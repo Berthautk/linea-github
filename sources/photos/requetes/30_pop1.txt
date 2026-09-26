@@ -1,0 +1,20 @@
+p_census::census enumerator household interview Africa
+p_birthreg::birth registration certificate Africa
+p_passport::passport control immigration airport
+p_children::African school children
+p_elderly::elderly people Japan
+p_industrial::industrial revolution factory 19th century
+p_vaccine::vaccination child Africa
+p_newborn::newborn baby mother hospital Africa
+p_familyplan::family planning clinic Africa
+p_girls::girls school Africa classroom
+p_onechild::one child policy poster China
+p_ellis::Ellis Island immigrants
+p_busstation::bus station travellers Africa
+p_rushhour::rush hour traffic Lagos
+p_boat::migrants boat rescue Mediterranean
+p_refugee::refugee camp Africa
+p_lapaz::La Paz Bolivia city mountains
+p_bigfarm::large wheat farm Australia
+p_crowd::crowded street Lagos
+p_family::large African family

@@ -928,3 +928,123 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (lsa_herbs.jpg) : “MEDICINE MARKET - SEOUL” by U.S. Army Korea (Historical Image Archive), CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/28486074@N08/2920744660)
 - Activity 4 (lsa_bee.jpg) : “Bee pollinating flower” by tombayly13, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60174932@N05/5797724005)
 - Activity 5 (f2t_safari.jpg) : “Sri Lankan Leopard” by Shanaka Kalubowila, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50057113@N06/43689916724)
+
+# Upper Sixth Arts — Population Geography
+
+## USA Lesson 1: Sources of Population Data
+
+- Activity 2 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
+- Activity 3 (usa_passport.jpg) : “London Heathrow T4 arrivals” by markhillary, CC BY 2.0, via Flickr (https://www.flickr.com/photos/56087830@N00/1568955656)
+- Activity 4 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+
+## USA Lesson 2: Population Distribution and Density
+
+- Activity 1 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 2 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+- Activity 5 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## USA Lesson 3: Spatial Population Distribution and its Factors
+
+- Activity 2 (lsa_tundra.jpg) : “Fall Tundra Landscape” by Andrea Pokrzywinski, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65781065@N00/2891717078)
+- Activity 3 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+
+## USA Practical Work 2: Population Distribution and Altitude
+
+- Activity 2 (lsa_himalaya.jpg) : “View of the Himalaya Mountain Range” by NASA Johnson, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/29988733@N04/10678470543)
+- Activity 3 (usa_lapaz.jpg) : “La Paz” by cliff.hellis, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/30099537@N02/6348597083)
+- Activity 5 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+
+## USA Lesson 4: Modifications of Population Distribution
+
+- Activity 3 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (usa_refugee.jpg) : “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
+
+## USA Lesson 5: Population Structure
+
+- Activity 2 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+- Activity 5 (usa_girls.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+
+## USA Lesson 6: Age and Sex Composition
+
+- Activity 2 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+- Activity 3 (f2t_classroom.jpg) : “Class” by WABC Certified Business Coach • Counselor, CC BY 2.0, via Flickr (https://www.flickr.com/photos/43919827@N00/3617014360)
+- Activity 5 (f2t_doctor.jpg) : “Medical Readiness and Training Exercise 15-3” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/16958932197)
+
+## USA Lesson 7: Population Pyramids
+
+- Activity 4 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
+
+## USA Lesson 8: Historical Evolution of World Population
+
+- Activity 2 (usa_steam.jpg) : “Lowell Massachusetts - Boston & Maine Railroad - Steam Engine - Monoch” by Onasill - Bill Badzo - 149 Million Views - Thank Y, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/51797580418)
+- Activity 3 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
+
+## USA Lesson 9: Population Growth and its Determinants
+
+- Activity 3 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
+- Activity 5 (usa_boat.jpg) : “A sailor from HMS BULWARK hands out water to rescued individuals on a ” by Royal Navy Media Archive, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/69974959@N03/17374754690)
+
+## USA Practical Work 4: Calculating Demographic Indices
+
+- Activity 4 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+
+## USA Lesson 10: Factors of Population Growth
+
+- Activity 2 (usa_girls.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+- Activity 3 (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
+- Activity 4 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
+- Activity 5 (f2t_doctor.jpg) : “Medical Readiness and Training Exercise 15-3” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/16958932197)
+
+## USA Lesson 11: The Modern Demographic Explosion and Population Policies
+
+- Activity 2 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 3 (usa_onechild.jpg) : “propaganda posters, one child policy” by kattebelletje, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/97249369@N00/3349125321)
+- Activity 4 (usa_ellis.jpg) : “No Known Restrictions: Ellis Island Immigrants by National Photo Co., ” by pingnews.com, Public domain 1.0, via Flickr (https://www.flickr.com/photos/39735679@N00/434439223)
+
+## USA Lesson 12: The Demographic Transition Model
+
+- Activity 5 (usa_girls.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+
+## USA Lesson 13: Migration: Characteristics, Laws and Models
+
+- Activity 1 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+
+## USA Lesson 14: Spatial Interaction
+
+- Activity 2 (f2t_cattle_market.jpg) : “Discussing the price” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7313656038)
+- Activity 3 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 4 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+- Activity 5 (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+
+## USA Lesson 15: Types of Migration
+
+- Activity 2 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 3 (usa_boat.jpg) : “A sailor from HMS BULWARK hands out water to rescued individuals on a ” by Royal Navy Media Archive, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/69974959@N03/17374754690)
+- Activity 4 (usa_refugee.jpg) : “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
+
+## USA Lesson 16: Carrying Capacity
+
+- Activity 2 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Activity 3 (f2t_pivot.jpg) : “Mid-West Agriculture” by Djof, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/10787942@N00/147222315)
+
+## USA Lesson 17: Overpopulation, Underpopulation and Optimum Population
+
+- Activity 2 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 3 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Activity 4 (usa_bigfarm.jpg) : “Wheat fields. New Zealand.” by Bernard Spragg, CC0 1.0, via Flickr (https://www.flickr.com/photos/88123769@N02/24607172362)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## USA Lesson 18: Theories of Population and Resources: Malthus and Boserup
+
+- Activity 2 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Activity 4 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Activity 5 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+
+## USA Further Study 1: Population Change in Cameroon
+
+- Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)

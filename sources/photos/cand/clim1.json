@@ -1,0 +1,722 @@
+{
+ "c_limb": [
+  {
+   "title": "Moon Over Earth (NASA, International Space Station, 07/31/11) [Explored]",
+   "url": "https://live.staticflickr.com/6188/6097028416_5724d04a2e_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/6097028416",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "Sunset Over the Indian Ocean (NASA, International Space Station Science, 05/25/10)",
+   "url": "https://live.staticflickr.com/8325/8134997029_847a8c7d3c_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/8134997029",
+   "w": 1024,
+   "h": 701
+  },
+  {
+   "title": "Great Lakes in Sunglint (NASA, International Space Station, 06/14/12)",
+   "url": "https://live.staticflickr.com/8283/7637356614_cc6b9e6b8e_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/7637356614",
+   "w": 1024,
+   "h": 680
+  }
+ ],
+ "c_aurora": [
+  {
+   "title": "Aurora Borealis",
+   "url": "https://live.staticflickr.com/5162/5342588503_f68e57ddf3_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "Billy Idle",
+   "page": "https://www.flickr.com/photos/58122391@N03/5342588503",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Aurora Borealis",
+   "url": "https://live.staticflickr.com/3452/3256810738_8bcd2849c9_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "Haukur H.",
+   "page": "https://www.flickr.com/photos/34699962@N04/3256810738",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Aurora Borealis over Oslo",
+   "url": "https://live.staticflickr.com/125/323390540_b065ba46a3_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "ergates",
+   "page": "https://www.flickr.com/photos/65218245@N00/323390540",
+   "w": 1024,
+   "h": 685
+  }
+ ],
+ "c_sun": [
+  {
+   "title": "Strong Solar Flare Erupts from Sun",
+   "url": "https://live.staticflickr.com/65535/52068482191_9e0d76cd64_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/52068482191",
+   "w": 1024,
+   "h": 865
+  },
+  {
+   "title": "Scientists Propose Mechanism to Describe Solar Eruptions of All Sizes",
+   "url": "https://live.staticflickr.com/4344/36084784530_d4b0f47a11_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/36084784530",
+   "w": 1024,
+   "h": 576
+  },
+  {
+   "title": "NASA Team Studies Middle-aged Sun by Tracking Motion of Mercury",
+   "url": "https://live.staticflickr.com/4607/39048448535_3c015f4af6_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/39048448535",
+   "w": 1024,
+   "h": 576
+  }
+ ],
+ "c_snow": [
+  {
+   "title": "Nooksack River Washington State",
+   "url": "https://live.staticflickr.com/6051/7037105099_7ec1ec5e63_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "PatrickMcNallyMolokai",
+   "page": "https://www.flickr.com/photos/65652256@N02/7037105099",
+   "w": 1024,
+   "h": 681
+  }
+ ],
+ "c_polar": [
+  {
+   "title": "Antarctica: Sea Ice",
+   "url": "https://live.staticflickr.com/3133/2631121595_59b7697ff1_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "eliduke",
+   "page": "https://www.flickr.com/photos/80547277@N00/2631121595",
+   "w": 1024,
+   "h": 658
+  },
+  {
+   "title": "Antarctica: sea ice",
+   "url": "https://live.staticflickr.com/2150/2634527239_18444658e3_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "eliduke",
+   "page": "https://www.flickr.com/photos/80547277@N00/2634527239",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Antarctica: Sea Ice",
+   "url": "https://live.staticflickr.com/3003/2635383842_df9db8806f_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "eliduke",
+   "page": "https://www.flickr.com/photos/80547277@N00/2635383842",
+   "w": 1024,
+   "h": 683
+  }
+ ],
+ "c_steam": [
+  {
+   "title": "Formal Cannibalism",
+   "url": "https://live.staticflickr.com/4105/4839061144_419949fe42_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-ND 2.0",
+   "creator": "Photo Extremist",
+   "page": "https://www.flickr.com/photos/27027945@N07/4839061144",
+   "w": 1000,
+   "h": 664
+  },
+  {
+   "title": "Tea Anyone?",
+   "url": "https://live.staticflickr.com/1772/42256910960_02a78188de_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-ND 2.0",
+   "creator": "Beegee49 (Thanks for 12m views,account locked",
+   "page": "https://www.flickr.com/photos/66358983@N07/42256910960",
+   "w": 1024,
+   "h": 819
+  },
+  {
+   "title": "A simple broccoli recipe",
+   "url": "https://live.staticflickr.com/46/111810805_0802970b8d_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "churl",
+   "page": "https://www.flickr.com/photos/77005536@N00/111810805",
+   "w": 1024,
+   "h": 768
+  }
+ ],
+ "c_smog": [
+  {
+   "title": "Beijing smog",
+   "url": "https://live.staticflickr.com/155/386198516_cc06f2ee5d_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "kevin dooley",
+   "page": "https://www.flickr.com/photos/12836528@N00/386198516",
+   "w": 1024,
+   "h": 766
+  },
+  {
+   "title": "Nairobi 1980",
+   "url": "https://live.staticflickr.com/2065/2214390238_e0f78ebbd8_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "exfordy",
+   "page": "https://www.flickr.com/photos/32659528@N00/2214390238",
+   "w": 1024,
+   "h": 635
+  },
+  {
+   "title": "New Orleans, LA",
+   "url": "https://live.staticflickr.com/141/400064521_89567f1550_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "kla4067",
+   "page": "https://www.flickr.com/photos/84263554@N00/400064521",
+   "w": 1024,
+   "h": 746
+  }
+ ],
+ "c_frost": [
+  {
+   "title": "Frosty Morning",
+   "url": "https://live.staticflickr.com/4039/4283143427_036f3d1768_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "Tom Gill.",
+   "page": "https://www.flickr.com/photos/10199807@N00/4283143427",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Peaceful Winter",
+   "url": "https://live.staticflickr.com/1704/25673217581_225766f2ed_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "`James Wheeler",
+   "page": "https://www.flickr.com/photos/24128704@N08/25673217581",
+   "w": 1024,
+   "h": 576
+  },
+  {
+   "title": "k7247-5",
+   "url": "https://live.staticflickr.com/8251/8456927526_ca3ecc9d32_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "USDAgov",
+   "page": "https://www.flickr.com/photos/41284017@N08/8456927526",
+   "w": 1024,
+   "h": 678
+  }
+ ],
+ "c_ice": [
+  {
+   "title": "Thrice",
+   "url": "https://live.staticflickr.com/8738/16875162129_4e6bac7b53_b.jpg",
+   "src": "flickr",
+   "lic": "CC0 1.0",
+   "creator": "mpardo.photo",
+   "page": "https://www.flickr.com/photos/130551911@N05/16875162129",
+   "w": 1024,
+   "h": 678
+  },
+  {
+   "title": "Restraint (2012): Joshua Clark-Legallienne",
+   "url": "https://live.staticflickr.com/8023/7396769488_5092816f1a_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Dominic's pics",
+   "page": "https://www.flickr.com/photos/64097751@N00/7396769488",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "on ice",
+   "url": "https://live.staticflickr.com/7162/6736878767_981f37af8a_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "jenny downing",
+   "page": "https://www.flickr.com/photos/7941044@N06/6736878767",
+   "w": 1024,
+   "h": 770
+  }
+ ],
+ "c_hygro": [
+  {
+   "title": "Mason's wet and dry bulb hygrometer",
+   "url": "https://coimages.sciencemuseumgroup.org.uk/520/508/large_smg00002751.jpg",
+   "src": "sciencemuseum",
+   "lic": "CC BY-NC-SA 4.0",
+   "creator": "Henry Barrow & Co.",
+   "page": "https://collection.sciencemuseumgroup.org.uk/objects/co55208/masons-wet-and-dry-bulb-hygrometer",
+   "w": 1536,
+   "h": 1113
+  },
+  {
+   "title": "Sling hydrometer used on 1953 Mount Everest expedition",
+   "url": "https://coimages.sciencemuseumgroup.org.uk/272/342/large_2017_0049__0001_.jpg",
+   "src": "sciencemuseum",
+   "lic": "CC BY-NC-SA 4.0",
+   "creator": "G H Zeal Limited",
+   "page": "https://collection.sciencemuseumgroup.org.uk/objects/co8593941/sling-hydrometer-used-on-1953-mount-everest-expedition",
+   "w": 1536,
+   "h": 1123
+  }
+ ],
+ "c_cumulus": [
+  {
+   "title": "Drifting",
+   "url": "https://live.staticflickr.com/2167/1804991414_6fb3334a98_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "The Blind Glass",
+   "page": "https://www.flickr.com/photos/79892385@N00/1804991414",
+   "w": 1024,
+   "h": 615
+  },
+  {
+   "title": "'An Isolated Storm' Australia, Darwin Harbor",
+   "url": "https://live.staticflickr.com/4036/4659700300_a66d92ab89_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "WanderingtheWorld (www.ChrisFord.com)",
+   "page": "https://www.flickr.com/photos/44028103@N07/4659700300",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Epic Cloud (Explored)",
+   "url": "https://live.staticflickr.com/7041/6984912657_88c42f818d_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "Christina Ann VanMeter",
+   "page": "https://www.flickr.com/photos/54129831@N02/6984912657",
+   "w": 1024,
+   "h": 673
+  }
+ ],
+ "c_dew": [
+  {
+   "title": "Dew drops on grass",
+   "url": "https://live.staticflickr.com/7446/9537409567_c576762055_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Ervins Strauhmanis",
+   "page": "https://www.flickr.com/photos/76523360@N03/9537409567",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Frozen dew drops on grass",
+   "url": "https://live.staticflickr.com/65535/52729120287_f2bbaabf65_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "stanzebla",
+   "page": "https://www.flickr.com/photos/92823399@N07/52729120287",
+   "w": 1024,
+   "h": 775
+  },
+  {
+   "title": "Frozen dew drops on grass",
+   "url": "https://live.staticflickr.com/65535/52729895874_2b874ba11c_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "stanzebla",
+   "page": "https://www.flickr.com/photos/92823399@N07/52729895874",
+   "w": 1024,
+   "h": 682
+  }
+ ],
+ "c_hail": [
+  {
+   "title": "Hailstones (4 July 2010) (Limon, eastern Colorado, USA) 3",
+   "url": "https://live.staticflickr.com/5581/15148092311_176a339eb5_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "James St. John",
+   "page": "https://www.flickr.com/photos/47445767@N05/15148092311",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "Hailstone-smashed back window of a car from 4 July 2010 hailstorm (Limon, eastern Colorado, USA)",
+   "url": "https://live.staticflickr.com/5566/14964553107_c292d6707a_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "James St. John",
+   "page": "https://www.flickr.com/photos/47445767@N05/14964553107",
+   "w": 1024,
+   "h": 775
+  },
+  {
+   "title": "Hailstone-smashed front windshield of a car from 4 July 2010 hailstorm (Limon, eastern Colorado, USA)",
+   "url": "https://live.staticflickr.com/3892/14964553677_577feb8803_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "James St. John",
+   "page": "https://www.flickr.com/photos/47445767@N05/14964553677",
+   "w": 1024,
+   "h": 584
+  }
+ ],
+ "c_stratus": [],
+ "c_chimney": [
+  {
+   "title": "Rising above the Inversion",
+   "url": "https://live.staticflickr.com/7015/6535713585_4b892cc88b_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "Pictoscribe -",
+   "page": "https://www.flickr.com/photos/70414856@N00/6535713585",
+   "w": 1024,
+   "h": 594
+  },
+  {
+   "title": "Art Institute of Chicago (July 2011",
+   "url": "https://live.staticflickr.com/65535/49833430337_541fbd9785_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "UGArdener",
+   "page": "https://www.flickr.com/photos/22834654@N04/49833430337",
+   "w": 1024,
+   "h": 682
+  },
+  {
+   "title": "Art Institute of Chicago (July 2011",
+   "url": "https://live.staticflickr.com/65535/49832588423_ec7d0ee99a_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "UGArdener",
+   "page": "https://www.flickr.com/photos/22834654@N04/49832588423",
+   "w": 1024,
+   "h": 710
+  }
+ ],
+ "c_ship": [
+  {
+   "title": "Sail 2010 (Frontpage)",
+   "url": "https://live.staticflickr.com/4100/4909665345_eb0549600f_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Bert Kaufmann",
+   "page": "https://www.flickr.com/photos/22746515@N02/4909665345",
+   "w": 1024,
+   "h": 688
+  },
+  {
+   "title": "The Amerigo Vespucci Arrives In Dublin (Tall Ships Race Dublin - 2012)",
+   "url": "https://live.staticflickr.com/8441/7846937046_f8fa9caa53_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "infomatique",
+   "page": "https://www.flickr.com/photos/80824546@N00/7846937046",
+   "w": 1024,
+   "h": 556
+  },
+  {
+   "title": "The Amerigo Vespucci Arrives In Dublin (Tall Ships Race Dublin - 2012)",
+   "url": "https://live.staticflickr.com/8305/7846933992_8e68de66a5_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "infomatique",
+   "page": "https://www.flickr.com/photos/80824546@N00/7846933992",
+   "w": 1024,
+   "h": 683
+  }
+ ],
+ "c_monsoon": [
+  {
+   "title": "Running in the rain",
+   "url": "https://live.staticflickr.com/2846/10960940954_48a846e47f_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "VinothChandar",
+   "page": "https://www.flickr.com/photos/44345361@N06/10960940954",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "precious mom!",
+   "url": "https://live.staticflickr.com/8855/18424718619_5121748725_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "2 million+ views. Humbled and thanks!",
+   "page": "https://www.flickr.com/photos/61732052@N02/18424718619",
+   "w": 1024,
+   "h": 650
+  },
+  {
+   "title": "Its a rainy day..",
+   "url": "https://live.staticflickr.com/1026/5180651937_4f81640fc7_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "VinothChandar",
+   "page": "https://www.flickr.com/photos/44345361@N06/5180651937",
+   "w": 1024,
+   "h": 832
+  }
+ ],
+ "c_canoes": [],
+ "c_city": [
+  {
+   "title": "Cameroon - Day in the life of Christine Banlog, market woman",
+   "url": "https://live.staticflickr.com/65535/48061950558_05842a7bcc_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "UN Women Gallery",
+   "page": "https://www.flickr.com/photos/51431730@N04/48061950558",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Douala",
+   "url": "https://live.staticflickr.com/7245/7227535754_80ddb216ba_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "christing-O-",
+   "page": "https://www.flickr.com/photos/76187282@N00/7227535754",
+   "w": 1024,
+   "h": 667
+  },
+  {
+   "title": "Cameroon - Day in the life of Christine Banlog, market woman",
+   "url": "https://live.staticflickr.com/65535/48061901036_1aca9899db_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "UN Women Gallery",
+   "page": "https://www.flickr.com/photos/51431730@N04/48061901036",
+   "w": 1024,
+   "h": 683
+  }
+ ],
+ "c_lake": [
+  {
+   "title": "Landscape",
+   "url": "https://live.staticflickr.com/3268/2765581183_65907da0d0_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "World Bank Photo Collection",
+   "page": "https://www.flickr.com/photos/10816734@N03/2765581183",
+   "w": 1024,
+   "h": 679
+  },
+  {
+   "title": "El Molo Woman, Lake Turkana, Kenya",
+   "url": "https://live.staticflickr.com/8591/15990141333_1ebe8cf1f1_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Ray in Manila",
+   "page": "https://www.flickr.com/photos/21186555@N07/15990141333",
+   "w": 1024,
+   "h": 873
+  },
+  {
+   "title": "Lake Kamburu",
+   "url": "https://live.staticflickr.com/1552/25644146245_c470202cc5_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "World Bank Photo Collection",
+   "page": "https://www.flickr.com/photos/10816734@N03/25644146245",
+   "w": 1024,
+   "h": 683
+  }
+ ],
+ "c_tornado": [
+  {
+   "title": "Tornado - RIAT 2006",
+   "url": "https://live.staticflickr.com/3229/2493045598_2cb820a775_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "Airwolfhound",
+   "page": "https://www.flickr.com/photos/24874528@N04/2493045598",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Record Breaking Tornadoes",
+   "url": "https://live.staticflickr.com/3274/4554359577_963ee13f80_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "GDS Infographics",
+   "page": "https://www.flickr.com/photos/43157614@N06/4554359577",
+   "w": 1024,
+   "h": 639
+  },
+  {
+   "title": "Tornado Track near Sturbridge, Massachusetts",
+   "url": "https://live.staticflickr.com/3602/5805753622_72183e9a07_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY 2.0",
+   "creator": "NASA Goddard Photo and Video",
+   "page": "https://www.flickr.com/photos/24662369@N07/5805753622",
+   "w": 1024,
+   "h": 397
+  }
+ ],
+ "c_cyclone": [
+  {
+   "title": "Nazma Begum",
+   "url": "https://live.staticflickr.com/2262/2247242477_9ff221940a_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "IRRI Images",
+   "page": "https://www.flickr.com/photos/86712369@N00/2247242477",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "DSC01228_1024x768",
+   "url": "https://live.staticflickr.com/7058/6950282099_4a188a6635_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Tim Rodenberg",
+   "page": "https://www.flickr.com/photos/24556804@N04/6950282099",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "The Brisbane Flood of 1893",
+   "url": "https://live.staticflickr.com/8042/29618559855_99fffa7676_b.jpg",
+   "src": "flickr",
+   "lic": "Public domain 1.0",
+   "creator": "Queensland State Archives",
+   "page": "https://www.flickr.com/photos/60455048@N02/29618559855",
+   "w": 1024,
+   "h": 628
+  }
+ ],
+ "c_radiosonde": [
+  {
+   "title": "wea01105",
+   "url": "https://live.staticflickr.com/4152/5083798802_a3567dd0eb_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "NOAA Photo Library",
+   "page": "https://www.flickr.com/photos/51647007@N08/5083798802",
+   "w": 1024,
+   "h": 704
+  },
+  {
+   "title": "post0126",
+   "url": "https://live.staticflickr.com/4071/5142804393_ae1f59a0c4_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "NOAA Photo Library",
+   "page": "https://www.flickr.com/photos/51647007@N08/5142804393",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "wea01144",
+   "url": "https://live.staticflickr.com/4149/5083800180_3531092bd1_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "NOAA Photo Library",
+   "page": "https://www.flickr.com/photos/51647007@N08/5083800180",
+   "w": 1024,
+   "h": 635
+  }
+ ],
+ "c_radar": [
+  {
+   "title": "ILX - Central Illinois Doppler Radar - NOAA",
+   "url": "https://live.staticflickr.com/99/363045232_156b61d2ff_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "HAM guy",
+   "page": "https://www.flickr.com/photos/10728157@N00/363045232",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "AWACS visits Luke",
+   "url": "https://live.staticflickr.com/65535/48990180346_0703c4b794_b.jpg",
+   "src": "flickr",
+   "lic": "Public domain 1.0",
+   "creator": "aeroman3",
+   "page": "https://www.flickr.com/photos/47430793@N08/48990180346",
+   "w": 1024,
+   "h": 731
+  },
+  {
+   "title": "Leksand SWEPOS reference station",
+   "url": "https://live.staticflickr.com/6224/6384464049_57b37e8263_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Johan G",
+   "page": "https://www.flickr.com/photos/58187590@N02/6384464049",
+   "w": 1024,
+   "h": 768
+  }
+ ],
+ "c_meteosat": [
+  {
+   "title": "Lake Chad: almost gone",
+   "url": "https://live.staticflickr.com/507/32323646926_fe04f471bd_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "GRIDArendal",
+   "page": "https://www.flickr.com/photos/148768555@N05/32323646926",
+   "w": 1024,
+   "h": 582
+  }
+ ],
+ "c_yaounde": [
+  {
+   "title": "Yaound\u00e9",
+   "url": "https://live.staticflickr.com/5310/5677034246_64f9ae2211_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "wili_hybrid",
+   "page": "https://www.flickr.com/photos/62223880@N00/5677034246",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "Yaound\u00e9",
+   "url": "https://live.staticflickr.com/3/2692840_4f2f9a67dd_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "friel",
+   "page": "https://www.flickr.com/photos/91702411@N00/2692840",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "Yaound\u00e9, Cameroon",
+   "url": "https://live.staticflickr.com/3723/11593932793_7823828f73_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "jbdodane",
+   "page": "https://www.flickr.com/photos/27998473@N02/11593932793",
+   "w": 1024,
+   "h": 678
+  }
+ ]
+}

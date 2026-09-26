@@ -1,0 +1,26 @@
+c_limb::Earth atmosphere limb from space station
+c_aurora::aurora borealis
+c_sun::Solar Dynamics Observatory sun
+c_snow::snowfield glacier sunlight
+c_polar::Antarctica sea ice
+c_steam::boiling pot steam cooking
+c_smog::smog city skyline
+c_frost::frost on plants morning
+c_ice::melting ice cubes water
+c_hygro::wet and dry bulb hygrometer
+c_cumulus::cumulus clouds blue sky
+c_dew::dew drops on grass
+c_hail::hailstones
+c_stratus::overcast stratus cloud layer
+c_chimney::chimney smoke inversion
+c_ship::tall ship sails wind
+c_monsoon::monsoon rain India street
+c_canoes::fishing canoes beach Ghana
+c_city::Douala city
+c_lake::lake shore Africa
+c_tornado::tornado
+c_cyclone::cyclone damage houses
+c_radiosonde::radiosonde weather balloon launch
+c_radar::weather radar dome
+c_meteosat::Meteosat Africa satellite image
+c_yaounde::Yaounde city

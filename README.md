@@ -15,6 +15,7 @@ Même format allégé, avec deux différences : chaque leçon dure **2 périodes
 
 | Dossier | Contenu | Leçons |
 |---|---|---|
+| `lecons/LSA/Climatology/` | Module 1 (météorologie, climatologie) | L1 à L21, FS1 (perturbations tropicales), FS2 (observation et prévision du temps), FS3 (climat du Cameroun) — 24 fichiers |
 | `lecons/LSA/Geomorphology/` | Module 2 (géomorphologie) | L1 à L16, FS1 (premières théories), FS2 (expansion des fonds océaniques), FS3 (relief du Cameroun) — 19 fichiers |
 
 Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node v2_lsa_geo.js` (runner `sixth.js`, schémas `sources/maps/big_lsa_geo.py`).

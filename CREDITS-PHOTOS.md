@@ -494,3 +494,126 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (lsa_adamawa.jpg) : “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
 - Activity 4 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
 - Activity 5 (lsa_mangrove.jpg) : “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
+
+# Lower Sixth Arts — Climatology
+
+## LSA Lesson 1: The Meaning and Composition of the Atmosphere
+
+- Activity 1 (lsa_limb.jpg) : “Sunset Over the Indian Ocean (NASA, International Space Station Scienc” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/8134997029)
+- Activity 3 (f4_exhaust.jpg) : “image replaced (thanks Anne :) )” by why 137, CC BY 2.0, via Flickr (https://www.flickr.com/photos/78752351@N03/8464430910)
+- Activity 4 (f2t_sandstorm.jpg) : “Sandstorm at Camp Bastion, Afghanistan” by Defence Images, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/48399297@N04/10343833885)
+- Activity 5 (f4_fog.jpg) : “Mist” by Art by MarkAC, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60580775@N08/40783321332)
+
+## LSA Lesson 2: Structure of the Atmosphere
+
+- Activity 3 (f4_planewindow.jpg) : “flying” by { pranav }, CC BY 2.0, via Flickr (https://www.flickr.com/photos/29220600@N08/3469129491)
+- Activity 4 (f4_ozonehole.jpg) : “Sauron's Eye” by sjrankin, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24354425@N03/15252220086)
+- Activity 5 (lsa_aurora.jpg) : “Aurora Borealis” by Haukur H., CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/34699962@N04/3256810738)
+
+## LSA Lesson 3: Solar Radiation
+
+- Activity 1 (lsa_sun.jpg) : “Scientists Propose Mechanism to Describe Solar Eruptions of All Sizes” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/36084784530)
+- Activity 4 (f4_sunrise.jpg) : “African Sunrise, Amboseli National Park” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/30385097358)
+- Activity 5 (lsa_snow.jpg) : “Peaceful Winter” by `James Wheeler, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/24128704@N08/25673217581)
+
+## LSA Lesson 4: The Earth's Radiation Balance
+
+- Activity 5 (f4_hurricane.jpg) : “NASA's Aqua Satellite Captures Hurricane Danielle” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/4931591817)
+
+## LSA Lesson 5: Heat Transport
+
+- Activity 2 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Activity 3 (lsa_steam.jpg) : “Tea Anyone?” by Beegee49 (Thanks for 12m views,account locked, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/66358983@N07/42256910960)
+- Activity 5 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
+
+## LSA Lesson 7: Geographical Factors Affecting Temperature
+
+- Activity 2 (f2t_kilimanjaro.jpg) : “Kilimanjaro” by ian 1602, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98181641@N00/2179855841)
+
+## LSA Lesson 8: Vertical Distribution of Temperature
+
+- Activity 1 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Activity 4 (f4_planewindow.jpg) : “flying” by { pranav }, CC BY 2.0, via Flickr (https://www.flickr.com/photos/29220600@N08/3469129491)
+
+## LSA Lesson 9: Temperature Inversion
+
+- Activity 3 (lsa_cloudsea.jpg) : “Rising above the Inversion” by Pictoscribe -, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/70414856@N00/6535713585)
+- Activity 4 (lsa_frost.jpg) : “Frosty Morning” by Tom Gill., CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10199807@N00/4283143427)
+- Activity 5 (lsa_smog.jpg) : “Beijing smog” by kevin dooley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/12836528@N00/386198516)
+
+## LSA Lesson 10: Nature of Moisture
+
+- Activity 2 (lsa_ice.jpg) : “Thrice” by mpardo.photo, CC0 1.0, via Flickr (https://www.flickr.com/photos/130551911@N05/16875162129)
+- Activity 4 (lsa_hygro.jpg) : “Sling hydrometer used on 1953 Mount Everest expedition” by G H Zeal Limited, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co8593941/sling-hydrometer-used-on-1953-mount-everest-expedition)
+- Activity 5 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+
+## LSA Lesson 11: Forms of Condensation and Precipitation
+
+- Activity 2 (lsa_cumulus.jpg) : “Epic Cloud (Explored)” by Christina Ann VanMeter, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/54129831@N02/6984912657)
+- Activity 3 (lsa_dew.jpg) : “Dew drops on grass” by Ervins Strauhmanis, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76523360@N03/9537409567)
+- Activity 4 (lsa_hail.jpg) : “Hailstones (4 July 2010) (Limon, eastern Colorado, USA) 3” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/15148092311)
+
+## LSA Lesson 12: Global Distribution of Precipitation
+
+- Activity 3 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+
+## LSA Lesson 13: Pressure Systems
+
+- Activity 1 (f4_barometer.jpg) : “Aneroid Barometer, with dial designed by Sir Napier Shaw, 1914” by Negretti & Zambra; Shaw, Sir Napier, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co54459/aneroid-barometer-with-dial-designed-by-sir-napier-shaw-1914)
+- Activity 5 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+
+## LSA Lesson 14: Vertical Motions: Stability and Instability
+
+- Activity 3 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
+- Activity 4 (lsa_cloudsea.jpg) : “Rising above the Inversion” by Pictoscribe -, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/70414856@N00/6535713585)
+- Activity 5 (lsa_smog.jpg) : “Beijing smog” by kevin dooley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/12836528@N00/386198516)
+
+## LSA Lesson 15: Planetary Winds
+
+- Activity 1 (f4_windsock.jpg) : “Windsock” by Wajahat Mahmood, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/26116471@N03/6613272897)
+- Activity 4 (lsa_ship.jpg) : “The Amerigo Vespucci Arrives In Dublin (Tall Ships Race Dublin - 2012)” by infomatique, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/80824546@N00/7846937046)
+- Activity 5 (f4_bigwaves.jpg) : “Wave Explosion, Monterey Bay, California” by John William Hammond, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/8398907@N02/16328053911)
+
+## LSA Lesson 16: Tropical Seasonal Winds: Monsoon and Harmattan
+
+- Activity 2 (lsa_monsoon.jpg) : “Running in the rain” by VinothChandar, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44345361@N06/10960940954)
+- Activity 4 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Activity 5 (f2t_sandstorm.jpg) : “Sandstorm at Camp Bastion, Afghanistan” by Defence Images, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/48399297@N04/10343833885)
+
+## LSA Lesson 17: Local Winds
+
+- Activity 2 (f2t_fishing.jpg) : “Fishermen, Lake Tana” by A.Davey, CC BY 2.0, via Flickr (https://www.flickr.com/photos/40595948@N00/2260748777)
+- Activity 5 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+
+## LSA Lesson 18: Air Masses
+
+- Activity 4 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Activity 5 (f4_heavyrain.jpg) : “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
+
+## LSA Lesson 19: Meaning of Climate and Köppen's Classification
+
+- Activity 1 (f4_stevenson.jpg) : “Adelaide. Urrbrae. The weather station at the Waite campus of the Univ” by denisbin, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/82134796@N03/49865994827)
+
+## LSA Lesson 20: Micro-climates
+
+- Activity 1 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+- Activity 3 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 4 (lsa_lake.jpg) : “Lake Kamburu” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644146245)
+- Activity 5 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+
+## LSA Lesson 21: Mountain Climates
+
+- Activity 2 (f2t_kilimanjaro.jpg) : “Kilimanjaro” by ian 1602, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98181641@N00/2179855841)
+- Activity 5 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+
+## LSA Further Study 1: Tropical Weather Disturbances
+
+- Activity 2 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
+- Activity 3 (f4_hurricane.jpg) : “NASA's Aqua Satellite Captures Hurricane Danielle” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/4931591817)
+- Activity 5 (lsa_cyclone.jpg) : “Nazma Begum” by IRRI Images, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/86712369@N00/2247242477)
+
+## LSA Further Study 2: Weather Observation, Prediction, Modification and Mapping
+
+- Activity 2 (lsa_radiosonde.jpg) : “wea01144” by NOAA Photo Library, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51647007@N08/5083800180)
+- Activity 3 (lsa_radar.jpg) : “ILX - Central Illinois Doppler Radar - NOAA” by HAM guy, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10728157@N00/363045232)
+- Activity 4 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)

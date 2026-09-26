@@ -715,3 +715,216 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## LSA Practical Work 2: Drainage Basin Morphometry
 
 - Activity 4 (lsa_wouri_sat.jpg) : “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)
+
+# Lower Sixth Arts — Biogeography
+
+## LSA Lesson 1: The Soil
+
+- Activity 1 (lsa_soilpit.jpg) : “Humic Dystrudept (fine-loamy, isotic, frigid)” by SoilScience.info, CC BY 2.0, via Flickr (https://www.flickr.com/photos/22503286@N06/5140645742)
+- Activity 3 (lsa_earthworm.jpg) : “Earthworm In Soil” by jwinfred, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/98937825@N00/3532746937)
+- Activity 4 (lsa_cmrfarm.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
+
+## LSA Lesson 2: Physical Properties of the Soil: Texture
+
+- Activity 4 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 5 (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
+
+## LSA Practical Work 1: Determining Soil Texture
+
+- Activity 1 (lsa_soilpit.jpg) : “Humic Dystrudept (fine-loamy, isotic, frigid)” by SoilScience.info, CC BY 2.0, via Flickr (https://www.flickr.com/photos/22503286@N06/5140645742)
+
+## LSA Lesson 3: Soil Structure
+
+- Activity 2 (lsa_earthworm.jpg) : “Earthworm In Soil” by jwinfred, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/98937825@N00/3532746937)
+- Activity 3 (f2t_cracked_soil.jpg) : “Cracked Earth” by Aleatoric Consonance, CC BY 2.0, via Flickr (https://www.flickr.com/photos/93921318@N00/3772011444)
+- Activity 4 (f2t_combine.jpg) : “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
+- Activity 5 (f4_roots.jpg) : “Stones 'n' Roots” by erix!, CC BY 2.0, via Flickr (https://www.flickr.com/photos/68387408@N00/55692423)
+
+## LSA Lesson 4: Soil Depth, Organic Matter and Soil Organisms
+
+- Activity 2 (lsa_scree.jpg) : “Full Screen Plate Tectonics” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/3109980958)
+- Activity 3 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+- Activity 4 (lsa_termite.jpg) : “100_5629” by damien_farrell, CC BY 2.0, via Flickr (https://www.flickr.com/photos/92094658@N00/269671962)
+- Activity 5 (lsa_fungi.jpg) : “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
+
+## LSA Lesson 5: Chemical Properties of the Soil
+
+- Activity 1 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 2 (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Activity 4 (lsa_phtest.jpg) : “Soil Ph Test Kit” by London Permaculture, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7371031@N08/5211146737)
+- Activity 5 (lsa_fertiliser.jpg) : “Farmer applies fertilizer on his rice field” by IRRI Images, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/86712369@N00/5366605498)
+
+## LSA Lesson 6: Soil Fertility
+
+- Activity 1 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+- Activity 2 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 3 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+- Activity 4 (f4_zai.jpg) : “Women sowing okra in zai holes” by abossuet, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30450178@N07/7175750825)
+- Activity 5 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## LSA Lesson 7: Soil Formation
+
+- Activity 3 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 4 (lsa_scree.jpg) : “Full Screen Plate Tectonics” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/3109980958)
+- Activity 5 (lsa_fernlava.jpg) : “Fern Growing in Lava” by Ed Suominen, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/37960170@N07/9688955410)
+
+## LSA Lesson 8: The Soil Profile
+
+- Activity 2 (lsa_soilpit.jpg) : “Humic Dystrudept (fine-loamy, isotic, frigid)” by SoilScience.info, CC BY 2.0, via Flickr (https://www.flickr.com/photos/22503286@N06/5140645742)
+- Activity 3 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+
+## LSA Lesson 9: Major Pedogenic Regimes
+
+- Activity 2 (f2t_conifer.jpg) : “Battleship Lake” by `James Wheeler, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/24128704@N08/16587218945)
+- Activity 3 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+- Activity 4 (lsa_steppe.jpg) : “Tank on the Kazakh steppe” by Timon91, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/52250985@N06/30964503402)
+- Activity 5 (f2t_salt_crust.jpg) : “Salt” by Phillie Casablanca, CC BY 2.0, via Flickr (https://www.flickr.com/photos/19451080@N00/2052715618)
+
+## LSA Lesson 10: Minor Soil Forming Processes
+
+- Activity 2 (f4_rust.jpg) : “Lock down!” by ViNo Gv, CC BY 2.0, via Flickr (https://www.flickr.com/photos/38217093@N03/20143584561)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (lsa_earthworm.jpg) : “Earthworm In Soil” by jwinfred, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/98937825@N00/3532746937)
+- Activity 5 (f2t_salt_crust.jpg) : “Salt” by Phillie Casablanca, CC BY 2.0, via Flickr (https://www.flickr.com/photos/19451080@N00/2052715618)
+
+## LSA Lesson 11: Classes of Soil
+
+- Activity 2 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 3 (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
+- Activity 4 (f4_floodplain.jpg) : “20130501-NRCS-LSC-0605” by USDAgov, Public domain 1.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8725089904)
+- Activity 5 (lsa_pahoehoe.jpg) : “Pahoehoe Lava Flow” by graysky., CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/20021588@N00/540223861)
+
+## LSA Further Study 1: Soils of Cameroon
+
+- Activity 2 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 3 (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Activity 4 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+- Activity 5 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+
+## LSA Lesson 12: Meaning of Natural Vegetation
+
+- Activity 1 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 2 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 3 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (f2t_charcoal.jpg) : “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
+
+## LSA Lesson 13: Evolution of Vegetation over Time: Plant Succession
+
+- Activity 3 (lsa_lichen.jpg) : “Lichens on rock - Mason Lake” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/2924427336)
+- Activity 5 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+
+## LSA Lesson 14: The Concept of Climax Vegetation
+
+- Activity 2 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 4 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Activity 5 (f2t_prairie.jpg) : “Saskatchewan field in August, Alfalfa Medicago sativa” by ocean.flynn, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/89488115@N00/1535397596)
+
+## LSA Lesson 15: Examples of Plant Succession
+
+- Activity 1 (lsa_fernlava.jpg) : “Fern Growing in Lava” by Ed Suominen, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/37960170@N07/9688955410)
+- Activity 2 (lsa_moss.jpg) : “Moss growing in rock crevace” by binarydreams, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30479406@N00/1399948300)
+- Activity 3 (lsa_pond.jpg) : “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
+- Activity 4 (lsa_regrowth.jpg) : “Young, Shrubby Forest” by Wayne National Forest, Public domain 1.0, via Flickr (https://www.flickr.com/photos/39244790@N04/53956302430)
+- Activity 5 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+
+## LSA Lesson 16: Spatial Distribution of Vegetation
+
+- Activity 3 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 5 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+
+## LSA Further Study 2: Vegetation of Cameroon
+
+- Activity 2 (lsa_mangrove.jpg) : “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+
+## LSA Lesson 17: Meaning of Ecology and Ecosystems
+
+- Activity 2 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 3 (lsa_pond.jpg) : “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
+- Activity 4 (lsa_zebra.jpg) : “Zebra” by mape_s, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50931380@N00/333863114)
+- Activity 5 (lsa_fungi.jpg) : “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
+
+## LSA Lesson 18: The Ecosystem as a System
+
+- Activity 2 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+- Activity 4 (lsa_lion.jpg) : “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
+- Activity 5 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+
+## LSA Lesson 19: Examples of Ecosystems: The Pond
+
+- Activity 2 (lsa_waterlily.jpg) : “Rieve's Pond Water Lilies 2015” by matthewbeziat, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/109690096@N08/20146588069)
+- Activity 3 (f2t_fishing.jpg) : “Fishermen, Lake Tana” by A.Davey, CC BY 2.0, via Flickr (https://www.flickr.com/photos/40595948@N00/2260748777)
+- Activity 4 (lsa_pond.jpg) : “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
+- Activity 5 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+
+## LSA Lesson 20: Interactions within Ecosystems
+
+- Activity 3 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+- Activity 4 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+
+## LSA Lesson 21: Energy Flows in Ecosystems
+
+- Activity 1 (lsa_sun.jpg) : “Scientists Propose Mechanism to Describe Solar Eruptions of All Sizes” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/36084784530)
+- Activity 4 (lsa_zebra.jpg) : “Zebra” by mape_s, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50931380@N00/333863114)
+- Activity 5 (lsa_lion.jpg) : “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
+
+## LSA Lesson 22: Trophic Levels, Food Chains and Food Webs
+
+- Activity 2 (lsa_lion.jpg) : “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
+- Activity 4 (lsa_fungi.jpg) : “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
+- Activity 5 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+
+## LSA Lesson 23: Nutrient Cycling and the Gersmehl Model
+
+- Activity 2 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+- Activity 3 (lsa_fungi.jpg) : “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
+- Activity 4 (f4_roots.jpg) : “Stones 'n' Roots” by erix!, CC BY 2.0, via Flickr (https://www.flickr.com/photos/68387408@N00/55692423)
+- Activity 5 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+
+## LSA Lesson 24: Nutrient Cycling in Contrasting Ecosystems
+
+- Activity 2 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 4 (lsa_wheat.jpg) : “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
+- Activity 5 (f2t_conifer.jpg) : “Battleship Lake” by `James Wheeler, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/24128704@N08/16587218945)
+
+## LSA Lesson 25: Nutrient Cycling and Ecosystem Management
+
+- Activity 2 (f4_zai.jpg) : “Women sowing okra in zai holes” by abossuet, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30450178@N07/7175750825)
+- Activity 3 (lsa_fertiliser.jpg) : “Farmer applies fertilizer on his rice field” by IRRI Images, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/86712369@N00/5366605498)
+- Activity 4 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## LSA Lesson 26: Productivity of Ecosystems
+
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (lsa_tundra.jpg) : “Fall Tundra Landscape” by Andrea Pokrzywinski, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65781065@N00/2891717078)
+- Activity 5 (lsa_quadrat.jpg) : “Vegetation Monitoring, Katmai NPP” by swanNPS, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/90673956@N06/16796099732)
+
+## LSA Practical Work 2: Measurement of Ecosystem Productivity
+
+- Activity 3 (lsa_quadrat.jpg) : “Vegetation Monitoring, Katmai NPP” by swanNPS, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/90673956@N06/16796099732)
+- Activity 4 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+
+## LSA Lesson 27: Biomes
+
+- Activity 3 (f2t_autumn_forest.jpg) : “David R. Johnson Natural Area (3)” by Nicholas_T, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14922165@N00/10682288495)
+- Activity 4 (f2t_prairie.jpg) : “Saskatchewan field in August, Alfalfa Medicago sativa” by ocean.flynn, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/89488115@N00/1535397596)
+- Activity 5 (lsa_tundra.jpg) : “Fall Tundra Landscape” by Andrea Pokrzywinski, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65781065@N00/2891717078)
+
+## LSA Lesson 28: Characteristics of Tropical Biomes
+
+- Activity 1 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (f2t_desert_plants.jpg) : “Saguaro and teddy bear cholla with mountains in background” by Martin LaBar, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/32454422@N00/443523984)
+
+## LSA Further Study 3: Ecosystem Services
+
+- Activity 2 (f2t_fish_market.jpg) : “Kenyan food, farming and landscapes” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/14310899853)
+- Activity 3 (lsa_herbs.jpg) : “MEDICINE MARKET - SEOUL” by U.S. Army Korea (Historical Image Archive), CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/28486074@N08/2920744660)
+- Activity 4 (lsa_bee.jpg) : “Bee pollinating flower” by tombayly13, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60174932@N05/5797724005)
+- Activity 5 (f2t_safari.jpg) : “Sri Lankan Leopard” by Shanaka Kalubowila, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50057113@N06/43689916724)

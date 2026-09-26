@@ -1,0 +1,4 @@
+b_regrowth::secondary forest regrowth tropical
+b_oldfield::old field succession shrubs
+b_sahel3::Sahel vegetation Burkina Faso
+b_sahel4::acacia steppe Chad

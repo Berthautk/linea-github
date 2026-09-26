@@ -11,13 +11,14 @@ Chaque fichier se termine par `_v2.pptx`, comme le pilote.
 
 ## Second cycle : Lower Sixth Arts (LSA) et Upper Sixth Arts (USA)
 
-Même format allégé, avec deux différences : chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé au tableau compte **2 phrases, 3 au maximum**, au lieu d'une seule. Le contenu suit le **programme national 2019 (MINESEC)**, comparé aux leçons du Drive. Les leçons sont classées par branche :
+Même format allégé, avec deux différences : chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé au tableau compte **2 phrases, 3 au maximum**, au lieu d'une seule. Le contenu suit le **programme national 2019 (MINESEC)**, comparé aux leçons du Drive. Les leçons sont classées par branche. Les deux « Guided Works » du programme (projets d'observation sur toute l'année) ne sont pas des leçons de 2 périodes et n'ont pas été transformés en PowerPoint.
 
 | Dossier | Contenu | Leçons |
 |---|---|---|
 | `lecons/LSA/Climatology/` | Module 1 (météorologie, climatologie) | L1 à L21, FS1 (perturbations tropicales), FS2 (observation et prévision du temps), FS3 (climat du Cameroun) — 24 fichiers |
 | `lecons/LSA/Hydrology/` | Module 1 (hydrologie) | L22 à L34, FS4 (réseau hydrographique du Cameroun), PW1 (hydrogrammes et régimes), PW2 (morphométrie des bassins) — 16 fichiers |
 | `lecons/LSA/Geomorphology/` | Module 2 (géomorphologie) | L1 à L16, FS1 (premières théories), FS2 (expansion des fonds océaniques), FS3 (relief du Cameroun) — 19 fichiers |
+| `lecons/LSA/Biogeography/` | Module 3 (sols, végétation, écosystèmes) | L1 à L28, FS1 (sols du Cameroun), FS2 (végétation du Cameroun), FS3 (services des écosystèmes), PW1 (texture du sol), PW2 (productivité) — 33 fichiers |
 
 Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node v2_lsa_geo.js` (runner `sixth.js`, schémas `sources/maps/big_lsa_geo.py`).
 

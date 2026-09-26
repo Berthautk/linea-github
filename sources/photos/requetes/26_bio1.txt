@@ -1,0 +1,30 @@
+b_soilpit::soil profile pit horizons
+b_ribbon::soil texture hand test ribbon
+b_earthworm::earthworm in soil
+b_litter::leaf litter forest floor
+b_podzol::podzol soil profile
+b_lichen::lichen on rock
+b_moss::moss growing on rock
+b_fernlava::fern growing on lava
+b_fallow::abandoned field regrowth bush
+b_pond::pond water lilies
+b_tundra::tundra landscape
+b_montane::montane cloud forest Africa
+b_sahel::Sahel landscape acacia
+b_oilpalm::oil palm plantation
+b_cocoa::cocoa farm Cameroon
+b_reserve::Dja reserve Cameroon forest
+b_fungi::mushrooms on rotting log
+b_lion::lion hunting zebra
+b_zebra::zebras grazing savanna
+b_slashburn::slash and burn farming
+b_wheat::wheat field harvest combine
+b_fertiliser::farmer applying fertilizer
+b_bee::bee pollinating flower
+b_herbs::medicinal plants market Africa
+b_quadrat::quadrat vegetation survey
+b_sieve::soil sieves laboratory
+b_phtest::soil pH test kit
+b_termite::termite mound Africa
+b_steppe::steppe grassland Kazakhstan
+b_taiga::taiga forest Siberia

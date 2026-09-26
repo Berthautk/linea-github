@@ -1,0 +1,8 @@
+b_fallow2::fallow land regrowth Africa
+b_sahel2::Sahel Niger landscape
+b_texture2::soil texture feel test hands
+b_podzol2::podzol
+b_forest2::rainforest Cameroon
+b_herbs2::traditional medicine herbs market
+b_highland2::Bamenda highlands grassland
+b_redsoil2::red laterite soil road Africa

@@ -1202,3 +1202,258 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
 - Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Activity 5 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+
+# USA Economic Geography (Module 6)
+
+## USA Lesson 1: Natural Resources
+
+- Activity 1 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (usa_oilwell.jpg) : “Oil Pump Jack” by Paul Lowry, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10039026@N03/2770193028)
+- Activity 4 (usa_wind.jpg) : “Wind turbine farm” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/4941489845)
+- Activity 5 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+
+## USA Lesson 2: What is Agriculture?
+
+- Activity 1 (lsa_cmrfarm.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
+- Activity 2 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Activity 5 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## USA Lesson 3: Influences on Agriculture
+
+- Activity 2 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (f2t_cattle_market.jpg) : “Discussing the price” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7313656038)
+- Activity 5 (lsa_fertiliser.jpg) : “Farmer applies fertilizer on his rice field” by IRRI Images, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/86712369@N00/5366605498)
+
+## USA Lesson 4: Agriculture as a System and its Classification
+
+- Activity 2 (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Activity 4 (f2t_combine.jpg) : “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
+- Activity 5 (f2t_mixed_farm.jpg) : “Timid” by tricky (rick harrison), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/81851211@N00/205287304)
+
+## USA Lesson 5: Types of Agricultural Systems
+
+- Activity 2 (usa_ricefarm.jpg) : “Drone view of rice plantation on bali island with path to walk around ” by Artem Beliaikin, CC0 1.0, via Flickr (https://www.flickr.com/photos/157635012@N07/46229046541)
+- Activity 3 (usa_greenhouse.jpg) : “Organic farming, vegetable patch” by U.S. Department of Agriculture, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/10995692/organic-farming-vegetable-patch)
+- Activity 4 (usa_herders.jpg) : “Young cattle herders in Sénégal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/525185172)
+- Activity 5 (f2t_combine.jpg) : “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
+
+## USA Lesson 6: Von Thünen's Theory of Agricultural Land Use
+
+- Activity 1 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 4 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 5 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+
+## USA Practical Work 1: Calculating Locational Rent and Drawing Rent Curves
+
+- Activity 5 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+
+## USA Lesson 7: Sinclair's Model of Agricultural Land Value
+
+- Activity 2 (f2t_construction.jpg) : “Cementing Ethiopia's progress” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/8757865770)
+- Activity 3 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Activity 5 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+
+## USA Lesson 8: Agricultural Improvements: The Green Revolution
+
+- Activity 1 (usa_ricefarm.jpg) : “Drone view of rice plantation on bali island with path to walk around ” by Artem Beliaikin, CC0 1.0, via Flickr (https://www.flickr.com/photos/157635012@N07/46229046541)
+- Activity 4 (usa_spraying.jpg) : “k4817-4” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8497812386)
+- Activity 5 (f2t_field_trial.jpg) : “CIMMYT international wheat nurseries growing in Ecuador” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/5958068839)
+
+## USA Lesson 9: Meeting the Increasing Food Demand
+
+- Activity 3 (usa_irrigation.jpg) : “Irrigation Canals in Farah Province Afgahnistan” by USAID_IMAGES, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46658241@N06/14784748647)
+- Activity 4 (usa_foodaid.jpg) : “WFP food distribution” by UNAMID Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58538810@N03/12495227734)
+- Activity 5 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+
+## USA Lesson 10: Impacts of Agriculture on the Environment
+
+- Activity 1 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+- Activity 2 (usa_spraying.jpg) : “k4817-4” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8497812386)
+- Activity 3 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Activity 4 (usa_organic.jpg) : “Allotment garden” by tacowitte, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31817492@N00/1509608412)
+
+## USA Further Study 1: Agricultural Development and Change in Cameroon
+
+- Activity 2 (lsa_cmrfarm.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
+- Activity 3 (usa_banana.jpg) : “Banana Plantation” by AfricaTravelAssociation, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65134942@N06/8164706151)
+- Activity 4 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Activity 5 (usa_coffee.jpg) : “Harvesting coffee, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11590251453)
+
+## USA Further Study 2: Management of Forest Resources in Cameroon
+
+- Activity 2 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 3 (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+- Activity 4 (f2t_charcoal.jpg) : “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## USA Lesson 11: Energy Resources
+
+- Activity 4 (usa_offshore.jpg) : “Rig I” by Tuftronic10000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36574363@N00/367931994)
+- Activity 5 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+
+## USA Lesson 13: Minerals and Mining
+
+- Activity 3 (usa_openpit.jpg) : “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
+- Activity 4 (usa_goldminers.jpg) : “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1873057946)
+
+## USA Further Study 3: Management of Mineral and Energy Resources in Cameroon
+
+- Activity 2 (usa_offshore.jpg) : “Rig I” by Tuftronic10000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36574363@N00/367931994)
+- Activity 3 (usa_goldminers.jpg) : “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1873057946)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (usa_smelter.jpg) : “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
+
+## USA Further Study 4: Management of Water Resources in Cameroon
+
+- Activity 2 (usa_fishing.jpg) : “Empty beaches” by ludwig.troller, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/124845120@N03/14285811155)
+- Activity 3 (f2t_lake_chad.jpg) : “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
+- Activity 4 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+- Activity 5 (f2t_lagdo.jpg) : “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
+
+## USA Lesson 14: What is Manufacturing?
+
+- Activity 1 (usa_brewery.jpg) : “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
+- Activity 3 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+- Activity 5 (f2t_textile_factory.jpg) : “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
+
+## USA Lesson 15: Industrial Location
+
+- Activity 2 (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+- Activity 3 (usa_smelter.jpg) : “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
+- Activity 4 (usa_brewery.jpg) : “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
+- Activity 5 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+
+## USA Lesson 16: Factors of Industrial Location
+
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 3 (usa_textile.jpg) : “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
+- Activity 4 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+- Activity 5 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+
+## USA Lesson 17: Government Policy and Industrial Location
+
+- Activity 1 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 3 (usa_newtown.jpg) : “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
+- Activity 4 (usa_smelter.jpg) : “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
+- Activity 5 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+
+## USA Lesson 18: The Changing Nature of Industrial Location
+
+- Activity 2 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+- Activity 3 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 5 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+
+## USA Lesson 19: Industrial Agglomerations
+
+- Activity 1 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 3 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+- Activity 4 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Activity 5 (usa_textile.jpg) : “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
+
+## USA Practical Work 2: Measuring Industrial Agglomeration: The Location Quotient
+
+- Activity 3 (usa_textile.jpg) : “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
+- Activity 5 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+
+## USA Lesson 20: Functional Linkages
+
+- Activity 2 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+- Activity 3 (usa_brewery.jpg) : “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+
+## USA Lesson 21: Industrial Inertia
+
+- Activity 1 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+- Activity 3 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+- Activity 5 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+
+## USA Lesson 22: New Trends in Manufacturing
+
+- Activity 1 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (usa_textile.jpg) : “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
+- Activity 5 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+
+## USA Lesson 23: Weber's Least-Cost Model
+
+- Activity 1 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+
+## USA Practical Work 3: Material Index, Location Triangles and Isodapanes
+
+- Activity 4 (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+
+## USA Lesson 24: Other Theories of Industrial Location: Lösch and Smith
+
+- Activity 4 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+
+## USA Lesson 25: Sub-optimal Industrial Location
+
+- Activity 2 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+- Activity 3 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+- Activity 4 (usa_newtown.jpg) : “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
+- Activity 5 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+
+## USA Lesson 26: Impacts of Manufacturing on the Environment
+
+- Activity 2 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+- Activity 3 (lsa_wouri.jpg) : “Fishing on the Wouri River” by Karlplatz, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/36973264@N00/3158348)
+- Activity 4 (usa_openpit.jpg) : “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
+- Activity 5 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+
+## USA Further Study 5: Industrial Development and Change in Cameroon
+
+- Activity 1 (usa_brewery.jpg) : “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
+- Activity 3 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (usa_smelter.jpg) : “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
+
+## USA Lesson 27: Transport
+
+- Activity 1 (usa_truck.jpg) : “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
+- Activity 2 (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+- Activity 3 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (usa_airport.jpg) : “Airplane” by jeffk, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44124372247@N01/59597563)
+
+## USA Practical Work 4: Calculating and Illustrating Transport Costs
+
+- Activity 5 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+
+## USA Lesson 28: Transport Networks
+
+- Activity 3 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 4 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+
+## USA Lesson 29: Transport Network Efficiency
+
+- Activity 3 (usa_truck.jpg) : “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+
+## USA Lesson 30: The Taaffe, Morrill and Gould Model
+
+- Activity 2 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 5 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+
+## USA Further Study 6: Transport Development in Cameroon
+
+- Activity 2 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 3 (usa_airport.jpg) : “Airplane” by jeffk, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44124372247@N01/59597563)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+
+## USA Lesson 31: Tourism
+
+- Activity 1 (usa_beach.jpg) : “Crowded Sunny Beach, Bulgaria” by phototouring, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/19054742@N00/1557605901)
+- Activity 3 (usa_safari.jpg) : “African Bush Elephant, Amboseli National Park, Kenya” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/37211779966)
+
+## USA Further Study 7: Tourism Development in Cameroon
+
+- Activity 2 (usa_limbe.jpg) : “Sunset in Limbe” by visulogik, CC BY 2.0, via Flickr (https://www.flickr.com/photos/55671677@N00/2202334428)
+- Activity 3 (usa_hotel.jpg) : “Laguna Pool” by Prayitno / Thank you for (12 millions +) view, CC BY 2.0, via Flickr (https://www.flickr.com/photos/34128007@N04/14216582552)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)

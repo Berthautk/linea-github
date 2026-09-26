@@ -20,6 +20,7 @@ Même format allégé, avec deux différences : chaque leçon dure **2 périodes
 | `lecons/LSA/Geomorphology/` | Module 2 (géomorphologie) | L1 à L16, FS1 (premières théories), FS2 (expansion des fonds océaniques), FS3 (relief du Cameroun) — 19 fichiers |
 | `lecons/LSA/Biogeography/` | Module 3 (sols, végétation, écosystèmes) | L1 à L28, FS1 (sols du Cameroun), FS2 (végétation du Cameroun), FS3 (services des écosystèmes), PW1 (texture du sol), PW2 (productivité) — 33 fichiers |
 | `lecons/USA/Population Geography/` | Upper Sixth, module 4 (géographie de la population) | L1 à L18, PW1 à PW4 (cartes de densité, altitude, pyramides, indices démographiques), FS1 (population du Cameroun) — 23 fichiers |
+| `lecons/USA/Settlement Geography/` | Upper Sixth, module 5 (géographie de l'habitat) | L1 à L22, PW1 (indice du plus proche voisin), PW2 (zones d'influence, loi de Reilly), FS1 (urbanisation au Cameroun) — 25 fichiers |
 
 Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node v2_lsa_geo.js` (runner `sixth.js`, schémas `sources/maps/big_lsa_geo.py`).
 

@@ -1,0 +1,25 @@
+s_village::village huts Cameroon
+s_musgum::Musgum mud houses Cameroon
+s_compound::Bamileke compound Cameroon
+s_nomad::nomad tent Sahara
+s_stilt::stilt houses water village
+s_linear::village along road aerial Africa
+s_farmstead::isolated farmstead fields aerial
+s_hilltop::hilltop town Italy medieval
+s_bridge::town bridge over river medieval
+s_suburb::suburban houses aerial
+s_cbd::central business district skyscrapers
+s_slum::slum informal settlement Africa
+s_traffic::traffic jam African city
+s_tokyo::Tokyo aerial city
+s_haussmann::Paris boulevard aerial
+s_docklands::London Docklands regeneration
+s_newtown::Milton Keynes new town
+s_hypermarket::hypermarket shopping centre
+s_bamenda::Bamenda city
+s_garoua::Garoua Cameroon
+s_kribi::Kribi Cameroon
+s_oasis::oasis town Sahara
+s_greenbelt::green belt countryside edge of city
+s_ringroad::ring road motorway city aerial
+s_market::rural market Africa

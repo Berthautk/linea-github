@@ -1048,3 +1048,157 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## USA Further Study 1: Population Change in Cameroon
 
 - Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+
+# Upper Sixth Arts — Settlement Geography
+
+## USA Lesson 1: Settlement: Meaning, Evolution and Early Location
+
+- Activity 1 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 2 (usa_nomad.jpg) : “A roadside stop for souvenirs & exploring dry wells, Northern Sahara, ” by ali eminov, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27435717@N00/3437516165)
+- Activity 5 (usa_stilt.jpg) : “Village on the water Brunei.” by Bernard Spragg, CC0 1.0, via Flickr (https://www.flickr.com/photos/88123769@N02/15383937049)
+
+## USA Lesson 2: Site and Situation of Settlements
+
+- Activity 3 (usa_monteriggioni.jpg) : “Piazza Roma, Monteriggioni, Tuscany” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/27053980373)
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (usa_bamenda.jpg) : “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+
+## USA Lesson 3: Rural Settlement: Meaning, Types and Size
+
+- Activity 1 (lsa_cmrfarm.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
+- Activity 3 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+- Activity 4 (f2t_desert_well.jpg) : “Well in the desert” by Focx Photography, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/30780900@N02/4117141154)
+- Activity 5 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+
+## USA Lesson 4: Settlement Morphology: Forms and Shapes
+
+- Activity 1 (usa_nomad.jpg) : “A roadside stop for souvenirs & exploring dry wells, Northern Sahara, ” by ali eminov, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27435717@N00/3437516165)
+- Activity 3 (usa_monteriggioni.jpg) : “Piazza Roma, Monteriggioni, Tuscany” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/27053980373)
+- Activity 4 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+- Activity 5 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+
+## USA Lesson 5: Settlement Distribution and Pattern
+
+- Activity 2 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+- Activity 3 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 4 (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+- Activity 5 (lsa_cmrfarm.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
+
+## USA Lesson 6: Rural Settlements and the Physical Environment
+
+- Activity 1 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 2 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+- Activity 3 (usa_nomad.jpg) : “A roadside stop for souvenirs & exploring dry wells, Northern Sahara, ” by ali eminov, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27435717@N00/3437516165)
+- Activity 4 (usa_stilt.jpg) : “Village on the water Brunei.” by Bernard Spragg, CC0 1.0, via Flickr (https://www.flickr.com/photos/88123769@N02/15383937049)
+- Activity 5 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+
+## USA Lesson 7: Changes in Rural Settlements
+
+- Activity 1 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 2 (f2t_construction.jpg) : “Cementing Ethiopia's progress” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/8757865770)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (f4_borehole.jpg) : “i'll fight you for it...” by the apostrophe, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/66441426@N00/4019192363)
+
+## USA Lesson 8: The Urban Fringe
+
+- Activity 2 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (f2t_construction.jpg) : “Cementing Ethiopia's progress” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/8757865770)
+
+## USA Lesson 9: Differences between Rural and Urban Settlements
+
+- Activity 2 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 3 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 4 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 5 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+
+## USA Lesson 10: The Urban Settlement: Meaning, Types and Origin
+
+- Activity 1 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 2 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 3 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+- Activity 4 (usa_monteriggioni.jpg) : “Piazza Roma, Monteriggioni, Tuscany” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/27053980373)
+
+## USA Lesson 11: Urbanisation
+
+- Activity 2 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+- Activity 3 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 4 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 5 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+
+## USA Lesson 12: Current Trends in Urbanisation
+
+- Activity 2 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+- Activity 3 (f2t_mixed_farm.jpg) : “Timid” by tricky (rick harrison), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/81851211@N00/205287304)
+- Activity 4 (usa_docklands.jpg) : “Old & new: University Greenwich, The Queen's House & London Docklands” by Bert Kaufmann, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/22746515@N02/26742366958)
+
+## USA Lesson 13: Urban Regions: Millionaire Cities, Conurbations and Megalopolis
+
+- Activity 3 (usa_tokyo.jpg) : “Tokyo from the Air” by Trey Ratcliff, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/95572727@N00/4140101118)
+- Activity 4 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 5 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+
+## USA Lesson 14: Urban Fields (Spheres of Influence)
+
+- Activity 3 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 4 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+
+## USA Practical Work 2: Delimiting Urban Fields
+
+- Activity 2 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 5 (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+
+## USA Lesson 15: Urban Hierarchy and Central Place Theory
+
+- Activity 4 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+
+## USA Lesson 16: Settlement Size and Functional Relationship
+
+- Activity 3 (usa_stilt.jpg) : “Village on the water Brunei.” by Bernard Spragg, CC0 1.0, via Flickr (https://www.flickr.com/photos/88123769@N02/15383937049)
+- Activity 4 (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+
+## USA Lesson 17: The Rank-Size Rule
+
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+
+## USA Lesson 18: Structure of the City in MEDCs
+
+- Activity 2 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 4 (usa_tokyo.jpg) : “Tokyo from the Air” by Trey Ratcliff, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/95572727@N00/4140101118)
+- Activity 5 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+
+## USA Lesson 19: Bid Rent and Functional Segregation
+
+- Activity 2 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 3 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 4 (usa_bamenda.jpg) : “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+
+## USA Lesson 20: Settlement Planning
+
+- Activity 1 (usa_newtown.jpg) : “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
+- Activity 3 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 4 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Activity 5 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+
+## USA Lesson 21: Solving Inner City Decay
+
+- Activity 1 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 2 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+- Activity 4 (usa_docklands.jpg) : “Old & new: University Greenwich, The Queen's House & London Docklands” by Bert Kaufmann, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/22746515@N02/26742366958)
+- Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+
+## USA Lesson 22: Controlling Town Spread
+
+- Activity 1 (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+- Activity 3 (usa_newtown.jpg) : “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
+- Activity 4 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 5 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+
+## USA Further Study 1: Urbanisation in Cameroon
+
+- Activity 3 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)

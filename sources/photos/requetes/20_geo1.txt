@@ -1,0 +1,29 @@
+galaxy::Hubble deep field galaxies
+stromatolite::stromatolites Shark Bay
+trilobite::trilobite fossil
+dinosaur::dinosaur skeleton museum
+pillow::pillow lava underwater
+surtsey::Surtsey island volcano
+shield::Mauna Loa shield volcano
+escarpment::fault escarpment cliff rift
+himalaya::Himalaya mountains range
+folds::folded rock strata anticline
+sthelens::Mount St Helens eruption
+fuji::Mount Fuji
+basalt::columnar basalt
+pahoehoe::pahoehoe lava flow
+volcmonitor::volcano monitoring scientists instruments
+tsunami::tsunami damage
+scree::scree slope mountain
+bauxite::bauxite mine
+gravel::gravel quarry sand
+weathered::weathered stone statue
+landscar::landslide scar hillside
+creep::soil creep leaning fence trees
+slump::slump landslide rotational
+lahar::lahar mudflow volcano
+solifluction::solifluction lobes
+adamawa2::Ngaoundere landscape plateau
+mandara::Mandara mountains Cameroon
+mangrove::mangroves Cameroon Douala
+chadplain::Lake Chad plain landscape

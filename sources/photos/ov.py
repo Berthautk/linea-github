@@ -1,5 +1,5 @@
 """Openverse search + download (Flickr and other CC sources; Wikimedia skipped because it is throttled here).
-  ov.py NAME "key::query" ...        -> cand/NAME.json, cache/<key>_<i>.jpg, sheet_NAME.png
+  ov.py NAME "key::query" ...        -> cand/NAME.json, cache/u_<md5(url)>.jpg, sheet_NAME.png
   ov.py p NAME key#i:out.jpg ...     -> copy to img/v2 and record the credit in credits.json
 """
 import sys, time, json, os, io, urllib.request, urllib.parse, shutil
@@ -37,6 +37,18 @@ def search(q, n=3):
     return res
 
 
+def cpath(r):
+    import hashlib
+    return D + 'cache/u_' + hashlib.md5(r['url'].encode()).hexdigest()[:16] + '.jpg'
+
+
+def fetch(r):
+    f = cpath(r)
+    if not os.path.exists(f):
+        im = Image.open(io.BytesIO(get(r['url']))).convert('RGB'); im.thumbnail((1600, 1600)); im.save(f, quality=88)
+    return f
+
+
 def credit(r):
     src = {'flickr': 'Flickr'}.get(r['src'], r['src'])
     return f"“{r['title'][:70]}” by {r['creator']}, {r['lic']}, via {src} ({r['page']})"
@@ -45,8 +57,8 @@ def credit(r):
 def sheet(name, keys, C):
     font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 20); tiles = []
     for key in keys:
-        for i in range(len(C.get(key, []))):
-            f = D + f'cache/{key}_{i}.jpg'
+        for i, r in enumerate(C.get(key, [])):
+            f = cpath(r)
             if not os.path.exists(f): continue
             im = Image.open(f); im.thumbnail((360, 240)); t = Image.new('RGB', (360, 268), 'white'); t.paste(im, (0, 0))
             ImageDraw.Draw(t).text((3, 243), f'{key}#{i}', fill='red', font=font); tiles.append(t)
@@ -61,7 +73,7 @@ if __name__ == '__main__':
         c = json.load(open(CRED)) if os.path.exists(CRED) else {}
         for a in sys.argv[3:]:
             k, o = a.split(':'); key, i = k.split('#'); r = C[key][int(i)]
-            shutil.copy(D + f'cache/{key}_{i}.jpg', OUT + o); c[o] = credit(r); print(o, '<-', c[o][:110])
+            shutil.copy(fetch(r), OUT + o); c[o] = credit(r); print(o, '<-', c[o][:110])
         json.dump(c, open(CRED, 'w'), indent=1, ensure_ascii=False); sys.exit()
     name = sys.argv[1]; args = sys.argv[2:]
     os.makedirs(D + 'cand', exist_ok=True); os.makedirs(D + 'cache', exist_ok=True)
@@ -74,10 +86,7 @@ if __name__ == '__main__':
             except Exception as e: print('search fail', key, e, flush=True); C[key] = []
             json.dump(C, open(path, 'w'), indent=1); time.sleep(3.5)
         for i, r in enumerate(C[key]):
-            f = D + f'cache/{key}_{i}.jpg'
-            if os.path.exists(f): continue
-            try:
-                im = Image.open(io.BytesIO(get(r['url']))).convert('RGB'); im.thumbnail((1600, 1600)); im.save(f, quality=88)
+            try: fetch(r)
             except Exception as e: print('dl fail', key, i, e, flush=True)
         print('done', key, len(C[key]), flush=True)
     sheet(name, keys, C)

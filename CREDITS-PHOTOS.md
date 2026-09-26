@@ -379,3 +379,118 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 1 (f4_borehole.jpg) : “i'll fight you for it...” by the apostrophe, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/66441426@N00/4019192363)
 - Activity 2 (f4_leakingtap.jpg) : “Drip” by jronaldlee, CC BY 2.0, via Flickr (https://www.flickr.com/photos/37176760@N06/5996590138)
 
+
+# Lower Sixth Arts — Geomorphology
+
+## LSA Lesson 1: Origin of the Earth
+
+- Activity 1 (lsa_galaxy.jpg) : “Hubble Spies Charming Spiral Galaxy Bursting with Stars” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/15766783527)
+- Activity 3 (lsa_stromatolite.jpg) : “Western Australia, Stromatolites Sharks Bay” by VladPix, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/62825712@N07/8766549873)
+- Activity 4 (lsa_trilobite.jpg) : “Trilobite Fossil at NMNH” by Mr.TinDC, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/7471115@N08/2948579998)
+- Activity 5 (lsa_dinosaur.jpg) : “dinosaur” by ianturton, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/16041363@N00/9555513)
+
+## LSA Lesson 2: Internal Structure of the Earth
+
+- Activity 4 (f4_eruption.jpg) : “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
+- Activity 5 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+
+## LSA Further Study 1: Early Theories of Crustal Movements
+
+- Activity 3 (f4_fossil.jpg) : “Marble Skin Fish Fossil” by Bold Frontiers, CC BY 2.0, via Flickr (https://www.flickr.com/photos/82955120@N05/14091612527)
+- Activity 4 (lsa_striation.jpg) : “geoscience crowd sourcing” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/37633979015)
+
+## LSA Further Study 2: Theory of Sea-Floor Spreading
+
+- Activity 2 (lsa_pillow.jpg) : “expl1536” by NOAA Photo Library, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51647007@N08/9664185645)
+- Activity 3 (lsa_surtsey.jpg) : “Iceland's Vestmannaeyjar the town that held back an erupting lava flow” by moonjazz, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/8398907@N02/21228033348)
+- Activity 5 (f4_thingvellir.jpg) : “Silfra Fissure” by Daveography.ca, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/71482738@N00/32857247053)
+
+## LSA Lesson 3: Theory of Plate Tectonics
+
+- Activity 4 (f4_sanandreas.jpg) : “faultfind_48” by dsearls, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/52614599@N00/15392616)
+- Activity 5 (f2t_kilimanjaro.jpg) : “Kilimanjaro” by ian 1602, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98181641@N00/2179855841)
+
+## LSA Lesson 4: Landforms at Constructive or Divergent Margins
+
+- Activity 2 (f2t_rift_valley.jpg) : “Great Rift Valley” by GSAPP_SIDL, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77974798@N04/7341392488)
+- Activity 3 (lsa_escarpment.jpg) : “1959 Hebgen Lake Earthquake fault scarp (Cabin Creek, Gallatin County,” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/45610123392)
+- Activity 4 (lsa_shield.jpg) : “Fire and Stars” by howardignatius, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/25659032@N07/39966052052)
+- Activity 5 (f4_thingvellir.jpg) : “Silfra Fissure” by Daveography.ca, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/71482738@N00/32857247053)
+
+## LSA Lesson 5: Landforms at Destructive and Conservative Margins
+
+- Activity 3 (lsa_himalaya.jpg) : “View of the Himalaya Mountain Range” by NASA Johnson, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/29988733@N04/10678470543)
+- Activity 5 (lsa_sthelens.jpg) : “Mount St. Helens: Eruption, May 18, 1980, from East. Photo: DNR” by Washington State Department of Natural Resources, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35433815@N08/4607166057)
+
+## LSA Lesson 6: Volcanism
+
+- Activity 1 (lsa_pahoehoe.jpg) : “Pahoehoe Lava Flow” by graysky., CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/20021588@N00/540223861)
+- Activity 3 (lsa_mayon.jpg) : “Mayon Volcano, Albay, Luzon, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/20591774278)
+- Activity 4 (f4_crater.jpg) : “Taal Lake and Volcano, Tagaytay, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/28260012661)
+- Activity 5 (lsa_basalt.jpg) : “Snapshot, Daguoye Columnar Basalt, Penghu, Taiwan, 隨拍, 池東大菓葉玄武岩, 大菓葉柱狀” by bryan..., CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/91049143@N00/52316527525)
+
+## LSA Lesson 7: Volcanoes and Man
+
+- Activity 1 (f2t_mount_cameroon.jpg) : “20131110-DSC_4372” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11288779044)
+- Activity 2 (f4_geothermal.jpg) : “Global Geothermal Alliance Stakeholder Meeting and Site Tour, 15-16 Ju” by International Renewable Energy Agency (IRENA), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/127932406@N06/18856399410)
+- Activity 3 (f4_lavahouse.jpg) : “Lava flow over road” by J. N. Stuart, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/21786539@N03/3387263273)
+- Activity 4 (f4_nyos.jpg) : “Lake Nyos, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11584073056)
+- Activity 5 (lsa_volcmonitor.jpg) : “Hawaiian Volcano Observatory, Hawaiʻi Volcanoes National Park, Hawaii” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/4528702285)
+
+## LSA Lesson 8: Earthquakes and Man
+
+- Activity 2 (f4_seismograph.jpg) : “Recording drum from Golitsyn seismograph” by Galitzin, Boris; Masing, Hugo, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co8647018/recording-drum-from-golitsyn-seismograph)
+- Activity 4 (f4_quakedamage.jpg) : “Collapsed buildings in earthquake-hit Chautara, Nepal” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/16693413433)
+- Activity 5 (lsa_tsunami.jpg) : “Tsunami damage” by robertodevido, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/63082042@N00/5531541425)
+
+## LSA Lesson 9: Denudation and Weathering
+
+- Activity 4 (f4_rust.jpg) : “Lock down!” by ViNo Gv, CC BY 2.0, via Flickr (https://www.flickr.com/photos/38217093@N03/20143584561)
+- Activity 5 (f4_roots.jpg) : “Stones 'n' Roots” by erix!, CC BY 2.0, via Flickr (https://www.flickr.com/photos/68387408@N00/55692423)
+
+## LSA Lesson 10: Intensity and Factors of Weathering
+
+- Activity 2 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 3 (f4_karst.jpg) : “Songam Cave” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/5063216873)
+- Activity 4 (lsa_scree.jpg) : “Full Screen Plate Tectonics” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/3109980958)
+- Activity 5 (f4_marble.jpg) : “Marble quarry, Carrara” by Russell Carman, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/11328254@N02/2095886412)
+
+## LSA Lesson 11: The Impact of Weathering
+
+- Activity 2 (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+- Activity 3 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+- Activity 4 (f4_landslide.jpg) : “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
+- Activity 5 (lsa_weathered.jpg) : “Moisturise Daily (Statue at Palladio's Teatro Olimpico), Vicenza” by flatworldsedge, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/53196512@N07/5624073650)
+
+## LSA Lesson 12: Mass Wasting (Movement)
+
+- Activity 1 (lsa_landscar.jpg) : “Hillsides scarred by landslides caused by cloudbursts, Rudraprayag, Ut” by ICIMOD.Gallery, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/127267759@N06/16051008426)
+- Activity 3 (f4_landslide.jpg) : “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
+- Activity 4 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## LSA Lesson 13: Processes and Features of Mass Wasting
+
+- Activity 2 (lsa_solifluction.jpg) : “Opal Hills” by Dru!, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/36543076@N00/17159561341)
+- Activity 3 (lsa_slump.jpg) : “Holderness landslides 026” by Madingley, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/26004680@N00/256596582)
+- Activity 4 (lsa_lahar.jpg) : “Lahar (mudflow) remnants from Mount Ruapehu” by Wade Tregaskis, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7725552@N06/502073245)
+- Activity 5 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## LSA Lesson 14: Erosional Processes and the Fluvial System
+
+- Activity 4 (f4_muddyriver.jpg) : “Parana River Floodplain, Northern Argentina (NASA, International Space” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/5684050889)
+
+## LSA Lesson 15: River Action on its Long Profile
+
+- Activity 2 (f4_waterfall.jpg) : “Ekom-Nkam waterfall” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11291226526)
+- Activity 5 (f4_delta.jpg) : “Egypt” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/5635018418)
+
+## LSA Lesson 16: Coastal Processes and Features
+
+- Activity 5 (f4_spit.jpg) : “Coastal defences no longer being maintained - Why? Spurn Head, Yorkshi” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/6605676971)
+
+## LSA Further Study 3: Relief of Cameroon
+
+- Activity 2 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Activity 3 (lsa_adamawa.jpg) : “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
+- Activity 4 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+- Activity 5 (lsa_mangrove.jpg) : “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)

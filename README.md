@@ -9,6 +9,16 @@
 
 Chaque fichier se termine par `_v2.pptx`, comme le pilote.
 
+## Second cycle : Lower Sixth Arts (LSA) et Upper Sixth Arts (USA)
+
+Même format allégé, avec deux différences : chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé au tableau compte **2 phrases, 3 au maximum**, au lieu d'une seule. Le contenu suit le **programme national 2019 (MINESEC)**, comparé aux leçons du Drive. Les leçons sont classées par branche :
+
+| Dossier | Contenu | Leçons |
+|---|---|---|
+| `lecons/LSA/Geomorphology/` | Module 2 (géomorphologie) | L1 à L16, FS1 (premières théories), FS2 (expansion des fonds océaniques), FS3 (relief du Cameroun) — 19 fichiers |
+
+Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node v2_lsa_geo.js` (runner `sixth.js`, schémas `sources/maps/big_lsa_geo.py`).
+
 ## Ce que contient chaque leçon
 
 - Page de garde, informations, objectifs, rappel, situation de vie (un seul paragraphe court) et 3 questions.

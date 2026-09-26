@@ -1,0 +1,13 @@
+striation::glacial striations rock
+surtsey::Heimaey volcano Iceland
+escarpment::fault scarp
+fuji::Mount Fuji
+mayon::Mayon volcano
+lahar::lahar mudflow
+gravel::gravel quarry
+mangrove::mangrove forest
+adamawa::Ngaoundere
+folds::anticline
+volcmonitor::volcano observatory
+maunaloa::Mauna Loa shield volcano
+solif::solifluction lobes tundra

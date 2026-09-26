@@ -617,3 +617,101 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 2 (lsa_radiosonde.jpg) : “wea01144” by NOAA Photo Library, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51647007@N08/5083800180)
 - Activity 3 (lsa_radar.jpg) : “ILX - Central Illinois Doppler Radar - NOAA” by HAM guy, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10728157@N00/363045232)
 - Activity 4 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+
+# Lower Sixth Arts — Hydrology
+
+## LSA Lesson 22: Introduction to Hydrology
+
+- Activity 1 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+- Activity 3 (lsa_icecap.jpg) : “The Art of Retreat” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/7048837663)
+- Activity 4 (f4_borehole.jpg) : “i'll fight you for it...” by the apostrophe, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/66441426@N00/4019192363)
+- Activity 5 (f2t_pivot.jpg) : “Mid-West Agriculture” by Djof, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/10787942@N00/147222315)
+
+## LSA Lesson 23: The Hydrological Cycle
+
+- Activity 2 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+- Activity 4 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
+- Activity 5 (lsa_lake.jpg) : “Lake Kamburu” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644146245)
+
+## LSA Lesson 24: The Drainage Basin as an Open System
+
+- Activity 2 (lsa_headwater.jpg) : “Cherry Run (Headwaters) (3)” by Nicholas_T, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14922165@N00/8690621015)
+- Activity 5 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+
+## LSA Lesson 25: How Human Activities Affect the Hydrological Cycle
+
+- Activity 2 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+- Activity 3 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 4 (lsa_dam.jpg) : “Fontana Dam Spillway” by Frank Kehren, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77759596@N00/9256852611)
+- Activity 5 (lsa_lakechad_maps.jpg) : “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
+
+## LSA Lesson 26: Evapotranspiration
+
+- Activity 2 (f4_laundry.jpg) : “Bright Blue Home” by Clav, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/37005711@N00/2797194021)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+- Activity 5 (f4_stevenson.jpg) : “Adelaide. Urrbrae. The weather station at the Waite campus of the Univ” by denisbin, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/82134796@N03/49865994827)
+
+## LSA Lesson 27: Precipitation as the Input of the Drainage Basin
+
+- Activity 1 (f4_heavyrain.jpg) : “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
+- Activity 2 (f4_raingauge.jpg) : “Sarasota - Rain Gauge (in 23rd Year)” by roger4336, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/24736216@N07/8370429863)
+
+## LSA Lesson 28: Interception as a Store
+
+- Activity 2 (lsa_leafdrops.jpg) : “Water drops” by Photoctor, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/57227563@N00/2963134371)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (f2t_cotton_field.jpg) : “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
+- Activity 5 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+
+## LSA Lesson 29: Infiltration and Overland Flow
+
+- Activity 3 (lsa_puddle.jpg) : “Powerline Road after the rain.” by Jill Bazeley, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/13111532@N07/29857035555)
+- Activity 4 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 5 (f4_zai.jpg) : “Women sowing okra in zai holes” by abossuet, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30450178@N07/7175750825)
+
+## LSA Lesson 30: Soil Moisture Storage
+
+- Activity 3 (f2t_cracked_soil.jpg) : “Cracked Earth” by Aleatoric Consonance, CC BY 2.0, via Flickr (https://www.flickr.com/photos/93921318@N00/3772011444)
+- Activity 4 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+- Activity 5 (f2t_cotton_field.jpg) : “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
+
+## LSA Lesson 31: The Soil Moisture Budget
+
+- Activity 2 (f4_rainyseason.jpg) : “Farmer” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35708569412)
+- Activity 3 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Activity 4 (f2t_cotton_field.jpg) : “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
+- Activity 5 (f2t_pivot.jpg) : “Mid-West Agriculture” by Djof, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/10787942@N00/147222315)
+
+## LSA Lesson 32: Runoff
+
+- Activity 1 (f4_muddyriver.jpg) : “Parana River Floodplain, Northern Argentina (NASA, International Space” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/5684050889)
+- Activity 3 (lsa_gauge.jpg) : “Embudo Stream Gaging Station (Rio Arriba County, New Mexico)” by cmh2315fl, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/21953562@N07/32142798192)
+- Activity 4 (f4_flood.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
+- Activity 5 (lsa_wouri.jpg) : “Fishing on the Wouri River” by Karlplatz, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/36973264@N00/3158348)
+
+## LSA Lesson 33: Storm Hydrographs
+
+- Activity 5 (f4_floodvillage.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
+
+## LSA Lesson 34: River Regimes
+
+- Activity 2 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+- Activity 3 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+- Activity 4 (f2t_nile.jpg) : “Egypt-5B-023 - Approaching Aswan” by archer10 (Dennis), CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/22490717@N02/2217394088)
+- Activity 5 (lsa_dam.jpg) : “Fontana Dam Spillway” by Frank Kehren, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77759596@N00/9256852611)
+
+## LSA Further Study 4: The Drainage of Cameroon
+
+- Activity 3 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+- Activity 4 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+- Activity 5 (lsa_lakechad_maps.jpg) : “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
+
+## LSA Practical Work 1: Plotting and Analysing Storm Hydrographs and River Regimes
+
+- Activity 3 (lsa_gauge.jpg) : “Embudo Stream Gaging Station (Rio Arriba County, New Mexico)” by cmh2315fl, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/21953562@N07/32142798192)
+- Activity 5 (lsa_dam.jpg) : “Fontana Dam Spillway” by Frank Kehren, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77759596@N00/9256852611)
+
+## LSA Practical Work 2: Drainage Basin Morphometry
+
+- Activity 4 (lsa_wouri_sat.jpg) : “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)

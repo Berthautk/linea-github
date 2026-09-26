@@ -1,0 +1,16 @@
+h_glacier::glacier ice cap
+h_pan::evaporation pan weather station
+h_canopy::rain falling on leaves forest
+h_streetflood::flooded street city Africa
+h_wilting::wilted plant drought
+h_puddle::puddles on dirt road
+h_gauge::river stream gauge measurement
+h_dam::hydroelectric dam spillway
+h_sanaga::Sanaga river Cameroon
+h_lobe::Lobe waterfalls Kribi
+h_wouri::Wouri river Douala
+h_logone::Logone river
+h_spring::spring water flowing from rock
+h_leafdrops::water drops on leaf rain
+h_topomap::topographic map rivers contour
+h_stemflow::rain water running down tree trunk

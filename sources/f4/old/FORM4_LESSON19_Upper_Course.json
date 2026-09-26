@@ -1,0 +1,444 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Vertical erosion forms the following landforms:\"]",
+  "sum | \"x\" | \"A. V-Shaped Valley\" | [\"The river cuts down, and the valley sides are worn back, forming a narrow valley with steep sides in a V shape.\"]",
+  "sumImage | \"x\" | \"B. Interlocking Spurs\" | \"The river winds around spurs of hard rock that lock into each other like the teeth of a zip.\" | \"interlocking_spurs.png\"",
+  "sumImage | \"x\" | \"C. Waterfalls and Gorges\" | \"A waterfall forms where the river flows from hard rock onto soft rock. It retreats upstream and leaves a gorge. Examples: Vina and Tello Falls (Adamawa), Kola Gorges (near Guider).\" | \"waterfall.png\"",
+  "sum | \"x\" | \"D. Rapids, Cataracts and Potholes\" | [\"– Rapids: fast, rough water over rocks; large rapids are cataracts.\",\"– Potholes: round holes drilled in the rocky bed by swirling stones.\"]",
+  "sum | \"II. Landforms of the Upper Course (1/5)\" | [\"Vertical erosion forms the following landforms:\"]",
+  "sum | \"II. Landforms of the Upper Course (2/5)\" | \"A. V-Shaped Valley\" | [\"The river cuts down, and the valley sides are worn back, forming a narrow valley with steep sides in a V shape.\"]",
+  "sumImage | \"II. Landforms of the Upper Course (3/5)\" | \"B. Interlocking Spurs\" | \"The river winds around spurs of hard rock that lock into each other like the teeth of a zip.\" | \"interlocking_spurs.png\"",
+  "sumImage | \"II. Landforms of the Upper Course (4/5)\" | \"C. Waterfalls and Gorges\" | \"A waterfall forms where the river flows from hard rock onto soft rock. It retreats upstream and leaves a gorge. Examples: Vina and Tello Falls (Adamawa), Kola Gorges (near Guider).\" | \"waterfall.png\"",
+  "sum | \"II. Landforms of the Upper Course (5/5)\" | \"D. Rapids, Cataracts and Potholes\" | [\"– Rapids: fast, rough water over rocks; large rapids are cataracts.\",\"– Potholes: round holes drilled in the rocky bed by swirling stones.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON19_Upper_Course",
+  "lessonNo": 19,
+  "lessonName": "The Upper Course of a River",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "V-shaped valley, waterfalls, rapids, cataracts, potholes.",
+  "focus": "Main characteristics and processes of the upper course; landforms of the upper course.",
+  "competence": "Learners are able to recognise the landforms of the upper course, such as waterfalls and gorges, and to explain their value and dangers.",
+  "objectives": [
+   "Describe the main characteristics and processes of the upper course.",
+   "Explain the formation of the landforms of the upper course.",
+   "Give examples of these landforms in Cameroon."
+  ],
+  "recall": [
+   "The long profile is steep near the source.",
+   "Vertical erosion is dominant in the upper course.",
+   "Rivers erode by hydraulic action, abrasion, attrition and solution."
+  ],
+  "recallNote": "Check the homework: descriptions of the Vina Falls, Tello Falls or Kola Gorges.",
+  "situation": [
+   "Near Ngaoundéré, on the Adamawa Plateau, the Vina River falls over a cliff of hard rock: the Vina Falls. The water is fast, white and noisy, and the valley sides are steep.",
+   "Bouba compares it with the wide, slow Benue at Garoua. He wonders why rivers in the hills look so different from rivers on the plains."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Bouba does not understand why rivers in the hills are different from rivers on the plains."
+   ],
+   [
+    "Describe the Vina River at the falls.",
+    "The water is fast, white and noisy, and it falls over a cliff of hard rock between steep valley sides."
+   ],
+   [
+    "How can waterfalls help the people of a region?",
+    "They attract tourists, and some of them can be used to produce hydroelectricity."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the young, powerful stage of a river and the landforms it creates.",
+  "parts": [
+   {
+    "sec": "I. CHARACTERISTICS AND PROCESSES",
+    "qa": [
+     {
+      "q": "Give three characteristics of the upper course.",
+      "a": "The gradient is steep, the channel is narrow and shallow, and the water flows fast and turbulently over large, angular rocks."
+     },
+     {
+      "q": "What is the main process in the upper course?",
+      "a": "The main process is vertical erosion: the river cuts down into its bed by hydraulic action and abrasion."
+     }
+    ],
+    "sum": {
+     "title": "I. Main Characteristics and Processes",
+     "intro": "The upper course is the youthful stage of the river, near its source:",
+     "items": [
+      [
+       "A. Characteristics",
+       [
+        "– Steep gradient.",
+        "– Narrow and shallow channel.",
+        "– Fast, turbulent flow with white water.",
+        "– Load of large, angular boulders."
+       ]
+      ],
+      [
+       "B. Processes",
+       [
+        "– Vertical (downward) erosion is dominant.",
+        "– Hydraulic action and abrasion are very active.",
+        "– Large rocks are rolled along the bed during floods."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LANDFORMS",
+    "qa": [
+     {
+      "q": "How is a V-shaped valley formed?",
+      "a": "The river cuts down into its bed. Weathering and rain wear back the valley sides, and the loose material slides into the river. This gives steep sides in a V shape."
+     },
+     {
+      "img": "interlocking_spurs.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "Why does a young river wind between interlocking spurs?",
+      "a": "The young river cannot cut through the hard spurs, so it flows around them. The spurs lock into each other like the teeth of a zip.",
+      "split": 5.4
+     },
+     {
+      "img": "waterfall.png",
+      "kind": "diagram",
+      "title": "Question 3",
+      "q": "Explain how a waterfall is formed.",
+      "a": "The river flows over hard rock onto soft rock. The soft rock is eroded faster, which forms a step. The falling water digs a plunge pool and undercuts the hard rock, which collapses.",
+      "split": 5.4
+     },
+     {
+      "q": "How does a gorge form below a waterfall?",
+      "a": "The waterfall slowly moves back upstream as the hard rock collapses again and again. It leaves a deep, narrow valley with steep sides: a gorge."
+     },
+     {
+      "q": "What are rapids, cataracts and potholes?",
+      "a": "Rapids are parts of a river with fast, rough water over rocks; big rapids are cataracts. Potholes are round holes drilled in the bed by stones turned by the water."
+     }
+    ],
+    "sum": {
+     "title": "II. Landforms of the Upper Course",
+     "intro": "Vertical erosion forms the following landforms:",
+     "items": [
+      [
+       "A. V-Shaped Valley",
+       "The river cuts down, and the valley sides are worn back, forming a narrow valley with steep sides in a V shape."
+      ],
+      [
+       "B. Interlocking Spurs",
+       "The river winds around spurs of hard rock that lock into each other like the teeth of a zip.",
+       "interlocking_spurs.png"
+      ],
+      [
+       "C. Waterfalls and Gorges",
+       "A waterfall forms where the river flows from hard rock onto soft rock. It retreats upstream and leaves a gorge. Examples: Vina and Tello Falls (Adamawa), Kola Gorges (near Guider).",
+       "waterfall.png"
+      ],
+      [
+       "D. Rapids, Cataracts and Potholes",
+       [
+        "– Rapids: fast, rough water over rocks; large rapids are cataracts.",
+        "– Potholes: round holes drilled in the rocky bed by swirling stones."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main process in the upper course?",
+    "Vertical erosion is the main process."
+   ],
+   [
+    "Why does a waterfall retreat upstream?",
+    "The water undercuts the hard rock, which collapses again and again, so the fall moves back."
+   ],
+   [
+    "Give one example of a waterfall in Cameroon.",
+    "The Vina Falls near Ngaoundéré (also the Tello, Ekom-Nkam or Lobé Falls)."
+   ]
+  ],
+  "remediation": [
+   [
+    "The upper course has a ______ gradient.",
+    "The valley of the upper course is ______-shaped.",
+    "The deep hole at the foot of a waterfall is a ______ pool."
+   ],
+   [
+    "A narrow valley left by a retreating waterfall is a ______.",
+    "Round holes in a river bed are ______.",
+    "Large rapids are called ______."
+   ]
+  ],
+  "remediationAnswers": "1. steep 2. V 3. plunge 4. gorge 5. potholes 6. cataracts",
+  "homework": "Stand on the Benue Bridge in Garoua or look at a photo of it. Draw the river and its bends, and mark where the water seems fastest.",
+  "homeworkTag": "This prepares Lesson 20: The Middle Course of a River.",
+  "bilingual": [
+   [
+    "Waterfall",
+    "La chute d'eau / la cascade"
+   ],
+   [
+    "Gorge",
+    "La gorge"
+   ],
+   [
+    "Rapids",
+    "Les rapides"
+   ],
+   [
+    "Pothole",
+    "La marmite de géant"
+   ],
+   [
+    "Spur",
+    "L'éperon"
+   ],
+   [
+    "V-shaped valley",
+    "La vallée en V"
+   ],
+   [
+    "Plunge pool",
+    "La fosse de plongée"
+   ],
+   [
+    "Hard rock",
+    "La roche dure"
+   ]
+  ],
+  "teacherNote": [
+   "Local examples checked: Vina Falls and Tello Falls near Ngaoundéré; Kola Gorges near Guider (North Region); Ekom-Nkam Falls (Littoral/West); Lobé Falls near Kribi fall directly into the sea.",
+   "The syllabus notions include cataracts: large rapids or waterfalls on big rivers (e.g. the cataracts of the Nile)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 19",
+  "title": "The Upper Course of a River",
+  "sumTitle": "The Upper Course of a River",
+  "coverNote": "Good morning, class. Today we study Lesson 19: The Upper Course of a River.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 19: The Upper Course of a River",
+  "matter": "I. Main Characteristics and Processes: Characteristics, Processes; II. Landforms of the Upper Course: V-Shaped Valley, Interlocking Spurs, Waterfalls and Gorges, Rapids, Cataracts and Potholes."
+ },
+ "file": "FORM4_LESSON19_Upper_Course",
+ "sp": {
+  "file": "FORM4_LESSON19_Upper_Course",
+  "lessonNo": 19,
+  "lessonName": "The Upper Course of a River",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "V-shaped valley, waterfalls, rapids, cataracts, potholes.",
+  "focus": "Main characteristics and processes of the upper course; landforms of the upper course.",
+  "competence": "Learners are able to recognise the landforms of the upper course, such as waterfalls and gorges, and to explain their value and dangers.",
+  "objectives": [
+   "Describe the main characteristics and processes of the upper course.",
+   "Explain the formation of the landforms of the upper course.",
+   "Give examples of these landforms in Cameroon."
+  ],
+  "recall": [
+   "The long profile is steep near the source.",
+   "Vertical erosion is dominant in the upper course.",
+   "Rivers erode by hydraulic action, abrasion, attrition and solution."
+  ],
+  "recallNote": "Check the homework: descriptions of the Vina Falls, Tello Falls or Kola Gorges.",
+  "situation": [
+   "Near Ngaoundéré, on the Adamawa Plateau, the Vina River falls over a cliff of hard rock: the Vina Falls. The water is fast, white and noisy, and the valley sides are steep.",
+   "Bouba compares it with the wide, slow Benue at Garoua. He wonders why rivers in the hills look so different from rivers on the plains."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Bouba does not understand why rivers in the hills are different from rivers on the plains."
+   ],
+   [
+    "Describe the Vina River at the falls.",
+    "The water is fast, white and noisy, and it falls over a cliff of hard rock between steep valley sides."
+   ],
+   [
+    "How can waterfalls help the people of a region?",
+    "They attract tourists, and some of them can be used to produce hydroelectricity."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the young, powerful stage of a river and the landforms it creates.",
+  "parts": [
+   {
+    "sec": "I. CHARACTERISTICS AND PROCESSES",
+    "qa": [
+     {
+      "q": "Give three characteristics of the upper course.",
+      "a": "The gradient is steep, the channel is narrow and shallow, and the water flows fast and turbulently over large, angular rocks."
+     },
+     {
+      "q": "What is the main process in the upper course?",
+      "a": "The main process is vertical erosion: the river cuts down into its bed by hydraulic action and abrasion."
+     }
+    ],
+    "sum": {
+     "title": "I. Main Characteristics and Processes",
+     "intro": "The upper course is the youthful stage of the river, near its source:",
+     "items": [
+      [
+       "A. Characteristics",
+       [
+        "– Steep gradient.",
+        "– Narrow and shallow channel.",
+        "– Fast, turbulent flow with white water.",
+        "– Load of large, angular boulders."
+       ]
+      ],
+      [
+       "B. Processes",
+       [
+        "– Vertical (downward) erosion is dominant.",
+        "– Hydraulic action and abrasion are very active.",
+        "– Large rocks are rolled along the bed during floods."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LANDFORMS",
+    "qa": [
+     {
+      "q": "How is a V-shaped valley formed?",
+      "a": "The river cuts down into its bed. Weathering and rain wear back the valley sides, and the loose material slides into the river. This gives steep sides in a V shape."
+     },
+     {
+      "img": "interlocking_spurs.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "Why does a young river wind between interlocking spurs?",
+      "a": "The young river cannot cut through the hard spurs, so it flows around them. The spurs lock into each other like the teeth of a zip.",
+      "split": 5.4
+     },
+     {
+      "img": "waterfall.png",
+      "kind": "diagram",
+      "title": "Question 3",
+      "q": "Explain how a waterfall is formed.",
+      "a": "The river flows over hard rock onto soft rock. The soft rock is eroded faster, which forms a step. The falling water digs a plunge pool and undercuts the hard rock, which collapses.",
+      "split": 5.4
+     },
+     {
+      "q": "How does a gorge form below a waterfall?",
+      "a": "The waterfall slowly moves back upstream as the hard rock collapses again and again. It leaves a deep, narrow valley with steep sides: a gorge."
+     },
+     {
+      "q": "What are rapids, cataracts and potholes?",
+      "a": "Rapids are parts of a river with fast, rough water over rocks; big rapids are cataracts. Potholes are round holes drilled in the bed by stones turned by the water."
+     }
+    ],
+    "sum": {
+     "title": "II. Landforms of the Upper Course",
+     "intro": "Vertical erosion forms the following landforms:",
+     "items": [
+      [
+       "A. V-Shaped Valley",
+       "The river cuts down, and the valley sides are worn back, forming a narrow valley with steep sides in a V shape."
+      ],
+      [
+       "B. Interlocking Spurs",
+       "The river winds around spurs of hard rock that lock into each other like the teeth of a zip.",
+       "interlocking_spurs.png"
+      ],
+      [
+       "C. Waterfalls and Gorges",
+       "A waterfall forms where the river flows from hard rock onto soft rock. It retreats upstream and leaves a gorge. Examples: Vina and Tello Falls (Adamawa), Kola Gorges (near Guider).",
+       "waterfall.png"
+      ],
+      [
+       "D. Rapids, Cataracts and Potholes",
+       [
+        "– Rapids: fast, rough water over rocks; large rapids are cataracts.",
+        "– Potholes: round holes drilled in the rocky bed by swirling stones."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main process in the upper course?",
+    "Vertical erosion is the main process."
+   ],
+   [
+    "Why does a waterfall retreat upstream?",
+    "The water undercuts the hard rock, which collapses again and again, so the fall moves back."
+   ],
+   [
+    "Give one example of a waterfall in Cameroon.",
+    "The Vina Falls near Ngaoundéré (also the Tello, Ekom-Nkam or Lobé Falls)."
+   ]
+  ],
+  "remediation": [
+   [
+    "The upper course has a ______ gradient.",
+    "The valley of the upper course is ______-shaped.",
+    "The deep hole at the foot of a waterfall is a ______ pool."
+   ],
+   [
+    "A narrow valley left by a retreating waterfall is a ______.",
+    "Round holes in a river bed are ______.",
+    "Large rapids are called ______."
+   ]
+  ],
+  "remediationAnswers": "1. steep 2. V 3. plunge 4. gorge 5. potholes 6. cataracts",
+  "homework": "Stand on the Benue Bridge in Garoua or look at a photo of it. Draw the river and its bends, and mark where the water seems fastest.",
+  "homeworkTag": "This prepares Lesson 20: The Middle Course of a River.",
+  "bilingual": [
+   [
+    "Waterfall",
+    "La chute d'eau / la cascade"
+   ],
+   [
+    "Gorge",
+    "La gorge"
+   ],
+   [
+    "Rapids",
+    "Les rapides"
+   ],
+   [
+    "Pothole",
+    "La marmite de géant"
+   ],
+   [
+    "Spur",
+    "L'éperon"
+   ],
+   [
+    "V-shaped valley",
+    "La vallée en V"
+   ],
+   [
+    "Plunge pool",
+    "La fosse de plongée"
+   ],
+   [
+    "Hard rock",
+    "La roche dure"
+   ]
+  ],
+  "teacherNote": [
+   "Local examples checked: Vina Falls and Tello Falls near Ngaoundéré; Kola Gorges near Guider (North Region); Ekom-Nkam Falls (Littoral/West); Lobé Falls near Kribi fall directly into the sea.",
+   "The syllabus notions include cataracts: large rapids or waterfalls on big rivers (e.g. the cataracts of the Nile)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

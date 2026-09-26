@@ -1,0 +1,625 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. VEGETATION\" | \"Question 1\" | [\"In Western Europe, trees like the oak and the beech lose their leaves in autumn. Why?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"In winter, it is cold and the ground may freeze, so trees cannot get water. They lose their leaves to save water. They are deciduous trees.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 2\" | [\"Further north, trees like the pine and the spruce keep their needle-shaped leaves in winter. How do their leaves help them?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"Their thin, waxy needles lose little water, and their cone shape lets the snow slide off. They are coniferous trees.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 3\" | [\"The olive tree of the Mediterranean has small, thick, waxy leaves. How does this help it in the hot, dry summer?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"Small, thick, waxy leaves lose very little water. Mediterranean plants also have long roots and thick bark, like the cork oak.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 4\" | [\"In the Prairies and the Steppes, there are almost no trees, only short grass. Why?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"The rainfall is low and the winters are very cold, so trees cannot grow well. Only short grass grows.\"]",
+  "slide | \"II. SOILS\" | \"Question 1\" | [\"Every autumn, the leaves of deciduous trees fall and rot. What does this give to the soil?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"The rotting leaves give a lot of humus to the soil, so it becomes a fertile brown forest soil.\"]",
+  "slide | \"II. SOILS\" | \"Question 2\" | [\"The soils of the Steppes and the Prairies are black and very rich. Why are they called the \\\"granaries of the world\\\"?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"Their black soil, called chernozem, is very rich in humus from grass roots. Farmers grow huge amounts of wheat on it.\"]",
+  "sum | \"I. Vegetation (1/5)\" | [\"The vegetation of the temperate region has the following types:\"]",
+  "sum | \"I. Vegetation (2/5)\" | \"A. Deciduous Forest\" | [\"In the oceanic climate, trees such as the oak, the beech and the ash lose their leaves in autumn to survive the winter.\"]",
+  "sum | \"I. Vegetation (3/5)\" | \"B. Coniferous Forest\" | [\"In the colder parts, trees such as the pine and the spruce keep their needle-shaped leaves all year and have cones.\"]",
+  "sum | \"I. Vegetation (4/5)\" | \"C. Mediterranean Vegetation\" | [\"Olive trees, cork oaks and bushes (maquis) have small, waxy leaves, long roots and thick bark to resist summer drought.\"]",
+  "sum | \"I. Vegetation (5/5)\" | \"D. Temperate Grasslands\" | [\"In the continental interiors, short grasses grow with few trees: the Prairies, the Steppes, the Pampas and the Veld.\"]",
+  "sum | \"II. Soils (1/5)\" | [\"The main soils of the temperate region are the following:\"]",
+  "sum | \"II. Soils (2/5)\" | \"A. Brown Forest Soils\" | [\"Under deciduous forests, soils are brown and rich in humus from fallen leaves. They are fertile.\"]",
+  "sum | \"II. Soils (3/5)\" | \"B. Podzols\" | [\"Under coniferous forests, soils are grey, acidic and poor, because needles rot slowly.\"]",
+  "sum | \"II. Soils (4/5)\" | \"C. Chernozems\" | [\"Under temperate grasslands, soils are black and very rich in humus. They are the best soils for wheat.\"]",
+  "sum | \"II. Soils (5/5)\" | \"D. Mediterranean Red Soils\" | [\"In the Mediterranean region, soils are often red (terra rossa) and thin.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S11_L4_P2_Temperate_Soils_Vegetation",
+  "part": 2,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Deciduous forest, coniferous forest, Mediterranean vegetation, temperate grassland, brown forest soil, podzol, chernozem.",
+  "focus": "Characteristics of the soils and vegetation of the temperate region.",
+  "competence": "Learners are able to recognise pine and eucalyptus trees planted in Cameroon as temperate trees, and explain why temperate grasslands feed the world.",
+  "objectives": [
+   "Describe the vegetation of the three types of temperate region.",
+   "Explain how temperate plants are adapted to their climate.",
+   "Describe the main temperate soils."
+  ],
+  "recall": [
+   "The temperate region lies between 30° and 60° north and south of the Equator.",
+   "It has four seasons: spring, summer, autumn and winter.",
+   "Its three types of climate are oceanic, Mediterranean and continental."
+  ],
+  "recallNote": "Check the homework: the colour of European forests in autumn.",
+  "situation": [
+   "On a trip to Europe, Samuel sees a forest in November. All the trees have yellow and red leaves, and many leaves are falling to the ground. In January, the trees are completely bare.",
+   "In Garoua, many trees also lose their leaves, but in the dry season, not because of cold. Samuel wonders why European trees lose their leaves in winter."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Samuel does not understand why European trees lose their leaves in winter."
+   ],
+   [
+    "When do the trees of Garoua lose their leaves?",
+    "The trees of Garoua lose their leaves in the dry season."
+   ],
+   [
+    "What can Samuel do to find the answer?",
+    "He can ask his geography teacher, read his textbook, or compare the climates of Garoua and Europe."
+   ]
+  ],
+  "justification": "This lesson will help us to know the forests, grasslands and soils of the temperate region.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "q": "In Western Europe, trees like the oak and the beech lose their leaves in autumn. Why?",
+      "a": "In winter, it is cold and the ground may freeze, so trees cannot get water. They lose their leaves to save water. They are deciduous trees."
+     },
+     {
+      "q": "Further north, trees like the pine and the spruce keep their needle-shaped leaves in winter. How do their leaves help them?",
+      "a": "Their thin, waxy needles lose little water, and their cone shape lets the snow slide off. They are coniferous trees."
+     },
+     {
+      "q": "The olive tree of the Mediterranean has small, thick, waxy leaves. How does this help it in the hot, dry summer?",
+      "a": "Small, thick, waxy leaves lose very little water. Mediterranean plants also have long roots and thick bark, like the cork oak."
+     },
+     {
+      "q": "In the Prairies and the Steppes, there are almost no trees, only short grass. Why?",
+      "a": "The rainfall is low and the winters are very cold, so trees cannot grow well. Only short grass grows."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "intro": "The vegetation of the temperate region has the following types:",
+     "items": [
+      [
+       "A. Deciduous Forest",
+       "In the oceanic climate, trees such as the oak, the beech and the ash lose their leaves in autumn to survive the winter."
+      ],
+      [
+       "B. Coniferous Forest",
+       "In the colder parts, trees such as the pine and the spruce keep their needle-shaped leaves all year and have cones."
+      ],
+      [
+       "C. Mediterranean Vegetation",
+       "Olive trees, cork oaks and bushes (maquis) have small, waxy leaves, long roots and thick bark to resist summer drought."
+      ],
+      [
+       "D. Temperate Grasslands",
+       "In the continental interiors, short grasses grow with few trees: the Prairies, the Steppes, the Pampas and the Veld."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "Every autumn, the leaves of deciduous trees fall and rot. What does this give to the soil?",
+      "a": "The rotting leaves give a lot of humus to the soil, so it becomes a fertile brown forest soil."
+     },
+     {
+      "q": "The soils of the Steppes and the Prairies are black and very rich. Why are they called the \"granaries of the world\"?",
+      "a": "Their black soil, called chernozem, is very rich in humus from grass roots. Farmers grow huge amounts of wheat on it."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The main soils of the temperate region are the following:",
+     "items": [
+      [
+       "A. Brown Forest Soils",
+       "Under deciduous forests, soils are brown and rich in humus from fallen leaves. They are fertile."
+      ],
+      [
+       "B. Podzols",
+       "Under coniferous forests, soils are grey, acidic and poor, because needles rot slowly."
+      ],
+      [
+       "C. Chernozems",
+       "Under temperate grasslands, soils are black and very rich in humus. They are the best soils for wheat."
+      ],
+      [
+       "D. Mediterranean Red Soils",
+       "In the Mediterranean region, soils are often red (terra rossa) and thin."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do deciduous trees lose their leaves in autumn?",
+    "They lose their leaves to save water during the cold winter, when the ground may freeze."
+   ],
+   [
+    "Give two adaptations of Mediterranean plants to summer drought.",
+    "They have small, waxy leaves and long roots."
+   ],
+   [
+    "Why are chernozem soils very fertile?",
+    "They are very fertile because they are rich in humus from grass roots."
+   ]
+  ],
+  "remediation": [
+   [
+    "Trees that lose their leaves in autumn are called ______ trees.",
+    "Trees with needles and cones are called ______ trees.",
+    "A typical tree of the Mediterranean region is the ______."
+   ],
+   [
+    "The black, fertile soil of temperate grasslands is called ______.",
+    "The grey, acidic soil of coniferous forests is called ______.",
+    "The temperate grassland of Argentina is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. deciduous 2. coniferous 3. olive 4. chernozem 5. podzol 6. Pampas",
+  "homework": "Find the names of three food products imported into Cameroon from temperate countries (for example wheat flour, milk or apples).",
+  "homeworkTag": "This prepares Part 3: Human Activities (Farming) in the Temperate Region.",
+  "bilingual": [
+   [
+    "Forest",
+    "La forêt"
+   ],
+   [
+    "Deciduous",
+    "À feuilles caduques"
+   ],
+   [
+    "Coniferous",
+    "Conifère"
+   ],
+   [
+    "Pine",
+    "Le pin"
+   ],
+   [
+    "Oak",
+    "Le chêne"
+   ],
+   [
+    "Olive tree",
+    "L'olivier"
+   ],
+   [
+    "Grassland",
+    "La prairie"
+   ],
+   [
+    "Humus",
+    "L'humus"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Pine and eucalyptus plantations exist in the western highlands of Cameroon; pine is a temperate conifer (eucalyptus comes from Australia)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 2)",
+  "title": "The Temperate Region: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 2: Characteristics (Soils and Vegetation).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 2: Characteristics (Soils and Vegetation)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S11_L4_P2_Temperate_Soils_Vegetation",
+  "part": 2,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Deciduous forest, coniferous forest, Mediterranean vegetation, temperate grassland, brown forest soil, podzol, chernozem.",
+  "focus": "Characteristics of the soils and vegetation of the temperate region.",
+  "competence": "Learners are able to recognise pine and eucalyptus trees planted in Cameroon as temperate trees, and explain why temperate grasslands feed the world.",
+  "objectives": [
+   "Describe the vegetation of the three types of temperate region.",
+   "Explain how temperate plants are adapted to their climate.",
+   "Describe the main temperate soils."
+  ],
+  "recall": [
+   "The temperate region lies between 30° and 60° north and south of the Equator.",
+   "It has four seasons: spring, summer, autumn and winter.",
+   "Its three types of climate are oceanic, Mediterranean and continental."
+  ],
+  "recallNote": "Check the homework: the colour of European forests in autumn.",
+  "situation": [
+   "On a trip to Europe, Samuel sees a forest in November. All the trees have yellow and red leaves, and many leaves are falling to the ground. In January, the trees are completely bare.",
+   "In Garoua, many trees also lose their leaves, but in the dry season, not because of cold. Samuel wonders why European trees lose their leaves in winter."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Samuel does not understand why European trees lose their leaves in winter."
+   ],
+   [
+    "When do the trees of Garoua lose their leaves?",
+    "The trees of Garoua lose their leaves in the dry season."
+   ],
+   [
+    "What can Samuel do to find the answer?",
+    "He can ask his geography teacher, read his textbook, or compare the climates of Garoua and Europe."
+   ]
+  ],
+  "justification": "This lesson will help us to know the forests, grasslands and soils of the temperate region.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "q": "In Western Europe, trees like the oak and the beech lose their leaves in autumn. Why?",
+      "a": "In winter, it is cold and the ground may freeze, so trees cannot get water. They lose their leaves to save water. They are deciduous trees."
+     },
+     {
+      "q": "Further north, trees like the pine and the spruce keep their needle-shaped leaves in winter. How do their leaves help them?",
+      "a": "Their thin, waxy needles lose little water, and their cone shape lets the snow slide off. They are coniferous trees."
+     },
+     {
+      "q": "The olive tree of the Mediterranean has small, thick, waxy leaves. How does this help it in the hot, dry summer?",
+      "a": "Small, thick, waxy leaves lose very little water. Mediterranean plants also have long roots and thick bark, like the cork oak."
+     },
+     {
+      "q": "In the Prairies and the Steppes, there are almost no trees, only short grass. Why?",
+      "a": "The rainfall is low and the winters are very cold, so trees cannot grow well. Only short grass grows."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "intro": "The vegetation of the temperate region has the following types:",
+     "items": [
+      [
+       "A. Deciduous Forest",
+       "In the oceanic climate, trees such as the oak, the beech and the ash lose their leaves in autumn to survive the winter."
+      ],
+      [
+       "B. Coniferous Forest",
+       "In the colder parts, trees such as the pine and the spruce keep their needle-shaped leaves all year and have cones."
+      ],
+      [
+       "C. Mediterranean Vegetation",
+       "Olive trees, cork oaks and bushes (maquis) have small, waxy leaves, long roots and thick bark to resist summer drought."
+      ],
+      [
+       "D. Temperate Grasslands",
+       "In the continental interiors, short grasses grow with few trees: the Prairies, the Steppes, the Pampas and the Veld."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "Every autumn, the leaves of deciduous trees fall and rot. What does this give to the soil?",
+      "a": "The rotting leaves give a lot of humus to the soil, so it becomes a fertile brown forest soil."
+     },
+     {
+      "q": "The soils of the Steppes and the Prairies are black and very rich. Why are they called the \"granaries of the world\"?",
+      "a": "Their black soil, called chernozem, is very rich in humus from grass roots. Farmers grow huge amounts of wheat on it."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The main soils of the temperate region are the following:",
+     "items": [
+      [
+       "A. Brown Forest Soils",
+       "Under deciduous forests, soils are brown and rich in humus from fallen leaves. They are fertile."
+      ],
+      [
+       "B. Podzols",
+       "Under coniferous forests, soils are grey, acidic and poor, because needles rot slowly."
+      ],
+      [
+       "C. Chernozems",
+       "Under temperate grasslands, soils are black and very rich in humus. They are the best soils for wheat."
+      ],
+      [
+       "D. Mediterranean Red Soils",
+       "In the Mediterranean region, soils are often red (terra rossa) and thin."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do deciduous trees lose their leaves in autumn?",
+    "They lose their leaves to save water during the cold winter, when the ground may freeze."
+   ],
+   [
+    "Give two adaptations of Mediterranean plants to summer drought.",
+    "They have small, waxy leaves and long roots."
+   ],
+   [
+    "Why are chernozem soils very fertile?",
+    "They are very fertile because they are rich in humus from grass roots."
+   ]
+  ],
+  "remediation": [
+   [
+    "Trees that lose their leaves in autumn are called ______ trees.",
+    "Trees with needles and cones are called ______ trees.",
+    "A typical tree of the Mediterranean region is the ______."
+   ],
+   [
+    "The black, fertile soil of temperate grasslands is called ______.",
+    "The grey, acidic soil of coniferous forests is called ______.",
+    "The temperate grassland of Argentina is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. deciduous 2. coniferous 3. olive 4. chernozem 5. podzol 6. Pampas",
+  "homework": "Find the names of three food products imported into Cameroon from temperate countries (for example wheat flour, milk or apples).",
+  "homeworkTag": "This prepares Part 3: Human Activities (Farming) in the Temperate Region.",
+  "bilingual": [
+   [
+    "Forest",
+    "La forêt"
+   ],
+   [
+    "Deciduous",
+    "À feuilles caduques"
+   ],
+   [
+    "Coniferous",
+    "Conifère"
+   ],
+   [
+    "Pine",
+    "Le pin"
+   ],
+   [
+    "Oak",
+    "Le chêne"
+   ],
+   [
+    "Olive tree",
+    "L'olivier"
+   ],
+   [
+    "Grassland",
+    "La prairie"
+   ],
+   [
+    "Humus",
+    "L'humus"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Pine and eucalyptus plantations exist in the western highlands of Cameroon; pine is a temperate conifer (eucalyptus comes from Australia)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 2)",
+  "title": "The Temperate Region: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 2: Characteristics (Soils and Vegetation).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 2: Characteristics (Soils and Vegetation)",
+  "matter": "I. Vegetation: Deciduous Forest, Coniferous Forest, Mediterranean Vegetation, Temperate Grasslands; II. Soils: Brown Forest Soils, Podzols, Chernozems, Mediterranean Red Soils."
+ },
+ "file": "S11_L4_P2_Temperate_Soils_Vegetation",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S11_L4_P2_Temperate_Soils_Vegetation",
+  "part": 2,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Deciduous forest, coniferous forest, Mediterranean vegetation, temperate grassland, brown forest soil, podzol, chernozem.",
+  "focus": "Characteristics of the soils and vegetation of the temperate region.",
+  "competence": "Learners are able to recognise pine and eucalyptus trees planted in Cameroon as temperate trees, and explain why temperate grasslands feed the world.",
+  "objectives": [
+   "Describe the vegetation of the three types of temperate region.",
+   "Explain how temperate plants are adapted to their climate.",
+   "Describe the main temperate soils."
+  ],
+  "recall": [
+   "The temperate region lies between 30° and 60° north and south of the Equator.",
+   "It has four seasons: spring, summer, autumn and winter.",
+   "Its three types of climate are oceanic, Mediterranean and continental."
+  ],
+  "recallNote": "Check the homework: the colour of European forests in autumn.",
+  "situation": [
+   "On a trip to Europe, Samuel sees a forest in November. All the trees have yellow and red leaves, and many leaves are falling to the ground. In January, the trees are completely bare.",
+   "In Garoua, many trees also lose their leaves, but in the dry season, not because of cold. Samuel wonders why European trees lose their leaves in winter."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Samuel does not understand why European trees lose their leaves in winter."
+   ],
+   [
+    "When do the trees of Garoua lose their leaves?",
+    "The trees of Garoua lose their leaves in the dry season."
+   ],
+   [
+    "What can Samuel do to find the answer?",
+    "He can ask his geography teacher, read his textbook, or compare the climates of Garoua and Europe."
+   ]
+  ],
+  "justification": "This lesson will help us to know the forests, grasslands and soils of the temperate region.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "q": "In Western Europe, trees like the oak and the beech lose their leaves in autumn. Why?",
+      "a": "In winter, it is cold and the ground may freeze, so trees cannot get water. They lose their leaves to save water. They are deciduous trees."
+     },
+     {
+      "q": "Further north, trees like the pine and the spruce keep their needle-shaped leaves in winter. How do their leaves help them?",
+      "a": "Their thin, waxy needles lose little water, and their cone shape lets the snow slide off. They are coniferous trees."
+     },
+     {
+      "q": "The olive tree of the Mediterranean has small, thick, waxy leaves. How does this help it in the hot, dry summer?",
+      "a": "Small, thick, waxy leaves lose very little water. Mediterranean plants also have long roots and thick bark, like the cork oak."
+     },
+     {
+      "q": "In the Prairies and the Steppes, there are almost no trees, only short grass. Why?",
+      "a": "The rainfall is low and the winters are very cold, so trees cannot grow well. Only short grass grows."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "intro": "The vegetation of the temperate region has the following types:",
+     "items": [
+      [
+       "A. Deciduous Forest",
+       "In the oceanic climate, trees such as the oak, the beech and the ash lose their leaves in autumn to survive the winter."
+      ],
+      [
+       "B. Coniferous Forest",
+       "In the colder parts, trees such as the pine and the spruce keep their needle-shaped leaves all year and have cones."
+      ],
+      [
+       "C. Mediterranean Vegetation",
+       "Olive trees, cork oaks and bushes (maquis) have small, waxy leaves, long roots and thick bark to resist summer drought."
+      ],
+      [
+       "D. Temperate Grasslands",
+       "In the continental interiors, short grasses grow with few trees: the Prairies, the Steppes, the Pampas and the Veld."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "Every autumn, the leaves of deciduous trees fall and rot. What does this give to the soil?",
+      "a": "The rotting leaves give a lot of humus to the soil, so it becomes a fertile brown forest soil."
+     },
+     {
+      "q": "The soils of the Steppes and the Prairies are black and very rich. Why are they called the \"granaries of the world\"?",
+      "a": "Their black soil, called chernozem, is very rich in humus from grass roots. Farmers grow huge amounts of wheat on it."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The main soils of the temperate region are the following:",
+     "items": [
+      [
+       "A. Brown Forest Soils",
+       "Under deciduous forests, soils are brown and rich in humus from fallen leaves. They are fertile."
+      ],
+      [
+       "B. Podzols",
+       "Under coniferous forests, soils are grey, acidic and poor, because needles rot slowly."
+      ],
+      [
+       "C. Chernozems",
+       "Under temperate grasslands, soils are black and very rich in humus. They are the best soils for wheat."
+      ],
+      [
+       "D. Mediterranean Red Soils",
+       "In the Mediterranean region, soils are often red (terra rossa) and thin."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do deciduous trees lose their leaves in autumn?",
+    "They lose their leaves to save water during the cold winter, when the ground may freeze."
+   ],
+   [
+    "Give two adaptations of Mediterranean plants to summer drought.",
+    "They have small, waxy leaves and long roots."
+   ],
+   [
+    "Why are chernozem soils very fertile?",
+    "They are very fertile because they are rich in humus from grass roots."
+   ]
+  ],
+  "remediation": [
+   [
+    "Trees that lose their leaves in autumn are called ______ trees.",
+    "Trees with needles and cones are called ______ trees.",
+    "A typical tree of the Mediterranean region is the ______."
+   ],
+   [
+    "The black, fertile soil of temperate grasslands is called ______.",
+    "The grey, acidic soil of coniferous forests is called ______.",
+    "The temperate grassland of Argentina is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. deciduous 2. coniferous 3. olive 4. chernozem 5. podzol 6. Pampas",
+  "homework": "Find the names of three food products imported into Cameroon from temperate countries (for example wheat flour, milk or apples).",
+  "homeworkTag": "This prepares Part 3: Human Activities (Farming) in the Temperate Region.",
+  "bilingual": [
+   [
+    "Forest",
+    "La forêt"
+   ],
+   [
+    "Deciduous",
+    "À feuilles caduques"
+   ],
+   [
+    "Coniferous",
+    "Conifère"
+   ],
+   [
+    "Pine",
+    "Le pin"
+   ],
+   [
+    "Oak",
+    "Le chêne"
+   ],
+   [
+    "Olive tree",
+    "L'olivier"
+   ],
+   [
+    "Grassland",
+    "La prairie"
+   ],
+   [
+    "Humus",
+    "L'humus"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Pine and eucalyptus plantations exist in the western highlands of Cameroon; pine is a temperate conifer (eucalyptus comes from Australia)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ]
+ }
+}

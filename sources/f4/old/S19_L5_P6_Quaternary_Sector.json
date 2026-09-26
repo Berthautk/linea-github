@@ -1,0 +1,542 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITION\" | \"Question 1\" | [\"Researchers, computer programmers and experts produce knowledge and information. What sector do they belong to?\"]",
+  "slide | \"I. DEFINITION\" | \"Answer\" | [\"They belong to the quaternary sector.\"]",
+  "slide | \"II. EXAMPLES AND IMPORTANCE\" | \"Question 1\" | [\"Give two examples of research centres in Cameroon.\"]",
+  "slide | \"II. EXAMPLES AND IMPORTANCE\" | \"Answer\" | [\"IRAD (Institute of Agricultural Research for Development) and the research laboratories of the universities, such as the University of Maroua.\"]",
+  "slide | \"II. EXAMPLES AND IMPORTANCE\" | \"Question 2\" | [\"How do information and communication technologies (ICT) help farmers and traders?\"]",
+  "slide | \"II. EXAMPLES AND IMPORTANCE\" | \"Answer\" | [\"With mobile phones and the internet, they can get market prices, weather forecasts and advice, and they can sell online.\"]",
+  "slide | \"II. EXAMPLES AND IMPORTANCE\" | \"Question 3\" | [\"Why do rich countries invest a lot of money in the quaternary sector?\"]",
+  "slide | \"II. EXAMPLES AND IMPORTANCE\" | \"Answer\" | [\"Because research and technology create new products, improve production and make the economy stronger.\"]",
+  "sum | \"I. Definition (1/1)\" | \"DEFINITION\" | [\"The quaternary sector is the sector of the economy based on knowledge, research and information.\"]",
+  "sum | \"II. Examples and Importance (1/5)\" | [\"The main quaternary activities and their importance are the following:\"]",
+  "sum | \"II. Examples and Importance (2/5)\" | \"A. Scientific Research\" | [\"Researchers create new knowledge, medicines and better seeds, as at IRAD and in universities.\"]",
+  "sum | \"II. Examples and Importance (3/5)\" | \"B. Information and Communication Technology\" | [\"ICT workers create software, websites, mobile applications and manage data.\"]",
+  "sum | \"II. Examples and Importance (4/5)\" | \"C. Consulting and Education Planning\" | [\"Experts give advice to governments and companies, and plan education and training.\"]",
+  "sum | \"II. Examples and Importance (5/5)\" | \"D. Importance\" | [\"The quaternary sector improves all the other sectors: better seeds for farmers, new machines for factories and new services.\"]"
+ ],
+ "d": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S19_L5_P6_Quaternary_Sector",
+  "part": 6,
+  "partTitle": "The Quaternary Sector (Definition and Examples)",
+  "notions": "Quaternary sector, research, information and communication technology (ICT), knowledge economy.",
+  "focus": "Definition and examples of the quaternary sector.",
+  "competence": "Learners are able to explain how research and digital tools improve daily life and farming, and to use them responsibly.",
+  "objectives": [
+   "Define the quaternary sector.",
+   "Name the main quaternary activities.",
+   "Explain the importance of the quaternary sector for development."
+  ],
+  "recall": [
+   "The tertiary sector provides services: trade, transport, banking, social services and tourism.",
+   "Services link producers to consumers."
+  ],
+  "recallNote": "Check the homework: what a research centre does.",
+  "situation": [
+   "For many years, the maize of farmers near Garoua was destroyed by drought. Then researchers created a new variety of maize that grows quickly and resists drought.",
+   "Now farmers harvest much more. Fatimé wonders in which sector these researchers work, since they do not farm, make goods or sell things."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fatimé does not know in which sector the researchers work."
+   ],
+   [
+    "What did the researchers create, and how did it help farmers?",
+    "They created a new maize variety that grows quickly and resists drought, so farmers harvest more."
+   ],
+   [
+    "How can research help other farmers in North Cameroon?",
+    "Researchers can create better seeds for sorghum, cotton and rice, and teach farmers new methods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the quaternary sector, which produces knowledge and information that help all other sectors.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Researchers, computer programmers and experts produce knowledge and information. What sector do they belong to?",
+      "a": "They belong to the quaternary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The quaternary sector is the sector of the economy based on knowledge, research and information."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES AND IMPORTANCE",
+    "qa": [
+     {
+      "q": "Give two examples of research centres in Cameroon.",
+      "a": "IRAD (Institute of Agricultural Research for Development) and the research laboratories of the universities, such as the University of Maroua."
+     },
+     {
+      "q": "How do information and communication technologies (ICT) help farmers and traders?",
+      "a": "With mobile phones and the internet, they can get market prices, weather forecasts and advice, and they can sell online."
+     },
+     {
+      "q": "Why do rich countries invest a lot of money in the quaternary sector?",
+      "a": "Because research and technology create new products, improve production and make the economy stronger."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples and Importance",
+     "intro": "The main quaternary activities and their importance are the following:",
+     "items": [
+      [
+       "A. Scientific Research",
+       "Researchers create new knowledge, medicines and better seeds, as at IRAD and in universities."
+      ],
+      [
+       "B. Information and Communication Technology",
+       "ICT workers create software, websites, mobile applications and manage data."
+      ],
+      [
+       "C. Consulting and Education Planning",
+       "Experts give advice to governments and companies, and plan education and training."
+      ],
+      [
+       "D. Importance",
+       "The quaternary sector improves all the other sectors: better seeds for farmers, new machines for factories and new services."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the quaternary sector.",
+    "The quaternary sector is the sector based on knowledge, research and information."
+   ],
+   [
+    "Give two examples of quaternary activities.",
+    "Two quaternary activities are scientific research and computer programming."
+   ],
+   [
+    "Classify these jobs into the four sectors: fisherman, baker, taxi driver, researcher.",
+    "Fisherman: primary. Baker: secondary. Taxi driver: tertiary. Researcher: quaternary."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector based on knowledge and research is the ______ sector.",
+    "The agricultural research institute of Cameroon is ______.",
+    "ICT means information and ______ technology."
+   ],
+   [
+    "A person who writes computer programs is a ______.",
+    "Research helps farmers by creating better ______.",
+    "A baker works in the ______ sector."
+   ]
+  ],
+  "remediationAnswers": "1. quaternary 2. IRAD 3. communication 4. programmer 5. seeds 6. secondary",
+  "homework": "On a map of Africa in your atlas, find Cameroon and name the four oceans and seas that surround Africa.",
+  "homeworkTag": "This prepares Lesson 6: Africa (Introduction: location and physical characteristics).",
+  "bilingual": [
+   [
+    "Research",
+    "La recherche"
+   ],
+   [
+    "Researcher",
+    "Le chercheur"
+   ],
+   [
+    "Knowledge",
+    "La connaissance"
+   ],
+   [
+    "Information",
+    "L'information"
+   ],
+   [
+    "Software",
+    "Le logiciel"
+   ],
+   [
+    "Internet",
+    "L'internet"
+   ],
+   [
+    "Expert",
+    "L'expert"
+   ],
+   [
+    "Innovation",
+    "L'innovation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first question of part II. Period 2: rest of part II, board summary and evaluation.",
+   "This session closes Lesson 5 (Sectors of the Economy)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "IRAD: Institut de Recherche Agricole pour le Développement (Cameroon)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 6)",
+  "title": "The Sectors of the Economy: The Quaternary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 6: The Quaternary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 6: The Quaternary Sector (Definition and Examples)"
+ },
+ "end": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S19_L5_P6_Quaternary_Sector",
+  "part": 6,
+  "partTitle": "The Quaternary Sector (Definition and Examples)",
+  "notions": "Quaternary sector, research, information and communication technology (ICT), knowledge economy.",
+  "focus": "Definition and examples of the quaternary sector.",
+  "competence": "Learners are able to explain how research and digital tools improve daily life and farming, and to use them responsibly.",
+  "objectives": [
+   "Define the quaternary sector.",
+   "Name the main quaternary activities.",
+   "Explain the importance of the quaternary sector for development."
+  ],
+  "recall": [
+   "The tertiary sector provides services: trade, transport, banking, social services and tourism.",
+   "Services link producers to consumers."
+  ],
+  "recallNote": "Check the homework: what a research centre does.",
+  "situation": [
+   "For many years, the maize of farmers near Garoua was destroyed by drought. Then researchers created a new variety of maize that grows quickly and resists drought.",
+   "Now farmers harvest much more. Fatimé wonders in which sector these researchers work, since they do not farm, make goods or sell things."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fatimé does not know in which sector the researchers work."
+   ],
+   [
+    "What did the researchers create, and how did it help farmers?",
+    "They created a new maize variety that grows quickly and resists drought, so farmers harvest more."
+   ],
+   [
+    "How can research help other farmers in North Cameroon?",
+    "Researchers can create better seeds for sorghum, cotton and rice, and teach farmers new methods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the quaternary sector, which produces knowledge and information that help all other sectors.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Researchers, computer programmers and experts produce knowledge and information. What sector do they belong to?",
+      "a": "They belong to the quaternary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The quaternary sector is the sector of the economy based on knowledge, research and information."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES AND IMPORTANCE",
+    "qa": [
+     {
+      "q": "Give two examples of research centres in Cameroon.",
+      "a": "IRAD (Institute of Agricultural Research for Development) and the research laboratories of the universities, such as the University of Maroua."
+     },
+     {
+      "q": "How do information and communication technologies (ICT) help farmers and traders?",
+      "a": "With mobile phones and the internet, they can get market prices, weather forecasts and advice, and they can sell online."
+     },
+     {
+      "q": "Why do rich countries invest a lot of money in the quaternary sector?",
+      "a": "Because research and technology create new products, improve production and make the economy stronger."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples and Importance",
+     "intro": "The main quaternary activities and their importance are the following:",
+     "items": [
+      [
+       "A. Scientific Research",
+       "Researchers create new knowledge, medicines and better seeds, as at IRAD and in universities."
+      ],
+      [
+       "B. Information and Communication Technology",
+       "ICT workers create software, websites, mobile applications and manage data."
+      ],
+      [
+       "C. Consulting and Education Planning",
+       "Experts give advice to governments and companies, and plan education and training."
+      ],
+      [
+       "D. Importance",
+       "The quaternary sector improves all the other sectors: better seeds for farmers, new machines for factories and new services."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the quaternary sector.",
+    "The quaternary sector is the sector based on knowledge, research and information."
+   ],
+   [
+    "Give two examples of quaternary activities.",
+    "Two quaternary activities are scientific research and computer programming."
+   ],
+   [
+    "Classify these jobs into the four sectors: fisherman, baker, taxi driver, researcher.",
+    "Fisherman: primary. Baker: secondary. Taxi driver: tertiary. Researcher: quaternary."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector based on knowledge and research is the ______ sector.",
+    "The agricultural research institute of Cameroon is ______.",
+    "ICT means information and ______ technology."
+   ],
+   [
+    "A person who writes computer programs is a ______.",
+    "Research helps farmers by creating better ______.",
+    "A baker works in the ______ sector."
+   ]
+  ],
+  "remediationAnswers": "1. quaternary 2. IRAD 3. communication 4. programmer 5. seeds 6. secondary",
+  "homework": "On a map of Africa in your atlas, find Cameroon and name the four oceans and seas that surround Africa.",
+  "homeworkTag": "This prepares Lesson 6: Africa (Introduction: location and physical characteristics).",
+  "bilingual": [
+   [
+    "Research",
+    "La recherche"
+   ],
+   [
+    "Researcher",
+    "Le chercheur"
+   ],
+   [
+    "Knowledge",
+    "La connaissance"
+   ],
+   [
+    "Information",
+    "L'information"
+   ],
+   [
+    "Software",
+    "Le logiciel"
+   ],
+   [
+    "Internet",
+    "L'internet"
+   ],
+   [
+    "Expert",
+    "L'expert"
+   ],
+   [
+    "Innovation",
+    "L'innovation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first question of part II. Period 2: rest of part II, board summary and evaluation.",
+   "This session closes Lesson 5 (Sectors of the Economy)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "IRAD: Institut de Recherche Agricole pour le Développement (Cameroon)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 6)",
+  "title": "The Sectors of the Economy: The Quaternary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 6: The Quaternary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 6: The Quaternary Sector (Definition and Examples)",
+  "matter": "I. Definition: ; II. Examples and Importance: Scientific Research, Information and Communication Technology, Consulting and Education Planning, Importance."
+ },
+ "file": "S19_L5_P6_Quaternary_Sector",
+ "sp": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S19_L5_P6_Quaternary_Sector",
+  "part": 6,
+  "partTitle": "The Quaternary Sector (Definition and Examples)",
+  "notions": "Quaternary sector, research, information and communication technology (ICT), knowledge economy.",
+  "focus": "Definition and examples of the quaternary sector.",
+  "competence": "Learners are able to explain how research and digital tools improve daily life and farming, and to use them responsibly.",
+  "objectives": [
+   "Define the quaternary sector.",
+   "Name the main quaternary activities.",
+   "Explain the importance of the quaternary sector for development."
+  ],
+  "recall": [
+   "The tertiary sector provides services: trade, transport, banking, social services and tourism.",
+   "Services link producers to consumers."
+  ],
+  "recallNote": "Check the homework: what a research centre does.",
+  "situation": [
+   "For many years, the maize of farmers near Garoua was destroyed by drought. Then researchers created a new variety of maize that grows quickly and resists drought.",
+   "Now farmers harvest much more. Fatimé wonders in which sector these researchers work, since they do not farm, make goods or sell things."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fatimé does not know in which sector the researchers work."
+   ],
+   [
+    "What did the researchers create, and how did it help farmers?",
+    "They created a new maize variety that grows quickly and resists drought, so farmers harvest more."
+   ],
+   [
+    "How can research help other farmers in North Cameroon?",
+    "Researchers can create better seeds for sorghum, cotton and rice, and teach farmers new methods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the quaternary sector, which produces knowledge and information that help all other sectors.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Researchers, computer programmers and experts produce knowledge and information. What sector do they belong to?",
+      "a": "They belong to the quaternary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The quaternary sector is the sector of the economy based on knowledge, research and information."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES AND IMPORTANCE",
+    "qa": [
+     {
+      "q": "Give two examples of research centres in Cameroon.",
+      "a": "IRAD (Institute of Agricultural Research for Development) and the research laboratories of the universities, such as the University of Maroua."
+     },
+     {
+      "q": "How do information and communication technologies (ICT) help farmers and traders?",
+      "a": "With mobile phones and the internet, they can get market prices, weather forecasts and advice, and they can sell online."
+     },
+     {
+      "q": "Why do rich countries invest a lot of money in the quaternary sector?",
+      "a": "Because research and technology create new products, improve production and make the economy stronger."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples and Importance",
+     "intro": "The main quaternary activities and their importance are the following:",
+     "items": [
+      [
+       "A. Scientific Research",
+       "Researchers create new knowledge, medicines and better seeds, as at IRAD and in universities."
+      ],
+      [
+       "B. Information and Communication Technology",
+       "ICT workers create software, websites, mobile applications and manage data."
+      ],
+      [
+       "C. Consulting and Education Planning",
+       "Experts give advice to governments and companies, and plan education and training."
+      ],
+      [
+       "D. Importance",
+       "The quaternary sector improves all the other sectors: better seeds for farmers, new machines for factories and new services."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the quaternary sector.",
+    "The quaternary sector is the sector based on knowledge, research and information."
+   ],
+   [
+    "Give two examples of quaternary activities.",
+    "Two quaternary activities are scientific research and computer programming."
+   ],
+   [
+    "Classify these jobs into the four sectors: fisherman, baker, taxi driver, researcher.",
+    "Fisherman: primary. Baker: secondary. Taxi driver: tertiary. Researcher: quaternary."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector based on knowledge and research is the ______ sector.",
+    "The agricultural research institute of Cameroon is ______.",
+    "ICT means information and ______ technology."
+   ],
+   [
+    "A person who writes computer programs is a ______.",
+    "Research helps farmers by creating better ______.",
+    "A baker works in the ______ sector."
+   ]
+  ],
+  "remediationAnswers": "1. quaternary 2. IRAD 3. communication 4. programmer 5. seeds 6. secondary",
+  "homework": "On a map of Africa in your atlas, find Cameroon and name the four oceans and seas that surround Africa.",
+  "homeworkTag": "This prepares Lesson 6: Africa (Introduction: location and physical characteristics).",
+  "bilingual": [
+   [
+    "Research",
+    "La recherche"
+   ],
+   [
+    "Researcher",
+    "Le chercheur"
+   ],
+   [
+    "Knowledge",
+    "La connaissance"
+   ],
+   [
+    "Information",
+    "L'information"
+   ],
+   [
+    "Software",
+    "Le logiciel"
+   ],
+   [
+    "Internet",
+    "L'internet"
+   ],
+   [
+    "Expert",
+    "L'expert"
+   ],
+   [
+    "Innovation",
+    "L'innovation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first question of part II. Period 2: rest of part II, board summary and evaluation.",
+   "This session closes Lesson 5 (Sectors of the Economy)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "IRAD: Institut de Recherche Agricole pour le Développement (Cameroon)."
+  ]
+ }
+}

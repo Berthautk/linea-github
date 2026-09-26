@@ -1,0 +1,686 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "imageFull | \"I. VEGETATION\" | \"Activity: Study the diagram\" | \"This diagram shows the vegetation of the savanna.\" | \"savanna_vegetation.png\"",
+  "slide | \"I. VEGETATION\" | \"Question 1\" | [\"Describe the two main types of plants found in the savanna.\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"The savanna has tall grasses, up to 3 metres high, and trees that grow far apart from one another.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 2\" | [\"Why do many savanna trees, such as the acacia, lose their leaves in the dry season?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"They lose their leaves to reduce the loss of water when there is no rain. Trees that lose their leaves are called deciduous trees.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 3\" | [\"The baobab has a very thick trunk, and the shea tree has a thick bark. How do these help the trees?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"The thick trunk of the baobab stores water for the dry season. The thick bark of the shea tree protects it from bush fires.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 4\" | [\"Near the Equatorial forest, the savanna has tall trees. Near the desert, it has short grasses and thorny bushes. Why?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"Near the forest there is more rain, so trees are taller and closer. Near the desert there is little rain, so the grass is short and the bushes are thorny.\"]",
+  "slide | \"II. SOILS\" | \"Question 1\" | [\"In the wet season, heavy rain washes plant food deep into the soil. What happens to the top soil?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"The top soil loses its plant food, and it becomes poor. This washing of plant food is called leaching.\"]",
+  "slide | \"II. SOILS\" | \"Question 2\" | [\"In the dry season, the sun dries the red soil. What happens to the iron in the soil?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"The iron forms a hard red crust called laterite. Plants and farmers find it difficult to dig into it.\"]",
+  "slide | \"II. SOILS\" | \"Question 3\" | [\"Around Maroua, farmers grow dry-season sorghum on dark clay soils that crack when dry. What are these soils called?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"These dark clay soils are called black cotton soils, or karal in the Far North. They are fertile and hold water well.\"]",
+  "sum | \"I. Vegetation (1/6)\" | \"DEFINITION\" | [\"A savanna is a vegetation of tall grasses with scattered trees, found in the Tropical Grassland region.\"]",
+  "sum | \"I. Vegetation (2/6)\" | [\"The vegetation of the Tropical Grassland region has the following characteristics:\"]",
+  "sum | \"I. Vegetation (3/6)\" | \"A. Grasses\" | [\"Tall grasses such as elephant grass grow up to 3 metres high. They are green in the wet season and dry and yellow in the dry season.\"]",
+  "sumImage | \"I. Vegetation (4/6)\" | \"B. Trees\" | \"Trees grow far apart. The main trees are the acacia, the baobab, the shea tree and the locust bean tree (néré).\" | \"savanna_vegetation.png\"",
+  "sum | \"I. Vegetation (5/6)\" | \"C. Adaptations of Plants\" | [\"– Many trees lose their leaves in the dry season.\",\"– Some trees have thick bark that resists bush fires.\",\"– Some trees have long roots, small leaves or thorns.\",\"– The baobab stores water in its trunk.\"]",
+  "sum | \"I. Vegetation (6/6)\" | \"D. Types of Savanna\" | [\"The savanna changes with rainfall: the Guinea savanna near the forest has tall trees, the Sudan savanna (Garoua) has scattered trees, and the Sahel savanna has short grass and thorny bushes.\"]",
+  "sum | \"II. Soils (1/5)\" | [\"The soils of the Tropical Grassland region have the following characteristics:\"]",
+  "sum | \"II. Soils (2/5)\" | \"A. Ferruginous Soils\" | [\"The main soils are red or brown ferruginous soils. They are leached in the wet season and are only fairly fertile.\"]",
+  "sum | \"II. Soils (3/5)\" | \"B. Laterite\" | [\"In the dry season, iron in the soil forms a hard red crust called laterite. It is used to make roads and bricks.\"]",
+  "sum | \"II. Soils (4/5)\" | \"C. Black Cotton Soils\" | [\"In low areas, there are dark clay soils called black cotton soils. They are fertile and good for cotton and sorghum.\"]",
+  "sum | \"II. Soils (5/5)\" | \"D. Little Humus\" | [\"Bush fires burn the dead grass, so the soils have little humus.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S01_L2_P2_Tropical_Grassland_Soils_Vegetation",
+  "part": 2,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Savanna, deciduous, xerophyte, ferruginous soil, laterite, black cotton soil.",
+  "focus": "Characteristics of the soils and vegetation of the Tropical Grassland region.",
+  "competence": "Learners are able to recognise the trees and soils of the savanna around them and explain why some trees lose their leaves in the dry season.",
+  "objectives": [
+   "Describe the vegetation of the Tropical Grassland region.",
+   "Explain how savanna plants are adapted to the dry season and to bush fires.",
+   "Describe the main soils of the Tropical Grassland region."
+  ],
+  "recall": [
+   "The Tropical Grassland lies between 5° and 15° north and south of the Equator.",
+   "It has a wet season and a dry season, with 500 to 1,500 mm of rain.",
+   "Garoua has a dry season from November to March."
+  ],
+  "recallNote": "Check the homework: which trees keep or lose their leaves in the dry season?",
+  "situation": [
+   "In January, Hawa travels from Garoua to Ngaoundéré. Near Garoua, the grass is dry and yellow, many trees have no leaves, and some areas are black because of bush fires.",
+   "But one big tree near the road, the shea tree, still has leaves and its bark is not burnt. Hawa wonders how these plants can survive the long dry season and the fires."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hawa does not understand how savanna plants survive the long dry season and the bush fires."
+   ],
+   [
+    "What did Hawa see near Garoua in January?",
+    "She saw dry, yellow grass, trees without leaves and areas burnt by bush fires."
+   ],
+   [
+    "What can people do to protect the savanna from bush fires?",
+    "They can avoid setting fires, make firebreaks, and burn small areas early in the dry season under control."
+   ]
+  ],
+  "justification": "This lesson will help us to know the plants and soils of the savanna where we live, and to understand how they survive the dry season.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "img": "savanna_vegetation.png",
+      "kind": "diagram",
+      "q": "This diagram shows the vegetation of the savanna.",
+      "full": true
+     },
+     {
+      "q": "Describe the two main types of plants found in the savanna.",
+      "a": "The savanna has tall grasses, up to 3 metres high, and trees that grow far apart from one another."
+     },
+     {
+      "q": "Why do many savanna trees, such as the acacia, lose their leaves in the dry season?",
+      "a": "They lose their leaves to reduce the loss of water when there is no rain. Trees that lose their leaves are called deciduous trees."
+     },
+     {
+      "q": "The baobab has a very thick trunk, and the shea tree has a thick bark. How do these help the trees?",
+      "a": "The thick trunk of the baobab stores water for the dry season. The thick bark of the shea tree protects it from bush fires."
+     },
+     {
+      "q": "Near the Equatorial forest, the savanna has tall trees. Near the desert, it has short grasses and thorny bushes. Why?",
+      "a": "Near the forest there is more rain, so trees are taller and closer. Near the desert there is little rain, so the grass is short and the bushes are thorny."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "defs": [
+      "A savanna is a vegetation of tall grasses with scattered trees, found in the Tropical Grassland region."
+     ],
+     "intro": "The vegetation of the Tropical Grassland region has the following characteristics:",
+     "items": [
+      [
+       "A. Grasses",
+       "Tall grasses such as elephant grass grow up to 3 metres high. They are green in the wet season and dry and yellow in the dry season."
+      ],
+      [
+       "B. Trees",
+       "Trees grow far apart. The main trees are the acacia, the baobab, the shea tree and the locust bean tree (néré).",
+       "savanna_vegetation.png"
+      ],
+      [
+       "C. Adaptations of Plants",
+       [
+        "– Many trees lose their leaves in the dry season.",
+        "– Some trees have thick bark that resists bush fires.",
+        "– Some trees have long roots, small leaves or thorns.",
+        "– The baobab stores water in its trunk."
+       ]
+      ],
+      [
+       "D. Types of Savanna",
+       "The savanna changes with rainfall: the Guinea savanna near the forest has tall trees, the Sudan savanna (Garoua) has scattered trees, and the Sahel savanna has short grass and thorny bushes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "In the wet season, heavy rain washes plant food deep into the soil. What happens to the top soil?",
+      "a": "The top soil loses its plant food, and it becomes poor. This washing of plant food is called leaching."
+     },
+     {
+      "q": "In the dry season, the sun dries the red soil. What happens to the iron in the soil?",
+      "a": "The iron forms a hard red crust called laterite. Plants and farmers find it difficult to dig into it."
+     },
+     {
+      "q": "Around Maroua, farmers grow dry-season sorghum on dark clay soils that crack when dry. What are these soils called?",
+      "a": "These dark clay soils are called black cotton soils, or karal in the Far North. They are fertile and hold water well."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The soils of the Tropical Grassland region have the following characteristics:",
+     "items": [
+      [
+       "A. Ferruginous Soils",
+       "The main soils are red or brown ferruginous soils. They are leached in the wet season and are only fairly fertile."
+      ],
+      [
+       "B. Laterite",
+       "In the dry season, iron in the soil forms a hard red crust called laterite. It is used to make roads and bricks."
+      ],
+      [
+       "C. Black Cotton Soils",
+       "In low areas, there are dark clay soils called black cotton soils. They are fertile and good for cotton and sorghum."
+      ],
+      [
+       "D. Little Humus",
+       "Bush fires burn the dead grass, so the soils have little humus."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why are savanna trees called deciduous trees?",
+    "They are called deciduous trees because they lose their leaves during the dry season."
+   ],
+   [
+    "Give two ways in which savanna trees are adapted to the dry season.",
+    "They lose their leaves to save water, and some, like the baobab, store water in their trunks."
+   ],
+   [
+    "What is laterite, and what is it used for?",
+    "Laterite is a hard red crust formed by iron in the soil. It is used to make roads and bricks."
+   ]
+  ],
+  "remediation": [
+   [
+    "The vegetation of tall grasses and scattered trees is called ______.",
+    "Trees that lose their leaves in the dry season are called ______.",
+    "The tree with a thick trunk that stores water is the ______."
+   ],
+   [
+    "The washing of plant food deep into the soil is called ______.",
+    "The hard red crust formed in savanna soils is called ______.",
+    "Dark clay soils that crack when dry are called black ______ soils."
+   ]
+  ],
+  "remediationAnswers": "1. savanna 2. deciduous 3. baobab 4. leaching 5. laterite 6. cotton",
+  "homework": "List three things that people in your family get from the savanna around Garoua, for example food, wood or animals.",
+  "homeworkTag": "This prepares Part 3: Types of Resources and Methods of Exploitation.",
+  "bilingual": [
+   [
+    "Savanna",
+    "La savane"
+   ],
+   [
+    "Grass",
+    "L'herbe"
+   ],
+   [
+    "Deciduous tree",
+    "L'arbre à feuilles caduques"
+   ],
+   [
+    "Bush fire",
+    "Le feu de brousse"
+   ],
+   [
+    "Shea tree",
+    "Le karité"
+   ],
+   [
+    "Baobab",
+    "Le baobab"
+   ],
+   [
+    "Laterite",
+    "La latérite"
+   ],
+   [
+    "Leaching",
+    "Le lessivage"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Use local trees (shea, néré, acacia, baobab) and the karal soils of the Far North as examples."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 2)",
+  "title": "The Tropical Grassland Region: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 2: Characteristics (Soils and Vegetation).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 2: Characteristics (Soils and Vegetation)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S01_L2_P2_Tropical_Grassland_Soils_Vegetation",
+  "part": 2,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Savanna, deciduous, xerophyte, ferruginous soil, laterite, black cotton soil.",
+  "focus": "Characteristics of the soils and vegetation of the Tropical Grassland region.",
+  "competence": "Learners are able to recognise the trees and soils of the savanna around them and explain why some trees lose their leaves in the dry season.",
+  "objectives": [
+   "Describe the vegetation of the Tropical Grassland region.",
+   "Explain how savanna plants are adapted to the dry season and to bush fires.",
+   "Describe the main soils of the Tropical Grassland region."
+  ],
+  "recall": [
+   "The Tropical Grassland lies between 5° and 15° north and south of the Equator.",
+   "It has a wet season and a dry season, with 500 to 1,500 mm of rain.",
+   "Garoua has a dry season from November to March."
+  ],
+  "recallNote": "Check the homework: which trees keep or lose their leaves in the dry season?",
+  "situation": [
+   "In January, Hawa travels from Garoua to Ngaoundéré. Near Garoua, the grass is dry and yellow, many trees have no leaves, and some areas are black because of bush fires.",
+   "But one big tree near the road, the shea tree, still has leaves and its bark is not burnt. Hawa wonders how these plants can survive the long dry season and the fires."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hawa does not understand how savanna plants survive the long dry season and the bush fires."
+   ],
+   [
+    "What did Hawa see near Garoua in January?",
+    "She saw dry, yellow grass, trees without leaves and areas burnt by bush fires."
+   ],
+   [
+    "What can people do to protect the savanna from bush fires?",
+    "They can avoid setting fires, make firebreaks, and burn small areas early in the dry season under control."
+   ]
+  ],
+  "justification": "This lesson will help us to know the plants and soils of the savanna where we live, and to understand how they survive the dry season.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "img": "savanna_vegetation.png",
+      "kind": "diagram",
+      "q": "This diagram shows the vegetation of the savanna.",
+      "full": true
+     },
+     {
+      "q": "Describe the two main types of plants found in the savanna.",
+      "a": "The savanna has tall grasses, up to 3 metres high, and trees that grow far apart from one another."
+     },
+     {
+      "q": "Why do many savanna trees, such as the acacia, lose their leaves in the dry season?",
+      "a": "They lose their leaves to reduce the loss of water when there is no rain. Trees that lose their leaves are called deciduous trees."
+     },
+     {
+      "q": "The baobab has a very thick trunk, and the shea tree has a thick bark. How do these help the trees?",
+      "a": "The thick trunk of the baobab stores water for the dry season. The thick bark of the shea tree protects it from bush fires."
+     },
+     {
+      "q": "Near the Equatorial forest, the savanna has tall trees. Near the desert, it has short grasses and thorny bushes. Why?",
+      "a": "Near the forest there is more rain, so trees are taller and closer. Near the desert there is little rain, so the grass is short and the bushes are thorny."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "defs": [
+      "A savanna is a vegetation of tall grasses with scattered trees, found in the Tropical Grassland region."
+     ],
+     "intro": "The vegetation of the Tropical Grassland region has the following characteristics:",
+     "items": [
+      [
+       "A. Grasses",
+       "Tall grasses such as elephant grass grow up to 3 metres high. They are green in the wet season and dry and yellow in the dry season."
+      ],
+      [
+       "B. Trees",
+       "Trees grow far apart. The main trees are the acacia, the baobab, the shea tree and the locust bean tree (néré).",
+       "savanna_vegetation.png"
+      ],
+      [
+       "C. Adaptations of Plants",
+       [
+        "– Many trees lose their leaves in the dry season.",
+        "– Some trees have thick bark that resists bush fires.",
+        "– Some trees have long roots, small leaves or thorns.",
+        "– The baobab stores water in its trunk."
+       ]
+      ],
+      [
+       "D. Types of Savanna",
+       "The savanna changes with rainfall: the Guinea savanna near the forest has tall trees, the Sudan savanna (Garoua) has scattered trees, and the Sahel savanna has short grass and thorny bushes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "In the wet season, heavy rain washes plant food deep into the soil. What happens to the top soil?",
+      "a": "The top soil loses its plant food, and it becomes poor. This washing of plant food is called leaching."
+     },
+     {
+      "q": "In the dry season, the sun dries the red soil. What happens to the iron in the soil?",
+      "a": "The iron forms a hard red crust called laterite. Plants and farmers find it difficult to dig into it."
+     },
+     {
+      "q": "Around Maroua, farmers grow dry-season sorghum on dark clay soils that crack when dry. What are these soils called?",
+      "a": "These dark clay soils are called black cotton soils, or karal in the Far North. They are fertile and hold water well."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The soils of the Tropical Grassland region have the following characteristics:",
+     "items": [
+      [
+       "A. Ferruginous Soils",
+       "The main soils are red or brown ferruginous soils. They are leached in the wet season and are only fairly fertile."
+      ],
+      [
+       "B. Laterite",
+       "In the dry season, iron in the soil forms a hard red crust called laterite. It is used to make roads and bricks."
+      ],
+      [
+       "C. Black Cotton Soils",
+       "In low areas, there are dark clay soils called black cotton soils. They are fertile and good for cotton and sorghum."
+      ],
+      [
+       "D. Little Humus",
+       "Bush fires burn the dead grass, so the soils have little humus."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why are savanna trees called deciduous trees?",
+    "They are called deciduous trees because they lose their leaves during the dry season."
+   ],
+   [
+    "Give two ways in which savanna trees are adapted to the dry season.",
+    "They lose their leaves to save water, and some, like the baobab, store water in their trunks."
+   ],
+   [
+    "What is laterite, and what is it used for?",
+    "Laterite is a hard red crust formed by iron in the soil. It is used to make roads and bricks."
+   ]
+  ],
+  "remediation": [
+   [
+    "The vegetation of tall grasses and scattered trees is called ______.",
+    "Trees that lose their leaves in the dry season are called ______.",
+    "The tree with a thick trunk that stores water is the ______."
+   ],
+   [
+    "The washing of plant food deep into the soil is called ______.",
+    "The hard red crust formed in savanna soils is called ______.",
+    "Dark clay soils that crack when dry are called black ______ soils."
+   ]
+  ],
+  "remediationAnswers": "1. savanna 2. deciduous 3. baobab 4. leaching 5. laterite 6. cotton",
+  "homework": "List three things that people in your family get from the savanna around Garoua, for example food, wood or animals.",
+  "homeworkTag": "This prepares Part 3: Types of Resources and Methods of Exploitation.",
+  "bilingual": [
+   [
+    "Savanna",
+    "La savane"
+   ],
+   [
+    "Grass",
+    "L'herbe"
+   ],
+   [
+    "Deciduous tree",
+    "L'arbre à feuilles caduques"
+   ],
+   [
+    "Bush fire",
+    "Le feu de brousse"
+   ],
+   [
+    "Shea tree",
+    "Le karité"
+   ],
+   [
+    "Baobab",
+    "Le baobab"
+   ],
+   [
+    "Laterite",
+    "La latérite"
+   ],
+   [
+    "Leaching",
+    "Le lessivage"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Use local trees (shea, néré, acacia, baobab) and the karal soils of the Far North as examples."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 2)",
+  "title": "The Tropical Grassland Region: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 2: Characteristics (Soils and Vegetation).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 2: Characteristics (Soils and Vegetation)",
+  "matter": "I. Vegetation: Grasses, Trees, Adaptations of Plants, Types of Savanna; II. Soils: Ferruginous Soils, Laterite, Black Cotton Soils, Little Humus."
+ },
+ "file": "S01_L2_P2_Tropical_Grassland_Soils_Vegetation",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S01_L2_P2_Tropical_Grassland_Soils_Vegetation",
+  "part": 2,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Savanna, deciduous, xerophyte, ferruginous soil, laterite, black cotton soil.",
+  "focus": "Characteristics of the soils and vegetation of the Tropical Grassland region.",
+  "competence": "Learners are able to recognise the trees and soils of the savanna around them and explain why some trees lose their leaves in the dry season.",
+  "objectives": [
+   "Describe the vegetation of the Tropical Grassland region.",
+   "Explain how savanna plants are adapted to the dry season and to bush fires.",
+   "Describe the main soils of the Tropical Grassland region."
+  ],
+  "recall": [
+   "The Tropical Grassland lies between 5° and 15° north and south of the Equator.",
+   "It has a wet season and a dry season, with 500 to 1,500 mm of rain.",
+   "Garoua has a dry season from November to March."
+  ],
+  "recallNote": "Check the homework: which trees keep or lose their leaves in the dry season?",
+  "situation": [
+   "In January, Hawa travels from Garoua to Ngaoundéré. Near Garoua, the grass is dry and yellow, many trees have no leaves, and some areas are black because of bush fires.",
+   "But one big tree near the road, the shea tree, still has leaves and its bark is not burnt. Hawa wonders how these plants can survive the long dry season and the fires."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hawa does not understand how savanna plants survive the long dry season and the bush fires."
+   ],
+   [
+    "What did Hawa see near Garoua in January?",
+    "She saw dry, yellow grass, trees without leaves and areas burnt by bush fires."
+   ],
+   [
+    "What can people do to protect the savanna from bush fires?",
+    "They can avoid setting fires, make firebreaks, and burn small areas early in the dry season under control."
+   ]
+  ],
+  "justification": "This lesson will help us to know the plants and soils of the savanna where we live, and to understand how they survive the dry season.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "img": "savanna_vegetation.png",
+      "kind": "diagram",
+      "q": "This diagram shows the vegetation of the savanna.",
+      "full": true
+     },
+     {
+      "q": "Describe the two main types of plants found in the savanna.",
+      "a": "The savanna has tall grasses, up to 3 metres high, and trees that grow far apart from one another."
+     },
+     {
+      "q": "Why do many savanna trees, such as the acacia, lose their leaves in the dry season?",
+      "a": "They lose their leaves to reduce the loss of water when there is no rain. Trees that lose their leaves are called deciduous trees."
+     },
+     {
+      "q": "The baobab has a very thick trunk, and the shea tree has a thick bark. How do these help the trees?",
+      "a": "The thick trunk of the baobab stores water for the dry season. The thick bark of the shea tree protects it from bush fires."
+     },
+     {
+      "q": "Near the Equatorial forest, the savanna has tall trees. Near the desert, it has short grasses and thorny bushes. Why?",
+      "a": "Near the forest there is more rain, so trees are taller and closer. Near the desert there is little rain, so the grass is short and the bushes are thorny."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "defs": [
+      "A savanna is a vegetation of tall grasses with scattered trees, found in the Tropical Grassland region."
+     ],
+     "intro": "The vegetation of the Tropical Grassland region has the following characteristics:",
+     "items": [
+      [
+       "A. Grasses",
+       "Tall grasses such as elephant grass grow up to 3 metres high. They are green in the wet season and dry and yellow in the dry season."
+      ],
+      [
+       "B. Trees",
+       "Trees grow far apart. The main trees are the acacia, the baobab, the shea tree and the locust bean tree (néré).",
+       "savanna_vegetation.png"
+      ],
+      [
+       "C. Adaptations of Plants",
+       [
+        "– Many trees lose their leaves in the dry season.",
+        "– Some trees have thick bark that resists bush fires.",
+        "– Some trees have long roots, small leaves or thorns.",
+        "– The baobab stores water in its trunk."
+       ]
+      ],
+      [
+       "D. Types of Savanna",
+       "The savanna changes with rainfall: the Guinea savanna near the forest has tall trees, the Sudan savanna (Garoua) has scattered trees, and the Sahel savanna has short grass and thorny bushes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "In the wet season, heavy rain washes plant food deep into the soil. What happens to the top soil?",
+      "a": "The top soil loses its plant food, and it becomes poor. This washing of plant food is called leaching."
+     },
+     {
+      "q": "In the dry season, the sun dries the red soil. What happens to the iron in the soil?",
+      "a": "The iron forms a hard red crust called laterite. Plants and farmers find it difficult to dig into it."
+     },
+     {
+      "q": "Around Maroua, farmers grow dry-season sorghum on dark clay soils that crack when dry. What are these soils called?",
+      "a": "These dark clay soils are called black cotton soils, or karal in the Far North. They are fertile and hold water well."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The soils of the Tropical Grassland region have the following characteristics:",
+     "items": [
+      [
+       "A. Ferruginous Soils",
+       "The main soils are red or brown ferruginous soils. They are leached in the wet season and are only fairly fertile."
+      ],
+      [
+       "B. Laterite",
+       "In the dry season, iron in the soil forms a hard red crust called laterite. It is used to make roads and bricks."
+      ],
+      [
+       "C. Black Cotton Soils",
+       "In low areas, there are dark clay soils called black cotton soils. They are fertile and good for cotton and sorghum."
+      ],
+      [
+       "D. Little Humus",
+       "Bush fires burn the dead grass, so the soils have little humus."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why are savanna trees called deciduous trees?",
+    "They are called deciduous trees because they lose their leaves during the dry season."
+   ],
+   [
+    "Give two ways in which savanna trees are adapted to the dry season.",
+    "They lose their leaves to save water, and some, like the baobab, store water in their trunks."
+   ],
+   [
+    "What is laterite, and what is it used for?",
+    "Laterite is a hard red crust formed by iron in the soil. It is used to make roads and bricks."
+   ]
+  ],
+  "remediation": [
+   [
+    "The vegetation of tall grasses and scattered trees is called ______.",
+    "Trees that lose their leaves in the dry season are called ______.",
+    "The tree with a thick trunk that stores water is the ______."
+   ],
+   [
+    "The washing of plant food deep into the soil is called ______.",
+    "The hard red crust formed in savanna soils is called ______.",
+    "Dark clay soils that crack when dry are called black ______ soils."
+   ]
+  ],
+  "remediationAnswers": "1. savanna 2. deciduous 3. baobab 4. leaching 5. laterite 6. cotton",
+  "homework": "List three things that people in your family get from the savanna around Garoua, for example food, wood or animals.",
+  "homeworkTag": "This prepares Part 3: Types of Resources and Methods of Exploitation.",
+  "bilingual": [
+   [
+    "Savanna",
+    "La savane"
+   ],
+   [
+    "Grass",
+    "L'herbe"
+   ],
+   [
+    "Deciduous tree",
+    "L'arbre à feuilles caduques"
+   ],
+   [
+    "Bush fire",
+    "Le feu de brousse"
+   ],
+   [
+    "Shea tree",
+    "Le karité"
+   ],
+   [
+    "Baobab",
+    "Le baobab"
+   ],
+   [
+    "Laterite",
+    "La latérite"
+   ],
+   [
+    "Leaching",
+    "Le lessivage"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Use local trees (shea, néré, acacia, baobab) and the karal soils of the Far North as examples."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland)."
+  ]
+ }
+}

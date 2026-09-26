@@ -1,0 +1,9 @@
+spit2::sand spit aerial view
+spit3::Spurn Head
+tombolo2::tombolo aerial
+tombolo3::St Michaels Mount causeway low tide
+port2::container port cranes ship Africa
+coast2::coastal erosion collapsed road sea
+barchan2::barchan dune
+seif2::linear dunes aerial desert
+water2::women fetching water jerrycans Africa

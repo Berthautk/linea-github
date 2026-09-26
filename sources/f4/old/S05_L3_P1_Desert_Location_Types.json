@@ -1,0 +1,736 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 1\" | [\"A region receives less than 250 mm of rain per year and has very little vegetation. What do we call it?\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"Such a region is called a desert.\"]",
+  "imageFull | \"I. DEFINITION AND LOCATION\" | \"Activity: Study the map\" | \"Find the main deserts on the map.\" | \"deserts_world.png\"",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 2\" | [\"Look at the map. Near which lines of latitude are most hot deserts found?\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"Most hot deserts are found near the Tropic of Cancer and the Tropic of Capricorn, between about 15° and 30° north and south of the Equator.\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 3\" | [\"Look at the map. On which side of the continents are most hot deserts found: east or west?\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"Most hot deserts are found on the western side of the continents, for example the Sahara, the Namib, the Atacama and the Great Australian Desert.\"]",
+  "slide | \"II. TYPES\" | \"Question 1\" | [\"The Gobi Desert in Asia is dry, but its winters are very cold. What type of desert is it?\"]",
+  "slide | \"II. TYPES\" | \"Answer\" | [\"The Gobi is a cold desert, also called a mid-latitude desert. The Sahara is a hot desert.\"]",
+  "slide | \"II. TYPES\" | \"Question 2\" | [\"In the Sahara, some areas are seas of sand, some are stony plains and some are bare rock. What are these three surfaces called?\"]",
+  "slide | \"II. TYPES\" | \"Answer\" | [\"A sandy desert is called an erg, a stony desert is called a reg, and a rocky desert is called a hamada.\"]",
+  "slide | \"III. CAUSES\" | \"Question 1\" | [\"The trade winds that blow over the Sahara come from the land, not from the sea. Why do they bring no rain?\"]",
+  "slide | \"III. CAUSES\" | \"Answer\" | [\"They bring no rain because they blow over land and are dry. They also get warmer as they move towards the Equator, so they do not form clouds.\"]",
+  "slide | \"III. CAUSES\" | \"Question 2\" | [\"The Namib Desert lies along the coast, next to the cold Benguela current. How does this cold current make the coast dry?\"]",
+  "slide | \"III. CAUSES\" | \"Answer\" | [\"The cold current cools the air above it. Cool air cannot rise and form rain clouds, so it gives only fog and no rain.\"]",
+  "sum | \"I. Definition and Location (1/5)\" | \"DEFINITION\" | [\"A desert is a region that receives less than 250 mm of rain per year and has very little vegetation.\"]",
+  "sum | \"I. Definition and Location (2/5)\" | [\"Hot deserts are found between about 15° and 30° north and south of the Equator, mostly on the western sides of continents. The main ones are the following:\"]",
+  "sumImage | \"I. Definition and Location (3/5)\" | \"A. In Africa\" | \"The Sahara in North Africa, the largest hot desert in the world, and the Kalahari and the Namib in Southern Africa.\" | \"deserts_world.png\"",
+  "sum | \"I. Definition and Location (4/5)\" | \"B. In Asia\" | [\"The Arabian Desert and the Thar Desert in India and Pakistan.\"]",
+  "sum | \"I. Definition and Location (5/5)\" | \"C. In America and Australia\" | [\"The Sonoran and Mojave Deserts in North America, the Atacama in South America, and the Great Australian Desert.\"]",
+  "sum | \"II. Types of Deserts (1/3)\" | [\"Deserts can be classified according to their temperature and according to their surface:\"]",
+  "sum | \"II. Types of Deserts (2/3)\" | \"A. According to Temperature\" | [\"Hot deserts, like the Sahara, are hot all year. Cold deserts, like the Gobi, have very cold winters.\"]",
+  "sum | \"II. Types of Deserts (3/3)\" | \"B. According to Surface\" | [\"– An erg is a sandy desert with dunes.\",\"– A reg is a stony desert.\",\"– A hamada is a rocky desert.\"]",
+  "sum | \"III. Causes of Deserts (1/5)\" | [\"The main causes of deserts are the following:\"]",
+  "sum | \"III. Causes of Deserts (2/5)\" | \"A. Dry Trade Winds\" | [\"The trade winds blow from the land. They are dry and bring no rain.\"]",
+  "sum | \"III. Causes of Deserts (3/5)\" | \"B. Cold Ocean Currents\" | [\"Cold currents cool the air, so it cannot form rain clouds. Examples: the Benguela current (Namib) and the Humboldt current (Atacama).\"]",
+  "sum | \"III. Causes of Deserts (4/5)\" | \"C. Distance from the Sea\" | [\"The centres of large continents are far from the sea, so moist winds do not reach them, as in the Gobi.\"]",
+  "sum | \"III. Causes of Deserts (5/5)\" | \"D. Rain Shadow\" | [\"Mountains stop moist winds, so the land behind them is dry, as in Patagonia.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S05_L3_P1_Desert_Location_Types",
+  "part": 1,
+  "partTitle": "Location, Types and Characteristics",
+  "notions": "Desert, hot desert, cold desert, erg, reg, hamada, trade winds, cold ocean current, rain shadow.",
+  "focus": "Location and types of deserts; general characteristics and causes of deserts.",
+  "competence": "Learners are able to find the deserts of the world on a map and explain why the Sahara, north of Cameroon, is so dry.",
+  "objectives": [
+   "Define a desert.",
+   "Locate the main deserts of the world.",
+   "Distinguish between hot and cold deserts, and between sandy, stony and rocky deserts.",
+   "Explain the causes of deserts."
+  ],
+  "recall": [
+   "The Tropical Grassland lies between 5° and 15° north and south of the Equator.",
+   "Its drier part, the Sahel, is threatened by desertification.",
+   "North of the Sahel lies the largest hot desert in the world."
+  ],
+  "recallNote": "Check the homework: three countries covered by the Sahara.",
+  "situation": [
+   "In Garoua, Salma watches a documentary about the Sahara. She is surprised to see that it is not only sand: there are also plains covered with stones and bare rocky mountains.",
+   "She had always thought that a desert was only a sea of sand dunes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Salma thought that a desert was only sand, but she discovers that deserts can also be stony or rocky."
+   ],
+   [
+    "What three kinds of surface did Salma see in the documentary?",
+    "She saw sand dunes, plains covered with stones and bare rocky mountains."
+   ],
+   [
+    "How can Salma learn more about the different types of deserts?",
+    "She can study maps and pictures in her atlas and textbook, and ask her geography teacher."
+   ]
+  ],
+  "justification": "This lesson will help us to know where the deserts of the world are found, their types, and why they are so dry.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION AND LOCATION",
+    "qa": [
+     {
+      "q": "A region receives less than 250 mm of rain per year and has very little vegetation. What do we call it?",
+      "a": "Such a region is called a desert."
+     },
+     {
+      "img": "deserts_world.png",
+      "kind": "map",
+      "q": "Find the main deserts on the map.",
+      "full": true
+     },
+     {
+      "q": "Look at the map. Near which lines of latitude are most hot deserts found?",
+      "a": "Most hot deserts are found near the Tropic of Cancer and the Tropic of Capricorn, between about 15° and 30° north and south of the Equator."
+     },
+     {
+      "q": "Look at the map. On which side of the continents are most hot deserts found: east or west?",
+      "a": "Most hot deserts are found on the western side of the continents, for example the Sahara, the Namib, the Atacama and the Great Australian Desert."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition and Location",
+     "defs": [
+      "A desert is a region that receives less than 250 mm of rain per year and has very little vegetation."
+     ],
+     "intro": "Hot deserts are found between about 15° and 30° north and south of the Equator, mostly on the western sides of continents. The main ones are the following:",
+     "items": [
+      [
+       "A. In Africa",
+       "The Sahara in North Africa, the largest hot desert in the world, and the Kalahari and the Namib in Southern Africa.",
+       "deserts_world.png"
+      ],
+      [
+       "B. In Asia",
+       "The Arabian Desert and the Thar Desert in India and Pakistan."
+      ],
+      [
+       "C. In America and Australia",
+       "The Sonoran and Mojave Deserts in North America, the Atacama in South America, and the Great Australian Desert."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES",
+    "qa": [
+     {
+      "q": "The Gobi Desert in Asia is dry, but its winters are very cold. What type of desert is it?",
+      "a": "The Gobi is a cold desert, also called a mid-latitude desert. The Sahara is a hot desert."
+     },
+     {
+      "q": "In the Sahara, some areas are seas of sand, some are stony plains and some are bare rock. What are these three surfaces called?",
+      "a": "A sandy desert is called an erg, a stony desert is called a reg, and a rocky desert is called a hamada."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Deserts",
+     "intro": "Deserts can be classified according to their temperature and according to their surface:",
+     "items": [
+      [
+       "A. According to Temperature",
+       "Hot deserts, like the Sahara, are hot all year. Cold deserts, like the Gobi, have very cold winters."
+      ],
+      [
+       "B. According to Surface",
+       [
+        "– An erg is a sandy desert with dunes.",
+        "– A reg is a stony desert.",
+        "– A hamada is a rocky desert."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. CAUSES",
+    "qa": [
+     {
+      "q": "The trade winds that blow over the Sahara come from the land, not from the sea. Why do they bring no rain?",
+      "a": "They bring no rain because they blow over land and are dry. They also get warmer as they move towards the Equator, so they do not form clouds."
+     },
+     {
+      "q": "The Namib Desert lies along the coast, next to the cold Benguela current. How does this cold current make the coast dry?",
+      "a": "The cold current cools the air above it. Cool air cannot rise and form rain clouds, so it gives only fog and no rain."
+     }
+    ],
+    "sum": {
+     "title": "III. Causes of Deserts",
+     "intro": "The main causes of deserts are the following:",
+     "items": [
+      [
+       "A. Dry Trade Winds",
+       "The trade winds blow from the land. They are dry and bring no rain."
+      ],
+      [
+       "B. Cold Ocean Currents",
+       "Cold currents cool the air, so it cannot form rain clouds. Examples: the Benguela current (Namib) and the Humboldt current (Atacama)."
+      ],
+      [
+       "C. Distance from the Sea",
+       "The centres of large continents are far from the sea, so moist winds do not reach them, as in the Gobi."
+      ],
+      [
+       "D. Rain Shadow",
+       "Mountains stop moist winds, so the land behind them is dry, as in Patagonia."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why are most hot deserts found on the western sides of the continents?",
+    "They are found there because of dry trade winds blowing from the land and cold ocean currents along the coasts."
+   ],
+   [
+    "What is the difference between an erg and a reg?",
+    "An erg is a sandy desert with dunes, while a reg is a stony desert."
+   ],
+   [
+    "Name one hot desert and one cold desert.",
+    "The Sahara is a hot desert and the Gobi is a cold desert."
+   ]
+  ],
+  "remediation": [
+   [
+    "A desert receives less than ______ mm of rain per year.",
+    "The largest hot desert in the world is the ______.",
+    "A sandy desert is called an ______."
+   ],
+   [
+    "A stony desert is called a ______, and a rocky desert is called a ______.",
+    "The cold current along the Namib Desert is the ______ current.",
+    "The Gobi is an example of a ______ desert."
+   ]
+  ],
+  "remediationAnswers": "1. 250 2. Sahara 3. erg 4. reg, hamada 5. Benguela 6. cold",
+  "homework": "Think about the hottest days of March in Garoua. Are the nights also very hot, or cooler? Write two sentences about the difference between day and night.",
+  "homeworkTag": "This prepares Part 2: The Climate of Hot Deserts.",
+  "bilingual": [
+   [
+    "Desert",
+    "Le désert"
+   ],
+   [
+    "Hot desert",
+    "Le désert chaud"
+   ],
+   [
+    "Cold desert",
+    "Le désert froid"
+   ],
+   [
+    "Erg (sandy desert)",
+    "L'erg"
+   ],
+   [
+    "Reg (stony desert)",
+    "Le reg"
+   ],
+   [
+    "Rocky desert",
+    "La hamada"
+   ],
+   [
+    "Trade winds",
+    "Les alizés"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, parts I and II. Period 2: part III, board summary and evaluation.",
+   "The Sahara covers about 9 million km². The Atacama is the driest non-polar desert."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts).",
+   "World deserts map drawn from Natural Earth data; limits are approximate."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 1)",
+  "title": "The Desert Regions: Location, Types and Characteristics",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 1: Location, Types and Characteristics.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 1: Location, Types and Characteristics"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S05_L3_P1_Desert_Location_Types",
+  "part": 1,
+  "partTitle": "Location, Types and Characteristics",
+  "notions": "Desert, hot desert, cold desert, erg, reg, hamada, trade winds, cold ocean current, rain shadow.",
+  "focus": "Location and types of deserts; general characteristics and causes of deserts.",
+  "competence": "Learners are able to find the deserts of the world on a map and explain why the Sahara, north of Cameroon, is so dry.",
+  "objectives": [
+   "Define a desert.",
+   "Locate the main deserts of the world.",
+   "Distinguish between hot and cold deserts, and between sandy, stony and rocky deserts.",
+   "Explain the causes of deserts."
+  ],
+  "recall": [
+   "The Tropical Grassland lies between 5° and 15° north and south of the Equator.",
+   "Its drier part, the Sahel, is threatened by desertification.",
+   "North of the Sahel lies the largest hot desert in the world."
+  ],
+  "recallNote": "Check the homework: three countries covered by the Sahara.",
+  "situation": [
+   "In Garoua, Salma watches a documentary about the Sahara. She is surprised to see that it is not only sand: there are also plains covered with stones and bare rocky mountains.",
+   "She had always thought that a desert was only a sea of sand dunes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Salma thought that a desert was only sand, but she discovers that deserts can also be stony or rocky."
+   ],
+   [
+    "What three kinds of surface did Salma see in the documentary?",
+    "She saw sand dunes, plains covered with stones and bare rocky mountains."
+   ],
+   [
+    "How can Salma learn more about the different types of deserts?",
+    "She can study maps and pictures in her atlas and textbook, and ask her geography teacher."
+   ]
+  ],
+  "justification": "This lesson will help us to know where the deserts of the world are found, their types, and why they are so dry.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION AND LOCATION",
+    "qa": [
+     {
+      "q": "A region receives less than 250 mm of rain per year and has very little vegetation. What do we call it?",
+      "a": "Such a region is called a desert."
+     },
+     {
+      "img": "deserts_world.png",
+      "kind": "map",
+      "q": "Find the main deserts on the map.",
+      "full": true
+     },
+     {
+      "q": "Look at the map. Near which lines of latitude are most hot deserts found?",
+      "a": "Most hot deserts are found near the Tropic of Cancer and the Tropic of Capricorn, between about 15° and 30° north and south of the Equator."
+     },
+     {
+      "q": "Look at the map. On which side of the continents are most hot deserts found: east or west?",
+      "a": "Most hot deserts are found on the western side of the continents, for example the Sahara, the Namib, the Atacama and the Great Australian Desert."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition and Location",
+     "defs": [
+      "A desert is a region that receives less than 250 mm of rain per year and has very little vegetation."
+     ],
+     "intro": "Hot deserts are found between about 15° and 30° north and south of the Equator, mostly on the western sides of continents. The main ones are the following:",
+     "items": [
+      [
+       "A. In Africa",
+       "The Sahara in North Africa, the largest hot desert in the world, and the Kalahari and the Namib in Southern Africa.",
+       "deserts_world.png"
+      ],
+      [
+       "B. In Asia",
+       "The Arabian Desert and the Thar Desert in India and Pakistan."
+      ],
+      [
+       "C. In America and Australia",
+       "The Sonoran and Mojave Deserts in North America, the Atacama in South America, and the Great Australian Desert."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES",
+    "qa": [
+     {
+      "q": "The Gobi Desert in Asia is dry, but its winters are very cold. What type of desert is it?",
+      "a": "The Gobi is a cold desert, also called a mid-latitude desert. The Sahara is a hot desert."
+     },
+     {
+      "q": "In the Sahara, some areas are seas of sand, some are stony plains and some are bare rock. What are these three surfaces called?",
+      "a": "A sandy desert is called an erg, a stony desert is called a reg, and a rocky desert is called a hamada."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Deserts",
+     "intro": "Deserts can be classified according to their temperature and according to their surface:",
+     "items": [
+      [
+       "A. According to Temperature",
+       "Hot deserts, like the Sahara, are hot all year. Cold deserts, like the Gobi, have very cold winters."
+      ],
+      [
+       "B. According to Surface",
+       [
+        "– An erg is a sandy desert with dunes.",
+        "– A reg is a stony desert.",
+        "– A hamada is a rocky desert."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. CAUSES",
+    "qa": [
+     {
+      "q": "The trade winds that blow over the Sahara come from the land, not from the sea. Why do they bring no rain?",
+      "a": "They bring no rain because they blow over land and are dry. They also get warmer as they move towards the Equator, so they do not form clouds."
+     },
+     {
+      "q": "The Namib Desert lies along the coast, next to the cold Benguela current. How does this cold current make the coast dry?",
+      "a": "The cold current cools the air above it. Cool air cannot rise and form rain clouds, so it gives only fog and no rain."
+     }
+    ],
+    "sum": {
+     "title": "III. Causes of Deserts",
+     "intro": "The main causes of deserts are the following:",
+     "items": [
+      [
+       "A. Dry Trade Winds",
+       "The trade winds blow from the land. They are dry and bring no rain."
+      ],
+      [
+       "B. Cold Ocean Currents",
+       "Cold currents cool the air, so it cannot form rain clouds. Examples: the Benguela current (Namib) and the Humboldt current (Atacama)."
+      ],
+      [
+       "C. Distance from the Sea",
+       "The centres of large continents are far from the sea, so moist winds do not reach them, as in the Gobi."
+      ],
+      [
+       "D. Rain Shadow",
+       "Mountains stop moist winds, so the land behind them is dry, as in Patagonia."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why are most hot deserts found on the western sides of the continents?",
+    "They are found there because of dry trade winds blowing from the land and cold ocean currents along the coasts."
+   ],
+   [
+    "What is the difference between an erg and a reg?",
+    "An erg is a sandy desert with dunes, while a reg is a stony desert."
+   ],
+   [
+    "Name one hot desert and one cold desert.",
+    "The Sahara is a hot desert and the Gobi is a cold desert."
+   ]
+  ],
+  "remediation": [
+   [
+    "A desert receives less than ______ mm of rain per year.",
+    "The largest hot desert in the world is the ______.",
+    "A sandy desert is called an ______."
+   ],
+   [
+    "A stony desert is called a ______, and a rocky desert is called a ______.",
+    "The cold current along the Namib Desert is the ______ current.",
+    "The Gobi is an example of a ______ desert."
+   ]
+  ],
+  "remediationAnswers": "1. 250 2. Sahara 3. erg 4. reg, hamada 5. Benguela 6. cold",
+  "homework": "Think about the hottest days of March in Garoua. Are the nights also very hot, or cooler? Write two sentences about the difference between day and night.",
+  "homeworkTag": "This prepares Part 2: The Climate of Hot Deserts.",
+  "bilingual": [
+   [
+    "Desert",
+    "Le désert"
+   ],
+   [
+    "Hot desert",
+    "Le désert chaud"
+   ],
+   [
+    "Cold desert",
+    "Le désert froid"
+   ],
+   [
+    "Erg (sandy desert)",
+    "L'erg"
+   ],
+   [
+    "Reg (stony desert)",
+    "Le reg"
+   ],
+   [
+    "Rocky desert",
+    "La hamada"
+   ],
+   [
+    "Trade winds",
+    "Les alizés"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, parts I and II. Period 2: part III, board summary and evaluation.",
+   "The Sahara covers about 9 million km². The Atacama is the driest non-polar desert."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts).",
+   "World deserts map drawn from Natural Earth data; limits are approximate."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 1)",
+  "title": "The Desert Regions: Location, Types and Characteristics",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 1: Location, Types and Characteristics.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 1: Location, Types and Characteristics",
+  "matter": "I. Definition and Location: In Africa, In Asia, In America and Australia; II. Types of Deserts: According to Temperature, According to Surface; III. Causes of Deserts: Dry Trade Winds, Cold Ocean Currents, Distance from the Sea, Rain Shadow."
+ },
+ "file": "S05_L3_P1_Desert_Location_Types",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S05_L3_P1_Desert_Location_Types",
+  "part": 1,
+  "partTitle": "Location, Types and Characteristics",
+  "notions": "Desert, hot desert, cold desert, erg, reg, hamada, trade winds, cold ocean current, rain shadow.",
+  "focus": "Location and types of deserts; general characteristics and causes of deserts.",
+  "competence": "Learners are able to find the deserts of the world on a map and explain why the Sahara, north of Cameroon, is so dry.",
+  "objectives": [
+   "Define a desert.",
+   "Locate the main deserts of the world.",
+   "Distinguish between hot and cold deserts, and between sandy, stony and rocky deserts.",
+   "Explain the causes of deserts."
+  ],
+  "recall": [
+   "The Tropical Grassland lies between 5° and 15° north and south of the Equator.",
+   "Its drier part, the Sahel, is threatened by desertification.",
+   "North of the Sahel lies the largest hot desert in the world."
+  ],
+  "recallNote": "Check the homework: three countries covered by the Sahara.",
+  "situation": [
+   "In Garoua, Salma watches a documentary about the Sahara. She is surprised to see that it is not only sand: there are also plains covered with stones and bare rocky mountains.",
+   "She had always thought that a desert was only a sea of sand dunes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Salma thought that a desert was only sand, but she discovers that deserts can also be stony or rocky."
+   ],
+   [
+    "What three kinds of surface did Salma see in the documentary?",
+    "She saw sand dunes, plains covered with stones and bare rocky mountains."
+   ],
+   [
+    "How can Salma learn more about the different types of deserts?",
+    "She can study maps and pictures in her atlas and textbook, and ask her geography teacher."
+   ]
+  ],
+  "justification": "This lesson will help us to know where the deserts of the world are found, their types, and why they are so dry.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION AND LOCATION",
+    "qa": [
+     {
+      "q": "A region receives less than 250 mm of rain per year and has very little vegetation. What do we call it?",
+      "a": "Such a region is called a desert."
+     },
+     {
+      "img": "deserts_world.png",
+      "kind": "map",
+      "q": "Find the main deserts on the map.",
+      "full": true
+     },
+     {
+      "q": "Look at the map. Near which lines of latitude are most hot deserts found?",
+      "a": "Most hot deserts are found near the Tropic of Cancer and the Tropic of Capricorn, between about 15° and 30° north and south of the Equator."
+     },
+     {
+      "q": "Look at the map. On which side of the continents are most hot deserts found: east or west?",
+      "a": "Most hot deserts are found on the western side of the continents, for example the Sahara, the Namib, the Atacama and the Great Australian Desert."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition and Location",
+     "defs": [
+      "A desert is a region that receives less than 250 mm of rain per year and has very little vegetation."
+     ],
+     "intro": "Hot deserts are found between about 15° and 30° north and south of the Equator, mostly on the western sides of continents. The main ones are the following:",
+     "items": [
+      [
+       "A. In Africa",
+       "The Sahara in North Africa, the largest hot desert in the world, and the Kalahari and the Namib in Southern Africa.",
+       "deserts_world.png"
+      ],
+      [
+       "B. In Asia",
+       "The Arabian Desert and the Thar Desert in India and Pakistan."
+      ],
+      [
+       "C. In America and Australia",
+       "The Sonoran and Mojave Deserts in North America, the Atacama in South America, and the Great Australian Desert."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES",
+    "qa": [
+     {
+      "q": "The Gobi Desert in Asia is dry, but its winters are very cold. What type of desert is it?",
+      "a": "The Gobi is a cold desert, also called a mid-latitude desert. The Sahara is a hot desert."
+     },
+     {
+      "q": "In the Sahara, some areas are seas of sand, some are stony plains and some are bare rock. What are these three surfaces called?",
+      "a": "A sandy desert is called an erg, a stony desert is called a reg, and a rocky desert is called a hamada."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Deserts",
+     "intro": "Deserts can be classified according to their temperature and according to their surface:",
+     "items": [
+      [
+       "A. According to Temperature",
+       "Hot deserts, like the Sahara, are hot all year. Cold deserts, like the Gobi, have very cold winters."
+      ],
+      [
+       "B. According to Surface",
+       [
+        "– An erg is a sandy desert with dunes.",
+        "– A reg is a stony desert.",
+        "– A hamada is a rocky desert."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. CAUSES",
+    "qa": [
+     {
+      "q": "The trade winds that blow over the Sahara come from the land, not from the sea. Why do they bring no rain?",
+      "a": "They bring no rain because they blow over land and are dry. They also get warmer as they move towards the Equator, so they do not form clouds."
+     },
+     {
+      "q": "The Namib Desert lies along the coast, next to the cold Benguela current. How does this cold current make the coast dry?",
+      "a": "The cold current cools the air above it. Cool air cannot rise and form rain clouds, so it gives only fog and no rain."
+     }
+    ],
+    "sum": {
+     "title": "III. Causes of Deserts",
+     "intro": "The main causes of deserts are the following:",
+     "items": [
+      [
+       "A. Dry Trade Winds",
+       "The trade winds blow from the land. They are dry and bring no rain."
+      ],
+      [
+       "B. Cold Ocean Currents",
+       "Cold currents cool the air, so it cannot form rain clouds. Examples: the Benguela current (Namib) and the Humboldt current (Atacama)."
+      ],
+      [
+       "C. Distance from the Sea",
+       "The centres of large continents are far from the sea, so moist winds do not reach them, as in the Gobi."
+      ],
+      [
+       "D. Rain Shadow",
+       "Mountains stop moist winds, so the land behind them is dry, as in Patagonia."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why are most hot deserts found on the western sides of the continents?",
+    "They are found there because of dry trade winds blowing from the land and cold ocean currents along the coasts."
+   ],
+   [
+    "What is the difference between an erg and a reg?",
+    "An erg is a sandy desert with dunes, while a reg is a stony desert."
+   ],
+   [
+    "Name one hot desert and one cold desert.",
+    "The Sahara is a hot desert and the Gobi is a cold desert."
+   ]
+  ],
+  "remediation": [
+   [
+    "A desert receives less than ______ mm of rain per year.",
+    "The largest hot desert in the world is the ______.",
+    "A sandy desert is called an ______."
+   ],
+   [
+    "A stony desert is called a ______, and a rocky desert is called a ______.",
+    "The cold current along the Namib Desert is the ______ current.",
+    "The Gobi is an example of a ______ desert."
+   ]
+  ],
+  "remediationAnswers": "1. 250 2. Sahara 3. erg 4. reg, hamada 5. Benguela 6. cold",
+  "homework": "Think about the hottest days of March in Garoua. Are the nights also very hot, or cooler? Write two sentences about the difference between day and night.",
+  "homeworkTag": "This prepares Part 2: The Climate of Hot Deserts.",
+  "bilingual": [
+   [
+    "Desert",
+    "Le désert"
+   ],
+   [
+    "Hot desert",
+    "Le désert chaud"
+   ],
+   [
+    "Cold desert",
+    "Le désert froid"
+   ],
+   [
+    "Erg (sandy desert)",
+    "L'erg"
+   ],
+   [
+    "Reg (stony desert)",
+    "Le reg"
+   ],
+   [
+    "Rocky desert",
+    "La hamada"
+   ],
+   [
+    "Trade winds",
+    "Les alizés"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, parts I and II. Period 2: part III, board summary and evaluation.",
+   "The Sahara covers about 9 million km². The Atacama is the driest non-polar desert."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts).",
+   "World deserts map drawn from Natural Earth data; limits are approximate."
+  ]
+ }
+}

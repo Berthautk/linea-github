@@ -1,0 +1,7 @@
+treeplant3::planting a tree sapling hands soil
+treeplant4::volunteers planting trees reforestation
+treeplant5::tree planting Kenya women
+fire3::bushfire Africa grass flames
+fire4::savanna fire Kenya burning grass
+dam3::dam spillway reservoir Africa
+dam4::hydroelectric dam Cameroon

@@ -1,0 +1,498 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Earthquakes are major hazards, but their damage can be reduced:\"]",
+  "sum | \"x\" | \"A. Impact on Man\" | [\"– Deaths and injuries, mainly when buildings collapse.\",\"– Destruction of houses, roads, bridges and dams.\",\"– Fires, broken water pipes and power lines; diseases.\",\"– Homelessness and poverty (Haiti 2010; Turkey and Syria 2023; Morocco 2023).\"]",
+  "sum | \"x\" | \"B. Adaptation and Mitigation\" | [\"– Earthquake-resistant buildings and strict building rules.\",\"– Monitoring with seismographs and early warning systems.\",\"– Drills: drop, cover and hold on.\",\"– Land-use planning: avoid building on faults and loose soils.\",\"– Emergency kits and rescue services.\"]",
+  "sum | \"III. Impact on Man, Adaptation and Mitigation (1/5)\" | [\"Earthquakes are major hazards, but their damage can be reduced:\"]",
+  "sum | \"III. Impact on Man, Adaptation and Mitigation (2/5)\" | \"A. Impact on Man\" | [\"– Deaths and injuries, mainly when buildings collapse.\",\"– Destruction of houses, roads, bridges and dams.\",\"– Fires, broken water pipes and power lines; diseases.\",\"– Homelessness and poverty (Haiti 2010; Turkey and Syria 2023; Morocco 2023).\"]",
+  "sum | \"III. Impact on Man, Adaptation and Mitigation (4/5)\" | \"B. Adaptation and Mitigation\" | [\"– Earthquake-resistant buildings and strict building rules.\",\"– Monitoring with seismographs and early warning systems.\",\"– Drills: drop, cover and hold on.\",\"– Land-use planning: avoid building on faults and loose soils.\",\"– Emergency kits and rescue services.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON13_Earthquakes",
+  "lessonNo": 13,
+  "lessonName": "Earthquakes",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Seismic Activities and Man",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Seismic Activities and Man",
+  "notions": "Seismicity, focus, epicentre, magnitude, resources, hazards.",
+  "focus": "Definition; causes; manifestation; impact on man; adaptation and mitigation.",
+  "competence": "Learners are able to explain what causes earthquakes and to apply safety rules (drop, cover and hold on) during an earthquake.",
+  "objectives": [
+   "Define an earthquake, its focus and its epicentre.",
+   "Explain the causes of earthquakes.",
+   "Describe how earthquakes are measured and how they appear.",
+   "Explain their impact on man and suggest adaptation and mitigation measures."
+  ],
+  "recall": [
+   "The plates move against each other at their margins.",
+   "Volcanic eruptions can cause the ground to shake.",
+   "Conservative margins have strong earthquakes."
+  ],
+  "recallNote": "Check the homework: experiences of ground shaking.",
+  "situation": [
+   "On the news, Ismaïla sees that a strong earthquake in Morocco in September 2023 destroyed villages in the mountains. Thousands of people died, and many families lost their houses.",
+   "Ismaïla feels that the ground of Garoua is solid. He wonders what can make the whole ground shake, and why some earthquakes are weak while others are deadly."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ismaïla does not know what causes earthquakes and why some are stronger than others."
+   ],
+   [
+    "Which African country had a deadly earthquake in 2023?",
+    "Morocco had a deadly earthquake in September 2023."
+   ],
+   [
+    "What should you do if the ground starts to shake?",
+    "Drop to the ground, take cover under a strong table, hold on, and stay away from windows and walls that can fall."
+   ]
+  ],
+  "justification": "This lesson will help us to understand earthquakes and to know how to protect ourselves.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION AND CAUSES",
+    "qa": [
+     {
+      "img": "earthquake.png",
+      "kind": "diagram",
+      "q": "Study the focus and the epicentre.",
+      "full": true
+     },
+     {
+      "q": "What is an earthquake? What are the focus and the epicentre?",
+      "a": "An earthquake is a sudden shaking of the ground. The focus is the point underground where it starts. The epicentre is the point on the surface just above the focus."
+     },
+     {
+      "q": "What is the main cause of earthquakes?",
+      "a": "Most earthquakes happen when plates move. Rocks get stuck along a fault, stress builds up, and the rocks suddenly break and slip."
+     },
+     {
+      "q": "Give other causes of earthquakes.",
+      "a": "Volcanic eruptions, and human activities such as mining, big dams and explosions, can also cause earthquakes."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition and Causes",
+     "defs": [
+      "An earthquake is a sudden shaking of the ground caused by the release of energy in the crust.",
+      "The focus is the point underground where the earthquake starts. The epicentre is the point on the surface directly above the focus."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The energy spreads from the focus as seismic waves. The shaking is strongest near the epicentre.",
+       "earthquake.png"
+      ],
+      [
+       "B. Causes",
+       [
+        "– Movement of plates along faults (main cause).",
+        "– Volcanic eruptions.",
+        "– Human activities: mining, large dams, explosions."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. MANIFESTATION",
+    "qa": [
+     {
+      "q": "Which instrument records earthquakes?",
+      "a": "A seismograph (seismometer) records the seismic waves of earthquakes."
+     },
+     {
+      "q": "Is the Richter scale limited from 1 to 10?",
+      "a": "No. Magnitude scales have no upper limit. Today scientists use the moment magnitude scale. Each step of 1 means about 32 times more energy."
+     },
+     {
+      "q": "How does an earthquake show itself on the ground?",
+      "a": "The ground shakes and cracks, buildings collapse, landslides happen, and under the sea, it can cause a tsunami."
+     }
+    ],
+    "sum": {
+     "title": "II. Manifestation and Measurement",
+     "intro": "Earthquakes can be measured and observed:",
+     "items": [
+      [
+       "A. Measurement",
+       [
+        "– The seismograph records seismic waves.",
+        "– Magnitude (energy) is measured on the Richter or moment magnitude scale; it has no upper limit. Each step of 1 is about 32 times more energy.",
+        "– Intensity (damage) is measured on the Mercalli scale (I to XII)."
+       ]
+      ],
+      [
+       "B. Manifestation",
+       [
+        "– Shaking and cracking of the ground.",
+        "– Collapse of buildings, bridges and roads.",
+        "– Landslides, liquefaction of wet soils, and tsunamis under the sea."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. IMPACT, ADAPTATION AND MITIGATION",
+    "qa": [
+     {
+      "q": "What is the main cause of death during an earthquake?",
+      "a": "Most people die when buildings collapse on them."
+     },
+     {
+      "q": "How do countries like Japan reduce the damage of earthquakes?",
+      "a": "They build earthquake-resistant buildings, give early warnings, and train people with regular drills."
+     }
+    ],
+    "sum": {
+     "title": "III. Impact on Man, Adaptation and Mitigation",
+     "intro": "Earthquakes are major hazards, but their damage can be reduced:",
+     "items": [
+      [
+       "A. Impact on Man",
+       [
+        "– Deaths and injuries, mainly when buildings collapse.",
+        "– Destruction of houses, roads, bridges and dams.",
+        "– Fires, broken water pipes and power lines; diseases.",
+        "– Homelessness and poverty (Haiti 2010; Turkey and Syria 2023; Morocco 2023)."
+       ]
+      ],
+      [
+       "B. Adaptation and Mitigation",
+       [
+        "– Earthquake-resistant buildings and strict building rules.",
+        "– Monitoring with seismographs and early warning systems.",
+        "– Drills: drop, cover and hold on.",
+        "– Land-use planning: avoid building on faults and loose soils.",
+        "– Emergency kits and rescue services."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the epicentre of an earthquake?",
+    "It is the point on the surface directly above the focus."
+   ],
+   [
+    "Which instrument records earthquakes?",
+    "The seismograph records earthquakes."
+   ],
+   [
+    "Give two ways to reduce the damage of earthquakes.",
+    "Build earthquake-resistant buildings and train people with safety drills."
+   ]
+  ],
+  "remediation": [
+   [
+    "A sudden shaking of the ground is an ______.",
+    "The point where an earthquake starts is the ______.",
+    "Earthquakes are recorded by a ______."
+   ],
+   [
+    "The damage of an earthquake is measured on the ______ scale.",
+    "An earthquake under the sea can cause a ______.",
+    "During an earthquake: drop, cover and ______ on."
+   ]
+  ],
+  "remediationAnswers": "1. earthquake 2. focus 3. seismograph 4. Mercalli 5. tsunami 6. hold",
+  "homework": "After the next rain, look at the side of a road or a slope. Write what the running water did to the soil, and where the soil went.",
+  "homeworkTag": "This prepares Lesson 14: Denudation.",
+  "bilingual": [
+   [
+    "Earthquake",
+    "Le séisme / le tremblement de terre"
+   ],
+   [
+    "Focus",
+    "Le foyer / hypocentre"
+   ],
+   [
+    "Epicentre",
+    "L'épicentre"
+   ],
+   [
+    "Seismograph",
+    "Le sismographe"
+   ],
+   [
+    "Magnitude",
+    "La magnitude"
+   ],
+   [
+    "Tsunami",
+    "Le tsunami"
+   ],
+   [
+    "Fault",
+    "La faille"
+   ],
+   [
+    "Collapse",
+    "L'effondrement"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say the Richter scale \"goes from 1 to 10\" and that each number is \"ten times more powerful\". Magnitude scales have no upper limit; each whole number means 10 times more ground movement (amplitude) and about 32 times more energy. Scientists now use the moment magnitude scale. The Mercalli scale measures intensity (damage).",
+   "Checked: Morocco (Al Haouz), 8 September 2023, magnitude 6.8, about 2,960 deaths. Turkey–Syria, 6 February 2023, magnitude 7.8, more than 50,000 deaths. Largest recorded: Chile 1960, magnitude 9.5.",
+   "Small earthquakes are sometimes felt in Cameroon, mainly around Mount Cameroon and along the Cameroon Volcanic Line."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary.",
+   "USGS Earthquake Hazards Program: magnitude and intensity."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 13",
+  "title": "Earthquakes",
+  "sumTitle": "Earthquakes",
+  "coverNote": "Good morning, class. Today we study Lesson 13: Earthquakes.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 13: Earthquakes",
+  "matter": "I. Definition and Causes: Illustration, Causes; II. Manifestation and Measurement: Measurement, Manifestation; III. Impact on Man, Adaptation and Mitigation: Impact on Man, Adaptation and Mitigation."
+ },
+ "file": "FORM4_LESSON13_Earthquakes",
+ "sp": {
+  "file": "FORM4_LESSON13_Earthquakes",
+  "lessonNo": 13,
+  "lessonName": "Earthquakes",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Seismic Activities and Man",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Seismic Activities and Man",
+  "notions": "Seismicity, focus, epicentre, magnitude, resources, hazards.",
+  "focus": "Definition; causes; manifestation; impact on man; adaptation and mitigation.",
+  "competence": "Learners are able to explain what causes earthquakes and to apply safety rules (drop, cover and hold on) during an earthquake.",
+  "objectives": [
+   "Define an earthquake, its focus and its epicentre.",
+   "Explain the causes of earthquakes.",
+   "Describe how earthquakes are measured and how they appear.",
+   "Explain their impact on man and suggest adaptation and mitigation measures."
+  ],
+  "recall": [
+   "The plates move against each other at their margins.",
+   "Volcanic eruptions can cause the ground to shake.",
+   "Conservative margins have strong earthquakes."
+  ],
+  "recallNote": "Check the homework: experiences of ground shaking.",
+  "situation": [
+   "On the news, Ismaïla sees that a strong earthquake in Morocco in September 2023 destroyed villages in the mountains. Thousands of people died, and many families lost their houses.",
+   "Ismaïla feels that the ground of Garoua is solid. He wonders what can make the whole ground shake, and why some earthquakes are weak while others are deadly."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ismaïla does not know what causes earthquakes and why some are stronger than others."
+   ],
+   [
+    "Which African country had a deadly earthquake in 2023?",
+    "Morocco had a deadly earthquake in September 2023."
+   ],
+   [
+    "What should you do if the ground starts to shake?",
+    "Drop to the ground, take cover under a strong table, hold on, and stay away from windows and walls that can fall."
+   ]
+  ],
+  "justification": "This lesson will help us to understand earthquakes and to know how to protect ourselves.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION AND CAUSES",
+    "qa": [
+     {
+      "img": "earthquake.png",
+      "kind": "diagram",
+      "q": "Study the focus and the epicentre.",
+      "full": true
+     },
+     {
+      "q": "What is an earthquake? What are the focus and the epicentre?",
+      "a": "An earthquake is a sudden shaking of the ground. The focus is the point underground where it starts. The epicentre is the point on the surface just above the focus."
+     },
+     {
+      "q": "What is the main cause of earthquakes?",
+      "a": "Most earthquakes happen when plates move. Rocks get stuck along a fault, stress builds up, and the rocks suddenly break and slip."
+     },
+     {
+      "q": "Give other causes of earthquakes.",
+      "a": "Volcanic eruptions, and human activities such as mining, big dams and explosions, can also cause earthquakes."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition and Causes",
+     "defs": [
+      "An earthquake is a sudden shaking of the ground caused by the release of energy in the crust.",
+      "The focus is the point underground where the earthquake starts. The epicentre is the point on the surface directly above the focus."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The energy spreads from the focus as seismic waves. The shaking is strongest near the epicentre.",
+       "earthquake.png"
+      ],
+      [
+       "B. Causes",
+       [
+        "– Movement of plates along faults (main cause).",
+        "– Volcanic eruptions.",
+        "– Human activities: mining, large dams, explosions."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. MANIFESTATION",
+    "qa": [
+     {
+      "q": "Which instrument records earthquakes?",
+      "a": "A seismograph (seismometer) records the seismic waves of earthquakes."
+     },
+     {
+      "q": "Is the Richter scale limited from 1 to 10?",
+      "a": "No. Magnitude scales have no upper limit. Today scientists use the moment magnitude scale. Each step of 1 means about 32 times more energy."
+     },
+     {
+      "q": "How does an earthquake show itself on the ground?",
+      "a": "The ground shakes and cracks, buildings collapse, landslides happen, and under the sea, it can cause a tsunami."
+     }
+    ],
+    "sum": {
+     "title": "II. Manifestation and Measurement",
+     "intro": "Earthquakes can be measured and observed:",
+     "items": [
+      [
+       "A. Measurement",
+       [
+        "– The seismograph records seismic waves.",
+        "– Magnitude (energy) is measured on the Richter or moment magnitude scale; it has no upper limit. Each step of 1 is about 32 times more energy.",
+        "– Intensity (damage) is measured on the Mercalli scale (I to XII)."
+       ]
+      ],
+      [
+       "B. Manifestation",
+       [
+        "– Shaking and cracking of the ground.",
+        "– Collapse of buildings, bridges and roads.",
+        "– Landslides, liquefaction of wet soils, and tsunamis under the sea."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. IMPACT, ADAPTATION AND MITIGATION",
+    "qa": [
+     {
+      "q": "What is the main cause of death during an earthquake?",
+      "a": "Most people die when buildings collapse on them."
+     },
+     {
+      "q": "How do countries like Japan reduce the damage of earthquakes?",
+      "a": "They build earthquake-resistant buildings, give early warnings, and train people with regular drills."
+     }
+    ],
+    "sum": {
+     "title": "III. Impact on Man, Adaptation and Mitigation",
+     "intro": "Earthquakes are major hazards, but their damage can be reduced:",
+     "items": [
+      [
+       "A. Impact on Man",
+       [
+        "– Deaths and injuries, mainly when buildings collapse.",
+        "– Destruction of houses, roads, bridges and dams.",
+        "– Fires, broken water pipes and power lines; diseases.",
+        "– Homelessness and poverty (Haiti 2010; Turkey and Syria 2023; Morocco 2023)."
+       ]
+      ],
+      [
+       "B. Adaptation and Mitigation",
+       [
+        "– Earthquake-resistant buildings and strict building rules.",
+        "– Monitoring with seismographs and early warning systems.",
+        "– Drills: drop, cover and hold on.",
+        "– Land-use planning: avoid building on faults and loose soils.",
+        "– Emergency kits and rescue services."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the epicentre of an earthquake?",
+    "It is the point on the surface directly above the focus."
+   ],
+   [
+    "Which instrument records earthquakes?",
+    "The seismograph records earthquakes."
+   ],
+   [
+    "Give two ways to reduce the damage of earthquakes.",
+    "Build earthquake-resistant buildings and train people with safety drills."
+   ]
+  ],
+  "remediation": [
+   [
+    "A sudden shaking of the ground is an ______.",
+    "The point where an earthquake starts is the ______.",
+    "Earthquakes are recorded by a ______."
+   ],
+   [
+    "The damage of an earthquake is measured on the ______ scale.",
+    "An earthquake under the sea can cause a ______.",
+    "During an earthquake: drop, cover and ______ on."
+   ]
+  ],
+  "remediationAnswers": "1. earthquake 2. focus 3. seismograph 4. Mercalli 5. tsunami 6. hold",
+  "homework": "After the next rain, look at the side of a road or a slope. Write what the running water did to the soil, and where the soil went.",
+  "homeworkTag": "This prepares Lesson 14: Denudation.",
+  "bilingual": [
+   [
+    "Earthquake",
+    "Le séisme / le tremblement de terre"
+   ],
+   [
+    "Focus",
+    "Le foyer / hypocentre"
+   ],
+   [
+    "Epicentre",
+    "L'épicentre"
+   ],
+   [
+    "Seismograph",
+    "Le sismographe"
+   ],
+   [
+    "Magnitude",
+    "La magnitude"
+   ],
+   [
+    "Tsunami",
+    "Le tsunami"
+   ],
+   [
+    "Fault",
+    "La faille"
+   ],
+   [
+    "Collapse",
+    "L'effondrement"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say the Richter scale \"goes from 1 to 10\" and that each number is \"ten times more powerful\". Magnitude scales have no upper limit; each whole number means 10 times more ground movement (amplitude) and about 32 times more energy. Scientists now use the moment magnitude scale. The Mercalli scale measures intensity (damage).",
+   "Checked: Morocco (Al Haouz), 8 September 2023, magnitude 6.8, about 2,960 deaths. Turkey–Syria, 6 February 2023, magnitude 7.8, more than 50,000 deaths. Largest recorded: Chile 1960, magnitude 9.5.",
+   "Small earthquakes are sometimes felt in Cameroon, mainly around Mount Cameroon and along the Cameroon Volcanic Line."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary.",
+   "USGS Earthquake Hazards Program: magnitude and intensity."
+  ]
+ }
+}

@@ -1,0 +1,525 @@
+{
+ "planewindow": [
+  {
+   "title": "flying",
+   "url": "https://live.staticflickr.com/3500/3469129491_f8b8193839_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "{ pranav }",
+   "page": "https://www.flickr.com/photos/29220600@N08/3469129491",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "Blue Beauty",
+   "url": "https://live.staticflickr.com/58/195627864_c38013a2e8_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "caribb",
+   "page": "https://www.flickr.com/photos/87857621@N00/195627864",
+   "w": 1024,
+   "h": 680
+  },
+  {
+   "title": "KLM Asia 747-400",
+   "url": "https://live.staticflickr.com/68/195600154_4bdc0880e2_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "caribb",
+   "page": "https://www.flickr.com/photos/87857621@N00/195600154",
+   "w": 1024,
+   "h": 680
+  }
+ ],
+ "ozonehole": [
+  {
+   "title": "NASA\u2019s DC-8 over Palmer Peninsula",
+   "url": "https://live.staticflickr.com/4479/37988456046_0418989e31_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY 2.0",
+   "creator": "NASA Goddard Photo and Video",
+   "page": "https://www.flickr.com/photos/24662369@N07/37988456046",
+   "w": 940,
+   "h": 705
+  },
+  {
+   "title": "Sauron's Eye",
+   "url": "https://live.staticflickr.com/3860/15252220086_264d001fd4_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "sjrankin",
+   "page": "https://www.flickr.com/photos/24354425@N03/15252220086",
+   "w": 1024,
+   "h": 576
+  },
+  {
+   "title": "Ozone Hole Over Antarctica Reaches Annual Maximum",
+   "url": "https://live.staticflickr.com/1599/24270792702_0d7d162b5c_b.jpg",
+   "src": "flickr",
+   "lic": "Public domain 1.0",
+   "creator": "NOAASatellites",
+   "page": "https://www.flickr.com/photos/125201706@N06/24270792702",
+   "w": 1024,
+   "h": 576
+  }
+ ],
+ "wxstation": [],
+ "raingauge": [
+  {
+   "title": "TinyTX with tipping bucket rain gauge",
+   "url": "https://live.staticflickr.com/8382/8513441453_99cfcb0afd_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "Nathan Chantrell",
+   "page": "https://www.flickr.com/photos/41533053@N03/8513441453",
+   "w": 1000,
+   "h": 750
+  },
+  {
+   "title": "Instruction on the use of a rain-gauge",
+   "url": "https://live.staticflickr.com/7378/27686584975_87fff8d5a8_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "World Meteorological Organization",
+   "page": "https://www.flickr.com/photos/89438962@N05/27686584975",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "Sarasota - Rain Gauge (in 23rd Year)",
+   "url": "https://live.staticflickr.com/8361/8370429863_56ab2aa358_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "roger4336",
+   "page": "https://www.flickr.com/photos/24736216@N07/8370429863",
+   "w": 928,
+   "h": 770
+  }
+ ],
+ "anemometer": [],
+ "maxmin": [
+  {
+   "title": "maximum minimum thermometer",
+   "url": "https://live.staticflickr.com/8461/7928832850_c02d431d14_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "Leo Reynolds",
+   "page": "https://www.flickr.com/photos/49968232@N00/7928832850",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "maximum minimum thermometer",
+   "url": "https://live.staticflickr.com/8445/7928521796_581a6ecebd_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "Leo Reynolds",
+   "page": "https://www.flickr.com/photos/49968232@N00/7928521796",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Federal Thunderbolt Siren, Complex Status Lights, Crow's Nest",
+   "url": "https://live.staticflickr.com/65535/52620761123_241b4728d5_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "rocbolt",
+   "page": "https://www.flickr.com/photos/28685581@N06/52620761123",
+   "w": 1024,
+   "h": 683
+  }
+ ],
+ "stevenson": [
+  {
+   "title": "Stevenson screen interior",
+   "url": "https://live.staticflickr.com/5305/5614320172_40f3a20475_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "cambridgebayweather",
+   "page": "https://www.flickr.com/photos/49502561@N00/5614320172",
+   "w": 1024,
+   "h": 773
+  },
+  {
+   "title": "Queen Victoria Homes, Wentworth Falls",
+   "url": "https://live.staticflickr.com/65535/48459953717_d21458f8f2_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "Blue Mountains Library, Local Studies",
+   "page": "https://www.flickr.com/photos/26602074@N06/48459953717",
+   "w": 1024,
+   "h": 678
+  },
+  {
+   "title": "Adelaide. Urrbrae. The weather station at the Waite campus of the University of Adelaide. The old Stevenson Screen replaced with complex equipment to measure air pollution etc.",
+   "url": "https://live.staticflickr.com/65535/49865994827_884d1f44b9_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-ND 2.0",
+   "creator": "denisbin",
+   "page": "https://www.flickr.com/photos/82134796@N03/49865994827",
+   "w": 1024,
+   "h": 768
+  }
+ ],
+ "laundry": [
+  {
+   "title": "The wind and the washing",
+   "url": "https://live.staticflickr.com/4073/4893870082_ac5137362c_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "10b travelling / Carsten ten Brink",
+   "page": "https://www.flickr.com/photos/77334245@N00/4893870082",
+   "w": 1024,
+   "h": 377
+  },
+  {
+   "title": "Clothesline in Zanzibar",
+   "url": "https://live.staticflickr.com/4057/4324424199_bb3b74030c_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "Kevin H.",
+   "page": "https://www.flickr.com/photos/16151021@N00/4324424199",
+   "w": 1024,
+   "h": 680
+  },
+  {
+   "title": "Bright Blue Home",
+   "url": "https://live.staticflickr.com/3290/2797194021_14d403481e_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "Clav",
+   "page": "https://www.flickr.com/photos/37005711@N00/2797194021",
+   "w": 1024,
+   "h": 682
+  }
+ ],
+ "windsock": [
+  {
+   "title": "Back from Afghanistan, Marines describe success behind close-air support mission",
+   "url": "https://live.staticflickr.com/7093/7314782674_19a4d4b7cd_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "DVIDSHUB",
+   "page": "https://www.flickr.com/photos/28650594@N03/7314782674",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "2014 - Victoria - Doctor on Board",
+   "url": "https://live.staticflickr.com/3859/15063872121_b73c1c4f1c_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-SA 2.0",
+   "creator": "Ted's photos - Returns in December",
+   "page": "https://www.flickr.com/photos/90955804@N04/15063872121",
+   "w": 1024,
+   "h": 454
+  },
+  {
+   "title": "Day 10 - From the Jungle to the Beach",
+   "url": "https://live.staticflickr.com/4008/4326683288_440d304607_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "Kevin H.",
+   "page": "https://www.flickr.com/photos/16151021@N00/4326683288",
+   "w": 1024,
+   "h": 680
+  }
+ ],
+ "barometer": [
+  {
+   "title": "Aneroid Barometer, with dial designed by Sir Napier Shaw, 1914",
+   "url": "https://coimages.sciencemuseumgroup.org.uk/361/954/large_smg00178305.jpg",
+   "src": "sciencemuseum",
+   "lic": "CC BY-NC-SA 4.0",
+   "creator": "Negretti & Zambra; Shaw, Sir Napier",
+   "page": "https://collection.sciencemuseumgroup.org.uk/objects/co54459/aneroid-barometer-with-dial-designed-by-sir-napier-shaw-1914",
+   "w": 1536,
+   "h": 1223
+  }
+ ],
+ "coldbottle": [
+  {
+   "title": "water bottle",
+   "url": "https://live.staticflickr.com/1133/542497582_679b6396ea_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Muffet",
+   "page": "https://www.flickr.com/photos/53133240@N00/542497582",
+   "w": 1024,
+   "h": 829
+  },
+  {
+   "title": "ambience",
+   "url": "https://live.staticflickr.com/3915/14527761925_3d17d876c8_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "jenny downing",
+   "page": "https://www.flickr.com/photos/7941044@N06/14527761925",
+   "w": 1024,
+   "h": 788
+  },
+  {
+   "title": "Beer Bottle Base",
+   "url": "https://live.staticflickr.com/5218/5533724847_28064d467f_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "KJGarbutt",
+   "page": "https://www.flickr.com/photos/25187937@N05/5533724847",
+   "w": 1024,
+   "h": 768
+  }
+ ],
+ "fogvalley": [
+  {
+   "title": "Fog rolling into the Red Valley",
+   "url": "https://live.staticflickr.com/5514/9865616153_c62a57a625_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "nicholasjon",
+   "page": "https://www.flickr.com/photos/71235231@N00/9865616153",
+   "w": 1024,
+   "h": 683
+  },
+  {
+   "title": "Morning mist on lavender. Lavender Valley Farms, Oregon",
+   "url": "https://live.staticflickr.com/65535/51385907781_e7d46fd3d2_b.jpg",
+   "src": "flickr",
+   "lic": "Public domain 1.0",
+   "creator": "Bonnie Moreland (free images)",
+   "page": "https://www.flickr.com/photos/66741228@N05/51385907781",
+   "w": 1024,
+   "h": 672
+  },
+  {
+   "title": "Mist",
+   "url": "https://live.staticflickr.com/805/40783321332_43c5852716_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-SA 2.0",
+   "creator": "Art by MarkAC",
+   "page": "https://www.flickr.com/photos/60580775@N08/40783321332",
+   "w": 1024,
+   "h": 380
+  }
+ ],
+ "cumulonimbus": [
+  {
+   "title": "06172012 Sunday evening pulse storms/cumulonimbi",
+   "url": "https://live.staticflickr.com/8015/7395715628_f0a0705a86_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "StormRider93 | Into the Storm",
+   "page": "https://www.flickr.com/photos/65232104@N04/7395715628",
+   "w": 1000,
+   "h": 860
+  },
+  {
+   "title": "Cumulonimbus Cloud Over Senegal and Mali, Africa (NASA, International Space Station Science, 02/05/08)",
+   "url": "https://live.staticflickr.com/2429/3899705341_345fe247a2_b.jpg",
+   "src": "nasa",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "NASA's Marshall Space Flight Center",
+   "page": "https://www.flickr.com/photos/28634332@N05/3899705341",
+   "w": 1024,
+   "h": 697
+  },
+  {
+   "title": "Thunderhead",
+   "url": "https://live.staticflickr.com/1191/543334336_dc24ebe65e_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Nicholas_T",
+   "page": "https://www.flickr.com/photos/14922165@N00/543334336",
+   "w": 1024,
+   "h": 613
+  }
+ ],
+ "heavyrain": [
+  {
+   "title": "Flood in Accra",
+   "url": "https://live.staticflickr.com/54/181742000_fa59c856dc_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Stig Nygaard",
+   "page": "https://www.flickr.com/photos/10259776@N00/181742000",
+   "w": 1024,
+   "h": 768
+  },
+  {
+   "title": "D\u00e9solation",
+   "url": "https://live.staticflickr.com/8378/8507976100_07463a1aa7_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "DeGust",
+   "page": "https://www.flickr.com/photos/55299332@N05/8507976100",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "Heavy rain. Johannesburg, South Africa",
+   "url": "https://live.staticflickr.com/65535/49745935146_7438b76acf_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "varfolomeev",
+   "page": "https://www.flickr.com/photos/45427632@N02/49745935146",
+   "w": 1024,
+   "h": 768
+  }
+ ],
+ "canoesdawn": [],
+ "treeshade": [],
+ "fullriver": [],
+ "exhaust": [
+  {
+   "title": "Seattle with crane and exhaust stack, Cascade Mountain range in the distance from the deck of Highway 5 bridge, U District, Seattle, Washington, USA (stopped in traffic)",
+   "url": "https://live.staticflickr.com/4025/4669986703_d1e81c32f4_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Wonderlane",
+   "page": "https://www.flickr.com/photos/71401718@N00/4669986703",
+   "w": 1024,
+   "h": 656
+  }
+ ],
+ "chimneys": [
+  {
+   "title": "image replaced (thanks Anne :) )",
+   "url": "https://live.staticflickr.com/8108/8464430910_3089286af7_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "why 137",
+   "page": "https://www.flickr.com/photos/78752351@N03/8464430910",
+   "w": 1024,
+   "h": 664
+  },
+  {
+   "title": "Cantley sugar beet factory, Norfolk",
+   "url": "https://live.staticflickr.com/3042/3084556690_1c05d952cd_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "mira66",
+   "page": "https://www.flickr.com/photos/21804434@N02/3084556690",
+   "w": 1024,
+   "h": 677
+  },
+  {
+   "title": "Part of Beijing's Smog Problem?",
+   "url": "https://live.staticflickr.com/5344/9215105540_7f03b98aaa_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "pamhule",
+   "page": "https://www.flickr.com/photos/58571789@N00/9215105540",
+   "w": 1024,
+   "h": 683
+  }
+ ],
+ "solarroof": [
+  {
+   "title": "Masaika Clinic in Tanzania Reopened - Combined Joint Task Force - Horn of Africa - 091007-N-2420K-228",
+   "url": "https://live.staticflickr.com/2492/4089995942_4359833b25_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "US Army Africa",
+   "page": "https://www.flickr.com/photos/36281822@N08/4089995942",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "Masaika Clinic in Tanzania Reopened - Combined Joint Task Force - Horn of Africa - 091007-N-2420K-183",
+   "url": "https://live.staticflickr.com/2622/4089238189_aab1eda652_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "US Army Africa",
+   "page": "https://www.flickr.com/photos/36281822@N08/4089238189",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "Masaika Clinic in Tanzania Reopened - Combined Joint Task Force - Horn of Africa - 091007-N-2420K-290",
+   "url": "https://live.staticflickr.com/3443/4089995250_96bb67728f_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "US Army Africa",
+   "page": "https://www.flickr.com/photos/36281822@N08/4089995250",
+   "w": 1024,
+   "h": 681
+  }
+ ],
+ "floodvillage": [
+  {
+   "title": "Woukpokpoe village has benefited from Benin's national CDD project",
+   "url": "https://live.staticflickr.com/5140/5456601079_6c13b4e829_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "World Bank Photo Collection",
+   "page": "https://www.flickr.com/photos/10816734@N03/5456601079",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "Woukpokpoe village had benefited from Benin's national CDD project",
+   "url": "https://live.staticflickr.com/5055/5456601411_829de7890f_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "World Bank Photo Collection",
+   "page": "https://www.flickr.com/photos/10816734@N03/5456601411",
+   "w": 1024,
+   "h": 681
+  },
+  {
+   "title": "AH-BJ-100920-5589 World Bank",
+   "url": "https://live.staticflickr.com/5256/5457209036_e508758252_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC-ND 2.0",
+   "creator": "World Bank Photo Collection",
+   "page": "https://www.flickr.com/photos/10816734@N03/5457209036",
+   "w": 1024,
+   "h": 681
+  }
+ ],
+ "deadcattle": [],
+ "zai": [
+  {
+   "title": "Women sowing okra in zai holes",
+   "url": "https://live.staticflickr.com/7232/7175750825_a7a41ef078_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-NC 2.0",
+   "creator": "abossuet",
+   "page": "https://www.flickr.com/photos/30450178@N07/7175750825",
+   "w": 1024,
+   "h": 768
+  }
+ ],
+ "borehole": [],
+ "leakingtap": [
+  {
+   "title": "Drip",
+   "url": "https://live.staticflickr.com/6150/5996590138_19c16dbac3_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "jronaldlee",
+   "page": "https://www.flickr.com/photos/37176760@N06/5996590138",
+   "w": 1024,
+   "h": 698
+  },
+  {
+   "title": "President Jacob Zuma launches War on Leaks programme, 28 Aug 2015",
+   "url": "https://live.staticflickr.com/5660/20326853884_d4af217855_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY-ND 2.0",
+   "creator": "GovernmentZA",
+   "page": "https://www.flickr.com/photos/90122870@N03/20326853884",
+   "w": 1024,
+   "h": 865
+  },
+  {
+   "title": "Fracking at Occupy (11/37)",
+   "url": "https://live.staticflickr.com/6045/6273636441_3402812cd8_b.jpg",
+   "src": "flickr",
+   "lic": "CC BY 2.0",
+   "creator": "Tony Fischer Photography",
+   "page": "https://www.flickr.com/photos/22714323@N06/6273636441",
+   "w": 1024,
+   "h": 730
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+gully::gully erosion red soil Africa
+muddyriver::muddy brown river sediment
+oldwall::old crumbling wall cracked stone weathered
+rust::rusty metal gate corroded
+roots::tree roots breaking rock
+exfol::exfoliation granite dome onion weathering
+karst::limestone cave stalactites
+redsoil::red laterite road Africa
+farmsoil::farmer hands soil Africa
+landslide::landslide road
+terraces::terraces hillside farming Africa
+vvalley::v-shaped valley mountain river
+waterfall::waterfall Cameroon
+potholes::river potholes rock riverbed
+meander::river meander aerial
+rivercliff::river bend eroded bank cliff
+floodplain::floodplain river flat farmland
+oxbow::oxbow lake aerial
+delta::Nile delta satellite
+braided::braided river channels sandbars
+ricefield::rice field floodplain Africa
+flood::flood houses Africa
+dyke::river dyke embankment flood protection

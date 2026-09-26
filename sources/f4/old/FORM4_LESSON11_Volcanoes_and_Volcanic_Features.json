@@ -1,0 +1,482 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Magma forms features inside the crust and on the surface:\"]",
+  "sumImage | \"x\" | \"A. Intrusive Features (illustration only)\" | \"They form when magma cools inside the crust: dyke, sill, laccolith, lopolith, phacolith, batholith and volcanic plug. We see them after erosion removes the rocks above.\" | \"volcano_structure.png\"",
+  "sum | \"x\" | \"B. Extrusive Features\" | [\"– Lava cones: gentle slopes of runny lava.\",\"– Ash and cinder cones: steep, small cones of ash.\",\"– Composite cones: layers of lava and ash.\",\"– Craters, calderas and lava plateaus.\",\"– Crater lakes, such as Lake Nyos and the lakes of Manengouba.\"]",
+  "sum | \"III. Volcanic Features (1/4)\" | [\"Magma forms features inside the crust and on the surface:\"]",
+  "sumImage | \"III. Volcanic Features (2/4)\" | \"A. Intrusive Features (illustration only)\" | \"They form when magma cools inside the crust: dyke, sill, laccolith, lopolith, phacolith, batholith and volcanic plug. We see them after erosion removes the rocks above.\" | \"volcano_structure.png\"",
+  "sum | \"III. Volcanic Features (3/4)\" | \"B. Extrusive Features\" | [\"– Lava cones: gentle slopes of runny lava.\",\"– Ash and cinder cones: steep, small cones of ash.\",\"– Composite cones: layers of lava and ash.\",\"– Craters, calderas and lava plateaus.\",\"– Crater lakes, such as Lake Nyos and the lakes of Manengouba.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON11_Volcanoes_and_Volcanic_Features",
+  "lessonNo": 11,
+  "lessonName": "Volcanoes and Volcanic Features",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Volcanoes and People",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Volcanoes and People",
+  "notions": "Volcanicity, magma, lava, crater, vent, intrusive and extrusive features.",
+  "focus": "Definition and origin of volcanoes; types by activity; structure of a volcano; intrusive features (illustration only) and extrusive features.",
+  "competence": "Learners are able to draw and label a volcano, and to recognise volcanic landforms in Cameroon.",
+  "objectives": [
+   "Define a volcano and volcanicity.",
+   "Classify volcanoes according to their activity.",
+   "Draw and label the structure of a volcano.",
+   "Identify intrusive and extrusive volcanic features."
+  ],
+  "recall": [
+   "The plates move at their margins.",
+   "Magma rises at constructive margins and at subduction zones.",
+   "Mount Cameroon is an active volcano."
+  ],
+  "recallNote": "Check the homework: the last eruptions of Mount Cameroon.",
+  "situation": [
+   "Mount Cameroon, near Buea and Limbe, is a very high mountain, but it is also an active volcano. In 1999 and in 2000, lava flowed down its sides.",
+   "The soils around the mountain are dark and very fertile. Bananas, tea, rubber and palm trees grow well there. Nafissa wonders what a volcano is, and how it can be both dangerous and useful."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nafissa does not know what a volcano is and how it can be both dangerous and useful."
+   ],
+   [
+    "In which years did Mount Cameroon erupt recently?",
+    "It erupted in 1999 and in 2000."
+   ],
+   [
+    "Name two crops grown on the soils of Mount Cameroon.",
+    "Bananas and tea (also rubber and oil palm) are grown there."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how volcanoes are formed and to recognise the landforms they create.",
+  "parts": [
+   {
+    "sec": "I. MEANING AND TYPES",
+    "qa": [
+     {
+      "q": "What is a volcano, and what is volcanicity?",
+      "a": "A volcano is an opening in the crust through which magma, gases and ash come out. Volcanicity is all the processes by which magma moves towards or onto the surface."
+     },
+     {
+      "q": "Where do volcanoes usually form?",
+      "a": "They form at plate margins and at hot spots. Mount Cameroon is on the Cameroon Volcanic Line, inside the African Plate."
+     },
+     {
+      "q": "Is Mount Cameroon active, dormant or extinct? Explain.",
+      "a": "Mount Cameroon is active, because it has erupted in recent times (1999 and 2000) and can erupt again."
+     },
+     {
+      "img": "cameroon_volcanic_line.png",
+      "kind": "map",
+      "q": "Study the Cameroon Volcanic Line.",
+      "full": true
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning and Types of Volcanoes",
+     "defs": [
+      "A volcano is an opening (vent) in the crust through which magma, gases and ash come out onto the surface.",
+      "Volcanicity is all the processes by which magma rises into the crust or onto the surface."
+     ],
+     "items": [
+      [
+       "A. Origin",
+       "Volcanoes form at plate margins and at hot spots. In Cameroon, they lie on the Cameroon Volcanic Line: Bioko, Mount Cameroon, Manengouba, Bamboutos and Oku.",
+       "cameroon_volcanic_line.png"
+      ],
+      [
+       "B. Types by Activity",
+       [
+        "– Active: it erupts or has erupted in recent history (Mount Cameroon).",
+        "– Dormant: it has not erupted for a long time but can erupt again.",
+        "– Extinct: it will not erupt again (Mount Manengouba)."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. STRUCTURE OF A VOLCANO",
+    "qa": [
+     {
+      "img": "volcano_structure.png",
+      "kind": "diagram",
+      "q": "Study the structure of a volcano.",
+      "full": true
+     },
+     {
+      "q": "Name the main parts of a volcano, from the bottom to the top.",
+      "a": "The main parts are the magma chamber, the vent (pipe), the cone and the crater at the top."
+     }
+    ],
+    "sum": {
+     "title": "II. Structure of a Volcano",
+     "intro": "A volcano has the following parts:",
+     "items": [
+      [
+       "The Main Parts",
+       [
+        "– Magma chamber: an underground store of molten rock.",
+        "– Vent: the pipe through which magma rises.",
+        "– Cone: the mountain built of layers of lava and ash.",
+        "– Crater: the bowl-shaped hole at the top."
+       ],
+       "volcano_structure.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. VOLCANIC FEATURES",
+    "qa": [
+     {
+      "q": "What is the difference between intrusive and extrusive features?",
+      "a": "Intrusive features form when magma cools inside the crust. Extrusive features form when lava and ash cool on the surface."
+     },
+     {
+      "q": "Name four intrusive features.",
+      "a": "Dyke (vertical), sill (horizontal), laccolith (dome-shaped) and batholith (very large mass, often of granite)."
+     },
+     {
+      "q": "What is the difference between a crater and a caldera?",
+      "a": "A crater is the small hole at the top of a volcano. A caldera is a very large hollow formed when the top of a volcano collapses after a big eruption."
+     }
+    ],
+    "sum": {
+     "title": "III. Volcanic Features",
+     "intro": "Magma forms features inside the crust and on the surface:",
+     "items": [
+      [
+       "A. Intrusive Features (illustration only)",
+       "They form when magma cools inside the crust: dyke, sill, laccolith, lopolith, phacolith, batholith and volcanic plug. We see them after erosion removes the rocks above.",
+       "volcano_structure.png"
+      ],
+      [
+       "B. Extrusive Features",
+       [
+        "– Lava cones: gentle slopes of runny lava.",
+        "– Ash and cinder cones: steep, small cones of ash.",
+        "– Composite cones: layers of lava and ash.",
+        "– Craters, calderas and lava plateaus.",
+        "– Crater lakes, such as Lake Nyos and the lakes of Manengouba."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between magma and lava?",
+    "Magma is molten rock under the ground; lava is molten rock that has reached the surface."
+   ],
+   [
+    "Give an example of an active volcano in Cameroon.",
+    "Mount Cameroon is an active volcano."
+   ],
+   [
+    "What is a dyke?",
+    "A dyke is a vertical wall of magma that cooled inside the crust."
+   ]
+  ],
+  "remediation": [
+   [
+    "Molten rock under the ground is ______.",
+    "The bowl-shaped hole at the top of a volcano is the ______.",
+    "A volcano that will not erupt again is ______."
+   ],
+   [
+    "A horizontal sheet of cooled magma is a ______.",
+    "A very large collapsed crater is a ______.",
+    "Mount Cameroon lies on the Cameroon Volcanic ______."
+   ]
+  ],
+  "remediationAnswers": "1. magma 2. crater 3. extinct 4. sill 5. caldera 6. Line",
+  "homework": "Imagine a friend wants to farm near Buea, on Mount Cameroon. Write two good reasons to go and two dangers.",
+  "homeworkTag": "This prepares Lesson 12: The Impact of Volcanicity on Man.",
+  "bilingual": [
+   [
+    "Volcano",
+    "Le volcan"
+   ],
+   [
+    "Magma",
+    "Le magma"
+   ],
+   [
+    "Lava",
+    "La lave"
+   ],
+   [
+    "Crater",
+    "Le cratère"
+   ],
+   [
+    "Vent",
+    "La cheminée"
+   ],
+   [
+    "Eruption",
+    "L'éruption"
+   ],
+   [
+    "Dyke",
+    "Le dyke"
+   ],
+   [
+    "Active volcano",
+    "Le volcan actif"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: Mount Cameroon is not at a subduction margin. It is on the Cameroon Volcanic Line, a line of volcanoes inside the African Plate. Its eruptions are mostly quiet flows of basalt lava.",
+   "Checked eruptions of Mount Cameroon in the 20th–21st centuries: 1909, 1922, 1954, 1959, 1982, 1999, 2000 (and small activity in 2012). Its height is about 4,040–4,095 m, depending on the survey.",
+   "Mount Manengouba is usually described as extinct (dormant for a very long time)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary.",
+   "Global Volcanism Program (Smithsonian): Mount Cameroon."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 11",
+  "title": "Volcanoes and Volcanic Features",
+  "sumTitle": "Volcanoes and Volcanic Features",
+  "coverNote": "Good morning, class. Today we study Lesson 11: Volcanoes and Volcanic Features.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 11: Volcanoes and Volcanic Features",
+  "matter": "I. Meaning and Types of Volcanoes: Origin, Types by Activity; II. Structure of a Volcano: The Main Parts; III. Volcanic Features: Intrusive Features (illustration only), Extrusive Features."
+ },
+ "file": "FORM4_LESSON11_Volcanoes_and_Volcanic_Features",
+ "sp": {
+  "file": "FORM4_LESSON11_Volcanoes_and_Volcanic_Features",
+  "lessonNo": 11,
+  "lessonName": "Volcanoes and Volcanic Features",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Volcanoes and People",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Volcanoes and People",
+  "notions": "Volcanicity, magma, lava, crater, vent, intrusive and extrusive features.",
+  "focus": "Definition and origin of volcanoes; types by activity; structure of a volcano; intrusive features (illustration only) and extrusive features.",
+  "competence": "Learners are able to draw and label a volcano, and to recognise volcanic landforms in Cameroon.",
+  "objectives": [
+   "Define a volcano and volcanicity.",
+   "Classify volcanoes according to their activity.",
+   "Draw and label the structure of a volcano.",
+   "Identify intrusive and extrusive volcanic features."
+  ],
+  "recall": [
+   "The plates move at their margins.",
+   "Magma rises at constructive margins and at subduction zones.",
+   "Mount Cameroon is an active volcano."
+  ],
+  "recallNote": "Check the homework: the last eruptions of Mount Cameroon.",
+  "situation": [
+   "Mount Cameroon, near Buea and Limbe, is a very high mountain, but it is also an active volcano. In 1999 and in 2000, lava flowed down its sides.",
+   "The soils around the mountain are dark and very fertile. Bananas, tea, rubber and palm trees grow well there. Nafissa wonders what a volcano is, and how it can be both dangerous and useful."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nafissa does not know what a volcano is and how it can be both dangerous and useful."
+   ],
+   [
+    "In which years did Mount Cameroon erupt recently?",
+    "It erupted in 1999 and in 2000."
+   ],
+   [
+    "Name two crops grown on the soils of Mount Cameroon.",
+    "Bananas and tea (also rubber and oil palm) are grown there."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how volcanoes are formed and to recognise the landforms they create.",
+  "parts": [
+   {
+    "sec": "I. MEANING AND TYPES",
+    "qa": [
+     {
+      "q": "What is a volcano, and what is volcanicity?",
+      "a": "A volcano is an opening in the crust through which magma, gases and ash come out. Volcanicity is all the processes by which magma moves towards or onto the surface."
+     },
+     {
+      "q": "Where do volcanoes usually form?",
+      "a": "They form at plate margins and at hot spots. Mount Cameroon is on the Cameroon Volcanic Line, inside the African Plate."
+     },
+     {
+      "q": "Is Mount Cameroon active, dormant or extinct? Explain.",
+      "a": "Mount Cameroon is active, because it has erupted in recent times (1999 and 2000) and can erupt again."
+     },
+     {
+      "img": "cameroon_volcanic_line.png",
+      "kind": "map",
+      "q": "Study the Cameroon Volcanic Line.",
+      "full": true
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning and Types of Volcanoes",
+     "defs": [
+      "A volcano is an opening (vent) in the crust through which magma, gases and ash come out onto the surface.",
+      "Volcanicity is all the processes by which magma rises into the crust or onto the surface."
+     ],
+     "items": [
+      [
+       "A. Origin",
+       "Volcanoes form at plate margins and at hot spots. In Cameroon, they lie on the Cameroon Volcanic Line: Bioko, Mount Cameroon, Manengouba, Bamboutos and Oku.",
+       "cameroon_volcanic_line.png"
+      ],
+      [
+       "B. Types by Activity",
+       [
+        "– Active: it erupts or has erupted in recent history (Mount Cameroon).",
+        "– Dormant: it has not erupted for a long time but can erupt again.",
+        "– Extinct: it will not erupt again (Mount Manengouba)."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. STRUCTURE OF A VOLCANO",
+    "qa": [
+     {
+      "img": "volcano_structure.png",
+      "kind": "diagram",
+      "q": "Study the structure of a volcano.",
+      "full": true
+     },
+     {
+      "q": "Name the main parts of a volcano, from the bottom to the top.",
+      "a": "The main parts are the magma chamber, the vent (pipe), the cone and the crater at the top."
+     }
+    ],
+    "sum": {
+     "title": "II. Structure of a Volcano",
+     "intro": "A volcano has the following parts:",
+     "items": [
+      [
+       "The Main Parts",
+       [
+        "– Magma chamber: an underground store of molten rock.",
+        "– Vent: the pipe through which magma rises.",
+        "– Cone: the mountain built of layers of lava and ash.",
+        "– Crater: the bowl-shaped hole at the top."
+       ],
+       "volcano_structure.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. VOLCANIC FEATURES",
+    "qa": [
+     {
+      "q": "What is the difference between intrusive and extrusive features?",
+      "a": "Intrusive features form when magma cools inside the crust. Extrusive features form when lava and ash cool on the surface."
+     },
+     {
+      "q": "Name four intrusive features.",
+      "a": "Dyke (vertical), sill (horizontal), laccolith (dome-shaped) and batholith (very large mass, often of granite)."
+     },
+     {
+      "q": "What is the difference between a crater and a caldera?",
+      "a": "A crater is the small hole at the top of a volcano. A caldera is a very large hollow formed when the top of a volcano collapses after a big eruption."
+     }
+    ],
+    "sum": {
+     "title": "III. Volcanic Features",
+     "intro": "Magma forms features inside the crust and on the surface:",
+     "items": [
+      [
+       "A. Intrusive Features (illustration only)",
+       "They form when magma cools inside the crust: dyke, sill, laccolith, lopolith, phacolith, batholith and volcanic plug. We see them after erosion removes the rocks above.",
+       "volcano_structure.png"
+      ],
+      [
+       "B. Extrusive Features",
+       [
+        "– Lava cones: gentle slopes of runny lava.",
+        "– Ash and cinder cones: steep, small cones of ash.",
+        "– Composite cones: layers of lava and ash.",
+        "– Craters, calderas and lava plateaus.",
+        "– Crater lakes, such as Lake Nyos and the lakes of Manengouba."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between magma and lava?",
+    "Magma is molten rock under the ground; lava is molten rock that has reached the surface."
+   ],
+   [
+    "Give an example of an active volcano in Cameroon.",
+    "Mount Cameroon is an active volcano."
+   ],
+   [
+    "What is a dyke?",
+    "A dyke is a vertical wall of magma that cooled inside the crust."
+   ]
+  ],
+  "remediation": [
+   [
+    "Molten rock under the ground is ______.",
+    "The bowl-shaped hole at the top of a volcano is the ______.",
+    "A volcano that will not erupt again is ______."
+   ],
+   [
+    "A horizontal sheet of cooled magma is a ______.",
+    "A very large collapsed crater is a ______.",
+    "Mount Cameroon lies on the Cameroon Volcanic ______."
+   ]
+  ],
+  "remediationAnswers": "1. magma 2. crater 3. extinct 4. sill 5. caldera 6. Line",
+  "homework": "Imagine a friend wants to farm near Buea, on Mount Cameroon. Write two good reasons to go and two dangers.",
+  "homeworkTag": "This prepares Lesson 12: The Impact of Volcanicity on Man.",
+  "bilingual": [
+   [
+    "Volcano",
+    "Le volcan"
+   ],
+   [
+    "Magma",
+    "Le magma"
+   ],
+   [
+    "Lava",
+    "La lave"
+   ],
+   [
+    "Crater",
+    "Le cratère"
+   ],
+   [
+    "Vent",
+    "La cheminée"
+   ],
+   [
+    "Eruption",
+    "L'éruption"
+   ],
+   [
+    "Dyke",
+    "Le dyke"
+   ],
+   [
+    "Active volcano",
+    "Le volcan actif"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: Mount Cameroon is not at a subduction margin. It is on the Cameroon Volcanic Line, a line of volcanoes inside the African Plate. Its eruptions are mostly quiet flows of basalt lava.",
+   "Checked eruptions of Mount Cameroon in the 20th–21st centuries: 1909, 1922, 1954, 1959, 1982, 1999, 2000 (and small activity in 2012). Its height is about 4,040–4,095 m, depending on the survey.",
+   "Mount Manengouba is usually described as extinct (dormant for a very long time)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary.",
+   "Global Volcanism Program (Smithsonian): Mount Cameroon."
+  ]
+ }
+}

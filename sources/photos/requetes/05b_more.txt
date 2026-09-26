@@ -1,0 +1,9 @@
+reg3::gravel desert plain
+reg4::desert pavement stones
+nile3::Nile valley green fields desert aerial
+nile4::irrigated fields edge of desert Egypt
+oasisg::oasis garden palm trees crops
+oasisg2::date palms vegetable garden
+chern3::black soil field
+chern4::fertile black earth ploughed field
+mixed3::cows grazing farm fields

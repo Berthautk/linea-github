@@ -1,0 +1,19 @@
+snowcity::snow street winter Paris
+medsummer::olive grove Mediterranean summer dry hills
+steppe::Kazakh steppe landscape
+autumn::autumn deciduous forest beech
+conifer::coniferous forest snow spruce
+olive::olive tree Mediterranean
+prairie::prairie grassland Saskatchewan
+chern::chernozem soil profile
+mixedfarm::farm England cows fields crops
+dairy::dairy cows Netherlands milking
+combine::combine harvester wheat field
+ranch::sheep station Australia flock
+gaucho::gaucho cattle Pampas Argentina
+vineyard::vineyard grape harvest France
+snowplow::snowplow road winter
+dustbowl::Dust Bowl 1930s dust storm farm
+wildfire::forest fire Greece
+greenhouse::greenhouse vegetables Netherlands
+shelterbelt::shelterbelt windbreak trees field

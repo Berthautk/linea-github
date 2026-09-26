@@ -1,0 +1,431 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITION\" | [\"An agent of denudation is a natural force that erodes and transports material.\"]",
+  "sum | \"x\" | \"The Agents\" | [\"– Running water: rain, streams and rivers. It is the most important agent (the Benue in the rainy season).\",\"– Wind: strong in dry areas with little vegetation (Sahara, Far North).\",\"– Waves: along the coast (Limbe, Kribi).\",\"– Ice (glaciers) acts in cold regions and high mountains.\"]",
+  "sum | \"III. Main Agents of Denudation (1/3)\" | \"DEFINITION\" | [\"An agent of denudation is a natural force that erodes and transports material.\"]",
+  "sum | \"III. Main Agents of Denudation (2/3)\" | \"The Agents\" | [\"– Running water: rain, streams and rivers. It is the most important agent (the Benue in the rainy season).\",\"– Wind: strong in dry areas with little vegetation (Sahara, Far North).\",\"– Waves: along the coast (Limbe, Kribi).\",\"– Ice (glaciers) acts in cold regions and high mountains.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON14_Denudation",
+  "lessonNo": 14,
+  "lessonName": "Denudation",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes and Impacts on Man",
+  "coverNote": "Good morning, class. Today we start a new topic: denudation processes, landforms and their impacts on man. Lesson 14 is about denudation.",
+  "notions": "Degradation, weathering, erosion, transportation.",
+  "focus": "Definition; major processes of denudation (weathering, erosion and transportation); main agents (running water, wind and waves).",
+  "competence": "Learners are able to recognise signs of denudation around them, such as gullies and crumbling rocks, and to suggest simple ways to protect the soil.",
+  "objectives": [
+   "Define denudation.",
+   "Explain the major processes of denudation.",
+   "Describe the main agents of denudation."
+  ],
+  "recall": [
+   "Earthquakes and volcanoes are internal forces that build the relief.",
+   "Rocks are igneous, sedimentary or metamorphic.",
+   "Rocks slowly change in the rock cycle."
+  ],
+  "recallNote": "Check the homework: what the rain did to the soil.",
+  "situation": [
+   "After a heavy storm in Garoua, Halima sees a small channel cut into the red soil beside the road. The water has carried sand and small stones and dropped them further down the slope.",
+   "In her compound, a big rock has cracks and is slowly crumbling into sand at its base. Halima wonders which slow forces can break solid rock and carry away the soil."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Halima does not know which forces break rocks and carry away the soil."
+   ],
+   [
+    "What did the running water do beside the road?",
+    "It cut a channel in the soil, carried sand and stones, and dropped them further down the slope."
+   ],
+   [
+    "How can we protect the soil beside roads and in our compounds?",
+    "We can plant grass and trees, build small stone lines and drains, and avoid leaving the soil bare."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the processes that wear down the surface of the Earth and shape its landforms.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is denudation?",
+      "a": "Denudation is the wearing away and lowering of the surface of the Earth by weathering, erosion and transportation. The word means \"to make bare\"."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Denudation (or degradation) is the wearing away and lowering of the surface of the Earth by weathering, erosion and transportation."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. MAJOR PROCESSES",
+    "qa": [
+     {
+      "img": "denudation.png",
+      "kind": "diagram",
+      "q": "Study the processes of denudation.",
+      "full": true
+     },
+     {
+      "q": "The rock in Halima's compound crumbles in its place. Which process is this?",
+      "a": "This is weathering: the breaking down of rocks in their place, without movement."
+     },
+     {
+      "q": "The water picked up sand and stones beside the road. Which process is this?",
+      "a": "This is erosion: the wearing away and picking up of rock and soil by a moving agent."
+     },
+     {
+      "q": "During the Harmattan, dust from the Sahara reaches Garoua. Which process is this?",
+      "a": "This is transportation: the carrying of material from one place to another by an agent, here the wind."
+     }
+    ],
+    "sum": {
+     "title": "II. Major Processes of Denudation",
+     "intro": "Denudation includes three main processes:",
+     "items": [
+      [
+       "A. Weathering",
+       "Weathering is the breaking down of rocks in their place (in situ), with no movement. Example: a rock that cracks in the sun.",
+       "denudation.png"
+      ],
+      [
+       "B. Erosion",
+       "Erosion is the wearing away and picking up of rock and soil by a moving agent. Example: running water cutting a gully."
+      ],
+      [
+       "C. Transportation",
+       "Transportation is the carrying of eroded material from one place to another. Example: the Harmattan carrying dust from the Sahara. When the agent loses energy, it drops the material: this is deposition."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. MAIN AGENTS",
+    "qa": [
+     {
+      "q": "Which agent of denudation is the most important in Garoua during the rainy season?",
+      "a": "Running water is the most important: rain and rivers like the Benue cut gullies and valleys and carry mud and sand."
+     },
+     {
+      "q": "Where is the wind a strong agent of denudation?",
+      "a": "The wind is strong in dry areas with little vegetation, such as the Sahara and the Far North of Cameroon."
+     },
+     {
+      "q": "Where do waves act in Cameroon?",
+      "a": "Waves act along the coast, for example at Limbe and Kribi, where they erode cliffs and build beaches."
+     }
+    ],
+    "sum": {
+     "title": "III. Main Agents of Denudation",
+     "defs": [
+      "An agent of denudation is a natural force that erodes and transports material."
+     ],
+     "items": [
+      [
+       "The Agents",
+       [
+        "– Running water: rain, streams and rivers. It is the most important agent (the Benue in the rainy season).",
+        "– Wind: strong in dry areas with little vegetation (Sahara, Far North).",
+        "– Waves: along the coast (Limbe, Kribi).",
+        "– Ice (glaciers) acts in cold regions and high mountains."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is denudation?",
+    "Denudation is the wearing away of the surface of the Earth by weathering, erosion and transportation."
+   ],
+   [
+    "What is the difference between weathering and erosion?",
+    "Weathering breaks rocks in their place; erosion wears them away and moves them with an agent."
+   ],
+   [
+    "Name three agents of denudation.",
+    "Running water, wind and waves."
+   ]
+  ],
+  "remediation": [
+   [
+    "The breaking down of rocks in their place is ______.",
+    "The picking up of material by an agent is ______.",
+    "The carrying of material is ______."
+   ],
+   [
+    "The most important agent of denudation is running ______.",
+    "Wind is strong in ______ areas.",
+    "Waves act along the ______."
+   ]
+  ],
+  "remediationAnswers": "1. weathering 2. erosion 3. transportation 4. water 5. dry 6. coast",
+  "homework": "Compare an old wall and a new wall in your area. Write three differences you see, and suggest what damaged the old wall.",
+  "homeworkTag": "This prepares Lesson 15: Weathering.",
+  "bilingual": [
+   [
+    "Denudation",
+    "La dénudation / l'érosion au sens large"
+   ],
+   [
+    "Weathering",
+    "L'altération / la météorisation"
+   ],
+   [
+    "Erosion",
+    "L'érosion"
+   ],
+   [
+    "Transportation",
+    "Le transport"
+   ],
+   [
+    "Deposition",
+    "Le dépôt"
+   ],
+   [
+    "Agent",
+    "L'agent"
+   ],
+   [
+    "Running water",
+    "L'eau courante"
+   ],
+   [
+    "Gully",
+    "Le ravin"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say that Garoua is in the Sahel. Garoua (about 9° N, about 1,000 mm of rain) is in the Sudanian savanna. The Sahel is further north, near Lake Chad.",
+   "Some books include deposition in denudation; the syllabus asks for weathering, erosion and transportation. Deposition is mentioned as the end of transportation."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 14",
+  "title": "Denudation",
+  "sumTitle": "Denudation",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 14: Denudation",
+  "matter": "I. Definition: ; II. Major Processes of Denudation: Weathering, Erosion, Transportation; III. Main Agents of Denudation: The Agents."
+ },
+ "file": "FORM4_LESSON14_Denudation",
+ "sp": {
+  "file": "FORM4_LESSON14_Denudation",
+  "lessonNo": 14,
+  "lessonName": "Denudation",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes and Impacts on Man",
+  "coverNote": "Good morning, class. Today we start a new topic: denudation processes, landforms and their impacts on man. Lesson 14 is about denudation.",
+  "notions": "Degradation, weathering, erosion, transportation.",
+  "focus": "Definition; major processes of denudation (weathering, erosion and transportation); main agents (running water, wind and waves).",
+  "competence": "Learners are able to recognise signs of denudation around them, such as gullies and crumbling rocks, and to suggest simple ways to protect the soil.",
+  "objectives": [
+   "Define denudation.",
+   "Explain the major processes of denudation.",
+   "Describe the main agents of denudation."
+  ],
+  "recall": [
+   "Earthquakes and volcanoes are internal forces that build the relief.",
+   "Rocks are igneous, sedimentary or metamorphic.",
+   "Rocks slowly change in the rock cycle."
+  ],
+  "recallNote": "Check the homework: what the rain did to the soil.",
+  "situation": [
+   "After a heavy storm in Garoua, Halima sees a small channel cut into the red soil beside the road. The water has carried sand and small stones and dropped them further down the slope.",
+   "In her compound, a big rock has cracks and is slowly crumbling into sand at its base. Halima wonders which slow forces can break solid rock and carry away the soil."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Halima does not know which forces break rocks and carry away the soil."
+   ],
+   [
+    "What did the running water do beside the road?",
+    "It cut a channel in the soil, carried sand and stones, and dropped them further down the slope."
+   ],
+   [
+    "How can we protect the soil beside roads and in our compounds?",
+    "We can plant grass and trees, build small stone lines and drains, and avoid leaving the soil bare."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the processes that wear down the surface of the Earth and shape its landforms.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is denudation?",
+      "a": "Denudation is the wearing away and lowering of the surface of the Earth by weathering, erosion and transportation. The word means \"to make bare\"."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Denudation (or degradation) is the wearing away and lowering of the surface of the Earth by weathering, erosion and transportation."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. MAJOR PROCESSES",
+    "qa": [
+     {
+      "img": "denudation.png",
+      "kind": "diagram",
+      "q": "Study the processes of denudation.",
+      "full": true
+     },
+     {
+      "q": "The rock in Halima's compound crumbles in its place. Which process is this?",
+      "a": "This is weathering: the breaking down of rocks in their place, without movement."
+     },
+     {
+      "q": "The water picked up sand and stones beside the road. Which process is this?",
+      "a": "This is erosion: the wearing away and picking up of rock and soil by a moving agent."
+     },
+     {
+      "q": "During the Harmattan, dust from the Sahara reaches Garoua. Which process is this?",
+      "a": "This is transportation: the carrying of material from one place to another by an agent, here the wind."
+     }
+    ],
+    "sum": {
+     "title": "II. Major Processes of Denudation",
+     "intro": "Denudation includes three main processes:",
+     "items": [
+      [
+       "A. Weathering",
+       "Weathering is the breaking down of rocks in their place (in situ), with no movement. Example: a rock that cracks in the sun.",
+       "denudation.png"
+      ],
+      [
+       "B. Erosion",
+       "Erosion is the wearing away and picking up of rock and soil by a moving agent. Example: running water cutting a gully."
+      ],
+      [
+       "C. Transportation",
+       "Transportation is the carrying of eroded material from one place to another. Example: the Harmattan carrying dust from the Sahara. When the agent loses energy, it drops the material: this is deposition."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. MAIN AGENTS",
+    "qa": [
+     {
+      "q": "Which agent of denudation is the most important in Garoua during the rainy season?",
+      "a": "Running water is the most important: rain and rivers like the Benue cut gullies and valleys and carry mud and sand."
+     },
+     {
+      "q": "Where is the wind a strong agent of denudation?",
+      "a": "The wind is strong in dry areas with little vegetation, such as the Sahara and the Far North of Cameroon."
+     },
+     {
+      "q": "Where do waves act in Cameroon?",
+      "a": "Waves act along the coast, for example at Limbe and Kribi, where they erode cliffs and build beaches."
+     }
+    ],
+    "sum": {
+     "title": "III. Main Agents of Denudation",
+     "defs": [
+      "An agent of denudation is a natural force that erodes and transports material."
+     ],
+     "items": [
+      [
+       "The Agents",
+       [
+        "– Running water: rain, streams and rivers. It is the most important agent (the Benue in the rainy season).",
+        "– Wind: strong in dry areas with little vegetation (Sahara, Far North).",
+        "– Waves: along the coast (Limbe, Kribi).",
+        "– Ice (glaciers) acts in cold regions and high mountains."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is denudation?",
+    "Denudation is the wearing away of the surface of the Earth by weathering, erosion and transportation."
+   ],
+   [
+    "What is the difference between weathering and erosion?",
+    "Weathering breaks rocks in their place; erosion wears them away and moves them with an agent."
+   ],
+   [
+    "Name three agents of denudation.",
+    "Running water, wind and waves."
+   ]
+  ],
+  "remediation": [
+   [
+    "The breaking down of rocks in their place is ______.",
+    "The picking up of material by an agent is ______.",
+    "The carrying of material is ______."
+   ],
+   [
+    "The most important agent of denudation is running ______.",
+    "Wind is strong in ______ areas.",
+    "Waves act along the ______."
+   ]
+  ],
+  "remediationAnswers": "1. weathering 2. erosion 3. transportation 4. water 5. dry 6. coast",
+  "homework": "Compare an old wall and a new wall in your area. Write three differences you see, and suggest what damaged the old wall.",
+  "homeworkTag": "This prepares Lesson 15: Weathering.",
+  "bilingual": [
+   [
+    "Denudation",
+    "La dénudation / l'érosion au sens large"
+   ],
+   [
+    "Weathering",
+    "L'altération / la météorisation"
+   ],
+   [
+    "Erosion",
+    "L'érosion"
+   ],
+   [
+    "Transportation",
+    "Le transport"
+   ],
+   [
+    "Deposition",
+    "Le dépôt"
+   ],
+   [
+    "Agent",
+    "L'agent"
+   ],
+   [
+    "Running water",
+    "L'eau courante"
+   ],
+   [
+    "Gully",
+    "Le ravin"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say that Garoua is in the Sahel. Garoua (about 9° N, about 1,000 mm of rain) is in the Sudanian savanna. The Sahel is further north, near Lake Chad.",
+   "Some books include deposition in denudation; the syllabus asks for weathering, erosion and transportation. Deposition is mentioned as the end of transportation."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

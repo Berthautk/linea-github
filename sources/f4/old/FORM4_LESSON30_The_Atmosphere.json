@@ -1,0 +1,490 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITIONS\" | [\"The ozone layer is a layer of ozone gas in the stratosphere, about 15 to 35 km high, that absorbs most of the harmful ultraviolet rays of the sun.\"]",
+  "sum | \"x\" | \"DEFINITIONS\" | [\"Ozone layer depletion is the thinning of the ozone layer.\"]",
+  "sum | \"x\" | \"A. Causes\" | [\"Depletion is caused by chemicals such as CFCs, used in old refrigerators, air conditioners and spray cans.\"]",
+  "sum | \"x\" | \"B. Effects\" | [\"More ultraviolet rays reach the Earth, causing skin cancer, eye diseases (cataracts) and damage to crops.\"]",
+  "sum | \"x\" | \"C. Solutions\" | [\"The Montreal Protocol (1987), signed by Cameroon, banned CFCs. People should use ozone-friendly refrigerators and sprays.\"]",
+  "sum | \"IV. Ozone Layer Depletion (1/5)\" | \"DEFINITIONS\" | [\"The ozone layer is a layer of ozone gas in the stratosphere, about 15 to 35 km high, that absorbs most of the harmful ultraviolet rays of the sun.\"]",
+  "sum | \"IV. Ozone Layer Depletion (2/5)\" | \"DEFINITIONS\" | [\"Ozone layer depletion is the thinning of the ozone layer.\"]",
+  "sum | \"IV. Ozone Layer Depletion (3/5)\" | \"A. Causes\" | [\"Depletion is caused by chemicals such as CFCs, used in old refrigerators, air conditioners and spray cans.\"]",
+  "sum | \"IV. Ozone Layer Depletion (4/5)\" | \"B. Effects\" | [\"More ultraviolet rays reach the Earth, causing skin cancer, eye diseases (cataracts) and damage to crops.\"]",
+  "sum | \"IV. Ozone Layer Depletion (5/5)\" | \"C. Solutions\" | [\"The Montreal Protocol (1987), signed by Cameroon, banned CFCs. People should use ozone-friendly refrigerators and sprays.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON30_The_Atmosphere",
+  "lessonNo": 30,
+  "lessonName": "The Atmosphere",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "The Atmosphere",
+  "notions": "Atmosphere, ozone layer, depletion.",
+  "focus": "Definition of the atmosphere; structure (illustration of the main layers only); thermal structure in the troposphere and the stratosphere; ozone layer depletion.",
+  "competence": "Learners are able to protect themselves from strong sun rays and to avoid products that damage the ozone layer.",
+  "objectives": [
+   "Define the atmosphere.",
+   "Identify the main layers of the atmosphere on a diagram.",
+   "Describe how temperature changes in the troposphere and the stratosphere.",
+   "Explain the causes, effects and solutions of ozone layer depletion."
+  ],
+  "recall": [
+   "Hot deserts have very dry air, clear skies and a large daily temperature range.",
+   "People adapt to heat and dryness with clothing, housing and water supply.",
+   "Today we begin a new module: weather and climate."
+  ],
+  "recallNote": "Ask learners what they remember about desert climates, then introduce the new module.",
+  "situation": [
+   "Nafissatou flies from Garoua to Douala. The pilot announces: \"We are flying at 11,000 metres. The temperature outside is minus 50 degrees Celsius.\"",
+   "Nafissatou is surprised, because in Garoua it is 35°C and the plane is closer to the sun. She does not understand why the air is so cold up there."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nafissatou does not understand why the air is very cold high above the ground, although it is closer to the sun."
+   ],
+   [
+    "What is the temperature outside the plane, and at what height?",
+    "The temperature is minus 50°C at a height of 11,000 metres."
+   ],
+   [
+    "What can passengers do to be comfortable during such a flight?",
+    "The plane is pressurised and heated, and passengers can carry a light jacket."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the air around the Earth, its layers, and the ozone layer that protects us from the sun.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "The Earth is surrounded by a layer of gases held by gravity. What is it called?",
+      "a": "This layer of gases is called the atmosphere."
+     },
+     {
+      "q": "Which two gases make up most of the atmosphere?",
+      "a": "Nitrogen makes up about 78% and oxygen about 21% of the atmosphere. Argon, carbon dioxide and water vapour make up the rest."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The atmosphere is the layer of gases that surrounds the Earth and is held by gravity. It is made of about 78% nitrogen, 21% oxygen and 1% other gases."
+     ]
+    }
+   },
+   {
+    "sec": "II. STRUCTURE",
+    "qa": [
+     {
+      "img": "atmosphere_layers.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the four main layers of the atmosphere from the ground upwards.",
+      "a": "From the ground upwards, the layers are the troposphere, the stratosphere, the mesosphere and the thermosphere.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "II. Structure",
+     "items": [
+      [
+       "The Main Layers",
+       "From the ground upwards, the atmosphere has four main layers: the troposphere, the stratosphere, the mesosphere and the thermosphere.",
+       "atmosphere_layers.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. THERMAL STRUCTURE",
+    "qa": [
+     {
+      "img": "atmosphere_layers.png",
+      "title": "Question 1",
+      "q": "Look at the graph. What happens to temperature as we go up in the troposphere? Why was it −50°C outside the plane?",
+      "a": "In the troposphere, temperature falls by about 6.5°C for every 1,000 metres. At 11,000 metres, it is about 70°C colder than on the ground.",
+      "split": 5
+     },
+     {
+      "q": "Where do clouds, rain and wind form?",
+      "a": "Clouds, rain and wind form in the troposphere. It contains most of the water vapour of the atmosphere."
+     },
+     {
+      "img": "atmosphere_layers.png",
+      "title": "Question 3",
+      "q": "What happens to temperature in the stratosphere? Why?",
+      "a": "In the stratosphere, temperature rises with height, because the ozone layer absorbs the ultraviolet rays of the sun.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "III. Thermal Structure",
+     "intro": "The thermal structure is the way temperature changes with height in each layer:",
+     "items": [
+      [
+       "A. The Troposphere",
+       "It goes from the ground to about 12 km (up to 16 km above the Equator). Temperature falls by about 6.5°C per 1,000 m. All weather takes place here."
+      ],
+      [
+       "B. The Stratosphere",
+       "It goes from about 12 km to 50 km. Temperature rises with height, because the ozone layer absorbs the ultraviolet rays of the sun."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. OZONE LAYER DEPLETION",
+    "qa": [
+     {
+      "q": "The ozone layer lies in the stratosphere. What is its role?",
+      "a": "The ozone layer absorbs most of the harmful ultraviolet (UV) rays of the sun and protects living things."
+     },
+     {
+      "q": "In the 1980s, scientists found a \"hole\" in the ozone layer over Antarctica. What caused it?",
+      "a": "It was caused by chemicals called CFCs (chlorofluorocarbons), used in old refrigerators, air conditioners and spray cans."
+     },
+     {
+      "q": "What are the effects of a thinner ozone layer, and what has been done?",
+      "a": "More UV rays cause skin cancer, eye diseases and damage to crops. The Montreal Protocol (1987) banned CFCs, and the ozone layer is slowly recovering."
+     }
+    ],
+    "sum": {
+     "title": "IV. Ozone Layer Depletion",
+     "defs": [
+      "The ozone layer is a layer of ozone gas in the stratosphere, about 15 to 35 km high, that absorbs most of the harmful ultraviolet rays of the sun.",
+      "Ozone layer depletion is the thinning of the ozone layer."
+     ],
+     "items": [
+      [
+       "A. Causes",
+       "Depletion is caused by chemicals such as CFCs, used in old refrigerators, air conditioners and spray cans."
+      ],
+      [
+       "B. Effects",
+       "More ultraviolet rays reach the Earth, causing skin cancer, eye diseases (cataracts) and damage to crops."
+      ],
+      [
+       "C. Solutions",
+       "The Montreal Protocol (1987), signed by Cameroon, banned CFCs. People should use ozone-friendly refrigerators and sprays."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the troposphere important for weather?",
+    "It is important because it contains most of the water vapour, so clouds, rain and wind form there."
+   ],
+   [
+    "Explain why temperature rises with height in the stratosphere.",
+    "It rises because the ozone layer absorbs the ultraviolet rays of the sun and warms the air."
+   ],
+   [
+    "Give one cause and one effect of ozone layer depletion.",
+    "One cause is the use of CFCs. One effect is an increase in skin cancer."
+   ]
+  ],
+  "remediation": [
+   [
+    "The layer of gases around the Earth is the ______.",
+    "The lowest layer of the atmosphere is the ______.",
+    "In the troposphere, temperature falls by about ______ °C per 1,000 m."
+   ],
+   [
+    "The ozone layer is found in the ______.",
+    "Chemicals that destroy the ozone layer are called ______.",
+    "The agreement that banned CFCs is the ______ Protocol."
+   ]
+  ],
+  "remediationAnswers": "1. atmosphere 2. troposphere 3. 6.5 4. stratosphere 5. CFCs 6. Montreal",
+  "homework": "Watch or listen to a weather forecast on television or radio. Write down two pieces of information it gives (for example temperature, rain or wind).",
+  "homeworkTag": "This prepares Lesson 31: Weather and Climate.",
+  "bilingual": [
+   [
+    "Atmosphere",
+    "L'atmosphère"
+   ],
+   [
+    "Layer",
+    "La couche"
+   ],
+   [
+    "Troposphere",
+    "La troposphère"
+   ],
+   [
+    "Stratosphere",
+    "La stratosphère"
+   ],
+   [
+    "Ozone layer",
+    "La couche d'ozone"
+   ],
+   [
+    "Ultraviolet rays",
+    "Les rayons ultraviolets"
+   ],
+   [
+    "Depletion",
+    "L'appauvrissement"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ]
+  ],
+  "teacherNote": [
+   "The syllabus asks for an illustration of the main layers only: do not go into details on the mesosphere and thermosphere.",
+   "The height of the troposphere varies: about 8 km at the poles and 16–18 km above the Equator (about 12 km on average).",
+   "The ozone hole over Antarctica is expected to recover around 2066 (UNEP, 2023)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "UNEP / WMO Scientific Assessment of Ozone Depletion (2022)."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 30",
+  "title": "The Atmosphere",
+  "sumTitle": "The Atmosphere",
+  "coverNote": "Good morning, class. Today we study Lesson 30: The Atmosphere.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 30: The Atmosphere",
+  "matter": "I. Definition: ; II. Structure: The Main Layers; III. Thermal Structure: The Troposphere, The Stratosphere; IV. Ozone Layer Depletion: Causes, Effects, Solutions."
+ },
+ "file": "FORM4_LESSON30_The_Atmosphere",
+ "sp": {
+  "file": "FORM4_LESSON30_The_Atmosphere",
+  "lessonNo": 30,
+  "lessonName": "The Atmosphere",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "The Atmosphere",
+  "notions": "Atmosphere, ozone layer, depletion.",
+  "focus": "Definition of the atmosphere; structure (illustration of the main layers only); thermal structure in the troposphere and the stratosphere; ozone layer depletion.",
+  "competence": "Learners are able to protect themselves from strong sun rays and to avoid products that damage the ozone layer.",
+  "objectives": [
+   "Define the atmosphere.",
+   "Identify the main layers of the atmosphere on a diagram.",
+   "Describe how temperature changes in the troposphere and the stratosphere.",
+   "Explain the causes, effects and solutions of ozone layer depletion."
+  ],
+  "recall": [
+   "Hot deserts have very dry air, clear skies and a large daily temperature range.",
+   "People adapt to heat and dryness with clothing, housing and water supply.",
+   "Today we begin a new module: weather and climate."
+  ],
+  "recallNote": "Ask learners what they remember about desert climates, then introduce the new module.",
+  "situation": [
+   "Nafissatou flies from Garoua to Douala. The pilot announces: \"We are flying at 11,000 metres. The temperature outside is minus 50 degrees Celsius.\"",
+   "Nafissatou is surprised, because in Garoua it is 35°C and the plane is closer to the sun. She does not understand why the air is so cold up there."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nafissatou does not understand why the air is very cold high above the ground, although it is closer to the sun."
+   ],
+   [
+    "What is the temperature outside the plane, and at what height?",
+    "The temperature is minus 50°C at a height of 11,000 metres."
+   ],
+   [
+    "What can passengers do to be comfortable during such a flight?",
+    "The plane is pressurised and heated, and passengers can carry a light jacket."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the air around the Earth, its layers, and the ozone layer that protects us from the sun.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "The Earth is surrounded by a layer of gases held by gravity. What is it called?",
+      "a": "This layer of gases is called the atmosphere."
+     },
+     {
+      "q": "Which two gases make up most of the atmosphere?",
+      "a": "Nitrogen makes up about 78% and oxygen about 21% of the atmosphere. Argon, carbon dioxide and water vapour make up the rest."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The atmosphere is the layer of gases that surrounds the Earth and is held by gravity. It is made of about 78% nitrogen, 21% oxygen and 1% other gases."
+     ]
+    }
+   },
+   {
+    "sec": "II. STRUCTURE",
+    "qa": [
+     {
+      "img": "atmosphere_layers.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the four main layers of the atmosphere from the ground upwards.",
+      "a": "From the ground upwards, the layers are the troposphere, the stratosphere, the mesosphere and the thermosphere.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "II. Structure",
+     "items": [
+      [
+       "The Main Layers",
+       "From the ground upwards, the atmosphere has four main layers: the troposphere, the stratosphere, the mesosphere and the thermosphere.",
+       "atmosphere_layers.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. THERMAL STRUCTURE",
+    "qa": [
+     {
+      "img": "atmosphere_layers.png",
+      "title": "Question 1",
+      "q": "Look at the graph. What happens to temperature as we go up in the troposphere? Why was it −50°C outside the plane?",
+      "a": "In the troposphere, temperature falls by about 6.5°C for every 1,000 metres. At 11,000 metres, it is about 70°C colder than on the ground.",
+      "split": 5
+     },
+     {
+      "q": "Where do clouds, rain and wind form?",
+      "a": "Clouds, rain and wind form in the troposphere. It contains most of the water vapour of the atmosphere."
+     },
+     {
+      "img": "atmosphere_layers.png",
+      "title": "Question 3",
+      "q": "What happens to temperature in the stratosphere? Why?",
+      "a": "In the stratosphere, temperature rises with height, because the ozone layer absorbs the ultraviolet rays of the sun.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "III. Thermal Structure",
+     "intro": "The thermal structure is the way temperature changes with height in each layer:",
+     "items": [
+      [
+       "A. The Troposphere",
+       "It goes from the ground to about 12 km (up to 16 km above the Equator). Temperature falls by about 6.5°C per 1,000 m. All weather takes place here."
+      ],
+      [
+       "B. The Stratosphere",
+       "It goes from about 12 km to 50 km. Temperature rises with height, because the ozone layer absorbs the ultraviolet rays of the sun."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. OZONE LAYER DEPLETION",
+    "qa": [
+     {
+      "q": "The ozone layer lies in the stratosphere. What is its role?",
+      "a": "The ozone layer absorbs most of the harmful ultraviolet (UV) rays of the sun and protects living things."
+     },
+     {
+      "q": "In the 1980s, scientists found a \"hole\" in the ozone layer over Antarctica. What caused it?",
+      "a": "It was caused by chemicals called CFCs (chlorofluorocarbons), used in old refrigerators, air conditioners and spray cans."
+     },
+     {
+      "q": "What are the effects of a thinner ozone layer, and what has been done?",
+      "a": "More UV rays cause skin cancer, eye diseases and damage to crops. The Montreal Protocol (1987) banned CFCs, and the ozone layer is slowly recovering."
+     }
+    ],
+    "sum": {
+     "title": "IV. Ozone Layer Depletion",
+     "defs": [
+      "The ozone layer is a layer of ozone gas in the stratosphere, about 15 to 35 km high, that absorbs most of the harmful ultraviolet rays of the sun.",
+      "Ozone layer depletion is the thinning of the ozone layer."
+     ],
+     "items": [
+      [
+       "A. Causes",
+       "Depletion is caused by chemicals such as CFCs, used in old refrigerators, air conditioners and spray cans."
+      ],
+      [
+       "B. Effects",
+       "More ultraviolet rays reach the Earth, causing skin cancer, eye diseases (cataracts) and damage to crops."
+      ],
+      [
+       "C. Solutions",
+       "The Montreal Protocol (1987), signed by Cameroon, banned CFCs. People should use ozone-friendly refrigerators and sprays."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the troposphere important for weather?",
+    "It is important because it contains most of the water vapour, so clouds, rain and wind form there."
+   ],
+   [
+    "Explain why temperature rises with height in the stratosphere.",
+    "It rises because the ozone layer absorbs the ultraviolet rays of the sun and warms the air."
+   ],
+   [
+    "Give one cause and one effect of ozone layer depletion.",
+    "One cause is the use of CFCs. One effect is an increase in skin cancer."
+   ]
+  ],
+  "remediation": [
+   [
+    "The layer of gases around the Earth is the ______.",
+    "The lowest layer of the atmosphere is the ______.",
+    "In the troposphere, temperature falls by about ______ °C per 1,000 m."
+   ],
+   [
+    "The ozone layer is found in the ______.",
+    "Chemicals that destroy the ozone layer are called ______.",
+    "The agreement that banned CFCs is the ______ Protocol."
+   ]
+  ],
+  "remediationAnswers": "1. atmosphere 2. troposphere 3. 6.5 4. stratosphere 5. CFCs 6. Montreal",
+  "homework": "Watch or listen to a weather forecast on television or radio. Write down two pieces of information it gives (for example temperature, rain or wind).",
+  "homeworkTag": "This prepares Lesson 31: Weather and Climate.",
+  "bilingual": [
+   [
+    "Atmosphere",
+    "L'atmosphère"
+   ],
+   [
+    "Layer",
+    "La couche"
+   ],
+   [
+    "Troposphere",
+    "La troposphère"
+   ],
+   [
+    "Stratosphere",
+    "La stratosphère"
+   ],
+   [
+    "Ozone layer",
+    "La couche d'ozone"
+   ],
+   [
+    "Ultraviolet rays",
+    "Les rayons ultraviolets"
+   ],
+   [
+    "Depletion",
+    "L'appauvrissement"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ]
+  ],
+  "teacherNote": [
+   "The syllabus asks for an illustration of the main layers only: do not go into details on the mesosphere and thermosphere.",
+   "The height of the troposphere varies: about 8 km at the poles and 16–18 km above the Equator (about 12 km on average).",
+   "The ozone hole over Antarctica is expected to recover around 2066 (UNEP, 2023)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "UNEP / WMO Scientific Assessment of Ozone Depletion (2022)."
+  ]
+ }
+}

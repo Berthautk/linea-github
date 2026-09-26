@@ -1,0 +1,2 @@
+quake3::collapsed building earthquake rubble
+quake4::earthquake damage street

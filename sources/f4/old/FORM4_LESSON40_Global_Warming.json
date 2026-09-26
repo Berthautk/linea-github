@@ -1,0 +1,500 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITION\" | [\"Mitigation is the reduction of greenhouse gas emissions. Adaptation is the adjustment of people's ways of life to the effects of global warming.\"]",
+  "sum | \"x\" | \"A. Mitigation\" | [\"Using solar energy, saving energy, planting trees, protecting forests and reducing bush fires.\"]",
+  "sum | \"x\" | \"B. Adaptation\" | [\"Growing drought-resistant crops, storing water, building sea walls and warning people of heatwaves and floods.\"]",
+  "sum | \"x\" | \"C. International Action\" | [\"Countries, including Cameroon, signed the Paris Agreement (2015) to limit warming to well below 2°C.\"]",
+  "sum | \"IV. Adaptations and Mitigations (1/4)\" | \"DEFINITION\" | [\"Mitigation is the reduction of greenhouse gas emissions. Adaptation is the adjustment of people's ways of life to the effects of global warming.\"]",
+  "sum | \"IV. Adaptations and Mitigations (2/4)\" | \"A. Mitigation\" | [\"Using solar energy, saving energy, planting trees, protecting forests and reducing bush fires.\"]",
+  "sum | \"IV. Adaptations and Mitigations (3/4)\" | \"B. Adaptation\" | [\"Growing drought-resistant crops, storing water, building sea walls and warning people of heatwaves and floods.\"]",
+  "sum | \"IV. Adaptations and Mitigations (4/4)\" | \"C. International Action\" | [\"Countries, including Cameroon, signed the Paris Agreement (2015) to limit warming to well below 2°C.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON40_Global_Warming",
+  "lessonNo": 40,
+  "lessonName": "Global Warming",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Management of Climate and Hydrological Related Hazards",
+  "subtopic": "Hydro-climatic Hazards",
+  "notions": "Climate variability, greenhouse gases.",
+  "focus": "Definition; causes (natural and human); effects; adaptations and mitigations.",
+  "competence": "Learners are able to take simple actions against global warming, such as planting trees and saving energy, and to adapt to hotter, drier seasons.",
+  "objectives": [
+   "Define global warming, the greenhouse effect and greenhouse gases.",
+   "Explain the natural and human causes of global warming.",
+   "Describe its effects.",
+   "Propose adaptation and mitigation measures."
+  ],
+  "recall": [
+   "The hydrological cycle moves water between the oceans, the air and the land.",
+   "Temperature depends on factors such as latitude, altitude and cloud cover.",
+   "Human activities can make cities warmer."
+  ],
+  "recallNote": "Check the homework: what elders say about the dry season.",
+  "situation": [
+   "Baba Hamadou, 70 years old, says that when he was young, the rains in Garoua started regularly in May and the heat of March was bearable. Today, he says, the heat is stronger and the rains are irregular.",
+   "His grandson wonders whether the whole Earth is really becoming hotter, and why."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the heat in Garoua is stronger and the rains are more irregular than in the past."
+   ],
+   [
+    "What changes has Baba Hamadou noticed?",
+    "He has noticed that the heat is stronger and that the rains no longer start regularly in May."
+   ],
+   [
+    "What can the family do to cope with these changes?",
+    "They can plant trees for shade, store water, and grow crops that resist drought."
+   ]
+  ],
+  "justification": "This lesson will help us to understand global warming, its causes and effects, and what we can do about it.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "img": "greenhouse_effect.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. How do greenhouse gases keep the Earth warm?",
+      "a": "Sunlight heats the ground, which gives off heat. Greenhouse gases trap part of this heat and send it back to the Earth: this is the greenhouse effect.",
+      "split": 5.2
+     },
+     {
+      "q": "The average temperature of the Earth has risen by about 1.2°C since about 1850. What is this rise called?",
+      "a": "This rise is called global warming."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Global warming is the long-term rise in the average temperature of the Earth, mainly caused by an increase in greenhouse gases.",
+      "The greenhouse effect is the natural trapping of heat by gases in the atmosphere, such as carbon dioxide (CO₂), methane (CH₄) and water vapour, called greenhouse gases."
+     ]
+    }
+   },
+   {
+    "sec": "II. CAUSES",
+    "qa": [
+     {
+      "q": "Cars, motorbikes, generators and factories burn petrol, diesel and coal. Which gas do they release?",
+      "a": "They release carbon dioxide (CO₂), the main greenhouse gas added by human activities."
+     },
+     {
+      "q": "Why does cutting and burning forests increase global warming?",
+      "a": "Burning trees releases carbon dioxide, and fewer trees remain to absorb it from the air."
+     },
+     {
+      "q": "Give one natural cause of changes in the Earth's temperature.",
+      "a": "Natural causes include changes in the energy of the sun, changes in the Earth's orbit and volcanic eruptions. Today's rapid warming is mainly caused by humans."
+     }
+    ],
+    "sum": {
+     "title": "II. Causes",
+     "intro": "Global warming has human causes, which are the main ones today, and natural causes:",
+     "items": [
+      [
+       "A. Human Causes",
+       [
+        "– Burning fossil fuels (petrol, diesel, coal, gas) releases CO₂.",
+        "– Deforestation and bush fires release CO₂ and remove trees that absorb it.",
+        "– Livestock, rice fields and rubbish dumps release methane."
+       ]
+      ],
+      [
+       "B. Natural Causes",
+       "Changes in solar energy, changes in the Earth's orbit and volcanic eruptions can change the climate, but slowly or for a short time."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS",
+    "qa": [
+     {
+      "q": "Give two effects of global warming on the North Region of Cameroon.",
+      "a": "Hotter dry seasons, irregular rains, more droughts and floods, and poorer harvests. These changes from year to year are called climate variability."
+     },
+     {
+      "q": "Why is the sea level rising, and which Cameroonian towns are threatened?",
+      "a": "Ice is melting and warm water expands, so the sea level rises. Coastal towns like Douala, Limbe and Kribi are threatened."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects",
+     "intro": "The main effects of global warming are the following:",
+     "items": [
+      [
+       "A. Extreme Weather",
+       "Heatwaves, droughts and floods become more frequent and more intense, as in the Sahel."
+      ],
+      [
+       "B. Rising Sea Level",
+       "Melting ice and warmer water raise the sea level, threatening coastal towns such as Douala and Limbe."
+      ],
+      [
+       "C. Agriculture and Health",
+       "Irregular rains reduce harvests and cause food shortages. Heat favours some diseases."
+      ],
+      [
+       "D. Ecosystems",
+       "Some plants and animals disappear, and desertification spreads in the Sahel."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. ADAPTATIONS AND MITIGATIONS",
+    "qa": [
+     {
+      "q": "What is the difference between mitigation and adaptation?",
+      "a": "Mitigation reduces the causes of global warming, for example by planting trees. Adaptation helps people to live with its effects, for example with drought-resistant crops."
+     }
+    ],
+    "sum": {
+     "title": "IV. Adaptations and Mitigations",
+     "defs": [
+      "Mitigation is the reduction of greenhouse gas emissions. Adaptation is the adjustment of people's ways of life to the effects of global warming."
+     ],
+     "items": [
+      [
+       "A. Mitigation",
+       "Using solar energy, saving energy, planting trees, protecting forests and reducing bush fires."
+      ],
+      [
+       "B. Adaptation",
+       "Growing drought-resistant crops, storing water, building sea walls and warning people of heatwaves and floods."
+      ],
+      [
+       "C. International Action",
+       "Countries, including Cameroon, signed the Paris Agreement (2015) to limit warming to well below 2°C."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between the greenhouse effect and global warming?",
+    "The greenhouse effect is natural and keeps the Earth warm. Global warming is the extra warming caused by more greenhouse gases."
+   ],
+   [
+    "Give two human causes of global warming.",
+    "Two human causes are burning fossil fuels and deforestation."
+   ],
+   [
+    "Give one adaptation measure for farmers in North Cameroon.",
+    "Farmers can grow drought-resistant crops such as improved sorghum and millet."
+   ]
+  ],
+  "remediation": [
+   [
+    "The long-term rise of Earth's temperature is global ______.",
+    "The main greenhouse gas added by humans is ______.",
+    "Cutting down forests is called ______."
+   ],
+   [
+    "Reducing greenhouse gas emissions is called ______.",
+    "Adjusting to the effects of warming is called ______.",
+    "The 2015 agreement on climate is the ______ Agreement."
+   ]
+  ],
+  "remediationAnswers": "1. warming 2. carbon dioxide (CO₂) 3. deforestation 4. mitigation 5. adaptation 6. Paris",
+  "homework": "Ask an adult in your family whether your area has ever been flooded or has suffered a very dry year. Write down when it happened and what damage it caused.",
+  "homeworkTag": "This prepares Lesson 41: Floods, Droughts and Desertification.",
+  "bilingual": [
+   [
+    "Global warming",
+    "Le réchauffement climatique"
+   ],
+   [
+    "Greenhouse effect",
+    "L'effet de serre"
+   ],
+   [
+    "Greenhouse gas",
+    "Le gaz à effet de serre"
+   ],
+   [
+    "Carbon dioxide",
+    "Le dioxyde de carbone"
+   ],
+   [
+    "Climate variability",
+    "La variabilité climatique"
+   ],
+   [
+    "Mitigation",
+    "L'atténuation"
+   ],
+   [
+    "Adaptation",
+    "L'adaptation"
+   ],
+   [
+    "Sea level",
+    "Le niveau de la mer"
+   ]
+  ],
+  "teacherNote": [
+   "IPCC AR6 (2021): global surface temperature was about 1.1°C higher in 2011–2020 than in 1850–1900; recent years are about 1.2°C or more. CO₂ has risen from about 280 ppm before 1850 to more than 420 ppm.",
+   "Correction of the source notes: large volcanic eruptions usually cool the climate for a short time (their ash and gases block sunlight); they are not a cause of today's warming."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "IPCC Sixth Assessment Report (2021–2023).",
+   "UNFCCC: Paris Agreement (2015)."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 40",
+  "title": "Global Warming",
+  "sumTitle": "Global Warming",
+  "coverNote": "Good morning, class. Today we study Lesson 40: Global Warming.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 40: Global Warming",
+  "matter": "I. Definition: ; II. Causes: Human Causes, Natural Causes; III. Effects: Extreme Weather, Rising Sea Level, Agriculture and Health, Ecosystems; IV. Adaptations and Mitigations: Mitigation, Adaptation, International Action."
+ },
+ "file": "FORM4_LESSON40_Global_Warming",
+ "sp": {
+  "file": "FORM4_LESSON40_Global_Warming",
+  "lessonNo": 40,
+  "lessonName": "Global Warming",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Management of Climate and Hydrological Related Hazards",
+  "subtopic": "Hydro-climatic Hazards",
+  "notions": "Climate variability, greenhouse gases.",
+  "focus": "Definition; causes (natural and human); effects; adaptations and mitigations.",
+  "competence": "Learners are able to take simple actions against global warming, such as planting trees and saving energy, and to adapt to hotter, drier seasons.",
+  "objectives": [
+   "Define global warming, the greenhouse effect and greenhouse gases.",
+   "Explain the natural and human causes of global warming.",
+   "Describe its effects.",
+   "Propose adaptation and mitigation measures."
+  ],
+  "recall": [
+   "The hydrological cycle moves water between the oceans, the air and the land.",
+   "Temperature depends on factors such as latitude, altitude and cloud cover.",
+   "Human activities can make cities warmer."
+  ],
+  "recallNote": "Check the homework: what elders say about the dry season.",
+  "situation": [
+   "Baba Hamadou, 70 years old, says that when he was young, the rains in Garoua started regularly in May and the heat of March was bearable. Today, he says, the heat is stronger and the rains are irregular.",
+   "His grandson wonders whether the whole Earth is really becoming hotter, and why."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the heat in Garoua is stronger and the rains are more irregular than in the past."
+   ],
+   [
+    "What changes has Baba Hamadou noticed?",
+    "He has noticed that the heat is stronger and that the rains no longer start regularly in May."
+   ],
+   [
+    "What can the family do to cope with these changes?",
+    "They can plant trees for shade, store water, and grow crops that resist drought."
+   ]
+  ],
+  "justification": "This lesson will help us to understand global warming, its causes and effects, and what we can do about it.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "img": "greenhouse_effect.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. How do greenhouse gases keep the Earth warm?",
+      "a": "Sunlight heats the ground, which gives off heat. Greenhouse gases trap part of this heat and send it back to the Earth: this is the greenhouse effect.",
+      "split": 5.2
+     },
+     {
+      "q": "The average temperature of the Earth has risen by about 1.2°C since about 1850. What is this rise called?",
+      "a": "This rise is called global warming."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Global warming is the long-term rise in the average temperature of the Earth, mainly caused by an increase in greenhouse gases.",
+      "The greenhouse effect is the natural trapping of heat by gases in the atmosphere, such as carbon dioxide (CO₂), methane (CH₄) and water vapour, called greenhouse gases."
+     ]
+    }
+   },
+   {
+    "sec": "II. CAUSES",
+    "qa": [
+     {
+      "q": "Cars, motorbikes, generators and factories burn petrol, diesel and coal. Which gas do they release?",
+      "a": "They release carbon dioxide (CO₂), the main greenhouse gas added by human activities."
+     },
+     {
+      "q": "Why does cutting and burning forests increase global warming?",
+      "a": "Burning trees releases carbon dioxide, and fewer trees remain to absorb it from the air."
+     },
+     {
+      "q": "Give one natural cause of changes in the Earth's temperature.",
+      "a": "Natural causes include changes in the energy of the sun, changes in the Earth's orbit and volcanic eruptions. Today's rapid warming is mainly caused by humans."
+     }
+    ],
+    "sum": {
+     "title": "II. Causes",
+     "intro": "Global warming has human causes, which are the main ones today, and natural causes:",
+     "items": [
+      [
+       "A. Human Causes",
+       [
+        "– Burning fossil fuels (petrol, diesel, coal, gas) releases CO₂.",
+        "– Deforestation and bush fires release CO₂ and remove trees that absorb it.",
+        "– Livestock, rice fields and rubbish dumps release methane."
+       ]
+      ],
+      [
+       "B. Natural Causes",
+       "Changes in solar energy, changes in the Earth's orbit and volcanic eruptions can change the climate, but slowly or for a short time."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS",
+    "qa": [
+     {
+      "q": "Give two effects of global warming on the North Region of Cameroon.",
+      "a": "Hotter dry seasons, irregular rains, more droughts and floods, and poorer harvests. These changes from year to year are called climate variability."
+     },
+     {
+      "q": "Why is the sea level rising, and which Cameroonian towns are threatened?",
+      "a": "Ice is melting and warm water expands, so the sea level rises. Coastal towns like Douala, Limbe and Kribi are threatened."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects",
+     "intro": "The main effects of global warming are the following:",
+     "items": [
+      [
+       "A. Extreme Weather",
+       "Heatwaves, droughts and floods become more frequent and more intense, as in the Sahel."
+      ],
+      [
+       "B. Rising Sea Level",
+       "Melting ice and warmer water raise the sea level, threatening coastal towns such as Douala and Limbe."
+      ],
+      [
+       "C. Agriculture and Health",
+       "Irregular rains reduce harvests and cause food shortages. Heat favours some diseases."
+      ],
+      [
+       "D. Ecosystems",
+       "Some plants and animals disappear, and desertification spreads in the Sahel."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. ADAPTATIONS AND MITIGATIONS",
+    "qa": [
+     {
+      "q": "What is the difference between mitigation and adaptation?",
+      "a": "Mitigation reduces the causes of global warming, for example by planting trees. Adaptation helps people to live with its effects, for example with drought-resistant crops."
+     }
+    ],
+    "sum": {
+     "title": "IV. Adaptations and Mitigations",
+     "defs": [
+      "Mitigation is the reduction of greenhouse gas emissions. Adaptation is the adjustment of people's ways of life to the effects of global warming."
+     ],
+     "items": [
+      [
+       "A. Mitigation",
+       "Using solar energy, saving energy, planting trees, protecting forests and reducing bush fires."
+      ],
+      [
+       "B. Adaptation",
+       "Growing drought-resistant crops, storing water, building sea walls and warning people of heatwaves and floods."
+      ],
+      [
+       "C. International Action",
+       "Countries, including Cameroon, signed the Paris Agreement (2015) to limit warming to well below 2°C."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between the greenhouse effect and global warming?",
+    "The greenhouse effect is natural and keeps the Earth warm. Global warming is the extra warming caused by more greenhouse gases."
+   ],
+   [
+    "Give two human causes of global warming.",
+    "Two human causes are burning fossil fuels and deforestation."
+   ],
+   [
+    "Give one adaptation measure for farmers in North Cameroon.",
+    "Farmers can grow drought-resistant crops such as improved sorghum and millet."
+   ]
+  ],
+  "remediation": [
+   [
+    "The long-term rise of Earth's temperature is global ______.",
+    "The main greenhouse gas added by humans is ______.",
+    "Cutting down forests is called ______."
+   ],
+   [
+    "Reducing greenhouse gas emissions is called ______.",
+    "Adjusting to the effects of warming is called ______.",
+    "The 2015 agreement on climate is the ______ Agreement."
+   ]
+  ],
+  "remediationAnswers": "1. warming 2. carbon dioxide (CO₂) 3. deforestation 4. mitigation 5. adaptation 6. Paris",
+  "homework": "Ask an adult in your family whether your area has ever been flooded or has suffered a very dry year. Write down when it happened and what damage it caused.",
+  "homeworkTag": "This prepares Lesson 41: Floods, Droughts and Desertification.",
+  "bilingual": [
+   [
+    "Global warming",
+    "Le réchauffement climatique"
+   ],
+   [
+    "Greenhouse effect",
+    "L'effet de serre"
+   ],
+   [
+    "Greenhouse gas",
+    "Le gaz à effet de serre"
+   ],
+   [
+    "Carbon dioxide",
+    "Le dioxyde de carbone"
+   ],
+   [
+    "Climate variability",
+    "La variabilité climatique"
+   ],
+   [
+    "Mitigation",
+    "L'atténuation"
+   ],
+   [
+    "Adaptation",
+    "L'adaptation"
+   ],
+   [
+    "Sea level",
+    "Le niveau de la mer"
+   ]
+  ],
+  "teacherNote": [
+   "IPCC AR6 (2021): global surface temperature was about 1.1°C higher in 2011–2020 than in 1850–1900; recent years are about 1.2°C or more. CO₂ has risen from about 280 ppm before 1850 to more than 420 ppm.",
+   "Correction of the source notes: large volcanic eruptions usually cool the climate for a short time (their ash and gases block sunlight); they are not a cause of today's warming."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "IPCC Sixth Assessment Report (2021–2023).",
+   "UNFCCC: Paris Agreement (2015)."
+  ]
+ }
+}

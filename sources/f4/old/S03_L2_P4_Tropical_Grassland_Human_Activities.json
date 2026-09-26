@@ -1,0 +1,696 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. CROP FARMING\" | \"Question 1\" | [\"Farmers around Garoua grow cotton to sell and sorghum to eat. What do we call these two kinds of crops?\"]",
+  "slide | \"I. CROP FARMING\" | \"Answer\" | [\"Cotton is a cash crop, grown to be sold. Sorghum is a food crop, grown to feed the family.\"]",
+  "slide | \"I. CROP FARMING\" | \"Question 2\" | [\"Which company buys the cotton of farmers in North Cameroon?\"]",
+  "slide | \"I. CROP FARMING\" | \"Answer\" | [\"The cotton is bought by SODECOTON, which gives seeds and fertilisers to farmers and gins the cotton in its factories.\"]",
+  "slide | \"I. CROP FARMING\" | \"Question 3\" | [\"Why do farmers in the savanna prepare their fields in May and harvest in October or November?\"]",
+  "slide | \"I. CROP FARMING\" | \"Answer\" | [\"Because crops need rain to grow. The rainy season lasts from May to October.\"]",
+  "slide | \"II. LIVESTOCK REARING\" | \"Question 1\" | [\"Adamou moves with his cattle every year. Why must he move in the dry season?\"]",
+  "slide | \"II. LIVESTOCK REARING\" | \"Answer\" | [\"In the dry season, the grass dries up and water becomes scarce. He moves to find green pasture and water for his animals.\"]",
+  "slide | \"II. LIVESTOCK REARING\" | \"Question 2\" | [\"What do we call the movement of herders with their animals between the dry-season and wet-season pastures?\"]",
+  "slide | \"II. LIVESTOCK REARING\" | \"Answer\" | [\"This seasonal movement is called transhumance. When herders move all the time without a fixed home, it is called nomadic pastoralism.\"]",
+  "slide | \"II. LIVESTOCK REARING\" | \"Question 3\" | [\"The Maasai of Kenya and Tanzania also rear cattle in the savanna. Why are cattle important for them?\"]",
+  "slide | \"II. LIVESTOCK REARING\" | \"Answer\" | [\"Cattle give them milk, meat and blood for food. They are also a sign of wealth and are used to pay the bride price.\"]",
+  "slide | \"III. OTHER ACTIVITIES\" | \"Question 1\" | [\"Besides farming and rearing, give two other activities of the people of the savanna.\"]",
+  "slide | \"III. OTHER ACTIVITIES\" | \"Answer\" | [\"People also hunt, fish in rivers and lakes, cut wood for fuel and building, and guide tourists in national parks.\"]",
+  "sum | \"I. Crop Farming (1/5)\" | [\"Crop farming in the Tropical Grassland region has the following characteristics:\"]",
+  "sum | \"I. Crop Farming (2/5)\" | \"A. Food Crops\" | [\"Farmers grow sorghum, millet, maize, groundnuts and cowpeas to feed their families.\"]",
+  "sum | \"I. Crop Farming (3/5)\" | \"B. Cash Crops\" | [\"Farmers grow cotton to sell. In North Cameroon, SODECOTON buys the cotton and gives seeds and fertilisers.\"]",
+  "sum | \"I. Crop Farming (4/5)\" | \"C. Irrigated Farming\" | [\"Rice is grown on irrigated fields, for example near Lagdo and at Yagoua (SEMRY).\"]",
+  "sum | \"I. Crop Farming (5/5)\" | \"D. Farming Calendar\" | [\"Farming depends on the rainy season: fields are prepared in May and crops are harvested in October and November.\"]",
+  "sum | \"II. Livestock Rearing (1/4)\" | [\"Livestock rearing is a major activity of the savanna. It is practised in the following ways:\"]",
+  "sum | \"II. Livestock Rearing (2/4)\" | \"A. Nomadic Pastoralism\" | [\"Nomadic pastoralism is the rearing of animals by herders who move from place to place with them, such as the Fulani and the Maasai.\"]",
+  "sum | \"II. Livestock Rearing (3/4)\" | \"B. Transhumance\" | [\"Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures.\"]",
+  "sum | \"II. Livestock Rearing (4/4)\" | \"C. Sedentary Rearing\" | [\"Some farmers keep animals near the village and feed them with crop residues. Ranches rear cattle on the Adamawa plateau.\"]",
+  "sum | \"III. Other Activities (1/4)\" | [\"The other human activities of the savanna are the following:\"]",
+  "sum | \"III. Other Activities (2/4)\" | \"A. Hunting\" | [\"People hunt antelopes and other animals for meat. Controlled sport hunting takes place in hunting zones of North Cameroon.\"]",
+  "sum | \"III. Other Activities (3/4)\" | \"B. Lumbering and Wood Cutting\" | [\"Trees are cut for firewood, charcoal and building poles. Large-scale lumbering is rare because trees are scattered.\"]",
+  "sum | \"III. Other Activities (4/4)\" | \"C. Fishing and Tourism\" | [\"People fish in the Lagdo lake and the Benue. Tourists visit the national parks.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S03_L2_P4_Tropical_Grassland_Human_Activities",
+  "part": 4,
+  "partTitle": "Human Activities",
+  "notions": "Crop farming, cash crop, food crop, livestock rearing, nomadic pastoralism, transhumance, hunting.",
+  "focus": "Human activities of the Tropical Grassland region: farming, livestock rearing, hunting, lumbering and others.",
+  "competence": "Learners are able to describe the work of farmers and herders around them and explain why herders move with their animals.",
+  "objectives": [
+   "Describe crop farming in the Tropical Grassland region.",
+   "Describe livestock rearing, including nomadic pastoralism and transhumance.",
+   "Describe hunting, fishing and wood cutting in the Tropical Grassland region."
+  ],
+  "recall": [
+   "The resources of the savanna are pasture, farmland, wildlife, water and trees.",
+   "People exploit them by farming, livestock rearing, tourism, fishing and cutting trees."
+  ],
+  "recallNote": "Check the homework: what did learners find out from farmers or herders?",
+  "situation": [
+   "Every year in November, Adamou, a Fulani herder, leaves his village near Garoua with his cattle. He walks for weeks towards the valleys in the south, and comes back only when the rains return.",
+   "His classmate Paul thinks that Adamou's family moves because they do not like to stay in one place."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Paul does not understand why Adamou's family moves every year with their cattle."
+   ],
+   [
+    "When does Adamou leave, and when does he come back?",
+    "He leaves in November, at the start of the dry season, and comes back when the rains return."
+   ],
+   [
+    "What can be done so that herders do not need to move so far?",
+    "Farmers and herders can grow fodder, store hay and dig wells or small dams for the animals."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the main activities of the people of the savanna, such as farming and livestock rearing.",
+  "parts": [
+   {
+    "sec": "I. CROP FARMING",
+    "qa": [
+     {
+      "q": "Farmers around Garoua grow cotton to sell and sorghum to eat. What do we call these two kinds of crops?",
+      "a": "Cotton is a cash crop, grown to be sold. Sorghum is a food crop, grown to feed the family."
+     },
+     {
+      "q": "Which company buys the cotton of farmers in North Cameroon?",
+      "a": "The cotton is bought by SODECOTON, which gives seeds and fertilisers to farmers and gins the cotton in its factories."
+     },
+     {
+      "q": "Why do farmers in the savanna prepare their fields in May and harvest in October or November?",
+      "a": "Because crops need rain to grow. The rainy season lasts from May to October."
+     }
+    ],
+    "sum": {
+     "title": "I. Crop Farming",
+     "intro": "Crop farming in the Tropical Grassland region has the following characteristics:",
+     "items": [
+      [
+       "A. Food Crops",
+       "Farmers grow sorghum, millet, maize, groundnuts and cowpeas to feed their families."
+      ],
+      [
+       "B. Cash Crops",
+       "Farmers grow cotton to sell. In North Cameroon, SODECOTON buys the cotton and gives seeds and fertilisers."
+      ],
+      [
+       "C. Irrigated Farming",
+       "Rice is grown on irrigated fields, for example near Lagdo and at Yagoua (SEMRY)."
+      ],
+      [
+       "D. Farming Calendar",
+       "Farming depends on the rainy season: fields are prepared in May and crops are harvested in October and November."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LIVESTOCK REARING",
+    "qa": [
+     {
+      "q": "Adamou moves with his cattle every year. Why must he move in the dry season?",
+      "a": "In the dry season, the grass dries up and water becomes scarce. He moves to find green pasture and water for his animals."
+     },
+     {
+      "q": "What do we call the movement of herders with their animals between the dry-season and wet-season pastures?",
+      "a": "This seasonal movement is called transhumance. When herders move all the time without a fixed home, it is called nomadic pastoralism."
+     },
+     {
+      "q": "The Maasai of Kenya and Tanzania also rear cattle in the savanna. Why are cattle important for them?",
+      "a": "Cattle give them milk, meat and blood for food. They are also a sign of wealth and are used to pay the bride price."
+     }
+    ],
+    "sum": {
+     "title": "II. Livestock Rearing",
+     "intro": "Livestock rearing is a major activity of the savanna. It is practised in the following ways:",
+     "items": [
+      [
+       "A. Nomadic Pastoralism",
+       "Nomadic pastoralism is the rearing of animals by herders who move from place to place with them, such as the Fulani and the Maasai."
+      ],
+      [
+       "B. Transhumance",
+       "Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures."
+      ],
+      [
+       "C. Sedentary Rearing",
+       "Some farmers keep animals near the village and feed them with crop residues. Ranches rear cattle on the Adamawa plateau."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. OTHER ACTIVITIES",
+    "qa": [
+     {
+      "q": "Besides farming and rearing, give two other activities of the people of the savanna.",
+      "a": "People also hunt, fish in rivers and lakes, cut wood for fuel and building, and guide tourists in national parks."
+     }
+    ],
+    "sum": {
+     "title": "III. Other Activities",
+     "intro": "The other human activities of the savanna are the following:",
+     "items": [
+      [
+       "A. Hunting",
+       "People hunt antelopes and other animals for meat. Controlled sport hunting takes place in hunting zones of North Cameroon."
+      ],
+      [
+       "B. Lumbering and Wood Cutting",
+       "Trees are cut for firewood, charcoal and building poles. Large-scale lumbering is rare because trees are scattered."
+      ],
+      [
+       "C. Fishing and Tourism",
+       "People fish in the Lagdo lake and the Benue. Tourists visit the national parks."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a cash crop and a food crop? Give one example of each.",
+    "A cash crop is grown to be sold, like cotton. A food crop is grown to feed the family, like sorghum."
+   ],
+   [
+    "What is transhumance?",
+    "Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures."
+   ],
+   [
+    "Why is large-scale lumbering rare in the savanna?",
+    "It is rare because the trees are scattered and there are few big trees."
+   ]
+  ],
+  "remediation": [
+   [
+    "A crop grown to be sold is a ______ crop.",
+    "The company that buys cotton in North Cameroon is ______.",
+    "Rice is grown on ______ fields near Lagdo."
+   ],
+   [
+    "The seasonal movement of herders and animals is called ______.",
+    "Herders who move all the time are called ______ pastoralists.",
+    "A cattle-rearing people of Kenya and Tanzania is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. cash 2. SODECOTON 3. irrigated 4. transhumance 5. nomadic 6. Maasai",
+  "homework": "Write down two problems that farmers or herders around Garoua face, for example with rain, fires or pests.",
+  "homeworkTag": "This prepares Part 5: Problems Faced and Attempted Solutions.",
+  "bilingual": [
+   [
+    "Cash crop",
+    "La culture de rente"
+   ],
+   [
+    "Food crop",
+    "La culture vivrière"
+   ],
+   [
+    "Herder",
+    "L'éleveur"
+   ],
+   [
+    "Cattle",
+    "Les bovins"
+   ],
+   [
+    "Transhumance",
+    "La transhumance"
+   ],
+   [
+    "Nomadic",
+    "Nomade"
+   ],
+   [
+    "Hunting",
+    "La chasse"
+   ],
+   [
+    "Firewood",
+    "Le bois de chauffe"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: parts II and III, board summary and evaluation.",
+   "SEMRY (Société d'Expansion et de Modernisation de la Riziculture de Yagoua) runs irrigated rice schemes in the Far North."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 4)",
+  "title": "The Tropical Grassland Region: Human Activities",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 4: Human Activities.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 4: Human Activities"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S03_L2_P4_Tropical_Grassland_Human_Activities",
+  "part": 4,
+  "partTitle": "Human Activities",
+  "notions": "Crop farming, cash crop, food crop, livestock rearing, nomadic pastoralism, transhumance, hunting.",
+  "focus": "Human activities of the Tropical Grassland region: farming, livestock rearing, hunting, lumbering and others.",
+  "competence": "Learners are able to describe the work of farmers and herders around them and explain why herders move with their animals.",
+  "objectives": [
+   "Describe crop farming in the Tropical Grassland region.",
+   "Describe livestock rearing, including nomadic pastoralism and transhumance.",
+   "Describe hunting, fishing and wood cutting in the Tropical Grassland region."
+  ],
+  "recall": [
+   "The resources of the savanna are pasture, farmland, wildlife, water and trees.",
+   "People exploit them by farming, livestock rearing, tourism, fishing and cutting trees."
+  ],
+  "recallNote": "Check the homework: what did learners find out from farmers or herders?",
+  "situation": [
+   "Every year in November, Adamou, a Fulani herder, leaves his village near Garoua with his cattle. He walks for weeks towards the valleys in the south, and comes back only when the rains return.",
+   "His classmate Paul thinks that Adamou's family moves because they do not like to stay in one place."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Paul does not understand why Adamou's family moves every year with their cattle."
+   ],
+   [
+    "When does Adamou leave, and when does he come back?",
+    "He leaves in November, at the start of the dry season, and comes back when the rains return."
+   ],
+   [
+    "What can be done so that herders do not need to move so far?",
+    "Farmers and herders can grow fodder, store hay and dig wells or small dams for the animals."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the main activities of the people of the savanna, such as farming and livestock rearing.",
+  "parts": [
+   {
+    "sec": "I. CROP FARMING",
+    "qa": [
+     {
+      "q": "Farmers around Garoua grow cotton to sell and sorghum to eat. What do we call these two kinds of crops?",
+      "a": "Cotton is a cash crop, grown to be sold. Sorghum is a food crop, grown to feed the family."
+     },
+     {
+      "q": "Which company buys the cotton of farmers in North Cameroon?",
+      "a": "The cotton is bought by SODECOTON, which gives seeds and fertilisers to farmers and gins the cotton in its factories."
+     },
+     {
+      "q": "Why do farmers in the savanna prepare their fields in May and harvest in October or November?",
+      "a": "Because crops need rain to grow. The rainy season lasts from May to October."
+     }
+    ],
+    "sum": {
+     "title": "I. Crop Farming",
+     "intro": "Crop farming in the Tropical Grassland region has the following characteristics:",
+     "items": [
+      [
+       "A. Food Crops",
+       "Farmers grow sorghum, millet, maize, groundnuts and cowpeas to feed their families."
+      ],
+      [
+       "B. Cash Crops",
+       "Farmers grow cotton to sell. In North Cameroon, SODECOTON buys the cotton and gives seeds and fertilisers."
+      ],
+      [
+       "C. Irrigated Farming",
+       "Rice is grown on irrigated fields, for example near Lagdo and at Yagoua (SEMRY)."
+      ],
+      [
+       "D. Farming Calendar",
+       "Farming depends on the rainy season: fields are prepared in May and crops are harvested in October and November."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LIVESTOCK REARING",
+    "qa": [
+     {
+      "q": "Adamou moves with his cattle every year. Why must he move in the dry season?",
+      "a": "In the dry season, the grass dries up and water becomes scarce. He moves to find green pasture and water for his animals."
+     },
+     {
+      "q": "What do we call the movement of herders with their animals between the dry-season and wet-season pastures?",
+      "a": "This seasonal movement is called transhumance. When herders move all the time without a fixed home, it is called nomadic pastoralism."
+     },
+     {
+      "q": "The Maasai of Kenya and Tanzania also rear cattle in the savanna. Why are cattle important for them?",
+      "a": "Cattle give them milk, meat and blood for food. They are also a sign of wealth and are used to pay the bride price."
+     }
+    ],
+    "sum": {
+     "title": "II. Livestock Rearing",
+     "intro": "Livestock rearing is a major activity of the savanna. It is practised in the following ways:",
+     "items": [
+      [
+       "A. Nomadic Pastoralism",
+       "Nomadic pastoralism is the rearing of animals by herders who move from place to place with them, such as the Fulani and the Maasai."
+      ],
+      [
+       "B. Transhumance",
+       "Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures."
+      ],
+      [
+       "C. Sedentary Rearing",
+       "Some farmers keep animals near the village and feed them with crop residues. Ranches rear cattle on the Adamawa plateau."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. OTHER ACTIVITIES",
+    "qa": [
+     {
+      "q": "Besides farming and rearing, give two other activities of the people of the savanna.",
+      "a": "People also hunt, fish in rivers and lakes, cut wood for fuel and building, and guide tourists in national parks."
+     }
+    ],
+    "sum": {
+     "title": "III. Other Activities",
+     "intro": "The other human activities of the savanna are the following:",
+     "items": [
+      [
+       "A. Hunting",
+       "People hunt antelopes and other animals for meat. Controlled sport hunting takes place in hunting zones of North Cameroon."
+      ],
+      [
+       "B. Lumbering and Wood Cutting",
+       "Trees are cut for firewood, charcoal and building poles. Large-scale lumbering is rare because trees are scattered."
+      ],
+      [
+       "C. Fishing and Tourism",
+       "People fish in the Lagdo lake and the Benue. Tourists visit the national parks."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a cash crop and a food crop? Give one example of each.",
+    "A cash crop is grown to be sold, like cotton. A food crop is grown to feed the family, like sorghum."
+   ],
+   [
+    "What is transhumance?",
+    "Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures."
+   ],
+   [
+    "Why is large-scale lumbering rare in the savanna?",
+    "It is rare because the trees are scattered and there are few big trees."
+   ]
+  ],
+  "remediation": [
+   [
+    "A crop grown to be sold is a ______ crop.",
+    "The company that buys cotton in North Cameroon is ______.",
+    "Rice is grown on ______ fields near Lagdo."
+   ],
+   [
+    "The seasonal movement of herders and animals is called ______.",
+    "Herders who move all the time are called ______ pastoralists.",
+    "A cattle-rearing people of Kenya and Tanzania is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. cash 2. SODECOTON 3. irrigated 4. transhumance 5. nomadic 6. Maasai",
+  "homework": "Write down two problems that farmers or herders around Garoua face, for example with rain, fires or pests.",
+  "homeworkTag": "This prepares Part 5: Problems Faced and Attempted Solutions.",
+  "bilingual": [
+   [
+    "Cash crop",
+    "La culture de rente"
+   ],
+   [
+    "Food crop",
+    "La culture vivrière"
+   ],
+   [
+    "Herder",
+    "L'éleveur"
+   ],
+   [
+    "Cattle",
+    "Les bovins"
+   ],
+   [
+    "Transhumance",
+    "La transhumance"
+   ],
+   [
+    "Nomadic",
+    "Nomade"
+   ],
+   [
+    "Hunting",
+    "La chasse"
+   ],
+   [
+    "Firewood",
+    "Le bois de chauffe"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: parts II and III, board summary and evaluation.",
+   "SEMRY (Société d'Expansion et de Modernisation de la Riziculture de Yagoua) runs irrigated rice schemes in the Far North."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 4)",
+  "title": "The Tropical Grassland Region: Human Activities",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 4: Human Activities.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 4: Human Activities",
+  "matter": "I. Crop Farming: Food Crops, Cash Crops, Irrigated Farming, Farming Calendar; II. Livestock Rearing: Nomadic Pastoralism, Transhumance, Sedentary Rearing; III. Other Activities: Hunting, Lumbering and Wood Cutting, Fishing and Tourism."
+ },
+ "file": "S03_L2_P4_Tropical_Grassland_Human_Activities",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S03_L2_P4_Tropical_Grassland_Human_Activities",
+  "part": 4,
+  "partTitle": "Human Activities",
+  "notions": "Crop farming, cash crop, food crop, livestock rearing, nomadic pastoralism, transhumance, hunting.",
+  "focus": "Human activities of the Tropical Grassland region: farming, livestock rearing, hunting, lumbering and others.",
+  "competence": "Learners are able to describe the work of farmers and herders around them and explain why herders move with their animals.",
+  "objectives": [
+   "Describe crop farming in the Tropical Grassland region.",
+   "Describe livestock rearing, including nomadic pastoralism and transhumance.",
+   "Describe hunting, fishing and wood cutting in the Tropical Grassland region."
+  ],
+  "recall": [
+   "The resources of the savanna are pasture, farmland, wildlife, water and trees.",
+   "People exploit them by farming, livestock rearing, tourism, fishing and cutting trees."
+  ],
+  "recallNote": "Check the homework: what did learners find out from farmers or herders?",
+  "situation": [
+   "Every year in November, Adamou, a Fulani herder, leaves his village near Garoua with his cattle. He walks for weeks towards the valleys in the south, and comes back only when the rains return.",
+   "His classmate Paul thinks that Adamou's family moves because they do not like to stay in one place."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Paul does not understand why Adamou's family moves every year with their cattle."
+   ],
+   [
+    "When does Adamou leave, and when does he come back?",
+    "He leaves in November, at the start of the dry season, and comes back when the rains return."
+   ],
+   [
+    "What can be done so that herders do not need to move so far?",
+    "Farmers and herders can grow fodder, store hay and dig wells or small dams for the animals."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the main activities of the people of the savanna, such as farming and livestock rearing.",
+  "parts": [
+   {
+    "sec": "I. CROP FARMING",
+    "qa": [
+     {
+      "q": "Farmers around Garoua grow cotton to sell and sorghum to eat. What do we call these two kinds of crops?",
+      "a": "Cotton is a cash crop, grown to be sold. Sorghum is a food crop, grown to feed the family."
+     },
+     {
+      "q": "Which company buys the cotton of farmers in North Cameroon?",
+      "a": "The cotton is bought by SODECOTON, which gives seeds and fertilisers to farmers and gins the cotton in its factories."
+     },
+     {
+      "q": "Why do farmers in the savanna prepare their fields in May and harvest in October or November?",
+      "a": "Because crops need rain to grow. The rainy season lasts from May to October."
+     }
+    ],
+    "sum": {
+     "title": "I. Crop Farming",
+     "intro": "Crop farming in the Tropical Grassland region has the following characteristics:",
+     "items": [
+      [
+       "A. Food Crops",
+       "Farmers grow sorghum, millet, maize, groundnuts and cowpeas to feed their families."
+      ],
+      [
+       "B. Cash Crops",
+       "Farmers grow cotton to sell. In North Cameroon, SODECOTON buys the cotton and gives seeds and fertilisers."
+      ],
+      [
+       "C. Irrigated Farming",
+       "Rice is grown on irrigated fields, for example near Lagdo and at Yagoua (SEMRY)."
+      ],
+      [
+       "D. Farming Calendar",
+       "Farming depends on the rainy season: fields are prepared in May and crops are harvested in October and November."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LIVESTOCK REARING",
+    "qa": [
+     {
+      "q": "Adamou moves with his cattle every year. Why must he move in the dry season?",
+      "a": "In the dry season, the grass dries up and water becomes scarce. He moves to find green pasture and water for his animals."
+     },
+     {
+      "q": "What do we call the movement of herders with their animals between the dry-season and wet-season pastures?",
+      "a": "This seasonal movement is called transhumance. When herders move all the time without a fixed home, it is called nomadic pastoralism."
+     },
+     {
+      "q": "The Maasai of Kenya and Tanzania also rear cattle in the savanna. Why are cattle important for them?",
+      "a": "Cattle give them milk, meat and blood for food. They are also a sign of wealth and are used to pay the bride price."
+     }
+    ],
+    "sum": {
+     "title": "II. Livestock Rearing",
+     "intro": "Livestock rearing is a major activity of the savanna. It is practised in the following ways:",
+     "items": [
+      [
+       "A. Nomadic Pastoralism",
+       "Nomadic pastoralism is the rearing of animals by herders who move from place to place with them, such as the Fulani and the Maasai."
+      ],
+      [
+       "B. Transhumance",
+       "Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures."
+      ],
+      [
+       "C. Sedentary Rearing",
+       "Some farmers keep animals near the village and feed them with crop residues. Ranches rear cattle on the Adamawa plateau."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. OTHER ACTIVITIES",
+    "qa": [
+     {
+      "q": "Besides farming and rearing, give two other activities of the people of the savanna.",
+      "a": "People also hunt, fish in rivers and lakes, cut wood for fuel and building, and guide tourists in national parks."
+     }
+    ],
+    "sum": {
+     "title": "III. Other Activities",
+     "intro": "The other human activities of the savanna are the following:",
+     "items": [
+      [
+       "A. Hunting",
+       "People hunt antelopes and other animals for meat. Controlled sport hunting takes place in hunting zones of North Cameroon."
+      ],
+      [
+       "B. Lumbering and Wood Cutting",
+       "Trees are cut for firewood, charcoal and building poles. Large-scale lumbering is rare because trees are scattered."
+      ],
+      [
+       "C. Fishing and Tourism",
+       "People fish in the Lagdo lake and the Benue. Tourists visit the national parks."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a cash crop and a food crop? Give one example of each.",
+    "A cash crop is grown to be sold, like cotton. A food crop is grown to feed the family, like sorghum."
+   ],
+   [
+    "What is transhumance?",
+    "Transhumance is the seasonal movement of herders and animals between dry-season and wet-season pastures."
+   ],
+   [
+    "Why is large-scale lumbering rare in the savanna?",
+    "It is rare because the trees are scattered and there are few big trees."
+   ]
+  ],
+  "remediation": [
+   [
+    "A crop grown to be sold is a ______ crop.",
+    "The company that buys cotton in North Cameroon is ______.",
+    "Rice is grown on ______ fields near Lagdo."
+   ],
+   [
+    "The seasonal movement of herders and animals is called ______.",
+    "Herders who move all the time are called ______ pastoralists.",
+    "A cattle-rearing people of Kenya and Tanzania is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. cash 2. SODECOTON 3. irrigated 4. transhumance 5. nomadic 6. Maasai",
+  "homework": "Write down two problems that farmers or herders around Garoua face, for example with rain, fires or pests.",
+  "homeworkTag": "This prepares Part 5: Problems Faced and Attempted Solutions.",
+  "bilingual": [
+   [
+    "Cash crop",
+    "La culture de rente"
+   ],
+   [
+    "Food crop",
+    "La culture vivrière"
+   ],
+   [
+    "Herder",
+    "L'éleveur"
+   ],
+   [
+    "Cattle",
+    "Les bovins"
+   ],
+   [
+    "Transhumance",
+    "La transhumance"
+   ],
+   [
+    "Nomadic",
+    "Nomade"
+   ],
+   [
+    "Hunting",
+    "La chasse"
+   ],
+   [
+    "Firewood",
+    "Le bois de chauffe"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: parts II and III, board summary and evaluation.",
+   "SEMRY (Société d'Expansion et de Modernisation de la Riziculture de Yagoua) runs irrigated rice schemes in the Far North."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland)."
+  ]
+ }
+}

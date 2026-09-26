@@ -1,0 +1,593 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITIONS\" | \"Question 1\" | [\"Anything in nature that people can use to satisfy their needs is called a ______. What is the missing word?\"]",
+  "slide | \"I. DEFINITIONS\" | \"Answer\" | [\"The missing word is resource. Land, water, grass and wild animals are resources.\"]",
+  "slide | \"I. DEFINITIONS\" | \"Question 2\" | [\"What do we call the action of taking and using a resource for our needs or to earn money?\"]",
+  "slide | \"I. DEFINITIONS\" | \"Answer\" | [\"The action of taking and using a resource is called exploitation.\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Question 1\" | [\"The savanna has large areas of grass. Which animals can feed on it, and who rears them in North Cameroon?\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Answer\" | [\"Cattle, sheep and goats feed on the grass. In North Cameroon, the Fulani (Mbororo) herders rear them.\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Question 2\" | [\"Which crops grow well on the soils of the savanna around Garoua?\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Answer\" | [\"Cotton, maize, sorghum, millet, groundnuts and rice grow well. Cotton is the main cash crop.\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Question 3\" | [\"Name two national parks of North Cameroon. Why are they important resources?\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Answer\" | [\"The Benoue and Bouba Ndjida National Parks, in the North Region, and Waza, in the Far North, protect wild animals. Tourists visit them.\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Question 4\" | [\"The Lagdo dam was built on the River Benue. Give two ways in which people use its water.\"]",
+  "slide | \"II. RESOURCES AND METHODS\" | \"Answer\" | [\"The dam produces hydro-electricity (72 MW) for the North. Its lake is used for fishing and for irrigating rice fields.\"]",
+  "sum | \"I. Definitions (1/2)\" | \"DEFINITIONS\" | [\"A resource is anything in nature that people can use to satisfy their needs.\"]",
+  "sum | \"I. Definitions (2/2)\" | \"DEFINITIONS\" | [\"Exploitation is the action of taking and using a resource to satisfy needs or to earn money.\"]",
+  "sum | \"II. Types of Resources and Methods of Exploitation (1/6)\" | [\"The main resources of the Tropical Grassland region and their methods of exploitation are the following:\"]",
+  "sum | \"II. Types of Resources and Methods of Exploitation (2/6)\" | \"A. Pasture\" | [\"The grass is used to feed cattle, sheep and goats. It is exploited by livestock rearing, as done by the Fulani (Mbororo).\"]",
+  "sum | \"II. Types of Resources and Methods of Exploitation (3/6)\" | \"B. Farmland\" | [\"The soils are used to grow cotton, maize, sorghum, millet and groundnuts. They are exploited by crop farming.\"]",
+  "sum | \"II. Types of Resources and Methods of Exploitation (4/6)\" | \"C. Wildlife\" | [\"Elephants, lions, giraffes and antelopes live in parks such as Benoue, Bouba Ndjida and Waza. They are exploited by tourism and controlled hunting.\"]",
+  "sum | \"II. Types of Resources and Methods of Exploitation (5/6)\" | \"D. Water\" | [\"Rivers and lakes are used for fishing, irrigation and hydro-electricity. The Lagdo dam on the Benue produces 72 MW.\"]",
+  "sum | \"II. Types of Resources and Methods of Exploitation (6/6)\" | \"E. Trees\" | [\"Trees give firewood, charcoal, shea butter and fruits. They are exploited by gathering and cutting.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S02_L2_P3_Tropical_Grassland_Resources",
+  "part": 3,
+  "partTitle": "Types of Resources and Methods of Exploitation",
+  "notions": "Resource, exploitation, pasture, national park, hydro-electric power, irrigation.",
+  "focus": "Types of resources of the Tropical Grassland region and methods of exploitation.",
+  "competence": "Learners are able to name the resources of the savanna around them and explain how people use them to earn a living.",
+  "objectives": [
+   "Define a resource and exploitation.",
+   "Identify the main resources of the Tropical Grassland region.",
+   "Describe the methods used to exploit these resources."
+  ],
+  "recall": [
+   "The savanna has tall grasses and scattered trees.",
+   "Its soils are ferruginous, with laterite and black cotton soils.",
+   "Plants survive the dry season by losing leaves and storing water."
+  ],
+  "recallNote": "Check the homework: what do families get from the savanna?",
+  "situation": [
+   "Ibrahim lives in a village near the Lagdo lake, south of Garoua. His uncle fishes in the lake, his father grows cotton, and his cousin guides tourists in the Benoue National Park.",
+   "A visitor tells Ibrahim that the savanna is a poor region with nothing useful. Ibrahim does not agree, but he cannot explain why."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ibrahim cannot explain why the savanna is not a poor region with nothing useful."
+   ],
+   [
+    "Which activities do the members of Ibrahim's family practise?",
+    "His uncle fishes in the Lagdo lake, his father grows cotton, and his cousin guides tourists in the Benoue National Park."
+   ],
+   [
+    "What can Ibrahim tell the visitor?",
+    "He can tell him that the savanna has many resources: land for crops, grass for animals, wildlife, rivers and lakes."
+   ]
+  ],
+  "justification": "This lesson will help us to know the wealth of the savanna where we live and how people use it.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "Anything in nature that people can use to satisfy their needs is called a ______. What is the missing word?",
+      "a": "The missing word is resource. Land, water, grass and wild animals are resources."
+     },
+     {
+      "q": "What do we call the action of taking and using a resource for our needs or to earn money?",
+      "a": "The action of taking and using a resource is called exploitation."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "A resource is anything in nature that people can use to satisfy their needs.",
+      "Exploitation is the action of taking and using a resource to satisfy needs or to earn money."
+     ]
+    }
+   },
+   {
+    "sec": "II. RESOURCES AND METHODS",
+    "qa": [
+     {
+      "q": "The savanna has large areas of grass. Which animals can feed on it, and who rears them in North Cameroon?",
+      "a": "Cattle, sheep and goats feed on the grass. In North Cameroon, the Fulani (Mbororo) herders rear them."
+     },
+     {
+      "q": "Which crops grow well on the soils of the savanna around Garoua?",
+      "a": "Cotton, maize, sorghum, millet, groundnuts and rice grow well. Cotton is the main cash crop."
+     },
+     {
+      "q": "Name two national parks of North Cameroon. Why are they important resources?",
+      "a": "The Benoue and Bouba Ndjida National Parks, in the North Region, and Waza, in the Far North, protect wild animals. Tourists visit them."
+     },
+     {
+      "q": "The Lagdo dam was built on the River Benue. Give two ways in which people use its water.",
+      "a": "The dam produces hydro-electricity (72 MW) for the North. Its lake is used for fishing and for irrigating rice fields."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Resources and Methods of Exploitation",
+     "intro": "The main resources of the Tropical Grassland region and their methods of exploitation are the following:",
+     "items": [
+      [
+       "A. Pasture",
+       "The grass is used to feed cattle, sheep and goats. It is exploited by livestock rearing, as done by the Fulani (Mbororo)."
+      ],
+      [
+       "B. Farmland",
+       "The soils are used to grow cotton, maize, sorghum, millet and groundnuts. They are exploited by crop farming."
+      ],
+      [
+       "C. Wildlife",
+       "Elephants, lions, giraffes and antelopes live in parks such as Benoue, Bouba Ndjida and Waza. They are exploited by tourism and controlled hunting."
+      ],
+      [
+       "D. Water",
+       "Rivers and lakes are used for fishing, irrigation and hydro-electricity. The Lagdo dam on the Benue produces 72 MW."
+      ],
+      [
+       "E. Trees",
+       "Trees give firewood, charcoal, shea butter and fruits. They are exploited by gathering and cutting."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two resources of the Tropical Grassland region.",
+    "Two resources of the Tropical Grassland region are pasture and wildlife."
+   ],
+   [
+    "How is the water of the Lagdo dam exploited?",
+    "It is exploited to produce hydro-electricity, to fish and to irrigate rice fields."
+   ],
+   [
+    "Why are the national parks of North Cameroon important for the economy?",
+    "They attract tourists, who spend money on guides, transport and hotels."
+   ]
+  ],
+  "remediation": [
+   [
+    "Anything in nature that people can use is a ______.",
+    "The action of taking and using a resource is called ______.",
+    "Grass used to feed animals is called ______."
+   ],
+   [
+    "The main cash crop of North Cameroon is ______.",
+    "The dam built on the Benue near Garoua is the ______ dam.",
+    "A national park in the Far North Region is ______."
+   ]
+  ],
+  "remediationAnswers": "1. resource 2. exploitation 3. pasture 4. cotton 5. Lagdo 6. Waza",
+  "homework": "Ask a farmer or a herder in your area about his work: what he produces, which tools he uses and where he sells his products.",
+  "homeworkTag": "This prepares Part 4: Human Activities.",
+  "bilingual": [
+   [
+    "Resource",
+    "La ressource"
+   ],
+   [
+    "Exploitation",
+    "L'exploitation"
+   ],
+   [
+    "Pasture",
+    "Le pâturage"
+   ],
+   [
+    "Livestock",
+    "Le bétail"
+   ],
+   [
+    "Wildlife",
+    "La faune"
+   ],
+   [
+    "National park",
+    "Le parc national"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "Lagdo dam: on the Benue, south of Garoua, commissioned in the early 1980s, capacity 72 MW."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland).",
+   "Lagdo dam and national parks of North Cameroon: general reference sources (Wikipedia)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 3)",
+  "title": "The Tropical Grassland Region: Types of Resources and Methods of Exploitation",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 3: Types of Resources and Methods of Exploitation.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 3: Types of Resources and Methods of Exploitation"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S02_L2_P3_Tropical_Grassland_Resources",
+  "part": 3,
+  "partTitle": "Types of Resources and Methods of Exploitation",
+  "notions": "Resource, exploitation, pasture, national park, hydro-electric power, irrigation.",
+  "focus": "Types of resources of the Tropical Grassland region and methods of exploitation.",
+  "competence": "Learners are able to name the resources of the savanna around them and explain how people use them to earn a living.",
+  "objectives": [
+   "Define a resource and exploitation.",
+   "Identify the main resources of the Tropical Grassland region.",
+   "Describe the methods used to exploit these resources."
+  ],
+  "recall": [
+   "The savanna has tall grasses and scattered trees.",
+   "Its soils are ferruginous, with laterite and black cotton soils.",
+   "Plants survive the dry season by losing leaves and storing water."
+  ],
+  "recallNote": "Check the homework: what do families get from the savanna?",
+  "situation": [
+   "Ibrahim lives in a village near the Lagdo lake, south of Garoua. His uncle fishes in the lake, his father grows cotton, and his cousin guides tourists in the Benoue National Park.",
+   "A visitor tells Ibrahim that the savanna is a poor region with nothing useful. Ibrahim does not agree, but he cannot explain why."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ibrahim cannot explain why the savanna is not a poor region with nothing useful."
+   ],
+   [
+    "Which activities do the members of Ibrahim's family practise?",
+    "His uncle fishes in the Lagdo lake, his father grows cotton, and his cousin guides tourists in the Benoue National Park."
+   ],
+   [
+    "What can Ibrahim tell the visitor?",
+    "He can tell him that the savanna has many resources: land for crops, grass for animals, wildlife, rivers and lakes."
+   ]
+  ],
+  "justification": "This lesson will help us to know the wealth of the savanna where we live and how people use it.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "Anything in nature that people can use to satisfy their needs is called a ______. What is the missing word?",
+      "a": "The missing word is resource. Land, water, grass and wild animals are resources."
+     },
+     {
+      "q": "What do we call the action of taking and using a resource for our needs or to earn money?",
+      "a": "The action of taking and using a resource is called exploitation."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "A resource is anything in nature that people can use to satisfy their needs.",
+      "Exploitation is the action of taking and using a resource to satisfy needs or to earn money."
+     ]
+    }
+   },
+   {
+    "sec": "II. RESOURCES AND METHODS",
+    "qa": [
+     {
+      "q": "The savanna has large areas of grass. Which animals can feed on it, and who rears them in North Cameroon?",
+      "a": "Cattle, sheep and goats feed on the grass. In North Cameroon, the Fulani (Mbororo) herders rear them."
+     },
+     {
+      "q": "Which crops grow well on the soils of the savanna around Garoua?",
+      "a": "Cotton, maize, sorghum, millet, groundnuts and rice grow well. Cotton is the main cash crop."
+     },
+     {
+      "q": "Name two national parks of North Cameroon. Why are they important resources?",
+      "a": "The Benoue and Bouba Ndjida National Parks, in the North Region, and Waza, in the Far North, protect wild animals. Tourists visit them."
+     },
+     {
+      "q": "The Lagdo dam was built on the River Benue. Give two ways in which people use its water.",
+      "a": "The dam produces hydro-electricity (72 MW) for the North. Its lake is used for fishing and for irrigating rice fields."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Resources and Methods of Exploitation",
+     "intro": "The main resources of the Tropical Grassland region and their methods of exploitation are the following:",
+     "items": [
+      [
+       "A. Pasture",
+       "The grass is used to feed cattle, sheep and goats. It is exploited by livestock rearing, as done by the Fulani (Mbororo)."
+      ],
+      [
+       "B. Farmland",
+       "The soils are used to grow cotton, maize, sorghum, millet and groundnuts. They are exploited by crop farming."
+      ],
+      [
+       "C. Wildlife",
+       "Elephants, lions, giraffes and antelopes live in parks such as Benoue, Bouba Ndjida and Waza. They are exploited by tourism and controlled hunting."
+      ],
+      [
+       "D. Water",
+       "Rivers and lakes are used for fishing, irrigation and hydro-electricity. The Lagdo dam on the Benue produces 72 MW."
+      ],
+      [
+       "E. Trees",
+       "Trees give firewood, charcoal, shea butter and fruits. They are exploited by gathering and cutting."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two resources of the Tropical Grassland region.",
+    "Two resources of the Tropical Grassland region are pasture and wildlife."
+   ],
+   [
+    "How is the water of the Lagdo dam exploited?",
+    "It is exploited to produce hydro-electricity, to fish and to irrigate rice fields."
+   ],
+   [
+    "Why are the national parks of North Cameroon important for the economy?",
+    "They attract tourists, who spend money on guides, transport and hotels."
+   ]
+  ],
+  "remediation": [
+   [
+    "Anything in nature that people can use is a ______.",
+    "The action of taking and using a resource is called ______.",
+    "Grass used to feed animals is called ______."
+   ],
+   [
+    "The main cash crop of North Cameroon is ______.",
+    "The dam built on the Benue near Garoua is the ______ dam.",
+    "A national park in the Far North Region is ______."
+   ]
+  ],
+  "remediationAnswers": "1. resource 2. exploitation 3. pasture 4. cotton 5. Lagdo 6. Waza",
+  "homework": "Ask a farmer or a herder in your area about his work: what he produces, which tools he uses and where he sells his products.",
+  "homeworkTag": "This prepares Part 4: Human Activities.",
+  "bilingual": [
+   [
+    "Resource",
+    "La ressource"
+   ],
+   [
+    "Exploitation",
+    "L'exploitation"
+   ],
+   [
+    "Pasture",
+    "Le pâturage"
+   ],
+   [
+    "Livestock",
+    "Le bétail"
+   ],
+   [
+    "Wildlife",
+    "La faune"
+   ],
+   [
+    "National park",
+    "Le parc national"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "Lagdo dam: on the Benue, south of Garoua, commissioned in the early 1980s, capacity 72 MW."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland).",
+   "Lagdo dam and national parks of North Cameroon: general reference sources (Wikipedia)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 3)",
+  "title": "The Tropical Grassland Region: Types of Resources and Methods of Exploitation",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 3: Types of Resources and Methods of Exploitation.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 3: Types of Resources and Methods of Exploitation",
+  "matter": "I. Definitions: ; II. Types of Resources and Methods of Exploitation: Pasture, Farmland, Wildlife, Water, Trees."
+ },
+ "file": "S02_L2_P3_Tropical_Grassland_Resources",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S02_L2_P3_Tropical_Grassland_Resources",
+  "part": 3,
+  "partTitle": "Types of Resources and Methods of Exploitation",
+  "notions": "Resource, exploitation, pasture, national park, hydro-electric power, irrigation.",
+  "focus": "Types of resources of the Tropical Grassland region and methods of exploitation.",
+  "competence": "Learners are able to name the resources of the savanna around them and explain how people use them to earn a living.",
+  "objectives": [
+   "Define a resource and exploitation.",
+   "Identify the main resources of the Tropical Grassland region.",
+   "Describe the methods used to exploit these resources."
+  ],
+  "recall": [
+   "The savanna has tall grasses and scattered trees.",
+   "Its soils are ferruginous, with laterite and black cotton soils.",
+   "Plants survive the dry season by losing leaves and storing water."
+  ],
+  "recallNote": "Check the homework: what do families get from the savanna?",
+  "situation": [
+   "Ibrahim lives in a village near the Lagdo lake, south of Garoua. His uncle fishes in the lake, his father grows cotton, and his cousin guides tourists in the Benoue National Park.",
+   "A visitor tells Ibrahim that the savanna is a poor region with nothing useful. Ibrahim does not agree, but he cannot explain why."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ibrahim cannot explain why the savanna is not a poor region with nothing useful."
+   ],
+   [
+    "Which activities do the members of Ibrahim's family practise?",
+    "His uncle fishes in the Lagdo lake, his father grows cotton, and his cousin guides tourists in the Benoue National Park."
+   ],
+   [
+    "What can Ibrahim tell the visitor?",
+    "He can tell him that the savanna has many resources: land for crops, grass for animals, wildlife, rivers and lakes."
+   ]
+  ],
+  "justification": "This lesson will help us to know the wealth of the savanna where we live and how people use it.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "Anything in nature that people can use to satisfy their needs is called a ______. What is the missing word?",
+      "a": "The missing word is resource. Land, water, grass and wild animals are resources."
+     },
+     {
+      "q": "What do we call the action of taking and using a resource for our needs or to earn money?",
+      "a": "The action of taking and using a resource is called exploitation."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "A resource is anything in nature that people can use to satisfy their needs.",
+      "Exploitation is the action of taking and using a resource to satisfy needs or to earn money."
+     ]
+    }
+   },
+   {
+    "sec": "II. RESOURCES AND METHODS",
+    "qa": [
+     {
+      "q": "The savanna has large areas of grass. Which animals can feed on it, and who rears them in North Cameroon?",
+      "a": "Cattle, sheep and goats feed on the grass. In North Cameroon, the Fulani (Mbororo) herders rear them."
+     },
+     {
+      "q": "Which crops grow well on the soils of the savanna around Garoua?",
+      "a": "Cotton, maize, sorghum, millet, groundnuts and rice grow well. Cotton is the main cash crop."
+     },
+     {
+      "q": "Name two national parks of North Cameroon. Why are they important resources?",
+      "a": "The Benoue and Bouba Ndjida National Parks, in the North Region, and Waza, in the Far North, protect wild animals. Tourists visit them."
+     },
+     {
+      "q": "The Lagdo dam was built on the River Benue. Give two ways in which people use its water.",
+      "a": "The dam produces hydro-electricity (72 MW) for the North. Its lake is used for fishing and for irrigating rice fields."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Resources and Methods of Exploitation",
+     "intro": "The main resources of the Tropical Grassland region and their methods of exploitation are the following:",
+     "items": [
+      [
+       "A. Pasture",
+       "The grass is used to feed cattle, sheep and goats. It is exploited by livestock rearing, as done by the Fulani (Mbororo)."
+      ],
+      [
+       "B. Farmland",
+       "The soils are used to grow cotton, maize, sorghum, millet and groundnuts. They are exploited by crop farming."
+      ],
+      [
+       "C. Wildlife",
+       "Elephants, lions, giraffes and antelopes live in parks such as Benoue, Bouba Ndjida and Waza. They are exploited by tourism and controlled hunting."
+      ],
+      [
+       "D. Water",
+       "Rivers and lakes are used for fishing, irrigation and hydro-electricity. The Lagdo dam on the Benue produces 72 MW."
+      ],
+      [
+       "E. Trees",
+       "Trees give firewood, charcoal, shea butter and fruits. They are exploited by gathering and cutting."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two resources of the Tropical Grassland region.",
+    "Two resources of the Tropical Grassland region are pasture and wildlife."
+   ],
+   [
+    "How is the water of the Lagdo dam exploited?",
+    "It is exploited to produce hydro-electricity, to fish and to irrigate rice fields."
+   ],
+   [
+    "Why are the national parks of North Cameroon important for the economy?",
+    "They attract tourists, who spend money on guides, transport and hotels."
+   ]
+  ],
+  "remediation": [
+   [
+    "Anything in nature that people can use is a ______.",
+    "The action of taking and using a resource is called ______.",
+    "Grass used to feed animals is called ______."
+   ],
+   [
+    "The main cash crop of North Cameroon is ______.",
+    "The dam built on the Benue near Garoua is the ______ dam.",
+    "A national park in the Far North Region is ______."
+   ]
+  ],
+  "remediationAnswers": "1. resource 2. exploitation 3. pasture 4. cotton 5. Lagdo 6. Waza",
+  "homework": "Ask a farmer or a herder in your area about his work: what he produces, which tools he uses and where he sells his products.",
+  "homeworkTag": "This prepares Part 4: Human Activities.",
+  "bilingual": [
+   [
+    "Resource",
+    "La ressource"
+   ],
+   [
+    "Exploitation",
+    "L'exploitation"
+   ],
+   [
+    "Pasture",
+    "Le pâturage"
+   ],
+   [
+    "Livestock",
+    "Le bétail"
+   ],
+   [
+    "Wildlife",
+    "La faune"
+   ],
+   [
+    "National park",
+    "Le parc national"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "Lagdo dam: on the Benue, south of Garoua, commissioned in the early 1980s, capacity 72 MW."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland).",
+   "Lagdo dam and national parks of North Cameroon: general reference sources (Wikipedia)."
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+regr::stony desert plain gravel
+regr2::Sahara rocky plain stones
+gobir::Gobi desert winter snow
+sstormr::dust storm approaching town
+sstormr2::sandstorm desert
+wadir::flash flood desert
+duneroadr::sand covering road desert
+niler::Nile river green fields desert Egypt
+niler2::Nile valley agriculture Luxor
+wellr::water well desert Niger
+wellr2::well Sahel people water
+oasisr::oasis palm trees desert
+oasisr2::Siwa oasis
+oasisfarm::date palm garden oasis vegetables
+pivotr::center pivot irrigation desert aerial

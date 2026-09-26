@@ -1,0 +1,454 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITION\" | [\"The Stevenson screen is a white wooden box on legs, with louvred sides, in which thermometers are kept to measure the temperature of the air in the shade.\"]",
+  "sumImage | \"x\" | \"A. Description\" | \"It is painted white to reflect sunlight, has louvred sides for free air flow, a double roof and stands on legs.\" | \"stevenson_screen.png\"",
+  "sum | \"x\" | \"B. Siting\" | [\"– It is placed on short grass, not on concrete.\",\"– It is in an open space, far from trees and buildings.\",\"– The thermometers are about 1.25 m above the ground.\",\"– In the Northern Hemisphere, the door faces north.\"]",
+  "sum | \"III. The Stevenson Screen (1/4)\" | \"DEFINITION\" | [\"The Stevenson screen is a white wooden box on legs, with louvred sides, in which thermometers are kept to measure the temperature of the air in the shade.\"]",
+  "sumImage | \"III. The Stevenson Screen (2/4)\" | \"A. Description\" | \"It is painted white to reflect sunlight, has louvred sides for free air flow, a double roof and stands on legs.\" | \"stevenson_screen.png\"",
+  "sum | \"III. The Stevenson Screen (3/4)\" | \"B. Siting\" | [\"– It is placed on short grass, not on concrete.\",\"– It is in an open space, far from trees and buildings.\",\"– The thermometers are about 1.25 m above the ground.\",\"– In the Northern Hemisphere, the door faces north.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON32_Atmospheric_Temperatures",
+  "lessonNo": 32,
+  "lessonName": "Weather Elements: Atmospheric Temperatures",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Measurement of Weather Elements",
+  "notions": "Temperature, thermometer, Stevenson screen.",
+  "focus": "Meaning of atmospheric temperature; measurement and presentation; siting of the Stevenson screen.",
+  "competence": "Learners are able to measure the temperature of the air correctly and calculate daily means and ranges.",
+  "objectives": [
+   "Define atmospheric temperature.",
+   "Describe how temperature is measured and calculate mean and range.",
+   "Describe the Stevenson screen and the rules for siting it."
+  ],
+  "recall": [
+   "Weather is the condition of the atmosphere at a given time; climate is the average over 30 years.",
+   "Each weather element has its instrument, unit and isoline.",
+   "Temperature is measured with a thermometer, in °C."
+  ],
+  "recallNote": "Check the homework: the bottle in the sun and the bottle in the shade.",
+  "situation": [
+   "Two students measure the temperature at school at the same time. Ali puts his thermometer in the sun on a concrete floor and reads 45°C. Bouba hangs his in the shade of a tree and reads 34°C.",
+   "Their teacher says that neither reading is the official air temperature. The students do not understand how the temperature should be measured."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the students do not know how to measure the official temperature of the air."
+   ],
+   [
+    "Why did Ali's thermometer show a higher temperature?",
+    "It was in direct sunlight and on concrete, which absorbs and gives off a lot of heat."
+   ],
+   [
+    "What can the students do to get a correct reading?",
+    "They should place the thermometer in the shade, off the ground, where air can move freely, as in a Stevenson screen."
+   ]
+  ],
+  "justification": "This lesson will help us to measure temperature correctly and to present temperature data.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "What do we measure when we say how hot or cold the air is?",
+      "a": "We measure the atmospheric temperature, the degree of hotness or coldness of the air."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning",
+     "defs": [
+      "Atmospheric temperature is the degree of hotness or coldness of the air. It is measured in degrees Celsius (°C)."
+     ]
+    }
+   },
+   {
+    "sec": "II. MEASUREMENT AND PRESENTATION",
+    "qa": [
+     {
+      "img": "sixs_thermometer.png",
+      "kind": "diagram",
+      "q": "This thermometer records the highest and the lowest temperature of the day. What is it called?",
+      "a": "It is called Six's maximum and minimum thermometer. Its two small indices stay at the highest and lowest temperatures reached.",
+      "split": 5.4
+     },
+     {
+      "q": "In Garoua, the maximum temperature of a day is 38°C and the minimum is 24°C. Calculate the mean daily temperature and the daily range.",
+      "a": [
+       "Mean daily temperature = (38 + 24) ÷ 2 = 31°C.",
+       "Daily range = 38 − 24 = 14°C."
+      ]
+     },
+     {
+      "q": "How can temperature data for a place or a region be presented?",
+      "a": "It can be presented in tables, in line graphs, and on maps with isotherms."
+     }
+    ],
+    "sum": {
+     "title": "II. Measurement and Presentation",
+     "intro": "Temperature is measured and presented in the following ways:",
+     "items": [
+      [
+       "A. Instruments",
+       "The ordinary thermometer gives the temperature at a given time. Six's maximum and minimum thermometer records the highest and lowest temperatures of the day.",
+       "sixs_thermometer.png"
+      ],
+      [
+       "B. Calculations",
+       [
+        "– Mean daily temperature = (maximum + minimum) ÷ 2",
+        "– Daily range = maximum − minimum",
+        "– Annual range = mean of the hottest month − mean of the coldest month"
+       ]
+      ],
+      [
+       "C. Presentation",
+       "Temperature data is presented in tables, line graphs and maps with isotherms, lines joining places with the same temperature."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. THE STEVENSON SCREEN",
+    "qa": [
+     {
+      "img": "stevenson_screen.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Why is the Stevenson screen painted white and why does it have louvred sides?",
+      "a": "It is painted white to reflect sunlight. Its louvred sides let air flow freely but keep out sunlight and rain.",
+      "split": 5
+     },
+     {
+      "img": "stevenson_screen.png",
+      "title": "Question 2",
+      "q": "Give two rules for siting the Stevenson screen.",
+      "a": "It must stand on short grass, in an open space far from trees and buildings, with the thermometers about 1.25 m above the ground and the door facing north.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "III. The Stevenson Screen",
+     "defs": [
+      "The Stevenson screen is a white wooden box on legs, with louvred sides, in which thermometers are kept to measure the temperature of the air in the shade."
+     ],
+     "items": [
+      [
+       "A. Description",
+       "It is painted white to reflect sunlight, has louvred sides for free air flow, a double roof and stands on legs.",
+       "stevenson_screen.png"
+      ],
+      [
+       "B. Siting",
+       [
+        "– It is placed on short grass, not on concrete.",
+        "– It is in an open space, far from trees and buildings.",
+        "– The thermometers are about 1.25 m above the ground.",
+        "– In the Northern Hemisphere, the door faces north."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "A day has a maximum of 36°C and a minimum of 22°C. Calculate the daily range.",
+    "The daily range is 36 − 22 = 14°C."
+   ],
+   [
+    "Why must the Stevenson screen not be placed on concrete?",
+    "Concrete absorbs and gives off a lot of heat, so the reading would be too high."
+   ],
+   [
+    "What does Six's thermometer record?",
+    "Six's thermometer records the maximum and minimum temperatures of the day."
+   ]
+  ],
+  "remediation": [
+   [
+    "Temperature is measured in degrees ______.",
+    "The thermometer that records the highest and lowest temperatures is ______'s thermometer.",
+    "Mean daily temperature = (maximum + minimum) ÷ ______."
+   ],
+   [
+    "The white box that protects thermometers is the ______ screen.",
+    "Its sides are ______ to let air circulate.",
+    "In the Northern Hemisphere, its door faces ______."
+   ]
+  ],
+  "remediationAnswers": "1. Celsius 2. Six 3. 2 4. Stevenson 5. louvred 6. north",
+  "homework": "Wet a piece of cloth and hang it outside in the morning and in the afternoon. Note how long it takes to dry each time.",
+  "homeworkTag": "This prepares Lesson 33: Other Weather Elements (humidity, wind, pressure, sunshine).",
+  "bilingual": [
+   [
+    "Temperature",
+    "La température"
+   ],
+   [
+    "Maximum",
+    "Le maximum"
+   ],
+   [
+    "Minimum",
+    "Le minimum"
+   ],
+   [
+    "Range",
+    "L'amplitude"
+   ],
+   [
+    "Mean",
+    "La moyenne"
+   ],
+   [
+    "Stevenson screen",
+    "L'abri météorologique"
+   ],
+   [
+    "Shade",
+    "L'ombre"
+   ],
+   [
+    "Isotherm",
+    "L'isotherme"
+   ]
+  ],
+  "teacherNote": [
+   "WMO standards place thermometers between 1.25 m and 2 m above the ground; 1.25 m is the traditional British standard used in textbooks.",
+   "In Six's thermometer, read the end of each index nearest to the mercury."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "WMO Guide to Instruments and Methods of Observation (WMO-No. 8)."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 32",
+  "title": "Weather Elements: Atmospheric Temperatures",
+  "sumTitle": "Weather Elements: Atmospheric Temperatures",
+  "coverNote": "Good morning, class. Today we study Lesson 32: Weather Elements: Atmospheric Temperatures.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 32: Weather Elements: Atmospheric Temperatures",
+  "matter": "I. Meaning: ; II. Measurement and Presentation: Instruments, Calculations, Presentation; III. The Stevenson Screen: Description, Siting."
+ },
+ "file": "FORM4_LESSON32_Atmospheric_Temperatures",
+ "sp": {
+  "file": "FORM4_LESSON32_Atmospheric_Temperatures",
+  "lessonNo": 32,
+  "lessonName": "Weather Elements: Atmospheric Temperatures",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Measurement of Weather Elements",
+  "notions": "Temperature, thermometer, Stevenson screen.",
+  "focus": "Meaning of atmospheric temperature; measurement and presentation; siting of the Stevenson screen.",
+  "competence": "Learners are able to measure the temperature of the air correctly and calculate daily means and ranges.",
+  "objectives": [
+   "Define atmospheric temperature.",
+   "Describe how temperature is measured and calculate mean and range.",
+   "Describe the Stevenson screen and the rules for siting it."
+  ],
+  "recall": [
+   "Weather is the condition of the atmosphere at a given time; climate is the average over 30 years.",
+   "Each weather element has its instrument, unit and isoline.",
+   "Temperature is measured with a thermometer, in °C."
+  ],
+  "recallNote": "Check the homework: the bottle in the sun and the bottle in the shade.",
+  "situation": [
+   "Two students measure the temperature at school at the same time. Ali puts his thermometer in the sun on a concrete floor and reads 45°C. Bouba hangs his in the shade of a tree and reads 34°C.",
+   "Their teacher says that neither reading is the official air temperature. The students do not understand how the temperature should be measured."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the students do not know how to measure the official temperature of the air."
+   ],
+   [
+    "Why did Ali's thermometer show a higher temperature?",
+    "It was in direct sunlight and on concrete, which absorbs and gives off a lot of heat."
+   ],
+   [
+    "What can the students do to get a correct reading?",
+    "They should place the thermometer in the shade, off the ground, where air can move freely, as in a Stevenson screen."
+   ]
+  ],
+  "justification": "This lesson will help us to measure temperature correctly and to present temperature data.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "What do we measure when we say how hot or cold the air is?",
+      "a": "We measure the atmospheric temperature, the degree of hotness or coldness of the air."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning",
+     "defs": [
+      "Atmospheric temperature is the degree of hotness or coldness of the air. It is measured in degrees Celsius (°C)."
+     ]
+    }
+   },
+   {
+    "sec": "II. MEASUREMENT AND PRESENTATION",
+    "qa": [
+     {
+      "img": "sixs_thermometer.png",
+      "kind": "diagram",
+      "q": "This thermometer records the highest and the lowest temperature of the day. What is it called?",
+      "a": "It is called Six's maximum and minimum thermometer. Its two small indices stay at the highest and lowest temperatures reached.",
+      "split": 5.4
+     },
+     {
+      "q": "In Garoua, the maximum temperature of a day is 38°C and the minimum is 24°C. Calculate the mean daily temperature and the daily range.",
+      "a": [
+       "Mean daily temperature = (38 + 24) ÷ 2 = 31°C.",
+       "Daily range = 38 − 24 = 14°C."
+      ]
+     },
+     {
+      "q": "How can temperature data for a place or a region be presented?",
+      "a": "It can be presented in tables, in line graphs, and on maps with isotherms."
+     }
+    ],
+    "sum": {
+     "title": "II. Measurement and Presentation",
+     "intro": "Temperature is measured and presented in the following ways:",
+     "items": [
+      [
+       "A. Instruments",
+       "The ordinary thermometer gives the temperature at a given time. Six's maximum and minimum thermometer records the highest and lowest temperatures of the day.",
+       "sixs_thermometer.png"
+      ],
+      [
+       "B. Calculations",
+       [
+        "– Mean daily temperature = (maximum + minimum) ÷ 2",
+        "– Daily range = maximum − minimum",
+        "– Annual range = mean of the hottest month − mean of the coldest month"
+       ]
+      ],
+      [
+       "C. Presentation",
+       "Temperature data is presented in tables, line graphs and maps with isotherms, lines joining places with the same temperature."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. THE STEVENSON SCREEN",
+    "qa": [
+     {
+      "img": "stevenson_screen.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Why is the Stevenson screen painted white and why does it have louvred sides?",
+      "a": "It is painted white to reflect sunlight. Its louvred sides let air flow freely but keep out sunlight and rain.",
+      "split": 5
+     },
+     {
+      "img": "stevenson_screen.png",
+      "title": "Question 2",
+      "q": "Give two rules for siting the Stevenson screen.",
+      "a": "It must stand on short grass, in an open space far from trees and buildings, with the thermometers about 1.25 m above the ground and the door facing north.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "III. The Stevenson Screen",
+     "defs": [
+      "The Stevenson screen is a white wooden box on legs, with louvred sides, in which thermometers are kept to measure the temperature of the air in the shade."
+     ],
+     "items": [
+      [
+       "A. Description",
+       "It is painted white to reflect sunlight, has louvred sides for free air flow, a double roof and stands on legs.",
+       "stevenson_screen.png"
+      ],
+      [
+       "B. Siting",
+       [
+        "– It is placed on short grass, not on concrete.",
+        "– It is in an open space, far from trees and buildings.",
+        "– The thermometers are about 1.25 m above the ground.",
+        "– In the Northern Hemisphere, the door faces north."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "A day has a maximum of 36°C and a minimum of 22°C. Calculate the daily range.",
+    "The daily range is 36 − 22 = 14°C."
+   ],
+   [
+    "Why must the Stevenson screen not be placed on concrete?",
+    "Concrete absorbs and gives off a lot of heat, so the reading would be too high."
+   ],
+   [
+    "What does Six's thermometer record?",
+    "Six's thermometer records the maximum and minimum temperatures of the day."
+   ]
+  ],
+  "remediation": [
+   [
+    "Temperature is measured in degrees ______.",
+    "The thermometer that records the highest and lowest temperatures is ______'s thermometer.",
+    "Mean daily temperature = (maximum + minimum) ÷ ______."
+   ],
+   [
+    "The white box that protects thermometers is the ______ screen.",
+    "Its sides are ______ to let air circulate.",
+    "In the Northern Hemisphere, its door faces ______."
+   ]
+  ],
+  "remediationAnswers": "1. Celsius 2. Six 3. 2 4. Stevenson 5. louvred 6. north",
+  "homework": "Wet a piece of cloth and hang it outside in the morning and in the afternoon. Note how long it takes to dry each time.",
+  "homeworkTag": "This prepares Lesson 33: Other Weather Elements (humidity, wind, pressure, sunshine).",
+  "bilingual": [
+   [
+    "Temperature",
+    "La température"
+   ],
+   [
+    "Maximum",
+    "Le maximum"
+   ],
+   [
+    "Minimum",
+    "Le minimum"
+   ],
+   [
+    "Range",
+    "L'amplitude"
+   ],
+   [
+    "Mean",
+    "La moyenne"
+   ],
+   [
+    "Stevenson screen",
+    "L'abri météorologique"
+   ],
+   [
+    "Shade",
+    "L'ombre"
+   ],
+   [
+    "Isotherm",
+    "L'isotherme"
+   ]
+  ],
+  "teacherNote": [
+   "WMO standards place thermometers between 1.25 m and 2 m above the ground; 1.25 m is the traditional British standard used in textbooks.",
+   "In Six's thermometer, read the end of each index nearest to the mercury."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "WMO Guide to Instruments and Methods of Observation (WMO-No. 8)."
+  ]
+ }
+}

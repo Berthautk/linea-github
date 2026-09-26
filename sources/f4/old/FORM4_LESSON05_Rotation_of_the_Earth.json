@@ -1,0 +1,432 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The rotation of the Earth has the following effects:\"]",
+  "sum | \"x\" | \"A. Day and Night\" | [\"The side of the Earth facing the Sun has day; the other side has night.\"]",
+  "sum | \"x\" | \"B. Apparent Movement of the Sun\" | [\"The Sun seems to rise in the east and set in the west, because the Earth turns from west to east.\"]",
+  "sum | \"x\" | \"C. Difference in Time\" | [\"Places to the east see the Sun first, so their time is ahead: 1 hour for every 15° of longitude.\"]",
+  "sum | \"x\" | \"D. Deflection of Winds and Currents\" | [\"Winds and ocean currents are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis effect).\"]",
+  "sum | \"x\" | \"E. Tides\" | [\"With the pull of the Moon, rotation gives each coast about two high tides and two low tides a day.\"]",
+  "sum | \"x\" | \"F. Shape of the Earth\" | [\"Rotation makes the Earth bulge at the Equator and flatten at the poles.\"]",
+  "sum | \"II. Effects of Rotation (1/7)\" | [\"The rotation of the Earth has the following effects:\"]",
+  "sum | \"II. Effects of Rotation (2/7)\" | \"A. Day and Night\" | [\"The side of the Earth facing the Sun has day; the other side has night.\"]",
+  "sum | \"II. Effects of Rotation (3/7)\" | \"B. Apparent Movement of the Sun\" | [\"The Sun seems to rise in the east and set in the west, because the Earth turns from west to east.\"]",
+  "sum | \"II. Effects of Rotation (4/7)\" | \"C. Difference in Time\" | [\"Places to the east see the Sun first, so their time is ahead: 1 hour for every 15° of longitude.\"]",
+  "sum | \"II. Effects of Rotation (5/7)\" | \"D. Deflection of Winds and Currents\" | [\"Winds and ocean currents are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis effect).\"]",
+  "sum | \"II. Effects of Rotation (6/7)\" | \"E. Tides\" | [\"With the pull of the Moon, rotation gives each coast about two high tides and two low tides a day.\"]",
+  "sum | \"II. Effects of Rotation (7/7)\" | \"F. Shape of the Earth\" | [\"Rotation makes the Earth bulge at the Equator and flatten at the poles.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON05_Rotation_of_the_Earth",
+  "lessonNo": 5,
+  "lessonName": "The Rotation of the Earth",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Axis, rotation, tides, deflection of winds and ocean currents.",
+  "focus": "Rotation: meaning, illustration and effects.",
+  "competence": "Learners are able to explain day and night, the rising of the Sun in the east, and the difference in time between places.",
+  "objectives": [
+   "Define rotation and the axis of the Earth.",
+   "Illustrate the rotation of the Earth.",
+   "Explain the effects of rotation."
+  ],
+  "recall": [
+   "15° of longitude = 1 hour.",
+   "Places to the east are ahead in time.",
+   "Cameroon uses GMT + 1."
+  ],
+  "recallNote": "Check the homework: times of sunrise and sunset.",
+  "situation": [
+   "Early in the morning in Garoua, the first light appears in the eastern sky and the roosters crow. In the evening, the Sun disappears in the west, and the night comes.",
+   "This happens every day. Oumarou's little sister thinks that the Sun walks around the Earth. Oumarou is not sure if the Sun really moves or if something else causes day and night."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumarou does not know what causes day and night."
+   ],
+   [
+    "In which direction does the Sun rise, and where does it set?",
+    "The Sun rises in the east and sets in the west."
+   ],
+   [
+    "How can Oumarou show his sister what really happens?",
+    "He can turn a ball in front of a torch in a dark room: the lit side has day and the dark side has night."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the daily movement of the Earth and its effects on our lives.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "img": "rotation.png",
+      "kind": "diagram",
+      "q": "Study the rotation of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What is the rotation of the Earth?",
+      "a": "Rotation is the turning of the Earth on its axis, from west to east. One complete turn takes about 24 hours."
+     },
+     {
+      "q": "What is the axis of the Earth?",
+      "a": "The axis is an imaginary line through the centre of the Earth, from the North Pole to the South Pole. It is tilted at 23½°."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Rotation",
+     "defs": [
+      "Rotation is the turning of the Earth on its axis, from west to east. One rotation takes about 24 hours.",
+      "The axis is an imaginary line that passes through the centre of the Earth from the North Pole to the South Pole."
+     ],
+     "items": [
+      [
+       "Illustration",
+       "The Earth turns from west to east on its axis, which is tilted at 23½°. The side facing the Sun has day.",
+       "rotation.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. EFFECTS OF ROTATION",
+    "qa": [
+     {
+      "q": "Why do we have day and night?",
+      "a": "As the Earth turns, the side facing the Sun has day and the side away from the Sun has night."
+     },
+     {
+      "q": "Why does the Sun seem to rise in the east and set in the west?",
+      "a": "The Earth turns from west to east, so the Sun seems to move from east to west across the sky."
+     },
+     {
+      "q": "Why is it 8 a.m. in Garoua when it is 7 a.m. in London in winter?",
+      "a": "Because of rotation, places to the east see the Sun earlier. Garoua is east of London, so its time is ahead."
+     },
+     {
+      "q": "Winds and ocean currents do not move in straight lines. In which direction are they deflected?",
+      "a": "They are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis effect)."
+     },
+     {
+      "q": "How does rotation affect tides?",
+      "a": "The Moon pulls the water of the oceans. As the Earth turns, each coast passes through about two high tides and two low tides a day."
+     }
+    ],
+    "sum": {
+     "title": "II. Effects of Rotation",
+     "intro": "The rotation of the Earth has the following effects:",
+     "items": [
+      [
+       "A. Day and Night",
+       "The side of the Earth facing the Sun has day; the other side has night."
+      ],
+      [
+       "B. Apparent Movement of the Sun",
+       "The Sun seems to rise in the east and set in the west, because the Earth turns from west to east."
+      ],
+      [
+       "C. Difference in Time",
+       "Places to the east see the Sun first, so their time is ahead: 1 hour for every 15° of longitude."
+      ],
+      [
+       "D. Deflection of Winds and Currents",
+       "Winds and ocean currents are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis effect)."
+      ],
+      [
+       "E. Tides",
+       "With the pull of the Moon, rotation gives each coast about two high tides and two low tides a day."
+      ],
+      [
+       "F. Shape of the Earth",
+       "Rotation makes the Earth bulge at the Equator and flatten at the poles."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is rotation?",
+    "Rotation is the turning of the Earth on its axis from west to east, in about 24 hours."
+   ],
+   [
+    "Give three effects of rotation.",
+    "Day and night, the apparent movement of the Sun, and the difference in time between places."
+   ],
+   [
+    "In which direction are winds deflected in the Northern Hemisphere?",
+    "They are deflected to the right."
+   ]
+  ],
+  "remediation": [
+   [
+    "The Earth rotates from ______ to east.",
+    "One rotation takes about ______ hours.",
+    "The axis of the Earth is tilted at ______ °."
+   ],
+   [
+    "The side facing the Sun has ______.",
+    "In the Southern Hemisphere, winds are deflected to the ______.",
+    "The deflection of winds is called the ______ effect."
+   ]
+  ],
+  "remediationAnswers": "1. west 2. 24 3. 23½ 4. day 5. left 6. Coriolis",
+  "homework": "Ask an elder in which months the rainy season and the dry season start in Garoua. Write the months down.",
+  "homeworkTag": "This prepares Lesson 6: The Revolution of the Earth.",
+  "bilingual": [
+   [
+    "Rotation",
+    "La rotation"
+   ],
+   [
+    "Axis",
+    "L'axe"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Night",
+    "La nuit"
+   ],
+   [
+    "Sunrise",
+    "Le lever du soleil"
+   ],
+   [
+    "Sunset",
+    "Le coucher du soleil"
+   ],
+   [
+    "Deflection",
+    "La déviation"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ]
+  ],
+  "teacherNote": [
+   "Rotation relative to the Sun takes 24 hours (solar day); relative to the stars it takes 23 h 56 min. At Form 4 level, \"about 24 hours\" is enough.",
+   "Tides are caused mainly by the gravity of the Moon; rotation explains why each coast has about two high tides a day."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 5",
+  "title": "The Rotation of the Earth",
+  "sumTitle": "The Rotation of the Earth",
+  "coverNote": "Good morning, class. Today we study Lesson 5: The Rotation of the Earth.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 5: The Rotation of the Earth",
+  "matter": "I. Meaning of Rotation: Illustration; II. Effects of Rotation: Day and Night, Apparent Movement of the Sun, Difference in Time, Deflection of Winds and Currents, Tides, Shape of the Earth."
+ },
+ "file": "FORM4_LESSON05_Rotation_of_the_Earth",
+ "sp": {
+  "file": "FORM4_LESSON05_Rotation_of_the_Earth",
+  "lessonNo": 5,
+  "lessonName": "The Rotation of the Earth",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Axis, rotation, tides, deflection of winds and ocean currents.",
+  "focus": "Rotation: meaning, illustration and effects.",
+  "competence": "Learners are able to explain day and night, the rising of the Sun in the east, and the difference in time between places.",
+  "objectives": [
+   "Define rotation and the axis of the Earth.",
+   "Illustrate the rotation of the Earth.",
+   "Explain the effects of rotation."
+  ],
+  "recall": [
+   "15° of longitude = 1 hour.",
+   "Places to the east are ahead in time.",
+   "Cameroon uses GMT + 1."
+  ],
+  "recallNote": "Check the homework: times of sunrise and sunset.",
+  "situation": [
+   "Early in the morning in Garoua, the first light appears in the eastern sky and the roosters crow. In the evening, the Sun disappears in the west, and the night comes.",
+   "This happens every day. Oumarou's little sister thinks that the Sun walks around the Earth. Oumarou is not sure if the Sun really moves or if something else causes day and night."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumarou does not know what causes day and night."
+   ],
+   [
+    "In which direction does the Sun rise, and where does it set?",
+    "The Sun rises in the east and sets in the west."
+   ],
+   [
+    "How can Oumarou show his sister what really happens?",
+    "He can turn a ball in front of a torch in a dark room: the lit side has day and the dark side has night."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the daily movement of the Earth and its effects on our lives.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "img": "rotation.png",
+      "kind": "diagram",
+      "q": "Study the rotation of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What is the rotation of the Earth?",
+      "a": "Rotation is the turning of the Earth on its axis, from west to east. One complete turn takes about 24 hours."
+     },
+     {
+      "q": "What is the axis of the Earth?",
+      "a": "The axis is an imaginary line through the centre of the Earth, from the North Pole to the South Pole. It is tilted at 23½°."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Rotation",
+     "defs": [
+      "Rotation is the turning of the Earth on its axis, from west to east. One rotation takes about 24 hours.",
+      "The axis is an imaginary line that passes through the centre of the Earth from the North Pole to the South Pole."
+     ],
+     "items": [
+      [
+       "Illustration",
+       "The Earth turns from west to east on its axis, which is tilted at 23½°. The side facing the Sun has day.",
+       "rotation.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. EFFECTS OF ROTATION",
+    "qa": [
+     {
+      "q": "Why do we have day and night?",
+      "a": "As the Earth turns, the side facing the Sun has day and the side away from the Sun has night."
+     },
+     {
+      "q": "Why does the Sun seem to rise in the east and set in the west?",
+      "a": "The Earth turns from west to east, so the Sun seems to move from east to west across the sky."
+     },
+     {
+      "q": "Why is it 8 a.m. in Garoua when it is 7 a.m. in London in winter?",
+      "a": "Because of rotation, places to the east see the Sun earlier. Garoua is east of London, so its time is ahead."
+     },
+     {
+      "q": "Winds and ocean currents do not move in straight lines. In which direction are they deflected?",
+      "a": "They are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis effect)."
+     },
+     {
+      "q": "How does rotation affect tides?",
+      "a": "The Moon pulls the water of the oceans. As the Earth turns, each coast passes through about two high tides and two low tides a day."
+     }
+    ],
+    "sum": {
+     "title": "II. Effects of Rotation",
+     "intro": "The rotation of the Earth has the following effects:",
+     "items": [
+      [
+       "A. Day and Night",
+       "The side of the Earth facing the Sun has day; the other side has night."
+      ],
+      [
+       "B. Apparent Movement of the Sun",
+       "The Sun seems to rise in the east and set in the west, because the Earth turns from west to east."
+      ],
+      [
+       "C. Difference in Time",
+       "Places to the east see the Sun first, so their time is ahead: 1 hour for every 15° of longitude."
+      ],
+      [
+       "D. Deflection of Winds and Currents",
+       "Winds and ocean currents are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis effect)."
+      ],
+      [
+       "E. Tides",
+       "With the pull of the Moon, rotation gives each coast about two high tides and two low tides a day."
+      ],
+      [
+       "F. Shape of the Earth",
+       "Rotation makes the Earth bulge at the Equator and flatten at the poles."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is rotation?",
+    "Rotation is the turning of the Earth on its axis from west to east, in about 24 hours."
+   ],
+   [
+    "Give three effects of rotation.",
+    "Day and night, the apparent movement of the Sun, and the difference in time between places."
+   ],
+   [
+    "In which direction are winds deflected in the Northern Hemisphere?",
+    "They are deflected to the right."
+   ]
+  ],
+  "remediation": [
+   [
+    "The Earth rotates from ______ to east.",
+    "One rotation takes about ______ hours.",
+    "The axis of the Earth is tilted at ______ °."
+   ],
+   [
+    "The side facing the Sun has ______.",
+    "In the Southern Hemisphere, winds are deflected to the ______.",
+    "The deflection of winds is called the ______ effect."
+   ]
+  ],
+  "remediationAnswers": "1. west 2. 24 3. 23½ 4. day 5. left 6. Coriolis",
+  "homework": "Ask an elder in which months the rainy season and the dry season start in Garoua. Write the months down.",
+  "homeworkTag": "This prepares Lesson 6: The Revolution of the Earth.",
+  "bilingual": [
+   [
+    "Rotation",
+    "La rotation"
+   ],
+   [
+    "Axis",
+    "L'axe"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Night",
+    "La nuit"
+   ],
+   [
+    "Sunrise",
+    "Le lever du soleil"
+   ],
+   [
+    "Sunset",
+    "Le coucher du soleil"
+   ],
+   [
+    "Deflection",
+    "La déviation"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ]
+  ],
+  "teacherNote": [
+   "Rotation relative to the Sun takes 24 hours (solar day); relative to the stars it takes 23 h 56 min. At Form 4 level, \"about 24 hours\" is enough.",
+   "Tides are caused mainly by the gravity of the Moon; rotation explains why each coast has about two high tides a day."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

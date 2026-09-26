@@ -1,0 +1,507 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The Moon affects both the natural environment and human activities:\"]",
+  "sumImage | \"x\" | \"A. On the Natural Environment\" | \"The gravity of the Moon causes tides: the regular rise and fall of the level of the sea, about twice a day.\" | \"tides.png\"",
+  "sum | \"x\" | \"B. On Human Activities\" | [\"– Fishing and ports: fishermen and ships use the times of the tides.\",\"– Calendars and religion: the Islamic calendar follows the phases of the Moon.\",\"– Farming and night work: the light of the full Moon helps people to work or travel at night.\",\"– Energy: in some countries, tides turn turbines to make electricity.\"]",
+  "sum | \"III. Impacts of the Moon (1/4)\" | [\"The Moon affects both the natural environment and human activities:\"]",
+  "sumImage | \"III. Impacts of the Moon (2/4)\" | \"A. On the Natural Environment\" | \"The gravity of the Moon causes tides: the regular rise and fall of the level of the sea, about twice a day.\" | \"tides.png\"",
+  "sum | \"III. Impacts of the Moon (3/4)\" | \"B. On Human Activities\" | [\"– Fishing and ports: fishermen and ships use the times of the tides.\",\"– Calendars and religion: the Islamic calendar follows the phases of the Moon.\",\"– Farming and night work: the light of the full Moon helps people to work or travel at night.\",\"– Energy: in some countries, tides turn turbines to make electricity.\"]"
+ ],
+ "end": {
+  "file": "FORM4_FURTHER_STUDY1_Universe_and_Moon",
+  "kind": "Further Study",
+  "lessonNo": 1,
+  "lessonName": "The Universe and the Moon",
+  "chapter": "The Earth as a Planet in the Solar System — The Earth as a Planet of the Solar System",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "The Earth as a Planet of the Solar System",
+  "coverNote": "Good morning, class. Today we do Further Study 1: the Universe and the Moon, and how the Moon affects our lives.",
+  "notions": "Universe, galaxy, star, satellite, phases of the Moon, tides.",
+  "focus": "Meaning and composition of the universe; links with planet Earth; the Moon: phases and impacts on the natural environment and on human activities.",
+  "competence": "Learners are able to recognise the phases of the Moon and to explain how the Moon affects tides, calendars and daily activities.",
+  "objectives": [
+   "Define the universe and a galaxy, and describe the place of the Earth in the universe.",
+   "Describe the phases of the Moon.",
+   "Explain the impacts of the Moon on the natural environment and on human activities."
+  ],
+  "recall": [
+   "The Earth is an oblate spheroid.",
+   "Many proofs show that the Earth is round, such as the round shadow of the Earth on the Moon.",
+   "The Earth is one of the eight planets that move around the Sun."
+  ],
+  "recallNote": "Check the homework: the drawings of the Moon. Ask learners why the shape changed.",
+  "situation": [
+   "One evening in Garoua, Hawaou sits outside with her grandmother. The full Moon lights up the whole compound. Her grandmother says that in her village, people used to plant some crops according to the shape of the Moon.",
+   "Hawaou looks at the sky full of stars. She wonders what is out there in space, and how the Moon, which is so far away, can affect life on Earth."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hawaou does not know what is in space, or how the Moon can affect life on Earth."
+   ],
+   [
+    "What lit up the compound that evening?",
+    "The full Moon lit up the compound. It reflects the light of the Sun."
+   ],
+   [
+    "How can Hawaou learn more about the sky?",
+    "She can observe the Moon every evening, read books on astronomy and ask her teacher."
+   ]
+  ],
+  "justification": "This lesson will help us to understand our place in the universe and the influence of the Moon on the Earth and on our activities.",
+  "parts": [
+   {
+    "sec": "I. THE UNIVERSE",
+    "qa": [
+     {
+      "q": "What is the universe?",
+      "a": "The universe is all of space and everything in it: galaxies, stars, planets, moons, dust, gas, matter and energy."
+     },
+     {
+      "q": "What is a galaxy? What is the name of our galaxy?",
+      "a": "A galaxy is a huge group of stars, gas and dust held together by gravity. Our galaxy is the Milky Way."
+     },
+     {
+      "q": "How is the Sun linked to life on Earth?",
+      "a": "The Sun is the star that gives the Earth light and heat, and its gravity keeps the Earth in its orbit. Without the Sun, there would be no life on Earth."
+     }
+    ],
+    "sum": {
+     "title": "I. The Universe",
+     "defs": [
+      "The universe is all of space and everything it contains: galaxies, stars, planets, matter and energy."
+     ],
+     "items": [
+      [
+       "A. Composition",
+       [
+        "– The universe contains billions of galaxies.",
+        "– A galaxy is a huge group of stars, gas and dust held together by gravity.",
+        "– Our galaxy is the Milky Way. The Sun is one of its billions of stars."
+       ]
+      ],
+      [
+       "B. Links with the Earth",
+       [
+        "– The Sun gives the Earth light and heat, which make life possible.",
+        "– The gravity of the Sun keeps the Earth in its orbit.",
+        "– The gravity of the Moon causes tides on the Earth."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE MOON AND ITS PHASES",
+    "qa": [
+     {
+      "q": "The Moon moves around the Earth. What do we call an object that moves around a planet?",
+      "a": "We call it a satellite. The Moon is the only natural satellite of the Earth. It is about 384,000 km away."
+     },
+     {
+      "img": "moon_phases.png",
+      "kind": "diagram",
+      "q": "Study the phases of the Moon.",
+      "full": true
+     },
+     {
+      "q": "Does the Moon produce its own light? Why does its shape seem to change?",
+      "a": "No. The Moon reflects the light of the Sun. As it moves around the Earth, we see a different part of its lit half. These shapes are the phases."
+     },
+     {
+      "q": "Where is the Moon during the New Moon, and during the Full Moon?",
+      "a": "At New Moon, the Moon is between the Earth and the Sun, so we cannot see it. At Full Moon, the Earth is between the Sun and the Moon, so we see a full circle."
+     }
+    ],
+    "sum": {
+     "title": "II. The Moon and Its Phases",
+     "defs": [
+      "The Moon is the only natural satellite of the Earth. It does not produce light; it reflects the light of the Sun."
+     ],
+     "items": [
+      [
+       "A. The Phases",
+       "The phases are the different shapes of the lit part of the Moon that we see from the Earth. One cycle lasts about 29.5 days.",
+       "moon_phases.png"
+      ],
+      [
+       "B. The Main Phases",
+       [
+        "– New Moon: the Moon is between the Earth and the Sun; we do not see it.",
+        "– First quarter: we see half of the Moon.",
+        "– Full Moon: the Earth is between the Sun and the Moon; we see a full circle.",
+        "– Last quarter: we see the other half."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. IMPACTS OF THE MOON",
+    "qa": [
+     {
+      "img": "tides.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "Look at the diagram. What does the gravity of the Moon do to the water of the oceans?",
+      "a": "The gravity of the Moon pulls the water of the oceans and makes it rise and fall. This gives tides: about two high tides and two low tides a day.",
+      "split": 5.4
+     },
+     {
+      "q": "How do the fishermen of Limbe and Kribi use the tides?",
+      "a": "They go out to sea and come back with the tides, and they know the best times to catch fish."
+     },
+     {
+      "q": "How does the Moon affect the religious calendar in Garoua?",
+      "a": "The Islamic calendar follows the Moon. The new crescent Moon marks the start of each month, such as the beginning and the end of Ramadan."
+     }
+    ],
+    "sum": {
+     "title": "III. Impacts of the Moon",
+     "intro": "The Moon affects both the natural environment and human activities:",
+     "items": [
+      [
+       "A. On the Natural Environment",
+       "The gravity of the Moon causes tides: the regular rise and fall of the level of the sea, about twice a day.",
+       "tides.png"
+      ],
+      [
+       "B. On Human Activities",
+       [
+        "– Fishing and ports: fishermen and ships use the times of the tides.",
+        "– Calendars and religion: the Islamic calendar follows the phases of the Moon.",
+        "– Farming and night work: the light of the full Moon helps people to work or travel at night.",
+        "– Energy: in some countries, tides turn turbines to make electricity."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a star and a satellite?",
+    "A star, like the Sun, produces its own light and heat. A satellite, like the Moon, moves around a planet and only reflects light."
+   ],
+   [
+    "Why can we not see the Moon at New Moon?",
+    "At New Moon, the lit side of the Moon faces the Sun and the dark side faces the Earth."
+   ],
+   [
+    "Give two impacts of the Moon on human activities.",
+    "The Moon guides the Islamic calendar, and its tides help fishermen to plan their work."
+   ]
+  ],
+  "remediation": [
+   [
+    "All of space and everything in it is the ______.",
+    "Our galaxy is called the ______ Way.",
+    "The Moon is the natural ______ of the Earth."
+   ],
+   [
+    "A full cycle of the phases of the Moon lasts about ______ days.",
+    "At ______ Moon, we see a full, bright circle.",
+    "The gravity of the Moon causes ______."
+   ]
+  ],
+  "remediationAnswers": "1. universe 2. Milky 3. satellite 4. 29.5 5. Full 6. tides",
+  "homework": "Look at a map of Cameroon in your atlas. Find the numbers written on the edges of the map and copy the numbers written near Garoua.",
+  "homeworkTag": "This prepares Lesson 2: Earth Divisions — Latitudes and Longitudes.",
+  "bilingual": [
+   [
+    "Universe",
+    "L'univers"
+   ],
+   [
+    "Galaxy",
+    "La galaxie"
+   ],
+   [
+    "Star",
+    "L'étoile"
+   ],
+   [
+    "Satellite",
+    "Le satellite"
+   ],
+   [
+    "Full Moon",
+    "La pleine lune"
+   ],
+   [
+    "New Moon",
+    "La nouvelle lune"
+   ],
+   [
+    "Tide",
+    "La marée"
+   ],
+   [
+    "Gravity",
+    "La gravité"
+   ]
+  ],
+  "teacherNote": [
+   "Figures checked: average Earth–Moon distance about 384,400 km; one cycle of the phases (synodic month) about 29.5 days.",
+   "The source notes call the last phase \"Third quarter\"; \"Last quarter\" is the same phase. Both names can be accepted.",
+   "Planting by the Moon is a tradition; present it as a cultural practice, not as a scientific fact."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  FURTHER STUDY 1",
+  "title": "The Universe and the Moon",
+  "sumTitle": "The Universe and the Moon",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Further Study 1: The Universe and the Moon",
+  "matter": "I. The Universe: Composition, Links with the Earth; II. The Moon and Its Phases: The Phases, The Main Phases; III. Impacts of the Moon: On the Natural Environment, On Human Activities."
+ },
+ "file": "FORM4_FURTHER_STUDY1_Universe_and_Moon",
+ "sp": {
+  "file": "FORM4_FURTHER_STUDY1_Universe_and_Moon",
+  "kind": "Further Study",
+  "lessonNo": 1,
+  "lessonName": "The Universe and the Moon",
+  "chapter": "The Earth as a Planet in the Solar System — The Earth as a Planet of the Solar System",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "The Earth as a Planet of the Solar System",
+  "coverNote": "Good morning, class. Today we do Further Study 1: the Universe and the Moon, and how the Moon affects our lives.",
+  "notions": "Universe, galaxy, star, satellite, phases of the Moon, tides.",
+  "focus": "Meaning and composition of the universe; links with planet Earth; the Moon: phases and impacts on the natural environment and on human activities.",
+  "competence": "Learners are able to recognise the phases of the Moon and to explain how the Moon affects tides, calendars and daily activities.",
+  "objectives": [
+   "Define the universe and a galaxy, and describe the place of the Earth in the universe.",
+   "Describe the phases of the Moon.",
+   "Explain the impacts of the Moon on the natural environment and on human activities."
+  ],
+  "recall": [
+   "The Earth is an oblate spheroid.",
+   "Many proofs show that the Earth is round, such as the round shadow of the Earth on the Moon.",
+   "The Earth is one of the eight planets that move around the Sun."
+  ],
+  "recallNote": "Check the homework: the drawings of the Moon. Ask learners why the shape changed.",
+  "situation": [
+   "One evening in Garoua, Hawaou sits outside with her grandmother. The full Moon lights up the whole compound. Her grandmother says that in her village, people used to plant some crops according to the shape of the Moon.",
+   "Hawaou looks at the sky full of stars. She wonders what is out there in space, and how the Moon, which is so far away, can affect life on Earth."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hawaou does not know what is in space, or how the Moon can affect life on Earth."
+   ],
+   [
+    "What lit up the compound that evening?",
+    "The full Moon lit up the compound. It reflects the light of the Sun."
+   ],
+   [
+    "How can Hawaou learn more about the sky?",
+    "She can observe the Moon every evening, read books on astronomy and ask her teacher."
+   ]
+  ],
+  "justification": "This lesson will help us to understand our place in the universe and the influence of the Moon on the Earth and on our activities.",
+  "parts": [
+   {
+    "sec": "I. THE UNIVERSE",
+    "qa": [
+     {
+      "q": "What is the universe?",
+      "a": "The universe is all of space and everything in it: galaxies, stars, planets, moons, dust, gas, matter and energy."
+     },
+     {
+      "q": "What is a galaxy? What is the name of our galaxy?",
+      "a": "A galaxy is a huge group of stars, gas and dust held together by gravity. Our galaxy is the Milky Way."
+     },
+     {
+      "q": "How is the Sun linked to life on Earth?",
+      "a": "The Sun is the star that gives the Earth light and heat, and its gravity keeps the Earth in its orbit. Without the Sun, there would be no life on Earth."
+     }
+    ],
+    "sum": {
+     "title": "I. The Universe",
+     "defs": [
+      "The universe is all of space and everything it contains: galaxies, stars, planets, matter and energy."
+     ],
+     "items": [
+      [
+       "A. Composition",
+       [
+        "– The universe contains billions of galaxies.",
+        "– A galaxy is a huge group of stars, gas and dust held together by gravity.",
+        "– Our galaxy is the Milky Way. The Sun is one of its billions of stars."
+       ]
+      ],
+      [
+       "B. Links with the Earth",
+       [
+        "– The Sun gives the Earth light and heat, which make life possible.",
+        "– The gravity of the Sun keeps the Earth in its orbit.",
+        "– The gravity of the Moon causes tides on the Earth."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE MOON AND ITS PHASES",
+    "qa": [
+     {
+      "q": "The Moon moves around the Earth. What do we call an object that moves around a planet?",
+      "a": "We call it a satellite. The Moon is the only natural satellite of the Earth. It is about 384,000 km away."
+     },
+     {
+      "img": "moon_phases.png",
+      "kind": "diagram",
+      "q": "Study the phases of the Moon.",
+      "full": true
+     },
+     {
+      "q": "Does the Moon produce its own light? Why does its shape seem to change?",
+      "a": "No. The Moon reflects the light of the Sun. As it moves around the Earth, we see a different part of its lit half. These shapes are the phases."
+     },
+     {
+      "q": "Where is the Moon during the New Moon, and during the Full Moon?",
+      "a": "At New Moon, the Moon is between the Earth and the Sun, so we cannot see it. At Full Moon, the Earth is between the Sun and the Moon, so we see a full circle."
+     }
+    ],
+    "sum": {
+     "title": "II. The Moon and Its Phases",
+     "defs": [
+      "The Moon is the only natural satellite of the Earth. It does not produce light; it reflects the light of the Sun."
+     ],
+     "items": [
+      [
+       "A. The Phases",
+       "The phases are the different shapes of the lit part of the Moon that we see from the Earth. One cycle lasts about 29.5 days.",
+       "moon_phases.png"
+      ],
+      [
+       "B. The Main Phases",
+       [
+        "– New Moon: the Moon is between the Earth and the Sun; we do not see it.",
+        "– First quarter: we see half of the Moon.",
+        "– Full Moon: the Earth is between the Sun and the Moon; we see a full circle.",
+        "– Last quarter: we see the other half."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. IMPACTS OF THE MOON",
+    "qa": [
+     {
+      "img": "tides.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "Look at the diagram. What does the gravity of the Moon do to the water of the oceans?",
+      "a": "The gravity of the Moon pulls the water of the oceans and makes it rise and fall. This gives tides: about two high tides and two low tides a day.",
+      "split": 5.4
+     },
+     {
+      "q": "How do the fishermen of Limbe and Kribi use the tides?",
+      "a": "They go out to sea and come back with the tides, and they know the best times to catch fish."
+     },
+     {
+      "q": "How does the Moon affect the religious calendar in Garoua?",
+      "a": "The Islamic calendar follows the Moon. The new crescent Moon marks the start of each month, such as the beginning and the end of Ramadan."
+     }
+    ],
+    "sum": {
+     "title": "III. Impacts of the Moon",
+     "intro": "The Moon affects both the natural environment and human activities:",
+     "items": [
+      [
+       "A. On the Natural Environment",
+       "The gravity of the Moon causes tides: the regular rise and fall of the level of the sea, about twice a day.",
+       "tides.png"
+      ],
+      [
+       "B. On Human Activities",
+       [
+        "– Fishing and ports: fishermen and ships use the times of the tides.",
+        "– Calendars and religion: the Islamic calendar follows the phases of the Moon.",
+        "– Farming and night work: the light of the full Moon helps people to work or travel at night.",
+        "– Energy: in some countries, tides turn turbines to make electricity."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a star and a satellite?",
+    "A star, like the Sun, produces its own light and heat. A satellite, like the Moon, moves around a planet and only reflects light."
+   ],
+   [
+    "Why can we not see the Moon at New Moon?",
+    "At New Moon, the lit side of the Moon faces the Sun and the dark side faces the Earth."
+   ],
+   [
+    "Give two impacts of the Moon on human activities.",
+    "The Moon guides the Islamic calendar, and its tides help fishermen to plan their work."
+   ]
+  ],
+  "remediation": [
+   [
+    "All of space and everything in it is the ______.",
+    "Our galaxy is called the ______ Way.",
+    "The Moon is the natural ______ of the Earth."
+   ],
+   [
+    "A full cycle of the phases of the Moon lasts about ______ days.",
+    "At ______ Moon, we see a full, bright circle.",
+    "The gravity of the Moon causes ______."
+   ]
+  ],
+  "remediationAnswers": "1. universe 2. Milky 3. satellite 4. 29.5 5. Full 6. tides",
+  "homework": "Look at a map of Cameroon in your atlas. Find the numbers written on the edges of the map and copy the numbers written near Garoua.",
+  "homeworkTag": "This prepares Lesson 2: Earth Divisions — Latitudes and Longitudes.",
+  "bilingual": [
+   [
+    "Universe",
+    "L'univers"
+   ],
+   [
+    "Galaxy",
+    "La galaxie"
+   ],
+   [
+    "Star",
+    "L'étoile"
+   ],
+   [
+    "Satellite",
+    "Le satellite"
+   ],
+   [
+    "Full Moon",
+    "La pleine lune"
+   ],
+   [
+    "New Moon",
+    "La nouvelle lune"
+   ],
+   [
+    "Tide",
+    "La marée"
+   ],
+   [
+    "Gravity",
+    "La gravité"
+   ]
+  ],
+  "teacherNote": [
+   "Figures checked: average Earth–Moon distance about 384,400 km; one cycle of the phases (synodic month) about 29.5 days.",
+   "The source notes call the last phase \"Third quarter\"; \"Last quarter\" is the same phase. Both names can be accepted.",
+   "Planting by the Moon is a tradition; present it as a cultural practice, not as a scientific fact."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

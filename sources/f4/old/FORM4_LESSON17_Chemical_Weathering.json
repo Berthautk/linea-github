@@ -1,0 +1,420 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The main processes of chemical weathering are the following:\"]",
+  "sumImage | \"x\" | \"A. Solution\" | \"Water dissolves some minerals, such as rock salt. Products: holes and grooves in the rock, and water rich in minerals.\" | \"chemical_weathering.png\"",
+  "sum | \"x\" | \"B. Carbonation\" | [\"Rainwater and carbon dioxide form a weak acid that dissolves limestone. Products: caves, sinkholes and limestone pavements.\"]",
+  "sum | \"x\" | \"C. Oxidation\" | [\"Oxygen reacts with iron minerals and forms iron oxides (rust). Products: red and brown soils and crumbly rock.\"]",
+  "sum | \"x\" | \"D. Hydrolysis\" | [\"Water reacts with minerals such as feldspar in granite. Product: clay (used for bricks and pottery).\"]",
+  "sum | \"x\" | \"E. Hydration\" | [\"Some minerals absorb water, swell and weaken. Example: anhydrite changes into gypsum.\"]",
+  "sum | \"x\" | \"F. Chemically Induced Biological Weathering\" | [\"Plants, lichens, mosses and decaying organic matter release acids that rot the rock.\"]",
+  "sum | \"II. Processes and Products of Chemical Weathering (1/7)\" | [\"The main processes of chemical weathering are the following:\"]",
+  "sumImage | \"II. Processes and Products of Chemical Weathering (2/7)\" | \"A. Solution\" | \"Water dissolves some minerals, such as rock salt. Products: holes and grooves in the rock, and water rich in minerals.\" | \"chemical_weathering.png\"",
+  "sum | \"II. Processes and Products of Chemical Weathering (3/7)\" | \"B. Carbonation\" | [\"Rainwater and carbon dioxide form a weak acid that dissolves limestone. Products: caves, sinkholes and limestone pavements.\"]",
+  "sum | \"II. Processes and Products of Chemical Weathering (4/7)\" | \"C. Oxidation\" | [\"Oxygen reacts with iron minerals and forms iron oxides (rust). Products: red and brown soils and crumbly rock.\"]",
+  "sum | \"II. Processes and Products of Chemical Weathering (5/7)\" | \"D. Hydrolysis\" | [\"Water reacts with minerals such as feldspar in granite. Product: clay (used for bricks and pottery).\"]",
+  "sum | \"II. Processes and Products of Chemical Weathering (6/7)\" | \"E. Hydration\" | [\"Some minerals absorb water, swell and weaken. Example: anhydrite changes into gypsum.\"]",
+  "sum | \"II. Processes and Products of Chemical Weathering (7/7)\" | \"F. Chemically Induced Biological Weathering\" | [\"Plants, lichens, mosses and decaying organic matter release acids that rot the rock.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON17_Chemical_Weathering",
+  "lessonNo": 17,
+  "lessonName": "Chemical Weathering Processes and Products",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes: The Products and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes: The Products and Impacts on Man",
+  "notions": "Solution, carbonation, hydrolysis, oxidation, hydration, chemically induced biological weathering.",
+  "focus": "Processes and products of chemical weathering: solution, carbonation, hydrolysis, oxidation, hydration and chemically induced biological weathering.",
+  "competence": "Learners are able to explain why rocks rot and soils become red or clayey, and to protect metal and cement from the effects of water and air.",
+  "objectives": [
+   "Define chemical weathering.",
+   "Explain the main processes of chemical weathering.",
+   "Name the products of each process."
+  ],
+  "recall": [
+   "Physical weathering breaks rocks without changing their minerals.",
+   "Thermal shattering is common in hot, dry areas.",
+   "Chemical weathering is fastest in hot, wet climates."
+  ],
+  "recallNote": "Check the homework: the rusty gate or roofing sheet.",
+  "situation": [
+   "In the rainy season, Kaltouma sees that the old metal gate of her compound has turned reddish-brown. It flakes and crumbles, and red streaks appear on the ground below it.",
+   "A new piece of metal next to it is still shiny. Kaltouma wonders what in the rain and the air can \"eat\" hard metal, and whether the same thing happens to rocks."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Kaltouma does not know what in the rain and the air damages metal and rocks."
+   ],
+   [
+    "What happened to the old gate?",
+    "It became reddish-brown (rusty), and it flakes and crumbles."
+   ],
+   [
+    "How can we protect metal from rust?",
+    "We can paint it, keep it dry, and use galvanised (zinc-coated) metal."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how water, air and acids change the minerals of rocks and form soils.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is chemical weathering? What is its main agent?",
+      "a": "Chemical weathering is the decomposition (rotting) of rocks by chemical reactions that change their minerals. Its main agent is water."
+     },
+     {
+      "img": "chemical_weathering.png",
+      "kind": "diagram",
+      "q": "Study the processes of chemical weathering.",
+      "full": true
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Chemical weathering is the decomposition of rocks by chemical reactions that change their minerals. Water is its main agent."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. PROCESSES AND PRODUCTS",
+    "qa": [
+     {
+      "q": "What is solution? Give an example.",
+      "a": "Solution is when water dissolves some minerals, like rock salt, just as sugar dissolves in tea. It leaves holes and grooves in the rock."
+     },
+     {
+      "q": "What is carbonation, and which rocks does it attack?",
+      "a": "Rainwater takes carbon dioxide from the air and becomes a weak acid (carbonic acid). This acid dissolves limestone and forms caves and sinkholes."
+     },
+     {
+      "q": "Why are many soils around Garoua red?",
+      "a": "Oxygen reacts with the iron in rocks and soils. This is oxidation, which forms red and brown iron oxides (rust)."
+     },
+     {
+      "q": "What is hydrolysis? What does it produce?",
+      "a": "Hydrolysis is the reaction of water with minerals such as feldspar in granite. It changes them into clay, used to make bricks and pots."
+     },
+     {
+      "q": "What is hydration?",
+      "a": "Hydration is when some minerals absorb water, swell and become weak. For example, anhydrite becomes gypsum."
+     },
+     {
+      "q": "How can living things cause chemical weathering?",
+      "a": "Plant roots, mosses, lichens and decaying plants release acids that attack the minerals of rocks."
+     }
+    ],
+    "sum": {
+     "title": "II. Processes and Products of Chemical Weathering",
+     "intro": "The main processes of chemical weathering are the following:",
+     "items": [
+      [
+       "A. Solution",
+       "Water dissolves some minerals, such as rock salt. Products: holes and grooves in the rock, and water rich in minerals.",
+       "chemical_weathering.png"
+      ],
+      [
+       "B. Carbonation",
+       "Rainwater and carbon dioxide form a weak acid that dissolves limestone. Products: caves, sinkholes and limestone pavements."
+      ],
+      [
+       "C. Oxidation",
+       "Oxygen reacts with iron minerals and forms iron oxides (rust). Products: red and brown soils and crumbly rock."
+      ],
+      [
+       "D. Hydrolysis",
+       "Water reacts with minerals such as feldspar in granite. Product: clay (used for bricks and pottery)."
+      ],
+      [
+       "E. Hydration",
+       "Some minerals absorb water, swell and weaken. Example: anhydrite changes into gypsum."
+      ],
+      [
+       "F. Chemically Induced Biological Weathering",
+       "Plants, lichens, mosses and decaying organic matter release acids that rot the rock."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main agent of chemical weathering?",
+    "Water is the main agent of chemical weathering."
+   ],
+   [
+    "Which process forms clay from granite?",
+    "Hydrolysis forms clay from the feldspar in granite."
+   ],
+   [
+    "Why are the soils around Garoua often red?",
+    "Because of oxidation: oxygen reacts with iron and forms red iron oxides."
+   ]
+  ],
+  "remediation": [
+   [
+    "Rusting of rocks is called ______.",
+    "Rainwater and carbon dioxide form a weak ______.",
+    "Carbonation dissolves ______."
+   ],
+   [
+    "Hydrolysis changes feldspar into ______.",
+    "Minerals that absorb water and swell undergo ______.",
+    "Acids from plants cause chemically induced ______ weathering."
+   ]
+  ],
+  "remediationAnswers": "1. oxidation 2. acid 3. limestone 4. clay 5. hydration 6. biological",
+  "homework": "Ask a farmer in your family where the soil of his farm comes from, and ask if he has seen rocks fall or roads blocked after heavy rain. Write his answers.",
+  "homeworkTag": "This prepares Further Study 2: The Impact of Weathering on the Environment.",
+  "bilingual": [
+   [
+    "Solution",
+    "La dissolution"
+   ],
+   [
+    "Oxidation",
+    "L'oxydation"
+   ],
+   [
+    "Carbonation",
+    "La carbonatation"
+   ],
+   [
+    "Hydrolysis",
+    "L'hydrolyse"
+   ],
+   [
+    "Hydration",
+    "L'hydratation"
+   ],
+   [
+    "Rust",
+    "La rouille"
+   ],
+   [
+    "Clay",
+    "L'argile"
+   ],
+   [
+    "Limestone",
+    "Le calcaire"
+   ]
+  ],
+  "teacherNote": [
+   "Addition from the syllabus: hydration and chemically induced biological weathering were missing in the source notes.",
+   "Correction: the source notes compare oxidation with \"old zinc roofs\". Zinc protects iron sheets; rust (iron oxide) appears when the zinc coating wears off."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 17",
+  "title": "Chemical Weathering Processes and Products",
+  "sumTitle": "Chemical Weathering Processes and Products",
+  "coverNote": "Good morning, class. Today we study Lesson 17: Chemical Weathering Processes and Products.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 17: Chemical Weathering Processes and Products",
+  "matter": "I. Definition: ; II. Processes and Products of Chemical Weathering: Solution, Carbonation, Oxidation, Hydrolysis, Hydration, Chemically Induced Biological Weathering."
+ },
+ "file": "FORM4_LESSON17_Chemical_Weathering",
+ "sp": {
+  "file": "FORM4_LESSON17_Chemical_Weathering",
+  "lessonNo": 17,
+  "lessonName": "Chemical Weathering Processes and Products",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes: The Products and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes: The Products and Impacts on Man",
+  "notions": "Solution, carbonation, hydrolysis, oxidation, hydration, chemically induced biological weathering.",
+  "focus": "Processes and products of chemical weathering: solution, carbonation, hydrolysis, oxidation, hydration and chemically induced biological weathering.",
+  "competence": "Learners are able to explain why rocks rot and soils become red or clayey, and to protect metal and cement from the effects of water and air.",
+  "objectives": [
+   "Define chemical weathering.",
+   "Explain the main processes of chemical weathering.",
+   "Name the products of each process."
+  ],
+  "recall": [
+   "Physical weathering breaks rocks without changing their minerals.",
+   "Thermal shattering is common in hot, dry areas.",
+   "Chemical weathering is fastest in hot, wet climates."
+  ],
+  "recallNote": "Check the homework: the rusty gate or roofing sheet.",
+  "situation": [
+   "In the rainy season, Kaltouma sees that the old metal gate of her compound has turned reddish-brown. It flakes and crumbles, and red streaks appear on the ground below it.",
+   "A new piece of metal next to it is still shiny. Kaltouma wonders what in the rain and the air can \"eat\" hard metal, and whether the same thing happens to rocks."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Kaltouma does not know what in the rain and the air damages metal and rocks."
+   ],
+   [
+    "What happened to the old gate?",
+    "It became reddish-brown (rusty), and it flakes and crumbles."
+   ],
+   [
+    "How can we protect metal from rust?",
+    "We can paint it, keep it dry, and use galvanised (zinc-coated) metal."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how water, air and acids change the minerals of rocks and form soils.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is chemical weathering? What is its main agent?",
+      "a": "Chemical weathering is the decomposition (rotting) of rocks by chemical reactions that change their minerals. Its main agent is water."
+     },
+     {
+      "img": "chemical_weathering.png",
+      "kind": "diagram",
+      "q": "Study the processes of chemical weathering.",
+      "full": true
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Chemical weathering is the decomposition of rocks by chemical reactions that change their minerals. Water is its main agent."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. PROCESSES AND PRODUCTS",
+    "qa": [
+     {
+      "q": "What is solution? Give an example.",
+      "a": "Solution is when water dissolves some minerals, like rock salt, just as sugar dissolves in tea. It leaves holes and grooves in the rock."
+     },
+     {
+      "q": "What is carbonation, and which rocks does it attack?",
+      "a": "Rainwater takes carbon dioxide from the air and becomes a weak acid (carbonic acid). This acid dissolves limestone and forms caves and sinkholes."
+     },
+     {
+      "q": "Why are many soils around Garoua red?",
+      "a": "Oxygen reacts with the iron in rocks and soils. This is oxidation, which forms red and brown iron oxides (rust)."
+     },
+     {
+      "q": "What is hydrolysis? What does it produce?",
+      "a": "Hydrolysis is the reaction of water with minerals such as feldspar in granite. It changes them into clay, used to make bricks and pots."
+     },
+     {
+      "q": "What is hydration?",
+      "a": "Hydration is when some minerals absorb water, swell and become weak. For example, anhydrite becomes gypsum."
+     },
+     {
+      "q": "How can living things cause chemical weathering?",
+      "a": "Plant roots, mosses, lichens and decaying plants release acids that attack the minerals of rocks."
+     }
+    ],
+    "sum": {
+     "title": "II. Processes and Products of Chemical Weathering",
+     "intro": "The main processes of chemical weathering are the following:",
+     "items": [
+      [
+       "A. Solution",
+       "Water dissolves some minerals, such as rock salt. Products: holes and grooves in the rock, and water rich in minerals.",
+       "chemical_weathering.png"
+      ],
+      [
+       "B. Carbonation",
+       "Rainwater and carbon dioxide form a weak acid that dissolves limestone. Products: caves, sinkholes and limestone pavements."
+      ],
+      [
+       "C. Oxidation",
+       "Oxygen reacts with iron minerals and forms iron oxides (rust). Products: red and brown soils and crumbly rock."
+      ],
+      [
+       "D. Hydrolysis",
+       "Water reacts with minerals such as feldspar in granite. Product: clay (used for bricks and pottery)."
+      ],
+      [
+       "E. Hydration",
+       "Some minerals absorb water, swell and weaken. Example: anhydrite changes into gypsum."
+      ],
+      [
+       "F. Chemically Induced Biological Weathering",
+       "Plants, lichens, mosses and decaying organic matter release acids that rot the rock."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main agent of chemical weathering?",
+    "Water is the main agent of chemical weathering."
+   ],
+   [
+    "Which process forms clay from granite?",
+    "Hydrolysis forms clay from the feldspar in granite."
+   ],
+   [
+    "Why are the soils around Garoua often red?",
+    "Because of oxidation: oxygen reacts with iron and forms red iron oxides."
+   ]
+  ],
+  "remediation": [
+   [
+    "Rusting of rocks is called ______.",
+    "Rainwater and carbon dioxide form a weak ______.",
+    "Carbonation dissolves ______."
+   ],
+   [
+    "Hydrolysis changes feldspar into ______.",
+    "Minerals that absorb water and swell undergo ______.",
+    "Acids from plants cause chemically induced ______ weathering."
+   ]
+  ],
+  "remediationAnswers": "1. oxidation 2. acid 3. limestone 4. clay 5. hydration 6. biological",
+  "homework": "Ask a farmer in your family where the soil of his farm comes from, and ask if he has seen rocks fall or roads blocked after heavy rain. Write his answers.",
+  "homeworkTag": "This prepares Further Study 2: The Impact of Weathering on the Environment.",
+  "bilingual": [
+   [
+    "Solution",
+    "La dissolution"
+   ],
+   [
+    "Oxidation",
+    "L'oxydation"
+   ],
+   [
+    "Carbonation",
+    "La carbonatation"
+   ],
+   [
+    "Hydrolysis",
+    "L'hydrolyse"
+   ],
+   [
+    "Hydration",
+    "L'hydratation"
+   ],
+   [
+    "Rust",
+    "La rouille"
+   ],
+   [
+    "Clay",
+    "L'argile"
+   ],
+   [
+    "Limestone",
+    "Le calcaire"
+   ]
+  ],
+  "teacherNote": [
+   "Addition from the syllabus: hydration and chemically induced biological weathering were missing in the source notes.",
+   "Correction: the source notes compare oxidation with \"old zinc roofs\". Zinc protects iron sheets; rust (iron oxide) appears when the zinc coating wears off."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,566 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITION\" | \"Question 1\" | [\"A factory turns cotton into cloth, and another turns cocoa into chocolate. What sector do these factories belong to?\"]",
+  "slide | \"I. DEFINITION\" | \"Answer\" | [\"They belong to the secondary sector, which transforms raw materials into finished goods.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 1\" | [\"Name two factories found in North Cameroon and what they produce.\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"SODECOTON gins cotton and makes cooking oil (Diamaor), CICAM in Garoua makes cloth, and Cimencam at Figuil makes cement.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 2\" | [\"Name two big industries found in the south of Cameroon.\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Alucam at Edéa makes aluminium, SONARA at Limbe refines oil, and the Brasseries du Cameroun make drinks.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 3\" | [\"Building houses, roads and bridges also belongs to the secondary sector. Why?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Because construction transforms materials such as cement, sand and iron into buildings and roads.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 4\" | [\"The Lagdo and Edéa dams produce electricity. Why is energy important for industry?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Factories need electricity to run their machines. Without energy, industry cannot develop.\"]",
+  "sum | \"I. Definition (1/1)\" | \"DEFINITION\" | [\"The secondary sector is the sector of the economy that transforms raw materials into finished goods, and includes construction and energy production.\"]",
+  "sum | \"II. Examples of Secondary Activities (1/6)\" | [\"The main secondary activities, with examples from Cameroon, are the following:\"]",
+  "sum | \"II. Examples of Secondary Activities (2/6)\" | \"A. Agro-Industries\" | [\"Agro-industries transform farm products: SODECOTON (cotton and oil), CICAM (cloth), and the breweries (drinks).\"]",
+  "sum | \"II. Examples of Secondary Activities (3/6)\" | \"B. Heavy Industries\" | [\"Heavy industries transform minerals: Alucam at Edéa (aluminium), SONARA at Limbe (oil refining), Cimencam (cement).\"]",
+  "sum | \"II. Examples of Secondary Activities (4/6)\" | \"C. Construction\" | [\"Construction is the building of houses, roads, bridges and dams.\"]",
+  "sum | \"II. Examples of Secondary Activities (5/6)\" | \"D. Energy Production\" | [\"Electricity is produced by dams such as Edéa, Song Loulou, Lagdo and Lom Pangar, and by gas and thermal plants.\"]",
+  "sum | \"II. Examples of Secondary Activities (6/6)\" | \"E. Crafts\" | [\"Craftsmen such as tailors, blacksmiths, carpenters and potters make goods by hand.\"]"
+ ],
+ "d": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S17_L5_P4_Secondary_Sector",
+  "part": 4,
+  "partTitle": "The Secondary Sector (Definition and Examples)",
+  "notions": "Secondary sector, industry, manufacturing, processing, construction, energy production.",
+  "focus": "Definition and examples of the secondary sector, with examples from Cameroon.",
+  "competence": "Learners are able to recognise the products of Cameroonian factories and explain why transforming raw materials creates jobs and wealth.",
+  "objectives": [
+   "Define the secondary sector.",
+   "Name the main secondary activities.",
+   "Give examples of industries in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The primary sector takes raw materials from nature.",
+   "Its activities are agriculture, livestock rearing, fishing, forestry and mining."
+  ],
+  "recallNote": "Check the homework: two factories in Cameroon and their products.",
+  "situation": [
+   "Cameroon sells raw cotton and cocoa beans abroad at low prices. Later, it buys back clothes and chocolate made from them at high prices.",
+   "Djibrilla wonders why Cameroon does not transform more of its own raw materials."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Cameroon sells raw materials cheaply and buys back expensive finished goods made from them."
+   ],
+   [
+    "Which raw materials and finished goods are mentioned?",
+    "Raw cotton and cocoa beans are raw materials. Clothes and chocolate are finished goods."
+   ],
+   [
+    "What can Cameroon do to earn more from its raw materials?",
+    "It can build more factories to transform its cotton, cocoa and other raw materials into finished goods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the secondary sector, which transforms raw materials and creates jobs and wealth.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "A factory turns cotton into cloth, and another turns cocoa into chocolate. What sector do these factories belong to?",
+      "a": "They belong to the secondary sector, which transforms raw materials into finished goods."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The secondary sector is the sector of the economy that transforms raw materials into finished goods, and includes construction and energy production."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name two factories found in North Cameroon and what they produce.",
+      "a": "SODECOTON gins cotton and makes cooking oil (Diamaor), CICAM in Garoua makes cloth, and Cimencam at Figuil makes cement."
+     },
+     {
+      "q": "Name two big industries found in the south of Cameroon.",
+      "a": "Alucam at Edéa makes aluminium, SONARA at Limbe refines oil, and the Brasseries du Cameroun make drinks."
+     },
+     {
+      "q": "Building houses, roads and bridges also belongs to the secondary sector. Why?",
+      "a": "Because construction transforms materials such as cement, sand and iron into buildings and roads."
+     },
+     {
+      "q": "The Lagdo and Edéa dams produce electricity. Why is energy important for industry?",
+      "a": "Factories need electricity to run their machines. Without energy, industry cannot develop."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Secondary Activities",
+     "intro": "The main secondary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Agro-Industries",
+       "Agro-industries transform farm products: SODECOTON (cotton and oil), CICAM (cloth), and the breweries (drinks)."
+      ],
+      [
+       "B. Heavy Industries",
+       "Heavy industries transform minerals: Alucam at Edéa (aluminium), SONARA at Limbe (oil refining), Cimencam (cement)."
+      ],
+      [
+       "C. Construction",
+       "Construction is the building of houses, roads, bridges and dams."
+      ],
+      [
+       "D. Energy Production",
+       "Electricity is produced by dams such as Edéa, Song Loulou, Lagdo and Lom Pangar, and by gas and thermal plants."
+      ],
+      [
+       "E. Crafts",
+       "Craftsmen such as tailors, blacksmiths, carpenters and potters make goods by hand."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the secondary sector.",
+    "The secondary sector is the sector that transforms raw materials into finished goods."
+   ],
+   [
+    "Give one example of an agro-industry and one of a heavy industry in Cameroon.",
+    "SODECOTON is an agro-industry, and Alucam at Edéa is a heavy industry."
+   ],
+   [
+    "Why is it better for Cameroon to transform its raw materials?",
+    "It creates jobs and earns more money, because finished goods are sold at higher prices."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that transforms raw materials is the ______ sector.",
+    "The factory that makes cloth in Garoua is ______.",
+    "The aluminium factory at Edéa is ______."
+   ],
+   [
+    "The oil refinery at Limbe is ______.",
+    "The building of houses and roads is called ______.",
+    "A dam on the Benue that produces electricity is ______."
+   ]
+  ],
+  "remediationAnswers": "1. secondary 2. CICAM 3. Alucam 4. SONARA 5. construction 6. Lagdo",
+  "homework": "List four services that your family uses every week, for example transport, school, hospital, market or mobile money.",
+  "homeworkTag": "This prepares Part 5: The Tertiary Sector.",
+  "bilingual": [
+   [
+    "Industry",
+    "L'industrie"
+   ],
+   [
+    "Factory",
+    "L'usine"
+   ],
+   [
+    "Finished good",
+    "Le produit fini"
+   ],
+   [
+    "Construction",
+    "Le bâtiment (la construction)"
+   ],
+   [
+    "Energy",
+    "L'énergie"
+   ],
+   [
+    "Refinery",
+    "La raffinerie"
+   ],
+   [
+    "Craftsman",
+    "L'artisan"
+   ],
+   [
+    "Cement",
+    "Le ciment"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "Cimencam has a cement plant at Figuil (North Region). SONARA's refinery at Limbe was badly damaged by a fire in 2019."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 4)",
+  "title": "The Sectors of the Economy: The Secondary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 4: The Secondary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 4: The Secondary Sector (Definition and Examples)"
+ },
+ "end": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S17_L5_P4_Secondary_Sector",
+  "part": 4,
+  "partTitle": "The Secondary Sector (Definition and Examples)",
+  "notions": "Secondary sector, industry, manufacturing, processing, construction, energy production.",
+  "focus": "Definition and examples of the secondary sector, with examples from Cameroon.",
+  "competence": "Learners are able to recognise the products of Cameroonian factories and explain why transforming raw materials creates jobs and wealth.",
+  "objectives": [
+   "Define the secondary sector.",
+   "Name the main secondary activities.",
+   "Give examples of industries in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The primary sector takes raw materials from nature.",
+   "Its activities are agriculture, livestock rearing, fishing, forestry and mining."
+  ],
+  "recallNote": "Check the homework: two factories in Cameroon and their products.",
+  "situation": [
+   "Cameroon sells raw cotton and cocoa beans abroad at low prices. Later, it buys back clothes and chocolate made from them at high prices.",
+   "Djibrilla wonders why Cameroon does not transform more of its own raw materials."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Cameroon sells raw materials cheaply and buys back expensive finished goods made from them."
+   ],
+   [
+    "Which raw materials and finished goods are mentioned?",
+    "Raw cotton and cocoa beans are raw materials. Clothes and chocolate are finished goods."
+   ],
+   [
+    "What can Cameroon do to earn more from its raw materials?",
+    "It can build more factories to transform its cotton, cocoa and other raw materials into finished goods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the secondary sector, which transforms raw materials and creates jobs and wealth.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "A factory turns cotton into cloth, and another turns cocoa into chocolate. What sector do these factories belong to?",
+      "a": "They belong to the secondary sector, which transforms raw materials into finished goods."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The secondary sector is the sector of the economy that transforms raw materials into finished goods, and includes construction and energy production."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name two factories found in North Cameroon and what they produce.",
+      "a": "SODECOTON gins cotton and makes cooking oil (Diamaor), CICAM in Garoua makes cloth, and Cimencam at Figuil makes cement."
+     },
+     {
+      "q": "Name two big industries found in the south of Cameroon.",
+      "a": "Alucam at Edéa makes aluminium, SONARA at Limbe refines oil, and the Brasseries du Cameroun make drinks."
+     },
+     {
+      "q": "Building houses, roads and bridges also belongs to the secondary sector. Why?",
+      "a": "Because construction transforms materials such as cement, sand and iron into buildings and roads."
+     },
+     {
+      "q": "The Lagdo and Edéa dams produce electricity. Why is energy important for industry?",
+      "a": "Factories need electricity to run their machines. Without energy, industry cannot develop."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Secondary Activities",
+     "intro": "The main secondary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Agro-Industries",
+       "Agro-industries transform farm products: SODECOTON (cotton and oil), CICAM (cloth), and the breweries (drinks)."
+      ],
+      [
+       "B. Heavy Industries",
+       "Heavy industries transform minerals: Alucam at Edéa (aluminium), SONARA at Limbe (oil refining), Cimencam (cement)."
+      ],
+      [
+       "C. Construction",
+       "Construction is the building of houses, roads, bridges and dams."
+      ],
+      [
+       "D. Energy Production",
+       "Electricity is produced by dams such as Edéa, Song Loulou, Lagdo and Lom Pangar, and by gas and thermal plants."
+      ],
+      [
+       "E. Crafts",
+       "Craftsmen such as tailors, blacksmiths, carpenters and potters make goods by hand."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the secondary sector.",
+    "The secondary sector is the sector that transforms raw materials into finished goods."
+   ],
+   [
+    "Give one example of an agro-industry and one of a heavy industry in Cameroon.",
+    "SODECOTON is an agro-industry, and Alucam at Edéa is a heavy industry."
+   ],
+   [
+    "Why is it better for Cameroon to transform its raw materials?",
+    "It creates jobs and earns more money, because finished goods are sold at higher prices."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that transforms raw materials is the ______ sector.",
+    "The factory that makes cloth in Garoua is ______.",
+    "The aluminium factory at Edéa is ______."
+   ],
+   [
+    "The oil refinery at Limbe is ______.",
+    "The building of houses and roads is called ______.",
+    "A dam on the Benue that produces electricity is ______."
+   ]
+  ],
+  "remediationAnswers": "1. secondary 2. CICAM 3. Alucam 4. SONARA 5. construction 6. Lagdo",
+  "homework": "List four services that your family uses every week, for example transport, school, hospital, market or mobile money.",
+  "homeworkTag": "This prepares Part 5: The Tertiary Sector.",
+  "bilingual": [
+   [
+    "Industry",
+    "L'industrie"
+   ],
+   [
+    "Factory",
+    "L'usine"
+   ],
+   [
+    "Finished good",
+    "Le produit fini"
+   ],
+   [
+    "Construction",
+    "Le bâtiment (la construction)"
+   ],
+   [
+    "Energy",
+    "L'énergie"
+   ],
+   [
+    "Refinery",
+    "La raffinerie"
+   ],
+   [
+    "Craftsman",
+    "L'artisan"
+   ],
+   [
+    "Cement",
+    "Le ciment"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "Cimencam has a cement plant at Figuil (North Region). SONARA's refinery at Limbe was badly damaged by a fire in 2019."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 4)",
+  "title": "The Sectors of the Economy: The Secondary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 4: The Secondary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 4: The Secondary Sector (Definition and Examples)",
+  "matter": "I. Definition: ; II. Examples of Secondary Activities: Agro-Industries, Heavy Industries, Construction, Energy Production, Crafts."
+ },
+ "file": "S17_L5_P4_Secondary_Sector",
+ "sp": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S17_L5_P4_Secondary_Sector",
+  "part": 4,
+  "partTitle": "The Secondary Sector (Definition and Examples)",
+  "notions": "Secondary sector, industry, manufacturing, processing, construction, energy production.",
+  "focus": "Definition and examples of the secondary sector, with examples from Cameroon.",
+  "competence": "Learners are able to recognise the products of Cameroonian factories and explain why transforming raw materials creates jobs and wealth.",
+  "objectives": [
+   "Define the secondary sector.",
+   "Name the main secondary activities.",
+   "Give examples of industries in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The primary sector takes raw materials from nature.",
+   "Its activities are agriculture, livestock rearing, fishing, forestry and mining."
+  ],
+  "recallNote": "Check the homework: two factories in Cameroon and their products.",
+  "situation": [
+   "Cameroon sells raw cotton and cocoa beans abroad at low prices. Later, it buys back clothes and chocolate made from them at high prices.",
+   "Djibrilla wonders why Cameroon does not transform more of its own raw materials."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Cameroon sells raw materials cheaply and buys back expensive finished goods made from them."
+   ],
+   [
+    "Which raw materials and finished goods are mentioned?",
+    "Raw cotton and cocoa beans are raw materials. Clothes and chocolate are finished goods."
+   ],
+   [
+    "What can Cameroon do to earn more from its raw materials?",
+    "It can build more factories to transform its cotton, cocoa and other raw materials into finished goods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the secondary sector, which transforms raw materials and creates jobs and wealth.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "A factory turns cotton into cloth, and another turns cocoa into chocolate. What sector do these factories belong to?",
+      "a": "They belong to the secondary sector, which transforms raw materials into finished goods."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The secondary sector is the sector of the economy that transforms raw materials into finished goods, and includes construction and energy production."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name two factories found in North Cameroon and what they produce.",
+      "a": "SODECOTON gins cotton and makes cooking oil (Diamaor), CICAM in Garoua makes cloth, and Cimencam at Figuil makes cement."
+     },
+     {
+      "q": "Name two big industries found in the south of Cameroon.",
+      "a": "Alucam at Edéa makes aluminium, SONARA at Limbe refines oil, and the Brasseries du Cameroun make drinks."
+     },
+     {
+      "q": "Building houses, roads and bridges also belongs to the secondary sector. Why?",
+      "a": "Because construction transforms materials such as cement, sand and iron into buildings and roads."
+     },
+     {
+      "q": "The Lagdo and Edéa dams produce electricity. Why is energy important for industry?",
+      "a": "Factories need electricity to run their machines. Without energy, industry cannot develop."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Secondary Activities",
+     "intro": "The main secondary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Agro-Industries",
+       "Agro-industries transform farm products: SODECOTON (cotton and oil), CICAM (cloth), and the breweries (drinks)."
+      ],
+      [
+       "B. Heavy Industries",
+       "Heavy industries transform minerals: Alucam at Edéa (aluminium), SONARA at Limbe (oil refining), Cimencam (cement)."
+      ],
+      [
+       "C. Construction",
+       "Construction is the building of houses, roads, bridges and dams."
+      ],
+      [
+       "D. Energy Production",
+       "Electricity is produced by dams such as Edéa, Song Loulou, Lagdo and Lom Pangar, and by gas and thermal plants."
+      ],
+      [
+       "E. Crafts",
+       "Craftsmen such as tailors, blacksmiths, carpenters and potters make goods by hand."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the secondary sector.",
+    "The secondary sector is the sector that transforms raw materials into finished goods."
+   ],
+   [
+    "Give one example of an agro-industry and one of a heavy industry in Cameroon.",
+    "SODECOTON is an agro-industry, and Alucam at Edéa is a heavy industry."
+   ],
+   [
+    "Why is it better for Cameroon to transform its raw materials?",
+    "It creates jobs and earns more money, because finished goods are sold at higher prices."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that transforms raw materials is the ______ sector.",
+    "The factory that makes cloth in Garoua is ______.",
+    "The aluminium factory at Edéa is ______."
+   ],
+   [
+    "The oil refinery at Limbe is ______.",
+    "The building of houses and roads is called ______.",
+    "A dam on the Benue that produces electricity is ______."
+   ]
+  ],
+  "remediationAnswers": "1. secondary 2. CICAM 3. Alucam 4. SONARA 5. construction 6. Lagdo",
+  "homework": "List four services that your family uses every week, for example transport, school, hospital, market or mobile money.",
+  "homeworkTag": "This prepares Part 5: The Tertiary Sector.",
+  "bilingual": [
+   [
+    "Industry",
+    "L'industrie"
+   ],
+   [
+    "Factory",
+    "L'usine"
+   ],
+   [
+    "Finished good",
+    "Le produit fini"
+   ],
+   [
+    "Construction",
+    "Le bâtiment (la construction)"
+   ],
+   [
+    "Energy",
+    "L'énergie"
+   ],
+   [
+    "Refinery",
+    "La raffinerie"
+   ],
+   [
+    "Craftsman",
+    "L'artisan"
+   ],
+   [
+    "Cement",
+    "Le ciment"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "Cimencam has a cement plant at Figuil (North Region). SONARA's refinery at Limbe was badly damaged by a fire in 2019."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ]
+ }
+}

@@ -1,0 +1,422 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Other factors that affect temperature are the following:\"]",
+  "sum | \"x\" | \"A. Cloud Cover\" | [\"Clouds reflect sunlight by day, so cloudy days are cooler. At night, clouds keep heat, so cloudy nights are warmer.\"]",
+  "sum | \"x\" | \"B. Air Masses and Winds\" | [\"Winds from hot areas raise temperatures, like the Harmattan from the Sahara. Winds from the sea cool the land.\"]",
+  "sum | \"x\" | \"C. Distance from the Sea and Ocean Currents\" | [\"The sea moderates temperatures on coasts. Warm currents warm coasts, and cold currents, like the Benguela, cool them.\"]",
+  "sum | \"x\" | \"D. Vegetation\" | [\"Forests give shade and release water vapour, so forested areas are cooler than bare ground.\"]",
+  "sum | \"x\" | \"E. Human Activities\" | [\"Concrete, zinc roofs, cars and factories make cities warmer than the countryside (urban heat island).\"]",
+  "sum | \"II. Other Factors of Temperature (1/6)\" | [\"Other factors that affect temperature are the following:\"]",
+  "sum | \"II. Other Factors of Temperature (2/6)\" | \"A. Cloud Cover\" | [\"Clouds reflect sunlight by day, so cloudy days are cooler. At night, clouds keep heat, so cloudy nights are warmer.\"]",
+  "sum | \"II. Other Factors of Temperature (3/6)\" | \"B. Air Masses and Winds\" | [\"Winds from hot areas raise temperatures, like the Harmattan from the Sahara. Winds from the sea cool the land.\"]",
+  "sum | \"II. Other Factors of Temperature (4/6)\" | \"C. Distance from the Sea and Ocean Currents\" | [\"The sea moderates temperatures on coasts. Warm currents warm coasts, and cold currents, like the Benguela, cool them.\"]",
+  "sum | \"II. Other Factors of Temperature (5/6)\" | \"D. Vegetation\" | [\"Forests give shade and release water vapour, so forested areas are cooler than bare ground.\"]",
+  "sum | \"II. Other Factors of Temperature (6/6)\" | \"E. Human Activities\" | [\"Concrete, zinc roofs, cars and factories make cities warmer than the countryside (urban heat island).\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON38_Factors_of_Temperature",
+  "lessonNo": 38,
+  "lessonName": "Factors of Temperature",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Basic Notions of Climate",
+  "notions": "Weather and climate.",
+  "focus": "Factors of temperature: latitude, altitude, cloud cover, air masses, ocean currents, vegetation, human activities, etc.",
+  "competence": "Learners are able to explain why one place is hotter or cooler than another, and to choose shade, trees and building materials that reduce heat.",
+  "objectives": [
+   "Identify the main factors that affect temperature.",
+   "Explain how each factor makes a place hotter or cooler.",
+   "Use these factors to compare temperatures in Cameroon."
+  ],
+  "recall": [
+   "Local winds are caused by unequal heating of land and sea, or slopes and valleys.",
+   "Land heats and cools faster than water.",
+   "Temperature falls with height in the troposphere."
+  ],
+  "recallNote": "Check the homework: comparison of Garoua and Ngaoundéré.",
+  "situation": [
+   "Oumar travels by bus from Garoua to Ngaoundéré. When he leaves Garoua, it is 35°C. When he arrives in Ngaoundéré a few hours later, he needs a sweater in the evening.",
+   "Both towns are in the north of Cameroon, and Ngaoundéré is even closer to the Equator. Oumar does not understand why it is cooler there."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumar does not understand why Ngaoundéré is cooler than Garoua, although it is closer to the Equator."
+   ],
+   [
+    "What did Oumar need when he arrived in Ngaoundéré?",
+    "He needed a sweater in the evening, because it was cool."
+   ],
+   [
+    "What advice can you give to someone travelling from Garoua to Ngaoundéré?",
+    "He should carry warm clothes for the evenings, because Ngaoundéré is cooler."
+   ]
+  ],
+  "justification": "This lesson will help us to understand why temperatures differ from one place to another in Cameroon and in the world.",
+  "parts": [
+   {
+    "sec": "I. LATITUDE AND ALTITUDE",
+    "qa": [
+     {
+      "img": "sun_rays_latitude.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Why are places near the Equator hotter than places near the poles?",
+      "a": "Near the Equator, the sun's rays are direct and concentrate heat on a small area. Near the poles, the rays are slanting and spread heat over a large area.",
+      "split": 5.2
+     },
+     {
+      "img": "temp_altitude_cameroon.png",
+      "kind": "graph",
+      "title": "Question 2",
+      "q": "Look at the graph. Why is Ngaoundéré (1,212 m) cooler than Garoua?",
+      "a": "Ngaoundéré is about 1,000 m higher than Garoua. Temperature falls by about 6.5°C per 1,000 m, so Ngaoundéré (22°C) is about 6°C cooler than Garoua (28°C).",
+      "split": 4.8
+     }
+    ],
+    "sum": {
+     "title": "I. Latitude and Altitude",
+     "intro": "Temperature depends on many factors. The two main ones are latitude and altitude:",
+     "items": [
+      [
+       "A. Latitude",
+       "Places near the Equator receive direct sun rays and are hot. Places near the poles receive slanting rays and are cold.",
+       "sun_rays_latitude.png"
+      ],
+      [
+       "B. Altitude",
+       "Temperature falls by about 6.5°C for every 1,000 m of height. Ngaoundéré (22°C) is cooler than Garoua (28°C).",
+       "temp_altitude_cameroon.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. OTHER FACTORS",
+    "qa": [
+     {
+      "q": "Why is a cloudy day cooler than a clear day, but a cloudy night warmer than a clear night?",
+      "a": "By day, clouds reflect sunlight back to space. At night, they act like a blanket and keep the heat of the ground."
+     },
+     {
+      "q": "In January, the Harmattan blows from the Sahara. How does it affect temperatures in Garoua?",
+      "a": "It is a dry air mass from the desert: days are hot and dusty, and nights are cool because the air is dry."
+     },
+     {
+      "q": "Douala, by the sea, has a small temperature range, while Garoua, far inland, has a large range. Why?",
+      "a": "The sea heats and cools slowly, so it keeps coastal temperatures moderate. Places far from the sea heat and cool quickly (continentality)."
+     },
+     {
+      "q": "Why is it cooler under trees, and why are big cities hotter than villages?",
+      "a": "Trees give shade and release water vapour, which cools the air. Cities have concrete, zinc roofs, cars and machines, which store and give off heat."
+     }
+    ],
+    "sum": {
+     "title": "II. Other Factors of Temperature",
+     "intro": "Other factors that affect temperature are the following:",
+     "items": [
+      [
+       "A. Cloud Cover",
+       "Clouds reflect sunlight by day, so cloudy days are cooler. At night, clouds keep heat, so cloudy nights are warmer."
+      ],
+      [
+       "B. Air Masses and Winds",
+       "Winds from hot areas raise temperatures, like the Harmattan from the Sahara. Winds from the sea cool the land."
+      ],
+      [
+       "C. Distance from the Sea and Ocean Currents",
+       "The sea moderates temperatures on coasts. Warm currents warm coasts, and cold currents, like the Benguela, cool them."
+      ],
+      [
+       "D. Vegetation",
+       "Forests give shade and release water vapour, so forested areas are cooler than bare ground."
+      ],
+      [
+       "E. Human Activities",
+       "Concrete, zinc roofs, cars and factories make cities warmer than the countryside (urban heat island)."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "A town is 2,000 m higher than another. About how much cooler is it?",
+    "It is about 13°C cooler (2 × 6.5°C)."
+   ],
+   [
+    "Why do coastal towns like Douala have a small temperature range?",
+    "The sea heats and cools slowly and moderates the temperatures of the coast."
+   ],
+   [
+    "Give two ways of reducing heat in a house in Garoua.",
+    "We can plant trees around the house and use thick walls or light-coloured roofs."
+   ]
+  ],
+  "remediation": [
+   [
+    "Distance from the Equator is called ______.",
+    "Height above sea level is called ______.",
+    "Temperature falls by about ______ °C per 1,000 m."
+   ],
+   [
+    "Clouds make nights ______ because they keep heat.",
+    "The effect of the sea on temperature is weaker far inland; this is called ______.",
+    "Cities are warmer than villages: this is the urban heat ______."
+   ]
+  ],
+  "remediationAnswers": "1. latitude 2. altitude 3. 6.5 4. warmer 5. continentality 6. island",
+  "homework": "Put a little water in a bowl in the sun in the morning. In the evening, check how much water is left and write where you think the missing water went.",
+  "homeworkTag": "This prepares Lesson 39: The Hydrological Cycle.",
+  "bilingual": [
+   [
+    "Factor",
+    "Le facteur"
+   ],
+   [
+    "Latitude",
+    "La latitude"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ],
+   [
+    "Cloud cover",
+    "La nébulosité"
+   ],
+   [
+    "Air mass",
+    "La masse d'air"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ],
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "Heat island",
+    "L'îlot de chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Data: Garoua 28.3°C, Maroua 27.9°C, Ngaoundéré 22.0°C (NOAA 1961–1990); Douala 27.0°C (WMO 1991–2020). Ngaoundéré lies at about 1,212 m.",
+   "Correction: Ngaoundéré is more than 1,000 m higher than Garoua (not only \"a plateau\"), which explains a difference of about 6°C."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "Climate normals of Garoua, Maroua, Ngaoundéré and Douala (via Wikipedia climate tables: NOAA, WMO)."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 38",
+  "title": "Factors of Temperature",
+  "sumTitle": "Factors of Temperature",
+  "coverNote": "Good morning, class. Today we study Lesson 38: Factors of Temperature.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 38: Factors of Temperature",
+  "matter": "I. Latitude and Altitude: Latitude, Altitude; II. Other Factors of Temperature: Cloud Cover, Air Masses and Winds, Distance from the Sea and Ocean Currents, Vegetation, Human Activities."
+ },
+ "file": "FORM4_LESSON38_Factors_of_Temperature",
+ "sp": {
+  "file": "FORM4_LESSON38_Factors_of_Temperature",
+  "lessonNo": 38,
+  "lessonName": "Factors of Temperature",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Basic Notions of Climate",
+  "notions": "Weather and climate.",
+  "focus": "Factors of temperature: latitude, altitude, cloud cover, air masses, ocean currents, vegetation, human activities, etc.",
+  "competence": "Learners are able to explain why one place is hotter or cooler than another, and to choose shade, trees and building materials that reduce heat.",
+  "objectives": [
+   "Identify the main factors that affect temperature.",
+   "Explain how each factor makes a place hotter or cooler.",
+   "Use these factors to compare temperatures in Cameroon."
+  ],
+  "recall": [
+   "Local winds are caused by unequal heating of land and sea, or slopes and valleys.",
+   "Land heats and cools faster than water.",
+   "Temperature falls with height in the troposphere."
+  ],
+  "recallNote": "Check the homework: comparison of Garoua and Ngaoundéré.",
+  "situation": [
+   "Oumar travels by bus from Garoua to Ngaoundéré. When he leaves Garoua, it is 35°C. When he arrives in Ngaoundéré a few hours later, he needs a sweater in the evening.",
+   "Both towns are in the north of Cameroon, and Ngaoundéré is even closer to the Equator. Oumar does not understand why it is cooler there."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumar does not understand why Ngaoundéré is cooler than Garoua, although it is closer to the Equator."
+   ],
+   [
+    "What did Oumar need when he arrived in Ngaoundéré?",
+    "He needed a sweater in the evening, because it was cool."
+   ],
+   [
+    "What advice can you give to someone travelling from Garoua to Ngaoundéré?",
+    "He should carry warm clothes for the evenings, because Ngaoundéré is cooler."
+   ]
+  ],
+  "justification": "This lesson will help us to understand why temperatures differ from one place to another in Cameroon and in the world.",
+  "parts": [
+   {
+    "sec": "I. LATITUDE AND ALTITUDE",
+    "qa": [
+     {
+      "img": "sun_rays_latitude.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Why are places near the Equator hotter than places near the poles?",
+      "a": "Near the Equator, the sun's rays are direct and concentrate heat on a small area. Near the poles, the rays are slanting and spread heat over a large area.",
+      "split": 5.2
+     },
+     {
+      "img": "temp_altitude_cameroon.png",
+      "kind": "graph",
+      "title": "Question 2",
+      "q": "Look at the graph. Why is Ngaoundéré (1,212 m) cooler than Garoua?",
+      "a": "Ngaoundéré is about 1,000 m higher than Garoua. Temperature falls by about 6.5°C per 1,000 m, so Ngaoundéré (22°C) is about 6°C cooler than Garoua (28°C).",
+      "split": 4.8
+     }
+    ],
+    "sum": {
+     "title": "I. Latitude and Altitude",
+     "intro": "Temperature depends on many factors. The two main ones are latitude and altitude:",
+     "items": [
+      [
+       "A. Latitude",
+       "Places near the Equator receive direct sun rays and are hot. Places near the poles receive slanting rays and are cold.",
+       "sun_rays_latitude.png"
+      ],
+      [
+       "B. Altitude",
+       "Temperature falls by about 6.5°C for every 1,000 m of height. Ngaoundéré (22°C) is cooler than Garoua (28°C).",
+       "temp_altitude_cameroon.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. OTHER FACTORS",
+    "qa": [
+     {
+      "q": "Why is a cloudy day cooler than a clear day, but a cloudy night warmer than a clear night?",
+      "a": "By day, clouds reflect sunlight back to space. At night, they act like a blanket and keep the heat of the ground."
+     },
+     {
+      "q": "In January, the Harmattan blows from the Sahara. How does it affect temperatures in Garoua?",
+      "a": "It is a dry air mass from the desert: days are hot and dusty, and nights are cool because the air is dry."
+     },
+     {
+      "q": "Douala, by the sea, has a small temperature range, while Garoua, far inland, has a large range. Why?",
+      "a": "The sea heats and cools slowly, so it keeps coastal temperatures moderate. Places far from the sea heat and cool quickly (continentality)."
+     },
+     {
+      "q": "Why is it cooler under trees, and why are big cities hotter than villages?",
+      "a": "Trees give shade and release water vapour, which cools the air. Cities have concrete, zinc roofs, cars and machines, which store and give off heat."
+     }
+    ],
+    "sum": {
+     "title": "II. Other Factors of Temperature",
+     "intro": "Other factors that affect temperature are the following:",
+     "items": [
+      [
+       "A. Cloud Cover",
+       "Clouds reflect sunlight by day, so cloudy days are cooler. At night, clouds keep heat, so cloudy nights are warmer."
+      ],
+      [
+       "B. Air Masses and Winds",
+       "Winds from hot areas raise temperatures, like the Harmattan from the Sahara. Winds from the sea cool the land."
+      ],
+      [
+       "C. Distance from the Sea and Ocean Currents",
+       "The sea moderates temperatures on coasts. Warm currents warm coasts, and cold currents, like the Benguela, cool them."
+      ],
+      [
+       "D. Vegetation",
+       "Forests give shade and release water vapour, so forested areas are cooler than bare ground."
+      ],
+      [
+       "E. Human Activities",
+       "Concrete, zinc roofs, cars and factories make cities warmer than the countryside (urban heat island)."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "A town is 2,000 m higher than another. About how much cooler is it?",
+    "It is about 13°C cooler (2 × 6.5°C)."
+   ],
+   [
+    "Why do coastal towns like Douala have a small temperature range?",
+    "The sea heats and cools slowly and moderates the temperatures of the coast."
+   ],
+   [
+    "Give two ways of reducing heat in a house in Garoua.",
+    "We can plant trees around the house and use thick walls or light-coloured roofs."
+   ]
+  ],
+  "remediation": [
+   [
+    "Distance from the Equator is called ______.",
+    "Height above sea level is called ______.",
+    "Temperature falls by about ______ °C per 1,000 m."
+   ],
+   [
+    "Clouds make nights ______ because they keep heat.",
+    "The effect of the sea on temperature is weaker far inland; this is called ______.",
+    "Cities are warmer than villages: this is the urban heat ______."
+   ]
+  ],
+  "remediationAnswers": "1. latitude 2. altitude 3. 6.5 4. warmer 5. continentality 6. island",
+  "homework": "Put a little water in a bowl in the sun in the morning. In the evening, check how much water is left and write where you think the missing water went.",
+  "homeworkTag": "This prepares Lesson 39: The Hydrological Cycle.",
+  "bilingual": [
+   [
+    "Factor",
+    "Le facteur"
+   ],
+   [
+    "Latitude",
+    "La latitude"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ],
+   [
+    "Cloud cover",
+    "La nébulosité"
+   ],
+   [
+    "Air mass",
+    "La masse d'air"
+   ],
+   [
+    "Ocean current",
+    "Le courant marin"
+   ],
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "Heat island",
+    "L'îlot de chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Data: Garoua 28.3°C, Maroua 27.9°C, Ngaoundéré 22.0°C (NOAA 1961–1990); Douala 27.0°C (WMO 1991–2020). Ngaoundéré lies at about 1,212 m.",
+   "Correction: Ngaoundéré is more than 1,000 m higher than Garoua (not only \"a plateau\"), which explains a difference of about 6°C."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "Climate normals of Garoua, Maroua, Ngaoundéré and Douala (via Wikipedia climate tables: NOAA, WMO)."
+  ]
+ }
+}

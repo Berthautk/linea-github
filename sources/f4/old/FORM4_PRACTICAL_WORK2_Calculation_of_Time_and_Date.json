@@ -1,0 +1,549 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"With time zones, we use the difference between the GMT values:\"]",
+  "sum | \"x\" | \"A. Standard Time\" | [\"– Garoua (GMT + 1), 5:27 a.m. Sunday.\",\"– Beijing (GMT + 8): difference = 7 hours; east, so add.\",\"– Answer: 12:27 p.m. on Sunday.\"]",
+  "sum | \"x\" | \"B. Crossing Midnight\" | [\"– Garoua, 10:00 p.m. Friday; Tokyo (GMT + 9): difference = 8 hours; add.\",\"– 10 p.m. + 8 h = 6:00 a.m. on Saturday: the date changes.\"]",
+  "sumImage | \"x\" | \"C. Crossing the IDL\" | \"Samoa, 10:00 a.m. Sunday. Crossing the IDL going east, we remove one day: 10:00 a.m. on Saturday in American Samoa.\" | \"idl_map.png\"",
+  "sum | \"III. Standard Time and Date (1/4)\" | [\"With time zones, we use the difference between the GMT values:\"]",
+  "sum | \"III. Standard Time and Date (2/4)\" | \"A. Standard Time\" | [\"– Garoua (GMT + 1), 5:27 a.m. Sunday.\",\"– Beijing (GMT + 8): difference = 7 hours; east, so add.\",\"– Answer: 12:27 p.m. on Sunday.\"]",
+  "sum | \"III. Standard Time and Date (3/4)\" | \"B. Crossing Midnight\" | [\"– Garoua, 10:00 p.m. Friday; Tokyo (GMT + 9): difference = 8 hours; add.\",\"– 10 p.m. + 8 h = 6:00 a.m. on Saturday: the date changes.\"]",
+  "sumImage | \"III. Standard Time and Date (4/4)\" | \"C. Crossing the IDL\" | \"Samoa, 10:00 a.m. Sunday. Crossing the IDL going east, we remove one day: 10:00 a.m. on Saturday in American Samoa.\" | \"idl_map.png\""
+ ],
+ "end": {
+  "file": "FORM4_PRACTICAL_WORK2_Calculation_of_Time_and_Date",
+  "kind": "Practical Work",
+  "lessonNo": 2,
+  "lessonName": "Calculation of Time and Date",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "coverNote": "Good morning, class. Today we do Practical Work 2: we calculate time and date in different places. Take out your exercise books and pencils.",
+  "notions": "Longitude difference, time difference, GMT, International Date Line.",
+  "focus": "Sun time: calculating local time from longitude and longitude from local time; calculating standard time with time zones; calculating the date when crossing midnight or the International Date Line.",
+  "competence": "Learners are able to calculate the time and the date in another place, for example to follow a match or to call a relative abroad.",
+  "objectives": [
+   "State the three rules for time calculations.",
+   "Calculate local time from a difference of longitude, and longitude from local time.",
+   "Calculate standard time with time zones.",
+   "Find the correct date after crossing midnight or the International Date Line."
+  ],
+  "recall": [
+   "The Earth turns 15° in 1 hour, and 1° in 4 minutes.",
+   "Cameroon uses West Africa Time: GMT + 1.",
+   "Crossing the IDL going west, we add one day; going east, we remove one day."
+  ],
+  "recallNote": "Check the homework: 12 noon at 0° is 3 p.m. at 45° E.",
+  "situation": [
+   "A World Cup match is played in Los Angeles, in the USA. It starts at 5 p.m. on Sunday, Los Angeles time. Los Angeles uses GMT − 7 in summer.",
+   "Moussa and his friends in Garoua want to watch the match live. If they guess the time, they can miss the match. They must calculate the exact time and date of the match in Garoua."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa and his friends must calculate the time and date of the match in Garoua."
+   ],
+   [
+    "What information do they need to solve the problem?",
+    "They need the time in Los Angeles (5 p.m. Sunday) and the time zones: GMT − 7 for Los Angeles and GMT + 1 for Garoua."
+   ],
+   [
+    "What is the answer?",
+    "The difference is 8 hours, and Garoua is east, so we add: 5 p.m. + 8 h = 1 a.m. on Monday in Garoua."
+   ]
+  ],
+  "justification": "This practical work will help us to calculate time and date correctly for travel, communication and events in other countries.",
+  "parts": [
+   {
+    "sec": "I. THE RULES",
+    "qa": [
+     {
+      "img": "time_line.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "Look at the diagram. When it is 12:00 at 0°, what time is it at 30° E and at 30° W?",
+      "a": "At 30° E it is 14:00 (we add 2 hours). At 30° W it is 10:00 (we subtract 2 hours).",
+      "split": 5
+     },
+     {
+      "q": "Two places are at 20° E and 40° W. What is their difference of longitude?",
+      "a": "One place is east and the other is west, so we add: 20° + 40° = 60°. If both were on the same side, we would subtract."
+     }
+    ],
+    "sum": {
+     "title": "I. Rules for Calculating Time",
+     "intro": "For all calculations of time and date, we use three rules:",
+     "items": [
+      [
+       "A. Rule 1: Degrees and Time",
+       "15° of longitude = 1 hour, and 1° = 4 minutes.",
+       "time_line.png"
+      ],
+      [
+       "B. Rule 2: Direction",
+       [
+        "– Places to the east are ahead: we add time.",
+        "– Places to the west are behind: we subtract time.",
+        "– Same side of 0° (both E or both W): subtract the longitudes. Different sides: add them."
+       ]
+      ],
+      [
+       "C. Rule 3: The Date",
+       [
+        "– If the time passes midnight, the date changes.",
+        "– Crossing the IDL going west: add one day.",
+        "– Crossing the IDL going east: remove one day."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SUN TIME (LOCAL TIME)",
+    "qa": [
+     {
+      "title": "Example 1",
+      "q": "It is 12:00 noon (local time) at Garoua (13° E). What is the local time at a town at 43° E?",
+      "a": [
+       "Difference: 43° − 13° = 30°. Time: 30 × 4 min = 120 min = 2 hours.",
+       "The town is east, so we add: 12:00 + 2 h = 14:00 (2 p.m.)."
+      ]
+     },
+     {
+      "title": "Example 2",
+      "q": "It is 10:00 a.m. (local time) at Garoua (13° E). What is the local time at a place at 17° W?",
+      "a": [
+       "Difference: 13° + 17° = 30° (different sides). Time: 30 × 4 min = 2 hours.",
+       "The place is west, so we subtract: 10:00 − 2 h = 08:00 (8 a.m.)."
+      ]
+     },
+     {
+      "title": "Example 3",
+      "q": "It is 12:00 noon at Greenwich (0°). At the same moment, the local time in a town is 3:00 p.m. What is the longitude of the town?",
+      "a": [
+       "Time difference: 3 hours. Longitude: 3 × 15° = 45°.",
+       "The town is ahead of Greenwich, so it is east: its longitude is 45° E."
+      ]
+     }
+    ],
+    "sum": {
+     "title": "II. Sun Time (Local Time)",
+     "intro": "We follow four steps: find the difference of longitude, change it into time, find the direction, then add or subtract.",
+     "items": [
+      [
+       "Worked Example",
+       [
+        "– It is 12:00 at Garoua (13° E). Find the time at 43° E.",
+        "– Difference: 43° − 13° = 30°.",
+        "– Time: 30 × 4 minutes = 120 minutes = 2 hours.",
+        "– 43° E is east of Garoua, so we add: 12:00 + 2 h = 14:00."
+       ]
+      ],
+      [
+       "Finding the Longitude from Local Time",
+       [
+        "– It is 12:00 at Greenwich (0°) and 3:00 p.m. in a town.",
+        "– Time difference: 3 hours; 3 × 15° = 45°.",
+        "– The town is ahead, so it is east: 45° E.",
+        "– If the town were behind, it would be west."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. STANDARD TIME AND DATE",
+    "qa": [
+     {
+      "title": "Example 4",
+      "q": "It is 5:27 a.m. on Sunday in Garoua (GMT + 1). What is the time in Beijing, China (GMT + 8)?",
+      "a": "The difference is 8 − 1 = 7 hours. Beijing is east, so we add: 5:27 a.m. + 7 h = 12:27 p.m. on the same Sunday."
+     },
+     {
+      "title": "Example 5",
+      "q": "It is 10:00 p.m. on Friday in Garoua (GMT + 1). What is the time and date in Tokyo (GMT + 9)?",
+      "a": "The difference is 8 hours. Tokyo is east, so we add: 10 p.m. + 8 h = 6:00 a.m. on Saturday. We passed midnight, so the date changes."
+     },
+     {
+      "img": "idl_map.png",
+      "kind": "map",
+      "title": "Example 6",
+      "q": "It is 10:00 a.m. on Sunday in Samoa, west of the IDL. What is the time and day in American Samoa, just east of the IDL?",
+      "a": "We cross the IDL going east, so we remove one day. It is 10:00 a.m. on Saturday in American Samoa.",
+      "split": 5.2
+     }
+    ],
+    "sum": {
+     "title": "III. Standard Time and Date",
+     "intro": "With time zones, we use the difference between the GMT values:",
+     "items": [
+      [
+       "A. Standard Time",
+       [
+        "– Garoua (GMT + 1), 5:27 a.m. Sunday.",
+        "– Beijing (GMT + 8): difference = 7 hours; east, so add.",
+        "– Answer: 12:27 p.m. on Sunday."
+       ]
+      ],
+      [
+       "B. Crossing Midnight",
+       [
+        "– Garoua, 10:00 p.m. Friday; Tokyo (GMT + 9): difference = 8 hours; add.",
+        "– 10 p.m. + 8 h = 6:00 a.m. on Saturday: the date changes."
+       ]
+      ],
+      [
+       "C. Crossing the IDL",
+       "Samoa, 10:00 a.m. Sunday. Crossing the IDL going east, we remove one day: 10:00 a.m. on Saturday in American Samoa.",
+       "idl_map.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "It is 12:00 at 0°. What is the local time at 60° E?",
+    "60 ÷ 15 = 4 hours; east, so add: 16:00 (4 p.m.)."
+   ],
+   [
+    "It is 9:00 a.m. in Garoua (GMT + 1). What time is it in London in winter (GMT)?",
+    "London is 1 hour behind: it is 8:00 a.m."
+   ],
+   [
+    "It is 11:00 p.m. on Monday in Garoua (GMT + 1). What is the time and day in Dubai (GMT + 4)?",
+    "Add 3 hours: 2:00 a.m. on Tuesday."
+   ]
+  ],
+  "remediation": [
+   [
+    "15° of longitude = ______ hour.",
+    "1° of longitude = ______ minutes.",
+    "Places to the east are ______ in time."
+   ],
+   [
+    "For places to the west, we ______ time.",
+    "If the time passes midnight, the ______ changes.",
+    "Crossing the IDL going east, we ______ one day."
+   ]
+  ],
+  "remediationAnswers": "1. one 2. four 3. ahead 4. subtract 5. date 6. remove",
+  "homework": "Watch the sunrise and the sunset one day this week and write down the times. Write a sentence to explain why the Sun rises in the east.",
+  "homeworkTag": "This prepares Lesson 5: The Rotation of the Earth.",
+  "bilingual": [
+   [
+    "Calculation",
+    "Le calcul"
+   ],
+   [
+    "To add",
+    "Ajouter"
+   ],
+   [
+    "To subtract",
+    "Soustraire"
+   ],
+   [
+    "Difference",
+    "La différence"
+   ],
+   [
+    "East",
+    "L'est"
+   ],
+   [
+    "West",
+    "L'ouest"
+   ],
+   [
+    "Date",
+    "La date"
+   ],
+   [
+    "Hour",
+    "L'heure"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes place Garoua at \"15° E\". Garoua is at about 13°24′ E. The examples use 13° E.",
+   "Checked: Los Angeles uses GMT − 7 in summer (PDT) and GMT − 8 in winter. Samoa is GMT + 13 and American Samoa GMT − 11, a difference of 24 hours.",
+   "Correction of the situation: the 2026 World Cup final was played near New York, not in Los Angeles. The situation now speaks of a World Cup match in Los Angeles."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  PRACTICAL WORK 2",
+  "title": "Calculation of Time and Date",
+  "sumTitle": "Calculation of Time and Date",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Practical Work 2: Calculation of Time and Date",
+  "matter": "I. Rules for Calculating Time: Rule 1: Degrees and Time, Rule 2: Direction, Rule 3: The Date; II. Sun Time (Local Time): Worked Example, Finding the Longitude from Local Time; III. Standard Time and Date: Standard Time, Crossing Midnight, Crossing the IDL."
+ },
+ "file": "FORM4_PRACTICAL_WORK2_Calculation_of_Time_and_Date",
+ "sp": {
+  "file": "FORM4_PRACTICAL_WORK2_Calculation_of_Time_and_Date",
+  "kind": "Practical Work",
+  "lessonNo": 2,
+  "lessonName": "Calculation of Time and Date",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "coverNote": "Good morning, class. Today we do Practical Work 2: we calculate time and date in different places. Take out your exercise books and pencils.",
+  "notions": "Longitude difference, time difference, GMT, International Date Line.",
+  "focus": "Sun time: calculating local time from longitude and longitude from local time; calculating standard time with time zones; calculating the date when crossing midnight or the International Date Line.",
+  "competence": "Learners are able to calculate the time and the date in another place, for example to follow a match or to call a relative abroad.",
+  "objectives": [
+   "State the three rules for time calculations.",
+   "Calculate local time from a difference of longitude, and longitude from local time.",
+   "Calculate standard time with time zones.",
+   "Find the correct date after crossing midnight or the International Date Line."
+  ],
+  "recall": [
+   "The Earth turns 15° in 1 hour, and 1° in 4 minutes.",
+   "Cameroon uses West Africa Time: GMT + 1.",
+   "Crossing the IDL going west, we add one day; going east, we remove one day."
+  ],
+  "recallNote": "Check the homework: 12 noon at 0° is 3 p.m. at 45° E.",
+  "situation": [
+   "A World Cup match is played in Los Angeles, in the USA. It starts at 5 p.m. on Sunday, Los Angeles time. Los Angeles uses GMT − 7 in summer.",
+   "Moussa and his friends in Garoua want to watch the match live. If they guess the time, they can miss the match. They must calculate the exact time and date of the match in Garoua."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa and his friends must calculate the time and date of the match in Garoua."
+   ],
+   [
+    "What information do they need to solve the problem?",
+    "They need the time in Los Angeles (5 p.m. Sunday) and the time zones: GMT − 7 for Los Angeles and GMT + 1 for Garoua."
+   ],
+   [
+    "What is the answer?",
+    "The difference is 8 hours, and Garoua is east, so we add: 5 p.m. + 8 h = 1 a.m. on Monday in Garoua."
+   ]
+  ],
+  "justification": "This practical work will help us to calculate time and date correctly for travel, communication and events in other countries.",
+  "parts": [
+   {
+    "sec": "I. THE RULES",
+    "qa": [
+     {
+      "img": "time_line.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "Look at the diagram. When it is 12:00 at 0°, what time is it at 30° E and at 30° W?",
+      "a": "At 30° E it is 14:00 (we add 2 hours). At 30° W it is 10:00 (we subtract 2 hours).",
+      "split": 5
+     },
+     {
+      "q": "Two places are at 20° E and 40° W. What is their difference of longitude?",
+      "a": "One place is east and the other is west, so we add: 20° + 40° = 60°. If both were on the same side, we would subtract."
+     }
+    ],
+    "sum": {
+     "title": "I. Rules for Calculating Time",
+     "intro": "For all calculations of time and date, we use three rules:",
+     "items": [
+      [
+       "A. Rule 1: Degrees and Time",
+       "15° of longitude = 1 hour, and 1° = 4 minutes.",
+       "time_line.png"
+      ],
+      [
+       "B. Rule 2: Direction",
+       [
+        "– Places to the east are ahead: we add time.",
+        "– Places to the west are behind: we subtract time.",
+        "– Same side of 0° (both E or both W): subtract the longitudes. Different sides: add them."
+       ]
+      ],
+      [
+       "C. Rule 3: The Date",
+       [
+        "– If the time passes midnight, the date changes.",
+        "– Crossing the IDL going west: add one day.",
+        "– Crossing the IDL going east: remove one day."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SUN TIME (LOCAL TIME)",
+    "qa": [
+     {
+      "title": "Example 1",
+      "q": "It is 12:00 noon (local time) at Garoua (13° E). What is the local time at a town at 43° E?",
+      "a": [
+       "Difference: 43° − 13° = 30°. Time: 30 × 4 min = 120 min = 2 hours.",
+       "The town is east, so we add: 12:00 + 2 h = 14:00 (2 p.m.)."
+      ]
+     },
+     {
+      "title": "Example 2",
+      "q": "It is 10:00 a.m. (local time) at Garoua (13° E). What is the local time at a place at 17° W?",
+      "a": [
+       "Difference: 13° + 17° = 30° (different sides). Time: 30 × 4 min = 2 hours.",
+       "The place is west, so we subtract: 10:00 − 2 h = 08:00 (8 a.m.)."
+      ]
+     },
+     {
+      "title": "Example 3",
+      "q": "It is 12:00 noon at Greenwich (0°). At the same moment, the local time in a town is 3:00 p.m. What is the longitude of the town?",
+      "a": [
+       "Time difference: 3 hours. Longitude: 3 × 15° = 45°.",
+       "The town is ahead of Greenwich, so it is east: its longitude is 45° E."
+      ]
+     }
+    ],
+    "sum": {
+     "title": "II. Sun Time (Local Time)",
+     "intro": "We follow four steps: find the difference of longitude, change it into time, find the direction, then add or subtract.",
+     "items": [
+      [
+       "Worked Example",
+       [
+        "– It is 12:00 at Garoua (13° E). Find the time at 43° E.",
+        "– Difference: 43° − 13° = 30°.",
+        "– Time: 30 × 4 minutes = 120 minutes = 2 hours.",
+        "– 43° E is east of Garoua, so we add: 12:00 + 2 h = 14:00."
+       ]
+      ],
+      [
+       "Finding the Longitude from Local Time",
+       [
+        "– It is 12:00 at Greenwich (0°) and 3:00 p.m. in a town.",
+        "– Time difference: 3 hours; 3 × 15° = 45°.",
+        "– The town is ahead, so it is east: 45° E.",
+        "– If the town were behind, it would be west."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. STANDARD TIME AND DATE",
+    "qa": [
+     {
+      "title": "Example 4",
+      "q": "It is 5:27 a.m. on Sunday in Garoua (GMT + 1). What is the time in Beijing, China (GMT + 8)?",
+      "a": "The difference is 8 − 1 = 7 hours. Beijing is east, so we add: 5:27 a.m. + 7 h = 12:27 p.m. on the same Sunday."
+     },
+     {
+      "title": "Example 5",
+      "q": "It is 10:00 p.m. on Friday in Garoua (GMT + 1). What is the time and date in Tokyo (GMT + 9)?",
+      "a": "The difference is 8 hours. Tokyo is east, so we add: 10 p.m. + 8 h = 6:00 a.m. on Saturday. We passed midnight, so the date changes."
+     },
+     {
+      "img": "idl_map.png",
+      "kind": "map",
+      "title": "Example 6",
+      "q": "It is 10:00 a.m. on Sunday in Samoa, west of the IDL. What is the time and day in American Samoa, just east of the IDL?",
+      "a": "We cross the IDL going east, so we remove one day. It is 10:00 a.m. on Saturday in American Samoa.",
+      "split": 5.2
+     }
+    ],
+    "sum": {
+     "title": "III. Standard Time and Date",
+     "intro": "With time zones, we use the difference between the GMT values:",
+     "items": [
+      [
+       "A. Standard Time",
+       [
+        "– Garoua (GMT + 1), 5:27 a.m. Sunday.",
+        "– Beijing (GMT + 8): difference = 7 hours; east, so add.",
+        "– Answer: 12:27 p.m. on Sunday."
+       ]
+      ],
+      [
+       "B. Crossing Midnight",
+       [
+        "– Garoua, 10:00 p.m. Friday; Tokyo (GMT + 9): difference = 8 hours; add.",
+        "– 10 p.m. + 8 h = 6:00 a.m. on Saturday: the date changes."
+       ]
+      ],
+      [
+       "C. Crossing the IDL",
+       "Samoa, 10:00 a.m. Sunday. Crossing the IDL going east, we remove one day: 10:00 a.m. on Saturday in American Samoa.",
+       "idl_map.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "It is 12:00 at 0°. What is the local time at 60° E?",
+    "60 ÷ 15 = 4 hours; east, so add: 16:00 (4 p.m.)."
+   ],
+   [
+    "It is 9:00 a.m. in Garoua (GMT + 1). What time is it in London in winter (GMT)?",
+    "London is 1 hour behind: it is 8:00 a.m."
+   ],
+   [
+    "It is 11:00 p.m. on Monday in Garoua (GMT + 1). What is the time and day in Dubai (GMT + 4)?",
+    "Add 3 hours: 2:00 a.m. on Tuesday."
+   ]
+  ],
+  "remediation": [
+   [
+    "15° of longitude = ______ hour.",
+    "1° of longitude = ______ minutes.",
+    "Places to the east are ______ in time."
+   ],
+   [
+    "For places to the west, we ______ time.",
+    "If the time passes midnight, the ______ changes.",
+    "Crossing the IDL going east, we ______ one day."
+   ]
+  ],
+  "remediationAnswers": "1. one 2. four 3. ahead 4. subtract 5. date 6. remove",
+  "homework": "Watch the sunrise and the sunset one day this week and write down the times. Write a sentence to explain why the Sun rises in the east.",
+  "homeworkTag": "This prepares Lesson 5: The Rotation of the Earth.",
+  "bilingual": [
+   [
+    "Calculation",
+    "Le calcul"
+   ],
+   [
+    "To add",
+    "Ajouter"
+   ],
+   [
+    "To subtract",
+    "Soustraire"
+   ],
+   [
+    "Difference",
+    "La différence"
+   ],
+   [
+    "East",
+    "L'est"
+   ],
+   [
+    "West",
+    "L'ouest"
+   ],
+   [
+    "Date",
+    "La date"
+   ],
+   [
+    "Hour",
+    "L'heure"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes place Garoua at \"15° E\". Garoua is at about 13°24′ E. The examples use 13° E.",
+   "Checked: Los Angeles uses GMT − 7 in summer (PDT) and GMT − 8 in winter. Samoa is GMT + 13 and American Samoa GMT − 11, a difference of 24 hours.",
+   "Correction of the situation: the 2026 World Cup final was played near New York, not in Los Angeles. The situation now speaks of a World Cup match in Los Angeles."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

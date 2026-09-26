@@ -1,0 +1,480 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"A. Against Floods\" | [\"Build dykes and drains, control dam releases, set up early warning systems, avoid building on floodplains and replant forests.\"]",
+  "sum | \"x\" | \"B. Against Droughts and Desertification\" | [\"Plant trees (Opération Sahel Vert, Great Green Wall), grow drought-resistant crops, store water, control grazing and use improved stoves.\"]",
+  "sum | \"IV. Adaptations and Mitigations (1/2)\" | \"A. Against Floods\" | [\"Build dykes and drains, control dam releases, set up early warning systems, avoid building on floodplains and replant forests.\"]",
+  "sum | \"IV. Adaptations and Mitigations (2/2)\" | \"B. Against Droughts and Desertification\" | [\"Plant trees (Opération Sahel Vert, Great Green Wall), grow drought-resistant crops, store water, control grazing and use improved stoves.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON41_Floods_Droughts_Desertification",
+  "lessonNo": 41,
+  "lessonName": "Floods, Droughts and Desertification",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Management of Climate and Hydrological Related Hazards",
+  "subtopic": "Hydro-climatic Hazards",
+  "notions": "Floods, droughts, desertification.",
+  "focus": "Meaning (definition and area of occurrence); causes; effects; adaptations and mitigations.",
+  "competence": "Learners are able to recognise the risks of floods and drought in their area and to take actions to protect their families, crops and land.",
+  "objectives": [
+   "Define floods, droughts and desertification and give their areas of occurrence.",
+   "Explain their causes.",
+   "Describe their effects.",
+   "Propose adaptation and mitigation measures."
+  ],
+  "recall": [
+   "Global warming is the long-term rise of the Earth's temperature.",
+   "It makes droughts and floods more frequent.",
+   "Mitigation reduces its causes; adaptation helps people to live with its effects."
+  ],
+  "recallNote": "Check the homework: floods or dry years in the family's memory.",
+  "situation": [
+   "In September 2012, water released from the Lagdo dam and heavy rains flooded villages along the Benue near Garoua. Farmers lost their fields and houses.",
+   "Six months later, in March, the same farmers waited for rain under a burning sun to plant their millet. Hamza wonders how the same area can suffer from too much water and from too little water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the same area suffers from floods in the rainy season and from lack of water in the dry season."
+   ],
+   [
+    "What caused the floods of September 2012?",
+    "They were caused by heavy rains and by water released from the Lagdo dam."
+   ],
+   [
+    "What can farmers do to reduce these problems?",
+    "They can avoid building on the floodplain, store water for the dry season and plant trees."
+   ]
+  ],
+  "justification": "This lesson will help us to understand floods, droughts and desertification, which are major hazards in North Cameroon.",
+  "parts": [
+   {
+    "sec": "I. MEANING AND AREAS",
+    "qa": [
+     {
+      "img": "cmr_hazards.png",
+      "kind": "map",
+      "q": "Look at the map. Which areas of North Cameroon are often flooded, and which are threatened by drought and desertification?",
+      "a": "The floodplains of the Benue (Garoua) and of the Logone (Yagoua, Kousseri) are often flooded. The Far North is threatened by drought and desertification.",
+      "split": 6.2
+     },
+     {
+      "q": "What is the difference between a drought and desertification?",
+      "a": "A drought is a temporary period with too little rain. Desertification is a lasting change: fertile land becomes desert."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning and Areas of Occurrence",
+     "defs": [
+      "A flood is the covering of normally dry land by water.",
+      "A drought is a long period of abnormally low rainfall that causes a shortage of water.",
+      "Desertification is the degradation of land in dry areas, which slowly turns into desert."
+     ],
+     "items": [
+      [
+       "Areas of Occurrence",
+       "Floods occur on floodplains, such as the Benue near Garoua and the Logone near Yagoua and Kousseri. Droughts and desertification affect the Sahel and the Far North Region.",
+       "cmr_hazards.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. CAUSES",
+    "qa": [
+     {
+      "q": "Give two causes of floods along the Benue.",
+      "a": "Heavy, long rains that rivers cannot contain, and the sudden release of water from the Lagdo dam. Deforestation also increases runoff."
+     },
+     {
+      "q": "Give two human causes of desertification in the Far North.",
+      "a": "Cutting trees for firewood and charcoal, overgrazing and poor farming methods leave the soil bare and exhausted."
+     }
+    ],
+    "sum": {
+     "title": "II. Causes",
+     "items": [
+      [
+       "A. Causes of Floods",
+       [
+        "– Heavy and prolonged rainfall.",
+        "– Release of water from dams or dam failure.",
+        "– Deforestation, which increases runoff.",
+        "– Building on floodplains and blocked drains."
+       ]
+      ],
+      [
+       "B. Causes of Droughts and Desertification",
+       [
+        "– Low and irregular rainfall, made worse by global warming.",
+        "– Cutting trees for firewood and charcoal.",
+        "– Overgrazing and bush fires.",
+        "– Poor farming methods that exhaust the soil."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS",
+    "qa": [
+     {
+      "q": "Give two effects of floods and two effects of drought on people.",
+      "a": "Floods destroy houses, crops and roads, and spread cholera. Droughts cause crop failure, famine, loss of livestock and migration."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects",
+     "items": [
+      [
+       "A. Effects of Floods",
+       "Floods destroy houses, roads, bridges and crops, drown people and animals, and spread waterborne diseases such as cholera."
+      ],
+      [
+       "B. Effects of Droughts and Desertification",
+       "They cause crop failure, famine, death of livestock, migration to towns and conflicts over water and pasture."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. ADAPTATIONS AND MITIGATIONS",
+    "qa": [
+     {
+      "q": "How can people protect themselves from floods?",
+      "a": "By building dykes, controlling the release of water from dams, warning people in time, and not building on floodplains."
+     },
+     {
+      "q": "How can people fight desertification in the Far North?",
+      "a": "By planting trees (Opération Sahel Vert, Great Green Wall), using improved stoves, controlling grazing and storing water."
+     }
+    ],
+    "sum": {
+     "title": "IV. Adaptations and Mitigations",
+     "items": [
+      [
+       "A. Against Floods",
+       "Build dykes and drains, control dam releases, set up early warning systems, avoid building on floodplains and replant forests."
+      ],
+      [
+       "B. Against Droughts and Desertification",
+       "Plant trees (Opération Sahel Vert, Great Green Wall), grow drought-resistant crops, store water, control grazing and use improved stoves."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Where do floods often occur in North Cameroon?",
+    "Floods often occur on the floodplains of the Benue near Garoua and of the Logone near Yagoua and Kousseri."
+   ],
+   [
+    "Give two human causes of desertification.",
+    "Two human causes are cutting trees for firewood and overgrazing."
+   ],
+   [
+    "Why can floods spread cholera?",
+    "Flood water mixes with sewage and pollutes drinking water."
+   ]
+  ],
+  "remediation": [
+   [
+    "The covering of dry land by water is a ______.",
+    "A long period of low rainfall is a ______.",
+    "The degradation of dry land into desert is ______."
+   ],
+   [
+    "Too many animals grazing on the same land is ______.",
+    "The dam whose releases can flood the Benue valley is ______.",
+    "The African tree-planting project across the Sahel is the Great Green ______."
+   ]
+  ],
+  "remediationAnswers": "1. flood 2. drought 3. desertification 4. overgrazing 5. Lagdo 6. Wall",
+  "homework": "Count how many buckets (or litres) of water your family uses in one day, and list the main uses (drinking, cooking, washing).",
+  "homeworkTag": "This prepares Lesson 42: Water Scarcity.",
+  "bilingual": [
+   [
+    "Flood",
+    "L'inondation"
+   ],
+   [
+    "Drought",
+    "La sécheresse"
+   ],
+   [
+    "Desertification",
+    "La désertification"
+   ],
+   [
+    "Floodplain",
+    "La plaine d'inondation"
+   ],
+   [
+    "Dyke",
+    "La digue"
+   ],
+   [
+    "Famine",
+    "La famine"
+   ],
+   [
+    "Overgrazing",
+    "Le surpâturage"
+   ],
+   [
+    "Early warning",
+    "L'alerte précoce"
+   ]
+  ],
+  "teacherNote": [
+   "The 2012 floods in the Benue valley (Cameroon and Nigeria) followed heavy rains and releases from the Lagdo dam.",
+   "The map shows approximate areas only."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "MINEPDED: Opération Sahel Vert; African Union: Great Green Wall."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 41",
+  "title": "Floods, Droughts and Desertification",
+  "sumTitle": "Floods, Droughts and Desertification",
+  "coverNote": "Good morning, class. Today we study Lesson 41: Floods, Droughts and Desertification.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 41: Floods, Droughts and Desertification",
+  "matter": "I. Meaning and Areas of Occurrence: Areas of Occurrence; II. Causes: Causes of Floods, Causes of Droughts and Desertification; III. Effects: Effects of Floods, Effects of Droughts and Desertification; IV. Adaptations and Mitigations: Against Floods, Against Droughts and Desertification."
+ },
+ "file": "FORM4_LESSON41_Floods_Droughts_Desertification",
+ "sp": {
+  "file": "FORM4_LESSON41_Floods_Droughts_Desertification",
+  "lessonNo": 41,
+  "lessonName": "Floods, Droughts and Desertification",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Management of Climate and Hydrological Related Hazards",
+  "subtopic": "Hydro-climatic Hazards",
+  "notions": "Floods, droughts, desertification.",
+  "focus": "Meaning (definition and area of occurrence); causes; effects; adaptations and mitigations.",
+  "competence": "Learners are able to recognise the risks of floods and drought in their area and to take actions to protect their families, crops and land.",
+  "objectives": [
+   "Define floods, droughts and desertification and give their areas of occurrence.",
+   "Explain their causes.",
+   "Describe their effects.",
+   "Propose adaptation and mitigation measures."
+  ],
+  "recall": [
+   "Global warming is the long-term rise of the Earth's temperature.",
+   "It makes droughts and floods more frequent.",
+   "Mitigation reduces its causes; adaptation helps people to live with its effects."
+  ],
+  "recallNote": "Check the homework: floods or dry years in the family's memory.",
+  "situation": [
+   "In September 2012, water released from the Lagdo dam and heavy rains flooded villages along the Benue near Garoua. Farmers lost their fields and houses.",
+   "Six months later, in March, the same farmers waited for rain under a burning sun to plant their millet. Hamza wonders how the same area can suffer from too much water and from too little water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the same area suffers from floods in the rainy season and from lack of water in the dry season."
+   ],
+   [
+    "What caused the floods of September 2012?",
+    "They were caused by heavy rains and by water released from the Lagdo dam."
+   ],
+   [
+    "What can farmers do to reduce these problems?",
+    "They can avoid building on the floodplain, store water for the dry season and plant trees."
+   ]
+  ],
+  "justification": "This lesson will help us to understand floods, droughts and desertification, which are major hazards in North Cameroon.",
+  "parts": [
+   {
+    "sec": "I. MEANING AND AREAS",
+    "qa": [
+     {
+      "img": "cmr_hazards.png",
+      "kind": "map",
+      "q": "Look at the map. Which areas of North Cameroon are often flooded, and which are threatened by drought and desertification?",
+      "a": "The floodplains of the Benue (Garoua) and of the Logone (Yagoua, Kousseri) are often flooded. The Far North is threatened by drought and desertification.",
+      "split": 6.2
+     },
+     {
+      "q": "What is the difference between a drought and desertification?",
+      "a": "A drought is a temporary period with too little rain. Desertification is a lasting change: fertile land becomes desert."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning and Areas of Occurrence",
+     "defs": [
+      "A flood is the covering of normally dry land by water.",
+      "A drought is a long period of abnormally low rainfall that causes a shortage of water.",
+      "Desertification is the degradation of land in dry areas, which slowly turns into desert."
+     ],
+     "items": [
+      [
+       "Areas of Occurrence",
+       "Floods occur on floodplains, such as the Benue near Garoua and the Logone near Yagoua and Kousseri. Droughts and desertification affect the Sahel and the Far North Region.",
+       "cmr_hazards.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. CAUSES",
+    "qa": [
+     {
+      "q": "Give two causes of floods along the Benue.",
+      "a": "Heavy, long rains that rivers cannot contain, and the sudden release of water from the Lagdo dam. Deforestation also increases runoff."
+     },
+     {
+      "q": "Give two human causes of desertification in the Far North.",
+      "a": "Cutting trees for firewood and charcoal, overgrazing and poor farming methods leave the soil bare and exhausted."
+     }
+    ],
+    "sum": {
+     "title": "II. Causes",
+     "items": [
+      [
+       "A. Causes of Floods",
+       [
+        "– Heavy and prolonged rainfall.",
+        "– Release of water from dams or dam failure.",
+        "– Deforestation, which increases runoff.",
+        "– Building on floodplains and blocked drains."
+       ]
+      ],
+      [
+       "B. Causes of Droughts and Desertification",
+       [
+        "– Low and irregular rainfall, made worse by global warming.",
+        "– Cutting trees for firewood and charcoal.",
+        "– Overgrazing and bush fires.",
+        "– Poor farming methods that exhaust the soil."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS",
+    "qa": [
+     {
+      "q": "Give two effects of floods and two effects of drought on people.",
+      "a": "Floods destroy houses, crops and roads, and spread cholera. Droughts cause crop failure, famine, loss of livestock and migration."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects",
+     "items": [
+      [
+       "A. Effects of Floods",
+       "Floods destroy houses, roads, bridges and crops, drown people and animals, and spread waterborne diseases such as cholera."
+      ],
+      [
+       "B. Effects of Droughts and Desertification",
+       "They cause crop failure, famine, death of livestock, migration to towns and conflicts over water and pasture."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. ADAPTATIONS AND MITIGATIONS",
+    "qa": [
+     {
+      "q": "How can people protect themselves from floods?",
+      "a": "By building dykes, controlling the release of water from dams, warning people in time, and not building on floodplains."
+     },
+     {
+      "q": "How can people fight desertification in the Far North?",
+      "a": "By planting trees (Opération Sahel Vert, Great Green Wall), using improved stoves, controlling grazing and storing water."
+     }
+    ],
+    "sum": {
+     "title": "IV. Adaptations and Mitigations",
+     "items": [
+      [
+       "A. Against Floods",
+       "Build dykes and drains, control dam releases, set up early warning systems, avoid building on floodplains and replant forests."
+      ],
+      [
+       "B. Against Droughts and Desertification",
+       "Plant trees (Opération Sahel Vert, Great Green Wall), grow drought-resistant crops, store water, control grazing and use improved stoves."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Where do floods often occur in North Cameroon?",
+    "Floods often occur on the floodplains of the Benue near Garoua and of the Logone near Yagoua and Kousseri."
+   ],
+   [
+    "Give two human causes of desertification.",
+    "Two human causes are cutting trees for firewood and overgrazing."
+   ],
+   [
+    "Why can floods spread cholera?",
+    "Flood water mixes with sewage and pollutes drinking water."
+   ]
+  ],
+  "remediation": [
+   [
+    "The covering of dry land by water is a ______.",
+    "A long period of low rainfall is a ______.",
+    "The degradation of dry land into desert is ______."
+   ],
+   [
+    "Too many animals grazing on the same land is ______.",
+    "The dam whose releases can flood the Benue valley is ______.",
+    "The African tree-planting project across the Sahel is the Great Green ______."
+   ]
+  ],
+  "remediationAnswers": "1. flood 2. drought 3. desertification 4. overgrazing 5. Lagdo 6. Wall",
+  "homework": "Count how many buckets (or litres) of water your family uses in one day, and list the main uses (drinking, cooking, washing).",
+  "homeworkTag": "This prepares Lesson 42: Water Scarcity.",
+  "bilingual": [
+   [
+    "Flood",
+    "L'inondation"
+   ],
+   [
+    "Drought",
+    "La sécheresse"
+   ],
+   [
+    "Desertification",
+    "La désertification"
+   ],
+   [
+    "Floodplain",
+    "La plaine d'inondation"
+   ],
+   [
+    "Dyke",
+    "La digue"
+   ],
+   [
+    "Famine",
+    "La famine"
+   ],
+   [
+    "Overgrazing",
+    "Le surpâturage"
+   ],
+   [
+    "Early warning",
+    "L'alerte précoce"
+   ]
+  ],
+  "teacherNote": [
+   "The 2012 floods in the Benue valley (Cameroon and Nigeria) followed heavy rains and releases from the Lagdo dam.",
+   "The map shows approximate areas only."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "MINEPDED: Opération Sahel Vert; African Union: Great Green Wall."
+  ]
+ }
+}

@@ -1,0 +1,452 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"People can reduce the dangers of floods:\"]",
+  "sum | \"x\" | \"A. Hard Engineering\" | [\"– Dams and reservoirs (Lagdo) to control the flow, with careful, announced releases.\",\"– Artificial levees, dykes and walls along the river.\",\"– Deepening and cleaning channels and drains.\"]",
+  "sum | \"x\" | \"B. Soft Engineering\" | [\"– Flood warnings by radio, television and phone.\",\"– Land-use zoning: no houses or schools in high-risk areas.\",\"– Planting trees along the banks and in the basin.\",\"– Houses on raised foundations, and emergency plans.\"]",
+  "sum | \"III. Solutions to the Problems (1/4)\" | [\"People can reduce the dangers of floods:\"]",
+  "sum | \"III. Solutions to the Problems (2/4)\" | \"A. Hard Engineering\" | [\"– Dams and reservoirs (Lagdo) to control the flow, with careful, announced releases.\",\"– Artificial levees, dykes and walls along the river.\",\"– Deepening and cleaning channels and drains.\"]",
+  "sum | \"III. Solutions to the Problems (3/4)\" | \"B. Soft Engineering\" | [\"– Flood warnings by radio, television and phone.\",\"– Land-use zoning: no houses or schools in high-risk areas.\",\"– Planting trees along the banks and in the basin.\",\"– Houses on raised foundations, and emergency plans.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON22_Man_and_Floodplain_Interactions",
+  "lessonNo": 22,
+  "lessonName": "Man and Floodplain Interactions",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "Floodplain, resource, hazard.",
+  "focus": "Importance of rivers and floodplains to man; problems of living in floodplains; solutions to the problems of living in floodplains.",
+  "competence": "Learners are able to use the resources of a river safely and to take measures against floods in their community.",
+  "objectives": [
+   "Explain the importance of rivers and floodplains to man.",
+   "Describe the problems of living on floodplains.",
+   "Suggest solutions to these problems."
+  ],
+  "recall": [
+   "A floodplain is a wide, flat area covered with alluvium.",
+   "Levees are raised banks built during floods.",
+   "Deposition is dominant in the lower course."
+  ],
+  "recallNote": "Check the homework: advantages and problems of the Benue.",
+  "situation": [
+   "In September, the Benue is very high at Garoua. Farms and houses near the river are in danger. In 2012, heavy rain and water released from the Lagdo Dam flooded many areas of the North Region and of Nigeria.",
+   "Every year, some families must move because the water rises. Hadja wonders why so many people choose to live and farm on the flat land near the river."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hadja does not understand why people live near the river despite the floods."
+   ],
+   [
+    "What caused the floods of 2012?",
+    "Heavy rain and water released from the Lagdo Dam caused the floods."
+   ],
+   [
+    "What should families near the river do in the rainy season?",
+    "They should listen to warnings, keep their documents and food high, and move to higher ground when the water rises."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the advantages and dangers of floodplains and how to live safely with rivers.",
+  "parts": [
+   {
+    "sec": "I. IMPORTANCE OF RIVERS AND FLOODPLAINS",
+    "qa": [
+     {
+      "q": "Why are floodplains good for farming?",
+      "a": "Floods leave fertile alluvium, and the land is flat and easy to farm. Near Garoua, farmers grow rice, maize, onions and vegetables."
+     },
+     {
+      "q": "How is the Lagdo Dam useful?",
+      "a": "It produces hydroelectricity for the North, stores water for irrigation and supports fishing in its lake."
+     },
+     {
+      "q": "Give other uses of rivers.",
+      "a": "Rivers give water for homes and factories, fish, sand for building and a route for boats. The Benue was once used by boats to Garoua."
+     }
+    ],
+    "sum": {
+     "title": "I. Importance of Rivers and Floodplains",
+     "intro": "Rivers and floodplains are important resources:",
+     "items": [
+      [
+       "The Benefits",
+       [
+        "– Fertile alluvial soils and flat land for farming (rice, maize, onions).",
+        "– Water for homes, factories and irrigation.",
+        "– Hydroelectricity: the Lagdo Dam on the Benue.",
+        "– Fishing, especially in the Lagdo reservoir.",
+        "– Transport by river, and sand and gravel for building.",
+        "– Flat land for towns and roads."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. PROBLEMS",
+    "qa": [
+     {
+      "q": "What is the main problem of living on a floodplain?",
+      "a": "The main problem is flooding: it destroys houses, crops, roads and animals, and can kill people."
+     },
+     {
+      "q": "Why do floods bring diseases?",
+      "a": "Flood water mixes with toilets and dirty water and pollutes wells. This spreads cholera, typhoid and malaria."
+     }
+    ],
+    "sum": {
+     "title": "II. Problems of Living on Floodplains",
+     "defs": [
+      "A flood is the overflow of a river onto land that is usually dry."
+     ],
+     "items": [
+      [
+       "The Problems",
+       [
+        "– Destruction of houses, crops, roads and bridges.",
+        "– Loss of human and animal lives.",
+        "– Water-borne diseases: cholera, typhoid; more mosquitoes and malaria.",
+        "– Displacement of people and loss of income.",
+        "– Bank erosion and silting of the river."
+       ],
+       "cmr_hazards.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. SOLUTIONS",
+    "qa": [
+     {
+      "q": "Give two hard engineering solutions to floods.",
+      "a": "Dams, like the Lagdo Dam, store water and control the flow. Artificial levees and dykes stop the water from overflowing."
+     },
+     {
+      "q": "Give two soft solutions to floods.",
+      "a": "Flood warnings on radio and phones, and laws that forbid building in the most dangerous areas."
+     }
+    ],
+    "sum": {
+     "title": "III. Solutions to the Problems",
+     "intro": "People can reduce the dangers of floods:",
+     "items": [
+      [
+       "A. Hard Engineering",
+       [
+        "– Dams and reservoirs (Lagdo) to control the flow, with careful, announced releases.",
+        "– Artificial levees, dykes and walls along the river.",
+        "– Deepening and cleaning channels and drains."
+       ]
+      ],
+      [
+       "B. Soft Engineering",
+       [
+        "– Flood warnings by radio, television and phone.",
+        "– Land-use zoning: no houses or schools in high-risk areas.",
+        "– Planting trees along the banks and in the basin.",
+        "– Houses on raised foundations, and emergency plans."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two advantages of floodplains.",
+    "Fertile alluvial soils for farming, and flat land for building."
+   ],
+   [
+    "Why do floods cause diseases?",
+    "Flood water pollutes wells with dirty water, which spreads diseases such as cholera."
+   ],
+   [
+    "Give one hard and one soft solution to floods.",
+    "Hard: a dam or artificial levees. Soft: flood warnings or zoning laws."
+   ]
+  ],
+  "remediation": [
+   [
+    "The fertile mud left by floods is ______.",
+    "The dam on the Benue upstream of Garoua is the ______ Dam.",
+    "A disease spread by dirty flood water is ______."
+   ],
+   [
+    "Building structures against floods is ______ engineering.",
+    "Warnings and zoning are ______ engineering.",
+    "Raised banks built by people are artificial ______."
+   ]
+  ],
+  "remediationAnswers": "1. alluvium 2. Lagdo 3. cholera 4. hard 5. soft 6. levees",
+  "homework": "Watch the wind blowing on the water of the Benue or of a big basin of water. Write how the waves form and in which direction they move.",
+  "homeworkTag": "This prepares Lesson 23: Wave Action in Coastal Areas.",
+  "bilingual": [
+   [
+    "Resource",
+    "La ressource"
+   ],
+   [
+    "Hazard",
+    "L'aléa"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ],
+   [
+    "Hydroelectricity",
+    "L'hydroélectricité"
+   ],
+   [
+    "Warning",
+    "L'alerte"
+   ],
+   [
+    "Zoning",
+    "Le zonage"
+   ],
+   [
+    "Displaced person",
+    "La personne déplacée"
+   ]
+  ],
+  "teacherNote": [
+   "Checked: the Lagdo Dam on the Benue, about 50 km upstream of Garoua, was completed in 1982; its power station has a capacity of about 72 MW. The floods of September 2012 affected the North Region of Cameroon and Nigeria after heavy rain and releases from the dam.",
+   "The hazard map shows the flood-prone zones along the Benue and the Logone."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 22",
+  "title": "Man and Floodplain Interactions",
+  "sumTitle": "Man and Floodplain Interactions",
+  "coverNote": "Good morning, class. Today we study Lesson 22: Man and Floodplain Interactions.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 22: Man and Floodplain Interactions",
+  "matter": "I. Importance of Rivers and Floodplains: The Benefits; II. Problems of Living on Floodplains: The Problems; III. Solutions to the Problems: Hard Engineering, Soft Engineering."
+ },
+ "file": "FORM4_LESSON22_Man_and_Floodplain_Interactions",
+ "sp": {
+  "file": "FORM4_LESSON22_Man_and_Floodplain_Interactions",
+  "lessonNo": 22,
+  "lessonName": "Man and Floodplain Interactions",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "Floodplain, resource, hazard.",
+  "focus": "Importance of rivers and floodplains to man; problems of living in floodplains; solutions to the problems of living in floodplains.",
+  "competence": "Learners are able to use the resources of a river safely and to take measures against floods in their community.",
+  "objectives": [
+   "Explain the importance of rivers and floodplains to man.",
+   "Describe the problems of living on floodplains.",
+   "Suggest solutions to these problems."
+  ],
+  "recall": [
+   "A floodplain is a wide, flat area covered with alluvium.",
+   "Levees are raised banks built during floods.",
+   "Deposition is dominant in the lower course."
+  ],
+  "recallNote": "Check the homework: advantages and problems of the Benue.",
+  "situation": [
+   "In September, the Benue is very high at Garoua. Farms and houses near the river are in danger. In 2012, heavy rain and water released from the Lagdo Dam flooded many areas of the North Region and of Nigeria.",
+   "Every year, some families must move because the water rises. Hadja wonders why so many people choose to live and farm on the flat land near the river."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hadja does not understand why people live near the river despite the floods."
+   ],
+   [
+    "What caused the floods of 2012?",
+    "Heavy rain and water released from the Lagdo Dam caused the floods."
+   ],
+   [
+    "What should families near the river do in the rainy season?",
+    "They should listen to warnings, keep their documents and food high, and move to higher ground when the water rises."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the advantages and dangers of floodplains and how to live safely with rivers.",
+  "parts": [
+   {
+    "sec": "I. IMPORTANCE OF RIVERS AND FLOODPLAINS",
+    "qa": [
+     {
+      "q": "Why are floodplains good for farming?",
+      "a": "Floods leave fertile alluvium, and the land is flat and easy to farm. Near Garoua, farmers grow rice, maize, onions and vegetables."
+     },
+     {
+      "q": "How is the Lagdo Dam useful?",
+      "a": "It produces hydroelectricity for the North, stores water for irrigation and supports fishing in its lake."
+     },
+     {
+      "q": "Give other uses of rivers.",
+      "a": "Rivers give water for homes and factories, fish, sand for building and a route for boats. The Benue was once used by boats to Garoua."
+     }
+    ],
+    "sum": {
+     "title": "I. Importance of Rivers and Floodplains",
+     "intro": "Rivers and floodplains are important resources:",
+     "items": [
+      [
+       "The Benefits",
+       [
+        "– Fertile alluvial soils and flat land for farming (rice, maize, onions).",
+        "– Water for homes, factories and irrigation.",
+        "– Hydroelectricity: the Lagdo Dam on the Benue.",
+        "– Fishing, especially in the Lagdo reservoir.",
+        "– Transport by river, and sand and gravel for building.",
+        "– Flat land for towns and roads."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. PROBLEMS",
+    "qa": [
+     {
+      "q": "What is the main problem of living on a floodplain?",
+      "a": "The main problem is flooding: it destroys houses, crops, roads and animals, and can kill people."
+     },
+     {
+      "q": "Why do floods bring diseases?",
+      "a": "Flood water mixes with toilets and dirty water and pollutes wells. This spreads cholera, typhoid and malaria."
+     }
+    ],
+    "sum": {
+     "title": "II. Problems of Living on Floodplains",
+     "defs": [
+      "A flood is the overflow of a river onto land that is usually dry."
+     ],
+     "items": [
+      [
+       "The Problems",
+       [
+        "– Destruction of houses, crops, roads and bridges.",
+        "– Loss of human and animal lives.",
+        "– Water-borne diseases: cholera, typhoid; more mosquitoes and malaria.",
+        "– Displacement of people and loss of income.",
+        "– Bank erosion and silting of the river."
+       ],
+       "cmr_hazards.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. SOLUTIONS",
+    "qa": [
+     {
+      "q": "Give two hard engineering solutions to floods.",
+      "a": "Dams, like the Lagdo Dam, store water and control the flow. Artificial levees and dykes stop the water from overflowing."
+     },
+     {
+      "q": "Give two soft solutions to floods.",
+      "a": "Flood warnings on radio and phones, and laws that forbid building in the most dangerous areas."
+     }
+    ],
+    "sum": {
+     "title": "III. Solutions to the Problems",
+     "intro": "People can reduce the dangers of floods:",
+     "items": [
+      [
+       "A. Hard Engineering",
+       [
+        "– Dams and reservoirs (Lagdo) to control the flow, with careful, announced releases.",
+        "– Artificial levees, dykes and walls along the river.",
+        "– Deepening and cleaning channels and drains."
+       ]
+      ],
+      [
+       "B. Soft Engineering",
+       [
+        "– Flood warnings by radio, television and phone.",
+        "– Land-use zoning: no houses or schools in high-risk areas.",
+        "– Planting trees along the banks and in the basin.",
+        "– Houses on raised foundations, and emergency plans."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two advantages of floodplains.",
+    "Fertile alluvial soils for farming, and flat land for building."
+   ],
+   [
+    "Why do floods cause diseases?",
+    "Flood water pollutes wells with dirty water, which spreads diseases such as cholera."
+   ],
+   [
+    "Give one hard and one soft solution to floods.",
+    "Hard: a dam or artificial levees. Soft: flood warnings or zoning laws."
+   ]
+  ],
+  "remediation": [
+   [
+    "The fertile mud left by floods is ______.",
+    "The dam on the Benue upstream of Garoua is the ______ Dam.",
+    "A disease spread by dirty flood water is ______."
+   ],
+   [
+    "Building structures against floods is ______ engineering.",
+    "Warnings and zoning are ______ engineering.",
+    "Raised banks built by people are artificial ______."
+   ]
+  ],
+  "remediationAnswers": "1. alluvium 2. Lagdo 3. cholera 4. hard 5. soft 6. levees",
+  "homework": "Watch the wind blowing on the water of the Benue or of a big basin of water. Write how the waves form and in which direction they move.",
+  "homeworkTag": "This prepares Lesson 23: Wave Action in Coastal Areas.",
+  "bilingual": [
+   [
+    "Resource",
+    "La ressource"
+   ],
+   [
+    "Hazard",
+    "L'aléa"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ],
+   [
+    "Hydroelectricity",
+    "L'hydroélectricité"
+   ],
+   [
+    "Warning",
+    "L'alerte"
+   ],
+   [
+    "Zoning",
+    "Le zonage"
+   ],
+   [
+    "Displaced person",
+    "La personne déplacée"
+   ]
+  ],
+  "teacherNote": [
+   "Checked: the Lagdo Dam on the Benue, about 50 km upstream of Garoua, was completed in 1982; its power station has a capacity of about 72 MW. The floods of September 2012 affected the North Region of Cameroon and Nigeria after heavy rain and releases from the dam.",
+   "The hazard map shows the flood-prone zones along the Benue and the Logone."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

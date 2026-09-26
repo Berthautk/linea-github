@@ -1,0 +1,21 @@
+erg::Sahara sand dunes erg
+reg::reg stony desert Sahara
+hamada::hamada rocky desert Sahara
+gobi::Gobi desert snow winter
+sstorm::sandstorm haboob
+wadi::flash flood wadi desert
+sparse::desert vegetation sparse shrubs Sahara
+cactus::cactus desert Arizona saguaro
+bloom::desert flowers bloom after rain
+nile::Nile valley fields desert edge green
+salt::salt crust soil desert
+well::well Sahara Niger water nomads
+dune_road::sand dune road covered desert
+camel::camel caravan Sahara
+tuareg::Tuareg man turban
+mudhouse::Ghadames old town mud houses
+desal::desalination plant
+oasis::oasis Sahara palm grove
+oasis_farm::oasis garden date palms vegetables
+shaduf::shaduf Egypt
+pivot::center pivot irrigation Sahara desert

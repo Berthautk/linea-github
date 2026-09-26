@@ -1,0 +1,563 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITION\" | \"Question 1\" | [\"Farming, fishing, rearing and mining all take products directly from nature. What sector do they belong to?\"]",
+  "slide | \"I. DEFINITION\" | \"Answer\" | [\"They belong to the primary sector.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 1\" | [\"Name two food crops and two cash crops grown in Cameroon.\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Food crops: maize, cassava, sorghum, plantain. Cash crops: cocoa, coffee, cotton and bananas.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 2\" | [\"Where do cattle come from in Cameroon, and where do fish come from?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Most cattle come from the Adamawa, North and Far North Regions. Fish come from the sea (Douala, Kribi, Limbe) and from lakes such as Lagdo.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 3\" | [\"Which primary products does Cameroon take from its forests and from under the ground?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"From the forests, Cameroon takes timber. From under the ground, it takes crude oil, natural gas and building materials.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 4\" | [\"Why is the primary sector important for Cameroon?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"It feeds the population, employs most rural people, and gives many export products such as oil, cocoa, timber and cotton.\"]",
+  "sum | \"I. Definition (1/1)\" | \"DEFINITION\" | [\"The primary sector is the sector of the economy that takes raw materials and food directly from nature.\"]",
+  "sum | \"II. Examples of Primary Activities (1/6)\" | [\"The main primary activities, with examples from Cameroon, are the following:\"]",
+  "sum | \"II. Examples of Primary Activities (2/6)\" | \"A. Agriculture\" | [\"Agriculture is the growing of crops: food crops such as maize and cassava, and cash crops such as cocoa, coffee and cotton.\"]",
+  "sum | \"II. Examples of Primary Activities (3/6)\" | \"B. Livestock Rearing\" | [\"Livestock rearing is the keeping of animals such as cattle, sheep, goats and poultry, especially in the Adamawa and the North.\"]",
+  "sum | \"II. Examples of Primary Activities (4/6)\" | \"C. Fishing\" | [\"Fishing is the catching of fish in the sea at Douala, Kribi and Limbe, and in lakes and rivers such as Lagdo.\"]",
+  "sum | \"II. Examples of Primary Activities (5/6)\" | \"D. Forestry and Mining\" | [\"Forestry is the cutting of timber in the southern forests. Mining is the extraction of oil, gas and minerals.\"]",
+  "sum | \"II. Examples of Primary Activities (6/6)\" | \"E. Importance\" | [\"The primary sector feeds the population, employs most rural people and gives many exports.\"]"
+ ],
+ "d": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S16_L5_P3_Primary_Sector",
+  "part": 3,
+  "partTitle": "The Primary Sector (Definition and Examples)",
+  "notions": "Primary sector, agriculture, livestock rearing, fishing, forestry, mining.",
+  "focus": "Definition and examples of the primary sector, with examples from Cameroon.",
+  "competence": "Learners are able to identify primary activities around them and explain their importance for food and exports.",
+  "objectives": [
+   "Define the primary sector.",
+   "Name the main primary activities.",
+   "Give examples of primary activities in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The formal sector is registered and pays taxes; the informal sector is not registered.",
+   "Both sectors exist in primary, secondary and tertiary activities."
+  ],
+  "recallNote": "Check the homework: primary products found in the Garoua market.",
+  "situation": [
+   "In the Garoua market, Rahila sees maize from the farms of Pitoa, fish from the Lagdo lake, beef from the Adamawa plateau and firewood from the bush.",
+   "Her mother says that all these products come directly from nature. Rahila wonders what this group of activities is called."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Rahila does not know the name of the group of activities that take products directly from nature."
+   ],
+   [
+    "Which products did Rahila see, and where do they come from?",
+    "She saw maize from Pitoa, fish from the Lagdo lake, beef from the Adamawa plateau and firewood from the bush."
+   ],
+   [
+    "How can these activities be improved so that they produce more?",
+    "Farmers can use improved seeds and fertilisers, fishermen can use better nets, and herders can vaccinate their animals."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the primary sector, which feeds the population and provides most of Cameroon's exports.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Farming, fishing, rearing and mining all take products directly from nature. What sector do they belong to?",
+      "a": "They belong to the primary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The primary sector is the sector of the economy that takes raw materials and food directly from nature."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name two food crops and two cash crops grown in Cameroon.",
+      "a": "Food crops: maize, cassava, sorghum, plantain. Cash crops: cocoa, coffee, cotton and bananas."
+     },
+     {
+      "q": "Where do cattle come from in Cameroon, and where do fish come from?",
+      "a": "Most cattle come from the Adamawa, North and Far North Regions. Fish come from the sea (Douala, Kribi, Limbe) and from lakes such as Lagdo."
+     },
+     {
+      "q": "Which primary products does Cameroon take from its forests and from under the ground?",
+      "a": "From the forests, Cameroon takes timber. From under the ground, it takes crude oil, natural gas and building materials."
+     },
+     {
+      "q": "Why is the primary sector important for Cameroon?",
+      "a": "It feeds the population, employs most rural people, and gives many export products such as oil, cocoa, timber and cotton."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Primary Activities",
+     "intro": "The main primary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Agriculture",
+       "Agriculture is the growing of crops: food crops such as maize and cassava, and cash crops such as cocoa, coffee and cotton."
+      ],
+      [
+       "B. Livestock Rearing",
+       "Livestock rearing is the keeping of animals such as cattle, sheep, goats and poultry, especially in the Adamawa and the North."
+      ],
+      [
+       "C. Fishing",
+       "Fishing is the catching of fish in the sea at Douala, Kribi and Limbe, and in lakes and rivers such as Lagdo."
+      ],
+      [
+       "D. Forestry and Mining",
+       "Forestry is the cutting of timber in the southern forests. Mining is the extraction of oil, gas and minerals."
+      ],
+      [
+       "E. Importance",
+       "The primary sector feeds the population, employs most rural people and gives many exports."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the primary sector.",
+    "The primary sector is the sector that takes raw materials and food directly from nature."
+   ],
+   [
+    "Give three primary activities practised in Cameroon.",
+    "Three primary activities are agriculture, fishing and livestock rearing."
+   ],
+   [
+    "Why is the primary sector important for Cameroon?",
+    "It feeds the population and gives export products such as oil, cocoa, timber and cotton."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that takes products directly from nature is the ______ sector.",
+    "The growing of crops is called ______.",
+    "The keeping of cattle, goats and sheep is called livestock ______."
+   ],
+   [
+    "The cutting of timber in forests is called ______.",
+    "The extraction of oil and minerals is called ______.",
+    "A cash crop of the North Region is ______."
+   ]
+  ],
+  "remediationAnswers": "1. primary 2. agriculture 3. rearing 4. forestry 5. mining 6. cotton",
+  "homework": "Find the names of two factories in Cameroon, and write what each one produces.",
+  "homeworkTag": "This prepares Part 4: The Secondary Sector.",
+  "bilingual": [
+   [
+    "Agriculture",
+    "L'agriculture"
+   ],
+   [
+    "Fishing",
+    "La pêche"
+   ],
+   [
+    "Livestock rearing",
+    "L'élevage"
+   ],
+   [
+    "Forestry",
+    "L'exploitation forestière"
+   ],
+   [
+    "Mining",
+    "L'exploitation minière"
+   ],
+   [
+    "Crude oil",
+    "Le pétrole brut"
+   ],
+   [
+    "Timber",
+    "Le bois d'œuvre"
+   ],
+   [
+    "Export",
+    "L'exportation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 3)",
+  "title": "The Sectors of the Economy: The Primary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 3: The Primary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 3: The Primary Sector (Definition and Examples)"
+ },
+ "end": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S16_L5_P3_Primary_Sector",
+  "part": 3,
+  "partTitle": "The Primary Sector (Definition and Examples)",
+  "notions": "Primary sector, agriculture, livestock rearing, fishing, forestry, mining.",
+  "focus": "Definition and examples of the primary sector, with examples from Cameroon.",
+  "competence": "Learners are able to identify primary activities around them and explain their importance for food and exports.",
+  "objectives": [
+   "Define the primary sector.",
+   "Name the main primary activities.",
+   "Give examples of primary activities in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The formal sector is registered and pays taxes; the informal sector is not registered.",
+   "Both sectors exist in primary, secondary and tertiary activities."
+  ],
+  "recallNote": "Check the homework: primary products found in the Garoua market.",
+  "situation": [
+   "In the Garoua market, Rahila sees maize from the farms of Pitoa, fish from the Lagdo lake, beef from the Adamawa plateau and firewood from the bush.",
+   "Her mother says that all these products come directly from nature. Rahila wonders what this group of activities is called."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Rahila does not know the name of the group of activities that take products directly from nature."
+   ],
+   [
+    "Which products did Rahila see, and where do they come from?",
+    "She saw maize from Pitoa, fish from the Lagdo lake, beef from the Adamawa plateau and firewood from the bush."
+   ],
+   [
+    "How can these activities be improved so that they produce more?",
+    "Farmers can use improved seeds and fertilisers, fishermen can use better nets, and herders can vaccinate their animals."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the primary sector, which feeds the population and provides most of Cameroon's exports.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Farming, fishing, rearing and mining all take products directly from nature. What sector do they belong to?",
+      "a": "They belong to the primary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The primary sector is the sector of the economy that takes raw materials and food directly from nature."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name two food crops and two cash crops grown in Cameroon.",
+      "a": "Food crops: maize, cassava, sorghum, plantain. Cash crops: cocoa, coffee, cotton and bananas."
+     },
+     {
+      "q": "Where do cattle come from in Cameroon, and where do fish come from?",
+      "a": "Most cattle come from the Adamawa, North and Far North Regions. Fish come from the sea (Douala, Kribi, Limbe) and from lakes such as Lagdo."
+     },
+     {
+      "q": "Which primary products does Cameroon take from its forests and from under the ground?",
+      "a": "From the forests, Cameroon takes timber. From under the ground, it takes crude oil, natural gas and building materials."
+     },
+     {
+      "q": "Why is the primary sector important for Cameroon?",
+      "a": "It feeds the population, employs most rural people, and gives many export products such as oil, cocoa, timber and cotton."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Primary Activities",
+     "intro": "The main primary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Agriculture",
+       "Agriculture is the growing of crops: food crops such as maize and cassava, and cash crops such as cocoa, coffee and cotton."
+      ],
+      [
+       "B. Livestock Rearing",
+       "Livestock rearing is the keeping of animals such as cattle, sheep, goats and poultry, especially in the Adamawa and the North."
+      ],
+      [
+       "C. Fishing",
+       "Fishing is the catching of fish in the sea at Douala, Kribi and Limbe, and in lakes and rivers such as Lagdo."
+      ],
+      [
+       "D. Forestry and Mining",
+       "Forestry is the cutting of timber in the southern forests. Mining is the extraction of oil, gas and minerals."
+      ],
+      [
+       "E. Importance",
+       "The primary sector feeds the population, employs most rural people and gives many exports."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the primary sector.",
+    "The primary sector is the sector that takes raw materials and food directly from nature."
+   ],
+   [
+    "Give three primary activities practised in Cameroon.",
+    "Three primary activities are agriculture, fishing and livestock rearing."
+   ],
+   [
+    "Why is the primary sector important for Cameroon?",
+    "It feeds the population and gives export products such as oil, cocoa, timber and cotton."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that takes products directly from nature is the ______ sector.",
+    "The growing of crops is called ______.",
+    "The keeping of cattle, goats and sheep is called livestock ______."
+   ],
+   [
+    "The cutting of timber in forests is called ______.",
+    "The extraction of oil and minerals is called ______.",
+    "A cash crop of the North Region is ______."
+   ]
+  ],
+  "remediationAnswers": "1. primary 2. agriculture 3. rearing 4. forestry 5. mining 6. cotton",
+  "homework": "Find the names of two factories in Cameroon, and write what each one produces.",
+  "homeworkTag": "This prepares Part 4: The Secondary Sector.",
+  "bilingual": [
+   [
+    "Agriculture",
+    "L'agriculture"
+   ],
+   [
+    "Fishing",
+    "La pêche"
+   ],
+   [
+    "Livestock rearing",
+    "L'élevage"
+   ],
+   [
+    "Forestry",
+    "L'exploitation forestière"
+   ],
+   [
+    "Mining",
+    "L'exploitation minière"
+   ],
+   [
+    "Crude oil",
+    "Le pétrole brut"
+   ],
+   [
+    "Timber",
+    "Le bois d'œuvre"
+   ],
+   [
+    "Export",
+    "L'exportation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 3)",
+  "title": "The Sectors of the Economy: The Primary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 3: The Primary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 3: The Primary Sector (Definition and Examples)",
+  "matter": "I. Definition: ; II. Examples of Primary Activities: Agriculture, Livestock Rearing, Fishing, Forestry and Mining, Importance."
+ },
+ "file": "S16_L5_P3_Primary_Sector",
+ "sp": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S16_L5_P3_Primary_Sector",
+  "part": 3,
+  "partTitle": "The Primary Sector (Definition and Examples)",
+  "notions": "Primary sector, agriculture, livestock rearing, fishing, forestry, mining.",
+  "focus": "Definition and examples of the primary sector, with examples from Cameroon.",
+  "competence": "Learners are able to identify primary activities around them and explain their importance for food and exports.",
+  "objectives": [
+   "Define the primary sector.",
+   "Name the main primary activities.",
+   "Give examples of primary activities in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The formal sector is registered and pays taxes; the informal sector is not registered.",
+   "Both sectors exist in primary, secondary and tertiary activities."
+  ],
+  "recallNote": "Check the homework: primary products found in the Garoua market.",
+  "situation": [
+   "In the Garoua market, Rahila sees maize from the farms of Pitoa, fish from the Lagdo lake, beef from the Adamawa plateau and firewood from the bush.",
+   "Her mother says that all these products come directly from nature. Rahila wonders what this group of activities is called."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Rahila does not know the name of the group of activities that take products directly from nature."
+   ],
+   [
+    "Which products did Rahila see, and where do they come from?",
+    "She saw maize from Pitoa, fish from the Lagdo lake, beef from the Adamawa plateau and firewood from the bush."
+   ],
+   [
+    "How can these activities be improved so that they produce more?",
+    "Farmers can use improved seeds and fertilisers, fishermen can use better nets, and herders can vaccinate their animals."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the primary sector, which feeds the population and provides most of Cameroon's exports.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Farming, fishing, rearing and mining all take products directly from nature. What sector do they belong to?",
+      "a": "They belong to the primary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The primary sector is the sector of the economy that takes raw materials and food directly from nature."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name two food crops and two cash crops grown in Cameroon.",
+      "a": "Food crops: maize, cassava, sorghum, plantain. Cash crops: cocoa, coffee, cotton and bananas."
+     },
+     {
+      "q": "Where do cattle come from in Cameroon, and where do fish come from?",
+      "a": "Most cattle come from the Adamawa, North and Far North Regions. Fish come from the sea (Douala, Kribi, Limbe) and from lakes such as Lagdo."
+     },
+     {
+      "q": "Which primary products does Cameroon take from its forests and from under the ground?",
+      "a": "From the forests, Cameroon takes timber. From under the ground, it takes crude oil, natural gas and building materials."
+     },
+     {
+      "q": "Why is the primary sector important for Cameroon?",
+      "a": "It feeds the population, employs most rural people, and gives many export products such as oil, cocoa, timber and cotton."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Primary Activities",
+     "intro": "The main primary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Agriculture",
+       "Agriculture is the growing of crops: food crops such as maize and cassava, and cash crops such as cocoa, coffee and cotton."
+      ],
+      [
+       "B. Livestock Rearing",
+       "Livestock rearing is the keeping of animals such as cattle, sheep, goats and poultry, especially in the Adamawa and the North."
+      ],
+      [
+       "C. Fishing",
+       "Fishing is the catching of fish in the sea at Douala, Kribi and Limbe, and in lakes and rivers such as Lagdo."
+      ],
+      [
+       "D. Forestry and Mining",
+       "Forestry is the cutting of timber in the southern forests. Mining is the extraction of oil, gas and minerals."
+      ],
+      [
+       "E. Importance",
+       "The primary sector feeds the population, employs most rural people and gives many exports."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the primary sector.",
+    "The primary sector is the sector that takes raw materials and food directly from nature."
+   ],
+   [
+    "Give three primary activities practised in Cameroon.",
+    "Three primary activities are agriculture, fishing and livestock rearing."
+   ],
+   [
+    "Why is the primary sector important for Cameroon?",
+    "It feeds the population and gives export products such as oil, cocoa, timber and cotton."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that takes products directly from nature is the ______ sector.",
+    "The growing of crops is called ______.",
+    "The keeping of cattle, goats and sheep is called livestock ______."
+   ],
+   [
+    "The cutting of timber in forests is called ______.",
+    "The extraction of oil and minerals is called ______.",
+    "A cash crop of the North Region is ______."
+   ]
+  ],
+  "remediationAnswers": "1. primary 2. agriculture 3. rearing 4. forestry 5. mining 6. cotton",
+  "homework": "Find the names of two factories in Cameroon, and write what each one produces.",
+  "homeworkTag": "This prepares Part 4: The Secondary Sector.",
+  "bilingual": [
+   [
+    "Agriculture",
+    "L'agriculture"
+   ],
+   [
+    "Fishing",
+    "La pêche"
+   ],
+   [
+    "Livestock rearing",
+    "L'élevage"
+   ],
+   [
+    "Forestry",
+    "L'exploitation forestière"
+   ],
+   [
+    "Mining",
+    "L'exploitation minière"
+   ],
+   [
+    "Crude oil",
+    "Le pétrole brut"
+   ],
+   [
+    "Timber",
+    "Le bois d'œuvre"
+   ],
+   [
+    "Export",
+    "L'exportation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ]
+ }
+}

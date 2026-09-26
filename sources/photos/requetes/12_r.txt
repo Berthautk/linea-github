@@ -1,0 +1,4 @@
+nile5::Egypt farmland Nile green fields
+nile6::Nile agriculture fields palm trees
+riv7::River Niger Niamey
+riv8::Niger river Mali boats pirogue

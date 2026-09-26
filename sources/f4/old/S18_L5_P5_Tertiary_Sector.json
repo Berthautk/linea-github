@@ -1,0 +1,566 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITION\" | \"Question 1\" | [\"Transporters, traders, teachers and doctors do not produce goods. What do they provide, and what sector do they belong to?\"]",
+  "slide | \"I. DEFINITION\" | \"Answer\" | [\"They provide services. They belong to the tertiary sector.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 1\" | [\"Name three means of transport used in Cameroon.\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Road transport (buses, trucks, moto-taxis), rail transport (Camrail, from Douala to Ngaoundéré), air transport (Garoua airport) and sea transport (port of Douala).\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 2\" | [\"Name two social services provided by the state.\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Education in schools and health care in hospitals are social services.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 3\" | [\"Mobile money, banks and telephone companies are also services. How do they help people?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"They help people to save, send and receive money and to communicate quickly.\"]",
+  "slide | \"II. EXAMPLES\" | \"Question 4\" | [\"Why do tourists visit North Cameroon? Which sector does tourism belong to?\"]",
+  "slide | \"II. EXAMPLES\" | \"Answer\" | [\"Tourists visit the national parks of Benoue, Bouba Ndjida and Waza, and the Rhumsiki landscapes. Tourism belongs to the tertiary sector.\"]",
+  "sum | \"I. Definition (1/1)\" | \"DEFINITION\" | [\"The tertiary sector is the sector of the economy that provides services to people and businesses.\"]",
+  "sum | \"II. Examples of Tertiary Activities (1/6)\" | [\"The main tertiary activities, with examples from Cameroon, are the following:\"]",
+  "sum | \"II. Examples of Tertiary Activities (2/6)\" | \"A. Trade\" | [\"Trade is the buying and selling of goods in markets, shops and supermarkets, and between countries.\"]",
+  "sum | \"II. Examples of Tertiary Activities (3/6)\" | \"B. Transport and Communication\" | [\"Transport moves people and goods by road, rail, air and sea. Communication includes telephone, internet, post and media.\"]",
+  "sum | \"II. Examples of Tertiary Activities (4/6)\" | \"C. Banking and Insurance\" | [\"Banks, microfinance and mobile money help people to save, borrow and send money.\"]",
+  "sum | \"II. Examples of Tertiary Activities (5/6)\" | \"D. Social Services and Administration\" | [\"Education, health care, security and public administration are provided mostly by the state.\"]",
+  "sum | \"II. Examples of Tertiary Activities (6/6)\" | \"E. Tourism\" | [\"Tourists visit national parks such as Waza and Benoue, beaches such as Kribi and Limbe, and cultural sites.\"]"
+ ],
+ "d": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S18_L5_P5_Tertiary_Sector",
+  "part": 5,
+  "partTitle": "The Tertiary Sector (Definition and Examples)",
+  "notions": "Tertiary sector, services, trade, transport, communication, banking, tourism, administration.",
+  "focus": "Definition and examples of the tertiary sector, with examples from Cameroon.",
+  "competence": "Learners are able to identify the services they use every day and explain why services are necessary for other sectors.",
+  "objectives": [
+   "Define the tertiary sector.",
+   "Name the main tertiary activities.",
+   "Give examples of tertiary activities in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The secondary sector transforms raw materials into finished goods.",
+   "It includes agro-industries, heavy industries, construction, energy and crafts."
+  ],
+  "recallNote": "Check the homework: four services used by the family every week.",
+  "situation": [
+   "CICAM in Garoua has produced a lot of cloth, but the road to Ngaoundéré is damaged and trucks cannot pass. The cloth stays in the factory, and traders in the South wait for it.",
+   "The factory manager says that without transport and traders, the factory cannot sell its goods."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the cloth cannot reach the traders because the road is damaged and trucks cannot pass."
+   ],
+   [
+    "Who is waiting for the cloth?",
+    "Traders in the South of the country are waiting for the cloth."
+   ],
+   [
+    "What can be done to solve this problem?",
+    "The road can be repaired, or the cloth can be sent by another route, such as the railway from Ngaoundéré."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the tertiary sector, whose services link producers to consumers.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Transporters, traders, teachers and doctors do not produce goods. What do they provide, and what sector do they belong to?",
+      "a": "They provide services. They belong to the tertiary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The tertiary sector is the sector of the economy that provides services to people and businesses."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name three means of transport used in Cameroon.",
+      "a": "Road transport (buses, trucks, moto-taxis), rail transport (Camrail, from Douala to Ngaoundéré), air transport (Garoua airport) and sea transport (port of Douala)."
+     },
+     {
+      "q": "Name two social services provided by the state.",
+      "a": "Education in schools and health care in hospitals are social services."
+     },
+     {
+      "q": "Mobile money, banks and telephone companies are also services. How do they help people?",
+      "a": "They help people to save, send and receive money and to communicate quickly."
+     },
+     {
+      "q": "Why do tourists visit North Cameroon? Which sector does tourism belong to?",
+      "a": "Tourists visit the national parks of Benoue, Bouba Ndjida and Waza, and the Rhumsiki landscapes. Tourism belongs to the tertiary sector."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Tertiary Activities",
+     "intro": "The main tertiary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Trade",
+       "Trade is the buying and selling of goods in markets, shops and supermarkets, and between countries."
+      ],
+      [
+       "B. Transport and Communication",
+       "Transport moves people and goods by road, rail, air and sea. Communication includes telephone, internet, post and media."
+      ],
+      [
+       "C. Banking and Insurance",
+       "Banks, microfinance and mobile money help people to save, borrow and send money."
+      ],
+      [
+       "D. Social Services and Administration",
+       "Education, health care, security and public administration are provided mostly by the state."
+      ],
+      [
+       "E. Tourism",
+       "Tourists visit national parks such as Waza and Benoue, beaches such as Kribi and Limbe, and cultural sites."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the tertiary sector.",
+    "The tertiary sector is the sector that provides services to people and businesses."
+   ],
+   [
+    "Give three tertiary activities.",
+    "Three tertiary activities are trade, transport and banking."
+   ],
+   [
+    "Why does the secondary sector need the tertiary sector?",
+    "Factories need transport and traders to deliver and sell their goods."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that provides services is the ______ sector.",
+    "The buying and selling of goods is called ______.",
+    "The railway company of Cameroon is ______."
+   ],
+   [
+    "The main seaport of Cameroon is ______.",
+    "Education and health are ______ services.",
+    "Visiting national parks for pleasure is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. tertiary 2. trade 3. Camrail 4. Douala 5. social 6. tourism",
+  "homework": "Find out what a research centre does. Ask an adult or read about IRAD (Institute of Agricultural Research for Development).",
+  "homeworkTag": "This prepares Part 6: The Quaternary Sector.",
+  "bilingual": [
+   [
+    "Service",
+    "Le service"
+   ],
+   [
+    "Trade",
+    "Le commerce"
+   ],
+   [
+    "Transport",
+    "Le transport"
+   ],
+   [
+    "Bank",
+    "La banque"
+   ],
+   [
+    "Insurance",
+    "L'assurance"
+   ],
+   [
+    "Tourism",
+    "Le tourisme"
+   ],
+   [
+    "Health care",
+    "Les soins de santé"
+   ],
+   [
+    "Market",
+    "Le marché"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "The tertiary sector is the largest contributor to Cameroon's GDP."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 5)",
+  "title": "The Sectors of the Economy: The Tertiary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 5: The Tertiary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 5: The Tertiary Sector (Definition and Examples)"
+ },
+ "end": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S18_L5_P5_Tertiary_Sector",
+  "part": 5,
+  "partTitle": "The Tertiary Sector (Definition and Examples)",
+  "notions": "Tertiary sector, services, trade, transport, communication, banking, tourism, administration.",
+  "focus": "Definition and examples of the tertiary sector, with examples from Cameroon.",
+  "competence": "Learners are able to identify the services they use every day and explain why services are necessary for other sectors.",
+  "objectives": [
+   "Define the tertiary sector.",
+   "Name the main tertiary activities.",
+   "Give examples of tertiary activities in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The secondary sector transforms raw materials into finished goods.",
+   "It includes agro-industries, heavy industries, construction, energy and crafts."
+  ],
+  "recallNote": "Check the homework: four services used by the family every week.",
+  "situation": [
+   "CICAM in Garoua has produced a lot of cloth, but the road to Ngaoundéré is damaged and trucks cannot pass. The cloth stays in the factory, and traders in the South wait for it.",
+   "The factory manager says that without transport and traders, the factory cannot sell its goods."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the cloth cannot reach the traders because the road is damaged and trucks cannot pass."
+   ],
+   [
+    "Who is waiting for the cloth?",
+    "Traders in the South of the country are waiting for the cloth."
+   ],
+   [
+    "What can be done to solve this problem?",
+    "The road can be repaired, or the cloth can be sent by another route, such as the railway from Ngaoundéré."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the tertiary sector, whose services link producers to consumers.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Transporters, traders, teachers and doctors do not produce goods. What do they provide, and what sector do they belong to?",
+      "a": "They provide services. They belong to the tertiary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The tertiary sector is the sector of the economy that provides services to people and businesses."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name three means of transport used in Cameroon.",
+      "a": "Road transport (buses, trucks, moto-taxis), rail transport (Camrail, from Douala to Ngaoundéré), air transport (Garoua airport) and sea transport (port of Douala)."
+     },
+     {
+      "q": "Name two social services provided by the state.",
+      "a": "Education in schools and health care in hospitals are social services."
+     },
+     {
+      "q": "Mobile money, banks and telephone companies are also services. How do they help people?",
+      "a": "They help people to save, send and receive money and to communicate quickly."
+     },
+     {
+      "q": "Why do tourists visit North Cameroon? Which sector does tourism belong to?",
+      "a": "Tourists visit the national parks of Benoue, Bouba Ndjida and Waza, and the Rhumsiki landscapes. Tourism belongs to the tertiary sector."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Tertiary Activities",
+     "intro": "The main tertiary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Trade",
+       "Trade is the buying and selling of goods in markets, shops and supermarkets, and between countries."
+      ],
+      [
+       "B. Transport and Communication",
+       "Transport moves people and goods by road, rail, air and sea. Communication includes telephone, internet, post and media."
+      ],
+      [
+       "C. Banking and Insurance",
+       "Banks, microfinance and mobile money help people to save, borrow and send money."
+      ],
+      [
+       "D. Social Services and Administration",
+       "Education, health care, security and public administration are provided mostly by the state."
+      ],
+      [
+       "E. Tourism",
+       "Tourists visit national parks such as Waza and Benoue, beaches such as Kribi and Limbe, and cultural sites."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the tertiary sector.",
+    "The tertiary sector is the sector that provides services to people and businesses."
+   ],
+   [
+    "Give three tertiary activities.",
+    "Three tertiary activities are trade, transport and banking."
+   ],
+   [
+    "Why does the secondary sector need the tertiary sector?",
+    "Factories need transport and traders to deliver and sell their goods."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that provides services is the ______ sector.",
+    "The buying and selling of goods is called ______.",
+    "The railway company of Cameroon is ______."
+   ],
+   [
+    "The main seaport of Cameroon is ______.",
+    "Education and health are ______ services.",
+    "Visiting national parks for pleasure is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. tertiary 2. trade 3. Camrail 4. Douala 5. social 6. tourism",
+  "homework": "Find out what a research centre does. Ask an adult or read about IRAD (Institute of Agricultural Research for Development).",
+  "homeworkTag": "This prepares Part 6: The Quaternary Sector.",
+  "bilingual": [
+   [
+    "Service",
+    "Le service"
+   ],
+   [
+    "Trade",
+    "Le commerce"
+   ],
+   [
+    "Transport",
+    "Le transport"
+   ],
+   [
+    "Bank",
+    "La banque"
+   ],
+   [
+    "Insurance",
+    "L'assurance"
+   ],
+   [
+    "Tourism",
+    "Le tourisme"
+   ],
+   [
+    "Health care",
+    "Les soins de santé"
+   ],
+   [
+    "Market",
+    "Le marché"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "The tertiary sector is the largest contributor to Cameroon's GDP."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 5)",
+  "title": "The Sectors of the Economy: The Tertiary Sector (Definition and Examples)",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 5: The Tertiary Sector (Definition and Examples).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 5: The Tertiary Sector (Definition and Examples)",
+  "matter": "I. Definition: ; II. Examples of Tertiary Activities: Trade, Transport and Communication, Banking and Insurance, Social Services and Administration, Tourism."
+ },
+ "file": "S18_L5_P5_Tertiary_Sector",
+ "sp": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S18_L5_P5_Tertiary_Sector",
+  "part": 5,
+  "partTitle": "The Tertiary Sector (Definition and Examples)",
+  "notions": "Tertiary sector, services, trade, transport, communication, banking, tourism, administration.",
+  "focus": "Definition and examples of the tertiary sector, with examples from Cameroon.",
+  "competence": "Learners are able to identify the services they use every day and explain why services are necessary for other sectors.",
+  "objectives": [
+   "Define the tertiary sector.",
+   "Name the main tertiary activities.",
+   "Give examples of tertiary activities in Cameroon and explain their importance."
+  ],
+  "recall": [
+   "The secondary sector transforms raw materials into finished goods.",
+   "It includes agro-industries, heavy industries, construction, energy and crafts."
+  ],
+  "recallNote": "Check the homework: four services used by the family every week.",
+  "situation": [
+   "CICAM in Garoua has produced a lot of cloth, but the road to Ngaoundéré is damaged and trucks cannot pass. The cloth stays in the factory, and traders in the South wait for it.",
+   "The factory manager says that without transport and traders, the factory cannot sell its goods."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the cloth cannot reach the traders because the road is damaged and trucks cannot pass."
+   ],
+   [
+    "Who is waiting for the cloth?",
+    "Traders in the South of the country are waiting for the cloth."
+   ],
+   [
+    "What can be done to solve this problem?",
+    "The road can be repaired, or the cloth can be sent by another route, such as the railway from Ngaoundéré."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the tertiary sector, whose services link producers to consumers.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Transporters, traders, teachers and doctors do not produce goods. What do they provide, and what sector do they belong to?",
+      "a": "They provide services. They belong to the tertiary sector."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "The tertiary sector is the sector of the economy that provides services to people and businesses."
+     ]
+    }
+   },
+   {
+    "sec": "II. EXAMPLES",
+    "qa": [
+     {
+      "q": "Name three means of transport used in Cameroon.",
+      "a": "Road transport (buses, trucks, moto-taxis), rail transport (Camrail, from Douala to Ngaoundéré), air transport (Garoua airport) and sea transport (port of Douala)."
+     },
+     {
+      "q": "Name two social services provided by the state.",
+      "a": "Education in schools and health care in hospitals are social services."
+     },
+     {
+      "q": "Mobile money, banks and telephone companies are also services. How do they help people?",
+      "a": "They help people to save, send and receive money and to communicate quickly."
+     },
+     {
+      "q": "Why do tourists visit North Cameroon? Which sector does tourism belong to?",
+      "a": "Tourists visit the national parks of Benoue, Bouba Ndjida and Waza, and the Rhumsiki landscapes. Tourism belongs to the tertiary sector."
+     }
+    ],
+    "sum": {
+     "title": "II. Examples of Tertiary Activities",
+     "intro": "The main tertiary activities, with examples from Cameroon, are the following:",
+     "items": [
+      [
+       "A. Trade",
+       "Trade is the buying and selling of goods in markets, shops and supermarkets, and between countries."
+      ],
+      [
+       "B. Transport and Communication",
+       "Transport moves people and goods by road, rail, air and sea. Communication includes telephone, internet, post and media."
+      ],
+      [
+       "C. Banking and Insurance",
+       "Banks, microfinance and mobile money help people to save, borrow and send money."
+      ],
+      [
+       "D. Social Services and Administration",
+       "Education, health care, security and public administration are provided mostly by the state."
+      ],
+      [
+       "E. Tourism",
+       "Tourists visit national parks such as Waza and Benoue, beaches such as Kribi and Limbe, and cultural sites."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define the tertiary sector.",
+    "The tertiary sector is the sector that provides services to people and businesses."
+   ],
+   [
+    "Give three tertiary activities.",
+    "Three tertiary activities are trade, transport and banking."
+   ],
+   [
+    "Why does the secondary sector need the tertiary sector?",
+    "Factories need transport and traders to deliver and sell their goods."
+   ]
+  ],
+  "remediation": [
+   [
+    "The sector that provides services is the ______ sector.",
+    "The buying and selling of goods is called ______.",
+    "The railway company of Cameroon is ______."
+   ],
+   [
+    "The main seaport of Cameroon is ______.",
+    "Education and health are ______ services.",
+    "Visiting national parks for pleasure is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. tertiary 2. trade 3. Camrail 4. Douala 5. social 6. tourism",
+  "homework": "Find out what a research centre does. Ask an adult or read about IRAD (Institute of Agricultural Research for Development).",
+  "homeworkTag": "This prepares Part 6: The Quaternary Sector.",
+  "bilingual": [
+   [
+    "Service",
+    "Le service"
+   ],
+   [
+    "Trade",
+    "Le commerce"
+   ],
+   [
+    "Transport",
+    "Le transport"
+   ],
+   [
+    "Bank",
+    "La banque"
+   ],
+   [
+    "Insurance",
+    "L'assurance"
+   ],
+   [
+    "Tourism",
+    "Le tourisme"
+   ],
+   [
+    "Health care",
+    "Les soins de santé"
+   ],
+   [
+    "Market",
+    "Le marché"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first two questions of part II. Period 2: rest of part II, board summary and evaluation.",
+   "The tertiary sector is the largest contributor to Cameroon's GDP."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ]
+ }
+}

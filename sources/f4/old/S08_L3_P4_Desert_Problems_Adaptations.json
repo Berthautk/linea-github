@@ -1,0 +1,652 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. PROBLEMS FACED\" | \"Question 1\" | [\"What is the biggest problem for people and animals living in hot deserts?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"The biggest problem is the lack of water for drinking, washing, animals and farming.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 2\" | [\"Give two problems caused by the desert climate for people's health.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"The strong heat can cause heatstroke and dehydration, and the dust of sandstorms causes eye and breathing problems.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 3\" | [\"Why is it difficult to build roads and travel in the desert?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"The distances are very long, moving dunes cover roads, and there are few towns and water points.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 1\" | [\"Why is the camel called the \\\"ship of the desert\\\"?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"The camel can walk for days without drinking, carry heavy loads, and walk easily on sand with its wide feet.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 2\" | [\"Why do the Tuareg and the Bedouin move from place to place with their animals?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"They move in search of water and pasture. This way of life is called nomadism.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 3\" | [\"How do desert people protect themselves from the sun and the sand?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"They wear long, loose, light-coloured clothes and cover their heads and faces with a turban or a veil.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 4\" | [\"Rich desert countries such as Saudi Arabia have little fresh water. How do they get drinking water for their cities?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"They remove the salt from sea water in factories. This is called desalination.\"]",
+  "sum | \"I. Problems Faced (1/5)\" | [\"The main problems faced by people in hot deserts are the following:\"]",
+  "sum | \"I. Problems Faced (2/5)\" | \"A. Lack of Water\" | [\"Water is very scarce for drinking, washing, animals and farming.\"]",
+  "sum | \"I. Problems Faced (3/5)\" | \"B. Extreme Temperatures\" | [\"Very hot days cause heatstroke and dehydration. Nights can be very cold.\"]",
+  "sum | \"I. Problems Faced (4/5)\" | \"C. Sandstorms and Moving Dunes\" | [\"Sandstorms cause eye and breathing problems. Moving dunes bury roads, wells and fields.\"]",
+  "sum | \"I. Problems Faced (5/5)\" | \"D. Poor Soils and Isolation\" | [\"Soils are poor and salty, so farming is difficult. Towns are far apart and transport is difficult.\"]",
+  "sum | \"II. Adaptations (1/6)\" | [\"People have adapted to life in hot deserts in the following ways:\"]",
+  "sum | \"II. Adaptations (2/6)\" | \"A. Nomadism\" | [\"Nomads, such as the Tuareg and the Bedouin, move with their animals in search of water and pasture.\"]",
+  "sum | \"II. Adaptations (3/6)\" | \"B. Use of the Camel\" | [\"The camel can live for days without water and carry heavy loads across the sand.\"]",
+  "sum | \"II. Adaptations (4/6)\" | \"C. Clothing and Housing\" | [\"People wear long, loose, light clothes and turbans. Houses have thick mud walls, small windows and flat roofs.\"]",
+  "sum | \"II. Adaptations (5/6)\" | \"D. Water Supply\" | [\"People dig wells and underground channels called foggaras. Rich countries use desalination of sea water.\"]",
+  "sum | \"II. Adaptations (6/6)\" | \"E. Modern Technology\" | [\"Air conditioning, solar energy and paved roads make life easier in desert towns.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S08_L3_P4_Desert_Problems_Adaptations",
+  "part": 4,
+  "partTitle": "Problems Faced and Adaptations",
+  "notions": "Aridity, nomadism, adaptation, foggara, desalination, camel.",
+  "focus": "Problems faced by people in hot deserts and their adaptations.",
+  "competence": "Learners are able to save water and protect themselves from heat and dust, as desert people do.",
+  "objectives": [
+   "Identify the problems faced by people living in hot deserts.",
+   "Describe the traditional adaptations of desert people.",
+   "Describe the modern adaptations used in deserts."
+  ],
+  "recall": [
+   "Desert vegetation is scarce: cacti, thorny bushes and date palms in oases.",
+   "Plants store water, reduce water loss and have long roots.",
+   "Desert soils are sandy or stony, salty and poor in humus."
+  ],
+  "recallNote": "Check the homework: problems of a week in the Sahara.",
+  "situation": [
+   "A Tuareg family lives in the Sahara, in northern Niger. The only well near their camp has dried up, and there is no grass left for their camels and goats.",
+   "The father must decide what to do to save his family and his animals."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the Tuareg family has no more water and no grass for their animals."
+   ],
+   [
+    "Which animals does the family rear?",
+    "The family rears camels and goats."
+   ],
+   [
+    "What can the father do to save his family and animals?",
+    "He can move with his family and animals to another place where there is a well and pasture."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difficulties of life in the desert and the clever ways people adapt to them.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "What is the biggest problem for people and animals living in hot deserts?",
+      "a": "The biggest problem is the lack of water for drinking, washing, animals and farming."
+     },
+     {
+      "q": "Give two problems caused by the desert climate for people's health.",
+      "a": "The strong heat can cause heatstroke and dehydration, and the dust of sandstorms causes eye and breathing problems."
+     },
+     {
+      "q": "Why is it difficult to build roads and travel in the desert?",
+      "a": "The distances are very long, moving dunes cover roads, and there are few towns and water points."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced by people in hot deserts are the following:",
+     "items": [
+      [
+       "A. Lack of Water",
+       "Water is very scarce for drinking, washing, animals and farming."
+      ],
+      [
+       "B. Extreme Temperatures",
+       "Very hot days cause heatstroke and dehydration. Nights can be very cold."
+      ],
+      [
+       "C. Sandstorms and Moving Dunes",
+       "Sandstorms cause eye and breathing problems. Moving dunes bury roads, wells and fields."
+      ],
+      [
+       "D. Poor Soils and Isolation",
+       "Soils are poor and salty, so farming is difficult. Towns are far apart and transport is difficult."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ADAPTATIONS",
+    "qa": [
+     {
+      "q": "Why is the camel called the \"ship of the desert\"?",
+      "a": "The camel can walk for days without drinking, carry heavy loads, and walk easily on sand with its wide feet."
+     },
+     {
+      "q": "Why do the Tuareg and the Bedouin move from place to place with their animals?",
+      "a": "They move in search of water and pasture. This way of life is called nomadism."
+     },
+     {
+      "q": "How do desert people protect themselves from the sun and the sand?",
+      "a": "They wear long, loose, light-coloured clothes and cover their heads and faces with a turban or a veil."
+     },
+     {
+      "q": "Rich desert countries such as Saudi Arabia have little fresh water. How do they get drinking water for their cities?",
+      "a": "They remove the salt from sea water in factories. This is called desalination."
+     }
+    ],
+    "sum": {
+     "title": "II. Adaptations",
+     "intro": "People have adapted to life in hot deserts in the following ways:",
+     "items": [
+      [
+       "A. Nomadism",
+       "Nomads, such as the Tuareg and the Bedouin, move with their animals in search of water and pasture."
+      ],
+      [
+       "B. Use of the Camel",
+       "The camel can live for days without water and carry heavy loads across the sand."
+      ],
+      [
+       "C. Clothing and Housing",
+       "People wear long, loose, light clothes and turbans. Houses have thick mud walls, small windows and flat roofs."
+      ],
+      [
+       "D. Water Supply",
+       "People dig wells and underground channels called foggaras. Rich countries use desalination of sea water."
+      ],
+      [
+       "E. Modern Technology",
+       "Air conditioning, solar energy and paved roads make life easier in desert towns."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main problem of life in the desert?",
+    "The main problem of life in the desert is the lack of water."
+   ],
+   [
+    "What is nomadism? Name one nomadic people of the Sahara.",
+    "Nomadism is moving from place to place with animals in search of water and pasture. The Tuareg are nomads of the Sahara."
+   ],
+   [
+    "What is desalination?",
+    "Desalination is the removal of salt from sea water to obtain fresh water."
+   ]
+  ],
+  "remediation": [
+   [
+    "The animal called the \"ship of the desert\" is the ______.",
+    "Moving from place to place with animals is called ______.",
+    "A nomadic people of the Sahara is the ______."
+   ],
+   [
+    "Underground water channels in the Sahara are called ______.",
+    "Removing salt from sea water is called ______.",
+    "Desert houses have thick ______ walls to keep them cool."
+   ]
+  ],
+  "remediationAnswers": "1. camel 2. nomadism 3. Tuareg 4. foggaras 5. desalination 6. mud",
+  "homework": "Find in your textbook or atlas the name of one oasis in the Sahara, and write the name of the country where it is found.",
+  "homeworkTag": "This prepares Part 5: Human Activities (Farming around Oases).",
+  "bilingual": [
+   [
+    "Water",
+    "L'eau"
+   ],
+   [
+    "Well",
+    "Le puits"
+   ],
+   [
+    "Camel",
+    "Le dromadaire"
+   ],
+   [
+    "Nomad",
+    "Le nomade"
+   ],
+   [
+    "Adaptation",
+    "L'adaptation"
+   ],
+   [
+    "Turban",
+    "Le turban"
+   ],
+   [
+    "Desalination",
+    "Le dessalement"
+   ],
+   [
+    "Heatstroke",
+    "Le coup de chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "The camel of the Sahara is the dromedary (one hump)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 4)",
+  "title": "The Desert Regions: Problems Faced and Adaptations",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 4: Problems Faced and Adaptations.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 4: Problems Faced and Adaptations"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S08_L3_P4_Desert_Problems_Adaptations",
+  "part": 4,
+  "partTitle": "Problems Faced and Adaptations",
+  "notions": "Aridity, nomadism, adaptation, foggara, desalination, camel.",
+  "focus": "Problems faced by people in hot deserts and their adaptations.",
+  "competence": "Learners are able to save water and protect themselves from heat and dust, as desert people do.",
+  "objectives": [
+   "Identify the problems faced by people living in hot deserts.",
+   "Describe the traditional adaptations of desert people.",
+   "Describe the modern adaptations used in deserts."
+  ],
+  "recall": [
+   "Desert vegetation is scarce: cacti, thorny bushes and date palms in oases.",
+   "Plants store water, reduce water loss and have long roots.",
+   "Desert soils are sandy or stony, salty and poor in humus."
+  ],
+  "recallNote": "Check the homework: problems of a week in the Sahara.",
+  "situation": [
+   "A Tuareg family lives in the Sahara, in northern Niger. The only well near their camp has dried up, and there is no grass left for their camels and goats.",
+   "The father must decide what to do to save his family and his animals."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the Tuareg family has no more water and no grass for their animals."
+   ],
+   [
+    "Which animals does the family rear?",
+    "The family rears camels and goats."
+   ],
+   [
+    "What can the father do to save his family and animals?",
+    "He can move with his family and animals to another place where there is a well and pasture."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difficulties of life in the desert and the clever ways people adapt to them.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "What is the biggest problem for people and animals living in hot deserts?",
+      "a": "The biggest problem is the lack of water for drinking, washing, animals and farming."
+     },
+     {
+      "q": "Give two problems caused by the desert climate for people's health.",
+      "a": "The strong heat can cause heatstroke and dehydration, and the dust of sandstorms causes eye and breathing problems."
+     },
+     {
+      "q": "Why is it difficult to build roads and travel in the desert?",
+      "a": "The distances are very long, moving dunes cover roads, and there are few towns and water points."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced by people in hot deserts are the following:",
+     "items": [
+      [
+       "A. Lack of Water",
+       "Water is very scarce for drinking, washing, animals and farming."
+      ],
+      [
+       "B. Extreme Temperatures",
+       "Very hot days cause heatstroke and dehydration. Nights can be very cold."
+      ],
+      [
+       "C. Sandstorms and Moving Dunes",
+       "Sandstorms cause eye and breathing problems. Moving dunes bury roads, wells and fields."
+      ],
+      [
+       "D. Poor Soils and Isolation",
+       "Soils are poor and salty, so farming is difficult. Towns are far apart and transport is difficult."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ADAPTATIONS",
+    "qa": [
+     {
+      "q": "Why is the camel called the \"ship of the desert\"?",
+      "a": "The camel can walk for days without drinking, carry heavy loads, and walk easily on sand with its wide feet."
+     },
+     {
+      "q": "Why do the Tuareg and the Bedouin move from place to place with their animals?",
+      "a": "They move in search of water and pasture. This way of life is called nomadism."
+     },
+     {
+      "q": "How do desert people protect themselves from the sun and the sand?",
+      "a": "They wear long, loose, light-coloured clothes and cover their heads and faces with a turban or a veil."
+     },
+     {
+      "q": "Rich desert countries such as Saudi Arabia have little fresh water. How do they get drinking water for their cities?",
+      "a": "They remove the salt from sea water in factories. This is called desalination."
+     }
+    ],
+    "sum": {
+     "title": "II. Adaptations",
+     "intro": "People have adapted to life in hot deserts in the following ways:",
+     "items": [
+      [
+       "A. Nomadism",
+       "Nomads, such as the Tuareg and the Bedouin, move with their animals in search of water and pasture."
+      ],
+      [
+       "B. Use of the Camel",
+       "The camel can live for days without water and carry heavy loads across the sand."
+      ],
+      [
+       "C. Clothing and Housing",
+       "People wear long, loose, light clothes and turbans. Houses have thick mud walls, small windows and flat roofs."
+      ],
+      [
+       "D. Water Supply",
+       "People dig wells and underground channels called foggaras. Rich countries use desalination of sea water."
+      ],
+      [
+       "E. Modern Technology",
+       "Air conditioning, solar energy and paved roads make life easier in desert towns."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main problem of life in the desert?",
+    "The main problem of life in the desert is the lack of water."
+   ],
+   [
+    "What is nomadism? Name one nomadic people of the Sahara.",
+    "Nomadism is moving from place to place with animals in search of water and pasture. The Tuareg are nomads of the Sahara."
+   ],
+   [
+    "What is desalination?",
+    "Desalination is the removal of salt from sea water to obtain fresh water."
+   ]
+  ],
+  "remediation": [
+   [
+    "The animal called the \"ship of the desert\" is the ______.",
+    "Moving from place to place with animals is called ______.",
+    "A nomadic people of the Sahara is the ______."
+   ],
+   [
+    "Underground water channels in the Sahara are called ______.",
+    "Removing salt from sea water is called ______.",
+    "Desert houses have thick ______ walls to keep them cool."
+   ]
+  ],
+  "remediationAnswers": "1. camel 2. nomadism 3. Tuareg 4. foggaras 5. desalination 6. mud",
+  "homework": "Find in your textbook or atlas the name of one oasis in the Sahara, and write the name of the country where it is found.",
+  "homeworkTag": "This prepares Part 5: Human Activities (Farming around Oases).",
+  "bilingual": [
+   [
+    "Water",
+    "L'eau"
+   ],
+   [
+    "Well",
+    "Le puits"
+   ],
+   [
+    "Camel",
+    "Le dromadaire"
+   ],
+   [
+    "Nomad",
+    "Le nomade"
+   ],
+   [
+    "Adaptation",
+    "L'adaptation"
+   ],
+   [
+    "Turban",
+    "Le turban"
+   ],
+   [
+    "Desalination",
+    "Le dessalement"
+   ],
+   [
+    "Heatstroke",
+    "Le coup de chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "The camel of the Sahara is the dromedary (one hump)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 4)",
+  "title": "The Desert Regions: Problems Faced and Adaptations",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 4: Problems Faced and Adaptations.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 4: Problems Faced and Adaptations",
+  "matter": "I. Problems Faced: Lack of Water, Extreme Temperatures, Sandstorms and Moving Dunes, Poor Soils and Isolation; II. Adaptations: Nomadism, Use of the Camel, Clothing and Housing, Water Supply, Modern Technology."
+ },
+ "file": "S08_L3_P4_Desert_Problems_Adaptations",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S08_L3_P4_Desert_Problems_Adaptations",
+  "part": 4,
+  "partTitle": "Problems Faced and Adaptations",
+  "notions": "Aridity, nomadism, adaptation, foggara, desalination, camel.",
+  "focus": "Problems faced by people in hot deserts and their adaptations.",
+  "competence": "Learners are able to save water and protect themselves from heat and dust, as desert people do.",
+  "objectives": [
+   "Identify the problems faced by people living in hot deserts.",
+   "Describe the traditional adaptations of desert people.",
+   "Describe the modern adaptations used in deserts."
+  ],
+  "recall": [
+   "Desert vegetation is scarce: cacti, thorny bushes and date palms in oases.",
+   "Plants store water, reduce water loss and have long roots.",
+   "Desert soils are sandy or stony, salty and poor in humus."
+  ],
+  "recallNote": "Check the homework: problems of a week in the Sahara.",
+  "situation": [
+   "A Tuareg family lives in the Sahara, in northern Niger. The only well near their camp has dried up, and there is no grass left for their camels and goats.",
+   "The father must decide what to do to save his family and his animals."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the Tuareg family has no more water and no grass for their animals."
+   ],
+   [
+    "Which animals does the family rear?",
+    "The family rears camels and goats."
+   ],
+   [
+    "What can the father do to save his family and animals?",
+    "He can move with his family and animals to another place where there is a well and pasture."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difficulties of life in the desert and the clever ways people adapt to them.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "What is the biggest problem for people and animals living in hot deserts?",
+      "a": "The biggest problem is the lack of water for drinking, washing, animals and farming."
+     },
+     {
+      "q": "Give two problems caused by the desert climate for people's health.",
+      "a": "The strong heat can cause heatstroke and dehydration, and the dust of sandstorms causes eye and breathing problems."
+     },
+     {
+      "q": "Why is it difficult to build roads and travel in the desert?",
+      "a": "The distances are very long, moving dunes cover roads, and there are few towns and water points."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced by people in hot deserts are the following:",
+     "items": [
+      [
+       "A. Lack of Water",
+       "Water is very scarce for drinking, washing, animals and farming."
+      ],
+      [
+       "B. Extreme Temperatures",
+       "Very hot days cause heatstroke and dehydration. Nights can be very cold."
+      ],
+      [
+       "C. Sandstorms and Moving Dunes",
+       "Sandstorms cause eye and breathing problems. Moving dunes bury roads, wells and fields."
+      ],
+      [
+       "D. Poor Soils and Isolation",
+       "Soils are poor and salty, so farming is difficult. Towns are far apart and transport is difficult."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ADAPTATIONS",
+    "qa": [
+     {
+      "q": "Why is the camel called the \"ship of the desert\"?",
+      "a": "The camel can walk for days without drinking, carry heavy loads, and walk easily on sand with its wide feet."
+     },
+     {
+      "q": "Why do the Tuareg and the Bedouin move from place to place with their animals?",
+      "a": "They move in search of water and pasture. This way of life is called nomadism."
+     },
+     {
+      "q": "How do desert people protect themselves from the sun and the sand?",
+      "a": "They wear long, loose, light-coloured clothes and cover their heads and faces with a turban or a veil."
+     },
+     {
+      "q": "Rich desert countries such as Saudi Arabia have little fresh water. How do they get drinking water for their cities?",
+      "a": "They remove the salt from sea water in factories. This is called desalination."
+     }
+    ],
+    "sum": {
+     "title": "II. Adaptations",
+     "intro": "People have adapted to life in hot deserts in the following ways:",
+     "items": [
+      [
+       "A. Nomadism",
+       "Nomads, such as the Tuareg and the Bedouin, move with their animals in search of water and pasture."
+      ],
+      [
+       "B. Use of the Camel",
+       "The camel can live for days without water and carry heavy loads across the sand."
+      ],
+      [
+       "C. Clothing and Housing",
+       "People wear long, loose, light clothes and turbans. Houses have thick mud walls, small windows and flat roofs."
+      ],
+      [
+       "D. Water Supply",
+       "People dig wells and underground channels called foggaras. Rich countries use desalination of sea water."
+      ],
+      [
+       "E. Modern Technology",
+       "Air conditioning, solar energy and paved roads make life easier in desert towns."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main problem of life in the desert?",
+    "The main problem of life in the desert is the lack of water."
+   ],
+   [
+    "What is nomadism? Name one nomadic people of the Sahara.",
+    "Nomadism is moving from place to place with animals in search of water and pasture. The Tuareg are nomads of the Sahara."
+   ],
+   [
+    "What is desalination?",
+    "Desalination is the removal of salt from sea water to obtain fresh water."
+   ]
+  ],
+  "remediation": [
+   [
+    "The animal called the \"ship of the desert\" is the ______.",
+    "Moving from place to place with animals is called ______.",
+    "A nomadic people of the Sahara is the ______."
+   ],
+   [
+    "Underground water channels in the Sahara are called ______.",
+    "Removing salt from sea water is called ______.",
+    "Desert houses have thick ______ walls to keep them cool."
+   ]
+  ],
+  "remediationAnswers": "1. camel 2. nomadism 3. Tuareg 4. foggaras 5. desalination 6. mud",
+  "homework": "Find in your textbook or atlas the name of one oasis in the Sahara, and write the name of the country where it is found.",
+  "homeworkTag": "This prepares Part 5: Human Activities (Farming around Oases).",
+  "bilingual": [
+   [
+    "Water",
+    "L'eau"
+   ],
+   [
+    "Well",
+    "Le puits"
+   ],
+   [
+    "Camel",
+    "Le dromadaire"
+   ],
+   [
+    "Nomad",
+    "Le nomade"
+   ],
+   [
+    "Adaptation",
+    "L'adaptation"
+   ],
+   [
+    "Turban",
+    "Le turban"
+   ],
+   [
+    "Desalination",
+    "Le dessalement"
+   ],
+   [
+    "Heatstroke",
+    "Le coup de chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "The camel of the Sahara is the dromedary (one hump)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ]
+ }
+}

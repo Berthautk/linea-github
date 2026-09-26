@@ -1,0 +1,678 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. PROBLEMS FACED\" | \"Question 1\" | [\"Some years, the rains start late or stop early. What problem does this cause for farmers?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"It causes drought. Crops dry up, harvests are poor and there can be famine.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 2\" | [\"In the dry season, bush fires burn large areas of savanna. Give two dangers of bush fires.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"Bush fires destroy grass, trees and animals, and they leave the soil bare, so it is easily eroded.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 3\" | [\"Too many cattle graze on the same land. What happens to the grass and the soil?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"The grass disappears and the soil becomes bare. This is called overgrazing. The soil is then washed away by rain or blown by wind.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 4\" | [\"Give two other problems of the savanna: one linked to animals and one linked to people.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"Locusts and the tsetse fly harm crops and cattle. Poachers kill protected animals, and farmers and herders sometimes fight.\"]",
+  "slide | \"II. ATTEMPTED SOLUTIONS\" | \"Question 1\" | [\"How can farmers still grow crops when the rains are irregular?\"]",
+  "slide | \"II. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"They can irrigate their fields with water from dams and wells, and grow crops that resist drought, such as millet and sorghum.\"]",
+  "slide | \"II. ATTEMPTED SOLUTIONS\" | \"Question 2\" | [\"What is the name of the Cameroonian programme that plants trees to stop the desert in the North?\"]",
+  "slide | \"II. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"It is called Opération Sahel Vert. Across Africa, the Great Green Wall project also plants trees in the Sahel.\"]",
+  "slide | \"II. ATTEMPTED SOLUTIONS\" | \"Question 3\" | [\"How can the government protect wild animals from poachers?\"]",
+  "slide | \"II. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"It creates national parks, trains and arms eco-guards, and punishes poachers.\"]",
+  "sum | \"I. Problems Faced (1/7)\" | [\"The main problems faced in the Tropical Grassland region are the following:\"]",
+  "sum | \"I. Problems Faced (2/7)\" | \"A. Irregular Rainfall and Drought\" | [\"The rains sometimes start late or stop early. Crops dry up, harvests are poor and famine can follow.\"]",
+  "sum | \"I. Problems Faced (3/7)\" | \"B. Bush Fires\" | [\"Bush fires destroy grass, trees and animals. They leave the soil bare and easy to erode.\"]",
+  "sum | \"I. Problems Faced (4/7)\" | \"C. Overgrazing and Soil Erosion\" | [\"Too many animals eat all the grass. The bare soil is washed away by rain or blown away by wind.\"]",
+  "sum | \"I. Problems Faced (5/7)\" | \"D. Desertification\" | [\"In the drier savanna, the land slowly turns into desert because of drought, overgrazing and the cutting of trees.\"]",
+  "sum | \"I. Problems Faced (6/7)\" | \"E. Pests and Diseases\" | [\"Locusts and birds destroy crops. The tsetse fly carries sleeping sickness in cattle and people.\"]",
+  "sum | \"I. Problems Faced (7/7)\" | \"F. Poaching and Conflicts\" | [\"Poachers kill protected animals. Farmers and herders fight over land and water.\"]",
+  "sum | \"II. Attempted Solutions (1/6)\" | [\"The main solutions attempted in the Tropical Grassland region are the following:\"]",
+  "sum | \"II. Attempted Solutions (2/6)\" | \"A. Irrigation and Drought-Resistant Crops\" | [\"Dams and wells supply water to fields. Farmers grow millet and sorghum, which resist drought.\"]",
+  "sum | \"II. Attempted Solutions (3/6)\" | \"B. Reforestation\" | [\"Trees are planted to stop desertification, as in Opération Sahel Vert in Cameroon and the Great Green Wall in the Sahel.\"]",
+  "sum | \"II. Attempted Solutions (4/6)\" | \"C. Fire Control\" | [\"Early controlled burning, firebreaks and education reduce the damage caused by bush fires.\"]",
+  "sum | \"II. Attempted Solutions (5/6)\" | \"D. Better Management of Land\" | [\"Grazing zones and cattle paths are marked, and fodder is stored. Crop rotation and manure keep the soil fertile.\"]",
+  "sum | \"II. Attempted Solutions (6/6)\" | \"E. Protection of Wildlife and Pest Control\" | [\"National parks and eco-guards protect animals. Insecticides and vaccination fight pests and diseases.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S04_L2_P5_Tropical_Grassland_Problems_Solutions",
+  "part": 5,
+  "partTitle": "Problems Faced and Attempted Solutions",
+  "notions": "Drought, bush fire, overgrazing, soil erosion, desertification, poaching, farmer–herder conflict.",
+  "focus": "Problems faced in the Tropical Grassland region and the solutions attempted.",
+  "competence": "Learners are able to take simple actions against bush fires and soil erosion around their homes.",
+  "objectives": [
+   "Identify the problems faced by people in the Tropical Grassland region.",
+   "Explain the causes of these problems.",
+   "Describe the solutions attempted to solve them."
+  ],
+  "recall": [
+   "The people of the savanna practise crop farming, livestock rearing, hunting and fishing.",
+   "Herders move with their animals in the dry season (transhumance)."
+  ],
+  "recallNote": "Check the homework: problems faced by farmers and herders around Garoua.",
+  "situation": [
+   "In a village near Garoua, a herder's cattle entered a farmer's field at night and ate his maize. The farmer was very angry, and the two men started to fight.",
+   "The village chief called them. He wants to find a solution so that this does not happen again."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is a conflict between a farmer and a herder, because the herder's cattle ate the farmer's maize."
+   ],
+   [
+    "Why did the cattle enter the field?",
+    "They entered the field to eat, because pasture is scarce and there was no one to guard them at night."
+   ],
+   [
+    "What can the chief do to prevent such conflicts?",
+    "He can mark paths for the animals, separate farming zones from grazing zones, and ask herders to guard their cattle."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the problems of the savanna and the solutions people have found, so that we can protect our environment.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "Some years, the rains start late or stop early. What problem does this cause for farmers?",
+      "a": "It causes drought. Crops dry up, harvests are poor and there can be famine."
+     },
+     {
+      "q": "In the dry season, bush fires burn large areas of savanna. Give two dangers of bush fires.",
+      "a": "Bush fires destroy grass, trees and animals, and they leave the soil bare, so it is easily eroded."
+     },
+     {
+      "q": "Too many cattle graze on the same land. What happens to the grass and the soil?",
+      "a": "The grass disappears and the soil becomes bare. This is called overgrazing. The soil is then washed away by rain or blown by wind."
+     },
+     {
+      "q": "Give two other problems of the savanna: one linked to animals and one linked to people.",
+      "a": "Locusts and the tsetse fly harm crops and cattle. Poachers kill protected animals, and farmers and herders sometimes fight."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced in the Tropical Grassland region are the following:",
+     "items": [
+      [
+       "A. Irregular Rainfall and Drought",
+       "The rains sometimes start late or stop early. Crops dry up, harvests are poor and famine can follow."
+      ],
+      [
+       "B. Bush Fires",
+       "Bush fires destroy grass, trees and animals. They leave the soil bare and easy to erode."
+      ],
+      [
+       "C. Overgrazing and Soil Erosion",
+       "Too many animals eat all the grass. The bare soil is washed away by rain or blown away by wind."
+      ],
+      [
+       "D. Desertification",
+       "In the drier savanna, the land slowly turns into desert because of drought, overgrazing and the cutting of trees."
+      ],
+      [
+       "E. Pests and Diseases",
+       "Locusts and birds destroy crops. The tsetse fly carries sleeping sickness in cattle and people."
+      ],
+      [
+       "F. Poaching and Conflicts",
+       "Poachers kill protected animals. Farmers and herders fight over land and water."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ATTEMPTED SOLUTIONS",
+    "qa": [
+     {
+      "q": "How can farmers still grow crops when the rains are irregular?",
+      "a": "They can irrigate their fields with water from dams and wells, and grow crops that resist drought, such as millet and sorghum."
+     },
+     {
+      "q": "What is the name of the Cameroonian programme that plants trees to stop the desert in the North?",
+      "a": "It is called Opération Sahel Vert. Across Africa, the Great Green Wall project also plants trees in the Sahel."
+     },
+     {
+      "q": "How can the government protect wild animals from poachers?",
+      "a": "It creates national parks, trains and arms eco-guards, and punishes poachers."
+     }
+    ],
+    "sum": {
+     "title": "II. Attempted Solutions",
+     "intro": "The main solutions attempted in the Tropical Grassland region are the following:",
+     "items": [
+      [
+       "A. Irrigation and Drought-Resistant Crops",
+       "Dams and wells supply water to fields. Farmers grow millet and sorghum, which resist drought."
+      ],
+      [
+       "B. Reforestation",
+       "Trees are planted to stop desertification, as in Opération Sahel Vert in Cameroon and the Great Green Wall in the Sahel."
+      ],
+      [
+       "C. Fire Control",
+       "Early controlled burning, firebreaks and education reduce the damage caused by bush fires."
+      ],
+      [
+       "D. Better Management of Land",
+       "Grazing zones and cattle paths are marked, and fodder is stored. Crop rotation and manure keep the soil fertile."
+      ],
+      [
+       "E. Protection of Wildlife and Pest Control",
+       "National parks and eco-guards protect animals. Insecticides and vaccination fight pests and diseases."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Explain how overgrazing leads to soil erosion.",
+    "Too many animals eat all the grass. The bare soil is then washed away by rain or blown away by wind."
+   ],
+   [
+    "Give two solutions to the problem of drought.",
+    "Farmers can irrigate their fields and grow drought-resistant crops such as millet and sorghum."
+   ],
+   [
+    "Give one cause of conflicts between farmers and herders.",
+    "Cattle enter fields and eat crops, because pasture and water are scarce."
+   ]
+  ],
+  "remediation": [
+   [
+    "A long period without enough rain is called a ______.",
+    "Too many animals grazing on the same land is called ______.",
+    "The fly that carries sleeping sickness is the ______ fly."
+   ],
+   [
+    "The illegal killing of protected animals is called ______.",
+    "The Cameroonian tree-planting programme in the North is called Opération ______.",
+    "Burning small areas early in the dry season is called ______ burning."
+   ]
+  ],
+  "remediationAnswers": "1. drought 2. overgrazing 3. tsetse 4. poaching 5. Sahel Vert 6. controlled (early)",
+  "homework": "On a map of Africa in your atlas, find the Sahara Desert. Write the names of three countries that it covers.",
+  "homeworkTag": "This prepares Lesson 3: Desert Regions (location, types and characteristics).",
+  "bilingual": [
+   [
+    "Drought",
+    "La sécheresse"
+   ],
+   [
+    "Bush fire",
+    "Le feu de brousse"
+   ],
+   [
+    "Overgrazing",
+    "Le surpâturage"
+   ],
+   [
+    "Soil erosion",
+    "L'érosion des sols"
+   ],
+   [
+    "Desertification",
+    "La désertification"
+   ],
+   [
+    "Poaching",
+    "Le braconnage"
+   ],
+   [
+    "Locust",
+    "Le criquet"
+   ],
+   [
+    "Conflict",
+    "Le conflit"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "This session closes Lesson 2 (Tropical Grassland Region)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland).",
+   "MINEPDED: Opération Sahel Vert."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 5)",
+  "title": "The Tropical Grassland Region: Problems Faced and Attempted Solutions",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 5: Problems Faced and Attempted Solutions.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 5: Problems Faced and Attempted Solutions"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S04_L2_P5_Tropical_Grassland_Problems_Solutions",
+  "part": 5,
+  "partTitle": "Problems Faced and Attempted Solutions",
+  "notions": "Drought, bush fire, overgrazing, soil erosion, desertification, poaching, farmer–herder conflict.",
+  "focus": "Problems faced in the Tropical Grassland region and the solutions attempted.",
+  "competence": "Learners are able to take simple actions against bush fires and soil erosion around their homes.",
+  "objectives": [
+   "Identify the problems faced by people in the Tropical Grassland region.",
+   "Explain the causes of these problems.",
+   "Describe the solutions attempted to solve them."
+  ],
+  "recall": [
+   "The people of the savanna practise crop farming, livestock rearing, hunting and fishing.",
+   "Herders move with their animals in the dry season (transhumance)."
+  ],
+  "recallNote": "Check the homework: problems faced by farmers and herders around Garoua.",
+  "situation": [
+   "In a village near Garoua, a herder's cattle entered a farmer's field at night and ate his maize. The farmer was very angry, and the two men started to fight.",
+   "The village chief called them. He wants to find a solution so that this does not happen again."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is a conflict between a farmer and a herder, because the herder's cattle ate the farmer's maize."
+   ],
+   [
+    "Why did the cattle enter the field?",
+    "They entered the field to eat, because pasture is scarce and there was no one to guard them at night."
+   ],
+   [
+    "What can the chief do to prevent such conflicts?",
+    "He can mark paths for the animals, separate farming zones from grazing zones, and ask herders to guard their cattle."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the problems of the savanna and the solutions people have found, so that we can protect our environment.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "Some years, the rains start late or stop early. What problem does this cause for farmers?",
+      "a": "It causes drought. Crops dry up, harvests are poor and there can be famine."
+     },
+     {
+      "q": "In the dry season, bush fires burn large areas of savanna. Give two dangers of bush fires.",
+      "a": "Bush fires destroy grass, trees and animals, and they leave the soil bare, so it is easily eroded."
+     },
+     {
+      "q": "Too many cattle graze on the same land. What happens to the grass and the soil?",
+      "a": "The grass disappears and the soil becomes bare. This is called overgrazing. The soil is then washed away by rain or blown by wind."
+     },
+     {
+      "q": "Give two other problems of the savanna: one linked to animals and one linked to people.",
+      "a": "Locusts and the tsetse fly harm crops and cattle. Poachers kill protected animals, and farmers and herders sometimes fight."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced in the Tropical Grassland region are the following:",
+     "items": [
+      [
+       "A. Irregular Rainfall and Drought",
+       "The rains sometimes start late or stop early. Crops dry up, harvests are poor and famine can follow."
+      ],
+      [
+       "B. Bush Fires",
+       "Bush fires destroy grass, trees and animals. They leave the soil bare and easy to erode."
+      ],
+      [
+       "C. Overgrazing and Soil Erosion",
+       "Too many animals eat all the grass. The bare soil is washed away by rain or blown away by wind."
+      ],
+      [
+       "D. Desertification",
+       "In the drier savanna, the land slowly turns into desert because of drought, overgrazing and the cutting of trees."
+      ],
+      [
+       "E. Pests and Diseases",
+       "Locusts and birds destroy crops. The tsetse fly carries sleeping sickness in cattle and people."
+      ],
+      [
+       "F. Poaching and Conflicts",
+       "Poachers kill protected animals. Farmers and herders fight over land and water."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ATTEMPTED SOLUTIONS",
+    "qa": [
+     {
+      "q": "How can farmers still grow crops when the rains are irregular?",
+      "a": "They can irrigate their fields with water from dams and wells, and grow crops that resist drought, such as millet and sorghum."
+     },
+     {
+      "q": "What is the name of the Cameroonian programme that plants trees to stop the desert in the North?",
+      "a": "It is called Opération Sahel Vert. Across Africa, the Great Green Wall project also plants trees in the Sahel."
+     },
+     {
+      "q": "How can the government protect wild animals from poachers?",
+      "a": "It creates national parks, trains and arms eco-guards, and punishes poachers."
+     }
+    ],
+    "sum": {
+     "title": "II. Attempted Solutions",
+     "intro": "The main solutions attempted in the Tropical Grassland region are the following:",
+     "items": [
+      [
+       "A. Irrigation and Drought-Resistant Crops",
+       "Dams and wells supply water to fields. Farmers grow millet and sorghum, which resist drought."
+      ],
+      [
+       "B. Reforestation",
+       "Trees are planted to stop desertification, as in Opération Sahel Vert in Cameroon and the Great Green Wall in the Sahel."
+      ],
+      [
+       "C. Fire Control",
+       "Early controlled burning, firebreaks and education reduce the damage caused by bush fires."
+      ],
+      [
+       "D. Better Management of Land",
+       "Grazing zones and cattle paths are marked, and fodder is stored. Crop rotation and manure keep the soil fertile."
+      ],
+      [
+       "E. Protection of Wildlife and Pest Control",
+       "National parks and eco-guards protect animals. Insecticides and vaccination fight pests and diseases."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Explain how overgrazing leads to soil erosion.",
+    "Too many animals eat all the grass. The bare soil is then washed away by rain or blown away by wind."
+   ],
+   [
+    "Give two solutions to the problem of drought.",
+    "Farmers can irrigate their fields and grow drought-resistant crops such as millet and sorghum."
+   ],
+   [
+    "Give one cause of conflicts between farmers and herders.",
+    "Cattle enter fields and eat crops, because pasture and water are scarce."
+   ]
+  ],
+  "remediation": [
+   [
+    "A long period without enough rain is called a ______.",
+    "Too many animals grazing on the same land is called ______.",
+    "The fly that carries sleeping sickness is the ______ fly."
+   ],
+   [
+    "The illegal killing of protected animals is called ______.",
+    "The Cameroonian tree-planting programme in the North is called Opération ______.",
+    "Burning small areas early in the dry season is called ______ burning."
+   ]
+  ],
+  "remediationAnswers": "1. drought 2. overgrazing 3. tsetse 4. poaching 5. Sahel Vert 6. controlled (early)",
+  "homework": "On a map of Africa in your atlas, find the Sahara Desert. Write the names of three countries that it covers.",
+  "homeworkTag": "This prepares Lesson 3: Desert Regions (location, types and characteristics).",
+  "bilingual": [
+   [
+    "Drought",
+    "La sécheresse"
+   ],
+   [
+    "Bush fire",
+    "Le feu de brousse"
+   ],
+   [
+    "Overgrazing",
+    "Le surpâturage"
+   ],
+   [
+    "Soil erosion",
+    "L'érosion des sols"
+   ],
+   [
+    "Desertification",
+    "La désertification"
+   ],
+   [
+    "Poaching",
+    "Le braconnage"
+   ],
+   [
+    "Locust",
+    "Le criquet"
+   ],
+   [
+    "Conflict",
+    "Le conflit"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "This session closes Lesson 2 (Tropical Grassland Region)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland).",
+   "MINEPDED: Opération Sahel Vert."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (PART 5)",
+  "title": "The Tropical Grassland Region: Problems Faced and Attempted Solutions",
+  "sumTitle": "The Tropical Grassland Region",
+  "coverNote": "Good morning, class. Today we study The Tropical Grassland Region, part 5: Problems Faced and Attempted Solutions.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 5: Problems Faced and Attempted Solutions",
+  "matter": "I. Problems Faced: Irregular Rainfall and Drought, Bush Fires, Overgrazing and Soil Erosion, Desertification, Pests and Diseases, Poaching and Conflicts; II. Attempted Solutions: Irrigation and Drought-Resistant Crops, Reforestation, Fire Control, Better Management of Land, Protection of Wildlife and Pest Control."
+ },
+ "file": "S04_L2_P5_Tropical_Grassland_Problems_Solutions",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 2. The Tropical Grassland Region",
+  "lessonNo": 2,
+  "lessonName": "The Tropical Grassland Region",
+  "file": "S04_L2_P5_Tropical_Grassland_Problems_Solutions",
+  "part": 5,
+  "partTitle": "Problems Faced and Attempted Solutions",
+  "notions": "Drought, bush fire, overgrazing, soil erosion, desertification, poaching, farmer–herder conflict.",
+  "focus": "Problems faced in the Tropical Grassland region and the solutions attempted.",
+  "competence": "Learners are able to take simple actions against bush fires and soil erosion around their homes.",
+  "objectives": [
+   "Identify the problems faced by people in the Tropical Grassland region.",
+   "Explain the causes of these problems.",
+   "Describe the solutions attempted to solve them."
+  ],
+  "recall": [
+   "The people of the savanna practise crop farming, livestock rearing, hunting and fishing.",
+   "Herders move with their animals in the dry season (transhumance)."
+  ],
+  "recallNote": "Check the homework: problems faced by farmers and herders around Garoua.",
+  "situation": [
+   "In a village near Garoua, a herder's cattle entered a farmer's field at night and ate his maize. The farmer was very angry, and the two men started to fight.",
+   "The village chief called them. He wants to find a solution so that this does not happen again."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is a conflict between a farmer and a herder, because the herder's cattle ate the farmer's maize."
+   ],
+   [
+    "Why did the cattle enter the field?",
+    "They entered the field to eat, because pasture is scarce and there was no one to guard them at night."
+   ],
+   [
+    "What can the chief do to prevent such conflicts?",
+    "He can mark paths for the animals, separate farming zones from grazing zones, and ask herders to guard their cattle."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the problems of the savanna and the solutions people have found, so that we can protect our environment.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "Some years, the rains start late or stop early. What problem does this cause for farmers?",
+      "a": "It causes drought. Crops dry up, harvests are poor and there can be famine."
+     },
+     {
+      "q": "In the dry season, bush fires burn large areas of savanna. Give two dangers of bush fires.",
+      "a": "Bush fires destroy grass, trees and animals, and they leave the soil bare, so it is easily eroded."
+     },
+     {
+      "q": "Too many cattle graze on the same land. What happens to the grass and the soil?",
+      "a": "The grass disappears and the soil becomes bare. This is called overgrazing. The soil is then washed away by rain or blown by wind."
+     },
+     {
+      "q": "Give two other problems of the savanna: one linked to animals and one linked to people.",
+      "a": "Locusts and the tsetse fly harm crops and cattle. Poachers kill protected animals, and farmers and herders sometimes fight."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced in the Tropical Grassland region are the following:",
+     "items": [
+      [
+       "A. Irregular Rainfall and Drought",
+       "The rains sometimes start late or stop early. Crops dry up, harvests are poor and famine can follow."
+      ],
+      [
+       "B. Bush Fires",
+       "Bush fires destroy grass, trees and animals. They leave the soil bare and easy to erode."
+      ],
+      [
+       "C. Overgrazing and Soil Erosion",
+       "Too many animals eat all the grass. The bare soil is washed away by rain or blown away by wind."
+      ],
+      [
+       "D. Desertification",
+       "In the drier savanna, the land slowly turns into desert because of drought, overgrazing and the cutting of trees."
+      ],
+      [
+       "E. Pests and Diseases",
+       "Locusts and birds destroy crops. The tsetse fly carries sleeping sickness in cattle and people."
+      ],
+      [
+       "F. Poaching and Conflicts",
+       "Poachers kill protected animals. Farmers and herders fight over land and water."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ATTEMPTED SOLUTIONS",
+    "qa": [
+     {
+      "q": "How can farmers still grow crops when the rains are irregular?",
+      "a": "They can irrigate their fields with water from dams and wells, and grow crops that resist drought, such as millet and sorghum."
+     },
+     {
+      "q": "What is the name of the Cameroonian programme that plants trees to stop the desert in the North?",
+      "a": "It is called Opération Sahel Vert. Across Africa, the Great Green Wall project also plants trees in the Sahel."
+     },
+     {
+      "q": "How can the government protect wild animals from poachers?",
+      "a": "It creates national parks, trains and arms eco-guards, and punishes poachers."
+     }
+    ],
+    "sum": {
+     "title": "II. Attempted Solutions",
+     "intro": "The main solutions attempted in the Tropical Grassland region are the following:",
+     "items": [
+      [
+       "A. Irrigation and Drought-Resistant Crops",
+       "Dams and wells supply water to fields. Farmers grow millet and sorghum, which resist drought."
+      ],
+      [
+       "B. Reforestation",
+       "Trees are planted to stop desertification, as in Opération Sahel Vert in Cameroon and the Great Green Wall in the Sahel."
+      ],
+      [
+       "C. Fire Control",
+       "Early controlled burning, firebreaks and education reduce the damage caused by bush fires."
+      ],
+      [
+       "D. Better Management of Land",
+       "Grazing zones and cattle paths are marked, and fodder is stored. Crop rotation and manure keep the soil fertile."
+      ],
+      [
+       "E. Protection of Wildlife and Pest Control",
+       "National parks and eco-guards protect animals. Insecticides and vaccination fight pests and diseases."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Explain how overgrazing leads to soil erosion.",
+    "Too many animals eat all the grass. The bare soil is then washed away by rain or blown away by wind."
+   ],
+   [
+    "Give two solutions to the problem of drought.",
+    "Farmers can irrigate their fields and grow drought-resistant crops such as millet and sorghum."
+   ],
+   [
+    "Give one cause of conflicts between farmers and herders.",
+    "Cattle enter fields and eat crops, because pasture and water are scarce."
+   ]
+  ],
+  "remediation": [
+   [
+    "A long period without enough rain is called a ______.",
+    "Too many animals grazing on the same land is called ______.",
+    "The fly that carries sleeping sickness is the ______ fly."
+   ],
+   [
+    "The illegal killing of protected animals is called ______.",
+    "The Cameroonian tree-planting programme in the North is called Opération ______.",
+    "Burning small areas early in the dry season is called ______ burning."
+   ]
+  ],
+  "remediationAnswers": "1. drought 2. overgrazing 3. tsetse 4. poaching 5. Sahel Vert 6. controlled (early)",
+  "homework": "On a map of Africa in your atlas, find the Sahara Desert. Write the names of three countries that it covers.",
+  "homeworkTag": "This prepares Lesson 3: Desert Regions (location, types and characteristics).",
+  "bilingual": [
+   [
+    "Drought",
+    "La sécheresse"
+   ],
+   [
+    "Bush fire",
+    "Le feu de brousse"
+   ],
+   [
+    "Overgrazing",
+    "Le surpâturage"
+   ],
+   [
+    "Soil erosion",
+    "L'érosion des sols"
+   ],
+   [
+    "Desertification",
+    "La désertification"
+   ],
+   [
+    "Poaching",
+    "Le braconnage"
+   ],
+   [
+    "Locust",
+    "Le criquet"
+   ],
+   [
+    "Conflict",
+    "Le conflit"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "This session closes Lesson 2 (Tropical Grassland Region)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (tropical grassland).",
+   "MINEPDED: Opération Sahel Vert."
+  ]
+ }
+}

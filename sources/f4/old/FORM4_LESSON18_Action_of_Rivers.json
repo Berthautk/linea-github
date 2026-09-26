@@ -1,0 +1,433 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"A river erodes its bed and banks in four ways:\"]",
+  "sumImage | \"x\" | \"A. Hydraulic Action\" | \"The force of the water hits the bed and banks and breaks off pieces of rock.\" | \"river_erosion.png\"",
+  "sum | \"x\" | \"B. Abrasion (Corrasion)\" | [\"The load (sand and stones) rubs and scrapes the bed and banks, like sandpaper.\"]",
+  "sum | \"x\" | \"C. Attrition\" | [\"Stones carried by the river hit each other and become smaller, smoother and rounder.\"]",
+  "sum | \"x\" | \"D. Solution (Corrosion)\" | [\"River water dissolves soluble rocks such as limestone.\"]",
+  "sum | \"II. Mechanisms of River Erosion (1/5)\" | [\"A river erodes its bed and banks in four ways:\"]",
+  "sumImage | \"II. Mechanisms of River Erosion (2/5)\" | \"A. Hydraulic Action\" | \"The force of the water hits the bed and banks and breaks off pieces of rock.\" | \"river_erosion.png\"",
+  "sum | \"II. Mechanisms of River Erosion (3/5)\" | \"B. Abrasion (Corrasion)\" | [\"The load (sand and stones) rubs and scrapes the bed and banks, like sandpaper.\"]",
+  "sum | \"II. Mechanisms of River Erosion (4/5)\" | \"C. Attrition\" | [\"Stones carried by the river hit each other and become smaller, smoother and rounder.\"]",
+  "sum | \"II. Mechanisms of River Erosion (5/5)\" | \"D. Solution (Corrosion)\" | [\"River water dissolves soluble rocks such as limestone.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON18_Action_of_Rivers",
+  "lessonNo": 18,
+  "lessonName": "Action of Rivers on the Landscape",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "coverNote": "Good morning, class. Today we start a new sub-topic: the work of rivers. Lesson 18 is about the action of rivers on the landscape.",
+  "notions": "Running water, long profile of a river.",
+  "focus": "The long profile of a river: definition and illustration; mechanisms of river erosion.",
+  "competence": "Learners are able to describe how a river such as the Benue changes from its source to its mouth, and to explain how running water wears away its bed and banks.",
+  "objectives": [
+   "Define the long profile of a river.",
+   "Draw and describe the long profile with its three courses.",
+   "Explain the four mechanisms of river erosion."
+  ],
+  "recall": [
+   "Running water is the most important agent of denudation.",
+   "Erosion is the wearing away of rocks by a moving agent.",
+   "Weathering prepares the material that rivers carry."
+  ],
+  "recallNote": "Check the homework: observations of the Benue or a stream.",
+  "situation": [
+   "In Garoua, the Benue is wide and slow in the rainy season. It carries a lot of brown mud and sand.",
+   "The Benue begins on the Adamawa Plateau, near Ngaoundéré, and flows into Nigeria to join the Niger. Asta wonders if the river is also wide and slow near its source, or small and fast on steep slopes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Asta does not know how the Benue changes between its source and its mouth."
+   ],
+   [
+    "Where does the Benue begin, and which river does it join?",
+    "It begins on the Adamawa Plateau and joins the Niger River in Nigeria."
+   ],
+   [
+    "Why is it useful to know how a river changes along its course?",
+    "It helps us to choose places for bridges, dams, farms and settlements, and to avoid dangers."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the journey of a river and how it wears away the land.",
+  "parts": [
+   {
+    "sec": "I. THE LONG PROFILE",
+    "qa": [
+     {
+      "img": "long_profile.png",
+      "kind": "diagram",
+      "q": "Study the long profile of a river.",
+      "full": true
+     },
+     {
+      "q": "What is the long profile of a river?",
+      "a": "The long profile is a line that shows the change of the gradient (slope) of a river from its source to its mouth."
+     },
+     {
+      "q": "Name the three courses of a river and the main work of the river in each one.",
+      "a": "The upper course (vertical erosion), the middle course (lateral erosion and transportation) and the lower course (deposition)."
+     },
+     {
+      "q": "Compare the gradient at the source and at the mouth.",
+      "a": "At the source, the gradient is steep. At the mouth, it is almost flat, near sea level."
+     }
+    ],
+    "sum": {
+     "title": "I. The Long Profile of a River",
+     "defs": [
+      "The long profile of a river is a line that shows the change in its gradient (slope) from the source to the mouth."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The long profile is steep near the source and almost flat near the mouth. It is concave (curved like a slide).",
+       "long_profile.png"
+      ],
+      [
+       "B. The Three Courses",
+       [
+        "– Upper course: steep gradient, narrow V-shaped valley, vertical erosion.",
+        "– Middle course: gentler gradient, wider valley, lateral erosion and transportation.",
+        "– Lower course: almost flat, wide floodplain, deposition."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. MECHANISMS OF RIVER EROSION",
+    "qa": [
+     {
+      "img": "river_erosion.png",
+      "kind": "diagram",
+      "q": "Study the four mechanisms of river erosion.",
+      "full": true
+     },
+     {
+      "q": "What is hydraulic action?",
+      "a": "Hydraulic action is the force of moving water hitting the bed and banks. It pushes air and water into cracks and breaks off pieces of rock."
+     },
+     {
+      "q": "What is the difference between abrasion and attrition?",
+      "a": "In abrasion, the stones carried by the river scrape the bed and banks. In attrition, the stones knock against each other and become smaller and rounder."
+     },
+     {
+      "q": "What is solution (corrosion)?",
+      "a": "Solution is the chemical dissolving of rocks such as limestone by river water."
+     }
+    ],
+    "sum": {
+     "title": "II. Mechanisms of River Erosion",
+     "intro": "A river erodes its bed and banks in four ways:",
+     "items": [
+      [
+       "A. Hydraulic Action",
+       "The force of the water hits the bed and banks and breaks off pieces of rock.",
+       "river_erosion.png"
+      ],
+      [
+       "B. Abrasion (Corrasion)",
+       "The load (sand and stones) rubs and scrapes the bed and banks, like sandpaper."
+      ],
+      [
+       "C. Attrition",
+       "Stones carried by the river hit each other and become smaller, smoother and rounder."
+      ],
+      [
+       "D. Solution (Corrosion)",
+       "River water dissolves soluble rocks such as limestone."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What does the long profile of a river show?",
+    "It shows the change of the gradient of the river from its source to its mouth."
+   ],
+   [
+    "In which course is vertical erosion dominant?",
+    "Vertical erosion is dominant in the upper course."
+   ],
+   [
+    "Why are the stones of a river bed smooth and round?",
+    "Because of attrition: the stones knock against each other and lose their sharp edges."
+   ]
+  ],
+  "remediation": [
+   [
+    "The start of a river is its ______.",
+    "The end of a river is its ______.",
+    "The main work in the lower course is ______."
+   ],
+   [
+    "The force of moving water is hydraulic ______.",
+    "Stones scraping the bed is ______.",
+    "Stones hitting each other is ______."
+   ]
+  ],
+  "remediationAnswers": "1. source 2. mouth 3. deposition 4. action 5. abrasion 6. attrition",
+  "homework": "Find a photo or a video of the Vina Falls or the Tello Falls near Ngaoundéré, or of the Kola Gorges near Guider. Describe the river and its valley in three sentences.",
+  "homeworkTag": "This prepares Lesson 19: The Upper Course of a River.",
+  "bilingual": [
+   [
+    "River",
+    "La rivière / le fleuve"
+   ],
+   [
+    "Source",
+    "La source"
+   ],
+   [
+    "Mouth",
+    "L'embouchure"
+   ],
+   [
+    "Gradient",
+    "La pente"
+   ],
+   [
+    "Long profile",
+    "Le profil en long"
+   ],
+   [
+    "Bed",
+    "Le lit"
+   ],
+   [
+    "Bank",
+    "La berge / la rive"
+   ],
+   [
+    "Load",
+    "La charge"
+   ]
+  ],
+  "teacherNote": [
+   "Checked: the Benue rises on the Adamawa Plateau, flows through the Lagdo reservoir and Garoua, and joins the Niger at Lokoja (Nigeria). Its length is about 1,400 km.",
+   "Around Garoua, the Benue shows middle-course features (wide valley, meanders, sandbanks and braided channels in the dry season)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 18",
+  "title": "Action of Rivers on the Landscape",
+  "sumTitle": "Action of Rivers on the Landscape",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 18: Action of Rivers on the Landscape",
+  "matter": "I. The Long Profile of a River: Illustration, The Three Courses; II. Mechanisms of River Erosion: Hydraulic Action, Abrasion (Corrasion), Attrition, Solution (Corrosion)."
+ },
+ "file": "FORM4_LESSON18_Action_of_Rivers",
+ "sp": {
+  "file": "FORM4_LESSON18_Action_of_Rivers",
+  "lessonNo": 18,
+  "lessonName": "Action of Rivers on the Landscape",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "coverNote": "Good morning, class. Today we start a new sub-topic: the work of rivers. Lesson 18 is about the action of rivers on the landscape.",
+  "notions": "Running water, long profile of a river.",
+  "focus": "The long profile of a river: definition and illustration; mechanisms of river erosion.",
+  "competence": "Learners are able to describe how a river such as the Benue changes from its source to its mouth, and to explain how running water wears away its bed and banks.",
+  "objectives": [
+   "Define the long profile of a river.",
+   "Draw and describe the long profile with its three courses.",
+   "Explain the four mechanisms of river erosion."
+  ],
+  "recall": [
+   "Running water is the most important agent of denudation.",
+   "Erosion is the wearing away of rocks by a moving agent.",
+   "Weathering prepares the material that rivers carry."
+  ],
+  "recallNote": "Check the homework: observations of the Benue or a stream.",
+  "situation": [
+   "In Garoua, the Benue is wide and slow in the rainy season. It carries a lot of brown mud and sand.",
+   "The Benue begins on the Adamawa Plateau, near Ngaoundéré, and flows into Nigeria to join the Niger. Asta wonders if the river is also wide and slow near its source, or small and fast on steep slopes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Asta does not know how the Benue changes between its source and its mouth."
+   ],
+   [
+    "Where does the Benue begin, and which river does it join?",
+    "It begins on the Adamawa Plateau and joins the Niger River in Nigeria."
+   ],
+   [
+    "Why is it useful to know how a river changes along its course?",
+    "It helps us to choose places for bridges, dams, farms and settlements, and to avoid dangers."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the journey of a river and how it wears away the land.",
+  "parts": [
+   {
+    "sec": "I. THE LONG PROFILE",
+    "qa": [
+     {
+      "img": "long_profile.png",
+      "kind": "diagram",
+      "q": "Study the long profile of a river.",
+      "full": true
+     },
+     {
+      "q": "What is the long profile of a river?",
+      "a": "The long profile is a line that shows the change of the gradient (slope) of a river from its source to its mouth."
+     },
+     {
+      "q": "Name the three courses of a river and the main work of the river in each one.",
+      "a": "The upper course (vertical erosion), the middle course (lateral erosion and transportation) and the lower course (deposition)."
+     },
+     {
+      "q": "Compare the gradient at the source and at the mouth.",
+      "a": "At the source, the gradient is steep. At the mouth, it is almost flat, near sea level."
+     }
+    ],
+    "sum": {
+     "title": "I. The Long Profile of a River",
+     "defs": [
+      "The long profile of a river is a line that shows the change in its gradient (slope) from the source to the mouth."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The long profile is steep near the source and almost flat near the mouth. It is concave (curved like a slide).",
+       "long_profile.png"
+      ],
+      [
+       "B. The Three Courses",
+       [
+        "– Upper course: steep gradient, narrow V-shaped valley, vertical erosion.",
+        "– Middle course: gentler gradient, wider valley, lateral erosion and transportation.",
+        "– Lower course: almost flat, wide floodplain, deposition."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. MECHANISMS OF RIVER EROSION",
+    "qa": [
+     {
+      "img": "river_erosion.png",
+      "kind": "diagram",
+      "q": "Study the four mechanisms of river erosion.",
+      "full": true
+     },
+     {
+      "q": "What is hydraulic action?",
+      "a": "Hydraulic action is the force of moving water hitting the bed and banks. It pushes air and water into cracks and breaks off pieces of rock."
+     },
+     {
+      "q": "What is the difference between abrasion and attrition?",
+      "a": "In abrasion, the stones carried by the river scrape the bed and banks. In attrition, the stones knock against each other and become smaller and rounder."
+     },
+     {
+      "q": "What is solution (corrosion)?",
+      "a": "Solution is the chemical dissolving of rocks such as limestone by river water."
+     }
+    ],
+    "sum": {
+     "title": "II. Mechanisms of River Erosion",
+     "intro": "A river erodes its bed and banks in four ways:",
+     "items": [
+      [
+       "A. Hydraulic Action",
+       "The force of the water hits the bed and banks and breaks off pieces of rock.",
+       "river_erosion.png"
+      ],
+      [
+       "B. Abrasion (Corrasion)",
+       "The load (sand and stones) rubs and scrapes the bed and banks, like sandpaper."
+      ],
+      [
+       "C. Attrition",
+       "Stones carried by the river hit each other and become smaller, smoother and rounder."
+      ],
+      [
+       "D. Solution (Corrosion)",
+       "River water dissolves soluble rocks such as limestone."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What does the long profile of a river show?",
+    "It shows the change of the gradient of the river from its source to its mouth."
+   ],
+   [
+    "In which course is vertical erosion dominant?",
+    "Vertical erosion is dominant in the upper course."
+   ],
+   [
+    "Why are the stones of a river bed smooth and round?",
+    "Because of attrition: the stones knock against each other and lose their sharp edges."
+   ]
+  ],
+  "remediation": [
+   [
+    "The start of a river is its ______.",
+    "The end of a river is its ______.",
+    "The main work in the lower course is ______."
+   ],
+   [
+    "The force of moving water is hydraulic ______.",
+    "Stones scraping the bed is ______.",
+    "Stones hitting each other is ______."
+   ]
+  ],
+  "remediationAnswers": "1. source 2. mouth 3. deposition 4. action 5. abrasion 6. attrition",
+  "homework": "Find a photo or a video of the Vina Falls or the Tello Falls near Ngaoundéré, or of the Kola Gorges near Guider. Describe the river and its valley in three sentences.",
+  "homeworkTag": "This prepares Lesson 19: The Upper Course of a River.",
+  "bilingual": [
+   [
+    "River",
+    "La rivière / le fleuve"
+   ],
+   [
+    "Source",
+    "La source"
+   ],
+   [
+    "Mouth",
+    "L'embouchure"
+   ],
+   [
+    "Gradient",
+    "La pente"
+   ],
+   [
+    "Long profile",
+    "Le profil en long"
+   ],
+   [
+    "Bed",
+    "Le lit"
+   ],
+   [
+    "Bank",
+    "La berge / la rive"
+   ],
+   [
+    "Load",
+    "La charge"
+   ]
+  ],
+  "teacherNote": [
+   "Checked: the Benue rises on the Adamawa Plateau, flows through the Lagdo reservoir and Garoua, and joins the Niger at Lokoja (Nigeria). Its length is about 1,400 km.",
+   "Around Garoua, the Benue shows middle-course features (wide valley, meanders, sandbanks and braided channels in the dry season)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

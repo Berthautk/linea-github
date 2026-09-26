@@ -1,0 +1,636 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. TYPES OF FARMING\" | \"Question 1\" | [\"In England and France, many farmers grow crops and rear animals on the same farm. What is this type of farming called?\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Answer\" | [\"It is called mixed farming. Farmers grow wheat, barley and vegetables, and rear cattle, pigs and sheep.\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Question 2\" | [\"The Netherlands, Denmark and New Zealand rear many cows for milk, butter and cheese. What type of farming is this?\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Answer\" | [\"It is called dairy farming. The mild, wet climate gives green grass all year.\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Question 3\" | [\"On the Prairies of Canada and the USA, huge farms grow only wheat with large machines. What type of farming is this?\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Answer\" | [\"It is called extensive commercial grain farming. The Prairies, the Steppes and the Pampas produce huge amounts of wheat.\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Question 4\" | [\"On the Pampas of Argentina and in Australia, animals are reared on huge farms. What are these farms called?\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Answer\" | [\"They are called ranches. Argentina rears beef cattle, and Australia and New Zealand rear many sheep for wool and meat.\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Question 5\" | [\"Which crops are typical of Mediterranean farming?\"]",
+  "slide | \"I. TYPES OF FARMING\" | \"Answer\" | [\"Mediterranean farmers grow olives, grapes (for wine), citrus fruits and wheat, and they irrigate in the dry summer.\"]",
+  "slide | \"II. CHARACTERISTICS\" | \"Question 1\" | [\"Why does one farmer in Canada produce much more wheat than one farmer in North Cameroon?\"]",
+  "slide | \"II. CHARACTERISTICS\" | \"Answer\" | [\"He uses tractors and combine harvesters, improved seeds, fertilisers and pesticides, and he farms a much larger area.\"]",
+  "slide | \"II. CHARACTERISTICS\" | \"Question 2\" | [\"How do temperate farmers sell their products at good prices?\"]",
+  "slide | \"II. CHARACTERISTICS\" | \"Answer\" | [\"They join cooperatives, which store, process and sell their products. Governments also help them with subsidies.\"]",
+  "sum | \"I. Types of Farming (1/6)\" | [\"The main types of farming in the temperate region are the following:\"]",
+  "sum | \"I. Types of Farming (2/6)\" | \"A. Mixed Farming\" | [\"Mixed farming is the growing of crops and rearing of animals on the same farm, as in England and France.\"]",
+  "sum | \"I. Types of Farming (3/6)\" | \"B. Dairy Farming\" | [\"Dairy farming is the rearing of cows for milk, butter and cheese, as in the Netherlands, Denmark and New Zealand.\"]",
+  "sum | \"I. Types of Farming (4/6)\" | \"C. Extensive Grain Farming\" | [\"Extensive grain farming is the growing of wheat on huge farms with machines, as on the Prairies, the Steppes and the Pampas.\"]",
+  "sum | \"I. Types of Farming (5/6)\" | \"D. Ranching\" | [\"Ranching is the rearing of cattle or sheep on huge farms called ranches, as in Argentina, Australia and New Zealand.\"]",
+  "sum | \"I. Types of Farming (6/6)\" | \"E. Mediterranean Farming\" | [\"Mediterranean farming is the growing of olives, grapes, citrus fruits and wheat, with irrigation in summer.\"]",
+  "sum | \"II. Characteristics of Temperate Farming (1/4)\" | [\"Temperate farming has the following characteristics:\"]",
+  "sum | \"II. Characteristics of Temperate Farming (2/4)\" | \"A. Mechanisation\" | [\"Farmers use tractors, combine harvesters and milking machines, so few workers produce a lot.\"]",
+  "sum | \"II. Characteristics of Temperate Farming (3/4)\" | \"B. Science and Inputs\" | [\"Farmers use improved seeds, fertilisers and pesticides, so yields are high.\"]",
+  "sum | \"II. Characteristics of Temperate Farming (4/4)\" | \"C. Commercial Farming\" | [\"Most products are sold, often abroad. Farmers are organised in cooperatives and helped by the government.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S12_L4_P3_Temperate_Farming",
+  "part": 3,
+  "partTitle": "Human Activities (Farming)",
+  "notions": "Mixed farming, dairy farming, extensive grain farming, ranching, Mediterranean farming, mechanisation.",
+  "focus": "Farming in the temperate region.",
+  "competence": "Learners are able to explain where the imported flour, milk and meat sold in Garoua come from, and how they are produced.",
+  "objectives": [
+   "Describe the main types of farming in the temperate region.",
+   "Give examples of countries for each type of farming.",
+   "Explain why temperate farming is very productive."
+  ],
+  "recall": [
+   "The temperate region has deciduous forests, coniferous forests, Mediterranean vegetation and grasslands.",
+   "Its brown forest soils and chernozems are very fertile."
+  ],
+  "recallNote": "Check the homework: food products imported from temperate countries.",
+  "situation": [
+   "In a shop in Garoua, Blaise sees bags of wheat flour from France, tins of powdered milk from the Netherlands and bottles of olive oil from Spain.",
+   "He wonders how these countries can produce so much food that they sell it to other countries."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Blaise does not understand how temperate countries produce so much food that they sell it abroad."
+   ],
+   [
+    "Which products did Blaise see, and where do they come from?",
+    "He saw wheat flour from France, powdered milk from the Netherlands and olive oil from Spain."
+   ],
+   [
+    "What can Cameroon learn from these countries to produce more food?",
+    "Cameroon can use machines, improved seeds, fertilisers and good training for farmers."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how farming is done in temperate countries and why it produces so much food.",
+  "parts": [
+   {
+    "sec": "I. TYPES OF FARMING",
+    "qa": [
+     {
+      "q": "In England and France, many farmers grow crops and rear animals on the same farm. What is this type of farming called?",
+      "a": "It is called mixed farming. Farmers grow wheat, barley and vegetables, and rear cattle, pigs and sheep."
+     },
+     {
+      "q": "The Netherlands, Denmark and New Zealand rear many cows for milk, butter and cheese. What type of farming is this?",
+      "a": "It is called dairy farming. The mild, wet climate gives green grass all year."
+     },
+     {
+      "q": "On the Prairies of Canada and the USA, huge farms grow only wheat with large machines. What type of farming is this?",
+      "a": "It is called extensive commercial grain farming. The Prairies, the Steppes and the Pampas produce huge amounts of wheat."
+     },
+     {
+      "q": "On the Pampas of Argentina and in Australia, animals are reared on huge farms. What are these farms called?",
+      "a": "They are called ranches. Argentina rears beef cattle, and Australia and New Zealand rear many sheep for wool and meat."
+     },
+     {
+      "q": "Which crops are typical of Mediterranean farming?",
+      "a": "Mediterranean farmers grow olives, grapes (for wine), citrus fruits and wheat, and they irrigate in the dry summer."
+     }
+    ],
+    "sum": {
+     "title": "I. Types of Farming",
+     "intro": "The main types of farming in the temperate region are the following:",
+     "items": [
+      [
+       "A. Mixed Farming",
+       "Mixed farming is the growing of crops and rearing of animals on the same farm, as in England and France."
+      ],
+      [
+       "B. Dairy Farming",
+       "Dairy farming is the rearing of cows for milk, butter and cheese, as in the Netherlands, Denmark and New Zealand."
+      ],
+      [
+       "C. Extensive Grain Farming",
+       "Extensive grain farming is the growing of wheat on huge farms with machines, as on the Prairies, the Steppes and the Pampas."
+      ],
+      [
+       "D. Ranching",
+       "Ranching is the rearing of cattle or sheep on huge farms called ranches, as in Argentina, Australia and New Zealand."
+      ],
+      [
+       "E. Mediterranean Farming",
+       "Mediterranean farming is the growing of olives, grapes, citrus fruits and wheat, with irrigation in summer."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. CHARACTERISTICS",
+    "qa": [
+     {
+      "q": "Why does one farmer in Canada produce much more wheat than one farmer in North Cameroon?",
+      "a": "He uses tractors and combine harvesters, improved seeds, fertilisers and pesticides, and he farms a much larger area."
+     },
+     {
+      "q": "How do temperate farmers sell their products at good prices?",
+      "a": "They join cooperatives, which store, process and sell their products. Governments also help them with subsidies."
+     }
+    ],
+    "sum": {
+     "title": "II. Characteristics of Temperate Farming",
+     "intro": "Temperate farming has the following characteristics:",
+     "items": [
+      [
+       "A. Mechanisation",
+       "Farmers use tractors, combine harvesters and milking machines, so few workers produce a lot."
+      ],
+      [
+       "B. Science and Inputs",
+       "Farmers use improved seeds, fertilisers and pesticides, so yields are high."
+      ],
+      [
+       "C. Commercial Farming",
+       "Most products are sold, often abroad. Farmers are organised in cooperatives and helped by the government."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is mixed farming?",
+    "Mixed farming is the growing of crops and rearing of animals on the same farm."
+   ],
+   [
+    "Name one country known for dairy farming and one known for ranching.",
+    "The Netherlands is known for dairy farming, and Argentina is known for ranching."
+   ],
+   [
+    "Give two reasons why temperate farming is very productive.",
+    "Farmers use machines, improved seeds and fertilisers."
+   ]
+  ],
+  "remediation": [
+   [
+    "Growing crops and rearing animals on the same farm is called ______ farming.",
+    "Rearing cows for milk and cheese is called ______ farming.",
+    "Huge farms for rearing cattle are called ______."
+   ],
+   [
+    "The grassland of Canada and the USA that produces wheat is the ______.",
+    "A typical Mediterranean crop is the ______.",
+    "A machine that cuts and threshes wheat is a combine ______."
+   ]
+  ],
+  "remediationAnswers": "1. mixed 2. dairy 3. ranches 4. Prairies 5. olive (or grape) 6. harvester",
+  "homework": "Ask an adult who has lived or travelled in Europe what difficulties people face in winter. Write down two of them.",
+  "homeworkTag": "This prepares Part 4: Problems Faced and Adaptations in the Temperate Region.",
+  "bilingual": [
+   [
+    "Mixed farming",
+    "La polyculture-élevage"
+   ],
+   [
+    "Dairy farming",
+    "L'élevage laitier"
+   ],
+   [
+    "Wheat",
+    "Le blé"
+   ],
+   [
+    "Ranch",
+    "Le ranch"
+   ],
+   [
+    "Tractor",
+    "Le tracteur"
+   ],
+   [
+    "Cooperative",
+    "La coopérative"
+   ],
+   [
+    "Fertiliser",
+    "L'engrais"
+   ],
+   [
+    "Grape",
+    "Le raisin"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Link to local reality: most wheat flour sold in Cameroon is made from imported wheat."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 3)",
+  "title": "The Temperate Region: Human Activities (Farming)",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 3: Human Activities (Farming).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 3: Human Activities (Farming)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S12_L4_P3_Temperate_Farming",
+  "part": 3,
+  "partTitle": "Human Activities (Farming)",
+  "notions": "Mixed farming, dairy farming, extensive grain farming, ranching, Mediterranean farming, mechanisation.",
+  "focus": "Farming in the temperate region.",
+  "competence": "Learners are able to explain where the imported flour, milk and meat sold in Garoua come from, and how they are produced.",
+  "objectives": [
+   "Describe the main types of farming in the temperate region.",
+   "Give examples of countries for each type of farming.",
+   "Explain why temperate farming is very productive."
+  ],
+  "recall": [
+   "The temperate region has deciduous forests, coniferous forests, Mediterranean vegetation and grasslands.",
+   "Its brown forest soils and chernozems are very fertile."
+  ],
+  "recallNote": "Check the homework: food products imported from temperate countries.",
+  "situation": [
+   "In a shop in Garoua, Blaise sees bags of wheat flour from France, tins of powdered milk from the Netherlands and bottles of olive oil from Spain.",
+   "He wonders how these countries can produce so much food that they sell it to other countries."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Blaise does not understand how temperate countries produce so much food that they sell it abroad."
+   ],
+   [
+    "Which products did Blaise see, and where do they come from?",
+    "He saw wheat flour from France, powdered milk from the Netherlands and olive oil from Spain."
+   ],
+   [
+    "What can Cameroon learn from these countries to produce more food?",
+    "Cameroon can use machines, improved seeds, fertilisers and good training for farmers."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how farming is done in temperate countries and why it produces so much food.",
+  "parts": [
+   {
+    "sec": "I. TYPES OF FARMING",
+    "qa": [
+     {
+      "q": "In England and France, many farmers grow crops and rear animals on the same farm. What is this type of farming called?",
+      "a": "It is called mixed farming. Farmers grow wheat, barley and vegetables, and rear cattle, pigs and sheep."
+     },
+     {
+      "q": "The Netherlands, Denmark and New Zealand rear many cows for milk, butter and cheese. What type of farming is this?",
+      "a": "It is called dairy farming. The mild, wet climate gives green grass all year."
+     },
+     {
+      "q": "On the Prairies of Canada and the USA, huge farms grow only wheat with large machines. What type of farming is this?",
+      "a": "It is called extensive commercial grain farming. The Prairies, the Steppes and the Pampas produce huge amounts of wheat."
+     },
+     {
+      "q": "On the Pampas of Argentina and in Australia, animals are reared on huge farms. What are these farms called?",
+      "a": "They are called ranches. Argentina rears beef cattle, and Australia and New Zealand rear many sheep for wool and meat."
+     },
+     {
+      "q": "Which crops are typical of Mediterranean farming?",
+      "a": "Mediterranean farmers grow olives, grapes (for wine), citrus fruits and wheat, and they irrigate in the dry summer."
+     }
+    ],
+    "sum": {
+     "title": "I. Types of Farming",
+     "intro": "The main types of farming in the temperate region are the following:",
+     "items": [
+      [
+       "A. Mixed Farming",
+       "Mixed farming is the growing of crops and rearing of animals on the same farm, as in England and France."
+      ],
+      [
+       "B. Dairy Farming",
+       "Dairy farming is the rearing of cows for milk, butter and cheese, as in the Netherlands, Denmark and New Zealand."
+      ],
+      [
+       "C. Extensive Grain Farming",
+       "Extensive grain farming is the growing of wheat on huge farms with machines, as on the Prairies, the Steppes and the Pampas."
+      ],
+      [
+       "D. Ranching",
+       "Ranching is the rearing of cattle or sheep on huge farms called ranches, as in Argentina, Australia and New Zealand."
+      ],
+      [
+       "E. Mediterranean Farming",
+       "Mediterranean farming is the growing of olives, grapes, citrus fruits and wheat, with irrigation in summer."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. CHARACTERISTICS",
+    "qa": [
+     {
+      "q": "Why does one farmer in Canada produce much more wheat than one farmer in North Cameroon?",
+      "a": "He uses tractors and combine harvesters, improved seeds, fertilisers and pesticides, and he farms a much larger area."
+     },
+     {
+      "q": "How do temperate farmers sell their products at good prices?",
+      "a": "They join cooperatives, which store, process and sell their products. Governments also help them with subsidies."
+     }
+    ],
+    "sum": {
+     "title": "II. Characteristics of Temperate Farming",
+     "intro": "Temperate farming has the following characteristics:",
+     "items": [
+      [
+       "A. Mechanisation",
+       "Farmers use tractors, combine harvesters and milking machines, so few workers produce a lot."
+      ],
+      [
+       "B. Science and Inputs",
+       "Farmers use improved seeds, fertilisers and pesticides, so yields are high."
+      ],
+      [
+       "C. Commercial Farming",
+       "Most products are sold, often abroad. Farmers are organised in cooperatives and helped by the government."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is mixed farming?",
+    "Mixed farming is the growing of crops and rearing of animals on the same farm."
+   ],
+   [
+    "Name one country known for dairy farming and one known for ranching.",
+    "The Netherlands is known for dairy farming, and Argentina is known for ranching."
+   ],
+   [
+    "Give two reasons why temperate farming is very productive.",
+    "Farmers use machines, improved seeds and fertilisers."
+   ]
+  ],
+  "remediation": [
+   [
+    "Growing crops and rearing animals on the same farm is called ______ farming.",
+    "Rearing cows for milk and cheese is called ______ farming.",
+    "Huge farms for rearing cattle are called ______."
+   ],
+   [
+    "The grassland of Canada and the USA that produces wheat is the ______.",
+    "A typical Mediterranean crop is the ______.",
+    "A machine that cuts and threshes wheat is a combine ______."
+   ]
+  ],
+  "remediationAnswers": "1. mixed 2. dairy 3. ranches 4. Prairies 5. olive (or grape) 6. harvester",
+  "homework": "Ask an adult who has lived or travelled in Europe what difficulties people face in winter. Write down two of them.",
+  "homeworkTag": "This prepares Part 4: Problems Faced and Adaptations in the Temperate Region.",
+  "bilingual": [
+   [
+    "Mixed farming",
+    "La polyculture-élevage"
+   ],
+   [
+    "Dairy farming",
+    "L'élevage laitier"
+   ],
+   [
+    "Wheat",
+    "Le blé"
+   ],
+   [
+    "Ranch",
+    "Le ranch"
+   ],
+   [
+    "Tractor",
+    "Le tracteur"
+   ],
+   [
+    "Cooperative",
+    "La coopérative"
+   ],
+   [
+    "Fertiliser",
+    "L'engrais"
+   ],
+   [
+    "Grape",
+    "Le raisin"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Link to local reality: most wheat flour sold in Cameroon is made from imported wheat."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 3)",
+  "title": "The Temperate Region: Human Activities (Farming)",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 3: Human Activities (Farming).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 3: Human Activities (Farming)",
+  "matter": "I. Types of Farming: Mixed Farming, Dairy Farming, Extensive Grain Farming, Ranching, Mediterranean Farming; II. Characteristics of Temperate Farming: Mechanisation, Science and Inputs, Commercial Farming."
+ },
+ "file": "S12_L4_P3_Temperate_Farming",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S12_L4_P3_Temperate_Farming",
+  "part": 3,
+  "partTitle": "Human Activities (Farming)",
+  "notions": "Mixed farming, dairy farming, extensive grain farming, ranching, Mediterranean farming, mechanisation.",
+  "focus": "Farming in the temperate region.",
+  "competence": "Learners are able to explain where the imported flour, milk and meat sold in Garoua come from, and how they are produced.",
+  "objectives": [
+   "Describe the main types of farming in the temperate region.",
+   "Give examples of countries for each type of farming.",
+   "Explain why temperate farming is very productive."
+  ],
+  "recall": [
+   "The temperate region has deciduous forests, coniferous forests, Mediterranean vegetation and grasslands.",
+   "Its brown forest soils and chernozems are very fertile."
+  ],
+  "recallNote": "Check the homework: food products imported from temperate countries.",
+  "situation": [
+   "In a shop in Garoua, Blaise sees bags of wheat flour from France, tins of powdered milk from the Netherlands and bottles of olive oil from Spain.",
+   "He wonders how these countries can produce so much food that they sell it to other countries."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Blaise does not understand how temperate countries produce so much food that they sell it abroad."
+   ],
+   [
+    "Which products did Blaise see, and where do they come from?",
+    "He saw wheat flour from France, powdered milk from the Netherlands and olive oil from Spain."
+   ],
+   [
+    "What can Cameroon learn from these countries to produce more food?",
+    "Cameroon can use machines, improved seeds, fertilisers and good training for farmers."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how farming is done in temperate countries and why it produces so much food.",
+  "parts": [
+   {
+    "sec": "I. TYPES OF FARMING",
+    "qa": [
+     {
+      "q": "In England and France, many farmers grow crops and rear animals on the same farm. What is this type of farming called?",
+      "a": "It is called mixed farming. Farmers grow wheat, barley and vegetables, and rear cattle, pigs and sheep."
+     },
+     {
+      "q": "The Netherlands, Denmark and New Zealand rear many cows for milk, butter and cheese. What type of farming is this?",
+      "a": "It is called dairy farming. The mild, wet climate gives green grass all year."
+     },
+     {
+      "q": "On the Prairies of Canada and the USA, huge farms grow only wheat with large machines. What type of farming is this?",
+      "a": "It is called extensive commercial grain farming. The Prairies, the Steppes and the Pampas produce huge amounts of wheat."
+     },
+     {
+      "q": "On the Pampas of Argentina and in Australia, animals are reared on huge farms. What are these farms called?",
+      "a": "They are called ranches. Argentina rears beef cattle, and Australia and New Zealand rear many sheep for wool and meat."
+     },
+     {
+      "q": "Which crops are typical of Mediterranean farming?",
+      "a": "Mediterranean farmers grow olives, grapes (for wine), citrus fruits and wheat, and they irrigate in the dry summer."
+     }
+    ],
+    "sum": {
+     "title": "I. Types of Farming",
+     "intro": "The main types of farming in the temperate region are the following:",
+     "items": [
+      [
+       "A. Mixed Farming",
+       "Mixed farming is the growing of crops and rearing of animals on the same farm, as in England and France."
+      ],
+      [
+       "B. Dairy Farming",
+       "Dairy farming is the rearing of cows for milk, butter and cheese, as in the Netherlands, Denmark and New Zealand."
+      ],
+      [
+       "C. Extensive Grain Farming",
+       "Extensive grain farming is the growing of wheat on huge farms with machines, as on the Prairies, the Steppes and the Pampas."
+      ],
+      [
+       "D. Ranching",
+       "Ranching is the rearing of cattle or sheep on huge farms called ranches, as in Argentina, Australia and New Zealand."
+      ],
+      [
+       "E. Mediterranean Farming",
+       "Mediterranean farming is the growing of olives, grapes, citrus fruits and wheat, with irrigation in summer."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. CHARACTERISTICS",
+    "qa": [
+     {
+      "q": "Why does one farmer in Canada produce much more wheat than one farmer in North Cameroon?",
+      "a": "He uses tractors and combine harvesters, improved seeds, fertilisers and pesticides, and he farms a much larger area."
+     },
+     {
+      "q": "How do temperate farmers sell their products at good prices?",
+      "a": "They join cooperatives, which store, process and sell their products. Governments also help them with subsidies."
+     }
+    ],
+    "sum": {
+     "title": "II. Characteristics of Temperate Farming",
+     "intro": "Temperate farming has the following characteristics:",
+     "items": [
+      [
+       "A. Mechanisation",
+       "Farmers use tractors, combine harvesters and milking machines, so few workers produce a lot."
+      ],
+      [
+       "B. Science and Inputs",
+       "Farmers use improved seeds, fertilisers and pesticides, so yields are high."
+      ],
+      [
+       "C. Commercial Farming",
+       "Most products are sold, often abroad. Farmers are organised in cooperatives and helped by the government."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is mixed farming?",
+    "Mixed farming is the growing of crops and rearing of animals on the same farm."
+   ],
+   [
+    "Name one country known for dairy farming and one known for ranching.",
+    "The Netherlands is known for dairy farming, and Argentina is known for ranching."
+   ],
+   [
+    "Give two reasons why temperate farming is very productive.",
+    "Farmers use machines, improved seeds and fertilisers."
+   ]
+  ],
+  "remediation": [
+   [
+    "Growing crops and rearing animals on the same farm is called ______ farming.",
+    "Rearing cows for milk and cheese is called ______ farming.",
+    "Huge farms for rearing cattle are called ______."
+   ],
+   [
+    "The grassland of Canada and the USA that produces wheat is the ______.",
+    "A typical Mediterranean crop is the ______.",
+    "A machine that cuts and threshes wheat is a combine ______."
+   ]
+  ],
+  "remediationAnswers": "1. mixed 2. dairy 3. ranches 4. Prairies 5. olive (or grape) 6. harvester",
+  "homework": "Ask an adult who has lived or travelled in Europe what difficulties people face in winter. Write down two of them.",
+  "homeworkTag": "This prepares Part 4: Problems Faced and Adaptations in the Temperate Region.",
+  "bilingual": [
+   [
+    "Mixed farming",
+    "La polyculture-élevage"
+   ],
+   [
+    "Dairy farming",
+    "L'élevage laitier"
+   ],
+   [
+    "Wheat",
+    "Le blé"
+   ],
+   [
+    "Ranch",
+    "Le ranch"
+   ],
+   [
+    "Tractor",
+    "Le tracteur"
+   ],
+   [
+    "Cooperative",
+    "La coopérative"
+   ],
+   [
+    "Fertiliser",
+    "L'engrais"
+   ],
+   [
+    "Grape",
+    "Le raisin"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Link to local reality: most wheat flour sold in Cameroon is made from imported wheat."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ]
+ }
+}

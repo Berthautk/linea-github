@@ -1,0 +1,420 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Lateral erosion and deposition form the following landforms:\"]",
+  "sum | \"x\" | \"A. Open V-Shaped Valley\" | [\"Lateral erosion widens the valley. It has gentle sides and a flat floor.\"]",
+  "sumImage | \"x\" | \"B. Meanders\" | \"A meander is a large bend in a river, formed by erosion on the outside and deposition on the inside of the bend.\" | \"meander.png\"",
+  "sum | \"x\" | \"C. River Cliffs and Slip-Off Slopes\" | [\"– River cliff: a steep bank on the outside of a bend, where the fast water erodes.\",\"– Slip-off slope (point bar): a gentle bank of sand on the inside of a bend, where the slow water deposits.\"]",
+  "sum | \"II. Landforms of the Middle Course (1/4)\" | [\"Lateral erosion and deposition form the following landforms:\"]",
+  "sum | \"II. Landforms of the Middle Course (2/4)\" | \"A. Open V-Shaped Valley\" | [\"Lateral erosion widens the valley. It has gentle sides and a flat floor.\"]",
+  "sumImage | \"II. Landforms of the Middle Course (3/4)\" | \"B. Meanders\" | \"A meander is a large bend in a river, formed by erosion on the outside and deposition on the inside of the bend.\" | \"meander.png\"",
+  "sum | \"II. Landforms of the Middle Course (4/4)\" | \"C. River Cliffs and Slip-Off Slopes\" | [\"– River cliff: a steep bank on the outside of a bend, where the fast water erodes.\",\"– Slip-off slope (point bar): a gentle bank of sand on the inside of a bend, where the slow water deposits.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON20_Middle_Course",
+  "lessonNo": 20,
+  "lessonName": "The Middle Course of a River",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "Open V-shaped valley, meanders, river cliffs, slip-off slopes.",
+  "focus": "Main characteristics and processes of the middle course; landforms of the middle course.",
+  "competence": "Learners are able to recognise the landforms of the middle course and to choose safe places to build or farm along a winding river.",
+  "objectives": [
+   "Describe the main characteristics and processes of the middle course.",
+   "Explain how a river transports its load.",
+   "Explain the formation of meanders, river cliffs and slip-off slopes."
+  ],
+  "recall": [
+   "The upper course has steep slopes and vertical erosion.",
+   "Waterfalls form where hard rock lies on soft rock.",
+   "In the middle course, the gradient is gentler."
+  ],
+  "recallNote": "Check the homework: drawings of the Benue from the bridge.",
+  "situation": [
+   "From the Benue Bridge in Garoua, Adama sees that the river is wide and the valley is open. The water flows fast on the outside of a bend, where the bank is steep.",
+   "On the inside of the bend, the water is slow and shallow, and a sandbank has formed. Adama wonders why the river is so different from a mountain stream."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Adama does not understand why the river is different in the middle course."
+   ],
+   [
+    "Where is the water fastest, and where is it slowest?",
+    "It is fastest on the outside of the bend and slowest on the inside."
+   ],
+   [
+    "Which side of a bend is dangerous for houses? Why?",
+    "The outside of the bend is dangerous, because the river erodes the bank there."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the mature stage of a river and the landforms made by lateral erosion and deposition.",
+  "parts": [
+   {
+    "sec": "I. CHARACTERISTICS AND PROCESSES",
+    "qa": [
+     {
+      "q": "Give three characteristics of the middle course.",
+      "a": "The gradient is gentle, the channel is wider and deeper, and the valley is an open V shape with a flat floor."
+     },
+     {
+      "q": "What is the main process in the middle course?",
+      "a": "Lateral (sideways) erosion widens the valley, and transportation is the main work of the river. Deposition begins on the inside of bends."
+     },
+     {
+      "q": "How does a river carry its load?",
+      "a": "It rolls big stones (traction), bounces small stones (saltation), carries fine mud (suspension) and carries dissolved minerals (solution)."
+     }
+    ],
+    "sum": {
+     "title": "I. Main Characteristics and Processes",
+     "intro": "The middle course is the mature stage of the river:",
+     "items": [
+      [
+       "A. Characteristics",
+       [
+        "– Gentle gradient.",
+        "– Wider and deeper channel with more water.",
+        "– Open V-shaped valley with a flat floor.",
+        "– Smaller and rounder load."
+       ]
+      ],
+      [
+       "B. Processes",
+       [
+        "– Lateral (sideways) erosion widens the valley.",
+        "– Transportation is the main work: traction, saltation, suspension and solution.",
+        "– Deposition begins on the inside of bends."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LANDFORMS",
+    "qa": [
+     {
+      "img": "meander.png",
+      "kind": "diagram",
+      "q": "Study a meander and its cross-section.",
+      "full": true
+     },
+     {
+      "q": "What is a meander?",
+      "a": "A meander is a large bend in a river. It forms by erosion on the outside of the bend and deposition on the inside."
+     },
+     {
+      "q": "How does a river cliff form?",
+      "a": "On the outside of the bend, the water is deep and fast. It erodes the bank by hydraulic action and abrasion and forms a steep river cliff."
+     },
+     {
+      "q": "How does a slip-off slope form?",
+      "a": "On the inside of the bend, the water is shallow and slow. It deposits sand and gravel, forming a gentle slip-off slope (point bar)."
+     }
+    ],
+    "sum": {
+     "title": "II. Landforms of the Middle Course",
+     "intro": "Lateral erosion and deposition form the following landforms:",
+     "items": [
+      [
+       "A. Open V-Shaped Valley",
+       "Lateral erosion widens the valley. It has gentle sides and a flat floor."
+      ],
+      [
+       "B. Meanders",
+       "A meander is a large bend in a river, formed by erosion on the outside and deposition on the inside of the bend.",
+       "meander.png"
+      ],
+      [
+       "C. River Cliffs and Slip-Off Slopes",
+       [
+        "– River cliff: a steep bank on the outside of a bend, where the fast water erodes.",
+        "– Slip-off slope (point bar): a gentle bank of sand on the inside of a bend, where the slow water deposits."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main process in the middle course?",
+    "Lateral erosion, with transportation of the load."
+   ],
+   [
+    "What is the difference between a river cliff and a slip-off slope?",
+    "A river cliff is a steep bank eroded on the outside of a bend; a slip-off slope is a gentle bank of deposits on the inside."
+   ],
+   [
+    "How does a river carry fine mud?",
+    "It carries fine mud in suspension."
+   ]
+  ],
+  "remediation": [
+   [
+    "Sideways erosion is ______ erosion.",
+    "A large bend in a river is a ______.",
+    "The steep bank on the outside of a bend is a river ______."
+   ],
+   [
+    "The gentle bank on the inside of a bend is a ______ slope.",
+    "Rolling of big stones is ______.",
+    "Bouncing of small stones is ______."
+   ]
+  ],
+  "remediationAnswers": "1. lateral 2. meander 3. cliff 4. slip-off 5. traction 6. saltation",
+  "homework": "Look at a map of the Niger Delta or the Nile Delta in your atlas. Draw its shape and name the sea it reaches.",
+  "homeworkTag": "This prepares Lesson 21: The Lower Course of a River.",
+  "bilingual": [
+   [
+    "Meander",
+    "Le méandre"
+   ],
+   [
+    "River cliff",
+    "La rive concave / falaise de méandre"
+   ],
+   [
+    "Slip-off slope",
+    "La rive convexe"
+   ],
+   [
+    "Lateral erosion",
+    "L'érosion latérale"
+   ],
+   [
+    "Suspension",
+    "La suspension"
+   ],
+   [
+    "Saltation",
+    "La saltation"
+   ],
+   [
+    "Traction",
+    "Le charriage / la traction"
+   ],
+   [
+    "Sandbank",
+    "Le banc de sable"
+   ]
+  ],
+  "teacherNote": [
+   "Floodplains begin in the middle course, but the syllabus studies them with the lower course and with Lesson 22; they are only mentioned here.",
+   "The four modes of transport were added because transportation is the main work of the river in the middle course."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 20",
+  "title": "The Middle Course of a River",
+  "sumTitle": "The Middle Course of a River",
+  "coverNote": "Good morning, class. Today we study Lesson 20: The Middle Course of a River.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 20: The Middle Course of a River",
+  "matter": "I. Main Characteristics and Processes: Characteristics, Processes; II. Landforms of the Middle Course: Open V-Shaped Valley, Meanders, River Cliffs and Slip-Off Slopes."
+ },
+ "file": "FORM4_LESSON20_Middle_Course",
+ "sp": {
+  "file": "FORM4_LESSON20_Middle_Course",
+  "lessonNo": 20,
+  "lessonName": "The Middle Course of a River",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "Open V-shaped valley, meanders, river cliffs, slip-off slopes.",
+  "focus": "Main characteristics and processes of the middle course; landforms of the middle course.",
+  "competence": "Learners are able to recognise the landforms of the middle course and to choose safe places to build or farm along a winding river.",
+  "objectives": [
+   "Describe the main characteristics and processes of the middle course.",
+   "Explain how a river transports its load.",
+   "Explain the formation of meanders, river cliffs and slip-off slopes."
+  ],
+  "recall": [
+   "The upper course has steep slopes and vertical erosion.",
+   "Waterfalls form where hard rock lies on soft rock.",
+   "In the middle course, the gradient is gentler."
+  ],
+  "recallNote": "Check the homework: drawings of the Benue from the bridge.",
+  "situation": [
+   "From the Benue Bridge in Garoua, Adama sees that the river is wide and the valley is open. The water flows fast on the outside of a bend, where the bank is steep.",
+   "On the inside of the bend, the water is slow and shallow, and a sandbank has formed. Adama wonders why the river is so different from a mountain stream."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Adama does not understand why the river is different in the middle course."
+   ],
+   [
+    "Where is the water fastest, and where is it slowest?",
+    "It is fastest on the outside of the bend and slowest on the inside."
+   ],
+   [
+    "Which side of a bend is dangerous for houses? Why?",
+    "The outside of the bend is dangerous, because the river erodes the bank there."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the mature stage of a river and the landforms made by lateral erosion and deposition.",
+  "parts": [
+   {
+    "sec": "I. CHARACTERISTICS AND PROCESSES",
+    "qa": [
+     {
+      "q": "Give three characteristics of the middle course.",
+      "a": "The gradient is gentle, the channel is wider and deeper, and the valley is an open V shape with a flat floor."
+     },
+     {
+      "q": "What is the main process in the middle course?",
+      "a": "Lateral (sideways) erosion widens the valley, and transportation is the main work of the river. Deposition begins on the inside of bends."
+     },
+     {
+      "q": "How does a river carry its load?",
+      "a": "It rolls big stones (traction), bounces small stones (saltation), carries fine mud (suspension) and carries dissolved minerals (solution)."
+     }
+    ],
+    "sum": {
+     "title": "I. Main Characteristics and Processes",
+     "intro": "The middle course is the mature stage of the river:",
+     "items": [
+      [
+       "A. Characteristics",
+       [
+        "– Gentle gradient.",
+        "– Wider and deeper channel with more water.",
+        "– Open V-shaped valley with a flat floor.",
+        "– Smaller and rounder load."
+       ]
+      ],
+      [
+       "B. Processes",
+       [
+        "– Lateral (sideways) erosion widens the valley.",
+        "– Transportation is the main work: traction, saltation, suspension and solution.",
+        "– Deposition begins on the inside of bends."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LANDFORMS",
+    "qa": [
+     {
+      "img": "meander.png",
+      "kind": "diagram",
+      "q": "Study a meander and its cross-section.",
+      "full": true
+     },
+     {
+      "q": "What is a meander?",
+      "a": "A meander is a large bend in a river. It forms by erosion on the outside of the bend and deposition on the inside."
+     },
+     {
+      "q": "How does a river cliff form?",
+      "a": "On the outside of the bend, the water is deep and fast. It erodes the bank by hydraulic action and abrasion and forms a steep river cliff."
+     },
+     {
+      "q": "How does a slip-off slope form?",
+      "a": "On the inside of the bend, the water is shallow and slow. It deposits sand and gravel, forming a gentle slip-off slope (point bar)."
+     }
+    ],
+    "sum": {
+     "title": "II. Landforms of the Middle Course",
+     "intro": "Lateral erosion and deposition form the following landforms:",
+     "items": [
+      [
+       "A. Open V-Shaped Valley",
+       "Lateral erosion widens the valley. It has gentle sides and a flat floor."
+      ],
+      [
+       "B. Meanders",
+       "A meander is a large bend in a river, formed by erosion on the outside and deposition on the inside of the bend.",
+       "meander.png"
+      ],
+      [
+       "C. River Cliffs and Slip-Off Slopes",
+       [
+        "– River cliff: a steep bank on the outside of a bend, where the fast water erodes.",
+        "– Slip-off slope (point bar): a gentle bank of sand on the inside of a bend, where the slow water deposits."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the main process in the middle course?",
+    "Lateral erosion, with transportation of the load."
+   ],
+   [
+    "What is the difference between a river cliff and a slip-off slope?",
+    "A river cliff is a steep bank eroded on the outside of a bend; a slip-off slope is a gentle bank of deposits on the inside."
+   ],
+   [
+    "How does a river carry fine mud?",
+    "It carries fine mud in suspension."
+   ]
+  ],
+  "remediation": [
+   [
+    "Sideways erosion is ______ erosion.",
+    "A large bend in a river is a ______.",
+    "The steep bank on the outside of a bend is a river ______."
+   ],
+   [
+    "The gentle bank on the inside of a bend is a ______ slope.",
+    "Rolling of big stones is ______.",
+    "Bouncing of small stones is ______."
+   ]
+  ],
+  "remediationAnswers": "1. lateral 2. meander 3. cliff 4. slip-off 5. traction 6. saltation",
+  "homework": "Look at a map of the Niger Delta or the Nile Delta in your atlas. Draw its shape and name the sea it reaches.",
+  "homeworkTag": "This prepares Lesson 21: The Lower Course of a River.",
+  "bilingual": [
+   [
+    "Meander",
+    "Le méandre"
+   ],
+   [
+    "River cliff",
+    "La rive concave / falaise de méandre"
+   ],
+   [
+    "Slip-off slope",
+    "La rive convexe"
+   ],
+   [
+    "Lateral erosion",
+    "L'érosion latérale"
+   ],
+   [
+    "Suspension",
+    "La suspension"
+   ],
+   [
+    "Saltation",
+    "La saltation"
+   ],
+   [
+    "Traction",
+    "Le charriage / la traction"
+   ],
+   [
+    "Sandbank",
+    "Le banc de sable"
+   ]
+  ],
+  "teacherNote": [
+   "Floodplains begin in the middle course, but the syllabus studies them with the lower course and with Lesson 22; they are only mentioned here.",
+   "The four modes of transport were added because transportation is the main work of the river in the middle course."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

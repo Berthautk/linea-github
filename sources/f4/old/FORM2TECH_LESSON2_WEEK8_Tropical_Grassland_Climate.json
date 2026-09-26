@@ -1,0 +1,198 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 1\" | [\"Around Garoua, we see tall grasses with trees growing far apart. What do we call this type of natural region?\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"This natural region is called the Tropical Grassland region, or savanna. It is a region of tall grasses and scattered trees.\"]",
+  "imageFull | \"I. DEFINITION AND LOCATION\" | \"Activity 1: Study the map\" | \"Find the Tropical Grassland regions on the map.\" | \"savanna_world.png\" | \"Let learners find the Equator, the 5° and 15° lines, and Garoua.\"",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 2\" | [\"Look at the map. Between which latitudes is the Tropical Grassland region found?\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"The Tropical Grassland region is found between latitudes 5° and 15° north and south of the Equator. It lies between the Equatorial forest and the hot deserts.\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 3\" | [\"Name the three parts of Africa where we find the Tropical Grassland region.\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"In Africa, we find the Tropical Grassland in West Africa (the Sudan savanna), in East Africa (Kenya and Tanzania) and in Southern Africa.\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Question 4\" | [\"Name the Tropical Grassland regions of South America and of Australia.\"]",
+  "slide | \"I. DEFINITION AND LOCATION\" | \"Answer\" | [\"In South America, we find the Llanos in Venezuela and Colombia, and the Campos in Brazil. In Australia, we find the savanna of the north.\"] | \"Remind learners that Garoua is in the Sudan savanna of West Africa. Transition: let us study the climate of Garoua.\"",
+  "imageQ | \"II. CLIMATE\" | \"Activity 2: The climate of Garoua\" | \"Study the graph. Which is the hottest month in Garoua, and what is its temperature?\" | \"garoua_climate.png\" | \"The graph uses NOAA climate normals for Garoua (1961–1990).\"",
+  "slide | \"II. CLIMATE\" | \"Answer\" | [\"The hottest month is April, with an average of 33°C. The hottest months come just before the rains start.\"]",
+  "imageQ | \"II. CLIMATE\" | \"Question 2\" | \"The coolest months have 26°C. Calculate the annual temperature range of Garoua.\" | \"garoua_climate.png\"",
+  "slide | \"II. CLIMATE\" | \"Answer\" | [\"The annual temperature range is 33°C − 26°C = 7°C. It is larger than in the Equatorial region, where it is less than 3°C.\"]",
+  "imageQ | \"II. CLIMATE\" | \"Question 3\" | \"Which months form the wet season in Garoua, and which months form the dry season?\" | \"garoua_climate.png\"",
+  "slide | \"II. CLIMATE\" | \"Answer\" | [\"The wet season lasts from May to October. The dry season lasts from November to March, with almost no rain.\"]",
+  "imageQ | \"II. CLIMATE\" | \"Question 4\" | \"Garoua receives about 1,000 mm of rain per year. Is this more or less than in the Equatorial region?\" | \"garoua_climate.png\"",
+  "slide | \"II. CLIMATE\" | \"Answer\" | [\"It is less. The Equatorial region receives about 2,000 mm of rain per year, while the Tropical Grassland receives between about 500 and 1,500 mm.\"]",
+  "slide | \"II. CLIMATE\" | \"Question 5\" | [\"Which dry, dusty wind blows over Garoua during the dry season? Where does it come from?\"]",
+  "slide | \"II. CLIMATE\" | \"Answer\" | [\"It is the Harmattan, a dry and dusty wind that blows from the Sahara, in the north-east. In the wet season, a moist wind from the Atlantic Ocean, the south-west monsoon, brings the rain.\"] | \"Transition: Now, copy the board summary.\"",
+  "sum | \"I. Definition and Location (1/5)\" | \"DEFINITION\" | [\"The Tropical Grassland region, or savanna, is a natural region of tall grasses and scattered trees, found between the Equatorial forest and the hot deserts.\"]",
+  "sum | \"I. Definition and Location (2/5)\" | [\"The Tropical Grassland region is found between latitudes 5° and 15° north and south of the Equator. Its main areas are found in Africa, South America and Australia.\"]",
+  "sum | \"I. Definition and Location (3/5)\" | \"A. Africa\" | [\"In Africa, it is found in West Africa (the Sudan savanna, including the north of Cameroon), in East Africa (Kenya and Tanzania) and in Southern Africa.\"]",
+  "sum | \"I. Definition and Location (4/5)\" | \"B. South America\" | [\"In South America, it is found in the Llanos of Venezuela and Colombia, and in the Campos of Brazil.\"]",
+  "sum | \"I. Definition and Location (5/5)\" | \"C. Australia\" | [\"In Australia, the Tropical Grassland is found in the north of the country.\"]",
+  "sum | \"II. Characteristics of the Climate (1/4)\" | [\"The various characteristics of the climate of the Tropical Grassland region are:\",\"– Temperatures are high all year, between about 20°C and 32°C.\",\"– The annual temperature range is between about 5°C and 10°C.\"]",
+  "sum | \"II. Characteristics of the Climate (2/4)\" | [\"– There are two seasons: a wet season and a dry season.\",\"– The annual rainfall is between about 500 mm and 1,500 mm.\",\"– The rain is mostly convectional, with thunderstorms.\"]",
+  "sum | \"II. Characteristics of the Climate (3/4)\" | [\"– The hottest months come just before the rainy season.\",\"– In West Africa, the dry Harmattan blows in the dry season, and the moist south-west monsoon brings rain in the wet season.\"]",
+  "sumImage | \"II. Characteristics of the Climate (4/4)\" | \"Example: Garoua\" | \"Temperatures range from 26°C to 33°C. The wet season lasts from May to October. Garoua receives about 1,000 mm of rain.\" | \"garoua_climate.png\""
+ ],
+ "d": {
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (WEEK 8)",
+  "title": "The Tropical Grassland Region: Location and Characteristics (Climate)",
+  "coverNote": "Good morning, class. After the Equatorial region, we start Lesson 2: the Tropical Grassland region, the region where we live.",
+  "sumTitle": "The Tropical Grassland Region",
+  "cls": "Form 2 Technical",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "duration": "2 periods (2 × 50 minutes)",
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 1: Location and Characteristics (Climate)",
+  "notions": "Tropical grassland (savanna), wet season, dry season, annual temperature range, Harmattan.",
+  "focus": "Location of the Tropical Grassland region; characteristics of its climate (progression sheet, week 8).",
+  "competence": "Learners are able to read the climate of their town and choose the right time of the year to plant crops.",
+  "objectives": [
+   "Define the Tropical Grassland region.",
+   "Locate the Tropical Grassland regions of the world on a map.",
+   "Describe the characteristics of the climate of the Tropical Grassland region, using Garoua as an example."
+  ],
+  "recall": [
+   "The Equatorial region lies between 0° and 5° north and south of the Equator.",
+   "Its climate is hot and wet all year, with about 2,000 mm of rain and a temperature range below 3°C.",
+   "Today, we move away from the Equator to the next natural region: the Tropical Grassland."
+  ],
+  "recallNote": "Check the homework: learners describe the vegetation around their homes in Garoua.",
+  "situation": [
+   "In March, Moussa's father plants maize in his field near Garoua. After a few weeks, the young plants dry up and die. His neighbour waits until June to plant his maize, and his plants grow well.",
+   "Moussa's father does not understand why his maize died while his neighbour's maize grew."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the maize of Moussa's father dried up and died, while his neighbour's maize grew well."
+   ],
+   [
+    "Why did the maize planted in March dry up?",
+    "In March, it does not rain in Garoua and it is very hot. The young plants had no water."
+   ],
+   [
+    "What can you suggest to Moussa's father for the next season?",
+    "He should plant at the beginning of the rainy season, in May or June, when the rains have started."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of the region where we live, with its wet and dry seasons, so that we can organise farming and daily life."
+ },
+ "end": {
+  "label": "FORM 2 TECHNICAL  —  LESSON 2 (WEEK 8)",
+  "title": "The Tropical Grassland Region: Location and Characteristics (Climate)",
+  "coverNote": "Good morning, class. After the Equatorial region, we start Lesson 2: the Tropical Grassland region, the region where we live.",
+  "sumTitle": "The Tropical Grassland Region",
+  "cls": "Form 2 Technical",
+  "chapter": "Economic Geography — Natural Regions: 2. The Tropical Grassland Region",
+  "duration": "2 periods (2 × 50 minutes)",
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "lesson": "Lesson 2: The Tropical Grassland Region — Part 1: Location and Characteristics (Climate)",
+  "notions": "Tropical grassland (savanna), wet season, dry season, annual temperature range, Harmattan.",
+  "focus": "Location of the Tropical Grassland region; characteristics of its climate (progression sheet, week 8).",
+  "competence": "Learners are able to read the climate of their town and choose the right time of the year to plant crops.",
+  "objectives": [
+   "Define the Tropical Grassland region.",
+   "Locate the Tropical Grassland regions of the world on a map.",
+   "Describe the characteristics of the climate of the Tropical Grassland region, using Garoua as an example."
+  ],
+  "recall": [
+   "The Equatorial region lies between 0° and 5° north and south of the Equator.",
+   "Its climate is hot and wet all year, with about 2,000 mm of rain and a temperature range below 3°C.",
+   "Today, we move away from the Equator to the next natural region: the Tropical Grassland."
+  ],
+  "recallNote": "Check the homework: learners describe the vegetation around their homes in Garoua.",
+  "situation": [
+   "In March, Moussa's father plants maize in his field near Garoua. After a few weeks, the young plants dry up and die. His neighbour waits until June to plant his maize, and his plants grow well.",
+   "Moussa's father does not understand why his maize died while his neighbour's maize grew."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the maize of Moussa's father dried up and died, while his neighbour's maize grew well."
+   ],
+   [
+    "Why did the maize planted in March dry up?",
+    "In March, it does not rain in Garoua and it is very hot. The young plants had no water."
+   ],
+   [
+    "What can you suggest to Moussa's father for the next season?",
+    "He should plant at the beginning of the rainy season, in May or June, when the rains have started."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of the region where we live, with its wet and dry seasons, so that we can organise farming and daily life.",
+  "evaluation": [
+   [
+    "Give two differences between the climate of the Equatorial region and the climate of the Tropical Grassland region.",
+    "The Equatorial region has rain all year and a range below 3°C. The Tropical Grassland has a dry season and a range of about 5°C to 10°C."
+   ],
+   [
+    "Why is it difficult to grow crops in Garoua in January without irrigation?",
+    "In January, Garoua receives no rain, because it is the dry season."
+   ],
+   [
+    "In which countries are the Llanos found?",
+    "The Llanos are found in Venezuela and Colombia, in South America."
+   ]
+  ],
+  "remediation": [
+   [
+    "The Tropical Grassland region is also called the ______.",
+    "It is found between latitudes ______ and ______ north and south of the Equator.",
+    "The Tropical Grassland region of Brazil is called the ______."
+   ],
+   [
+    "The Tropical Grassland has two seasons: a ______ season and a ______ season.",
+    "The dry, dusty wind that blows from the Sahara is the ______.",
+    "The annual temperature range of Garoua is ______ °C."
+   ]
+  ],
+  "remediationAnswers": "1. savanna 2. 5°, 15° 3. Campos 4. wet, dry 5. Harmattan 6. 7",
+  "homework": "Look at the trees and grass around your home. Which trees keep their leaves in the dry season, and which lose them? Is the grass green or dry now? Write your observations.",
+  "homeworkTag": "This prepares Lesson 2, Part 2: Soils and Vegetation of the Tropical Grassland.",
+  "bilingual": [
+   [
+    "Tropical grassland",
+    "La savane"
+   ],
+   [
+    "Wet season",
+    "La saison des pluies"
+   ],
+   [
+    "Dry season",
+    "La saison sèche"
+   ],
+   [
+    "Temperature range",
+    "L'amplitude thermique"
+   ],
+   [
+    "Rainfall",
+    "Les précipitations"
+   ],
+   [
+    "Harmattan",
+    "L'harmattan"
+   ],
+   [
+    "Monsoon",
+    "La mousson"
+   ],
+   [
+    "Latitude",
+    "La latitude"
+   ]
+  ],
+  "matter": "I. Definition and location of the Tropical Grassland region (Africa, South America, Australia); II. Characteristics of the climate (high temperatures, range 5–10°C, wet and dry seasons, 500–1,500 mm, convectional rain, Harmattan and monsoon); example of Garoua.",
+  "teacherNote": [
+   "This session is week 8 of the progression sheet. Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Garoua data (NOAA normals 1961–1990): hottest month April 33°C, coolest December–January 26°C, total rainfall about 997 mm, wettest month August (248 mm).",
+   "The climate graph is drawn as two panels (temperature above, rainfall below) so that each has its own clear scale."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2 — week 8.",
+   "Garoua climate normals: NOAA 1961–1990 (via Wikipedia, \"Garoua\").",
+   "World map drawn from Natural Earth data; the limits of the savanna are approximate."
+  ]
+ },
+ "file": "FORM2TECH_LESSON2_WEEK8_Tropical_Grassland_Climate"
+}

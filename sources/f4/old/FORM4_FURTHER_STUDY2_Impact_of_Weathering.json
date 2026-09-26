@@ -1,0 +1,455 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"We can reduce the negative impacts of weathering:\"]",
+  "sum | \"x\" | \"The Measures\" | [\"– Plant trees and grass on slopes; avoid building on unstable slopes.\",\"– Build drains and retaining walls near roads.\",\"– Protect buildings: plaster, paint and repair cracks; use good cement.\",\"– Add manure and compost to soils to replace lost nutrients.\"]",
+  "sum | \"III. Measures to Reduce the Negative Impacts (1/3)\" | [\"We can reduce the negative impacts of weathering:\"]",
+  "sum | \"III. Measures to Reduce the Negative Impacts (2/3)\" | \"The Measures\" | [\"– Plant trees and grass on slopes; avoid building on unstable slopes.\",\"– Build drains and retaining walls near roads.\",\"– Protect buildings: plaster, paint and repair cracks; use good cement.\",\"– Add manure and compost to soils to replace lost nutrients.\"]"
+ ],
+ "end": {
+  "file": "FORM4_FURTHER_STUDY2_Impact_of_Weathering",
+  "kind": "Further Study",
+  "lessonNo": 2,
+  "lessonName": "The Impact of Weathering on the Environment",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes: The Products and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes: The Products and Impacts on Man",
+  "coverNote": "Good morning, class. Today we do Further Study 2: the impact of weathering on the environment and on people.",
+  "notions": "Soil formation, regolith, mineral deposits, mass movement, leaching.",
+  "focus": "Positive impacts of weathering (soils, minerals, landforms) and negative impacts (mass movement, damage to buildings, loss of soil fertility).",
+  "competence": "Learners are able to explain how weathering gives soils and resources, and to take simple measures against rockfalls and the decay of buildings.",
+  "objectives": [
+   "Explain the positive impacts of weathering.",
+   "Explain the negative impacts of weathering.",
+   "Suggest measures to reduce the negative impacts."
+  ],
+  "recall": [
+   "Physical weathering breaks rocks into pieces.",
+   "Chemical weathering changes the minerals of rocks.",
+   "Hydrolysis changes feldspar into clay."
+  ],
+  "recallNote": "Check the homework: the answers of the farmer.",
+  "situation": [
+   "Djaouro's uncle is a farmer near Garoua. He says that his rich soil, where he grows maize and cotton, came from the slow breakdown of rocks over thousands of years.",
+   "But last rainy season, after a heavy storm, part of a cracked rocky hill fell and blocked a road. Djaouro wonders how the same process can be both good and bad."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Djaouro does not understand how weathering can be both useful and dangerous."
+   ],
+   [
+    "Which good result of weathering is mentioned?",
+    "The formation of the rich soil of the farm is mentioned."
+   ],
+   [
+    "What can people do to reduce rockfalls near roads?",
+    "They can plant trees on slopes, build retaining walls and drains, and remove loose rocks."
+   ]
+  ],
+  "justification": "This further study will help us to see the benefits and the problems of weathering for the environment and for people.",
+  "parts": [
+   {
+    "sec": "I. POSITIVE IMPACTS",
+    "qa": [
+     {
+      "img": "soil_profile.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "Look at the soil profile. How does weathering form soil?",
+      "a": "Weathering breaks the bedrock into small pieces (regolith). These mix with humus from dead plants and animals to form soil.",
+      "split": 5.4
+     },
+     {
+      "q": "How does weathering form mineral deposits, like the bauxite of Minim-Martap?",
+      "a": "In hot, wet climates, chemical weathering removes many minerals and leaves aluminium, which forms bauxite. It also forms iron ore and clay."
+     },
+     {
+      "q": "Give other benefits of weathering.",
+      "a": "Weathering shapes landforms that attract tourists, gives sand and clay for building, and releases nutrients for plants."
+     }
+    ],
+    "sum": {
+     "title": "I. Positive Impacts of Weathering",
+     "intro": "Weathering has many benefits:",
+     "items": [
+      [
+       "A. Formation of Soil",
+       "Weathered rock mixes with humus to form soil, the basis of agriculture.",
+       "soil_profile.png"
+      ],
+      [
+       "B. Mineral Deposits and Materials",
+       [
+        "– Chemical weathering forms bauxite (Minim-Martap, Adamawa) and iron ore.",
+        "– It gives clay for bricks and pottery, and sand for building."
+       ]
+      ],
+      [
+       "C. Landforms and Tourism",
+       "Weathering shapes rounded rocks, domes and hills that attract tourists."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. NEGATIVE IMPACTS",
+    "qa": [
+     {
+      "q": "Why do rockfalls and landslides often happen after heavy rain?",
+      "a": "Weathering weakens rocks and soils. Heavy rain makes them heavy and slippery, so they slide or fall down the slope."
+     },
+     {
+      "q": "How does weathering damage buildings?",
+      "a": "Heat cracks walls and concrete, water and salts attack cement, and the iron bars inside concrete rust and weaken the building."
+     },
+     {
+      "q": "What is leaching, and why is it a problem?",
+      "a": "Leaching is the washing of plant nutrients down into the soil by rainwater. It makes soils poor, as in very wet regions."
+     }
+    ],
+    "sum": {
+     "title": "II. Negative Impacts of Weathering",
+     "intro": "Weathering also causes problems:",
+     "items": [
+      [
+       "A. Mass Movement",
+       "Weathered rocks and soils on slopes can fall or slide after heavy rain: rockfalls, landslides and mudflows (as in Bafoussam in 2019)."
+      ],
+      [
+       "B. Damage to Buildings and Roads",
+       "Heat, water and salts crack walls and roads; the iron in concrete rusts and weakens bridges and buildings."
+      ],
+      [
+       "C. Loss of Soil Fertility",
+       "Leaching washes nutrients out of the soil and can form hard laterite crusts, which are poor for farming."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. MEASURES",
+    "qa": [
+     {
+      "q": "Suggest three measures to reduce the negative impacts of weathering.",
+      "a": "Plant trees on slopes, build drains and retaining walls, and protect buildings with plaster, paint and good maintenance."
+     }
+    ],
+    "sum": {
+     "title": "III. Measures to Reduce the Negative Impacts",
+     "intro": "We can reduce the negative impacts of weathering:",
+     "items": [
+      [
+       "The Measures",
+       [
+        "– Plant trees and grass on slopes; avoid building on unstable slopes.",
+        "– Build drains and retaining walls near roads.",
+        "– Protect buildings: plaster, paint and repair cracks; use good cement.",
+        "– Add manure and compost to soils to replace lost nutrients."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the most important positive impact of weathering?",
+    "The formation of soil, which is the basis of agriculture."
+   ],
+   [
+    "Why can weathering cause landslides?",
+    "It weakens rocks and soils on slopes, which can then slide after heavy rain."
+   ],
+   [
+    "What is leaching?",
+    "Leaching is the washing of nutrients down into the soil by rainwater, which makes the soil poor."
+   ]
+  ],
+  "remediation": [
+   [
+    "Weathered rock mixed with humus forms ______.",
+    "Broken rock material above the bedrock is called ______.",
+    "Weathering in hot, wet areas forms ______, the ore of aluminium."
+   ],
+   [
+    "Rockfalls and landslides are types of mass ______.",
+    "The washing of nutrients from soil is ______.",
+    "Planting trees on slopes reduces ______."
+   ]
+  ],
+  "remediationAnswers": "1. soil 2. regolith 3. bauxite 4. movement 5. leaching 6. landslides",
+  "homework": "Watch the Benue or a stream near your home. Write how fast the water flows, what it carries, and whether it is wide or narrow.",
+  "homeworkTag": "This prepares Lesson 18: Action of Rivers on the Landscape.",
+  "bilingual": [
+   [
+    "Soil",
+    "Le sol"
+   ],
+   [
+    "Humus",
+    "L'humus"
+   ],
+   [
+    "Bedrock",
+    "La roche mère"
+   ],
+   [
+    "Landslide",
+    "Le glissement de terrain"
+   ],
+   [
+    "Rockfall",
+    "L'éboulement"
+   ],
+   [
+    "Leaching",
+    "Le lessivage"
+   ],
+   [
+    "Bauxite",
+    "La bauxite"
+   ],
+   [
+    "Fertility",
+    "La fertilité"
+   ]
+  ],
+  "teacherNote": [
+   "In the source document, this further study is labelled \"Lesson 18\". In the syllabus, it is Further Study 2, placed after Lesson 17.",
+   "Checked: bauxite deposits of Minim-Martap and Ngaoundal (Adamawa) formed by deep chemical weathering. Landslide of Gouache, Bafoussam: 29 October 2019, more than 40 deaths.",
+   "Correction: the source notes say the rounded granite inselbergs are formed by exfoliation. Exfoliation rounds them, but they are formed by long weathering and erosion."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  FURTHER STUDY 2",
+  "title": "The Impact of Weathering on the Environment",
+  "sumTitle": "The Impact of Weathering on the Environment",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Further Study 2: The Impact of Weathering on the Environment",
+  "matter": "I. Positive Impacts of Weathering: Formation of Soil, Mineral Deposits and Materials, Landforms and Tourism; II. Negative Impacts of Weathering: Mass Movement, Damage to Buildings and Roads, Loss of Soil Fertility; III. Measures to Reduce the Negative Impacts: The Measures."
+ },
+ "file": "FORM4_FURTHER_STUDY2_Impact_of_Weathering",
+ "sp": {
+  "file": "FORM4_FURTHER_STUDY2_Impact_of_Weathering",
+  "kind": "Further Study",
+  "lessonNo": 2,
+  "lessonName": "The Impact of Weathering on the Environment",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes: The Products and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes: The Products and Impacts on Man",
+  "coverNote": "Good morning, class. Today we do Further Study 2: the impact of weathering on the environment and on people.",
+  "notions": "Soil formation, regolith, mineral deposits, mass movement, leaching.",
+  "focus": "Positive impacts of weathering (soils, minerals, landforms) and negative impacts (mass movement, damage to buildings, loss of soil fertility).",
+  "competence": "Learners are able to explain how weathering gives soils and resources, and to take simple measures against rockfalls and the decay of buildings.",
+  "objectives": [
+   "Explain the positive impacts of weathering.",
+   "Explain the negative impacts of weathering.",
+   "Suggest measures to reduce the negative impacts."
+  ],
+  "recall": [
+   "Physical weathering breaks rocks into pieces.",
+   "Chemical weathering changes the minerals of rocks.",
+   "Hydrolysis changes feldspar into clay."
+  ],
+  "recallNote": "Check the homework: the answers of the farmer.",
+  "situation": [
+   "Djaouro's uncle is a farmer near Garoua. He says that his rich soil, where he grows maize and cotton, came from the slow breakdown of rocks over thousands of years.",
+   "But last rainy season, after a heavy storm, part of a cracked rocky hill fell and blocked a road. Djaouro wonders how the same process can be both good and bad."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Djaouro does not understand how weathering can be both useful and dangerous."
+   ],
+   [
+    "Which good result of weathering is mentioned?",
+    "The formation of the rich soil of the farm is mentioned."
+   ],
+   [
+    "What can people do to reduce rockfalls near roads?",
+    "They can plant trees on slopes, build retaining walls and drains, and remove loose rocks."
+   ]
+  ],
+  "justification": "This further study will help us to see the benefits and the problems of weathering for the environment and for people.",
+  "parts": [
+   {
+    "sec": "I. POSITIVE IMPACTS",
+    "qa": [
+     {
+      "img": "soil_profile.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "Look at the soil profile. How does weathering form soil?",
+      "a": "Weathering breaks the bedrock into small pieces (regolith). These mix with humus from dead plants and animals to form soil.",
+      "split": 5.4
+     },
+     {
+      "q": "How does weathering form mineral deposits, like the bauxite of Minim-Martap?",
+      "a": "In hot, wet climates, chemical weathering removes many minerals and leaves aluminium, which forms bauxite. It also forms iron ore and clay."
+     },
+     {
+      "q": "Give other benefits of weathering.",
+      "a": "Weathering shapes landforms that attract tourists, gives sand and clay for building, and releases nutrients for plants."
+     }
+    ],
+    "sum": {
+     "title": "I. Positive Impacts of Weathering",
+     "intro": "Weathering has many benefits:",
+     "items": [
+      [
+       "A. Formation of Soil",
+       "Weathered rock mixes with humus to form soil, the basis of agriculture.",
+       "soil_profile.png"
+      ],
+      [
+       "B. Mineral Deposits and Materials",
+       [
+        "– Chemical weathering forms bauxite (Minim-Martap, Adamawa) and iron ore.",
+        "– It gives clay for bricks and pottery, and sand for building."
+       ]
+      ],
+      [
+       "C. Landforms and Tourism",
+       "Weathering shapes rounded rocks, domes and hills that attract tourists."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. NEGATIVE IMPACTS",
+    "qa": [
+     {
+      "q": "Why do rockfalls and landslides often happen after heavy rain?",
+      "a": "Weathering weakens rocks and soils. Heavy rain makes them heavy and slippery, so they slide or fall down the slope."
+     },
+     {
+      "q": "How does weathering damage buildings?",
+      "a": "Heat cracks walls and concrete, water and salts attack cement, and the iron bars inside concrete rust and weaken the building."
+     },
+     {
+      "q": "What is leaching, and why is it a problem?",
+      "a": "Leaching is the washing of plant nutrients down into the soil by rainwater. It makes soils poor, as in very wet regions."
+     }
+    ],
+    "sum": {
+     "title": "II. Negative Impacts of Weathering",
+     "intro": "Weathering also causes problems:",
+     "items": [
+      [
+       "A. Mass Movement",
+       "Weathered rocks and soils on slopes can fall or slide after heavy rain: rockfalls, landslides and mudflows (as in Bafoussam in 2019)."
+      ],
+      [
+       "B. Damage to Buildings and Roads",
+       "Heat, water and salts crack walls and roads; the iron in concrete rusts and weakens bridges and buildings."
+      ],
+      [
+       "C. Loss of Soil Fertility",
+       "Leaching washes nutrients out of the soil and can form hard laterite crusts, which are poor for farming."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. MEASURES",
+    "qa": [
+     {
+      "q": "Suggest three measures to reduce the negative impacts of weathering.",
+      "a": "Plant trees on slopes, build drains and retaining walls, and protect buildings with plaster, paint and good maintenance."
+     }
+    ],
+    "sum": {
+     "title": "III. Measures to Reduce the Negative Impacts",
+     "intro": "We can reduce the negative impacts of weathering:",
+     "items": [
+      [
+       "The Measures",
+       [
+        "– Plant trees and grass on slopes; avoid building on unstable slopes.",
+        "– Build drains and retaining walls near roads.",
+        "– Protect buildings: plaster, paint and repair cracks; use good cement.",
+        "– Add manure and compost to soils to replace lost nutrients."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the most important positive impact of weathering?",
+    "The formation of soil, which is the basis of agriculture."
+   ],
+   [
+    "Why can weathering cause landslides?",
+    "It weakens rocks and soils on slopes, which can then slide after heavy rain."
+   ],
+   [
+    "What is leaching?",
+    "Leaching is the washing of nutrients down into the soil by rainwater, which makes the soil poor."
+   ]
+  ],
+  "remediation": [
+   [
+    "Weathered rock mixed with humus forms ______.",
+    "Broken rock material above the bedrock is called ______.",
+    "Weathering in hot, wet areas forms ______, the ore of aluminium."
+   ],
+   [
+    "Rockfalls and landslides are types of mass ______.",
+    "The washing of nutrients from soil is ______.",
+    "Planting trees on slopes reduces ______."
+   ]
+  ],
+  "remediationAnswers": "1. soil 2. regolith 3. bauxite 4. movement 5. leaching 6. landslides",
+  "homework": "Watch the Benue or a stream near your home. Write how fast the water flows, what it carries, and whether it is wide or narrow.",
+  "homeworkTag": "This prepares Lesson 18: Action of Rivers on the Landscape.",
+  "bilingual": [
+   [
+    "Soil",
+    "Le sol"
+   ],
+   [
+    "Humus",
+    "L'humus"
+   ],
+   [
+    "Bedrock",
+    "La roche mère"
+   ],
+   [
+    "Landslide",
+    "Le glissement de terrain"
+   ],
+   [
+    "Rockfall",
+    "L'éboulement"
+   ],
+   [
+    "Leaching",
+    "Le lessivage"
+   ],
+   [
+    "Bauxite",
+    "La bauxite"
+   ],
+   [
+    "Fertility",
+    "La fertilité"
+   ]
+  ],
+  "teacherNote": [
+   "In the source document, this further study is labelled \"Lesson 18\". In the syllabus, it is Further Study 2, placed after Lesson 17.",
+   "Checked: bauxite deposits of Minim-Martap and Ngaoundal (Adamawa) formed by deep chemical weathering. Landslide of Gouache, Bafoussam: 29 October 2019, more than 40 deaths.",
+   "Correction: the source notes say the rounded granite inselbergs are formed by exfoliation. Exfoliation rounds them, but they are formed by long weathering and erosion."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+bankr::bank building city Africa
+factr::factory workers assembly line Africa
+fishmktr::fish market Africa women
+goldr::artisanal gold mining Africa
+textr::textile mill weaving machines
+brewr::bottling plant factory line
+alur::aluminium smelter plant
+safarir::giraffe safari tourists jeep
+agror::agricultural research field trial plots

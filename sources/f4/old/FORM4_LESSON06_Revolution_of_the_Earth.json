@@ -1,0 +1,480 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Revolution, together with the tilt of the axis, has the following effects:\"]",
+  "sum | \"x\" | \"A. The Seasons\" | [\"– In temperate lands: summer, autumn, winter and spring.\",\"– In Garoua: the rainy season (May–October) when the overhead Sun and the rain belt are in the north; the dry season (November–April) when they move south.\"]",
+  "sum | \"x\" | \"B. Changing Length of Day and Night\" | [\"Days are longer in summer and shorter in winter. The difference is small at the Equator and very large near the poles.\"]",
+  "sum | \"x\" | \"C. Changing Height of the Midday Sun\" | [\"The midday Sun is high in summer and low in winter. It is overhead only between the two Tropics.\"]",
+  "sum | \"x\" | \"D. The Year and the Calendar\" | [\"One revolution gives one year of 365 days, with a leap year of 366 days every four years.\"]",
+  "sum | \"III. Effects of Revolution (1/5)\" | [\"Revolution, together with the tilt of the axis, has the following effects:\"]",
+  "sum | \"III. Effects of Revolution (2/5)\" | \"A. The Seasons\" | [\"– In temperate lands: summer, autumn, winter and spring.\",\"– In Garoua: the rainy season (May–October) when the overhead Sun and the rain belt are in the north; the dry season (November–April) when they move south.\"]",
+  "sum | \"III. Effects of Revolution (3/5)\" | \"B. Changing Length of Day and Night\" | [\"Days are longer in summer and shorter in winter. The difference is small at the Equator and very large near the poles.\"]",
+  "sum | \"III. Effects of Revolution (4/5)\" | \"C. Changing Height of the Midday Sun\" | [\"The midday Sun is high in summer and low in winter. It is overhead only between the two Tropics.\"]",
+  "sum | \"III. Effects of Revolution (5/5)\" | \"D. The Year and the Calendar\" | [\"One revolution gives one year of 365 days, with a leap year of 366 days every four years.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON06_Revolution_of_the_Earth",
+  "lessonNo": 6,
+  "lessonName": "The Revolution of the Earth",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Orbit, equinox, solstice, leap year, seasons.",
+  "focus": "Revolution: meaning, illustration and effects (notions of equinox, solstice and orbit).",
+  "competence": "Learners are able to explain the change of seasons and of day length during the year, and to plan activities such as farming with the calendar.",
+  "objectives": [
+   "Define revolution and the orbit of the Earth.",
+   "Illustrate the revolution with equinoxes and solstices.",
+   "Explain the effects of revolution."
+  ],
+  "recall": [
+   "Rotation is the turning of the Earth on its axis in about 24 hours.",
+   "Rotation causes day and night.",
+   "The axis of the Earth is tilted at 23½°."
+  ],
+  "recallNote": "Check the homework: the months of the rainy and dry seasons in Garoua.",
+  "situation": [
+   "In September, it is the rainy season in Garoua. The grass is green, the Benue is full and farmers work in their fields. In December and January, the dry and dusty Harmattan season comes, and the Benue becomes low.",
+   "This cycle comes back every year. Salamatou wonders what causes this change of seasons during the year."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Salamatou does not know what causes the change of seasons during the year."
+   ],
+   [
+    "What are the two main seasons in Garoua?",
+    "The two main seasons are the rainy season (about May to October) and the dry season (about November to April)."
+   ],
+   [
+    "Why is it useful for farmers to know the seasons?",
+    "It helps them to know when to plant, when to harvest and when to store water and food."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the yearly movement of the Earth around the Sun and its effects on seasons and on day length.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "What is the revolution of the Earth?",
+      "a": "Revolution is the movement of the Earth around the Sun along a path called an orbit. One revolution takes 365¼ days."
+     },
+     {
+      "q": "What is the shape of the orbit of the Earth?",
+      "a": "The orbit is an ellipse (a slightly oval shape). The Earth is closest to the Sun in early January and furthest in early July."
+     },
+     {
+      "q": "Why do we add 29 February every four years?",
+      "a": "Each year has an extra quarter of a day. After four years, these quarters make one full day, so we add 29 February. Such a year is called a leap year and has 366 days."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Revolution",
+     "defs": [
+      "Revolution is the movement of the Earth around the Sun. One revolution takes 365¼ days.",
+      "The orbit is the path of the Earth around the Sun. It is an ellipse."
+     ],
+     "items": [
+      [
+       "The Leap Year",
+       [
+        "– The extra ¼ day becomes one full day every four years: 29 February.",
+        "– A leap year has 366 days. It can be divided by 4, like 2024 and 2028.",
+        "– Century years are leap years only if they can be divided by 400: 2000 was a leap year, but 1900 was not."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ILLUSTRATION",
+    "qa": [
+     {
+      "img": "revolution.png",
+      "kind": "diagram",
+      "q": "Study the revolution of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What happens at the equinoxes of 21 March and 23 September?",
+      "a": "The Sun is overhead at the Equator at midday. Day and night are equal (12 hours each) everywhere on the Earth."
+     },
+     {
+      "q": "What happens at the solstices of 21 June and 22 December?",
+      "a": "On 21 June, the Sun is overhead at the Tropic of Cancer. On 22 December, it is overhead at the Tropic of Capricorn."
+     }
+    ],
+    "sum": {
+     "title": "II. Illustration: Equinoxes and Solstices",
+     "intro": "As the Earth moves around the Sun with its tilted axis, the overhead Sun moves between the Tropics:",
+     "items": [
+      [
+       "A. The Equinoxes",
+       "On 21 March and 23 September, the Sun is overhead at the Equator. Day and night are equal everywhere.",
+       "revolution.png"
+      ],
+      [
+       "B. The Solstices",
+       [
+        "– 21 June: the Sun is overhead at the Tropic of Cancer (23½° N); longest day in the Northern Hemisphere.",
+        "– 22 December: the Sun is overhead at the Tropic of Capricorn (23½° S); shortest day in the Northern Hemisphere."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS OF REVOLUTION",
+    "qa": [
+     {
+      "q": "In June, the overhead Sun and the rain belt are north of the Equator. How does this affect Garoua?",
+      "a": "In June, July and August, the rain belt is over northern Cameroon, so Garoua has its rainy season."
+     },
+     {
+      "q": "In December, the overhead Sun is south of the Equator. What season does Garoua have?",
+      "a": "The rain belt moves south, and the dry Harmattan blows from the Sahara. Garoua has its dry season."
+     },
+     {
+      "q": "Are days longer in Garoua in June or in December?",
+      "a": "Days are a little longer in June and a little shorter in December. Near the Equator, the difference is small."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects of Revolution",
+     "intro": "Revolution, together with the tilt of the axis, has the following effects:",
+     "items": [
+      [
+       "A. The Seasons",
+       [
+        "– In temperate lands: summer, autumn, winter and spring.",
+        "– In Garoua: the rainy season (May–October) when the overhead Sun and the rain belt are in the north; the dry season (November–April) when they move south."
+       ]
+      ],
+      [
+       "B. Changing Length of Day and Night",
+       "Days are longer in summer and shorter in winter. The difference is small at the Equator and very large near the poles."
+      ],
+      [
+       "C. Changing Height of the Midday Sun",
+       "The midday Sun is high in summer and low in winter. It is overhead only between the two Tropics."
+      ],
+      [
+       "D. The Year and the Calendar",
+       "One revolution gives one year of 365 days, with a leap year of 366 days every four years."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between rotation and revolution?",
+    "Rotation is the turning of the Earth on its axis in 24 hours; revolution is its movement around the Sun in 365¼ days."
+   ],
+   [
+    "What is an equinox?",
+    "An equinox is a day when the Sun is overhead at the Equator and day and night are equal everywhere (21 March and 23 September)."
+   ],
+   [
+    "Why does Garoua have its rainy season in July and August?",
+    "At that time, the overhead Sun and the rain belt are north of the Equator, over northern Cameroon."
+   ]
+  ],
+  "remediation": [
+   [
+    "The path of the Earth around the Sun is its ______.",
+    "One revolution takes ______ days.",
+    "A year of 366 days is a ______ year."
+   ],
+   [
+    "On 21 June, the Sun is overhead at the Tropic of ______.",
+    "Day and night are equal at the ______.",
+    "The Sun is overhead at the Tropic of Capricorn on ______ December."
+   ]
+  ],
+  "remediationAnswers": "1. orbit 2. 365¼ 3. leap 4. Cancer 5. equinoxes 6. 22",
+  "homework": "Cut an orange, an onion or an egg in half. Draw what you see inside and name its layers.",
+  "homeworkTag": "This prepares Lesson 7: The Internal Structure of the Earth.",
+  "bilingual": [
+   [
+    "Revolution",
+    "La révolution"
+   ],
+   [
+    "Orbit",
+    "L'orbite"
+   ],
+   [
+    "Season",
+    "La saison"
+   ],
+   [
+    "Equinox",
+    "L'équinoxe"
+   ],
+   [
+    "Solstice",
+    "Le solstice"
+   ],
+   [
+    "Leap year",
+    "L'année bissextile"
+   ],
+   [
+    "Rainy season",
+    "La saison des pluies"
+   ],
+   [
+    "Dry season",
+    "La saison sèche"
+   ]
+  ],
+  "teacherNote": [
+   "Correction 1: the source notes say that summer is our \"hot, dry season\" and winter our \"cooler, rainy season\". This is wrong. The rainy season of Garoua comes in the Northern Hemisphere summer (June–September), when the overhead Sun and the rain belt (ITCZ) are in the north.",
+   "Correction 2: the leap-year rule was incomplete. Century years must be divisible by 400 (2000 was a leap year; 1900 and 2100 are not).",
+   "Checked: perihelion about 3 January (147 million km); aphelion about 4 July (152 million km). Solstice and equinox dates can vary by one day."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 6",
+  "title": "The Revolution of the Earth",
+  "sumTitle": "The Revolution of the Earth",
+  "coverNote": "Good morning, class. Today we study Lesson 6: The Revolution of the Earth.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 6: The Revolution of the Earth",
+  "matter": "I. Meaning of Revolution: The Leap Year; II. Illustration: Equinoxes and Solstices: The Equinoxes, The Solstices; III. Effects of Revolution: The Seasons, Changing Length of Day and Night, Changing Height of the Midday Sun, The Year and the Calendar."
+ },
+ "file": "FORM4_LESSON06_Revolution_of_the_Earth",
+ "sp": {
+  "file": "FORM4_LESSON06_Revolution_of_the_Earth",
+  "lessonNo": 6,
+  "lessonName": "The Revolution of the Earth",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Orbit, equinox, solstice, leap year, seasons.",
+  "focus": "Revolution: meaning, illustration and effects (notions of equinox, solstice and orbit).",
+  "competence": "Learners are able to explain the change of seasons and of day length during the year, and to plan activities such as farming with the calendar.",
+  "objectives": [
+   "Define revolution and the orbit of the Earth.",
+   "Illustrate the revolution with equinoxes and solstices.",
+   "Explain the effects of revolution."
+  ],
+  "recall": [
+   "Rotation is the turning of the Earth on its axis in about 24 hours.",
+   "Rotation causes day and night.",
+   "The axis of the Earth is tilted at 23½°."
+  ],
+  "recallNote": "Check the homework: the months of the rainy and dry seasons in Garoua.",
+  "situation": [
+   "In September, it is the rainy season in Garoua. The grass is green, the Benue is full and farmers work in their fields. In December and January, the dry and dusty Harmattan season comes, and the Benue becomes low.",
+   "This cycle comes back every year. Salamatou wonders what causes this change of seasons during the year."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Salamatou does not know what causes the change of seasons during the year."
+   ],
+   [
+    "What are the two main seasons in Garoua?",
+    "The two main seasons are the rainy season (about May to October) and the dry season (about November to April)."
+   ],
+   [
+    "Why is it useful for farmers to know the seasons?",
+    "It helps them to know when to plant, when to harvest and when to store water and food."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the yearly movement of the Earth around the Sun and its effects on seasons and on day length.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "What is the revolution of the Earth?",
+      "a": "Revolution is the movement of the Earth around the Sun along a path called an orbit. One revolution takes 365¼ days."
+     },
+     {
+      "q": "What is the shape of the orbit of the Earth?",
+      "a": "The orbit is an ellipse (a slightly oval shape). The Earth is closest to the Sun in early January and furthest in early July."
+     },
+     {
+      "q": "Why do we add 29 February every four years?",
+      "a": "Each year has an extra quarter of a day. After four years, these quarters make one full day, so we add 29 February. Such a year is called a leap year and has 366 days."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Revolution",
+     "defs": [
+      "Revolution is the movement of the Earth around the Sun. One revolution takes 365¼ days.",
+      "The orbit is the path of the Earth around the Sun. It is an ellipse."
+     ],
+     "items": [
+      [
+       "The Leap Year",
+       [
+        "– The extra ¼ day becomes one full day every four years: 29 February.",
+        "– A leap year has 366 days. It can be divided by 4, like 2024 and 2028.",
+        "– Century years are leap years only if they can be divided by 400: 2000 was a leap year, but 1900 was not."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ILLUSTRATION",
+    "qa": [
+     {
+      "img": "revolution.png",
+      "kind": "diagram",
+      "q": "Study the revolution of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What happens at the equinoxes of 21 March and 23 September?",
+      "a": "The Sun is overhead at the Equator at midday. Day and night are equal (12 hours each) everywhere on the Earth."
+     },
+     {
+      "q": "What happens at the solstices of 21 June and 22 December?",
+      "a": "On 21 June, the Sun is overhead at the Tropic of Cancer. On 22 December, it is overhead at the Tropic of Capricorn."
+     }
+    ],
+    "sum": {
+     "title": "II. Illustration: Equinoxes and Solstices",
+     "intro": "As the Earth moves around the Sun with its tilted axis, the overhead Sun moves between the Tropics:",
+     "items": [
+      [
+       "A. The Equinoxes",
+       "On 21 March and 23 September, the Sun is overhead at the Equator. Day and night are equal everywhere.",
+       "revolution.png"
+      ],
+      [
+       "B. The Solstices",
+       [
+        "– 21 June: the Sun is overhead at the Tropic of Cancer (23½° N); longest day in the Northern Hemisphere.",
+        "– 22 December: the Sun is overhead at the Tropic of Capricorn (23½° S); shortest day in the Northern Hemisphere."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS OF REVOLUTION",
+    "qa": [
+     {
+      "q": "In June, the overhead Sun and the rain belt are north of the Equator. How does this affect Garoua?",
+      "a": "In June, July and August, the rain belt is over northern Cameroon, so Garoua has its rainy season."
+     },
+     {
+      "q": "In December, the overhead Sun is south of the Equator. What season does Garoua have?",
+      "a": "The rain belt moves south, and the dry Harmattan blows from the Sahara. Garoua has its dry season."
+     },
+     {
+      "q": "Are days longer in Garoua in June or in December?",
+      "a": "Days are a little longer in June and a little shorter in December. Near the Equator, the difference is small."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects of Revolution",
+     "intro": "Revolution, together with the tilt of the axis, has the following effects:",
+     "items": [
+      [
+       "A. The Seasons",
+       [
+        "– In temperate lands: summer, autumn, winter and spring.",
+        "– In Garoua: the rainy season (May–October) when the overhead Sun and the rain belt are in the north; the dry season (November–April) when they move south."
+       ]
+      ],
+      [
+       "B. Changing Length of Day and Night",
+       "Days are longer in summer and shorter in winter. The difference is small at the Equator and very large near the poles."
+      ],
+      [
+       "C. Changing Height of the Midday Sun",
+       "The midday Sun is high in summer and low in winter. It is overhead only between the two Tropics."
+      ],
+      [
+       "D. The Year and the Calendar",
+       "One revolution gives one year of 365 days, with a leap year of 366 days every four years."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between rotation and revolution?",
+    "Rotation is the turning of the Earth on its axis in 24 hours; revolution is its movement around the Sun in 365¼ days."
+   ],
+   [
+    "What is an equinox?",
+    "An equinox is a day when the Sun is overhead at the Equator and day and night are equal everywhere (21 March and 23 September)."
+   ],
+   [
+    "Why does Garoua have its rainy season in July and August?",
+    "At that time, the overhead Sun and the rain belt are north of the Equator, over northern Cameroon."
+   ]
+  ],
+  "remediation": [
+   [
+    "The path of the Earth around the Sun is its ______.",
+    "One revolution takes ______ days.",
+    "A year of 366 days is a ______ year."
+   ],
+   [
+    "On 21 June, the Sun is overhead at the Tropic of ______.",
+    "Day and night are equal at the ______.",
+    "The Sun is overhead at the Tropic of Capricorn on ______ December."
+   ]
+  ],
+  "remediationAnswers": "1. orbit 2. 365¼ 3. leap 4. Cancer 5. equinoxes 6. 22",
+  "homework": "Cut an orange, an onion or an egg in half. Draw what you see inside and name its layers.",
+  "homeworkTag": "This prepares Lesson 7: The Internal Structure of the Earth.",
+  "bilingual": [
+   [
+    "Revolution",
+    "La révolution"
+   ],
+   [
+    "Orbit",
+    "L'orbite"
+   ],
+   [
+    "Season",
+    "La saison"
+   ],
+   [
+    "Equinox",
+    "L'équinoxe"
+   ],
+   [
+    "Solstice",
+    "Le solstice"
+   ],
+   [
+    "Leap year",
+    "L'année bissextile"
+   ],
+   [
+    "Rainy season",
+    "La saison des pluies"
+   ],
+   [
+    "Dry season",
+    "La saison sèche"
+   ]
+  ],
+  "teacherNote": [
+   "Correction 1: the source notes say that summer is our \"hot, dry season\" and winter our \"cooler, rainy season\". This is wrong. The rainy season of Garoua comes in the Northern Hemisphere summer (June–September), when the overhead Sun and the rain belt (ITCZ) are in the north.",
+   "Correction 2: the leap-year rule was incomplete. Century years must be divisible by 400 (2000 was a leap year; 1900 and 2100 are not).",
+   "Checked: perihelion about 3 January (147 million km); aphelion about 4 July (152 million km). Solstice and equinox dates can vary by one day."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

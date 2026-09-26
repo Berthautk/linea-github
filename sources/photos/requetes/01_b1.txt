@@ -1,0 +1,30 @@
+road::muddy road Cameroon
+net::mosquito net Africa
+log::logging truck Cameroon
+plant::reforestation planting trees Africa
+sav::savanna Cameroon
+sav2::savanna trees grass Africa dry season
+harm::Harmattan
+storm::cumulonimbus Africa
+baobab::baobab Senegal
+shea::Vitellaria paradoxa tree
+lat::laterite soil
+lat2::laterite bricks
+vert2::cracked clay soil dry season Africa
+dryt::Sahel trees dry season leafless
+cattle::Fulani cattle Cameroon
+cattle2::Zebu cattle Sahel herd
+cotton::cotton field Africa
+eleph2::elephants savanna Africa
+lagdo::Lagdo dam
+charc::charcoal bags sale Africa
+harv::cotton harvest Africa women
+rice::irrigated rice field Africa
+maasai::Maasai cattle herders
+fish::fishermen canoe river Niger
+drought::drought cracked earth Africa
+fire::bush fire savanna
+fire2::feu de brousse
+cfield::cattle millet field Africa
+tplant::tree planting Sahel
+tplant2::Great Green Wall planting

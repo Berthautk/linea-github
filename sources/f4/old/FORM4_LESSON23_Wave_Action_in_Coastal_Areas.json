@@ -1,0 +1,405 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"There are two types of waves:\"]",
+  "sumImage | \"x\" | \"A. Constructive Waves\" | \"Low, long waves, about 6–8 per minute. The swash is stronger than the backwash, so they bring sand and build wide, gentle beaches. They come in calm weather.\" | \"waves_types.png\"",
+  "sum | \"x\" | \"B. Destructive Waves\" | [\"High, steep waves, about 11–15 per minute. The backwash is stronger than the swash, so they take sand away and erode the coast. They come with storms.\"]",
+  "sum | \"II. Types of Waves (1/3)\" | [\"There are two types of waves:\"]",
+  "sumImage | \"II. Types of Waves (2/3)\" | \"A. Constructive Waves\" | \"Low, long waves, about 6–8 per minute. The swash is stronger than the backwash, so they bring sand and build wide, gentle beaches. They come in calm weather.\" | \"waves_types.png\"",
+  "sum | \"II. Types of Waves (3/3)\" | \"B. Destructive Waves\" | [\"High, steep waves, about 11–15 per minute. The backwash is stronger than the swash, so they take sand away and erode the coast. They come with storms.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON23_Wave_Action_in_Coastal_Areas",
+  "lessonNo": 23,
+  "lessonName": "Wave Action in Coastal Areas",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "coverNote": "Good morning, class. Today we start a new sub-topic: wave action along the coast. Lesson 23 is about waves in coastal areas.",
+  "notions": "Wave, fetch, swash, backwash, longshore drift.",
+  "focus": "Meaning of waves; types of waves (constructive and destructive).",
+  "competence": "Learners are able to explain how waves form and to recognise dangerous waves on a beach, for example at Kribi or Limbe.",
+  "objectives": [
+   "Define a wave and explain its cause.",
+   "Explain the factors of the strength of waves.",
+   "Distinguish constructive and destructive waves."
+  ],
+  "recall": [
+   "Rivers erode, transport and deposit.",
+   "Rivers drop their load where they lose energy.",
+   "Waves are an agent of denudation along the coast."
+  ],
+  "recallNote": "Check the homework: observations of waves made by the wind.",
+  "situation": [
+   "On a windy day in Garoua, Moussa stands by the Benue. The wind blows on the water and makes small waves that move towards the bank.",
+   "His cousin in Kribi says that on the Atlantic Ocean, the waves are very big and powerful. Moussa wonders what a wave is, and why some waves are small and others very strong."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa does not know what a wave is and why waves have different strengths."
+   ],
+   [
+    "What makes the waves on the Benue?",
+    "The wind blowing on the water makes the waves."
+   ],
+   [
+    "Why must swimmers be careful at Kribi and Limbe?",
+    "Strong waves and currents can pull swimmers into the sea, so they must swim only in safe places."
+   ]
+  ],
+  "justification": "This lesson will help us to understand waves, the main force that shapes coastlines.",
+  "parts": [
+   {
+    "sec": "I. MEANING OF WAVES",
+    "qa": [
+     {
+      "q": "What is a wave?",
+      "a": "A wave is a movement of energy through the water of the sea, which makes the surface rise and fall. The water moves in circles; the energy moves forward."
+     },
+     {
+      "q": "What causes most waves?",
+      "a": "Most waves are caused by the wind blowing over the surface of the sea."
+     },
+     {
+      "q": "On what does the size of a wave depend?",
+      "a": "It depends on the strength of the wind, how long it blows, and the fetch: the distance of open water over which the wind blows."
+     },
+     {
+      "q": "What are the swash and the backwash?",
+      "a": "The swash is the water that rushes up the beach when a wave breaks. The backwash is the water that flows back down the beach."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Waves",
+     "defs": [
+      "A wave is a movement of energy through the water, which makes the surface of the sea rise and fall. Most waves are caused by the wind."
+     ],
+     "items": [
+      [
+       "A. Strength of Waves",
+       [
+        "– The strength of the wind.",
+        "– The time the wind blows.",
+        "– The fetch: the distance of open water over which the wind blows."
+       ]
+      ],
+      [
+       "B. Swash and Backwash",
+       [
+        "– Swash: water that rushes up the beach after a wave breaks.",
+        "– Backwash: water that flows back down the beach to the sea."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES OF WAVES",
+    "qa": [
+     {
+      "img": "waves_types.png",
+      "kind": "diagram",
+      "q": "Compare constructive and destructive waves.",
+      "full": true
+     },
+     {
+      "q": "What are constructive waves? What do they do?",
+      "a": "They are low, long waves (about 6–8 per minute) with a strong swash and a weak backwash. They bring sand and build the beach."
+     },
+     {
+      "q": "What are destructive waves? What do they do?",
+      "a": "They are high, steep waves (about 11–15 per minute) with a weak swash and a strong backwash. They remove sand and erode the coast."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Waves",
+     "intro": "There are two types of waves:",
+     "items": [
+      [
+       "A. Constructive Waves",
+       "Low, long waves, about 6–8 per minute. The swash is stronger than the backwash, so they bring sand and build wide, gentle beaches. They come in calm weather.",
+       "waves_types.png"
+      ],
+      [
+       "B. Destructive Waves",
+       "High, steep waves, about 11–15 per minute. The backwash is stronger than the swash, so they take sand away and erode the coast. They come with storms."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What causes most waves?",
+    "The wind blowing over the sea."
+   ],
+   [
+    "What is the fetch?",
+    "The fetch is the distance of open water over which the wind blows."
+   ],
+   [
+    "What is the difference between constructive and destructive waves?",
+    "Constructive waves have a strong swash and build beaches; destructive waves have a strong backwash and erode the coast."
+   ]
+  ],
+  "remediation": [
+   [
+    "Most waves are caused by the ______.",
+    "The distance of open water over which the wind blows is the ______.",
+    "Water rushing up the beach is the ______."
+   ],
+   [
+    "Water flowing back to the sea is the ______.",
+    "Waves that build beaches are ______ waves.",
+    "Waves that erode the coast are ______ waves."
+   ]
+  ],
+  "remediationAnswers": "1. wind 2. fetch 3. swash 4. backwash 5. constructive 6. destructive",
+  "homework": "Look at photos of the coast of Limbe or Kribi. Draw a rocky part of the coast and name any holes, arches or rocks in the sea that you see.",
+  "homeworkTag": "This prepares Lesson 24: Main Erosional Processes and Features of Wave Action.",
+  "bilingual": [
+   [
+    "Wave",
+    "La vague"
+   ],
+   [
+    "Coast",
+    "La côte"
+   ],
+   [
+    "Beach",
+    "La plage"
+   ],
+   [
+    "Swash",
+    "Le jet de rive"
+   ],
+   [
+    "Backwash",
+    "La nappe de retrait / le ressac"
+   ],
+   [
+    "Fetch",
+    "Le fetch"
+   ],
+   [
+    "Storm",
+    "La tempête"
+   ],
+   [
+    "Current",
+    "Le courant"
+   ]
+  ],
+  "teacherNote": [
+   "Figures checked: constructive waves about 6–8 per minute; destructive waves about 11–15 per minute (the source notes say 12–14, which is within this range).",
+   "Cameroon has about 400 km of coastline, from Idenau and Limbe to Kribi and Campo."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 23",
+  "title": "Wave Action in Coastal Areas",
+  "sumTitle": "Wave Action in Coastal Areas",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 23: Wave Action in Coastal Areas",
+  "matter": "I. Meaning of Waves: Strength of Waves, Swash and Backwash; II. Types of Waves: Constructive Waves, Destructive Waves."
+ },
+ "file": "FORM4_LESSON23_Wave_Action_in_Coastal_Areas",
+ "sp": {
+  "file": "FORM4_LESSON23_Wave_Action_in_Coastal_Areas",
+  "lessonNo": 23,
+  "lessonName": "Wave Action in Coastal Areas",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "coverNote": "Good morning, class. Today we start a new sub-topic: wave action along the coast. Lesson 23 is about waves in coastal areas.",
+  "notions": "Wave, fetch, swash, backwash, longshore drift.",
+  "focus": "Meaning of waves; types of waves (constructive and destructive).",
+  "competence": "Learners are able to explain how waves form and to recognise dangerous waves on a beach, for example at Kribi or Limbe.",
+  "objectives": [
+   "Define a wave and explain its cause.",
+   "Explain the factors of the strength of waves.",
+   "Distinguish constructive and destructive waves."
+  ],
+  "recall": [
+   "Rivers erode, transport and deposit.",
+   "Rivers drop their load where they lose energy.",
+   "Waves are an agent of denudation along the coast."
+  ],
+  "recallNote": "Check the homework: observations of waves made by the wind.",
+  "situation": [
+   "On a windy day in Garoua, Moussa stands by the Benue. The wind blows on the water and makes small waves that move towards the bank.",
+   "His cousin in Kribi says that on the Atlantic Ocean, the waves are very big and powerful. Moussa wonders what a wave is, and why some waves are small and others very strong."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa does not know what a wave is and why waves have different strengths."
+   ],
+   [
+    "What makes the waves on the Benue?",
+    "The wind blowing on the water makes the waves."
+   ],
+   [
+    "Why must swimmers be careful at Kribi and Limbe?",
+    "Strong waves and currents can pull swimmers into the sea, so they must swim only in safe places."
+   ]
+  ],
+  "justification": "This lesson will help us to understand waves, the main force that shapes coastlines.",
+  "parts": [
+   {
+    "sec": "I. MEANING OF WAVES",
+    "qa": [
+     {
+      "q": "What is a wave?",
+      "a": "A wave is a movement of energy through the water of the sea, which makes the surface rise and fall. The water moves in circles; the energy moves forward."
+     },
+     {
+      "q": "What causes most waves?",
+      "a": "Most waves are caused by the wind blowing over the surface of the sea."
+     },
+     {
+      "q": "On what does the size of a wave depend?",
+      "a": "It depends on the strength of the wind, how long it blows, and the fetch: the distance of open water over which the wind blows."
+     },
+     {
+      "q": "What are the swash and the backwash?",
+      "a": "The swash is the water that rushes up the beach when a wave breaks. The backwash is the water that flows back down the beach."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Waves",
+     "defs": [
+      "A wave is a movement of energy through the water, which makes the surface of the sea rise and fall. Most waves are caused by the wind."
+     ],
+     "items": [
+      [
+       "A. Strength of Waves",
+       [
+        "– The strength of the wind.",
+        "– The time the wind blows.",
+        "– The fetch: the distance of open water over which the wind blows."
+       ]
+      ],
+      [
+       "B. Swash and Backwash",
+       [
+        "– Swash: water that rushes up the beach after a wave breaks.",
+        "– Backwash: water that flows back down the beach to the sea."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES OF WAVES",
+    "qa": [
+     {
+      "img": "waves_types.png",
+      "kind": "diagram",
+      "q": "Compare constructive and destructive waves.",
+      "full": true
+     },
+     {
+      "q": "What are constructive waves? What do they do?",
+      "a": "They are low, long waves (about 6–8 per minute) with a strong swash and a weak backwash. They bring sand and build the beach."
+     },
+     {
+      "q": "What are destructive waves? What do they do?",
+      "a": "They are high, steep waves (about 11–15 per minute) with a weak swash and a strong backwash. They remove sand and erode the coast."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Waves",
+     "intro": "There are two types of waves:",
+     "items": [
+      [
+       "A. Constructive Waves",
+       "Low, long waves, about 6–8 per minute. The swash is stronger than the backwash, so they bring sand and build wide, gentle beaches. They come in calm weather.",
+       "waves_types.png"
+      ],
+      [
+       "B. Destructive Waves",
+       "High, steep waves, about 11–15 per minute. The backwash is stronger than the swash, so they take sand away and erode the coast. They come with storms."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What causes most waves?",
+    "The wind blowing over the sea."
+   ],
+   [
+    "What is the fetch?",
+    "The fetch is the distance of open water over which the wind blows."
+   ],
+   [
+    "What is the difference between constructive and destructive waves?",
+    "Constructive waves have a strong swash and build beaches; destructive waves have a strong backwash and erode the coast."
+   ]
+  ],
+  "remediation": [
+   [
+    "Most waves are caused by the ______.",
+    "The distance of open water over which the wind blows is the ______.",
+    "Water rushing up the beach is the ______."
+   ],
+   [
+    "Water flowing back to the sea is the ______.",
+    "Waves that build beaches are ______ waves.",
+    "Waves that erode the coast are ______ waves."
+   ]
+  ],
+  "remediationAnswers": "1. wind 2. fetch 3. swash 4. backwash 5. constructive 6. destructive",
+  "homework": "Look at photos of the coast of Limbe or Kribi. Draw a rocky part of the coast and name any holes, arches or rocks in the sea that you see.",
+  "homeworkTag": "This prepares Lesson 24: Main Erosional Processes and Features of Wave Action.",
+  "bilingual": [
+   [
+    "Wave",
+    "La vague"
+   ],
+   [
+    "Coast",
+    "La côte"
+   ],
+   [
+    "Beach",
+    "La plage"
+   ],
+   [
+    "Swash",
+    "Le jet de rive"
+   ],
+   [
+    "Backwash",
+    "La nappe de retrait / le ressac"
+   ],
+   [
+    "Fetch",
+    "Le fetch"
+   ],
+   [
+    "Storm",
+    "La tempête"
+   ],
+   [
+    "Current",
+    "Le courant"
+   ]
+  ],
+  "teacherNote": [
+   "Figures checked: constructive waves about 6–8 per minute; destructive waves about 11–15 per minute (the source notes say 12–14, which is within this range).",
+   "Cameroon has about 400 km of coastline, from Idenau and Limbe to Kribi and Campo."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

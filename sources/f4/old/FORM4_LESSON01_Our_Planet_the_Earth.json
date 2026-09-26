@@ -1,0 +1,501 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Many observations prove that the Earth is round:\"]",
+  "sumImage | \"x\" | \"A. The Ship at Sea\" | \"When a ship sails away, its hull disappears first and its mast last. It moves over the curve of the Earth.\" | \"ship_proof.png\"",
+  "sum | \"x\" | \"B. Eclipse of the Moon\" | [\"During an eclipse of the Moon, the shadow of the Earth on the Moon is always round.\"]",
+  "sum | \"x\" | \"C. Sunrise and Sunset\" | [\"The Sun rises and sets at different times in different places. It rises first in places further east.\"]",
+  "sum | \"x\" | \"D. The Circular Horizon\" | [\"From a mountain or an aeroplane, the horizon looks curved, and we can see further when we go higher.\"]",
+  "sum | \"x\" | \"E. Travel Around the World\" | [\"People can travel around the world in one direction and return to their starting point (circumnavigation).\"]",
+  "sum | \"x\" | \"F. Photos from Space\" | [\"Photos taken by satellites and astronauts show that the Earth is round.\"]",
+  "sum | \"III. Proofs of the Shape of the Earth (1/7)\" | [\"Many observations prove that the Earth is round:\"]",
+  "sumImage | \"III. Proofs of the Shape of the Earth (2/7)\" | \"A. The Ship at Sea\" | \"When a ship sails away, its hull disappears first and its mast last. It moves over the curve of the Earth.\" | \"ship_proof.png\"",
+  "sum | \"III. Proofs of the Shape of the Earth (3/7)\" | \"B. Eclipse of the Moon\" | [\"During an eclipse of the Moon, the shadow of the Earth on the Moon is always round.\"]",
+  "sum | \"III. Proofs of the Shape of the Earth (4/7)\" | \"C. Sunrise and Sunset\" | [\"The Sun rises and sets at different times in different places. It rises first in places further east.\"]",
+  "sum | \"III. Proofs of the Shape of the Earth (5/7)\" | \"D. The Circular Horizon\" | [\"From a mountain or an aeroplane, the horizon looks curved, and we can see further when we go higher.\"]",
+  "sum | \"III. Proofs of the Shape of the Earth (6/7)\" | \"E. Travel Around the World\" | [\"People can travel around the world in one direction and return to their starting point (circumnavigation).\"]",
+  "sum | \"III. Proofs of the Shape of the Earth (7/7)\" | \"F. Photos from Space\" | [\"Photos taken by satellites and astronauts show that the Earth is round.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON01_Our_Planet_the_Earth",
+  "lessonNo": 1,
+  "lessonName": "Our Planet, the Earth: Size, Shape and Proofs",
+  "chapter": "The Earth as a Planet in the Solar System — The Earth as a Planet of the Solar System",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "The Earth as a Planet of the Solar System",
+  "coverNote": "Good morning, class, and welcome to Form 4 Geography. Our first lesson is about our planet, the Earth: its size, its shape and the proofs of its shape.",
+  "notions": "Sphere, oblate spheroid, circumference, diameter, horizon.",
+  "focus": "Size of the Earth; shape of the Earth; proofs of the shape of the Earth.",
+  "competence": "Learners are able to explain, with everyday observations, why the Earth is round and to give its main measurements.",
+  "objectives": [
+   "Give the size of the Earth: its circumferences and diameters.",
+   "Describe the true shape of the Earth (an oblate spheroid).",
+   "Explain at least four proofs that the Earth is round."
+  ],
+  "recall": [
+   "The Earth is one of the eight planets of the solar system.",
+   "The Earth moves around the Sun.",
+   "We live on the surface of the Earth, which is made of land and water."
+  ],
+  "recallNote": "Ask learners what they learned about the Earth in Form 1.",
+  "situation": [
+   "Aïcha travels by bus from Garoua to Ngaoundéré. On a long, straight road, she sees a big lorry coming from far away. At first, she sees only the top of the lorry. Then, little by little, she sees the whole lorry.",
+   "Her little brother says, \"The Earth is flat like a table.\" Aïcha thinks that the lorry appeared little by little because the Earth is round, but she cannot explain it well."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aïcha cannot explain how the lorry shows that the Earth is round."
+   ],
+   [
+    "Which part of the lorry did Aïcha see first?",
+    "She saw the top of the lorry first, and then the rest of the lorry."
+   ],
+   [
+    "How can Aïcha convince her brother that the Earth is not flat?",
+    "She can show him a globe and photos of the Earth taken from space, and explain the example of the lorry or of a ship at sea."
+   ]
+  ],
+  "justification": "This lesson will help us to know the true size and shape of our planet, and to prove its shape with simple observations.",
+  "parts": [
+   {
+    "sec": "I. SIZE OF THE EARTH",
+    "qa": [
+     {
+      "img": "earth_shape.png",
+      "kind": "diagram",
+      "q": "Study the size of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What is the distance around the Earth at the Equator?",
+      "a": "The distance around the Earth at the Equator (the equatorial circumference) is about 40,075 km."
+     },
+     {
+      "q": "Compare the equatorial diameter and the polar diameter. What do you notice?",
+      "a": "The equatorial diameter (12,756 km) is about 42 km longer than the polar diameter (12,714 km). The Earth is wider at the Equator."
+     }
+    ],
+    "sum": {
+     "title": "I. Size of the Earth",
+     "intro": "The Earth is a very large planet. Its main measurements are the following:",
+     "items": [
+      [
+       "A. Circumferences",
+       [
+        "– Equatorial circumference: about 40,075 km.",
+        "– Polar circumference: about 40,008 km."
+       ]
+      ],
+      [
+       "B. Diameters",
+       [
+        "– Equatorial diameter: about 12,756 km.",
+        "– Polar diameter: about 12,714 km.",
+        "– The radius of the Earth is about 6,370 km."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SHAPE OF THE EARTH",
+    "qa": [
+     {
+      "q": "The Earth is not a perfect ball. Where is it flattened, and where does it bulge?",
+      "a": "It is slightly flattened at the North Pole and the South Pole, and it bulges (is wider) at the Equator."
+     },
+     {
+      "q": "What is the name of this true shape of the Earth?",
+      "a": "This shape is called an oblate spheroid (or geoid). It is caused by the rotation of the Earth."
+     }
+    ],
+    "sum": {
+     "title": "II. Shape of the Earth",
+     "defs": [
+      "An oblate spheroid is a sphere that is slightly flattened at the poles and slightly bulging at the Equator."
+     ],
+     "items": [
+      [
+       "The True Shape",
+       "The Earth is almost a sphere, but its true shape is an oblate spheroid. The bulge at the Equator is caused by the rotation of the Earth.",
+       "earth_shape.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. PROOFS OF THE SHAPE",
+    "qa": [
+     {
+      "img": "ship_proof.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "A ship sails away from the coast. Which part disappears first? Why?",
+      "a": "The hull (bottom) disappears first and the mast (top) last, because the ship moves over the curved surface of the Earth.",
+      "split": 5.6
+     },
+     {
+      "q": "During an eclipse of the Moon, what is the shape of the shadow of the Earth on the Moon?",
+      "a": "The shadow of the Earth is always round (curved). Only a sphere gives a round shadow from every side."
+     },
+     {
+      "q": "Why does the Sun rise in Maroua a few minutes before it rises in Douala?",
+      "a": "Maroua is further east than Douala. On a round, turning Earth, the Sun rises first in the east and later in the west."
+     },
+     {
+      "q": "Give two other proofs that the Earth is round.",
+      "a": "People can travel around the world and return to their starting point. Photos from satellites and astronauts show a round Earth."
+     }
+    ],
+    "sum": {
+     "title": "III. Proofs of the Shape of the Earth",
+     "intro": "Many observations prove that the Earth is round:",
+     "items": [
+      [
+       "A. The Ship at Sea",
+       "When a ship sails away, its hull disappears first and its mast last. It moves over the curve of the Earth.",
+       "ship_proof.png"
+      ],
+      [
+       "B. Eclipse of the Moon",
+       "During an eclipse of the Moon, the shadow of the Earth on the Moon is always round."
+      ],
+      [
+       "C. Sunrise and Sunset",
+       "The Sun rises and sets at different times in different places. It rises first in places further east."
+      ],
+      [
+       "D. The Circular Horizon",
+       "From a mountain or an aeroplane, the horizon looks curved, and we can see further when we go higher."
+      ],
+      [
+       "E. Travel Around the World",
+       "People can travel around the world in one direction and return to their starting point (circumnavigation)."
+      ],
+      [
+       "F. Photos from Space",
+       "Photos taken by satellites and astronauts show that the Earth is round."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the true shape of the Earth?",
+    "The true shape of the Earth is an oblate spheroid: flattened at the poles and bulging at the Equator."
+   ],
+   [
+    "Why is the equatorial circumference longer than the polar circumference?",
+    "It is longer because the Earth bulges at the Equator."
+   ],
+   [
+    "Give three proofs that the Earth is round.",
+    "The ship at sea, the round shadow of the Earth during an eclipse of the Moon, and photos from space."
+   ]
+  ],
+  "remediation": [
+   [
+    "The Earth is flattened at the ______.",
+    "The Earth bulges at the ______.",
+    "The equatorial circumference is about ______ km."
+   ],
+   [
+    "The true shape of the Earth is an oblate ______.",
+    "When a ship sails away, the ______ disappears first.",
+    "During an eclipse of the Moon, the shadow of the Earth is ______."
+   ]
+  ],
+  "remediationAnswers": "1. poles 2. Equator 3. 40,075 4. spheroid 5. hull 6. round",
+  "homework": "Look at the Moon on three different evenings this week. Draw its shape each time and write the date under each drawing.",
+  "homeworkTag": "This prepares Further Study 1: The Universe and the Moon.",
+  "bilingual": [
+   [
+    "Planet",
+    "La planète"
+   ],
+   [
+    "Shape",
+    "La forme"
+   ],
+   [
+    "Size",
+    "La taille"
+   ],
+   [
+    "Sphere",
+    "La sphère"
+   ],
+   [
+    "Circumference",
+    "La circonférence"
+   ],
+   [
+    "Diameter",
+    "Le diamètre"
+   ],
+   [
+    "Horizon",
+    "L'horizon"
+   ],
+   [
+    "Proof",
+    "La preuve"
+   ]
+  ],
+  "teacherNote": [
+   "Figures checked: equatorial circumference 40,075 km; polar circumference 40,008 km; equatorial diameter 12,756 km; polar diameter 12,714 km.",
+   "Correction: the situation of the source notes mixed time zones and the sunset over the Mandara Mountains (which cannot be seen from Garoua). It was replaced by a simple horizon example. Time zones are studied in Lesson 4."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 1",
+  "title": "Our Planet, the Earth: Size, Shape and Proofs",
+  "sumTitle": "Our Planet, the Earth: Size, Shape and Proofs",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 1: Our Planet, the Earth: Size, Shape and Proofs",
+  "matter": "I. Size of the Earth: Circumferences, Diameters; II. Shape of the Earth: The True Shape; III. Proofs of the Shape of the Earth: The Ship at Sea, Eclipse of the Moon, Sunrise and Sunset, The Circular Horizon, Travel Around the World, Photos from Space."
+ },
+ "file": "FORM4_LESSON01_Our_Planet_the_Earth",
+ "sp": {
+  "file": "FORM4_LESSON01_Our_Planet_the_Earth",
+  "lessonNo": 1,
+  "lessonName": "Our Planet, the Earth: Size, Shape and Proofs",
+  "chapter": "The Earth as a Planet in the Solar System — The Earth as a Planet of the Solar System",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "The Earth as a Planet of the Solar System",
+  "coverNote": "Good morning, class, and welcome to Form 4 Geography. Our first lesson is about our planet, the Earth: its size, its shape and the proofs of its shape.",
+  "notions": "Sphere, oblate spheroid, circumference, diameter, horizon.",
+  "focus": "Size of the Earth; shape of the Earth; proofs of the shape of the Earth.",
+  "competence": "Learners are able to explain, with everyday observations, why the Earth is round and to give its main measurements.",
+  "objectives": [
+   "Give the size of the Earth: its circumferences and diameters.",
+   "Describe the true shape of the Earth (an oblate spheroid).",
+   "Explain at least four proofs that the Earth is round."
+  ],
+  "recall": [
+   "The Earth is one of the eight planets of the solar system.",
+   "The Earth moves around the Sun.",
+   "We live on the surface of the Earth, which is made of land and water."
+  ],
+  "recallNote": "Ask learners what they learned about the Earth in Form 1.",
+  "situation": [
+   "Aïcha travels by bus from Garoua to Ngaoundéré. On a long, straight road, she sees a big lorry coming from far away. At first, she sees only the top of the lorry. Then, little by little, she sees the whole lorry.",
+   "Her little brother says, \"The Earth is flat like a table.\" Aïcha thinks that the lorry appeared little by little because the Earth is round, but she cannot explain it well."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aïcha cannot explain how the lorry shows that the Earth is round."
+   ],
+   [
+    "Which part of the lorry did Aïcha see first?",
+    "She saw the top of the lorry first, and then the rest of the lorry."
+   ],
+   [
+    "How can Aïcha convince her brother that the Earth is not flat?",
+    "She can show him a globe and photos of the Earth taken from space, and explain the example of the lorry or of a ship at sea."
+   ]
+  ],
+  "justification": "This lesson will help us to know the true size and shape of our planet, and to prove its shape with simple observations.",
+  "parts": [
+   {
+    "sec": "I. SIZE OF THE EARTH",
+    "qa": [
+     {
+      "img": "earth_shape.png",
+      "kind": "diagram",
+      "q": "Study the size of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What is the distance around the Earth at the Equator?",
+      "a": "The distance around the Earth at the Equator (the equatorial circumference) is about 40,075 km."
+     },
+     {
+      "q": "Compare the equatorial diameter and the polar diameter. What do you notice?",
+      "a": "The equatorial diameter (12,756 km) is about 42 km longer than the polar diameter (12,714 km). The Earth is wider at the Equator."
+     }
+    ],
+    "sum": {
+     "title": "I. Size of the Earth",
+     "intro": "The Earth is a very large planet. Its main measurements are the following:",
+     "items": [
+      [
+       "A. Circumferences",
+       [
+        "– Equatorial circumference: about 40,075 km.",
+        "– Polar circumference: about 40,008 km."
+       ]
+      ],
+      [
+       "B. Diameters",
+       [
+        "– Equatorial diameter: about 12,756 km.",
+        "– Polar diameter: about 12,714 km.",
+        "– The radius of the Earth is about 6,370 km."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SHAPE OF THE EARTH",
+    "qa": [
+     {
+      "q": "The Earth is not a perfect ball. Where is it flattened, and where does it bulge?",
+      "a": "It is slightly flattened at the North Pole and the South Pole, and it bulges (is wider) at the Equator."
+     },
+     {
+      "q": "What is the name of this true shape of the Earth?",
+      "a": "This shape is called an oblate spheroid (or geoid). It is caused by the rotation of the Earth."
+     }
+    ],
+    "sum": {
+     "title": "II. Shape of the Earth",
+     "defs": [
+      "An oblate spheroid is a sphere that is slightly flattened at the poles and slightly bulging at the Equator."
+     ],
+     "items": [
+      [
+       "The True Shape",
+       "The Earth is almost a sphere, but its true shape is an oblate spheroid. The bulge at the Equator is caused by the rotation of the Earth.",
+       "earth_shape.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. PROOFS OF THE SHAPE",
+    "qa": [
+     {
+      "img": "ship_proof.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "A ship sails away from the coast. Which part disappears first? Why?",
+      "a": "The hull (bottom) disappears first and the mast (top) last, because the ship moves over the curved surface of the Earth.",
+      "split": 5.6
+     },
+     {
+      "q": "During an eclipse of the Moon, what is the shape of the shadow of the Earth on the Moon?",
+      "a": "The shadow of the Earth is always round (curved). Only a sphere gives a round shadow from every side."
+     },
+     {
+      "q": "Why does the Sun rise in Maroua a few minutes before it rises in Douala?",
+      "a": "Maroua is further east than Douala. On a round, turning Earth, the Sun rises first in the east and later in the west."
+     },
+     {
+      "q": "Give two other proofs that the Earth is round.",
+      "a": "People can travel around the world and return to their starting point. Photos from satellites and astronauts show a round Earth."
+     }
+    ],
+    "sum": {
+     "title": "III. Proofs of the Shape of the Earth",
+     "intro": "Many observations prove that the Earth is round:",
+     "items": [
+      [
+       "A. The Ship at Sea",
+       "When a ship sails away, its hull disappears first and its mast last. It moves over the curve of the Earth.",
+       "ship_proof.png"
+      ],
+      [
+       "B. Eclipse of the Moon",
+       "During an eclipse of the Moon, the shadow of the Earth on the Moon is always round."
+      ],
+      [
+       "C. Sunrise and Sunset",
+       "The Sun rises and sets at different times in different places. It rises first in places further east."
+      ],
+      [
+       "D. The Circular Horizon",
+       "From a mountain or an aeroplane, the horizon looks curved, and we can see further when we go higher."
+      ],
+      [
+       "E. Travel Around the World",
+       "People can travel around the world in one direction and return to their starting point (circumnavigation)."
+      ],
+      [
+       "F. Photos from Space",
+       "Photos taken by satellites and astronauts show that the Earth is round."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the true shape of the Earth?",
+    "The true shape of the Earth is an oblate spheroid: flattened at the poles and bulging at the Equator."
+   ],
+   [
+    "Why is the equatorial circumference longer than the polar circumference?",
+    "It is longer because the Earth bulges at the Equator."
+   ],
+   [
+    "Give three proofs that the Earth is round.",
+    "The ship at sea, the round shadow of the Earth during an eclipse of the Moon, and photos from space."
+   ]
+  ],
+  "remediation": [
+   [
+    "The Earth is flattened at the ______.",
+    "The Earth bulges at the ______.",
+    "The equatorial circumference is about ______ km."
+   ],
+   [
+    "The true shape of the Earth is an oblate ______.",
+    "When a ship sails away, the ______ disappears first.",
+    "During an eclipse of the Moon, the shadow of the Earth is ______."
+   ]
+  ],
+  "remediationAnswers": "1. poles 2. Equator 3. 40,075 4. spheroid 5. hull 6. round",
+  "homework": "Look at the Moon on three different evenings this week. Draw its shape each time and write the date under each drawing.",
+  "homeworkTag": "This prepares Further Study 1: The Universe and the Moon.",
+  "bilingual": [
+   [
+    "Planet",
+    "La planète"
+   ],
+   [
+    "Shape",
+    "La forme"
+   ],
+   [
+    "Size",
+    "La taille"
+   ],
+   [
+    "Sphere",
+    "La sphère"
+   ],
+   [
+    "Circumference",
+    "La circonférence"
+   ],
+   [
+    "Diameter",
+    "Le diamètre"
+   ],
+   [
+    "Horizon",
+    "L'horizon"
+   ],
+   [
+    "Proof",
+    "La preuve"
+   ]
+  ],
+  "teacherNote": [
+   "Figures checked: equatorial circumference 40,075 km; polar circumference 40,008 km; equatorial diameter 12,756 km; polar diameter 12,714 km.",
+   "Correction: the situation of the source notes mixed time zones and the sunset over the Mandara Mountains (which cannot be seen from Garoua). It was replaced by a simple horizon example. Time zones are studied in Lesson 4."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,491 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"We located Cameroon and some of its towns with the grid of the map:\"]",
+  "sumImage | \"x\" | \"A. Cameroon in Africa\" | \"Cameroon lies between about 2° N and 13° N, and between about 8° E and 16° E.\" | \"africa_latlon.png\"",
+  "sumImage | \"x\" | \"B. Towns of Cameroon\" | [\"– Garoua: about 9°18′ N, 13°24′ E.\",\"– Maroua: about 10°36′ N, 14°18′ E.\",\"– Ngaoundéré: about 7°18′ N, 13°36′ E.\",\"– Yaoundé: about 3°52′ N, 11°31′ E.\",\"– Douala: about 4°03′ N, 9°42′ E.\"] | \"cameroon_latlon.png\"",
+  "sum | \"III. Practical Exercises (1/4)\" | [\"We located Cameroon and some of its towns with the grid of the map:\"]",
+  "sumImage | \"III. Practical Exercises (2/4)\" | \"A. Cameroon in Africa\" | \"Cameroon lies between about 2° N and 13° N, and between about 8° E and 16° E.\" | \"africa_latlon.png\"",
+  "sumImage | \"III. Practical Exercises (3/4)\" | \"B. Towns of Cameroon\" | [\"– Garoua: about 9°18′ N, 13°24′ E.\",\"– Maroua: about 10°36′ N, 14°18′ E.\",\"– Ngaoundéré: about 7°18′ N, 13°36′ E.\",\"– Yaoundé: about 3°52′ N, 11°31′ E.\",\"– Douala: about 4°03′ N, 9°42′ E.\"] | \"cameroon_latlon.png\""
+ ],
+ "end": {
+  "file": "FORM4_PRACTICAL_WORK1_Locate_a_Place_on_a_Map",
+  "kind": "Practical Work",
+  "lessonNo": 1,
+  "lessonName": "Locate a Place on a Map",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "coverNote": "Good morning, class. Today we do Practical Work 1: we locate places on a map with their latitude and longitude. Take out your atlases, rulers and pencils.",
+  "notions": "Grid, coordinates, latitude, longitude.",
+  "focus": "Locating a place on a map using latitudes and longitudes; reading and writing geographical coordinates.",
+  "competence": "Learners are able to find a place on a map from its coordinates, and to give the coordinates of towns such as Garoua, Maroua and Ngaoundéré.",
+  "objectives": [
+   "Revise the meaning of latitude and longitude on a map.",
+   "Follow the steps to read the coordinates of a place.",
+   "Find a place on a map from its coordinates.",
+   "Give the coordinates of Cameroon and of some of its towns."
+  ],
+  "recall": [
+   "A latitude measures the distance north or south of the Equator.",
+   "A longitude measures the distance east or west of the Prime Meridian.",
+   "We write the latitude first and the longitude second."
+  ],
+  "recallNote": "Check that every pair of learners has an atlas and a ruler.",
+  "situation": [
+   "A Red Cross team in Garoua must deliver medicines to a small village that is not on most phone maps. The head office sends a message with only two numbers: \"10° N, 14° E\".",
+   "The team has a large paper map of the North Region. They must find the exact place of the village on the map to plan their route."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the team must find the village on a paper map using only its coordinates."
+   ],
+   [
+    "What do the numbers \"10° N, 14° E\" represent?",
+    "They represent the latitude (10° North) and the longitude (14° East) of the village."
+   ],
+   [
+    "Near which town of the North Region is this village?",
+    "It is near Guider, north-east of Garoua."
+   ]
+  ],
+  "justification": "This practical work will help us to use a map to find places and to give their exact position.",
+  "parts": [
+   {
+    "sec": "I. REVISION",
+    "qa": [
+     {
+      "q": "On a map, which lines run from left to right, and which lines run from top to bottom?",
+      "a": "Lines of latitude run from left to right (west to east). Lines of longitude run from top to bottom (north to south)."
+     },
+     {
+      "q": "Where are the values of latitude and longitude written on a map?",
+      "a": "The values of latitude are written on the left and right edges of the map. The values of longitude are written on the top and bottom edges."
+     }
+    ],
+    "sum": {
+     "title": "I. Revision of Key Ideas",
+     "intro": "On a map, the lines of latitude and longitude form a grid:",
+     "items": [
+      [
+       "A. Latitudes on a Map",
+       "Lines of latitude run across the map from west to east. Their values are read on the left or right edge of the map (N or S)."
+      ],
+      [
+       "B. Longitudes on a Map",
+       "Lines of longitude run from the top to the bottom of the map. Their values are read on the top or bottom edge (E or W)."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. STEPS TO READ COORDINATES",
+    "qa": [
+     {
+      "q": "You want the coordinates of Garoua. What is the first step?",
+      "a": "The first step is to find Garoua on the map."
+     },
+     {
+      "q": "How do you find the latitude of Garoua?",
+      "a": "From Garoua, I follow a line of latitude to the left or right edge of the map and read the value in degrees, with N or S."
+     },
+     {
+      "q": "How do you find the longitude of Garoua?",
+      "a": "From Garoua, I follow a line of longitude to the top or bottom edge of the map and read the value in degrees, with E or W."
+     }
+    ],
+    "sum": {
+     "title": "II. Steps to Read Coordinates",
+     "intro": "To read the coordinates of a place, we follow four steps:",
+     "items": [
+      [
+       "The Four Steps",
+       [
+        "– Step 1: Find the place on the map.",
+        "– Step 2: Read its latitude on the left or right edge (N or S).",
+        "– Step 3: Read its longitude on the top or bottom edge (E or W).",
+        "– Step 4: Write the latitude first, then the longitude. Example: Garoua, 9° N, 13° E."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EXERCISES",
+    "qa": [
+     {
+      "img": "africa_latlon.png",
+      "kind": "map",
+      "title": "Exercise A",
+      "q": "On the map of Africa, give the coordinates of the black dot in Cameroon.",
+      "a": "The black dot in Cameroon is at about 6° N, 12° E.",
+      "split": 5.2
+     },
+     {
+      "img": "africa_latlon.png",
+      "kind": "map",
+      "title": "Exercise B",
+      "q": "Between which latitudes and which longitudes is Cameroon located?",
+      "a": "Cameroon is located between about 2° N and 13° N, and between about 8° E and 16° E.",
+      "split": 5.2
+     },
+     {
+      "img": "cameroon_latlon.png",
+      "kind": "map",
+      "title": "Exercise C",
+      "q": "Give the coordinates of Garoua, Maroua and Ngaoundéré.",
+      "a": "Garoua: about 9°18′ N, 13°24′ E. Maroua: about 10°36′ N, 14°18′ E. Ngaoundéré: about 7°18′ N, 13°36′ E.",
+      "split": 5.4
+     },
+     {
+      "img": "cameroon_latlon.png",
+      "kind": "map",
+      "title": "Exercise D",
+      "q": "Which town is at about 3°52′ N, 11°31′ E? Which town is at about 4°03′ N, 9°42′ E?",
+      "a": "The first town is Yaoundé, the capital. The second town is Douala.",
+      "split": 5.4
+     }
+    ],
+    "sum": {
+     "title": "III. Practical Exercises",
+     "intro": "We located Cameroon and some of its towns with the grid of the map:",
+     "items": [
+      [
+       "A. Cameroon in Africa",
+       "Cameroon lies between about 2° N and 13° N, and between about 8° E and 16° E.",
+       "africa_latlon.png"
+      ],
+      [
+       "B. Towns of Cameroon",
+       [
+        "– Garoua: about 9°18′ N, 13°24′ E.",
+        "– Maroua: about 10°36′ N, 14°18′ E.",
+        "– Ngaoundéré: about 7°18′ N, 13°36′ E.",
+        "– Yaoundé: about 3°52′ N, 11°31′ E.",
+        "– Douala: about 4°03′ N, 9°42′ E."
+       ],
+       "cameroon_latlon.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "On which edges of a map do we read the latitude?",
+    "We read the latitude on the left and right edges of the map."
+   ],
+   [
+    "Write the coordinates of Garoua in the correct order.",
+    "Garoua: about 9° N, 13° E (latitude first, then longitude)."
+   ],
+   [
+    "A place is at 10° N, 14° E. Near which town of the North Region is it?",
+    "It is near Guider, north-east of Garoua."
+   ]
+  ],
+  "remediation": [
+   [
+    "Lines of ______ run from west to east on a map.",
+    "Lines of ______ run from north to south.",
+    "We always write the ______ first."
+   ],
+   [
+    "Garoua is at about ______ ° N.",
+    "Garoua is at about ______ ° E.",
+    "One degree is divided into 60 ______."
+   ]
+  ],
+  "remediationAnswers": "1. latitude 2. longitude 3. latitude 4. 9 5. 13 6. minutes",
+  "homework": "Look at the time on a phone set to Cameroon time and on a phone or television showing the time in another country (for example Dubai or Brazil). Write both times and the difference.",
+  "homeworkTag": "This prepares Lesson 4: Local Time, Standard Time and Time Zones.",
+  "bilingual": [
+   [
+    "Map",
+    "La carte"
+   ],
+   [
+    "Atlas",
+    "L'atlas"
+   ],
+   [
+    "Grid",
+    "La grille / le quadrillage"
+   ],
+   [
+    "Edge",
+    "Le bord"
+   ],
+   [
+    "Degree",
+    "Le degré"
+   ],
+   [
+    "Minute (of arc)",
+    "La minute (d'angle)"
+   ],
+   [
+    "Town",
+    "La ville"
+   ],
+   [
+    "To locate",
+    "Localiser"
+   ]
+  ],
+  "teacherNote": [
+   "Coordinates checked (rounded): Garoua 9.30° N, 13.40° E; Maroua 10.59° N, 14.32° E; Ngaoundéré 7.32° N, 13.58° E; Yaoundé 3.87° N, 11.52° E; Douala 4.05° N, 9.70° E.",
+   "Correction: the point 10° N, 14° E is near Guider (North Region), not on the border with Chad. Cameroon extends from about 1°40′ N to 13° N and from about 8°30′ E to 16°10′ E.",
+   "Explain that 1 degree = 60 minutes (′) before Exercise C."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  PRACTICAL WORK 1",
+  "title": "Locate a Place on a Map",
+  "sumTitle": "Locate a Place on a Map",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Practical Work 1: Locate a Place on a Map",
+  "matter": "I. Revision of Key Ideas: Latitudes on a Map, Longitudes on a Map; II. Steps to Read Coordinates: The Four Steps; III. Practical Exercises: Cameroon in Africa, Towns of Cameroon."
+ },
+ "file": "FORM4_PRACTICAL_WORK1_Locate_a_Place_on_a_Map",
+ "sp": {
+  "file": "FORM4_PRACTICAL_WORK1_Locate_a_Place_on_a_Map",
+  "kind": "Practical Work",
+  "lessonNo": 1,
+  "lessonName": "Locate a Place on a Map",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "coverNote": "Good morning, class. Today we do Practical Work 1: we locate places on a map with their latitude and longitude. Take out your atlases, rulers and pencils.",
+  "notions": "Grid, coordinates, latitude, longitude.",
+  "focus": "Locating a place on a map using latitudes and longitudes; reading and writing geographical coordinates.",
+  "competence": "Learners are able to find a place on a map from its coordinates, and to give the coordinates of towns such as Garoua, Maroua and Ngaoundéré.",
+  "objectives": [
+   "Revise the meaning of latitude and longitude on a map.",
+   "Follow the steps to read the coordinates of a place.",
+   "Find a place on a map from its coordinates.",
+   "Give the coordinates of Cameroon and of some of its towns."
+  ],
+  "recall": [
+   "A latitude measures the distance north or south of the Equator.",
+   "A longitude measures the distance east or west of the Prime Meridian.",
+   "We write the latitude first and the longitude second."
+  ],
+  "recallNote": "Check that every pair of learners has an atlas and a ruler.",
+  "situation": [
+   "A Red Cross team in Garoua must deliver medicines to a small village that is not on most phone maps. The head office sends a message with only two numbers: \"10° N, 14° E\".",
+   "The team has a large paper map of the North Region. They must find the exact place of the village on the map to plan their route."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the team must find the village on a paper map using only its coordinates."
+   ],
+   [
+    "What do the numbers \"10° N, 14° E\" represent?",
+    "They represent the latitude (10° North) and the longitude (14° East) of the village."
+   ],
+   [
+    "Near which town of the North Region is this village?",
+    "It is near Guider, north-east of Garoua."
+   ]
+  ],
+  "justification": "This practical work will help us to use a map to find places and to give their exact position.",
+  "parts": [
+   {
+    "sec": "I. REVISION",
+    "qa": [
+     {
+      "q": "On a map, which lines run from left to right, and which lines run from top to bottom?",
+      "a": "Lines of latitude run from left to right (west to east). Lines of longitude run from top to bottom (north to south)."
+     },
+     {
+      "q": "Where are the values of latitude and longitude written on a map?",
+      "a": "The values of latitude are written on the left and right edges of the map. The values of longitude are written on the top and bottom edges."
+     }
+    ],
+    "sum": {
+     "title": "I. Revision of Key Ideas",
+     "intro": "On a map, the lines of latitude and longitude form a grid:",
+     "items": [
+      [
+       "A. Latitudes on a Map",
+       "Lines of latitude run across the map from west to east. Their values are read on the left or right edge of the map (N or S)."
+      ],
+      [
+       "B. Longitudes on a Map",
+       "Lines of longitude run from the top to the bottom of the map. Their values are read on the top or bottom edge (E or W)."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. STEPS TO READ COORDINATES",
+    "qa": [
+     {
+      "q": "You want the coordinates of Garoua. What is the first step?",
+      "a": "The first step is to find Garoua on the map."
+     },
+     {
+      "q": "How do you find the latitude of Garoua?",
+      "a": "From Garoua, I follow a line of latitude to the left or right edge of the map and read the value in degrees, with N or S."
+     },
+     {
+      "q": "How do you find the longitude of Garoua?",
+      "a": "From Garoua, I follow a line of longitude to the top or bottom edge of the map and read the value in degrees, with E or W."
+     }
+    ],
+    "sum": {
+     "title": "II. Steps to Read Coordinates",
+     "intro": "To read the coordinates of a place, we follow four steps:",
+     "items": [
+      [
+       "The Four Steps",
+       [
+        "– Step 1: Find the place on the map.",
+        "– Step 2: Read its latitude on the left or right edge (N or S).",
+        "– Step 3: Read its longitude on the top or bottom edge (E or W).",
+        "– Step 4: Write the latitude first, then the longitude. Example: Garoua, 9° N, 13° E."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EXERCISES",
+    "qa": [
+     {
+      "img": "africa_latlon.png",
+      "kind": "map",
+      "title": "Exercise A",
+      "q": "On the map of Africa, give the coordinates of the black dot in Cameroon.",
+      "a": "The black dot in Cameroon is at about 6° N, 12° E.",
+      "split": 5.2
+     },
+     {
+      "img": "africa_latlon.png",
+      "kind": "map",
+      "title": "Exercise B",
+      "q": "Between which latitudes and which longitudes is Cameroon located?",
+      "a": "Cameroon is located between about 2° N and 13° N, and between about 8° E and 16° E.",
+      "split": 5.2
+     },
+     {
+      "img": "cameroon_latlon.png",
+      "kind": "map",
+      "title": "Exercise C",
+      "q": "Give the coordinates of Garoua, Maroua and Ngaoundéré.",
+      "a": "Garoua: about 9°18′ N, 13°24′ E. Maroua: about 10°36′ N, 14°18′ E. Ngaoundéré: about 7°18′ N, 13°36′ E.",
+      "split": 5.4
+     },
+     {
+      "img": "cameroon_latlon.png",
+      "kind": "map",
+      "title": "Exercise D",
+      "q": "Which town is at about 3°52′ N, 11°31′ E? Which town is at about 4°03′ N, 9°42′ E?",
+      "a": "The first town is Yaoundé, the capital. The second town is Douala.",
+      "split": 5.4
+     }
+    ],
+    "sum": {
+     "title": "III. Practical Exercises",
+     "intro": "We located Cameroon and some of its towns with the grid of the map:",
+     "items": [
+      [
+       "A. Cameroon in Africa",
+       "Cameroon lies between about 2° N and 13° N, and between about 8° E and 16° E.",
+       "africa_latlon.png"
+      ],
+      [
+       "B. Towns of Cameroon",
+       [
+        "– Garoua: about 9°18′ N, 13°24′ E.",
+        "– Maroua: about 10°36′ N, 14°18′ E.",
+        "– Ngaoundéré: about 7°18′ N, 13°36′ E.",
+        "– Yaoundé: about 3°52′ N, 11°31′ E.",
+        "– Douala: about 4°03′ N, 9°42′ E."
+       ],
+       "cameroon_latlon.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "On which edges of a map do we read the latitude?",
+    "We read the latitude on the left and right edges of the map."
+   ],
+   [
+    "Write the coordinates of Garoua in the correct order.",
+    "Garoua: about 9° N, 13° E (latitude first, then longitude)."
+   ],
+   [
+    "A place is at 10° N, 14° E. Near which town of the North Region is it?",
+    "It is near Guider, north-east of Garoua."
+   ]
+  ],
+  "remediation": [
+   [
+    "Lines of ______ run from west to east on a map.",
+    "Lines of ______ run from north to south.",
+    "We always write the ______ first."
+   ],
+   [
+    "Garoua is at about ______ ° N.",
+    "Garoua is at about ______ ° E.",
+    "One degree is divided into 60 ______."
+   ]
+  ],
+  "remediationAnswers": "1. latitude 2. longitude 3. latitude 4. 9 5. 13 6. minutes",
+  "homework": "Look at the time on a phone set to Cameroon time and on a phone or television showing the time in another country (for example Dubai or Brazil). Write both times and the difference.",
+  "homeworkTag": "This prepares Lesson 4: Local Time, Standard Time and Time Zones.",
+  "bilingual": [
+   [
+    "Map",
+    "La carte"
+   ],
+   [
+    "Atlas",
+    "L'atlas"
+   ],
+   [
+    "Grid",
+    "La grille / le quadrillage"
+   ],
+   [
+    "Edge",
+    "Le bord"
+   ],
+   [
+    "Degree",
+    "Le degré"
+   ],
+   [
+    "Minute (of arc)",
+    "La minute (d'angle)"
+   ],
+   [
+    "Town",
+    "La ville"
+   ],
+   [
+    "To locate",
+    "Localiser"
+   ]
+  ],
+  "teacherNote": [
+   "Coordinates checked (rounded): Garoua 9.30° N, 13.40° E; Maroua 10.59° N, 14.32° E; Ngaoundéré 7.32° N, 13.58° E; Yaoundé 3.87° N, 11.52° E; Douala 4.05° N, 9.70° E.",
+   "Correction: the point 10° N, 14° E is near Guider (North Region), not on the border with Chad. Cameroon extends from about 1°40′ N to 13° N and from about 8°30′ E to 16°10′ E.",
+   "Explain that 1 degree = 60 minutes (′) before Exercise C."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

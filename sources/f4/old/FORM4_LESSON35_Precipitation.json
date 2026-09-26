@@ -1,0 +1,436 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Rain forms when moist air rises, cools to its dew point and condenses. There are three types of rainfall, according to the cause of rising:\"]",
+  "sumImage | \"x\" | \"A. Convectional Rainfall\" | \"The sun heats the ground and the air above it, which rises quickly and forms cumulonimbus clouds. It gives heavy afternoon storms, as in Garoua.\" | \"rainfall_types.png\"",
+  "sum | \"x\" | \"B. Relief (Orographic) Rainfall\" | [\"Moist air is forced to rise over a mountain. The windward slope is wet and the leeward slope is dry (rain shadow), as around Mount Cameroon.\"]",
+  "sum | \"x\" | \"C. Frontal (Cyclonic) Rainfall\" | [\"Warm, light air rises over cold, heavy air along a front. It gives long, steady rain, mainly in temperate regions.\"]",
+  "sum | \"III. Types of Rainfall (1/4)\" | [\"Rain forms when moist air rises, cools to its dew point and condenses. There are three types of rainfall, according to the cause of rising:\"]",
+  "sumImage | \"III. Types of Rainfall (2/4)\" | \"A. Convectional Rainfall\" | \"The sun heats the ground and the air above it, which rises quickly and forms cumulonimbus clouds. It gives heavy afternoon storms, as in Garoua.\" | \"rainfall_types.png\"",
+  "sum | \"III. Types of Rainfall (3/4)\" | \"B. Relief (Orographic) Rainfall\" | [\"Moist air is forced to rise over a mountain. The windward slope is wet and the leeward slope is dry (rain shadow), as around Mount Cameroon.\"]",
+  "sum | \"III. Types of Rainfall (4/4)\" | \"C. Frontal (Cyclonic) Rainfall\" | [\"Warm, light air rises over cold, heavy air along a front. It gives long, steady rain, mainly in temperate regions.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON35_Precipitation",
+  "lessonNo": 35,
+  "lessonName": "Precipitation",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Forms of Condensation",
+  "notions": "Rain gauge, pluviometer, convectional, orographic, frontal.",
+  "focus": "Definition of precipitation; measurement; types of rainfall.",
+  "competence": "Learners are able to measure the rain that falls at home or at school and explain why some places receive more rain than others.",
+  "objectives": [
+   "Define precipitation and name its forms.",
+   "Describe how rainfall is measured with a rain gauge.",
+   "Explain the three types of rainfall."
+  ],
+  "recall": [
+   "Condensation is the change of water vapour into liquid water.",
+   "It happens when saturated air is cooled to its dew point.",
+   "Clouds are tiny droplets formed by condensation."
+  ],
+  "recallNote": "Check the homework: depth of rain collected in a tin.",
+  "situation": [
+   "In September, Garoua receives short, very heavy afternoon storms with thunder. Emmanuel's cousin in Buea, on the slope of Mount Cameroon, says that it rains there for many days, with low clouds against the mountain.",
+   "Emmanuel wonders why the rain is so different in the two towns."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Emmanuel does not understand why the rain in Garoua is different from the rain in Buea."
+   ],
+   [
+    "Describe the rain in Garoua and in Buea.",
+    "In Garoua, the rain falls in short, heavy afternoon storms with thunder. In Buea, it falls for many days, with low clouds against the mountain."
+   ],
+   [
+    "How can Emmanuel compare the amount of rain in the two towns?",
+    "He can compare the rainfall measured with rain gauges at the weather stations of the two towns."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how rain forms, how it is measured and why there are different types of rainfall.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Rain, drizzle, hail and snow all fall from clouds. What is their general name?",
+      "a": "Their general name is precipitation."
+     },
+     {
+      "q": "When do the tiny droplets of a cloud fall as rain?",
+      "a": "They fall when they join together and become too heavy to stay in the air."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Precipitation is any form of water, liquid or solid, that falls from clouds to the Earth's surface."
+     ],
+     "items": [
+      [
+       "Forms of Precipitation",
+       "The main forms are rain, drizzle (very fine drops), hail (balls of ice), snow (ice crystals) and sleet (rain mixed with snow)."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. MEASUREMENT",
+    "qa": [
+     {
+      "img": "rain_gauge.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the instrument and explain how it is used.",
+      "a": "It is a rain gauge. The funnel collects rain into a jar. Every day, the water is poured into a measuring cylinder and read in millimetres.",
+      "split": 5
+     },
+     {
+      "q": "Why is the rim of the rain gauge placed about 30 cm above the ground, in an open space?",
+      "a": "This prevents rain splashing in from the ground, and keeps trees and buildings from blocking the rain."
+     }
+    ],
+    "sum": {
+     "title": "II. Measurement",
+     "items": [
+      [
+       "The Rain Gauge",
+       "Rainfall is measured with a rain gauge (pluviometer), in millimetres (mm). Its rim is about 30 cm above the ground, in an open space. Rainfall is shown with isohyets.",
+       "rain_gauge.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. TYPES OF RAINFALL",
+    "qa": [
+     {
+      "img": "rainfall_types.png",
+      "kind": "diagram",
+      "q": "What makes the air rise in each case?",
+      "full": true
+     },
+     {
+      "q": "In Garoua, the hot ground heats the air, which rises quickly and forms storm clouds. What type of rainfall is this?",
+      "a": "This is convectional rainfall. It gives heavy afternoon storms with thunder and lightning."
+     },
+     {
+      "q": "In Buea, moist air from the Atlantic is forced to rise over Mount Cameroon. What type of rainfall is this, and what happens on the other side?",
+      "a": "This is relief (orographic) rainfall. The windward slope receives a lot of rain, while the leeward slope is dry: it is in a rain shadow."
+     },
+     {
+      "q": "In Europe, warm air rises slowly over cold air. What type of rainfall is this?",
+      "a": "This is frontal (cyclonic) rainfall. It gives long, steady rain over a wide area."
+     }
+    ],
+    "sum": {
+     "title": "III. Types of Rainfall",
+     "intro": "Rain forms when moist air rises, cools to its dew point and condenses. There are three types of rainfall, according to the cause of rising:",
+     "items": [
+      [
+       "A. Convectional Rainfall",
+       "The sun heats the ground and the air above it, which rises quickly and forms cumulonimbus clouds. It gives heavy afternoon storms, as in Garoua.",
+       "rainfall_types.png"
+      ],
+      [
+       "B. Relief (Orographic) Rainfall",
+       "Moist air is forced to rise over a mountain. The windward slope is wet and the leeward slope is dry (rain shadow), as around Mount Cameroon."
+      ],
+      [
+       "C. Frontal (Cyclonic) Rainfall",
+       "Warm, light air rises over cold, heavy air along a front. It gives long, steady rain, mainly in temperate regions."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give three forms of precipitation.",
+    "Three forms of precipitation are rain, hail and drizzle."
+   ],
+   [
+    "Why is the leeward slope of a mountain dry?",
+    "The air has lost its moisture on the windward slope, and it warms as it goes down, so it gives little rain."
+   ],
+   [
+    "What type of rainfall is most common in Garoua? Explain.",
+    "Convectional rainfall is most common, because the hot ground heats the air, which rises quickly and forms storm clouds."
+   ]
+  ],
+  "remediation": [
+   [
+    "Any water falling from clouds is called ______.",
+    "Rainfall is measured with a ______, in mm.",
+    "A line joining places of equal rainfall is an ______."
+   ],
+   [
+    "Rain caused by hot ground heating the air is ______ rainfall.",
+    "Rain caused by air rising over a mountain is ______ rainfall.",
+    "The dry side of a mountain is in a rain ______."
+   ]
+  ],
+  "remediationAnswers": "1. precipitation 2. rain gauge 3. isohyet 4. convectional 5. relief (orographic) 6. shadow",
+  "homework": "Observe the wind in Garoua for three days: from which direction does it blow? Is it dry or moist? Write your observations.",
+  "homeworkTag": "This prepares Lesson 36: Pressure Belts and Planetary Winds.",
+  "bilingual": [
+   [
+    "Precipitation",
+    "Les précipitations"
+   ],
+   [
+    "Rain",
+    "La pluie"
+   ],
+   [
+    "Drizzle",
+    "La bruine"
+   ],
+   [
+    "Hail",
+    "La grêle"
+   ],
+   [
+    "Rain gauge",
+    "Le pluviomètre"
+   ],
+   [
+    "Convectional rain",
+    "La pluie de convection"
+   ],
+   [
+    "Relief rain",
+    "La pluie orographique"
+   ],
+   [
+    "Rain shadow",
+    "L'abri pluviométrique"
+   ]
+  ],
+  "teacherNote": [
+   "Debundscha, at the foot of Mount Cameroon, receives about 10,000 mm of rain per year, one of the highest totals in the world: a clear example of relief rainfall.",
+   "Frontal rainfall is rare in Cameroon, but the meeting of air masses along the Inter-Tropical Front (ITF) controls the start of the rainy season."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 35",
+  "title": "Precipitation",
+  "sumTitle": "Precipitation",
+  "coverNote": "Good morning, class. Today we study Lesson 35: Precipitation.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 35: Precipitation",
+  "matter": "I. Definition: Forms of Precipitation; II. Measurement: The Rain Gauge; III. Types of Rainfall: Convectional Rainfall, Relief (Orographic) Rainfall, Frontal (Cyclonic) Rainfall."
+ },
+ "file": "FORM4_LESSON35_Precipitation",
+ "sp": {
+  "file": "FORM4_LESSON35_Precipitation",
+  "lessonNo": 35,
+  "lessonName": "Precipitation",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Forms of Condensation",
+  "notions": "Rain gauge, pluviometer, convectional, orographic, frontal.",
+  "focus": "Definition of precipitation; measurement; types of rainfall.",
+  "competence": "Learners are able to measure the rain that falls at home or at school and explain why some places receive more rain than others.",
+  "objectives": [
+   "Define precipitation and name its forms.",
+   "Describe how rainfall is measured with a rain gauge.",
+   "Explain the three types of rainfall."
+  ],
+  "recall": [
+   "Condensation is the change of water vapour into liquid water.",
+   "It happens when saturated air is cooled to its dew point.",
+   "Clouds are tiny droplets formed by condensation."
+  ],
+  "recallNote": "Check the homework: depth of rain collected in a tin.",
+  "situation": [
+   "In September, Garoua receives short, very heavy afternoon storms with thunder. Emmanuel's cousin in Buea, on the slope of Mount Cameroon, says that it rains there for many days, with low clouds against the mountain.",
+   "Emmanuel wonders why the rain is so different in the two towns."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Emmanuel does not understand why the rain in Garoua is different from the rain in Buea."
+   ],
+   [
+    "Describe the rain in Garoua and in Buea.",
+    "In Garoua, the rain falls in short, heavy afternoon storms with thunder. In Buea, it falls for many days, with low clouds against the mountain."
+   ],
+   [
+    "How can Emmanuel compare the amount of rain in the two towns?",
+    "He can compare the rainfall measured with rain gauges at the weather stations of the two towns."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how rain forms, how it is measured and why there are different types of rainfall.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Rain, drizzle, hail and snow all fall from clouds. What is their general name?",
+      "a": "Their general name is precipitation."
+     },
+     {
+      "q": "When do the tiny droplets of a cloud fall as rain?",
+      "a": "They fall when they join together and become too heavy to stay in the air."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Precipitation is any form of water, liquid or solid, that falls from clouds to the Earth's surface."
+     ],
+     "items": [
+      [
+       "Forms of Precipitation",
+       "The main forms are rain, drizzle (very fine drops), hail (balls of ice), snow (ice crystals) and sleet (rain mixed with snow)."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. MEASUREMENT",
+    "qa": [
+     {
+      "img": "rain_gauge.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the instrument and explain how it is used.",
+      "a": "It is a rain gauge. The funnel collects rain into a jar. Every day, the water is poured into a measuring cylinder and read in millimetres.",
+      "split": 5
+     },
+     {
+      "q": "Why is the rim of the rain gauge placed about 30 cm above the ground, in an open space?",
+      "a": "This prevents rain splashing in from the ground, and keeps trees and buildings from blocking the rain."
+     }
+    ],
+    "sum": {
+     "title": "II. Measurement",
+     "items": [
+      [
+       "The Rain Gauge",
+       "Rainfall is measured with a rain gauge (pluviometer), in millimetres (mm). Its rim is about 30 cm above the ground, in an open space. Rainfall is shown with isohyets.",
+       "rain_gauge.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. TYPES OF RAINFALL",
+    "qa": [
+     {
+      "img": "rainfall_types.png",
+      "kind": "diagram",
+      "q": "What makes the air rise in each case?",
+      "full": true
+     },
+     {
+      "q": "In Garoua, the hot ground heats the air, which rises quickly and forms storm clouds. What type of rainfall is this?",
+      "a": "This is convectional rainfall. It gives heavy afternoon storms with thunder and lightning."
+     },
+     {
+      "q": "In Buea, moist air from the Atlantic is forced to rise over Mount Cameroon. What type of rainfall is this, and what happens on the other side?",
+      "a": "This is relief (orographic) rainfall. The windward slope receives a lot of rain, while the leeward slope is dry: it is in a rain shadow."
+     },
+     {
+      "q": "In Europe, warm air rises slowly over cold air. What type of rainfall is this?",
+      "a": "This is frontal (cyclonic) rainfall. It gives long, steady rain over a wide area."
+     }
+    ],
+    "sum": {
+     "title": "III. Types of Rainfall",
+     "intro": "Rain forms when moist air rises, cools to its dew point and condenses. There are three types of rainfall, according to the cause of rising:",
+     "items": [
+      [
+       "A. Convectional Rainfall",
+       "The sun heats the ground and the air above it, which rises quickly and forms cumulonimbus clouds. It gives heavy afternoon storms, as in Garoua.",
+       "rainfall_types.png"
+      ],
+      [
+       "B. Relief (Orographic) Rainfall",
+       "Moist air is forced to rise over a mountain. The windward slope is wet and the leeward slope is dry (rain shadow), as around Mount Cameroon."
+      ],
+      [
+       "C. Frontal (Cyclonic) Rainfall",
+       "Warm, light air rises over cold, heavy air along a front. It gives long, steady rain, mainly in temperate regions."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give three forms of precipitation.",
+    "Three forms of precipitation are rain, hail and drizzle."
+   ],
+   [
+    "Why is the leeward slope of a mountain dry?",
+    "The air has lost its moisture on the windward slope, and it warms as it goes down, so it gives little rain."
+   ],
+   [
+    "What type of rainfall is most common in Garoua? Explain.",
+    "Convectional rainfall is most common, because the hot ground heats the air, which rises quickly and forms storm clouds."
+   ]
+  ],
+  "remediation": [
+   [
+    "Any water falling from clouds is called ______.",
+    "Rainfall is measured with a ______, in mm.",
+    "A line joining places of equal rainfall is an ______."
+   ],
+   [
+    "Rain caused by hot ground heating the air is ______ rainfall.",
+    "Rain caused by air rising over a mountain is ______ rainfall.",
+    "The dry side of a mountain is in a rain ______."
+   ]
+  ],
+  "remediationAnswers": "1. precipitation 2. rain gauge 3. isohyet 4. convectional 5. relief (orographic) 6. shadow",
+  "homework": "Observe the wind in Garoua for three days: from which direction does it blow? Is it dry or moist? Write your observations.",
+  "homeworkTag": "This prepares Lesson 36: Pressure Belts and Planetary Winds.",
+  "bilingual": [
+   [
+    "Precipitation",
+    "Les précipitations"
+   ],
+   [
+    "Rain",
+    "La pluie"
+   ],
+   [
+    "Drizzle",
+    "La bruine"
+   ],
+   [
+    "Hail",
+    "La grêle"
+   ],
+   [
+    "Rain gauge",
+    "Le pluviomètre"
+   ],
+   [
+    "Convectional rain",
+    "La pluie de convection"
+   ],
+   [
+    "Relief rain",
+    "La pluie orographique"
+   ],
+   [
+    "Rain shadow",
+    "L'abri pluviométrique"
+   ]
+  ],
+  "teacherNote": [
+   "Debundscha, at the foot of Mount Cameroon, receives about 10,000 mm of rain per year, one of the highest totals in the world: a clear example of relief rainfall.",
+   "Frontal rainfall is rare in Cameroon, but the meeting of air masses along the Inter-Tropical Front (ITF) controls the start of the rainy season."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,654 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "imageFull | \"I. LOCATION\" | \"Activity: Study the map\" | \"Find the temperate regions on the map.\" | \"temperate_world.png\"",
+  "slide | \"I. LOCATION\" | \"Question 1\" | [\"Look at the map. Between which latitudes are the temperate regions found?\"]",
+  "slide | \"I. LOCATION\" | \"Answer\" | [\"The temperate regions are found between about 30° and 60° north and south of the Equator, between the tropics and the polar regions.\"]",
+  "slide | \"I. LOCATION\" | \"Question 2\" | [\"Name two temperate regions in the Northern Hemisphere and two in the Southern Hemisphere.\"]",
+  "slide | \"I. LOCATION\" | \"Answer\" | [\"In the north: Western Europe and the Prairies of North America. In the south: the Pampas of Argentina and New Zealand.\"]",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Question 1\" | [\"In the temperate region, the year has four seasons. Name them.\"]",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Answer\" | [\"The four seasons are spring, summer, autumn and winter.\"]",
+  "imageQ | \"II. TYPES AND CLIMATE\" | \"Question 2\" | \"Which months are the warmest and the coldest in London? Does it rain every month?\" | \"london_climate.png\"",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Answer\" | [\"July is the warmest month (18.5°C) and January the coldest (5°C). Yes, it rains in every month, about 630 mm per year.\"]",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Question 3\" | [\"Around the Mediterranean Sea, summers are hot and dry, while winters are mild and wet. What type of climate is this?\"]",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Answer\" | [\"This is the Mediterranean climate, found in Italy, Spain, Algeria, California and around Cape Town.\"]",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Question 4\" | [\"In the centre of Russia and North America, far from the sea, summers are hot and winters are very cold. Why?\"]",
+  "slide | \"II. TYPES AND CLIMATE\" | \"Answer\" | [\"These areas are far from the sea, which cannot moderate the temperatures. This is the continental climate.\"]",
+  "sum | \"I. Location (1/3)\" | \"DEFINITION\" | [\"The temperate region is the natural region found between about 30° and 60° north and south of the Equator, with neither very hot nor very cold climates.\"]",
+  "sumImage | \"I. Location (2/3)\" | \"A. Northern Hemisphere\" | \"Western Europe, the Mediterranean lands, the Steppes of Russia and Central Asia, and the Prairies of North America.\" | \"temperate_world.png\"",
+  "sum | \"I. Location (3/3)\" | \"B. Southern Hemisphere\" | [\"The Pampas of Argentina, the Veld of South Africa, southern Australia and New Zealand.\"]",
+  "sum | \"II. Types and Characteristics of the Climate (1/5)\" | [\"The temperate region has four seasons: spring, summer, autumn and winter. There are three main types of temperate climate:\"]",
+  "sumImage | \"II. Types and Characteristics of the Climate (2/5)\" | \"A. Oceanic (British Type)\" | \"On western coasts between 45° and 60°, summers are mild, winters are cool, and it rains all year, as in London.\" | \"london_climate.png\"",
+  "sum | \"II. Types and Characteristics of the Climate (3/5)\" | \"B. Mediterranean\" | [\"It is found on western coasts between 30° and 45°. Summers are hot and dry, and winters are mild and wet. Examples: Rome, Cape Town.\"]",
+  "sum | \"II. Types and Characteristics of the Climate (4/5)\" | \"C. Temperate Continental\" | [\"It is found in the interior of continents. Summers are hot, winters are very cold with snow, and rainfall is low. Examples: the Prairies, the Steppes.\"]",
+  "sum | \"II. Types and Characteristics of the Climate (5/5)\" | \"D. Winds\" | [\"The westerlies blow from the ocean and bring rain to the western coasts, especially in winter.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S10_L4_P1_Temperate_Location_Types_Climate",
+  "part": 1,
+  "partTitle": "Location, Types and Characteristics (Climate)",
+  "notions": "Temperate region, seasons, westerlies, Mediterranean climate, oceanic climate, continental climate.",
+  "focus": "Location and types of temperate regions; characteristics of the temperate climate.",
+  "competence": "Learners are able to explain why countries like France or England have four seasons and to prepare for a trip to a temperate country.",
+  "objectives": [
+   "Locate the temperate regions of the world.",
+   "Name the four seasons of the temperate region.",
+   "Describe the three main types of temperate climate."
+  ],
+  "recall": [
+   "Hot deserts lie between 15° and 30° north and south of the Equator.",
+   "People farm in the desert thanks to oases and irrigation.",
+   "Beyond the deserts, towards the poles, the climate becomes cooler."
+  ],
+  "recallNote": "Check the homework: two countries between 30° and 60° north.",
+  "situation": [
+   "Aïssatou's brother is going to study in France in January. He packs only T-shirts and sandals, as in Garoua.",
+   "His mother tells him that he will need a thick coat, gloves and closed shoes, because it is winter there. Her son does not understand why France is cold when Garoua is hot."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aïssatou's brother does not understand why France is cold in January, while Garoua is hot."
+   ],
+   [
+    "What clothes does his mother advise him to take?",
+    "She advises him to take a thick coat, gloves and closed shoes."
+   ],
+   [
+    "What advice can you give to someone travelling to a temperate country?",
+    "He should check the season there before travelling and take clothes adapted to the cold or the heat."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of the temperate countries, where many Cameroonians travel or study.",
+  "parts": [
+   {
+    "sec": "I. LOCATION",
+    "qa": [
+     {
+      "img": "temperate_world.png",
+      "kind": "map",
+      "q": "Find the temperate regions on the map.",
+      "full": true
+     },
+     {
+      "q": "Look at the map. Between which latitudes are the temperate regions found?",
+      "a": "The temperate regions are found between about 30° and 60° north and south of the Equator, between the tropics and the polar regions."
+     },
+     {
+      "q": "Name two temperate regions in the Northern Hemisphere and two in the Southern Hemisphere.",
+      "a": "In the north: Western Europe and the Prairies of North America. In the south: the Pampas of Argentina and New Zealand."
+     }
+    ],
+    "sum": {
+     "title": "I. Location",
+     "defs": [
+      "The temperate region is the natural region found between about 30° and 60° north and south of the Equator, with neither very hot nor very cold climates."
+     ],
+     "items": [
+      [
+       "A. Northern Hemisphere",
+       "Western Europe, the Mediterranean lands, the Steppes of Russia and Central Asia, and the Prairies of North America.",
+       "temperate_world.png"
+      ],
+      [
+       "B. Southern Hemisphere",
+       "The Pampas of Argentina, the Veld of South Africa, southern Australia and New Zealand."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES AND CLIMATE",
+    "qa": [
+     {
+      "q": "In the temperate region, the year has four seasons. Name them.",
+      "a": "The four seasons are spring, summer, autumn and winter."
+     },
+     {
+      "img": "london_climate.png",
+      "kind": "graph",
+      "title": "Question 2",
+      "q": "Which months are the warmest and the coldest in London? Does it rain every month?",
+      "a": "July is the warmest month (18.5°C) and January the coldest (5°C). Yes, it rains in every month, about 630 mm per year.",
+      "split": 5
+     },
+     {
+      "q": "Around the Mediterranean Sea, summers are hot and dry, while winters are mild and wet. What type of climate is this?",
+      "a": "This is the Mediterranean climate, found in Italy, Spain, Algeria, California and around Cape Town."
+     },
+     {
+      "q": "In the centre of Russia and North America, far from the sea, summers are hot and winters are very cold. Why?",
+      "a": "These areas are far from the sea, which cannot moderate the temperatures. This is the continental climate."
+     }
+    ],
+    "sum": {
+     "title": "II. Types and Characteristics of the Climate",
+     "intro": [
+      "The temperate region has four seasons: spring, summer, autumn and winter. There are three main types of temperate climate:"
+     ],
+     "items": [
+      [
+       "A. Oceanic (British Type)",
+       "On western coasts between 45° and 60°, summers are mild, winters are cool, and it rains all year, as in London.",
+       "london_climate.png"
+      ],
+      [
+       "B. Mediterranean",
+       "It is found on western coasts between 30° and 45°. Summers are hot and dry, and winters are mild and wet. Examples: Rome, Cape Town."
+      ],
+      [
+       "C. Temperate Continental",
+       "It is found in the interior of continents. Summers are hot, winters are very cold with snow, and rainfall is low. Examples: the Prairies, the Steppes."
+      ],
+      [
+       "D. Winds",
+       "The westerlies blow from the ocean and bring rain to the western coasts, especially in winter."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Between which latitudes is the temperate region found?",
+    "The temperate region is found between about 30° and 60° north and south of the Equator."
+   ],
+   [
+    "Give two characteristics of the Mediterranean climate.",
+    "Summers are hot and dry, and winters are mild and wet."
+   ],
+   [
+    "Why are winters very cold in the centre of continents?",
+    "They are very cold because these areas are far from the sea, which cannot moderate the temperatures."
+   ]
+  ],
+  "remediation": [
+   [
+    "The temperate region lies between ______ and ______ north and south of the Equator.",
+    "The four seasons are spring, summer, ______ and winter.",
+    "The climate with hot, dry summers and mild, wet winters is the ______ climate."
+   ],
+   [
+    "London has a cool temperate ______ climate.",
+    "The winds that bring rain to western Europe are the ______.",
+    "The grasslands of North America are called the ______."
+   ]
+  ],
+  "remediationAnswers": "1. 30°, 60° 2. autumn 3. Mediterranean 4. oceanic 5. westerlies 6. Prairies",
+  "homework": "Find a picture of a European forest in autumn in your textbook or on television. Describe the colour of the leaves and say what happens to them in winter.",
+  "homeworkTag": "This prepares Part 2: Soils and Vegetation of the Temperate Region.",
+  "bilingual": [
+   [
+    "Temperate",
+    "Tempéré"
+   ],
+   [
+    "Spring",
+    "Le printemps"
+   ],
+   [
+    "Summer",
+    "L'été"
+   ],
+   [
+    "Autumn",
+    "L'automne"
+   ],
+   [
+    "Winter",
+    "L'hiver"
+   ],
+   [
+    "Snow",
+    "La neige"
+   ],
+   [
+    "Westerlies",
+    "Les vents d'ouest"
+   ],
+   [
+    "Mediterranean",
+    "Méditerranéen"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "London data: Met Office, Kew Gardens, 1991–2020 (about 630 mm, mean 11.3°C). Seasons in the Southern Hemisphere are the opposite of those in the Northern Hemisphere."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions).",
+   "London climate normals: Met Office (via Wikipedia, \"Climate of London\").",
+   "Temperate regions map drawn from Natural Earth data; limits are approximate."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 1)",
+  "title": "The Temperate Region: Location, Types and Characteristics (Climate)",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 1: Location, Types and Characteristics (Climate).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 1: Location, Types and Characteristics (Climate)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S10_L4_P1_Temperate_Location_Types_Climate",
+  "part": 1,
+  "partTitle": "Location, Types and Characteristics (Climate)",
+  "notions": "Temperate region, seasons, westerlies, Mediterranean climate, oceanic climate, continental climate.",
+  "focus": "Location and types of temperate regions; characteristics of the temperate climate.",
+  "competence": "Learners are able to explain why countries like France or England have four seasons and to prepare for a trip to a temperate country.",
+  "objectives": [
+   "Locate the temperate regions of the world.",
+   "Name the four seasons of the temperate region.",
+   "Describe the three main types of temperate climate."
+  ],
+  "recall": [
+   "Hot deserts lie between 15° and 30° north and south of the Equator.",
+   "People farm in the desert thanks to oases and irrigation.",
+   "Beyond the deserts, towards the poles, the climate becomes cooler."
+  ],
+  "recallNote": "Check the homework: two countries between 30° and 60° north.",
+  "situation": [
+   "Aïssatou's brother is going to study in France in January. He packs only T-shirts and sandals, as in Garoua.",
+   "His mother tells him that he will need a thick coat, gloves and closed shoes, because it is winter there. Her son does not understand why France is cold when Garoua is hot."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aïssatou's brother does not understand why France is cold in January, while Garoua is hot."
+   ],
+   [
+    "What clothes does his mother advise him to take?",
+    "She advises him to take a thick coat, gloves and closed shoes."
+   ],
+   [
+    "What advice can you give to someone travelling to a temperate country?",
+    "He should check the season there before travelling and take clothes adapted to the cold or the heat."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of the temperate countries, where many Cameroonians travel or study.",
+  "parts": [
+   {
+    "sec": "I. LOCATION",
+    "qa": [
+     {
+      "img": "temperate_world.png",
+      "kind": "map",
+      "q": "Find the temperate regions on the map.",
+      "full": true
+     },
+     {
+      "q": "Look at the map. Between which latitudes are the temperate regions found?",
+      "a": "The temperate regions are found between about 30° and 60° north and south of the Equator, between the tropics and the polar regions."
+     },
+     {
+      "q": "Name two temperate regions in the Northern Hemisphere and two in the Southern Hemisphere.",
+      "a": "In the north: Western Europe and the Prairies of North America. In the south: the Pampas of Argentina and New Zealand."
+     }
+    ],
+    "sum": {
+     "title": "I. Location",
+     "defs": [
+      "The temperate region is the natural region found between about 30° and 60° north and south of the Equator, with neither very hot nor very cold climates."
+     ],
+     "items": [
+      [
+       "A. Northern Hemisphere",
+       "Western Europe, the Mediterranean lands, the Steppes of Russia and Central Asia, and the Prairies of North America.",
+       "temperate_world.png"
+      ],
+      [
+       "B. Southern Hemisphere",
+       "The Pampas of Argentina, the Veld of South Africa, southern Australia and New Zealand."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES AND CLIMATE",
+    "qa": [
+     {
+      "q": "In the temperate region, the year has four seasons. Name them.",
+      "a": "The four seasons are spring, summer, autumn and winter."
+     },
+     {
+      "img": "london_climate.png",
+      "kind": "graph",
+      "title": "Question 2",
+      "q": "Which months are the warmest and the coldest in London? Does it rain every month?",
+      "a": "July is the warmest month (18.5°C) and January the coldest (5°C). Yes, it rains in every month, about 630 mm per year.",
+      "split": 5
+     },
+     {
+      "q": "Around the Mediterranean Sea, summers are hot and dry, while winters are mild and wet. What type of climate is this?",
+      "a": "This is the Mediterranean climate, found in Italy, Spain, Algeria, California and around Cape Town."
+     },
+     {
+      "q": "In the centre of Russia and North America, far from the sea, summers are hot and winters are very cold. Why?",
+      "a": "These areas are far from the sea, which cannot moderate the temperatures. This is the continental climate."
+     }
+    ],
+    "sum": {
+     "title": "II. Types and Characteristics of the Climate",
+     "intro": [
+      "The temperate region has four seasons: spring, summer, autumn and winter. There are three main types of temperate climate:"
+     ],
+     "items": [
+      [
+       "A. Oceanic (British Type)",
+       "On western coasts between 45° and 60°, summers are mild, winters are cool, and it rains all year, as in London.",
+       "london_climate.png"
+      ],
+      [
+       "B. Mediterranean",
+       "It is found on western coasts between 30° and 45°. Summers are hot and dry, and winters are mild and wet. Examples: Rome, Cape Town."
+      ],
+      [
+       "C. Temperate Continental",
+       "It is found in the interior of continents. Summers are hot, winters are very cold with snow, and rainfall is low. Examples: the Prairies, the Steppes."
+      ],
+      [
+       "D. Winds",
+       "The westerlies blow from the ocean and bring rain to the western coasts, especially in winter."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Between which latitudes is the temperate region found?",
+    "The temperate region is found between about 30° and 60° north and south of the Equator."
+   ],
+   [
+    "Give two characteristics of the Mediterranean climate.",
+    "Summers are hot and dry, and winters are mild and wet."
+   ],
+   [
+    "Why are winters very cold in the centre of continents?",
+    "They are very cold because these areas are far from the sea, which cannot moderate the temperatures."
+   ]
+  ],
+  "remediation": [
+   [
+    "The temperate region lies between ______ and ______ north and south of the Equator.",
+    "The four seasons are spring, summer, ______ and winter.",
+    "The climate with hot, dry summers and mild, wet winters is the ______ climate."
+   ],
+   [
+    "London has a cool temperate ______ climate.",
+    "The winds that bring rain to western Europe are the ______.",
+    "The grasslands of North America are called the ______."
+   ]
+  ],
+  "remediationAnswers": "1. 30°, 60° 2. autumn 3. Mediterranean 4. oceanic 5. westerlies 6. Prairies",
+  "homework": "Find a picture of a European forest in autumn in your textbook or on television. Describe the colour of the leaves and say what happens to them in winter.",
+  "homeworkTag": "This prepares Part 2: Soils and Vegetation of the Temperate Region.",
+  "bilingual": [
+   [
+    "Temperate",
+    "Tempéré"
+   ],
+   [
+    "Spring",
+    "Le printemps"
+   ],
+   [
+    "Summer",
+    "L'été"
+   ],
+   [
+    "Autumn",
+    "L'automne"
+   ],
+   [
+    "Winter",
+    "L'hiver"
+   ],
+   [
+    "Snow",
+    "La neige"
+   ],
+   [
+    "Westerlies",
+    "Les vents d'ouest"
+   ],
+   [
+    "Mediterranean",
+    "Méditerranéen"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "London data: Met Office, Kew Gardens, 1991–2020 (about 630 mm, mean 11.3°C). Seasons in the Southern Hemisphere are the opposite of those in the Northern Hemisphere."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions).",
+   "London climate normals: Met Office (via Wikipedia, \"Climate of London\").",
+   "Temperate regions map drawn from Natural Earth data; limits are approximate."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 1)",
+  "title": "The Temperate Region: Location, Types and Characteristics (Climate)",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 1: Location, Types and Characteristics (Climate).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 1: Location, Types and Characteristics (Climate)",
+  "matter": "I. Location: Northern Hemisphere, Southern Hemisphere; II. Types and Characteristics of the Climate: Oceanic (British Type), Mediterranean, Temperate Continental, Winds."
+ },
+ "file": "S10_L4_P1_Temperate_Location_Types_Climate",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S10_L4_P1_Temperate_Location_Types_Climate",
+  "part": 1,
+  "partTitle": "Location, Types and Characteristics (Climate)",
+  "notions": "Temperate region, seasons, westerlies, Mediterranean climate, oceanic climate, continental climate.",
+  "focus": "Location and types of temperate regions; characteristics of the temperate climate.",
+  "competence": "Learners are able to explain why countries like France or England have four seasons and to prepare for a trip to a temperate country.",
+  "objectives": [
+   "Locate the temperate regions of the world.",
+   "Name the four seasons of the temperate region.",
+   "Describe the three main types of temperate climate."
+  ],
+  "recall": [
+   "Hot deserts lie between 15° and 30° north and south of the Equator.",
+   "People farm in the desert thanks to oases and irrigation.",
+   "Beyond the deserts, towards the poles, the climate becomes cooler."
+  ],
+  "recallNote": "Check the homework: two countries between 30° and 60° north.",
+  "situation": [
+   "Aïssatou's brother is going to study in France in January. He packs only T-shirts and sandals, as in Garoua.",
+   "His mother tells him that he will need a thick coat, gloves and closed shoes, because it is winter there. Her son does not understand why France is cold when Garoua is hot."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aïssatou's brother does not understand why France is cold in January, while Garoua is hot."
+   ],
+   [
+    "What clothes does his mother advise him to take?",
+    "She advises him to take a thick coat, gloves and closed shoes."
+   ],
+   [
+    "What advice can you give to someone travelling to a temperate country?",
+    "He should check the season there before travelling and take clothes adapted to the cold or the heat."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of the temperate countries, where many Cameroonians travel or study.",
+  "parts": [
+   {
+    "sec": "I. LOCATION",
+    "qa": [
+     {
+      "img": "temperate_world.png",
+      "kind": "map",
+      "q": "Find the temperate regions on the map.",
+      "full": true
+     },
+     {
+      "q": "Look at the map. Between which latitudes are the temperate regions found?",
+      "a": "The temperate regions are found between about 30° and 60° north and south of the Equator, between the tropics and the polar regions."
+     },
+     {
+      "q": "Name two temperate regions in the Northern Hemisphere and two in the Southern Hemisphere.",
+      "a": "In the north: Western Europe and the Prairies of North America. In the south: the Pampas of Argentina and New Zealand."
+     }
+    ],
+    "sum": {
+     "title": "I. Location",
+     "defs": [
+      "The temperate region is the natural region found between about 30° and 60° north and south of the Equator, with neither very hot nor very cold climates."
+     ],
+     "items": [
+      [
+       "A. Northern Hemisphere",
+       "Western Europe, the Mediterranean lands, the Steppes of Russia and Central Asia, and the Prairies of North America.",
+       "temperate_world.png"
+      ],
+      [
+       "B. Southern Hemisphere",
+       "The Pampas of Argentina, the Veld of South Africa, southern Australia and New Zealand."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES AND CLIMATE",
+    "qa": [
+     {
+      "q": "In the temperate region, the year has four seasons. Name them.",
+      "a": "The four seasons are spring, summer, autumn and winter."
+     },
+     {
+      "img": "london_climate.png",
+      "kind": "graph",
+      "title": "Question 2",
+      "q": "Which months are the warmest and the coldest in London? Does it rain every month?",
+      "a": "July is the warmest month (18.5°C) and January the coldest (5°C). Yes, it rains in every month, about 630 mm per year.",
+      "split": 5
+     },
+     {
+      "q": "Around the Mediterranean Sea, summers are hot and dry, while winters are mild and wet. What type of climate is this?",
+      "a": "This is the Mediterranean climate, found in Italy, Spain, Algeria, California and around Cape Town."
+     },
+     {
+      "q": "In the centre of Russia and North America, far from the sea, summers are hot and winters are very cold. Why?",
+      "a": "These areas are far from the sea, which cannot moderate the temperatures. This is the continental climate."
+     }
+    ],
+    "sum": {
+     "title": "II. Types and Characteristics of the Climate",
+     "intro": [
+      "The temperate region has four seasons: spring, summer, autumn and winter. There are three main types of temperate climate:"
+     ],
+     "items": [
+      [
+       "A. Oceanic (British Type)",
+       "On western coasts between 45° and 60°, summers are mild, winters are cool, and it rains all year, as in London.",
+       "london_climate.png"
+      ],
+      [
+       "B. Mediterranean",
+       "It is found on western coasts between 30° and 45°. Summers are hot and dry, and winters are mild and wet. Examples: Rome, Cape Town."
+      ],
+      [
+       "C. Temperate Continental",
+       "It is found in the interior of continents. Summers are hot, winters are very cold with snow, and rainfall is low. Examples: the Prairies, the Steppes."
+      ],
+      [
+       "D. Winds",
+       "The westerlies blow from the ocean and bring rain to the western coasts, especially in winter."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Between which latitudes is the temperate region found?",
+    "The temperate region is found between about 30° and 60° north and south of the Equator."
+   ],
+   [
+    "Give two characteristics of the Mediterranean climate.",
+    "Summers are hot and dry, and winters are mild and wet."
+   ],
+   [
+    "Why are winters very cold in the centre of continents?",
+    "They are very cold because these areas are far from the sea, which cannot moderate the temperatures."
+   ]
+  ],
+  "remediation": [
+   [
+    "The temperate region lies between ______ and ______ north and south of the Equator.",
+    "The four seasons are spring, summer, ______ and winter.",
+    "The climate with hot, dry summers and mild, wet winters is the ______ climate."
+   ],
+   [
+    "London has a cool temperate ______ climate.",
+    "The winds that bring rain to western Europe are the ______.",
+    "The grasslands of North America are called the ______."
+   ]
+  ],
+  "remediationAnswers": "1. 30°, 60° 2. autumn 3. Mediterranean 4. oceanic 5. westerlies 6. Prairies",
+  "homework": "Find a picture of a European forest in autumn in your textbook or on television. Describe the colour of the leaves and say what happens to them in winter.",
+  "homeworkTag": "This prepares Part 2: Soils and Vegetation of the Temperate Region.",
+  "bilingual": [
+   [
+    "Temperate",
+    "Tempéré"
+   ],
+   [
+    "Spring",
+    "Le printemps"
+   ],
+   [
+    "Summer",
+    "L'été"
+   ],
+   [
+    "Autumn",
+    "L'automne"
+   ],
+   [
+    "Winter",
+    "L'hiver"
+   ],
+   [
+    "Snow",
+    "La neige"
+   ],
+   [
+    "Westerlies",
+    "Les vents d'ouest"
+   ],
+   [
+    "Mediterranean",
+    "Méditerranéen"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "London data: Met Office, Kew Gardens, 1991–2020 (about 630 mm, mean 11.3°C). Seasons in the Southern Hemisphere are the opposite of those in the Northern Hemisphere."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions).",
+   "London climate normals: Met Office (via Wikipedia, \"Climate of London\").",
+   "Temperate regions map drawn from Natural Earth data; limits are approximate."
+  ]
+ }
+}

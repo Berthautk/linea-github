@@ -1,0 +1,418 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Wave deposition forms the following features:\"]",
+  "sum | \"x\" | \"A. Beaches\" | [\"A beach is a deposit of sand and pebbles between the low-tide and high-tide marks (Kribi, Limbe).\"]",
+  "sumImage | \"x\" | \"B. Spits\" | \"A spit is a long, narrow ridge of sand joined to the land at one end, built by longshore drift where the coast changes direction (Langue de Barbarie, Senegal).\" | \"longshore_spit.png\"",
+  "sumImage | \"x\" | \"C. Bars and Lagoons\" | \"A bar is a ridge of sand that grows across a bay and traps a lagoon behind it (lagoons of Lagos and Abidjan).\" | \"bar_tombolo.png\"",
+  "sum | \"x\" | \"D. Tombolos\" | [\"A tombolo is a ridge of sand that joins an island to the mainland.\"]",
+  "sum | \"II. Depositional Features (1/5)\" | [\"Wave deposition forms the following features:\"]",
+  "sum | \"II. Depositional Features (2/5)\" | \"A. Beaches\" | [\"A beach is a deposit of sand and pebbles between the low-tide and high-tide marks (Kribi, Limbe).\"]",
+  "sumImage | \"II. Depositional Features (3/5)\" | \"B. Spits\" | \"A spit is a long, narrow ridge of sand joined to the land at one end, built by longshore drift where the coast changes direction (Langue de Barbarie, Senegal).\" | \"longshore_spit.png\"",
+  "sumImage | \"II. Depositional Features (4/5)\" | \"C. Bars and Lagoons\" | \"A bar is a ridge of sand that grows across a bay and traps a lagoon behind it (lagoons of Lagos and Abidjan).\" | \"bar_tombolo.png\"",
+  "sum | \"II. Depositional Features (5/5)\" | \"D. Tombolos\" | [\"A tombolo is a ridge of sand that joins an island to the mainland.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON25_Depositional_Features_of_Wave_Action",
+  "lessonNo": 25,
+  "lessonName": "Main Depositional Features of Wave Action",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "notions": "Beach, spits, bars, tombolos, longshore drift.",
+  "focus": "Major depositional process (longshore drift); depositional features.",
+  "competence": "Learners are able to explain how beaches and spits are built, and why sand moves along a coast.",
+  "objectives": [
+   "Explain longshore drift.",
+   "Explain the formation of beaches, spits, bars and tombolos.",
+   "Give examples of these features."
+  ],
+  "recall": [
+   "Constructive waves build beaches.",
+   "Waves erode rocky coasts and form cliffs, caves, arches and stacks.",
+   "The swash goes up the beach; the backwash goes down."
+  ],
+  "recallNote": "Check the homework: the sand in the tray.",
+  "situation": [
+   "On holiday in Kribi, Maïmouna builds a sandcastle near the water. The waves reach the beach at an angle, and the water flows straight back to the sea.",
+   "After an hour, she sees that some sand from her castle has moved along the beach. She wonders where the sand of the beach comes from, and what moves it along the coast."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Maïmouna does not know where the sand comes from and what moves it along the coast."
+   ],
+   [
+    "How do the waves reach the beach?",
+    "They reach the beach at an angle, and the water flows straight back."
+   ],
+   [
+    "Why is it bad to take too much sand from beaches for building?",
+    "Without sand, the beach cannot protect the land, and the waves erode the coast faster."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how waves move and deposit sand to build beaches, spits, bars and tombolos.",
+  "parts": [
+   {
+    "sec": "I. LONGSHORE DRIFT",
+    "qa": [
+     {
+      "img": "longshore_spit.png",
+      "kind": "diagram",
+      "q": "Study longshore drift.",
+      "full": true
+     },
+     {
+      "q": "What is longshore drift?",
+      "a": "Longshore drift is the movement of sand and pebbles along the coast by waves that reach the beach at an angle."
+     },
+     {
+      "q": "Explain how longshore drift moves sand.",
+      "a": "The swash carries sand up the beach at an angle. The backwash brings it straight back down. This zig-zag moves the sand along the coast."
+     }
+    ],
+    "sum": {
+     "title": "I. Longshore Drift",
+     "defs": [
+      "Longshore drift is the movement of sand and pebbles along the coast by waves that reach the beach at an angle."
+     ],
+     "intro": "It works in three steps:",
+     "items": [
+      [
+       "The Steps",
+       [
+        "– The wind makes waves reach the beach at an angle.",
+        "– The swash carries sand up the beach at the same angle.",
+        "– The backwash brings the sand straight back down.",
+        "– The zig-zag movement slowly moves the sand along the coast."
+       ],
+       "longshore_spit.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. DEPOSITIONAL FEATURES",
+    "qa": [
+     {
+      "q": "What is a beach?",
+      "a": "A beach is a deposit of sand and pebbles between the low-tide and the high-tide marks. Examples: the beaches of Kribi and Limbe."
+     },
+     {
+      "q": "How is a spit formed?",
+      "a": "Where the coast changes direction, longshore drift keeps depositing sand into the sea. A long, narrow ridge grows, attached to the land at one end."
+     },
+     {
+      "img": "bar_tombolo.png",
+      "kind": "diagram",
+      "title": "Question 3",
+      "q": "What is the difference between a bar and a tombolo?",
+      "a": "A bar is a ridge of sand across a bay; it traps a lagoon behind it. A tombolo is a ridge of sand that joins an island to the land.",
+      "split": 5.2
+     }
+    ],
+    "sum": {
+     "title": "II. Depositional Features",
+     "intro": "Wave deposition forms the following features:",
+     "items": [
+      [
+       "A. Beaches",
+       "A beach is a deposit of sand and pebbles between the low-tide and high-tide marks (Kribi, Limbe)."
+      ],
+      [
+       "B. Spits",
+       "A spit is a long, narrow ridge of sand joined to the land at one end, built by longshore drift where the coast changes direction (Langue de Barbarie, Senegal).",
+       "longshore_spit.png"
+      ],
+      [
+       "C. Bars and Lagoons",
+       "A bar is a ridge of sand that grows across a bay and traps a lagoon behind it (lagoons of Lagos and Abidjan).",
+       "bar_tombolo.png"
+      ],
+      [
+       "D. Tombolos",
+       "A tombolo is a ridge of sand that joins an island to the mainland."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is longshore drift?",
+    "It is the movement of sand along the coast by waves that reach the beach at an angle."
+   ],
+   [
+    "What is a spit?",
+    "A spit is a long, narrow ridge of sand attached to the land at one end."
+   ],
+   [
+    "What is trapped behind a bar?",
+    "A lagoon is trapped behind a bar."
+   ]
+  ],
+  "remediation": [
+   [
+    "The movement of sand along the coast is longshore ______.",
+    "The swash moves sand up the beach at an ______.",
+    "A ridge of sand joined to the land at one end is a ______."
+   ],
+   [
+    "A ridge of sand across a bay is a ______.",
+    "The water trapped behind a bar is a ______.",
+    "A ridge of sand joining an island to the land is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. drift 2. angle 3. spit 4. bar 5. lagoon 6. tombolo",
+  "homework": "List five goods sold in the market of Garoua that come from abroad. Ask a trader through which port they entered Cameroon.",
+  "homeworkTag": "This prepares Lesson 26: Impact of Wave Action on Human Development along Coastal Areas.",
+  "bilingual": [
+   [
+    "Longshore drift",
+    "La dérive littorale"
+   ],
+   [
+    "Beach",
+    "La plage"
+   ],
+   [
+    "Spit",
+    "La flèche littorale"
+   ],
+   [
+    "Bar",
+    "Le cordon littoral"
+   ],
+   [
+    "Lagoon",
+    "La lagune"
+   ],
+   [
+    "Tombolo",
+    "Le tombolo"
+   ],
+   [
+    "Sand",
+    "Le sable"
+   ],
+   [
+    "Pebble",
+    "Le galet"
+   ]
+  ],
+  "teacherNote": [
+   "Board summary: the definition of longshore drift comes first, then a half-sentence introduction and the steps, as agreed.",
+   "Examples checked: Langue de Barbarie (spit at the mouth of the Senegal River); Lagos Lagoon and Ébrié Lagoon (Abidjan) lie behind sand bars."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 25",
+  "title": "Main Depositional Features of Wave Action",
+  "sumTitle": "Main Depositional Features of Wave Action",
+  "coverNote": "Good morning, class. Today we study Lesson 25: Main Depositional Features of Wave Action.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 25: Main Depositional Features of Wave Action",
+  "matter": "I. Longshore Drift: The Steps; II. Depositional Features: Beaches, Spits, Bars and Lagoons, Tombolos."
+ },
+ "file": "FORM4_LESSON25_Depositional_Features_of_Wave_Action",
+ "sp": {
+  "file": "FORM4_LESSON25_Depositional_Features_of_Wave_Action",
+  "lessonNo": 25,
+  "lessonName": "Main Depositional Features of Wave Action",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "notions": "Beach, spits, bars, tombolos, longshore drift.",
+  "focus": "Major depositional process (longshore drift); depositional features.",
+  "competence": "Learners are able to explain how beaches and spits are built, and why sand moves along a coast.",
+  "objectives": [
+   "Explain longshore drift.",
+   "Explain the formation of beaches, spits, bars and tombolos.",
+   "Give examples of these features."
+  ],
+  "recall": [
+   "Constructive waves build beaches.",
+   "Waves erode rocky coasts and form cliffs, caves, arches and stacks.",
+   "The swash goes up the beach; the backwash goes down."
+  ],
+  "recallNote": "Check the homework: the sand in the tray.",
+  "situation": [
+   "On holiday in Kribi, Maïmouna builds a sandcastle near the water. The waves reach the beach at an angle, and the water flows straight back to the sea.",
+   "After an hour, she sees that some sand from her castle has moved along the beach. She wonders where the sand of the beach comes from, and what moves it along the coast."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Maïmouna does not know where the sand comes from and what moves it along the coast."
+   ],
+   [
+    "How do the waves reach the beach?",
+    "They reach the beach at an angle, and the water flows straight back."
+   ],
+   [
+    "Why is it bad to take too much sand from beaches for building?",
+    "Without sand, the beach cannot protect the land, and the waves erode the coast faster."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how waves move and deposit sand to build beaches, spits, bars and tombolos.",
+  "parts": [
+   {
+    "sec": "I. LONGSHORE DRIFT",
+    "qa": [
+     {
+      "img": "longshore_spit.png",
+      "kind": "diagram",
+      "q": "Study longshore drift.",
+      "full": true
+     },
+     {
+      "q": "What is longshore drift?",
+      "a": "Longshore drift is the movement of sand and pebbles along the coast by waves that reach the beach at an angle."
+     },
+     {
+      "q": "Explain how longshore drift moves sand.",
+      "a": "The swash carries sand up the beach at an angle. The backwash brings it straight back down. This zig-zag moves the sand along the coast."
+     }
+    ],
+    "sum": {
+     "title": "I. Longshore Drift",
+     "defs": [
+      "Longshore drift is the movement of sand and pebbles along the coast by waves that reach the beach at an angle."
+     ],
+     "intro": "It works in three steps:",
+     "items": [
+      [
+       "The Steps",
+       [
+        "– The wind makes waves reach the beach at an angle.",
+        "– The swash carries sand up the beach at the same angle.",
+        "– The backwash brings the sand straight back down.",
+        "– The zig-zag movement slowly moves the sand along the coast."
+       ],
+       "longshore_spit.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. DEPOSITIONAL FEATURES",
+    "qa": [
+     {
+      "q": "What is a beach?",
+      "a": "A beach is a deposit of sand and pebbles between the low-tide and the high-tide marks. Examples: the beaches of Kribi and Limbe."
+     },
+     {
+      "q": "How is a spit formed?",
+      "a": "Where the coast changes direction, longshore drift keeps depositing sand into the sea. A long, narrow ridge grows, attached to the land at one end."
+     },
+     {
+      "img": "bar_tombolo.png",
+      "kind": "diagram",
+      "title": "Question 3",
+      "q": "What is the difference between a bar and a tombolo?",
+      "a": "A bar is a ridge of sand across a bay; it traps a lagoon behind it. A tombolo is a ridge of sand that joins an island to the land.",
+      "split": 5.2
+     }
+    ],
+    "sum": {
+     "title": "II. Depositional Features",
+     "intro": "Wave deposition forms the following features:",
+     "items": [
+      [
+       "A. Beaches",
+       "A beach is a deposit of sand and pebbles between the low-tide and high-tide marks (Kribi, Limbe)."
+      ],
+      [
+       "B. Spits",
+       "A spit is a long, narrow ridge of sand joined to the land at one end, built by longshore drift where the coast changes direction (Langue de Barbarie, Senegal).",
+       "longshore_spit.png"
+      ],
+      [
+       "C. Bars and Lagoons",
+       "A bar is a ridge of sand that grows across a bay and traps a lagoon behind it (lagoons of Lagos and Abidjan).",
+       "bar_tombolo.png"
+      ],
+      [
+       "D. Tombolos",
+       "A tombolo is a ridge of sand that joins an island to the mainland."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is longshore drift?",
+    "It is the movement of sand along the coast by waves that reach the beach at an angle."
+   ],
+   [
+    "What is a spit?",
+    "A spit is a long, narrow ridge of sand attached to the land at one end."
+   ],
+   [
+    "What is trapped behind a bar?",
+    "A lagoon is trapped behind a bar."
+   ]
+  ],
+  "remediation": [
+   [
+    "The movement of sand along the coast is longshore ______.",
+    "The swash moves sand up the beach at an ______.",
+    "A ridge of sand joined to the land at one end is a ______."
+   ],
+   [
+    "A ridge of sand across a bay is a ______.",
+    "The water trapped behind a bar is a ______.",
+    "A ridge of sand joining an island to the land is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. drift 2. angle 3. spit 4. bar 5. lagoon 6. tombolo",
+  "homework": "List five goods sold in the market of Garoua that come from abroad. Ask a trader through which port they entered Cameroon.",
+  "homeworkTag": "This prepares Lesson 26: Impact of Wave Action on Human Development along Coastal Areas.",
+  "bilingual": [
+   [
+    "Longshore drift",
+    "La dérive littorale"
+   ],
+   [
+    "Beach",
+    "La plage"
+   ],
+   [
+    "Spit",
+    "La flèche littorale"
+   ],
+   [
+    "Bar",
+    "Le cordon littoral"
+   ],
+   [
+    "Lagoon",
+    "La lagune"
+   ],
+   [
+    "Tombolo",
+    "Le tombolo"
+   ],
+   [
+    "Sand",
+    "Le sable"
+   ],
+   [
+    "Pebble",
+    "Le galet"
+   ]
+  ],
+  "teacherNote": [
+   "Board summary: the definition of longshore drift comes first, then a half-sentence introduction and the steps, as agreed.",
+   "Examples checked: Langue de Barbarie (spit at the mouth of the Senegal River); Lagos Lagoon and Ébrié Lagoon (Abidjan) lie behind sand bars."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

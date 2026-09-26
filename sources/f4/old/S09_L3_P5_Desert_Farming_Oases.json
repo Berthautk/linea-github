@@ -1,0 +1,629 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "imageQ | \"I. THE OASIS\" | \"Question 1\" | \"Look at the diagram. Where does the water of an oasis come from?\" | \"oasis.png\"",
+  "slide | \"I. THE OASIS\" | \"Answer\" | [\"The water comes from rain that fell on distant highlands. It flows slowly under the desert in permeable rock and comes to the surface in a low place.\"]",
+  "slide | \"I. THE OASIS\" | \"Question 2\" | [\"What do we call a fertile place in the desert where underground water reaches the surface?\"]",
+  "slide | \"I. THE OASIS\" | \"Answer\" | [\"Such a fertile place is called an oasis. Examples are Siwa in Egypt and Tafilalt in Morocco.\"]",
+  "imageQ | \"II. OASIS FARMING\" | \"Question 1\" | \"Look at the diagram. Name the three layers of crops grown in an oasis.\" | \"oasis_layers.png\"",
+  "slide | \"II. OASIS FARMING\" | \"Answer\" | [\"The top layer is made of date palms, the middle layer of fruit trees such as citrus, figs and pomegranates, and the ground layer of vegetables, wheat and barley.\"]",
+  "slide | \"II. OASIS FARMING\" | \"Question 2\" | [\"Why do farmers grow crops in three layers under the date palms?\"]",
+  "slide | \"II. OASIS FARMING\" | \"Answer\" | [\"The tall palms give shade and protect the smaller plants from the strong sun and the wind. This also uses the little land well.\"]",
+  "slide | \"II. OASIS FARMING\" | \"Question 3\" | [\"Farmers in Egypt used a long pole with a bucket to lift water from the Nile. What is this tool called?\"]",
+  "slide | \"II. OASIS FARMING\" | \"Answer\" | [\"This tool is called a shaduf. Today, farmers mostly use motor pumps and boreholes.\"]",
+  "slide | \"II. OASIS FARMING\" | \"Question 4\" | [\"Farmers use too much water from their wells. What happens to the water table and to the soil?\"]",
+  "slide | \"II. OASIS FARMING\" | \"Answer\" | [\"The water table falls, so wells dry up. The soil also becomes salty because of evaporation.\"]",
+  "sum | \"I. The Oasis (1/3)\" | \"DEFINITION\" | [\"An oasis is a fertile place in the desert where underground water reaches the surface or can be reached by wells.\"]",
+  "sumImage | \"I. The Oasis (2/3)\" | \"A. Formation of an Oasis\" | \"Rain falls on distant highlands, flows slowly under the desert in permeable rock and reaches the surface in low places.\" | \"oasis.png\"",
+  "sum | \"I. The Oasis (3/3)\" | \"B. Examples\" | [\"Famous oases include Siwa in Egypt and Tafilalt in Morocco. The Nile valley is like a long oasis in the desert.\"]",
+  "sum | \"II. Farming around Oases (1/5)\" | [\"Farming around oases has the following characteristics:\"]",
+  "sumImage | \"II. Farming around Oases (2/5)\" | \"A. Crops in Three Layers\" | \"Date palms form the top layer, fruit trees the middle layer, and vegetables, wheat and barley the ground layer.\" | \"oasis_layers.png\"",
+  "sum | \"II. Farming around Oases (3/5)\" | \"B. Methods of Irrigation\" | [\"Water is brought from wells, springs and underground channels (foggaras), with the shaduf or with motor pumps and boreholes.\"]",
+  "sum | \"II. Farming around Oases (4/5)\" | \"C. Irrigation along Rivers\" | [\"In Egypt, the Aswan High Dam on the Nile stores water in Lake Nasser to irrigate fields all year.\"]",
+  "sum | \"II. Farming around Oases (5/5)\" | \"D. Problems of Oasis Farming\" | [\"Wells dry up when too much water is used, soils become salty, and sand dunes invade the fields.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S09_L3_P5_Desert_Farming_Oases",
+  "part": 5,
+  "partTitle": "Human Activities (Farming around Oases)",
+  "notions": "Oasis, water table, irrigation, shaduf, foggara, borehole, date palm.",
+  "focus": "Formation of oases and farming around oases; irrigation in hot deserts.",
+  "competence": "Learners are able to explain how water can be brought to crops in the dry season and use water carefully in farming.",
+  "objectives": [
+   "Explain how an oasis is formed.",
+   "Describe the crops grown in oases.",
+   "Describe the methods of irrigation used in deserts.",
+   "Identify the problems of oasis farming."
+  ],
+  "recall": [
+   "Desert people face lack of water, extreme temperatures, sandstorms and poor soils.",
+   "They adapt through nomadism, camels, clothing, housing and wells."
+  ],
+  "recallNote": "Check the homework: the name of an oasis and its country.",
+  "situation": [
+   "In the middle of the Sahara, travellers see a green area with tall palm trees, gardens and houses, while all around there is only sand and rock.",
+   "Musa, who is travelling with them, wonders how crops can grow in this place where it almost never rains."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Musa does not understand how crops can grow in a desert place where it almost never rains."
+   ],
+   [
+    "What did the travellers see in the green area?",
+    "They saw tall palm trees, gardens and houses."
+   ],
+   [
+    "Where do you think the water for these crops comes from?",
+    "The water probably comes from under the ground, from a well or a spring."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how people farm in the desert thanks to oases and irrigation.",
+  "parts": [
+   {
+    "sec": "I. THE OASIS",
+    "qa": [
+     {
+      "img": "oasis.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Where does the water of an oasis come from?",
+      "a": "The water comes from rain that fell on distant highlands. It flows slowly under the desert in permeable rock and comes to the surface in a low place.",
+      "split": 5
+     },
+     {
+      "q": "What do we call a fertile place in the desert where underground water reaches the surface?",
+      "a": "Such a fertile place is called an oasis. Examples are Siwa in Egypt and Tafilalt in Morocco."
+     }
+    ],
+    "sum": {
+     "title": "I. The Oasis",
+     "defs": [
+      "An oasis is a fertile place in the desert where underground water reaches the surface or can be reached by wells."
+     ],
+     "items": [
+      [
+       "A. Formation of an Oasis",
+       "Rain falls on distant highlands, flows slowly under the desert in permeable rock and reaches the surface in low places.",
+       "oasis.png"
+      ],
+      [
+       "B. Examples",
+       "Famous oases include Siwa in Egypt and Tafilalt in Morocco. The Nile valley is like a long oasis in the desert."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. OASIS FARMING",
+    "qa": [
+     {
+      "img": "oasis_layers.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the three layers of crops grown in an oasis.",
+      "a": "The top layer is made of date palms, the middle layer of fruit trees such as citrus, figs and pomegranates, and the ground layer of vegetables, wheat and barley.",
+      "split": 5
+     },
+     {
+      "q": "Why do farmers grow crops in three layers under the date palms?",
+      "a": "The tall palms give shade and protect the smaller plants from the strong sun and the wind. This also uses the little land well."
+     },
+     {
+      "q": "Farmers in Egypt used a long pole with a bucket to lift water from the Nile. What is this tool called?",
+      "a": "This tool is called a shaduf. Today, farmers mostly use motor pumps and boreholes."
+     },
+     {
+      "q": "Farmers use too much water from their wells. What happens to the water table and to the soil?",
+      "a": "The water table falls, so wells dry up. The soil also becomes salty because of evaporation."
+     }
+    ],
+    "sum": {
+     "title": "II. Farming around Oases",
+     "intro": "Farming around oases has the following characteristics:",
+     "items": [
+      [
+       "A. Crops in Three Layers",
+       "Date palms form the top layer, fruit trees the middle layer, and vegetables, wheat and barley the ground layer.",
+       "oasis_layers.png"
+      ],
+      [
+       "B. Methods of Irrigation",
+       "Water is brought from wells, springs and underground channels (foggaras), with the shaduf or with motor pumps and boreholes."
+      ],
+      [
+       "C. Irrigation along Rivers",
+       "In Egypt, the Aswan High Dam on the Nile stores water in Lake Nasser to irrigate fields all year."
+      ],
+      [
+       "D. Problems of Oasis Farming",
+       "Wells dry up when too much water is used, soils become salty, and sand dunes invade the fields."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Explain how an oasis is formed.",
+    "Rain falls on distant highlands and flows slowly under the desert. It reaches the surface in a low place, forming an oasis."
+   ],
+   [
+    "Why is the date palm important in an oasis?",
+    "It gives dates to eat and sell, and it shades and protects the smaller crops below it."
+   ],
+   [
+    "Give two problems of oasis farming.",
+    "Wells can dry up and soils can become salty."
+   ]
+  ],
+  "remediation": [
+   [
+    "A fertile place in the desert with water is called an ______.",
+    "The main tree of oases is the ______ palm.",
+    "A pole with a bucket used to lift water is a ______."
+   ],
+   [
+    "Underground water channels are called ______.",
+    "The dam on the Nile in Egypt is the Aswan ______ Dam.",
+    "The level of underground water is called the water ______."
+   ]
+  ],
+  "remediationAnswers": "1. oasis 2. date 3. shaduf 4. foggaras 5. High 6. table",
+  "homework": "Look at a world map in your atlas. Find two countries located between 30° and 60° north of the Equator, and write their names.",
+  "homeworkTag": "This prepares Lesson 4: The Temperate Region.",
+  "bilingual": [
+   [
+    "Oasis",
+    "L'oasis"
+   ],
+   [
+    "Date",
+    "La datte"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ],
+   [
+    "Borehole",
+    "Le forage"
+   ],
+   [
+    "Spring",
+    "La source"
+   ],
+   [
+    "Water table",
+    "La nappe phréatique"
+   ],
+   [
+    "Pump",
+    "La pompe"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "The Aswan High Dam was completed in 1970; it created Lake Nasser. This session closes Lesson 3."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 5)",
+  "title": "The Desert Regions: Human Activities (Farming around Oases)",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 5: Human Activities (Farming around Oases).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 5: Human Activities (Farming around Oases)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S09_L3_P5_Desert_Farming_Oases",
+  "part": 5,
+  "partTitle": "Human Activities (Farming around Oases)",
+  "notions": "Oasis, water table, irrigation, shaduf, foggara, borehole, date palm.",
+  "focus": "Formation of oases and farming around oases; irrigation in hot deserts.",
+  "competence": "Learners are able to explain how water can be brought to crops in the dry season and use water carefully in farming.",
+  "objectives": [
+   "Explain how an oasis is formed.",
+   "Describe the crops grown in oases.",
+   "Describe the methods of irrigation used in deserts.",
+   "Identify the problems of oasis farming."
+  ],
+  "recall": [
+   "Desert people face lack of water, extreme temperatures, sandstorms and poor soils.",
+   "They adapt through nomadism, camels, clothing, housing and wells."
+  ],
+  "recallNote": "Check the homework: the name of an oasis and its country.",
+  "situation": [
+   "In the middle of the Sahara, travellers see a green area with tall palm trees, gardens and houses, while all around there is only sand and rock.",
+   "Musa, who is travelling with them, wonders how crops can grow in this place where it almost never rains."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Musa does not understand how crops can grow in a desert place where it almost never rains."
+   ],
+   [
+    "What did the travellers see in the green area?",
+    "They saw tall palm trees, gardens and houses."
+   ],
+   [
+    "Where do you think the water for these crops comes from?",
+    "The water probably comes from under the ground, from a well or a spring."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how people farm in the desert thanks to oases and irrigation.",
+  "parts": [
+   {
+    "sec": "I. THE OASIS",
+    "qa": [
+     {
+      "img": "oasis.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Where does the water of an oasis come from?",
+      "a": "The water comes from rain that fell on distant highlands. It flows slowly under the desert in permeable rock and comes to the surface in a low place.",
+      "split": 5
+     },
+     {
+      "q": "What do we call a fertile place in the desert where underground water reaches the surface?",
+      "a": "Such a fertile place is called an oasis. Examples are Siwa in Egypt and Tafilalt in Morocco."
+     }
+    ],
+    "sum": {
+     "title": "I. The Oasis",
+     "defs": [
+      "An oasis is a fertile place in the desert where underground water reaches the surface or can be reached by wells."
+     ],
+     "items": [
+      [
+       "A. Formation of an Oasis",
+       "Rain falls on distant highlands, flows slowly under the desert in permeable rock and reaches the surface in low places.",
+       "oasis.png"
+      ],
+      [
+       "B. Examples",
+       "Famous oases include Siwa in Egypt and Tafilalt in Morocco. The Nile valley is like a long oasis in the desert."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. OASIS FARMING",
+    "qa": [
+     {
+      "img": "oasis_layers.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the three layers of crops grown in an oasis.",
+      "a": "The top layer is made of date palms, the middle layer of fruit trees such as citrus, figs and pomegranates, and the ground layer of vegetables, wheat and barley.",
+      "split": 5
+     },
+     {
+      "q": "Why do farmers grow crops in three layers under the date palms?",
+      "a": "The tall palms give shade and protect the smaller plants from the strong sun and the wind. This also uses the little land well."
+     },
+     {
+      "q": "Farmers in Egypt used a long pole with a bucket to lift water from the Nile. What is this tool called?",
+      "a": "This tool is called a shaduf. Today, farmers mostly use motor pumps and boreholes."
+     },
+     {
+      "q": "Farmers use too much water from their wells. What happens to the water table and to the soil?",
+      "a": "The water table falls, so wells dry up. The soil also becomes salty because of evaporation."
+     }
+    ],
+    "sum": {
+     "title": "II. Farming around Oases",
+     "intro": "Farming around oases has the following characteristics:",
+     "items": [
+      [
+       "A. Crops in Three Layers",
+       "Date palms form the top layer, fruit trees the middle layer, and vegetables, wheat and barley the ground layer.",
+       "oasis_layers.png"
+      ],
+      [
+       "B. Methods of Irrigation",
+       "Water is brought from wells, springs and underground channels (foggaras), with the shaduf or with motor pumps and boreholes."
+      ],
+      [
+       "C. Irrigation along Rivers",
+       "In Egypt, the Aswan High Dam on the Nile stores water in Lake Nasser to irrigate fields all year."
+      ],
+      [
+       "D. Problems of Oasis Farming",
+       "Wells dry up when too much water is used, soils become salty, and sand dunes invade the fields."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Explain how an oasis is formed.",
+    "Rain falls on distant highlands and flows slowly under the desert. It reaches the surface in a low place, forming an oasis."
+   ],
+   [
+    "Why is the date palm important in an oasis?",
+    "It gives dates to eat and sell, and it shades and protects the smaller crops below it."
+   ],
+   [
+    "Give two problems of oasis farming.",
+    "Wells can dry up and soils can become salty."
+   ]
+  ],
+  "remediation": [
+   [
+    "A fertile place in the desert with water is called an ______.",
+    "The main tree of oases is the ______ palm.",
+    "A pole with a bucket used to lift water is a ______."
+   ],
+   [
+    "Underground water channels are called ______.",
+    "The dam on the Nile in Egypt is the Aswan ______ Dam.",
+    "The level of underground water is called the water ______."
+   ]
+  ],
+  "remediationAnswers": "1. oasis 2. date 3. shaduf 4. foggaras 5. High 6. table",
+  "homework": "Look at a world map in your atlas. Find two countries located between 30° and 60° north of the Equator, and write their names.",
+  "homeworkTag": "This prepares Lesson 4: The Temperate Region.",
+  "bilingual": [
+   [
+    "Oasis",
+    "L'oasis"
+   ],
+   [
+    "Date",
+    "La datte"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ],
+   [
+    "Borehole",
+    "Le forage"
+   ],
+   [
+    "Spring",
+    "La source"
+   ],
+   [
+    "Water table",
+    "La nappe phréatique"
+   ],
+   [
+    "Pump",
+    "La pompe"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "The Aswan High Dam was completed in 1970; it created Lake Nasser. This session closes Lesson 3."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 5)",
+  "title": "The Desert Regions: Human Activities (Farming around Oases)",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 5: Human Activities (Farming around Oases).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 5: Human Activities (Farming around Oases)",
+  "matter": "I. The Oasis: Formation of an Oasis, Examples; II. Farming around Oases: Crops in Three Layers, Methods of Irrigation, Irrigation along Rivers, Problems of Oasis Farming."
+ },
+ "file": "S09_L3_P5_Desert_Farming_Oases",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S09_L3_P5_Desert_Farming_Oases",
+  "part": 5,
+  "partTitle": "Human Activities (Farming around Oases)",
+  "notions": "Oasis, water table, irrigation, shaduf, foggara, borehole, date palm.",
+  "focus": "Formation of oases and farming around oases; irrigation in hot deserts.",
+  "competence": "Learners are able to explain how water can be brought to crops in the dry season and use water carefully in farming.",
+  "objectives": [
+   "Explain how an oasis is formed.",
+   "Describe the crops grown in oases.",
+   "Describe the methods of irrigation used in deserts.",
+   "Identify the problems of oasis farming."
+  ],
+  "recall": [
+   "Desert people face lack of water, extreme temperatures, sandstorms and poor soils.",
+   "They adapt through nomadism, camels, clothing, housing and wells."
+  ],
+  "recallNote": "Check the homework: the name of an oasis and its country.",
+  "situation": [
+   "In the middle of the Sahara, travellers see a green area with tall palm trees, gardens and houses, while all around there is only sand and rock.",
+   "Musa, who is travelling with them, wonders how crops can grow in this place where it almost never rains."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Musa does not understand how crops can grow in a desert place where it almost never rains."
+   ],
+   [
+    "What did the travellers see in the green area?",
+    "They saw tall palm trees, gardens and houses."
+   ],
+   [
+    "Where do you think the water for these crops comes from?",
+    "The water probably comes from under the ground, from a well or a spring."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how people farm in the desert thanks to oases and irrigation.",
+  "parts": [
+   {
+    "sec": "I. THE OASIS",
+    "qa": [
+     {
+      "img": "oasis.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Where does the water of an oasis come from?",
+      "a": "The water comes from rain that fell on distant highlands. It flows slowly under the desert in permeable rock and comes to the surface in a low place.",
+      "split": 5
+     },
+     {
+      "q": "What do we call a fertile place in the desert where underground water reaches the surface?",
+      "a": "Such a fertile place is called an oasis. Examples are Siwa in Egypt and Tafilalt in Morocco."
+     }
+    ],
+    "sum": {
+     "title": "I. The Oasis",
+     "defs": [
+      "An oasis is a fertile place in the desert where underground water reaches the surface or can be reached by wells."
+     ],
+     "items": [
+      [
+       "A. Formation of an Oasis",
+       "Rain falls on distant highlands, flows slowly under the desert in permeable rock and reaches the surface in low places.",
+       "oasis.png"
+      ],
+      [
+       "B. Examples",
+       "Famous oases include Siwa in Egypt and Tafilalt in Morocco. The Nile valley is like a long oasis in the desert."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. OASIS FARMING",
+    "qa": [
+     {
+      "img": "oasis_layers.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the three layers of crops grown in an oasis.",
+      "a": "The top layer is made of date palms, the middle layer of fruit trees such as citrus, figs and pomegranates, and the ground layer of vegetables, wheat and barley.",
+      "split": 5
+     },
+     {
+      "q": "Why do farmers grow crops in three layers under the date palms?",
+      "a": "The tall palms give shade and protect the smaller plants from the strong sun and the wind. This also uses the little land well."
+     },
+     {
+      "q": "Farmers in Egypt used a long pole with a bucket to lift water from the Nile. What is this tool called?",
+      "a": "This tool is called a shaduf. Today, farmers mostly use motor pumps and boreholes."
+     },
+     {
+      "q": "Farmers use too much water from their wells. What happens to the water table and to the soil?",
+      "a": "The water table falls, so wells dry up. The soil also becomes salty because of evaporation."
+     }
+    ],
+    "sum": {
+     "title": "II. Farming around Oases",
+     "intro": "Farming around oases has the following characteristics:",
+     "items": [
+      [
+       "A. Crops in Three Layers",
+       "Date palms form the top layer, fruit trees the middle layer, and vegetables, wheat and barley the ground layer.",
+       "oasis_layers.png"
+      ],
+      [
+       "B. Methods of Irrigation",
+       "Water is brought from wells, springs and underground channels (foggaras), with the shaduf or with motor pumps and boreholes."
+      ],
+      [
+       "C. Irrigation along Rivers",
+       "In Egypt, the Aswan High Dam on the Nile stores water in Lake Nasser to irrigate fields all year."
+      ],
+      [
+       "D. Problems of Oasis Farming",
+       "Wells dry up when too much water is used, soils become salty, and sand dunes invade the fields."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Explain how an oasis is formed.",
+    "Rain falls on distant highlands and flows slowly under the desert. It reaches the surface in a low place, forming an oasis."
+   ],
+   [
+    "Why is the date palm important in an oasis?",
+    "It gives dates to eat and sell, and it shades and protects the smaller crops below it."
+   ],
+   [
+    "Give two problems of oasis farming.",
+    "Wells can dry up and soils can become salty."
+   ]
+  ],
+  "remediation": [
+   [
+    "A fertile place in the desert with water is called an ______.",
+    "The main tree of oases is the ______ palm.",
+    "A pole with a bucket used to lift water is a ______."
+   ],
+   [
+    "Underground water channels are called ______.",
+    "The dam on the Nile in Egypt is the Aswan ______ Dam.",
+    "The level of underground water is called the water ______."
+   ]
+  ],
+  "remediationAnswers": "1. oasis 2. date 3. shaduf 4. foggaras 5. High 6. table",
+  "homework": "Look at a world map in your atlas. Find two countries located between 30° and 60° north of the Equator, and write their names.",
+  "homeworkTag": "This prepares Lesson 4: The Temperate Region.",
+  "bilingual": [
+   [
+    "Oasis",
+    "L'oasis"
+   ],
+   [
+    "Date",
+    "La datte"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ],
+   [
+    "Borehole",
+    "Le forage"
+   ],
+   [
+    "Spring",
+    "La source"
+   ],
+   [
+    "Water table",
+    "La nappe phréatique"
+   ],
+   [
+    "Pump",
+    "La pompe"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "The Aswan High Dam was completed in 1970; it created Lake Nasser. This session closes Lesson 3."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ]
+ }
+}

@@ -1,0 +1,25 @@
+tailor::tailor sewing machine Africa
+doctor::doctor patient consultation Africa hospital
+textile::textile factory Africa weaving
+lab::laboratory researcher Africa scientist
+bank::bank Cameroon building
+factoryw::factory workers Africa uniform
+moto::moto taxi Cameroon
+vendor::street vendor Cameroon
+mechanic::roadside mechanic Africa
+maize::maize harvest farmer Africa
+cmarket::cattle market Cameroon
+fishmkt::fish market Cameroon
+gold::artisanal gold mining Cameroon
+brewery::brewery bottling line Africa
+alucam::Alucam Edéa
+constr::construction workers building site Africa
+smith::blacksmith Africa forge
+market::market Cameroon traders
+train::Camrail train
+momo::mobile money kiosk Africa
+teacher::teacher classroom Cameroon
+safari::giraffe tourists safari vehicle Africa
+agro::agronomist maize field trial Africa
+phone::farmer mobile phone Africa
+ict::computer class students Africa

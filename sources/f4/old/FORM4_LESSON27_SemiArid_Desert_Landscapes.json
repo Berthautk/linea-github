@@ -1,0 +1,204 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "imageQ | \"I. LOCATION\" | \"Activity 1: Study the map\" | \"Name the largest hot desert shown on the map. In which part of Africa is it located?\" | \"africa_deserts.png\" | \"Give learners one minute to study the map before the first question.\"",
+  "slide | \"I. LOCATION\" | \"Answer\" | [\"The largest hot desert is the Sahara. It covers most of North Africa, about 9 million square kilometres. It is the largest hot desert in the world.\"]",
+  "imageQ | \"I. LOCATION\" | \"Question 2\" | \"What is the name of the semi-arid belt south of the Sahara? Which region of Cameroon lies in it?\" | \"africa_deserts.png\"",
+  "slide | \"I. LOCATION\" | \"Answer\" | [\"The semi-arid belt is the Sahel. The Far North Region of Cameroon lies in the Sahel. Garoua lies just south of it, in a dry savanna.\"] | \"Garoua receives about 800 to 1,000 mm of rain per year, which is more than the Sahel (about 250 to 500 mm).\"",
+  "imageQ | \"I. LOCATION\" | \"Question 3\" | \"Name the two hot deserts of Southern Africa. Which one lies along the coast?\" | \"africa_deserts.png\"",
+  "slide | \"I. LOCATION\" | \"Answer\" | [\"The two hot deserts of Southern Africa are the Kalahari and the Namib. The Namib lies along the Atlantic coast of Namibia.\"]",
+  "imageFull | \"II. EROSIONAL PROCESSES\" | \"Activity 2: Study the diagram\" | \"Three ways in which wind erodes.\" | \"wind_processes.png\"",
+  "slide | \"II. EROSIONAL PROCESSES\" | \"Question 1\" | [\"Look at part 1. What happens to the light sand when a strong wind blows over the ground? What is left behind?\"]",
+  "slide | \"II. EROSIONAL PROCESSES\" | \"Answer\" | [\"The wind lifts the light sand and dust and blows them away. The heavy pebbles are left behind. This process is called deflation.\"]",
+  "slide | \"II. EROSIONAL PROCESSES\" | \"Question 2\" | [\"Look at part 2. Why is the rock worn away mostly near the ground, as on Moussa's wall?\"]",
+  "slide | \"II. EROSIONAL PROCESSES\" | \"Answer\" | [\"The wind throws sand grains against the rock. The grains are heavy, so the wind lifts them only about 1 to 2 metres high. This process is called abrasion.\"]",
+  "slide | \"II. EROSIONAL PROCESSES\" | \"Question 3\" | [\"Look at part 3. What happens to the sand grains when they hit one another again and again?\"]",
+  "slide | \"II. EROSIONAL PROCESSES\" | \"Answer\" | [\"The grains break and become smaller and rounder. This process is called attrition.\"] | \"Transition: These processes, acting for thousands of years, create special landforms.\"",
+  "imageQ | \"III. EROSIONAL FEATURES\" | \"Activity 3: Study the diagram\" | \"Why is this rock narrow at the bottom and wide at the top?\" | \"rock_pedestal.jpg\"",
+  "slide | \"III. EROSIONAL FEATURES\" | \"Answer\" | [\"Abrasion is strongest near the ground, so the base of the rock is worn away faster than the top. This mushroom-shaped rock is called a rock pedestal.\"]",
+  "imageQ | \"III. EROSIONAL FEATURES\" | \"Question 2\" | \"Here, a layer of hard rock lies on top of soft rock. What happens to the soft rock, and what landform is left?\" | \"zeugen.png\"",
+  "slide | \"III. EROSIONAL FEATURES\" | \"Answer\" | [\"The wind wears away the soft rock along cracks and makes furrows. Flat-topped ridges of rock, covered by hard rock, are left. They are called zeugen.\"]",
+  "imageQ | \"III. EROSIONAL FEATURES\" | \"Question 3\" | \"These long ridges lie in the same direction as the wind. What are they called?\" | \"yardangs.jpg\"",
+  "slide | \"III. EROSIONAL FEATURES\" | \"Answer\" | [\"They are called yardangs. They form where bands of hard and soft rock lie in the direction of the wind. The soft rock is worn away and the hard rock remains as ridges.\"]",
+  "imageQ | \"III. EROSIONAL FEATURES\" | \"Question 4\" | \"This isolated hill of hard rock rises above a flat plain. What is it called?\" | \"inselberg.jpg\"",
+  "slide | \"III. EROSIONAL FEATURES\" | \"Answer\" | [\"It is called an inselberg. It remains after the softer rocks around it have been worn away over a very long time. Zuma Rock in Nigeria is an example.\"] | \"Transition: Now, copy the board summary.\"",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (1/7)\" | \"DEFINITIONS\" | [\"A desert is a region that receives less than 250 mm of rain per year and has very little vegetation.\"]",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (2/7)\" | \"DEFINITIONS\" | [\"A semi-arid region is a region that receives between about 250 and 500 mm of rain per year. It lies between the desert and the savanna.\"]",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (3/7)\" | [\"The main hot deserts and semi-arid areas of Africa are the Sahara, the Kalahari, the Namib and the Sahel.\"]",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (4/7)\" | \"A. The Sahara\" | [\"The Sahara is the largest hot desert in the world. It covers most of North Africa.\"]",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (5/7)\" | \"B. The Kalahari\" | [\"The Kalahari Desert is found in Southern Africa, mainly in Botswana, Namibia and South Africa.\"]",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (6/7)\" | \"C. The Namib\" | [\"The Namib Desert lies along the Atlantic coast of Namibia. It is one of the oldest deserts in the world.\"]",
+  "sum | \"I. Location of Semi-Arid Areas and Hot Deserts (7/7)\" | \"D. The Sahel\" | [\"The Sahel is a semi-arid belt south of the Sahara, from Senegal to Sudan. The Far North Region of Cameroon lies in the Sahel.\"]",
+  "sum | \"II. Main Erosional Processes of Wind (1/4)\" | [\"Wind erosion is strong in dry areas, where there is little vegetation to protect the ground. The main erosional processes of wind are deflation, abrasion and attrition.\"]",
+  "sum | \"II. Main Erosional Processes of Wind (2/4)\" | \"A. Deflation\" | [\"Deflation is the removal of loose sand and dust by the wind. It leaves behind a stony surface called a desert pavement.\"]",
+  "sum | \"II. Main Erosional Processes of Wind (3/4)\" | \"B. Abrasion\" | [\"Abrasion is the wearing away of rocks by sand grains that the wind throws against them. It is strongest within 1 to 2 metres of the ground.\"]",
+  "sum | \"II. Main Erosional Processes of Wind (4/4)\" | \"C. Attrition\" | [\"Attrition is the wearing down of the sand grains themselves as they hit one another. The grains become smaller and rounder.\"]",
+  "sum | \"III. Erosional Features (1/5)\" | [\"Over thousands of years, wind erosion produces the following landforms: rock pedestals, zeugen, yardangs and inselbergs.\"]",
+  "sumImage | \"III. Erosional Features (2/5)\" | \"A. Rock Pedestal\" | \"A rock pedestal is a mushroom-shaped rock. Abrasion wears away its base faster than its top.\" | \"rock_pedestal.jpg\"",
+  "sumImage | \"III. Erosional Features (3/5)\" | \"B. Zeugen\" | \"Zeugen are flat-topped ridges formed where hard rock lies on top of soft rock. The wind wears away the soft rock.\" | \"zeugen.png\"",
+  "sumImage | \"III. Erosional Features (4/5)\" | \"C. Yardangs\" | \"Yardangs are long ridges of hard rock lying in the direction of the wind. The soft rock between them is worn away.\" | \"yardangs.jpg\"",
+  "sumImage | \"III. Erosional Features (5/5)\" | \"D. Inselberg\" | \"An inselberg is an isolated, steep-sided hill of hard rock that rises above a flat plain.\" | \"inselberg.jpg\""
+ ],
+ "d": {
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 27",
+  "title": "Semi-Arid and Desert Landscapes",
+  "coverNote": "Good morning, class. Today we start a new sub-topic: hot desert landscapes. Lesson 27 is about semi-arid and desert landscapes.",
+  "cls": "Form 4",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "duration": "50 minutes",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "lesson": "Lesson 27: Semi-Arid and Desert Landscapes",
+  "notions": "Rock pedestal, zeugen, yardangs, inselbergs.",
+  "focus": "Location of semi-arid areas and hot deserts in Africa; main erosional processes of wind; erosional features.",
+  "competence": "Learners are able to locate the hot deserts of Africa on a map and recognise rocks and walls worn by the wind.",
+  "objectives": [
+   "Locate the main hot deserts and the semi-arid Sahel on a map of Africa.",
+   "Describe the three processes of wind erosion: deflation, abrasion and attrition.",
+   "Explain the formation of rock pedestals, zeugen, yardangs and inselbergs."
+  ],
+  "recall": [
+   "Rivers and waves are agents of erosion: they wear away, transport and deposit material.",
+   "Waves erode the coast and form cliffs, caves, arches and stacks.",
+   "Today, we study another agent of erosion: the wind, in dry areas."
+  ],
+  "situation": [
+   "During the Harmattan season in Garoua, Moussa notices that the old wall of his family compound is rough and worn near the ground, while the top of the wall is still smooth.",
+   "The worn side faces the north-east, where the dusty Harmattan comes from. His father says, \"It is the wind and its sand.\" Moussa does not understand how the wind can wear away a wall."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa does not understand how the wind can wear away the wall of his compound."
+   ],
+   [
+    "Which part of the wall is the most worn, and which direction does it face?",
+    "The bottom part of the wall is the most worn. It faces the north-east, the direction from which the Harmattan blows."
+   ],
+   [
+    "What can you suggest to protect the wall?",
+    "We can plant trees or a hedge as a windbreak, and repair or plaster the base of the wall regularly."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the wind wears away rocks in dry areas, and to recognise the landforms it creates."
+ },
+ "end": {
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 27",
+  "title": "Semi-Arid and Desert Landscapes",
+  "coverNote": "Good morning, class. Today we start a new sub-topic: hot desert landscapes. Lesson 27 is about semi-arid and desert landscapes.",
+  "cls": "Form 4",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "duration": "50 minutes",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "lesson": "Lesson 27: Semi-Arid and Desert Landscapes",
+  "notions": "Rock pedestal, zeugen, yardangs, inselbergs.",
+  "focus": "Location of semi-arid areas and hot deserts in Africa; main erosional processes of wind; erosional features.",
+  "competence": "Learners are able to locate the hot deserts of Africa on a map and recognise rocks and walls worn by the wind.",
+  "objectives": [
+   "Locate the main hot deserts and the semi-arid Sahel on a map of Africa.",
+   "Describe the three processes of wind erosion: deflation, abrasion and attrition.",
+   "Explain the formation of rock pedestals, zeugen, yardangs and inselbergs."
+  ],
+  "recall": [
+   "Rivers and waves are agents of erosion: they wear away, transport and deposit material.",
+   "Waves erode the coast and form cliffs, caves, arches and stacks.",
+   "Today, we study another agent of erosion: the wind, in dry areas."
+  ],
+  "situation": [
+   "During the Harmattan season in Garoua, Moussa notices that the old wall of his family compound is rough and worn near the ground, while the top of the wall is still smooth.",
+   "The worn side faces the north-east, where the dusty Harmattan comes from. His father says, \"It is the wind and its sand.\" Moussa does not understand how the wind can wear away a wall."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa does not understand how the wind can wear away the wall of his compound."
+   ],
+   [
+    "Which part of the wall is the most worn, and which direction does it face?",
+    "The bottom part of the wall is the most worn. It faces the north-east, the direction from which the Harmattan blows."
+   ],
+   [
+    "What can you suggest to protect the wall?",
+    "We can plant trees or a hedge as a windbreak, and repair or plaster the base of the wall regularly."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the wind wears away rocks in dry areas, and to recognise the landforms it creates.",
+  "evaluation": [
+   [
+    "A stony surface is found where the wind has blown all the sand away. Which process formed it?",
+    "This stony surface, called a desert pavement, was formed by deflation."
+   ],
+   [
+    "Why are yardangs and zeugen different, although both are ridges of rock?",
+    "Zeugen form where hard rock lies on top of soft rock. Yardangs form where bands of hard and soft rock lie side by side, in the direction of the wind."
+   ],
+   [
+    "Why do deserts have more wind erosion than the forest areas of southern Cameroon?",
+    "Deserts are dry and have very little vegetation, so the loose sand is not held by roots or protected by plants."
+   ]
+  ],
+  "remediation": [
+   [
+    "A region with less than 250 mm of rain per year is called a ______.",
+    "The largest hot desert in the world is the ______.",
+    "The removal of loose sand by the wind is called ______."
+   ],
+   [
+    "The wearing away of rocks by wind-blown sand is called ______.",
+    "A mushroom-shaped rock is called a rock ______.",
+    "An isolated hill of hard rock above a plain is called an ______."
+   ]
+  ],
+  "remediationAnswers": "1. desert 2. Sahara 3. deflation 4. abrasion 5. pedestal 6. inselberg",
+  "homework": "After the next windy day, look around your compound. Find a place where sand or dust has piled up, for example behind a wall, a stone or a bush, and write down why you think it collected there.",
+  "homeworkTag": "This prepares Lesson 28: Depositional Features of Wind Action.",
+  "bilingual": [
+   [
+    "Desert",
+    "Le désert"
+   ],
+   [
+    "Semi-arid",
+    "Semi-aride"
+   ],
+   [
+    "Wind erosion",
+    "L'érosion éolienne"
+   ],
+   [
+    "Deflation",
+    "La déflation"
+   ],
+   [
+    "Abrasion",
+    "La corrasion"
+   ],
+   [
+    "Rock pedestal",
+    "Le rocher-champignon"
+   ],
+   [
+    "Inselberg",
+    "L'inselberg"
+   ],
+   [
+    "Ridge",
+    "La crête"
+   ]
+  ],
+  "matter": "I. Location of semi-arid areas and hot deserts (Sahara, Kalahari, Namib, Sahel); II. Erosional processes of wind (deflation, abrasion, attrition); III. Erosional features (rock pedestal, zeugen, yardangs, inselberg).",
+  "teacherNote": [
+   "Use the Harmattan and a worn wall or rock in your compound as local examples of abrasion.",
+   "Garoua is not in the Sahel: it lies in the dry Sudano-Sahelian savanna (about 800–1,000 mm of rain). The Far North (Maroua, Kousseri) lies in the Sahel.",
+   "The hills of Mount Tinguelin near Garoua are tabular sandstone hills, not typical inselbergs, so Zuma Rock (Nigeria) is used as the example."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation processes, landforms and impacts on man — Lesson 27.",
+   "Teacher's lesson notes, Lesson 27 (f4.docx).",
+   "Maps drawn from Natural Earth data; desert limits are approximate.",
+   "Climate data for Garoua: Weather Spark; Mont Tinguelin: Wikipédia (fr)."
+  ]
+ },
+ "file": "FORM4_LESSON27_SemiArid_Desert_Landscapes"
+}

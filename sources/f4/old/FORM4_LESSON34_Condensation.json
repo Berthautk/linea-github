@@ -1,0 +1,416 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Condensation takes place near the ground and high in the atmosphere. Its main forms are the following:\"]",
+  "sumImage | \"x\" | \"A. Dew and Frost\" | \"Dew is drops of water on cool surfaces after a clear, calm night. Frost is ice crystals formed when the dew point is below 0°C.\" | \"condensation_forms.png\"",
+  "sum | \"x\" | \"B. Fog and Mist\" | [\"Fog is a cloud at ground level, with visibility below 1 km. Mist is a thin fog, with visibility above 1 km.\"]",
+  "sum | \"x\" | \"C. Clouds\" | [\"A cloud is a mass of tiny water droplets or ice crystals formed when rising air cools to its dew point.\"]",
+  "sumImage | \"x\" | \"D. Types of Clouds\" | \"The main clouds are cirrus (high, feathery), stratus (low, grey layer), cumulus (white, puffy) and cumulonimbus (tall storm cloud).\" | \"cloud_types.png\"",
+  "sum | \"II. Forms of Condensation (1/5)\" | [\"Condensation takes place near the ground and high in the atmosphere. Its main forms are the following:\"]",
+  "sumImage | \"II. Forms of Condensation (2/5)\" | \"A. Dew and Frost\" | \"Dew is drops of water on cool surfaces after a clear, calm night. Frost is ice crystals formed when the dew point is below 0°C.\" | \"condensation_forms.png\"",
+  "sum | \"II. Forms of Condensation (3/5)\" | \"B. Fog and Mist\" | [\"Fog is a cloud at ground level, with visibility below 1 km. Mist is a thin fog, with visibility above 1 km.\"]",
+  "sum | \"II. Forms of Condensation (4/5)\" | \"C. Clouds\" | [\"A cloud is a mass of tiny water droplets or ice crystals formed when rising air cools to its dew point.\"]",
+  "sumImage | \"II. Forms of Condensation (5/5)\" | \"D. Types of Clouds\" | \"The main clouds are cirrus (high, feathery), stratus (low, grey layer), cumulus (white, puffy) and cumulonimbus (tall storm cloud).\" | \"cloud_types.png\""
+ ],
+ "end": {
+  "file": "FORM4_LESSON34_Condensation",
+  "lessonNo": 34,
+  "lessonName": "Condensation",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Forms of Condensation",
+  "notions": "Drizzle, precipitation, hail, cloud, fog, dew, mist.",
+  "focus": "Meaning of condensation; forms of condensation.",
+  "competence": "Learners are able to explain the drops of water that appear on cold objects, grass and windows, and to drive or walk carefully in fog.",
+  "objectives": [
+   "Define condensation, saturation and dew point.",
+   "State the conditions necessary for condensation.",
+   "Describe the forms of condensation near the ground and in the atmosphere."
+  ],
+  "recall": [
+   "Humidity is the amount of water vapour in the air.",
+   "It is measured with a hygrometer and given in percent.",
+   "Warm air can hold more water vapour than cold air."
+  ],
+  "recallNote": "Check the homework: drops of water seen early in the morning.",
+  "situation": [
+   "On a hot afternoon in Garoua, Yaya takes a very cold bottle of water out of the refrigerator. After a few minutes, the outside of the bottle is covered with drops of water.",
+   "The bottle is not leaking. Yaya wonders where these drops came from."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Yaya does not know where the drops of water on the cold bottle came from."
+   ],
+   [
+    "Where did the drops appear, and when?",
+    "They appeared on the outside of the cold bottle a few minutes after it was taken out of the refrigerator."
+   ],
+   [
+    "What can Yaya do to see if the water comes from the air?",
+    "He can wipe the bottle dry and watch: new drops form again, because the water comes from the air."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the invisible water vapour of the air becomes dew, fog, mist and clouds.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "The water vapour in the air touched the cold bottle and became liquid water. What is this change called?",
+      "a": "This change from water vapour (gas) to liquid water is called condensation. It is the opposite of evaporation."
+     },
+     {
+      "q": "Why did the drops form only on the cold bottle?",
+      "a": "The air touching the bottle was cooled. Cool air cannot hold as much water vapour as warm air, so the extra vapour became liquid."
+     },
+     {
+      "q": "At what point does air become full of water vapour and start to condense?",
+      "a": "When air holds all the water vapour it can, it is saturated. The temperature at which condensation begins is the dew point."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Condensation",
+     "defs": [
+      "Condensation is the change of water vapour (a gas) into liquid water or ice.",
+      "The dew point is the temperature at which the air becomes saturated and condensation begins."
+     ],
+     "items": [
+      [
+       "Conditions for Condensation",
+       [
+        "– The air must be saturated with water vapour.",
+        "– The air must be cooled to its dew point.",
+        "– There must be tiny particles (dust, salt, smoke) on which water can condense."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. FORMS OF CONDENSATION",
+    "qa": [
+     {
+      "img": "condensation_forms.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. What is the difference between fog and mist?",
+      "a": "Both are tiny water droplets near the ground. In fog, we cannot see beyond 1 km; in mist, we can see beyond 1 km.",
+      "split": 5
+     },
+     {
+      "q": "On a clear, calm night in the dry season, the ground cools quickly. What forms on the grass in the morning?",
+      "a": "Dew forms: drops of water on the grass. If the dew point is below 0°C, ice crystals called frost form instead."
+     },
+     {
+      "img": "cloud_types.png",
+      "kind": "diagram",
+      "title": "Question 3",
+      "q": "Look at the diagram. Which cloud brings the heavy thunderstorms of Garoua in the rainy season?",
+      "a": "The cumulonimbus, a tall, dark storm cloud, brings heavy rain, thunder and lightning.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "II. Forms of Condensation",
+     "intro": "Condensation takes place near the ground and high in the atmosphere. Its main forms are the following:",
+     "items": [
+      [
+       "A. Dew and Frost",
+       "Dew is drops of water on cool surfaces after a clear, calm night. Frost is ice crystals formed when the dew point is below 0°C.",
+       "condensation_forms.png"
+      ],
+      [
+       "B. Fog and Mist",
+       "Fog is a cloud at ground level, with visibility below 1 km. Mist is a thin fog, with visibility above 1 km."
+      ],
+      [
+       "C. Clouds",
+       "A cloud is a mass of tiny water droplets or ice crystals formed when rising air cools to its dew point."
+      ],
+      [
+       "D. Types of Clouds",
+       "The main clouds are cirrus (high, feathery), stratus (low, grey layer), cumulus (white, puffy) and cumulonimbus (tall storm cloud).",
+       "cloud_types.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the dew point?",
+    "The dew point is the temperature at which the air becomes saturated and condensation begins."
+   ],
+   [
+    "Why does dew form after clear, calm nights?",
+    "Without clouds, the ground loses heat quickly and cools the air above it to its dew point."
+   ],
+   [
+    "Why is fog dangerous for drivers?",
+    "Fog reduces visibility to less than 1 km, so drivers cannot see far ahead."
+   ]
+  ],
+  "remediation": [
+   [
+    "The change of water vapour into liquid water is ______.",
+    "Air that holds all the water vapour it can is ______.",
+    "The temperature at which condensation begins is the ______ point."
+   ],
+   [
+    "Drops of water on grass in the morning are called ______.",
+    "A cloud at ground level with visibility below 1 km is ______.",
+    "The tall storm cloud is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. condensation 2. saturated 3. dew 4. dew 5. fog 6. cumulonimbus",
+  "homework": "During the next rain, put an empty tin with straight sides in an open place. After the rain, measure the depth of water in it with a ruler, in millimetres.",
+  "homeworkTag": "This prepares Lesson 35: Precipitation.",
+  "bilingual": [
+   [
+    "Condensation",
+    "La condensation"
+   ],
+   [
+    "Water vapour",
+    "La vapeur d'eau"
+   ],
+   [
+    "Dew point",
+    "Le point de rosée"
+   ],
+   [
+    "Dew",
+    "La rosée"
+   ],
+   [
+    "Frost",
+    "Le givre"
+   ],
+   [
+    "Fog",
+    "Le brouillard"
+   ],
+   [
+    "Mist",
+    "La brume"
+   ],
+   [
+    "Cloud",
+    "Le nuage"
+   ]
+  ],
+  "teacherNote": [
+   "The syllabus notions also list drizzle and hail: they are forms of precipitation and are treated in Lesson 35.",
+   "Visibility limit between fog and mist (1 km) follows the WMO definition."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 34",
+  "title": "Condensation",
+  "sumTitle": "Condensation",
+  "coverNote": "Good morning, class. Today we study Lesson 34: Condensation.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 34: Condensation",
+  "matter": "I. Meaning of Condensation: Conditions for Condensation; II. Forms of Condensation: Dew and Frost, Fog and Mist, Clouds, Types of Clouds."
+ },
+ "file": "FORM4_LESSON34_Condensation",
+ "sp": {
+  "file": "FORM4_LESSON34_Condensation",
+  "lessonNo": 34,
+  "lessonName": "Condensation",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Forms of Condensation",
+  "notions": "Drizzle, precipitation, hail, cloud, fog, dew, mist.",
+  "focus": "Meaning of condensation; forms of condensation.",
+  "competence": "Learners are able to explain the drops of water that appear on cold objects, grass and windows, and to drive or walk carefully in fog.",
+  "objectives": [
+   "Define condensation, saturation and dew point.",
+   "State the conditions necessary for condensation.",
+   "Describe the forms of condensation near the ground and in the atmosphere."
+  ],
+  "recall": [
+   "Humidity is the amount of water vapour in the air.",
+   "It is measured with a hygrometer and given in percent.",
+   "Warm air can hold more water vapour than cold air."
+  ],
+  "recallNote": "Check the homework: drops of water seen early in the morning.",
+  "situation": [
+   "On a hot afternoon in Garoua, Yaya takes a very cold bottle of water out of the refrigerator. After a few minutes, the outside of the bottle is covered with drops of water.",
+   "The bottle is not leaking. Yaya wonders where these drops came from."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Yaya does not know where the drops of water on the cold bottle came from."
+   ],
+   [
+    "Where did the drops appear, and when?",
+    "They appeared on the outside of the cold bottle a few minutes after it was taken out of the refrigerator."
+   ],
+   [
+    "What can Yaya do to see if the water comes from the air?",
+    "He can wipe the bottle dry and watch: new drops form again, because the water comes from the air."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the invisible water vapour of the air becomes dew, fog, mist and clouds.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "The water vapour in the air touched the cold bottle and became liquid water. What is this change called?",
+      "a": "This change from water vapour (gas) to liquid water is called condensation. It is the opposite of evaporation."
+     },
+     {
+      "q": "Why did the drops form only on the cold bottle?",
+      "a": "The air touching the bottle was cooled. Cool air cannot hold as much water vapour as warm air, so the extra vapour became liquid."
+     },
+     {
+      "q": "At what point does air become full of water vapour and start to condense?",
+      "a": "When air holds all the water vapour it can, it is saturated. The temperature at which condensation begins is the dew point."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Condensation",
+     "defs": [
+      "Condensation is the change of water vapour (a gas) into liquid water or ice.",
+      "The dew point is the temperature at which the air becomes saturated and condensation begins."
+     ],
+     "items": [
+      [
+       "Conditions for Condensation",
+       [
+        "– The air must be saturated with water vapour.",
+        "– The air must be cooled to its dew point.",
+        "– There must be tiny particles (dust, salt, smoke) on which water can condense."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. FORMS OF CONDENSATION",
+    "qa": [
+     {
+      "img": "condensation_forms.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. What is the difference between fog and mist?",
+      "a": "Both are tiny water droplets near the ground. In fog, we cannot see beyond 1 km; in mist, we can see beyond 1 km.",
+      "split": 5
+     },
+     {
+      "q": "On a clear, calm night in the dry season, the ground cools quickly. What forms on the grass in the morning?",
+      "a": "Dew forms: drops of water on the grass. If the dew point is below 0°C, ice crystals called frost form instead."
+     },
+     {
+      "img": "cloud_types.png",
+      "kind": "diagram",
+      "title": "Question 3",
+      "q": "Look at the diagram. Which cloud brings the heavy thunderstorms of Garoua in the rainy season?",
+      "a": "The cumulonimbus, a tall, dark storm cloud, brings heavy rain, thunder and lightning.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "II. Forms of Condensation",
+     "intro": "Condensation takes place near the ground and high in the atmosphere. Its main forms are the following:",
+     "items": [
+      [
+       "A. Dew and Frost",
+       "Dew is drops of water on cool surfaces after a clear, calm night. Frost is ice crystals formed when the dew point is below 0°C.",
+       "condensation_forms.png"
+      ],
+      [
+       "B. Fog and Mist",
+       "Fog is a cloud at ground level, with visibility below 1 km. Mist is a thin fog, with visibility above 1 km."
+      ],
+      [
+       "C. Clouds",
+       "A cloud is a mass of tiny water droplets or ice crystals formed when rising air cools to its dew point."
+      ],
+      [
+       "D. Types of Clouds",
+       "The main clouds are cirrus (high, feathery), stratus (low, grey layer), cumulus (white, puffy) and cumulonimbus (tall storm cloud).",
+       "cloud_types.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the dew point?",
+    "The dew point is the temperature at which the air becomes saturated and condensation begins."
+   ],
+   [
+    "Why does dew form after clear, calm nights?",
+    "Without clouds, the ground loses heat quickly and cools the air above it to its dew point."
+   ],
+   [
+    "Why is fog dangerous for drivers?",
+    "Fog reduces visibility to less than 1 km, so drivers cannot see far ahead."
+   ]
+  ],
+  "remediation": [
+   [
+    "The change of water vapour into liquid water is ______.",
+    "Air that holds all the water vapour it can is ______.",
+    "The temperature at which condensation begins is the ______ point."
+   ],
+   [
+    "Drops of water on grass in the morning are called ______.",
+    "A cloud at ground level with visibility below 1 km is ______.",
+    "The tall storm cloud is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. condensation 2. saturated 3. dew 4. dew 5. fog 6. cumulonimbus",
+  "homework": "During the next rain, put an empty tin with straight sides in an open place. After the rain, measure the depth of water in it with a ruler, in millimetres.",
+  "homeworkTag": "This prepares Lesson 35: Precipitation.",
+  "bilingual": [
+   [
+    "Condensation",
+    "La condensation"
+   ],
+   [
+    "Water vapour",
+    "La vapeur d'eau"
+   ],
+   [
+    "Dew point",
+    "Le point de rosée"
+   ],
+   [
+    "Dew",
+    "La rosée"
+   ],
+   [
+    "Frost",
+    "Le givre"
+   ],
+   [
+    "Fog",
+    "Le brouillard"
+   ],
+   [
+    "Mist",
+    "La brume"
+   ],
+   [
+    "Cloud",
+    "Le nuage"
+   ]
+  ],
+  "teacherNote": [
+   "The syllabus notions also list drizzle and hail: they are forms of precipitation and are treated in Lesson 35.",
+   "Visibility limit between fog and mist (1 km) follows the WMO definition."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

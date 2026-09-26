@@ -1,0 +1,462 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Some countries have several time zones:\"]",
+  "sum | \"x\" | \"Reason and Examples\" | [\"– These countries are very wide from west to east.\",\"– Several time zones keep clock time close to daylight in each region.\",\"– Examples: Russia (11 zones), the USA (6 zones for its 50 states), Canada (6), Australia (3).\",\"– Note: China is very wide, but it chose only one time zone.\"]",
+  "sum | \"III. Why Some Countries Have Many Time Zones (1/3)\" | [\"Some countries have several time zones:\"]",
+  "sum | \"III. Why Some Countries Have Many Time Zones (2/3)\" | \"Reason and Examples\" | [\"– These countries are very wide from west to east.\",\"– Several time zones keep clock time close to daylight in each region.\",\"– Examples: Russia (11 zones), the USA (6 zones for its 50 states), Canada (6), Australia (3).\",\"– Note: China is very wide, but it chose only one time zone.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON04_Local_Time_Standard_Time_Time_Zones",
+  "lessonNo": 4,
+  "lessonName": "Local Time, Standard Time and Time Zones",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Local time, standard time, time zone, Greenwich Mean Time (GMT).",
+  "focus": "Local time, standard time and time zones: meaning, illustrations, reasons for time zones; why some countries have many time zones.",
+  "competence": "Learners are able to explain why the time is different in other countries, and to find the time of a match or a call abroad.",
+  "objectives": [
+   "Define local time and standard time.",
+   "Explain the meaning of time zones and why they exist.",
+   "Explain why some countries have many time zones."
+  ],
+  "recall": [
+   "Longitudes measure the distance east or west of the Prime Meridian.",
+   "The Earth turns from west to east.",
+   "Garoua is at about 13° E."
+  ],
+  "recallNote": "Check the homework: the time in Cameroon and in another country.",
+  "situation": [
+   "The Indomitable Lions play a match in Brazil. The match starts at 3 p.m. in Brazil, but in Garoua we must switch on the television at 7 p.m. to watch it live.",
+   "Alima sees on her phone that Cameroon uses \"West Africa Time\". She wonders why it is not the same time everywhere, and who decides the official time for the whole of Cameroon."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Alima does not understand why the time in Brazil is different from the time in Cameroon."
+   ],
+   [
+    "What is the time difference between Brazil and Cameroon in the situation?",
+    "The difference is 4 hours: 3 p.m. in Brazil is 7 p.m. in Cameroon."
+   ],
+   [
+    "Why is it important to know the time difference?",
+    "It helps us to watch matches live, to call people abroad at a good time, and to catch flights."
+   ]
+  ],
+  "justification": "This lesson will help us to understand why time changes from one place to another, and how countries choose their official time.",
+  "parts": [
+   {
+    "sec": "I. LOCAL TIME AND STANDARD TIME",
+    "qa": [
+     {
+      "q": "At midday, the Sun is at its highest point in the sky. Is it midday at the same moment in Garoua and in Kousseri?",
+      "a": "No. Kousseri is further east, so the Sun reaches its highest point there a few minutes earlier. Each place has its own local time."
+     },
+     {
+      "img": "time_line.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "The Earth turns 360° in 24 hours. How many degrees does it turn in 1 hour? And in 4 minutes?",
+      "a": "It turns 15° in 1 hour (360 ÷ 24), and 1° in 4 minutes.",
+      "split": 5
+     },
+     {
+      "q": "Why do Garoua, Yaoundé and Douala use the same time?",
+      "a": "They use one official time (standard time) so that schools, offices, buses and radios follow the same clock in the whole country."
+     }
+    ],
+    "sum": {
+     "title": "I. Local Time and Standard Time",
+     "defs": [
+      "Local time is the time of a place based on the position of the Sun: it is 12 noon when the Sun is at its highest point.",
+      "Standard time is the official time used in a whole country or region."
+     ],
+     "items": [
+      [
+       "A. Local Time",
+       "The Earth turns 15° in 1 hour, and 1° in 4 minutes. So places east of us have a later local time, and places west have an earlier one.",
+       "time_line.png"
+      ],
+      [
+       "B. Standard Time",
+       "Standard time avoids confusion. Cameroon uses West Africa Time (WAT), which is GMT + 1, all year round."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TIME ZONES",
+    "qa": [
+     {
+      "img": "time_zones.png",
+      "kind": "map",
+      "q": "Study the time zones of the world.",
+      "full": true
+     },
+     {
+      "q": "How many main time zones are there, and how wide is each one?",
+      "a": "There are 24 main time zones, one for each hour. Each one is about 15° of longitude wide."
+     },
+     {
+      "q": "Why do we need time zones?",
+      "a": "Time zones give a clear system of time for travel, trade, communication and television all over the world."
+     }
+    ],
+    "sum": {
+     "title": "II. Time Zones",
+     "defs": [
+      "A time zone is an area of the Earth that uses the same standard time."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The world has 24 main time zones, each about 15° of longitude wide. Their borders often follow the borders of countries.",
+       "time_zones.png"
+      ],
+      [
+       "B. Reasons for Time Zones",
+       [
+        "– The Earth turns 360° in 24 hours, so time changes by 1 hour every 15°.",
+        "– Time zones make travel, trade and communication easier.",
+        "– They keep clock time close to the position of the Sun."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. COUNTRIES WITH MANY TIME ZONES",
+    "qa": [
+     {
+      "q": "Russia stretches over more than 150° of longitude. Why does it have 11 time zones?",
+      "a": "Russia is very wide from west to east. With one time only, it would be night in the east while it is morning in the west."
+     },
+     {
+      "q": "Name other countries with many time zones.",
+      "a": "The USA has six time zones for its 50 states, Canada has six, and Australia has three main time zones."
+     }
+    ],
+    "sum": {
+     "title": "III. Why Some Countries Have Many Time Zones",
+     "intro": "Some countries have several time zones:",
+     "items": [
+      [
+       "Reason and Examples",
+       [
+        "– These countries are very wide from west to east.",
+        "– Several time zones keep clock time close to daylight in each region.",
+        "– Examples: Russia (11 zones), the USA (6 zones for its 50 states), Canada (6), Australia (3).",
+        "– Note: China is very wide, but it chose only one time zone."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between local time and standard time?",
+    "Local time depends on the position of the Sun at a place; standard time is the official time of a country or region."
+   ],
+   [
+    "How many degrees of longitude make one hour?",
+    "15 degrees of longitude make one hour."
+   ],
+   [
+    "Why does Russia have many time zones?",
+    "Russia is very wide from west to east, so one time would not match daylight in all its regions."
+   ]
+  ],
+  "remediation": [
+   [
+    "The time based on the position of the Sun is ______ time.",
+    "The official time of a country is ______ time.",
+    "Cameroon uses West Africa Time, which is GMT + ______."
+   ],
+   [
+    "There are ______ main time zones.",
+    "One hour equals ______ ° of longitude.",
+    "One degree of longitude equals ______ minutes."
+   ]
+  ],
+  "remediationAnswers": "1. local 2. standard 3. 1 4. 24 5. 15 6. 4",
+  "homework": "Find the time in Garoua when it is 12 noon in London in winter (GMT). Then try: what time is it in a town at 45° E when it is 12 noon at 0°?",
+  "homeworkTag": "This prepares Practical Work 2: Calculation of Time and Date.",
+  "bilingual": [
+   [
+    "Local time",
+    "L'heure locale"
+   ],
+   [
+    "Standard time",
+    "L'heure légale"
+   ],
+   [
+    "Time zone",
+    "Le fuseau horaire"
+   ],
+   [
+    "Clock",
+    "L'horloge"
+   ],
+   [
+    "Noon",
+    "Midi"
+   ],
+   [
+    "Midnight",
+    "Minuit"
+   ],
+   [
+    "Ahead",
+    "En avance"
+   ],
+   [
+    "Behind",
+    "En retard"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: do not say \"WAT is one hour ahead of London\". WAT is GMT + 1 all year, but London uses GMT + 1 in summer (BST), so in summer London and Cameroon have the same time.",
+   "Checked: Brasília is GMT − 3 (no daylight saving since 2019), so 3 p.m. in Brasília is 7 p.m. in Cameroon. Russia has 11 time zones; the 50 US states have 6; Canada 6; mainland Australia 3.",
+   "The time zone map shows nominal 15° zones; real borders follow countries."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 4",
+  "title": "Local Time, Standard Time and Time Zones",
+  "sumTitle": "Local Time, Standard Time and Time Zones",
+  "coverNote": "Good morning, class. Today we study Lesson 4: Local Time, Standard Time and Time Zones.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 4: Local Time, Standard Time and Time Zones",
+  "matter": "I. Local Time and Standard Time: Local Time, Standard Time; II. Time Zones: Illustration, Reasons for Time Zones; III. Why Some Countries Have Many Time Zones: Reason and Examples."
+ },
+ "file": "FORM4_LESSON04_Local_Time_Standard_Time_Time_Zones",
+ "sp": {
+  "file": "FORM4_LESSON04_Local_Time_Standard_Time_Time_Zones",
+  "lessonNo": 4,
+  "lessonName": "Local Time, Standard Time and Time Zones",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Local time, standard time, time zone, Greenwich Mean Time (GMT).",
+  "focus": "Local time, standard time and time zones: meaning, illustrations, reasons for time zones; why some countries have many time zones.",
+  "competence": "Learners are able to explain why the time is different in other countries, and to find the time of a match or a call abroad.",
+  "objectives": [
+   "Define local time and standard time.",
+   "Explain the meaning of time zones and why they exist.",
+   "Explain why some countries have many time zones."
+  ],
+  "recall": [
+   "Longitudes measure the distance east or west of the Prime Meridian.",
+   "The Earth turns from west to east.",
+   "Garoua is at about 13° E."
+  ],
+  "recallNote": "Check the homework: the time in Cameroon and in another country.",
+  "situation": [
+   "The Indomitable Lions play a match in Brazil. The match starts at 3 p.m. in Brazil, but in Garoua we must switch on the television at 7 p.m. to watch it live.",
+   "Alima sees on her phone that Cameroon uses \"West Africa Time\". She wonders why it is not the same time everywhere, and who decides the official time for the whole of Cameroon."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Alima does not understand why the time in Brazil is different from the time in Cameroon."
+   ],
+   [
+    "What is the time difference between Brazil and Cameroon in the situation?",
+    "The difference is 4 hours: 3 p.m. in Brazil is 7 p.m. in Cameroon."
+   ],
+   [
+    "Why is it important to know the time difference?",
+    "It helps us to watch matches live, to call people abroad at a good time, and to catch flights."
+   ]
+  ],
+  "justification": "This lesson will help us to understand why time changes from one place to another, and how countries choose their official time.",
+  "parts": [
+   {
+    "sec": "I. LOCAL TIME AND STANDARD TIME",
+    "qa": [
+     {
+      "q": "At midday, the Sun is at its highest point in the sky. Is it midday at the same moment in Garoua and in Kousseri?",
+      "a": "No. Kousseri is further east, so the Sun reaches its highest point there a few minutes earlier. Each place has its own local time."
+     },
+     {
+      "img": "time_line.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "The Earth turns 360° in 24 hours. How many degrees does it turn in 1 hour? And in 4 minutes?",
+      "a": "It turns 15° in 1 hour (360 ÷ 24), and 1° in 4 minutes.",
+      "split": 5
+     },
+     {
+      "q": "Why do Garoua, Yaoundé and Douala use the same time?",
+      "a": "They use one official time (standard time) so that schools, offices, buses and radios follow the same clock in the whole country."
+     }
+    ],
+    "sum": {
+     "title": "I. Local Time and Standard Time",
+     "defs": [
+      "Local time is the time of a place based on the position of the Sun: it is 12 noon when the Sun is at its highest point.",
+      "Standard time is the official time used in a whole country or region."
+     ],
+     "items": [
+      [
+       "A. Local Time",
+       "The Earth turns 15° in 1 hour, and 1° in 4 minutes. So places east of us have a later local time, and places west have an earlier one.",
+       "time_line.png"
+      ],
+      [
+       "B. Standard Time",
+       "Standard time avoids confusion. Cameroon uses West Africa Time (WAT), which is GMT + 1, all year round."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TIME ZONES",
+    "qa": [
+     {
+      "img": "time_zones.png",
+      "kind": "map",
+      "q": "Study the time zones of the world.",
+      "full": true
+     },
+     {
+      "q": "How many main time zones are there, and how wide is each one?",
+      "a": "There are 24 main time zones, one for each hour. Each one is about 15° of longitude wide."
+     },
+     {
+      "q": "Why do we need time zones?",
+      "a": "Time zones give a clear system of time for travel, trade, communication and television all over the world."
+     }
+    ],
+    "sum": {
+     "title": "II. Time Zones",
+     "defs": [
+      "A time zone is an area of the Earth that uses the same standard time."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The world has 24 main time zones, each about 15° of longitude wide. Their borders often follow the borders of countries.",
+       "time_zones.png"
+      ],
+      [
+       "B. Reasons for Time Zones",
+       [
+        "– The Earth turns 360° in 24 hours, so time changes by 1 hour every 15°.",
+        "– Time zones make travel, trade and communication easier.",
+        "– They keep clock time close to the position of the Sun."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. COUNTRIES WITH MANY TIME ZONES",
+    "qa": [
+     {
+      "q": "Russia stretches over more than 150° of longitude. Why does it have 11 time zones?",
+      "a": "Russia is very wide from west to east. With one time only, it would be night in the east while it is morning in the west."
+     },
+     {
+      "q": "Name other countries with many time zones.",
+      "a": "The USA has six time zones for its 50 states, Canada has six, and Australia has three main time zones."
+     }
+    ],
+    "sum": {
+     "title": "III. Why Some Countries Have Many Time Zones",
+     "intro": "Some countries have several time zones:",
+     "items": [
+      [
+       "Reason and Examples",
+       [
+        "– These countries are very wide from west to east.",
+        "– Several time zones keep clock time close to daylight in each region.",
+        "– Examples: Russia (11 zones), the USA (6 zones for its 50 states), Canada (6), Australia (3).",
+        "– Note: China is very wide, but it chose only one time zone."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between local time and standard time?",
+    "Local time depends on the position of the Sun at a place; standard time is the official time of a country or region."
+   ],
+   [
+    "How many degrees of longitude make one hour?",
+    "15 degrees of longitude make one hour."
+   ],
+   [
+    "Why does Russia have many time zones?",
+    "Russia is very wide from west to east, so one time would not match daylight in all its regions."
+   ]
+  ],
+  "remediation": [
+   [
+    "The time based on the position of the Sun is ______ time.",
+    "The official time of a country is ______ time.",
+    "Cameroon uses West Africa Time, which is GMT + ______."
+   ],
+   [
+    "There are ______ main time zones.",
+    "One hour equals ______ ° of longitude.",
+    "One degree of longitude equals ______ minutes."
+   ]
+  ],
+  "remediationAnswers": "1. local 2. standard 3. 1 4. 24 5. 15 6. 4",
+  "homework": "Find the time in Garoua when it is 12 noon in London in winter (GMT). Then try: what time is it in a town at 45° E when it is 12 noon at 0°?",
+  "homeworkTag": "This prepares Practical Work 2: Calculation of Time and Date.",
+  "bilingual": [
+   [
+    "Local time",
+    "L'heure locale"
+   ],
+   [
+    "Standard time",
+    "L'heure légale"
+   ],
+   [
+    "Time zone",
+    "Le fuseau horaire"
+   ],
+   [
+    "Clock",
+    "L'horloge"
+   ],
+   [
+    "Noon",
+    "Midi"
+   ],
+   [
+    "Midnight",
+    "Minuit"
+   ],
+   [
+    "Ahead",
+    "En avance"
+   ],
+   [
+    "Behind",
+    "En retard"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: do not say \"WAT is one hour ahead of London\". WAT is GMT + 1 all year, but London uses GMT + 1 in summer (BST), so in summer London and Cameroon have the same time.",
+   "Checked: Brasília is GMT − 3 (no daylight saving since 2019), so 3 p.m. in Brasília is 7 p.m. in Cameroon. Russia has 11 time zones; the 50 US states have 6; Canada 6; mainland Australia 3.",
+   "The time zone map shows nominal 15° zones; real borders follow countries."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

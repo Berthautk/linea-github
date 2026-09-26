@@ -1,0 +1,628 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. THE FORMAL SECTOR\" | \"Question 1\" | [\"A company is registered with the state, pays taxes and declares its workers. What sector does it belong to?\"]",
+  "slide | \"I. THE FORMAL SECTOR\" | \"Answer\" | [\"It belongs to the formal sector.\"]",
+  "slide | \"I. THE FORMAL SECTOR\" | \"Question 2\" | [\"Give three examples of formal-sector employers in Garoua.\"]",
+  "slide | \"I. THE FORMAL SECTOR\" | \"Answer\" | [\"Examples are SODECOTON, CICAM, the banks, the hospitals, the schools and the ministries.\"]",
+  "slide | \"II. THE INFORMAL SECTOR\" | \"Question 1\" | [\"Street sellers, moto-taxi drivers and roadside mechanics are not registered and pay few taxes. What sector do they belong to?\"]",
+  "slide | \"II. THE INFORMAL SECTOR\" | \"Answer\" | [\"They belong to the informal sector.\"]",
+  "slide | \"II. THE INFORMAL SECTOR\" | \"Question 2\" | [\"Why do so many young people in Cameroon work in the informal sector?\"]",
+  "slide | \"II. THE INFORMAL SECTOR\" | \"Answer\" | [\"It is easy to start, needs little money or diplomas, and there are not enough jobs in the formal sector.\"]",
+  "slide | \"II. THE INFORMAL SECTOR\" | \"Question 3\" | [\"Give two problems of working in the informal sector.\"]",
+  "slide | \"II. THE INFORMAL SECTOR\" | \"Answer\" | [\"Workers have no contract, no pension and no protection in case of illness. Their income is irregular.\"]",
+  "sum | \"I. The Formal Sector (1/6)\" | \"DEFINITION\" | [\"The formal sector is the part of the economy made up of activities that are registered with the state, pay taxes and follow the law.\"]",
+  "sum | \"I. The Formal Sector (2/6)\" | [\"The formal sector has the following characteristics:\"]",
+  "sum | \"I. The Formal Sector (3/6)\" | \"A. Registration and Taxes\" | [\"Businesses are registered and pay taxes to the state.\"]",
+  "sum | \"I. The Formal Sector (4/6)\" | \"B. Contracts and Salaries\" | [\"Workers have contracts, regular salaries and fixed working hours.\"]",
+  "sum | \"I. The Formal Sector (5/6)\" | \"C. Social Protection\" | [\"Workers are declared to the social security fund (CNPS) and receive pensions and help in case of accidents.\"]",
+  "sum | \"I. The Formal Sector (6/6)\" | \"D. Examples\" | [\"SODECOTON, CICAM, banks, hospitals, schools and government services are part of the formal sector.\"]",
+  "sum | \"II. The Informal Sector (1/6)\" | \"DEFINITION\" | [\"The informal sector is the part of the economy made up of small activities that are not registered with the state and pay few or no taxes.\"]",
+  "sum | \"II. The Informal Sector (2/6)\" | [\"The informal sector has the following characteristics:\"]",
+  "sum | \"II. The Informal Sector (3/6)\" | \"A. Examples\" | [\"Street selling, moto-taxis, roadside repairs, small shops, hairdressing and small farming are informal activities.\"]",
+  "sum | \"II. The Informal Sector (4/6)\" | \"B. Importance\" | [\"It is easy to start and employs most workers in Cameroon, about nine workers out of ten.\"]",
+  "sum | \"II. The Informal Sector (5/6)\" | \"C. Problems\" | [\"Workers have no contract, no pension and no protection. Their income is irregular, and the state loses taxes.\"]",
+  "sum | \"II. The Informal Sector (6/6)\" | \"D. Solutions\" | [\"The state encourages workers to register their businesses and to join the CNPS, and offers training and small loans.\"]"
+ ],
+ "d": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S15_L5_P2_Formal_Informal_Sectors",
+  "part": 2,
+  "partTitle": "Formal and Informal Sectors of the Economy",
+  "notions": "Formal sector, informal sector, taxes, social security (CNPS), registration.",
+  "focus": "The formal and informal sectors of the economy: definitions, characteristics, advantages and problems.",
+  "competence": "Learners are able to tell whether a job around them belongs to the formal or informal sector and explain the advantages of registering a business.",
+  "objectives": [
+   "Define the formal and informal sectors.",
+   "Give the characteristics of each sector with examples from Cameroon.",
+   "Give the advantages and problems of the informal sector."
+  ],
+  "recall": [
+   "The economy has four sectors: primary, secondary, tertiary and quaternary.",
+   "The primary sector extracts, the secondary transforms, the tertiary serves and the quaternary researches."
+  ],
+  "recallNote": "Check the homework: difference between a company worker and a street worker.",
+  "situation": [
+   "Mr Bello works for a bank in Garoua. He has a contract, a salary every month and he will receive a pension. His neighbour Moussa is a moto-taxi driver: he has no contract, earns money every day, and has no pension.",
+   "One day Moussa falls ill and cannot work for a month. He has no money for his family. His son wonders why his father has no protection like Mr Bello."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa has no money and no protection when he is ill, because he works in the informal sector."
+   ],
+   [
+    "Give two differences between the work of Mr Bello and the work of Moussa.",
+    "Mr Bello has a contract and a monthly salary. Moussa has no contract and no pension."
+   ],
+   [
+    "What can Moussa do to be better protected?",
+    "He can register with the social security fund (CNPS) as a voluntary member, and save money regularly."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difference between formal and informal work, which are both very important in Cameroon.",
+  "parts": [
+   {
+    "sec": "I. THE FORMAL SECTOR",
+    "qa": [
+     {
+      "q": "A company is registered with the state, pays taxes and declares its workers. What sector does it belong to?",
+      "a": "It belongs to the formal sector."
+     },
+     {
+      "q": "Give three examples of formal-sector employers in Garoua.",
+      "a": "Examples are SODECOTON, CICAM, the banks, the hospitals, the schools and the ministries."
+     }
+    ],
+    "sum": {
+     "title": "I. The Formal Sector",
+     "defs": [
+      "The formal sector is the part of the economy made up of activities that are registered with the state, pay taxes and follow the law."
+     ],
+     "intro": "The formal sector has the following characteristics:",
+     "items": [
+      [
+       "A. Registration and Taxes",
+       "Businesses are registered and pay taxes to the state."
+      ],
+      [
+       "B. Contracts and Salaries",
+       "Workers have contracts, regular salaries and fixed working hours."
+      ],
+      [
+       "C. Social Protection",
+       "Workers are declared to the social security fund (CNPS) and receive pensions and help in case of accidents."
+      ],
+      [
+       "D. Examples",
+       "SODECOTON, CICAM, banks, hospitals, schools and government services are part of the formal sector."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE INFORMAL SECTOR",
+    "qa": [
+     {
+      "q": "Street sellers, moto-taxi drivers and roadside mechanics are not registered and pay few taxes. What sector do they belong to?",
+      "a": "They belong to the informal sector."
+     },
+     {
+      "q": "Why do so many young people in Cameroon work in the informal sector?",
+      "a": "It is easy to start, needs little money or diplomas, and there are not enough jobs in the formal sector."
+     },
+     {
+      "q": "Give two problems of working in the informal sector.",
+      "a": "Workers have no contract, no pension and no protection in case of illness. Their income is irregular."
+     }
+    ],
+    "sum": {
+     "title": "II. The Informal Sector",
+     "defs": [
+      "The informal sector is the part of the economy made up of small activities that are not registered with the state and pay few or no taxes."
+     ],
+     "intro": "The informal sector has the following characteristics:",
+     "items": [
+      [
+       "A. Examples",
+       "Street selling, moto-taxis, roadside repairs, small shops, hairdressing and small farming are informal activities."
+      ],
+      [
+       "B. Importance",
+       "It is easy to start and employs most workers in Cameroon, about nine workers out of ten."
+      ],
+      [
+       "C. Problems",
+       "Workers have no contract, no pension and no protection. Their income is irregular, and the state loses taxes."
+      ],
+      [
+       "D. Solutions",
+       "The state encourages workers to register their businesses and to join the CNPS, and offers training and small loans."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the informal sector? Give one example.",
+    "The informal sector is made up of small activities that are not registered and pay few taxes, like moto-taxi driving."
+   ],
+   [
+    "Give two advantages of working in the formal sector.",
+    "Workers have a regular salary and social protection, such as a pension."
+   ],
+   [
+    "Why does the state want informal workers to register?",
+    "It wants them to register so that they pay taxes and receive social protection."
+   ]
+  ],
+  "remediation": [
+   [
+    "Activities registered with the state belong to the ______ sector.",
+    "Activities not registered with the state belong to the ______ sector.",
+    "The social security fund of Cameroon is the ______."
+   ],
+   [
+    "A moto-taxi driver usually works in the ______ sector.",
+    "A bank worker works in the ______ sector.",
+    "The informal sector employs about ______ workers out of ten in Cameroon."
+   ]
+  ],
+  "remediationAnswers": "1. formal 2. informal 3. CNPS 4. informal 5. formal 6. nine",
+  "homework": "List four products of farming, fishing, forestry or mining found in the Garoua market, and say where each comes from.",
+  "homeworkTag": "This prepares Part 3: The Primary Sector.",
+  "bilingual": [
+   [
+    "Formal sector",
+    "Le secteur formel"
+   ],
+   [
+    "Informal sector",
+    "Le secteur informel"
+   ],
+   [
+    "Tax",
+    "L'impôt"
+   ],
+   [
+    "Salary",
+    "Le salaire"
+   ],
+   [
+    "Contract",
+    "Le contrat"
+   ],
+   [
+    "Pension",
+    "La retraite (pension)"
+   ],
+   [
+    "Street seller",
+    "Le vendeur ambulant"
+   ],
+   [
+    "Registration",
+    "L'immatriculation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Surveys of the National Institute of Statistics (INS, EESI) estimate that close to 90% of workers in Cameroon are in the informal sector."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Institut National de la Statistique (INS), Enquêtes sur l'Emploi et le Secteur Informel (EESI)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 2)",
+  "title": "The Sectors of the Economy: Formal and Informal Sectors of the Economy",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 2: Formal and Informal Sectors of the Economy.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 2: Formal and Informal Sectors of the Economy"
+ },
+ "end": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S15_L5_P2_Formal_Informal_Sectors",
+  "part": 2,
+  "partTitle": "Formal and Informal Sectors of the Economy",
+  "notions": "Formal sector, informal sector, taxes, social security (CNPS), registration.",
+  "focus": "The formal and informal sectors of the economy: definitions, characteristics, advantages and problems.",
+  "competence": "Learners are able to tell whether a job around them belongs to the formal or informal sector and explain the advantages of registering a business.",
+  "objectives": [
+   "Define the formal and informal sectors.",
+   "Give the characteristics of each sector with examples from Cameroon.",
+   "Give the advantages and problems of the informal sector."
+  ],
+  "recall": [
+   "The economy has four sectors: primary, secondary, tertiary and quaternary.",
+   "The primary sector extracts, the secondary transforms, the tertiary serves and the quaternary researches."
+  ],
+  "recallNote": "Check the homework: difference between a company worker and a street worker.",
+  "situation": [
+   "Mr Bello works for a bank in Garoua. He has a contract, a salary every month and he will receive a pension. His neighbour Moussa is a moto-taxi driver: he has no contract, earns money every day, and has no pension.",
+   "One day Moussa falls ill and cannot work for a month. He has no money for his family. His son wonders why his father has no protection like Mr Bello."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa has no money and no protection when he is ill, because he works in the informal sector."
+   ],
+   [
+    "Give two differences between the work of Mr Bello and the work of Moussa.",
+    "Mr Bello has a contract and a monthly salary. Moussa has no contract and no pension."
+   ],
+   [
+    "What can Moussa do to be better protected?",
+    "He can register with the social security fund (CNPS) as a voluntary member, and save money regularly."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difference between formal and informal work, which are both very important in Cameroon.",
+  "parts": [
+   {
+    "sec": "I. THE FORMAL SECTOR",
+    "qa": [
+     {
+      "q": "A company is registered with the state, pays taxes and declares its workers. What sector does it belong to?",
+      "a": "It belongs to the formal sector."
+     },
+     {
+      "q": "Give three examples of formal-sector employers in Garoua.",
+      "a": "Examples are SODECOTON, CICAM, the banks, the hospitals, the schools and the ministries."
+     }
+    ],
+    "sum": {
+     "title": "I. The Formal Sector",
+     "defs": [
+      "The formal sector is the part of the economy made up of activities that are registered with the state, pay taxes and follow the law."
+     ],
+     "intro": "The formal sector has the following characteristics:",
+     "items": [
+      [
+       "A. Registration and Taxes",
+       "Businesses are registered and pay taxes to the state."
+      ],
+      [
+       "B. Contracts and Salaries",
+       "Workers have contracts, regular salaries and fixed working hours."
+      ],
+      [
+       "C. Social Protection",
+       "Workers are declared to the social security fund (CNPS) and receive pensions and help in case of accidents."
+      ],
+      [
+       "D. Examples",
+       "SODECOTON, CICAM, banks, hospitals, schools and government services are part of the formal sector."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE INFORMAL SECTOR",
+    "qa": [
+     {
+      "q": "Street sellers, moto-taxi drivers and roadside mechanics are not registered and pay few taxes. What sector do they belong to?",
+      "a": "They belong to the informal sector."
+     },
+     {
+      "q": "Why do so many young people in Cameroon work in the informal sector?",
+      "a": "It is easy to start, needs little money or diplomas, and there are not enough jobs in the formal sector."
+     },
+     {
+      "q": "Give two problems of working in the informal sector.",
+      "a": "Workers have no contract, no pension and no protection in case of illness. Their income is irregular."
+     }
+    ],
+    "sum": {
+     "title": "II. The Informal Sector",
+     "defs": [
+      "The informal sector is the part of the economy made up of small activities that are not registered with the state and pay few or no taxes."
+     ],
+     "intro": "The informal sector has the following characteristics:",
+     "items": [
+      [
+       "A. Examples",
+       "Street selling, moto-taxis, roadside repairs, small shops, hairdressing and small farming are informal activities."
+      ],
+      [
+       "B. Importance",
+       "It is easy to start and employs most workers in Cameroon, about nine workers out of ten."
+      ],
+      [
+       "C. Problems",
+       "Workers have no contract, no pension and no protection. Their income is irregular, and the state loses taxes."
+      ],
+      [
+       "D. Solutions",
+       "The state encourages workers to register their businesses and to join the CNPS, and offers training and small loans."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the informal sector? Give one example.",
+    "The informal sector is made up of small activities that are not registered and pay few taxes, like moto-taxi driving."
+   ],
+   [
+    "Give two advantages of working in the formal sector.",
+    "Workers have a regular salary and social protection, such as a pension."
+   ],
+   [
+    "Why does the state want informal workers to register?",
+    "It wants them to register so that they pay taxes and receive social protection."
+   ]
+  ],
+  "remediation": [
+   [
+    "Activities registered with the state belong to the ______ sector.",
+    "Activities not registered with the state belong to the ______ sector.",
+    "The social security fund of Cameroon is the ______."
+   ],
+   [
+    "A moto-taxi driver usually works in the ______ sector.",
+    "A bank worker works in the ______ sector.",
+    "The informal sector employs about ______ workers out of ten in Cameroon."
+   ]
+  ],
+  "remediationAnswers": "1. formal 2. informal 3. CNPS 4. informal 5. formal 6. nine",
+  "homework": "List four products of farming, fishing, forestry or mining found in the Garoua market, and say where each comes from.",
+  "homeworkTag": "This prepares Part 3: The Primary Sector.",
+  "bilingual": [
+   [
+    "Formal sector",
+    "Le secteur formel"
+   ],
+   [
+    "Informal sector",
+    "Le secteur informel"
+   ],
+   [
+    "Tax",
+    "L'impôt"
+   ],
+   [
+    "Salary",
+    "Le salaire"
+   ],
+   [
+    "Contract",
+    "Le contrat"
+   ],
+   [
+    "Pension",
+    "La retraite (pension)"
+   ],
+   [
+    "Street seller",
+    "Le vendeur ambulant"
+   ],
+   [
+    "Registration",
+    "L'immatriculation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Surveys of the National Institute of Statistics (INS, EESI) estimate that close to 90% of workers in Cameroon are in the informal sector."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Institut National de la Statistique (INS), Enquêtes sur l'Emploi et le Secteur Informel (EESI)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 2)",
+  "title": "The Sectors of the Economy: Formal and Informal Sectors of the Economy",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 2: Formal and Informal Sectors of the Economy.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 2: Formal and Informal Sectors of the Economy",
+  "matter": "I. The Formal Sector: Registration and Taxes, Contracts and Salaries, Social Protection, Examples; II. The Informal Sector: Examples, Importance, Problems, Solutions."
+ },
+ "file": "S15_L5_P2_Formal_Informal_Sectors",
+ "sp": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S15_L5_P2_Formal_Informal_Sectors",
+  "part": 2,
+  "partTitle": "Formal and Informal Sectors of the Economy",
+  "notions": "Formal sector, informal sector, taxes, social security (CNPS), registration.",
+  "focus": "The formal and informal sectors of the economy: definitions, characteristics, advantages and problems.",
+  "competence": "Learners are able to tell whether a job around them belongs to the formal or informal sector and explain the advantages of registering a business.",
+  "objectives": [
+   "Define the formal and informal sectors.",
+   "Give the characteristics of each sector with examples from Cameroon.",
+   "Give the advantages and problems of the informal sector."
+  ],
+  "recall": [
+   "The economy has four sectors: primary, secondary, tertiary and quaternary.",
+   "The primary sector extracts, the secondary transforms, the tertiary serves and the quaternary researches."
+  ],
+  "recallNote": "Check the homework: difference between a company worker and a street worker.",
+  "situation": [
+   "Mr Bello works for a bank in Garoua. He has a contract, a salary every month and he will receive a pension. His neighbour Moussa is a moto-taxi driver: he has no contract, earns money every day, and has no pension.",
+   "One day Moussa falls ill and cannot work for a month. He has no money for his family. His son wonders why his father has no protection like Mr Bello."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Moussa has no money and no protection when he is ill, because he works in the informal sector."
+   ],
+   [
+    "Give two differences between the work of Mr Bello and the work of Moussa.",
+    "Mr Bello has a contract and a monthly salary. Moussa has no contract and no pension."
+   ],
+   [
+    "What can Moussa do to be better protected?",
+    "He can register with the social security fund (CNPS) as a voluntary member, and save money regularly."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difference between formal and informal work, which are both very important in Cameroon.",
+  "parts": [
+   {
+    "sec": "I. THE FORMAL SECTOR",
+    "qa": [
+     {
+      "q": "A company is registered with the state, pays taxes and declares its workers. What sector does it belong to?",
+      "a": "It belongs to the formal sector."
+     },
+     {
+      "q": "Give three examples of formal-sector employers in Garoua.",
+      "a": "Examples are SODECOTON, CICAM, the banks, the hospitals, the schools and the ministries."
+     }
+    ],
+    "sum": {
+     "title": "I. The Formal Sector",
+     "defs": [
+      "The formal sector is the part of the economy made up of activities that are registered with the state, pay taxes and follow the law."
+     ],
+     "intro": "The formal sector has the following characteristics:",
+     "items": [
+      [
+       "A. Registration and Taxes",
+       "Businesses are registered and pay taxes to the state."
+      ],
+      [
+       "B. Contracts and Salaries",
+       "Workers have contracts, regular salaries and fixed working hours."
+      ],
+      [
+       "C. Social Protection",
+       "Workers are declared to the social security fund (CNPS) and receive pensions and help in case of accidents."
+      ],
+      [
+       "D. Examples",
+       "SODECOTON, CICAM, banks, hospitals, schools and government services are part of the formal sector."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE INFORMAL SECTOR",
+    "qa": [
+     {
+      "q": "Street sellers, moto-taxi drivers and roadside mechanics are not registered and pay few taxes. What sector do they belong to?",
+      "a": "They belong to the informal sector."
+     },
+     {
+      "q": "Why do so many young people in Cameroon work in the informal sector?",
+      "a": "It is easy to start, needs little money or diplomas, and there are not enough jobs in the formal sector."
+     },
+     {
+      "q": "Give two problems of working in the informal sector.",
+      "a": "Workers have no contract, no pension and no protection in case of illness. Their income is irregular."
+     }
+    ],
+    "sum": {
+     "title": "II. The Informal Sector",
+     "defs": [
+      "The informal sector is the part of the economy made up of small activities that are not registered with the state and pay few or no taxes."
+     ],
+     "intro": "The informal sector has the following characteristics:",
+     "items": [
+      [
+       "A. Examples",
+       "Street selling, moto-taxis, roadside repairs, small shops, hairdressing and small farming are informal activities."
+      ],
+      [
+       "B. Importance",
+       "It is easy to start and employs most workers in Cameroon, about nine workers out of ten."
+      ],
+      [
+       "C. Problems",
+       "Workers have no contract, no pension and no protection. Their income is irregular, and the state loses taxes."
+      ],
+      [
+       "D. Solutions",
+       "The state encourages workers to register their businesses and to join the CNPS, and offers training and small loans."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the informal sector? Give one example.",
+    "The informal sector is made up of small activities that are not registered and pay few taxes, like moto-taxi driving."
+   ],
+   [
+    "Give two advantages of working in the formal sector.",
+    "Workers have a regular salary and social protection, such as a pension."
+   ],
+   [
+    "Why does the state want informal workers to register?",
+    "It wants them to register so that they pay taxes and receive social protection."
+   ]
+  ],
+  "remediation": [
+   [
+    "Activities registered with the state belong to the ______ sector.",
+    "Activities not registered with the state belong to the ______ sector.",
+    "The social security fund of Cameroon is the ______."
+   ],
+   [
+    "A moto-taxi driver usually works in the ______ sector.",
+    "A bank worker works in the ______ sector.",
+    "The informal sector employs about ______ workers out of ten in Cameroon."
+   ]
+  ],
+  "remediationAnswers": "1. formal 2. informal 3. CNPS 4. informal 5. formal 6. nine",
+  "homework": "List four products of farming, fishing, forestry or mining found in the Garoua market, and say where each comes from.",
+  "homeworkTag": "This prepares Part 3: The Primary Sector.",
+  "bilingual": [
+   [
+    "Formal sector",
+    "Le secteur formel"
+   ],
+   [
+    "Informal sector",
+    "Le secteur informel"
+   ],
+   [
+    "Tax",
+    "L'impôt"
+   ],
+   [
+    "Salary",
+    "Le salaire"
+   ],
+   [
+    "Contract",
+    "Le contrat"
+   ],
+   [
+    "Pension",
+    "La retraite (pension)"
+   ],
+   [
+    "Street seller",
+    "Le vendeur ambulant"
+   ],
+   [
+    "Registration",
+    "L'immatriculation"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Surveys of the National Institute of Statistics (INS, EESI) estimate that close to 90% of workers in Cameroon are in the informal sector."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Institut National de la Statistique (INS), Enquêtes sur l'Emploi et le Secteur Informel (EESI)."
+  ]
+ }
+}

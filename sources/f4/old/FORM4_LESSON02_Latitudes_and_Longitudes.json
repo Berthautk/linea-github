@@ -1,0 +1,502 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITION\" | [\"The geographical coordinates of a place are its latitude and its longitude. They give the exact position of the place on Earth.\"]",
+  "sum | \"x\" | \"How to Write Coordinates\" | [\"– We write the latitude first, then the longitude.\",\"– We always add the letter N or S, and E or W.\",\"– Example: Garoua is at about 9° N, 13° E.\",\"– Example: Yaoundé is at about 4° N, 11½° E.\"]",
+  "sum | \"III. Geographical Coordinates (1/2)\" | \"DEFINITION\" | [\"The geographical coordinates of a place are its latitude and its longitude. They give the exact position of the place on Earth.\"]",
+  "sum | \"III. Geographical Coordinates (2/2)\" | \"How to Write Coordinates\" | [\"– We write the latitude first, then the longitude.\",\"– We always add the letter N or S, and E or W.\",\"– Example: Garoua is at about 9° N, 13° E.\",\"– Example: Yaoundé is at about 4° N, 11½° E.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON02_Latitudes_and_Longitudes",
+  "lessonNo": 2,
+  "lessonName": "Earth Divisions: Latitudes and Longitudes",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Latitude, longitude, parallel, meridian, hemisphere, coordinates.",
+  "focus": "Latitudes and longitudes: definition, major lines, characteristics, differences; geographical coordinates.",
+  "competence": "Learners are able to read and write the geographical coordinates of a place, such as Garoua, on a map or on a phone.",
+  "objectives": [
+   "Define latitude and longitude.",
+   "Name the major lines of latitude and longitude.",
+   "Give the characteristics of latitudes and longitudes and their differences.",
+   "Write the geographical coordinates of a place."
+  ],
+  "recall": [
+   "The Earth is an oblate spheroid.",
+   "The Moon moves around the Earth and causes tides.",
+   "The Equator is the line around the middle of the Earth."
+  ],
+  "recallNote": "Check the homework: the numbers near Garoua on the map of Cameroon.",
+  "situation": [
+   "Ibrahim's cousin works in Douala. He sends a parcel to a client in Japan. On his phone map, he shows Ibrahim the location of Tokyo: \"35° N, 139° E\".",
+   "Ibrahim does not understand what these numbers and letters mean, or how two numbers can show one exact city in the whole world."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ibrahim does not understand the meaning of the numbers \"35° N, 139° E\"."
+   ],
+   [
+    "What do the letters N and E stand for?",
+    "N stands for North and E stands for East."
+   ],
+   [
+    "Where can Ibrahim see such numbers every day?",
+    "He can see them on maps, in atlases, on globes and in the map application of a phone."
+   ]
+  ],
+  "justification": "This lesson will help us to locate any place on Earth with two numbers: its latitude and its longitude.",
+  "parts": [
+   {
+    "sec": "I. LATITUDES",
+    "qa": [
+     {
+      "img": "lat_long.png",
+      "kind": "diagram",
+      "q": "Study the imaginary lines of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What does a latitude measure?",
+      "a": "A latitude measures the distance of a place north or south of the Equator, in degrees (°), from 0° to 90°."
+     },
+     {
+      "q": "Name the five major lines of latitude and give their values.",
+      "a": "They are the Equator (0°), the Tropic of Cancer (23½° N), the Tropic of Capricorn (23½° S), the Arctic Circle (66½° N) and the Antarctic Circle (66½° S)."
+     },
+     {
+      "q": "Do latitudes meet? Are they all the same length?",
+      "a": "No. Latitudes are parallel and never meet. They become shorter towards the poles; the Equator is the longest."
+     }
+    ],
+    "sum": {
+     "title": "I. Latitudes",
+     "defs": [
+      "A latitude (or parallel) is an imaginary line drawn around the Earth from west to east. It measures the distance of a place north or south of the Equator."
+     ],
+     "items": [
+      [
+       "A. Major Lines of Latitude",
+       [
+        "– The Equator (0°) divides the Earth into the Northern and Southern Hemispheres.",
+        "– The Tropic of Cancer (23½° N) and the Tropic of Capricorn (23½° S).",
+        "– The Arctic Circle (66½° N) and the Antarctic Circle (66½° S).",
+        "– The North Pole (90° N) and the South Pole (90° S)."
+       ]
+      ],
+      [
+       "B. Characteristics",
+       [
+        "– Latitudes are parallel and never meet.",
+        "– They are complete circles that become smaller towards the poles.",
+        "– They go from 0° at the Equator to 90° at the poles."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LONGITUDES",
+    "qa": [
+     {
+      "q": "What does a longitude measure?",
+      "a": "A longitude measures the distance of a place east or west of the Prime (Greenwich) Meridian, in degrees, from 0° to 180°."
+     },
+     {
+      "q": "Name the two major lines of longitude.",
+      "a": "They are the Prime Meridian (0°), which passes through Greenwich in London, and the 180° meridian, near which the International Date Line runs."
+     },
+     {
+      "q": "Give two differences between latitudes and longitudes.",
+      "a": "Latitudes are parallel and never meet, while longitudes meet at the poles. Latitudes have different lengths, while all longitudes have the same length."
+     }
+    ],
+    "sum": {
+     "title": "II. Longitudes",
+     "defs": [
+      "A longitude (or meridian) is an imaginary line drawn from the North Pole to the South Pole. It measures the distance of a place east or west of the Prime Meridian."
+     ],
+     "items": [
+      [
+       "A. Major Lines of Longitude",
+       [
+        "– The Prime (Greenwich) Meridian (0°) divides the Earth into the Eastern and Western Hemispheres.",
+        "– The 180° meridian is opposite the Prime Meridian. The International Date Line follows it."
+       ]
+      ],
+      [
+       "B. Characteristics",
+       [
+        "– Longitudes meet at the North and South Poles.",
+        "– They are half-circles of the same length.",
+        "– They go from 0° to 180° east and 180° west."
+       ]
+      ],
+      [
+       "C. Differences",
+       [
+        "– Latitudes run from west to east; longitudes run from north to south.",
+        "– Latitudes never meet; longitudes meet at the poles.",
+        "– Latitudes have different lengths; longitudes have the same length.",
+        "– Latitudes go up to 90°; longitudes go up to 180°."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. GEOGRAPHICAL COORDINATES",
+    "qa": [
+     {
+      "q": "Garoua is at about 9° N and 13° E. What does this mean?",
+      "a": "Garoua is about 9 degrees north of the Equator and about 13 degrees east of the Prime Meridian."
+     },
+     {
+      "q": "Which one do we write first: the latitude or the longitude?",
+      "a": "We always write the latitude first (N or S), and then the longitude (E or W). For example, Tokyo: 35° N, 139° E."
+     }
+    ],
+    "sum": {
+     "title": "III. Geographical Coordinates",
+     "defs": [
+      "The geographical coordinates of a place are its latitude and its longitude. They give the exact position of the place on Earth."
+     ],
+     "items": [
+      [
+       "How to Write Coordinates",
+       [
+        "– We write the latitude first, then the longitude.",
+        "– We always add the letter N or S, and E or W.",
+        "– Example: Garoua is at about 9° N, 13° E.",
+        "– Example: Yaoundé is at about 4° N, 11½° E."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a latitude and a longitude?",
+    "A latitude measures the distance north or south of the Equator; a longitude measures the distance east or west of the Prime Meridian."
+   ],
+   [
+    "Which is the longest line of latitude?",
+    "The Equator is the longest line of latitude."
+   ],
+   [
+    "Write the coordinates of Garoua.",
+    "Garoua is at about 9° N, 13° E."
+   ]
+  ],
+  "remediation": [
+   [
+    "The line of latitude 0° is the ______.",
+    "The line of longitude 0° is the ______ Meridian.",
+    "Longitudes meet at the ______."
+   ],
+   [
+    "The Tropic of Cancer is at ______ ° N.",
+    "In coordinates, we write the ______ first.",
+    "The latitude and longitude of a place are its geographical ______."
+   ]
+  ],
+  "remediationAnswers": "1. Equator 2. Prime (Greenwich) 3. poles 4. 23½ 5. latitude 6. coordinates",
+  "homework": "Watch or listen to news about a flight from Douala to Paris or to Dubai. Write the name of the route and ask an adult why aeroplanes do not always fly in a straight line on a flat map.",
+  "homeworkTag": "This prepares Lesson 3: Great Circles and the International Date Line.",
+  "bilingual": [
+   [
+    "Latitude",
+    "La latitude"
+   ],
+   [
+    "Longitude",
+    "La longitude"
+   ],
+   [
+    "Parallel",
+    "Le parallèle"
+   ],
+   [
+    "Meridian",
+    "Le méridien"
+   ],
+   [
+    "Equator",
+    "L'équateur"
+   ],
+   [
+    "Hemisphere",
+    "L'hémisphère"
+   ],
+   [
+    "Pole",
+    "Le pôle"
+   ],
+   [
+    "Coordinates",
+    "Les coordonnées"
+   ]
+  ],
+  "teacherNote": [
+   "Coordinates checked: Garoua about 9.3° N, 13.4° E; Yaoundé about 3.9° N, 11.5° E; Tokyo about 35.7° N, 139.7° E.",
+   "The Tropics are at 23.44° (about 23½°) and the Polar Circles at 66.56° (about 66½°)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 2",
+  "title": "Earth Divisions: Latitudes and Longitudes",
+  "sumTitle": "Earth Divisions: Latitudes and Longitudes",
+  "coverNote": "Good morning, class. Today we study Lesson 2: Earth Divisions: Latitudes and Longitudes.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 2: Earth Divisions: Latitudes and Longitudes",
+  "matter": "I. Latitudes: Major Lines of Latitude, Characteristics; II. Longitudes: Major Lines of Longitude, Characteristics, Differences; III. Geographical Coordinates: How to Write Coordinates."
+ },
+ "file": "FORM4_LESSON02_Latitudes_and_Longitudes",
+ "sp": {
+  "file": "FORM4_LESSON02_Latitudes_and_Longitudes",
+  "lessonNo": 2,
+  "lessonName": "Earth Divisions: Latitudes and Longitudes",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Latitude, longitude, parallel, meridian, hemisphere, coordinates.",
+  "focus": "Latitudes and longitudes: definition, major lines, characteristics, differences; geographical coordinates.",
+  "competence": "Learners are able to read and write the geographical coordinates of a place, such as Garoua, on a map or on a phone.",
+  "objectives": [
+   "Define latitude and longitude.",
+   "Name the major lines of latitude and longitude.",
+   "Give the characteristics of latitudes and longitudes and their differences.",
+   "Write the geographical coordinates of a place."
+  ],
+  "recall": [
+   "The Earth is an oblate spheroid.",
+   "The Moon moves around the Earth and causes tides.",
+   "The Equator is the line around the middle of the Earth."
+  ],
+  "recallNote": "Check the homework: the numbers near Garoua on the map of Cameroon.",
+  "situation": [
+   "Ibrahim's cousin works in Douala. He sends a parcel to a client in Japan. On his phone map, he shows Ibrahim the location of Tokyo: \"35° N, 139° E\".",
+   "Ibrahim does not understand what these numbers and letters mean, or how two numbers can show one exact city in the whole world."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ibrahim does not understand the meaning of the numbers \"35° N, 139° E\"."
+   ],
+   [
+    "What do the letters N and E stand for?",
+    "N stands for North and E stands for East."
+   ],
+   [
+    "Where can Ibrahim see such numbers every day?",
+    "He can see them on maps, in atlases, on globes and in the map application of a phone."
+   ]
+  ],
+  "justification": "This lesson will help us to locate any place on Earth with two numbers: its latitude and its longitude.",
+  "parts": [
+   {
+    "sec": "I. LATITUDES",
+    "qa": [
+     {
+      "img": "lat_long.png",
+      "kind": "diagram",
+      "q": "Study the imaginary lines of the Earth.",
+      "full": true
+     },
+     {
+      "q": "What does a latitude measure?",
+      "a": "A latitude measures the distance of a place north or south of the Equator, in degrees (°), from 0° to 90°."
+     },
+     {
+      "q": "Name the five major lines of latitude and give their values.",
+      "a": "They are the Equator (0°), the Tropic of Cancer (23½° N), the Tropic of Capricorn (23½° S), the Arctic Circle (66½° N) and the Antarctic Circle (66½° S)."
+     },
+     {
+      "q": "Do latitudes meet? Are they all the same length?",
+      "a": "No. Latitudes are parallel and never meet. They become shorter towards the poles; the Equator is the longest."
+     }
+    ],
+    "sum": {
+     "title": "I. Latitudes",
+     "defs": [
+      "A latitude (or parallel) is an imaginary line drawn around the Earth from west to east. It measures the distance of a place north or south of the Equator."
+     ],
+     "items": [
+      [
+       "A. Major Lines of Latitude",
+       [
+        "– The Equator (0°) divides the Earth into the Northern and Southern Hemispheres.",
+        "– The Tropic of Cancer (23½° N) and the Tropic of Capricorn (23½° S).",
+        "– The Arctic Circle (66½° N) and the Antarctic Circle (66½° S).",
+        "– The North Pole (90° N) and the South Pole (90° S)."
+       ]
+      ],
+      [
+       "B. Characteristics",
+       [
+        "– Latitudes are parallel and never meet.",
+        "– They are complete circles that become smaller towards the poles.",
+        "– They go from 0° at the Equator to 90° at the poles."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LONGITUDES",
+    "qa": [
+     {
+      "q": "What does a longitude measure?",
+      "a": "A longitude measures the distance of a place east or west of the Prime (Greenwich) Meridian, in degrees, from 0° to 180°."
+     },
+     {
+      "q": "Name the two major lines of longitude.",
+      "a": "They are the Prime Meridian (0°), which passes through Greenwich in London, and the 180° meridian, near which the International Date Line runs."
+     },
+     {
+      "q": "Give two differences between latitudes and longitudes.",
+      "a": "Latitudes are parallel and never meet, while longitudes meet at the poles. Latitudes have different lengths, while all longitudes have the same length."
+     }
+    ],
+    "sum": {
+     "title": "II. Longitudes",
+     "defs": [
+      "A longitude (or meridian) is an imaginary line drawn from the North Pole to the South Pole. It measures the distance of a place east or west of the Prime Meridian."
+     ],
+     "items": [
+      [
+       "A. Major Lines of Longitude",
+       [
+        "– The Prime (Greenwich) Meridian (0°) divides the Earth into the Eastern and Western Hemispheres.",
+        "– The 180° meridian is opposite the Prime Meridian. The International Date Line follows it."
+       ]
+      ],
+      [
+       "B. Characteristics",
+       [
+        "– Longitudes meet at the North and South Poles.",
+        "– They are half-circles of the same length.",
+        "– They go from 0° to 180° east and 180° west."
+       ]
+      ],
+      [
+       "C. Differences",
+       [
+        "– Latitudes run from west to east; longitudes run from north to south.",
+        "– Latitudes never meet; longitudes meet at the poles.",
+        "– Latitudes have different lengths; longitudes have the same length.",
+        "– Latitudes go up to 90°; longitudes go up to 180°."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. GEOGRAPHICAL COORDINATES",
+    "qa": [
+     {
+      "q": "Garoua is at about 9° N and 13° E. What does this mean?",
+      "a": "Garoua is about 9 degrees north of the Equator and about 13 degrees east of the Prime Meridian."
+     },
+     {
+      "q": "Which one do we write first: the latitude or the longitude?",
+      "a": "We always write the latitude first (N or S), and then the longitude (E or W). For example, Tokyo: 35° N, 139° E."
+     }
+    ],
+    "sum": {
+     "title": "III. Geographical Coordinates",
+     "defs": [
+      "The geographical coordinates of a place are its latitude and its longitude. They give the exact position of the place on Earth."
+     ],
+     "items": [
+      [
+       "How to Write Coordinates",
+       [
+        "– We write the latitude first, then the longitude.",
+        "– We always add the letter N or S, and E or W.",
+        "– Example: Garoua is at about 9° N, 13° E.",
+        "– Example: Yaoundé is at about 4° N, 11½° E."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a latitude and a longitude?",
+    "A latitude measures the distance north or south of the Equator; a longitude measures the distance east or west of the Prime Meridian."
+   ],
+   [
+    "Which is the longest line of latitude?",
+    "The Equator is the longest line of latitude."
+   ],
+   [
+    "Write the coordinates of Garoua.",
+    "Garoua is at about 9° N, 13° E."
+   ]
+  ],
+  "remediation": [
+   [
+    "The line of latitude 0° is the ______.",
+    "The line of longitude 0° is the ______ Meridian.",
+    "Longitudes meet at the ______."
+   ],
+   [
+    "The Tropic of Cancer is at ______ ° N.",
+    "In coordinates, we write the ______ first.",
+    "The latitude and longitude of a place are its geographical ______."
+   ]
+  ],
+  "remediationAnswers": "1. Equator 2. Prime (Greenwich) 3. poles 4. 23½ 5. latitude 6. coordinates",
+  "homework": "Watch or listen to news about a flight from Douala to Paris or to Dubai. Write the name of the route and ask an adult why aeroplanes do not always fly in a straight line on a flat map.",
+  "homeworkTag": "This prepares Lesson 3: Great Circles and the International Date Line.",
+  "bilingual": [
+   [
+    "Latitude",
+    "La latitude"
+   ],
+   [
+    "Longitude",
+    "La longitude"
+   ],
+   [
+    "Parallel",
+    "Le parallèle"
+   ],
+   [
+    "Meridian",
+    "Le méridien"
+   ],
+   [
+    "Equator",
+    "L'équateur"
+   ],
+   [
+    "Hemisphere",
+    "L'hémisphère"
+   ],
+   [
+    "Pole",
+    "Le pôle"
+   ],
+   [
+    "Coordinates",
+    "Les coordonnées"
+   ]
+  ],
+  "teacherNote": [
+   "Coordinates checked: Garoua about 9.3° N, 13.4° E; Yaoundé about 3.9° N, 11.5° E; Tokyo about 35.7° N, 139.7° E.",
+   "The Tropics are at 23.44° (about 23½°) and the Polar Circles at 66.56° (about 66½°)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

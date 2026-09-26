@@ -1,0 +1,452 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"People protect the coast in two ways:\"]",
+  "sumImage | \"x\" | \"A. Hard Engineering\" | [\"– Sea walls: concrete walls that block the waves.\",\"– Groynes: low walls across the beach that trap sand.\",\"– Rock armour: big rocks piled at the foot of cliffs and roads.\"] | \"coastal_defence.png\"",
+  "sum | \"x\" | \"B. Soft Engineering\" | [\"– Beach nourishment: adding sand to widen the beach.\",\"– Planting trees and mangroves to hold the soil and reduce waves.\",\"– Control of sand extraction and of building near the shore.\",\"– Cleaning beaches and reducing pollution.\"]",
+  "sum | \"III. Coastal Management Strategies (1/5)\" | [\"People protect the coast in two ways:\"]",
+  "sumImage | \"III. Coastal Management Strategies (2/5)\" | \"A. Hard Engineering\" | [\"– Sea walls: concrete walls that block the waves.\",\"– Groynes: low walls across the beach that trap sand.\",\"– Rock armour: big rocks piled at the foot of cliffs and roads.\"] | \"coastal_defence.png\"",
+  "sum | \"III. Coastal Management Strategies (4/5)\" | \"B. Soft Engineering\" | [\"– Beach nourishment: adding sand to widen the beach.\",\"– Planting trees and mangroves to hold the soil and reduce waves.\",\"– Control of sand extraction and of building near the shore.\",\"– Cleaning beaches and reducing pollution.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON26_Impact_of_Wave_Action_on_Coastal_Development",
+  "lessonNo": 26,
+  "lessonName": "Impact of Wave Action on Human Development along Coastal Areas",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "notions": "Resource, hazard, coastal management.",
+  "focus": "Importance of coasts (resources); coastal hazards; coastal management strategies.",
+  "competence": "Learners are able to explain why coasts are important for Cameroon, and to suggest simple ways to protect them.",
+  "objectives": [
+   "Explain the importance of coasts.",
+   "Describe the main coastal hazards.",
+   "Explain coastal management strategies."
+  ],
+  "recall": [
+   "Longshore drift moves sand along the coast.",
+   "Beaches, spits and bars are built by wave deposition.",
+   "Destructive waves erode the coast."
+  ],
+  "recallNote": "Check the homework: imported goods and the ports through which they entered.",
+  "situation": [
+   "In the market of Garoua, Idrissa sees phones, fabrics, rice and many other goods from abroad. Most of them arrived by ship at the ports of Douala or Kribi.",
+   "Douala is on the coast, where the Wouri River meets the Atlantic Ocean. This is good for trade, but the city also suffers from coastal erosion and floods. Idrissa wonders what the benefits and the dangers of a coast are, and how to protect it."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Idrissa does not know the benefits and the dangers of the coast, and how to protect it."
+   ],
+   [
+    "Through which ports do imported goods enter Cameroon?",
+    "They enter through the ports of Douala and Kribi."
+   ],
+   [
+    "How can we help to protect the coast even from Garoua?",
+    "We can reduce plastic waste that reaches rivers and the sea, and support the planting of mangroves and trees."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the importance of coasts, their dangers, and how people protect them.",
+  "parts": [
+   {
+    "sec": "I. IMPORTANCE OF COASTS",
+    "qa": [
+     {
+      "q": "Why are ports important for Cameroon and for the North Region?",
+      "a": "Most imports and exports pass through the ports of Douala and Kribi. Goods for Garoua, Chad and the Central African Republic also pass through them."
+     },
+     {
+      "q": "Give three other resources of the coast.",
+      "a": "Fish and shrimps, oil and gas offshore, and beaches that attract tourists."
+     }
+    ],
+    "sum": {
+     "title": "I. Importance of Coasts (Resources)",
+     "intro": "Coasts are very important for human development:",
+     "items": [
+      [
+       "The Resources",
+       [
+        "– Ports and trade: Douala and the deep-sea port of Kribi.",
+        "– Fishing: fish, shrimps and crabs.",
+        "– Oil and gas offshore, near Limbe and Kribi.",
+        "– Tourism: beaches of Kribi and Limbe, Lobé Falls.",
+        "– Sand and gravel for building; flat land for towns and industries.",
+        "– Mangroves: wood, fish nurseries and protection of the coast."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. COASTAL HAZARDS",
+    "qa": [
+     {
+      "q": "What is coastal erosion, and what are its effects?",
+      "a": "Coastal erosion is the wearing away of the coast by waves. It destroys beaches, houses and roads, as at Kribi and Limbe."
+     },
+     {
+      "q": "Why is sea-level rise a danger for Douala?",
+      "a": "Douala is low and flat. As the sea rises with global warming, more of the city and the Wouri estuary can be flooded."
+     }
+    ],
+    "sum": {
+     "title": "II. Coastal Hazards",
+     "defs": [
+      "A coastal hazard is a natural danger that threatens people and property along the coast."
+     ],
+     "items": [
+      [
+       "The Hazards",
+       [
+        "– Coastal erosion: the waves wear away beaches, cliffs, roads and houses.",
+        "– Coastal flooding: storms and high tides flood low areas.",
+        "– Sea-level rise with global warming threatens low cities such as Douala.",
+        "– Pollution by oil, plastics and waste harms fish and mangroves."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. COASTAL MANAGEMENT STRATEGIES",
+    "qa": [
+     {
+      "img": "coastal_defence.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "How do a sea wall and groynes protect the coast?",
+      "a": "A sea wall blocks the waves and sends them back. Groynes are low walls built across the beach; they trap the sand moved by longshore drift and keep the beach wide.",
+      "split": 5
+     },
+     {
+      "q": "Give two soft strategies to protect the coast.",
+      "a": "Beach nourishment (adding sand to the beach), and planting mangroves and trees that hold the soil and reduce the waves."
+     }
+    ],
+    "sum": {
+     "title": "III. Coastal Management Strategies",
+     "intro": "People protect the coast in two ways:",
+     "items": [
+      [
+       "A. Hard Engineering",
+       [
+        "– Sea walls: concrete walls that block the waves.",
+        "– Groynes: low walls across the beach that trap sand.",
+        "– Rock armour: big rocks piled at the foot of cliffs and roads."
+       ],
+       "coastal_defence.png"
+      ],
+      [
+       "B. Soft Engineering",
+       [
+        "– Beach nourishment: adding sand to widen the beach.",
+        "– Planting trees and mangroves to hold the soil and reduce waves.",
+        "– Control of sand extraction and of building near the shore.",
+        "– Cleaning beaches and reducing pollution."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two resources of the coast of Cameroon.",
+    "Ports for trade (Douala, Kribi) and fishing (also oil and tourism)."
+   ],
+   [
+    "Why is sea-level rise dangerous for Douala?",
+    "Douala is low and flat, so a rise of the sea can flood large parts of the city."
+   ],
+   [
+    "How do mangroves protect the coast?",
+    "Their roots hold the mud and reduce the force of the waves."
+   ]
+  ],
+  "remediation": [
+   [
+    "The two main ports of Cameroon are Douala and ______.",
+    "The wearing away of the coast is coastal ______.",
+    "A rise of the level of the sea is caused by global ______."
+   ],
+   [
+    "A concrete wall that blocks waves is a sea ______.",
+    "Low walls across a beach that trap sand are ______.",
+    "Adding sand to a beach is beach ______."
+   ]
+  ],
+  "remediationAnswers": "1. Kribi 2. erosion 3. warming 4. wall 5. groynes 6. nourishment",
+  "homework": "On a map of Africa in your atlas, find the Sahara, the Sahel and the Kalahari. Write in which part of Africa each one is located.",
+  "homeworkTag": "This prepares Lesson 27: Semi-Arid and Desert Landscapes.",
+  "bilingual": [
+   [
+    "Port",
+    "Le port"
+   ],
+   [
+    "Coastal erosion",
+    "L'érosion côtière"
+   ],
+   [
+    "Sea wall",
+    "La digue / le mur de protection"
+   ],
+   [
+    "Groyne",
+    "L'épi"
+   ],
+   [
+    "Mangrove",
+    "La mangrove"
+   ],
+   [
+    "Sea-level rise",
+    "L'élévation du niveau de la mer"
+   ],
+   [
+    "Estuary",
+    "L'estuaire"
+   ],
+   [
+    "Pollution",
+    "La pollution"
+   ]
+  ],
+  "teacherNote": [
+   "As agreed earlier, \"managed retreat\" in the source notes is replaced by simpler strategies: planting trees and mangroves, controlling sand extraction and building near the shore.",
+   "Checked: the deep-sea port of Kribi began operations in 2018. Goods for Chad and the Central African Republic transit through Douala.",
+   "This is the last lesson of the coast sub-topic. The next lesson starts hot desert landscapes."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 26",
+  "title": "Impact of Wave Action on Human Development along Coastal Areas",
+  "sumTitle": "Impact of Wave Action on Human Development along Coastal Areas",
+  "coverNote": "Good morning, class. Today we study Lesson 26: Impact of Wave Action on Human Development along Coastal Areas.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 26: Impact of Wave Action on Human Development along Coastal Areas",
+  "matter": "I. Importance of Coasts (Resources): The Resources; II. Coastal Hazards: The Hazards; III. Coastal Management Strategies: Hard Engineering, Soft Engineering."
+ },
+ "file": "FORM4_LESSON26_Impact_of_Wave_Action_on_Coastal_Development",
+ "sp": {
+  "file": "FORM4_LESSON26_Impact_of_Wave_Action_on_Coastal_Development",
+  "lessonNo": 26,
+  "lessonName": "Impact of Wave Action on Human Development along Coastal Areas",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "notions": "Resource, hazard, coastal management.",
+  "focus": "Importance of coasts (resources); coastal hazards; coastal management strategies.",
+  "competence": "Learners are able to explain why coasts are important for Cameroon, and to suggest simple ways to protect them.",
+  "objectives": [
+   "Explain the importance of coasts.",
+   "Describe the main coastal hazards.",
+   "Explain coastal management strategies."
+  ],
+  "recall": [
+   "Longshore drift moves sand along the coast.",
+   "Beaches, spits and bars are built by wave deposition.",
+   "Destructive waves erode the coast."
+  ],
+  "recallNote": "Check the homework: imported goods and the ports through which they entered.",
+  "situation": [
+   "In the market of Garoua, Idrissa sees phones, fabrics, rice and many other goods from abroad. Most of them arrived by ship at the ports of Douala or Kribi.",
+   "Douala is on the coast, where the Wouri River meets the Atlantic Ocean. This is good for trade, but the city also suffers from coastal erosion and floods. Idrissa wonders what the benefits and the dangers of a coast are, and how to protect it."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Idrissa does not know the benefits and the dangers of the coast, and how to protect it."
+   ],
+   [
+    "Through which ports do imported goods enter Cameroon?",
+    "They enter through the ports of Douala and Kribi."
+   ],
+   [
+    "How can we help to protect the coast even from Garoua?",
+    "We can reduce plastic waste that reaches rivers and the sea, and support the planting of mangroves and trees."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the importance of coasts, their dangers, and how people protect them.",
+  "parts": [
+   {
+    "sec": "I. IMPORTANCE OF COASTS",
+    "qa": [
+     {
+      "q": "Why are ports important for Cameroon and for the North Region?",
+      "a": "Most imports and exports pass through the ports of Douala and Kribi. Goods for Garoua, Chad and the Central African Republic also pass through them."
+     },
+     {
+      "q": "Give three other resources of the coast.",
+      "a": "Fish and shrimps, oil and gas offshore, and beaches that attract tourists."
+     }
+    ],
+    "sum": {
+     "title": "I. Importance of Coasts (Resources)",
+     "intro": "Coasts are very important for human development:",
+     "items": [
+      [
+       "The Resources",
+       [
+        "– Ports and trade: Douala and the deep-sea port of Kribi.",
+        "– Fishing: fish, shrimps and crabs.",
+        "– Oil and gas offshore, near Limbe and Kribi.",
+        "– Tourism: beaches of Kribi and Limbe, Lobé Falls.",
+        "– Sand and gravel for building; flat land for towns and industries.",
+        "– Mangroves: wood, fish nurseries and protection of the coast."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. COASTAL HAZARDS",
+    "qa": [
+     {
+      "q": "What is coastal erosion, and what are its effects?",
+      "a": "Coastal erosion is the wearing away of the coast by waves. It destroys beaches, houses and roads, as at Kribi and Limbe."
+     },
+     {
+      "q": "Why is sea-level rise a danger for Douala?",
+      "a": "Douala is low and flat. As the sea rises with global warming, more of the city and the Wouri estuary can be flooded."
+     }
+    ],
+    "sum": {
+     "title": "II. Coastal Hazards",
+     "defs": [
+      "A coastal hazard is a natural danger that threatens people and property along the coast."
+     ],
+     "items": [
+      [
+       "The Hazards",
+       [
+        "– Coastal erosion: the waves wear away beaches, cliffs, roads and houses.",
+        "– Coastal flooding: storms and high tides flood low areas.",
+        "– Sea-level rise with global warming threatens low cities such as Douala.",
+        "– Pollution by oil, plastics and waste harms fish and mangroves."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. COASTAL MANAGEMENT STRATEGIES",
+    "qa": [
+     {
+      "img": "coastal_defence.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "How do a sea wall and groynes protect the coast?",
+      "a": "A sea wall blocks the waves and sends them back. Groynes are low walls built across the beach; they trap the sand moved by longshore drift and keep the beach wide.",
+      "split": 5
+     },
+     {
+      "q": "Give two soft strategies to protect the coast.",
+      "a": "Beach nourishment (adding sand to the beach), and planting mangroves and trees that hold the soil and reduce the waves."
+     }
+    ],
+    "sum": {
+     "title": "III. Coastal Management Strategies",
+     "intro": "People protect the coast in two ways:",
+     "items": [
+      [
+       "A. Hard Engineering",
+       [
+        "– Sea walls: concrete walls that block the waves.",
+        "– Groynes: low walls across the beach that trap sand.",
+        "– Rock armour: big rocks piled at the foot of cliffs and roads."
+       ],
+       "coastal_defence.png"
+      ],
+      [
+       "B. Soft Engineering",
+       [
+        "– Beach nourishment: adding sand to widen the beach.",
+        "– Planting trees and mangroves to hold the soil and reduce waves.",
+        "– Control of sand extraction and of building near the shore.",
+        "– Cleaning beaches and reducing pollution."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two resources of the coast of Cameroon.",
+    "Ports for trade (Douala, Kribi) and fishing (also oil and tourism)."
+   ],
+   [
+    "Why is sea-level rise dangerous for Douala?",
+    "Douala is low and flat, so a rise of the sea can flood large parts of the city."
+   ],
+   [
+    "How do mangroves protect the coast?",
+    "Their roots hold the mud and reduce the force of the waves."
+   ]
+  ],
+  "remediation": [
+   [
+    "The two main ports of Cameroon are Douala and ______.",
+    "The wearing away of the coast is coastal ______.",
+    "A rise of the level of the sea is caused by global ______."
+   ],
+   [
+    "A concrete wall that blocks waves is a sea ______.",
+    "Low walls across a beach that trap sand are ______.",
+    "Adding sand to a beach is beach ______."
+   ]
+  ],
+  "remediationAnswers": "1. Kribi 2. erosion 3. warming 4. wall 5. groynes 6. nourishment",
+  "homework": "On a map of Africa in your atlas, find the Sahara, the Sahel and the Kalahari. Write in which part of Africa each one is located.",
+  "homeworkTag": "This prepares Lesson 27: Semi-Arid and Desert Landscapes.",
+  "bilingual": [
+   [
+    "Port",
+    "Le port"
+   ],
+   [
+    "Coastal erosion",
+    "L'érosion côtière"
+   ],
+   [
+    "Sea wall",
+    "La digue / le mur de protection"
+   ],
+   [
+    "Groyne",
+    "L'épi"
+   ],
+   [
+    "Mangrove",
+    "La mangrove"
+   ],
+   [
+    "Sea-level rise",
+    "L'élévation du niveau de la mer"
+   ],
+   [
+    "Estuary",
+    "L'estuaire"
+   ],
+   [
+    "Pollution",
+    "La pollution"
+   ]
+  ],
+  "teacherNote": [
+   "As agreed earlier, \"managed retreat\" in the source notes is replaced by simpler strategies: planting trees and mangroves, controlling sand extraction and building near the shore.",
+   "Checked: the deep-sea port of Kribi began operations in 2018. Goods for Chad and the Central African Republic transit through Douala.",
+   "This is the last lesson of the coast sub-topic. The next lesson starts hot desert landscapes."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

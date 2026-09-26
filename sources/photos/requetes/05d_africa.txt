@@ -1,0 +1,6 @@
+suez3::Suez Canal ship container
+suez4::ship Suez canal desert
+forest3::tropical rainforest canopy aerial Africa
+forest4::Congo rainforest river aerial
+benue3::Benue river Nigeria
+benue4::wide river sandbanks Africa dry season

@@ -1,0 +1,12 @@
+suez::Suez Canal ship aerial
+gibraltar::Strait of Gibraltar from space
+kili::Kilimanjaro
+nile::Nile river Egypt felucca
+adamawa::Adamawa plateau Cameroon
+teakenya::tea plantation Kenya highlands
+rift::Great Rift Valley Kenya escarpment
+atlas::Atlas mountains snow Morocco
+mtcam::Mount Cameroon plantation
+rainforest::Congo rainforest aerial
+benue::Benue river Garoua
+chad::Lake Chad shrinking satellite

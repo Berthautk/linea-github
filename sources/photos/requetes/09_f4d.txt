@@ -1,0 +1,22 @@
+kribi::Kribi beach waves Cameroon
+bigwaves::storm waves crashing coast
+gentlewaves::gentle waves sandy beach
+notch::wave-cut notch cliff platform
+stack::sea stack arch coast
+arch::sea arch Durdle Door
+spit::sand spit aerial coast
+tombolo::tombolo island sand
+douala::Douala port containers ship
+kribiport::Kribi deep sea port
+coasterosion::coastal erosion house collapsing beach
+groynes::groynes beach wooden
+seawall::sea wall waves concrete
+pedestal::mushroom rock desert wind erosion
+rhumsiki::Rhumsiki Cameroon
+yardang::yardangs desert
+sandwall::sand drift wall desert
+barchan::barchan dune aerial
+seif::linear dunes Namib aerial
+solar::Noor Ouarzazate solar plant
+oilfield::oil field Sahara Algeria
+fetchwater::women carrying water Sahel

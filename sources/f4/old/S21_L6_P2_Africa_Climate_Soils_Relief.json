@@ -1,0 +1,742 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "imageQ | \"I. CLIMATE\" | \"Question 1\" | \"Look at the map. What climate is found around the Equator, and what climate is found around the tropics?\" | \"africa_climate.png\"",
+  "slide | \"I. CLIMATE\" | \"Answer\" | [\"Around the Equator, the climate is equatorial: hot and wet all year. Around the tropics, there are hot deserts: the Sahara, the Kalahari and the Namib.\"]",
+  "imageQ | \"I. CLIMATE\" | \"Question 2\" | \"What do you notice about the climatic zones north and south of the Equator?\" | \"africa_climate.png\"",
+  "slide | \"I. CLIMATE\" | \"Answer\" | [\"The climatic zones are repeated in the same order north and south of the Equator: equatorial, tropical, semi-arid, desert and Mediterranean.\"]",
+  "slide | \"I. CLIMATE\" | \"Question 3\" | [\"Nairobi is almost on the Equator, but it is cool. Why?\"]",
+  "slide | \"I. CLIMATE\" | \"Answer\" | [\"Nairobi is at a high altitude, about 1,700 m. Temperatures fall as altitude increases.\"]",
+  "imageQ | \"II. RELIEF\" | \"Question 1\" | \"Look at the relief map. Which part of Africa is higher: the north-west or the south-east?\" | \"africa_relief.png\"",
+  "slide | \"II. RELIEF\" | \"Answer\" | [\"The south and east are higher. We speak of \\\"High Africa\\\" in the south and east, and \\\"Low Africa\\\" in the north and west.\"]",
+  "slide | \"II. RELIEF\" | \"Question 2\" | [\"In East Africa, the land has sunk between two lines of faults, forming a long, deep valley with lakes. What is it called?\"]",
+  "slide | \"II. RELIEF\" | \"Answer\" | [\"It is called the Great Rift Valley. It runs from Ethiopia to Mozambique and contains lakes such as Tanganyika and Malawi.\"]",
+  "slide | \"II. RELIEF\" | \"Question 3\" | [\"Mount Cameroon and Kilimanjaro were formed by volcanoes. Which mountains of Africa were formed by folding?\"]",
+  "slide | \"II. RELIEF\" | \"Answer\" | [\"The Atlas Mountains in the north-west and the Cape Ranges in the far south were formed by folding.\"]",
+  "slide | \"III. SOILS\" | \"Question 1\" | [\"Farmers on the slopes of Mount Cameroon grow bananas, cocoa and tea on very fertile soils. Where do these soils come from?\"]",
+  "slide | \"III. SOILS\" | \"Answer\" | [\"These soils come from volcanic rocks. Volcanic soils are very fertile.\"]",
+  "sum | \"I. Climate (1/5)\" | [\"The climate of Africa is mostly hot, because most of Africa lies between the tropics. Its zones are repeated north and south of the Equator:\"]",
+  "sumImage | \"I. Climate (2/5)\" | \"A. Equatorial Climate\" | \"Around the Equator, it is hot and wet all year, as in the Congo Basin and southern Cameroon.\" | \"africa_climate.png\"",
+  "sum | \"I. Climate (3/5)\" | \"B. Tropical Climate\" | [\"Between the equatorial zone and the deserts, there is a wet season and a dry season, as in Garoua.\"]",
+  "sum | \"I. Climate (4/5)\" | \"C. Semi-Arid and Desert Climates\" | [\"Near the tropics, rainfall is low or very low, as in the Sahel, the Sahara, the Kalahari and the Namib.\"]",
+  "sum | \"I. Climate (5/5)\" | \"D. Mediterranean and Mountain Climates\" | [\"The far north and far south have hot, dry summers and mild, wet winters. Highlands are cooler, as in Ethiopia and Kenya.\"]",
+  "sum | \"II. Relief (1/5)\" | [\"The main relief features of Africa are the following:\"]",
+  "sumImage | \"II. Relief (2/5)\" | \"A. Plateaux\" | \"Most of Africa is a plateau. High Africa lies in the south and east, and Low Africa in the north and west.\" | \"africa_relief.png\"",
+  "sum | \"II. Relief (3/5)\" | \"B. Basins\" | [\"Large low basins lie inside the plateau: the Congo, Chad, Niger and Kalahari Basins.\"]",
+  "sum | \"II. Relief (4/5)\" | \"C. Mountains\" | [\"Fold mountains: the Atlas and the Cape Ranges. Volcanic mountains: Kilimanjaro, Mount Kenya and Mount Cameroon.\"]",
+  "sum | \"II. Relief (5/5)\" | \"D. The Great Rift Valley\" | [\"The Great Rift Valley is a long, deep valley in East Africa, formed by faulting. It contains many lakes.\"]",
+  "sum | \"III. Soils (1/4)\" | [\"The main soils of Africa are the following:\"]",
+  "sum | \"III. Soils (2/4)\" | \"A. Ferrallitic and Ferruginous Soils\" | [\"Red ferrallitic soils are found in the equatorial zone, and ferruginous soils in the savanna. They are leached and only fairly fertile.\"]",
+  "sum | \"III. Soils (3/4)\" | \"B. Desert Soils\" | [\"Desert soils are sandy or stony, poor in humus and often salty.\"]",
+  "sum | \"III. Soils (4/4)\" | \"C. Volcanic and Alluvial Soils\" | [\"Volcanic soils (Mount Cameroon, Ethiopia) and alluvial soils (Nile valley and delta) are very fertile.\"]"
+ ],
+ "d": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Economic Geography — Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S21_L6_P2_Africa_Climate_Soils_Relief",
+  "part": 2,
+  "partTitle": "Climate, Soils and Relief of Africa",
+  "notions": "Climatic zone, relief, plateau, basin, Rift Valley, fold mountains, volcanic mountains, ferrallitic and ferruginous soils.",
+  "focus": "Climate, soils and relief of Africa.",
+  "competence": "Learners are able to relate the climate and relief of a place in Africa to the activities that people practise there.",
+  "objectives": [
+   "Describe the main climatic zones of Africa.",
+   "Describe the main relief features of Africa.",
+   "Describe the main soils of Africa."
+  ],
+  "recall": [
+   "Africa lies between 37°N and 35°S, and the Equator crosses its middle.",
+   "It is a plateau continent, with Kilimanjaro as its highest point and the Nile as its longest river."
+  ],
+  "recallNote": "Check the homework: the wettest and driest towns of Cameroon.",
+  "situation": [
+   "Douala receives about 4,000 mm of rain per year, Garoua about 1,000 mm and Maroua about 800 mm. On the Adamawa plateau, the air is cooler than in Garoua.",
+   "Nadia wonders why the climate changes so much from one part of Cameroon, and of Africa, to another."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nadia does not understand why the climate changes so much from one part of Africa to another."
+   ],
+   [
+    "Which town is the wettest and which is the driest?",
+    "Douala is the wettest, with about 4,000 mm. Maroua is the driest, with about 800 mm."
+   ],
+   [
+    "How can Nadia find the reasons for these differences?",
+    "She can compare the latitude, the distance from the sea and the altitude of each town on a map."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate, relief and soils of Africa, which influence where people live and what they do.",
+  "parts": [
+   {
+    "sec": "I. CLIMATE",
+    "qa": [
+     {
+      "img": "africa_climate.png",
+      "kind": "map",
+      "q": "Look at the map. What climate is found around the Equator, and what climate is found around the tropics?",
+      "a": "Around the Equator, the climate is equatorial: hot and wet all year. Around the tropics, there are hot deserts: the Sahara, the Kalahari and the Namib.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_climate.png",
+      "title": "Question 2",
+      "q": "What do you notice about the climatic zones north and south of the Equator?",
+      "a": "The climatic zones are repeated in the same order north and south of the Equator: equatorial, tropical, semi-arid, desert and Mediterranean.",
+      "split": 5.6
+     },
+     {
+      "q": "Nairobi is almost on the Equator, but it is cool. Why?",
+      "a": "Nairobi is at a high altitude, about 1,700 m. Temperatures fall as altitude increases."
+     }
+    ],
+    "sum": {
+     "title": "I. Climate",
+     "intro": "The climate of Africa is mostly hot, because most of Africa lies between the tropics. Its zones are repeated north and south of the Equator:",
+     "items": [
+      [
+       "A. Equatorial Climate",
+       "Around the Equator, it is hot and wet all year, as in the Congo Basin and southern Cameroon.",
+       "africa_climate.png"
+      ],
+      [
+       "B. Tropical Climate",
+       "Between the equatorial zone and the deserts, there is a wet season and a dry season, as in Garoua."
+      ],
+      [
+       "C. Semi-Arid and Desert Climates",
+       "Near the tropics, rainfall is low or very low, as in the Sahel, the Sahara, the Kalahari and the Namib."
+      ],
+      [
+       "D. Mediterranean and Mountain Climates",
+       "The far north and far south have hot, dry summers and mild, wet winters. Highlands are cooler, as in Ethiopia and Kenya."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. RELIEF",
+    "qa": [
+     {
+      "img": "africa_relief.png",
+      "kind": "map",
+      "q": "Look at the relief map. Which part of Africa is higher: the north-west or the south-east?",
+      "a": "The south and east are higher. We speak of \"High Africa\" in the south and east, and \"Low Africa\" in the north and west.",
+      "split": 5.6
+     },
+     {
+      "q": "In East Africa, the land has sunk between two lines of faults, forming a long, deep valley with lakes. What is it called?",
+      "a": "It is called the Great Rift Valley. It runs from Ethiopia to Mozambique and contains lakes such as Tanganyika and Malawi."
+     },
+     {
+      "q": "Mount Cameroon and Kilimanjaro were formed by volcanoes. Which mountains of Africa were formed by folding?",
+      "a": "The Atlas Mountains in the north-west and the Cape Ranges in the far south were formed by folding."
+     }
+    ],
+    "sum": {
+     "title": "II. Relief",
+     "intro": "The main relief features of Africa are the following:",
+     "items": [
+      [
+       "A. Plateaux",
+       "Most of Africa is a plateau. High Africa lies in the south and east, and Low Africa in the north and west.",
+       "africa_relief.png"
+      ],
+      [
+       "B. Basins",
+       "Large low basins lie inside the plateau: the Congo, Chad, Niger and Kalahari Basins."
+      ],
+      [
+       "C. Mountains",
+       "Fold mountains: the Atlas and the Cape Ranges. Volcanic mountains: Kilimanjaro, Mount Kenya and Mount Cameroon."
+      ],
+      [
+       "D. The Great Rift Valley",
+       "The Great Rift Valley is a long, deep valley in East Africa, formed by faulting. It contains many lakes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. SOILS",
+    "qa": [
+     {
+      "q": "Farmers on the slopes of Mount Cameroon grow bananas, cocoa and tea on very fertile soils. Where do these soils come from?",
+      "a": "These soils come from volcanic rocks. Volcanic soils are very fertile."
+     }
+    ],
+    "sum": {
+     "title": "III. Soils",
+     "intro": "The main soils of Africa are the following:",
+     "items": [
+      [
+       "A. Ferrallitic and Ferruginous Soils",
+       "Red ferrallitic soils are found in the equatorial zone, and ferruginous soils in the savanna. They are leached and only fairly fertile."
+      ],
+      [
+       "B. Desert Soils",
+       "Desert soils are sandy or stony, poor in humus and often salty."
+      ],
+      [
+       "C. Volcanic and Alluvial Soils",
+       "Volcanic soils (Mount Cameroon, Ethiopia) and alluvial soils (Nile valley and delta) are very fertile."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the climate of Africa mostly hot?",
+    "It is mostly hot because most of Africa lies between the two tropics."
+   ],
+   [
+    "What is the Great Rift Valley?",
+    "The Great Rift Valley is a long, deep valley in East Africa, formed by faulting, with many lakes."
+   ],
+   [
+    "Name two types of very fertile soils in Africa.",
+    "Volcanic soils and alluvial soils are very fertile."
+   ]
+  ],
+  "remediation": [
+   [
+    "The climate that is hot and wet all year is the ______ climate.",
+    "Temperatures fall as ______ increases.",
+    "The fold mountains of north-west Africa are the ______."
+   ],
+   [
+    "The long valley of East Africa formed by faulting is the Great ______ Valley.",
+    "The soils of Mount Cameroon are ______ soils.",
+    "The soils of the Nile valley are ______ soils."
+   ]
+  ],
+  "remediationAnswers": "1. equatorial 2. altitude 3. Atlas 4. Rift 5. volcanic 6. alluvial",
+  "homework": "Look at a map of Africa and write the names of three big rivers. Say into which ocean or sea each one flows.",
+  "homeworkTag": "This prepares Part 3: Vegetation and Drainage of Africa.",
+  "bilingual": [
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Relief",
+    "Le relief"
+   ],
+   [
+    "Plateau",
+    "Le plateau"
+   ],
+   [
+    "Basin",
+    "La cuvette (le bassin)"
+   ],
+   [
+    "Rift Valley",
+    "La vallée du Rift"
+   ],
+   [
+    "Volcano",
+    "Le volcan"
+   ],
+   [
+    "Fertile",
+    "Fertile"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: parts II and III, board summary and evaluation.",
+   "Mount Cameroon is about 4,040 m high; it is the highest mountain in West and Central Africa and an active volcano (last eruptions 1999 and 2000)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 6 (PART 2)",
+  "title": "Africa: Climate, Soils and Relief of Africa",
+  "sumTitle": "Africa",
+  "coverNote": "Good morning, class. Today we study Africa, part 2: Climate, Soils and Relief of Africa.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 6: Africa — Part 2: Climate, Soils and Relief of Africa"
+ },
+ "end": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Economic Geography — Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S21_L6_P2_Africa_Climate_Soils_Relief",
+  "part": 2,
+  "partTitle": "Climate, Soils and Relief of Africa",
+  "notions": "Climatic zone, relief, plateau, basin, Rift Valley, fold mountains, volcanic mountains, ferrallitic and ferruginous soils.",
+  "focus": "Climate, soils and relief of Africa.",
+  "competence": "Learners are able to relate the climate and relief of a place in Africa to the activities that people practise there.",
+  "objectives": [
+   "Describe the main climatic zones of Africa.",
+   "Describe the main relief features of Africa.",
+   "Describe the main soils of Africa."
+  ],
+  "recall": [
+   "Africa lies between 37°N and 35°S, and the Equator crosses its middle.",
+   "It is a plateau continent, with Kilimanjaro as its highest point and the Nile as its longest river."
+  ],
+  "recallNote": "Check the homework: the wettest and driest towns of Cameroon.",
+  "situation": [
+   "Douala receives about 4,000 mm of rain per year, Garoua about 1,000 mm and Maroua about 800 mm. On the Adamawa plateau, the air is cooler than in Garoua.",
+   "Nadia wonders why the climate changes so much from one part of Cameroon, and of Africa, to another."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nadia does not understand why the climate changes so much from one part of Africa to another."
+   ],
+   [
+    "Which town is the wettest and which is the driest?",
+    "Douala is the wettest, with about 4,000 mm. Maroua is the driest, with about 800 mm."
+   ],
+   [
+    "How can Nadia find the reasons for these differences?",
+    "She can compare the latitude, the distance from the sea and the altitude of each town on a map."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate, relief and soils of Africa, which influence where people live and what they do.",
+  "parts": [
+   {
+    "sec": "I. CLIMATE",
+    "qa": [
+     {
+      "img": "africa_climate.png",
+      "kind": "map",
+      "q": "Look at the map. What climate is found around the Equator, and what climate is found around the tropics?",
+      "a": "Around the Equator, the climate is equatorial: hot and wet all year. Around the tropics, there are hot deserts: the Sahara, the Kalahari and the Namib.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_climate.png",
+      "title": "Question 2",
+      "q": "What do you notice about the climatic zones north and south of the Equator?",
+      "a": "The climatic zones are repeated in the same order north and south of the Equator: equatorial, tropical, semi-arid, desert and Mediterranean.",
+      "split": 5.6
+     },
+     {
+      "q": "Nairobi is almost on the Equator, but it is cool. Why?",
+      "a": "Nairobi is at a high altitude, about 1,700 m. Temperatures fall as altitude increases."
+     }
+    ],
+    "sum": {
+     "title": "I. Climate",
+     "intro": "The climate of Africa is mostly hot, because most of Africa lies between the tropics. Its zones are repeated north and south of the Equator:",
+     "items": [
+      [
+       "A. Equatorial Climate",
+       "Around the Equator, it is hot and wet all year, as in the Congo Basin and southern Cameroon.",
+       "africa_climate.png"
+      ],
+      [
+       "B. Tropical Climate",
+       "Between the equatorial zone and the deserts, there is a wet season and a dry season, as in Garoua."
+      ],
+      [
+       "C. Semi-Arid and Desert Climates",
+       "Near the tropics, rainfall is low or very low, as in the Sahel, the Sahara, the Kalahari and the Namib."
+      ],
+      [
+       "D. Mediterranean and Mountain Climates",
+       "The far north and far south have hot, dry summers and mild, wet winters. Highlands are cooler, as in Ethiopia and Kenya."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. RELIEF",
+    "qa": [
+     {
+      "img": "africa_relief.png",
+      "kind": "map",
+      "q": "Look at the relief map. Which part of Africa is higher: the north-west or the south-east?",
+      "a": "The south and east are higher. We speak of \"High Africa\" in the south and east, and \"Low Africa\" in the north and west.",
+      "split": 5.6
+     },
+     {
+      "q": "In East Africa, the land has sunk between two lines of faults, forming a long, deep valley with lakes. What is it called?",
+      "a": "It is called the Great Rift Valley. It runs from Ethiopia to Mozambique and contains lakes such as Tanganyika and Malawi."
+     },
+     {
+      "q": "Mount Cameroon and Kilimanjaro were formed by volcanoes. Which mountains of Africa were formed by folding?",
+      "a": "The Atlas Mountains in the north-west and the Cape Ranges in the far south were formed by folding."
+     }
+    ],
+    "sum": {
+     "title": "II. Relief",
+     "intro": "The main relief features of Africa are the following:",
+     "items": [
+      [
+       "A. Plateaux",
+       "Most of Africa is a plateau. High Africa lies in the south and east, and Low Africa in the north and west.",
+       "africa_relief.png"
+      ],
+      [
+       "B. Basins",
+       "Large low basins lie inside the plateau: the Congo, Chad, Niger and Kalahari Basins."
+      ],
+      [
+       "C. Mountains",
+       "Fold mountains: the Atlas and the Cape Ranges. Volcanic mountains: Kilimanjaro, Mount Kenya and Mount Cameroon."
+      ],
+      [
+       "D. The Great Rift Valley",
+       "The Great Rift Valley is a long, deep valley in East Africa, formed by faulting. It contains many lakes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. SOILS",
+    "qa": [
+     {
+      "q": "Farmers on the slopes of Mount Cameroon grow bananas, cocoa and tea on very fertile soils. Where do these soils come from?",
+      "a": "These soils come from volcanic rocks. Volcanic soils are very fertile."
+     }
+    ],
+    "sum": {
+     "title": "III. Soils",
+     "intro": "The main soils of Africa are the following:",
+     "items": [
+      [
+       "A. Ferrallitic and Ferruginous Soils",
+       "Red ferrallitic soils are found in the equatorial zone, and ferruginous soils in the savanna. They are leached and only fairly fertile."
+      ],
+      [
+       "B. Desert Soils",
+       "Desert soils are sandy or stony, poor in humus and often salty."
+      ],
+      [
+       "C. Volcanic and Alluvial Soils",
+       "Volcanic soils (Mount Cameroon, Ethiopia) and alluvial soils (Nile valley and delta) are very fertile."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the climate of Africa mostly hot?",
+    "It is mostly hot because most of Africa lies between the two tropics."
+   ],
+   [
+    "What is the Great Rift Valley?",
+    "The Great Rift Valley is a long, deep valley in East Africa, formed by faulting, with many lakes."
+   ],
+   [
+    "Name two types of very fertile soils in Africa.",
+    "Volcanic soils and alluvial soils are very fertile."
+   ]
+  ],
+  "remediation": [
+   [
+    "The climate that is hot and wet all year is the ______ climate.",
+    "Temperatures fall as ______ increases.",
+    "The fold mountains of north-west Africa are the ______."
+   ],
+   [
+    "The long valley of East Africa formed by faulting is the Great ______ Valley.",
+    "The soils of Mount Cameroon are ______ soils.",
+    "The soils of the Nile valley are ______ soils."
+   ]
+  ],
+  "remediationAnswers": "1. equatorial 2. altitude 3. Atlas 4. Rift 5. volcanic 6. alluvial",
+  "homework": "Look at a map of Africa and write the names of three big rivers. Say into which ocean or sea each one flows.",
+  "homeworkTag": "This prepares Part 3: Vegetation and Drainage of Africa.",
+  "bilingual": [
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Relief",
+    "Le relief"
+   ],
+   [
+    "Plateau",
+    "Le plateau"
+   ],
+   [
+    "Basin",
+    "La cuvette (le bassin)"
+   ],
+   [
+    "Rift Valley",
+    "La vallée du Rift"
+   ],
+   [
+    "Volcano",
+    "Le volcan"
+   ],
+   [
+    "Fertile",
+    "Fertile"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: parts II and III, board summary and evaluation.",
+   "Mount Cameroon is about 4,040 m high; it is the highest mountain in West and Central Africa and an active volcano (last eruptions 1999 and 2000)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 6 (PART 2)",
+  "title": "Africa: Climate, Soils and Relief of Africa",
+  "sumTitle": "Africa",
+  "coverNote": "Good morning, class. Today we study Africa, part 2: Climate, Soils and Relief of Africa.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 6: Africa — Part 2: Climate, Soils and Relief of Africa",
+  "matter": "I. Climate: Equatorial Climate, Tropical Climate, Semi-Arid and Desert Climates, Mediterranean and Mountain Climates; II. Relief: Plateaux, Basins, Mountains, The Great Rift Valley; III. Soils: Ferrallitic and Ferruginous Soils, Desert Soils, Volcanic and Alluvial Soils."
+ },
+ "file": "S21_L6_P2_Africa_Climate_Soils_Relief",
+ "sp": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S21_L6_P2_Africa_Climate_Soils_Relief",
+  "part": 2,
+  "partTitle": "Climate, Soils and Relief of Africa",
+  "notions": "Climatic zone, relief, plateau, basin, Rift Valley, fold mountains, volcanic mountains, ferrallitic and ferruginous soils.",
+  "focus": "Climate, soils and relief of Africa.",
+  "competence": "Learners are able to relate the climate and relief of a place in Africa to the activities that people practise there.",
+  "objectives": [
+   "Describe the main climatic zones of Africa.",
+   "Describe the main relief features of Africa.",
+   "Describe the main soils of Africa."
+  ],
+  "recall": [
+   "Africa lies between 37°N and 35°S, and the Equator crosses its middle.",
+   "It is a plateau continent, with Kilimanjaro as its highest point and the Nile as its longest river."
+  ],
+  "recallNote": "Check the homework: the wettest and driest towns of Cameroon.",
+  "situation": [
+   "Douala receives about 4,000 mm of rain per year, Garoua about 1,000 mm and Maroua about 800 mm. On the Adamawa plateau, the air is cooler than in Garoua.",
+   "Nadia wonders why the climate changes so much from one part of Cameroon, and of Africa, to another."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Nadia does not understand why the climate changes so much from one part of Africa to another."
+   ],
+   [
+    "Which town is the wettest and which is the driest?",
+    "Douala is the wettest, with about 4,000 mm. Maroua is the driest, with about 800 mm."
+   ],
+   [
+    "How can Nadia find the reasons for these differences?",
+    "She can compare the latitude, the distance from the sea and the altitude of each town on a map."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate, relief and soils of Africa, which influence where people live and what they do.",
+  "parts": [
+   {
+    "sec": "I. CLIMATE",
+    "qa": [
+     {
+      "img": "africa_climate.png",
+      "kind": "map",
+      "q": "Look at the map. What climate is found around the Equator, and what climate is found around the tropics?",
+      "a": "Around the Equator, the climate is equatorial: hot and wet all year. Around the tropics, there are hot deserts: the Sahara, the Kalahari and the Namib.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_climate.png",
+      "title": "Question 2",
+      "q": "What do you notice about the climatic zones north and south of the Equator?",
+      "a": "The climatic zones are repeated in the same order north and south of the Equator: equatorial, tropical, semi-arid, desert and Mediterranean.",
+      "split": 5.6
+     },
+     {
+      "q": "Nairobi is almost on the Equator, but it is cool. Why?",
+      "a": "Nairobi is at a high altitude, about 1,700 m. Temperatures fall as altitude increases."
+     }
+    ],
+    "sum": {
+     "title": "I. Climate",
+     "intro": "The climate of Africa is mostly hot, because most of Africa lies between the tropics. Its zones are repeated north and south of the Equator:",
+     "items": [
+      [
+       "A. Equatorial Climate",
+       "Around the Equator, it is hot and wet all year, as in the Congo Basin and southern Cameroon.",
+       "africa_climate.png"
+      ],
+      [
+       "B. Tropical Climate",
+       "Between the equatorial zone and the deserts, there is a wet season and a dry season, as in Garoua."
+      ],
+      [
+       "C. Semi-Arid and Desert Climates",
+       "Near the tropics, rainfall is low or very low, as in the Sahel, the Sahara, the Kalahari and the Namib."
+      ],
+      [
+       "D. Mediterranean and Mountain Climates",
+       "The far north and far south have hot, dry summers and mild, wet winters. Highlands are cooler, as in Ethiopia and Kenya."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. RELIEF",
+    "qa": [
+     {
+      "img": "africa_relief.png",
+      "kind": "map",
+      "q": "Look at the relief map. Which part of Africa is higher: the north-west or the south-east?",
+      "a": "The south and east are higher. We speak of \"High Africa\" in the south and east, and \"Low Africa\" in the north and west.",
+      "split": 5.6
+     },
+     {
+      "q": "In East Africa, the land has sunk between two lines of faults, forming a long, deep valley with lakes. What is it called?",
+      "a": "It is called the Great Rift Valley. It runs from Ethiopia to Mozambique and contains lakes such as Tanganyika and Malawi."
+     },
+     {
+      "q": "Mount Cameroon and Kilimanjaro were formed by volcanoes. Which mountains of Africa were formed by folding?",
+      "a": "The Atlas Mountains in the north-west and the Cape Ranges in the far south were formed by folding."
+     }
+    ],
+    "sum": {
+     "title": "II. Relief",
+     "intro": "The main relief features of Africa are the following:",
+     "items": [
+      [
+       "A. Plateaux",
+       "Most of Africa is a plateau. High Africa lies in the south and east, and Low Africa in the north and west.",
+       "africa_relief.png"
+      ],
+      [
+       "B. Basins",
+       "Large low basins lie inside the plateau: the Congo, Chad, Niger and Kalahari Basins."
+      ],
+      [
+       "C. Mountains",
+       "Fold mountains: the Atlas and the Cape Ranges. Volcanic mountains: Kilimanjaro, Mount Kenya and Mount Cameroon."
+      ],
+      [
+       "D. The Great Rift Valley",
+       "The Great Rift Valley is a long, deep valley in East Africa, formed by faulting. It contains many lakes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. SOILS",
+    "qa": [
+     {
+      "q": "Farmers on the slopes of Mount Cameroon grow bananas, cocoa and tea on very fertile soils. Where do these soils come from?",
+      "a": "These soils come from volcanic rocks. Volcanic soils are very fertile."
+     }
+    ],
+    "sum": {
+     "title": "III. Soils",
+     "intro": "The main soils of Africa are the following:",
+     "items": [
+      [
+       "A. Ferrallitic and Ferruginous Soils",
+       "Red ferrallitic soils are found in the equatorial zone, and ferruginous soils in the savanna. They are leached and only fairly fertile."
+      ],
+      [
+       "B. Desert Soils",
+       "Desert soils are sandy or stony, poor in humus and often salty."
+      ],
+      [
+       "C. Volcanic and Alluvial Soils",
+       "Volcanic soils (Mount Cameroon, Ethiopia) and alluvial soils (Nile valley and delta) are very fertile."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the climate of Africa mostly hot?",
+    "It is mostly hot because most of Africa lies between the two tropics."
+   ],
+   [
+    "What is the Great Rift Valley?",
+    "The Great Rift Valley is a long, deep valley in East Africa, formed by faulting, with many lakes."
+   ],
+   [
+    "Name two types of very fertile soils in Africa.",
+    "Volcanic soils and alluvial soils are very fertile."
+   ]
+  ],
+  "remediation": [
+   [
+    "The climate that is hot and wet all year is the ______ climate.",
+    "Temperatures fall as ______ increases.",
+    "The fold mountains of north-west Africa are the ______."
+   ],
+   [
+    "The long valley of East Africa formed by faulting is the Great ______ Valley.",
+    "The soils of Mount Cameroon are ______ soils.",
+    "The soils of the Nile valley are ______ soils."
+   ]
+  ],
+  "remediationAnswers": "1. equatorial 2. altitude 3. Atlas 4. Rift 5. volcanic 6. alluvial",
+  "homework": "Look at a map of Africa and write the names of three big rivers. Say into which ocean or sea each one flows.",
+  "homeworkTag": "This prepares Part 3: Vegetation and Drainage of Africa.",
+  "bilingual": [
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Relief",
+    "Le relief"
+   ],
+   [
+    "Plateau",
+    "Le plateau"
+   ],
+   [
+    "Basin",
+    "La cuvette (le bassin)"
+   ],
+   [
+    "Rift Valley",
+    "La vallée du Rift"
+   ],
+   [
+    "Volcano",
+    "Le volcan"
+   ],
+   [
+    "Fertile",
+    "Fertile"
+   ],
+   [
+    "Altitude",
+    "L'altitude"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: parts II and III, board summary and evaluation.",
+   "Mount Cameroon is about 4,040 m high; it is the highest mountain in West and Central Africa and an active volcano (last eruptions 1999 and 2000)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ]
+ }
+}

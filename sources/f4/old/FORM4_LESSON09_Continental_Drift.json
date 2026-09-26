@@ -1,0 +1,408 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Wegener gave four main types of evidence:\"]",
+  "sumImage | \"x\" | \"A. The Jigsaw Fit\" | \"The coasts of Africa and South America fit together like the pieces of a puzzle.\" | \"jigsaw_fit.png\"",
+  "sum | \"x\" | \"B. Fossil Evidence\" | [\"The same fossils, such as the reptile Mesosaurus and the plant Glossopteris, are found on continents now separated by oceans.\"]",
+  "sum | \"x\" | \"C. Rocks and Mountains\" | [\"Rocks of the same type and age, and old mountain ranges, match on both sides of the Atlantic Ocean.\"]",
+  "sum | \"x\" | \"D. Glacial Evidence\" | [\"Marks of ancient ice sheets are found in hot lands such as southern Africa, India and Australia.\"]",
+  "sum | \"II. Evidence for Continental Drift (1/5)\" | [\"Wegener gave four main types of evidence:\"]",
+  "sumImage | \"II. Evidence for Continental Drift (2/5)\" | \"A. The Jigsaw Fit\" | \"The coasts of Africa and South America fit together like the pieces of a puzzle.\" | \"jigsaw_fit.png\"",
+  "sum | \"II. Evidence for Continental Drift (3/5)\" | \"B. Fossil Evidence\" | [\"The same fossils, such as the reptile Mesosaurus and the plant Glossopteris, are found on continents now separated by oceans.\"]",
+  "sum | \"II. Evidence for Continental Drift (4/5)\" | \"C. Rocks and Mountains\" | [\"Rocks of the same type and age, and old mountain ranges, match on both sides of the Atlantic Ocean.\"]",
+  "sum | \"II. Evidence for Continental Drift (5/5)\" | \"D. Glacial Evidence\" | [\"Marks of ancient ice sheets are found in hot lands such as southern Africa, India and Australia.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON09_Continental_Drift",
+  "lessonNo": 9,
+  "lessonName": "The Theory of Continental Drift",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Internal Structure of the Earth",
+  "notions": "Continental drift, Pangaea, Laurasia, Gondwanaland.",
+  "focus": "The theory of continental drift: main idea, illustration and evidence.",
+  "competence": "Learners are able to explain, with map evidence, that the continents have moved, and to read the shape of the continents on a world map.",
+  "objectives": [
+   "State the theory of continental drift.",
+   "Describe the break-up of Pangaea.",
+   "Explain the evidence for continental drift."
+  ],
+  "recall": [
+   "The crust is broken and lies on the very hot mantle.",
+   "The mantle flows very slowly.",
+   "Fossils are found mainly in sedimentary rocks."
+  ],
+  "recallNote": "Check the homework: the fit of Africa and South America.",
+  "situation": [
+   "Djibrilla looks at a world map in his atlas. He notices that the west coast of Africa and the east coast of South America look like two pieces of a puzzle.",
+   "The Atlantic Ocean separates the two continents by thousands of kilometres. Djibrilla wonders if they were once joined together."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Djibrilla wonders if Africa and South America were once joined together."
+   ],
+   [
+    "Which ocean separates Africa and South America?",
+    "The Atlantic Ocean separates them."
+   ],
+   [
+    "How can Djibrilla test his idea?",
+    "He can cut out the two continents from a map and fit them together, and read about the evidence found by scientists."
+   ]
+  ],
+  "justification": "This lesson will help us to understand that the continents were once joined and have moved slowly to their present positions.",
+  "parts": [
+   {
+    "sec": "I. THE THEORY",
+    "qa": [
+     {
+      "q": "What is the theory of continental drift, and who proposed it?",
+      "a": "It is the theory that the continents were once joined in one great landmass and have slowly moved apart. It was proposed by Alfred Wegener, a German scientist, in 1912."
+     },
+     {
+      "q": "What name did Wegener give to the single great landmass?",
+      "a": "He called it Pangaea, which means \"all lands\". It was surrounded by one great ocean called Panthalassa."
+     },
+     {
+      "q": "How did Pangaea break up?",
+      "a": "About 200 million years ago, it split into Laurasia in the north and Gondwanaland in the south. Later, these broke into the continents of today."
+     }
+    ],
+    "sum": {
+     "title": "I. The Theory of Continental Drift",
+     "defs": [
+      "Continental drift is the theory that the continents were once joined in one landmass, Pangaea, and have slowly moved apart. It was proposed by Alfred Wegener in 1912."
+     ],
+     "items": [
+      [
+       "Illustration: the Break-up of Pangaea",
+       [
+        "– About 200 million years ago, Pangaea began to break up.",
+        "– It split into Laurasia (north) and Gondwanaland (south).",
+        "– Africa, South America, India, Australia and Antarctica came from Gondwanaland.",
+        "– The continents are still moving a few centimetres each year."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. EVIDENCE",
+    "qa": [
+     {
+      "img": "jigsaw_fit.png",
+      "kind": "map",
+      "title": "Question 1",
+      "q": "Look at the map. What does it show about Africa and South America?",
+      "a": "The coasts of Africa and South America fit together like the pieces of a jigsaw puzzle. This suggests that they were once joined.",
+      "split": 5.2
+     },
+     {
+      "q": "Fossils of Mesosaurus, a small freshwater reptile, are found in Brazil and in southern Africa. What does this prove?",
+      "a": "This small reptile could not swim across the ocean. So the two continents were joined when it lived."
+     },
+     {
+      "q": "Scratches of ancient ice sheets are found in hot lands like southern Africa and India. What does this show?",
+      "a": "It shows that these lands were once joined together near the South Pole, where there was ice."
+     }
+    ],
+    "sum": {
+     "title": "II. Evidence for Continental Drift",
+     "intro": "Wegener gave four main types of evidence:",
+     "items": [
+      [
+       "A. The Jigsaw Fit",
+       "The coasts of Africa and South America fit together like the pieces of a puzzle.",
+       "jigsaw_fit.png"
+      ],
+      [
+       "B. Fossil Evidence",
+       "The same fossils, such as the reptile Mesosaurus and the plant Glossopteris, are found on continents now separated by oceans."
+      ],
+      [
+       "C. Rocks and Mountains",
+       "Rocks of the same type and age, and old mountain ranges, match on both sides of the Atlantic Ocean."
+      ],
+      [
+       "D. Glacial Evidence",
+       "Marks of ancient ice sheets are found in hot lands such as southern Africa, India and Australia."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What was Pangaea?",
+    "Pangaea was the single great landmass in which all the continents were joined."
+   ],
+   [
+    "Into which two landmasses did Pangaea split?",
+    "It split into Laurasia in the north and Gondwanaland in the south."
+   ],
+   [
+    "Give two pieces of evidence for continental drift.",
+    "The jigsaw fit of the coasts and the same fossils found on different continents."
+   ]
+  ],
+  "remediation": [
+   [
+    "The theory of continental drift was proposed by Alfred ______.",
+    "The single great landmass was called ______.",
+    "The northern landmass was ______."
+   ],
+   [
+    "Africa was part of ______.",
+    "The fit of the coasts is called the ______ fit.",
+    "Pangaea began to break up about ______ million years ago."
+   ]
+  ],
+  "remediationAnswers": "1. Wegener 2. Pangaea 3. Laurasia 4. Gondwanaland 5. jigsaw 6. 200",
+  "homework": "Listen to the news or ask an adult about a recent earthquake or volcanic eruption in the world. Write the name of the country and what happened.",
+  "homeworkTag": "This prepares Lesson 10: The Theory of Plate Tectonics.",
+  "bilingual": [
+   [
+    "Continental drift",
+    "La dérive des continents"
+   ],
+   [
+    "Continent",
+    "Le continent"
+   ],
+   [
+    "Evidence",
+    "La preuve"
+   ],
+   [
+    "Fossil",
+    "Le fossile"
+   ],
+   [
+    "Coast",
+    "La côte"
+   ],
+   [
+    "Ice sheet",
+    "L'inlandsis / la calotte glaciaire"
+   ],
+   [
+    "Puzzle",
+    "Le puzzle"
+   ],
+   [
+    "To move apart",
+    "S'éloigner"
+   ]
+  ],
+  "teacherNote": [
+   "Checked: Wegener presented the theory in 1912 (book in 1915). Pangaea began to break up about 200 million years ago. The map uses the Bullard fit (1965) of the continental shelves.",
+   "Wegener could not explain what moves the continents. This is why his theory was rejected at first. Plate tectonics (next lesson) gives the explanation."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 9",
+  "title": "The Theory of Continental Drift",
+  "sumTitle": "The Theory of Continental Drift",
+  "coverNote": "Good morning, class. Today we study Lesson 9: The Theory of Continental Drift.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 9: The Theory of Continental Drift",
+  "matter": "I. The Theory of Continental Drift: Illustration: the Break-up of Pangaea; II. Evidence for Continental Drift: The Jigsaw Fit, Fossil Evidence, Rocks and Mountains, Glacial Evidence."
+ },
+ "file": "FORM4_LESSON09_Continental_Drift",
+ "sp": {
+  "file": "FORM4_LESSON09_Continental_Drift",
+  "lessonNo": 9,
+  "lessonName": "The Theory of Continental Drift",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Internal Structure of the Earth",
+  "notions": "Continental drift, Pangaea, Laurasia, Gondwanaland.",
+  "focus": "The theory of continental drift: main idea, illustration and evidence.",
+  "competence": "Learners are able to explain, with map evidence, that the continents have moved, and to read the shape of the continents on a world map.",
+  "objectives": [
+   "State the theory of continental drift.",
+   "Describe the break-up of Pangaea.",
+   "Explain the evidence for continental drift."
+  ],
+  "recall": [
+   "The crust is broken and lies on the very hot mantle.",
+   "The mantle flows very slowly.",
+   "Fossils are found mainly in sedimentary rocks."
+  ],
+  "recallNote": "Check the homework: the fit of Africa and South America.",
+  "situation": [
+   "Djibrilla looks at a world map in his atlas. He notices that the west coast of Africa and the east coast of South America look like two pieces of a puzzle.",
+   "The Atlantic Ocean separates the two continents by thousands of kilometres. Djibrilla wonders if they were once joined together."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Djibrilla wonders if Africa and South America were once joined together."
+   ],
+   [
+    "Which ocean separates Africa and South America?",
+    "The Atlantic Ocean separates them."
+   ],
+   [
+    "How can Djibrilla test his idea?",
+    "He can cut out the two continents from a map and fit them together, and read about the evidence found by scientists."
+   ]
+  ],
+  "justification": "This lesson will help us to understand that the continents were once joined and have moved slowly to their present positions.",
+  "parts": [
+   {
+    "sec": "I. THE THEORY",
+    "qa": [
+     {
+      "q": "What is the theory of continental drift, and who proposed it?",
+      "a": "It is the theory that the continents were once joined in one great landmass and have slowly moved apart. It was proposed by Alfred Wegener, a German scientist, in 1912."
+     },
+     {
+      "q": "What name did Wegener give to the single great landmass?",
+      "a": "He called it Pangaea, which means \"all lands\". It was surrounded by one great ocean called Panthalassa."
+     },
+     {
+      "q": "How did Pangaea break up?",
+      "a": "About 200 million years ago, it split into Laurasia in the north and Gondwanaland in the south. Later, these broke into the continents of today."
+     }
+    ],
+    "sum": {
+     "title": "I. The Theory of Continental Drift",
+     "defs": [
+      "Continental drift is the theory that the continents were once joined in one landmass, Pangaea, and have slowly moved apart. It was proposed by Alfred Wegener in 1912."
+     ],
+     "items": [
+      [
+       "Illustration: the Break-up of Pangaea",
+       [
+        "– About 200 million years ago, Pangaea began to break up.",
+        "– It split into Laurasia (north) and Gondwanaland (south).",
+        "– Africa, South America, India, Australia and Antarctica came from Gondwanaland.",
+        "– The continents are still moving a few centimetres each year."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. EVIDENCE",
+    "qa": [
+     {
+      "img": "jigsaw_fit.png",
+      "kind": "map",
+      "title": "Question 1",
+      "q": "Look at the map. What does it show about Africa and South America?",
+      "a": "The coasts of Africa and South America fit together like the pieces of a jigsaw puzzle. This suggests that they were once joined.",
+      "split": 5.2
+     },
+     {
+      "q": "Fossils of Mesosaurus, a small freshwater reptile, are found in Brazil and in southern Africa. What does this prove?",
+      "a": "This small reptile could not swim across the ocean. So the two continents were joined when it lived."
+     },
+     {
+      "q": "Scratches of ancient ice sheets are found in hot lands like southern Africa and India. What does this show?",
+      "a": "It shows that these lands were once joined together near the South Pole, where there was ice."
+     }
+    ],
+    "sum": {
+     "title": "II. Evidence for Continental Drift",
+     "intro": "Wegener gave four main types of evidence:",
+     "items": [
+      [
+       "A. The Jigsaw Fit",
+       "The coasts of Africa and South America fit together like the pieces of a puzzle.",
+       "jigsaw_fit.png"
+      ],
+      [
+       "B. Fossil Evidence",
+       "The same fossils, such as the reptile Mesosaurus and the plant Glossopteris, are found on continents now separated by oceans."
+      ],
+      [
+       "C. Rocks and Mountains",
+       "Rocks of the same type and age, and old mountain ranges, match on both sides of the Atlantic Ocean."
+      ],
+      [
+       "D. Glacial Evidence",
+       "Marks of ancient ice sheets are found in hot lands such as southern Africa, India and Australia."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What was Pangaea?",
+    "Pangaea was the single great landmass in which all the continents were joined."
+   ],
+   [
+    "Into which two landmasses did Pangaea split?",
+    "It split into Laurasia in the north and Gondwanaland in the south."
+   ],
+   [
+    "Give two pieces of evidence for continental drift.",
+    "The jigsaw fit of the coasts and the same fossils found on different continents."
+   ]
+  ],
+  "remediation": [
+   [
+    "The theory of continental drift was proposed by Alfred ______.",
+    "The single great landmass was called ______.",
+    "The northern landmass was ______."
+   ],
+   [
+    "Africa was part of ______.",
+    "The fit of the coasts is called the ______ fit.",
+    "Pangaea began to break up about ______ million years ago."
+   ]
+  ],
+  "remediationAnswers": "1. Wegener 2. Pangaea 3. Laurasia 4. Gondwanaland 5. jigsaw 6. 200",
+  "homework": "Listen to the news or ask an adult about a recent earthquake or volcanic eruption in the world. Write the name of the country and what happened.",
+  "homeworkTag": "This prepares Lesson 10: The Theory of Plate Tectonics.",
+  "bilingual": [
+   [
+    "Continental drift",
+    "La dérive des continents"
+   ],
+   [
+    "Continent",
+    "Le continent"
+   ],
+   [
+    "Evidence",
+    "La preuve"
+   ],
+   [
+    "Fossil",
+    "Le fossile"
+   ],
+   [
+    "Coast",
+    "La côte"
+   ],
+   [
+    "Ice sheet",
+    "L'inlandsis / la calotte glaciaire"
+   ],
+   [
+    "Puzzle",
+    "Le puzzle"
+   ],
+   [
+    "To move apart",
+    "S'éloigner"
+   ]
+  ],
+  "teacherNote": [
+   "Checked: Wegener presented the theory in 1912 (book in 1915). Pangaea began to break up about 200 million years ago. The map uses the Bullard fit (1965) of the continental shelves.",
+   "Wegener could not explain what moves the continents. This is why his theory was rejected at first. Plate tectonics (next lesson) gives the explanation."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

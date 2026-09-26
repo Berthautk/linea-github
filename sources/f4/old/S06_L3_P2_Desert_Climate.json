@@ -1,0 +1,697 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. RAINFALL AND HUMIDITY\" | \"Question 1\" | [\"Aswan, in Egypt, receives only about 2 mm of rain per year. How does this compare with Garoua, which receives about 1,000 mm?\"]",
+  "slide | \"I. RAINFALL AND HUMIDITY\" | \"Answer\" | [\"Aswan receives about 500 times less rain than Garoua. It is one of the driest places on Earth.\"]",
+  "slide | \"I. RAINFALL AND HUMIDITY\" | \"Question 2\" | [\"In the desert, rain may not fall for several years, and then a sudden storm causes floods. What does this tell us about desert rainfall?\"]",
+  "slide | \"I. RAINFALL AND HUMIDITY\" | \"Answer\" | [\"Desert rainfall is very low and very irregular. When it falls, it often comes as short, violent storms.\"]",
+  "imageQ | \"II. TEMPERATURES\" | \"Question 1\" | \"Study the graph. What is the mean daily maximum temperature in Aswan in July, and in January?\" | \"aswan_climate.png\"",
+  "slide | \"II. TEMPERATURES\" | \"Answer\" | [\"In July, the mean daily maximum is about 42°C. In January, it is about 23°C.\"]",
+  "imageQ | \"II. TEMPERATURES\" | \"Question 2\" | \"In July, days reach about 42°C and nights about 28°C. Calculate the daily (diurnal) temperature range.\" | \"aswan_climate.png\"",
+  "slide | \"II. TEMPERATURES\" | \"Answer\" | [\"The daily temperature range is 42°C − 28°C = 14°C. In winter, it is also about 13°C.\"]",
+  "slide | \"II. TEMPERATURES\" | \"Question 3\" | [\"Why does the desert become cold at night, when there are no clouds?\"]",
+  "slide | \"II. TEMPERATURES\" | \"Answer\" | [\"Without clouds, the heat stored by the ground during the day escapes quickly into the sky at night, so the air cools down fast.\"]",
+  "slide | \"III. WINDS\" | \"Question 1\" | [\"Name the hot, dusty wind that blows from the Sahara over Garoua in the dry season.\"]",
+  "slide | \"III. WINDS\" | \"Answer\" | [\"It is the Harmattan. Other hot desert winds are the Sirocco, which blows towards Italy, and the Khamsin, which blows over Egypt.\"]",
+  "slide | \"III. WINDS\" | \"Question 2\" | [\"Strong winds lift sand and dust into the air. What do we call this, and what are its dangers?\"]",
+  "slide | \"III. WINDS\" | \"Answer\" | [\"This is a sandstorm. It makes it difficult to see and to breathe, and it damages crops, roads and machines.\"]",
+  "sum | \"I. Rainfall and Humidity (1/4)\" | [\"Rainfall and humidity in hot deserts have the following characteristics:\"]",
+  "sum | \"I. Rainfall and Humidity (2/4)\" | \"A. Very Low Rainfall\" | [\"Hot deserts receive less than 250 mm of rain per year. Aswan in Egypt receives only about 2 mm.\"]",
+  "sum | \"I. Rainfall and Humidity (3/4)\" | \"B. Irregular Rainfall\" | [\"Rain may not fall for years. When it falls, it comes as short, violent storms that can cause floods.\"]",
+  "sum | \"I. Rainfall and Humidity (4/4)\" | \"C. Low Humidity and Clear Skies\" | [\"The air is very dry and there are almost no clouds, so the sun shines strongly nearly every day.\"]",
+  "sum | \"II. Temperatures (1/4)\" | [\"The temperatures of hot deserts have the following characteristics:\"]",
+  "sumImage | \"II. Temperatures (2/4)\" | \"A. Very Hot Days\" | \"Summer days are very hot, often above 40°C. In Aswan, the mean daily maximum in July is about 42°C.\" | \"aswan_climate.png\"",
+  "sum | \"II. Temperatures (3/4)\" | \"B. Cold Nights\" | [\"Nights are much cooler, because the clear skies let the heat escape. The daily temperature range can be 15°C or more.\"]",
+  "sum | \"II. Temperatures (4/4)\" | \"C. Cool Winters\" | [\"Winters are cooler than summers. In Aswan, January days reach about 23°C and nights about 10°C.\"]",
+  "sum | \"III. Winds (1/3)\" | [\"The winds of hot deserts have the following characteristics:\"]",
+  "sum | \"III. Winds (2/3)\" | \"A. Hot, Dry Winds\" | [\"Hot, dry and dusty winds blow from the deserts, such as the Harmattan (West Africa), the Sirocco (North Africa) and the Khamsin (Egypt).\"]",
+  "sum | \"III. Winds (3/3)\" | \"B. Sandstorms\" | [\"Strong winds lift sand and dust into the air. Sandstorms reduce visibility and damage crops, roads and machines.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S06_L3_P2_Desert_Climate",
+  "part": 2,
+  "partTitle": "Characteristics (Climate)",
+  "notions": "Aridity, diurnal temperature range, relative humidity, sandstorm, Harmattan, Sirocco, Khamsin.",
+  "focus": "Characteristics of the climate of hot deserts, with the example of Aswan (Egypt).",
+  "competence": "Learners are able to protect themselves from extreme heat and dust, and to explain why desert nights are cold.",
+  "objectives": [
+   "Describe the rainfall of hot deserts.",
+   "Describe the temperatures of hot deserts and explain the large daily range.",
+   "Describe the winds and humidity of hot deserts."
+  ],
+  "recall": [
+   "Hot deserts lie between 15° and 30° north and south of the Equator.",
+   "They are caused by dry trade winds, cold ocean currents, distance from the sea and rain shadow.",
+   "There are sandy (erg), stony (reg) and rocky (hamada) deserts."
+  ],
+  "recallNote": "Check the homework: day and night temperatures in Garoua in March.",
+  "situation": [
+   "Oumarou, a truck driver from Garoua, drives across the Sahara to Algeria. During the day, the heat is so strong that he cannot touch the metal of his truck.",
+   "But at night, he is so cold that he must cover himself with a thick blanket. Oumarou cannot understand how the same place can be so hot by day and so cold at night."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumarou does not understand why the desert is so hot during the day and so cold at night."
+   ],
+   [
+    "What does Oumarou need at night in the desert?",
+    "He needs a thick blanket, because the nights are cold."
+   ],
+   [
+    "What advice can you give to a traveller crossing the desert?",
+    "He should carry a lot of water, wear light clothes by day, have warm clothes for the night and travel with a guide."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of hot deserts and to compare it with the climate of Garoua.",
+  "parts": [
+   {
+    "sec": "I. RAINFALL AND HUMIDITY",
+    "qa": [
+     {
+      "q": "Aswan, in Egypt, receives only about 2 mm of rain per year. How does this compare with Garoua, which receives about 1,000 mm?",
+      "a": "Aswan receives about 500 times less rain than Garoua. It is one of the driest places on Earth."
+     },
+     {
+      "q": "In the desert, rain may not fall for several years, and then a sudden storm causes floods. What does this tell us about desert rainfall?",
+      "a": "Desert rainfall is very low and very irregular. When it falls, it often comes as short, violent storms."
+     }
+    ],
+    "sum": {
+     "title": "I. Rainfall and Humidity",
+     "intro": "Rainfall and humidity in hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Very Low Rainfall",
+       "Hot deserts receive less than 250 mm of rain per year. Aswan in Egypt receives only about 2 mm."
+      ],
+      [
+       "B. Irregular Rainfall",
+       "Rain may not fall for years. When it falls, it comes as short, violent storms that can cause floods."
+      ],
+      [
+       "C. Low Humidity and Clear Skies",
+       "The air is very dry and there are almost no clouds, so the sun shines strongly nearly every day."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TEMPERATURES",
+    "qa": [
+     {
+      "img": "aswan_climate.png",
+      "kind": "graph",
+      "q": "Study the graph. What is the mean daily maximum temperature in Aswan in July, and in January?",
+      "a": "In July, the mean daily maximum is about 42°C. In January, it is about 23°C.",
+      "split": 5
+     },
+     {
+      "img": "aswan_climate.png",
+      "title": "Question 2",
+      "q": "In July, days reach about 42°C and nights about 28°C. Calculate the daily (diurnal) temperature range.",
+      "a": "The daily temperature range is 42°C − 28°C = 14°C. In winter, it is also about 13°C.",
+      "split": 5
+     },
+     {
+      "q": "Why does the desert become cold at night, when there are no clouds?",
+      "a": "Without clouds, the heat stored by the ground during the day escapes quickly into the sky at night, so the air cools down fast."
+     }
+    ],
+    "sum": {
+     "title": "II. Temperatures",
+     "intro": "The temperatures of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Very Hot Days",
+       "Summer days are very hot, often above 40°C. In Aswan, the mean daily maximum in July is about 42°C.",
+       "aswan_climate.png"
+      ],
+      [
+       "B. Cold Nights",
+       "Nights are much cooler, because the clear skies let the heat escape. The daily temperature range can be 15°C or more."
+      ],
+      [
+       "C. Cool Winters",
+       "Winters are cooler than summers. In Aswan, January days reach about 23°C and nights about 10°C."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. WINDS",
+    "qa": [
+     {
+      "q": "Name the hot, dusty wind that blows from the Sahara over Garoua in the dry season.",
+      "a": "It is the Harmattan. Other hot desert winds are the Sirocco, which blows towards Italy, and the Khamsin, which blows over Egypt."
+     },
+     {
+      "q": "Strong winds lift sand and dust into the air. What do we call this, and what are its dangers?",
+      "a": "This is a sandstorm. It makes it difficult to see and to breathe, and it damages crops, roads and machines."
+     }
+    ],
+    "sum": {
+     "title": "III. Winds",
+     "intro": "The winds of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Hot, Dry Winds",
+       "Hot, dry and dusty winds blow from the deserts, such as the Harmattan (West Africa), the Sirocco (North Africa) and the Khamsin (Egypt)."
+      ],
+      [
+       "B. Sandstorms",
+       "Strong winds lift sand and dust into the air. Sandstorms reduce visibility and damage crops, roads and machines."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two characteristics of the rainfall of hot deserts.",
+    "The rainfall of hot deserts is very low, less than 250 mm, and very irregular."
+   ],
+   [
+    "Why is the daily temperature range large in hot deserts?",
+    "It is large because the clear skies let the ground heat strongly during the day and lose its heat quickly at night."
+   ],
+   [
+    "Name two hot desert winds.",
+    "Two hot desert winds are the Harmattan and the Sirocco."
+   ]
+  ],
+  "remediation": [
+   [
+    "Hot deserts receive less than ______ mm of rain per year.",
+    "Aswan in Egypt receives about ______ mm of rain per year.",
+    "Desert nights are cold because there are no ______."
+   ],
+   [
+    "The difference between day and night temperatures is the ______ temperature range.",
+    "The dusty wind that blows over Garoua is the ______.",
+    "A storm of sand lifted by strong winds is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. 250 2. 2 3. clouds 4. daily (diurnal) 5. Harmattan 6. sandstorm",
+  "homework": "Look at a cactus, an acacia or a date palm near your home or in a picture. Write down one way in which it is adapted to lack of water.",
+  "homeworkTag": "This prepares Part 3: Soils and Vegetation of Hot Deserts.",
+  "bilingual": [
+   [
+    "Rainfall",
+    "Les précipitations"
+   ],
+   [
+    "Humidity",
+    "L'humidité"
+   ],
+   [
+    "Temperature range",
+    "L'amplitude thermique"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Night",
+    "La nuit"
+   ],
+   [
+    "Sandstorm",
+    "La tempête de sable"
+   ],
+   [
+    "Dry",
+    "Sec"
+   ],
+   [
+    "Heat",
+    "La chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first question of part II. Period 2: rest of part II, part III, board summary and evaluation.",
+   "Aswan data: NOAA normals 1991–2020; about 2 mm of rain per year; record 51°C (1918)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts).",
+   "Aswan climate normals: NOAA 1991–2020 (via Wikipedia, \"Aswan\")."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 2)",
+  "title": "The Desert Regions: Characteristics (Climate)",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 2: Characteristics (Climate).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 2: Characteristics (Climate)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S06_L3_P2_Desert_Climate",
+  "part": 2,
+  "partTitle": "Characteristics (Climate)",
+  "notions": "Aridity, diurnal temperature range, relative humidity, sandstorm, Harmattan, Sirocco, Khamsin.",
+  "focus": "Characteristics of the climate of hot deserts, with the example of Aswan (Egypt).",
+  "competence": "Learners are able to protect themselves from extreme heat and dust, and to explain why desert nights are cold.",
+  "objectives": [
+   "Describe the rainfall of hot deserts.",
+   "Describe the temperatures of hot deserts and explain the large daily range.",
+   "Describe the winds and humidity of hot deserts."
+  ],
+  "recall": [
+   "Hot deserts lie between 15° and 30° north and south of the Equator.",
+   "They are caused by dry trade winds, cold ocean currents, distance from the sea and rain shadow.",
+   "There are sandy (erg), stony (reg) and rocky (hamada) deserts."
+  ],
+  "recallNote": "Check the homework: day and night temperatures in Garoua in March.",
+  "situation": [
+   "Oumarou, a truck driver from Garoua, drives across the Sahara to Algeria. During the day, the heat is so strong that he cannot touch the metal of his truck.",
+   "But at night, he is so cold that he must cover himself with a thick blanket. Oumarou cannot understand how the same place can be so hot by day and so cold at night."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumarou does not understand why the desert is so hot during the day and so cold at night."
+   ],
+   [
+    "What does Oumarou need at night in the desert?",
+    "He needs a thick blanket, because the nights are cold."
+   ],
+   [
+    "What advice can you give to a traveller crossing the desert?",
+    "He should carry a lot of water, wear light clothes by day, have warm clothes for the night and travel with a guide."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of hot deserts and to compare it with the climate of Garoua.",
+  "parts": [
+   {
+    "sec": "I. RAINFALL AND HUMIDITY",
+    "qa": [
+     {
+      "q": "Aswan, in Egypt, receives only about 2 mm of rain per year. How does this compare with Garoua, which receives about 1,000 mm?",
+      "a": "Aswan receives about 500 times less rain than Garoua. It is one of the driest places on Earth."
+     },
+     {
+      "q": "In the desert, rain may not fall for several years, and then a sudden storm causes floods. What does this tell us about desert rainfall?",
+      "a": "Desert rainfall is very low and very irregular. When it falls, it often comes as short, violent storms."
+     }
+    ],
+    "sum": {
+     "title": "I. Rainfall and Humidity",
+     "intro": "Rainfall and humidity in hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Very Low Rainfall",
+       "Hot deserts receive less than 250 mm of rain per year. Aswan in Egypt receives only about 2 mm."
+      ],
+      [
+       "B. Irregular Rainfall",
+       "Rain may not fall for years. When it falls, it comes as short, violent storms that can cause floods."
+      ],
+      [
+       "C. Low Humidity and Clear Skies",
+       "The air is very dry and there are almost no clouds, so the sun shines strongly nearly every day."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TEMPERATURES",
+    "qa": [
+     {
+      "img": "aswan_climate.png",
+      "kind": "graph",
+      "q": "Study the graph. What is the mean daily maximum temperature in Aswan in July, and in January?",
+      "a": "In July, the mean daily maximum is about 42°C. In January, it is about 23°C.",
+      "split": 5
+     },
+     {
+      "img": "aswan_climate.png",
+      "title": "Question 2",
+      "q": "In July, days reach about 42°C and nights about 28°C. Calculate the daily (diurnal) temperature range.",
+      "a": "The daily temperature range is 42°C − 28°C = 14°C. In winter, it is also about 13°C.",
+      "split": 5
+     },
+     {
+      "q": "Why does the desert become cold at night, when there are no clouds?",
+      "a": "Without clouds, the heat stored by the ground during the day escapes quickly into the sky at night, so the air cools down fast."
+     }
+    ],
+    "sum": {
+     "title": "II. Temperatures",
+     "intro": "The temperatures of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Very Hot Days",
+       "Summer days are very hot, often above 40°C. In Aswan, the mean daily maximum in July is about 42°C.",
+       "aswan_climate.png"
+      ],
+      [
+       "B. Cold Nights",
+       "Nights are much cooler, because the clear skies let the heat escape. The daily temperature range can be 15°C or more."
+      ],
+      [
+       "C. Cool Winters",
+       "Winters are cooler than summers. In Aswan, January days reach about 23°C and nights about 10°C."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. WINDS",
+    "qa": [
+     {
+      "q": "Name the hot, dusty wind that blows from the Sahara over Garoua in the dry season.",
+      "a": "It is the Harmattan. Other hot desert winds are the Sirocco, which blows towards Italy, and the Khamsin, which blows over Egypt."
+     },
+     {
+      "q": "Strong winds lift sand and dust into the air. What do we call this, and what are its dangers?",
+      "a": "This is a sandstorm. It makes it difficult to see and to breathe, and it damages crops, roads and machines."
+     }
+    ],
+    "sum": {
+     "title": "III. Winds",
+     "intro": "The winds of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Hot, Dry Winds",
+       "Hot, dry and dusty winds blow from the deserts, such as the Harmattan (West Africa), the Sirocco (North Africa) and the Khamsin (Egypt)."
+      ],
+      [
+       "B. Sandstorms",
+       "Strong winds lift sand and dust into the air. Sandstorms reduce visibility and damage crops, roads and machines."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two characteristics of the rainfall of hot deserts.",
+    "The rainfall of hot deserts is very low, less than 250 mm, and very irregular."
+   ],
+   [
+    "Why is the daily temperature range large in hot deserts?",
+    "It is large because the clear skies let the ground heat strongly during the day and lose its heat quickly at night."
+   ],
+   [
+    "Name two hot desert winds.",
+    "Two hot desert winds are the Harmattan and the Sirocco."
+   ]
+  ],
+  "remediation": [
+   [
+    "Hot deserts receive less than ______ mm of rain per year.",
+    "Aswan in Egypt receives about ______ mm of rain per year.",
+    "Desert nights are cold because there are no ______."
+   ],
+   [
+    "The difference between day and night temperatures is the ______ temperature range.",
+    "The dusty wind that blows over Garoua is the ______.",
+    "A storm of sand lifted by strong winds is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. 250 2. 2 3. clouds 4. daily (diurnal) 5. Harmattan 6. sandstorm",
+  "homework": "Look at a cactus, an acacia or a date palm near your home or in a picture. Write down one way in which it is adapted to lack of water.",
+  "homeworkTag": "This prepares Part 3: Soils and Vegetation of Hot Deserts.",
+  "bilingual": [
+   [
+    "Rainfall",
+    "Les précipitations"
+   ],
+   [
+    "Humidity",
+    "L'humidité"
+   ],
+   [
+    "Temperature range",
+    "L'amplitude thermique"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Night",
+    "La nuit"
+   ],
+   [
+    "Sandstorm",
+    "La tempête de sable"
+   ],
+   [
+    "Dry",
+    "Sec"
+   ],
+   [
+    "Heat",
+    "La chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first question of part II. Period 2: rest of part II, part III, board summary and evaluation.",
+   "Aswan data: NOAA normals 1991–2020; about 2 mm of rain per year; record 51°C (1918)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts).",
+   "Aswan climate normals: NOAA 1991–2020 (via Wikipedia, \"Aswan\")."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 2)",
+  "title": "The Desert Regions: Characteristics (Climate)",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 2: Characteristics (Climate).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 2: Characteristics (Climate)",
+  "matter": "I. Rainfall and Humidity: Very Low Rainfall, Irregular Rainfall, Low Humidity and Clear Skies; II. Temperatures: Very Hot Days, Cold Nights, Cool Winters; III. Winds: Hot, Dry Winds, Sandstorms."
+ },
+ "file": "S06_L3_P2_Desert_Climate",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S06_L3_P2_Desert_Climate",
+  "part": 2,
+  "partTitle": "Characteristics (Climate)",
+  "notions": "Aridity, diurnal temperature range, relative humidity, sandstorm, Harmattan, Sirocco, Khamsin.",
+  "focus": "Characteristics of the climate of hot deserts, with the example of Aswan (Egypt).",
+  "competence": "Learners are able to protect themselves from extreme heat and dust, and to explain why desert nights are cold.",
+  "objectives": [
+   "Describe the rainfall of hot deserts.",
+   "Describe the temperatures of hot deserts and explain the large daily range.",
+   "Describe the winds and humidity of hot deserts."
+  ],
+  "recall": [
+   "Hot deserts lie between 15° and 30° north and south of the Equator.",
+   "They are caused by dry trade winds, cold ocean currents, distance from the sea and rain shadow.",
+   "There are sandy (erg), stony (reg) and rocky (hamada) deserts."
+  ],
+  "recallNote": "Check the homework: day and night temperatures in Garoua in March.",
+  "situation": [
+   "Oumarou, a truck driver from Garoua, drives across the Sahara to Algeria. During the day, the heat is so strong that he cannot touch the metal of his truck.",
+   "But at night, he is so cold that he must cover himself with a thick blanket. Oumarou cannot understand how the same place can be so hot by day and so cold at night."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumarou does not understand why the desert is so hot during the day and so cold at night."
+   ],
+   [
+    "What does Oumarou need at night in the desert?",
+    "He needs a thick blanket, because the nights are cold."
+   ],
+   [
+    "What advice can you give to a traveller crossing the desert?",
+    "He should carry a lot of water, wear light clothes by day, have warm clothes for the night and travel with a guide."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the climate of hot deserts and to compare it with the climate of Garoua.",
+  "parts": [
+   {
+    "sec": "I. RAINFALL AND HUMIDITY",
+    "qa": [
+     {
+      "q": "Aswan, in Egypt, receives only about 2 mm of rain per year. How does this compare with Garoua, which receives about 1,000 mm?",
+      "a": "Aswan receives about 500 times less rain than Garoua. It is one of the driest places on Earth."
+     },
+     {
+      "q": "In the desert, rain may not fall for several years, and then a sudden storm causes floods. What does this tell us about desert rainfall?",
+      "a": "Desert rainfall is very low and very irregular. When it falls, it often comes as short, violent storms."
+     }
+    ],
+    "sum": {
+     "title": "I. Rainfall and Humidity",
+     "intro": "Rainfall and humidity in hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Very Low Rainfall",
+       "Hot deserts receive less than 250 mm of rain per year. Aswan in Egypt receives only about 2 mm."
+      ],
+      [
+       "B. Irregular Rainfall",
+       "Rain may not fall for years. When it falls, it comes as short, violent storms that can cause floods."
+      ],
+      [
+       "C. Low Humidity and Clear Skies",
+       "The air is very dry and there are almost no clouds, so the sun shines strongly nearly every day."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. TEMPERATURES",
+    "qa": [
+     {
+      "img": "aswan_climate.png",
+      "kind": "graph",
+      "q": "Study the graph. What is the mean daily maximum temperature in Aswan in July, and in January?",
+      "a": "In July, the mean daily maximum is about 42°C. In January, it is about 23°C.",
+      "split": 5
+     },
+     {
+      "img": "aswan_climate.png",
+      "title": "Question 2",
+      "q": "In July, days reach about 42°C and nights about 28°C. Calculate the daily (diurnal) temperature range.",
+      "a": "The daily temperature range is 42°C − 28°C = 14°C. In winter, it is also about 13°C.",
+      "split": 5
+     },
+     {
+      "q": "Why does the desert become cold at night, when there are no clouds?",
+      "a": "Without clouds, the heat stored by the ground during the day escapes quickly into the sky at night, so the air cools down fast."
+     }
+    ],
+    "sum": {
+     "title": "II. Temperatures",
+     "intro": "The temperatures of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Very Hot Days",
+       "Summer days are very hot, often above 40°C. In Aswan, the mean daily maximum in July is about 42°C.",
+       "aswan_climate.png"
+      ],
+      [
+       "B. Cold Nights",
+       "Nights are much cooler, because the clear skies let the heat escape. The daily temperature range can be 15°C or more."
+      ],
+      [
+       "C. Cool Winters",
+       "Winters are cooler than summers. In Aswan, January days reach about 23°C and nights about 10°C."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. WINDS",
+    "qa": [
+     {
+      "q": "Name the hot, dusty wind that blows from the Sahara over Garoua in the dry season.",
+      "a": "It is the Harmattan. Other hot desert winds are the Sirocco, which blows towards Italy, and the Khamsin, which blows over Egypt."
+     },
+     {
+      "q": "Strong winds lift sand and dust into the air. What do we call this, and what are its dangers?",
+      "a": "This is a sandstorm. It makes it difficult to see and to breathe, and it damages crops, roads and machines."
+     }
+    ],
+    "sum": {
+     "title": "III. Winds",
+     "intro": "The winds of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Hot, Dry Winds",
+       "Hot, dry and dusty winds blow from the deserts, such as the Harmattan (West Africa), the Sirocco (North Africa) and the Khamsin (Egypt)."
+      ],
+      [
+       "B. Sandstorms",
+       "Strong winds lift sand and dust into the air. Sandstorms reduce visibility and damage crops, roads and machines."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two characteristics of the rainfall of hot deserts.",
+    "The rainfall of hot deserts is very low, less than 250 mm, and very irregular."
+   ],
+   [
+    "Why is the daily temperature range large in hot deserts?",
+    "It is large because the clear skies let the ground heat strongly during the day and lose its heat quickly at night."
+   ],
+   [
+    "Name two hot desert winds.",
+    "Two hot desert winds are the Harmattan and the Sirocco."
+   ]
+  ],
+  "remediation": [
+   [
+    "Hot deserts receive less than ______ mm of rain per year.",
+    "Aswan in Egypt receives about ______ mm of rain per year.",
+    "Desert nights are cold because there are no ______."
+   ],
+   [
+    "The difference between day and night temperatures is the ______ temperature range.",
+    "The dusty wind that blows over Garoua is the ______.",
+    "A storm of sand lifted by strong winds is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. 250 2. 2 3. clouds 4. daily (diurnal) 5. Harmattan 6. sandstorm",
+  "homework": "Look at a cactus, an acacia or a date palm near your home or in a picture. Write down one way in which it is adapted to lack of water.",
+  "homeworkTag": "This prepares Part 3: Soils and Vegetation of Hot Deserts.",
+  "bilingual": [
+   [
+    "Rainfall",
+    "Les précipitations"
+   ],
+   [
+    "Humidity",
+    "L'humidité"
+   ],
+   [
+    "Temperature range",
+    "L'amplitude thermique"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Night",
+    "La nuit"
+   ],
+   [
+    "Sandstorm",
+    "La tempête de sable"
+   ],
+   [
+    "Dry",
+    "Sec"
+   ],
+   [
+    "Heat",
+    "La chaleur"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation, part I and the first question of part II. Period 2: rest of part II, part III, board summary and evaluation.",
+   "Aswan data: NOAA normals 1991–2020; about 2 mm of rain per year; record 51°C (1918)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts).",
+   "Aswan climate normals: NOAA 1991–2020 (via Wikipedia, \"Aswan\")."
+  ]
+ }
+}

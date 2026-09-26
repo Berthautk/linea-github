@@ -1,0 +1,438 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sumImage | \"x\" | \"Labelled Diagram\" | \"Copy the diagram with its labels: evaporation, transpiration, condensation, precipitation, surface runoff, infiltration and groundwater flow.\" | \"water_cycle.png\"",
+  "sumImage | \"III. Diagram of the Hydrological Cycle (1/1)\" | \"Labelled Diagram\" | \"Copy the diagram with its labels: evaporation, transpiration, condensation, precipitation, surface runoff, infiltration and groundwater flow.\" | \"water_cycle.png\""
+ ],
+ "end": {
+  "file": "FORM4_LESSON39_Hydrological_Cycle",
+  "lessonNo": 39,
+  "lessonName": "The Hydrological Cycle",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Circulation of Water in Nature",
+  "subtopic": "The Hydrological Cycle",
+  "notions": "Evaporation, transpiration, condensation, precipitation, infiltration.",
+  "focus": "Meaning (definition and components); the flow diagram as an open system; diagram of the hydrological cycle.",
+  "competence": "Learners are able to explain where the water of rivers, wells and rain comes from, and why protecting trees and soils helps to keep water available.",
+  "objectives": [
+   "Define the hydrological cycle and name its components.",
+   "Draw and explain a labelled diagram of the hydrological cycle.",
+   "Explain the drainage basin as an open system with inputs, stores, transfers and outputs."
+  ],
+  "recall": [
+   "Evaporation turns liquid water into water vapour.",
+   "Condensation turns water vapour into droplets that form clouds.",
+   "Precipitation is water falling from clouds."
+  ],
+  "recallNote": "Check the homework: where did the water in the bowl go?",
+  "situation": [
+   "In March, the Benue at Garoua is shallow and the sandbanks are visible. In September, after months of rain, the river is wide and full.",
+   "Mohamadou wonders where the water of the Benue comes from and where it goes, since the river never stops flowing."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Mohamadou does not understand where the water of the Benue comes from and where it goes."
+   ],
+   [
+    "How does the Benue change between March and September?",
+    "In March, it is shallow with sandbanks. In September, it is wide and full."
+   ],
+   [
+    "How can the people of Garoua help to keep water in the Benue?",
+    "They can plant trees along the banks, avoid polluting the river and use water carefully."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the continuous movement of water between the sea, the air and the land.",
+  "parts": [
+   {
+    "sec": "I. MEANING AND COMPONENTS",
+    "qa": [
+     {
+      "img": "water_cycle.png",
+      "kind": "diagram",
+      "q": "Follow the journey of water.",
+      "full": true
+     },
+     {
+      "q": "Water moves from the sea to the air, to the land and back to the sea, again and again. What is this called?",
+      "a": "It is called the hydrological cycle, or water cycle. It is powered by the energy of the sun."
+     },
+     {
+      "q": "Name the processes by which water goes up into the air.",
+      "a": "Water goes up by evaporation from seas, lakes and rivers, and by transpiration from the leaves of plants."
+     },
+     {
+      "q": "After rain falls on the land, what are the two ways in which it returns to rivers?",
+      "a": "It flows over the ground as surface runoff, or it soaks into the ground (infiltration) and flows slowly as groundwater."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning and Components",
+     "defs": [
+      "The hydrological cycle is the continuous movement of water between the oceans, the atmosphere and the land, powered by the sun."
+     ],
+     "items": [
+      [
+       "A. Evaporation and Transpiration",
+       "Evaporation is the change of liquid water into water vapour. Transpiration is the loss of water vapour by plants through their leaves."
+      ],
+      [
+       "B. Condensation and Precipitation",
+       "Condensation turns water vapour into droplets that form clouds. Precipitation brings the water back to the Earth as rain, hail or snow."
+      ],
+      [
+       "C. Infiltration and Runoff",
+       "Infiltration is the soaking of water into the ground. Surface runoff is the flow of water over the ground into rivers and the sea."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. AN OPEN SYSTEM",
+    "qa": [
+     {
+      "img": "basin_open_system.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "In the drainage basin of the Benue, water enters as rain and leaves by evaporation and river flow. Why is it called an open system?",
+      "a": "It is an open system because water enters it (input) and leaves it (output). Between them, water is stored and transferred.",
+      "split": 4.4
+     },
+     {
+      "q": "Is the global water cycle open or closed? Explain.",
+      "a": "The global cycle is a closed system for water: the total amount of water on Earth stays the same. Only energy from the sun enters and leaves."
+     }
+    ],
+    "sum": {
+     "title": "II. The Hydrological Cycle as an Open System",
+     "intro": "At the scale of a drainage basin, the hydrological cycle is an open system, with inputs, stores, transfers and outputs:",
+     "items": [
+      [
+       "A. Input",
+       "The input is precipitation (rain, hail).",
+       "basin_open_system.png"
+      ],
+      [
+       "B. Stores and Transfers",
+       "Water is stored on leaves (interception), on the surface, in the soil and as groundwater. It is transferred by infiltration, runoff and throughflow."
+      ],
+      [
+       "C. Outputs",
+       "Water leaves by evaporation, transpiration and river flow to the sea."
+      ],
+      [
+       "D. The Global Cycle",
+       "At the scale of the whole Earth, the water cycle is a closed system: the total amount of water does not change."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. DIAGRAM",
+    "qa": [],
+    "sum": {
+     "title": "III. Diagram of the Hydrological Cycle",
+     "items": [
+      [
+       "Labelled Diagram",
+       "Copy the diagram with its labels: evaporation, transpiration, condensation, precipitation, surface runoff, infiltration and groundwater flow.",
+       "water_cycle.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between evaporation and transpiration?",
+    "Evaporation is water vapour coming from water surfaces, while transpiration is water vapour released by plants."
+   ],
+   [
+    "Why is the drainage basin an open system?",
+    "It is an open system because water enters it as precipitation and leaves it by evaporation and river flow."
+   ],
+   [
+    "How does cutting trees affect the water cycle?",
+    "It reduces transpiration and infiltration, and increases surface runoff, floods and soil erosion."
+   ]
+  ],
+  "remediation": [
+   [
+    "The continuous movement of water is the ______ cycle.",
+    "Water vapour lost by plants is ______.",
+    "Water soaking into the ground is ______."
+   ],
+   [
+    "Water flowing over the ground is surface ______.",
+    "The input of a drainage basin is ______.",
+    "At the global scale, the water cycle is a ______ system."
+   ]
+  ],
+  "remediationAnswers": "1. hydrological 2. transpiration 3. infiltration 4. runoff 5. precipitation 6. closed",
+  "homework": "Ask your grandparents or an elder whether the dry season is hotter or longer today than when they were young. Write down what they say.",
+  "homeworkTag": "This prepares Lesson 40: Global Warming.",
+  "bilingual": [
+   [
+    "Water cycle",
+    "Le cycle de l'eau"
+   ],
+   [
+    "Evaporation",
+    "L'évaporation"
+   ],
+   [
+    "Transpiration",
+    "La transpiration"
+   ],
+   [
+    "Infiltration",
+    "L'infiltration"
+   ],
+   [
+    "Runoff",
+    "Le ruissellement"
+   ],
+   [
+    "Groundwater",
+    "La nappe souterraine"
+   ],
+   [
+    "Input",
+    "L'entrée"
+   ],
+   [
+    "Output",
+    "La sortie"
+   ]
+  ],
+  "teacherNote": [
+   "Correction of the source notes: the global water cycle is a closed system for water (only energy enters and leaves). The syllabus \"open system\" refers to the drainage basin, where water enters and leaves.",
+   "Part III is mainly for copying the labelled diagram."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 39",
+  "title": "The Hydrological Cycle",
+  "sumTitle": "The Hydrological Cycle",
+  "coverNote": "Good morning, class. Today we study Lesson 39: The Hydrological Cycle.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 39: The Hydrological Cycle",
+  "matter": "I. Meaning and Components: Evaporation and Transpiration, Condensation and Precipitation, Infiltration and Runoff; II. The Hydrological Cycle as an Open System: Input, Stores and Transfers, Outputs, The Global Cycle; III. Diagram of the Hydrological Cycle: Labelled Diagram."
+ },
+ "file": "FORM4_LESSON39_Hydrological_Cycle",
+ "sp": {
+  "file": "FORM4_LESSON39_Hydrological_Cycle",
+  "lessonNo": 39,
+  "lessonName": "The Hydrological Cycle",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Circulation of Water in Nature",
+  "subtopic": "The Hydrological Cycle",
+  "notions": "Evaporation, transpiration, condensation, precipitation, infiltration.",
+  "focus": "Meaning (definition and components); the flow diagram as an open system; diagram of the hydrological cycle.",
+  "competence": "Learners are able to explain where the water of rivers, wells and rain comes from, and why protecting trees and soils helps to keep water available.",
+  "objectives": [
+   "Define the hydrological cycle and name its components.",
+   "Draw and explain a labelled diagram of the hydrological cycle.",
+   "Explain the drainage basin as an open system with inputs, stores, transfers and outputs."
+  ],
+  "recall": [
+   "Evaporation turns liquid water into water vapour.",
+   "Condensation turns water vapour into droplets that form clouds.",
+   "Precipitation is water falling from clouds."
+  ],
+  "recallNote": "Check the homework: where did the water in the bowl go?",
+  "situation": [
+   "In March, the Benue at Garoua is shallow and the sandbanks are visible. In September, after months of rain, the river is wide and full.",
+   "Mohamadou wonders where the water of the Benue comes from and where it goes, since the river never stops flowing."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Mohamadou does not understand where the water of the Benue comes from and where it goes."
+   ],
+   [
+    "How does the Benue change between March and September?",
+    "In March, it is shallow with sandbanks. In September, it is wide and full."
+   ],
+   [
+    "How can the people of Garoua help to keep water in the Benue?",
+    "They can plant trees along the banks, avoid polluting the river and use water carefully."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the continuous movement of water between the sea, the air and the land.",
+  "parts": [
+   {
+    "sec": "I. MEANING AND COMPONENTS",
+    "qa": [
+     {
+      "img": "water_cycle.png",
+      "kind": "diagram",
+      "q": "Follow the journey of water.",
+      "full": true
+     },
+     {
+      "q": "Water moves from the sea to the air, to the land and back to the sea, again and again. What is this called?",
+      "a": "It is called the hydrological cycle, or water cycle. It is powered by the energy of the sun."
+     },
+     {
+      "q": "Name the processes by which water goes up into the air.",
+      "a": "Water goes up by evaporation from seas, lakes and rivers, and by transpiration from the leaves of plants."
+     },
+     {
+      "q": "After rain falls on the land, what are the two ways in which it returns to rivers?",
+      "a": "It flows over the ground as surface runoff, or it soaks into the ground (infiltration) and flows slowly as groundwater."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning and Components",
+     "defs": [
+      "The hydrological cycle is the continuous movement of water between the oceans, the atmosphere and the land, powered by the sun."
+     ],
+     "items": [
+      [
+       "A. Evaporation and Transpiration",
+       "Evaporation is the change of liquid water into water vapour. Transpiration is the loss of water vapour by plants through their leaves."
+      ],
+      [
+       "B. Condensation and Precipitation",
+       "Condensation turns water vapour into droplets that form clouds. Precipitation brings the water back to the Earth as rain, hail or snow."
+      ],
+      [
+       "C. Infiltration and Runoff",
+       "Infiltration is the soaking of water into the ground. Surface runoff is the flow of water over the ground into rivers and the sea."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. AN OPEN SYSTEM",
+    "qa": [
+     {
+      "img": "basin_open_system.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "In the drainage basin of the Benue, water enters as rain and leaves by evaporation and river flow. Why is it called an open system?",
+      "a": "It is an open system because water enters it (input) and leaves it (output). Between them, water is stored and transferred.",
+      "split": 4.4
+     },
+     {
+      "q": "Is the global water cycle open or closed? Explain.",
+      "a": "The global cycle is a closed system for water: the total amount of water on Earth stays the same. Only energy from the sun enters and leaves."
+     }
+    ],
+    "sum": {
+     "title": "II. The Hydrological Cycle as an Open System",
+     "intro": "At the scale of a drainage basin, the hydrological cycle is an open system, with inputs, stores, transfers and outputs:",
+     "items": [
+      [
+       "A. Input",
+       "The input is precipitation (rain, hail).",
+       "basin_open_system.png"
+      ],
+      [
+       "B. Stores and Transfers",
+       "Water is stored on leaves (interception), on the surface, in the soil and as groundwater. It is transferred by infiltration, runoff and throughflow."
+      ],
+      [
+       "C. Outputs",
+       "Water leaves by evaporation, transpiration and river flow to the sea."
+      ],
+      [
+       "D. The Global Cycle",
+       "At the scale of the whole Earth, the water cycle is a closed system: the total amount of water does not change."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. DIAGRAM",
+    "qa": [],
+    "sum": {
+     "title": "III. Diagram of the Hydrological Cycle",
+     "items": [
+      [
+       "Labelled Diagram",
+       "Copy the diagram with its labels: evaporation, transpiration, condensation, precipitation, surface runoff, infiltration and groundwater flow.",
+       "water_cycle.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between evaporation and transpiration?",
+    "Evaporation is water vapour coming from water surfaces, while transpiration is water vapour released by plants."
+   ],
+   [
+    "Why is the drainage basin an open system?",
+    "It is an open system because water enters it as precipitation and leaves it by evaporation and river flow."
+   ],
+   [
+    "How does cutting trees affect the water cycle?",
+    "It reduces transpiration and infiltration, and increases surface runoff, floods and soil erosion."
+   ]
+  ],
+  "remediation": [
+   [
+    "The continuous movement of water is the ______ cycle.",
+    "Water vapour lost by plants is ______.",
+    "Water soaking into the ground is ______."
+   ],
+   [
+    "Water flowing over the ground is surface ______.",
+    "The input of a drainage basin is ______.",
+    "At the global scale, the water cycle is a ______ system."
+   ]
+  ],
+  "remediationAnswers": "1. hydrological 2. transpiration 3. infiltration 4. runoff 5. precipitation 6. closed",
+  "homework": "Ask your grandparents or an elder whether the dry season is hotter or longer today than when they were young. Write down what they say.",
+  "homeworkTag": "This prepares Lesson 40: Global Warming.",
+  "bilingual": [
+   [
+    "Water cycle",
+    "Le cycle de l'eau"
+   ],
+   [
+    "Evaporation",
+    "L'évaporation"
+   ],
+   [
+    "Transpiration",
+    "La transpiration"
+   ],
+   [
+    "Infiltration",
+    "L'infiltration"
+   ],
+   [
+    "Runoff",
+    "Le ruissellement"
+   ],
+   [
+    "Groundwater",
+    "La nappe souterraine"
+   ],
+   [
+    "Input",
+    "L'entrée"
+   ],
+   [
+    "Output",
+    "La sortie"
+   ]
+  ],
+  "teacherNote": [
+   "Correction of the source notes: the global water cycle is a closed system for water (only energy enters and leaves). The syllabus \"open system\" refers to the drainage basin, where water enters and leaves.",
+   "Part III is mainly for copying the labelled diagram."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

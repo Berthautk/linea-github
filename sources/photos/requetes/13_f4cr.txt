@@ -1,0 +1,7 @@
+gully2::gully erosion soil rain
+exfol3::granite dome exfoliation sheets
+redsoil2::red dirt road Africa
+vvalley3::deep valley mountain river steep sides
+rivercliff2::eroded river bank bend
+flood3::flooded houses village water
+dyke2::flood levee embankment river

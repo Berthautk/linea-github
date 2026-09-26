@@ -1,0 +1,3 @@
+flood5::people wading flooded street houses
+flood6::flood water houses village rain
+coast5::beach erosion houses sea waves damage

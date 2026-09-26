@@ -1,0 +1,442 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The main weather elements, their instruments, units and isolines are the following. An isoline is a line joining places of equal value.\"]",
+  "sumImage | \"x\" | \"A. Temperature and Rainfall\" | [\"– Temperature: thermometer, °C, isotherm.\",\"– Rainfall: rain gauge, mm, isohyet.\"] | \"weather_instruments.png\"",
+  "sum | \"x\" | \"B. Wind\" | [\"– Wind direction: wind vane, compass points.\",\"– Wind speed: anemometer, km/h or knots, isotach.\"]",
+  "sum | \"x\" | \"C. Pressure and Humidity\" | [\"– Pressure: barometer, millibars (mb), isobar.\",\"– Humidity: hygrometer, percentage (%), isohume.\"]",
+  "sum | \"x\" | \"D. Sunshine and Cloud Cover\" | [\"– Sunshine: sunshine recorder, hours, isohel.\",\"– Cloud cover: observed by eye, oktas (eighths), isoneph.\"]",
+  "sum | \"III. Weather Elements, Instruments and Isolines (1/5)\" | [\"The main weather elements, their instruments, units and isolines are the following. An isoline is a line joining places of equal value.\"]",
+  "sumImage | \"III. Weather Elements, Instruments and Isolines (2/5)\" | \"A. Temperature and Rainfall\" | [\"– Temperature: thermometer, °C, isotherm.\",\"– Rainfall: rain gauge, mm, isohyet.\"] | \"weather_instruments.png\"",
+  "sum | \"III. Weather Elements, Instruments and Isolines (3/5)\" | \"B. Wind\" | [\"– Wind direction: wind vane, compass points.\",\"– Wind speed: anemometer, km/h or knots, isotach.\"]",
+  "sum | \"III. Weather Elements, Instruments and Isolines (4/5)\" | \"C. Pressure and Humidity\" | [\"– Pressure: barometer, millibars (mb), isobar.\",\"– Humidity: hygrometer, percentage (%), isohume.\"]",
+  "sum | \"III. Weather Elements, Instruments and Isolines (5/5)\" | \"D. Sunshine and Cloud Cover\" | [\"– Sunshine: sunshine recorder, hours, isohel.\",\"– Cloud cover: observed by eye, oktas (eighths), isoneph.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON31_Weather_and_Climate",
+  "lessonNo": 31,
+  "lessonName": "Weather and Climate",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Measurement of Weather Elements",
+  "notions": "Weather, weather instruments.",
+  "focus": "Definition of weather and climate; definition of a weather station; classification of weather elements, instruments and measurements; their isolines.",
+  "competence": "Learners are able to read a simple weather forecast and use it to plan daily activities such as farming or travel.",
+  "objectives": [
+   "Define weather and climate and distinguish between them.",
+   "Define a weather station.",
+   "Name the weather elements with their instruments, units and isolines."
+  ],
+  "recall": [
+   "The atmosphere has four layers; weather takes place in the troposphere.",
+   "Temperature falls with height in the troposphere.",
+   "The ozone layer protects us from ultraviolet rays."
+  ],
+  "recallNote": "Check the homework: information given by a weather forecast.",
+  "situation": [
+   "On Monday morning, Garoua is cloudy and it rains, so Idrissa carries an umbrella. His cousin in Paris says on the phone: \"But Garoua has a hot climate, so why do you need an umbrella?\"",
+   "Idrissa does not know how to explain the difference between the rain of today and the hot climate of Garoua."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Idrissa cannot explain the difference between today's rain and the hot climate of Garoua."
+   ],
+   [
+    "What are the conditions in Garoua on Monday morning?",
+    "On Monday morning, Garoua is cloudy and it rains."
+   ],
+   [
+    "How can Idrissa explain the difference to his cousin?",
+    "He can say that rain today is the weather, while the climate is the usual pattern of Garoua over many years."
+   ]
+  ],
+  "justification": "This lesson will help us to distinguish weather from climate, and to know how weather elements are measured.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "The condition of the air at a place today, for example cloudy and rainy, is called ______. What is the missing word?",
+      "a": "It is called weather. Weather changes from hour to hour and from day to day."
+     },
+     {
+      "q": "The average weather of a place over about 30 years is called ______. What is the missing word?",
+      "a": "It is called climate. For example, Garoua has a tropical climate with a wet season and a dry season."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "Weather is the condition of the atmosphere at a particular place and time, for example sunny, rainy, hot or windy.",
+      "Climate is the average weather condition of a place over a long period, usually 30 years or more."
+     ]
+    }
+   },
+   {
+    "sec": "II. THE WEATHER STATION",
+    "qa": [
+     {
+      "q": "At Garoua airport, there is a place where instruments measure the weather every day. What is it called?",
+      "a": "It is called a weather station, or meteorological station."
+     }
+    ],
+    "sum": {
+     "title": "II. The Weather Station",
+     "defs": [
+      "A weather station is a place with instruments that measure and record the elements of weather, to study weather and climate and to make forecasts."
+     ]
+    }
+   },
+   {
+    "sec": "III. WEATHER ELEMENTS",
+    "qa": [
+     {
+      "img": "weather_instruments.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Which instrument measures temperature, and which one measures rainfall?",
+      "a": "The thermometer measures temperature in degrees Celsius. The rain gauge measures rainfall in millimetres.",
+      "split": 5
+     },
+     {
+      "img": "weather_instruments.png",
+      "title": "Question 2",
+      "q": "Which instruments measure wind direction and wind speed?",
+      "a": "The wind vane shows wind direction. The anemometer measures wind speed in km/h or knots.",
+      "split": 5
+     },
+     {
+      "q": "On a map, a line joins all places with the same temperature. What do we call a line that joins places of equal value?",
+      "a": "It is called an isoline. A line joining places of equal temperature is an isotherm, and one joining places of equal rainfall is an isohyet."
+     }
+    ],
+    "sum": {
+     "title": "III. Weather Elements, Instruments and Isolines",
+     "intro": [
+      "The main weather elements, their instruments, units and isolines are the following. An isoline is a line joining places of equal value."
+     ],
+     "items": [
+      [
+       "A. Temperature and Rainfall",
+       [
+        "– Temperature: thermometer, °C, isotherm.",
+        "– Rainfall: rain gauge, mm, isohyet."
+       ],
+       "weather_instruments.png"
+      ],
+      [
+       "B. Wind",
+       [
+        "– Wind direction: wind vane, compass points.",
+        "– Wind speed: anemometer, km/h or knots, isotach."
+       ]
+      ],
+      [
+       "C. Pressure and Humidity",
+       [
+        "– Pressure: barometer, millibars (mb), isobar.",
+        "– Humidity: hygrometer, percentage (%), isohume."
+       ]
+      ],
+      [
+       "D. Sunshine and Cloud Cover",
+       [
+        "– Sunshine: sunshine recorder, hours, isohel.",
+        "– Cloud cover: observed by eye, oktas (eighths), isoneph."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give one difference between weather and climate.",
+    "Weather is the condition of the atmosphere for a short time, while climate is the average weather over about 30 years."
+   ],
+   [
+    "Name the instrument and the unit used to measure atmospheric pressure.",
+    "Pressure is measured with a barometer, in millibars."
+   ],
+   [
+    "What is an isohyet?",
+    "An isohyet is a line on a map that joins places with the same amount of rainfall."
+   ]
+  ],
+  "remediation": [
+   [
+    "The condition of the atmosphere at a given time is ______.",
+    "The average weather over 30 years is ______.",
+    "Rainfall is measured with a ______."
+   ],
+   [
+    "Wind speed is measured with an ______.",
+    "A line joining places of equal temperature is an ______.",
+    "A line joining places of equal pressure is an ______."
+   ]
+  ],
+  "remediationAnswers": "1. weather 2. climate 3. rain gauge 4. anemometer 5. isotherm 6. isobar",
+  "homework": "Put one bottle of water in the sun and another in the shade for one hour. Touch both and write down which is hotter and why.",
+  "homeworkTag": "This prepares Lesson 32: Weather Elements — Atmospheric Temperatures.",
+  "bilingual": [
+   [
+    "Weather",
+    "Le temps"
+   ],
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Weather station",
+    "La station météorologique"
+   ],
+   [
+    "Thermometer",
+    "Le thermomètre"
+   ],
+   [
+    "Rain gauge",
+    "Le pluviomètre"
+   ],
+   [
+    "Anemometer",
+    "L'anémomètre"
+   ],
+   [
+    "Wind vane",
+    "La girouette"
+   ],
+   [
+    "Barometer",
+    "Le baromètre"
+   ]
+  ],
+  "teacherNote": [
+   "Weather elements are sometimes classified into measured elements (temperature, rainfall, pressure, wind, humidity, sunshine) and observed elements (cloud cover, visibility).",
+   "Cloud cover is measured in oktas (eighths of the sky)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 31",
+  "title": "Weather and Climate",
+  "sumTitle": "Weather and Climate",
+  "coverNote": "Good morning, class. Today we study Lesson 31: Weather and Climate.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 31: Weather and Climate",
+  "matter": "I. Definitions: ; II. The Weather Station: ; III. Weather Elements, Instruments and Isolines: Temperature and Rainfall, Wind, Pressure and Humidity, Sunshine and Cloud Cover."
+ },
+ "file": "FORM4_LESSON31_Weather_and_Climate",
+ "sp": {
+  "file": "FORM4_LESSON31_Weather_and_Climate",
+  "lessonNo": 31,
+  "lessonName": "Weather and Climate",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Measurement of Weather Elements",
+  "notions": "Weather, weather instruments.",
+  "focus": "Definition of weather and climate; definition of a weather station; classification of weather elements, instruments and measurements; their isolines.",
+  "competence": "Learners are able to read a simple weather forecast and use it to plan daily activities such as farming or travel.",
+  "objectives": [
+   "Define weather and climate and distinguish between them.",
+   "Define a weather station.",
+   "Name the weather elements with their instruments, units and isolines."
+  ],
+  "recall": [
+   "The atmosphere has four layers; weather takes place in the troposphere.",
+   "Temperature falls with height in the troposphere.",
+   "The ozone layer protects us from ultraviolet rays."
+  ],
+  "recallNote": "Check the homework: information given by a weather forecast.",
+  "situation": [
+   "On Monday morning, Garoua is cloudy and it rains, so Idrissa carries an umbrella. His cousin in Paris says on the phone: \"But Garoua has a hot climate, so why do you need an umbrella?\"",
+   "Idrissa does not know how to explain the difference between the rain of today and the hot climate of Garoua."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Idrissa cannot explain the difference between today's rain and the hot climate of Garoua."
+   ],
+   [
+    "What are the conditions in Garoua on Monday morning?",
+    "On Monday morning, Garoua is cloudy and it rains."
+   ],
+   [
+    "How can Idrissa explain the difference to his cousin?",
+    "He can say that rain today is the weather, while the climate is the usual pattern of Garoua over many years."
+   ]
+  ],
+  "justification": "This lesson will help us to distinguish weather from climate, and to know how weather elements are measured.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "The condition of the air at a place today, for example cloudy and rainy, is called ______. What is the missing word?",
+      "a": "It is called weather. Weather changes from hour to hour and from day to day."
+     },
+     {
+      "q": "The average weather of a place over about 30 years is called ______. What is the missing word?",
+      "a": "It is called climate. For example, Garoua has a tropical climate with a wet season and a dry season."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "Weather is the condition of the atmosphere at a particular place and time, for example sunny, rainy, hot or windy.",
+      "Climate is the average weather condition of a place over a long period, usually 30 years or more."
+     ]
+    }
+   },
+   {
+    "sec": "II. THE WEATHER STATION",
+    "qa": [
+     {
+      "q": "At Garoua airport, there is a place where instruments measure the weather every day. What is it called?",
+      "a": "It is called a weather station, or meteorological station."
+     }
+    ],
+    "sum": {
+     "title": "II. The Weather Station",
+     "defs": [
+      "A weather station is a place with instruments that measure and record the elements of weather, to study weather and climate and to make forecasts."
+     ]
+    }
+   },
+   {
+    "sec": "III. WEATHER ELEMENTS",
+    "qa": [
+     {
+      "img": "weather_instruments.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Which instrument measures temperature, and which one measures rainfall?",
+      "a": "The thermometer measures temperature in degrees Celsius. The rain gauge measures rainfall in millimetres.",
+      "split": 5
+     },
+     {
+      "img": "weather_instruments.png",
+      "title": "Question 2",
+      "q": "Which instruments measure wind direction and wind speed?",
+      "a": "The wind vane shows wind direction. The anemometer measures wind speed in km/h or knots.",
+      "split": 5
+     },
+     {
+      "q": "On a map, a line joins all places with the same temperature. What do we call a line that joins places of equal value?",
+      "a": "It is called an isoline. A line joining places of equal temperature is an isotherm, and one joining places of equal rainfall is an isohyet."
+     }
+    ],
+    "sum": {
+     "title": "III. Weather Elements, Instruments and Isolines",
+     "intro": [
+      "The main weather elements, their instruments, units and isolines are the following. An isoline is a line joining places of equal value."
+     ],
+     "items": [
+      [
+       "A. Temperature and Rainfall",
+       [
+        "– Temperature: thermometer, °C, isotherm.",
+        "– Rainfall: rain gauge, mm, isohyet."
+       ],
+       "weather_instruments.png"
+      ],
+      [
+       "B. Wind",
+       [
+        "– Wind direction: wind vane, compass points.",
+        "– Wind speed: anemometer, km/h or knots, isotach."
+       ]
+      ],
+      [
+       "C. Pressure and Humidity",
+       [
+        "– Pressure: barometer, millibars (mb), isobar.",
+        "– Humidity: hygrometer, percentage (%), isohume."
+       ]
+      ],
+      [
+       "D. Sunshine and Cloud Cover",
+       [
+        "– Sunshine: sunshine recorder, hours, isohel.",
+        "– Cloud cover: observed by eye, oktas (eighths), isoneph."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give one difference between weather and climate.",
+    "Weather is the condition of the atmosphere for a short time, while climate is the average weather over about 30 years."
+   ],
+   [
+    "Name the instrument and the unit used to measure atmospheric pressure.",
+    "Pressure is measured with a barometer, in millibars."
+   ],
+   [
+    "What is an isohyet?",
+    "An isohyet is a line on a map that joins places with the same amount of rainfall."
+   ]
+  ],
+  "remediation": [
+   [
+    "The condition of the atmosphere at a given time is ______.",
+    "The average weather over 30 years is ______.",
+    "Rainfall is measured with a ______."
+   ],
+   [
+    "Wind speed is measured with an ______.",
+    "A line joining places of equal temperature is an ______.",
+    "A line joining places of equal pressure is an ______."
+   ]
+  ],
+  "remediationAnswers": "1. weather 2. climate 3. rain gauge 4. anemometer 5. isotherm 6. isobar",
+  "homework": "Put one bottle of water in the sun and another in the shade for one hour. Touch both and write down which is hotter and why.",
+  "homeworkTag": "This prepares Lesson 32: Weather Elements — Atmospheric Temperatures.",
+  "bilingual": [
+   [
+    "Weather",
+    "Le temps"
+   ],
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Weather station",
+    "La station météorologique"
+   ],
+   [
+    "Thermometer",
+    "Le thermomètre"
+   ],
+   [
+    "Rain gauge",
+    "Le pluviomètre"
+   ],
+   [
+    "Anemometer",
+    "L'anémomètre"
+   ],
+   [
+    "Wind vane",
+    "La girouette"
+   ],
+   [
+    "Barometer",
+    "Le baromètre"
+   ]
+  ],
+  "teacherNote": [
+   "Weather elements are sometimes classified into measured elements (temperature, rainfall, pressure, wind, humidity, sunshine) and observed elements (cloud cover, visibility).",
+   "Cloud cover is measured in oktas (eighths of the sky)."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

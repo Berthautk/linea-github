@@ -1,0 +1,418 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Wave erosion forms the following features:\"]",
+  "sumImage | \"x\" | \"A. Capes and Bays\" | \"Soft rock is eroded faster and forms bays; hard rock resists and forms capes (headlands). Example: the bays and headlands around Limbe.\" | \"capes_bays.png\"",
+  "sumImage | \"x\" | \"B. Cliffs and Wave-Cut Platforms\" | \"Waves cut a notch; the rock above collapses and the cliff retreats, leaving a flat wave-cut platform, seen at low tide.\" | \"cliff_platform.png\"",
+  "sumImage | \"x\" | \"C. Caves, Arches, Stacks and Stumps\" | \"Waves enlarge a crack into a cave, then cut through to form an arch. The arch collapses and leaves a stack, which is worn into a stump.\" | \"headland_erosion.png\"",
+  "sum | \"II. Erosional Features of Wave Action (1/4)\" | [\"Wave erosion forms the following features:\"]",
+  "sumImage | \"II. Erosional Features of Wave Action (2/4)\" | \"A. Capes and Bays\" | \"Soft rock is eroded faster and forms bays; hard rock resists and forms capes (headlands). Example: the bays and headlands around Limbe.\" | \"capes_bays.png\"",
+  "sumImage | \"II. Erosional Features of Wave Action (3/4)\" | \"B. Cliffs and Wave-Cut Platforms\" | \"Waves cut a notch; the rock above collapses and the cliff retreats, leaving a flat wave-cut platform, seen at low tide.\" | \"cliff_platform.png\"",
+  "sumImage | \"II. Erosional Features of Wave Action (4/4)\" | \"C. Caves, Arches, Stacks and Stumps\" | \"Waves enlarge a crack into a cave, then cut through to form an arch. The arch collapses and leaves a stack, which is worn into a stump.\" | \"headland_erosion.png\""
+ ],
+ "end": {
+  "file": "FORM4_LESSON24_Erosional_Features_of_Wave_Action",
+  "lessonNo": 24,
+  "lessonName": "Main Erosional Processes and Features of Wave Action",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "notions": "Capes and bays, cliffs, wave-cut platforms, caves, arches, stacks and stumps.",
+  "focus": "Erosional processes of waves; erosional features (use local examples).",
+  "competence": "Learners are able to recognise and explain the landforms of a rocky coast, and to respect the dangers of cliffs and caves.",
+  "objectives": [
+   "Explain the four erosional processes of waves.",
+   "Explain the formation of capes and bays, cliffs and wave-cut platforms.",
+   "Explain the formation of caves, arches, stacks and stumps."
+  ],
+  "recall": [
+   "Destructive waves erode the coast.",
+   "The backwash of destructive waves is stronger than the swash.",
+   "Rivers erode by hydraulic action, abrasion, attrition and solution."
+  ],
+  "recallNote": "Check the homework: drawings of the coast of Limbe or Kribi.",
+  "situation": [
+   "On holiday in Limbe, Rahila stands on the black sand beach. Big waves crash against the rocky coast. At the base of a rock face, the waves have cut a notch and small caves.",
+   "She hears the stones rolling in the water. Rahila wonders how water can be strong enough to break solid rock and carve these shapes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Rahila does not understand how waves can break solid rock."
+   ],
+   [
+    "Why is the sand of Limbe black?",
+    "It comes from the volcanic rocks (basalt) of Mount Cameroon."
+   ],
+   [
+    "Why is it dangerous to sit under a sea cliff?",
+    "The waves undercut the cliff, and rocks can fall at any time."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how waves erode rocky coasts and create cliffs, caves, arches and stacks.",
+  "parts": [
+   {
+    "sec": "I. EROSIONAL PROCESSES",
+    "qa": [
+     {
+      "q": "How does hydraulic action break a cliff?",
+      "a": "Waves hit the cliff and trap air in the cracks. The air is compressed, then expands suddenly when the wave goes back, and the rock breaks."
+     },
+     {
+      "q": "What is the difference between abrasion and attrition on the coast?",
+      "a": "In abrasion, waves throw sand and stones against the cliff. In attrition, the stones hit each other and become small and round pebbles."
+     },
+     {
+      "q": "What is solution (corrosion) on the coast?",
+      "a": "Sea water slowly dissolves some rocks, such as limestone and chalk."
+     }
+    ],
+    "sum": {
+     "title": "I. Erosional Processes of Waves",
+     "intro": "Waves erode the coast in four ways:",
+     "items": [
+      [
+       "The Processes",
+       [
+        "– Hydraulic action: the force of waves and compressed air in cracks breaks the rock.",
+        "– Abrasion (corrasion): waves throw sand and stones against the cliff.",
+        "– Attrition: stones hit each other and become small, round pebbles.",
+        "– Solution (corrosion): sea water dissolves rocks such as limestone."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. EROSIONAL FEATURES",
+    "qa": [
+     {
+      "img": "capes_bays.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "How are capes and bays formed?",
+      "a": "Where hard and soft rocks meet the sea, waves erode the soft rock faster and form bays. The hard rock resists and sticks out as capes (headlands).",
+      "split": 5.2
+     },
+     {
+      "img": "cliff_platform.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "Explain how a cliff and a wave-cut platform are formed.",
+      "a": "Waves cut a notch at the base of the rock. The rock above collapses and the cliff retreats. The flat rocky area left at its base is the wave-cut platform.",
+      "split": 5.2
+     },
+     {
+      "img": "headland_erosion.png",
+      "kind": "diagram",
+      "q": "Study the erosion of a headland.",
+      "full": true
+     },
+     {
+      "q": "Explain how a cave becomes an arch, then a stack and a stump.",
+      "a": "Waves enlarge a crack into a cave. The cave is cut through the headland and forms an arch. The top of the arch falls and leaves a stack. The stack is worn down into a stump."
+     }
+    ],
+    "sum": {
+     "title": "II. Erosional Features of Wave Action",
+     "intro": "Wave erosion forms the following features:",
+     "items": [
+      [
+       "A. Capes and Bays",
+       "Soft rock is eroded faster and forms bays; hard rock resists and forms capes (headlands). Example: the bays and headlands around Limbe.",
+       "capes_bays.png"
+      ],
+      [
+       "B. Cliffs and Wave-Cut Platforms",
+       "Waves cut a notch; the rock above collapses and the cliff retreats, leaving a flat wave-cut platform, seen at low tide.",
+       "cliff_platform.png"
+      ],
+      [
+       "C. Caves, Arches, Stacks and Stumps",
+       "Waves enlarge a crack into a cave, then cut through to form an arch. The arch collapses and leaves a stack, which is worn into a stump.",
+       "headland_erosion.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is hydraulic action?",
+    "It is the force of waves and compressed air in cracks, which breaks the rock."
+   ],
+   [
+    "How are bays formed?",
+    "Waves erode soft rock faster than hard rock, and form bays."
+   ],
+   [
+    "Put in order: stack, cave, stump, arch.",
+    "Cave, arch, stack, stump."
+   ]
+  ],
+  "remediation": [
+   [
+    "A piece of hard rock that sticks out into the sea is a ______.",
+    "A curved area of sea between capes is a ______.",
+    "The flat rock left at the foot of a cliff is a wave-cut ______."
+   ],
+   [
+    "A cave cut through a headland becomes an ______.",
+    "A pillar of rock separated from the land is a ______.",
+    "A small rock left after a stack collapses is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. cape (headland) 2. bay 3. platform 4. arch 5. stack 6. stump",
+  "homework": "Put some sand at one end of a tray of water and make waves from one corner. Write where the sand moves.",
+  "homeworkTag": "This prepares Lesson 25: Main Depositional Features of Wave Action.",
+  "bilingual": [
+   [
+    "Cliff",
+    "La falaise"
+   ],
+   [
+    "Cape / headland",
+    "Le cap"
+   ],
+   [
+    "Bay",
+    "La baie"
+   ],
+   [
+    "Cave",
+    "La grotte"
+   ],
+   [
+    "Arch",
+    "L'arche"
+   ],
+   [
+    "Stack",
+    "L'aiguille / le stack"
+   ],
+   [
+    "Wave-cut platform",
+    "La plate-forme d'abrasion"
+   ],
+   [
+    "Notch",
+    "L'encoche"
+   ]
+  ],
+  "teacherNote": [
+   "Addition from the syllabus: capes and bays were missing in the source notes.",
+   "Local examples: the rocky volcanic coast of Limbe, with small bays, headlands and black sand beaches; Kribi has rocky points between sandy bays."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 24",
+  "title": "Main Erosional Processes and Features of Wave Action",
+  "sumTitle": "Main Erosional Processes and Features of Wave Action",
+  "coverNote": "Good morning, class. Today we study Lesson 24: Main Erosional Processes and Features of Wave Action.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 24: Main Erosional Processes and Features of Wave Action",
+  "matter": "I. Erosional Processes of Waves: The Processes; II. Erosional Features of Wave Action: Capes and Bays, Cliffs and Wave-Cut Platforms, Caves, Arches, Stacks and Stumps."
+ },
+ "file": "FORM4_LESSON24_Erosional_Features_of_Wave_Action",
+ "sp": {
+  "file": "FORM4_LESSON24_Erosional_Features_of_Wave_Action",
+  "lessonNo": 24,
+  "lessonName": "Main Erosional Processes and Features of Wave Action",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Wave Action along the Coast and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Wave Action along the Coast and Impacts on Man",
+  "notions": "Capes and bays, cliffs, wave-cut platforms, caves, arches, stacks and stumps.",
+  "focus": "Erosional processes of waves; erosional features (use local examples).",
+  "competence": "Learners are able to recognise and explain the landforms of a rocky coast, and to respect the dangers of cliffs and caves.",
+  "objectives": [
+   "Explain the four erosional processes of waves.",
+   "Explain the formation of capes and bays, cliffs and wave-cut platforms.",
+   "Explain the formation of caves, arches, stacks and stumps."
+  ],
+  "recall": [
+   "Destructive waves erode the coast.",
+   "The backwash of destructive waves is stronger than the swash.",
+   "Rivers erode by hydraulic action, abrasion, attrition and solution."
+  ],
+  "recallNote": "Check the homework: drawings of the coast of Limbe or Kribi.",
+  "situation": [
+   "On holiday in Limbe, Rahila stands on the black sand beach. Big waves crash against the rocky coast. At the base of a rock face, the waves have cut a notch and small caves.",
+   "She hears the stones rolling in the water. Rahila wonders how water can be strong enough to break solid rock and carve these shapes."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Rahila does not understand how waves can break solid rock."
+   ],
+   [
+    "Why is the sand of Limbe black?",
+    "It comes from the volcanic rocks (basalt) of Mount Cameroon."
+   ],
+   [
+    "Why is it dangerous to sit under a sea cliff?",
+    "The waves undercut the cliff, and rocks can fall at any time."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how waves erode rocky coasts and create cliffs, caves, arches and stacks.",
+  "parts": [
+   {
+    "sec": "I. EROSIONAL PROCESSES",
+    "qa": [
+     {
+      "q": "How does hydraulic action break a cliff?",
+      "a": "Waves hit the cliff and trap air in the cracks. The air is compressed, then expands suddenly when the wave goes back, and the rock breaks."
+     },
+     {
+      "q": "What is the difference between abrasion and attrition on the coast?",
+      "a": "In abrasion, waves throw sand and stones against the cliff. In attrition, the stones hit each other and become small and round pebbles."
+     },
+     {
+      "q": "What is solution (corrosion) on the coast?",
+      "a": "Sea water slowly dissolves some rocks, such as limestone and chalk."
+     }
+    ],
+    "sum": {
+     "title": "I. Erosional Processes of Waves",
+     "intro": "Waves erode the coast in four ways:",
+     "items": [
+      [
+       "The Processes",
+       [
+        "– Hydraulic action: the force of waves and compressed air in cracks breaks the rock.",
+        "– Abrasion (corrasion): waves throw sand and stones against the cliff.",
+        "– Attrition: stones hit each other and become small, round pebbles.",
+        "– Solution (corrosion): sea water dissolves rocks such as limestone."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. EROSIONAL FEATURES",
+    "qa": [
+     {
+      "img": "capes_bays.png",
+      "kind": "diagram",
+      "title": "Question 1",
+      "q": "How are capes and bays formed?",
+      "a": "Where hard and soft rocks meet the sea, waves erode the soft rock faster and form bays. The hard rock resists and sticks out as capes (headlands).",
+      "split": 5.2
+     },
+     {
+      "img": "cliff_platform.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "Explain how a cliff and a wave-cut platform are formed.",
+      "a": "Waves cut a notch at the base of the rock. The rock above collapses and the cliff retreats. The flat rocky area left at its base is the wave-cut platform.",
+      "split": 5.2
+     },
+     {
+      "img": "headland_erosion.png",
+      "kind": "diagram",
+      "q": "Study the erosion of a headland.",
+      "full": true
+     },
+     {
+      "q": "Explain how a cave becomes an arch, then a stack and a stump.",
+      "a": "Waves enlarge a crack into a cave. The cave is cut through the headland and forms an arch. The top of the arch falls and leaves a stack. The stack is worn down into a stump."
+     }
+    ],
+    "sum": {
+     "title": "II. Erosional Features of Wave Action",
+     "intro": "Wave erosion forms the following features:",
+     "items": [
+      [
+       "A. Capes and Bays",
+       "Soft rock is eroded faster and forms bays; hard rock resists and forms capes (headlands). Example: the bays and headlands around Limbe.",
+       "capes_bays.png"
+      ],
+      [
+       "B. Cliffs and Wave-Cut Platforms",
+       "Waves cut a notch; the rock above collapses and the cliff retreats, leaving a flat wave-cut platform, seen at low tide.",
+       "cliff_platform.png"
+      ],
+      [
+       "C. Caves, Arches, Stacks and Stumps",
+       "Waves enlarge a crack into a cave, then cut through to form an arch. The arch collapses and leaves a stack, which is worn into a stump.",
+       "headland_erosion.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is hydraulic action?",
+    "It is the force of waves and compressed air in cracks, which breaks the rock."
+   ],
+   [
+    "How are bays formed?",
+    "Waves erode soft rock faster than hard rock, and form bays."
+   ],
+   [
+    "Put in order: stack, cave, stump, arch.",
+    "Cave, arch, stack, stump."
+   ]
+  ],
+  "remediation": [
+   [
+    "A piece of hard rock that sticks out into the sea is a ______.",
+    "A curved area of sea between capes is a ______.",
+    "The flat rock left at the foot of a cliff is a wave-cut ______."
+   ],
+   [
+    "A cave cut through a headland becomes an ______.",
+    "A pillar of rock separated from the land is a ______.",
+    "A small rock left after a stack collapses is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. cape (headland) 2. bay 3. platform 4. arch 5. stack 6. stump",
+  "homework": "Put some sand at one end of a tray of water and make waves from one corner. Write where the sand moves.",
+  "homeworkTag": "This prepares Lesson 25: Main Depositional Features of Wave Action.",
+  "bilingual": [
+   [
+    "Cliff",
+    "La falaise"
+   ],
+   [
+    "Cape / headland",
+    "Le cap"
+   ],
+   [
+    "Bay",
+    "La baie"
+   ],
+   [
+    "Cave",
+    "La grotte"
+   ],
+   [
+    "Arch",
+    "L'arche"
+   ],
+   [
+    "Stack",
+    "L'aiguille / le stack"
+   ],
+   [
+    "Wave-cut platform",
+    "La plate-forme d'abrasion"
+   ],
+   [
+    "Notch",
+    "L'encoche"
+   ]
+  ],
+  "teacherNote": [
+   "Addition from the syllabus: capes and bays were missing in the source notes.",
+   "Local examples: the rocky volcanic coast of Limbe, with small bays, headlands and black sand beaches; Kribi has rocky points between sandy bays."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,212 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Question 1\" | [\"The Equatorial region receives heavy rain almost every day. What problem does this create for roads and transport?\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Answer\" | [\"Heavy rain makes roads muddy and slippery, and it can wash roads and bridges away. The transport of people and goods becomes difficult, as in the East Region during the rainy season.\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Question 2\" | [\"The climate is hot and humid all year. Why does this favour diseases? Name two of them.\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Answer\" | [\"Heat and humidity favour insects that carry diseases. Mosquitoes carry malaria, the tsetse fly carries sleeping sickness, and the blackfly carries river blindness.\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Question 3\" | [\"The forest is very thick, with tall trees growing close together. What problem does this create for farmers and road builders?\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Answer\" | [\"Clearing the thick forest for farms and roads is hard, slow and expensive. The forest also hides wild animals that can destroy crops.\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Question 4\" | [\"We learnt that ferrallitic soils are poor. What problem does this create for farmers?\"]",
+  "slide | \"I. PROBLEMS FACED BY MAN\" | \"Answer\" | [\"Heavy rain washes the plant food out of the soil. After a few years, harvests become small, and farmers must move to new land.\"] | \"Transition: Now let us see the problems that people themselves cause to the forest.\"",
+  "imageFull | \"II. PROBLEMS CAUSED BY MAN\" | \"Activity 2: Study the two images\" | \"The same forest, before and after human activities.\" | \"forest_before_after.png\"",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Question 1\" | [\"What has happened to the forest in the \\\"After\\\" image? What do we call this?\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Answer\" | [\"The trees have been cut down, and only stumps remain. The cutting down of forests is called deforestation.\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Question 2\" | [\"Look at the river in the \\\"After\\\" image. What happens to the bare soil when heavy rain falls on it?\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Answer\" | [\"The rain washes the bare soil away into the river. This is called soil erosion. The river becomes muddy, as in Paul's village.\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Question 3\" | [\"In the \\\"Before\\\" image, we see a gorilla and other animals. What happens to these animals when the forest is cut and hunting increases?\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Answer\" | [\"The animals lose their home and many are killed by poachers. Some species, such as gorillas and forest elephants, become rare. This is called loss of biodiversity.\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Question 4\" | [\"Gold miners in the East Region wash the earth in rivers. What problem does this cause for the water?\"]",
+  "slide | \"II. PROBLEMS CAUSED BY MAN\" | \"Answer\" | [\"The rivers become polluted by mud and sometimes by chemicals such as mercury. The water becomes dangerous for people and fish.\"] | \"Transition: What have people done to solve these problems?\"",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Question 1\" | [\"After a forest has been cut down, what can people do to bring the trees back?\"]",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"They can plant new trees. This is called reforestation. Farmers can also grow trees and crops together; this is called agroforestry.\"]",
+  "imageQ | \"III. ATTEMPTED SOLUTIONS\" | \"Question 2\" | \"Look at the map. Name one protected area in the forest zone of Cameroon. Why was it created?\" | \"cmr_protected_areas.png\"",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"The Dja Faunal Reserve, Korup, Lobéké and Campo Ma'an National Parks are protected areas. They were created to protect forest plants and animals from logging and poaching.\"]",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Question 3\" | [\"Instead of cutting down all the trees, how can logging companies protect the forest?\"]",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"They can cut only some big trees and leave the young ones to grow. This is called selective logging. In Cameroon, the forestry law of 1994 obliges companies to follow a management plan.\"]",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Question 4\" | [\"What can the government and health workers do against malaria and other diseases?\"]",
+  "slide | \"III. ATTEMPTED SOLUTIONS\" | \"Answer\" | [\"They can distribute mosquito nets, vaccinate people, clean the surroundings and build health centres.\"] | \"Transition: Now, copy the board summary.\"",
+  "sum | \"I. Problems Faced by Man (1/5)\" | [\"The Equatorial environment creates the following problems for the people who live there: transport difficulties, diseases, a thick forest and poor soils.\"]",
+  "sum | \"I. Problems Faced by Man (2/5)\" | \"A. Transport Difficulties\" | [\"Heavy rain makes roads muddy and slippery, and it can wash roads and bridges away. Transport becomes difficult.\"]",
+  "sum | \"I. Problems Faced by Man (3/5)\" | \"B. Diseases\" | [\"The hot and humid climate favours insects that carry diseases, such as malaria, sleeping sickness and river blindness.\"]",
+  "sum | \"I. Problems Faced by Man (4/5)\" | \"C. The Thick Forest\" | [\"The thick forest is hard to clear for farms and roads. Wild animals hiding in it destroy crops.\"]",
+  "sum | \"I. Problems Faced by Man (5/5)\" | \"D. Poor Soils\" | [\"Heavy rain washes the plant food out of the ferrallitic soils. Harvests become small after a few years.\"]",
+  "sum | \"II. Problems Caused by Man (1/5)\" | [\"Human activities such as lumbering, farming, hunting and mining cause the following problems: deforestation, soil erosion, loss of biodiversity and water pollution.\"]",
+  "sum | \"II. Problems Caused by Man (2/5)\" | \"A. Deforestation\" | [\"Deforestation is the cutting down of forests for timber, farms, roads and settlements. The forest of the Equatorial region is disappearing.\"]",
+  "sum | \"II. Problems Caused by Man (3/5)\" | \"B. Soil Erosion\" | [\"When trees are cut, the soil is left bare. Heavy rain then washes the soil away into the rivers.\"]",
+  "sum | \"II. Problems Caused by Man (4/5)\" | \"C. Loss of Biodiversity\" | [\"Deforestation and poaching destroy plants and animals. Species such as gorillas and forest elephants are becoming rare.\"]",
+  "sum | \"II. Problems Caused by Man (5/5)\" | \"D. Water Pollution\" | [\"Mining and logging pollute rivers with mud and chemicals. The water becomes dangerous for people and fish.\"]",
+  "sum | \"III. Attempted Solutions (1/6)\" | \"DEFINITION\" | [\"Conservation is the careful protection and management of natural resources, so that they can still be used in the future.\"]",
+  "sum | \"III. Attempted Solutions (2/6)\" | [\"The main solutions that have been attempted are reforestation, protected areas, selective logging, health programmes and better roads.\"]",
+  "sum | \"III. Attempted Solutions (3/6)\" | \"A. Reforestation and Agroforestry\" | [\"People plant new trees where the forest has been cut. Farmers also grow trees and crops together to protect the soil.\"]",
+  "sumImage | \"III. Attempted Solutions (4/6)\" | \"B. Protected Areas\" | \"National parks and reserves, such as the Dja Faunal Reserve, protect plants and animals.\" | \"cmr_protected_areas.png\"",
+  "sum | \"III. Attempted Solutions (5/6)\" | \"C. Selective Logging\" | [\"Logging companies cut only some big trees and leave the young ones. The forestry law of 1994 obliges them to follow a management plan.\"]",
+  "sum | \"III. Attempted Solutions (6/6)\" | \"D. Health Programmes and Roads\" | [\"The government distributes mosquito nets and vaccinates people. It also builds paved roads and bridges.\"]"
+ ],
+ "d": {
+  "label": "FORM 2 TECHNICAL  —  LESSON 1 (WEEK 7)",
+  "title": "The Equatorial Region: Problems Faced, Problems Caused and Attempted Solutions",
+  "coverNote": "Good morning, class. Today we finish Lesson 1 on the Equatorial Region with its problems and the solutions people have tried.",
+  "sumTitle": "The Equatorial Region",
+  "cls": "Form 2 Technical",
+  "chapter": "Economic Geography — Natural Regions: 1. Equatorial Regions",
+  "duration": "2 periods (2 × 50 minutes)",
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "lesson": "Lesson 1: The Equatorial Region — Problems Faced, Problems Caused and Attempted Solutions",
+  "notions": "Deforestation, soil erosion, loss of biodiversity, conservation, reforestation.",
+  "focus": "Problems faced by man, problems caused by man and attempted solutions in the Equatorial region (progression sheet, week 7).",
+  "competence": "Learners are able to recognise the damage caused by cutting down trees around them and take simple actions to protect trees, soils and rivers.",
+  "objectives": [
+   "Identify the problems that the Equatorial environment creates for people.",
+   "Identify the problems that human activities cause to the Equatorial environment.",
+   "Describe the solutions that have been attempted to solve these problems."
+  ],
+  "recall": [
+   "The Equatorial region is hot and wet all year, with a thick evergreen forest and poor ferrallitic soils.",
+   "Its resources are timber, water, minerals, wildlife and farmland.",
+   "People exploit them through lumbering, plantation farming, hunting and mining."
+  ],
+  "recallNote": "Ask learners to recall the resources and human activities studied in week 5. Check the homework on problems caused by forestry, farming and hunting.",
+  "situation": [
+   "During the holidays, Paul visits his uncle in a village near a logging company in the East Region. He sees that a large part of the forest near the village has been cut down, leaving bare red soil.",
+   "After a heavy rain, muddy water rushes down the slope into the village stream. The villagers complain that the water is now dirty and that they catch fewer fish. Paul wonders why the stream has changed."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the village stream has become muddy and has fewer fish since the forest was cut down."
+   ],
+   [
+    "What has caused the soil to be washed into the stream?",
+    "The forest was cut down, so the soil was left bare. The heavy rain washed the bare soil into the stream."
+   ],
+   [
+    "What can the village and the logging company do to solve this problem?",
+    "They can replant trees, cut only some trees instead of the whole forest, and keep a strip of forest along the stream."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difficulties of living in the Equatorial region and the damage people cause there, so that we can protect our forests, soils and rivers."
+ },
+ "end": {
+  "label": "FORM 2 TECHNICAL  —  LESSON 1 (WEEK 7)",
+  "title": "The Equatorial Region: Problems Faced, Problems Caused and Attempted Solutions",
+  "coverNote": "Good morning, class. Today we finish Lesson 1 on the Equatorial Region with its problems and the solutions people have tried.",
+  "sumTitle": "The Equatorial Region",
+  "cls": "Form 2 Technical",
+  "chapter": "Economic Geography — Natural Regions: 1. Equatorial Regions",
+  "duration": "2 periods (2 × 50 minutes)",
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "lesson": "Lesson 1: The Equatorial Region — Problems Faced, Problems Caused and Attempted Solutions",
+  "notions": "Deforestation, soil erosion, loss of biodiversity, conservation, reforestation.",
+  "focus": "Problems faced by man, problems caused by man and attempted solutions in the Equatorial region (progression sheet, week 7).",
+  "competence": "Learners are able to recognise the damage caused by cutting down trees around them and take simple actions to protect trees, soils and rivers.",
+  "objectives": [
+   "Identify the problems that the Equatorial environment creates for people.",
+   "Identify the problems that human activities cause to the Equatorial environment.",
+   "Describe the solutions that have been attempted to solve these problems."
+  ],
+  "recall": [
+   "The Equatorial region is hot and wet all year, with a thick evergreen forest and poor ferrallitic soils.",
+   "Its resources are timber, water, minerals, wildlife and farmland.",
+   "People exploit them through lumbering, plantation farming, hunting and mining."
+  ],
+  "recallNote": "Ask learners to recall the resources and human activities studied in week 5. Check the homework on problems caused by forestry, farming and hunting.",
+  "situation": [
+   "During the holidays, Paul visits his uncle in a village near a logging company in the East Region. He sees that a large part of the forest near the village has been cut down, leaving bare red soil.",
+   "After a heavy rain, muddy water rushes down the slope into the village stream. The villagers complain that the water is now dirty and that they catch fewer fish. Paul wonders why the stream has changed."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the village stream has become muddy and has fewer fish since the forest was cut down."
+   ],
+   [
+    "What has caused the soil to be washed into the stream?",
+    "The forest was cut down, so the soil was left bare. The heavy rain washed the bare soil into the stream."
+   ],
+   [
+    "What can the village and the logging company do to solve this problem?",
+    "They can replant trees, cut only some trees instead of the whole forest, and keep a strip of forest along the stream."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the difficulties of living in the Equatorial region and the damage people cause there, so that we can protect our forests, soils and rivers.",
+  "evaluation": [
+   [
+    "Explain why malaria is common in the Equatorial region.",
+    "Malaria is common because the hot and humid climate and the stagnant water favour the mosquitoes that carry it."
+   ],
+   [
+    "Explain how deforestation leads to soil erosion.",
+    "When the trees are cut, their roots no longer hold the soil. Heavy rain then washes the bare soil away."
+   ],
+   [
+    "Give one problem faced by man and one problem caused by man in the Equatorial region.",
+    "A problem faced by man is the difficulty of transport. A problem caused by man is deforestation."
+   ]
+  ],
+  "remediation": [
+   [
+    "The cutting down of forests is called ______.",
+    "The washing away of bare soil by rain is called soil ______.",
+    "The disease carried by mosquitoes is called ______."
+   ],
+   [
+    "The planting of new trees is called ______.",
+    "Cutting only some big trees is called ______ logging.",
+    "The careful protection of natural resources is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. deforestation 2. erosion 3. malaria 4. reforestation 5. selective 6. conservation",
+  "homework": "Observe the vegetation around your home in Garoua. Are there tall trees growing close together, or grasses with scattered trees? Write two sentences to describe it.",
+  "homeworkTag": "This prepares Lesson 2: The Tropical Grassland Region (location and climate).",
+  "bilingual": [
+   [
+    "Deforestation",
+    "La déforestation"
+   ],
+   [
+    "Soil erosion",
+    "L'érosion des sols"
+   ],
+   [
+    "Biodiversity",
+    "La biodiversité"
+   ],
+   [
+    "Poaching",
+    "Le braconnage"
+   ],
+   [
+    "Reforestation",
+    "Le reboisement"
+   ],
+   [
+    "Protected area",
+    "L'aire protégée"
+   ],
+   [
+    "Conservation",
+    "La conservation"
+   ],
+   [
+    "Mosquito net",
+    "La moustiquaire"
+   ]
+  ],
+  "matter": "I. Problems faced by man (transport, diseases, thick forest, poor soils); II. Problems caused by man (deforestation, soil erosion, loss of biodiversity, water pollution); III. Attempted solutions (reforestation and agroforestry, protected areas, selective logging, health programmes and roads).",
+  "teacherNote": [
+   "This session is week 7 of the progression sheet (1 week = 1 session of 2 periods). It completes Lesson 1.",
+   "Period 1: recall, situation, parts I and II. Period 2: part III, board summary, evaluation and homework.",
+   "In the \"Before\" image, the red-and-blue parrot is a South American macaw; African forests have grey parrots instead. Mention it or replace the image."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2 — week 7.",
+   "Lesson 1 document: The Equatorial Region (teacher's file).",
+   "UNESCO: Dja Faunal Reserve (1987); Cameroon Forestry Law No. 94/01 of 20 January 1994.",
+   "Protected-areas map drawn from Natural Earth and geoBoundaries data."
+  ]
+ },
+ "file": "FORM2TECH_LESSON1_WEEK7_Problems_Solutions"
+}

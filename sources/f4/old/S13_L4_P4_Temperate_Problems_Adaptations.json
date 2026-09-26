@@ -1,0 +1,662 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. PROBLEMS FACED\" | \"Question 1\" | [\"In winter, snow and frost cover the ground for several months in the continental interiors. What problem does this cause for farmers?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"Crops cannot grow in winter, so the growing season is short. Animals must be kept inside and fed.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 2\" | [\"In the 1930s, drought and strong winds blew away the soil of the American Prairies. What was this disaster called?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"It was called the Dust Bowl. Drought and bad farming left the soil bare, and the wind carried it away.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 3\" | [\"In the hot, dry Mediterranean summer, what danger threatens forests and villages?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"Forest fires threaten them, for example in Greece, Spain and California.\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Question 4\" | [\"Farmers use a lot of fertilisers and pesticides. What problem can this cause?\"]",
+  "slide | \"I. PROBLEMS FACED\" | \"Answer\" | [\"They can pollute rivers, lakes and underground water, and harm plants and animals.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 1\" | [\"How are houses in cold countries built to keep people warm in winter?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"They have thick insulated walls, double windows, heating systems and sloping roofs so that snow slides off.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 2\" | [\"How can farmers grow vegetables in winter, when it is too cold outside?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"They grow them in greenhouses made of glass or plastic, which keep the heat of the sun inside.\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Question 3\" | [\"After the Dust Bowl, farmers planted rows of trees around their fields. Why?\"]",
+  "slide | \"II. ADAPTATIONS\" | \"Answer\" | [\"The rows of trees, called shelterbelts, break the force of the wind and protect the soil from erosion.\"]",
+  "sum | \"I. Problems Faced (1/6)\" | [\"The main problems faced in the temperate region are the following:\"]",
+  "sum | \"I. Problems Faced (2/6)\" | \"A. Cold Winters\" | [\"Snow and frost make transport difficult, freeze water pipes and stop crops from growing.\"]",
+  "sum | \"I. Problems Faced (3/6)\" | \"B. Short Growing Season\" | [\"In the cold interiors, crops can grow only from spring to autumn.\"]",
+  "sum | \"I. Problems Faced (4/6)\" | \"C. Drought and Soil Erosion\" | [\"Drought and strong winds can blow away bare soil, as in the Dust Bowl of the American Prairies in the 1930s.\"]",
+  "sum | \"I. Problems Faced (5/6)\" | \"D. Storms, Floods and Forest Fires\" | [\"Storms and floods hit western coasts. Forest fires burn Mediterranean lands in summer.\"]",
+  "sum | \"I. Problems Faced (6/6)\" | \"E. Pollution\" | [\"The heavy use of fertilisers and pesticides pollutes rivers and underground water.\"]",
+  "sum | \"II. Adaptations (1/6)\" | [\"People have adapted to the problems of the temperate region in the following ways:\"]",
+  "sum | \"II. Adaptations (2/6)\" | \"A. Houses and Clothing\" | [\"Houses have thick insulated walls, double windows, heating and sloping roofs. People wear coats, gloves and boots in winter.\"]",
+  "sum | \"II. Adaptations (3/6)\" | \"B. Transport\" | [\"Snowploughs clear the roads, and salt is spread to melt ice.\"]",
+  "sum | \"II. Adaptations (4/6)\" | \"C. Farming Adaptations\" | [\"Farmers use greenhouses, store hay for winter, grow winter wheat and irrigate in dry summers.\"]",
+  "sum | \"II. Adaptations (5/6)\" | \"D. Soil Protection\" | [\"Shelterbelts of trees, contour ploughing and crop rotation protect the soil from erosion.\"]",
+  "sum | \"II. Adaptations (6/6)\" | \"E. Fighting Fires and Pollution\" | [\"Firefighters, aircraft and firebreaks fight forest fires. Laws limit the use of fertilisers and pesticides.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S13_L4_P4_Temperate_Problems_Adaptations",
+  "part": 4,
+  "partTitle": "Problems Faced and Adaptations",
+  "notions": "Frost, snow, short growing season, drought, forest fire, shelterbelt, greenhouse.",
+  "focus": "Problems faced in the temperate region and the adaptations of people.",
+  "competence": "Learners are able to explain how people adapt their houses, clothes and farming to a difficult climate, and apply this idea to their own environment.",
+  "objectives": [
+   "Identify the problems faced by people in the temperate region.",
+   "Describe how people adapt their houses, clothes and transport.",
+   "Describe how farmers adapt to the problems of the temperate climate."
+  ],
+  "recall": [
+   "Temperate farming includes mixed, dairy, grain, ranching and Mediterranean farming.",
+   "It is very productive thanks to machines, science and cooperatives."
+  ],
+  "recallNote": "Check the homework: difficulties of winter in Europe.",
+  "situation": [
+   "In January, heavy snow falls in a village in Canada. Roads are blocked, the water pipes freeze, and the farmer cannot take his animals out to graze.",
+   "The farmer's cousin, visiting from Garoua, wonders how people can live and farm in such a cold place."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that heavy snow and cold make life and farming very difficult in the Canadian village."
+   ],
+   [
+    "What happened because of the snow?",
+    "Roads were blocked, water pipes froze, and the animals could not go out to graze."
+   ],
+   [
+    "How can the farmer prepare for the next winter?",
+    "He can store hay for his animals, protect the water pipes and keep a machine to clear snow from the roads."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the problems of the temperate climate and how people adapt to them.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "In winter, snow and frost cover the ground for several months in the continental interiors. What problem does this cause for farmers?",
+      "a": "Crops cannot grow in winter, so the growing season is short. Animals must be kept inside and fed."
+     },
+     {
+      "q": "In the 1930s, drought and strong winds blew away the soil of the American Prairies. What was this disaster called?",
+      "a": "It was called the Dust Bowl. Drought and bad farming left the soil bare, and the wind carried it away."
+     },
+     {
+      "q": "In the hot, dry Mediterranean summer, what danger threatens forests and villages?",
+      "a": "Forest fires threaten them, for example in Greece, Spain and California."
+     },
+     {
+      "q": "Farmers use a lot of fertilisers and pesticides. What problem can this cause?",
+      "a": "They can pollute rivers, lakes and underground water, and harm plants and animals."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced in the temperate region are the following:",
+     "items": [
+      [
+       "A. Cold Winters",
+       "Snow and frost make transport difficult, freeze water pipes and stop crops from growing."
+      ],
+      [
+       "B. Short Growing Season",
+       "In the cold interiors, crops can grow only from spring to autumn."
+      ],
+      [
+       "C. Drought and Soil Erosion",
+       "Drought and strong winds can blow away bare soil, as in the Dust Bowl of the American Prairies in the 1930s."
+      ],
+      [
+       "D. Storms, Floods and Forest Fires",
+       "Storms and floods hit western coasts. Forest fires burn Mediterranean lands in summer."
+      ],
+      [
+       "E. Pollution",
+       "The heavy use of fertilisers and pesticides pollutes rivers and underground water."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ADAPTATIONS",
+    "qa": [
+     {
+      "q": "How are houses in cold countries built to keep people warm in winter?",
+      "a": "They have thick insulated walls, double windows, heating systems and sloping roofs so that snow slides off."
+     },
+     {
+      "q": "How can farmers grow vegetables in winter, when it is too cold outside?",
+      "a": "They grow them in greenhouses made of glass or plastic, which keep the heat of the sun inside."
+     },
+     {
+      "q": "After the Dust Bowl, farmers planted rows of trees around their fields. Why?",
+      "a": "The rows of trees, called shelterbelts, break the force of the wind and protect the soil from erosion."
+     }
+    ],
+    "sum": {
+     "title": "II. Adaptations",
+     "intro": "People have adapted to the problems of the temperate region in the following ways:",
+     "items": [
+      [
+       "A. Houses and Clothing",
+       "Houses have thick insulated walls, double windows, heating and sloping roofs. People wear coats, gloves and boots in winter."
+      ],
+      [
+       "B. Transport",
+       "Snowploughs clear the roads, and salt is spread to melt ice."
+      ],
+      [
+       "C. Farming Adaptations",
+       "Farmers use greenhouses, store hay for winter, grow winter wheat and irrigate in dry summers."
+      ],
+      [
+       "D. Soil Protection",
+       "Shelterbelts of trees, contour ploughing and crop rotation protect the soil from erosion."
+      ],
+      [
+       "E. Fighting Fires and Pollution",
+       "Firefighters, aircraft and firebreaks fight forest fires. Laws limit the use of fertilisers and pesticides."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two problems caused by cold winters in the temperate region.",
+    "Snow blocks roads and frost stops crops from growing."
+   ],
+   [
+    "What is a greenhouse and why is it used?",
+    "A greenhouse is a building of glass or plastic that keeps heat inside. It is used to grow crops when it is too cold outside."
+   ],
+   [
+    "What was the Dust Bowl?",
+    "The Dust Bowl was a disaster in the American Prairies in the 1930s, when drought and wind blew away the soil."
+   ]
+  ],
+  "remediation": [
+   [
+    "Very cold nights that freeze the ground cause ______.",
+    "The soil erosion disaster of the American Prairies was the Dust ______.",
+    "In the Mediterranean summer, forests are threatened by ______."
+   ],
+   [
+    "A building of glass that keeps heat inside is a ______.",
+    "Rows of trees that protect soil from wind are called ______.",
+    "A machine that clears snow from roads is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. frost 2. Bowl 3. fires 4. greenhouse 5. shelterbelts 6. snowplough",
+  "homework": "List five jobs done by people in your family or neighbourhood (for example farmer, trader, teacher, mechanic, tailor).",
+  "homeworkTag": "This prepares Lesson 5: The Sectors of the Economy.",
+  "bilingual": [
+   [
+    "Frost",
+    "Le gel"
+   ],
+   [
+    "Snow",
+    "La neige"
+   ],
+   [
+    "Greenhouse",
+    "La serre"
+   ],
+   [
+    "Heating",
+    "Le chauffage"
+   ],
+   [
+    "Forest fire",
+    "L'incendie de forêt"
+   ],
+   [
+    "Flood",
+    "L'inondation"
+   ],
+   [
+    "Shelterbelt",
+    "Le brise-vent"
+   ],
+   [
+    "Pollution",
+    "La pollution"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "This session closes the study of natural regions (Lessons 1 to 4)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 4)",
+  "title": "The Temperate Region: Problems Faced and Adaptations",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 4: Problems Faced and Adaptations.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 4: Problems Faced and Adaptations"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S13_L4_P4_Temperate_Problems_Adaptations",
+  "part": 4,
+  "partTitle": "Problems Faced and Adaptations",
+  "notions": "Frost, snow, short growing season, drought, forest fire, shelterbelt, greenhouse.",
+  "focus": "Problems faced in the temperate region and the adaptations of people.",
+  "competence": "Learners are able to explain how people adapt their houses, clothes and farming to a difficult climate, and apply this idea to their own environment.",
+  "objectives": [
+   "Identify the problems faced by people in the temperate region.",
+   "Describe how people adapt their houses, clothes and transport.",
+   "Describe how farmers adapt to the problems of the temperate climate."
+  ],
+  "recall": [
+   "Temperate farming includes mixed, dairy, grain, ranching and Mediterranean farming.",
+   "It is very productive thanks to machines, science and cooperatives."
+  ],
+  "recallNote": "Check the homework: difficulties of winter in Europe.",
+  "situation": [
+   "In January, heavy snow falls in a village in Canada. Roads are blocked, the water pipes freeze, and the farmer cannot take his animals out to graze.",
+   "The farmer's cousin, visiting from Garoua, wonders how people can live and farm in such a cold place."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that heavy snow and cold make life and farming very difficult in the Canadian village."
+   ],
+   [
+    "What happened because of the snow?",
+    "Roads were blocked, water pipes froze, and the animals could not go out to graze."
+   ],
+   [
+    "How can the farmer prepare for the next winter?",
+    "He can store hay for his animals, protect the water pipes and keep a machine to clear snow from the roads."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the problems of the temperate climate and how people adapt to them.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "In winter, snow and frost cover the ground for several months in the continental interiors. What problem does this cause for farmers?",
+      "a": "Crops cannot grow in winter, so the growing season is short. Animals must be kept inside and fed."
+     },
+     {
+      "q": "In the 1930s, drought and strong winds blew away the soil of the American Prairies. What was this disaster called?",
+      "a": "It was called the Dust Bowl. Drought and bad farming left the soil bare, and the wind carried it away."
+     },
+     {
+      "q": "In the hot, dry Mediterranean summer, what danger threatens forests and villages?",
+      "a": "Forest fires threaten them, for example in Greece, Spain and California."
+     },
+     {
+      "q": "Farmers use a lot of fertilisers and pesticides. What problem can this cause?",
+      "a": "They can pollute rivers, lakes and underground water, and harm plants and animals."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced in the temperate region are the following:",
+     "items": [
+      [
+       "A. Cold Winters",
+       "Snow and frost make transport difficult, freeze water pipes and stop crops from growing."
+      ],
+      [
+       "B. Short Growing Season",
+       "In the cold interiors, crops can grow only from spring to autumn."
+      ],
+      [
+       "C. Drought and Soil Erosion",
+       "Drought and strong winds can blow away bare soil, as in the Dust Bowl of the American Prairies in the 1930s."
+      ],
+      [
+       "D. Storms, Floods and Forest Fires",
+       "Storms and floods hit western coasts. Forest fires burn Mediterranean lands in summer."
+      ],
+      [
+       "E. Pollution",
+       "The heavy use of fertilisers and pesticides pollutes rivers and underground water."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ADAPTATIONS",
+    "qa": [
+     {
+      "q": "How are houses in cold countries built to keep people warm in winter?",
+      "a": "They have thick insulated walls, double windows, heating systems and sloping roofs so that snow slides off."
+     },
+     {
+      "q": "How can farmers grow vegetables in winter, when it is too cold outside?",
+      "a": "They grow them in greenhouses made of glass or plastic, which keep the heat of the sun inside."
+     },
+     {
+      "q": "After the Dust Bowl, farmers planted rows of trees around their fields. Why?",
+      "a": "The rows of trees, called shelterbelts, break the force of the wind and protect the soil from erosion."
+     }
+    ],
+    "sum": {
+     "title": "II. Adaptations",
+     "intro": "People have adapted to the problems of the temperate region in the following ways:",
+     "items": [
+      [
+       "A. Houses and Clothing",
+       "Houses have thick insulated walls, double windows, heating and sloping roofs. People wear coats, gloves and boots in winter."
+      ],
+      [
+       "B. Transport",
+       "Snowploughs clear the roads, and salt is spread to melt ice."
+      ],
+      [
+       "C. Farming Adaptations",
+       "Farmers use greenhouses, store hay for winter, grow winter wheat and irrigate in dry summers."
+      ],
+      [
+       "D. Soil Protection",
+       "Shelterbelts of trees, contour ploughing and crop rotation protect the soil from erosion."
+      ],
+      [
+       "E. Fighting Fires and Pollution",
+       "Firefighters, aircraft and firebreaks fight forest fires. Laws limit the use of fertilisers and pesticides."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two problems caused by cold winters in the temperate region.",
+    "Snow blocks roads and frost stops crops from growing."
+   ],
+   [
+    "What is a greenhouse and why is it used?",
+    "A greenhouse is a building of glass or plastic that keeps heat inside. It is used to grow crops when it is too cold outside."
+   ],
+   [
+    "What was the Dust Bowl?",
+    "The Dust Bowl was a disaster in the American Prairies in the 1930s, when drought and wind blew away the soil."
+   ]
+  ],
+  "remediation": [
+   [
+    "Very cold nights that freeze the ground cause ______.",
+    "The soil erosion disaster of the American Prairies was the Dust ______.",
+    "In the Mediterranean summer, forests are threatened by ______."
+   ],
+   [
+    "A building of glass that keeps heat inside is a ______.",
+    "Rows of trees that protect soil from wind are called ______.",
+    "A machine that clears snow from roads is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. frost 2. Bowl 3. fires 4. greenhouse 5. shelterbelts 6. snowplough",
+  "homework": "List five jobs done by people in your family or neighbourhood (for example farmer, trader, teacher, mechanic, tailor).",
+  "homeworkTag": "This prepares Lesson 5: The Sectors of the Economy.",
+  "bilingual": [
+   [
+    "Frost",
+    "Le gel"
+   ],
+   [
+    "Snow",
+    "La neige"
+   ],
+   [
+    "Greenhouse",
+    "La serre"
+   ],
+   [
+    "Heating",
+    "Le chauffage"
+   ],
+   [
+    "Forest fire",
+    "L'incendie de forêt"
+   ],
+   [
+    "Flood",
+    "L'inondation"
+   ],
+   [
+    "Shelterbelt",
+    "Le brise-vent"
+   ],
+   [
+    "Pollution",
+    "La pollution"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "This session closes the study of natural regions (Lessons 1 to 4)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 4 (PART 4)",
+  "title": "The Temperate Region: Problems Faced and Adaptations",
+  "sumTitle": "The Temperate Region",
+  "coverNote": "Good morning, class. Today we study The Temperate Region, part 4: Problems Faced and Adaptations.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 4: The Temperate Region — Part 4: Problems Faced and Adaptations",
+  "matter": "I. Problems Faced: Cold Winters, Short Growing Season, Drought and Soil Erosion, Storms, Floods and Forest Fires, Pollution; II. Adaptations: Houses and Clothing, Transport, Farming Adaptations, Soil Protection, Fighting Fires and Pollution."
+ },
+ "file": "S13_L4_P4_Temperate_Problems_Adaptations",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 4. The Temperate Region",
+  "lessonNo": 4,
+  "lessonName": "The Temperate Region",
+  "file": "S13_L4_P4_Temperate_Problems_Adaptations",
+  "part": 4,
+  "partTitle": "Problems Faced and Adaptations",
+  "notions": "Frost, snow, short growing season, drought, forest fire, shelterbelt, greenhouse.",
+  "focus": "Problems faced in the temperate region and the adaptations of people.",
+  "competence": "Learners are able to explain how people adapt their houses, clothes and farming to a difficult climate, and apply this idea to their own environment.",
+  "objectives": [
+   "Identify the problems faced by people in the temperate region.",
+   "Describe how people adapt their houses, clothes and transport.",
+   "Describe how farmers adapt to the problems of the temperate climate."
+  ],
+  "recall": [
+   "Temperate farming includes mixed, dairy, grain, ranching and Mediterranean farming.",
+   "It is very productive thanks to machines, science and cooperatives."
+  ],
+  "recallNote": "Check the homework: difficulties of winter in Europe.",
+  "situation": [
+   "In January, heavy snow falls in a village in Canada. Roads are blocked, the water pipes freeze, and the farmer cannot take his animals out to graze.",
+   "The farmer's cousin, visiting from Garoua, wonders how people can live and farm in such a cold place."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that heavy snow and cold make life and farming very difficult in the Canadian village."
+   ],
+   [
+    "What happened because of the snow?",
+    "Roads were blocked, water pipes froze, and the animals could not go out to graze."
+   ],
+   [
+    "How can the farmer prepare for the next winter?",
+    "He can store hay for his animals, protect the water pipes and keep a machine to clear snow from the roads."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the problems of the temperate climate and how people adapt to them.",
+  "parts": [
+   {
+    "sec": "I. PROBLEMS FACED",
+    "qa": [
+     {
+      "q": "In winter, snow and frost cover the ground for several months in the continental interiors. What problem does this cause for farmers?",
+      "a": "Crops cannot grow in winter, so the growing season is short. Animals must be kept inside and fed."
+     },
+     {
+      "q": "In the 1930s, drought and strong winds blew away the soil of the American Prairies. What was this disaster called?",
+      "a": "It was called the Dust Bowl. Drought and bad farming left the soil bare, and the wind carried it away."
+     },
+     {
+      "q": "In the hot, dry Mediterranean summer, what danger threatens forests and villages?",
+      "a": "Forest fires threaten them, for example in Greece, Spain and California."
+     },
+     {
+      "q": "Farmers use a lot of fertilisers and pesticides. What problem can this cause?",
+      "a": "They can pollute rivers, lakes and underground water, and harm plants and animals."
+     }
+    ],
+    "sum": {
+     "title": "I. Problems Faced",
+     "intro": "The main problems faced in the temperate region are the following:",
+     "items": [
+      [
+       "A. Cold Winters",
+       "Snow and frost make transport difficult, freeze water pipes and stop crops from growing."
+      ],
+      [
+       "B. Short Growing Season",
+       "In the cold interiors, crops can grow only from spring to autumn."
+      ],
+      [
+       "C. Drought and Soil Erosion",
+       "Drought and strong winds can blow away bare soil, as in the Dust Bowl of the American Prairies in the 1930s."
+      ],
+      [
+       "D. Storms, Floods and Forest Fires",
+       "Storms and floods hit western coasts. Forest fires burn Mediterranean lands in summer."
+      ],
+      [
+       "E. Pollution",
+       "The heavy use of fertilisers and pesticides pollutes rivers and underground water."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ADAPTATIONS",
+    "qa": [
+     {
+      "q": "How are houses in cold countries built to keep people warm in winter?",
+      "a": "They have thick insulated walls, double windows, heating systems and sloping roofs so that snow slides off."
+     },
+     {
+      "q": "How can farmers grow vegetables in winter, when it is too cold outside?",
+      "a": "They grow them in greenhouses made of glass or plastic, which keep the heat of the sun inside."
+     },
+     {
+      "q": "After the Dust Bowl, farmers planted rows of trees around their fields. Why?",
+      "a": "The rows of trees, called shelterbelts, break the force of the wind and protect the soil from erosion."
+     }
+    ],
+    "sum": {
+     "title": "II. Adaptations",
+     "intro": "People have adapted to the problems of the temperate region in the following ways:",
+     "items": [
+      [
+       "A. Houses and Clothing",
+       "Houses have thick insulated walls, double windows, heating and sloping roofs. People wear coats, gloves and boots in winter."
+      ],
+      [
+       "B. Transport",
+       "Snowploughs clear the roads, and salt is spread to melt ice."
+      ],
+      [
+       "C. Farming Adaptations",
+       "Farmers use greenhouses, store hay for winter, grow winter wheat and irrigate in dry summers."
+      ],
+      [
+       "D. Soil Protection",
+       "Shelterbelts of trees, contour ploughing and crop rotation protect the soil from erosion."
+      ],
+      [
+       "E. Fighting Fires and Pollution",
+       "Firefighters, aircraft and firebreaks fight forest fires. Laws limit the use of fertilisers and pesticides."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two problems caused by cold winters in the temperate region.",
+    "Snow blocks roads and frost stops crops from growing."
+   ],
+   [
+    "What is a greenhouse and why is it used?",
+    "A greenhouse is a building of glass or plastic that keeps heat inside. It is used to grow crops when it is too cold outside."
+   ],
+   [
+    "What was the Dust Bowl?",
+    "The Dust Bowl was a disaster in the American Prairies in the 1930s, when drought and wind blew away the soil."
+   ]
+  ],
+  "remediation": [
+   [
+    "Very cold nights that freeze the ground cause ______.",
+    "The soil erosion disaster of the American Prairies was the Dust ______.",
+    "In the Mediterranean summer, forests are threatened by ______."
+   ],
+   [
+    "A building of glass that keeps heat inside is a ______.",
+    "Rows of trees that protect soil from wind are called ______.",
+    "A machine that clears snow from roads is a ______."
+   ]
+  ],
+  "remediationAnswers": "1. frost 2. Bowl 3. fires 4. greenhouse 5. shelterbelts 6. snowplough",
+  "homework": "List five jobs done by people in your family or neighbourhood (for example farmer, trader, teacher, mechanic, tailor).",
+  "homeworkTag": "This prepares Lesson 5: The Sectors of the Economy.",
+  "bilingual": [
+   [
+    "Frost",
+    "Le gel"
+   ],
+   [
+    "Snow",
+    "La neige"
+   ],
+   [
+    "Greenhouse",
+    "La serre"
+   ],
+   [
+    "Heating",
+    "Le chauffage"
+   ],
+   [
+    "Forest fire",
+    "L'incendie de forêt"
+   ],
+   [
+    "Flood",
+    "L'inondation"
+   ],
+   [
+    "Shelterbelt",
+    "Le brise-vent"
+   ],
+   [
+    "Pollution",
+    "La pollution"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "This session closes the study of natural regions (Lessons 1 to 4)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (temperate regions)."
+  ]
+ }
+}

@@ -1,0 +1,402 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The main processes of physical weathering are the following:\"]",
+  "sumImage | \"x\" | \"A. Thermal Shattering (Exfoliation)\" | \"Heating by day and cooling at night make the outer layers expand, contract and peel off. Products: curved sheets, rounded boulders and domes.\" | \"physical_weathering.png\"",
+  "sum | \"x\" | \"B. Frost Shattering (Frost Action)\" | [\"Water freezes in cracks and expands by about 9%, which widens the cracks. Product: angular pieces of rock (scree). It happens in cold regions.\"]",
+  "sum | \"x\" | \"C. Alternate Wetting and Drying (Slaking)\" | [\"Clay rocks swell when wet and shrink when dry, then crack and crumble. Product: small flakes of rock (banks of the Benue).\"]",
+  "sum | \"x\" | \"D. Pressure Release (Unloading)\" | [\"When the rocks above are removed, deep rocks such as granite expand and crack in sheets. Products: sheet joints and domes.\"]",
+  "sum | \"x\" | \"E. Physically Induced Biological Weathering\" | [\"Roots widen cracks, and burrowing animals break and move rock pieces. Products: broken blocks and loose material.\"]",
+  "sum | \"II. Processes and Products of Physical Weathering (1/6)\" | [\"The main processes of physical weathering are the following:\"]",
+  "sumImage | \"II. Processes and Products of Physical Weathering (2/6)\" | \"A. Thermal Shattering (Exfoliation)\" | \"Heating by day and cooling at night make the outer layers expand, contract and peel off. Products: curved sheets, rounded boulders and domes.\" | \"physical_weathering.png\"",
+  "sum | \"II. Processes and Products of Physical Weathering (3/6)\" | \"B. Frost Shattering (Frost Action)\" | [\"Water freezes in cracks and expands by about 9%, which widens the cracks. Product: angular pieces of rock (scree). It happens in cold regions.\"]",
+  "sum | \"II. Processes and Products of Physical Weathering (4/6)\" | \"C. Alternate Wetting and Drying (Slaking)\" | [\"Clay rocks swell when wet and shrink when dry, then crack and crumble. Product: small flakes of rock (banks of the Benue).\"]",
+  "sum | \"II. Processes and Products of Physical Weathering (5/6)\" | \"D. Pressure Release (Unloading)\" | [\"When the rocks above are removed, deep rocks such as granite expand and crack in sheets. Products: sheet joints and domes.\"]",
+  "sum | \"II. Processes and Products of Physical Weathering (6/6)\" | \"E. Physically Induced Biological Weathering\" | [\"Roots widen cracks, and burrowing animals break and move rock pieces. Products: broken blocks and loose material.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON16_Physical_Weathering",
+  "lessonNo": 16,
+  "lessonName": "Physical Weathering Processes and Products",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes: The Products and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes: The Products and Impacts on Man",
+  "notions": "Temperature changes, frost action, slaking, unloading.",
+  "focus": "Thermal shattering; frost shattering; alternate wetting and drying; pressure release; physically induced biological weathering.",
+  "competence": "Learners are able to explain why rocks and walls crack in the sun or break under roots, and to protect buildings from these effects.",
+  "objectives": [
+   "Define physical weathering.",
+   "Explain the processes of physical weathering.",
+   "Name the products of each process."
+  ],
+  "recall": [
+   "Weathering is the breaking down of rocks in their place.",
+   "Physical weathering breaks rocks without changing their minerals.",
+   "Climate is the main factor of weathering."
+  ],
+  "recallNote": "Check the homework: the rock at 1 p.m. and at 7 p.m.",
+  "situation": [
+   "In the dry season, Yaya walks past a big granite rock near Garoua. At midday, the rock is too hot to touch. Its outer surface is peeling off in thin, curved layers, like an onion.",
+   "A small tree grows in a crack of the rock, and its roots make the crack wider. Yaya wonders how such a hard rock can crack and peel."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Yaya does not understand how a hard granite rock can crack and peel."
+   ],
+   [
+    "Name two things that damage the rock in the situation.",
+    "The heat of the sun and the roots of the tree damage the rock."
+   ],
+   [
+    "How can people protect a house against roots?",
+    "They should not plant big trees too close to walls and should remove young plants that grow in cracks."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how physical forces break rocks into pieces and what products they form.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is physical weathering?",
+      "a": "Physical weathering is the breaking of rocks into smaller pieces by physical forces, without any change in their minerals."
+     },
+     {
+      "img": "physical_weathering.png",
+      "kind": "diagram",
+      "q": "Study the processes of physical weathering.",
+      "full": true
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Physical (mechanical) weathering is the breaking of rocks into smaller pieces by physical forces, without any change in their chemical composition."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. PROCESSES AND PRODUCTS",
+    "qa": [
+     {
+      "q": "Explain thermal shattering (exfoliation). What does it produce?",
+      "a": "By day, the outer layer of the rock heats and expands; at night, it cools and contracts. After many years, the outer layers crack and peel off. This forms curved sheets, rounded boulders and domes."
+     },
+     {
+      "q": "Explain frost shattering. Where does it happen?",
+      "a": "Water in cracks freezes and expands by about 9%. The ice widens the cracks until the rock breaks. It happens in cold climates and high mountains, and it forms angular pieces called scree."
+     },
+     {
+      "q": "Why do clay rocks on the banks of the Benue crumble?",
+      "a": "Clay rocks swell when wet and shrink when dry. This repeated wetting and drying (slaking) makes them crack and crumble."
+     },
+     {
+      "q": "What happens when the rocks above a granite mass are removed by erosion?",
+      "a": "The pressure is released, the granite expands and cracks in sheets parallel to the surface. This is pressure release (unloading)."
+     },
+     {
+      "q": "How can plants and animals break rocks?",
+      "a": "Roots grow in cracks and widen them. Burrowing animals, such as termites and rodents, break and move rock pieces."
+     }
+    ],
+    "sum": {
+     "title": "II. Processes and Products of Physical Weathering",
+     "intro": "The main processes of physical weathering are the following:",
+     "items": [
+      [
+       "A. Thermal Shattering (Exfoliation)",
+       "Heating by day and cooling at night make the outer layers expand, contract and peel off. Products: curved sheets, rounded boulders and domes.",
+       "physical_weathering.png"
+      ],
+      [
+       "B. Frost Shattering (Frost Action)",
+       "Water freezes in cracks and expands by about 9%, which widens the cracks. Product: angular pieces of rock (scree). It happens in cold regions."
+      ],
+      [
+       "C. Alternate Wetting and Drying (Slaking)",
+       "Clay rocks swell when wet and shrink when dry, then crack and crumble. Product: small flakes of rock (banks of the Benue)."
+      ],
+      [
+       "D. Pressure Release (Unloading)",
+       "When the rocks above are removed, deep rocks such as granite expand and crack in sheets. Products: sheet joints and domes."
+      ],
+      [
+       "E. Physically Induced Biological Weathering",
+       "Roots widen cracks, and burrowing animals break and move rock pieces. Products: broken blocks and loose material."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is thermal shattering?",
+    "It is the cracking and peeling of rocks caused by heating by day and cooling at night."
+   ],
+   [
+    "Why is frost shattering rare in Garoua?",
+    "It is rare because temperatures in Garoua do not fall below 0 °C."
+   ],
+   [
+    "How do roots break rocks?",
+    "Roots grow in cracks, become thicker and widen the cracks until the rock breaks."
+   ]
+  ],
+  "remediation": [
+   [
+    "Peeling of rocks in layers is called ______.",
+    "Water expands by about ______ % when it freezes.",
+    "Angular rock pieces from frost shattering are called ______."
+   ],
+   [
+    "Wetting and drying of clay rocks is called ______.",
+    "Pressure release is also called ______.",
+    "Roots cause physically induced ______ weathering."
+   ]
+  ],
+  "remediationAnswers": "1. exfoliation 2. 9 3. scree 4. slaking 5. unloading 6. biological",
+  "homework": "Look at an old iron gate, a roofing sheet or a nail left in the rain. Write what happened to it and what colour it became.",
+  "homeworkTag": "This prepares Lesson 17: Chemical Weathering Processes and Products.",
+  "bilingual": [
+   [
+    "Exfoliation",
+    "L'exfoliation / la desquamation"
+   ],
+   [
+    "Frost",
+    "Le gel"
+   ],
+   [
+    "Crack",
+    "La fissure"
+   ],
+   [
+    "To expand",
+    "Se dilater"
+   ],
+   [
+    "To contract",
+    "Se contracter"
+   ],
+   [
+    "Scree",
+    "L'éboulis"
+   ],
+   [
+    "Root",
+    "La racine"
+   ],
+   [
+    "Pressure release",
+    "La décompression"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say that exfoliation produces inselbergs. Exfoliation produces curved sheets, rounded boulders and domes. Inselbergs are isolated hills formed by long weathering and erosion (Lesson 27); exfoliation can shape them, but does not form them alone.",
+   "Frost shattering: water expands by about 9% when it freezes."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 16",
+  "title": "Physical Weathering Processes and Products",
+  "sumTitle": "Physical Weathering Processes and Products",
+  "coverNote": "Good morning, class. Today we study Lesson 16: Physical Weathering Processes and Products.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 16: Physical Weathering Processes and Products",
+  "matter": "I. Definition: ; II. Processes and Products of Physical Weathering: Thermal Shattering (Exfoliation), Frost Shattering (Frost Action), Alternate Wetting and Drying (Slaking), Pressure Release (Unloading), Physically Induced Biological Weathering."
+ },
+ "file": "FORM4_LESSON16_Physical_Weathering",
+ "sp": {
+  "file": "FORM4_LESSON16_Physical_Weathering",
+  "lessonNo": 16,
+  "lessonName": "Physical Weathering Processes and Products",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes: The Products and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes: The Products and Impacts on Man",
+  "notions": "Temperature changes, frost action, slaking, unloading.",
+  "focus": "Thermal shattering; frost shattering; alternate wetting and drying; pressure release; physically induced biological weathering.",
+  "competence": "Learners are able to explain why rocks and walls crack in the sun or break under roots, and to protect buildings from these effects.",
+  "objectives": [
+   "Define physical weathering.",
+   "Explain the processes of physical weathering.",
+   "Name the products of each process."
+  ],
+  "recall": [
+   "Weathering is the breaking down of rocks in their place.",
+   "Physical weathering breaks rocks without changing their minerals.",
+   "Climate is the main factor of weathering."
+  ],
+  "recallNote": "Check the homework: the rock at 1 p.m. and at 7 p.m.",
+  "situation": [
+   "In the dry season, Yaya walks past a big granite rock near Garoua. At midday, the rock is too hot to touch. Its outer surface is peeling off in thin, curved layers, like an onion.",
+   "A small tree grows in a crack of the rock, and its roots make the crack wider. Yaya wonders how such a hard rock can crack and peel."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Yaya does not understand how a hard granite rock can crack and peel."
+   ],
+   [
+    "Name two things that damage the rock in the situation.",
+    "The heat of the sun and the roots of the tree damage the rock."
+   ],
+   [
+    "How can people protect a house against roots?",
+    "They should not plant big trees too close to walls and should remove young plants that grow in cracks."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how physical forces break rocks into pieces and what products they form.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is physical weathering?",
+      "a": "Physical weathering is the breaking of rocks into smaller pieces by physical forces, without any change in their minerals."
+     },
+     {
+      "img": "physical_weathering.png",
+      "kind": "diagram",
+      "q": "Study the processes of physical weathering.",
+      "full": true
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Physical (mechanical) weathering is the breaking of rocks into smaller pieces by physical forces, without any change in their chemical composition."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. PROCESSES AND PRODUCTS",
+    "qa": [
+     {
+      "q": "Explain thermal shattering (exfoliation). What does it produce?",
+      "a": "By day, the outer layer of the rock heats and expands; at night, it cools and contracts. After many years, the outer layers crack and peel off. This forms curved sheets, rounded boulders and domes."
+     },
+     {
+      "q": "Explain frost shattering. Where does it happen?",
+      "a": "Water in cracks freezes and expands by about 9%. The ice widens the cracks until the rock breaks. It happens in cold climates and high mountains, and it forms angular pieces called scree."
+     },
+     {
+      "q": "Why do clay rocks on the banks of the Benue crumble?",
+      "a": "Clay rocks swell when wet and shrink when dry. This repeated wetting and drying (slaking) makes them crack and crumble."
+     },
+     {
+      "q": "What happens when the rocks above a granite mass are removed by erosion?",
+      "a": "The pressure is released, the granite expands and cracks in sheets parallel to the surface. This is pressure release (unloading)."
+     },
+     {
+      "q": "How can plants and animals break rocks?",
+      "a": "Roots grow in cracks and widen them. Burrowing animals, such as termites and rodents, break and move rock pieces."
+     }
+    ],
+    "sum": {
+     "title": "II. Processes and Products of Physical Weathering",
+     "intro": "The main processes of physical weathering are the following:",
+     "items": [
+      [
+       "A. Thermal Shattering (Exfoliation)",
+       "Heating by day and cooling at night make the outer layers expand, contract and peel off. Products: curved sheets, rounded boulders and domes.",
+       "physical_weathering.png"
+      ],
+      [
+       "B. Frost Shattering (Frost Action)",
+       "Water freezes in cracks and expands by about 9%, which widens the cracks. Product: angular pieces of rock (scree). It happens in cold regions."
+      ],
+      [
+       "C. Alternate Wetting and Drying (Slaking)",
+       "Clay rocks swell when wet and shrink when dry, then crack and crumble. Product: small flakes of rock (banks of the Benue)."
+      ],
+      [
+       "D. Pressure Release (Unloading)",
+       "When the rocks above are removed, deep rocks such as granite expand and crack in sheets. Products: sheet joints and domes."
+      ],
+      [
+       "E. Physically Induced Biological Weathering",
+       "Roots widen cracks, and burrowing animals break and move rock pieces. Products: broken blocks and loose material."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is thermal shattering?",
+    "It is the cracking and peeling of rocks caused by heating by day and cooling at night."
+   ],
+   [
+    "Why is frost shattering rare in Garoua?",
+    "It is rare because temperatures in Garoua do not fall below 0 °C."
+   ],
+   [
+    "How do roots break rocks?",
+    "Roots grow in cracks, become thicker and widen the cracks until the rock breaks."
+   ]
+  ],
+  "remediation": [
+   [
+    "Peeling of rocks in layers is called ______.",
+    "Water expands by about ______ % when it freezes.",
+    "Angular rock pieces from frost shattering are called ______."
+   ],
+   [
+    "Wetting and drying of clay rocks is called ______.",
+    "Pressure release is also called ______.",
+    "Roots cause physically induced ______ weathering."
+   ]
+  ],
+  "remediationAnswers": "1. exfoliation 2. 9 3. scree 4. slaking 5. unloading 6. biological",
+  "homework": "Look at an old iron gate, a roofing sheet or a nail left in the rain. Write what happened to it and what colour it became.",
+  "homeworkTag": "This prepares Lesson 17: Chemical Weathering Processes and Products.",
+  "bilingual": [
+   [
+    "Exfoliation",
+    "L'exfoliation / la desquamation"
+   ],
+   [
+    "Frost",
+    "Le gel"
+   ],
+   [
+    "Crack",
+    "La fissure"
+   ],
+   [
+    "To expand",
+    "Se dilater"
+   ],
+   [
+    "To contract",
+    "Se contracter"
+   ],
+   [
+    "Scree",
+    "L'éboulis"
+   ],
+   [
+    "Root",
+    "La racine"
+   ],
+   [
+    "Pressure release",
+    "La décompression"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say that exfoliation produces inselbergs. Exfoliation produces curved sheets, rounded boulders and domes. Inselbergs are isolated hills formed by long weathering and erosion (Lesson 27); exfoliation can shape them, but does not form them alone.",
+   "Frost shattering: water expands by about 9% when it freezes."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,412 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The type and speed of weathering depend on the following factors:\"]",
+  "sum | \"x\" | \"The Factors\" | [\"– Climate: hot, dry areas favour physical weathering; hot, wet areas favour chemical weathering.\",\"– Rock characteristics: hardness, minerals and joints (cracks).\",\"– Vegetation: roots and acids from dead plants.\",\"– Time: the longer a rock is exposed, the more it is weathered.\",\"– Human activities: quarrying, road building, farming and pollution.\"]",
+  "sum | \"III. General Factors of Weathering (1/3)\" | [\"The type and speed of weathering depend on the following factors:\"]",
+  "sum | \"III. General Factors of Weathering (2/3)\" | \"The Factors\" | [\"– Climate: hot, dry areas favour physical weathering; hot, wet areas favour chemical weathering.\",\"– Rock characteristics: hardness, minerals and joints (cracks).\",\"– Vegetation: roots and acids from dead plants.\",\"– Time: the longer a rock is exposed, the more it is weathered.\",\"– Human activities: quarrying, road building, farming and pollution.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON15_Weathering",
+  "lessonNo": 15,
+  "lessonName": "Weathering",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes and Impacts on Man",
+  "notions": "Weathering, in situ, physical weathering, chemical weathering.",
+  "focus": "Definition; types (physical and chemical); general factors of weathering in brief (climate, rock characteristics, vegetation, time, human activities).",
+  "competence": "Learners are able to explain why rocks, walls and buildings slowly break down, and to choose materials and actions that slow this down.",
+  "objectives": [
+   "Define weathering.",
+   "Distinguish physical and chemical weathering.",
+   "Explain briefly the factors of weathering."
+  ],
+  "recall": [
+   "Denudation includes weathering, erosion and transportation.",
+   "Weathering happens in place, without movement.",
+   "The main agents are running water, wind and waves."
+  ],
+  "recallNote": "Check the homework: the old wall and the new wall.",
+  "situation": [
+   "In Sadou's compound, an old wall built many years ago is cracked. Its stones break into sandy pieces at the bottom. A new wall built last year with the same stones still looks strong.",
+   "Sadou wonders which invisible forces of nature slowly attack the old wall while the new one stays strong."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Sadou does not know which forces slowly damage the old wall."
+   ],
+   [
+    "Why is the new wall still strong?",
+    "The new wall has not yet been exposed for a long time to the sun, the rain and the air."
+   ],
+   [
+    "How can Sadou protect his walls?",
+    "He can plaster and paint them, repair cracks, keep water away from their base and remove plants that grow in the cracks."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how rocks break down, which is the first step of soil formation and of denudation.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is weathering?",
+      "a": "Weathering is the breaking down and decomposition of rocks in their place (in situ), at or near the surface of the Earth, without movement."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Weathering is the breaking down (disintegration) and rotting (decomposition) of rocks in their place, at or near the surface of the Earth."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. TYPES OF WEATHERING",
+    "qa": [
+     {
+      "img": "weathering_types.png",
+      "kind": "diagram",
+      "q": "Compare the two types of weathering.",
+      "full": true
+     },
+     {
+      "q": "A rock breaks into pieces in the hot sun, but its minerals do not change. Which type of weathering is this?",
+      "a": "This is physical (mechanical) weathering."
+     },
+     {
+      "q": "An iron gate turns red and crumbles in the rain. Which type of weathering is similar?",
+      "a": "Chemical weathering: water and air react with the minerals of rocks and change them."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Weathering",
+     "intro": "There are two main types of weathering:",
+     "items": [
+      [
+       "A. Physical (Mechanical) Weathering",
+       "Rocks break into smaller pieces, but their minerals do not change. Examples: thermal shattering, frost shattering, wetting and drying.",
+       "weathering_types.png"
+      ],
+      [
+       "B. Chemical Weathering",
+       "Water, oxygen and acids react with the minerals of rocks and change them. The rock rots and becomes weak. Examples: solution, oxidation, carbonation, hydrolysis."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. GENERAL FACTORS",
+    "qa": [
+     {
+      "q": "Which type of weathering is faster in hot, dry areas, and which in hot, wet areas?",
+      "a": "Physical weathering is dominant in hot, dry areas. Chemical weathering is fastest in hot, wet areas, like Douala."
+     },
+     {
+      "q": "Does granite weather faster or slower than limestone? Why?",
+      "a": "Granite weathers more slowly, because it is hard and has few cracks. Limestone is dissolved by rainwater."
+     },
+     {
+      "q": "How can plants and people speed up weathering?",
+      "a": "Roots widen cracks and dead plants give acids. People break and expose rocks when they build roads, quarry and farm."
+     }
+    ],
+    "sum": {
+     "title": "III. General Factors of Weathering",
+     "intro": "The type and speed of weathering depend on the following factors:",
+     "items": [
+      [
+       "The Factors",
+       [
+        "– Climate: hot, dry areas favour physical weathering; hot, wet areas favour chemical weathering.",
+        "– Rock characteristics: hardness, minerals and joints (cracks).",
+        "– Vegetation: roots and acids from dead plants.",
+        "– Time: the longer a rock is exposed, the more it is weathered.",
+        "– Human activities: quarrying, road building, farming and pollution."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is weathering?",
+    "Weathering is the breaking down of rocks in their place, at or near the surface."
+   ],
+   [
+    "What is the difference between physical and chemical weathering?",
+    "Physical weathering breaks rocks into pieces without changing their minerals; chemical weathering changes the minerals."
+   ],
+   [
+    "Give three factors of weathering.",
+    "Climate, rock type and vegetation (also time and human activities)."
+   ]
+  ],
+  "remediation": [
+   [
+    "Weathering takes place in ______ (in its place).",
+    "Weathering without change of minerals is ______ weathering.",
+    "Weathering that changes minerals is ______ weathering."
+   ],
+   [
+    "Chemical weathering is fastest in hot, ______ climates.",
+    "Cracks in rocks are called ______.",
+    "Quarrying is a ______ factor of weathering."
+   ]
+  ],
+  "remediationAnswers": "1. situ 2. physical 3. chemical 4. wet 5. joints 6. human",
+  "homework": "Touch a big rock or a cement wall at 1 p.m. and again at 7 p.m. Write what you feel, and why this could break the rock after many years.",
+  "homeworkTag": "This prepares Lesson 16: Physical Weathering Processes and Products.",
+  "bilingual": [
+   [
+    "Weathering",
+    "L'altération"
+   ],
+   [
+    "Physical weathering",
+    "L'altération physique / mécanique"
+   ],
+   [
+    "Chemical weathering",
+    "L'altération chimique"
+   ],
+   [
+    "Joint",
+    "La diaclase / fissure"
+   ],
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "In situ",
+    "Sur place"
+   ],
+   [
+    "To crumble",
+    "S'effriter"
+   ]
+  ],
+  "teacherNote": [
+   "The syllabus asks for a brief description of the factors. Details of each process come in Lessons 16 and 17.",
+   "Correction: exfoliation is not the main physical process everywhere in Garoua; in the rainy season, chemical weathering is also very active. Both types act together."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 15",
+  "title": "Weathering",
+  "sumTitle": "Weathering",
+  "coverNote": "Good morning, class. Today we study Lesson 15: Weathering.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 15: Weathering",
+  "matter": "I. Definition: ; II. Types of Weathering: Physical (Mechanical) Weathering, Chemical Weathering; III. General Factors of Weathering: The Factors."
+ },
+ "file": "FORM4_LESSON15_Weathering",
+ "sp": {
+  "file": "FORM4_LESSON15_Weathering",
+  "lessonNo": 15,
+  "lessonName": "Weathering",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Weathering Processes and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Weathering Processes and Impacts on Man",
+  "notions": "Weathering, in situ, physical weathering, chemical weathering.",
+  "focus": "Definition; types (physical and chemical); general factors of weathering in brief (climate, rock characteristics, vegetation, time, human activities).",
+  "competence": "Learners are able to explain why rocks, walls and buildings slowly break down, and to choose materials and actions that slow this down.",
+  "objectives": [
+   "Define weathering.",
+   "Distinguish physical and chemical weathering.",
+   "Explain briefly the factors of weathering."
+  ],
+  "recall": [
+   "Denudation includes weathering, erosion and transportation.",
+   "Weathering happens in place, without movement.",
+   "The main agents are running water, wind and waves."
+  ],
+  "recallNote": "Check the homework: the old wall and the new wall.",
+  "situation": [
+   "In Sadou's compound, an old wall built many years ago is cracked. Its stones break into sandy pieces at the bottom. A new wall built last year with the same stones still looks strong.",
+   "Sadou wonders which invisible forces of nature slowly attack the old wall while the new one stays strong."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Sadou does not know which forces slowly damage the old wall."
+   ],
+   [
+    "Why is the new wall still strong?",
+    "The new wall has not yet been exposed for a long time to the sun, the rain and the air."
+   ],
+   [
+    "How can Sadou protect his walls?",
+    "He can plaster and paint them, repair cracks, keep water away from their base and remove plants that grow in the cracks."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how rocks break down, which is the first step of soil formation and of denudation.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is weathering?",
+      "a": "Weathering is the breaking down and decomposition of rocks in their place (in situ), at or near the surface of the Earth, without movement."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "Weathering is the breaking down (disintegration) and rotting (decomposition) of rocks in their place, at or near the surface of the Earth."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. TYPES OF WEATHERING",
+    "qa": [
+     {
+      "img": "weathering_types.png",
+      "kind": "diagram",
+      "q": "Compare the two types of weathering.",
+      "full": true
+     },
+     {
+      "q": "A rock breaks into pieces in the hot sun, but its minerals do not change. Which type of weathering is this?",
+      "a": "This is physical (mechanical) weathering."
+     },
+     {
+      "q": "An iron gate turns red and crumbles in the rain. Which type of weathering is similar?",
+      "a": "Chemical weathering: water and air react with the minerals of rocks and change them."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Weathering",
+     "intro": "There are two main types of weathering:",
+     "items": [
+      [
+       "A. Physical (Mechanical) Weathering",
+       "Rocks break into smaller pieces, but their minerals do not change. Examples: thermal shattering, frost shattering, wetting and drying.",
+       "weathering_types.png"
+      ],
+      [
+       "B. Chemical Weathering",
+       "Water, oxygen and acids react with the minerals of rocks and change them. The rock rots and becomes weak. Examples: solution, oxidation, carbonation, hydrolysis."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. GENERAL FACTORS",
+    "qa": [
+     {
+      "q": "Which type of weathering is faster in hot, dry areas, and which in hot, wet areas?",
+      "a": "Physical weathering is dominant in hot, dry areas. Chemical weathering is fastest in hot, wet areas, like Douala."
+     },
+     {
+      "q": "Does granite weather faster or slower than limestone? Why?",
+      "a": "Granite weathers more slowly, because it is hard and has few cracks. Limestone is dissolved by rainwater."
+     },
+     {
+      "q": "How can plants and people speed up weathering?",
+      "a": "Roots widen cracks and dead plants give acids. People break and expose rocks when they build roads, quarry and farm."
+     }
+    ],
+    "sum": {
+     "title": "III. General Factors of Weathering",
+     "intro": "The type and speed of weathering depend on the following factors:",
+     "items": [
+      [
+       "The Factors",
+       [
+        "– Climate: hot, dry areas favour physical weathering; hot, wet areas favour chemical weathering.",
+        "– Rock characteristics: hardness, minerals and joints (cracks).",
+        "– Vegetation: roots and acids from dead plants.",
+        "– Time: the longer a rock is exposed, the more it is weathered.",
+        "– Human activities: quarrying, road building, farming and pollution."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is weathering?",
+    "Weathering is the breaking down of rocks in their place, at or near the surface."
+   ],
+   [
+    "What is the difference between physical and chemical weathering?",
+    "Physical weathering breaks rocks into pieces without changing their minerals; chemical weathering changes the minerals."
+   ],
+   [
+    "Give three factors of weathering.",
+    "Climate, rock type and vegetation (also time and human activities)."
+   ]
+  ],
+  "remediation": [
+   [
+    "Weathering takes place in ______ (in its place).",
+    "Weathering without change of minerals is ______ weathering.",
+    "Weathering that changes minerals is ______ weathering."
+   ],
+   [
+    "Chemical weathering is fastest in hot, ______ climates.",
+    "Cracks in rocks are called ______.",
+    "Quarrying is a ______ factor of weathering."
+   ]
+  ],
+  "remediationAnswers": "1. situ 2. physical 3. chemical 4. wet 5. joints 6. human",
+  "homework": "Touch a big rock or a cement wall at 1 p.m. and again at 7 p.m. Write what you feel, and why this could break the rock after many years.",
+  "homeworkTag": "This prepares Lesson 16: Physical Weathering Processes and Products.",
+  "bilingual": [
+   [
+    "Weathering",
+    "L'altération"
+   ],
+   [
+    "Physical weathering",
+    "L'altération physique / mécanique"
+   ],
+   [
+    "Chemical weathering",
+    "L'altération chimique"
+   ],
+   [
+    "Joint",
+    "La diaclase / fissure"
+   ],
+   [
+    "Climate",
+    "Le climat"
+   ],
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "In situ",
+    "Sur place"
+   ],
+   [
+    "To crumble",
+    "S'effriter"
+   ]
+  ],
+  "teacherNote": [
+   "The syllabus asks for a brief description of the factors. Details of each process come in Lessons 16 and 17.",
+   "Correction: exfoliation is not the main physical process everywhere in Garoua; in the rainy season, chemical weathering is also very active. Both types act together."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

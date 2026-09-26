@@ -1,0 +1,434 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITION\" | [\"The International Date Line is an imaginary line, mostly along the 180° meridian, where the date changes by one day.\"]",
+  "sumImage | \"x\" | \"A. Illustration\" | \"The IDL runs through the Pacific Ocean. It bends around countries and islands, such as Russia, Kiribati and Samoa.\" | \"idl_map.png\"",
+  "sum | \"x\" | \"B. Importance\" | [\"– It marks the place where each new calendar day begins.\",\"– Crossing it going west, we add one day.\",\"– Crossing it going east, we remove one day.\",\"– It keeps the calendar correct for travellers around the world.\"]",
+  "sum | \"II. The International Date Line (IDL) (1/4)\" | \"DEFINITION\" | [\"The International Date Line is an imaginary line, mostly along the 180° meridian, where the date changes by one day.\"]",
+  "sumImage | \"II. The International Date Line (IDL) (2/4)\" | \"A. Illustration\" | \"The IDL runs through the Pacific Ocean. It bends around countries and islands, such as Russia, Kiribati and Samoa.\" | \"idl_map.png\"",
+  "sum | \"II. The International Date Line (IDL) (3/4)\" | \"B. Importance\" | [\"– It marks the place where each new calendar day begins.\",\"– Crossing it going west, we add one day.\",\"– Crossing it going east, we remove one day.\",\"– It keeps the calendar correct for travellers around the world.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON03_Great_Circles_and_IDL",
+  "lessonNo": 3,
+  "lessonName": "Great Circles and the International Date Line",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Great circle, small circle, shortest route, date line.",
+  "focus": "Great circles and the International Date Line: meaning, illustrations and importance.",
+  "competence": "Learners are able to explain why aeroplanes follow curved routes, and why the date changes when people cross the Pacific Ocean.",
+  "objectives": [
+   "Define a great circle and a small circle, with examples.",
+   "Give the importance of great circles.",
+   "Describe the International Date Line and explain its importance."
+  ],
+  "recall": [
+   "Latitudes are parallel lines; the Equator is the longest.",
+   "Longitudes meet at the poles.",
+   "The 180° meridian is opposite the Prime Meridian."
+  ],
+  "recallNote": "Check the homework on the route of aeroplanes.",
+  "situation": [
+   "On New Year's Eve, Fatimé watches the news on television. In the afternoon of 31 December, people in New Zealand and Australia are already celebrating the New Year with fireworks.",
+   "Late at night, after midnight in Garoua, she sees that people in America are still waiting for midnight. She wonders how the world can have two different dates at the same time."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fatimé does not understand why the world can have two different dates at the same time."
+   ],
+   [
+    "Which countries celebrated the New Year before Cameroon?",
+    "New Zealand and Australia celebrated the New Year before Cameroon."
+   ],
+   [
+    "Why is it useful to know the date in another country?",
+    "It helps us to call family abroad, to follow events on television and to plan journeys."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the shortest routes on the Earth and the place where each new day begins.",
+  "parts": [
+   {
+    "sec": "I. GREAT CIRCLES",
+    "qa": [
+     {
+      "img": "great_circles.png",
+      "kind": "diagram",
+      "q": "Compare great circles and small circles.",
+      "full": true
+     },
+     {
+      "q": "What is a great circle? Give two examples.",
+      "a": "A great circle is a circle that divides the Earth into two equal halves. Examples: the Equator, and any meridian together with its opposite meridian."
+     },
+     {
+      "q": "Is the Tropic of Cancer a great circle? Explain.",
+      "a": "No. It is a small circle, because it does not divide the Earth into two equal halves."
+     },
+     {
+      "q": "Why do pilots and ship captains follow great circle routes?",
+      "a": "A great circle route is the shortest distance between two places on the Earth. It saves time and fuel."
+     }
+    ],
+    "sum": {
+     "title": "I. Great Circles",
+     "defs": [
+      "A great circle is any circle on the surface of the Earth that divides it into two equal halves (hemispheres).",
+      "A small circle is a circle on the Earth that does not divide it into two equal halves."
+     ],
+     "items": [
+      [
+       "A. Illustrations",
+       [
+        "– Great circles: the Equator; a meridian and its opposite meridian.",
+        "– Small circles: all latitudes except the Equator, such as the Tropics."
+       ],
+       "great_circles.png"
+      ],
+      [
+       "B. Importance",
+       [
+        "– A great circle route is the shortest route between two places.",
+        "– Pilots and ship captains use great circle routes to save time and fuel.",
+        "– Great circles help to divide the Earth into hemispheres."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE INTERNATIONAL DATE LINE",
+    "qa": [
+     {
+      "img": "idl_map.png",
+      "kind": "map",
+      "q": "Study the International Date Line.",
+      "full": true
+     },
+     {
+      "q": "Where is the International Date Line located?",
+      "a": "It is an imaginary line that runs from the North Pole to the South Pole, mostly along the 180° meridian, in the Pacific Ocean."
+     },
+     {
+      "q": "Why is the International Date Line not straight?",
+      "a": "It bends to avoid dividing countries or island groups, so that each country keeps the same date."
+     },
+     {
+      "q": "A traveller crosses the line going west, from America to Asia. What happens to the date?",
+      "a": "The traveller adds one day. For example, Sunday becomes Monday. Going east, the traveller removes one day."
+     }
+    ],
+    "sum": {
+     "title": "II. The International Date Line (IDL)",
+     "defs": [
+      "The International Date Line is an imaginary line, mostly along the 180° meridian, where the date changes by one day."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The IDL runs through the Pacific Ocean. It bends around countries and islands, such as Russia, Kiribati and Samoa.",
+       "idl_map.png"
+      ],
+      [
+       "B. Importance",
+       [
+        "– It marks the place where each new calendar day begins.",
+        "– Crossing it going west, we add one day.",
+        "– Crossing it going east, we remove one day.",
+        "– It keeps the calendar correct for travellers around the world."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the Equator a great circle?",
+    "The Equator is a great circle because it divides the Earth into two equal halves."
+   ],
+   [
+    "Why is a great circle route important?",
+    "It is the shortest route between two places, so it saves time and fuel."
+   ],
+   [
+    "It is Sunday. A ship crosses the IDL going west. What day is it on the other side?",
+    "It is Monday: we add one day when we cross the IDL going west."
+   ]
+  ],
+  "remediation": [
+   [
+    "A circle that divides the Earth into two equal halves is a ______ circle.",
+    "The only latitude that is a great circle is the ______.",
+    "The Tropics are ______ circles."
+   ],
+   [
+    "The IDL mostly follows the ______ ° meridian.",
+    "Crossing the IDL going west, we ______ one day.",
+    "The IDL bends to avoid dividing ______."
+   ]
+  ],
+  "remediationAnswers": "1. great 2. Equator 3. small 4. 180 5. add 6. countries",
+  "homework": "Bring an atlas, a ruler and a pencil to the next lesson. Find the map of Cameroon in your atlas.",
+  "homeworkTag": "This prepares Practical Work 1: Locate a Place on a Map.",
+  "bilingual": [
+   [
+    "Great circle",
+    "Le grand cercle"
+   ],
+   [
+    "Small circle",
+    "Le petit cercle"
+   ],
+   [
+    "Shortest route",
+    "Le chemin le plus court"
+   ],
+   [
+    "Date Line",
+    "La ligne de changement de date"
+   ],
+   [
+    "Pacific Ocean",
+    "L'océan Pacifique"
+   ],
+   [
+    "Date",
+    "La date"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Traveller",
+    "Le voyageur"
+   ]
+  ],
+  "teacherNote": [
+   "On a flat map, a great circle route often looks curved. Show it with a string stretched on a globe between Douala and a city such as Tokyo.",
+   "Samoa moved to the west side of the IDL in December 2011; it skipped 30 December 2011. Kiribati moved the line in 1995."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 3",
+  "title": "Great Circles and the International Date Line",
+  "sumTitle": "Great Circles and the International Date Line",
+  "coverNote": "Good morning, class. Today we study Lesson 3: Great Circles and the International Date Line.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 3: Great Circles and the International Date Line",
+  "matter": "I. Great Circles: Illustrations, Importance; II. The International Date Line (IDL): Illustration, Importance."
+ },
+ "file": "FORM4_LESSON03_Great_Circles_and_IDL",
+ "sp": {
+  "file": "FORM4_LESSON03_Great_Circles_and_IDL",
+  "lessonNo": 3,
+  "lessonName": "Great Circles and the International Date Line",
+  "chapter": "The Earth as a Planet in the Solar System — Location and Time",
+  "topic": "The Earth as a Planet in the Solar System",
+  "subtopic": "Location and Time",
+  "notions": "Great circle, small circle, shortest route, date line.",
+  "focus": "Great circles and the International Date Line: meaning, illustrations and importance.",
+  "competence": "Learners are able to explain why aeroplanes follow curved routes, and why the date changes when people cross the Pacific Ocean.",
+  "objectives": [
+   "Define a great circle and a small circle, with examples.",
+   "Give the importance of great circles.",
+   "Describe the International Date Line and explain its importance."
+  ],
+  "recall": [
+   "Latitudes are parallel lines; the Equator is the longest.",
+   "Longitudes meet at the poles.",
+   "The 180° meridian is opposite the Prime Meridian."
+  ],
+  "recallNote": "Check the homework on the route of aeroplanes.",
+  "situation": [
+   "On New Year's Eve, Fatimé watches the news on television. In the afternoon of 31 December, people in New Zealand and Australia are already celebrating the New Year with fireworks.",
+   "Late at night, after midnight in Garoua, she sees that people in America are still waiting for midnight. She wonders how the world can have two different dates at the same time."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fatimé does not understand why the world can have two different dates at the same time."
+   ],
+   [
+    "Which countries celebrated the New Year before Cameroon?",
+    "New Zealand and Australia celebrated the New Year before Cameroon."
+   ],
+   [
+    "Why is it useful to know the date in another country?",
+    "It helps us to call family abroad, to follow events on television and to plan journeys."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the shortest routes on the Earth and the place where each new day begins.",
+  "parts": [
+   {
+    "sec": "I. GREAT CIRCLES",
+    "qa": [
+     {
+      "img": "great_circles.png",
+      "kind": "diagram",
+      "q": "Compare great circles and small circles.",
+      "full": true
+     },
+     {
+      "q": "What is a great circle? Give two examples.",
+      "a": "A great circle is a circle that divides the Earth into two equal halves. Examples: the Equator, and any meridian together with its opposite meridian."
+     },
+     {
+      "q": "Is the Tropic of Cancer a great circle? Explain.",
+      "a": "No. It is a small circle, because it does not divide the Earth into two equal halves."
+     },
+     {
+      "q": "Why do pilots and ship captains follow great circle routes?",
+      "a": "A great circle route is the shortest distance between two places on the Earth. It saves time and fuel."
+     }
+    ],
+    "sum": {
+     "title": "I. Great Circles",
+     "defs": [
+      "A great circle is any circle on the surface of the Earth that divides it into two equal halves (hemispheres).",
+      "A small circle is a circle on the Earth that does not divide it into two equal halves."
+     ],
+     "items": [
+      [
+       "A. Illustrations",
+       [
+        "– Great circles: the Equator; a meridian and its opposite meridian.",
+        "– Small circles: all latitudes except the Equator, such as the Tropics."
+       ],
+       "great_circles.png"
+      ],
+      [
+       "B. Importance",
+       [
+        "– A great circle route is the shortest route between two places.",
+        "– Pilots and ship captains use great circle routes to save time and fuel.",
+        "– Great circles help to divide the Earth into hemispheres."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE INTERNATIONAL DATE LINE",
+    "qa": [
+     {
+      "img": "idl_map.png",
+      "kind": "map",
+      "q": "Study the International Date Line.",
+      "full": true
+     },
+     {
+      "q": "Where is the International Date Line located?",
+      "a": "It is an imaginary line that runs from the North Pole to the South Pole, mostly along the 180° meridian, in the Pacific Ocean."
+     },
+     {
+      "q": "Why is the International Date Line not straight?",
+      "a": "It bends to avoid dividing countries or island groups, so that each country keeps the same date."
+     },
+     {
+      "q": "A traveller crosses the line going west, from America to Asia. What happens to the date?",
+      "a": "The traveller adds one day. For example, Sunday becomes Monday. Going east, the traveller removes one day."
+     }
+    ],
+    "sum": {
+     "title": "II. The International Date Line (IDL)",
+     "defs": [
+      "The International Date Line is an imaginary line, mostly along the 180° meridian, where the date changes by one day."
+     ],
+     "items": [
+      [
+       "A. Illustration",
+       "The IDL runs through the Pacific Ocean. It bends around countries and islands, such as Russia, Kiribati and Samoa.",
+       "idl_map.png"
+      ],
+      [
+       "B. Importance",
+       [
+        "– It marks the place where each new calendar day begins.",
+        "– Crossing it going west, we add one day.",
+        "– Crossing it going east, we remove one day.",
+        "– It keeps the calendar correct for travellers around the world."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is the Equator a great circle?",
+    "The Equator is a great circle because it divides the Earth into two equal halves."
+   ],
+   [
+    "Why is a great circle route important?",
+    "It is the shortest route between two places, so it saves time and fuel."
+   ],
+   [
+    "It is Sunday. A ship crosses the IDL going west. What day is it on the other side?",
+    "It is Monday: we add one day when we cross the IDL going west."
+   ]
+  ],
+  "remediation": [
+   [
+    "A circle that divides the Earth into two equal halves is a ______ circle.",
+    "The only latitude that is a great circle is the ______.",
+    "The Tropics are ______ circles."
+   ],
+   [
+    "The IDL mostly follows the ______ ° meridian.",
+    "Crossing the IDL going west, we ______ one day.",
+    "The IDL bends to avoid dividing ______."
+   ]
+  ],
+  "remediationAnswers": "1. great 2. Equator 3. small 4. 180 5. add 6. countries",
+  "homework": "Bring an atlas, a ruler and a pencil to the next lesson. Find the map of Cameroon in your atlas.",
+  "homeworkTag": "This prepares Practical Work 1: Locate a Place on a Map.",
+  "bilingual": [
+   [
+    "Great circle",
+    "Le grand cercle"
+   ],
+   [
+    "Small circle",
+    "Le petit cercle"
+   ],
+   [
+    "Shortest route",
+    "Le chemin le plus court"
+   ],
+   [
+    "Date Line",
+    "La ligne de changement de date"
+   ],
+   [
+    "Pacific Ocean",
+    "L'océan Pacifique"
+   ],
+   [
+    "Date",
+    "La date"
+   ],
+   [
+    "Day",
+    "Le jour"
+   ],
+   [
+    "Traveller",
+    "Le voyageur"
+   ]
+  ],
+  "teacherNote": [
+   "On a flat map, a great circle route often looks curved. Show it with a string stretched on a globe between Douala and a city such as Tokyo.",
+   "Samoa moved to the west side of the IDL in December 2011; it skipped 30 December 2011. Kiribati moved the line in 1995."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Earth as a Planet in the Solar System.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

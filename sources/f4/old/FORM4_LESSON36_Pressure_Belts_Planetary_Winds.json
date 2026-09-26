@@ -1,0 +1,432 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"From the Equator to the poles, the pressure belts and planetary winds are the following:\"]",
+  "sumImage | \"x\" | \"A. Equatorial Low (0°)\" | \"Hot air rises, giving heavy rain and calm winds called the Doldrums.\" | \"pressure_belts.png\"",
+  "sum | \"x\" | \"B. Trade Winds\" | [\"They blow from the Sub-tropical Highs to the Equatorial Low: the North-East Trades and the South-East Trades. The Harmattan is part of the North-East Trades.\"]",
+  "sum | \"x\" | \"C. Sub-tropical Highs (30° N and S)\" | [\"Air sinks and is dry, so hot deserts such as the Sahara and the Kalahari are found here.\"]",
+  "sum | \"x\" | \"D. Westerlies and Sub-polar Lows (60° N and S)\" | [\"The Westerlies blow from the Sub-tropical Highs to the Sub-polar Lows, where warm and cold air meet and bring rain.\"]",
+  "sum | \"x\" | \"E. Polar Easterlies and Polar Highs (90°)\" | [\"Cold, dense air sinks at the poles and blows out as the Polar Easterlies.\"]",
+  "sum | \"x\" | \"F. Deflection of Winds\" | [\"The rotation of the Earth deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Ferrel's law).\"]",
+  "sum | \"II. Pressure Belts and Planetary Winds (1/7)\" | [\"From the Equator to the poles, the pressure belts and planetary winds are the following:\"]",
+  "sumImage | \"II. Pressure Belts and Planetary Winds (2/7)\" | \"A. Equatorial Low (0°)\" | \"Hot air rises, giving heavy rain and calm winds called the Doldrums.\" | \"pressure_belts.png\"",
+  "sum | \"II. Pressure Belts and Planetary Winds (3/7)\" | \"B. Trade Winds\" | [\"They blow from the Sub-tropical Highs to the Equatorial Low: the North-East Trades and the South-East Trades. The Harmattan is part of the North-East Trades.\"]",
+  "sum | \"II. Pressure Belts and Planetary Winds (4/7)\" | \"C. Sub-tropical Highs (30° N and S)\" | [\"Air sinks and is dry, so hot deserts such as the Sahara and the Kalahari are found here.\"]",
+  "sum | \"II. Pressure Belts and Planetary Winds (5/7)\" | \"D. Westerlies and Sub-polar Lows (60° N and S)\" | [\"The Westerlies blow from the Sub-tropical Highs to the Sub-polar Lows, where warm and cold air meet and bring rain.\"]",
+  "sum | \"II. Pressure Belts and Planetary Winds (6/7)\" | \"E. Polar Easterlies and Polar Highs (90°)\" | [\"Cold, dense air sinks at the poles and blows out as the Polar Easterlies.\"]",
+  "sum | \"II. Pressure Belts and Planetary Winds (7/7)\" | \"F. Deflection of Winds\" | [\"The rotation of the Earth deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Ferrel's law).\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON36_Pressure_Belts_Planetary_Winds",
+  "lessonNo": 36,
+  "lessonName": "Pressure Belts and Planetary Winds",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Pressure and Winds",
+  "notions": "Pressure, wind.",
+  "focus": "Meaning of pressure belts (definition and major types); illustration of pressure belts and planetary winds.",
+  "competence": "Learners are able to explain why Garoua has a moist south-west wind in the rainy season and the dry Harmattan in the dry season.",
+  "objectives": [
+   "Define atmospheric pressure, pressure belt and planetary wind.",
+   "Distinguish between high-pressure and low-pressure belts.",
+   "Identify the pressure belts and planetary winds on a diagram."
+  ],
+  "recall": [
+   "Precipitation is water falling from clouds; it is measured with a rain gauge.",
+   "There are three types of rainfall: convectional, relief and frontal.",
+   "Wind is air moving from high pressure to low pressure."
+  ],
+  "recallNote": "Check the homework: wind direction in Garoua.",
+  "situation": [
+   "From June to September, the wind in Garoua blows from the south-west and brings rain. From December to February, a dry, dusty wind, the Harmattan, blows from the north-east for many weeks.",
+   "Abdou wonders why these big winds always come back at the same time every year."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Abdou does not understand why the big winds of Garoua come back at the same time every year."
+   ],
+   [
+    "From which direction does the Harmattan blow, and when?",
+    "The Harmattan blows from the north-east, from December to February."
+   ],
+   [
+    "How can people prepare for the Harmattan?",
+    "They can cover their mouths and noses against dust, drink more water and protect their eyes."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the pressure belts and the great winds of the Earth, which control the seasons of Garoua.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "Hot air is light and rises; cold air is heavy and sinks. Where does hot air create low pressure, and cold air high pressure?",
+      "a": "Rising hot air creates low pressure. Sinking cool air creates high pressure. Wind blows from high to low pressure."
+     },
+     {
+      "q": "Around the Earth, there are zones where pressure is generally high or low. What are these zones called?",
+      "a": "They are called pressure belts."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Pressure Belts",
+     "defs": [
+      "A pressure belt is a zone around the Earth where the air pressure is generally high or generally low.",
+      "A planetary wind is a large, permanent wind that blows from a high-pressure belt to a low-pressure belt."
+     ],
+     "items": [
+      [
+       "A. Low-Pressure Belts",
+       "In low-pressure belts, warm air rises, cools and forms clouds and rain."
+      ],
+      [
+       "B. High-Pressure Belts",
+       "In high-pressure belts, cool air sinks and becomes dry, so skies are clear and rain is rare. Most hot deserts lie in these belts."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ILLUSTRATION",
+    "qa": [
+     {
+      "img": "pressure_belts.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the pressure belts from the Equator to the North Pole.",
+      "a": "They are the Equatorial Low (0°), the Sub-tropical High (30°N), the Sub-polar Low (60°N) and the Polar High (90°N).",
+      "split": 5.6
+     },
+     {
+      "img": "pressure_belts.png",
+      "title": "Question 2",
+      "q": "Which winds blow from the Sub-tropical Highs to the Equatorial Low?",
+      "a": "The Trade Winds: the North-East Trades in the Northern Hemisphere and the South-East Trades in the Southern Hemisphere.",
+      "split": 5.6
+     },
+     {
+      "q": "Why do the Trade Winds blow from the north-east and the south-east, not from the north and the south?",
+      "a": "The rotation of the Earth deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis force, Ferrel's law)."
+     },
+     {
+      "q": "The low-pressure belt moves north in July and south in January. How does this explain the two winds of Garoua?",
+      "a": "In July, it lies north of Garoua, so moist south-west winds from the ocean bring rain. In January, it lies to the south, so the dry North-East Trade Wind (Harmattan) blows."
+     }
+    ],
+    "sum": {
+     "title": "II. Pressure Belts and Planetary Winds",
+     "intro": "From the Equator to the poles, the pressure belts and planetary winds are the following:",
+     "items": [
+      [
+       "A. Equatorial Low (0°)",
+       "Hot air rises, giving heavy rain and calm winds called the Doldrums.",
+       "pressure_belts.png"
+      ],
+      [
+       "B. Trade Winds",
+       "They blow from the Sub-tropical Highs to the Equatorial Low: the North-East Trades and the South-East Trades. The Harmattan is part of the North-East Trades."
+      ],
+      [
+       "C. Sub-tropical Highs (30° N and S)",
+       "Air sinks and is dry, so hot deserts such as the Sahara and the Kalahari are found here."
+      ],
+      [
+       "D. Westerlies and Sub-polar Lows (60° N and S)",
+       "The Westerlies blow from the Sub-tropical Highs to the Sub-polar Lows, where warm and cold air meet and bring rain."
+      ],
+      [
+       "E. Polar Easterlies and Polar Highs (90°)",
+       "Cold, dense air sinks at the poles and blows out as the Polar Easterlies."
+      ],
+      [
+       "F. Deflection of Winds",
+       "The rotation of the Earth deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Ferrel's law)."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do high-pressure belts have little rain?",
+    "In high-pressure belts, air sinks and becomes dry, so clouds do not form."
+   ],
+   [
+    "Name the planetary winds that blow over Cameroon in the dry season.",
+    "The North-East Trade Winds, called the Harmattan, blow over Cameroon in the dry season."
+   ],
+   [
+    "What is Ferrel's law?",
+    "Ferrel's law says that winds are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere."
+   ]
+  ],
+  "remediation": [
+   [
+    "Wind blows from ______ pressure to ______ pressure.",
+    "The calm, rainy belt at the Equator is called the ______.",
+    "Hot deserts lie in the Sub-tropical ______ pressure belts."
+   ],
+   [
+    "Winds that blow towards the Equatorial Low are the ______ Winds.",
+    "Winds blowing from 30° to 60° are the ______.",
+    "The Harmattan is part of the ______ Trade Winds."
+   ]
+  ],
+  "remediationAnswers": "1. high, low 2. Doldrums 3. high 4. Trade 5. Westerlies 6. North-East",
+  "homework": "Ask someone who has lived by the sea (Douala, Kribi or Limbe) or in the mountains (Buea, Mokolo) whether the wind changes between day and night. Write down what they say.",
+  "homeworkTag": "This prepares Lesson 37: Local Winds.",
+  "bilingual": [
+   [
+    "Pressure",
+    "La pression"
+   ],
+   [
+    "High pressure",
+    "Les hautes pressions"
+   ],
+   [
+    "Low pressure",
+    "Les basses pressions"
+   ],
+   [
+    "Pressure belt",
+    "La ceinture de pression"
+   ],
+   [
+    "Trade winds",
+    "Les alizés"
+   ],
+   [
+    "Westerlies",
+    "Les vents d'ouest"
+   ],
+   [
+    "Doldrums",
+    "Le pot au noir"
+   ],
+   [
+    "Planetary wind",
+    "Le vent planétaire"
+   ]
+  ],
+  "teacherNote": [
+   "The low-pressure zone near the Equator is also called the Inter-Tropical Convergence Zone (ITCZ); over West Africa, its surface limit is the Inter-Tropical Front (ITF).",
+   "The south-west monsoon of the rainy season is the South-East Trade Wind deflected to the right after crossing the Equator."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 36",
+  "title": "Pressure Belts and Planetary Winds",
+  "sumTitle": "Pressure Belts and Planetary Winds",
+  "coverNote": "Good morning, class. Today we study Lesson 36: Pressure Belts and Planetary Winds.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 36: Pressure Belts and Planetary Winds",
+  "matter": "I. Meaning of Pressure Belts: Low-Pressure Belts, High-Pressure Belts; II. Pressure Belts and Planetary Winds: Equatorial Low (0°), Trade Winds, Sub-tropical Highs (30° N and S), Westerlies and Sub-polar Lows (60° N and S), Polar Easterlies and Polar Highs (90°), Deflection of Winds."
+ },
+ "file": "FORM4_LESSON36_Pressure_Belts_Planetary_Winds",
+ "sp": {
+  "file": "FORM4_LESSON36_Pressure_Belts_Planetary_Winds",
+  "lessonNo": 36,
+  "lessonName": "Pressure Belts and Planetary Winds",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Pressure and Winds",
+  "notions": "Pressure, wind.",
+  "focus": "Meaning of pressure belts (definition and major types); illustration of pressure belts and planetary winds.",
+  "competence": "Learners are able to explain why Garoua has a moist south-west wind in the rainy season and the dry Harmattan in the dry season.",
+  "objectives": [
+   "Define atmospheric pressure, pressure belt and planetary wind.",
+   "Distinguish between high-pressure and low-pressure belts.",
+   "Identify the pressure belts and planetary winds on a diagram."
+  ],
+  "recall": [
+   "Precipitation is water falling from clouds; it is measured with a rain gauge.",
+   "There are three types of rainfall: convectional, relief and frontal.",
+   "Wind is air moving from high pressure to low pressure."
+  ],
+  "recallNote": "Check the homework: wind direction in Garoua.",
+  "situation": [
+   "From June to September, the wind in Garoua blows from the south-west and brings rain. From December to February, a dry, dusty wind, the Harmattan, blows from the north-east for many weeks.",
+   "Abdou wonders why these big winds always come back at the same time every year."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Abdou does not understand why the big winds of Garoua come back at the same time every year."
+   ],
+   [
+    "From which direction does the Harmattan blow, and when?",
+    "The Harmattan blows from the north-east, from December to February."
+   ],
+   [
+    "How can people prepare for the Harmattan?",
+    "They can cover their mouths and noses against dust, drink more water and protect their eyes."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the pressure belts and the great winds of the Earth, which control the seasons of Garoua.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "Hot air is light and rises; cold air is heavy and sinks. Where does hot air create low pressure, and cold air high pressure?",
+      "a": "Rising hot air creates low pressure. Sinking cool air creates high pressure. Wind blows from high to low pressure."
+     },
+     {
+      "q": "Around the Earth, there are zones where pressure is generally high or low. What are these zones called?",
+      "a": "They are called pressure belts."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning of Pressure Belts",
+     "defs": [
+      "A pressure belt is a zone around the Earth where the air pressure is generally high or generally low.",
+      "A planetary wind is a large, permanent wind that blows from a high-pressure belt to a low-pressure belt."
+     ],
+     "items": [
+      [
+       "A. Low-Pressure Belts",
+       "In low-pressure belts, warm air rises, cools and forms clouds and rain."
+      ],
+      [
+       "B. High-Pressure Belts",
+       "In high-pressure belts, cool air sinks and becomes dry, so skies are clear and rain is rare. Most hot deserts lie in these belts."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. ILLUSTRATION",
+    "qa": [
+     {
+      "img": "pressure_belts.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. Name the pressure belts from the Equator to the North Pole.",
+      "a": "They are the Equatorial Low (0°), the Sub-tropical High (30°N), the Sub-polar Low (60°N) and the Polar High (90°N).",
+      "split": 5.6
+     },
+     {
+      "img": "pressure_belts.png",
+      "title": "Question 2",
+      "q": "Which winds blow from the Sub-tropical Highs to the Equatorial Low?",
+      "a": "The Trade Winds: the North-East Trades in the Northern Hemisphere and the South-East Trades in the Southern Hemisphere.",
+      "split": 5.6
+     },
+     {
+      "q": "Why do the Trade Winds blow from the north-east and the south-east, not from the north and the south?",
+      "a": "The rotation of the Earth deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Coriolis force, Ferrel's law)."
+     },
+     {
+      "q": "The low-pressure belt moves north in July and south in January. How does this explain the two winds of Garoua?",
+      "a": "In July, it lies north of Garoua, so moist south-west winds from the ocean bring rain. In January, it lies to the south, so the dry North-East Trade Wind (Harmattan) blows."
+     }
+    ],
+    "sum": {
+     "title": "II. Pressure Belts and Planetary Winds",
+     "intro": "From the Equator to the poles, the pressure belts and planetary winds are the following:",
+     "items": [
+      [
+       "A. Equatorial Low (0°)",
+       "Hot air rises, giving heavy rain and calm winds called the Doldrums.",
+       "pressure_belts.png"
+      ],
+      [
+       "B. Trade Winds",
+       "They blow from the Sub-tropical Highs to the Equatorial Low: the North-East Trades and the South-East Trades. The Harmattan is part of the North-East Trades."
+      ],
+      [
+       "C. Sub-tropical Highs (30° N and S)",
+       "Air sinks and is dry, so hot deserts such as the Sahara and the Kalahari are found here."
+      ],
+      [
+       "D. Westerlies and Sub-polar Lows (60° N and S)",
+       "The Westerlies blow from the Sub-tropical Highs to the Sub-polar Lows, where warm and cold air meet and bring rain."
+      ],
+      [
+       "E. Polar Easterlies and Polar Highs (90°)",
+       "Cold, dense air sinks at the poles and blows out as the Polar Easterlies."
+      ],
+      [
+       "F. Deflection of Winds",
+       "The rotation of the Earth deflects winds to the right in the Northern Hemisphere and to the left in the Southern Hemisphere (Ferrel's law)."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do high-pressure belts have little rain?",
+    "In high-pressure belts, air sinks and becomes dry, so clouds do not form."
+   ],
+   [
+    "Name the planetary winds that blow over Cameroon in the dry season.",
+    "The North-East Trade Winds, called the Harmattan, blow over Cameroon in the dry season."
+   ],
+   [
+    "What is Ferrel's law?",
+    "Ferrel's law says that winds are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere."
+   ]
+  ],
+  "remediation": [
+   [
+    "Wind blows from ______ pressure to ______ pressure.",
+    "The calm, rainy belt at the Equator is called the ______.",
+    "Hot deserts lie in the Sub-tropical ______ pressure belts."
+   ],
+   [
+    "Winds that blow towards the Equatorial Low are the ______ Winds.",
+    "Winds blowing from 30° to 60° are the ______.",
+    "The Harmattan is part of the ______ Trade Winds."
+   ]
+  ],
+  "remediationAnswers": "1. high, low 2. Doldrums 3. high 4. Trade 5. Westerlies 6. North-East",
+  "homework": "Ask someone who has lived by the sea (Douala, Kribi or Limbe) or in the mountains (Buea, Mokolo) whether the wind changes between day and night. Write down what they say.",
+  "homeworkTag": "This prepares Lesson 37: Local Winds.",
+  "bilingual": [
+   [
+    "Pressure",
+    "La pression"
+   ],
+   [
+    "High pressure",
+    "Les hautes pressions"
+   ],
+   [
+    "Low pressure",
+    "Les basses pressions"
+   ],
+   [
+    "Pressure belt",
+    "La ceinture de pression"
+   ],
+   [
+    "Trade winds",
+    "Les alizés"
+   ],
+   [
+    "Westerlies",
+    "Les vents d'ouest"
+   ],
+   [
+    "Doldrums",
+    "Le pot au noir"
+   ],
+   [
+    "Planetary wind",
+    "Le vent planétaire"
+   ]
+  ],
+  "teacherNote": [
+   "The low-pressure zone near the Equator is also called the Inter-Tropical Convergence Zone (ITCZ); over West Africa, its surface limit is the Inter-Tropical Front (ITF).",
+   "The south-west monsoon of the rainy season is the South-East Trade Wind deflected to the right after crossing the Equator."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

@@ -1,0 +1,213 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "slide | \"I. RESOURCES\" | \"Question 1\" | [\"Deserts are dry, but people still find useful things there. What do we call anything in the environment that people can use to satisfy their needs?\"]",
+  "slide | \"I. RESOURCES\" | \"Answer\" | [\"Anything in the environment that people can use to satisfy their needs is called a resource.\"]",
+  "imageFull | \"I. RESOURCES\" | \"Activity 1: Study the map\" | \"This map shows some resources of the Sahara.\" | \"sahara_resources.png\" | \"Let learners read the labels on the map before the questions.\"",
+  "slide | \"I. RESOURCES\" | \"Question 2\" | [\"Look at the map. Name two minerals found in the Sahara, and give the country where each one is found.\"]",
+  "slide | \"I. RESOURCES\" | \"Answer\" | [\"Oil is found in Algeria and Libya. Uranium is found in Niger. Phosphates are found in Western Sahara, and salt is found at Bilma in Niger.\"]",
+  "slide | \"I. RESOURCES\" | \"Question 3\" | [\"Why is the desert a good place for solar power stations, like Noor Ouarzazate in Morocco?\"]",
+  "slide | \"I. RESOURCES\" | \"Answer\" | [\"The desert has clear skies and strong sunshine almost every day, so solar panels can produce a lot of electricity.\"]",
+  "imageQ | \"I. RESOURCES\" | \"Question 4\" | \"Look at the diagram. Where does the water of an oasis come from?\" | \"oasis.png\"",
+  "slide | \"I. RESOURCES\" | \"Answer\" | [\"The water of an oasis comes from underground. Rain from distant highlands flows slowly under the desert and reaches the surface in a low place.\"]",
+  "slide | \"II. CHALLENGES\" | \"Question 1\" | [\"What do we call a natural or human event that can cause harm to people and property?\"]",
+  "slide | \"II. CHALLENGES\" | \"Answer\" | [\"A natural or human event that can cause harm to people and property is called a hazard.\"]",
+  "slide | \"II. CHALLENGES\" | \"Question 2\" | [\"In the Sahara, it can be over 40°C during the day, but very cold at night. Why?\"]",
+  "slide | \"II. CHALLENGES\" | \"Answer\" | [\"There are no clouds. During the day the sun heats the ground strongly, and at night the heat escapes quickly into the sky.\"]",
+  "slide | \"II. CHALLENGES\" | \"Question 3\" | [\"During a sandstorm, strong winds lift a lot of sand into the air. Give two dangers of a sandstorm for people.\"]",
+  "slide | \"II. CHALLENGES\" | \"Answer\" | [\"A sandstorm makes it difficult to see and to breathe. It can also damage crops, block roads and bury wells.\"]",
+  "slide | \"II. CHALLENGES\" | \"Question 4\" | [\"In the Sahel, some farmland is slowly turning into desert. What do we call this process, and what human activities cause it?\"]",
+  "slide | \"II. CHALLENGES\" | \"Answer\" | [\"This process is called desertification. It is caused by drought and by human activities such as overgrazing and cutting down trees.\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Question 1\" | [\"The Tuareg of the Sahara often move with their camels and goats from place to place. Why do they do this?\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Answer\" | [\"They move in search of water and pasture for their animals. This way of life is called nomadism.\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Question 2\" | [\"Why do desert people wear long, loose, light-coloured clothes and cover their heads?\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Answer\" | [\"These clothes protect the body from the sun and the sand. Their loose shape lets air circulate, which keeps the body cool.\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Question 3\" | [\"Why are traditional desert houses built with thick mud walls and small windows?\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Answer\" | [\"Thick mud walls and small windows keep the house cool during the day and warm during the cold night.\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Question 4\" | [\"Egypt is almost all desert, yet farmers grow crops along the Nile. How is this possible?\"]",
+  "slide | \"III. ADAPTATIONS\" | \"Answer\" | [\"Farmers use water from the Nile to irrigate their fields. Irrigation brings water to crops where there is not enough rain.\"] | \"Transition: Now, copy the board summary.\"",
+  "sum | \"I. Resources of Hot Deserts (1/6)\" | \"DEFINITION\" | [\"A resource is anything in the environment that people can use to satisfy their needs.\"]",
+  "sum | \"I. Resources of Hot Deserts (2/6)\" | [\"Although hot deserts are dry, they have important resources. The main resources of hot deserts are minerals, solar energy, underground water and tourism.\"]",
+  "sum | \"I. Resources of Hot Deserts (3/6)\" | \"A. Minerals\" | [\"Hot deserts contain oil and natural gas in Algeria and Libya, uranium in Niger, phosphates in Western Sahara and salt at Bilma in Niger.\"]",
+  "sum | \"I. Resources of Hot Deserts (4/6)\" | \"B. Solar Energy\" | [\"Deserts have strong sunshine almost every day. The Noor Ouarzazate power station in Morocco produces electricity from the sun.\"]",
+  "sumImage | \"I. Resources of Hot Deserts (5/6)\" | \"C. Underground Water and Oases\" | \"An oasis is a fertile place in the desert where underground water reaches the surface.\" | \"oasis.png\"",
+  "sum | \"I. Resources of Hot Deserts (6/6)\" | \"D. Tourism\" | [\"Deserts attract tourists who come to see dunes, oases and ancient monuments, especially in Morocco and Egypt.\"]",
+  "sum | \"II. Challenges of Hot Deserts (1/6)\" | \"DEFINITION\" | [\"A hazard is a natural or human event that can cause harm to people and property.\"]",
+  "sum | \"II. Challenges of Hot Deserts (2/6)\" | [\"Life in hot deserts is difficult. The main challenges, or hazards, are extreme temperatures, lack of water, sandstorms and desertification.\"]",
+  "sum | \"II. Challenges of Hot Deserts (3/6)\" | \"A. Extreme Temperatures\" | [\"Day temperatures are often above 40°C, which can cause heatstroke. Nights can be very cold, because there are no clouds.\"]",
+  "sum | \"II. Challenges of Hot Deserts (4/6)\" | \"B. Lack of Water\" | [\"Deserts receive less than 250 mm of rain per year, and the rain is irregular. Water for drinking and farming is very scarce.\"]",
+  "sum | \"II. Challenges of Hot Deserts (5/6)\" | \"C. Sandstorms\" | [\"Sandstorms reduce visibility, cause breathing problems, damage crops and bury roads and wells.\"]",
+  "sum | \"II. Challenges of Hot Deserts (6/6)\" | \"D. Desertification\" | [\"Desertification is the spread of desert conditions into semi-arid lands, such as the Sahel. It is caused by drought, overgrazing and the cutting of trees.\"]",
+  "sum | \"III. Human Adaptations (1/5)\" | [\"People have adapted to life in hot deserts in the following ways: nomadism, clothing and housing, irrigation, and the fight against desertification.\"]",
+  "sum | \"III. Human Adaptations (2/5)\" | \"A. Nomadism\" | [\"Nomads, such as the Tuareg of the Sahara, move with their camels and goats from place to place in search of water and pasture.\"]",
+  "sum | \"III. Human Adaptations (3/5)\" | \"B. Clothing and Housing\" | [\"People wear long, loose, light-coloured clothes. Houses have thick mud walls and small windows to keep them cool.\"]",
+  "sum | \"III. Human Adaptations (4/5)\" | \"C. Irrigation and Water Supply\" | [\"People use water from rivers such as the Nile, from deep wells and from underground reservoirs to irrigate crops and supply towns.\"]",
+  "sum | \"III. Human Adaptations (5/5)\" | \"D. Fighting Desertification\" | [\"Trees are planted to stop the desert, as in the Great Green Wall across the Sahel and Opération Sahel Vert in the Far North of Cameroon.\"]"
+ ],
+ "d": {
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 29",
+  "title": "Man in the Hot Desert Environments",
+  "coverNote": "Good morning, class. After studying how the wind shapes deserts, today we study how people live in hot deserts.",
+  "cls": "Form 4",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "duration": "50 minutes",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "lesson": "Lesson 29: Man in the Hot Desert Environments",
+  "notions": "Resource, hazard.",
+  "focus": "Resources of hot deserts; challenges (hazards) of hot deserts; human adaptations.",
+  "competence": "Learners are able to use water carefully and protect themselves from heat and dust during the dry season, as desert people do.",
+  "objectives": [
+   "Define a resource and a hazard.",
+   "Identify the main resources of hot deserts.",
+   "Describe the main challenges of living in hot deserts.",
+   "Explain how people adapt to life in hot deserts."
+  ],
+  "recall": [
+   "The wind deposits sand when it slows down or meets an obstacle.",
+   "Sand dunes (barchans and seifs) move in the direction of the wind.",
+   "Moving dunes and dust can cause problems for people who live near deserts."
+  ],
+  "recallNote": "Check the homework: how do families in Garoua cope with the dry season?",
+  "situation": [
+   "In March, when the dry season is at its hottest in Garoua, the well of the Bouba family dries up. Mrs Bouba now walks for more than an hour every morning to fetch water, and the family's goats are thin because there is no grass.",
+   "Her son Ali reads that in the Sahara people live with even less water all year round. He wonders how they can survive there."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the Bouba family has no water, because their well has dried up during the hot dry season."
+   ],
+   [
+    "Why has the family's well dried up in March?",
+    "It has not rained for several months, and the heat makes water evaporate, so the underground water level has fallen."
+   ],
+   [
+    "What can the family do to have water during the next dry season?",
+    "They can dig the well deeper or use a borehole, store rainwater during the rainy season, and use water carefully."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how people use the resources of hot deserts, face their dangers and adapt to them, as we must do in the dry season."
+ },
+ "end": {
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 29",
+  "title": "Man in the Hot Desert Environments",
+  "coverNote": "Good morning, class. After studying how the wind shapes deserts, today we study how people live in hot deserts.",
+  "cls": "Form 4",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "duration": "50 minutes",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "lesson": "Lesson 29: Man in the Hot Desert Environments",
+  "notions": "Resource, hazard.",
+  "focus": "Resources of hot deserts; challenges (hazards) of hot deserts; human adaptations.",
+  "competence": "Learners are able to use water carefully and protect themselves from heat and dust during the dry season, as desert people do.",
+  "objectives": [
+   "Define a resource and a hazard.",
+   "Identify the main resources of hot deserts.",
+   "Describe the main challenges of living in hot deserts.",
+   "Explain how people adapt to life in hot deserts."
+  ],
+  "recall": [
+   "The wind deposits sand when it slows down or meets an obstacle.",
+   "Sand dunes (barchans and seifs) move in the direction of the wind.",
+   "Moving dunes and dust can cause problems for people who live near deserts."
+  ],
+  "recallNote": "Check the homework: how do families in Garoua cope with the dry season?",
+  "situation": [
+   "In March, when the dry season is at its hottest in Garoua, the well of the Bouba family dries up. Mrs Bouba now walks for more than an hour every morning to fetch water, and the family's goats are thin because there is no grass.",
+   "Her son Ali reads that in the Sahara people live with even less water all year round. He wonders how they can survive there."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the Bouba family has no water, because their well has dried up during the hot dry season."
+   ],
+   [
+    "Why has the family's well dried up in March?",
+    "It has not rained for several months, and the heat makes water evaporate, so the underground water level has fallen."
+   ],
+   [
+    "What can the family do to have water during the next dry season?",
+    "They can dig the well deeper or use a borehole, store rainwater during the rainy season, and use water carefully."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how people use the resources of hot deserts, face their dangers and adapt to them, as we must do in the dry season.",
+  "evaluation": [
+   [
+    "Give one resource and one hazard of hot deserts.",
+    "One resource of hot deserts is oil. One hazard is the sandstorm."
+   ],
+   [
+    "Name the tree-planting programme that fights desertification in the Far North Region of Cameroon.",
+    "This programme is called Opération Sahel Vert."
+   ],
+   [
+    "Give one way in which people in Garoua adapt to the hot dry season.",
+    "For example, they store water, wear light clothes and rest in the shade during the hottest hours of the day."
+   ]
+  ],
+  "remediation": [
+   [
+    "Anything that people can use to satisfy their needs is called a ______.",
+    "An event that can cause harm to people and property is called a ______.",
+    "A fertile place in the desert with underground water is called an ______."
+   ],
+   [
+    "People who move with their animals in search of water and pasture are called ______.",
+    "The spread of desert conditions into the Sahel is called ______.",
+    "Bringing water to crops from a river or a well is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. resource 2. hazard 3. oasis 4. nomads 5. desertification 6. irrigation",
+  "homework": "Make a table with three columns: resources, hazards and adaptations. Fill it with examples from the hot deserts and from the dry season in Garoua.",
+  "homeworkTag": "This prepares the revision of Lessons 27 to 29.",
+  "bilingual": [
+   [
+    "Resource",
+    "La ressource"
+   ],
+   [
+    "Hazard",
+    "Le risque / l'aléa"
+   ],
+   [
+    "Oasis",
+    "L'oasis"
+   ],
+   [
+    "Nomadism",
+    "Le nomadisme"
+   ],
+   [
+    "Irrigation",
+    "L'irrigation"
+   ],
+   [
+    "Sandstorm",
+    "La tempête de sable"
+   ],
+   [
+    "Desertification",
+    "La désertification"
+   ],
+   [
+    "Adaptation",
+    "L'adaptation"
+   ]
+  ],
+  "matter": "I. Resources of hot deserts (minerals, solar energy, oases, tourism); II. Challenges/hazards (extreme temperatures, lack of water, sandstorms, desertification); III. Human adaptations (nomadism, clothing and housing, irrigation, fighting desertification).",
+  "teacherNote": [
+   "Link each part of the lesson to the dry season in Garoua: water shortage, heat, dust and the Harmattan.",
+   "Opération Sahel Vert was relaunched in 2008 by the Ministry of the Environment (MINEPDED) to stop the advance of the desert in the Far North and North Regions.",
+   "The Great Green Wall is an African Union initiative launched in 2007 to plant trees and restore land across the Sahel."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation processes, landforms and impacts on man — Lesson 29.",
+   "Teacher's lesson notes, Lesson 29 (f4.docx).",
+   "MINEPDED: Opération Sahel Vert (minepded.gov.cm).",
+   "Resource map and oasis diagram drawn for this lesson from Natural Earth data."
+  ]
+ },
+ "file": "FORM4_LESSON29_Man_in_Hot_Desert"
+}

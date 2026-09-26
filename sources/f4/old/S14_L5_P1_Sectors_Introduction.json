@@ -1,0 +1,608 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. DEFINITIONS\" | \"Question 1\" | [\"All the activities by which people produce, sell and buy things in a country form its ______. What is the missing word?\"]",
+  "slide | \"I. DEFINITIONS\" | \"Answer\" | [\"The missing word is economy.\"]",
+  "slide | \"I. DEFINITIONS\" | \"Question 2\" | [\"A tailor makes a dress, and a doctor treats a patient. Which one produces a good, and which one gives a service?\"]",
+  "slide | \"I. DEFINITIONS\" | \"Answer\" | [\"The tailor produces a good, which is a thing we can touch. The doctor gives a service, which is work done for someone.\"]",
+  "slide | \"I. DEFINITIONS\" | \"Question 3\" | [\"Cotton is used to make cloth. What do we call a natural product used to make other goods?\"]",
+  "slide | \"I. DEFINITIONS\" | \"Answer\" | [\"A natural product used to make other goods is called a raw material.\"]",
+  "imageFull | \"II. THE FOUR SECTORS\" | \"Activity: Study the diagram\" | \"Follow the journey of cotton.\" | \"sectors_chain.png\"",
+  "slide | \"II. THE FOUR SECTORS\" | \"Question 1\" | [\"Ahmadou's father takes cotton from nature. In which sector does he work?\"]",
+  "slide | \"II. THE FOUR SECTORS\" | \"Answer\" | [\"He works in the primary sector, which takes raw materials from nature.\"]",
+  "slide | \"II. THE FOUR SECTORS\" | \"Question 2\" | [\"His uncle turns cotton into cloth, and his aunt sells the cloth. In which sectors do they work?\"]",
+  "slide | \"II. THE FOUR SECTORS\" | \"Answer\" | [\"His uncle works in the secondary sector, which transforms raw materials. His aunt works in the tertiary sector, which gives services.\"]",
+  "slide | \"II. THE FOUR SECTORS\" | \"Question 3\" | [\"His cousin creates new knowledge about cotton. In which sector does she work?\"]",
+  "slide | \"II. THE FOUR SECTORS\" | \"Answer\" | [\"She works in the quaternary sector, which deals with research, knowledge and information.\"]",
+  "sum | \"I. Definitions (1/5)\" | \"DEFINITIONS\" | [\"The economy is the set of all the activities by which people produce, exchange and use goods and services.\"]",
+  "sum | \"I. Definitions (2/5)\" | \"DEFINITIONS\" | [\"An economic activity is any activity that people do to earn money or to satisfy their needs.\"]",
+  "sum | \"I. Definitions (3/5)\" | \"DEFINITIONS\" | [\"Goods are things that we can touch, such as food or clothes. Services are work done for others, such as teaching or transport.\"]",
+  "sum | \"I. Definitions (4/5)\" | \"DEFINITIONS\" | [\"A raw material is a natural product used to make other goods, such as cotton, wood or iron ore.\"]",
+  "sum | \"I. Definitions (5/5)\" | \"DEFINITIONS\" | [\"A sector of the economy is a group of economic activities of the same kind.\"]",
+  "sum | \"II. The Four Sectors of the Economy (1/5)\" | [\"The economy is divided into four sectors:\"]",
+  "sumImage | \"II. The Four Sectors of the Economy (2/5)\" | \"A. The Primary Sector\" | \"The primary sector takes raw materials from nature. Example: growing cotton.\" | \"sectors_chain.png\"",
+  "sum | \"II. The Four Sectors of the Economy (3/5)\" | \"B. The Secondary Sector\" | [\"The secondary sector transforms raw materials into finished goods. Example: making cloth from cotton.\"]",
+  "sum | \"II. The Four Sectors of the Economy (4/5)\" | \"C. The Tertiary Sector\" | [\"The tertiary sector provides services to people. Example: selling cloth in the market.\"]",
+  "sum | \"II. The Four Sectors of the Economy (5/5)\" | \"D. The Quaternary Sector\" | [\"The quaternary sector deals with research, knowledge and information. Example: creating better cotton seeds.\"]"
+ ],
+ "d": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S14_L5_P1_Sectors_Introduction",
+  "part": 1,
+  "partTitle": "Introduction, Definitions and Key Concepts",
+  "notions": "Economy, economic activity, goods, services, raw material, production, sector of the economy.",
+  "focus": "Introduction to the sectors of the economy; definitions of terms; key concepts (activities and examples).",
+  "competence": "Learners are able to classify the jobs of people around them into the four sectors of the economy.",
+  "objectives": [
+   "Define economy, economic activity, goods and services.",
+   "Define a sector of the economy.",
+   "Name the four sectors of the economy and give an example of each."
+  ],
+  "recall": [
+   "In Lessons 1 to 4, we studied the natural regions of the world.",
+   "In each region, people carry out activities such as farming, rearing, mining and tourism.",
+   "These activities help them to earn a living."
+  ],
+  "recallNote": "Check the homework: five jobs done in the family or neighbourhood.",
+  "situation": [
+   "Ahmadou's father grows cotton near Garoua. His uncle works in the CICAM factory, where cotton becomes cloth. His aunt sells cloth in the Garoua market, and his cousin is a researcher who studies new cotton seeds.",
+   "Ahmadou's teacher says that all four people work in different sectors of the economy. Ahmadou does not understand what this means."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ahmadou does not understand what the teacher means by the different sectors of the economy."
+   ],
+   [
+    "What does each member of Ahmadou's family do?",
+    "His father grows cotton, his uncle turns cotton into cloth, his aunt sells cloth, and his cousin studies new cotton seeds."
+   ],
+   [
+    "How can Ahmadou group these four jobs?",
+    "He can group them according to what they do: producing raw materials, transforming them, selling them, or creating knowledge."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the economy is organised and in which sector each job belongs.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "All the activities by which people produce, sell and buy things in a country form its ______. What is the missing word?",
+      "a": "The missing word is economy."
+     },
+     {
+      "q": "A tailor makes a dress, and a doctor treats a patient. Which one produces a good, and which one gives a service?",
+      "a": "The tailor produces a good, which is a thing we can touch. The doctor gives a service, which is work done for someone."
+     },
+     {
+      "q": "Cotton is used to make cloth. What do we call a natural product used to make other goods?",
+      "a": "A natural product used to make other goods is called a raw material."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "The economy is the set of all the activities by which people produce, exchange and use goods and services.",
+      "An economic activity is any activity that people do to earn money or to satisfy their needs.",
+      "Goods are things that we can touch, such as food or clothes. Services are work done for others, such as teaching or transport.",
+      "A raw material is a natural product used to make other goods, such as cotton, wood or iron ore.",
+      "A sector of the economy is a group of economic activities of the same kind."
+     ]
+    }
+   },
+   {
+    "sec": "II. THE FOUR SECTORS",
+    "qa": [
+     {
+      "img": "sectors_chain.png",
+      "kind": "diagram",
+      "q": "Follow the journey of cotton.",
+      "full": true
+     },
+     {
+      "q": "Ahmadou's father takes cotton from nature. In which sector does he work?",
+      "a": "He works in the primary sector, which takes raw materials from nature."
+     },
+     {
+      "q": "His uncle turns cotton into cloth, and his aunt sells the cloth. In which sectors do they work?",
+      "a": "His uncle works in the secondary sector, which transforms raw materials. His aunt works in the tertiary sector, which gives services."
+     },
+     {
+      "q": "His cousin creates new knowledge about cotton. In which sector does she work?",
+      "a": "She works in the quaternary sector, which deals with research, knowledge and information."
+     }
+    ],
+    "sum": {
+     "title": "II. The Four Sectors of the Economy",
+     "intro": "The economy is divided into four sectors:",
+     "items": [
+      [
+       "A. The Primary Sector",
+       "The primary sector takes raw materials from nature. Example: growing cotton.",
+       "sectors_chain.png"
+      ],
+      [
+       "B. The Secondary Sector",
+       "The secondary sector transforms raw materials into finished goods. Example: making cloth from cotton."
+      ],
+      [
+       "C. The Tertiary Sector",
+       "The tertiary sector provides services to people. Example: selling cloth in the market."
+      ],
+      [
+       "D. The Quaternary Sector",
+       "The quaternary sector deals with research, knowledge and information. Example: creating better cotton seeds."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a good and a service?",
+    "A good is a thing we can touch, like a shirt. A service is work done for others, like teaching."
+   ],
+   [
+    "In which sector does a fisherman work, and in which sector does a bank worker work?",
+    "A fisherman works in the primary sector, and a bank worker works in the tertiary sector."
+   ],
+   [
+    "Name the four sectors of the economy.",
+    "The four sectors are the primary, secondary, tertiary and quaternary sectors."
+   ]
+  ],
+  "remediation": [
+   [
+    "A thing that we can touch, such as a shirt, is a ______.",
+    "Work done for others, such as teaching, is a ______.",
+    "A natural product used to make other goods is a ______ material."
+   ],
+   [
+    "The sector that takes raw materials from nature is the ______ sector.",
+    "The sector that transforms raw materials is the ______ sector.",
+    "The sector of research and information is the ______ sector."
+   ]
+  ],
+  "remediationAnswers": "1. good 2. service 3. raw 4. primary 5. secondary 6. quaternary",
+  "homework": "Observe two workers in your area: one who works for a registered company and one who works alone in the street (for example a moto-taxi driver). Write one difference between them.",
+  "homeworkTag": "This prepares Part 2: The Formal and Informal Sectors of the Economy.",
+  "bilingual": [
+   [
+    "Economy",
+    "L'économie"
+   ],
+   [
+    "Goods",
+    "Les biens"
+   ],
+   [
+    "Services",
+    "Les services"
+   ],
+   [
+    "Raw material",
+    "La matière première"
+   ],
+   [
+    "Primary sector",
+    "Le secteur primaire"
+   ],
+   [
+    "Secondary sector",
+    "Le secteur secondaire"
+   ],
+   [
+    "Tertiary sector",
+    "Le secteur tertiaire"
+   ],
+   [
+    "Quaternary sector",
+    "Le secteur quaternaire"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "SODECOTON gins cotton in North Cameroon; CICAM (Cotonnière Industrielle du Cameroun) in Garoua makes cloth."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 1)",
+  "title": "The Sectors of the Economy: Introduction, Definitions and Key Concepts",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 1: Introduction, Definitions and Key Concepts.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 1: Introduction, Definitions and Key Concepts"
+ },
+ "end": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Economic Geography — Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S14_L5_P1_Sectors_Introduction",
+  "part": 1,
+  "partTitle": "Introduction, Definitions and Key Concepts",
+  "notions": "Economy, economic activity, goods, services, raw material, production, sector of the economy.",
+  "focus": "Introduction to the sectors of the economy; definitions of terms; key concepts (activities and examples).",
+  "competence": "Learners are able to classify the jobs of people around them into the four sectors of the economy.",
+  "objectives": [
+   "Define economy, economic activity, goods and services.",
+   "Define a sector of the economy.",
+   "Name the four sectors of the economy and give an example of each."
+  ],
+  "recall": [
+   "In Lessons 1 to 4, we studied the natural regions of the world.",
+   "In each region, people carry out activities such as farming, rearing, mining and tourism.",
+   "These activities help them to earn a living."
+  ],
+  "recallNote": "Check the homework: five jobs done in the family or neighbourhood.",
+  "situation": [
+   "Ahmadou's father grows cotton near Garoua. His uncle works in the CICAM factory, where cotton becomes cloth. His aunt sells cloth in the Garoua market, and his cousin is a researcher who studies new cotton seeds.",
+   "Ahmadou's teacher says that all four people work in different sectors of the economy. Ahmadou does not understand what this means."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ahmadou does not understand what the teacher means by the different sectors of the economy."
+   ],
+   [
+    "What does each member of Ahmadou's family do?",
+    "His father grows cotton, his uncle turns cotton into cloth, his aunt sells cloth, and his cousin studies new cotton seeds."
+   ],
+   [
+    "How can Ahmadou group these four jobs?",
+    "He can group them according to what they do: producing raw materials, transforming them, selling them, or creating knowledge."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the economy is organised and in which sector each job belongs.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "All the activities by which people produce, sell and buy things in a country form its ______. What is the missing word?",
+      "a": "The missing word is economy."
+     },
+     {
+      "q": "A tailor makes a dress, and a doctor treats a patient. Which one produces a good, and which one gives a service?",
+      "a": "The tailor produces a good, which is a thing we can touch. The doctor gives a service, which is work done for someone."
+     },
+     {
+      "q": "Cotton is used to make cloth. What do we call a natural product used to make other goods?",
+      "a": "A natural product used to make other goods is called a raw material."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "The economy is the set of all the activities by which people produce, exchange and use goods and services.",
+      "An economic activity is any activity that people do to earn money or to satisfy their needs.",
+      "Goods are things that we can touch, such as food or clothes. Services are work done for others, such as teaching or transport.",
+      "A raw material is a natural product used to make other goods, such as cotton, wood or iron ore.",
+      "A sector of the economy is a group of economic activities of the same kind."
+     ]
+    }
+   },
+   {
+    "sec": "II. THE FOUR SECTORS",
+    "qa": [
+     {
+      "img": "sectors_chain.png",
+      "kind": "diagram",
+      "q": "Follow the journey of cotton.",
+      "full": true
+     },
+     {
+      "q": "Ahmadou's father takes cotton from nature. In which sector does he work?",
+      "a": "He works in the primary sector, which takes raw materials from nature."
+     },
+     {
+      "q": "His uncle turns cotton into cloth, and his aunt sells the cloth. In which sectors do they work?",
+      "a": "His uncle works in the secondary sector, which transforms raw materials. His aunt works in the tertiary sector, which gives services."
+     },
+     {
+      "q": "His cousin creates new knowledge about cotton. In which sector does she work?",
+      "a": "She works in the quaternary sector, which deals with research, knowledge and information."
+     }
+    ],
+    "sum": {
+     "title": "II. The Four Sectors of the Economy",
+     "intro": "The economy is divided into four sectors:",
+     "items": [
+      [
+       "A. The Primary Sector",
+       "The primary sector takes raw materials from nature. Example: growing cotton.",
+       "sectors_chain.png"
+      ],
+      [
+       "B. The Secondary Sector",
+       "The secondary sector transforms raw materials into finished goods. Example: making cloth from cotton."
+      ],
+      [
+       "C. The Tertiary Sector",
+       "The tertiary sector provides services to people. Example: selling cloth in the market."
+      ],
+      [
+       "D. The Quaternary Sector",
+       "The quaternary sector deals with research, knowledge and information. Example: creating better cotton seeds."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a good and a service?",
+    "A good is a thing we can touch, like a shirt. A service is work done for others, like teaching."
+   ],
+   [
+    "In which sector does a fisherman work, and in which sector does a bank worker work?",
+    "A fisherman works in the primary sector, and a bank worker works in the tertiary sector."
+   ],
+   [
+    "Name the four sectors of the economy.",
+    "The four sectors are the primary, secondary, tertiary and quaternary sectors."
+   ]
+  ],
+  "remediation": [
+   [
+    "A thing that we can touch, such as a shirt, is a ______.",
+    "Work done for others, such as teaching, is a ______.",
+    "A natural product used to make other goods is a ______ material."
+   ],
+   [
+    "The sector that takes raw materials from nature is the ______ sector.",
+    "The sector that transforms raw materials is the ______ sector.",
+    "The sector of research and information is the ______ sector."
+   ]
+  ],
+  "remediationAnswers": "1. good 2. service 3. raw 4. primary 5. secondary 6. quaternary",
+  "homework": "Observe two workers in your area: one who works for a registered company and one who works alone in the street (for example a moto-taxi driver). Write one difference between them.",
+  "homeworkTag": "This prepares Part 2: The Formal and Informal Sectors of the Economy.",
+  "bilingual": [
+   [
+    "Economy",
+    "L'économie"
+   ],
+   [
+    "Goods",
+    "Les biens"
+   ],
+   [
+    "Services",
+    "Les services"
+   ],
+   [
+    "Raw material",
+    "La matière première"
+   ],
+   [
+    "Primary sector",
+    "Le secteur primaire"
+   ],
+   [
+    "Secondary sector",
+    "Le secteur secondaire"
+   ],
+   [
+    "Tertiary sector",
+    "Le secteur tertiaire"
+   ],
+   [
+    "Quaternary sector",
+    "Le secteur quaternaire"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "SODECOTON gins cotton in North Cameroon; CICAM (Cotonnière Industrielle du Cameroun) in Garoua makes cloth."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 5 (PART 1)",
+  "title": "The Sectors of the Economy: Introduction, Definitions and Key Concepts",
+  "sumTitle": "The Sectors of the Economy",
+  "coverNote": "Good morning, class. Today we study The Sectors of the Economy, part 1: Introduction, Definitions and Key Concepts.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 5: The Sectors of the Economy — Part 1: Introduction, Definitions and Key Concepts",
+  "matter": "I. Definitions: ; II. The Four Sectors of the Economy: The Primary Sector, The Secondary Sector, The Tertiary Sector, The Quaternary Sector."
+ },
+ "file": "S14_L5_P1_Sectors_Introduction",
+ "sp": {
+  "topic": "Economic Activities",
+  "subtopic": "Sectors of the Economy",
+  "chapter": "Sectors of the Economy",
+  "lessonNo": 5,
+  "lessonName": "The Sectors of the Economy",
+  "file": "S14_L5_P1_Sectors_Introduction",
+  "part": 1,
+  "partTitle": "Introduction, Definitions and Key Concepts",
+  "notions": "Economy, economic activity, goods, services, raw material, production, sector of the economy.",
+  "focus": "Introduction to the sectors of the economy; definitions of terms; key concepts (activities and examples).",
+  "competence": "Learners are able to classify the jobs of people around them into the four sectors of the economy.",
+  "objectives": [
+   "Define economy, economic activity, goods and services.",
+   "Define a sector of the economy.",
+   "Name the four sectors of the economy and give an example of each."
+  ],
+  "recall": [
+   "In Lessons 1 to 4, we studied the natural regions of the world.",
+   "In each region, people carry out activities such as farming, rearing, mining and tourism.",
+   "These activities help them to earn a living."
+  ],
+  "recallNote": "Check the homework: five jobs done in the family or neighbourhood.",
+  "situation": [
+   "Ahmadou's father grows cotton near Garoua. His uncle works in the CICAM factory, where cotton becomes cloth. His aunt sells cloth in the Garoua market, and his cousin is a researcher who studies new cotton seeds.",
+   "Ahmadou's teacher says that all four people work in different sectors of the economy. Ahmadou does not understand what this means."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Ahmadou does not understand what the teacher means by the different sectors of the economy."
+   ],
+   [
+    "What does each member of Ahmadou's family do?",
+    "His father grows cotton, his uncle turns cotton into cloth, his aunt sells cloth, and his cousin studies new cotton seeds."
+   ],
+   [
+    "How can Ahmadou group these four jobs?",
+    "He can group them according to what they do: producing raw materials, transforming them, selling them, or creating knowledge."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how the economy is organised and in which sector each job belongs.",
+  "parts": [
+   {
+    "sec": "I. DEFINITIONS",
+    "qa": [
+     {
+      "q": "All the activities by which people produce, sell and buy things in a country form its ______. What is the missing word?",
+      "a": "The missing word is economy."
+     },
+     {
+      "q": "A tailor makes a dress, and a doctor treats a patient. Which one produces a good, and which one gives a service?",
+      "a": "The tailor produces a good, which is a thing we can touch. The doctor gives a service, which is work done for someone."
+     },
+     {
+      "q": "Cotton is used to make cloth. What do we call a natural product used to make other goods?",
+      "a": "A natural product used to make other goods is called a raw material."
+     }
+    ],
+    "sum": {
+     "title": "I. Definitions",
+     "defs": [
+      "The economy is the set of all the activities by which people produce, exchange and use goods and services.",
+      "An economic activity is any activity that people do to earn money or to satisfy their needs.",
+      "Goods are things that we can touch, such as food or clothes. Services are work done for others, such as teaching or transport.",
+      "A raw material is a natural product used to make other goods, such as cotton, wood or iron ore.",
+      "A sector of the economy is a group of economic activities of the same kind."
+     ]
+    }
+   },
+   {
+    "sec": "II. THE FOUR SECTORS",
+    "qa": [
+     {
+      "img": "sectors_chain.png",
+      "kind": "diagram",
+      "q": "Follow the journey of cotton.",
+      "full": true
+     },
+     {
+      "q": "Ahmadou's father takes cotton from nature. In which sector does he work?",
+      "a": "He works in the primary sector, which takes raw materials from nature."
+     },
+     {
+      "q": "His uncle turns cotton into cloth, and his aunt sells the cloth. In which sectors do they work?",
+      "a": "His uncle works in the secondary sector, which transforms raw materials. His aunt works in the tertiary sector, which gives services."
+     },
+     {
+      "q": "His cousin creates new knowledge about cotton. In which sector does she work?",
+      "a": "She works in the quaternary sector, which deals with research, knowledge and information."
+     }
+    ],
+    "sum": {
+     "title": "II. The Four Sectors of the Economy",
+     "intro": "The economy is divided into four sectors:",
+     "items": [
+      [
+       "A. The Primary Sector",
+       "The primary sector takes raw materials from nature. Example: growing cotton.",
+       "sectors_chain.png"
+      ],
+      [
+       "B. The Secondary Sector",
+       "The secondary sector transforms raw materials into finished goods. Example: making cloth from cotton."
+      ],
+      [
+       "C. The Tertiary Sector",
+       "The tertiary sector provides services to people. Example: selling cloth in the market."
+      ],
+      [
+       "D. The Quaternary Sector",
+       "The quaternary sector deals with research, knowledge and information. Example: creating better cotton seeds."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is the difference between a good and a service?",
+    "A good is a thing we can touch, like a shirt. A service is work done for others, like teaching."
+   ],
+   [
+    "In which sector does a fisherman work, and in which sector does a bank worker work?",
+    "A fisherman works in the primary sector, and a bank worker works in the tertiary sector."
+   ],
+   [
+    "Name the four sectors of the economy.",
+    "The four sectors are the primary, secondary, tertiary and quaternary sectors."
+   ]
+  ],
+  "remediation": [
+   [
+    "A thing that we can touch, such as a shirt, is a ______.",
+    "Work done for others, such as teaching, is a ______.",
+    "A natural product used to make other goods is a ______ material."
+   ],
+   [
+    "The sector that takes raw materials from nature is the ______ sector.",
+    "The sector that transforms raw materials is the ______ sector.",
+    "The sector of research and information is the ______ sector."
+   ]
+  ],
+  "remediationAnswers": "1. good 2. service 3. raw 4. primary 5. secondary 6. quaternary",
+  "homework": "Observe two workers in your area: one who works for a registered company and one who works alone in the street (for example a moto-taxi driver). Write one difference between them.",
+  "homeworkTag": "This prepares Part 2: The Formal and Informal Sectors of the Economy.",
+  "bilingual": [
+   [
+    "Economy",
+    "L'économie"
+   ],
+   [
+    "Goods",
+    "Les biens"
+   ],
+   [
+    "Services",
+    "Les services"
+   ],
+   [
+    "Raw material",
+    "La matière première"
+   ],
+   [
+    "Primary sector",
+    "Le secteur primaire"
+   ],
+   [
+    "Secondary sector",
+    "Le secteur secondaire"
+   ],
+   [
+    "Tertiary sector",
+    "Le secteur tertiaire"
+   ],
+   [
+    "Quaternary sector",
+    "Le secteur quaternaire"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "SODECOTON gins cotton in North Cameroon; CICAM (Cotonnière Industrielle du Cameroun) in Garoua makes cloth."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2."
+  ]
+ }
+}

@@ -1,0 +1,486 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"DEFINITION\" | [\"Water conservation is the careful use and protection of water so that it lasts for the future.\"]",
+  "sumImage | \"x\" | \"A. At Home\" | \"Repair leaks, close taps, reuse water and harvest rainwater in storage tanks.\" | \"rainwater_harvesting.png\"",
+  "sum | \"x\" | \"B. In Farming\" | [\"Use drip irrigation, grow drought-resistant crops and cover the soil to reduce evaporation.\"]",
+  "sum | \"x\" | \"C. In the Community\" | [\"Build dams, reservoirs, boreholes and storage tanks, protect rivers from pollution and plant trees.\"]",
+  "sum | \"IV. Water Conservation Methods (1/4)\" | \"DEFINITION\" | [\"Water conservation is the careful use and protection of water so that it lasts for the future.\"]",
+  "sumImage | \"IV. Water Conservation Methods (2/4)\" | \"A. At Home\" | \"Repair leaks, close taps, reuse water and harvest rainwater in storage tanks.\" | \"rainwater_harvesting.png\"",
+  "sum | \"IV. Water Conservation Methods (3/4)\" | \"B. In Farming\" | [\"Use drip irrigation, grow drought-resistant crops and cover the soil to reduce evaporation.\"]",
+  "sum | \"IV. Water Conservation Methods (4/4)\" | \"C. In the Community\" | [\"Build dams, reservoirs, boreholes and storage tanks, protect rivers from pollution and plant trees.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON42_Water_Scarcity",
+  "lessonNo": 42,
+  "lessonName": "Water Scarcity",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Management of Climate and Hydrological Related Hazards",
+  "subtopic": "Hydro-climatic Hazards",
+  "notions": "Water stress, storage tanks, boreholes, dams, reservoirs.",
+  "focus": "Meaning; causes; effects; water conservation methods.",
+  "competence": "Learners are able to save water at home and at school, and to collect and store rainwater for the dry season.",
+  "objectives": [
+   "Define water scarcity and water stress.",
+   "Explain the causes of water scarcity.",
+   "Describe its effects.",
+   "Describe methods of water conservation."
+  ],
+  "recall": [
+   "Floods cover dry land; droughts are long periods of low rainfall.",
+   "Desertification turns dry land into desert.",
+   "Storing water helps people to face droughts."
+  ],
+  "recallNote": "Check the homework: water used by the family in one day.",
+  "situation": [
+   "Every year in March, the taps in Aminatou's neighbourhood in Garoua run dry for several days. Women and children queue for hours at the borehole, and water sellers raise their prices.",
+   "Yet the Benue flows through the town. Aminatou wonders why there is not enough water for everyone."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that there is not enough water in Aminatou's neighbourhood during the dry season."
+   ],
+   [
+    "What happens in the neighbourhood when the taps run dry?",
+    "People queue for hours at the borehole, and water sellers raise their prices."
+   ],
+   [
+    "What can families do to have water in March?",
+    "They can collect rainwater in tanks during the rainy season, store water and avoid wasting it."
+   ]
+  ],
+  "justification": "This lesson will help us to understand why water becomes scarce and how we can save and store it.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "When there is not enough clean water to meet the needs of the population, what is this situation called?",
+      "a": "It is called water scarcity."
+     },
+     {
+      "q": "What is the difference between water stress and water scarcity?",
+      "a": "Water stress means water is becoming difficult to obtain. Experts speak of stress below 1,700 m³ per person per year, and of scarcity below 1,000 m³."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning",
+     "defs": [
+      "Water scarcity is the lack of enough clean water to meet the needs of the people of an area.",
+      "Water stress is a situation where the demand for water is higher than the available supply, or where water is of poor quality."
+     ]
+    }
+   },
+   {
+    "sec": "II. CAUSES",
+    "qa": [
+     {
+      "q": "Give two natural causes of water scarcity in Garoua.",
+      "a": "The long dry season with almost no rain, and droughts made worse by global warming."
+     },
+     {
+      "q": "Give two human causes of water scarcity.",
+      "a": "The fast growth of the population, the pollution of rivers, the waste of water and the lack of water pipes and storage."
+     }
+    ],
+    "sum": {
+     "title": "II. Causes",
+     "items": [
+      [
+       "A. Physical Causes",
+       "A long dry season, low and irregular rainfall, droughts and high evaporation reduce water supplies."
+      ],
+      [
+       "B. Human Causes",
+       [
+        "– Rapid population growth increases demand.",
+        "– Pollution makes water unsafe.",
+        "– Waste: leaking pipes and taps.",
+        "– Few pipes, boreholes and storage tanks.",
+        "– Deforestation reduces infiltration."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS",
+    "qa": [
+     {
+      "q": "Give three effects of water scarcity on families.",
+      "a": "Long walks and queues to fetch water, especially for women and children; diseases such as cholera and typhoid; high prices of water; conflicts over water points."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects",
+     "items": [
+      [
+       "Effects of Water Scarcity",
+       [
+        "– Long walks and queues to fetch water.",
+        "– Diseases such as cholera and typhoid.",
+        "– Crop failure and death of livestock.",
+        "– High water prices and conflicts."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. WATER CONSERVATION",
+    "qa": [
+     {
+      "img": "rainwater_harvesting.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. How can a family store water for the dry season?",
+      "a": "It can collect rainwater from the roof with gutters and pipes, and store it in a tank. This is rainwater harvesting.",
+      "split": 5.2
+     },
+     {
+      "q": "Name two large works that store water for towns and farms.",
+      "a": "Dams and reservoirs, such as the Lagdo reservoir, and boreholes that pump underground water."
+     },
+     {
+      "q": "Give two ways of saving water at home.",
+      "a": "Repair leaking taps, close the tap while washing, and reuse water, for example to clean the compound."
+     }
+    ],
+    "sum": {
+     "title": "IV. Water Conservation Methods",
+     "defs": [
+      "Water conservation is the careful use and protection of water so that it lasts for the future."
+     ],
+     "items": [
+      [
+       "A. At Home",
+       "Repair leaks, close taps, reuse water and harvest rainwater in storage tanks.",
+       "rainwater_harvesting.png"
+      ],
+      [
+       "B. In Farming",
+       "Use drip irrigation, grow drought-resistant crops and cover the soil to reduce evaporation."
+      ],
+      [
+       "C. In the Community",
+       "Build dams, reservoirs, boreholes and storage tanks, protect rivers from pollution and plant trees."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define water scarcity.",
+    "Water scarcity is the lack of enough clean water to meet the needs of the people of an area."
+   ],
+   [
+    "Give one physical cause and one human cause of water scarcity.",
+    "A physical cause is the long dry season. A human cause is the waste of water."
+   ],
+   [
+    "Explain how rainwater harvesting helps during the dry season.",
+    "Rainwater collected from roofs in the rainy season is stored in tanks and used in the dry season."
+   ]
+  ],
+  "remediation": [
+   [
+    "The lack of enough clean water is water ______.",
+    "Water stress begins below ______ m³ per person per year.",
+    "Collecting rain from roofs is rainwater ______."
+   ],
+   [
+    "A deep hole that pumps underground water is a ______.",
+    "A large lake made by a dam is a ______.",
+    "Giving water drop by drop to plant roots is ______ irrigation."
+   ]
+  ],
+  "remediationAnswers": "1. scarcity 2. 1,700 3. harvesting 4. borehole 5. reservoir 6. drip",
+  "homework": "Revise Lessons 30 to 42. Draw one diagram of your choice (layers of the atmosphere, Stevenson screen, types of rainfall, pressure belts or water cycle) and label it.",
+  "homeworkTag": "This closes Module 3: Weather and Climate.",
+  "bilingual": [
+   [
+    "Water scarcity",
+    "La pénurie d'eau"
+   ],
+   [
+    "Water stress",
+    "Le stress hydrique"
+   ],
+   [
+    "Storage tank",
+    "La citerne"
+   ],
+   [
+    "Borehole",
+    "Le forage"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Reservoir",
+    "Le réservoir"
+   ],
+   [
+    "Leak",
+    "La fuite"
+   ],
+   [
+    "To save water",
+    "Économiser l'eau"
+   ]
+  ],
+  "teacherNote": [
+   "The thresholds of 1,700 m³ (stress) and 1,000 m³ (scarcity) per person per year are the Falkenmark indicators used by the UN.",
+   "This is the last lesson of the national syllabus for Form 4."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "UN-Water: Water scarcity (Falkenmark indicator)."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 42",
+  "title": "Water Scarcity",
+  "sumTitle": "Water Scarcity",
+  "coverNote": "Good morning, class. Today we study Lesson 42: Water Scarcity.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 42: Water Scarcity",
+  "matter": "I. Meaning: ; II. Causes: Physical Causes, Human Causes; III. Effects: Effects of Water Scarcity; IV. Water Conservation Methods: At Home, In Farming, In the Community."
+ },
+ "file": "FORM4_LESSON42_Water_Scarcity",
+ "sp": {
+  "file": "FORM4_LESSON42_Water_Scarcity",
+  "lessonNo": 42,
+  "lessonName": "Water Scarcity",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "Management of Climate and Hydrological Related Hazards",
+  "subtopic": "Hydro-climatic Hazards",
+  "notions": "Water stress, storage tanks, boreholes, dams, reservoirs.",
+  "focus": "Meaning; causes; effects; water conservation methods.",
+  "competence": "Learners are able to save water at home and at school, and to collect and store rainwater for the dry season.",
+  "objectives": [
+   "Define water scarcity and water stress.",
+   "Explain the causes of water scarcity.",
+   "Describe its effects.",
+   "Describe methods of water conservation."
+  ],
+  "recall": [
+   "Floods cover dry land; droughts are long periods of low rainfall.",
+   "Desertification turns dry land into desert.",
+   "Storing water helps people to face droughts."
+  ],
+  "recallNote": "Check the homework: water used by the family in one day.",
+  "situation": [
+   "Every year in March, the taps in Aminatou's neighbourhood in Garoua run dry for several days. Women and children queue for hours at the borehole, and water sellers raise their prices.",
+   "Yet the Benue flows through the town. Aminatou wonders why there is not enough water for everyone."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that there is not enough water in Aminatou's neighbourhood during the dry season."
+   ],
+   [
+    "What happens in the neighbourhood when the taps run dry?",
+    "People queue for hours at the borehole, and water sellers raise their prices."
+   ],
+   [
+    "What can families do to have water in March?",
+    "They can collect rainwater in tanks during the rainy season, store water and avoid wasting it."
+   ]
+  ],
+  "justification": "This lesson will help us to understand why water becomes scarce and how we can save and store it.",
+  "parts": [
+   {
+    "sec": "I. MEANING",
+    "qa": [
+     {
+      "q": "When there is not enough clean water to meet the needs of the population, what is this situation called?",
+      "a": "It is called water scarcity."
+     },
+     {
+      "q": "What is the difference between water stress and water scarcity?",
+      "a": "Water stress means water is becoming difficult to obtain. Experts speak of stress below 1,700 m³ per person per year, and of scarcity below 1,000 m³."
+     }
+    ],
+    "sum": {
+     "title": "I. Meaning",
+     "defs": [
+      "Water scarcity is the lack of enough clean water to meet the needs of the people of an area.",
+      "Water stress is a situation where the demand for water is higher than the available supply, or where water is of poor quality."
+     ]
+    }
+   },
+   {
+    "sec": "II. CAUSES",
+    "qa": [
+     {
+      "q": "Give two natural causes of water scarcity in Garoua.",
+      "a": "The long dry season with almost no rain, and droughts made worse by global warming."
+     },
+     {
+      "q": "Give two human causes of water scarcity.",
+      "a": "The fast growth of the population, the pollution of rivers, the waste of water and the lack of water pipes and storage."
+     }
+    ],
+    "sum": {
+     "title": "II. Causes",
+     "items": [
+      [
+       "A. Physical Causes",
+       "A long dry season, low and irregular rainfall, droughts and high evaporation reduce water supplies."
+      ],
+      [
+       "B. Human Causes",
+       [
+        "– Rapid population growth increases demand.",
+        "– Pollution makes water unsafe.",
+        "– Waste: leaking pipes and taps.",
+        "– Few pipes, boreholes and storage tanks.",
+        "– Deforestation reduces infiltration."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. EFFECTS",
+    "qa": [
+     {
+      "q": "Give three effects of water scarcity on families.",
+      "a": "Long walks and queues to fetch water, especially for women and children; diseases such as cholera and typhoid; high prices of water; conflicts over water points."
+     }
+    ],
+    "sum": {
+     "title": "III. Effects",
+     "items": [
+      [
+       "Effects of Water Scarcity",
+       [
+        "– Long walks and queues to fetch water.",
+        "– Diseases such as cholera and typhoid.",
+        "– Crop failure and death of livestock.",
+        "– High water prices and conflicts."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "IV. WATER CONSERVATION",
+    "qa": [
+     {
+      "img": "rainwater_harvesting.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. How can a family store water for the dry season?",
+      "a": "It can collect rainwater from the roof with gutters and pipes, and store it in a tank. This is rainwater harvesting.",
+      "split": 5.2
+     },
+     {
+      "q": "Name two large works that store water for towns and farms.",
+      "a": "Dams and reservoirs, such as the Lagdo reservoir, and boreholes that pump underground water."
+     },
+     {
+      "q": "Give two ways of saving water at home.",
+      "a": "Repair leaking taps, close the tap while washing, and reuse water, for example to clean the compound."
+     }
+    ],
+    "sum": {
+     "title": "IV. Water Conservation Methods",
+     "defs": [
+      "Water conservation is the careful use and protection of water so that it lasts for the future."
+     ],
+     "items": [
+      [
+       "A. At Home",
+       "Repair leaks, close taps, reuse water and harvest rainwater in storage tanks.",
+       "rainwater_harvesting.png"
+      ],
+      [
+       "B. In Farming",
+       "Use drip irrigation, grow drought-resistant crops and cover the soil to reduce evaporation."
+      ],
+      [
+       "C. In the Community",
+       "Build dams, reservoirs, boreholes and storage tanks, protect rivers from pollution and plant trees."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Define water scarcity.",
+    "Water scarcity is the lack of enough clean water to meet the needs of the people of an area."
+   ],
+   [
+    "Give one physical cause and one human cause of water scarcity.",
+    "A physical cause is the long dry season. A human cause is the waste of water."
+   ],
+   [
+    "Explain how rainwater harvesting helps during the dry season.",
+    "Rainwater collected from roofs in the rainy season is stored in tanks and used in the dry season."
+   ]
+  ],
+  "remediation": [
+   [
+    "The lack of enough clean water is water ______.",
+    "Water stress begins below ______ m³ per person per year.",
+    "Collecting rain from roofs is rainwater ______."
+   ],
+   [
+    "A deep hole that pumps underground water is a ______.",
+    "A large lake made by a dam is a ______.",
+    "Giving water drop by drop to plant roots is ______ irrigation."
+   ]
+  ],
+  "remediationAnswers": "1. scarcity 2. 1,700 3. harvesting 4. borehole 5. reservoir 6. drip",
+  "homework": "Revise Lessons 30 to 42. Draw one diagram of your choice (layers of the atmosphere, Stevenson screen, types of rainfall, pressure belts or water cycle) and label it.",
+  "homeworkTag": "This closes Module 3: Weather and Climate.",
+  "bilingual": [
+   [
+    "Water scarcity",
+    "La pénurie d'eau"
+   ],
+   [
+    "Water stress",
+    "Le stress hydrique"
+   ],
+   [
+    "Storage tank",
+    "La citerne"
+   ],
+   [
+    "Borehole",
+    "Le forage"
+   ],
+   [
+    "Dam",
+    "Le barrage"
+   ],
+   [
+    "Reservoir",
+    "Le réservoir"
+   ],
+   [
+    "Leak",
+    "La fuite"
+   ],
+   [
+    "To save water",
+    "Économiser l'eau"
+   ]
+  ],
+  "teacherNote": [
+   "The thresholds of 1,700 m³ (stress) and 1,000 m³ (scarcity) per person per year are the Falkenmark indicators used by the UN.",
+   "This is the last lesson of the national syllabus for Form 4."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary.",
+   "UN-Water: Water scarcity (Falkenmark indicator)."
+  ]
+ }
+}

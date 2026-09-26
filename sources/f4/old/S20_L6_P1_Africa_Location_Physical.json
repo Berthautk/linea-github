@@ -1,0 +1,660 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "imageQ | \"I. LOCATION AND SIZE\" | \"Question 1\" | \"Look at the map. Which oceans and seas surround Africa?\" | \"africa_location.png\"",
+  "slide | \"I. LOCATION AND SIZE\" | \"Answer\" | [\"Africa is surrounded by the Mediterranean Sea in the north, the Red Sea in the north-east, the Indian Ocean in the east and the Atlantic Ocean in the west.\"]",
+  "imageQ | \"I. LOCATION AND SIZE\" | \"Question 2\" | \"Which important line of latitude crosses the middle of Africa? What does this tell us about its climate?\" | \"africa_location.png\"",
+  "slide | \"I. LOCATION AND SIZE\" | \"Answer\" | [\"The Equator crosses the middle of Africa. Most of Africa lies between the two tropics, so it is the hottest continent.\"]",
+  "slide | \"I. LOCATION AND SIZE\" | \"Question 3\" | [\"What separates Africa from Europe and from Asia?\"]",
+  "slide | \"I. LOCATION AND SIZE\" | \"Answer\" | [\"The Strait of Gibraltar, about 14 km wide, separates Africa from Europe. The Suez Canal, opened in 1869, separates Africa from Asia.\"]",
+  "slide | \"I. LOCATION AND SIZE\" | \"Question 4\" | [\"Africa covers about 30 million km² and has 54 countries. How does it rank among the continents?\"]",
+  "slide | \"I. LOCATION AND SIZE\" | \"Answer\" | [\"Africa is the second largest continent in the world, after Asia.\"]",
+  "slide | \"II. PHYSICAL CHARACTERISTICS\" | \"Question 1\" | [\"Most of Africa is made of high, flat land. What do we call this type of land, and why is Africa called a \\\"plateau continent\\\"?\"]",
+  "slide | \"II. PHYSICAL CHARACTERISTICS\" | \"Answer\" | [\"High, flat land is called a plateau. Africa is called a plateau continent because most of it is a plateau, with narrow coastal plains.\"]",
+  "slide | \"II. PHYSICAL CHARACTERISTICS\" | \"Question 2\" | [\"What is the highest mountain of Africa, and what is the longest river?\"]",
+  "slide | \"II. PHYSICAL CHARACTERISTICS\" | \"Answer\" | [\"The highest mountain is Kilimanjaro (5,895 m) in Tanzania. The longest river is the Nile, about 6,650 km long.\"]",
+  "slide | \"II. PHYSICAL CHARACTERISTICS\" | \"Question 3\" | [\"The African coastline has few bays and inlets. What problem does this cause?\"]",
+  "slide | \"II. PHYSICAL CHARACTERISTICS\" | \"Answer\" | [\"It has few natural harbours, so ports had to be built at great cost.\"]",
+  "sum | \"I. Location and Size (1/5)\" | [\"The location and size of Africa can be described as follows:\"]",
+  "sumImage | \"I. Location and Size (2/5)\" | \"A. Latitude and Longitude\" | \"Africa lies between latitudes 37°N and 35°S, and longitudes 17°W and 51°E. The Equator crosses its middle.\" | \"africa_location.png\"",
+  "sum | \"I. Location and Size (3/5)\" | \"B. Boundaries\" | [\"Africa is surrounded by the Mediterranean Sea, the Red Sea, the Indian Ocean and the Atlantic Ocean.\"]",
+  "sum | \"I. Location and Size (4/5)\" | \"C. Neighbours\" | [\"The Strait of Gibraltar separates Africa from Europe, and the Suez Canal separates it from Asia.\"]",
+  "sum | \"I. Location and Size (5/5)\" | \"D. Size\" | [\"Africa covers about 30 million km². It is the second largest continent, with 54 countries.\"]",
+  "sum | \"II. Physical Characteristics (1/5)\" | [\"The main physical characteristics of Africa are the following:\"]",
+  "sum | \"II. Physical Characteristics (2/5)\" | \"A. A Plateau Continent\" | [\"Most of Africa is a high plateau, with narrow coastal plains.\"]",
+  "sum | \"II. Physical Characteristics (3/5)\" | \"B. Highest and Lowest Points\" | [\"The highest point is Kilimanjaro (5,895 m) in Tanzania. The lowest point is Lake Assal (−155 m) in Djibouti.\"]",
+  "sum | \"II. Physical Characteristics (4/5)\" | \"C. Rivers and Lakes\" | [\"The Nile is the longest river in Africa (about 6,650 km). Lake Victoria is the largest lake.\"]",
+  "sum | \"II. Physical Characteristics (5/5)\" | \"D. A Regular Coastline\" | [\"The coastline is smooth, with few bays, so Africa has few natural harbours.\"]"
+ ],
+ "d": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Economic Geography — Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S20_L6_P1_Africa_Location_Physical",
+  "part": 1,
+  "partTitle": "Introduction (Location and Physical Characteristics)",
+  "notions": "Continent, location, extreme points, Strait of Gibraltar, Suez Canal, plateau continent.",
+  "focus": "Introduction to Africa: location, size and general physical characteristics.",
+  "competence": "Learners are able to locate Africa and Cameroon on a world map and describe the position of Africa in relation to other continents.",
+  "objectives": [
+   "Locate Africa using latitudes, longitudes, oceans and seas.",
+   "Give the size and the extreme points of Africa.",
+   "Describe the general physical characteristics of Africa."
+  ],
+  "recall": [
+   "The economy has four sectors: primary, secondary, tertiary and quaternary.",
+   "Most Africans work in the primary sector.",
+   "Today we begin the study of our continent, Africa."
+  ],
+  "recallNote": "Check the homework: the oceans and seas that surround Africa.",
+  "situation": [
+   "During a football tournament, a boy from Brazil asks Kevin, a Cameroonian student: \"Where exactly is Africa? Is it a country or a continent? Which seas surround it?\"",
+   "Kevin knows that he is African, but he cannot describe the position of Africa on the world map."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Kevin cannot describe the position of Africa on the world map."
+   ],
+   [
+    "What questions did the Brazilian boy ask?",
+    "He asked where Africa is, whether it is a country or a continent, and which seas surround it."
+   ],
+   [
+    "How can Kevin learn to describe Africa?",
+    "He can study a map of Africa in his atlas, with its latitudes, oceans, seas and neighbouring continents."
+   ]
+  ],
+  "justification": "This lesson will help us to know the position, size and main physical features of our continent, Africa.",
+  "parts": [
+   {
+    "sec": "I. LOCATION AND SIZE",
+    "qa": [
+     {
+      "img": "africa_location.png",
+      "kind": "map",
+      "q": "Look at the map. Which oceans and seas surround Africa?",
+      "a": "Africa is surrounded by the Mediterranean Sea in the north, the Red Sea in the north-east, the Indian Ocean in the east and the Atlantic Ocean in the west.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_location.png",
+      "title": "Question 2",
+      "q": "Which important line of latitude crosses the middle of Africa? What does this tell us about its climate?",
+      "a": "The Equator crosses the middle of Africa. Most of Africa lies between the two tropics, so it is the hottest continent.",
+      "split": 5.6
+     },
+     {
+      "q": "What separates Africa from Europe and from Asia?",
+      "a": "The Strait of Gibraltar, about 14 km wide, separates Africa from Europe. The Suez Canal, opened in 1869, separates Africa from Asia."
+     },
+     {
+      "q": "Africa covers about 30 million km² and has 54 countries. How does it rank among the continents?",
+      "a": "Africa is the second largest continent in the world, after Asia."
+     }
+    ],
+    "sum": {
+     "title": "I. Location and Size",
+     "intro": "The location and size of Africa can be described as follows:",
+     "items": [
+      [
+       "A. Latitude and Longitude",
+       "Africa lies between latitudes 37°N and 35°S, and longitudes 17°W and 51°E. The Equator crosses its middle.",
+       "africa_location.png"
+      ],
+      [
+       "B. Boundaries",
+       "Africa is surrounded by the Mediterranean Sea, the Red Sea, the Indian Ocean and the Atlantic Ocean."
+      ],
+      [
+       "C. Neighbours",
+       "The Strait of Gibraltar separates Africa from Europe, and the Suez Canal separates it from Asia."
+      ],
+      [
+       "D. Size",
+       "Africa covers about 30 million km². It is the second largest continent, with 54 countries."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. PHYSICAL CHARACTERISTICS",
+    "qa": [
+     {
+      "q": "Most of Africa is made of high, flat land. What do we call this type of land, and why is Africa called a \"plateau continent\"?",
+      "a": "High, flat land is called a plateau. Africa is called a plateau continent because most of it is a plateau, with narrow coastal plains."
+     },
+     {
+      "q": "What is the highest mountain of Africa, and what is the longest river?",
+      "a": "The highest mountain is Kilimanjaro (5,895 m) in Tanzania. The longest river is the Nile, about 6,650 km long."
+     },
+     {
+      "q": "The African coastline has few bays and inlets. What problem does this cause?",
+      "a": "It has few natural harbours, so ports had to be built at great cost."
+     }
+    ],
+    "sum": {
+     "title": "II. Physical Characteristics",
+     "intro": "The main physical characteristics of Africa are the following:",
+     "items": [
+      [
+       "A. A Plateau Continent",
+       "Most of Africa is a high plateau, with narrow coastal plains."
+      ],
+      [
+       "B. Highest and Lowest Points",
+       "The highest point is Kilimanjaro (5,895 m) in Tanzania. The lowest point is Lake Assal (−155 m) in Djibouti."
+      ],
+      [
+       "C. Rivers and Lakes",
+       "The Nile is the longest river in Africa (about 6,650 km). Lake Victoria is the largest lake."
+      ],
+      [
+       "D. A Regular Coastline",
+       "The coastline is smooth, with few bays, so Africa has few natural harbours."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Between which latitudes is Africa located?",
+    "Africa is located between latitudes 37°N and 35°S."
+   ],
+   [
+    "What separates Africa from Asia?",
+    "The Suez Canal separates Africa from Asia."
+   ],
+   [
+    "Why is Africa called a plateau continent?",
+    "It is called a plateau continent because most of its land is a high plateau."
+   ]
+  ],
+  "remediation": [
+   [
+    "Africa is the ______ largest continent in the world.",
+    "Africa has ______ countries.",
+    "The ______ separates Africa from Europe."
+   ],
+   [
+    "The highest mountain of Africa is ______.",
+    "The longest river of Africa is the ______.",
+    "The lowest point of Africa is Lake ______."
+   ]
+  ],
+  "remediationAnswers": "1. second 2. 54 3. Strait of Gibraltar 4. Kilimanjaro 5. Nile 6. Assal",
+  "homework": "Compare the climate of Douala, Garoua and Maroua. Which town is the wettest, and which is the driest? Ask an adult or use your textbook.",
+  "homeworkTag": "This prepares Part 2: Climate, Soils and Relief of Africa.",
+  "bilingual": [
+   [
+    "Continent",
+    "Le continent"
+   ],
+   [
+    "Ocean",
+    "L'océan"
+   ],
+   [
+    "Sea",
+    "La mer"
+   ],
+   [
+    "Strait",
+    "Le détroit"
+   ],
+   [
+    "Canal",
+    "Le canal"
+   ],
+   [
+    "Plateau",
+    "Le plateau"
+   ],
+   [
+    "Coastline",
+    "Le littoral"
+   ],
+   [
+    "Harbour",
+    "Le port naturel"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Extreme points: Ras ben Sakka (Tunisia, 37°N), Cape Agulhas (South Africa, 35°S), Cap Vert (Senegal, 17°W), Ras Hafun (Somalia, 51°E)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 6 (PART 1)",
+  "title": "Africa: Introduction (Location and Physical Characteristics)",
+  "sumTitle": "Africa",
+  "coverNote": "Good morning, class. Today we study Africa, part 1: Introduction (Location and Physical Characteristics).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 6: Africa — Part 1: Introduction (Location and Physical Characteristics)"
+ },
+ "end": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Economic Geography — Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S20_L6_P1_Africa_Location_Physical",
+  "part": 1,
+  "partTitle": "Introduction (Location and Physical Characteristics)",
+  "notions": "Continent, location, extreme points, Strait of Gibraltar, Suez Canal, plateau continent.",
+  "focus": "Introduction to Africa: location, size and general physical characteristics.",
+  "competence": "Learners are able to locate Africa and Cameroon on a world map and describe the position of Africa in relation to other continents.",
+  "objectives": [
+   "Locate Africa using latitudes, longitudes, oceans and seas.",
+   "Give the size and the extreme points of Africa.",
+   "Describe the general physical characteristics of Africa."
+  ],
+  "recall": [
+   "The economy has four sectors: primary, secondary, tertiary and quaternary.",
+   "Most Africans work in the primary sector.",
+   "Today we begin the study of our continent, Africa."
+  ],
+  "recallNote": "Check the homework: the oceans and seas that surround Africa.",
+  "situation": [
+   "During a football tournament, a boy from Brazil asks Kevin, a Cameroonian student: \"Where exactly is Africa? Is it a country or a continent? Which seas surround it?\"",
+   "Kevin knows that he is African, but he cannot describe the position of Africa on the world map."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Kevin cannot describe the position of Africa on the world map."
+   ],
+   [
+    "What questions did the Brazilian boy ask?",
+    "He asked where Africa is, whether it is a country or a continent, and which seas surround it."
+   ],
+   [
+    "How can Kevin learn to describe Africa?",
+    "He can study a map of Africa in his atlas, with its latitudes, oceans, seas and neighbouring continents."
+   ]
+  ],
+  "justification": "This lesson will help us to know the position, size and main physical features of our continent, Africa.",
+  "parts": [
+   {
+    "sec": "I. LOCATION AND SIZE",
+    "qa": [
+     {
+      "img": "africa_location.png",
+      "kind": "map",
+      "q": "Look at the map. Which oceans and seas surround Africa?",
+      "a": "Africa is surrounded by the Mediterranean Sea in the north, the Red Sea in the north-east, the Indian Ocean in the east and the Atlantic Ocean in the west.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_location.png",
+      "title": "Question 2",
+      "q": "Which important line of latitude crosses the middle of Africa? What does this tell us about its climate?",
+      "a": "The Equator crosses the middle of Africa. Most of Africa lies between the two tropics, so it is the hottest continent.",
+      "split": 5.6
+     },
+     {
+      "q": "What separates Africa from Europe and from Asia?",
+      "a": "The Strait of Gibraltar, about 14 km wide, separates Africa from Europe. The Suez Canal, opened in 1869, separates Africa from Asia."
+     },
+     {
+      "q": "Africa covers about 30 million km² and has 54 countries. How does it rank among the continents?",
+      "a": "Africa is the second largest continent in the world, after Asia."
+     }
+    ],
+    "sum": {
+     "title": "I. Location and Size",
+     "intro": "The location and size of Africa can be described as follows:",
+     "items": [
+      [
+       "A. Latitude and Longitude",
+       "Africa lies between latitudes 37°N and 35°S, and longitudes 17°W and 51°E. The Equator crosses its middle.",
+       "africa_location.png"
+      ],
+      [
+       "B. Boundaries",
+       "Africa is surrounded by the Mediterranean Sea, the Red Sea, the Indian Ocean and the Atlantic Ocean."
+      ],
+      [
+       "C. Neighbours",
+       "The Strait of Gibraltar separates Africa from Europe, and the Suez Canal separates it from Asia."
+      ],
+      [
+       "D. Size",
+       "Africa covers about 30 million km². It is the second largest continent, with 54 countries."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. PHYSICAL CHARACTERISTICS",
+    "qa": [
+     {
+      "q": "Most of Africa is made of high, flat land. What do we call this type of land, and why is Africa called a \"plateau continent\"?",
+      "a": "High, flat land is called a plateau. Africa is called a plateau continent because most of it is a plateau, with narrow coastal plains."
+     },
+     {
+      "q": "What is the highest mountain of Africa, and what is the longest river?",
+      "a": "The highest mountain is Kilimanjaro (5,895 m) in Tanzania. The longest river is the Nile, about 6,650 km long."
+     },
+     {
+      "q": "The African coastline has few bays and inlets. What problem does this cause?",
+      "a": "It has few natural harbours, so ports had to be built at great cost."
+     }
+    ],
+    "sum": {
+     "title": "II. Physical Characteristics",
+     "intro": "The main physical characteristics of Africa are the following:",
+     "items": [
+      [
+       "A. A Plateau Continent",
+       "Most of Africa is a high plateau, with narrow coastal plains."
+      ],
+      [
+       "B. Highest and Lowest Points",
+       "The highest point is Kilimanjaro (5,895 m) in Tanzania. The lowest point is Lake Assal (−155 m) in Djibouti."
+      ],
+      [
+       "C. Rivers and Lakes",
+       "The Nile is the longest river in Africa (about 6,650 km). Lake Victoria is the largest lake."
+      ],
+      [
+       "D. A Regular Coastline",
+       "The coastline is smooth, with few bays, so Africa has few natural harbours."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Between which latitudes is Africa located?",
+    "Africa is located between latitudes 37°N and 35°S."
+   ],
+   [
+    "What separates Africa from Asia?",
+    "The Suez Canal separates Africa from Asia."
+   ],
+   [
+    "Why is Africa called a plateau continent?",
+    "It is called a plateau continent because most of its land is a high plateau."
+   ]
+  ],
+  "remediation": [
+   [
+    "Africa is the ______ largest continent in the world.",
+    "Africa has ______ countries.",
+    "The ______ separates Africa from Europe."
+   ],
+   [
+    "The highest mountain of Africa is ______.",
+    "The longest river of Africa is the ______.",
+    "The lowest point of Africa is Lake ______."
+   ]
+  ],
+  "remediationAnswers": "1. second 2. 54 3. Strait of Gibraltar 4. Kilimanjaro 5. Nile 6. Assal",
+  "homework": "Compare the climate of Douala, Garoua and Maroua. Which town is the wettest, and which is the driest? Ask an adult or use your textbook.",
+  "homeworkTag": "This prepares Part 2: Climate, Soils and Relief of Africa.",
+  "bilingual": [
+   [
+    "Continent",
+    "Le continent"
+   ],
+   [
+    "Ocean",
+    "L'océan"
+   ],
+   [
+    "Sea",
+    "La mer"
+   ],
+   [
+    "Strait",
+    "Le détroit"
+   ],
+   [
+    "Canal",
+    "Le canal"
+   ],
+   [
+    "Plateau",
+    "Le plateau"
+   ],
+   [
+    "Coastline",
+    "Le littoral"
+   ],
+   [
+    "Harbour",
+    "Le port naturel"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Extreme points: Ras ben Sakka (Tunisia, 37°N), Cape Agulhas (South Africa, 35°S), Cap Vert (Senegal, 17°W), Ras Hafun (Somalia, 51°E)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 6 (PART 1)",
+  "title": "Africa: Introduction (Location and Physical Characteristics)",
+  "sumTitle": "Africa",
+  "coverNote": "Good morning, class. Today we study Africa, part 1: Introduction (Location and Physical Characteristics).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 6: Africa — Part 1: Introduction (Location and Physical Characteristics)",
+  "matter": "I. Location and Size: Latitude and Longitude, Boundaries, Neighbours, Size; II. Physical Characteristics: A Plateau Continent, Highest and Lowest Points, Rivers and Lakes, A Regular Coastline."
+ },
+ "file": "S20_L6_P1_Africa_Location_Physical",
+ "sp": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S20_L6_P1_Africa_Location_Physical",
+  "part": 1,
+  "partTitle": "Introduction (Location and Physical Characteristics)",
+  "notions": "Continent, location, extreme points, Strait of Gibraltar, Suez Canal, plateau continent.",
+  "focus": "Introduction to Africa: location, size and general physical characteristics.",
+  "competence": "Learners are able to locate Africa and Cameroon on a world map and describe the position of Africa in relation to other continents.",
+  "objectives": [
+   "Locate Africa using latitudes, longitudes, oceans and seas.",
+   "Give the size and the extreme points of Africa.",
+   "Describe the general physical characteristics of Africa."
+  ],
+  "recall": [
+   "The economy has four sectors: primary, secondary, tertiary and quaternary.",
+   "Most Africans work in the primary sector.",
+   "Today we begin the study of our continent, Africa."
+  ],
+  "recallNote": "Check the homework: the oceans and seas that surround Africa.",
+  "situation": [
+   "During a football tournament, a boy from Brazil asks Kevin, a Cameroonian student: \"Where exactly is Africa? Is it a country or a continent? Which seas surround it?\"",
+   "Kevin knows that he is African, but he cannot describe the position of Africa on the world map."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Kevin cannot describe the position of Africa on the world map."
+   ],
+   [
+    "What questions did the Brazilian boy ask?",
+    "He asked where Africa is, whether it is a country or a continent, and which seas surround it."
+   ],
+   [
+    "How can Kevin learn to describe Africa?",
+    "He can study a map of Africa in his atlas, with its latitudes, oceans, seas and neighbouring continents."
+   ]
+  ],
+  "justification": "This lesson will help us to know the position, size and main physical features of our continent, Africa.",
+  "parts": [
+   {
+    "sec": "I. LOCATION AND SIZE",
+    "qa": [
+     {
+      "img": "africa_location.png",
+      "kind": "map",
+      "q": "Look at the map. Which oceans and seas surround Africa?",
+      "a": "Africa is surrounded by the Mediterranean Sea in the north, the Red Sea in the north-east, the Indian Ocean in the east and the Atlantic Ocean in the west.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_location.png",
+      "title": "Question 2",
+      "q": "Which important line of latitude crosses the middle of Africa? What does this tell us about its climate?",
+      "a": "The Equator crosses the middle of Africa. Most of Africa lies between the two tropics, so it is the hottest continent.",
+      "split": 5.6
+     },
+     {
+      "q": "What separates Africa from Europe and from Asia?",
+      "a": "The Strait of Gibraltar, about 14 km wide, separates Africa from Europe. The Suez Canal, opened in 1869, separates Africa from Asia."
+     },
+     {
+      "q": "Africa covers about 30 million km² and has 54 countries. How does it rank among the continents?",
+      "a": "Africa is the second largest continent in the world, after Asia."
+     }
+    ],
+    "sum": {
+     "title": "I. Location and Size",
+     "intro": "The location and size of Africa can be described as follows:",
+     "items": [
+      [
+       "A. Latitude and Longitude",
+       "Africa lies between latitudes 37°N and 35°S, and longitudes 17°W and 51°E. The Equator crosses its middle.",
+       "africa_location.png"
+      ],
+      [
+       "B. Boundaries",
+       "Africa is surrounded by the Mediterranean Sea, the Red Sea, the Indian Ocean and the Atlantic Ocean."
+      ],
+      [
+       "C. Neighbours",
+       "The Strait of Gibraltar separates Africa from Europe, and the Suez Canal separates it from Asia."
+      ],
+      [
+       "D. Size",
+       "Africa covers about 30 million km². It is the second largest continent, with 54 countries."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. PHYSICAL CHARACTERISTICS",
+    "qa": [
+     {
+      "q": "Most of Africa is made of high, flat land. What do we call this type of land, and why is Africa called a \"plateau continent\"?",
+      "a": "High, flat land is called a plateau. Africa is called a plateau continent because most of it is a plateau, with narrow coastal plains."
+     },
+     {
+      "q": "What is the highest mountain of Africa, and what is the longest river?",
+      "a": "The highest mountain is Kilimanjaro (5,895 m) in Tanzania. The longest river is the Nile, about 6,650 km long."
+     },
+     {
+      "q": "The African coastline has few bays and inlets. What problem does this cause?",
+      "a": "It has few natural harbours, so ports had to be built at great cost."
+     }
+    ],
+    "sum": {
+     "title": "II. Physical Characteristics",
+     "intro": "The main physical characteristics of Africa are the following:",
+     "items": [
+      [
+       "A. A Plateau Continent",
+       "Most of Africa is a high plateau, with narrow coastal plains."
+      ],
+      [
+       "B. Highest and Lowest Points",
+       "The highest point is Kilimanjaro (5,895 m) in Tanzania. The lowest point is Lake Assal (−155 m) in Djibouti."
+      ],
+      [
+       "C. Rivers and Lakes",
+       "The Nile is the longest river in Africa (about 6,650 km). Lake Victoria is the largest lake."
+      ],
+      [
+       "D. A Regular Coastline",
+       "The coastline is smooth, with few bays, so Africa has few natural harbours."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Between which latitudes is Africa located?",
+    "Africa is located between latitudes 37°N and 35°S."
+   ],
+   [
+    "What separates Africa from Asia?",
+    "The Suez Canal separates Africa from Asia."
+   ],
+   [
+    "Why is Africa called a plateau continent?",
+    "It is called a plateau continent because most of its land is a high plateau."
+   ]
+  ],
+  "remediation": [
+   [
+    "Africa is the ______ largest continent in the world.",
+    "Africa has ______ countries.",
+    "The ______ separates Africa from Europe."
+   ],
+   [
+    "The highest mountain of Africa is ______.",
+    "The longest river of Africa is the ______.",
+    "The lowest point of Africa is Lake ______."
+   ]
+  ],
+  "remediationAnswers": "1. second 2. 54 3. Strait of Gibraltar 4. Kilimanjaro 5. Nile 6. Assal",
+  "homework": "Compare the climate of Douala, Garoua and Maroua. Which town is the wettest, and which is the driest? Ask an adult or use your textbook.",
+  "homeworkTag": "This prepares Part 2: Climate, Soils and Relief of Africa.",
+  "bilingual": [
+   [
+    "Continent",
+    "Le continent"
+   ],
+   [
+    "Ocean",
+    "L'océan"
+   ],
+   [
+    "Sea",
+    "La mer"
+   ],
+   [
+    "Strait",
+    "Le détroit"
+   ],
+   [
+    "Canal",
+    "Le canal"
+   ],
+   [
+    "Plateau",
+    "Le plateau"
+   ],
+   [
+    "Coastline",
+    "Le littoral"
+   ],
+   [
+    "Harbour",
+    "Le port naturel"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Extreme points: Ras ben Sakka (Tunisia, 37°N), Cape Agulhas (South Africa, 35°S), Cap Vert (Senegal, 17°W), Ras Hafun (Somalia, 51°E)."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ]
+ }
+}

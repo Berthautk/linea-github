@@ -1,0 +1,429 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The Earth has three main layers:\"]",
+  "sum | \"x\" | \"A. The Crust\" | [\"– It is the thin, solid outer layer of rock on which we live.\",\"– Continental crust: 30–70 km thick, lighter; it forms the continents.\",\"– Oceanic crust: 5–10 km thick, heavier; it lies under the oceans.\"]",
+  "sum | \"x\" | \"B. The Mantle\" | [\"– It lies under the crust and is about 2,900 km thick: the thickest layer.\",\"– It is made of very hot rock that flows very slowly.\",\"– Its upper part is partly melted; the plates move on it.\"]",
+  "sum | \"x\" | \"C. The Core\" | [\"– It is the centre of the Earth, made of iron and nickel.\",\"– The outer core is liquid; its movement makes the magnetic field of the Earth.\",\"– The inner core is solid, because of the very high pressure. It is the hottest part (about 5,000–6,000 °C).\"]",
+  "sum | \"II. Brief Description of the Main Layers (1/5)\" | [\"The Earth has three main layers:\"]",
+  "sum | \"II. Brief Description of the Main Layers (2/5)\" | \"A. The Crust\" | [\"– It is the thin, solid outer layer of rock on which we live.\",\"– Continental crust: 30–70 km thick, lighter; it forms the continents.\",\"– Oceanic crust: 5–10 km thick, heavier; it lies under the oceans.\"]",
+  "sum | \"II. Brief Description of the Main Layers (3/5)\" | \"B. The Mantle\" | [\"– It lies under the crust and is about 2,900 km thick: the thickest layer.\",\"– It is made of very hot rock that flows very slowly.\",\"– Its upper part is partly melted; the plates move on it.\"]",
+  "sum | \"II. Brief Description of the Main Layers (4/5)\" | \"C. The Core\" | [\"– It is the centre of the Earth, made of iron and nickel.\",\"– The outer core is liquid; its movement makes the magnetic field of the Earth.\",\"– The inner core is solid, because of the very high pressure. It is the hottest part (about 5,000–6,000 °C).\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON07_Internal_Structure_of_the_Earth",
+  "lessonNo": 7,
+  "lessonName": "The Internal Structure of the Earth",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Internal Structure of the Earth",
+  "coverNote": "Good morning, class. Today we start a new topic: the structure of the Earth. Lesson 7 is about the internal structure of the Earth.",
+  "notions": "Crust, mantle, core.",
+  "focus": "Illustrations: circular and cross-sectional views; brief description of the main layers.",
+  "competence": "Learners are able to draw and describe the layers of the Earth, and to explain why the inside of the Earth is hot.",
+  "objectives": [
+   "Draw the circular and the cross-sectional views of the structure of the Earth.",
+   "Name the main layers of the Earth.",
+   "Describe each layer briefly: thickness, state and composition."
+  ],
+  "recall": [
+   "The Earth is an oblate spheroid with a radius of about 6,370 km.",
+   "Revolution causes the seasons.",
+   "The Earth is one of the planets of the solar system."
+  ],
+  "recallNote": "Check the homework: the drawings of the inside of an orange, an onion or an egg.",
+  "situation": [
+   "Workers are digging a deep well in a neighbourhood of Garoua. First, they dig through red soil. Then they reach very hard rock and need special tools.",
+   "Amadou watches them. He wonders what they would find if they could dig deeper and deeper, and what the inside of the Earth is made of."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Amadou does not know what the inside of the Earth is made of."
+   ],
+   [
+    "What did the workers find under the soil?",
+    "They found very hard rock."
+   ],
+   [
+    "Can people dig to the centre of the Earth? Why?",
+    "No. The centre is about 6,370 km deep, and the inside of the Earth is extremely hot and under very high pressure. The deepest hole ever dug is only about 12 km deep."
+   ]
+  ],
+  "justification": "This lesson will help us to know the layers of the Earth, which explain volcanoes, earthquakes and the movement of the continents.",
+  "parts": [
+   {
+    "sec": "I. ILLUSTRATIONS",
+    "qa": [
+     {
+      "img": "earth_circle.png",
+      "kind": "diagram",
+      "q": "Study the circular view of the Earth.",
+      "full": true
+     },
+     {
+      "q": "Name the main layers of the Earth, from the outside to the centre.",
+      "a": "The main layers are the crust, the mantle, the outer core and the inner core."
+     },
+     {
+      "img": "earth_structure.png",
+      "kind": "diagram",
+      "q": "Study the cross-sectional view.",
+      "full": true
+     },
+     {
+      "q": "What is the difference between the circular view and the cross-sectional view?",
+      "a": "The circular view shows the layers as circles, one inside the other. The cross-sectional view cuts the Earth open, like a slice of an orange, to show the layers inside."
+     }
+    ],
+    "sum": {
+     "title": "I. Illustrations of the Structure of the Earth",
+     "intro": "The Earth is made of layers, like an egg or an onion. We show them in two ways:",
+     "items": [
+      [
+       "A. Circular View",
+       "The circular view shows the layers as circles, one inside the other: crust, mantle, outer core and inner core.",
+       "earth_circle.png"
+      ],
+      [
+       "B. Cross-Sectional View",
+       "The cross-sectional view cuts the Earth open to show its layers from the surface to the centre, about 6,370 km deep.",
+       "earth_structure.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE MAIN LAYERS",
+    "qa": [
+     {
+      "q": "Describe the crust. Why do we have two types of crust?",
+      "a": "The crust is the thin, solid outer layer on which we live. The continental crust is thick (30–70 km) and light. The oceanic crust is thin (5–10 km) and heavy."
+     },
+     {
+      "q": "The mantle is about 2,900 km thick. Is it liquid magma?",
+      "a": "No. The mantle is mostly solid rock, but it is so hot that it flows very slowly, like very thick honey. Only its upper part is partly melted."
+     },
+     {
+      "q": "What is the core made of? Why is the inner core solid?",
+      "a": "The core is made of iron and nickel. The outer core is liquid. The inner core is solid because the pressure there is extremely high."
+     }
+    ],
+    "sum": {
+     "title": "II. Brief Description of the Main Layers",
+     "intro": "The Earth has three main layers:",
+     "items": [
+      [
+       "A. The Crust",
+       [
+        "– It is the thin, solid outer layer of rock on which we live.",
+        "– Continental crust: 30–70 km thick, lighter; it forms the continents.",
+        "– Oceanic crust: 5–10 km thick, heavier; it lies under the oceans."
+       ]
+      ],
+      [
+       "B. The Mantle",
+       [
+        "– It lies under the crust and is about 2,900 km thick: the thickest layer.",
+        "– It is made of very hot rock that flows very slowly.",
+        "– Its upper part is partly melted; the plates move on it."
+       ]
+      ],
+      [
+       "C. The Core",
+       [
+        "– It is the centre of the Earth, made of iron and nickel.",
+        "– The outer core is liquid; its movement makes the magnetic field of the Earth.",
+        "– The inner core is solid, because of the very high pressure. It is the hottest part (about 5,000–6,000 °C)."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Name the three main layers of the Earth.",
+    "The three main layers are the crust, the mantle and the core."
+   ],
+   [
+    "Which layer is the thickest?",
+    "The mantle is the thickest layer, about 2,900 km thick."
+   ],
+   [
+    "Why is the inner core solid, although it is the hottest part?",
+    "It is solid because the pressure at the centre of the Earth is extremely high."
+   ]
+  ],
+  "remediation": [
+   [
+    "The outer layer of the Earth is the ______.",
+    "The thickest layer is the ______.",
+    "The core is made of iron and ______."
+   ],
+   [
+    "The outer core is ______.",
+    "The oceanic crust is ______ than the continental crust.",
+    "The distance to the centre of the Earth is about ______ km."
+   ]
+  ],
+  "remediationAnswers": "1. crust 2. mantle 3. nickel 4. liquid 5. thinner 6. 6,370",
+  "homework": "Collect three different stones or building materials (for example a piece of granite, a sandstone block and a piece of marble or tile). Write where you found each one.",
+  "homeworkTag": "This prepares Lesson 8: Rocks.",
+  "bilingual": [
+   [
+    "Crust",
+    "L'écorce / la croûte"
+   ],
+   [
+    "Mantle",
+    "Le manteau"
+   ],
+   [
+    "Core",
+    "Le noyau"
+   ],
+   [
+    "Layer",
+    "La couche"
+   ],
+   [
+    "Cross-section",
+    "La coupe"
+   ],
+   [
+    "Pressure",
+    "La pression"
+   ],
+   [
+    "Iron",
+    "Le fer"
+   ],
+   [
+    "Magnetic field",
+    "Le champ magnétique"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say the mantle is \"semi-liquid rock (magma)\". The mantle is solid rock that flows very slowly; only the upper part (asthenosphere) is partly molten.",
+   "Figures checked: continental crust 30–70 km; oceanic crust 5–10 km; mantle to about 2,900 km; outer core about 2,200 km thick; inner core radius about 1,220 km; centre about 6,370 km.",
+   "The deepest borehole (Kola, Russia) reached about 12 km."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 7",
+  "title": "The Internal Structure of the Earth",
+  "sumTitle": "The Internal Structure of the Earth",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 7: The Internal Structure of the Earth",
+  "matter": "I. Illustrations of the Structure of the Earth: Circular View, Cross-Sectional View; II. Brief Description of the Main Layers: The Crust, The Mantle, The Core."
+ },
+ "file": "FORM4_LESSON07_Internal_Structure_of_the_Earth",
+ "sp": {
+  "file": "FORM4_LESSON07_Internal_Structure_of_the_Earth",
+  "lessonNo": 7,
+  "lessonName": "The Internal Structure of the Earth",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Internal Structure of the Earth",
+  "coverNote": "Good morning, class. Today we start a new topic: the structure of the Earth. Lesson 7 is about the internal structure of the Earth.",
+  "notions": "Crust, mantle, core.",
+  "focus": "Illustrations: circular and cross-sectional views; brief description of the main layers.",
+  "competence": "Learners are able to draw and describe the layers of the Earth, and to explain why the inside of the Earth is hot.",
+  "objectives": [
+   "Draw the circular and the cross-sectional views of the structure of the Earth.",
+   "Name the main layers of the Earth.",
+   "Describe each layer briefly: thickness, state and composition."
+  ],
+  "recall": [
+   "The Earth is an oblate spheroid with a radius of about 6,370 km.",
+   "Revolution causes the seasons.",
+   "The Earth is one of the planets of the solar system."
+  ],
+  "recallNote": "Check the homework: the drawings of the inside of an orange, an onion or an egg.",
+  "situation": [
+   "Workers are digging a deep well in a neighbourhood of Garoua. First, they dig through red soil. Then they reach very hard rock and need special tools.",
+   "Amadou watches them. He wonders what they would find if they could dig deeper and deeper, and what the inside of the Earth is made of."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Amadou does not know what the inside of the Earth is made of."
+   ],
+   [
+    "What did the workers find under the soil?",
+    "They found very hard rock."
+   ],
+   [
+    "Can people dig to the centre of the Earth? Why?",
+    "No. The centre is about 6,370 km deep, and the inside of the Earth is extremely hot and under very high pressure. The deepest hole ever dug is only about 12 km deep."
+   ]
+  ],
+  "justification": "This lesson will help us to know the layers of the Earth, which explain volcanoes, earthquakes and the movement of the continents.",
+  "parts": [
+   {
+    "sec": "I. ILLUSTRATIONS",
+    "qa": [
+     {
+      "img": "earth_circle.png",
+      "kind": "diagram",
+      "q": "Study the circular view of the Earth.",
+      "full": true
+     },
+     {
+      "q": "Name the main layers of the Earth, from the outside to the centre.",
+      "a": "The main layers are the crust, the mantle, the outer core and the inner core."
+     },
+     {
+      "img": "earth_structure.png",
+      "kind": "diagram",
+      "q": "Study the cross-sectional view.",
+      "full": true
+     },
+     {
+      "q": "What is the difference between the circular view and the cross-sectional view?",
+      "a": "The circular view shows the layers as circles, one inside the other. The cross-sectional view cuts the Earth open, like a slice of an orange, to show the layers inside."
+     }
+    ],
+    "sum": {
+     "title": "I. Illustrations of the Structure of the Earth",
+     "intro": "The Earth is made of layers, like an egg or an onion. We show them in two ways:",
+     "items": [
+      [
+       "A. Circular View",
+       "The circular view shows the layers as circles, one inside the other: crust, mantle, outer core and inner core.",
+       "earth_circle.png"
+      ],
+      [
+       "B. Cross-Sectional View",
+       "The cross-sectional view cuts the Earth open to show its layers from the surface to the centre, about 6,370 km deep.",
+       "earth_structure.png"
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. THE MAIN LAYERS",
+    "qa": [
+     {
+      "q": "Describe the crust. Why do we have two types of crust?",
+      "a": "The crust is the thin, solid outer layer on which we live. The continental crust is thick (30–70 km) and light. The oceanic crust is thin (5–10 km) and heavy."
+     },
+     {
+      "q": "The mantle is about 2,900 km thick. Is it liquid magma?",
+      "a": "No. The mantle is mostly solid rock, but it is so hot that it flows very slowly, like very thick honey. Only its upper part is partly melted."
+     },
+     {
+      "q": "What is the core made of? Why is the inner core solid?",
+      "a": "The core is made of iron and nickel. The outer core is liquid. The inner core is solid because the pressure there is extremely high."
+     }
+    ],
+    "sum": {
+     "title": "II. Brief Description of the Main Layers",
+     "intro": "The Earth has three main layers:",
+     "items": [
+      [
+       "A. The Crust",
+       [
+        "– It is the thin, solid outer layer of rock on which we live.",
+        "– Continental crust: 30–70 km thick, lighter; it forms the continents.",
+        "– Oceanic crust: 5–10 km thick, heavier; it lies under the oceans."
+       ]
+      ],
+      [
+       "B. The Mantle",
+       [
+        "– It lies under the crust and is about 2,900 km thick: the thickest layer.",
+        "– It is made of very hot rock that flows very slowly.",
+        "– Its upper part is partly melted; the plates move on it."
+       ]
+      ],
+      [
+       "C. The Core",
+       [
+        "– It is the centre of the Earth, made of iron and nickel.",
+        "– The outer core is liquid; its movement makes the magnetic field of the Earth.",
+        "– The inner core is solid, because of the very high pressure. It is the hottest part (about 5,000–6,000 °C)."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Name the three main layers of the Earth.",
+    "The three main layers are the crust, the mantle and the core."
+   ],
+   [
+    "Which layer is the thickest?",
+    "The mantle is the thickest layer, about 2,900 km thick."
+   ],
+   [
+    "Why is the inner core solid, although it is the hottest part?",
+    "It is solid because the pressure at the centre of the Earth is extremely high."
+   ]
+  ],
+  "remediation": [
+   [
+    "The outer layer of the Earth is the ______.",
+    "The thickest layer is the ______.",
+    "The core is made of iron and ______."
+   ],
+   [
+    "The outer core is ______.",
+    "The oceanic crust is ______ than the continental crust.",
+    "The distance to the centre of the Earth is about ______ km."
+   ]
+  ],
+  "remediationAnswers": "1. crust 2. mantle 3. nickel 4. liquid 5. thinner 6. 6,370",
+  "homework": "Collect three different stones or building materials (for example a piece of granite, a sandstone block and a piece of marble or tile). Write where you found each one.",
+  "homeworkTag": "This prepares Lesson 8: Rocks.",
+  "bilingual": [
+   [
+    "Crust",
+    "L'écorce / la croûte"
+   ],
+   [
+    "Mantle",
+    "Le manteau"
+   ],
+   [
+    "Core",
+    "Le noyau"
+   ],
+   [
+    "Layer",
+    "La couche"
+   ],
+   [
+    "Cross-section",
+    "La coupe"
+   ],
+   [
+    "Pressure",
+    "La pression"
+   ],
+   [
+    "Iron",
+    "Le fer"
+   ],
+   [
+    "Magnetic field",
+    "Le champ magnétique"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source notes say the mantle is \"semi-liquid rock (magma)\". The mantle is solid rock that flows very slowly; only the upper part (asthenosphere) is partly molten.",
+   "Figures checked: continental crust 30–70 km; oceanic crust 5–10 km; mantle to about 2,900 km; outer core about 2,200 km thick; inner core radius about 1,220 km; centre about 6,370 km.",
+   "The deepest borehole (Kola, Russia) reached about 12 km."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

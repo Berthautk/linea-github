@@ -1,0 +1,12 @@
+plantr::planting tree seedlings community
+plantr2::tree nursery seedlings Africa
+savr::savanna landscape acacia trees grass
+savr2::Sahel savanna landscape Burkina Faso
+dryr::leafless trees dry season Africa
+crackr::cracked dry mud soil
+lagdor::hydroelectric dam lake Africa
+fishr::fishermen canoe Africa river
+firer::grass fire savanna burning
+firer2::controlled burn grassland Africa
+cfieldr::cattle grazing near crops field Africa
+herder::Fulani herder cattle

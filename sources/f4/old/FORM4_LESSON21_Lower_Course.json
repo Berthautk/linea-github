@@ -1,0 +1,436 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"Deposition forms the following landforms:\"]",
+  "sumImage | \"x\" | \"A. Floodplain and Levees\" | \"During floods, the river spreads alluvium over a wide, flat floodplain. The coarsest material is dropped on the banks and forms levees.\" | \"levee_delta.png\"",
+  "sumImage | \"x\" | \"B. Ox-Bow Lakes\" | \"A river cuts through the narrow neck of a meander during a flood; deposits seal the old loop, which becomes a curved lake.\" | \"oxbow.png\"",
+  "sum | \"x\" | \"C. Deltas\" | [\"A delta is a flat, fan-shaped area of alluvium at the mouth of a river, cut by distributaries. Examples: the Niger Delta and the Nile Delta.\"]",
+  "sum | \"x\" | \"D. Braided Channels\" | [\"Sandbanks in the channel divide the river into many small channels that join again (the Benue in the dry season).\"]",
+  "sum | \"II. Landforms of the Lower Course (1/5)\" | [\"Deposition forms the following landforms:\"]",
+  "sumImage | \"II. Landforms of the Lower Course (2/5)\" | \"A. Floodplain and Levees\" | \"During floods, the river spreads alluvium over a wide, flat floodplain. The coarsest material is dropped on the banks and forms levees.\" | \"levee_delta.png\"",
+  "sumImage | \"II. Landforms of the Lower Course (3/5)\" | \"B. Ox-Bow Lakes\" | \"A river cuts through the narrow neck of a meander during a flood; deposits seal the old loop, which becomes a curved lake.\" | \"oxbow.png\"",
+  "sum | \"II. Landforms of the Lower Course (4/5)\" | \"C. Deltas\" | [\"A delta is a flat, fan-shaped area of alluvium at the mouth of a river, cut by distributaries. Examples: the Niger Delta and the Nile Delta.\"]",
+  "sum | \"II. Landforms of the Lower Course (5/5)\" | \"D. Braided Channels\" | [\"Sandbanks in the channel divide the river into many small channels that join again (the Benue in the dry season).\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON21_Lower_Course",
+  "lessonNo": 21,
+  "lessonName": "The Lower Course of a River",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "Levees, ox-bow lakes, deltas, braided channels.",
+  "focus": "Main characteristics and processes of the lower course; landforms of the lower course.",
+  "competence": "Learners are able to recognise the landforms made by river deposition and to explain why they are good for farming but exposed to floods.",
+  "objectives": [
+   "Describe the main characteristics and processes of the lower course.",
+   "Explain the formation of floodplains, levees, ox-bow lakes, deltas and braided channels.",
+   "Give examples of these landforms."
+  ],
+  "recall": [
+   "In the middle course, meanders form by erosion and deposition.",
+   "The river carries fine mud in suspension.",
+   "Deposition happens where the water is slow."
+  ],
+  "recallNote": "Check the homework: drawings of the Niger or Nile Delta.",
+  "situation": [
+   "In the rainy season, the Benue is thick and brown with mud and sand. In the dry season, Oumar sees many sandbanks in the river at Garoua, and the water splits into small channels.",
+   "Oumar wonders what happens at the end of a river, when it reaches the flat coast and the sea. Does it keep its energy, or does it drop everything it carries?"
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumar does not know what a river does with its load at the end of its journey."
+   ],
+   [
+    "What does Oumar see in the Benue in the dry season?",
+    "He sees sandbanks, and the water splits into small channels."
+   ],
+   [
+    "Why do farmers like the land near the lower course of rivers?",
+    "The land is flat and covered with fertile mud (alluvium) left by floods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the old stage of a river, where deposition builds new landforms.",
+  "parts": [
+   {
+    "sec": "I. CHARACTERISTICS AND PROCESSES",
+    "qa": [
+     {
+      "q": "Give three characteristics of the lower course.",
+      "a": "The gradient is almost flat, the channel is at its widest and deepest, and the valley is a very wide, flat floodplain."
+     },
+     {
+      "q": "Why is deposition the main process in the lower course?",
+      "a": "The river flows very slowly and loses its energy, so it drops its load of fine sediment, called alluvium."
+     }
+    ],
+    "sum": {
+     "title": "I. Main Characteristics and Processes",
+     "intro": "The lower course is the old stage of the river, near its mouth:",
+     "items": [
+      [
+       "A. Characteristics",
+       [
+        "– Almost flat gradient.",
+        "– Very wide and deep channel with the largest volume of water.",
+        "– Very wide, flat floodplain.",
+        "– Fine load of mud and silt."
+       ]
+      ],
+      [
+       "B. Processes",
+       [
+        "– Deposition of alluvium is dominant.",
+        "– Some lateral erosion on the outside of large meanders."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LANDFORMS",
+    "qa": [
+     {
+      "img": "levee_delta.png",
+      "kind": "diagram",
+      "q": "Study levees, the floodplain and a delta.",
+      "full": true
+     },
+     {
+      "q": "How are levees formed?",
+      "a": "In a flood, the river overflows. It drops its coarsest material first, on its banks, and builds raised banks called levees."
+     },
+     {
+      "img": "oxbow.png",
+      "kind": "diagram",
+      "q": "Study the formation of an ox-bow lake.",
+      "full": true
+     },
+     {
+      "q": "Explain the formation of an ox-bow lake.",
+      "a": "Erosion makes the neck of a meander narrow. In a flood, the river cuts through the neck. Deposits seal the old loop, which becomes a curved lake."
+     },
+     {
+      "q": "How is a delta formed? Give an example.",
+      "a": "At its mouth, the river slows down in the sea or a lake and drops its load. The deposits build a flat, fan-shaped area cut by distributaries. Example: the Niger Delta."
+     },
+     {
+      "q": "What is a braided channel?",
+      "a": "When a river carries a lot of sand, it deposits sandbanks in its channel. The water divides and joins again around them, like braided hair, as in the Benue in the dry season."
+     }
+    ],
+    "sum": {
+     "title": "II. Landforms of the Lower Course",
+     "intro": "Deposition forms the following landforms:",
+     "items": [
+      [
+       "A. Floodplain and Levees",
+       "During floods, the river spreads alluvium over a wide, flat floodplain. The coarsest material is dropped on the banks and forms levees.",
+       "levee_delta.png"
+      ],
+      [
+       "B. Ox-Bow Lakes",
+       "A river cuts through the narrow neck of a meander during a flood; deposits seal the old loop, which becomes a curved lake.",
+       "oxbow.png"
+      ],
+      [
+       "C. Deltas",
+       "A delta is a flat, fan-shaped area of alluvium at the mouth of a river, cut by distributaries. Examples: the Niger Delta and the Nile Delta."
+      ],
+      [
+       "D. Braided Channels",
+       "Sandbanks in the channel divide the river into many small channels that join again (the Benue in the dry season)."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is deposition the main process in the lower course?",
+    "Because the river is very slow and loses its energy."
+   ],
+   [
+    "What is a levee?",
+    "A levee is a raised bank of coarse deposits along a river, built during floods."
+   ],
+   [
+    "Give an example of a delta in Africa.",
+    "The Niger Delta (or the Nile Delta)."
+   ]
+  ],
+  "remediation": [
+   [
+    "Fine sediment deposited by a river is ______.",
+    "Raised banks along a river are ______.",
+    "A curved lake cut off from a river is an ______ lake."
+   ],
+   [
+    "A fan-shaped area of deposits at a river mouth is a ______.",
+    "Small channels in a delta are ______.",
+    "A river split around sandbanks is a ______ channel."
+   ]
+  ],
+  "remediationAnswers": "1. alluvium 2. levees 3. ox-bow 4. delta 5. distributaries 6. braided",
+  "homework": "Ask two people who live or farm near the Benue: what are the advantages of the river, and what problems do the floods cause? Write their answers.",
+  "homeworkTag": "This prepares Lesson 22: Man and Floodplain Interactions.",
+  "bilingual": [
+   [
+    "Floodplain",
+    "La plaine d'inondation"
+   ],
+   [
+    "Levee",
+    "La levée / le bourrelet"
+   ],
+   [
+    "Ox-bow lake",
+    "Le bras mort / lac en croissant"
+   ],
+   [
+    "Delta",
+    "Le delta"
+   ],
+   [
+    "Distributary",
+    "Le défluent"
+   ],
+   [
+    "Alluvium",
+    "L'alluvion"
+   ],
+   [
+    "Braided channel",
+    "Le chenal en tresses"
+   ],
+   [
+    "Flood",
+    "L'inondation / la crue"
+   ]
+  ],
+  "teacherNote": [
+   "The Benue at Garoua shows braided channels and sandbanks in the dry season, which is a good local example.",
+   "The Niger Delta, into which the Benue water finally flows, is one of the largest deltas in the world."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 21",
+  "title": "The Lower Course of a River",
+  "sumTitle": "The Lower Course of a River",
+  "coverNote": "Good morning, class. Today we study Lesson 21: The Lower Course of a River.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 21: The Lower Course of a River",
+  "matter": "I. Main Characteristics and Processes: Characteristics, Processes; II. Landforms of the Lower Course: Floodplain and Levees, Ox-Bow Lakes, Deltas, Braided Channels."
+ },
+ "file": "FORM4_LESSON21_Lower_Course",
+ "sp": {
+  "file": "FORM4_LESSON21_Lower_Course",
+  "lessonNo": 21,
+  "lessonName": "The Lower Course of a River",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — The Work of Rivers on the Landscape and Impacts on Man",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "The Work of Rivers on the Landscape and Impacts on Man",
+  "notions": "Levees, ox-bow lakes, deltas, braided channels.",
+  "focus": "Main characteristics and processes of the lower course; landforms of the lower course.",
+  "competence": "Learners are able to recognise the landforms made by river deposition and to explain why they are good for farming but exposed to floods.",
+  "objectives": [
+   "Describe the main characteristics and processes of the lower course.",
+   "Explain the formation of floodplains, levees, ox-bow lakes, deltas and braided channels.",
+   "Give examples of these landforms."
+  ],
+  "recall": [
+   "In the middle course, meanders form by erosion and deposition.",
+   "The river carries fine mud in suspension.",
+   "Deposition happens where the water is slow."
+  ],
+  "recallNote": "Check the homework: drawings of the Niger or Nile Delta.",
+  "situation": [
+   "In the rainy season, the Benue is thick and brown with mud and sand. In the dry season, Oumar sees many sandbanks in the river at Garoua, and the water splits into small channels.",
+   "Oumar wonders what happens at the end of a river, when it reaches the flat coast and the sea. Does it keep its energy, or does it drop everything it carries?"
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Oumar does not know what a river does with its load at the end of its journey."
+   ],
+   [
+    "What does Oumar see in the Benue in the dry season?",
+    "He sees sandbanks, and the water splits into small channels."
+   ],
+   [
+    "Why do farmers like the land near the lower course of rivers?",
+    "The land is flat and covered with fertile mud (alluvium) left by floods."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the old stage of a river, where deposition builds new landforms.",
+  "parts": [
+   {
+    "sec": "I. CHARACTERISTICS AND PROCESSES",
+    "qa": [
+     {
+      "q": "Give three characteristics of the lower course.",
+      "a": "The gradient is almost flat, the channel is at its widest and deepest, and the valley is a very wide, flat floodplain."
+     },
+     {
+      "q": "Why is deposition the main process in the lower course?",
+      "a": "The river flows very slowly and loses its energy, so it drops its load of fine sediment, called alluvium."
+     }
+    ],
+    "sum": {
+     "title": "I. Main Characteristics and Processes",
+     "intro": "The lower course is the old stage of the river, near its mouth:",
+     "items": [
+      [
+       "A. Characteristics",
+       [
+        "– Almost flat gradient.",
+        "– Very wide and deep channel with the largest volume of water.",
+        "– Very wide, flat floodplain.",
+        "– Fine load of mud and silt."
+       ]
+      ],
+      [
+       "B. Processes",
+       [
+        "– Deposition of alluvium is dominant.",
+        "– Some lateral erosion on the outside of large meanders."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. LANDFORMS",
+    "qa": [
+     {
+      "img": "levee_delta.png",
+      "kind": "diagram",
+      "q": "Study levees, the floodplain and a delta.",
+      "full": true
+     },
+     {
+      "q": "How are levees formed?",
+      "a": "In a flood, the river overflows. It drops its coarsest material first, on its banks, and builds raised banks called levees."
+     },
+     {
+      "img": "oxbow.png",
+      "kind": "diagram",
+      "q": "Study the formation of an ox-bow lake.",
+      "full": true
+     },
+     {
+      "q": "Explain the formation of an ox-bow lake.",
+      "a": "Erosion makes the neck of a meander narrow. In a flood, the river cuts through the neck. Deposits seal the old loop, which becomes a curved lake."
+     },
+     {
+      "q": "How is a delta formed? Give an example.",
+      "a": "At its mouth, the river slows down in the sea or a lake and drops its load. The deposits build a flat, fan-shaped area cut by distributaries. Example: the Niger Delta."
+     },
+     {
+      "q": "What is a braided channel?",
+      "a": "When a river carries a lot of sand, it deposits sandbanks in its channel. The water divides and joins again around them, like braided hair, as in the Benue in the dry season."
+     }
+    ],
+    "sum": {
+     "title": "II. Landforms of the Lower Course",
+     "intro": "Deposition forms the following landforms:",
+     "items": [
+      [
+       "A. Floodplain and Levees",
+       "During floods, the river spreads alluvium over a wide, flat floodplain. The coarsest material is dropped on the banks and forms levees.",
+       "levee_delta.png"
+      ],
+      [
+       "B. Ox-Bow Lakes",
+       "A river cuts through the narrow neck of a meander during a flood; deposits seal the old loop, which becomes a curved lake.",
+       "oxbow.png"
+      ],
+      [
+       "C. Deltas",
+       "A delta is a flat, fan-shaped area of alluvium at the mouth of a river, cut by distributaries. Examples: the Niger Delta and the Nile Delta."
+      ],
+      [
+       "D. Braided Channels",
+       "Sandbanks in the channel divide the river into many small channels that join again (the Benue in the dry season)."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why is deposition the main process in the lower course?",
+    "Because the river is very slow and loses its energy."
+   ],
+   [
+    "What is a levee?",
+    "A levee is a raised bank of coarse deposits along a river, built during floods."
+   ],
+   [
+    "Give an example of a delta in Africa.",
+    "The Niger Delta (or the Nile Delta)."
+   ]
+  ],
+  "remediation": [
+   [
+    "Fine sediment deposited by a river is ______.",
+    "Raised banks along a river are ______.",
+    "A curved lake cut off from a river is an ______ lake."
+   ],
+   [
+    "A fan-shaped area of deposits at a river mouth is a ______.",
+    "Small channels in a delta are ______.",
+    "A river split around sandbanks is a ______ channel."
+   ]
+  ],
+  "remediationAnswers": "1. alluvium 2. levees 3. ox-bow 4. delta 5. distributaries 6. braided",
+  "homework": "Ask two people who live or farm near the Benue: what are the advantages of the river, and what problems do the floods cause? Write their answers.",
+  "homeworkTag": "This prepares Lesson 22: Man and Floodplain Interactions.",
+  "bilingual": [
+   [
+    "Floodplain",
+    "La plaine d'inondation"
+   ],
+   [
+    "Levee",
+    "La levée / le bourrelet"
+   ],
+   [
+    "Ox-bow lake",
+    "Le bras mort / lac en croissant"
+   ],
+   [
+    "Delta",
+    "Le delta"
+   ],
+   [
+    "Distributary",
+    "Le défluent"
+   ],
+   [
+    "Alluvium",
+    "L'alluvion"
+   ],
+   [
+    "Braided channel",
+    "Le chenal en tresses"
+   ],
+   [
+    "Flood",
+    "L'inondation / la crue"
+   ]
+  ],
+  "teacherNote": [
+   "The Benue at Garoua shows braided channels and sandbanks in the dry season, which is a good local example.",
+   "The Niger Delta, into which the Benue water finally flows, is one of the largest deltas in the world."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation Processes, Landforms and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

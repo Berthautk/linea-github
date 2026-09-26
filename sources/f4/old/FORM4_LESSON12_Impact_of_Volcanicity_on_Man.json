@@ -1,0 +1,454 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"People cannot stop eruptions, but they can reduce the risk:\"]",
+  "sum | \"x\" | \"Measures\" | [\"– Monitoring and warning: observe earthquakes, gases and ground swelling.\",\"– Evacuation plans and drills; safe shelters.\",\"– Hazard maps and land-use rules: no houses on old lava paths.\",\"– Strong, sloping roofs to shed ash.\",\"– Degassing pipes in dangerous lakes (Nyos, Monoun).\",\"– Education of the population on safety rules.\"]",
+  "sum | \"III. Adaptation, Mitigation and Preventive Measures (1/3)\" | [\"People cannot stop eruptions, but they can reduce the risk:\"]",
+  "sum | \"III. Adaptation, Mitigation and Preventive Measures (2/3)\" | \"Measures\" | [\"– Monitoring and warning: observe earthquakes, gases and ground swelling.\",\"– Evacuation plans and drills; safe shelters.\",\"– Hazard maps and land-use rules: no houses on old lava paths.\",\"– Strong, sloping roofs to shed ash.\",\"– Degassing pipes in dangerous lakes (Nyos, Monoun).\",\"– Education of the population on safety rules.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON12_Impact_of_Volcanicity_on_Man",
+  "lessonNo": 12,
+  "lessonName": "The Impact of Volcanicity on Man",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Volcanoes and People",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Volcanoes and People",
+  "notions": "Resources, hazards.",
+  "focus": "Volcanic hazards; importance of volcanoes; adaptation, mitigation and preventive measures.",
+  "competence": "Learners are able to weigh the advantages and dangers of living near a volcano, and to give simple safety rules in case of an eruption.",
+  "objectives": [
+   "Describe the main volcanic hazards.",
+   "Explain the importance of volcanoes.",
+   "Suggest adaptation, mitigation and preventive measures."
+  ],
+  "recall": [
+   "A volcano is an opening through which magma, gases and ash come out.",
+   "Mount Cameroon is an active volcano on the Cameroon Volcanic Line.",
+   "Lake Nyos is a crater lake."
+  ],
+  "recallNote": "Check the homework: reasons and dangers of farming near Buea.",
+  "situation": [
+   "A friend of Aboubakar's family wants to move to Buea to start a large farm, because the soil there is very fertile.",
+   "Another friend warns him: \"It is dangerous! You will live on the side of an active volcano.\" The family friend is confused. Is living near Mount Cameroon a good opportunity or a great risk?"
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the family friend does not know if living near Mount Cameroon is a good opportunity or a great risk."
+   ],
+   [
+    "Why does he want to farm near Buea?",
+    "He wants to farm there because the volcanic soil is very fertile."
+   ],
+   [
+    "What should he do before moving?",
+    "He should learn about the dangers, choose a safe place away from old lava flows, and know the evacuation plans."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the dangers and the benefits of volcanoes, and how people can live safely near them.",
+  "parts": [
+   {
+    "sec": "I. VOLCANIC HAZARDS",
+    "qa": [
+     {
+      "q": "What did the lava flows of Mount Cameroon do in 1999 and 2000?",
+      "a": "They destroyed farms, forest and part of the road between Limbe and Idenau, and threatened villages."
+     },
+     {
+      "q": "In 1986, a cloud of gas came out of Lake Nyos. What happened?",
+      "a": "A cloud of carbon dioxide came out of the lake and flowed down the valleys. About 1,700 people and thousands of animals died."
+     },
+     {
+      "q": "Name other volcanic hazards.",
+      "a": "Other hazards are ash falls, poisonous gases, mudflows (lahars), earthquakes and landslides."
+     }
+    ],
+    "sum": {
+     "title": "I. Volcanic Hazards",
+     "defs": [
+      "A volcanic hazard is a danger caused by a volcano to people and property."
+     ],
+     "items": [
+      [
+       "A. Lava Flows and Ash",
+       [
+        "– Lava flows burn and bury farms, houses and roads (Mount Cameroon, 1999 and 2000).",
+        "– Ash falls cover crops, pollute water, cause breathing problems and make roofs collapse."
+       ]
+      ],
+      [
+       "B. Gases, Mudflows and Earthquakes",
+       [
+        "– Poisonous gases kill people and animals: Lake Monoun (1984, 37 deaths) and Lake Nyos (1986, about 1,700 deaths).",
+        "– Mudflows (lahars) of ash and rainwater bury valleys.",
+        "– Eruptions cause earthquakes and landslides."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. IMPORTANCE OF VOLCANOES",
+    "qa": [
+     {
+      "q": "Why are the soils around Mount Cameroon very fertile?",
+      "a": "Volcanic rocks and ash break down into soils rich in minerals. They support plantations of bananas, tea, rubber and oil palm."
+     },
+     {
+      "q": "How can volcanoes produce electricity?",
+      "a": "In volcanic areas, underground heat turns water into steam, which turns turbines. This is geothermal energy, used in Iceland and in Kenya."
+     },
+     {
+      "q": "Give two other benefits of volcanoes.",
+      "a": "Volcanoes attract tourists, like the Mount Cameroon Race of Hope. They also give building materials (basalt, pozzolana) and new land."
+     }
+    ],
+    "sum": {
+     "title": "II. Importance of Volcanoes",
+     "intro": "Volcanoes are also useful to people:",
+     "items": [
+      [
+       "Benefits",
+       [
+        "– Fertile soils for agriculture: plantations of the Cameroon Development Corporation (CDC) around Mount Cameroon.",
+        "– Geothermal energy (Iceland, Kenya) and hot springs.",
+        "– Tourism: the Race of Hope, mountain hiking and crater lakes.",
+        "– Building materials: basalt and pozzolana (volcanic ash for cement).",
+        "– New land formed by lava."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. ADAPTATION AND MITIGATION",
+    "qa": [
+     {
+      "q": "What can scientists do before an eruption?",
+      "a": "They can monitor the volcano with instruments that measure earthquakes, gases and the swelling of the ground, and give warnings."
+     },
+     {
+      "q": "What did Cameroon do to prevent another disaster at Lake Nyos?",
+      "a": "Pipes were placed in Lake Nyos (from 2001) and in Lake Monoun to release the gas slowly and safely."
+     }
+    ],
+    "sum": {
+     "title": "III. Adaptation, Mitigation and Preventive Measures",
+     "intro": "People cannot stop eruptions, but they can reduce the risk:",
+     "items": [
+      [
+       "Measures",
+       [
+        "– Monitoring and warning: observe earthquakes, gases and ground swelling.",
+        "– Evacuation plans and drills; safe shelters.",
+        "– Hazard maps and land-use rules: no houses on old lava paths.",
+        "– Strong, sloping roofs to shed ash.",
+        "– Degassing pipes in dangerous lakes (Nyos, Monoun).",
+        "– Education of the population on safety rules."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two volcanic hazards.",
+    "Lava flows and poisonous gases (also ash falls and mudflows)."
+   ],
+   [
+    "Why do many people live near Mount Cameroon despite the danger?",
+    "They live there because the volcanic soils are very fertile and give good harvests."
+   ],
+   [
+    "How was Lake Nyos made safer?",
+    "Pipes were placed in the lake to release the carbon dioxide slowly."
+   ]
+  ],
+  "remediation": [
+   [
+    "A danger caused by a volcano is a volcanic ______.",
+    "The Lake Nyos disaster happened in ______.",
+    "The gas released by Lake Nyos was carbon ______."
+   ],
+   [
+    "Heat from volcanic areas gives ______ energy.",
+    "Volcanic soils are very ______.",
+    "Watching a volcano with instruments is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. hazard 2. 1986 3. dioxide 4. geothermal 5. fertile 6. monitoring",
+  "homework": "Ask your parents if they have ever felt the ground shake. Write where and when it happened, and what they felt.",
+  "homeworkTag": "This prepares Lesson 13: Earthquakes.",
+  "bilingual": [
+   [
+    "Hazard",
+    "L'aléa / le danger"
+   ],
+   [
+    "Ash",
+    "La cendre"
+   ],
+   [
+    "Gas",
+    "Le gaz"
+   ],
+   [
+    "Fertile soil",
+    "Le sol fertile"
+   ],
+   [
+    "Evacuation",
+    "L'évacuation"
+   ],
+   [
+    "Warning",
+    "L'alerte"
+   ],
+   [
+    "Geothermal energy",
+    "L'énergie géothermique"
+   ],
+   [
+    "Mitigation",
+    "L'atténuation"
+   ]
+  ],
+  "teacherNote": [
+   "Correction 1: the source notes say volcanoes bring up granite. Granite is an intrusive rock that cools deep underground; we see it only after erosion. Diamonds, however, are brought up by old volcanic pipes (kimberlite).",
+   "Correction 2: Lake Nyos (21 August 1986, about 1,700 deaths) and Lake Monoun (15 August 1984, 37 deaths) were added: they are the most deadly volcanic hazards in Cameroon.",
+   "Degassing pipes: Lake Nyos from 2001, Lake Monoun from 2003."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 12",
+  "title": "The Impact of Volcanicity on Man",
+  "sumTitle": "The Impact of Volcanicity on Man",
+  "coverNote": "Good morning, class. Today we study Lesson 12: The Impact of Volcanicity on Man.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 12: The Impact of Volcanicity on Man",
+  "matter": "I. Volcanic Hazards: Lava Flows and Ash, Gases, Mudflows and Earthquakes; II. Importance of Volcanoes: Benefits; III. Adaptation, Mitigation and Preventive Measures: Measures."
+ },
+ "file": "FORM4_LESSON12_Impact_of_Volcanicity_on_Man",
+ "sp": {
+  "file": "FORM4_LESSON12_Impact_of_Volcanicity_on_Man",
+  "lessonNo": 12,
+  "lessonName": "The Impact of Volcanicity on Man",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Volcanoes and People",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Volcanoes and People",
+  "notions": "Resources, hazards.",
+  "focus": "Volcanic hazards; importance of volcanoes; adaptation, mitigation and preventive measures.",
+  "competence": "Learners are able to weigh the advantages and dangers of living near a volcano, and to give simple safety rules in case of an eruption.",
+  "objectives": [
+   "Describe the main volcanic hazards.",
+   "Explain the importance of volcanoes.",
+   "Suggest adaptation, mitigation and preventive measures."
+  ],
+  "recall": [
+   "A volcano is an opening through which magma, gases and ash come out.",
+   "Mount Cameroon is an active volcano on the Cameroon Volcanic Line.",
+   "Lake Nyos is a crater lake."
+  ],
+  "recallNote": "Check the homework: reasons and dangers of farming near Buea.",
+  "situation": [
+   "A friend of Aboubakar's family wants to move to Buea to start a large farm, because the soil there is very fertile.",
+   "Another friend warns him: \"It is dangerous! You will live on the side of an active volcano.\" The family friend is confused. Is living near Mount Cameroon a good opportunity or a great risk?"
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that the family friend does not know if living near Mount Cameroon is a good opportunity or a great risk."
+   ],
+   [
+    "Why does he want to farm near Buea?",
+    "He wants to farm there because the volcanic soil is very fertile."
+   ],
+   [
+    "What should he do before moving?",
+    "He should learn about the dangers, choose a safe place away from old lava flows, and know the evacuation plans."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the dangers and the benefits of volcanoes, and how people can live safely near them.",
+  "parts": [
+   {
+    "sec": "I. VOLCANIC HAZARDS",
+    "qa": [
+     {
+      "q": "What did the lava flows of Mount Cameroon do in 1999 and 2000?",
+      "a": "They destroyed farms, forest and part of the road between Limbe and Idenau, and threatened villages."
+     },
+     {
+      "q": "In 1986, a cloud of gas came out of Lake Nyos. What happened?",
+      "a": "A cloud of carbon dioxide came out of the lake and flowed down the valleys. About 1,700 people and thousands of animals died."
+     },
+     {
+      "q": "Name other volcanic hazards.",
+      "a": "Other hazards are ash falls, poisonous gases, mudflows (lahars), earthquakes and landslides."
+     }
+    ],
+    "sum": {
+     "title": "I. Volcanic Hazards",
+     "defs": [
+      "A volcanic hazard is a danger caused by a volcano to people and property."
+     ],
+     "items": [
+      [
+       "A. Lava Flows and Ash",
+       [
+        "– Lava flows burn and bury farms, houses and roads (Mount Cameroon, 1999 and 2000).",
+        "– Ash falls cover crops, pollute water, cause breathing problems and make roofs collapse."
+       ]
+      ],
+      [
+       "B. Gases, Mudflows and Earthquakes",
+       [
+        "– Poisonous gases kill people and animals: Lake Monoun (1984, 37 deaths) and Lake Nyos (1986, about 1,700 deaths).",
+        "– Mudflows (lahars) of ash and rainwater bury valleys.",
+        "– Eruptions cause earthquakes and landslides."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. IMPORTANCE OF VOLCANOES",
+    "qa": [
+     {
+      "q": "Why are the soils around Mount Cameroon very fertile?",
+      "a": "Volcanic rocks and ash break down into soils rich in minerals. They support plantations of bananas, tea, rubber and oil palm."
+     },
+     {
+      "q": "How can volcanoes produce electricity?",
+      "a": "In volcanic areas, underground heat turns water into steam, which turns turbines. This is geothermal energy, used in Iceland and in Kenya."
+     },
+     {
+      "q": "Give two other benefits of volcanoes.",
+      "a": "Volcanoes attract tourists, like the Mount Cameroon Race of Hope. They also give building materials (basalt, pozzolana) and new land."
+     }
+    ],
+    "sum": {
+     "title": "II. Importance of Volcanoes",
+     "intro": "Volcanoes are also useful to people:",
+     "items": [
+      [
+       "Benefits",
+       [
+        "– Fertile soils for agriculture: plantations of the Cameroon Development Corporation (CDC) around Mount Cameroon.",
+        "– Geothermal energy (Iceland, Kenya) and hot springs.",
+        "– Tourism: the Race of Hope, mountain hiking and crater lakes.",
+        "– Building materials: basalt and pozzolana (volcanic ash for cement).",
+        "– New land formed by lava."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. ADAPTATION AND MITIGATION",
+    "qa": [
+     {
+      "q": "What can scientists do before an eruption?",
+      "a": "They can monitor the volcano with instruments that measure earthquakes, gases and the swelling of the ground, and give warnings."
+     },
+     {
+      "q": "What did Cameroon do to prevent another disaster at Lake Nyos?",
+      "a": "Pipes were placed in Lake Nyos (from 2001) and in Lake Monoun to release the gas slowly and safely."
+     }
+    ],
+    "sum": {
+     "title": "III. Adaptation, Mitigation and Preventive Measures",
+     "intro": "People cannot stop eruptions, but they can reduce the risk:",
+     "items": [
+      [
+       "Measures",
+       [
+        "– Monitoring and warning: observe earthquakes, gases and ground swelling.",
+        "– Evacuation plans and drills; safe shelters.",
+        "– Hazard maps and land-use rules: no houses on old lava paths.",
+        "– Strong, sloping roofs to shed ash.",
+        "– Degassing pipes in dangerous lakes (Nyos, Monoun).",
+        "– Education of the population on safety rules."
+       ]
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Give two volcanic hazards.",
+    "Lava flows and poisonous gases (also ash falls and mudflows)."
+   ],
+   [
+    "Why do many people live near Mount Cameroon despite the danger?",
+    "They live there because the volcanic soils are very fertile and give good harvests."
+   ],
+   [
+    "How was Lake Nyos made safer?",
+    "Pipes were placed in the lake to release the carbon dioxide slowly."
+   ]
+  ],
+  "remediation": [
+   [
+    "A danger caused by a volcano is a volcanic ______.",
+    "The Lake Nyos disaster happened in ______.",
+    "The gas released by Lake Nyos was carbon ______."
+   ],
+   [
+    "Heat from volcanic areas gives ______ energy.",
+    "Volcanic soils are very ______.",
+    "Watching a volcano with instruments is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. hazard 2. 1986 3. dioxide 4. geothermal 5. fertile 6. monitoring",
+  "homework": "Ask your parents if they have ever felt the ground shake. Write where and when it happened, and what they felt.",
+  "homeworkTag": "This prepares Lesson 13: Earthquakes.",
+  "bilingual": [
+   [
+    "Hazard",
+    "L'aléa / le danger"
+   ],
+   [
+    "Ash",
+    "La cendre"
+   ],
+   [
+    "Gas",
+    "Le gaz"
+   ],
+   [
+    "Fertile soil",
+    "Le sol fertile"
+   ],
+   [
+    "Evacuation",
+    "L'évacuation"
+   ],
+   [
+    "Warning",
+    "L'alerte"
+   ],
+   [
+    "Geothermal energy",
+    "L'énergie géothermique"
+   ],
+   [
+    "Mitigation",
+    "L'atténuation"
+   ]
+  ],
+  "teacherNote": [
+   "Correction 1: the source notes say volcanoes bring up granite. Granite is an intrusive rock that cools deep underground; we see it only after erosion. Diamonds, however, are brought up by old volcanic pipes (kimberlite).",
+   "Correction 2: Lake Nyos (21 August 1986, about 1,700 deaths) and Lake Monoun (15 August 1984, 37 deaths) were added: they are the most deadly volcanic hazards in Cameroon.",
+   "Degassing pipes: Lake Nyos from 2001, Lake Monoun from 2003."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

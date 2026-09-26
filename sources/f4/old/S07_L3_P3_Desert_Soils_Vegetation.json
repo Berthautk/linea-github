@@ -1,0 +1,649 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "slide | \"I. VEGETATION\" | \"Question 1\" | [\"In hot deserts, plants grow far apart and large areas have no plants at all. Why?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"There is very little water, so the few plants grow far apart to share the little water in the soil.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 2\" | [\"The cactus has a thick, fleshy stem and spines instead of leaves. How do these help it to survive?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"The thick stem stores water, and the spines lose very little water. They also protect the plant from animals.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 3\" | [\"Some desert plants have roots more than 20 metres long. Why?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"Long roots reach water deep under the ground. Other plants have wide roots near the surface to catch rain quickly.\"]",
+  "slide | \"I. VEGETATION\" | \"Question 4\" | [\"After a rare rain, the desert suddenly becomes green with flowers for a few weeks. How is this possible?\"]",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"Some plants, called ephemerals, have seeds that wait in the soil for years. After rain, they grow, flower and make new seeds very quickly.\"]",
+  "slide | \"II. SOILS\" | \"Question 1\" | [\"There are very few plants in the desert. What does this mean for the amount of humus in the soil?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"Desert soils have very little humus, because few plants die and rot in them.\"]",
+  "slide | \"II. SOILS\" | \"Question 2\" | [\"The strong sun makes water evaporate from the soil and leaves salt on the surface. What problem does this cause?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"The soil becomes salty, and most crops cannot grow in salty soil. This is called salinisation.\"]",
+  "slide | \"II. SOILS\" | \"Question 3\" | [\"Along the Nile, in the middle of the desert, farmers grow rich crops. What does this show about desert soils?\"]",
+  "slide | \"II. SOILS\" | \"Answer\" | [\"It shows that some desert soils can be fertile when they receive water. The Nile also brings fertile mud, called alluvium.\"]",
+  "sum | \"I. Vegetation (1/6)\" | \"DEFINITION\" | [\"A xerophyte is a plant that is adapted to live with very little water.\"]",
+  "sum | \"I. Vegetation (2/6)\" | [\"The vegetation of hot deserts is very scarce. Its main plants are cacti, thorny bushes such as acacias, tamarisks, grasses and date palms in oases.\"]",
+  "sum | \"I. Vegetation (3/6)\" | \"A. Water Storage\" | [\"Succulent plants, such as cacti, store water in their thick stems or leaves.\"]",
+  "sum | \"I. Vegetation (4/6)\" | \"B. Reduced Water Loss\" | [\"Plants have small, waxy leaves or spines instead of leaves, so they lose very little water.\"]",
+  "sum | \"I. Vegetation (5/6)\" | \"C. Long or Wide Roots\" | [\"Some plants have very long roots to reach deep water. Others have wide roots near the surface.\"]",
+  "sum | \"I. Vegetation (6/6)\" | \"D. Short Life Cycle\" | [\"Ephemeral plants grow, flower and make seeds in a few weeks after a rare rain.\"]",
+  "sum | \"II. Soils (1/5)\" | [\"The soils of hot deserts have the following characteristics:\"]",
+  "sum | \"II. Soils (2/5)\" | \"A. Sandy or Stony\" | [\"Desert soils are thin, sandy or stony, and they hold little water.\"]",
+  "sum | \"II. Soils (3/5)\" | \"B. Little Humus\" | [\"They contain little humus, because there are few plants.\"]",
+  "sum | \"II. Soils (4/5)\" | \"C. Salty Soils\" | [\"Evaporation leaves salt on the surface, so some soils are salty.\"]",
+  "sum | \"II. Soils (5/5)\" | \"D. Fertile with Water\" | [\"Some desert soils become fertile when they are irrigated, as along the Nile.\"]"
+ ],
+ "d": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S07_L3_P3_Desert_Soils_Vegetation",
+  "part": 3,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Xerophyte, succulent, ephemeral plant, desert soil, salinity, humus.",
+  "focus": "Characteristics of the soils and vegetation of hot deserts.",
+  "competence": "Learners are able to explain how plants survive with very little water, and to choose plants that resist drought for their homes.",
+  "objectives": [
+   "Describe the vegetation of hot deserts.",
+   "Explain how desert plants are adapted to the lack of water.",
+   "Describe the soils of hot deserts."
+  ],
+  "recall": [
+   "Hot deserts receive less than 250 mm of rain per year.",
+   "Days are very hot, nights are cold, and the air is very dry.",
+   "Hot, dusty winds and sandstorms are common."
+  ],
+  "recallNote": "Check the homework: adaptations of a cactus, an acacia or a date palm.",
+  "situation": [
+   "Fanta planted a mango tree and a small cactus in front of her house in Garoua at the start of the dry season. She forgot to water them for three months.",
+   "In March, the mango tree was dead, but the cactus was still green and healthy. Fanta wonders how the cactus survived without water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fanta does not understand how the cactus survived three months without water, while the mango tree died."
+   ],
+   [
+    "Which plant survived, and which plant died?",
+    "The cactus survived, but the mango tree died."
+   ],
+   [
+    "What can Fanta do to keep her plants alive in the dry season?",
+    "She can water them regularly, cover the soil with dry grass, or choose plants that resist drought."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how desert plants survive with very little water, and what desert soils are like.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "q": "In hot deserts, plants grow far apart and large areas have no plants at all. Why?",
+      "a": "There is very little water, so the few plants grow far apart to share the little water in the soil."
+     },
+     {
+      "q": "The cactus has a thick, fleshy stem and spines instead of leaves. How do these help it to survive?",
+      "a": "The thick stem stores water, and the spines lose very little water. They also protect the plant from animals."
+     },
+     {
+      "q": "Some desert plants have roots more than 20 metres long. Why?",
+      "a": "Long roots reach water deep under the ground. Other plants have wide roots near the surface to catch rain quickly."
+     },
+     {
+      "q": "After a rare rain, the desert suddenly becomes green with flowers for a few weeks. How is this possible?",
+      "a": "Some plants, called ephemerals, have seeds that wait in the soil for years. After rain, they grow, flower and make new seeds very quickly."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "defs": [
+      "A xerophyte is a plant that is adapted to live with very little water."
+     ],
+     "intro": "The vegetation of hot deserts is very scarce. Its main plants are cacti, thorny bushes such as acacias, tamarisks, grasses and date palms in oases.",
+     "items": [
+      [
+       "A. Water Storage",
+       "Succulent plants, such as cacti, store water in their thick stems or leaves."
+      ],
+      [
+       "B. Reduced Water Loss",
+       "Plants have small, waxy leaves or spines instead of leaves, so they lose very little water."
+      ],
+      [
+       "C. Long or Wide Roots",
+       "Some plants have very long roots to reach deep water. Others have wide roots near the surface."
+      ],
+      [
+       "D. Short Life Cycle",
+       "Ephemeral plants grow, flower and make seeds in a few weeks after a rare rain."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "There are very few plants in the desert. What does this mean for the amount of humus in the soil?",
+      "a": "Desert soils have very little humus, because few plants die and rot in them."
+     },
+     {
+      "q": "The strong sun makes water evaporate from the soil and leaves salt on the surface. What problem does this cause?",
+      "a": "The soil becomes salty, and most crops cannot grow in salty soil. This is called salinisation."
+     },
+     {
+      "q": "Along the Nile, in the middle of the desert, farmers grow rich crops. What does this show about desert soils?",
+      "a": "It shows that some desert soils can be fertile when they receive water. The Nile also brings fertile mud, called alluvium."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The soils of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Sandy or Stony",
+       "Desert soils are thin, sandy or stony, and they hold little water."
+      ],
+      [
+       "B. Little Humus",
+       "They contain little humus, because there are few plants."
+      ],
+      [
+       "C. Salty Soils",
+       "Evaporation leaves salt on the surface, so some soils are salty."
+      ],
+      [
+       "D. Fertile with Water",
+       "Some desert soils become fertile when they are irrigated, as along the Nile."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is a xerophyte? Give one example.",
+    "A xerophyte is a plant adapted to live with very little water, like the cactus."
+   ],
+   [
+    "Give two ways in which desert plants reduce water loss.",
+    "They have small, waxy leaves or spines instead of leaves."
+   ],
+   [
+    "Why are desert soils often salty?",
+    "They are salty because evaporation leaves salt on the surface of the soil."
+   ]
+  ],
+  "remediation": [
+   [
+    "A plant adapted to very little water is a ______.",
+    "The cactus stores water in its ______.",
+    "Plants that grow and flower quickly after rain are called ______."
+   ],
+   [
+    "Desert soils contain little ______, because there are few plants.",
+    "When evaporation leaves salt in the soil, it is called ______.",
+    "Desert soils can be fertile when they are ______."
+   ]
+  ],
+  "remediationAnswers": "1. xerophyte 2. stem 3. ephemerals 4. humus 5. salinisation 6. irrigated",
+  "homework": "Imagine you must spend one week in the Sahara. Write down three problems you would face and one way to solve each.",
+  "homeworkTag": "This prepares Part 4: Problems Faced and Adaptations.",
+  "bilingual": [
+   [
+    "Cactus",
+    "Le cactus"
+   ],
+   [
+    "Thorn",
+    "L'épine"
+   ],
+   [
+    "Root",
+    "La racine"
+   ],
+   [
+    "Stem",
+    "La tige"
+   ],
+   [
+    "Leaf",
+    "La feuille"
+   ],
+   [
+    "Seed",
+    "La graine"
+   ],
+   [
+    "Salty soil",
+    "Le sol salé"
+   ],
+   [
+    "Date palm",
+    "Le palmier dattier"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Cacti are native to the Americas; in the Sahara, typical plants are acacias, tamarisks, grasses and date palms."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 3)",
+  "title": "The Desert Regions: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 3: Characteristics (Soils and Vegetation).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 3: Characteristics (Soils and Vegetation)"
+ },
+ "end": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Economic Geography — Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S07_L3_P3_Desert_Soils_Vegetation",
+  "part": 3,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Xerophyte, succulent, ephemeral plant, desert soil, salinity, humus.",
+  "focus": "Characteristics of the soils and vegetation of hot deserts.",
+  "competence": "Learners are able to explain how plants survive with very little water, and to choose plants that resist drought for their homes.",
+  "objectives": [
+   "Describe the vegetation of hot deserts.",
+   "Explain how desert plants are adapted to the lack of water.",
+   "Describe the soils of hot deserts."
+  ],
+  "recall": [
+   "Hot deserts receive less than 250 mm of rain per year.",
+   "Days are very hot, nights are cold, and the air is very dry.",
+   "Hot, dusty winds and sandstorms are common."
+  ],
+  "recallNote": "Check the homework: adaptations of a cactus, an acacia or a date palm.",
+  "situation": [
+   "Fanta planted a mango tree and a small cactus in front of her house in Garoua at the start of the dry season. She forgot to water them for three months.",
+   "In March, the mango tree was dead, but the cactus was still green and healthy. Fanta wonders how the cactus survived without water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fanta does not understand how the cactus survived three months without water, while the mango tree died."
+   ],
+   [
+    "Which plant survived, and which plant died?",
+    "The cactus survived, but the mango tree died."
+   ],
+   [
+    "What can Fanta do to keep her plants alive in the dry season?",
+    "She can water them regularly, cover the soil with dry grass, or choose plants that resist drought."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how desert plants survive with very little water, and what desert soils are like.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "q": "In hot deserts, plants grow far apart and large areas have no plants at all. Why?",
+      "a": "There is very little water, so the few plants grow far apart to share the little water in the soil."
+     },
+     {
+      "q": "The cactus has a thick, fleshy stem and spines instead of leaves. How do these help it to survive?",
+      "a": "The thick stem stores water, and the spines lose very little water. They also protect the plant from animals."
+     },
+     {
+      "q": "Some desert plants have roots more than 20 metres long. Why?",
+      "a": "Long roots reach water deep under the ground. Other plants have wide roots near the surface to catch rain quickly."
+     },
+     {
+      "q": "After a rare rain, the desert suddenly becomes green with flowers for a few weeks. How is this possible?",
+      "a": "Some plants, called ephemerals, have seeds that wait in the soil for years. After rain, they grow, flower and make new seeds very quickly."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "defs": [
+      "A xerophyte is a plant that is adapted to live with very little water."
+     ],
+     "intro": "The vegetation of hot deserts is very scarce. Its main plants are cacti, thorny bushes such as acacias, tamarisks, grasses and date palms in oases.",
+     "items": [
+      [
+       "A. Water Storage",
+       "Succulent plants, such as cacti, store water in their thick stems or leaves."
+      ],
+      [
+       "B. Reduced Water Loss",
+       "Plants have small, waxy leaves or spines instead of leaves, so they lose very little water."
+      ],
+      [
+       "C. Long or Wide Roots",
+       "Some plants have very long roots to reach deep water. Others have wide roots near the surface."
+      ],
+      [
+       "D. Short Life Cycle",
+       "Ephemeral plants grow, flower and make seeds in a few weeks after a rare rain."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "There are very few plants in the desert. What does this mean for the amount of humus in the soil?",
+      "a": "Desert soils have very little humus, because few plants die and rot in them."
+     },
+     {
+      "q": "The strong sun makes water evaporate from the soil and leaves salt on the surface. What problem does this cause?",
+      "a": "The soil becomes salty, and most crops cannot grow in salty soil. This is called salinisation."
+     },
+     {
+      "q": "Along the Nile, in the middle of the desert, farmers grow rich crops. What does this show about desert soils?",
+      "a": "It shows that some desert soils can be fertile when they receive water. The Nile also brings fertile mud, called alluvium."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The soils of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Sandy or Stony",
+       "Desert soils are thin, sandy or stony, and they hold little water."
+      ],
+      [
+       "B. Little Humus",
+       "They contain little humus, because there are few plants."
+      ],
+      [
+       "C. Salty Soils",
+       "Evaporation leaves salt on the surface, so some soils are salty."
+      ],
+      [
+       "D. Fertile with Water",
+       "Some desert soils become fertile when they are irrigated, as along the Nile."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is a xerophyte? Give one example.",
+    "A xerophyte is a plant adapted to live with very little water, like the cactus."
+   ],
+   [
+    "Give two ways in which desert plants reduce water loss.",
+    "They have small, waxy leaves or spines instead of leaves."
+   ],
+   [
+    "Why are desert soils often salty?",
+    "They are salty because evaporation leaves salt on the surface of the soil."
+   ]
+  ],
+  "remediation": [
+   [
+    "A plant adapted to very little water is a ______.",
+    "The cactus stores water in its ______.",
+    "Plants that grow and flower quickly after rain are called ______."
+   ],
+   [
+    "Desert soils contain little ______, because there are few plants.",
+    "When evaporation leaves salt in the soil, it is called ______.",
+    "Desert soils can be fertile when they are ______."
+   ]
+  ],
+  "remediationAnswers": "1. xerophyte 2. stem 3. ephemerals 4. humus 5. salinisation 6. irrigated",
+  "homework": "Imagine you must spend one week in the Sahara. Write down three problems you would face and one way to solve each.",
+  "homeworkTag": "This prepares Part 4: Problems Faced and Adaptations.",
+  "bilingual": [
+   [
+    "Cactus",
+    "Le cactus"
+   ],
+   [
+    "Thorn",
+    "L'épine"
+   ],
+   [
+    "Root",
+    "La racine"
+   ],
+   [
+    "Stem",
+    "La tige"
+   ],
+   [
+    "Leaf",
+    "La feuille"
+   ],
+   [
+    "Seed",
+    "La graine"
+   ],
+   [
+    "Salty soil",
+    "Le sol salé"
+   ],
+   [
+    "Date palm",
+    "Le palmier dattier"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Cacti are native to the Americas; in the Sahara, typical plants are acacias, tamarisks, grasses and date palms."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 3 (PART 3)",
+  "title": "The Desert Regions: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Desert Regions",
+  "coverNote": "Good morning, class. Today we study The Desert Regions, part 3: Characteristics (Soils and Vegetation).",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 3: The Desert Regions — Part 3: Characteristics (Soils and Vegetation)",
+  "matter": "I. Vegetation: Water Storage, Reduced Water Loss, Long or Wide Roots, Short Life Cycle; II. Soils: Sandy or Stony, Little Humus, Salty Soils, Fertile with Water."
+ },
+ "file": "S07_L3_P3_Desert_Soils_Vegetation",
+ "sp": {
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "chapter": "Natural Regions: 3. Desert Regions",
+  "lessonNo": 3,
+  "lessonName": "The Desert Regions",
+  "file": "S07_L3_P3_Desert_Soils_Vegetation",
+  "part": 3,
+  "partTitle": "Characteristics (Soils and Vegetation)",
+  "notions": "Xerophyte, succulent, ephemeral plant, desert soil, salinity, humus.",
+  "focus": "Characteristics of the soils and vegetation of hot deserts.",
+  "competence": "Learners are able to explain how plants survive with very little water, and to choose plants that resist drought for their homes.",
+  "objectives": [
+   "Describe the vegetation of hot deserts.",
+   "Explain how desert plants are adapted to the lack of water.",
+   "Describe the soils of hot deserts."
+  ],
+  "recall": [
+   "Hot deserts receive less than 250 mm of rain per year.",
+   "Days are very hot, nights are cold, and the air is very dry.",
+   "Hot, dusty winds and sandstorms are common."
+  ],
+  "recallNote": "Check the homework: adaptations of a cactus, an acacia or a date palm.",
+  "situation": [
+   "Fanta planted a mango tree and a small cactus in front of her house in Garoua at the start of the dry season. She forgot to water them for three months.",
+   "In March, the mango tree was dead, but the cactus was still green and healthy. Fanta wonders how the cactus survived without water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Fanta does not understand how the cactus survived three months without water, while the mango tree died."
+   ],
+   [
+    "Which plant survived, and which plant died?",
+    "The cactus survived, but the mango tree died."
+   ],
+   [
+    "What can Fanta do to keep her plants alive in the dry season?",
+    "She can water them regularly, cover the soil with dry grass, or choose plants that resist drought."
+   ]
+  ],
+  "justification": "This lesson will help us to understand how desert plants survive with very little water, and what desert soils are like.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "q": "In hot deserts, plants grow far apart and large areas have no plants at all. Why?",
+      "a": "There is very little water, so the few plants grow far apart to share the little water in the soil."
+     },
+     {
+      "q": "The cactus has a thick, fleshy stem and spines instead of leaves. How do these help it to survive?",
+      "a": "The thick stem stores water, and the spines lose very little water. They also protect the plant from animals."
+     },
+     {
+      "q": "Some desert plants have roots more than 20 metres long. Why?",
+      "a": "Long roots reach water deep under the ground. Other plants have wide roots near the surface to catch rain quickly."
+     },
+     {
+      "q": "After a rare rain, the desert suddenly becomes green with flowers for a few weeks. How is this possible?",
+      "a": "Some plants, called ephemerals, have seeds that wait in the soil for years. After rain, they grow, flower and make new seeds very quickly."
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "defs": [
+      "A xerophyte is a plant that is adapted to live with very little water."
+     ],
+     "intro": "The vegetation of hot deserts is very scarce. Its main plants are cacti, thorny bushes such as acacias, tamarisks, grasses and date palms in oases.",
+     "items": [
+      [
+       "A. Water Storage",
+       "Succulent plants, such as cacti, store water in their thick stems or leaves."
+      ],
+      [
+       "B. Reduced Water Loss",
+       "Plants have small, waxy leaves or spines instead of leaves, so they lose very little water."
+      ],
+      [
+       "C. Long or Wide Roots",
+       "Some plants have very long roots to reach deep water. Others have wide roots near the surface."
+      ],
+      [
+       "D. Short Life Cycle",
+       "Ephemeral plants grow, flower and make seeds in a few weeks after a rare rain."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. SOILS",
+    "qa": [
+     {
+      "q": "There are very few plants in the desert. What does this mean for the amount of humus in the soil?",
+      "a": "Desert soils have very little humus, because few plants die and rot in them."
+     },
+     {
+      "q": "The strong sun makes water evaporate from the soil and leaves salt on the surface. What problem does this cause?",
+      "a": "The soil becomes salty, and most crops cannot grow in salty soil. This is called salinisation."
+     },
+     {
+      "q": "Along the Nile, in the middle of the desert, farmers grow rich crops. What does this show about desert soils?",
+      "a": "It shows that some desert soils can be fertile when they receive water. The Nile also brings fertile mud, called alluvium."
+     }
+    ],
+    "sum": {
+     "title": "II. Soils",
+     "intro": "The soils of hot deserts have the following characteristics:",
+     "items": [
+      [
+       "A. Sandy or Stony",
+       "Desert soils are thin, sandy or stony, and they hold little water."
+      ],
+      [
+       "B. Little Humus",
+       "They contain little humus, because there are few plants."
+      ],
+      [
+       "C. Salty Soils",
+       "Evaporation leaves salt on the surface, so some soils are salty."
+      ],
+      [
+       "D. Fertile with Water",
+       "Some desert soils become fertile when they are irrigated, as along the Nile."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is a xerophyte? Give one example.",
+    "A xerophyte is a plant adapted to live with very little water, like the cactus."
+   ],
+   [
+    "Give two ways in which desert plants reduce water loss.",
+    "They have small, waxy leaves or spines instead of leaves."
+   ],
+   [
+    "Why are desert soils often salty?",
+    "They are salty because evaporation leaves salt on the surface of the soil."
+   ]
+  ],
+  "remediation": [
+   [
+    "A plant adapted to very little water is a ______.",
+    "The cactus stores water in its ______.",
+    "Plants that grow and flower quickly after rain are called ______."
+   ],
+   [
+    "Desert soils contain little ______, because there are few plants.",
+    "When evaporation leaves salt in the soil, it is called ______.",
+    "Desert soils can be fertile when they are ______."
+   ]
+  ],
+  "remediationAnswers": "1. xerophyte 2. stem 3. ephemerals 4. humus 5. salinisation 6. irrigated",
+  "homework": "Imagine you must spend one week in the Sahara. Write down three problems you would face and one way to solve each.",
+  "homeworkTag": "This prepares Part 4: Problems Faced and Adaptations.",
+  "bilingual": [
+   [
+    "Cactus",
+    "Le cactus"
+   ],
+   [
+    "Thorn",
+    "L'épine"
+   ],
+   [
+    "Root",
+    "La racine"
+   ],
+   [
+    "Stem",
+    "La tige"
+   ],
+   [
+    "Leaf",
+    "La feuille"
+   ],
+   [
+    "Seed",
+    "La graine"
+   ],
+   [
+    "Salty soil",
+    "Le sol salé"
+   ],
+   [
+    "Date palm",
+    "Le palmier dattier"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Cacti are native to the Americas; in the Sahara, typical plants are acacias, tamarisks, grasses and date palms."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Class textbook: The major biomes of the world (hot deserts)."
+  ]
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "slide | \"I. WIND DEPOSITION\" | \"Question 1\" | [\"The wall, the stone and the bush are obstacles. What happens to the speed of the wind when it meets an obstacle?\"]",
+  "slide | \"I. WIND DEPOSITION\" | \"Answer\" | [\"The wind slows down behind the obstacle. When it slows down, it loses its energy and drops the sand it carries. This is called wind deposition.\"]",
+  "slide | \"I. WIND DEPOSITION\" | \"Question 2\" | [\"Apart from an obstacle, give another reason why the wind may drop the sand and dust it carries.\"]",
+  "slide | \"I. WIND DEPOSITION\" | \"Answer\" | [\"The wind also drops its load when its speed falls in calm weather, or when it meets damp ground or rain, which makes the dust stick and fall.\"] | \"Transition: In the desert, where there is a lot of sand, deposition builds dunes.\"",
+  "imageFull | \"II. DEPOSITIONAL FEATURES\" | \"Activity 2: Study the diagram\" | \"A sand dune seen from the side.\" | \"dune_profile.jpg\"",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Question 1\" | [\"Which slope of the dune faces the wind? Is it gentle or steep?\"]",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Answer\" | [\"The windward slope faces the wind. It is long and gentle. The other side, the leeward slope or slip face, is short and steep.\"]",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Question 2\" | [\"The wind pushes sand up the windward slope, and the sand falls down the slip face. What happens to the whole dune over time?\"]",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Answer\" | [\"The dune moves slowly forward in the direction of the wind. This is why dunes can cover roads, fields and villages.\"]",
+  "imageQ | \"II. DEPOSITIONAL FEATURES\" | \"Question 3\" | \"This dune is shaped like a crescent. In which direction do its horns point?\" | \"barchan_plan.png\" | \"Point to the wind arrows first, then to the horns.\"",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Answer\" | [\"The horns point downwind, in the direction the wind is blowing. This crescent-shaped dune is called a barchan.\"]",
+  "imageQ | \"II. DEPOSITIONAL FEATURES\" | \"Question 4\" | \"These dunes are long, narrow and parallel. From how many directions does the wind blow?\" | \"seif.png\"",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Answer\" | [\"The wind blows from two different directions. These long, narrow ridges of sand are called seif dunes.\"]",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Question 5\" | [\"The Harmattan carries very fine dust far from the Sahara. What do we call a thick layer of this fine dust deposited by the wind?\"]",
+  "slide | \"II. DEPOSITIONAL FEATURES\" | \"Answer\" | [\"A thick layer of fine wind-blown dust is called loess. The largest area of loess is the Loess Plateau in China.\"] | \"Transition: Now, copy the board summary.\"",
+  "sum | \"I. Wind Deposition (1/2)\" | \"DEFINITION\" | [\"Wind deposition is the dropping of sand and dust by the wind when it loses its energy.\"]",
+  "sum | \"I. Wind Deposition (2/2)\" | [\"The wind deposits its load for the following reasons:\",\"– The speed of the wind decreases.\",\"– The wind meets an obstacle, such as a rock, a bush or a wall.\",\"– The wind meets damp ground or rain.\"]",
+  "sum | \"II. Depositional Features of Wind Action (1/8)\" | [\"The main features formed by wind deposition are sand dunes and loess. The two main types of sand dunes are barchans and seif dunes.\"]",
+  "sum | \"II. Depositional Features of Wind Action (2/8)\" | \"A. Sand Dunes\" | [\"A sand dune is a hill or a ridge of sand piled up by the wind.\"]",
+  "sum | \"II. Depositional Features of Wind Action (3/8)\" | \"A. Sand Dunes\" | [\"The various characteristics of a sand dune are:\",\"– The windward slope faces the wind and is gentle.\",\"– The leeward slope, or slip face, is steep.\",\"– The dune moves slowly in the direction of the wind.\"]",
+  "sumImage | \"II. Depositional Features of Wind Action (4/8)\" | \"B. Barchans\" | \"A barchan is a crescent-shaped dune whose horns point downwind.\" | \"barchan_plan.png\"",
+  "sum | \"II. Depositional Features of Wind Action (5/8)\" | \"B. Barchans\" | [\"A barchan forms where the wind blows steadily from one direction and where there is not much sand.\"]",
+  "sumImage | \"II. Depositional Features of Wind Action (6/8)\" | \"C. Seif Dunes\" | \"A seif dune is a long, narrow ridge of sand, parallel to other seifs.\" | \"seif.png\"",
+  "sum | \"II. Depositional Features of Wind Action (7/8)\" | \"C. Seif Dunes\" | [\"Seif dunes form where the wind blows from two different directions. They can be many kilometres long.\"]",
+  "sum | \"II. Depositional Features of Wind Action (8/8)\" | \"D. Loess\" | [\"Loess is a thick layer of fine, yellowish dust deposited by the wind far from the desert. The largest area of loess is the Loess Plateau in China.\"]"
+ ],
+ "d": {
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 28",
+  "title": "Depositional Features of Wind Action",
+  "coverNote": "Good morning, class. In Lesson 27 we saw how the wind erodes. Today, in Lesson 28, we see what the wind builds when it drops its sand.",
+  "cls": "Form 4",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "duration": "50 minutes",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "lesson": "Lesson 28: Depositional Features of Wind Action",
+  "notions": "Barchans and seif dunes.",
+  "focus": "Depositional features of wind action; sand dunes (barchans and seif dunes).",
+  "competence": "Learners are able to explain why sand and dust pile up behind walls, stones and bushes, and to recognise barchan and seif dunes.",
+  "objectives": [
+   "Explain why the wind deposits the sand and dust it carries.",
+   "Describe the structure and movement of a sand dune.",
+   "Distinguish between barchan and seif dunes, and define loess."
+  ],
+  "recall": [
+   "Wind erodes the land by deflation, abrasion and attrition.",
+   "Wind erosion forms rock pedestals, zeugen, yardangs and inselbergs.",
+   "The sand and dust removed by the wind must be dropped somewhere."
+  ],
+  "recallNote": "Check the homework: where did learners find piles of sand in their compound?",
+  "situation": [
+   "After a windy Harmattan day, Aminatou sweeps her family compound in Garoua. She sees that the sand has piled up only in some places: at the foot of a wall, behind a big stone and around a bush.",
+   "In the open parts of the compound, there is almost no sand. Aminatou does not understand why the wind drops its sand in some places and not in others."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aminatou does not understand why the wind drops its sand in some places and not in others."
+   ],
+   [
+    "In which places did the sand pile up in Aminatou's compound?",
+    "The sand piled up at the foot of a wall, behind a big stone and around a bush."
+   ],
+   [
+    "What can Aminatou's family do to stop sand from piling up near the house?",
+    "They can plant a hedge or put up a fence some distance from the house, so that the wind drops its sand there."
+   ]
+  ],
+  "justification": "This lesson will help us to understand where and why the wind drops its sand, and to recognise the dunes it builds in the desert."
+ },
+ "end": {
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 28",
+  "title": "Depositional Features of Wind Action",
+  "coverNote": "Good morning, class. In Lesson 27 we saw how the wind erodes. Today, in Lesson 28, we see what the wind builds when it drops its sand.",
+  "cls": "Form 4",
+  "chapter": "Denudation Processes, Landforms and Impacts on Man — Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "duration": "50 minutes",
+  "topic": "Denudation Processes, Landforms and Impacts on Man",
+  "subtopic": "Hot Desert Landscapes: Wind Action and Human Adaptation",
+  "lesson": "Lesson 28: Depositional Features of Wind Action",
+  "notions": "Barchans and seif dunes.",
+  "focus": "Depositional features of wind action; sand dunes (barchans and seif dunes).",
+  "competence": "Learners are able to explain why sand and dust pile up behind walls, stones and bushes, and to recognise barchan and seif dunes.",
+  "objectives": [
+   "Explain why the wind deposits the sand and dust it carries.",
+   "Describe the structure and movement of a sand dune.",
+   "Distinguish between barchan and seif dunes, and define loess."
+  ],
+  "recall": [
+   "Wind erodes the land by deflation, abrasion and attrition.",
+   "Wind erosion forms rock pedestals, zeugen, yardangs and inselbergs.",
+   "The sand and dust removed by the wind must be dropped somewhere."
+  ],
+  "recallNote": "Check the homework: where did learners find piles of sand in their compound?",
+  "situation": [
+   "After a windy Harmattan day, Aminatou sweeps her family compound in Garoua. She sees that the sand has piled up only in some places: at the foot of a wall, behind a big stone and around a bush.",
+   "In the open parts of the compound, there is almost no sand. Aminatou does not understand why the wind drops its sand in some places and not in others."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Aminatou does not understand why the wind drops its sand in some places and not in others."
+   ],
+   [
+    "In which places did the sand pile up in Aminatou's compound?",
+    "The sand piled up at the foot of a wall, behind a big stone and around a bush."
+   ],
+   [
+    "What can Aminatou's family do to stop sand from piling up near the house?",
+    "They can plant a hedge or put up a fence some distance from the house, so that the wind drops its sand there."
+   ]
+  ],
+  "justification": "This lesson will help us to understand where and why the wind drops its sand, and to recognise the dunes it builds in the desert.",
+  "evaluation": [
+   [
+    "On which side of a dune do we find the slip face?",
+    "The slip face is on the leeward side, the side sheltered from the wind."
+   ],
+   [
+    "Give one difference between a barchan and a seif dune.",
+    "A barchan is crescent-shaped and forms with wind from one direction. A seif dune is a long, straight ridge and forms with winds from two directions."
+   ],
+   [
+    "Why can moving dunes be a danger for people living near the desert?",
+    "Moving dunes can bury roads, fields, wells and houses."
+   ]
+  ],
+  "remediation": [
+   [
+    "The dropping of sand by the wind is called wind ______.",
+    "The side of a dune that faces the wind is the ______ slope.",
+    "The steep side of a dune is called the slip ______."
+   ],
+   [
+    "A crescent-shaped dune is called a ______.",
+    "Long, parallel dunes formed by winds from two directions are called ______ dunes.",
+    "A thick layer of fine wind-blown dust is called ______."
+   ]
+  ],
+  "remediationAnswers": "1. deposition 2. windward 3. face 4. barchan 5. seif 6. loess",
+  "homework": "Ask an elder in your family how people in your area cope with the heat, the dust and the shortage of water during the dry season. Write down two ways.",
+  "homeworkTag": "This prepares Lesson 29: Man in the Hot Desert Environments.",
+  "bilingual": [
+   [
+    "Deposition",
+    "Le dépôt (l'accumulation)"
+   ],
+   [
+    "Sand dune",
+    "La dune de sable"
+   ],
+   [
+    "Barchan",
+    "La barkhane"
+   ],
+   [
+    "Seif dune",
+    "Le sif (dune longitudinale)"
+   ],
+   [
+    "Windward",
+    "Au vent"
+   ],
+   [
+    "Leeward",
+    "Sous le vent"
+   ],
+   [
+    "Slip face",
+    "La face d'avalanche"
+   ],
+   [
+    "Loess",
+    "Le lœss"
+   ]
+  ],
+  "matter": "I. Wind deposition (definition and causes); II. Depositional features: sand dunes (structure and movement), barchans, seif dunes, loess.",
+  "teacherNote": [
+   "If possible, bring a tray of dry sand and a small stone, and blow gently across it to show how sand collects behind an obstacle.",
+   "Remind learners that the horns of a barchan always point downwind: this is a frequent exam mistake.",
+   "The Harmattan dust in Garoua comes largely from the Sahara, especially the Bodélé Depression in Chad."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Denudation processes, landforms and impacts on man — Lesson 28.",
+   "Teacher's lesson notes, Lesson 28 (f4.docx).",
+   "Dune diagrams: teacher's images (dune profile, seif) and a barchan diagram redrawn with the horns pointing downwind."
+  ]
+ },
+ "file": "FORM4_LESSON28_Depositional_Features_Wind"
+}

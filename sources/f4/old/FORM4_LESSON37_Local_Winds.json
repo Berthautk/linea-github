@@ -1,0 +1,400 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | [\"The main types of local winds are land and sea breezes, mountain and valley breezes, and the monsoon:\"]",
+  "sumImage | \"x\" | \"A. Sea Breeze (Day)\" | \"During the day, the land heats up faster than the sea. Cool air blows from the sea (high pressure) to the land (low pressure).\" | \"local_winds.png\"",
+  "sum | \"x\" | \"B. Land Breeze (Night)\" | [\"At night, the land cools faster than the sea. Cool air blows from the land (high pressure) to the sea (low pressure).\"]",
+  "sum | \"x\" | \"C. Valley Breeze (Day)\" | [\"During the day, the slopes heat up and warm air rises from the valley up the slopes.\"]",
+  "sum | \"x\" | \"D. Mountain Breeze (Night)\" | [\"At night, the slopes cool quickly and cold, heavy air sinks down into the valley.\"]",
+  "sum | \"x\" | \"E. The Monsoon\" | [\"The monsoon is a seasonal wind that blows from the sea in the wet season and from the land in the dry season.\"]",
+  "sum | \"II. Types of Local Winds (1/6)\" | [\"The main types of local winds are land and sea breezes, mountain and valley breezes, and the monsoon:\"]",
+  "sumImage | \"II. Types of Local Winds (2/6)\" | \"A. Sea Breeze (Day)\" | \"During the day, the land heats up faster than the sea. Cool air blows from the sea (high pressure) to the land (low pressure).\" | \"local_winds.png\"",
+  "sum | \"II. Types of Local Winds (3/6)\" | \"B. Land Breeze (Night)\" | [\"At night, the land cools faster than the sea. Cool air blows from the land (high pressure) to the sea (low pressure).\"]",
+  "sum | \"II. Types of Local Winds (4/6)\" | \"C. Valley Breeze (Day)\" | [\"During the day, the slopes heat up and warm air rises from the valley up the slopes.\"]",
+  "sum | \"II. Types of Local Winds (5/6)\" | \"D. Mountain Breeze (Night)\" | [\"At night, the slopes cool quickly and cold, heavy air sinks down into the valley.\"]",
+  "sum | \"II. Types of Local Winds (6/6)\" | \"E. The Monsoon\" | [\"The monsoon is a seasonal wind that blows from the sea in the wet season and from the land in the dry season.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON37_Local_Winds",
+  "lessonNo": 37,
+  "lessonName": "Local Winds",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Pressure and Winds",
+  "notions": "Land and sea breezes, monsoon, mountain and valley winds.",
+  "focus": "Definition of local winds; types of local winds.",
+  "competence": "Learners are able to explain the daily change of winds at the coast and in the mountains, and to use this knowledge for fishing, farming or building.",
+  "objectives": [
+   "Define a local wind.",
+   "Explain land and sea breezes.",
+   "Explain mountain and valley breezes.",
+   "Explain the monsoon."
+  ],
+  "recall": [
+   "Pressure belts are zones of high or low pressure around the Earth.",
+   "Planetary winds blow from high to low pressure, like the Trade Winds.",
+   "The rotation of the Earth deflects winds (Ferrel's law)."
+  ],
+  "recallNote": "Check the homework: day and night winds at the coast or in the mountains.",
+  "situation": [
+   "In Kribi, fishermen leave the beach very early in the morning, before sunrise, and come back in the afternoon. They say that the wind pushes their canoes out to sea at dawn and brings them back to the beach in the afternoon.",
+   "Their son Jean wonders why the wind changes direction between night and day."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Jean does not understand why the wind at Kribi changes direction between night and day."
+   ],
+   [
+    "In which direction does the wind blow at dawn, and in the afternoon?",
+    "At dawn, the wind blows from the land to the sea. In the afternoon, it blows from the sea to the land."
+   ],
+   [
+    "How do the fishermen use this change of wind?",
+    "They leave early with the land breeze and come back in the afternoon with the sea breeze, which saves effort."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the small winds that change between day and night at the coast and in the mountains.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Some winds blow only over a small area and change direction between day and night. What are they called, and what causes them?",
+      "a": "They are called local winds. They are caused by the unequal heating and cooling of land and sea, or of slopes and valleys."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "A local wind is a wind that blows over a small area and is caused by local differences in temperature and pressure."
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES",
+    "qa": [
+     {
+      "img": "local_winds.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. During the day, which heats up faster: the land or the sea? What wind blows?",
+      "a": "The land heats up faster. Air rises over the land (low pressure), and cool air from the sea (high pressure) blows in: this is the sea breeze.",
+      "split": 5.4
+     },
+     {
+      "img": "local_winds.png",
+      "title": "Question 2",
+      "q": "At night, the land cools faster than the sea. Which wind blows?",
+      "a": "The land becomes cooler (high pressure) than the sea (low pressure), so the wind blows from the land to the sea: this is the land breeze.",
+      "split": 5.4
+     },
+     {
+      "img": "local_winds.png",
+      "title": "Question 3",
+      "q": "In the Mandara Mountains, near Mokolo, which wind blows down the slopes at night, and which blows up the slopes during the day?",
+      "a": "At night, cold heavy air sinks down the slopes: the mountain breeze. During the day, warm air rises up the slopes: the valley breeze.",
+      "split": 5.4
+     },
+     {
+      "q": "The land breeze and the sea breeze change every day. Which wind changes direction with the seasons?",
+      "a": "The monsoon. It blows from the sea in the wet season and from the land in the dry season, as in West Africa and India."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Local Winds",
+     "intro": "The main types of local winds are land and sea breezes, mountain and valley breezes, and the monsoon:",
+     "items": [
+      [
+       "A. Sea Breeze (Day)",
+       "During the day, the land heats up faster than the sea. Cool air blows from the sea (high pressure) to the land (low pressure).",
+       "local_winds.png"
+      ],
+      [
+       "B. Land Breeze (Night)",
+       "At night, the land cools faster than the sea. Cool air blows from the land (high pressure) to the sea (low pressure)."
+      ],
+      [
+       "C. Valley Breeze (Day)",
+       "During the day, the slopes heat up and warm air rises from the valley up the slopes."
+      ],
+      [
+       "D. Mountain Breeze (Night)",
+       "At night, the slopes cool quickly and cold, heavy air sinks down into the valley."
+      ],
+      [
+       "E. The Monsoon",
+       "The monsoon is a seasonal wind that blows from the sea in the wet season and from the land in the dry season."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why does a sea breeze blow during the day?",
+    "The land heats up faster than the sea, so warm air rises over the land and cool air from the sea blows in."
+   ],
+   [
+    "Give one difference between a valley breeze and a mountain breeze.",
+    "A valley breeze blows up the slopes during the day, while a mountain breeze blows down the slopes at night."
+   ],
+   [
+    "What is the difference between a land breeze and the monsoon?",
+    "A land breeze changes every day and night, while the monsoon changes with the seasons."
+   ]
+  ],
+  "remediation": [
+   [
+    "A wind that blows over a small area is a ______ wind.",
+    "During the day, the ______ heats up faster than the sea.",
+    "The wind that blows from the sea during the day is the ______ breeze."
+   ],
+   [
+    "The wind that blows from the land at night is the ______ breeze.",
+    "Cold air sinking down the slopes at night is the ______ breeze.",
+    "A wind that changes direction with the seasons is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. local 2. land 3. sea 4. land 5. mountain 6. monsoon",
+  "homework": "Compare the temperature of Garoua with that of Ngaoundéré (ask an adult who has travelled there). Write one sentence to say which town is cooler and one possible reason.",
+  "homeworkTag": "This prepares Lesson 38: Factors of Temperature.",
+  "bilingual": [
+   [
+    "Local wind",
+    "Le vent local"
+   ],
+   [
+    "Sea breeze",
+    "La brise de mer"
+   ],
+   [
+    "Land breeze",
+    "La brise de terre"
+   ],
+   [
+    "Valley breeze",
+    "La brise de vallée"
+   ],
+   [
+    "Mountain breeze",
+    "La brise de montagne"
+   ],
+   [
+    "Monsoon",
+    "La mousson"
+   ],
+   [
+    "Slope",
+    "La pente"
+   ],
+   [
+    "Coast",
+    "La côte"
+   ]
+  ],
+  "teacherNote": [
+   "Correction of the source notes: a mountain breeze from the Mandara Mountains cannot reach Garoua, which is about 150 km away. Mountain breezes only affect nearby valleys, such as around Mokolo or Rhumsiki.",
+   "The valley breeze is also called an anabatic wind, and the mountain breeze a katabatic wind."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 37",
+  "title": "Local Winds",
+  "sumTitle": "Local Winds",
+  "coverNote": "Good morning, class. Today we study Lesson 37: Local Winds.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 37: Local Winds",
+  "matter": "I. Definition: ; II. Types of Local Winds: Sea Breeze (Day), Land Breeze (Night), Valley Breeze (Day), Mountain Breeze (Night), The Monsoon."
+ },
+ "file": "FORM4_LESSON37_Local_Winds",
+ "sp": {
+  "file": "FORM4_LESSON37_Local_Winds",
+  "lessonNo": 37,
+  "lessonName": "Local Winds",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Pressure and Winds",
+  "notions": "Land and sea breezes, monsoon, mountain and valley winds.",
+  "focus": "Definition of local winds; types of local winds.",
+  "competence": "Learners are able to explain the daily change of winds at the coast and in the mountains, and to use this knowledge for fishing, farming or building.",
+  "objectives": [
+   "Define a local wind.",
+   "Explain land and sea breezes.",
+   "Explain mountain and valley breezes.",
+   "Explain the monsoon."
+  ],
+  "recall": [
+   "Pressure belts are zones of high or low pressure around the Earth.",
+   "Planetary winds blow from high to low pressure, like the Trade Winds.",
+   "The rotation of the Earth deflects winds (Ferrel's law)."
+  ],
+  "recallNote": "Check the homework: day and night winds at the coast or in the mountains.",
+  "situation": [
+   "In Kribi, fishermen leave the beach very early in the morning, before sunrise, and come back in the afternoon. They say that the wind pushes their canoes out to sea at dawn and brings them back to the beach in the afternoon.",
+   "Their son Jean wonders why the wind changes direction between night and day."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Jean does not understand why the wind at Kribi changes direction between night and day."
+   ],
+   [
+    "In which direction does the wind blow at dawn, and in the afternoon?",
+    "At dawn, the wind blows from the land to the sea. In the afternoon, it blows from the sea to the land."
+   ],
+   [
+    "How do the fishermen use this change of wind?",
+    "They leave early with the land breeze and come back in the afternoon with the sea breeze, which saves effort."
+   ]
+  ],
+  "justification": "This lesson will help us to understand the small winds that change between day and night at the coast and in the mountains.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "Some winds blow only over a small area and change direction between day and night. What are they called, and what causes them?",
+      "a": "They are called local winds. They are caused by the unequal heating and cooling of land and sea, or of slopes and valleys."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "A local wind is a wind that blows over a small area and is caused by local differences in temperature and pressure."
+     ]
+    }
+   },
+   {
+    "sec": "II. TYPES",
+    "qa": [
+     {
+      "img": "local_winds.png",
+      "kind": "diagram",
+      "q": "Look at the diagram. During the day, which heats up faster: the land or the sea? What wind blows?",
+      "a": "The land heats up faster. Air rises over the land (low pressure), and cool air from the sea (high pressure) blows in: this is the sea breeze.",
+      "split": 5.4
+     },
+     {
+      "img": "local_winds.png",
+      "title": "Question 2",
+      "q": "At night, the land cools faster than the sea. Which wind blows?",
+      "a": "The land becomes cooler (high pressure) than the sea (low pressure), so the wind blows from the land to the sea: this is the land breeze.",
+      "split": 5.4
+     },
+     {
+      "img": "local_winds.png",
+      "title": "Question 3",
+      "q": "In the Mandara Mountains, near Mokolo, which wind blows down the slopes at night, and which blows up the slopes during the day?",
+      "a": "At night, cold heavy air sinks down the slopes: the mountain breeze. During the day, warm air rises up the slopes: the valley breeze.",
+      "split": 5.4
+     },
+     {
+      "q": "The land breeze and the sea breeze change every day. Which wind changes direction with the seasons?",
+      "a": "The monsoon. It blows from the sea in the wet season and from the land in the dry season, as in West Africa and India."
+     }
+    ],
+    "sum": {
+     "title": "II. Types of Local Winds",
+     "intro": "The main types of local winds are land and sea breezes, mountain and valley breezes, and the monsoon:",
+     "items": [
+      [
+       "A. Sea Breeze (Day)",
+       "During the day, the land heats up faster than the sea. Cool air blows from the sea (high pressure) to the land (low pressure).",
+       "local_winds.png"
+      ],
+      [
+       "B. Land Breeze (Night)",
+       "At night, the land cools faster than the sea. Cool air blows from the land (high pressure) to the sea (low pressure)."
+      ],
+      [
+       "C. Valley Breeze (Day)",
+       "During the day, the slopes heat up and warm air rises from the valley up the slopes."
+      ],
+      [
+       "D. Mountain Breeze (Night)",
+       "At night, the slopes cool quickly and cold, heavy air sinks down into the valley."
+      ],
+      [
+       "E. The Monsoon",
+       "The monsoon is a seasonal wind that blows from the sea in the wet season and from the land in the dry season."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why does a sea breeze blow during the day?",
+    "The land heats up faster than the sea, so warm air rises over the land and cool air from the sea blows in."
+   ],
+   [
+    "Give one difference between a valley breeze and a mountain breeze.",
+    "A valley breeze blows up the slopes during the day, while a mountain breeze blows down the slopes at night."
+   ],
+   [
+    "What is the difference between a land breeze and the monsoon?",
+    "A land breeze changes every day and night, while the monsoon changes with the seasons."
+   ]
+  ],
+  "remediation": [
+   [
+    "A wind that blows over a small area is a ______ wind.",
+    "During the day, the ______ heats up faster than the sea.",
+    "The wind that blows from the sea during the day is the ______ breeze."
+   ],
+   [
+    "The wind that blows from the land at night is the ______ breeze.",
+    "Cold air sinking down the slopes at night is the ______ breeze.",
+    "A wind that changes direction with the seasons is the ______."
+   ]
+  ],
+  "remediationAnswers": "1. local 2. land 3. sea 4. land 5. mountain 6. monsoon",
+  "homework": "Compare the temperature of Garoua with that of Ngaoundéré (ask an adult who has travelled there). Write one sentence to say which town is cooler and one possible reason.",
+  "homeworkTag": "This prepares Lesson 38: Factors of Temperature.",
+  "bilingual": [
+   [
+    "Local wind",
+    "Le vent local"
+   ],
+   [
+    "Sea breeze",
+    "La brise de mer"
+   ],
+   [
+    "Land breeze",
+    "La brise de terre"
+   ],
+   [
+    "Valley breeze",
+    "La brise de vallée"
+   ],
+   [
+    "Mountain breeze",
+    "La brise de montagne"
+   ],
+   [
+    "Monsoon",
+    "La mousson"
+   ],
+   [
+    "Slope",
+    "La pente"
+   ],
+   [
+    "Coast",
+    "La côte"
+   ]
+  ],
+  "teacherNote": [
+   "Correction of the source notes: a mountain breeze from the Mandara Mountains cannot reach Garoua, which is about 150 km away. Mountain breezes only affect nearby valleys, such as around Mokolo or Rhumsiki.",
+   "The valley breeze is also called an anabatic wind, and the mountain breeze a katabatic wind."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

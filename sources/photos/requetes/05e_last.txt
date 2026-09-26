@@ -1,0 +1,14 @@
+tp6::child planting tree seedling
+tp7::planting seedlings hole trees Africa
+reg5::gravel plain Sahara desert
+reg6::stony desert Libya
+dam5::dam lake reservoir Africa aerial
+dam6::barrage lake Cameroon
+riv5::Niger river Mali sandbank boats
+riv6::wide river dry season sandbanks
+rf5::rainforest aerial view
+rf6::tropical forest canopy
+fire5::wildfire grassland Africa smoke
+fire6::grass fire burning field
+palmgarden::date palm plantation vegetables underneath
+palmgarden2::palmeraie Maroc cultures

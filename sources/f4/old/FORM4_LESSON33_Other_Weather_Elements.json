@@ -1,0 +1,422 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sum | \"x\" | \"A. Atmospheric Pressure\" | [\"Atmospheric pressure is the weight of the air pressing on the Earth. It is measured with a barometer, in millibars (mb), and shown with isobars.\"]",
+  "sum | \"x\" | \"B. Amount of Sunshine\" | [\"The amount of sunshine is the number of hours of bright sunshine in a day. It is measured with a sunshine recorder and shown with isohels.\"]",
+  "sum | \"III. Atmospheric Pressure and Sunshine (1/2)\" | \"A. Atmospheric Pressure\" | [\"Atmospheric pressure is the weight of the air pressing on the Earth. It is measured with a barometer, in millibars (mb), and shown with isobars.\"]",
+  "sum | \"III. Atmospheric Pressure and Sunshine (2/2)\" | \"B. Amount of Sunshine\" | [\"The amount of sunshine is the number of hours of bright sunshine in a day. It is measured with a sunshine recorder and shown with isohels.\"]"
+ ],
+ "end": {
+  "file": "FORM4_LESSON33_Other_Weather_Elements",
+  "lessonNo": 33,
+  "lessonName": "Weather Elements: Humidity, Wind, Pressure and Sunshine",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Measurement of Weather Elements",
+  "notions": "Humidity, wind direction, wind speed, atmospheric pressure, sunshine.",
+  "focus": "Atmospheric humidity; wind direction; wind speed; atmospheric pressure; amount of sunshine.",
+  "competence": "Learners are able to observe the humidity, wind and sky and predict simple changes in the weather around them.",
+  "objectives": [
+   "Define humidity and relative humidity, and name their instrument.",
+   "Describe how wind direction and wind speed are measured.",
+   "Define atmospheric pressure and sunshine and name their instruments."
+  ],
+  "recall": [
+   "Temperature is measured with a thermometer inside a Stevenson screen.",
+   "Mean daily temperature = (maximum + minimum) ÷ 2.",
+   "Temperature data is shown with isotherms."
+  ],
+  "recallNote": "Check the homework: drying time of a wet cloth.",
+  "situation": [
+   "In August, the washing of Hadja's family takes a whole day to dry, and the air feels heavy and sticky. In January, during the Harmattan, the same clothes dry in less than one hour.",
+   "Hadja wonders why the air makes clothes dry so differently in the two seasons."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hadja does not understand why clothes dry slowly in August and quickly in January."
+   ],
+   [
+    "How does the air feel in August?",
+    "In August, the air feels heavy and sticky."
+   ],
+   [
+    "What can Hadja do to dry clothes faster in the rainy season?",
+    "She can hang them in a sunny, windy place and spread them well so that air flows between them."
+   ]
+  ],
+  "justification": "This lesson will help us to understand and measure humidity, wind, pressure and sunshine.",
+  "parts": [
+   {
+    "sec": "I. HUMIDITY",
+    "qa": [
+     {
+      "q": "The heavy, sticky air of August contains a lot of water vapour. What do we call the amount of water vapour in the air?",
+      "a": "It is called humidity. Relative humidity compares the water vapour in the air with the maximum it can hold, in percent."
+     },
+     {
+      "img": "weather_instruments.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "Which instrument measures humidity? How does the wet-bulb thermometer work?",
+      "a": "The hygrometer measures humidity. Water evaporates from the wet bulb and cools it; the drier the air, the bigger the difference between the wet and dry bulbs.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "I. Atmospheric Humidity",
+     "defs": [
+      "Humidity is the amount of water vapour in the air. Relative humidity is the amount of water vapour in the air compared with the maximum the air can hold, in percent."
+     ],
+     "items": [
+      [
+       "Measurement",
+       "Humidity is measured with a hygrometer, made of a wet-bulb and a dry-bulb thermometer. It is given in percent (%) and shown with isohumes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. WIND",
+    "qa": [
+     {
+      "q": "The Harmattan blows from the north-east. How do we name a wind?",
+      "a": "A wind is named after the direction from which it blows. The Harmattan is a north-easterly wind."
+     },
+     {
+      "q": "Which instruments measure wind direction and wind speed?",
+      "a": "The wind vane shows the direction of the wind. The anemometer measures its speed in km/h or knots."
+     }
+    ],
+    "sum": {
+     "title": "II. Wind Direction and Wind Speed",
+     "defs": [
+      "Wind is air moving horizontally from an area of high pressure to an area of low pressure."
+     ],
+     "items": [
+      [
+       "A. Wind Direction",
+       "Wind direction is the direction from which the wind blows. It is shown by a wind vane, for example the north-easterly Harmattan."
+      ],
+      [
+       "B. Wind Speed",
+       "Wind speed is how fast the air moves. It is measured with an anemometer, in km/h or knots, and estimated with the Beaufort scale."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. PRESSURE AND SUNSHINE",
+    "qa": [
+     {
+      "q": "The air has weight and presses on the Earth. What is this called, and which instrument measures it?",
+      "a": "It is called atmospheric pressure. It is measured with a barometer, in millibars. Average pressure at sea level is about 1,013 mb."
+     },
+     {
+      "q": "When the barometer reading falls quickly, what weather can we expect?",
+      "a": "A quick fall in pressure often announces clouds, wind and rain. High pressure usually brings calm, clear weather."
+     },
+     {
+      "q": "How is the number of hours of sunshine in a day measured?",
+      "a": "It is measured with a sunshine recorder: a glass ball focuses the sun's rays and burns a line on a card."
+     }
+    ],
+    "sum": {
+     "title": "III. Atmospheric Pressure and Sunshine",
+     "items": [
+      [
+       "A. Atmospheric Pressure",
+       "Atmospheric pressure is the weight of the air pressing on the Earth. It is measured with a barometer, in millibars (mb), and shown with isobars."
+      ],
+      [
+       "B. Amount of Sunshine",
+       "The amount of sunshine is the number of hours of bright sunshine in a day. It is measured with a sunshine recorder and shown with isohels."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do clothes dry quickly during the Harmattan?",
+    "They dry quickly because the air is very dry (low humidity) and the wind is strong."
+   ],
+   [
+    "A wind blows from the south-west to the north-east. What is its name?",
+    "It is a south-westerly wind, because a wind is named after the direction from which it blows."
+   ],
+   [
+    "What does a quick fall in atmospheric pressure usually announce?",
+    "It usually announces clouds, wind and rain."
+   ]
+  ],
+  "remediation": [
+   [
+    "The amount of water vapour in the air is ______.",
+    "Humidity is measured with a ______.",
+    "The instrument that shows wind direction is the ______."
+   ],
+   [
+    "Wind speed is measured with an ______.",
+    "Pressure is measured with a ______, in millibars.",
+    "A line joining places of equal pressure is an ______."
+   ]
+  ],
+  "remediationAnswers": "1. humidity 2. hygrometer 3. wind vane 4. anemometer 5. barometer 6. isobar",
+  "homework": "Early tomorrow morning, look at the grass, leaves or cars near your house. Write down whether you see drops of water on them, and where you think the water came from.",
+  "homeworkTag": "This prepares Lesson 34: Condensation.",
+  "bilingual": [
+   [
+    "Humidity",
+    "L'humidité"
+   ],
+   [
+    "Hygrometer",
+    "L'hygromètre"
+   ],
+   [
+    "Wind direction",
+    "La direction du vent"
+   ],
+   [
+    "Wind speed",
+    "La vitesse du vent"
+   ],
+   [
+    "Pressure",
+    "La pression"
+   ],
+   [
+    "Barometer",
+    "Le baromètre"
+   ],
+   [
+    "Sunshine",
+    "L'ensoleillement"
+   ],
+   [
+    "Isobar",
+    "L'isobare"
+   ]
+  ],
+  "teacherNote": [
+   "The wet-and-dry bulb hygrometer is kept in the Stevenson screen; relative humidity is read from tables using the two temperatures.",
+   "The sunshine recorder in textbooks is the Campbell–Stokes recorder."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 33",
+  "title": "Weather Elements: Humidity, Wind, Pressure and Sunshine",
+  "sumTitle": "Weather Elements: Humidity, Wind, Pressure and Sunshine",
+  "coverNote": "Good morning, class. Today we study Lesson 33: Weather Elements: Humidity, Wind, Pressure and Sunshine.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 33: Weather Elements: Humidity, Wind, Pressure and Sunshine",
+  "matter": "I. Atmospheric Humidity: Measurement; II. Wind Direction and Wind Speed: Wind Direction, Wind Speed; III. Atmospheric Pressure and Sunshine: Atmospheric Pressure, Amount of Sunshine."
+ },
+ "file": "FORM4_LESSON33_Other_Weather_Elements",
+ "sp": {
+  "file": "FORM4_LESSON33_Other_Weather_Elements",
+  "lessonNo": 33,
+  "lessonName": "Weather Elements: Humidity, Wind, Pressure and Sunshine",
+  "chapter": "Module 3: Weather and Climate — Adaptation to Climatic Excesses",
+  "topic": "The Earth-Atmosphere System",
+  "subtopic": "Measurement of Weather Elements",
+  "notions": "Humidity, wind direction, wind speed, atmospheric pressure, sunshine.",
+  "focus": "Atmospheric humidity; wind direction; wind speed; atmospheric pressure; amount of sunshine.",
+  "competence": "Learners are able to observe the humidity, wind and sky and predict simple changes in the weather around them.",
+  "objectives": [
+   "Define humidity and relative humidity, and name their instrument.",
+   "Describe how wind direction and wind speed are measured.",
+   "Define atmospheric pressure and sunshine and name their instruments."
+  ],
+  "recall": [
+   "Temperature is measured with a thermometer inside a Stevenson screen.",
+   "Mean daily temperature = (maximum + minimum) ÷ 2.",
+   "Temperature data is shown with isotherms."
+  ],
+  "recallNote": "Check the homework: drying time of a wet cloth.",
+  "situation": [
+   "In August, the washing of Hadja's family takes a whole day to dry, and the air feels heavy and sticky. In January, during the Harmattan, the same clothes dry in less than one hour.",
+   "Hadja wonders why the air makes clothes dry so differently in the two seasons."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Hadja does not understand why clothes dry slowly in August and quickly in January."
+   ],
+   [
+    "How does the air feel in August?",
+    "In August, the air feels heavy and sticky."
+   ],
+   [
+    "What can Hadja do to dry clothes faster in the rainy season?",
+    "She can hang them in a sunny, windy place and spread them well so that air flows between them."
+   ]
+  ],
+  "justification": "This lesson will help us to understand and measure humidity, wind, pressure and sunshine.",
+  "parts": [
+   {
+    "sec": "I. HUMIDITY",
+    "qa": [
+     {
+      "q": "The heavy, sticky air of August contains a lot of water vapour. What do we call the amount of water vapour in the air?",
+      "a": "It is called humidity. Relative humidity compares the water vapour in the air with the maximum it can hold, in percent."
+     },
+     {
+      "img": "weather_instruments.png",
+      "kind": "diagram",
+      "title": "Question 2",
+      "q": "Which instrument measures humidity? How does the wet-bulb thermometer work?",
+      "a": "The hygrometer measures humidity. Water evaporates from the wet bulb and cools it; the drier the air, the bigger the difference between the wet and dry bulbs.",
+      "split": 5
+     }
+    ],
+    "sum": {
+     "title": "I. Atmospheric Humidity",
+     "defs": [
+      "Humidity is the amount of water vapour in the air. Relative humidity is the amount of water vapour in the air compared with the maximum the air can hold, in percent."
+     ],
+     "items": [
+      [
+       "Measurement",
+       "Humidity is measured with a hygrometer, made of a wet-bulb and a dry-bulb thermometer. It is given in percent (%) and shown with isohumes."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. WIND",
+    "qa": [
+     {
+      "q": "The Harmattan blows from the north-east. How do we name a wind?",
+      "a": "A wind is named after the direction from which it blows. The Harmattan is a north-easterly wind."
+     },
+     {
+      "q": "Which instruments measure wind direction and wind speed?",
+      "a": "The wind vane shows the direction of the wind. The anemometer measures its speed in km/h or knots."
+     }
+    ],
+    "sum": {
+     "title": "II. Wind Direction and Wind Speed",
+     "defs": [
+      "Wind is air moving horizontally from an area of high pressure to an area of low pressure."
+     ],
+     "items": [
+      [
+       "A. Wind Direction",
+       "Wind direction is the direction from which the wind blows. It is shown by a wind vane, for example the north-easterly Harmattan."
+      ],
+      [
+       "B. Wind Speed",
+       "Wind speed is how fast the air moves. It is measured with an anemometer, in km/h or knots, and estimated with the Beaufort scale."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. PRESSURE AND SUNSHINE",
+    "qa": [
+     {
+      "q": "The air has weight and presses on the Earth. What is this called, and which instrument measures it?",
+      "a": "It is called atmospheric pressure. It is measured with a barometer, in millibars. Average pressure at sea level is about 1,013 mb."
+     },
+     {
+      "q": "When the barometer reading falls quickly, what weather can we expect?",
+      "a": "A quick fall in pressure often announces clouds, wind and rain. High pressure usually brings calm, clear weather."
+     },
+     {
+      "q": "How is the number of hours of sunshine in a day measured?",
+      "a": "It is measured with a sunshine recorder: a glass ball focuses the sun's rays and burns a line on a card."
+     }
+    ],
+    "sum": {
+     "title": "III. Atmospheric Pressure and Sunshine",
+     "items": [
+      [
+       "A. Atmospheric Pressure",
+       "Atmospheric pressure is the weight of the air pressing on the Earth. It is measured with a barometer, in millibars (mb), and shown with isobars."
+      ],
+      [
+       "B. Amount of Sunshine",
+       "The amount of sunshine is the number of hours of bright sunshine in a day. It is measured with a sunshine recorder and shown with isohels."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why do clothes dry quickly during the Harmattan?",
+    "They dry quickly because the air is very dry (low humidity) and the wind is strong."
+   ],
+   [
+    "A wind blows from the south-west to the north-east. What is its name?",
+    "It is a south-westerly wind, because a wind is named after the direction from which it blows."
+   ],
+   [
+    "What does a quick fall in atmospheric pressure usually announce?",
+    "It usually announces clouds, wind and rain."
+   ]
+  ],
+  "remediation": [
+   [
+    "The amount of water vapour in the air is ______.",
+    "Humidity is measured with a ______.",
+    "The instrument that shows wind direction is the ______."
+   ],
+   [
+    "Wind speed is measured with an ______.",
+    "Pressure is measured with a ______, in millibars.",
+    "A line joining places of equal pressure is an ______."
+   ]
+  ],
+  "remediationAnswers": "1. humidity 2. hygrometer 3. wind vane 4. anemometer 5. barometer 6. isobar",
+  "homework": "Early tomorrow morning, look at the grass, leaves or cars near your house. Write down whether you see drops of water on them, and where you think the water came from.",
+  "homeworkTag": "This prepares Lesson 34: Condensation.",
+  "bilingual": [
+   [
+    "Humidity",
+    "L'humidité"
+   ],
+   [
+    "Hygrometer",
+    "L'hygromètre"
+   ],
+   [
+    "Wind direction",
+    "La direction du vent"
+   ],
+   [
+    "Wind speed",
+    "La vitesse du vent"
+   ],
+   [
+    "Pressure",
+    "La pression"
+   ],
+   [
+    "Barometer",
+    "Le baromètre"
+   ],
+   [
+    "Sunshine",
+    "L'ensoleillement"
+   ],
+   [
+    "Isobar",
+    "L'isobare"
+   ]
+  ],
+  "teacherNote": [
+   "The wet-and-dry bulb hygrometer is kept in the Stevenson screen; relative humidity is read from tables using the two temperatures.",
+   "The sunshine recorder in textbooks is the Campbell–Stokes recorder."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — Module 3: Weather and Climate.",
+   "Teacher's lesson notes (f4.docx), checked and corrected where necessary."
+  ]
+ }
+}

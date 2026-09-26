@@ -1,0 +1,684 @@
+{
+ "header": "!ECO. GEOGRAPHY — FORM 2 TECH",
+ "text": [
+  "imageQ | \"I. VEGETATION\" | \"Question 1\" | \"Look at the map. Which vegetation covers the Congo Basin, and which covers most of Africa?\" | \"africa_vegetation.png\"",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"The equatorial rainforest covers the Congo Basin. The savanna covers most of Africa.\"]",
+  "imageQ | \"I. VEGETATION\" | \"Question 2\" | \"Why does the vegetation change from forest to savanna and then to desert as we move away from the Equator?\" | \"africa_vegetation.png\"",
+  "slide | \"I. VEGETATION\" | \"Answer\" | [\"The vegetation follows the rainfall. Rainfall decreases away from the Equator, so trees become fewer and shorter.\"]",
+  "imageQ | \"II. DRAINAGE\" | \"Question 1\" | \"Look at the map. Name the four largest rivers of Africa and the sea or ocean into which each flows.\" | \"africa_drainage.png\"",
+  "slide | \"II. DRAINAGE\" | \"Answer\" | [\"The Nile flows into the Mediterranean Sea, the Congo and the Niger into the Atlantic Ocean, and the Zambezi into the Indian Ocean.\"]",
+  "slide | \"II. DRAINAGE\" | \"Question 2\" | [\"The River Benue, which flows through Garoua, is a tributary of which big river?\"]",
+  "slide | \"II. DRAINAGE\" | \"Answer\" | [\"The Benue is the main tributary of the River Niger. It joins the Niger at Lokoja in Nigeria.\"]",
+  "slide | \"II. DRAINAGE\" | \"Question 3\" | [\"Lake Chad has no outlet to the sea: rivers flow into it, but no river flows out. What do we call this type of drainage?\"]",
+  "slide | \"II. DRAINAGE\" | \"Answer\" | [\"This is called inland drainage. The Chari and Logone rivers flow into Lake Chad.\"]",
+  "slide | \"II. DRAINAGE\" | \"Question 4\" | [\"Give two ways in which people use African rivers and lakes.\"]",
+  "slide | \"II. DRAINAGE\" | \"Answer\" | [\"People use them for fishing, irrigation, transport and hydro-electricity, as at the Lagdo dam on the Benue and the Kariba dam on the Zambezi.\"]",
+  "sum | \"I. Vegetation (1/5)\" | [\"The vegetation of Africa follows its climate. The main vegetation zones are the following:\"]",
+  "sumImage | \"I. Vegetation (2/5)\" | \"A. Equatorial Rainforest\" | \"A thick evergreen forest covers the Congo Basin, southern Cameroon and the Guinea coast.\" | \"africa_vegetation.png\"",
+  "sum | \"I. Vegetation (3/5)\" | \"B. Savanna\" | [\"Tall grasses with scattered trees cover most of Africa, north and south of the forest.\"]",
+  "sum | \"I. Vegetation (4/5)\" | \"C. Semi-Desert and Desert\" | [\"Thorny bushes and short grass grow in the Sahel. Deserts have almost no vegetation.\"]",
+  "sum | \"I. Vegetation (5/5)\" | \"D. Mediterranean and Mountain Vegetation\" | [\"Evergreen shrubs and trees grow in the far north and far south. Highlands have mountain forests and grasslands.\"]",
+  "sum | \"II. Drainage (1/7)\" | \"DEFINITION\" | [\"Drainage is the system of rivers and lakes that carry water from the land to the sea or to inland lakes.\"]",
+  "sum | \"II. Drainage (2/7)\" | [\"The main rivers and lakes of Africa are the following:\"]",
+  "sumImage | \"II. Drainage (3/7)\" | \"A. The Nile\" | \"The Nile is the longest river in Africa (about 6,650 km). It flows north into the Mediterranean Sea.\" | \"africa_drainage.png\"",
+  "sum | \"II. Drainage (4/7)\" | \"B. The Congo\" | [\"The Congo carries the most water of all African rivers. It flows into the Atlantic Ocean.\"]",
+  "sum | \"II. Drainage (5/7)\" | \"C. The Niger and the Zambezi\" | [\"The Niger, with its tributary the Benue, flows into the Atlantic. The Zambezi forms the Victoria Falls and flows into the Indian Ocean.\"]",
+  "sum | \"II. Drainage (6/7)\" | \"D. Lakes\" | [\"Lake Victoria is the largest lake in Africa. Lake Tanganyika is the deepest. Lake Chad has inland drainage and is shrinking.\"]",
+  "sum | \"II. Drainage (7/7)\" | \"E. Importance\" | [\"Rivers and lakes are used for fishing, irrigation, transport and hydro-electricity, as at Lagdo and Kariba.\"]"
+ ],
+ "d": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Economic Geography — Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S22_L6_P3_Africa_Vegetation_Drainage",
+  "part": 3,
+  "partTitle": "Vegetation and Drainage of Africa",
+  "notions": "Vegetation zone, drainage, river basin, mouth, delta, waterfall, inland drainage.",
+  "focus": "Vegetation and drainage of Africa.",
+  "competence": "Learners are able to name the main vegetation zones, rivers and lakes of Africa and explain how people use rivers and lakes.",
+  "objectives": [
+   "Describe the main vegetation zones of Africa.",
+   "Name the main rivers and lakes of Africa and locate them.",
+   "Explain the importance of African rivers and lakes."
+  ],
+  "recall": [
+   "The climatic zones of Africa are repeated north and south of the Equator.",
+   "Africa has plateaux, basins, mountains and the Great Rift Valley.",
+   "Its soils include ferrallitic, ferruginous, desert, volcanic and alluvial soils."
+  ],
+  "recallNote": "Check the homework: three big rivers and their mouths.",
+  "situation": [
+   "Lake Chad, north of Cameroon, has become much smaller than it was sixty years ago. Fishermen and farmers who lived near it have lost their work.",
+   "Mariam wonders why this lake is shrinking while the big rivers of Africa, like the Congo, still carry so much water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Lake Chad has become much smaller, and many fishermen and farmers have lost their work."
+   ],
+   [
+    "Who has been affected by the shrinking of Lake Chad?",
+    "The fishermen and farmers who lived near the lake have been affected."
+   ],
+   [
+    "What can be done to save Lake Chad?",
+    "People can use its water carefully, plant trees against desertification, and countries can work together to protect it."
+   ]
+  ],
+  "justification": "This lesson will help us to know the vegetation, rivers and lakes of Africa and their importance for people.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "img": "africa_vegetation.png",
+      "kind": "map",
+      "q": "Look at the map. Which vegetation covers the Congo Basin, and which covers most of Africa?",
+      "a": "The equatorial rainforest covers the Congo Basin. The savanna covers most of Africa.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_vegetation.png",
+      "title": "Question 2",
+      "q": "Why does the vegetation change from forest to savanna and then to desert as we move away from the Equator?",
+      "a": "The vegetation follows the rainfall. Rainfall decreases away from the Equator, so trees become fewer and shorter.",
+      "split": 5.6
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "intro": "The vegetation of Africa follows its climate. The main vegetation zones are the following:",
+     "items": [
+      [
+       "A. Equatorial Rainforest",
+       "A thick evergreen forest covers the Congo Basin, southern Cameroon and the Guinea coast.",
+       "africa_vegetation.png"
+      ],
+      [
+       "B. Savanna",
+       "Tall grasses with scattered trees cover most of Africa, north and south of the forest."
+      ],
+      [
+       "C. Semi-Desert and Desert",
+       "Thorny bushes and short grass grow in the Sahel. Deserts have almost no vegetation."
+      ],
+      [
+       "D. Mediterranean and Mountain Vegetation",
+       "Evergreen shrubs and trees grow in the far north and far south. Highlands have mountain forests and grasslands."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. DRAINAGE",
+    "qa": [
+     {
+      "img": "africa_drainage.png",
+      "kind": "map",
+      "q": "Look at the map. Name the four largest rivers of Africa and the sea or ocean into which each flows.",
+      "a": "The Nile flows into the Mediterranean Sea, the Congo and the Niger into the Atlantic Ocean, and the Zambezi into the Indian Ocean.",
+      "split": 5.6
+     },
+     {
+      "q": "The River Benue, which flows through Garoua, is a tributary of which big river?",
+      "a": "The Benue is the main tributary of the River Niger. It joins the Niger at Lokoja in Nigeria."
+     },
+     {
+      "q": "Lake Chad has no outlet to the sea: rivers flow into it, but no river flows out. What do we call this type of drainage?",
+      "a": "This is called inland drainage. The Chari and Logone rivers flow into Lake Chad."
+     },
+     {
+      "q": "Give two ways in which people use African rivers and lakes.",
+      "a": "People use them for fishing, irrigation, transport and hydro-electricity, as at the Lagdo dam on the Benue and the Kariba dam on the Zambezi."
+     }
+    ],
+    "sum": {
+     "title": "II. Drainage",
+     "defs": [
+      "Drainage is the system of rivers and lakes that carry water from the land to the sea or to inland lakes."
+     ],
+     "intro": "The main rivers and lakes of Africa are the following:",
+     "items": [
+      [
+       "A. The Nile",
+       "The Nile is the longest river in Africa (about 6,650 km). It flows north into the Mediterranean Sea.",
+       "africa_drainage.png"
+      ],
+      [
+       "B. The Congo",
+       "The Congo carries the most water of all African rivers. It flows into the Atlantic Ocean."
+      ],
+      [
+       "C. The Niger and the Zambezi",
+       "The Niger, with its tributary the Benue, flows into the Atlantic. The Zambezi forms the Victoria Falls and flows into the Indian Ocean."
+      ],
+      [
+       "D. Lakes",
+       "Lake Victoria is the largest lake in Africa. Lake Tanganyika is the deepest. Lake Chad has inland drainage and is shrinking."
+      ],
+      [
+       "E. Importance",
+       "Rivers and lakes are used for fishing, irrigation, transport and hydro-electricity, as at Lagdo and Kariba."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why does the vegetation of Africa change from the Equator to the tropics?",
+    "It changes because rainfall decreases from the Equator towards the tropics."
+   ],
+   [
+    "Into which sea does the Nile flow, and into which ocean does the Zambezi flow?",
+    "The Nile flows into the Mediterranean Sea, and the Zambezi flows into the Indian Ocean."
+   ],
+   [
+    "What is inland drainage? Give one example.",
+    "Inland drainage is when rivers flow into a lake that has no outlet to the sea, like Lake Chad."
+   ]
+  ],
+  "remediation": [
+   [
+    "The vegetation of the Congo Basin is the equatorial ______.",
+    "The vegetation that covers most of Africa is the ______.",
+    "The longest river of Africa is the ______."
+   ],
+   [
+    "The River Benue is a tributary of the River ______.",
+    "The largest lake of Africa is Lake ______.",
+    "The waterfalls on the Zambezi are the ______ Falls."
+   ]
+  ],
+  "remediationAnswers": "1. rainforest 2. savanna 3. Nile 4. Niger 5. Victoria 6. Victoria",
+  "homework": "Revise Lesson 6 on Africa. Draw a simple map of Africa and mark the Equator, the Nile, the Congo, the Niger, Lake Victoria and Cameroon.",
+  "homeworkTag": "This closes the Form 2 Technical programme.",
+  "bilingual": [
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "Rainforest",
+    "La forêt dense"
+   ],
+   [
+    "River",
+    "Le fleuve"
+   ],
+   [
+    "Tributary",
+    "L'affluent"
+   ],
+   [
+    "Mouth",
+    "L'embouchure"
+   ],
+   [
+    "Lake",
+    "Le lac"
+   ],
+   [
+    "Waterfall",
+    "La chute d'eau"
+   ],
+   [
+    "Drainage",
+    "Le réseau hydrographique"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Lake Chad has lost about 90% of its surface area since the 1960s (from about 25,000 km² to a few thousand km²).",
+   "This session closes the Form 2 Technical programme."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 6 (PART 3)",
+  "title": "Africa: Vegetation and Drainage of Africa",
+  "sumTitle": "Africa",
+  "coverNote": "Good morning, class. Today we study Africa, part 3: Vegetation and Drainage of Africa.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 6: Africa — Part 3: Vegetation and Drainage of Africa"
+ },
+ "end": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Economic Geography — Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S22_L6_P3_Africa_Vegetation_Drainage",
+  "part": 3,
+  "partTitle": "Vegetation and Drainage of Africa",
+  "notions": "Vegetation zone, drainage, river basin, mouth, delta, waterfall, inland drainage.",
+  "focus": "Vegetation and drainage of Africa.",
+  "competence": "Learners are able to name the main vegetation zones, rivers and lakes of Africa and explain how people use rivers and lakes.",
+  "objectives": [
+   "Describe the main vegetation zones of Africa.",
+   "Name the main rivers and lakes of Africa and locate them.",
+   "Explain the importance of African rivers and lakes."
+  ],
+  "recall": [
+   "The climatic zones of Africa are repeated north and south of the Equator.",
+   "Africa has plateaux, basins, mountains and the Great Rift Valley.",
+   "Its soils include ferrallitic, ferruginous, desert, volcanic and alluvial soils."
+  ],
+  "recallNote": "Check the homework: three big rivers and their mouths.",
+  "situation": [
+   "Lake Chad, north of Cameroon, has become much smaller than it was sixty years ago. Fishermen and farmers who lived near it have lost their work.",
+   "Mariam wonders why this lake is shrinking while the big rivers of Africa, like the Congo, still carry so much water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Lake Chad has become much smaller, and many fishermen and farmers have lost their work."
+   ],
+   [
+    "Who has been affected by the shrinking of Lake Chad?",
+    "The fishermen and farmers who lived near the lake have been affected."
+   ],
+   [
+    "What can be done to save Lake Chad?",
+    "People can use its water carefully, plant trees against desertification, and countries can work together to protect it."
+   ]
+  ],
+  "justification": "This lesson will help us to know the vegetation, rivers and lakes of Africa and their importance for people.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "img": "africa_vegetation.png",
+      "kind": "map",
+      "q": "Look at the map. Which vegetation covers the Congo Basin, and which covers most of Africa?",
+      "a": "The equatorial rainforest covers the Congo Basin. The savanna covers most of Africa.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_vegetation.png",
+      "title": "Question 2",
+      "q": "Why does the vegetation change from forest to savanna and then to desert as we move away from the Equator?",
+      "a": "The vegetation follows the rainfall. Rainfall decreases away from the Equator, so trees become fewer and shorter.",
+      "split": 5.6
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "intro": "The vegetation of Africa follows its climate. The main vegetation zones are the following:",
+     "items": [
+      [
+       "A. Equatorial Rainforest",
+       "A thick evergreen forest covers the Congo Basin, southern Cameroon and the Guinea coast.",
+       "africa_vegetation.png"
+      ],
+      [
+       "B. Savanna",
+       "Tall grasses with scattered trees cover most of Africa, north and south of the forest."
+      ],
+      [
+       "C. Semi-Desert and Desert",
+       "Thorny bushes and short grass grow in the Sahel. Deserts have almost no vegetation."
+      ],
+      [
+       "D. Mediterranean and Mountain Vegetation",
+       "Evergreen shrubs and trees grow in the far north and far south. Highlands have mountain forests and grasslands."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. DRAINAGE",
+    "qa": [
+     {
+      "img": "africa_drainage.png",
+      "kind": "map",
+      "q": "Look at the map. Name the four largest rivers of Africa and the sea or ocean into which each flows.",
+      "a": "The Nile flows into the Mediterranean Sea, the Congo and the Niger into the Atlantic Ocean, and the Zambezi into the Indian Ocean.",
+      "split": 5.6
+     },
+     {
+      "q": "The River Benue, which flows through Garoua, is a tributary of which big river?",
+      "a": "The Benue is the main tributary of the River Niger. It joins the Niger at Lokoja in Nigeria."
+     },
+     {
+      "q": "Lake Chad has no outlet to the sea: rivers flow into it, but no river flows out. What do we call this type of drainage?",
+      "a": "This is called inland drainage. The Chari and Logone rivers flow into Lake Chad."
+     },
+     {
+      "q": "Give two ways in which people use African rivers and lakes.",
+      "a": "People use them for fishing, irrigation, transport and hydro-electricity, as at the Lagdo dam on the Benue and the Kariba dam on the Zambezi."
+     }
+    ],
+    "sum": {
+     "title": "II. Drainage",
+     "defs": [
+      "Drainage is the system of rivers and lakes that carry water from the land to the sea or to inland lakes."
+     ],
+     "intro": "The main rivers and lakes of Africa are the following:",
+     "items": [
+      [
+       "A. The Nile",
+       "The Nile is the longest river in Africa (about 6,650 km). It flows north into the Mediterranean Sea.",
+       "africa_drainage.png"
+      ],
+      [
+       "B. The Congo",
+       "The Congo carries the most water of all African rivers. It flows into the Atlantic Ocean."
+      ],
+      [
+       "C. The Niger and the Zambezi",
+       "The Niger, with its tributary the Benue, flows into the Atlantic. The Zambezi forms the Victoria Falls and flows into the Indian Ocean."
+      ],
+      [
+       "D. Lakes",
+       "Lake Victoria is the largest lake in Africa. Lake Tanganyika is the deepest. Lake Chad has inland drainage and is shrinking."
+      ],
+      [
+       "E. Importance",
+       "Rivers and lakes are used for fishing, irrigation, transport and hydro-electricity, as at Lagdo and Kariba."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why does the vegetation of Africa change from the Equator to the tropics?",
+    "It changes because rainfall decreases from the Equator towards the tropics."
+   ],
+   [
+    "Into which sea does the Nile flow, and into which ocean does the Zambezi flow?",
+    "The Nile flows into the Mediterranean Sea, and the Zambezi flows into the Indian Ocean."
+   ],
+   [
+    "What is inland drainage? Give one example.",
+    "Inland drainage is when rivers flow into a lake that has no outlet to the sea, like Lake Chad."
+   ]
+  ],
+  "remediation": [
+   [
+    "The vegetation of the Congo Basin is the equatorial ______.",
+    "The vegetation that covers most of Africa is the ______.",
+    "The longest river of Africa is the ______."
+   ],
+   [
+    "The River Benue is a tributary of the River ______.",
+    "The largest lake of Africa is Lake ______.",
+    "The waterfalls on the Zambezi are the ______ Falls."
+   ]
+  ],
+  "remediationAnswers": "1. rainforest 2. savanna 3. Nile 4. Niger 5. Victoria 6. Victoria",
+  "homework": "Revise Lesson 6 on Africa. Draw a simple map of Africa and mark the Equator, the Nile, the Congo, the Niger, Lake Victoria and Cameroon.",
+  "homeworkTag": "This closes the Form 2 Technical programme.",
+  "bilingual": [
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "Rainforest",
+    "La forêt dense"
+   ],
+   [
+    "River",
+    "Le fleuve"
+   ],
+   [
+    "Tributary",
+    "L'affluent"
+   ],
+   [
+    "Mouth",
+    "L'embouchure"
+   ],
+   [
+    "Lake",
+    "Le lac"
+   ],
+   [
+    "Waterfall",
+    "La chute d'eau"
+   ],
+   [
+    "Drainage",
+    "Le réseau hydrographique"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Lake Chad has lost about 90% of its surface area since the 1960s (from about 25,000 km² to a few thousand km²).",
+   "This session closes the Form 2 Technical programme."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 6 (PART 3)",
+  "title": "Africa: Vegetation and Drainage of Africa",
+  "sumTitle": "Africa",
+  "coverNote": "Good morning, class. Today we study Africa, part 3: Vegetation and Drainage of Africa.",
+  "cls": "Form 2 Technical",
+  "duration": "2 periods (2 × 50 minutes)",
+  "lesson": "Lesson 6: Africa — Part 3: Vegetation and Drainage of Africa",
+  "matter": "I. Vegetation: Equatorial Rainforest, Savanna, Semi-Desert and Desert, Mediterranean and Mountain Vegetation; II. Drainage: The Nile, The Congo, The Niger and the Zambezi, Lakes, Importance."
+ },
+ "file": "S22_L6_P3_Africa_Vegetation_Drainage",
+ "sp": {
+  "topic": "Regional Geography",
+  "subtopic": "Africa",
+  "chapter": "Africa",
+  "lessonNo": 6,
+  "lessonName": "Africa",
+  "file": "S22_L6_P3_Africa_Vegetation_Drainage",
+  "part": 3,
+  "partTitle": "Vegetation and Drainage of Africa",
+  "notions": "Vegetation zone, drainage, river basin, mouth, delta, waterfall, inland drainage.",
+  "focus": "Vegetation and drainage of Africa.",
+  "competence": "Learners are able to name the main vegetation zones, rivers and lakes of Africa and explain how people use rivers and lakes.",
+  "objectives": [
+   "Describe the main vegetation zones of Africa.",
+   "Name the main rivers and lakes of Africa and locate them.",
+   "Explain the importance of African rivers and lakes."
+  ],
+  "recall": [
+   "The climatic zones of Africa are repeated north and south of the Equator.",
+   "Africa has plateaux, basins, mountains and the Great Rift Valley.",
+   "Its soils include ferrallitic, ferruginous, desert, volcanic and alluvial soils."
+  ],
+  "recallNote": "Check the homework: three big rivers and their mouths.",
+  "situation": [
+   "Lake Chad, north of Cameroon, has become much smaller than it was sixty years ago. Fishermen and farmers who lived near it have lost their work.",
+   "Mariam wonders why this lake is shrinking while the big rivers of Africa, like the Congo, still carry so much water."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Lake Chad has become much smaller, and many fishermen and farmers have lost their work."
+   ],
+   [
+    "Who has been affected by the shrinking of Lake Chad?",
+    "The fishermen and farmers who lived near the lake have been affected."
+   ],
+   [
+    "What can be done to save Lake Chad?",
+    "People can use its water carefully, plant trees against desertification, and countries can work together to protect it."
+   ]
+  ],
+  "justification": "This lesson will help us to know the vegetation, rivers and lakes of Africa and their importance for people.",
+  "parts": [
+   {
+    "sec": "I. VEGETATION",
+    "qa": [
+     {
+      "img": "africa_vegetation.png",
+      "kind": "map",
+      "q": "Look at the map. Which vegetation covers the Congo Basin, and which covers most of Africa?",
+      "a": "The equatorial rainforest covers the Congo Basin. The savanna covers most of Africa.",
+      "split": 5.6
+     },
+     {
+      "img": "africa_vegetation.png",
+      "title": "Question 2",
+      "q": "Why does the vegetation change from forest to savanna and then to desert as we move away from the Equator?",
+      "a": "The vegetation follows the rainfall. Rainfall decreases away from the Equator, so trees become fewer and shorter.",
+      "split": 5.6
+     }
+    ],
+    "sum": {
+     "title": "I. Vegetation",
+     "intro": "The vegetation of Africa follows its climate. The main vegetation zones are the following:",
+     "items": [
+      [
+       "A. Equatorial Rainforest",
+       "A thick evergreen forest covers the Congo Basin, southern Cameroon and the Guinea coast.",
+       "africa_vegetation.png"
+      ],
+      [
+       "B. Savanna",
+       "Tall grasses with scattered trees cover most of Africa, north and south of the forest."
+      ],
+      [
+       "C. Semi-Desert and Desert",
+       "Thorny bushes and short grass grow in the Sahel. Deserts have almost no vegetation."
+      ],
+      [
+       "D. Mediterranean and Mountain Vegetation",
+       "Evergreen shrubs and trees grow in the far north and far south. Highlands have mountain forests and grasslands."
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "II. DRAINAGE",
+    "qa": [
+     {
+      "img": "africa_drainage.png",
+      "kind": "map",
+      "q": "Look at the map. Name the four largest rivers of Africa and the sea or ocean into which each flows.",
+      "a": "The Nile flows into the Mediterranean Sea, the Congo and the Niger into the Atlantic Ocean, and the Zambezi into the Indian Ocean.",
+      "split": 5.6
+     },
+     {
+      "q": "The River Benue, which flows through Garoua, is a tributary of which big river?",
+      "a": "The Benue is the main tributary of the River Niger. It joins the Niger at Lokoja in Nigeria."
+     },
+     {
+      "q": "Lake Chad has no outlet to the sea: rivers flow into it, but no river flows out. What do we call this type of drainage?",
+      "a": "This is called inland drainage. The Chari and Logone rivers flow into Lake Chad."
+     },
+     {
+      "q": "Give two ways in which people use African rivers and lakes.",
+      "a": "People use them for fishing, irrigation, transport and hydro-electricity, as at the Lagdo dam on the Benue and the Kariba dam on the Zambezi."
+     }
+    ],
+    "sum": {
+     "title": "II. Drainage",
+     "defs": [
+      "Drainage is the system of rivers and lakes that carry water from the land to the sea or to inland lakes."
+     ],
+     "intro": "The main rivers and lakes of Africa are the following:",
+     "items": [
+      [
+       "A. The Nile",
+       "The Nile is the longest river in Africa (about 6,650 km). It flows north into the Mediterranean Sea.",
+       "africa_drainage.png"
+      ],
+      [
+       "B. The Congo",
+       "The Congo carries the most water of all African rivers. It flows into the Atlantic Ocean."
+      ],
+      [
+       "C. The Niger and the Zambezi",
+       "The Niger, with its tributary the Benue, flows into the Atlantic. The Zambezi forms the Victoria Falls and flows into the Indian Ocean."
+      ],
+      [
+       "D. Lakes",
+       "Lake Victoria is the largest lake in Africa. Lake Tanganyika is the deepest. Lake Chad has inland drainage and is shrinking."
+      ],
+      [
+       "E. Importance",
+       "Rivers and lakes are used for fishing, irrigation, transport and hydro-electricity, as at Lagdo and Kariba."
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "Why does the vegetation of Africa change from the Equator to the tropics?",
+    "It changes because rainfall decreases from the Equator towards the tropics."
+   ],
+   [
+    "Into which sea does the Nile flow, and into which ocean does the Zambezi flow?",
+    "The Nile flows into the Mediterranean Sea, and the Zambezi flows into the Indian Ocean."
+   ],
+   [
+    "What is inland drainage? Give one example.",
+    "Inland drainage is when rivers flow into a lake that has no outlet to the sea, like Lake Chad."
+   ]
+  ],
+  "remediation": [
+   [
+    "The vegetation of the Congo Basin is the equatorial ______.",
+    "The vegetation that covers most of Africa is the ______.",
+    "The longest river of Africa is the ______."
+   ],
+   [
+    "The River Benue is a tributary of the River ______.",
+    "The largest lake of Africa is Lake ______.",
+    "The waterfalls on the Zambezi are the ______ Falls."
+   ]
+  ],
+  "remediationAnswers": "1. rainforest 2. savanna 3. Nile 4. Niger 5. Victoria 6. Victoria",
+  "homework": "Revise Lesson 6 on Africa. Draw a simple map of Africa and mark the Equator, the Nile, the Congo, the Niger, Lake Victoria and Cameroon.",
+  "homeworkTag": "This closes the Form 2 Technical programme.",
+  "bilingual": [
+   [
+    "Vegetation",
+    "La végétation"
+   ],
+   [
+    "Rainforest",
+    "La forêt dense"
+   ],
+   [
+    "River",
+    "Le fleuve"
+   ],
+   [
+    "Tributary",
+    "L'affluent"
+   ],
+   [
+    "Mouth",
+    "L'embouchure"
+   ],
+   [
+    "Lake",
+    "Le lac"
+   ],
+   [
+    "Waterfall",
+    "La chute d'eau"
+   ],
+   [
+    "Drainage",
+    "Le réseau hydrographique"
+   ]
+  ],
+  "teacherNote": [
+   "Period 1: recall, situation and part I. Period 2: part II, board summary and evaluation.",
+   "Lake Chad has lost about 90% of its surface area since the 1960s (from about 25,000 km² to a few thousand km²).",
+   "This session closes the Form 2 Technical programme."
+  ],
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2.",
+   "Maps drawn from Natural Earth data (borders, rivers, lakes, peaks); climatic and vegetation zones are simplified."
+  ]
+ }
+}

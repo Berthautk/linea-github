@@ -1,0 +1,432 @@
+{
+ "header": "FORM 4",
+ "text": [
+  "sumImage | \"x\" | \"Illustration\" | \"Copy the rock cycle: rocks slowly change from one type to another over millions of years.\" | \"rock_cycle.png\"",
+  "sumImage | \"III. The Rock Cycle (1/1)\" | \"Illustration\" | \"Copy the rock cycle: rocks slowly change from one type to another over millions of years.\" | \"rock_cycle.png\""
+ ],
+ "end": {
+  "file": "FORM4_LESSON08_Rocks",
+  "lessonNo": 8,
+  "lessonName": "Rocks",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Internal Structure of the Earth",
+  "notions": "Igneous rock, sedimentary rock, metamorphic rock.",
+  "focus": "Definition; classification according to origin (igneous, sedimentary, metamorphic): characteristics and main examples of each type; the rock cycle (illustration only).",
+  "competence": "Learners are able to recognise the main types of rocks around them and to choose suitable rocks for building.",
+  "objectives": [
+   "Define a rock.",
+   "Classify rocks according to their origin.",
+   "Give the characteristics and examples of each type of rock.",
+   "Draw the rock cycle."
+  ],
+  "recall": [
+   "The crust is the solid outer layer of the Earth.",
+   "The mantle is very hot rock that flows slowly.",
+   "Magma is molten rock under the ground."
+  ],
+  "recallNote": "Check the homework: the stones collected by learners. Use them in Part II.",
+  "situation": [
+   "In Garoua, a new mosque is built on a foundation of very hard, grey stones with small crystals, brought from a quarry near the hills. Some walls in town are built with sandstone blocks that show thin layers.",
+   "In a new office, Zara sees a shiny floor of polished stone with wavy bands. She wonders why there are so many types of rocks, and where they come from."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Zara does not know why there are different types of rocks or where they come from."
+   ],
+   [
+    "Name the three materials described in the situation.",
+    "They are hard grey stones with crystals, sandstone blocks with layers, and a polished stone with wavy bands."
+   ],
+   [
+    "Why is it useful to know the types of rocks?",
+    "It helps us to choose strong stones for building, to find useful minerals and to understand the landscape."
+   ]
+  ],
+  "justification": "This lesson will help us to classify the rocks of the crust and to understand how they are formed and changed.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is a rock?",
+      "a": "A rock is a natural, solid material of the crust, made of one or more minerals."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "A rock is a natural, solid material of the Earth's crust made of one or more minerals."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. CLASSIFICATION",
+    "qa": [
+     {
+      "q": "How are igneous rocks formed? Give two examples.",
+      "a": "They are formed when magma or lava cools and hardens. Examples: granite, which cools slowly underground, and basalt, which cools quickly at the surface, as at Mount Cameroon."
+     },
+     {
+      "q": "How are sedimentary rocks formed? Give two examples.",
+      "a": "They are formed when layers of sediments (sand, mud, shells) are pressed and cemented together. Examples: sandstone, found around Garoua, and limestone, found at Figuil."
+     },
+     {
+      "q": "How are metamorphic rocks formed? Give two examples.",
+      "a": "They are formed when existing rocks are changed by great heat and pressure. Examples: marble (from limestone), slate (from shale) and gneiss (from granite)."
+     },
+     {
+      "q": "In which type of rock do we usually find fossils? Why?",
+      "a": "Fossils are found mainly in sedimentary rocks, because plants and animals were buried in the layers of sediments."
+     }
+    ],
+    "sum": {
+     "title": "II. Classification of Rocks According to Origin",
+     "intro": "According to their origin, rocks are classified into three types:",
+     "items": [
+      [
+       "A. Igneous Rocks",
+       [
+        "– Formation: cooling and hardening of magma or lava.",
+        "– Characteristics: hard, made of crystals, no layers, no fossils.",
+        "– Examples: granite (Mandara Mountains), basalt (Mount Cameroon)."
+       ]
+      ],
+      [
+       "B. Sedimentary Rocks",
+       [
+        "– Formation: layers of sediments are pressed and cemented together.",
+        "– Characteristics: layers (strata), often softer, may contain fossils.",
+        "– Examples: sandstone (Garoua area), limestone (Figuil), clay, shale."
+       ]
+      ],
+      [
+       "C. Metamorphic Rocks",
+       [
+        "– Formation: existing rocks are changed by great heat and pressure.",
+        "– Characteristics: very hard, often with bands; minerals are rearranged.",
+        "– Examples: marble (from limestone), slate (from shale), gneiss (from granite)."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. THE ROCK CYCLE",
+    "qa": [
+     {
+      "img": "rock_cycle.png",
+      "kind": "diagram",
+      "q": "Study the rock cycle.",
+      "full": true
+     },
+     {
+      "q": "Can one type of rock become another type? Explain with the diagram.",
+      "a": "Yes. Igneous rocks are weathered into sediments that form sedimentary rocks. Heat and pressure change rocks into metamorphic rocks, which can melt into magma."
+     }
+    ],
+    "sum": {
+     "title": "III. The Rock Cycle",
+     "items": [
+      [
+       "Illustration",
+       "Copy the rock cycle: rocks slowly change from one type to another over millions of years.",
+       "rock_cycle.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is a rock?",
+    "A rock is a natural, solid material of the crust made of one or more minerals."
+   ],
+   [
+    "Give one example each of igneous, sedimentary and metamorphic rocks.",
+    "Granite (igneous), sandstone (sedimentary) and marble (metamorphic)."
+   ],
+   [
+    "Why does sandstone often show layers?",
+    "It is a sedimentary rock, made of layers of sand deposited one after another."
+   ]
+  ],
+  "remediation": [
+   [
+    "Rocks formed from cooled magma are ______ rocks.",
+    "Rocks formed from layers of sediments are ______ rocks.",
+    "Rocks changed by heat and pressure are ______ rocks."
+   ],
+   [
+    "Marble comes from ______.",
+    "Fossils are found mainly in ______ rocks.",
+    "The change of rocks from one type to another is the rock ______."
+   ]
+  ],
+  "remediationAnswers": "1. igneous 2. sedimentary 3. metamorphic 4. limestone 5. sedimentary 6. cycle",
+  "homework": "Look at a map of the world. Cut out, or trace, Africa and South America and try to fit their coasts together. Write what you notice.",
+  "homeworkTag": "This prepares Lesson 9: The Theory of Continental Drift.",
+  "bilingual": [
+   [
+    "Rock",
+    "La roche"
+   ],
+   [
+    "Mineral",
+    "Le minéral"
+   ],
+   [
+    "Igneous rock",
+    "La roche magmatique"
+   ],
+   [
+    "Sedimentary rock",
+    "La roche sédimentaire"
+   ],
+   [
+    "Metamorphic rock",
+    "La roche métamorphique"
+   ],
+   [
+    "Fossil",
+    "Le fossile"
+   ],
+   [
+    "Layer",
+    "La couche / la strate"
+   ],
+   [
+    "Rock cycle",
+    "Le cycle des roches"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source situation used mud bricks as an example of sedimentary rock. Mud bricks are made by people. The situation now uses sandstone blocks.",
+   "Correction: \"Sedimentary rocks are the only rocks that contain fossils\" is too strong. Fossils are found mainly in sedimentary rocks.",
+   "Local examples checked: limestone of Figuil (cement), Cretaceous sandstones of the Benue basin around Garoua, granite of the Mandara Mountains, basalt of Mount Cameroon."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ],
+  "label": "FORM 4 GEOGRAPHY  —  LESSON 8",
+  "title": "Rocks",
+  "sumTitle": "Rocks",
+  "coverNote": "Good morning, class. Today we study Lesson 8: Rocks.",
+  "cls": "Form 4",
+  "duration": "50 minutes",
+  "lesson": "Lesson 8: Rocks",
+  "matter": "I. Definition: ; II. Classification of Rocks According to Origin: Igneous Rocks, Sedimentary Rocks, Metamorphic Rocks; III. The Rock Cycle: Illustration."
+ },
+ "file": "FORM4_LESSON08_Rocks",
+ "sp": {
+  "file": "FORM4_LESSON08_Rocks",
+  "lessonNo": 8,
+  "lessonName": "Rocks",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
+  "subtopic": "Internal Structure of the Earth",
+  "notions": "Igneous rock, sedimentary rock, metamorphic rock.",
+  "focus": "Definition; classification according to origin (igneous, sedimentary, metamorphic): characteristics and main examples of each type; the rock cycle (illustration only).",
+  "competence": "Learners are able to recognise the main types of rocks around them and to choose suitable rocks for building.",
+  "objectives": [
+   "Define a rock.",
+   "Classify rocks according to their origin.",
+   "Give the characteristics and examples of each type of rock.",
+   "Draw the rock cycle."
+  ],
+  "recall": [
+   "The crust is the solid outer layer of the Earth.",
+   "The mantle is very hot rock that flows slowly.",
+   "Magma is molten rock under the ground."
+  ],
+  "recallNote": "Check the homework: the stones collected by learners. Use them in Part II.",
+  "situation": [
+   "In Garoua, a new mosque is built on a foundation of very hard, grey stones with small crystals, brought from a quarry near the hills. Some walls in town are built with sandstone blocks that show thin layers.",
+   "In a new office, Zara sees a shiny floor of polished stone with wavy bands. She wonders why there are so many types of rocks, and where they come from."
+  ],
+  "sitQA": [
+   [
+    "What is the problem raised in the situation above?",
+    "The problem is that Zara does not know why there are different types of rocks or where they come from."
+   ],
+   [
+    "Name the three materials described in the situation.",
+    "They are hard grey stones with crystals, sandstone blocks with layers, and a polished stone with wavy bands."
+   ],
+   [
+    "Why is it useful to know the types of rocks?",
+    "It helps us to choose strong stones for building, to find useful minerals and to understand the landscape."
+   ]
+  ],
+  "justification": "This lesson will help us to classify the rocks of the crust and to understand how they are formed and changed.",
+  "parts": [
+   {
+    "sec": "I. DEFINITION",
+    "qa": [
+     {
+      "q": "What is a rock?",
+      "a": "A rock is a natural, solid material of the crust, made of one or more minerals."
+     }
+    ],
+    "sum": {
+     "title": "I. Definition",
+     "defs": [
+      "A rock is a natural, solid material of the Earth's crust made of one or more minerals."
+     ],
+     "items": []
+    }
+   },
+   {
+    "sec": "II. CLASSIFICATION",
+    "qa": [
+     {
+      "q": "How are igneous rocks formed? Give two examples.",
+      "a": "They are formed when magma or lava cools and hardens. Examples: granite, which cools slowly underground, and basalt, which cools quickly at the surface, as at Mount Cameroon."
+     },
+     {
+      "q": "How are sedimentary rocks formed? Give two examples.",
+      "a": "They are formed when layers of sediments (sand, mud, shells) are pressed and cemented together. Examples: sandstone, found around Garoua, and limestone, found at Figuil."
+     },
+     {
+      "q": "How are metamorphic rocks formed? Give two examples.",
+      "a": "They are formed when existing rocks are changed by great heat and pressure. Examples: marble (from limestone), slate (from shale) and gneiss (from granite)."
+     },
+     {
+      "q": "In which type of rock do we usually find fossils? Why?",
+      "a": "Fossils are found mainly in sedimentary rocks, because plants and animals were buried in the layers of sediments."
+     }
+    ],
+    "sum": {
+     "title": "II. Classification of Rocks According to Origin",
+     "intro": "According to their origin, rocks are classified into three types:",
+     "items": [
+      [
+       "A. Igneous Rocks",
+       [
+        "– Formation: cooling and hardening of magma or lava.",
+        "– Characteristics: hard, made of crystals, no layers, no fossils.",
+        "– Examples: granite (Mandara Mountains), basalt (Mount Cameroon)."
+       ]
+      ],
+      [
+       "B. Sedimentary Rocks",
+       [
+        "– Formation: layers of sediments are pressed and cemented together.",
+        "– Characteristics: layers (strata), often softer, may contain fossils.",
+        "– Examples: sandstone (Garoua area), limestone (Figuil), clay, shale."
+       ]
+      ],
+      [
+       "C. Metamorphic Rocks",
+       [
+        "– Formation: existing rocks are changed by great heat and pressure.",
+        "– Characteristics: very hard, often with bands; minerals are rearranged.",
+        "– Examples: marble (from limestone), slate (from shale), gneiss (from granite)."
+       ]
+      ]
+     ]
+    }
+   },
+   {
+    "sec": "III. THE ROCK CYCLE",
+    "qa": [
+     {
+      "img": "rock_cycle.png",
+      "kind": "diagram",
+      "q": "Study the rock cycle.",
+      "full": true
+     },
+     {
+      "q": "Can one type of rock become another type? Explain with the diagram.",
+      "a": "Yes. Igneous rocks are weathered into sediments that form sedimentary rocks. Heat and pressure change rocks into metamorphic rocks, which can melt into magma."
+     }
+    ],
+    "sum": {
+     "title": "III. The Rock Cycle",
+     "items": [
+      [
+       "Illustration",
+       "Copy the rock cycle: rocks slowly change from one type to another over millions of years.",
+       "rock_cycle.png"
+      ]
+     ]
+    }
+   }
+  ],
+  "evaluation": [
+   [
+    "What is a rock?",
+    "A rock is a natural, solid material of the crust made of one or more minerals."
+   ],
+   [
+    "Give one example each of igneous, sedimentary and metamorphic rocks.",
+    "Granite (igneous), sandstone (sedimentary) and marble (metamorphic)."
+   ],
+   [
+    "Why does sandstone often show layers?",
+    "It is a sedimentary rock, made of layers of sand deposited one after another."
+   ]
+  ],
+  "remediation": [
+   [
+    "Rocks formed from cooled magma are ______ rocks.",
+    "Rocks formed from layers of sediments are ______ rocks.",
+    "Rocks changed by heat and pressure are ______ rocks."
+   ],
+   [
+    "Marble comes from ______.",
+    "Fossils are found mainly in ______ rocks.",
+    "The change of rocks from one type to another is the rock ______."
+   ]
+  ],
+  "remediationAnswers": "1. igneous 2. sedimentary 3. metamorphic 4. limestone 5. sedimentary 6. cycle",
+  "homework": "Look at a map of the world. Cut out, or trace, Africa and South America and try to fit their coasts together. Write what you notice.",
+  "homeworkTag": "This prepares Lesson 9: The Theory of Continental Drift.",
+  "bilingual": [
+   [
+    "Rock",
+    "La roche"
+   ],
+   [
+    "Mineral",
+    "Le minéral"
+   ],
+   [
+    "Igneous rock",
+    "La roche magmatique"
+   ],
+   [
+    "Sedimentary rock",
+    "La roche sédimentaire"
+   ],
+   [
+    "Metamorphic rock",
+    "La roche métamorphique"
+   ],
+   [
+    "Fossil",
+    "Le fossile"
+   ],
+   [
+    "Layer",
+    "La couche / la strate"
+   ],
+   [
+    "Rock cycle",
+    "Le cycle des roches"
+   ]
+  ],
+  "teacherNote": [
+   "Correction: the source situation used mud bricks as an example of sedimentary rock. Mud bricks are made by people. The situation now uses sandstone blocks.",
+   "Correction: \"Sedimentary rocks are the only rocks that contain fossils\" is too strong. Fossils are found mainly in sedimentary rocks.",
+   "Local examples checked: limestone of Figuil (cement), Cretaceous sandstones of the Benue basin around Garoua, granite of the Mandara Mountains, basalt of Mount Cameroon."
+  ],
+  "references": [
+   "National Geography Syllabus (MINESEC), Form 4 — The Structure of the Earth: Building Processes and Impacts on Man.",
+   "Teacher's lesson notes (Form 4), checked and corrected where necessary."
+  ]
+ }
+}

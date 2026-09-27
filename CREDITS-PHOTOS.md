@@ -1457,3 +1457,79 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (usa_hotel.jpg) : “Laguna Pool” by Prayitno / Thank you for (12 millions +) view, CC BY 2.0, via Flickr (https://www.flickr.com/photos/34128007@N04/14216582552)
 - Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
 - Activity 5 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+
+# USA Environment and Development (Module 7)
+
+## USA Lesson 1: Pollution (Environment and Development)
+
+- Activity 2 (usa_smoke.jpg) : “image replaced (thanks Anne :) )” by why 137, CC BY 2.0, via Flickr (https://www.flickr.com/photos/78752351@N03/8464430910)
+- Activity 4 (usa_dump.jpg) : “Garbage dump at Fadiouth, Senegal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/906659197)
+
+## USA Lesson 2: Deforestation and Desertification (Environment and Development)
+
+- Activity 1 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+
+## USA Lesson 3: Soil Erosion (Environment and Development)
+
+- Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 4 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## USA Lesson 4: Climatic Change (Environment and Development)
+
+- Activity 3 (usa_glacier.jpg) : “Glaciers and Sea Level Rise” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/8742463970)
+- Activity 5 (usa_powerplant.jpg) : “Loy Yang coal power station” by John Englart (Takver), CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/81043308@N00/18269071871)
+
+## USA Lesson 5: Global Warming (Environment and Development)
+
+- Activity 4 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+
+## USA Lesson 6: Flooding (Environment and Development)
+
+- Activity 1 (f4_floodvillage.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
+- Activity 4 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+- Activity 5 (usa_thames.jpg) : “Thames Barrier” by dolbinator1000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/126654539@N08/32983498011)
+
+## USA Lesson 7: Notion of Development (Environment and Development)
+
+- Activity 1 (usa_skyline.jpg) : “Aerial View City Skyline Skyscraper” by unknown, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/5967710/aerial-view-city-skyline-skyscraper)
+- Activity 4 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+
+## USA Lesson 8: Strategies of Development (Environment and Development)
+
+- Activity 2 (usa_clinic.jpg) : “Waiting at the dispensary” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/7556643920)
+- Activity 4 (usa_womenfarm.jpg) : “Women doing work on crops” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2073350635)
+
+## USA Lesson 9: New Industrial Strategy for Development (Environment and Development)
+
+- Activity 1 (usa_singapore.jpg) : “Singapore” by Christopher Chan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/17751217@N00/8909326546)
+- Activity 5 (usa_electronics.jpg) : “electronics factory” by ILO in Asia and the Pacific, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77173826@N08/8096445212)
+
+## USA Lesson 10: Globalisation (Environment and Development)
+
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (usa_internet.jpg) : “Woman uses a computer in an internet cafe” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/7556691396)
+
+## USA Lesson 11: International Trade (Environment and Development)
+
+- Activity 4 (usa_sacks.jpg) : “Sacks of Cocoa Beans” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/20795057229)
+
+## USA Lesson 12: Trade Associations (Trade Blocs) (Environment and Development)
+
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+
+## USA Lesson 13: Recent Developments in Global Trade (Environment and Development)
+
+- Activity 3 (usa_coffee.jpg) : “Harvesting coffee, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11590251453)
+- Activity 5 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+
+## USA Lesson 14: Aid and Interdependence (Environment and Development)
+
+- Activity 1 (usa_pump.jpg) : “Girls from the village of Mwachilolo head to the Pump Aid Elephant wat” by PumpAid, CC BY 2.0, via Flickr (https://www.flickr.com/photos/84463652@N06/8161357208)
+- Activity 3 (usa_foodaid.jpg) : “WFP food distribution” by UNAMID Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58538810@N03/12495227734)
+
+## USA Further Study 1: Contrast in Development within Cameroon (Environment and Development)
+
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)

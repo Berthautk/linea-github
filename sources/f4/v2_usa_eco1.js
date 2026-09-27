@@ -305,7 +305,7 @@ L.push({ kind: 'Further Study', no: 1, title: 'Agricultural Development and Chan
     { sec: 'II. PEASANT FARMING', img: 'lsa_cmrfarm.jpg', caption: 'A small family farm.', q: 'Give three characteristics of peasant farming.', a: 'Small plots, family labour, simple tools, mixed food and cash crops.', noProj: 'describe a family farm.' },
     { sec: 'III. PLANTATIONS', img: 'usa_banana.jpg', caption: 'A banana plantation.', q: 'Give three characteristics of plantation agriculture.', a: 'Large estates, one crop, many paid workers, much capital, for export.', noProj: 'mention CDC and PHP.' },
     { sec: 'IV. LIVESTOCK', img: 'f2t_cattle.jpg', caption: 'Cattle.', q: 'Where are most cattle reared in Cameroon? Why?', a: 'Adamawa and the north: grasslands and fewer tsetse flies.', noProj: 'discuss transhumance.' },
-    { sec: 'V. PROBLEMS AND CHANGES', img: 'usa_coffee.jpg', caption: 'Harvesting coffee.', q: 'Give two problems of agriculture and one change since independence.', a: 'Problems: poor roads, low prices. Change: agro-industrial companies and second-generation agriculture.', noProj: 'discuss problems.' },
+    { sec: 'V. PROBLEMS AND CHANGES', img: 'usa_coffee.jpg', caption: 'Harvested coffee beans.', q: 'Give two problems of agriculture and one change since independence.', a: 'Problems: poor roads, low prices. Change: agro-industrial companies and second-generation agriculture.', noProj: 'discuss problems.' },
   ],
   summary: [
     { title: 'I. Definitions', items: [['Peasant farming:', 'It is small-scale family farming with simple tools.'], ['Plantation:', 'It is a large estate growing one cash crop for export.'], ['Second-generation agriculture:', 'It is Cameroon\'s policy to modernise and industrialise farming.']] },

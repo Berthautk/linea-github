@@ -22,6 +22,7 @@ Même format allégé, avec deux différences : chaque leçon dure **2 périodes
 | `lecons/USA/Population Geography/` | Upper Sixth, module 4 (géographie de la population) | L1 à L18, PW1 à PW4 (cartes de densité, altitude, pyramides, indices démographiques), FS1 (population du Cameroun) — 23 fichiers |
 | `lecons/USA/Settlement Geography/` | Upper Sixth, module 5 (géographie de l'habitat) | L1 à L22, PW1 (indice du plus proche voisin), PW2 (zones d'influence, loi de Reilly), FS1 (urbanisation au Cameroun) — 25 fichiers |
 | `lecons/USA/Economic Geography/` | Upper Sixth, module 6 (activités économiques) | L1 à L11 et L13 à L31 (le programme n'a pas de leçon 12), PW1 (rente de situation), PW2 (quotient de localisation), PW3 (indice matière, isodapanes), PW4 (coûts de transport), PW5 (indices de réseau), FS1 à FS7 (agriculture, forêts, mines et énergie, eau, industrie, transports, tourisme au Cameroun) — 42 fichiers |
+| `lecons/USA/Environment and Development/` | Upper Sixth, module 7 (environnement et développement) | L1 à L14 (pollution, déforestation et désertification, érosion des sols, changement climatique, réchauffement, inondations, développement, stratégies, NPI, mondialisation, commerce, blocs commerciaux, OMC et APE, aide), FS1 (contrastes de développement au Cameroun) — 15 fichiers |
 
 Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node v2_lsa_geo.js` (runner `sixth.js`, schémas `sources/maps/big_lsa_geo.py`).
 

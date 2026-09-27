@@ -29,10 +29,13 @@ Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd 
 
 ## Ce que contient chaque leçon
 
-- Page de garde, informations, objectifs, rappel, situation de vie (un seul paragraphe court) et 3 questions.
-- **Activités** : une grande image sur toute la largeur, une petite légende, puis une diapositive « Question » et une diapositive « Answer » (réponse courte). Chaque activité a une consigne « Without the projector » dans les notes.
-- **Résumé au tableau** en taille 40, qui commence toujours par **« I. Definitions »** (« Terme: It is… »). Il est suivi de parties II, III… avec des points A, B, C… d'une seule phrase simple. Quand c'est utile, un schéma à recopier est ajouté.
-- Évaluation (2 questions), remédiation (3 trous), devoir, jeu bilingue, cahier de texte, note de l'enseignant (minutage) et références avec les **crédits photo**.
+**Nouveau format (septembre 2026, modèle de M. Kamdem) — déjà appliqué à la Lower Sixth ; l'Upper Sixth, la Form 4 et la Form 2 Tech suivent.**
+
+- **En-tête et bas de page dans le masque des diapositives** : classe, numéro et titre de la leçon, date, « Copyright MINESEC — HOD – GBHS GAROUA » (second cycle) ou « DGCAST-GAROUA » (premier cycle), nom de l'enseignant. Pour changer le nom de l'établissement une seule fois pour toutes les diapositives : *Affichage > Masque des diapositives*, modifier le texte du bas de page (et celui de la page de garde), puis fermer le masque. Le numéro de diapositive est dans le carré en haut à gauche.
+- **Feuille « MINESEC — Éducation à distance »** à gauche des diapositives de texte ; sa largeur diminue quand le texte est long, et elle disparaît sur les diapositives de photos, de schémas et de tableaux.
+- **Étapes** : page de garde, classe et durée, identification, correction du devoir de la leçon précédente, plan de la leçon, objectifs, prérequis, situation de vie (3 questions), action à mener, justification, 5 activités (image, question, réponse), résumé au tableau, évaluation, remédiation, devoir, prochaine leçon, jeu bilingue, cahier de texte, note de l'enseignant et références.
+- **Résumé au tableau** (Times New Roman, titres 36, texte 40) : les grands points suivent ceux du syllabus (1., 2., …) avec leurs sous-points A), B), … Chaque partie commence par une phrase d'annonce, puis chaque élément est sur sa ligne : « **Terme:** These are… ». La partie « DEFINITIONS » vient en premier, sauf si le premier grand point du syllabus est déjà « Meaning ». Au second cycle, chaque point compte 2 à 3 phrases ; au premier cycle, une phrase. Les illustrations ont leur propre diapositive dans la partie concernée.
+- **Commentaires (notes) sur chaque diapositive**, en anglais, rédigés comme si l'enseignant parlait directement aux élèves.
 
 ## Images
 

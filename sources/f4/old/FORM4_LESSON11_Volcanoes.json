@@ -9,20 +9,19 @@
   "sum | \"III. Volcanic Features (3/4)\" | \"B. Extrusive Features\" | [\"– Lava cones: gentle slopes of runny lava.\",\"– Ash and cinder cones: steep, small cones of ash.\",\"– Composite cones: layers of lava and ash.\",\"– Craters, calderas and lava plateaus.\",\"– Crater lakes, such as Lake Nyos and the lakes of Manengouba.\"]"
  ],
  "end": {
-  "file": "FORM4_LESSON11_Volcanoes_and_Volcanic_Features",
+  "file": "FORM4_LESSON11_Volcanoes",
   "lessonNo": 11,
-  "lessonName": "Volcanoes and Volcanic Features",
-  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Volcanoes and People",
+  "lessonName": "Volcanoes",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Volcanoes",
   "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
-  "subtopic": "Volcanoes and People",
-  "notions": "Volcanicity, magma, lava, crater, vent, intrusive and extrusive features.",
-  "focus": "Definition and origin of volcanoes; types by activity; structure of a volcano; intrusive features (illustration only) and extrusive features.",
+  "subtopic": "Volcanoes",
+  "notions": "Volcanicity, magma, lava, vent, crater.",
+  "focus": "Definition and origin; types of volcanoes; processes and general structure of a volcano.",
   "competence": "Learners are able to draw and label a volcano, and to recognise volcanic landforms in Cameroon.",
   "objectives": [
-   "Define a volcano and volcanicity.",
-   "Classify volcanoes according to their activity.",
-   "Draw and label the structure of a volcano.",
-   "Identify intrusive and extrusive volcanic features."
+   "Define a volcano and explain its origin.",
+   "Classify the types of volcanoes.",
+   "Describe the processes and the general structure of a volcano."
   ],
   "recall": [
    "The plates move at their margins.",
@@ -239,13 +238,13 @@
    "Global Volcanism Program (Smithsonian): Mount Cameroon."
   ],
   "label": "FORM 4 GEOGRAPHY  —  LESSON 11",
-  "title": "Volcanoes and Volcanic Features",
-  "sumTitle": "Volcanoes and Volcanic Features",
-  "coverNote": "Good morning, class. Today we study Lesson 11: Volcanoes and Volcanic Features.",
+  "title": "Volcanoes",
+  "sumTitle": "Volcanoes",
+  "coverNote": "Good morning, class. Today we study Lesson 11: Volcanoes.",
   "cls": "Form 4",
   "duration": "50 minutes",
-  "lesson": "Lesson 11: Volcanoes and Volcanic Features",
-  "matter": "I. Meaning and Types of Volcanoes: Origin, Types by Activity; II. Structure of a Volcano: The Main Parts; III. Volcanic Features: Intrusive Features (illustration only), Extrusive Features."
+  "lesson": "Lesson 11: Volcanoes",
+  "matter": "I. Definition and Origin; II. Types of Volcanoes; III. Processes and General Structure of a Volcano."
  },
  "file": "FORM4_LESSON11_Volcanoes_and_Volcanic_Features",
  "sp": {

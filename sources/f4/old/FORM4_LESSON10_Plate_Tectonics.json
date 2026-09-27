@@ -13,17 +13,17 @@
  "end": {
   "file": "FORM4_LESSON10_Plate_Tectonics",
   "lessonNo": 10,
-  "lessonName": "The Theory of Plate Tectonics",
-  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "lessonName": "Plate Tectonics",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Structure of the Earth",
   "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
-  "subtopic": "Internal Structure of the Earth",
-  "notions": "Plate, plate margin, convection current, subduction.",
-  "focus": "The theory of plate tectonics: meaning and main ideas; plates and plate margins (constructive, destructive, conservative) and their landforms.",
+  "subtopic": "Structure of the Earth",
+  "notions": "Plate tectonics, plates, plate margins.",
+  "focus": "Definition; main ideas (geometric and kinetic); plates and plate margins and main landforms.",
   "competence": "Learners are able to explain why earthquakes and volcanoes happen in some regions of the world, using a map of plates.",
   "objectives": [
    "Define plate tectonics.",
-   "Name the major plates and locate the African Plate.",
-   "Describe the three types of plate margins and their landforms."
+   "Explain the geometric and kinetic ideas of the theory.",
+   "Describe the plates, the plate margins and their main landforms."
   ],
   "recall": [
    "The continents were once joined in Pangaea.",
@@ -214,13 +214,13 @@
    "Plate boundaries: Bird (2003), PB2002 model."
   ],
   "label": "FORM 4 GEOGRAPHY  —  LESSON 10",
-  "title": "The Theory of Plate Tectonics",
-  "sumTitle": "The Theory of Plate Tectonics",
-  "coverNote": "Good morning, class. Today we study Lesson 10: The Theory of Plate Tectonics.",
+  "title": "Plate Tectonics",
+  "sumTitle": "Plate Tectonics",
+  "coverNote": "Good morning, class. Today we study Lesson 10: Plate Tectonics.",
   "cls": "Form 4",
   "duration": "50 minutes",
-  "lesson": "Lesson 10: The Theory of Plate Tectonics",
-  "matter": "I. Meaning and Main Ideas: The Plates, Movement of the Plates; II. Plates and Plate Margins: Constructive (Divergent) Margins, Destructive (Convergent) Margins, Conservative (Transform) Margins."
+  "lesson": "Lesson 10: Plate Tectonics",
+  "matter": "I. Definition; II. Main Ideas (Geometric and Kinetic); III. Plates, Plate Margins and Main Landforms."
  },
  "file": "FORM4_LESSON10_Plate_Tectonics",
  "sp": {

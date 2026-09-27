@@ -15,16 +15,16 @@
  "end": {
   "file": "FORM4_LESSON09_Continental_Drift",
   "lessonNo": 9,
-  "lessonName": "The Theory of Continental Drift",
-  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Internal Structure of the Earth",
+  "lessonName": "The Theories of the Earth's Structure: Continental Drift",
+  "chapter": "The Structure of the Earth: Building Processes and Impacts on Man — Structure of the Earth",
   "topic": "The Structure of the Earth: Building Processes and Impacts on Man",
-  "subtopic": "Internal Structure of the Earth",
+  "subtopic": "Structure of the Earth",
   "notions": "Continental drift, Pangaea, Laurasia, Gondwanaland.",
-  "focus": "The theory of continental drift: main idea, illustration and evidence.",
+  "focus": "Main idea; illustration of drifting; evidence.",
   "competence": "Learners are able to explain, with map evidence, that the continents have moved, and to read the shape of the continents on a world map.",
   "objectives": [
-   "State the theory of continental drift.",
-   "Describe the break-up of Pangaea.",
+   "State the main idea of the theory of continental drift.",
+   "Illustrate the drifting of the continents.",
    "Explain the evidence for continental drift."
   ],
   "recall": [
@@ -204,13 +204,13 @@
    "Teacher's lesson notes (Form 4), checked and corrected where necessary."
   ],
   "label": "FORM 4 GEOGRAPHY  —  LESSON 9",
-  "title": "The Theory of Continental Drift",
-  "sumTitle": "The Theory of Continental Drift",
-  "coverNote": "Good morning, class. Today we study Lesson 9: The Theory of Continental Drift.",
+  "title": "The Theories of the Earth's Structure: Continental Drift",
+  "sumTitle": "The Theories of the Earth's Structure: Continental Drift",
+  "coverNote": "Good morning, class. Today we study Lesson 9: The Theories of the Earth's Structure: Continental Drift.",
   "cls": "Form 4",
   "duration": "50 minutes",
-  "lesson": "Lesson 9: The Theory of Continental Drift",
-  "matter": "I. The Theory of Continental Drift: Illustration: the Break-up of Pangaea; II. Evidence for Continental Drift: The Jigsaw Fit, Fossil Evidence, Rocks and Mountains, Glacial Evidence."
+  "lesson": "Lesson 9: The Theories of the Earth's Structure: Continental Drift",
+  "matter": "I. Main Idea; II. Illustration of Drifting; III. Evidence."
  },
  "file": "FORM4_LESSON09_Continental_Drift",
  "sp": {

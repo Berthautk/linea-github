@@ -237,17 +237,11 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## FORM4_LESSON09_Continental_Drift
 
-- Activity 2 (f4_fossil.jpg) : “Marble Skin Fish Fossil” by Bold Frontiers, CC BY 2.0, via Flickr (https://www.flickr.com/photos/82955120@N05/14091612527)
-- Activity 3 (f4_thingvellir.jpg) : “Silfra Fissure” by Daveography.ca, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/71482738@N00/32857247053)
+- Activity 3 (f4_fossil.jpg) : “Marble Skin Fish Fossil” by Bold Frontiers, CC BY 2.0, via Flickr (https://www.flickr.com/photos/82955120@N05/14091612527)
 
-## FORM4_LESSON10_Plate_Tectonics
-
-- Activity 3 (f4_sanandreas.jpg) : “faultfind_48” by dsearls, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/52614599@N00/15392616)
-
-## FORM4_LESSON11_Volcanoes_and_Volcanic_Features
+## FORM4_LESSON11_Volcanoes
 
 - Activity 1 (f4_eruption.jpg) : “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
-- Activity 3 (f4_crater.jpg) : “Taal Lake and Volcano, Tagaytay, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/28260012661)
 
 ## FORM4_LESSON12_Impact_of_Volcanicity_on_Man
 

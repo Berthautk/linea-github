@@ -54,9 +54,9 @@ L.push({
     ['Who first explained this?', 'Alfred Wegener, in 1912.']],
   justification: 'This lesson helps us to understand that the continents move.',
   activities: [
-    { sec: 'I. THE THEORY', img: 'jigsaw.gif', caption: 'Animation: closing the Atlantic Ocean.', q: 'What happens when we bring South America near Africa?', a: 'The two coasts fit together like a puzzle.', noProj: 'cut a paper map of the two continents and fit them.' },
-    { sec: 'II. EVIDENCE', img: 'f4_fossil.jpg', caption: 'A fossil of a fish in rock.', q: 'The fossils of the same small reptile (Mesosaurus) are found in Brazil and in southern Africa. What does it prove?', a: 'The two continents were once joined.', noProj: 'explain: this small animal could not swim across the ocean.', note: 'The photo shows a fossil fish; Mesosaurus fossils look similar and are found on both sides of the Atlantic.' },
-    { sec: 'II. EVIDENCE', img: 'f4_thingvellir.jpg', caption: 'A crack in the ground in Iceland, where two plates move apart.', q: 'The ground here opens a little every year. What does it show?', a: 'The land (the continents) is moving.', noProj: 'push two books apart slowly on the table.' },
+    { sec: 'I. MAIN IDEA', img: 'jigsaw.gif', caption: 'Animation: closing the Atlantic Ocean.', q: 'What happens when we bring South America near Africa? What did Wegener conclude?', a: 'The two coasts fit together like a puzzle, so the continents were once joined and have drifted apart.', noProj: 'cut a paper map of the two continents and fit them.' },
+    { sec: 'II. ILLUSTRATION OF DRIFTING', img: 'drift_stages_big.png', caption: 'The break-up of Pangaea.', q: 'Describe the drifting of the continents shown on the diagram.', a: 'Pangaea split into Laurasia and Gondwanaland, which broke into the continents of today.', noProj: 'draw the three stages on the board.' },
+    { sec: 'III. EVIDENCE', img: 'f4_fossil.jpg', caption: 'A fossil of a fish in rock.', q: 'The fossils of the same small reptile (Mesosaurus) are found in Brazil and in southern Africa. What does it prove?', a: 'The two continents were once joined.', noProj: 'explain: this small animal could not swim across the ocean.', note: 'The photo shows a fossil fish; Mesosaurus fossils look similar and are found on both sides of the Atlantic.' },
   ],
   summary: [
     { title: 'I. Definitions', items: [['Continental drift:', 'It is the slow movement of the continents.'], ['Pangaea:', 'It is the single big continent of long ago.']] },
@@ -76,9 +76,9 @@ L.push({
     ['Where do most earthquakes and volcanoes happen?', 'At the edges of the plates.']],
   justification: 'This lesson helps us to know the plates of the Earth and how they move.',
   activities: [
-    { sec: 'I. THE PLATES', img: 'plates_big.png', caption: 'The main plates of the Earth (blue star: Cameroon).', q: 'On which plate is Cameroon? Name two other plates.', a: 'The African Plate. Others: Eurasian, Pacific.', noProj: 'break a biscuit into pieces: the pieces are like the plates.' },
-    { sec: 'II. PLATE MARGINS', img: 'margins.gif', caption: 'Animation: plates move apart (left) and together (right).', q: 'What happens when plates move apart? And when they move together?', a: 'Apart: magma rises. Together: one plate sinks.', noProj: 'move two books apart, then push them together.' },
-    { sec: 'II. PLATE MARGINS', img: 'f4_sanandreas.jpg', caption: 'The San Andreas Fault (USA), where two plates slide past each other.', q: 'Here the plates slide side by side. What type of margin is this?', a: 'A conservative margin. It causes earthquakes.', noProj: 'slide two books side by side.' },
+    { sec: 'I. DEFINITION', img: 'plates_big.png', caption: 'The main plates of the Earth.', q: 'What is plate tectonics? On which plate is Cameroon?', a: 'It is the theory that the crust is broken into rigid plates that move; Cameroon is on the African Plate.', noProj: 'break a biscuit into pieces: the pieces are like the plates.' },
+    { sec: 'II. MAIN IDEAS', img: 'mantle_convection.gif', caption: 'Animation: convection currents in the mantle.', q: 'How many major plates are there, and what makes them move?', a: 'There are seven major plates, and convection currents in the hot mantle move them a few centimetres a year.', noProj: 'watch rice move in boiling water.' },
+    { sec: 'III. PLATE MARGINS AND LANDFORMS', img: 'margins.gif', caption: 'Animation: plates move apart (left) and together (right).', q: 'What happens when plates move apart and together, and what landforms form?', a: 'Apart: magma rises and forms ridges and rift valleys. Together: one plate sinks and forms fold mountains, trenches and volcanoes.', noProj: 'move two books apart, then push them together.' },
   ],
   summary: [
     { title: 'I. Definitions', items: [['Plate:', 'It is a large piece of the crust.'], ['Plate margin:', 'It is the place where two plates meet.'], ['Plate tectonics:', 'It is the theory that plates move.']] },
@@ -91,16 +91,16 @@ L.push({
 });
 
 L.push({
-  src: 'FORM4_LESSON11_Volcanoes_and_Volcanic_Features',
+  src: 'FORM4_LESSON11_Volcanoes',
   situation: 'Mount Cameroon, near Buea, is a very high mountain and an active volcano. In 1999 and 2000, lava flowed down its sides. The soils around it are dark and very fertile.',
   sitQA: [['What is the problem in the situation?', 'People live near an active volcano.'],
     ['What came out of Mount Cameroon in 2000?', 'Lava.'],
     ['Why do people still live there?', 'The volcanic soils are very fertile.']],
   justification: 'This lesson helps us to know volcanoes and their parts.',
   activities: [
-    { sec: 'I. MEANING', img: 'f4_eruption.jpg', caption: 'A volcano erupts.', q: 'What comes out of a volcano?', a: 'Lava, ash, gases and rocks.', noProj: 'describe the 2000 eruption of Mount Cameroon.' },
-    { sec: 'II. STRUCTURE', img: 'volcano_big.png', caption: 'The parts of a volcano.', q: 'Name the parts of a volcano from the bottom to the top.', a: 'Magma chamber, vent (pipe), crater.', noProj: 'draw a simple volcano on the board.' },
-    { sec: 'III. FEATURES', img: 'f4_crater.jpg', caption: 'A big lake inside an old volcano.', q: 'This very large hollow of an old volcano is full of water. What is it called?', a: 'A caldera (a very large crater).', noProj: 'mention the crater lakes of Cameroon (Barombi, Nyos).' },
+    { sec: 'I. DEFINITION AND ORIGIN', img: 'f4_eruption.jpg', caption: 'A volcano erupts.', q: 'What is a volcano, and where does its magma come from?', a: 'It is an opening in the crust where magma, gases and ash come out; magma rises from the hot mantle at plate margins and hot spots.', noProj: 'describe the 2000 eruption of Mount Cameroon.' },
+    { sec: 'II. TYPES OF VOLCANOES', img: 'volcano_types_big.png', caption: 'Types of volcanoes by shape.', q: 'Name three types of volcanoes by shape and three by activity.', a: 'By shape: shield, composite and ash cone. By activity: active, dormant and extinct.', noProj: 'draw the three shapes on the board.' },
+    { sec: 'III. PROCESSES AND STRUCTURE', img: 'volcano_big.png', caption: 'The parts of a volcano.', q: 'Name the parts of a volcano from the bottom to the top.', a: 'Magma chamber, vent (pipe), cone and crater.', noProj: 'draw a simple volcano on the board.' },
   ],
   summary: [
     { title: 'I. Definitions', items: [['Volcano:', 'It is an opening in the crust where magma comes out.'], ['Lava:', 'It is magma that comes out on the surface.'], ['Crater:', 'It is the round hollow at the top of a volcano.']] },

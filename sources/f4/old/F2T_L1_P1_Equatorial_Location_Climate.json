@@ -1,0 +1,65 @@
+{
+ "header": "FORM 2 TECHNICAL",
+ "text": [],
+ "d": {},
+ "end": {
+  "cls": "Form 2 Technical",
+  "chapter": "Economic Geography — Natural Regions: 1. Equatorial Regions",
+  "duration": "2 periods (2 × 50 minutes)",
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "title": "The Equatorial Region: Location and Characteristics (Climate)",
+  "sumTitle": "The Equatorial Region",
+  "coverNote": "Good morning, class. Today we begin our study of the natural regions with the Equatorial Region: where it is found and what its climate is like",
+  "notions": "Equatorial region, Equator, convectional rain, humidity, annual range of temperature.",
+  "focus": "Location of the Equatorial region; characteristics of its climate (progression sheet, week 2).",
+  "competence": "Learners are able to locate the Equatorial region on a map and describe its hot and wet climate.",
+  "objectives": [
+   "Locate the Equatorial region on a map of the world and of Africa.",
+   "Describe the temperature and the rainfall of the Equatorial region.",
+   "Read and interpret the climate graph of Yaoundé."
+  ],
+  "recall": [
+   "The Equator is the line of latitude 0°.",
+   "Places near the Equator receive the direct rays of the Sun.",
+   "Southern Cameroon is covered by a thick forest."
+  ],
+  "recallNote": "Ask learners what they know about the forest of southern Cameroon and the weather in Yaoundé or Douala.",
+  "justification": "This lesson helps us to know where the Equatorial region is and to understand its hot and wet climate.",
+  "homework": "Ask someone who has lived in Yaoundé, Douala or Bertoua to describe the trees and plants around the town. Write three things he or she says.",
+  "homeworkTag": "This prepares Lesson 1 (Part 2): soils and vegetation of the Equatorial region.",
+  "bilingual": [
+   [
+    "Equator",
+    "L'équateur"
+   ],
+   [
+    "Rainfall",
+    "Les précipitations"
+   ],
+   [
+    "Humidity",
+    "L'humidité"
+   ],
+   [
+    "Temperature",
+    "La température"
+   ],
+   [
+    "Climate graph",
+    "Le diagramme climatique"
+   ],
+   [
+    "Storm",
+    "L'orage"
+   ]
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 1 (PART 1)",
+  "lesson": "Lesson 1 (Part 1): The Equatorial Region: Location and Characteristics (Climate)",
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2 — week 2.",
+   "Climate data for Yaoundé: long-term averages (approximate)."
+  ]
+ },
+ "file": "F2T_L1_P1_Equatorial_Location_Climate"
+}

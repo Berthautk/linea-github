@@ -1,0 +1,65 @@
+{
+ "header": "FORM 2 TECHNICAL",
+ "text": [],
+ "d": {},
+ "end": {
+  "cls": "Form 2 Technical",
+  "chapter": "Economic Geography — Natural Regions: 1. Equatorial Regions",
+  "duration": "2 periods (2 × 50 minutes)",
+  "topic": "Man in His Environment",
+  "subtopic": "Natural Regions",
+  "title": "The Equatorial Region: Characteristics (Soils and Vegetation)",
+  "sumTitle": "The Equatorial Region",
+  "coverNote": "Good morning, class. Today we continue with the Equatorial Region and study its forest and its soils",
+  "notions": "Evergreen forest, layers of the forest, hardwood, mangrove, ferrallitic soil, leaching, humus.",
+  "focus": "Characteristics of the vegetation and soils of the Equatorial region (progression sheet, week 3).",
+  "competence": "Learners are able to describe the equatorial forest and its soils and explain why the soils become poor when the forest is cut.",
+  "objectives": [
+   "Describe the characteristics of the equatorial forest.",
+   "Name the layers of the forest and some hardwood trees.",
+   "Describe the soils of the Equatorial region."
+  ],
+  "recall": [
+   "The Equatorial region is hot and wet all year.",
+   "Heavy rain falls almost every afternoon.",
+   "Plants need heat and water to grow."
+  ],
+  "recallNote": "Check the homework on the trees and plants around Yaoundé, Douala or Bertoua.",
+  "justification": "This lesson helps us to understand the rich forest of the Equatorial region and its fragile soils.",
+  "homework": "List three products from the forest of southern Cameroon that are sold in the market of Garoua (for example timber, plantains or cocoa products).",
+  "homeworkTag": "This prepares Lesson 1 (Part 3): resources and methods of exploitation.",
+  "bilingual": [
+   [
+    "Forest",
+    "La forêt"
+   ],
+   [
+    "Evergreen",
+    "Toujours vert"
+   ],
+   [
+    "Canopy",
+    "La canopée"
+   ],
+   [
+    "Hardwood",
+    "Le bois dur"
+   ],
+   [
+    "Soil",
+    "Le sol"
+   ],
+   [
+    "Leaching",
+    "Le lessivage"
+   ]
+  ],
+  "label": "FORM 2 TECHNICAL  —  LESSON 1 (PART 2)",
+  "lesson": "Lesson 1 (Part 2): The Equatorial Region: Characteristics (Soils and Vegetation)",
+  "references": [
+   "Harmonised Progression Sheet, Economic Geography (5051), Form 2 — week 3.",
+   "Climate data for Yaoundé: long-term averages (approximate)."
+  ]
+ },
+ "file": "F2T_L1_P2_Equatorial_Soils_Vegetation"
+}

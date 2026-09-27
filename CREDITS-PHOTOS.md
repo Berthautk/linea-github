@@ -2,6 +2,34 @@
 
 Toutes les photos sont sous licence libre (Creative Commons ou domaine public), trouvées via Openverse (Flickr) ou Wikimedia Commons. Les mêmes crédits figurent sur la diapositive « References » de chaque leçon. Les schémas et animations ont été dessinés pour ces leçons.
 
+## F2T_L1_P1_Equatorial_Location_Climate
+
+- Activity 1 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 5 (f2t_storm.jpg) : “When it rains in Africa!” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/31286250004)
+
+## F2T_L1_P2_Equatorial_Soils_Vegetation
+
+- Activity 1 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (lsa_mangrove.jpg) : “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
+- Activity 4 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 5 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+
+## F2T_L1_P3_Equatorial_Resources
+
+- Activity 1 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 2 (f2t_lagdo.jpg) : “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
+- Activity 3 (f2t_gold_mining.jpg) : “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1872000955)
+- Activity 4 (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Activity 5 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+
+## F2T_L1_P4_Equatorial_Human_Activities
+
+- Activity 1 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 2 (f2t_cassava_farm.jpg) : “Workshop in Lushoto, Tanzania” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/8551480688)
+- Activity 3 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 4 (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Activity 5 (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+
 ## FORM2TECH_LESSON1_WEEK7_Problems_Solutions
 
 - Activity 1 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)

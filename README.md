@@ -1,6 +1,6 @@
 # Leçons de géographie — DGCAST Garoua / GBHS Garoua (Mr KAMDEM)
 
-Toutes les leçons (286 PowerPoint) sont au nouveau format de septembre 2026 (voir « Ce que contient chaque leçon »).
+Toutes les leçons (290 PowerPoint) sont au nouveau format de septembre 2026 (voir « Ce que contient chaque leçon »).
 
 ## Premier cycle : Form 2 Technical (F2T) et Form 4 (F4)
 
@@ -8,7 +8,7 @@ Ordre des fichiers (numéro en tête du nom) : pour la F2T, l'ordre de la *Harmo
 
 | Dossier | Contenu | Leçons |
 |---|---|---|
-| `lecons/F2T/` | Form 2 Technical (2 périodes, **5 activités**) | Lesson 1 (problèmes, sem. 7), Lesson 2 (climat, sem. 8), S01 à S22 — 24 fichiers |
+| `lecons/F2T/` | Form 2 Technical (2 périodes, **5 activités**) | Lesson 1, parties 1 à 5 (région équatoriale : localisation et climat, sols et végétation, ressources, activités humaines — semaines 2 à 5 —, puis problèmes et solutions, sem. 7), Lesson 2 à Lesson 6 (S01 à S22) — 28 fichiers |
 | `lecons/F4/` | Form 4 (50 minutes, **3 activités**) | L1 à L42, FS1, FS2, PW1, PW2 — 46 fichiers |
 
 Au premier cycle, chaque point du résumé au tableau tient en **une phrase**, et le bas de page porte « DGCAST-GAROUA ». Reconstruire : `cd /home/claude/f4 && node build3_first.js F4` (ou `F2T`) ; le résumé de chaque leçon est dans `sources/f4/v3/f4_*.js` et `f2t_*.js`.

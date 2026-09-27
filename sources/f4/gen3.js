@@ -168,7 +168,7 @@ function build(sp) {
   const lessonName = sp.lesson;
   const cov = add('COVER');
   cov.addText([{ text: sp.cls.toUpperCase(), options: { breakLine: true } }, { text: 'GEOGRAPHY' }], { x: 6.7, y: 2.15, w: 6.3, h: 1.1, fontFace: TNR, fontSize: 26, bold: true, color: BLACK, align: 'center', valign: 'middle', margin: 0 });
-  cov.addText([{ text: sp.lessonLabel, options: { breakLine: true, fontSize: 26, color: BLACK } }, { text: sp.title, options: { fontSize: 32, color: RED } }], { x: 6.7, y: 3.35, w: 6.3, h: 2.3, fontFace: TNR, bold: true, align: 'center', valign: 'middle', margin: 0, fit: 'shrink' });
+  cov.addText([{ text: sp.lessonLabel.replace(/:.*$/, ''), options: { breakLine: true, fontSize: 26, color: BLACK } }, { text: sp.title, options: { fontSize: 32, color: RED } }], { x: 6.7, y: 3.35, w: 6.3, h: 2.3, fontFace: TNR, bold: true, align: 'center', valign: 'middle', margin: 0, fit: 'shrink' });
   note(cov, `Good morning, class, and welcome to our geography lesson. I am your geography teacher, Mr Kamdem. Today we are starting ${lessonName}.`);
   table('CLASS INFO', 'Class, Chapter and Duration', [['Class', sp.cls], ['Chapter', sp.chapter], ['Duration', sp.duration]], [2.6, 9.73], 22,
     `This lesson is for ${sp.cls}. It belongs to ${dot(sp.chapter)} We shall need ${sp.duration.replace(/\s*\(.*\)/, '')} to cover it.`);

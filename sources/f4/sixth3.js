@@ -8,6 +8,7 @@ const OUT = '/home/claude/v3out/';
 const CLASS = { LSA: 'Lower Sixth Arts', USA: 'Upper Sixth Arts', F4: 'Form 4', F2T: 'Form 2 Technical' };
 const SCHOOL = { LSA: 'GBHS GAROUA', USA: 'GBHS GAROUA', F4: 'DGCAST-GAROUA', F2T: 'DGCAST-GAROUA' };
 const TIMING2 = ['Homework correction, plan, objectives 8 min', 'Recall, situation, action 10 min', '5 activities 30 min', 'Board summary (copying) 30 min', 'Evaluation, remediation 10 min', 'Homework, next lesson 5 min', 'Logbook 7 min'];
+const TIMING1 = ['Homework correction, plan, objectives 4 min', 'Recall, situation, action 6 min', '3 activities 12 min', 'Board summary (copying) 15 min', 'Evaluation, remediation 5 min', 'Homework, next lesson 3 min', 'Logbook 5 min'];
 const key = (l) => `${l.kind || 'Lesson'} ${l.no}`;
 const nameOf = (l) => `${l.kind || 'Lesson'} ${l.no}: ${l.title}`;
 
@@ -24,18 +25,18 @@ function prepare(seq) {
       cls: CLASS[B.level], clsHeader: CLASS[B.level].toUpperCase(), school: SCHOOL[B.level], level: B.level,
       lesson: nameOf(sp), lessonLabel: `${kind} ${sp.no}: ${sp.title}`,
       chapter: B.module, duration: sp.duration || '2 periods (2 × 50 minutes)', topic: sp.topic || B.topicDefault, subtopic: sp.subtopic || B.branch,
-      timing: sp.timing || TIMING2,
+      timing: /^50 minutes/.test(sp.duration || '') ? TIMING1 : TIMING2,
       prevHomework: prevSp && prevSp.hwAnswer ? { lesson: nameOf(prevSp), q: prevSp.homework, a: prevSp.hwAnswer } : null,
       nextLesson: next ? nameOf(next.L) : null,
       outdir: OUT + B.level + '/' + B.folder + '/',
-      file: `${B.level}_${B.code}_${kind === 'Lesson' ? 'L' : kind.replace(/[^A-Z]/g, '')}${String(sp.no).padStart(2, '0')}_${sp.title.replace(/[^A-Za-z0-9]+/g, '_').replace(/_+$/, '').slice(0, 60)}`,
+      file: sp.fileOverride || `${B.level}_${B.code}_${kind === 'Lesson' ? 'L' : kind.replace(/[^A-Z]/g, '')}${String(sp.no).padStart(2, '0')}_${sp.title.replace(/[^A-Za-z0-9]+/g, '_').replace(/_+$/, '').slice(0, 60)}`,
     });
     const cred = fs.existsSync(CRED) ? JSON.parse(fs.readFileSync(CRED)) : {};
     const credits = [];
     sp.activities.forEach((a, k) => { if (a.img && cred[a.img]) credits.push(`Photo, Activity ${k + 1}: ${cred[a.img]}`); });
     const gifs = sp.activities.map((a, k) => (a.img && a.img.endsWith('.gif') ? k + 1 : 0)).filter(Boolean);
     sp.teacherNote = (l.teacherNote || []).concat(gifs.length ? [`Activit${gifs.length > 1 ? 'ies' : 'y'} ${gifs.join(' and ')} ${gifs.length > 1 ? 'are animations' : 'is an animation'} (GIF): it plays automatically in slide-show mode.`] : []);
-    sp.references = (B.refs || [`National Geography Syllabus, MINESEC/IGE/IP-SS, 2019 — ${B.moduleShort}.`]).concat(l.extraRefs || [], credits, ['Diagrams and animations: drawn for this lesson (Geography Department).']);
+    sp.references = (l.baseRefs || B.refs || [`National Geography Syllabus, MINESEC/IGE/IP-SS, 2019 — ${B.moduleShort}.`]).concat(l.extraRefs || [], credits, ['Diagrams and animations: drawn for this lesson (Geography Department).']);
     // checks
     const second = B.level === 'LSA' || B.level === 'USA';
     if (!P) console.warn('.. ' + sp.file + ': no v3 patch yet (old summary kept)');
@@ -48,7 +49,9 @@ function prepare(seq) {
         if (k < lo || k > hi) console.warn(`!! ${sp.file}: "${h}" has ${k} sentence(s)`);
       }));
     }
-    if (sp.activities.length !== 5 && second) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities');
+    const want = /^50 minutes/.test(sp.duration) ? 3 : 5;
+    if (sp.activities.length !== want) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities, expected ' + want);
+    if (false) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities');
     sp.activities.forEach((a) => { if (a.img && !fs.existsSync('/home/claude/f4/img/v2/' + a.img) && !fs.existsSync('/home/claude/f4/img/' + a.img)) throw new Error(sp.file + ': missing image ' + a.img); });
     return sp;
   });
@@ -65,4 +68,23 @@ function seqOf(specFile, patchFile, B) {
   const b = Object.assign({}, S.B || {}, B || {});
   return S.L.map((l) => ({ L: l, B: b, P: P[key(l)] }));
 }
-module.exports = { run, prepare, seqOf, key };
+// first cycle: v2 specs (old/<src>.json metadata + light content) + v3 patches keyed by src
+function seqFirst(specFiles, patchFile, level) {
+  const { meta } = require('./v2');
+  const P = patchFile && fs.existsSync(patchFile + '.js') ? require(patchFile) : {};
+  const out = [];
+  specFiles.forEach((f) => require(f).forEach((spec) => {
+    const m = meta(spec.src);
+    const lab = (m.label.split('—')[1] || '').trim();
+    const mm = lab.match(/^(LESSON|FURTHER STUDY|PRACTICAL WORK)\s+(\d+)(?:\s*\((PART \d+)\))?/);
+    const kind = mm[1].toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+    const no = mm[3] ? `${mm[2]} (${mm[3].charAt(0) + mm[3].slice(1).toLowerCase()})` : mm[2];
+    const base = (m.references || []).filter((r) => !/drawn from Natural Earth|image generated|illustration/i.test(r));
+    const l = Object.assign({}, m, spec, { kind: kind === 'Lesson' ? undefined : kind, no, title: m.title, fileOverride: spec.src, baseRefs: base });
+    delete l.timing;
+    const B = { level, folder: '', module: m.chapter, branch: m.subtopic, topicDefault: m.topic };
+    out.push({ L: l, B, P: P[spec.src] });
+  }));
+  return out;
+}
+module.exports = { run, prepare, seqOf, seqFirst, key };

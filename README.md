@@ -1,17 +1,19 @@
-# Leçons de géographie au format allégé — DGCAST Garoua (Mr KAMDEM)
+# Leçons de géographie — DGCAST Garoua / GBHS Garoua (Mr KAMDEM)
 
-70 PowerPoint reconstruits au format validé du pilote (`gen2.js` / `pilot_v2.js`) :
+Toutes les leçons (286 PowerPoint) sont au nouveau format de septembre 2026 (voir « Ce que contient chaque leçon »).
+
+## Premier cycle : Form 2 Technical (F2T) et Form 4 (F4)
 
 | Dossier | Contenu | Leçons |
 |---|---|---|
 | `lecons/F2T/` | Form 2 Technical (2 périodes, **5 activités**) | Lesson 1 (problèmes, sem. 7), Lesson 2 (climat, sem. 8), S01 à S22 — 24 fichiers |
 | `lecons/F4/` | Form 4 (50 minutes, **3 activités**) | L1 à L42, FS1, FS2, PW1, PW2 — 46 fichiers |
 
-Chaque fichier se termine par `_v2.pptx`, comme le pilote.
+Au premier cycle, chaque point du résumé au tableau tient en **une phrase**, et le bas de page porte « DGCAST-GAROUA ». Reconstruire : `cd /home/claude/f4 && node build3_first.js F4` (ou `F2T`) ; le résumé de chaque leçon est dans `sources/f4/v3/f4_*.js` et `f2t_*.js`.
 
 ## Second cycle : Lower Sixth Arts (LSA) et Upper Sixth Arts (USA)
 
-Même format allégé, avec deux différences : chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé au tableau compte **2 phrases, 3 au maximum**, au lieu d'une seule. Le contenu suit le **programme national 2019 (MINESEC)**, comparé aux leçons du Drive. Les leçons sont classées par branche. Toutes les Further Studies (FS) et tous les Practical Works (PW) du programme sont traités en classe et rangés dans le dossier de leur branche. Seuls les « Guided Works » de type *Project Based Learning* (projets de terrain rendus sous forme de rapport) ne sont pas préparés en PowerPoint : dans les modules 1 à 7, tous les Guided Works sont de ce type. Dans le module 8, le Fieldwork 2 (météorologie et climatologie) est marqué « DO AS A PROJECT » par le programme : il n'a donc pas de PowerPoint, et le Drive n'a pas de fichier pour lui.
+Chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé au tableau compte **2 phrases, 3 au maximum**, au lieu d'une seule. Le contenu suit le **programme national 2019 (MINESEC)**, comparé aux leçons du Drive. Les leçons sont classées par branche. Toutes les Further Studies (FS) et tous les Practical Works (PW) du programme sont traités en classe et rangés dans le dossier de leur branche. Seuls les « Guided Works » de type *Project Based Learning* (projets de terrain rendus sous forme de rapport) ne sont pas préparés en PowerPoint : dans les modules 1 à 7, tous les Guided Works sont de ce type. Dans le module 8, le Fieldwork 2 (météorologie et climatologie) est marqué « DO AS A PROJECT » par le programme : il n'a donc pas de PowerPoint, et le Drive n'a pas de fichier pour lui.
 
 | Dossier | Contenu | Leçons |
 |---|---|---|
@@ -25,15 +27,15 @@ Même format allégé, avec deux différences : chaque leçon dure **2 périodes
 | `lecons/USA/Environment and Development/` | Upper Sixth, module 7 (environnement et développement) | L1 à L14 (pollution, déforestation et désertification, érosion des sols, changement climatique, réchauffement, inondations, développement, stratégies, NPI, mondialisation, commerce, blocs commerciaux, OMC et APE, aide), FS1 (contrastes de développement au Cameroun) — 15 fichiers |
 | `lecons/USA/Practical Geography/` | Upper Sixth, module 8 (géographie pratique) | MA1 à MA9 (analyse de cartes topographiques : révision, télédétection et SIG, relief, drainage, végétation, transports, utilisation du sol, habitat rural et urbain), QT1 à QT4 (outils cartographiques, collecte de données, statistiques, graphiques), FW1 et FW3 à FW7 (travail de terrain : coordonnées, hydrologie, géomorphologie, biogéographie, activités économiques, habitat) — 19 fichiers. Les extraits de cartes sont inventés pour l'enseignement |
 
-Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node v2_lsa_geo.js` (runner `sixth.js`, schémas `sources/maps/big_lsa_geo.py`).
+Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node build3_lsa.js` ou `node build3_usa.js` (constructeur `gen3.js`, runner `sixth3.js`, résumés dans `sources/f4/v3/`, schémas dans `sources/maps/big_*.py`).
 
 ## Ce que contient chaque leçon
 
-**Nouveau format (septembre 2026, modèle de M. Kamdem) — déjà appliqué à la Lower Sixth et à l'Upper Sixth ; la Form 4 et la Form 2 Tech suivent.**
+**Nouveau format (septembre 2026, modèle de M. Kamdem), appliqué à toutes les classes : F2T, F4, LSA et USA.**
 
 - **En-tête et bas de page dans le masque des diapositives** : classe, numéro et titre de la leçon, date, « Copyright MINESEC — HOD – GBHS GAROUA » (second cycle) ou « DGCAST-GAROUA » (premier cycle), nom de l'enseignant. Pour changer le nom de l'établissement une seule fois pour toutes les diapositives : *Affichage > Masque des diapositives*, modifier le texte du bas de page (et celui de la page de garde), puis fermer le masque. Le numéro de diapositive est dans le carré en haut à gauche.
 - **Feuille « MINESEC — Éducation à distance »** à gauche des diapositives de texte ; sa largeur diminue quand le texte est long, et elle disparaît sur les diapositives de photos, de schémas et de tableaux.
-- **Étapes** : page de garde, classe et durée, identification, correction du devoir de la leçon précédente, plan de la leçon, objectifs, prérequis, situation de vie (3 questions), action à mener, justification, 5 activités (image, question, réponse), résumé au tableau, évaluation, remédiation, devoir, prochaine leçon, jeu bilingue, cahier de texte, note de l'enseignant et références.
+- **Étapes** : page de garde, classe et durée, identification, correction du devoir de la leçon précédente, plan de la leçon, objectifs, prérequis, situation de vie (3 questions), action à mener, justification, activités (5 pour 2 périodes, 3 pour la Form 4 de 50 minutes ; image, question, réponse), résumé au tableau, évaluation, remédiation, devoir, prochaine leçon, jeu bilingue, cahier de texte, note de l'enseignant et références.
 - **Résumé au tableau** (Times New Roman, titres 36, texte 40) : les grands points suivent ceux du syllabus (1., 2., …) avec leurs sous-points A), B), … Chaque partie commence par une phrase d'annonce, puis chaque élément est sur sa ligne : « **Terme:** These are… ». La partie « DEFINITIONS » vient en premier, sauf si le premier grand point du syllabus est déjà « Meaning ». Au second cycle, chaque point compte 2 à 3 phrases ; au premier cycle, une phrase. Les illustrations ont leur propre diapositive dans la partie concernée.
 - **Commentaires (notes) sur chaque diapositive**, en anglais, rédigés comme si l'enseignant parlait directement aux élèves.
 
@@ -55,11 +57,13 @@ Les scripts utilisent les chemins absolus d'origine (`/home/claude/f4`, `/home/c
 
 ```bash
 cd /home/claude/f4 && npm i pptxgenjs
-node v2_f2t_1.js            # F2T L1, L2, S01–S04 (v2_f2t_2 … v2_f2t_5 pour S05–S22)
-node v2_f4_1.js             # F4 L1–L6, FS1, PW1, PW2 (v2_f4_2 … v2_f4_5 pour L7–L42, FS2)
-node v2_f4_3.js L19         # une seule leçon (filtre sur le nom)
+node build3_first.js F4     # Form 4 (46 leçons) ; F2T pour la Form 2 Technical
+node build3_first.js F4 FORM4_LESSON19   # une seule leçon (filtre sur le nom)
+node build3_lsa.js          # Lower Sixth ; build3_usa.js pour l'Upper Sixth
 ```
 
+- `gen3.js` est le constructeur du nouveau format (masque des diapositives, feuille MINESEC, notes). `sixth3.js` enchaîne les leçons dans l'ordre (correction du devoir précédent, prochaine leçon) et vérifie le nombre de phrases par point.
+- Les contenus des leçons (situation, activités, évaluation) sont dans `v2_*.js` ; les nouveaux résumés au tableau, l'action à mener et le corrigé du devoir sont dans `v3/*.js`.
 - `v2.js` fusionne les métadonnées de l'ancienne leçon (`old/*.json`, extraites par `extract.js`) avec le nouveau contenu, ajoute les crédits et vérifie le format (nombre d'activités, « I. Definitions »).
-- `gen2.js` est le constructeur validé. Il est inchangé, sauf deux ajouts : une situation en un seul bloc et une note d'activité.
+- `gen2.js` est l'ancien constructeur (format allégé v2), gardé pour mémoire.
 - Photos : `sources/photos/ov.py` (recherche Openverse, planche d'aperçu, choix et crédit), `crop.py` (recadrage au format 1,8:1). Les requêtes utilisées sont dans `sources/photos/requetes/`.

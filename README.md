@@ -4,6 +4,8 @@ Toutes les leçons (286 PowerPoint) sont au nouveau format de septembre 2026 (vo
 
 ## Premier cycle : Form 2 Technical (F2T) et Form 4 (F4)
 
+Ordre des fichiers (numéro en tête du nom) : pour la F2T, l'ordre de la *Harmonised Progression Sheet* (Economic Geography, Form 2) ; pour la F4, l'ordre du syllabus national de la Form 3 (Physical Geography, 42 leçons, commencées en Form 3 et terminées en Form 4).
+
 | Dossier | Contenu | Leçons |
 |---|---|---|
 | `lecons/F2T/` | Form 2 Technical (2 périodes, **5 activités**) | Lesson 1 (problèmes, sem. 7), Lesson 2 (climat, sem. 8), S01 à S22 — 24 fichiers |
@@ -27,7 +29,7 @@ Chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé a
 | `lecons/USA/Environment and Development/` | Upper Sixth, module 7 (environnement et développement) | L1 à L14 (pollution, déforestation et désertification, érosion des sols, changement climatique, réchauffement, inondations, développement, stratégies, NPI, mondialisation, commerce, blocs commerciaux, OMC et APE, aide), FS1 (contrastes de développement au Cameroun) — 15 fichiers |
 | `lecons/USA/Practical Geography/` | Upper Sixth, module 8 (géographie pratique) | MA1 à MA9 (analyse de cartes topographiques : révision, télédétection et SIG, relief, drainage, végétation, transports, utilisation du sol, habitat rural et urbain), QT1 à QT4 (outils cartographiques, collecte de données, statistiques, graphiques), FW1 et FW3 à FW7 (travail de terrain : coordonnées, hydrologie, géomorphologie, biogéographie, activités économiques, habitat) — 19 fichiers. Les extraits de cartes sont inventés pour l'enseignement |
 
-Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd /home/claude/f4 && node build3_lsa.js` ou `node build3_usa.js` (constructeur `gen3.js`, runner `sixth3.js`, résumés dans `sources/f4/v3/`, schémas dans `sources/maps/big_*.py`).
+Nom des fichiers : `01_LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Le numéro en tête donne l'ordre du syllabus national 2019 : dans chaque dossier, les leçons, Further Studies et Practical Works s'affichent dans l'ordre où ils sont enseignés. Reconstruire : `cd /home/claude/f4 && node build3_lsa.js` ou `node build3_usa.js` (constructeur `gen3.js`, runner `sixth3.js`, résumés dans `sources/f4/v3/`, schémas dans `sources/maps/big_*.py`).
 
 ## Ce que contient chaque leçon
 

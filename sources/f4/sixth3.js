@@ -14,7 +14,10 @@ const nameOf = (l) => `${l.kind || 'Lesson'} ${l.no}: ${l.title}`;
 
 function prepare(seq) {
   // seq: [{ L: lesson, B: branch defaults, P: patch or undefined }] in teaching order
+  const rank = {};
   return seq.map(({ L: l, B, P }, i) => {
+    const fk = B.level + '/' + B.folder; rank[fk] = (rank[fk] || 0) + 1;
+    const nn = String(rank[fk]).padStart(2, '0') + '_';
     const sp = Object.assign({}, l, P || {});
     if (P && P.secs) sp.activities = l.activities.map((a, k) => Object.assign({}, a, { sec: P.secs[k] || a.sec }));
     if (P && P.activities) sp.activities = P.activities;
@@ -29,7 +32,7 @@ function prepare(seq) {
       prevHomework: prevSp && prevSp.hwAnswer ? { lesson: nameOf(prevSp), q: prevSp.homework, a: prevSp.hwAnswer } : null,
       nextLesson: next ? nameOf(next.L) : null,
       outdir: OUT + B.level + '/' + B.folder + '/',
-      file: sp.fileOverride || `${B.level}_${B.code}_${kind === 'Lesson' ? 'L' : kind.replace(/[^A-Z]/g, '')}${String(sp.no).padStart(2, '0')}_${sp.title.replace(/[^A-Za-z0-9]+/g, '_').replace(/_+$/, '').slice(0, 60)}`,
+      file: nn + (sp.fileOverride || `${B.level}_${B.code}_${kind === 'Lesson' ? 'L' : kind.replace(/[^A-Z]/g, '')}${String(sp.no).padStart(2, '0')}_${sp.title.replace(/[^A-Za-z0-9]+/g, '_').replace(/_+$/, '').slice(0, 60)}`),
     });
     const cred = fs.existsSync(CRED) ? JSON.parse(fs.readFileSync(CRED)) : {};
     const credits = [];
@@ -63,10 +66,13 @@ async function run(seq, only) {
   }
 }
 // helper: branch spec files + patch file -> seq entries
-function seqOf(specFile, patchFile, B) {
+function seqOf(specFile, patchFile, B, order) {
   const S = require(specFile); const P = patchFile && fs.existsSync(patchFile + '.js') ? require(patchFile) : {};
   const b = Object.assign({}, S.B || {}, B || {});
-  return S.L.map((l) => ({ L: l, B: b, P: P[key(l)] }));
+  let L = S.L;
+  // order: syllabus order of the keys ('Lesson 19', 'Further Study 1', ...) when it differs from the spec file
+  if (order) { L = order.map((k) => { const l = S.L.find((x) => key(x) === k); if (!l) throw new Error('order: ' + k); return l; }); if (L.length !== S.L.length) throw new Error('order incomplete in ' + specFile); }
+  return L.map((l) => ({ L: l, B: b, P: P[key(l)] }));
 }
 // first cycle: v2 specs (old/<src>.json metadata + light content) + v3 patches keyed by src
 function seqFirst(specFiles, patchFile, level) {
@@ -87,4 +93,10 @@ function seqFirst(specFiles, patchFile, level) {
   }));
   return out;
 }
-module.exports = { run, prepare, seqOf, seqFirst, key };
+// arrange: put seq entries (possibly from several spec files) in the syllabus order given by keys
+function arrange(seq, order) {
+  const out = order.map((k) => { const e = seq.find((x) => key(x.L) === k); if (!e) throw new Error('arrange: ' + k); return e; });
+  if (out.length !== seq.length) throw new Error('arrange: ' + seq.length + ' entries, ' + out.length + ' keys');
+  return out;
+}
+module.exports = { run, prepare, seqOf, seqFirst, arrange, key };

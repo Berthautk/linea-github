@@ -29,7 +29,7 @@ Nom des fichiers : `LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Reconstruire : `cd 
 
 ## Ce que contient chaque leçon
 
-**Nouveau format (septembre 2026, modèle de M. Kamdem) — déjà appliqué à la Lower Sixth ; l'Upper Sixth, la Form 4 et la Form 2 Tech suivent.**
+**Nouveau format (septembre 2026, modèle de M. Kamdem) — déjà appliqué à la Lower Sixth et à l'Upper Sixth ; la Form 4 et la Form 2 Tech suivent.**
 
 - **En-tête et bas de page dans le masque des diapositives** : classe, numéro et titre de la leçon, date, « Copyright MINESEC — HOD – GBHS GAROUA » (second cycle) ou « DGCAST-GAROUA » (premier cycle), nom de l'enseignant. Pour changer le nom de l'établissement une seule fois pour toutes les diapositives : *Affichage > Masque des diapositives*, modifier le texte du bas de page (et celui de la page de garde), puis fermer le masque. Le numéro de diapositive est dans le carré en haut à gauche.
 - **Feuille « MINESEC — Éducation à distance »** à gauche des diapositives de texte ; sa largeur diminue quand le texte est long, et elle disparaît sur les diapositives de photos, de schémas et de tableaux.

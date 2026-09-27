@@ -1618,3 +1618,868 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Activity 2 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Activity 5 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+
+# F1
+
+## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
+
+- Activity 1 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+- Activity 2 (f2t_mount_cameroon.jpg) : “20131110-DSC_4372” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11288779044)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (usa_topomap.jpg) : “Harvey Butchart's hiking map” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/5289678354)
+
+## F1/02_F1_M1_L02_Our_Planet_the_Earth
+
+- Activity 2 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+
+## F1/03_F1_M1_PW01_Representation_of_the_Earth_s_Shape_and_Size
+
+- Activity 1 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+
+## F1/05_F1_M1_L03_The_Earth_A_Planet_Moving_in_Space
+
+- Activity 2 (f4_sunrise.jpg) : “African Sunrise, Amboseli National Park” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/30385097358)
+
+## F1/06_F1_M1_PW03_Calculation_of_Time
+
+- Activity 5 (f4_worldclocks.jpg) : “The world in our office - 2012-03-28” by 4nitsirk, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/26223114@N02/7023309809)
+
+## F1/07_F1_M2_L04_The_Notion_of_the_Environment
+
+- Activity 1 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 2 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+- Activity 3 (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Activity 4 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+
+## F1/08_F1_M2_L05_Natural_Regions_Bio_climatic_Zones_of_Cameroon
+
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 5 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+
+## F1/10_F1_M2_L06_Forms_of_Degradation_of_the_Natural_Regions_of_Cameroon
+
+- Activity 1 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 2 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+- Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 4 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+- Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+
+## F1/11_F1_M2_GW01_Degradation_of_the_Natural_Environment_of_the_School
+
+- Activity 1 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 2 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+- Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 4 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## F1/12_F1_M2_PW05_Solid_Waste_Management
+
+- Activity 1 (usa_dump.jpg) : “Garbage dump at Fadiouth, Senegal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/906659197)
+- Activity 3 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+- Activity 5 (f2t_mixed_farm.jpg) : “Timid” by tricky (rick harrison), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/81851211@N00/205287304)
+
+## F1/13_F1_M3_L07_The_Atmosphere
+
+- Activity 1 (f4_planewindow.jpg) : “flying” by { pranav }, CC BY 2.0, via Flickr (https://www.flickr.com/photos/29220600@N08/3469129491)
+- Activity 4 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
+- Activity 5 (f4_ozonehole.jpg) : “Sauron's Eye” by sjrankin, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24354425@N03/15252220086)
+
+## F1/14_F1_M3_L08_Atmospheric_Circulation
+
+- Activity 1 (f4_barometer.jpg) : “Aneroid Barometer, with dial designed by Sir Napier Shaw, 1914” by Negretti & Zambra; Shaw, Sir Napier, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co54459/aneroid-barometer-with-dial-designed-by-sir-napier-shaw-1914)
+- Activity 3 (f4_windsock.jpg) : “Windsock” by Wajahat Mahmood, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/26116471@N03/6613272897)
+- Activity 5 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+
+## F1/15_F1_M3_L09_Atmospheric_Disturbances
+
+- Activity 2 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
+- Activity 3 (f4_hurricane.jpg) : “NASA's Aqua Satellite Captures Hurricane Danielle” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/4931591817)
+- Activity 4 (f2t_sandstorm.jpg) : “Sandstorm at Camp Bastion, Afghanistan” by Defence Images, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/48399297@N04/10343833885)
+- Activity 5 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+
+## F1/16_F1_M3_FS01_Atmospheric_Disturbances_in_Cameroon
+
+- Activity 2 (f4_heavyrain.jpg) : “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
+- Activity 3 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Activity 4 (f4_floodvillage.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
+- Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+
+## F1/17_F1_M3_PW06_Mechanisms_of_Rain_Formation
+
+- Activity 1 (f4_heavyrain.jpg) : “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
+- Activity 5 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+
+## F1/18_F1_M3_L10_Climate_Change_and_its_Consequences
+
+- Activity 1 (f4_exhaust.jpg) : “image replaced (thanks Anne :) )” by why 137, CC BY 2.0, via Flickr (https://www.flickr.com/photos/78752351@N03/8464430910)
+- Activity 4 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+
+## F1/19_F1_M3_L11_The_Internal_Structure_of_the_Earth
+
+- Activity 1 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+- Activity 3 (f4_eruption.jpg) : “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
+
+## F1/20_F1_M3_L12_Plate_Movements
+
+- Activity 5 (f4_sanandreas.jpg) : “faultfind_48” by dsearls, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/52614599@N00/15392616)
+
+## F1/21_F1_M3_L13_Consequences_of_the_Instability_of_the_Earth_s_Crust
+
+- Activity 2 (f4_quakedamage.jpg) : “Collapsed buildings in earthquake-hit Chautara, Nepal” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/16693413433)
+- Activity 4 (f4_lavahouse.jpg) : “Lava flow over road” by J. N. Stuart, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/21786539@N03/3387263273)
+- Activity 5 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+
+## F1/22_F1_M3_FS02_What_to_Do_in_Case_of_an_Earthquake_or_a_Volcanic_Eruption
+
+- Activity 1 (f4_quakedamage.jpg) : “Collapsed buildings in earthquake-hit Chautara, Nepal” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/16693413433)
+- Activity 2 (usa_sandbags.jpg) : “160310-F-VO743-004” by Official U.S. Air Force, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/39513508@N06/25854674326)
+- Activity 3 (f4_eruption.jpg) : “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
+- Activity 4 (lsa_volcmonitor.jpg) : “Hawaiian Volcano Observatory, Hawaiʻi Volcanoes National Park, Hawaii” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/4528702285)
+- Activity 5 (f4_nyos.jpg) : “Lake Nyos, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11584073056)
+
+# F2
+
+## F2/01_F2_M1_L01_A_Rapid_Growth_of_the_World_s_Population
+
+- Activity 2 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 3 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
+- Activity 5 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+
+## F2/02_F2_M1_PW01_Calculation_of_the_Demographic_Indices_of_Cameroon
+
+- Activity 2 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
+
+## F2/03_F2_M1_L02_The_Uneven_Distribution_of_the_World_s_Population
+
+- Activity 3 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+- Activity 4 (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
+- Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+
+## F2/04_F2_M1_PW02_Population_Densities_in_Cameroon
+
+- Activity 5 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+
+## F2/05_F2_M1_L03_Man_in_the_Equatorial_Zone
+
+- Activity 3 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 4 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+
+## F2/06_F2_M1_FS01_Deforestation_in_Cameroon
+
+- Activity 1 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 2 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## F2/07_F2_M1_L04_Man_in_the_Tropical_Zone
+
+- Activity 3 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+- Activity 5 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+
+## F2/08_F2_M1_FS02_The_Firewood_Crisis
+
+- Activity 1 (f2t_charcoal.jpg) : “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
+- Activity 2 (f4_fetchwater.jpg) : “Women fetch water in Kilte-Awlaelo woreda, Tigray” by UNICEF Ethiopia, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/86783452@N02/14056445728)
+- Activity 3 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 4 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+- Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+
+## F2/09_F2_M1_FS03_Products_Gathered_from_the_Wild_in_Cameroon
+
+- Activity 1 (lsa_herbs.jpg) : “MEDICINE MARKET - SEOUL” by U.S. Army Korea (Historical Image Archive), CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/28486074@N08/2920744660)
+- Activity 2 (f2t_shea_tree.jpg) : “Female shea tree (Vitellaria paradoxa) in full flower” by Joel Abroad, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/40295335@N00/5603751456)
+- Activity 3 (lsa_bee.jpg) : “Bee pollinating flower” by tombayly13, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60174932@N05/5797724005)
+- Activity 4 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 5 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+
+## F2/10_F2_M1_PW03_Identification_of_the_Biological_Resources_of_Cameroon
+
+- Activity 2 (f2t_baobab.jpg) : “What happens if you let weeds grow in centre of road, Dakar, Senegal” by ambabheg, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31518985@N04/5627872663)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+- Activity 5 (lsa_lion.jpg) : “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
+
+## F2/11_F2_M1_L05_Man_in_the_Hot_Desert_Milieu
+
+- Activity 2 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+- Activity 3 (f2t_oasis.jpg) : “49 Palms Oasis; Twentynine Palms, CA” by Joshua Tree National Park, Public domain 1.0, via Flickr (https://www.flickr.com/photos/115357548@N08/12525367563)
+- Activity 4 (f2t_camels.jpg) : “Merzouga desert, Morocco” by Mycroyance, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/91155980@N07/13157027505)
+- Activity 5 (f2t_desert_well.jpg) : “Well in the desert” by Focx Photography, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/30780900@N02/4117141154)
+
+## F2/12_F2_M1_FS04_Water_Scarcity
+
+- Activity 1 (f4_fetchwater.jpg) : “Women fetch water in Kilte-Awlaelo woreda, Tigray” by UNICEF Ethiopia, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/86783452@N02/14056445728)
+- Activity 3 (f4_borehole.jpg) : “i'll fight you for it...” by the apostrophe, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/66441426@N00/4019192363)
+- Activity 4 (f4_leakingtap.jpg) : “Drip” by jronaldlee, CC BY 2.0, via Flickr (https://www.flickr.com/photos/37176760@N06/5996590138)
+
+## F2/13_F2_M2_L06_Country_Sides_in_Africa
+
+- Activity 1 (f2t_cotton_field.jpg) : “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
+- Activity 2 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 4 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+- Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+
+## F2/14_F2_M2_L07_Towns_in_Africa
+
+- Activity 1 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+- Activity 3 (f2t_street_vendor.jpg) : “Roadside vendor roasts maize cobs for sale in Timau” by CIMMYT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/25375356457)
+- Activity 4 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+
+## F2/15_F2_M2_FS05_Informal_Sector_Activities_in_African_Cities
+
+- Activity 1 (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+- Activity 2 (f2t_tailor.jpg) : “A tailor of Wa” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/8154947468)
+- Activity 3 (f2t_street_vendor.jpg) : “Roadside vendor roasts maize cobs for sale in Timau” by CIMMYT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/25375356457)
+- Activity 4 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+
+## F2/17_F2_M2_FS06_Urban_Problems_in_Cameroon
+
+- Activity 1 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 2 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 3 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+- Activity 4 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Activity 5 (usa_newtown.jpg) : “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
+
+## F2/18_F2_M2_L08_Relationships_between_Towns_and_Country_Sides
+
+- Activity 1 (f2t_cattle_market.jpg) : “Discussing the price” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7313656038)
+- Activity 2 (usa_truck.jpg) : “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
+- Activity 3 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+- Activity 4 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+- Activity 5 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+
+## F2/19_F2_M2_FS07_Rural_Exodus_in_Cameroon
+
+- Activity 2 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 3 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+- Activity 4 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 5 (usa_pump.jpg) : “Girls from the village of Mwachilolo head to the Pump Aid Elephant wat” by PumpAid, CC BY 2.0, via Flickr (https://www.flickr.com/photos/84463652@N06/8161357208)
+
+# F4
+
+## F4/01_F4_M1_L01_Concept_of_the_Soil
+
+- Activity 1 (lsa_soilpit.jpg) : “Humic Dystrudept (fine-loamy, isotic, frigid)” by SoilScience.info, CC BY 2.0, via Flickr (https://www.flickr.com/photos/22503286@N06/5140645742)
+- Activity 5 (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+
+## F4/02_F4_M1_L02_The_Soil_Profile
+
+- Activity 1 (lsa_soilpit.jpg) : “Humic Dystrudept (fine-loamy, isotic, frigid)” by SoilScience.info, CC BY 2.0, via Flickr (https://www.flickr.com/photos/22503286@N06/5140645742)
+- Activity 3 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+- Activity 4 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+
+## F4/03_F4_M1_L03_Soil_Erosion
+
+- Activity 3 (f2t_cattle_field.jpg) : “Acacia Tree” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/11527335486)
+- Activity 4 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 5 (f4_muddyriver.jpg) : “Parana River Floodplain, Northern Argentina (NASA, International Space” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/5684050889)
+
+## F4/04_F4_M1_L04_Soil_Conservation
+
+- Activity 2 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Activity 3 (f4_zai.jpg) : “Women sowing okra in zai holes” by abossuet, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30450178@N07/7175750825)
+- Activity 4 (f2t_shelterbelt.jpg) : “20210723-NRCS-LSC-0128” by USDAgov, Public domain 1.0, via Flickr (https://www.flickr.com/photos/41284017@N08/51526578960)
+- Activity 5 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+
+## F4/05_F4_M1_L05_The_Ecosystem
+
+- Activity 1 (lsa_pond.jpg) : “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
+- Activity 3 (lsa_fungi.jpg) : “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
+- Activity 4 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+
+## F4/06_F4_M1_L06_The_Functioning_of_Ecosystems
+
+- Activity 2 (lsa_zebra.jpg) : “Zebra” by mape_s, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50931380@N00/333863114)
+
+## F4/07_F4_M1_L07_The_Tropical_Rainforest_Biome
+
+- Activity 4 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 5 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+
+## F4/08_F4_M1_L08_The_Tropical_Wet_and_Dry_Savanna_Biome
+
+- Activity 3 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 4 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+- Activity 5 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+
+## F4/09_F4_M1_L09_The_Tropical_Monsoon_Biome
+
+- Activity 3 (f2t_dry_trees.jpg) : “'Pain de singe' (monkey's bread) in a baobab, Senegal” by Milamber's portfolio, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/90956808@N00/420120264)
+- Activity 4 (usa_ricefarm.jpg) : “Drone view of rice plantation on bali island with path to walk around ” by Artem Beliaikin, CC0 1.0, via Flickr (https://www.flickr.com/photos/157635012@N07/46229046541)
+- Activity 5 (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+
+## F4/10_F4_M1_L10_The_Tropical_Hot_Desert_Biome
+
+- Activity 3 (f2t_cactus.jpg) : “Crested Saguaro” by CEBImagery.com, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/53098051@N02/5626437842)
+- Activity 4 (f2t_camels.jpg) : “Merzouga desert, Morocco” by Mycroyance, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/91155980@N07/13157027505)
+- Activity 5 (f2t_oasis.jpg) : “49 Palms Oasis; Twentynine Palms, CA” by Joshua Tree National Park, Public domain 1.0, via Flickr (https://www.flickr.com/photos/115357548@N08/12525367563)
+
+## F4/11_F4_M1_L11_The_Mediterranean_Biome
+
+- Activity 2 (f2t_mediterranean.jpg) : “Oro Mediterraneo / Mediterranean Gold” by Cristy Valencia, CC BY 2.0, via Flickr (https://www.flickr.com/photos/24522216@N03/5927925845)
+- Activity 3 (f2t_olive_tree.jpg) : “Close up of an Olive Tree” by Ian W Scott, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38000818@N06/5767827378)
+- Activity 4 (f2t_vineyard.jpg) : “Stefano Lubiana Wines Tasmania harvest panorama” by stefano lubiana wines, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50979249@N06/4688372740)
+- Activity 5 (usa_beach.jpg) : “Crowded Sunny Beach, Bulgaria” by phototouring, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/19054742@N00/1557605901)
+
+## F4/13_F4_M1_L13_The_Relief_of_Cameroon
+
+- Activity 2 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Activity 3 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+- Activity 4 (lsa_escarpment.jpg) : “1959 Hebgen Lake Earthquake fault scarp (Cabin Creek, Gallatin County,” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/45610123392)
+- Activity 5 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+
+## F4/14_F4_M1_L14_The_Drainage_of_Cameroon
+
+- Activity 2 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+- Activity 3 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+- Activity 4 (f2t_lake_chad.jpg) : “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
+- Activity 5 (lsa_dam.jpg) : “Fontana Dam Spillway” by Frank Kehren, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77759596@N00/9256852611)
+
+## F4/16_F4_M1_L16_The_Vegetation_of_Cameroon
+
+- Activity 2 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (lsa_mangrove.jpg) : “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
+- Activity 4 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (lsa_steppe.jpg) : “Tank on the Kazakh steppe” by Timon91, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/52250985@N06/30964503402)
+
+## F4/17_F4_M1_L17_The_Soils_of_Cameroon
+
+- Activity 2 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 3 (lsa_fernlava.jpg) : “Fern Growing in Lava” by Ed Suominen, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/37960170@N07/9688955410)
+- Activity 4 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+- Activity 5 (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
+
+## F4/18_F4_M1_FS01_The_Bio_geographical_Regions_of_Cameroon
+
+- Activity 2 (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Activity 3 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+- Activity 4 (f2t_cotton_harvest.jpg) : “Cotton harvest” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35706862552)
+- Activity 5 (usa_herders.jpg) : “Young cattle herders in Sénégal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/525185172)
+
+## F4/19_F4_M1_PW01_Basic_Principles_of_Map_Analysis
+
+- Activity 1 (usa_topomap.jpg) : “Harvey Butchart's hiking map” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/5289678354)
+
+## F4/20_F4_M1_PW02_Conventional_Signs_and_Symbols_on_Ordnance_Survey_Maps
+
+- Activity 5 (usa_topomap.jpg) : “Harvey Butchart's hiking map” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/5289678354)
+
+## F4/28_F4_M2_L18_The_Notion_of_Development
+
+- Activity 1 (usa_skyline.jpg) : “Aerial View City Skyline Skyscraper” by unknown, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/5967710/aerial-view-city-skyline-skyscraper)
+- Activity 2 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 4 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+- Activity 5 (usa_school.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+
+## F4/29_F4_M2_L19_Indicators_of_Development
+
+- Activity 2 (usa_clinic.jpg) : “Waiting at the dispensary” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/7556643920)
+- Activity 3 (usa_girls.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+
+## F4/30_F4_M2_L20_Classification_of_Countries_in_Terms_of_Development_Levels
+
+- Activity 1 (usa_sacks.jpg) : “Sacks of Cocoa Beans” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/20795057229)
+- Activity 2 (usa_singapore.jpg) : “Singapore” by Christopher Chan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/17751217@N00/8909326546)
+- Activity 4 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+
+## F4/31_F4_M2_L21_Rostow_s_Model_of_Economic_Growth
+
+- Activity 2 (f2t_cattle_field.jpg) : “Acacia Tree” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/11527335486)
+- Activity 3 (f2t_textile_factory.jpg) : “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
+- Activity 4 (usa_skyline.jpg) : “Aerial View City Skyline Skyscraper” by unknown, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/5967710/aerial-view-city-skyline-skyscraper)
+
+## F4/32_F4_M2_L22_Challenges_of_Development
+
+- Activity 1 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 4 (usa_school.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+- Activity 5 (f2t_mobile_money.jpg) : “Scenes from Rwanda” by International Monetary Fund, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/38851430@N07/52660758172)
+
+## F4/33_F4_M2_L23_Global_Solutions_to_Poverty_and_Underdevelopment
+
+- Activity 2 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+- Activity 3 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
+- Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+
+## F4/34_F4_M2_L24_Strategies_for_the_Emergence_of_the_NICs
+
+- Activity 1 (usa_singapore.jpg) : “Singapore” by Christopher Chan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/17751217@N00/8909326546)
+- Activity 3 (f2t_computer_class.jpg) : “The Oneputa Combined School goes from Grade 1 through to Grade 10” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/5321464442)
+- Activity 4 (usa_electronics.jpg) : “electronics factory” by ILO in Asia and the Pacific, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77173826@N08/8096445212)
+- Activity 5 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+
+## F4/35_F4_M2_L25_Economic_Activities
+
+- Activity 1 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 2 (f2t_cotton_harvest.jpg) : “Cotton harvest” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35706862552)
+- Activity 3 (f2t_textile_factory.jpg) : “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
+- Activity 4 (f2t_bank.jpg) : “Thibault Square, Cape Town” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/7825576852)
+
+## F4/36_F4_M2_L26_Agriculture
+
+- Activity 1 (f2t_maize.jpg) : “Ghana 15” by CIAT International Center for Tropical Agriculture, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5207540264)
+- Activity 3 (f4_rainyseason.jpg) : “Farmer” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35708569412)
+- Activity 4 (f2t_cotton_harvest2.jpg) : “Women carrying cotton” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35706852432)
+
+## F4/37_F4_M2_L27_Agricultural_Systems
+
+- Activity 2 (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Activity 3 (usa_greenhouse.jpg) : “Organic farming, vegetable patch” by U.S. Department of Agriculture, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/10995692/organic-farming-vegetable-patch)
+- Activity 4 (usa_herders.jpg) : “Young cattle herders in Sénégal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/525185172)
+
+## F4/38_F4_M2_L28_Intensive_and_Extensive_Agriculture
+
+- Activity 1 (usa_greenhouse.jpg) : “Organic farming, vegetable patch” by U.S. Department of Agriculture, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/10995692/organic-farming-vegetable-patch)
+- Activity 2 (f2t_dairy.jpg) : “Koe 9354” by ednl, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31392863@N04/5640329871)
+- Activity 3 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 4 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 5 (f2t_ranch.jpg) : “The Flock” by seefit, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76574551@N00/20928299362)
+
+## F4/39_F4_M2_L29_The_Green_Revolution
+
+- Activity 2 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+- Activity 4 (usa_spraying.jpg) : “k4817-4” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8497812386)
+- Activity 5 (f2t_field_trial.jpg) : “CIMMYT international wheat nurseries growing in Ecuador” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/5958068839)
+
+## F4/40_F4_M2_L30_The_Impact_of_Agriculture
+
+- Activity 1 (f2t_cotton_harvest.jpg) : “Cotton harvest” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35706862552)
+- Activity 2 (f2t_brewery.jpg) : “Interior of Winston-Salem Chero-Cola Bottling Company, Winston-Salem, ” by unclibraries_commons, Public domain 1.0, via Flickr (https://www.flickr.com/photos/122654055@N06/22680169228)
+- Activity 3 (usa_spraying.jpg) : “k4817-4” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8497812386)
+- Activity 4 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+
+## F4/41_F4_M2_L31_Sustainable_Agriculture
+
+- Activity 1 (usa_organic.jpg) : “Allotment garden” by tacowitte, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31817492@N00/1509608412)
+- Activity 2 (f2t_mixed_farm.jpg) : “Timid” by tricky (rick harrison), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/81851211@N00/205287304)
+- Activity 3 (f2t_shea_tree.jpg) : “Female shea tree (Vitellaria paradoxa) in full flower” by Joel Abroad, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/40295335@N00/5603751456)
+- Activity 4 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## F4/42_F4_M2_L32_Climate_Smart_Agriculture
+
+- Activity 1 (f4_zai.jpg) : “Women sowing okra in zai holes” by abossuet, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30450178@N07/7175750825)
+- Activity 3 (lsa_litter.jpg) : “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
+- Activity 4 (f2t_cassava_farm.jpg) : “Workshop in Lushoto, Tanzania” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/8551480688)
+- Activity 5 (usa_greenhouse.jpg) : “Organic farming, vegetable patch” by U.S. Department of Agriculture, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/10995692/organic-farming-vegetable-patch)
+
+## F4/43_F4_M2_L33_Spatial_Patterns_of_Agriculture_Von_Th_nen_s_Model_of_Agricu
+
+- Activity 4 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+
+## F4/44_F4_M2_L34_Arable_Agriculture_in_Cameroon
+
+- Activity 1 (f2t_cassava_farm.jpg) : “Workshop in Lushoto, Tanzania” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/8551480688)
+- Activity 2 (f2t_maize.jpg) : “Ghana 15” by CIAT International Center for Tropical Agriculture, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5207540264)
+- Activity 3 (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Activity 4 (usa_banana.jpg) : “Banana Plantation” by AfricaTravelAssociation, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65134942@N06/8164706151)
+
+## F4/45_F4_M2_L35_Pastoral_Agriculture_in_Cameroon
+
+- Activity 1 (usa_nomad.jpg) : “A roadside stop for souvenirs & exploring dry wells, Northern Sahara, ” by ali eminov, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27435717@N00/3437516165)
+- Activity 3 (f2t_ranch.jpg) : “The Flock” by seefit, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76574551@N00/20928299362)
+- Activity 4 (f2t_cattle_market.jpg) : “Discussing the price” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7313656038)
+- Activity 5 (f2t_cattle_field.jpg) : “Acacia Tree” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/11527335486)
+
+## F4/46_F4_M2_L36_The_Impact_of_Agriculture_on_the_Economy_of_Cameroon
+
+- Activity 1 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 3 (f2t_brewery.jpg) : “Interior of Winston-Salem Chero-Cola Bottling Company, Winston-Salem, ” by unclibraries_commons, Public domain 1.0, via Flickr (https://www.flickr.com/photos/122654055@N06/22680169228)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (usa_sacks.jpg) : “Sacks of Cocoa Beans” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/20795057229)
+
+## F4/47_F4_M2_L37_Food_Loss_and_Food_Waste
+
+- Activity 2 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 4 (usa_foodaid.jpg) : “WFP food distribution” by UNAMID Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58538810@N03/12495227734)
+- Activity 5 (usa_sacks.jpg) : “Sacks of Cocoa Beans” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/20795057229)
+
+## F4/48_F4_M2_L38_Problems_of_Tropical_Agriculture_with_Reference_to_Cameroon
+
+- Activity 1 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Activity 2 (usa_irrigation.jpg) : “Irrigation Canals in Farah Province Afgahnistan” by USAID_IMAGES, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46658241@N06/14784748647)
+- Activity 3 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 4 (f2t_cattle_field.jpg) : “Acacia Tree” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/11527335486)
+- Activity 5 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+
+## F4/49_F4_M2_L39_Forest_Resources_and_their_Management
+
+- Activity 2 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 4 (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## F4/50_F4_M2_L40_The_Management_of_Forest_Resources_in_Cameroon
+
+- Activity 2 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 3 (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+- Activity 4 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## F4/51_F4_M2_FS02_Deforestation_in_Cameroon_and_its_Consequences
+
+- Activity 1 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Activity 2 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Activity 4 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## F4/52_F4_M2_PW10_Description_of_Vegetation_on_Maps
+
+- Activity 3 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Activity 4 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 5 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+
+## F4/53_F4_M2_L41_Fish_Resources_and_their_Management
+
+- Activity 1 (f2t_fishing.jpg) : “Fishermen, Lake Tana” by A.Davey, CC BY 2.0, via Flickr (https://www.flickr.com/photos/40595948@N00/2260748777)
+- Activity 4 (f2t_fish_market.jpg) : “Kenyan food, farming and landscapes” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/14310899853)
+- Activity 5 (usa_fishing.jpg) : “Empty beaches” by ludwig.troller, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/124845120@N03/14285811155)
+
+## F4/54_F4_M2_L42_The_Management_of_Fish_Resources_in_Cameroon
+
+- Activity 1 (f2t_lagdo.jpg) : “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
+- Activity 2 (f2t_fishing.jpg) : “Fishermen, Lake Tana” by A.Davey, CC BY 2.0, via Flickr (https://www.flickr.com/photos/40595948@N00/2260748777)
+- Activity 3 (lsa_ship.jpg) : “The Amerigo Vespucci Arrives In Dublin (Tall Ships Race Dublin - 2012)” by infomatique, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/80824546@N00/7846937046)
+- Activity 4 (f2t_fish_market.jpg) : “Kenyan food, farming and landscapes” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/14310899853)
+- Activity 5 (lsa_pond.jpg) : “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
+
+## F4/55_F4_M2_L43_Mineral_Resources_and_their_Management
+
+- Activity 2 (usa_openpit.jpg) : “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
+- Activity 3 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+- Activity 5 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+
+## F4/56_F4_M2_L44_The_Management_of_Mineral_Resources_in_Cameroon
+
+- Activity 2 (usa_goldminers.jpg) : “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1873057946)
+- Activity 3 (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+- Activity 4 (usa_oilwell.jpg) : “Oil Pump Jack” by Paul Lowry, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10039026@N03/2770193028)
+- Activity 5 (lsa_landscar.jpg) : “Hillsides scarred by landslides caused by cloudbursts, Rudraprayag, Ut” by ICIMOD.Gallery, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/127267759@N06/16051008426)
+
+## F4/57_F4_M2_L45_Energy_Resources
+
+- Activity 2 (f2t_charcoal.jpg) : “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
+- Activity 4 (usa_smoke.jpg) : “image replaced (thanks Anne :) )” by why 137, CC BY 2.0, via Flickr (https://www.flickr.com/photos/78752351@N03/8464430910)
+- Activity 5 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+
+## F4/58_F4_M2_L46_The_Energy_Resources_of_Cameroon
+
+- Activity 1 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+- Activity 2 (usa_offshore.jpg) : “Rig I” by Tuftronic10000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36574363@N00/367931994)
+- Activity 3 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+- Activity 5 (lsa_dam.jpg) : “Fontana Dam Spillway” by Frank Kehren, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77759596@N00/9256852611)
+
+# F5
+
+## F5/01_F5_M1_L01_Manufacturing_Industries
+
+- Activity 1 (f2t_textile_factory.jpg) : “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
+- Activity 2 (usa_steel.jpg) : “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
+- Activity 3 (f2t_brewery.jpg) : “Interior of Winston-Salem Chero-Cola Bottling Company, Winston-Salem, ” by unclibraries_commons, Public domain 1.0, via Flickr (https://www.flickr.com/photos/122654055@N06/22680169228)
+- Activity 5 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+
+## F5/02_F5_M1_L02_The_Agglomeration_of_Industries
+
+- Activity 2 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 4 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+
+## F5/03_F5_M1_L03_Industrialisation_in_the_Least_Industrialised_Countries
+
+- Activity 1 (f2t_blacksmith.jpg) : “Forging a new spear tip” by www.j-pics.info, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/33979630@N07/16024814824)
+- Activity 2 (f2t_brewery.jpg) : “Interior of Winston-Salem Chero-Cola Bottling Company, Winston-Salem, ” by unclibraries_commons, Public domain 1.0, via Flickr (https://www.flickr.com/photos/122654055@N06/22680169228)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (f2t_textile_factory.jpg) : “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
+
+## F5/04_F5_M1_L04_Industrialisation_in_the_Advanced_Industrialised_Countries
+
+- Activity 1 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+- Activity 2 (usa_techpark.jpg) : “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
+- Activity 3 (usa_electronics.jpg) : “electronics factory” by ILO in Asia and the Pacific, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77173826@N08/8096445212)
+- Activity 4 (usa_steam.jpg) : “Lowell Massachusetts - Boston & Maine Railroad - Steam Engine - Monoch” by Onasill - Bill Badzo - 149 Million Views - Thank Y, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/51797580418)
+- Activity 5 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+
+## F5/05_F5_M1_L05_Weber_s_Industrial_Location_Model
+
+- Activity 3 (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+- Activity 4 (f2t_brewery.jpg) : “Interior of Winston-Salem Chero-Cola Bottling Company, Winston-Salem, ” by unclibraries_commons, Public domain 1.0, via Flickr (https://www.flickr.com/photos/122654055@N06/22680169228)
+- Activity 5 (usa_electronics.jpg) : “electronics factory” by ILO in Asia and the Pacific, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77173826@N08/8096445212)
+
+## F5/06_F5_M1_L06_Secondary_Manufacturing_Industries_in_Cameroon
+
+- Activity 1 (f2t_aluminium.jpg) : “Kurri Kurri aluminium” by yewenyi, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30265340@N00/2971223932)
+- Activity 3 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+
+## F5/07_F5_M1_PW01_Location_of_Economic_Activities_and_Description_of_Land_Use
+
+- Activity 4 (f4_terraces.jpg) : “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+
+## F5/08_F5_M1_L07_Communication
+
+- Activity 2 (usa_truck.jpg) : “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
+- Activity 3 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+
+## F5/09_F5_M1_L08_Development_of_Road_Transport
+
+- Activity 1 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 3 (f5_motorway.jpg) : “'Mini Stack' Interchange of Interstate 10, Loop 202, and State Route 5” by squeaks2569, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38478466@N06/5180259860)
+- Activity 4 (usa_truck.jpg) : “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
+- Activity 5 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+
+## F5/10_F5_M1_L09_Development_of_Rail_Transport
+
+- Activity 1 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 3 (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+- Activity 5 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+
+## F5/11_F5_M1_L10_Impact_of_Road_and_Railway_Transport_on_the_Economy
+
+- Activity 1 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 2 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+- Activity 3 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Activity 4 (f5_motorway.jpg) : “'Mini Stack' Interchange of Interstate 10, Loop 202, and State Route 5” by squeaks2569, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38478466@N06/5180259860)
+- Activity 5 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+
+## F5/12_F5_M1_L11_Air_and_Water_Transport
+
+- Activity 1 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 2 (f5_barge.jpg) : “Cargo handling facilities, Calumet River” by UIC Library Digital Collections, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/34893859@N05/7979987843)
+- Activity 3 (f5_plane.jpg) : “Olympic Airlines A340-313X 'Epidauros'” by caribb, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/87857621@N00/194965684)
+- Activity 4 (usa_airport.jpg) : “Airplane” by jeffk, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44124372247@N01/59597563)
+
+## F5/13_F5_M1_FS02_Containerisation
+
+- Activity 1 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 2 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 3 (usa_truck.jpg) : “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
+- Activity 5 (usa_docklands.jpg) : “Old & new: University Greenwich, The Queen's House & London Docklands” by Bert Kaufmann, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/22746515@N02/26742366958)
+
+## F5/14_F5_M1_L12_Specialised_Forms_of_Transport_Motorways_and_Cableways
+
+- Activity 1 (f5_motorway.jpg) : “'Mini Stack' Interchange of Interstate 10, Loop 202, and State Route 5” by squeaks2569, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38478466@N06/5180259860)
+- Activity 2 (f5_cablecar.jpg) : “Over the clouds” by radkuch.13, CC BY 2.0, via Flickr (https://www.flickr.com/photos/137294100@N08/51913188868)
+- Activity 3 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Activity 4 (usa_lapaz.jpg) : “La Paz” by cliff.hellis, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/30099537@N02/6348597083)
+
+## F5/15_F5_M1_L13_Pipelines
+
+- Activity 1 (f5_pipeline.jpg) : “Fairbanks - Trans-Alaska Pipeline” by roger4336, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/24736216@N07/3824994628)
+- Activity 2 (usa_oilwell.jpg) : “Oil Pump Jack” by Paul Lowry, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10039026@N03/2770193028)
+- Activity 3 (usa_oilspill.jpg) : “Exxon Valdez Oil Spill - 0038” by ARLIS Reference, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/51606297@N07/4750613516)
+
+## F5/16_F5_M1_L14_Globalisation
+
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+
+## F5/17_F5_M1_L15_Telecommunication_Internet_Communication
+
+- Activity 1 (usa_internet.jpg) : “Woman uses a computer in an internet cafe” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/7556691396)
+- Activity 2 (usa_gps.jpg) : “DAPA GPS Fruit 5” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/4821530518)
+- Activity 3 (f2t_computer_class.jpg) : “The Oneputa Combined School goes from Grade 1 through to Grade 10” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/5321464442)
+- Activity 4 (f2t_mobile_money.jpg) : “Scenes from Rwanda” by International Monetary Fund, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/38851430@N07/52660758172)
+- Activity 5 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+
+## F5/18_F5_M1_L16_Transport_Development_in_Cameroon
+
+- Activity 2 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 3 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 4 (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+- Activity 5 (f5_motorway.jpg) : “'Mini Stack' Interchange of Interstate 10, Loop 202, and State Route 5” by squeaks2569, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38478466@N06/5180259860)
+
+## F5/20_F5_M1_L17_Volume_of_Trade
+
+- Activity 1 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 2 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 3 (f2t_suez.jpg) : “MV Maersk Taikung” by tim.md, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50299151@N00/3252980648)
+
+## F5/21_F5_M1_L18_Trade_Blocs
+
+- Activity 5 (usa_passport.jpg) : “London Heathrow T4 arrivals” by markhillary, CC BY 2.0, via Flickr (https://www.flickr.com/photos/56087830@N00/1568955656)
+
+## F5/22_F5_M1_L19_Tourism
+
+- Activity 1 (usa_beach.jpg) : “Crowded Sunny Beach, Bulgaria” by phototouring, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/19054742@N00/1557605901)
+- Activity 2 (usa_safari.jpg) : “African Bush Elephant, Amboseli National Park, Kenya” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/37211779966)
+- Activity 3 (f5_plane.jpg) : “Olympic Airlines A340-313X 'Epidauros'” by caribb, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/87857621@N00/194965684)
+- Activity 5 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+
+## F5/23_F5_M1_L20_General_Effects_of_Tourism
+
+- Activity 1 (f2t_maasai.jpg) : “Young Maasai herder, Kenya, 1979” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/482990998)
+- Activity 2 (usa_hotel.jpg) : “Laguna Pool” by Prayitno / Thank you for (12 millions +) view, CC BY 2.0, via Flickr (https://www.flickr.com/photos/34128007@N04/14216582552)
+- Activity 4 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+
+## F5/24_F5_M1_L21_Development_of_Tourism_in_Cameroon
+
+- Activity 2 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (usa_limbe.jpg) : “Sunset in Limbe” by visulogik, CC BY 2.0, via Flickr (https://www.flickr.com/photos/55671677@N00/2202334428)
+
+## F5/26_F5_M2_L23_Land_Reclamation
+
+- Activity 2 (f5_polder.jpg) : “Mills Kinderdijk, Holland - 3632” by HereIsTom, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/47035764@N03/8141380736)
+- Activity 3 (usa_irrigation.jpg) : “Irrigation Canals in Farah Province Afgahnistan” by USAID_IMAGES, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46658241@N06/14784748647)
+- Activity 4 (usa_singapore.jpg) : “Singapore” by Christopher Chan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/17751217@N00/8909326546)
+- Activity 5 (f4_floodvillage.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
+
+## F5/27_F5_M2_L24_Multipurpose_River_Development_Project_MRDP
+
+- Activity 2 (lsa_dam.jpg) : “Fontana Dam Spillway” by Frank Kehren, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77759596@N00/9256852611)
+- Activity 3 (f5_threegorges.jpg) : “Three Gorges dam” by hughrocks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/97711233@N00/3892443712)
+- Activity 4 (usa_powerplant.jpg) : “Loy Yang coal power station” by John Englart (Takver), CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/81043308@N00/18269071871)
+- Activity 5 (usa_refugee.jpg) : “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
+
+## F5/28_F5_M2_L25_Multipurpose_River_Development_Project_in_Cameroon
+
+- Activity 3 (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
+- Activity 4 (f4_floodvillage.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
+- Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+
+## F5/29_F5_M2_L26_Problems_of_Waste_Management
+
+- Activity 1 (usa_dump.jpg) : “Garbage dump at Fadiouth, Senegal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/906659197)
+- Activity 2 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+- Activity 4 (f5_plastic.jpg) : “Thank God men cannot fly, and lay waste the sky as well as the earth. ” by katerha, CC BY 2.0, via Flickr (https://www.flickr.com/photos/8489692@N03/5107788414)
+
+## F5/30_F5_M2_L27_Pollution
+
+- Activity 2 (lsa_smog.jpg) : “Beijing smog” by kevin dooley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/12836528@N00/386198516)
+- Activity 3 (f5_plastic.jpg) : “Thank God men cannot fly, and lay waste the sky as well as the earth. ” by katerha, CC BY 2.0, via Flickr (https://www.flickr.com/photos/8489692@N03/5107788414)
+- Activity 4 (usa_spraying.jpg) : “k4817-4” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8497812386)
+
+## F5/31_F5_M3_L28_Basic_Notions_on_Population
+
+- Activity 1 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Activity 5 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
+
+## F5/32_F5_M3_FS03_Sources_of_Population_Data
+
+- Activity 3 (usa_girls.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+- Activity 4 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
+- Activity 5 (usa_passport.jpg) : “London Heathrow T4 arrivals” by markhillary, CC BY 2.0, via Flickr (https://www.flickr.com/photos/56087830@N00/1568955656)
+
+## F5/35_F5_M3_L30_Spatial_Distribution_of_the_World_s_Population
+
+- Activity 2 (usa_tokyo.jpg) : “Tokyo from the Air” by Trey Ratcliff, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/95572727@N00/4140101118)
+- Activity 4 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
+
+## F5/36_F5_M3_L31_Age_Composition_of_Population
+
+- Activity 3 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+- Activity 4 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+
+## F5/40_F5_M3_L35_Rapid_Population_Growth_in_Least_Industrialised_Countries
+
+- Activity 1 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+- Activity 2 (usa_clinic.jpg) : “Waiting at the dispensary” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/7556643920)
+- Activity 3 (usa_school.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+- Activity 4 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 5 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+
+## F5/41_F5_M3_FS04_Control_of_Population_Growth
+
+- Activity 2 (usa_onechild.jpg) : “propaganda posters, one child policy” by kattebelletje, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/97249369@N00/3349125321)
+- Activity 3 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
+
+## F5/42_F5_M3_L36_Migration
+
+- Activity 3 (usa_ellis.jpg) : “No Known Restrictions: Ellis Island Immigrants by National Photo Co., ” by pingnews.com, Public domain 1.0, via Flickr (https://www.flickr.com/photos/39735679@N00/434439223)
+- Activity 4 (usa_refugee.jpg) : “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
+- Activity 5 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+
+## F5/43_F5_M3_L37_Notions_on_Optimum_Population_Over_population_and_Under_popu
+
+- Activity 2 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 5 (usa_foodaid.jpg) : “WFP food distribution” by UNAMID Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58538810@N03/12495227734)
+
+## F5/44_F5_M3_L38_Population_and_Resource_Model_Malthus
+
+- Activity 3 (usa_foodaid.jpg) : “WFP food distribution” by UNAMID Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58538810@N03/12495227734)
+
+## F5/45_F5_M3_L39_Population_in_Cameroon
+
+- Activity 4 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+
+## F5/46_F5_M3_L40_Migration_Patterns_in_Cameroon
+
+- Activity 3 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Activity 4 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+- Activity 5 (f2t_mixed_farm.jpg) : “Timid” by tricky (rick harrison), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/81851211@N00/205287304)
+
+## F5/48_F5_M3_L41_Settlement
+
+- Activity 1 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 3 (usa_skyline.jpg) : “Aerial View City Skyline Skyscraper” by unknown, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/5967710/aerial-view-city-skyline-skyscraper)
+- Activity 5 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+
+## F5/49_F5_M3_L42_Location_of_Settlements
+
+- Activity 3 (f4_fetchwater.jpg) : “Women fetch water in Kilte-Awlaelo woreda, Tigray” by UNICEF Ethiopia, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/86783452@N02/14056445728)
+- Activity 4 (usa_monteriggioni.jpg) : “Piazza Roma, Monteriggioni, Tuscany” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/27053980373)
+
+## F5/50_F5_M3_L43_Concept_of_Rural_Settlement
+
+- Activity 1 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 2 (usa_bigfarm.jpg) : “Wheat fields. New Zealand.” by Bernard Spragg, CC0 1.0, via Flickr (https://www.flickr.com/photos/88123769@N02/24607172362)
+- Activity 4 (lsa_cmrfarm.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
+- Activity 5 (usa_nomad.jpg) : “A roadside stop for souvenirs & exploring dry wells, Northern Sahara, ” by ali eminov, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27435717@N00/3437516165)
+
+## F5/52_F5_M3_L45_Rural_Settlement_Patterns
+
+- Activity 4 (f4_fetchwater.jpg) : “Women fetch water in Kilte-Awlaelo woreda, Tigray” by UNICEF Ethiopia, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/86783452@N02/14056445728)
+- Activity 5 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+
+## F5/53_F5_M3_L46_The_Concept_of_Urban_Settlement
+
+- Activity 1 (usa_skyline.jpg) : “Aerial View City Skyline Skyscraper” by unknown, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/5967710/aerial-view-city-skyline-skyscraper)
+
+## F5/54_F5_M3_L47_Urbanisation
+
+- Activity 3 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+- Activity 4 (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
+- Activity 5 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+
+## F5/55_F5_M3_L48_Consequences_of_the_Urbanisation_Process
+
+- Activity 1 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 2 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 3 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+
+## F5/56_F5_M3_FS05_The_Shanty_Settlements_Ghettos_Slums_in_the_World
+
+- Activity 1 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Activity 2 (usa_stilt.jpg) : “Village on the water Brunei.” by Bernard Spragg, CC0 1.0, via Flickr (https://www.flickr.com/photos/88123769@N02/15383937049)
+- Activity 3 (usa_lapaz.jpg) : “La Paz” by cliff.hellis, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/30099537@N02/6348597083)
+- Activity 4 (usa_docklands.jpg) : “Old & new: University Greenwich, The Queen's House & London Docklands” by Bert Kaufmann, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/22746515@N02/26742366958)
+
+## F5/57_F5_M3_L49_Functions_of_Urban_Settlements
+
+- Activity 2 (usa_cbd.jpg) : “Central Business District” by alantankenghoe, CC BY 2.0, via Flickr (https://www.flickr.com/photos/57785759@N06/5548938771)
+- Activity 3 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 4 (usa_beach.jpg) : “Crowded Sunny Beach, Bulgaria” by phototouring, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/19054742@N00/1557605901)
+- Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+
+## F5/58_F5_M3_L50_Urban_Fields_or_Spheres_of_Influence
+
+- Activity 2 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Activity 3 (f2t_cattle_market.jpg) : “Discussing the price” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7313656038)
+
+## F5/61_F5_M3_L52_Settlements_in_Cameroon
+
+- Activity 1 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+
+## F5/62_F5_M3_L53_Urban_Spheres_of_Influence_in_Cameroon
+
+- Activity 2 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 3 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+
+## F5/63_F5_M3_FS06_Site_and_Situation_of_Douala
+
+- Activity 2 (lsa_wouri_sat.jpg) : “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)
+- Activity 4 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
+- Activity 5 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)

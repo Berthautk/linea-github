@@ -130,7 +130,7 @@ def coordinates_gif():
         if f2 > 0: ax.plot([X0, X0], [Y0, Y0 + (13.5 - Y0) * f2], color=GREEN, lw=5, transform=PC, zorder=9)
         if i >= 10: fig.text(0.66, 0.55, '1. Latitude: 9°N', fontsize=28, fontweight='bold', color=RED)
         if i >= 22: fig.text(0.66, 0.35, '2. Longitude: 13°E', fontsize=28, fontweight='bold', color=GREEN)
-        buf = io.BytesIO(); fig.savefig(buf, format='png', dpi=80, facecolor='white'); plt.close(fig); buf.seek(0); frames.append(Image.open(buf).convert('RGB'))
+        buf = io.BytesIO(); fig.savefig(buf, format='png', dpi=GIF_DPI, facecolor='white'); plt.close(fig); buf.seek(0); frames.append(Image.open(buf).convert('RGB'))
     save_gif(frames, 'coordinates.gif', ms=160, hold=14)
     frames[-1].save(OUT + 'coordinates_last.png')
 
@@ -300,7 +300,7 @@ def jigsaw_gif():
                 if p.area > 2: ax.add_patch(Polygon(np.array(p.exterior.coords), fc=c, ec='#333', lw=1.5))
         ax.text(25, 5, 'AFRICA', fontsize=30, fontweight='bold', ha='center'); c = g.centroid; ax.text(c.x, c.y, 'SOUTH\nAMERICA', fontsize=26, fontweight='bold', ha='center', va='center')
         lab(ax, -15, 34, 'Today' if i < 3 else ('The coasts fit together' if f >= 1 else 'Close the Atlantic Ocean...'), fs=28, c=RED)
-        buf = io.BytesIO(); fig.savefig(buf, format='png', dpi=80, facecolor='white'); plt.close(fig); buf.seek(0); frames.append(Image.open(buf).convert('RGB'))
+        buf = io.BytesIO(); fig.savefig(buf, format='png', dpi=GIF_DPI, facecolor='white'); plt.close(fig); buf.seek(0); frames.append(Image.open(buf).convert('RGB'))
     save_gif(frames, 'jigsaw.gif', ms=160, hold=14)
     frames[-1].save(OUT + 'jigsaw_last.png')
 

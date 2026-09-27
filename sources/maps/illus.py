@@ -9,6 +9,7 @@ import io, sys
 
 OUT = '/home/claude/f4/img/v2/'
 import os; os.makedirs(OUT, exist_ok=True)
+GIF_DPI = 150
 RED = '#B0001A'; NAVY = '#12305A'; W_, H_ = 12.8, 5.0
 LAB = 26
 
@@ -36,14 +37,21 @@ def save(fig, name):
 
 
 def frame(fig):
-    buf = io.BytesIO(); fig.savefig(buf, format='png', dpi=80, facecolor='white'); plt.close(fig); buf.seek(0)
+    buf = io.BytesIO(); fig.savefig(buf, format='png', dpi=GIF_DPI, facecolor='white'); plt.close(fig); buf.seek(0)
     return Image.open(buf).convert('RGB')
 
 
 def save_gif(frames, name, ms=120, hold=12):
-    frames = frames + [frames[-1]] * hold
-    pal = [f.convert('P', palette=Image.ADAPTIVE, colors=128) for f in frames]
-    pal[0].save(OUT + name, save_all=True, append_images=pal[1:], duration=ms, loop=0, optimize=True)
+    """Full frames (no delta/transparency) with one shared palette: PowerPoint shows them crisp and without ghosting."""
+    w, h = frames[0].size; step = max(1, len(frames) // 8)
+    sample = Image.new('RGB', (w, h * len(frames[::step])))
+    for i, f in enumerate(frames[::step]): sample.paste(f.resize((w, h)), (0, i * h))
+    pal = sample.quantize(colors=255, method=Image.Quantize.MEDIANCUT)
+    P = [f.resize((w, h)).quantize(palette=pal, dither=Image.Dither.NONE) for f in frames]
+    for k, p in enumerate(P):          # alternate two corner pixels so every frame is saved whole (no cropped delta frames)
+        p.putpixel((0, 0), k % 2); p.putpixel((w - 1, h - 1), 1 - k % 2)
+    dur = [ms] * (len(P) - 1) + [ms * (hold + 1)]
+    P[0].save(OUT + name, save_all=True, append_images=P[1:], duration=dur, loop=0, optimize=False, disposal=1)
 
 
 # ---------------- simple drawing helpers ----------------

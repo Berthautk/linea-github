@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Rectangle, Circle, Ellipse, FancyArrowPatch, Wedge, FancyBboxPatch
 from PIL import Image
-from illus import canvas, lab, arrow, save, frame, save_gif, sun, acacia, tuft, maize, cow, person, flame, OUT, RED, NAVY, W_, H_
+from illus import canvas, lab, arrow, save, frame, save_gif, GIF_DPI, sun, acacia, tuft, maize, cow, person, flame, OUT, RED, NAVY, W_, H_
 BLUE = '#1565C0'; GREEN = '#2E7D32'; BROWN = '#6D4C41'; ORANGE = '#E65100'
 plt.rcParams['font.family'] = 'DejaVu Sans'
 

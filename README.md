@@ -10,6 +10,7 @@ Ordre des fichiers (numéro en tête du nom) : pour la F2T, l'ordre de la *Harmo
 |---|---|---|
 | `lecons/F2T/` | Form 2 Technical (2 périodes, **5 activités**) | Lesson 1, parties 1 à 5 (région équatoriale : localisation et climat, sols et végétation, ressources, activités humaines — semaines 2 à 5 —, puis problèmes et solutions, sem. 7), Lesson 2 à Lesson 6 (S01 à S22) — 28 fichiers |
 | `lecons/F1/` | Form 1 (2 périodes, **5 activités**) | Modules 1 à 3 : L1 à L13, PW1 à PW6, FS1, FS2, Guided Work 1 — 22 fichiers |
+| `lecons/F2/` | Form 2 (2 périodes, **5 activités**) | Modules 1 et 2 : L1 à L8, PW1 à PW4, FS1 à FS7 — 19 fichiers |
 | `lecons/F3/` | Programme de la Form 3 (Physical Geography), enseigné en Form 4 (50 minutes, **3 activités**) | L1 à L42, FS1, FS2, PW1, PW2 — 46 fichiers |
 
 Au premier cycle, chaque point du résumé au tableau tient en **une phrase**, et le bas de page porte « DGCAST-GAROUA ». Reconstruire : `cd /home/claude/f4 && node build3_first.js F3` (ou `F2T`), et `node build3_new.js F1` (F2, F4, F5) pour les leçons écrites directement au nouveau format (`sources/f4/v3n/`) ; le résumé de chaque leçon est dans `sources/f4/v3/f4_*.js` et `f2t_*.js`.

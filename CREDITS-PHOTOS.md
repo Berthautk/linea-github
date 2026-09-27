@@ -1533,3 +1533,60 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+
+# USA Practical Geography (Module 8)
+
+## USA Map Analysis 2: Remote Sensing, Aerial Photographs and GIS (Practical Geography)
+
+- Activity 2 (lsa_wouri_sat.jpg) : “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)
+- Activity 4 (usa_aerialtown.jpg) : “Aerial of Greenwood, 1969” by Seattle Municipal Archives, CC BY 2.0, via Flickr (https://www.flickr.com/photos/24256351@N04/10161924795)
+
+## USA Map Analysis 5: Vegetation on Maps (Practical Geography)
+
+- Activity 3 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 4 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+
+## USA Map Analysis 7: Land Use on Maps (Practical Geography)
+
+- Activity 2 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 4 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+
+## USA Map Analysis 9: Urban Settlements on Maps (Practical Geography)
+
+- Activity 2 (usa_aerialtown.jpg) : “Aerial of Greenwood, 1969” by Seattle Municipal Archives, CC BY 2.0, via Flickr (https://www.flickr.com/photos/24256351@N04/10161924795)
+- Activity 5 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+
+## USA Quantitative Techniques 2: Data Collection: Sources and Techniques (Practical Geography)
+
+- Activity 4 (usa_tape.jpg) : “Farmers Use Ribbon Tape Measure a Crop Field” by IFPRI, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/49258007@N03/28439241155)
+
+## USA Field Work 1: Getting Geographical Coordinates (Practical Geography)
+
+- Activity 2 (usa_topomap.jpg) : “Harvey Butchart's hiking map” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/5289678354)
+- Activity 4 (usa_gps.jpg) : “DAPA GPS Fruit 5” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/4821530518)
+
+## USA Field Work 3: Fieldwork in Hydrology: Running Water (Practical Geography)
+
+- Activity 3 (usa_pebbles.jpg) : “Pebbles” by Squidz, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/49186419@N00/8046011884)
+- Activity 5 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+
+## USA Field Work 4: Fieldwork in Geomorphology: Rivers and Coasts (Practical Geography)
+
+- Activity 3 (f4_meander.jpg) : “Ox-bow” by colinjackson1972, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8253719@N04/2329293239)
+- Activity 5 (f4_waves.jpg) : “Carpinteria Bluffs, California (5)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/4063056130)
+
+## USA Field Work 5: Fieldwork in Biogeography: Soils and Vegetation (Practical Geography)
+
+- Activity 2 (usa_auger.jpg) : “Soil Auger sample” by SAGT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/46860625@N07/4971829421)
+- Activity 3 (lsa_quadrat.jpg) : “Vegetation Monitoring, Katmai NPP” by swanNPS, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/90673956@N06/16796099732)
+- Activity 5 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+
+## USA Field Work 6: Fieldwork on Economic Activities (Practical Geography)
+
+- Activity 2 (f2t_combine.jpg) : “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
+- Activity 3 (usa_pottery.jpg) : “Zulu woman at a reconstructed traditional village in South Africa roll” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/2355358070)
+
+## USA Field Work 7: Fieldwork on Settlement (Practical Geography)
+
+- Activity 2 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)

@@ -2,16 +2,17 @@
 
 Toutes les leçons (290 PowerPoint) sont au nouveau format de septembre 2026 (voir « Ce que contient chaque leçon »).
 
-## Premier cycle : Form 2 Technical (F2T) et Form 4 (F4)
+## Premier cycle : Form 1 à Form 5 et Form 2 Technical (F2T)
 
-Ordre des fichiers (numéro en tête du nom) : pour la F2T, l'ordre de la *Harmonised Progression Sheet* (Economic Geography, Form 2) ; pour la F4, l'ordre du syllabus national de la Form 3 (Physical Geography, 42 leçons, commencées en Form 3 et terminées en Form 4).
+Ordre des fichiers (numéro en tête du nom) : pour la F2T, l'ordre de la *Harmonised Progression Sheet* (Economic Geography, Form 2) ; pour F1 à F5, l'ordre du syllabus national *Geography Syllabus Forms I–V* (MINESEC, 2023) ; le dossier F3 contient le programme de la Form 3 (Physical Geography, 42 leçons, commencées en Form 3 et terminées en Form 4).
 
 | Dossier | Contenu | Leçons |
 |---|---|---|
 | `lecons/F2T/` | Form 2 Technical (2 périodes, **5 activités**) | Lesson 1, parties 1 à 5 (région équatoriale : localisation et climat, sols et végétation, ressources, activités humaines — semaines 2 à 5 —, puis problèmes et solutions, sem. 7), Lesson 2 à Lesson 6 (S01 à S22) — 28 fichiers |
-| `lecons/F4/` | Form 4 (50 minutes, **3 activités**) | L1 à L42, FS1, FS2, PW1, PW2 — 46 fichiers |
+| `lecons/F1/` | Form 1 (2 périodes, **5 activités**) | Modules 1 à 3 : L1 à L13, PW1 à PW6, FS1, FS2, Guided Work 1 — 22 fichiers |
+| `lecons/F3/` | Programme de la Form 3 (Physical Geography), enseigné en Form 4 (50 minutes, **3 activités**) | L1 à L42, FS1, FS2, PW1, PW2 — 46 fichiers |
 
-Au premier cycle, chaque point du résumé au tableau tient en **une phrase**, et le bas de page porte « DGCAST-GAROUA ». Reconstruire : `cd /home/claude/f4 && node build3_first.js F4` (ou `F2T`) ; le résumé de chaque leçon est dans `sources/f4/v3/f4_*.js` et `f2t_*.js`.
+Au premier cycle, chaque point du résumé au tableau tient en **une phrase**, et le bas de page porte « DGCAST-GAROUA ». Reconstruire : `cd /home/claude/f4 && node build3_first.js F3` (ou `F2T`), et `node build3_new.js F1` (F2, F4, F5) pour les leçons écrites directement au nouveau format (`sources/f4/v3n/`) ; le résumé de chaque leçon est dans `sources/f4/v3/f4_*.js` et `f2t_*.js`.
 
 ## Second cycle : Lower Sixth Arts (LSA) et Upper Sixth Arts (USA)
 
@@ -33,7 +34,7 @@ Nom des fichiers : `01_LSA_GEOMO_L01_Origin_of_the_Earth.pptx`. Le numéro en t�
 
 ## Ce que contient chaque leçon
 
-**Nouveau format (septembre 2026, modèle de M. Kamdem), appliqué à toutes les classes : F2T, F4, LSA et USA.**
+**Nouveau format (septembre 2026, modèle de M. Kamdem), appliqué à toutes les classes : F1 à F5, F2T, LSA et USA.**
 
 - **En-tête et bas de page dans le masque des diapositives** : classe, numéro et titre de la leçon, date, « Copyright MINESEC — HOD – GBHS GAROUA » (second cycle) ou « DGCAST-GAROUA » (premier cycle), nom de l'enseignant. Pour changer le nom de l'établissement une seule fois pour toutes les diapositives : *Affichage > Masque des diapositives*, modifier le texte du bas de page (et celui de la page de garde), puis fermer le masque. Le numéro de diapositive est dans le carré en haut à gauche.
 - **Feuille « MINESEC — Éducation à distance »** à gauche des diapositives de texte ; sa largeur diminue quand le texte est long, et elle disparaît sur les diapositives de photos, de schémas et de tableaux.
@@ -59,8 +60,9 @@ Les scripts utilisent les chemins absolus d'origine (`/home/claude/f4`, `/home/c
 
 ```bash
 cd /home/claude/f4 && npm i pptxgenjs
-node build3_first.js F4     # Form 4 (46 leçons) ; F2T pour la Form 2 Technical
-node build3_first.js F4 FORM4_LESSON19   # une seule leçon (filtre sur le nom)
+node build3_first.js F3     # programme de Form 3 (46 leçons) ; F2T pour la Form 2 Technical
+node build3_new.js F1       # Form 1 (idem F2, F4, F5)
+node build3_first.js F3 FORM4_LESSON19   # une seule leçon (filtre sur le nom)
 node build3_lsa.js          # Lower Sixth ; build3_usa.js pour l'Upper Sixth
 ```
 

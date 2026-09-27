@@ -5,8 +5,8 @@ const fs = require('fs');
 const { build } = require('./gen3');
 const CRED = '/home/claude/f4/photos/credits.json';
 const OUT = '/home/claude/v3out/';
-const CLASS = { LSA: 'Lower Sixth Arts', USA: 'Upper Sixth Arts', F4: 'Form 4', F2T: 'Form 2 Technical' };
-const SCHOOL = { LSA: 'GBHS GAROUA', USA: 'GBHS GAROUA', F4: 'DGCAST-GAROUA', F2T: 'DGCAST-GAROUA' };
+const CLASS = { LSA: 'Lower Sixth Arts', USA: 'Upper Sixth Arts', F1: 'Form 1', F2: 'Form 2', F3: 'Form 4', F4: 'Form 4', F5: 'Form 5', F2T: 'Form 2 Technical' };
+const SCHOOL = { LSA: 'GBHS GAROUA', USA: 'GBHS GAROUA', F1: 'DGCAST-GAROUA', F2: 'DGCAST-GAROUA', F3: 'DGCAST-GAROUA', F4: 'DGCAST-GAROUA', F5: 'DGCAST-GAROUA', F2T: 'DGCAST-GAROUA' };
 const TIMING2 = ['Homework correction, plan, objectives 8 min', 'Recall, situation, action 10 min', '5 activities 30 min', 'Board summary (copying) 30 min', 'Evaluation, remediation 10 min', 'Homework, next lesson 5 min', 'Logbook 7 min'];
 const TIMING1 = ['Homework correction, plan, objectives 4 min', 'Recall, situation, action 6 min', '3 activities 12 min', 'Board summary (copying) 15 min', 'Evaluation, remediation 5 min', 'Homework, next lesson 3 min', 'Logbook 5 min'];
 const key = (l) => `${l.kind || 'Lesson'} ${l.no}`;
@@ -42,6 +42,7 @@ function prepare(seq) {
     sp.references = (l.baseRefs || B.refs || [`National Geography Syllabus, MINESEC/IGE/IP-SS, 2019 — ${B.moduleShort}.`]).concat(l.extraRefs || [], credits, ['Diagrams and animations: drawn for this lesson (Geography Department).']);
     // checks
     const second = B.level === 'LSA' || B.level === 'USA';
+    const want = /^50 minutes/.test(sp.duration) ? 3 : 5;
     if (!P) console.warn('.. ' + sp.file + ': no v3 patch yet (old summary kept)');
     else {
       if (!sp.hwAnswer) console.warn('!! ' + sp.file + ': no homework answer');
@@ -52,7 +53,6 @@ function prepare(seq) {
         if (k < lo || k > hi) console.warn(`!! ${sp.file}: "${h}" has ${k} sentence(s)`);
       }));
     }
-    const want = /^50 minutes/.test(sp.duration) ? 3 : 5;
     if (sp.activities.length !== want) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities, expected ' + want);
     if (false) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities');
     sp.activities.forEach((a) => { if (a.img && !fs.existsSync('/home/claude/f4/img/v2/' + a.img) && !fs.existsSync('/home/claude/f4/img/' + a.img)) throw new Error(sp.file + ': missing image ' + a.img); });
@@ -99,4 +99,9 @@ function arrange(seq, order) {
   if (out.length !== seq.length) throw new Error('arrange: ' + seq.length + ' entries, ' + out.length + ' keys');
   return out;
 }
-module.exports = { run, prepare, seqOf, seqFirst, arrange, key };
+// native v3 specs (lessons written directly in the v3 format, no old metadata): file exports { B, L }
+function seqNative(specFile) {
+  const S = require(specFile);
+  return S.L.map((l) => ({ L: l, B: S.B, P: l }));
+}
+module.exports = { run, prepare, seqOf, seqFirst, seqNative, arrange, key };

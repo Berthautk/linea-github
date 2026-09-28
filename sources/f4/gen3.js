@@ -226,8 +226,13 @@ function build(sp) {
       const k = kindOf(a.img);
       picture(a.sec, t, a.img, a.caption, `Activity ${i + 1}. Look carefully at this ${k}${a.caption ? ': ' + lc1(a.caption.replace(/\.$/, '')) : ''}.` + (k === 'animation' ? ' Watch the animation to the end; it will play again.' : ' Observe every detail before I ask the question.'));
     }
-    tslide(a.sec, t + ': Question', [a.q], { note: `Here is the question for Activity ${i + 1}: ${a.q} Take one minute to think and write your answer in your rough notebook.` });
-    tslide(a.sec, t + ': Answer', [a.a], { note: `Let us check the answer together. ${dot(a.a)}` });
+    // one question per slide, each followed by its answer (q and a may be arrays of the same length)
+    const qs = [].concat(a.q), as = [].concat(a.a);
+    qs.forEach((q, k) => {
+      const suf = qs.length > 1 ? ` ${k + 1}` : '';
+      tslide(a.sec, t + ': Question' + suf, [q], { note: `${k === 0 ? `Here is the question for Activity ${i + 1}` : 'Here is the next question'}: ${q} Take one minute to think and write your answer in your rough notebook.` });
+      tslide(a.sec, t + ': Answer' + suf, [as[k]], { note: `Let us check the answer together. ${dot(as[k])}` });
+    });
   });
 
   // ---------- 5. board summary ----------

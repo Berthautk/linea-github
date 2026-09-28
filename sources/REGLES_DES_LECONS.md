@@ -23,4 +23,6 @@ Ces règles s'appliquent à toutes les classes (premier et second cycle). Modèl
 
 ## 4. Activités
 - Garder les activités (5 en 2 périodes, 3 en 50 minutes) et leurs images.
-- Questions de **découverte** en plusieurs temps : (a) ce qu'on observe, (b) pourquoi, (c) comment on l'appelle. L'élève découvre la notion avant qu'on la nomme.
+- Questions de **découverte** : l'élève découvre la notion (ce qu'il observe, pourquoi, comment on l'appelle) avant qu'on la nomme.
+- **Une seule question par diapositive**, suivie de sa réponse sur la diapositive suivante. Jamais plusieurs questions (a), (b), (c) d'affilée sur la même diapositive.
+- Choisir **une ou deux questions pertinentes** par activité, pas davantage.

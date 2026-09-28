@@ -1090,12 +1090,17 @@ $('exSave').onclick = () => {
 $('exShare').onclick = async () => {
   if (!ex.files) return;
   const data = { files: ex.files, title: safeName($('exName').value) };
-  if (navigator.canShare && navigator.canShare(data)) {
-    try { await navigator.share(data); }
-    catch (e) { if (e.name !== 'AbortError') toast('Le partage a échoué. Utilisez « Télécharger ».'); }
-  } else {
+  const saveInstead = (why) => {
     ex.files.forEach((f, i) => setTimeout(() => download(f), i * 300));
-    toast('Partage direct non disponible ici : le fichier a été téléchargé.');
+    toast(`${why} Le fichier a été enregistré dans « Téléchargements » : envoyez-le depuis WhatsApp ou Gmail (trombone > Document).`, 7000);
+  };
+  let ok = false;
+  try { ok = !!(navigator.canShare && navigator.canShare(data)); } catch { ok = false; }
+  if (!ok) { saveInstead('Ce téléphone ne permet pas de partager ce type de fichier directement.'); return; }
+  try { await navigator.share(data); }
+  catch (e) {
+    // Chrome sur Android refuse de partager certains types (Word…).
+    if (e.name !== 'AbortError') saveInstead('Partage direct impossible pour ce fichier.');
   }
 };
 

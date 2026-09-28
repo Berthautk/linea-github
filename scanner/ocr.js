@@ -44,8 +44,13 @@ function simplify(data) {
       for (const l of p.lines || []) {
         const words = (l.words || [])
           .filter(w => w.text && w.text.trim())
-          .map(w => ({ t: w.text.trim(), c: Math.round(w.confidence), b: [w.bbox.x0, w.bbox.y0, w.bbox.x1, w.bbox.y1] }));
-        if (words.length) lines.push({ b: [l.bbox.x0, l.bbox.y0, l.bbox.x1, l.bbox.y1], words });
+          .map(w => ({ t: w.text.trim(), c: Math.round(w.confidence), b: [w.bbox.x0, w.bbox.y0, w.bbox.x1, w.bbox.y1] }))
+          // Faux mots lus dans les images (feuilles, logos) : très faible
+          // confiance, ou aucune lettre ni chiffre.
+          .filter(w => w.c >= 40 && /[\p{L}\p{N}]/u.test(w.t));
+        const letters = words.reduce((s, w) => s + (w.t.match(/[\p{L}\p{N}]/gu) || []).length, 0);
+        const conf = words.reduce((s, w) => s + w.c, 0) / (words.length || 1);
+        if (words.length && letters >= 2 && conf >= 55) lines.push({ b: [l.bbox.x0, l.bbox.y0, l.bbox.x1, l.bbox.y1], words });
       }
       if (lines.length) paragraphs.push({ b: [p.bbox.x0, p.bbox.y0, p.bbox.x1, p.bbox.y1], lines });
     }

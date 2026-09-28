@@ -6,6 +6,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 # F1
 
+# F1
+
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
 
 - Photo, Activity 1: “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
@@ -1591,31 +1593,26 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## LSA/Geomorphology/01_LSA_GEOMO_L01_Origin_of_the_Earth
 
-- Photo, Activity 1: “Hubble Spies Charming Spiral Galaxy Bursting with Stars” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/15766783527)
-- Photo, Activity 3: “Western Australia, Stromatolites Sharks Bay” by VladPix, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/62825712@N07/8766549873)
-- Photo, Activity 4: “Trilobite Fossil at NMNH” by Mr.TinDC, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/7471115@N08/2948579998)
+- Photo, Activity 3: “Hubble Spies Charming Spiral Galaxy Bursting with Stars” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/15766783527)
 - Photo, Activity 5: “dinosaur” by ianturton, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/16041363@N00/9555513)
-
-## LSA/Geomorphology/02_LSA_GEOMO_L02_Internal_Structure_of_the_Earth
-
-- Photo, Activity 4: “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
-- Photo, Activity 5: “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Photo, board summary (Life in the Precambrian): “Western Australia, Stromatolites Sharks Bay” by VladPix, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/62825712@N07/8766549873)
+- Photo, board summary (Palaeozoic ("ancient life", 541–252 million years ago)): “Trilobite Fossil at NMNH” by Mr.TinDC, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/7471115@N08/2948579998)
 
 ## LSA/Geomorphology/03_LSA_GEOMO_FS01_Early_Theories_of_Crustal_Movements
 
-- Photo, Activity 3: “Marble Skin Fish Fossil” by Bold Frontiers, CC BY 2.0, via Flickr (https://www.flickr.com/photos/82955120@N05/14091612527)
-- Photo, Activity 4: “geoscience crowd sourcing” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/37633979015)
+- Photo, Activity 4: “Marble Skin Fish Fossil” by Bold Frontiers, CC BY 2.0, via Flickr (https://www.flickr.com/photos/82955120@N05/14091612527)
+- Photo, Activity 5: “geoscience crowd sourcing” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/37633979015)
 
 ## LSA/Geomorphology/04_LSA_GEOMO_FS02_Theory_of_Sea_Floor_Spreading
 
 - Photo, Activity 2: “expl1536” by NOAA Photo Library, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51647007@N08/9664185645)
-- Photo, Activity 3: “Iceland's Vestmannaeyjar the town that held back an erupting lava flow” by moonjazz, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/8398907@N02/21228033348)
+- Photo, Activity 4: “Iceland's Vestmannaeyjar the town that held back an erupting lava flow” by moonjazz, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/8398907@N02/21228033348)
 - Photo, Activity 5: “Silfra Fissure” by Daveography.ca, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/71482738@N00/32857247053)
 
 ## LSA/Geomorphology/05_LSA_GEOMO_L03_Theory_of_Plate_Tectonics
 
 - Photo, Activity 4: “faultfind_48” by dsearls, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/52614599@N00/15392616)
-- Photo, Activity 5: “Kilimanjaro” by ian 1602, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98181641@N00/2179855841)
+- Photo, board summary (Consequences): “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
 
 ## LSA/Geomorphology/06_LSA_GEOMO_L04_Landforms_at_Constructive_or_Divergent_Margins
 
@@ -1626,61 +1623,53 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## LSA/Geomorphology/07_LSA_GEOMO_L05_Landforms_at_Destructive_and_Conservative_Margins
 
-- Photo, Activity 3: “View of the Himalaya Mountain Range” by NASA Johnson, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/29988733@N04/10678470543)
-- Photo, Activity 5: “Mount St. Helens: Eruption, May 18, 1980, from East. Photo: DNR” by Washington State Department of Natural Resources, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35433815@N08/4607166057)
+- Photo, Activity 2: “View of the Himalaya Mountain Range” by NASA Johnson, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/29988733@N04/10678470543)
+- Photo, Activity 4: “Mount St. Helens: Eruption, May 18, 1980, from East. Photo: DNR” by Washington State Department of Natural Resources, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35433815@N08/4607166057)
+- Photo, Activity 5: “faultfind_48” by dsearls, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/52614599@N00/15392616)
 
 ## LSA/Geomorphology/08_LSA_GEOMO_L06_Volcanism
 
-- Photo, Activity 1: “Pahoehoe Lava Flow” by graysky., CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/20021588@N00/540223861)
-- Photo, Activity 3: “Mayon Volcano, Albay, Luzon, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/20591774278)
-- Photo, Activity 4: “Taal Lake and Volcano, Tagaytay, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/28260012661)
-- Photo, Activity 5: “Snapshot, Daguoye Columnar Basalt, Penghu, Taiwan, 隨拍, 池東大菓葉玄武岩, 大菓葉柱狀” by bryan..., CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/91049143@N00/52316527525)
+- Photo, board summary (Shield (basic lava) cones): “Fire and Stars” by howardignatius, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/25659032@N07/39966052052)
+- Photo, board summary (Composite cones (stratovolcanoes)): “Mayon Volcano, Albay, Luzon, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/20591774278)
+- Photo, board summary (Lava plateau): “Snapshot, Daguoye Columnar Basalt, Penghu, Taiwan, 隨拍, 池東大菓葉玄武岩, 大菓葉柱狀” by bryan..., CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/91049143@N00/52316527525)
 
 ## LSA/Geomorphology/09_LSA_GEOMO_L07_Volcanoes_and_Man
 
-- Photo, Activity 1: “20131110-DSC_4372” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11288779044)
-- Photo, Activity 2: “Global Geothermal Alliance Stakeholder Meeting and Site Tour, 15-16 Ju” by International Renewable Energy Agency (IRENA), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/127932406@N06/18856399410)
-- Photo, Activity 3: “Lava flow over road” by J. N. Stuart, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/21786539@N03/3387263273)
-- Photo, Activity 4: “Lake Nyos, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11584073056)
-- Photo, Activity 5: “Hawaiian Volcano Observatory, Hawaiʻi Volcanoes National Park, Hawaii” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/4528702285)
+- Photo, board summary (Lahars): “Lahar (mudflow) remnants from Mount Ruapehu” by Wade Tregaskis, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7725552@N06/502073245)
 
 ## LSA/Geomorphology/10_LSA_GEOMO_L08_Earthquakes_and_Man
 
 - Photo, Activity 2: “Recording drum from Golitsyn seismograph” by Galitzin, Boris; Masing, Hugo, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co8647018/recording-drum-from-golitsyn-seismograph)
 - Photo, Activity 4: “Collapsed buildings in earthquake-hit Chautara, Nepal” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/16693413433)
-- Photo, Activity 5: “Tsunami damage” by robertodevido, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/63082042@N00/5531541425)
+- Photo, board summary (Example): “Tsunami damage” by robertodevido, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/63082042@N00/5531541425)
 
 ## LSA/Geomorphology/11_LSA_GEOMO_L09_Denudation_and_Weathering
 
-- Photo, Activity 4: “Lock down!” by ViNo Gv, CC BY 2.0, via Flickr (https://www.flickr.com/photos/38217093@N03/20143584561)
 - Photo, Activity 5: “Stones 'n' Roots” by erix!, CC BY 2.0, via Flickr (https://www.flickr.com/photos/68387408@N00/55692423)
+- Photo, board summary (Erosion): “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 
 ## LSA/Geomorphology/12_LSA_GEOMO_L10_Intensity_and_Factors_of_Weathering
 
-- Photo, Activity 2: “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Photo, Activity 2: “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
 - Photo, Activity 3: “Songam Cave” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/5063216873)
 - Photo, Activity 4: “Full Screen Plate Tectonics” by subarcticmike, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31856336@N03/3109980958)
-- Photo, Activity 5: “Marble quarry, Carrara” by Russell Carman, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/11328254@N02/2095886412)
+- Photo, Activity 5: “Moisturise Daily (Statue at Palladio's Teatro Olimpico), Vicenza” by flatworldsedge, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/53196512@N07/5624073650)
 
 ## LSA/Geomorphology/13_LSA_GEOMO_L11_The_Impact_of_Weathering
 
 - Photo, Activity 2: “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
-- Photo, Activity 3: “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
-- Photo, Activity 4: “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
-- Photo, Activity 5: “Moisturise Daily (Statue at Palladio's Teatro Olimpico), Vicenza” by flatworldsedge, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/53196512@N07/5624073650)
+- Photo, Activity 3: “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
+- Photo, Activity 4: “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+- Photo, Activity 5: “Cracked wall” by árticotropical, CC BY 2.0, via Flickr (https://www.flickr.com/photos/8581973@N02/521943309)
 
 ## LSA/Geomorphology/14_LSA_GEOMO_L12_Mass_Wasting_Movement
 
-- Photo, Activity 1: “Hillsides scarred by landslides caused by cloudbursts, Rudraprayag, Ut” by ICIMOD.Gallery, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/127267759@N06/16051008426)
-- Photo, Activity 3: “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
-- Photo, Activity 4: “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Photo, Activity 5: “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
 
 ## LSA/Geomorphology/15_LSA_GEOMO_L13_Processes_and_Features_of_Mass_Wasting
 
-- Photo, Activity 2: “Opal Hills” by Dru!, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/36543076@N00/17159561341)
-- Photo, Activity 3: “Holderness landslides 026” by Madingley, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/26004680@N00/256596582)
-- Photo, Activity 4: “Lahar (mudflow) remnants from Mount Ruapehu” by Wade Tregaskis, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7725552@N06/502073245)
-- Photo, Activity 5: “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
+- Photo, board summary (Landslides): “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
+- Photo, board summary (Mudflows and debris flows): “Lahar (mudflow) remnants from Mount Ruapehu” by Wade Tregaskis, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7725552@N06/502073245)
 
 ## LSA/Geomorphology/16_LSA_GEOMO_L14_Erosional_Processes_and_the_Fluvial_System
 
@@ -1689,11 +1678,12 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## LSA/Geomorphology/17_LSA_GEOMO_L15_River_Action_on_its_Long_Profile
 
 - Photo, Activity 2: “Ekom-Nkam waterfall” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11291226526)
-- Photo, Activity 5: “Egypt” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/5635018418)
+- Photo, Activity 5: “20130501-NRCS-LSC-0605” by USDAgov, Public domain 1.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8725089904)
+- Photo, board summary (Deltas): “Egypt” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/5635018418)
 
 ## LSA/Geomorphology/18_LSA_GEOMO_L16_Coastal_Processes_and_Features
 
-- Photo, Activity 5: “Coastal defences no longer being maintained - Why? Spurn Head, Yorkshi” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/6605676971)
+- Photo, board summary (Pollution): “Exxon Valdez Oil Spill - 0038” by ARLIS Reference, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/51606297@N07/4750613516)
 
 ## LSA/Geomorphology/19_LSA_GEOMO_FS03_Relief_of_Cameroon
 

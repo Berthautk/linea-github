@@ -1,12 +1,5 @@
 // Rebuild Upper Sixth Arts in the v3 format, in the order of the 2019 syllabus (Modules 4 to 8)
-const fs = require('fs');
-const { run, seqOf, arrange, key } = require('./sixth3');
-// lessons rewritten natively from the teacher's supports (v3n/<prefix>_*.js) replace the old v2+v3 entries with the same key
-const overlay = (seq, prefix) => {
-  const N = [].concat(...fs.readdirSync(__dirname + '/v3n').filter((f) => f.startsWith(prefix + '_')).sort().map((f) => { const S = require('./v3n/' + f); return S.L.map((l) => ({ L: l, B: S.B, P: l })); }));
-  const X = fs.existsSync(__dirname + '/v3n/' + prefix + '.js') ? require('./v3n/' + prefix) : {};   // small overrides for kept lessons (homework...)
-  return seq.map((e) => N.find((n) => key(n.L) === key(e.L)) || (X[key(e.L)] ? { L: Object.assign({}, e.L, X[key(e.L)]), B: e.B, P: Object.assign({}, e.P, X[key(e.L)]) } : e));
-};
+const { run, seqOf, arrange, overlay } = require('./sixth3');
 const L = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => 'Lesson ' + (a + i));
 const seq = [].concat(
   overlay(seqOf('./v2_usa_pop', './v3/usa_pop'), 'usapop'), seqOf('./v2_usa_set', './v3/usa_set'),

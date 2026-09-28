@@ -113,4 +113,11 @@ function seqNative(specFile) {
   const S = require(specFile);
   return S.L.map((l) => ({ L: l, B: S.B, P: l }));
 }
-module.exports = { run, prepare, seqOf, seqFirst, seqNative, arrange, key };
+// lessons rewritten natively from the teacher's supports (v3n/<prefix>_*.js) replace the old v2+v3 entries with the same key;
+// v3n/<prefix>.js may hold small overrides (homework...) for the lessons that are kept
+function overlay(seq, prefix) {
+  const N = [].concat(...fs.readdirSync(__dirname + '/v3n').filter((f) => f.startsWith(prefix + '_')).sort().map((f) => { const S = require('./v3n/' + f); return S.L.map((l) => ({ L: l, B: S.B, P: l })); }));
+  const X = fs.existsSync(__dirname + '/v3n/' + prefix + '.js') ? require('./v3n/' + prefix) : {};
+  return seq.map((e) => N.find((n) => key(n.L) === key(e.L)) || (X[key(e.L)] ? { L: Object.assign({}, e.L, X[key(e.L)]), B: e.B, P: Object.assign({}, e.P, X[key(e.L)]) } : e));
+}
+module.exports = { run, prepare, seqOf, seqFirst, seqNative, arrange, key, overlay };

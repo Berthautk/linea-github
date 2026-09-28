@@ -1614,6 +1614,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 5 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
 
 
+
 # F1
 
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance

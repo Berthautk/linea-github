@@ -1618,21 +1618,19 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
 
 - Activity 1 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
-- Activity 2 (f2t_mount_cameroon.jpg) : “20131110-DSC_4372” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11288779044)
+- Activity 2 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
 - Activity 3 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
 - Activity 4 (usa_topomap.jpg) : “Harvey Butchart's hiking map” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/5289678354)
+- Activity 5 (f2t_cotton_field.jpg) : “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
 
 ## F1/02_F1_M1_L02_Our_Planet_the_Earth
 
 - Activity 2 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
-
-## F1/03_F1_M1_PW01_Representation_of_the_Earth_s_Shape_and_Size
-
-- Activity 1 (f4_earth_space.jpg) : “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
+- Board summary (lsa_sun.jpg) : “Scientists Propose Mechanism to Describe Solar Eruptions of All Sizes” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/36084784530)
 
 ## F1/05_F1_M1_L03_The_Earth_A_Planet_Moving_in_Space
 
-- Activity 2 (f4_sunrise.jpg) : “African Sunrise, Amboseli National Park” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/30385097358)
+- Board summary (f4_sunrise.jpg) : “African Sunrise, Amboseli National Park” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/30385097358)
 
 ## F1/06_F1_M1_PW03_Calculation_of_Time
 
@@ -1641,14 +1639,19 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## F1/07_F1_M2_L04_The_Notion_of_the_Environment
 
 - Activity 1 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
-- Activity 2 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
-- Activity 3 (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Activity 2 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 3 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
 - Activity 4 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+- Board summary (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Board summary (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Board summary (f2t_lake_chad.jpg) : “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
 
 ## F1/08_F1_M2_L05_Natural_Regions_Bio_climatic_Zones_of_Cameroon
 
 - Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Activity 5 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Board summary (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Board summary (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
 
 ## F1/10_F1_M2_L06_Forms_of_Degradation_of_the_Natural_Regions_of_Cameroon
 
@@ -1657,6 +1660,12 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 - Activity 4 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
 - Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+- Board summary (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Board summary (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Board summary (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Board summary (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Board summary (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
+- Board summary (f2t_safari.jpg) : “Sri Lankan Leopard” by Shanaka Kalubowila, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50057113@N06/43689916724)
 
 ## F1/11_F1_M2_GW01_Degradation_of_the_Natural_Environment_of_the_School
 
@@ -1669,7 +1678,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## F1/12_F1_M2_PW05_Solid_Waste_Management
 
 - Activity 1 (usa_dump.jpg) : “Garbage dump at Fadiouth, Senegal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/906659197)
-- Activity 3 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
+- Activity 4 (usa_litter.jpg) : “Do the evolution” by Marco Bellucci, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50451886@N00/3382099741)
 - Activity 5 (f2t_mixed_farm.jpg) : “Timid” by tricky (rick harrison), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/81851211@N00/205287304)
 
 ## F1/13_F1_M3_L07_The_Atmosphere
@@ -1677,12 +1686,14 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 1 (f4_planewindow.jpg) : “flying” by { pranav }, CC BY 2.0, via Flickr (https://www.flickr.com/photos/29220600@N08/3469129491)
 - Activity 4 (f4_cumulonimbus.jpg) : “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
 - Activity 5 (f4_ozonehole.jpg) : “Sauron's Eye” by sjrankin, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24354425@N03/15252220086)
+- Board summary (lsa_aurora.jpg) : “Aurora Borealis” by Haukur H., CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/34699962@N04/3256810738)
 
 ## F1/14_F1_M3_L08_Atmospheric_Circulation
 
 - Activity 1 (f4_barometer.jpg) : “Aneroid Barometer, with dial designed by Sir Napier Shaw, 1914” by Negretti & Zambra; Shaw, Sir Napier, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co54459/aneroid-barometer-with-dial-designed-by-sir-napier-shaw-1914)
 - Activity 3 (f4_windsock.jpg) : “Windsock” by Wajahat Mahmood, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/26116471@N03/6613272897)
 - Activity 5 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Board summary (lsa_monsoon.jpg) : “Running in the rain” by VinothChandar, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44345361@N06/10960940954)
 
 ## F1/15_F1_M3_L09_Atmospheric_Disturbances
 
@@ -1690,6 +1701,9 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (f4_hurricane.jpg) : “NASA's Aqua Satellite Captures Hurricane Danielle” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/4931591817)
 - Activity 4 (f2t_sandstorm.jpg) : “Sandstorm at Camp Bastion, Afghanistan” by Defence Images, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/48399297@N04/10343833885)
 - Activity 5 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+- Board summary (lsa_cumulus.jpg) : “Epic Cloud (Explored)” by Christina Ann VanMeter, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/54129831@N02/6984912657)
+- Board summary (f4_fog.jpg) : “Mist” by Art by MarkAC, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60580775@N08/40783321332)
+- Board summary (f4_heavyrain.jpg) : “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
 
 ## F1/16_F1_M3_FS01_Atmospheric_Disturbances_in_Cameroon
 
@@ -1697,6 +1711,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
 - Activity 4 (f4_floodvillage.jpg) : “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
 - Activity 5 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+- Board summary (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
 
 ## F1/17_F1_M3_PW06_Mechanisms_of_Rain_Formation
 
@@ -1707,11 +1722,17 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Activity 1 (f4_exhaust.jpg) : “image replaced (thanks Anne :) )” by why 137, CC BY 2.0, via Flickr (https://www.flickr.com/photos/78752351@N03/8464430910)
 - Activity 4 (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Activity 5 (f4_solar.jpg) : “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
+- Board summary (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Board summary (f2t_cattle.jpg) : “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
+- Board summary (usa_glacier.jpg) : “Glaciers and Sea Level Rise” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/8742463970)
+- Board summary (usa_irrigation.jpg) : “Irrigation Canals in Farah Province Afgahnistan” by USAID_IMAGES, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46658241@N06/14784748647)
+- Board summary (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
 
 ## F1/19_F1_M3_L11_The_Internal_Structure_of_the_Earth
 
 - Activity 1 (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
-- Activity 3 (f4_eruption.jpg) : “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
+- Activity 2 (f4_eruption.jpg) : “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
 
 ## F1/20_F1_M3_L12_Plate_Movements
 
@@ -1722,6 +1743,10 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 2 (f4_quakedamage.jpg) : “Collapsed buildings in earthquake-hit Chautara, Nepal” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/16693413433)
 - Activity 4 (f4_lavahouse.jpg) : “Lava flow over road” by J. N. Stuart, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/21786539@N03/3387263273)
 - Activity 5 (f2t_tea_highlands.jpg) : “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+- Board summary (lsa_tsunami.jpg) : “Tsunami damage” by robertodevido, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/63082042@N00/5531541425)
+- Board summary (f4_nyos.jpg) : “Lake Nyos, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11584073056)
+- Board summary (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Board summary (f4_geothermal.jpg) : “Global Geothermal Alliance Stakeholder Meeting and Site Tour, 15-16 Ju” by International Renewable Energy Agency (IRENA), CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/127932406@N06/18856399410)
 
 ## F1/22_F1_M3_FS02_What_to_Do_in_Case_of_an_Earthquake_or_a_Volcanic_Eruption
 

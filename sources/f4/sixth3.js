@@ -37,6 +37,8 @@ function prepare(seq) {
     const cred = fs.existsSync(CRED) ? JSON.parse(fs.readFileSync(CRED)) : {};
     const credits = [];
     sp.activities.forEach((a, k) => { if (a.img && cred[a.img]) credits.push(`Photo, Activity ${k + 1}: ${cred[a.img]}`); });
+    const seen = new Set(sp.activities.map((a) => a.img));
+    (sp.summary || []).forEach((p) => (p.items || []).forEach((it) => { const im = it[2]; if (im && cred[im] && !seen.has(im)) { seen.add(im); credits.push(`Photo, board summary (${it[0].replace(/:$/, '')}): ${cred[im]}`); } }));
     const gifs = sp.activities.map((a, k) => (a.img && a.img.endsWith('.gif') ? k + 1 : 0)).filter(Boolean);
     sp.teacherNote = (l.teacherNote || []).concat(gifs.length ? [`Activit${gifs.length > 1 ? 'ies' : 'y'} ${gifs.join(' and ')} ${gifs.length > 1 ? 'are animations' : 'is an animation'} (GIF): it plays automatically in slide-show mode.`] : []);
     sp.references = (l.baseRefs || B.refs || [`National Geography Syllabus, MINESEC/IGE/IP-SS, 2019 — ${B.moduleShort}.`]).concat(l.extraRefs || [], credits, ['Diagrams and animations: drawn for this lesson (Geography Department).']);
@@ -50,7 +52,7 @@ function prepare(seq) {
       sp.summary.forEach((p) => (p.items || []).forEach(([h, t]) => {
         if (Array.isArray(t)) return;   // term followed by a bulleted list (advantages, disadvantages...)
         const k = (t.match(/[.!?](\s|$)/g) || []).length; const def = /DEFINITION/i.test(p.title) || /Meaning|Definition/i.test(p.title + ' ' + (p.sub || ''));
-        const lo = 1, hi = second ? 3 : (def ? 2 : 1);
+        const lo = 1, hi = 3;
         if (k < lo || k > hi) console.warn(`!! ${sp.file}: "${h}" has ${k} sentence(s)`);
       }));
     }

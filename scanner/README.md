@@ -33,10 +33,9 @@ D'après les avis (Trustpilot : 1,9/5 ; note « réelle » 3,2/5 sur 45 000 avis
 | Documents envoyés sur leurs serveurs sans accord, impossibles à effacer | Rien ne quitte le téléphone ; « supprimer » efface vraiment |
 | Documents et étiquettes qui disparaissent, pas de sauvegarde fiable | Sauvegarde complète en un fichier, restauration sur un autre téléphone |
 | Application devenue lourde et confuse | Quelques centaines de Ko, un seul écran principal |
-| Compression, signature, mode carte d'identité réservés aux abonnés | Inclus |
-| Mode N&B qui noircit ou efface les cachets bleus | Le rendu « Scanner » garde leur couleur |
+| Outils avancés (conversion, compression, OCR illimité) réservés aux abonnés | Tout est inclus |
 
-Et ce que CamScanner ne fait pas : alerte flou/reflet dès la photo, taille maximale garantie pour les sites de dépôt, filigrane de protection des pièces d'identité, signature extraite d'une photo.
+En plus, pensé pour les dossiers officiels : alerte flou/reflet dès la photo, taille maximale garantie pour les sites de dépôt, CNI recto-verso à taille réelle, filigrane de protection, signature extraite d'une photo, cachets gardés en couleur.
 
 ## L'utiliser
 

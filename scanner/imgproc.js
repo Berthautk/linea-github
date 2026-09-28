@@ -252,23 +252,8 @@ export function orderQuad(q) {
   return [0, 1, 2, 3].map(i => ({ x: s[(k + i) % 4].x, y: s[(k + i) % 4].y }));
 }
 
-// Renvoie les 4 coins du document dans les coordonnées de `src`, ou null.
-export function detectQuad(src) {
-  const W = src.width, H = src.height;
-  const sc = Math.min(1, 320 / Math.max(W, H));
-  const w = Math.max(16, Math.round(W * sc)), h = Math.max(16, Math.round(H * sc));
-  const small = resizeCanvas(src, w, h);
-  const d = ctx2d(small).getImageData(0, 0, w, h).data;
-  const n = w * h;
-  // « Ressemblance au papier » : clair et peu coloré.
-  const raw = new Float32Array(n);
-  for (let i = 0, j = 0; i < n; i++, j += 4) {
-    const r = d[j], g = d[j + 1], b = d[j + 2];
-    const l = 0.299 * r + 0.587 * g + 0.114 * b;
-    const sat = Math.max(r, g, b) - Math.min(r, g, b);
-    raw[i] = l - 1.2 * sat;
-  }
-  const score = new Uint8Array(n);
+function blur3(raw, w, h) {
+  const out = new Uint8Array(w * h);
   for (let y = 0; y < h; y++)
     for (let x = 0; x < w; x++) {
       let s = 0, c = 0;
@@ -278,9 +263,16 @@ export function detectQuad(src) {
           if (xx < 0 || yy < 0 || xx >= w || yy >= h) continue;
           s += raw[yy * w + xx]; c++;
         }
-      score[y * w + x] = Math.max(0, Math.min(255, s / c));
+      out[y * w + x] = Math.max(0, Math.min(255, s / c));
     }
-  const t = otsu(score);
+  return out;
+}
+
+// Seuil d'Otsu sur une carte de « score », puis plus grande forme pleine
+// et meilleur quadrilatère. Renvoie { quad, fit } ou null.
+function quadFromScore(score, w, h, tMax = 255) {
+  const n = w * h;
+  const t = Math.min(otsu(score), tMax);
   let mask = new Uint8Array(n);
   for (let i = 0; i < n; i++) mask[i] = score[i] > t ? 1 : 0;
   const r = Math.max(1, Math.round(Math.max(w, h) / 160));
@@ -288,8 +280,7 @@ export function detectQuad(src) {
   mask = morph(mask, w, h, r, true);
   const comp = largestComponent(mask, w, h);
   const area = fillHoles(comp, w, h);
-  if (area < n * 0.08 || area > n * 0.985) return null;
-
+  if (area < n * 0.06 || area > n * 0.985) return null;
   const pts = [];
   for (let y = 0; y < h; y++)
     for (let x = 0; x < w; x++) {
@@ -303,9 +294,59 @@ export function detectQuad(src) {
   const hull = convexHull(pts);
   if (hull.length < 4) return null;
   const quad = maxAreaQuad(reduceHull(hull, 14));
+  const qa = polyArea(quad);
   // La forme doit vraiment ressembler à un quadrilatère.
-  if (polyArea(quad) < 0.85 * area) return null;
-  return orderQuad(quad).map(p => ({
+  const fit = Math.min(qa / area, area / qa);
+  if (fit < 0.85) return null;
+  return { quad, fit, area: qa };
+}
+
+// Renvoie les 4 coins du document dans les coordonnées de `src`, ou null.
+export function detectQuad(src) {
+  const W = src.width, H = src.height;
+  const sc = Math.min(1, 320 / Math.max(W, H));
+  const w = Math.max(16, Math.round(W * sc)), h = Math.max(16, Math.round(H * sc));
+  const small = resizeCanvas(src, w, h);
+  const d = ctx2d(small).getImageData(0, 0, w, h).data;
+  const n = w * h;
+
+  // Méthode 1 : « ressemblance au papier » (clair et peu coloré).
+  const paper = new Float32Array(n);
+  for (let i = 0, j = 0; i < n; i++, j += 4) {
+    const r = d[j], g = d[j + 1], b = d[j + 2];
+    paper[i] = 0.299 * r + 0.587 * g + 0.114 * b - 1.2 * (Math.max(r, g, b) - Math.min(r, g, b));
+  }
+  // Méthode 2 : « différent du fond » (fond mesuré sur le bord de la photo) :
+  // marche aussi pour les cartes colorées.
+  const ring = Math.max(2, Math.round(Math.min(w, h) * 0.03));
+  const rs = [], gs = [], bs = [];
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++) {
+      if (x >= ring && y >= ring && x < w - ring && y < h - ring) continue;
+      const j = (y * w + x) * 4;
+      rs.push(d[j]); gs.push(d[j + 1]); bs.push(d[j + 2]);
+    }
+  const med = (a) => a.slice().sort((u, v) => u - v)[a.length >> 1];
+  const br = med(rs), bg = med(gs), bb = med(bs);
+  const diff = new Float32Array(n);
+  for (let i = 0, j = 0; i < n; i++, j += 4) {
+    diff[i] = Math.hypot(d[j] - br, d[j + 1] - bg, d[j + 2] - bb) * 1.2;
+  }
+  // Variation normale du fond (grain du bois, dégradé) mesurée sur le bord :
+  // tout ce qui s'en écarte nettement fait partie du document.
+  const ringDiff = [];
+  for (let k = 0; k < rs.length; k++) ringDiff.push(Math.hypot(rs[k] - br, gs[k] - bg, bs[k] - bb) * 1.2);
+  ringDiff.sort((u, v) => u - v);
+  const tBg = Math.max(40, ringDiff[Math.floor(ringDiff.length * 0.9)] * 1.6);
+
+  const cands = [quadFromScore(blur3(paper, w, h), w, h), quadFromScore(blur3(diff, w, h), w, h, tBg)]
+    .filter(Boolean);
+  if (!cands.length) return null;
+  // Le plus rectangulaire, sauf si l'autre est nettement plus grand avec une
+  // forme presque aussi nette (bande colorée d'une carte, en-tête coloré).
+  cands.sort((a, b) => b.fit - a.fit);
+  if (cands.length === 2 && cands[1].area > cands[0].area * 1.05 && cands[0].fit - cands[1].fit < 0.03) cands.reverse();
+  return orderQuad(cands[0].quad).map(p => ({
     x: Math.max(0, Math.min(W, p.x / sc)),
     y: Math.max(0, Math.min(H, p.y / sc)),
   }));
@@ -347,17 +388,21 @@ function homography(from, to) {
 }
 
 const A4 = Math.SQRT2;
+const ID1 = 85.6 / 54; // carte d'identité, carte bancaire, permis (format ID-1)
 
 export function warp(src, quad, maxLong = MAX_SRC) {
   const q = quad;
   const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
   let ow = (dist(q[0], q[1]) + dist(q[3], q[2])) / 2;
   let oh = (dist(q[0], q[3]) + dist(q[1], q[2])) / 2;
-  // Proche du format A4 : on corrige les proportions (effet de la perspective).
+  // Proche d'un format connu (carte ID-1 ou A4) : on corrige les proportions
+  // faussées par la perspective.
   const ratio = Math.max(ow, oh) / Math.min(ow, oh);
-  if (Math.abs(ratio - A4) / A4 < 0.08) {
-    const areaSide = Math.sqrt(ow * oh / A4);
-    if (oh >= ow) { ow = areaSide; oh = areaSide * A4; } else { oh = areaSide; ow = areaSide * A4; }
+  const target = Math.abs(ratio - ID1) / ID1 < 0.045 ? ID1
+    : Math.abs(ratio - A4) / A4 < 0.08 ? A4 : 0;
+  if (target) {
+    const areaSide = Math.sqrt(ow * oh / target);
+    if (oh >= ow) { ow = areaSide; oh = areaSide * target; } else { oh = areaSide; ow = areaSide * target; }
   }
   const s = Math.min(maxLong / Math.max(ow, oh), 1.3);
   const OW = Math.max(1, Math.round(ow * s)), OH = Math.max(1, Math.round(oh * s));
@@ -480,9 +525,11 @@ export function enhance(src, mode) {
     for (let j = 0; j < d.length; j += 16) { hs[0][d[j]]++; hs[1][d[j + 1]]++; hs[2][d[j + 2]]++; }
     const tot = d.length / 16;
     const lo = hs.map(hh => percentile(hh, tot, 0.01)), hi = hs.map(hh => percentile(hh, tot, 0.985));
+    // Point noir commun (garde les teintes) et balance des blancs par canal.
+    const black = Math.min(60, lo[0], lo[1], lo[2]);
     const lut = [0, 1, 2].map(c => {
-      const t = new Uint8ClampedArray(256), span = Math.max(30, hi[c] - lo[c]);
-      for (let i = 0; i < 256; i++) t[i] = ((i - lo[c]) / span) * 255;
+      const t = new Uint8ClampedArray(256), span = Math.max(60, hi[c] - black);
+      for (let i = 0; i < 256; i++) t[i] = ((i - black) / span) * 255;
       return t;
     });
     for (let j = 0; j < d.length; j += 4) {
@@ -538,5 +585,114 @@ export function enhance(src, mode) {
     }
   }
   octx.putImageData(img, 0, 0);
+  return out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Contrôle de qualité de la photo (flou, reflet)                       */
+/* ------------------------------------------------------------------ */
+
+// `sharp` ~ netteté des bords (indépendante du contenu) : un bord flou de
+// largeur σ donne un rapport laplacien / gradient proportionnel à 1/σ.
+export function assessQuality(src) {
+  const c = fitCanvas(src, 1400);
+  const w = c.width, h = c.height;
+  const d = ctx2d(c).getImageData(0, 0, w, h).data;
+  const g = new Float32Array(w * h);
+  let sat = 0;
+  for (let i = 0, j = 0; i < g.length; i++, j += 4) {
+    g[i] = 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2];
+    if (d[j] >= 250 && d[j + 1] >= 250 && d[j + 2] >= 250) sat++;
+  }
+  const n = (w - 2) * (h - 2);
+  const grad = new Float32Array(n), lap = new Float32Array(n);
+  const hist = new Uint32Array(1024);
+  let k = 0;
+  for (let y = 1; y < h - 1; y++)
+    for (let x = 1; x < w - 1; x++, k++) {
+      const i = y * w + x;
+      const gx = g[i + 1] - g[i - 1], gy = g[i + w] - g[i - w];
+      const gm = Math.abs(gx) + Math.abs(gy);
+      grad[k] = gm;
+      lap[k] = Math.abs(4 * g[i] - g[i - 1] - g[i + 1] - g[i - w] - g[i + w]);
+      hist[Math.min(1023, gm | 0)]++;
+    }
+  // Seuil : les 2 % de pixels aux bords les plus marqués.
+  let acc = 0, t = 1023;
+  while (t > 0 && acc < n * 0.02) acc += hist[t--];
+  t = Math.max(t, 24);
+  let sl = 0, sg = 0, cnt = 0;
+  for (let i = 0; i < n; i++) if (grad[i] >= t) { sl += lap[i]; sg += grad[i]; cnt++; }
+  const sharp = cnt > 200 ? sl / sg : 1;
+  const glare = sat / (w * h);
+  return {
+    sharp: Math.round(sharp * 1000) / 1000,
+    glare: Math.round(glare * 10000) / 10000,
+    blurry: cnt > 200 && sharp < 0.12,
+    reflet: glare > 0.006 && glare < 0.35,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* Filigrane de protection                                              */
+/* ------------------------------------------------------------------ */
+
+export function drawWatermark(canvas, text) {
+  text = (text || '').trim();
+  if (!text) return canvas;
+  const ctx = ctx2d(canvas);
+  const W = canvas.width, H = canvas.height;
+  const size = Math.max(14, Math.round(Math.min(W, H) / 22));
+  ctx.save();
+  ctx.font = `bold ${size}px Arial, Helvetica, sans-serif`;
+  ctx.fillStyle = 'rgba(40, 70, 170, 0.17)';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.translate(W / 2, H / 2);
+  ctx.rotate(-Math.atan2(H, W) * 0.75);
+  const tw = ctx.measureText(text).width + size * 3;
+  const diag = Math.hypot(W, H);
+  for (let y = -diag / 2, row = 0; y < diag / 2; y += size * 5.5, row++) {
+    for (let x = -diag / 2 + (row % 2) * tw / 2; x < diag / 2; x += tw) ctx.fillText(text, x, y);
+  }
+  ctx.restore();
+  return canvas;
+}
+
+/* ------------------------------------------------------------------ */
+/* Signature : encre sur fond transparent                               */
+/* ------------------------------------------------------------------ */
+
+// Photo d'une signature sur papier -> encre seule (couleur gardée), fond transparent.
+export function inkToAlpha(src) {
+  const clean = enhance(src, 'scan');
+  const ctx = ctx2d(clean);
+  const img = ctx.getImageData(0, 0, clean.width, clean.height);
+  const d = img.data;
+  for (let j = 0; j < d.length; j += 4) {
+    const l = 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2];
+    const a = (225 - l) / 110;
+    d[j + 3] = a <= 0 ? 0 : a >= 1 ? 255 : a * 255;
+  }
+  ctx.putImageData(img, 0, 0);
+  return clean;
+}
+
+// Recadre sur l'encre (pixels non transparents), avec une petite marge.
+export function trimAlpha(src, pad = 8) {
+  const w = src.width, h = src.height;
+  const d = ctx2d(src).getImageData(0, 0, w, h).data;
+  let x0 = w, y0 = h, x1 = -1, y1 = -1;
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++)
+      if (d[(y * w + x) * 4 + 3] > 40) {
+        if (x < x0) x0 = x; if (x > x1) x1 = x;
+        if (y < y0) y0 = y; if (y > y1) y1 = y;
+      }
+  if (x1 < 0) return null;
+  x0 = Math.max(0, x0 - pad); y0 = Math.max(0, y0 - pad);
+  x1 = Math.min(w - 1, x1 + pad); y1 = Math.min(h - 1, y1 + pad);
+  const out = makeCanvas(x1 - x0 + 1, y1 - y0 + 1);
+  ctx2d(out).drawImage(src, x0, y0, out.width, out.height, 0, 0, out.width, out.height);
   return out;
 }

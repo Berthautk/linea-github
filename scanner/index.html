@@ -13,22 +13,40 @@
 </head>
 <body>
 
+<datalist id="nameIdeas">
+  <option value="CNI recto-verso">
+  <option value="Acte de naissance">
+  <option value="Diplôme">
+  <option value="Relevé de notes">
+  <option value="Certificat de scolarité">
+  <option value="Attestation">
+  <option value="Certificat médical">
+  <option value="Casier judiciaire">
+  <option value="Demande manuscrite">
+  <option value="Reçu de paiement">
+  <option value="Contrat">
+  <option value="Facture">
+</datalist>
+
 <!-- Écran principal : le document en cours -->
 <section id="home" class="screen">
   <header class="bar">
     <div class="brand">Linea Scan</div>
-    <button id="newDocBtn" class="ghost" type="button">Nouveau</button>
+    <div class="barbtns">
+      <button id="libBtn" class="ghost" type="button">📁 Mes documents</button>
+      <button id="newDocBtn" class="ghost" type="button">＋ Nouveau</button>
+    </div>
   </header>
 
   <div class="namebox">
     <label for="docName">Nom du document</label>
-    <input id="docName" type="text" autocomplete="off" spellcheck="false">
+    <input id="docName" type="text" autocomplete="off" spellcheck="false" list="nameIdeas">
   </div>
 
   <div id="empty" class="empty">
     <p class="big">Aucune page pour l'instant.</p>
     <p>Posez le document à plat sur une surface <b>plus foncée</b> que le papier, dans un endroit bien éclairé, puis appuyez sur <b>Scanner</b>.</p>
-    <p class="muted">Gratuit, sans compte, sans filigrane. Les photos restent sur votre téléphone.</p>
+    <p class="muted">Gratuit, sans compte, sans filigrane, sans publicité. Les photos restent sur votre téléphone.</p>
   </div>
 
   <div id="grid" class="grid"></div>
@@ -54,6 +72,14 @@
     <span id="edCount" class="muted"></span>
   </header>
 
+  <div id="qWarn" class="qwarn" hidden>
+    <span id="qText"></span>
+    <label class="btn small">
+      <input id="camRetake" type="file" accept="image/*" capture="environment" hidden>
+      <span>📷 Reprendre</span>
+    </label>
+  </div>
+
   <div id="stage" class="stage">
     <div id="frame" class="frame">
       <canvas id="edCanvas"></canvas>
@@ -78,7 +104,8 @@
       <button id="fCrop" class="btn small" type="button">✂️ Recadrer</button>
       <button id="fRotL" class="btn small" type="button" aria-label="Tourner à gauche">⟲</button>
       <button id="fRotR" class="btn small" type="button" aria-label="Tourner à droite">⟳</button>
-      <button id="fDel" class="btn small danger" type="button">🗑</button>
+      <button id="fAnno" class="btn small" type="button">✍️ Signer / masquer</button>
+      <button id="fDel" class="btn small danger" type="button" aria-label="Supprimer la page">🗑</button>
     </div>
     <div class="row">
       <label class="btn">
@@ -88,6 +115,18 @@
       <button id="fDone" class="btn primary" type="button">Terminé ✓</button>
     </div>
   </div>
+
+  <div id="annoTools" class="tools" hidden>
+    <p class="hint">Déplacez l'élément au doigt ; le rond en bas à droite change sa taille.</p>
+    <div class="row">
+      <button id="aSig" class="btn small" type="button">✍️ Signature</button>
+      <button id="aMask" class="btn small" type="button">⬛ Masquer une zone</button>
+      <button id="aDel" class="btn small danger" type="button" disabled aria-label="Retirer l'élément choisi">🗑</button>
+    </div>
+    <div class="row">
+      <button id="aOk" class="btn primary" type="button">Valider ✓</button>
+    </div>
+  </div>
 </section>
 
 <!-- Exportation -->
@@ -95,12 +134,20 @@
   <form method="dialog" class="dlg">
     <h2>Enregistrer / envoyer</h2>
     <label>Nom du fichier
-      <input id="exName" type="text" autocomplete="off" spellcheck="false">
+      <input id="exName" type="text" autocomplete="off" spellcheck="false" list="nameIdeas">
     </label>
     <label>Format
       <select id="exFormat">
         <option value="pdf">PDF (un seul fichier, toutes les pages)</option>
         <option value="jpg">Images JPG (une par page)</option>
+      </select>
+    </label>
+    <label>Mise en page
+      <select id="exPage">
+        <option value="a4">A4 (comme un scanner de bureau)</option>
+        <option value="id">Carte d'identité : recto + verso sur une page A4, taille réelle</option>
+        <option value="letter">Lettre US</option>
+        <option value="fit">Taille du document (sans marges)</option>
       </select>
     </label>
     <label>Qualité
@@ -110,19 +157,66 @@
         <option value="300">Haute — 300 ppp (impression, dossiers officiels)</option>
       </select>
     </label>
-    <label>Taille de page
-      <select id="exPage">
-        <option value="a4">A4 (comme un scanner de bureau)</option>
-        <option value="letter">Lettre US</option>
-        <option value="fit">Taille du document (sans marges)</option>
+    <label>Taille maximale du fichier (sites de dépôt en ligne)
+      <select id="exMax">
+        <option value="0">Pas de limite</option>
+        <option value="300">300 Ko</option>
+        <option value="500">500 Ko</option>
+        <option value="1000">1 Mo</option>
+        <option value="2000">2 Mo</option>
+        <option value="5000">5 Mo</option>
       </select>
     </label>
+    <label>Filigrane de protection (facultatif)
+      <input id="exWm" type="text" autocomplete="off" placeholder="Ex. : Copie réservée au dossier de concours ENS 2026">
+    </label>
+    <p class="muted small">Le filigrane empêche qu'une copie de vos pièces soit réutilisée pour autre chose. Le texte reste lisible dessous.</p>
     <p id="exInfo" class="muted"></p>
+    <p id="exWarn" class="warn" hidden></p>
     <div class="row">
       <button id="exSave" class="btn" type="button">⬇️ Télécharger</button>
       <button id="exShare" class="btn primary" type="button">📤 Partager</button>
     </div>
     <button class="ghost wide" value="cancel">Fermer</button>
+  </form>
+</dialog>
+
+<!-- Bibliothèque -->
+<dialog id="libDlg">
+  <form method="dialog" class="dlg">
+    <h2>Mes documents</h2>
+    <div id="libList" class="liblist"></div>
+    <p class="muted small">Tout est enregistré sur ce téléphone seulement. Faites de temps en temps une sauvegarde complète et gardez-la sur Drive ou sur une clé USB : si vous changez de téléphone ou videz le navigateur, vous pourrez tout restaurer.</p>
+    <div class="row">
+      <button id="bkSave" class="btn" type="button">💾 Sauvegarde complète</button>
+      <label class="btn">
+        <input id="bkLoad" type="file" accept=".lineascan,application/json" hidden>
+        <span>📥 Restaurer</span>
+      </label>
+    </div>
+    <button class="ghost wide" value="cancel">Fermer</button>
+  </form>
+</dialog>
+
+<!-- Signature -->
+<dialog id="sigDlg">
+  <form method="dialog" class="dlg">
+    <h2>Votre signature</h2>
+    <p class="muted small">Signez avec le doigt dans le cadre, ou prenez en photo votre signature faite au stylo sur une feuille blanche.</p>
+    <canvas id="sigPad" class="sigpad" width="900" height="360"></canvas>
+    <div class="row">
+      <button id="sigBlue" class="chip light on" type="button">Bleu</button>
+      <button id="sigBlack" class="chip light" type="button">Noir</button>
+      <button id="sigClear" class="btn small" type="button">Effacer</button>
+    </div>
+    <div class="row">
+      <label class="btn small">
+        <input id="sigPhoto" type="file" accept="image/*" capture="environment" hidden>
+        <span>📷 Depuis une photo</span>
+      </label>
+      <button id="sigUse" class="btn primary" type="button">Placer sur la page</button>
+    </div>
+    <button class="ghost wide" value="cancel">Annuler</button>
   </form>
 </dialog>
 

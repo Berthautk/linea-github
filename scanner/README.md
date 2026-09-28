@@ -5,30 +5,38 @@ Application web installable (PWA) qui transforme la photo d'un document en un fi
 ## Ce qu'elle fait
 
 - **Photo ou import** : appareil photo du téléphone (meilleure mise au point) ou images de la galerie, plusieurs à la fois.
-- **Recadrage automatique** : les 4 coins du document sont trouvés tout seuls. On peut les déplacer au doigt, avec une loupe pour placer chaque coin précisément.
-- **Redressement** : la perspective est corrigée. Si la feuille est presque au format A4, ses proportions sont remises exactement en A4.
+- **Recadrage automatique** : les 4 coins du document sont trouvés seuls, même pour une carte colorée (deux méthodes : « ressemble à du papier » et « se distingue du fond »). On peut les déplacer au doigt, avec une loupe.
+- **Redressement** : la perspective est corrigée ; les proportions sont remises exactement en A4 ou au format carte (85,6 × 54 mm) quand le document en est proche.
 - **Rendus** :
   - *Scanner* (par défaut) : fond blanc, ombres et éclairage inégal supprimés, texte net. **Les tampons, cachets et signatures gardent leur couleur.**
-  - *Gris* : même chose en niveaux de gris.
-  - *Photocopie* : noir et blanc pur.
-  - *Couleur* : vraies couleurs corrigées (cartes d'identité, diplômes, photos).
-  - *Original* : sans retouche.
-- **Plusieurs pages** : « Page suivante » après chaque photo, puis on change l'ordre, on tourne ou on supprime une page.
-- **Nom du document** modifiable à tout moment. C'est aussi le nom du fichier.
-- **Export** en PDF (toutes les pages dans un seul fichier) ou en JPG, à 150, 200 ou 300 ppp, sur une page A4, Lettre ou à la taille du document.
-- **Partage direct** (WhatsApp, Gmail, Drive…) avec le bouton « Partager », ou enregistrement dans Téléchargements.
-- **Sauvegarde automatique** : si le téléphone ferme la page pendant une photo, les pages déjà scannées sont toujours là au retour.
-- **Hors ligne** : une fois ouverte, elle marche sans connexion.
+  - *Gris*, *Photocopie* (noir et blanc pur), *Couleur* (choisi automatiquement pour les cartes), *Original*.
+- **Contrôle qualité immédiat** : si la photo est floue ou a un reflet de lumière, un bandeau le dit tout de suite, avec un bouton « Reprendre ». On ne découvre plus au guichet que le texte est illisible.
+- **Carte d'identité recto-verso sur une page A4, à la taille réelle**, comme une photocopie de CNI. Proposé automatiquement quand toutes les pages sont des cartes.
+- **Taille maximale du fichier** (300 Ko, 500 Ko, 1 Mo, 2 Mo, 5 Mo) : la compression s'ajuste seule pour passer sur les sites de dépôt en ligne (concours, inscriptions), sans descendre sous ce qui reste lisible.
+- **Filigrane de protection** (« Copie réservée au dossier de concours ENS 2026 ») : une copie de vos pièces ne peut pas être réutilisée pour autre chose.
+- **Signer** un document : signature au doigt, ou **tirée d'une photo de votre signature au stylo** (l'encre est détourée, sa couleur gardée). Elle est mémorisée pour la fois suivante.
+- **Masquer une zone** (numéro, adresse) avant d'envoyer : le rectangle noir est fondu dans l'image, il ne peut pas être retiré par le destinataire.
+- **Mes documents** : tous les documents restent sur le téléphone, rangés, avec leur nom (liste de noms courants : acte de naissance, relevé de notes…).
+- **Sauvegarde complète en un fichier** et restauration sur un autre téléphone.
+- **Export** en PDF ou JPG, 150 / 200 / 300 ppp, **partage direct** (WhatsApp, Gmail, Drive…).
+- **Hors ligne**, sans compte, sans publicité, sans abonnement.
 
 ## Ce qu'elle corrige par rapport à CamScanner
 
-| CamScanner | Linea Scan |
+D'après les avis (Trustpilot : 1,9/5 ; note « réelle » 3,2/5 sur 45 000 avis) :
+
+| Reproche fait à CamScanner | Linea Scan |
 |---|---|
-| Paiement pour exporter ou partager | Gratuit, sans limite |
-| Filigrane sur la version gratuite | Aucun filigrane |
-| Compte et envoi des documents sur leurs serveurs | Aucun compte ; tout reste sur le téléphone |
-| Mode N&B qui rend les cachets bleus en noir ou les efface | Le rendu « Scanner » garde les couleurs des cachets et signatures |
-| Publicités, application lourde | Rien à installer depuis un store, quelques centaines de Ko |
+| Essai qui devient un abonnement annuel, prélèvements après résiliation | Gratuit, pas d'abonnement, aucun paiement possible |
+| Filigrane et paiement pour exporter ou partager | Aucun filigrane imposé ; export et partage libres |
+| Publicités toutes les 15 secondes | Aucune publicité |
+| Documents envoyés sur leurs serveurs sans accord, impossibles à effacer | Rien ne quitte le téléphone ; « supprimer » efface vraiment |
+| Documents et étiquettes qui disparaissent, pas de sauvegarde fiable | Sauvegarde complète en un fichier, restauration sur un autre téléphone |
+| Application devenue lourde et confuse | Quelques centaines de Ko, un seul écran principal |
+| Compression, signature, mode carte d'identité réservés aux abonnés | Inclus |
+| Mode N&B qui noircit ou efface les cachets bleus | Le rendu « Scanner » garde leur couleur |
+
+Et ce que CamScanner ne fait pas : alerte flou/reflet dès la photo, taille maximale garantie pour les sites de dépôt, filigrane de protection des pièces d'identité, signature extraite d'une photo.
 
 ## L'utiliser
 

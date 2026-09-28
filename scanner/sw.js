@@ -1,5 +1,5 @@
 // Mode hors ligne : l'application reste utilisable sans connexion.
-const CACHE = 'linea-scan-v1';
+const CACHE = 'linea-scan-v2';
 const FILES = [
   './', 'index.html', 'app.css', 'app.js', 'imgproc.js', 'pdf.js', 'store.js',
   'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png',

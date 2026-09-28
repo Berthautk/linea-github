@@ -494,6 +494,10 @@ export function createReader(ctx) {
     close,
     get isOpen() { return st.open; },
     relabel() { if (st.open) { fillRates(); render(); status(); setPlayBtn(); } },
+    get index() { return st.idx; },
+    pause() { if (st.playing || st.waiting) pause(); },
+    // Retour de la correction du texte : même page, texte à jour.
+    refresh() { if (st.open) { const u = st.u; render(); st.u = Math.min(u, Math.max(0, st.units.length - 1)); highlight(false); status(); } },
     // pour les tests
     _st: st,
     _sentences: sentences,

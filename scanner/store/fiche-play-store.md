@@ -44,6 +44,12 @@ IMPORTER UN PDF, L'ÉCOUTER
 • Mode lecture : le texte en grand, la phrase lue surlignée, pause, paragraphe suivant, vitesse, reprise là où vous vous êtes arrêté.
 • Pages scannées : le texte est lu sur le téléphone pendant que vous écoutez.
 
+CORRIGER ET ENRICHIR LE TEXTE
+• Touchez un mot pour le corriger en le comparant à la photo ; les mots douteux sont surlignés.
+• Réécrivez ou ajoutez des paragraphes, au clavier ou en dictant.
+• Écrit à la main : chaque ligne s'affiche agrandie, vous la recopiez ou la dictez.
+• Envoi en Word, en PDF ou en « PDF propre », le texte remis au propre.
+
 DOSSIERS DE CANDIDATURE
 • Choisissez vos pièces dans une liste de 65 documents : CNI, acte de naissance, casier judiciaire, diplômes, relevés, certificat médical, justificatifs, visa…
 • Scannez-les une par une : chacune se range dans votre dossier, numérotée et nommée (01_CNI.pdf, 02_Acte_de_naissance.pdf…).
@@ -74,10 +80,10 @@ Envoyez vos documents en un geste par WhatsApp, e-mail ou Drive, ou enregistrez-
 Conseil pour un résultat parfait : posez la feuille à plat sur une surface plus foncée, dans un endroit bien éclairé, sans flash, et tenez le téléphone immobile au-dessus.
 ```
 
-**Notes de version (1.2.0)**
+**Notes de version (1.3.0)**
 
 ```
-Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. Import de PDF, conversion en Word et mode lecture à voix haute avec reprise. En français et en anglais.
+Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. Import de PDF, conversion en Word, mode lecture à voix haute avec reprise, correction du texte, transcription des pages écrites à la main et PDF propre. En français et en anglais.
 ```
 
 ---
@@ -118,6 +124,12 @@ IMPORT A PDF, LISTEN TO IT
 • Import a PDF, even hundreds of pages long: convert it to Word or listen to it.
 • Reading mode: large text, the sentence being read is highlighted, pause, next paragraph, speed, resume where you stopped.
 • Scanned pages: the text is read on the phone while you listen.
+
+CORRECT AND ENRICH THE TEXT
+• Tap a word to correct it against the photo; doubtful words are highlighted.
+• Rewrite or add paragraphs, by typing or dictating.
+• Handwritten pages: each line is shown enlarged for you to copy or dictate.
+• Send as Word, PDF or “clean PDF” with the text neatly retyped.
 
 APPLICATION FILES
 • Pick your documents from a list of 65: ID card, birth certificate, criminal record, diplomas, transcripts, medical certificate, proofs, visa…

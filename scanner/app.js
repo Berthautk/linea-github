@@ -3,7 +3,7 @@ import {
   warp, rotateCanvas, enhance, fitCanvas, resizeCanvas, FILTERS,
   assessQuality, drawWatermark, inkToAlpha, trimAlpha, estimateSkew, rotateSmall, cleanBorders,
 } from './imgproc.js';
-import { buildPdf, PAGE_SIZES } from './pdf.js';
+import { buildPdf, buildTextPdf, PAGE_SIZES } from './pdf.js';
 import { recognize, plainText, paragraphText } from './ocr.js';
 import { buildDocx, zip } from './docx.js';
 import * as store from './store.js';
@@ -11,8 +11,9 @@ import { t, L, getLang, setLang, applyI18n } from './i18n.js';
 import { CATEGORIES, PIECES, DOSSIER_NAMES, pieceById, slug } from './catalog.js';
 import { isPdf, openPdf, renderPdfPage, closePdf } from './pdfin.js';
 import { createReader } from './reader.js';
+import { createTextEditor, refitOcr } from './textedit.js';
 
-export const APP_VERSION = '1.2.0';
+export const APP_VERSION = '1.3.0';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -233,7 +234,13 @@ async function commit(page, out) {
   // Page de PDF : l'image d'origine n'est gardée à part qu'à la première retouche.
   if (!page.orig) page.orig = page.proc;
   page.proc = await canvasToBlob(out, 'image/jpeg', 0.92);
-  page.ocr = null; // l'image a changé : le texte sera relu
+  // L'image a changé : le texte sera relu, sauf s'il a été corrigé à la main
+  // (il est alors gardé, ses positions suivent la rotation ou le recadrage).
+  const kept = page.ocr && page.ocr.edited && page.w
+    ? refitOcr(page.ocr, page.w, page.h, out.width, out.height, page.turn || 0) : null;
+  page.ocr = kept;
+  page.turn = 0;
+  if (page.transc && page.transc.w !== out.width) page.transc = null;
   if (doc) doc.editedAt = Date.now();
   page.w = out.width;
   page.h = out.height;
@@ -743,6 +750,8 @@ function showScreen(name) {
   $('home').hidden = name !== 'home';
   $('editor').hidden = name !== 'editor';
   $('reader').hidden = name !== 'reader';
+  $('texted').hidden = name !== 'texted';
+  $('transc').hidden = name !== 'transc';
 }
 
 function edCounter() {
@@ -1020,8 +1029,8 @@ async function removePage(id) {
   await store.delPage(id);
 }
 
-$('fRotL').onclick = () => applyEdit(p => { p.rot = (p.rot + 270) % 360; rotateOverlays(p, 270); });
-$('fRotR').onclick = () => applyEdit(p => { p.rot = (p.rot + 90) % 360; rotateOverlays(p, 90); });
+$('fRotL').onclick = () => applyEdit(p => { p.rot = (p.rot + 270) % 360; p.turn = 270; rotateOverlays(p, 270); });
+$('fRotR').onclick = () => applyEdit(p => { p.rot = (p.rot + 90) % 360; p.turn = 90; rotateOverlays(p, 90); });
 $('fCrop').onclick = () => setMode('crop');
 $('fAnno').onclick = () => setMode('anno');
 $('fDel').onclick = async () => {
@@ -1136,7 +1145,7 @@ $('fBook').onclick = async () => {
 /* ------------------------------ lecture à voix haute ------------------------------ */
 
 async function pageText(page) {
-  if (!page.ocr || !(page.ocr.pdf || page.ocr.lang === 'fra+eng')) {
+  if (!page.ocr || !(page.ocr.pdf || page.ocr.edited || page.ocr.lang === 'fra+eng')) {
     const paragraphs = await recognize(page.proc, 'fra+eng');
     page.ocr = { lang: 'fra+eng', w: page.w, h: page.h, paragraphs };
     await store.putPage(page);
@@ -1343,7 +1352,7 @@ async function pdfFromSheets(out, title, ocrs) {
 
 /* ------------------------------ exportation d'un document ------------------------------ */
 
-const OCR_FORMATS = ['pdfocr', 'docx', 'txt'];
+const OCR_FORMATS = ['pdfocr', 'docx', 'txt', 'pdftext'];
 const LOW_CONF = 60;
 
 // Lit le texte de chaque page (une seule fois : le résultat est gardé avec la page).
@@ -1352,7 +1361,7 @@ async function ensureOcr(ids, lang, token) {
   for (let i = 0; i < ids.length; i++) {
     const page = pages.get(ids[i]);
     // Texte du PDF d'origine, ou déjà lu en français + anglais : gardé.
-    if (!page.ocr || !(page.ocr.lang === lang || page.ocr.pdf || page.ocr.lang === 'fra+eng')) {
+    if (!page.ocr || !(page.ocr.lang === lang || page.ocr.pdf || page.ocr.edited || page.ocr.lang === 'fra+eng')) {
       const label = t('ex.readPage', { i: i + 1, n: ids.length });
       $('exInfo').textContent = label;
       const paragraphs = await recognize(page.proc, lang, (p) => {
@@ -1384,8 +1393,9 @@ function wordsInPdf(ocr, box) {
 
 function updateExportForm() {
   const format = $('exFormat').value;
-  const textOnly = format === 'docx' || format === 'txt';
+  const textOnly = format === 'docx' || format === 'txt' || format === 'pdftext';
   $('rowLang').hidden = !OCR_FORMATS.includes(format);
+  $('exEdit').hidden = !OCR_FORMATS.includes(format);
   for (const id of ['rowPage', 'rowDpi', 'rowMax', 'rowWm']) $(id).hidden = textOnly;
 }
 
@@ -1444,11 +1454,13 @@ async function prepareExport() {
     else if (low) warns.push(t('ex.low', { low, all }));
   }
 
-  if (format === 'docx' || format === 'txt') {
+  if (format === 'docx' || format === 'txt' || format === 'pdftext') {
     const file = format === 'docx'
       ? new File([buildDocx(ocr, { title })], `${name}.docx`,
         { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' })
-      : new File([plainText(ocr.map(o => o.paragraphs))], `${name}.txt`, { type: 'text/plain;charset=utf-8' });
+      : format === 'pdftext'
+        ? new File([buildTextPdf(ocr, paragraphText, { title })], `${name}.pdf`, { type: 'application/pdf' })
+        : new File([plainText(ocr.map(o => o.paragraphs))], `${name}.txt`, { type: 'text/plain;charset=utf-8' });
     if (token !== ex.token) return;
     ex.files = [file];
     $('exInfo').textContent = t('ex.infoText', { n, size: fmtSize(file.size) });
@@ -2169,6 +2181,7 @@ function applyLang(l) {
   if (doc) refreshHome();
   if (ed.id) { edCounter(); setMode(ed.mode); }
   reader.relabel();
+  textEd.relabel();
 }
 
 $('langBtn').onclick = () => applyLang(getLang() === 'fr' ? 'en' : 'fr');
@@ -2197,6 +2210,28 @@ const reader = createReader({
   },
 });
 $('readBtn').onclick = () => reader.open();
+
+/* ------------------------------ correction du texte ------------------------------ */
+
+const textEd = createTextEditor({
+  getDoc: () => doc,
+  pages,
+  ensureText: (p) => pageText(p),
+  putPage: (p) => store.putPage(p),
+  showScreen,
+  toast,
+  busy,
+  onClose(from) {
+    saveLib();
+    if (from === 'home') refreshHome();
+    if (from === 'reader') reader.refresh();
+    if (from === 'export') $('exportBtn').click();
+  },
+});
+$('editTextBtn').onclick = () => textEd.open();
+$('fText').onclick = () => textEd.open({ index: doc.ids.indexOf(ed.id), from: 'editor' });
+$('rdEdit').onclick = () => { const i = reader.index; reader.pause(); textEd.open({ index: i, from: 'reader' }); };
+$('exEdit').onclick = () => { $('exportDlg').close(); textEd.open({ from: 'export' }); };
 
 /* ------------------------------ démarrage ------------------------------ */
 
@@ -2227,5 +2262,5 @@ init();
 // Pour les tests automatiques.
 window.__vraiscan = {
   lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, dx, restoreBackup, findDates,
-  switchTab, applyLang, importPdf, reader,
+  switchTab, applyLang, importPdf, reader, textEd,
 };

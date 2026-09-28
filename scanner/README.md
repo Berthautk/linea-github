@@ -33,6 +33,19 @@ Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso 
 
 Limites : la lecture du texte d'une page scannée prend quelques secondes sur un téléphone ; une page occupe environ 300 à 500 Ko ; l'écoute peut s'arrêter si l'écran est éteint ou si l'on change d'application (elle reprend la phrase au retour) ; l'écriture manuscrite n'est pas lue.
 
+## Corriger le texte, transcrire l'écriture à la main
+
+**✏️ Corriger** (accueil, éditeur de page, mode lecture, et « Corriger le texte avant d'envoyer » dans l'envoi) :
+
+- le texte reconnu, page par page ; les mots douteux sont surlignés en jaune ; **⤵ À vérifier** passe de l'un à l'autre, sur toutes les pages ;
+- toucher un mot : le mot est montré agrandi sur la photo (encadré en orange), on le corrige ; « ✓ Suivant » enchaîne sur le mot douteux suivant ;
+- ✏️ en fin de paragraphe : réécrire ou compléter le paragraphe ; **＋ Paragraphe** : ajouter du texte (enrichir) ;
+- le correcteur du clavier souligne les fautes d'orthographe ; le 🎤 du clavier permet de dicter.
+
+**✍️ Écrit à la main** : le moteur de lecture du texte ne sait pas lire l'écriture manuscrite. L'application trouve les lignes d'écriture sur la page et les montre une par une, agrandies ; on recopie ou on **dicte** chaque ligne, puis « Ligne suivante ». Les changements de paragraphe sont proposés d'après les espaces entre les lignes (bouton ¶). La saisie est gardée si l'on s'interrompt.
+
+Le texte corrigé ou transcrit est gardé avec la page (même après une rotation) et sert partout : **Word**, **PDF cherchable**, **PDF propre** (nouveau : le texte remis au propre comme un document tapé, sans la photo), texte, écoute.
+
 ## Ce qu'elle fait
 
 - **Photo ou import** : appareil photo du téléphone (meilleure mise au point) ou images de la galerie, plusieurs à la fois.
@@ -114,8 +127,9 @@ Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf
 | `imgproc.js` | Détection des bords, perspective, redressement fin, rendus, nettoyage des bords, contrôle qualité |
 | `ocr.js` | Lecture du texte sur le téléphone (Tesseract, dans `vendor/tesseract/`) |
 | `docx.js` | Fichier Word (sans bibliothèque) |
-| `pdf.js` | PDF, avec couche de texte cherchable (sans bibliothèque) |
+| `pdf.js` | PDF, avec couche de texte cherchable, et PDF propre (texte seul) (sans bibliothèque) |
 | `pdfin.js` | Import de PDF : pages en images, texte du PDF repris (pdf.js, dans `vendor/pdfjs/`) |
+| `textedit.js` | Correction du texte, transcription ligne par ligne (détection des lignes d'écriture) |
 | `reader.js` | Mode lecture : lecture à voix haute phrase par phrase, position retenue |
 | `store.js` | Enregistrement local (IndexedDB) |
 | `sw.js`, `manifest.webmanifest`, `icons/` | Installation et mode hors ligne |

@@ -55,6 +55,7 @@
 
     <div id="readRow" class="readrow" hidden>
       <button id="readBtn" class="btn" type="button" data-i18n="rd.btn">🎧 Lire et écouter</button>
+      <button id="editTextBtn" class="btn" type="button" data-i18n="te.btn">✏️ Corriger</button>
       <span id="readInfo" class="muted small"></span>
     </div>
 
@@ -151,6 +152,7 @@
     <div class="row">
       <button id="fBook" class="btn small" type="button" data-i18n="f.book">📖 Séparer 2 pages</button>
       <button id="fRead" class="btn small" type="button" data-i18n="f.read">🔊 Écouter</button>
+      <button id="fText" class="btn small" type="button" data-i18n="f.text">✏️ Texte</button>
     </div>
     <div class="row">
       <label class="btn">
@@ -186,6 +188,7 @@
         <option value="pdf" data-i18n="ex.f.pdf"></option>
         <option value="pdfocr" data-i18n="ex.f.pdfocr"></option>
         <option value="docx" data-i18n="ex.f.docx"></option>
+        <option value="pdftext" data-i18n="ex.f.pdftext"></option>
         <option value="txt" data-i18n="ex.f.txt"></option>
         <option value="jpg" data-i18n="ex.f.jpg"></option>
       </select>
@@ -224,6 +227,7 @@
     </div>
     <p id="exInfo" class="muted"></p>
     <p id="exWarn" class="warn" hidden></p>
+    <button id="exEdit" class="btn small" type="button" hidden data-i18n="te.fromExport">✏️ Corriger le texte avant d'envoyer</button>
     <button id="exListen" class="btn small" type="button" hidden data-i18n="ex.listen">🔊 Écouter le texte</button>
     <div class="row">
       <button id="exSave" class="btn" type="button" data-i18n="ex.download">⬇️ Télécharger</button>
@@ -395,9 +399,92 @@
       <button id="rdSmaller" class="rdb sm" type="button" data-i18n-aria="rd.smaller">A−</button>
       <button id="rdBigger" class="rdb sm" type="button" data-i18n-aria="rd.bigger">A+</button>
       <button id="rdImg" class="rdb sm" type="button" data-i18n-aria="rd.image">🖼</button>
+      <button id="rdEdit" class="rdb sm" type="button" data-i18n-aria="te.btnAria">✏️</button>
     </div>
   </footer>
 </section>
+
+<!-- Correction du texte -->
+<section id="texted" class="screen reader" hidden>
+  <header class="bar">
+    <button id="teBack" class="ghost" type="button" data-i18n="ed.back">← Retour</button>
+    <div id="teTitle" class="brand"></div>
+    <span id="tePage" class="muted"></span>
+  </header>
+  <div class="tetools">
+    <button id="teNextLow" class="btn small accent" type="button"></button>
+    <button id="teHand" class="btn small" type="button" data-i18n="tr.btn">✍️ Écrit à la main</button>
+    <button id="teAdd" class="btn small" type="button" data-i18n="te.add">＋ Paragraphe</button>
+  </div>
+  <p id="teHint" class="rdstatus"></p>
+  <article id="teBody" class="rdtext tebody" spellcheck="false"></article>
+  <footer class="rdctl">
+    <div class="rdmain">
+      <button id="tePrev" class="btn small" type="button" data-i18n="te.prev">‹ Page</button>
+      <button id="teDone" class="btn small primary" type="button" data-i18n="f.done">Terminé ✓</button>
+      <button id="teNext" class="btn small" type="button" data-i18n="te.next">Page ›</button>
+    </div>
+  </footer>
+</section>
+
+<!-- Transcription d'une page écrite à la main -->
+<section id="transc" class="screen reader" hidden>
+  <header class="bar">
+    <button id="trBack" class="ghost" type="button" data-i18n="ed.back">← Retour</button>
+    <div class="brand" data-i18n="tr.title">Transcription</div>
+    <span id="trCount" class="muted"></span>
+  </header>
+  <p class="rdstatus" data-i18n="tr.hint"></p>
+  <div class="trbody">
+    <div class="trcrop"><canvas id="trCrop"></canvas></div>
+    <textarea id="trText" rows="3" spellcheck="true" autocapitalize="sentences" enterkeyhint="next" data-i18n-ph="tr.ph"></textarea>
+    <div class="row">
+      <button id="trPara" class="btn small" type="button" data-i18n="tr.para">¶ Nouveau paragraphe</button>
+      <button id="trRedo" class="btn small" type="button" data-i18n="tr.redo">↺ Relire les lignes</button>
+    </div>
+  </div>
+  <footer class="rdctl">
+    <div class="rdmain">
+      <button id="trPrev" class="btn small" type="button" data-i18n="tr.prev">◀ Ligne</button>
+      <button id="trNext" class="btn small primary" type="button"></button>
+    </div>
+    <button id="trDone" class="ghost wide" type="button" data-i18n="tr.finishNow">Terminer maintenant ✓</button>
+  </footer>
+</section>
+
+<!-- Corriger un mot -->
+<dialog id="wordDlg">
+  <form method="dialog" class="dlg">
+    <h2 data-i18n="te.word">Corriger le mot</h2>
+    <div class="cropbox"><canvas id="wdCrop"></canvas></div>
+    <p id="wdLow" class="muted small" data-i18n="te.lowHint"></p>
+    <input id="wdInput" type="text" autocomplete="off" spellcheck="true" enterkeyhint="next">
+    <div class="row">
+      <button id="wdOk" class="btn" type="button" data-i18n="te.ok">✓ Valider</button>
+      <button id="wdNext" class="btn primary" type="button" data-i18n="te.okNext">✓ Suivant ⤵</button>
+    </div>
+    <div class="row">
+      <button id="wdPara" class="btn small" type="button" data-i18n="te.wholePara">✏️ Tout le paragraphe</button>
+      <button id="wdDel" class="btn small danger" type="button" data-i18n-aria="te.delWord">🗑</button>
+    </div>
+    <button class="ghost wide" value="cancel" data-i18n="sig.cancel">Annuler</button>
+  </form>
+</dialog>
+
+<!-- Modifier / ajouter un paragraphe -->
+<dialog id="paraDlg">
+  <form method="dialog" class="dlg">
+    <h2 id="ptTitle"></h2>
+    <div id="ptCropBox" class="cropbox"><canvas id="ptCrop"></canvas></div>
+    <textarea id="ptText" rows="7" spellcheck="true" autocapitalize="sentences"></textarea>
+    <p class="muted small" data-i18n="te.dictate"></p>
+    <div class="row">
+      <button id="ptDel" class="btn small danger" type="button" data-i18n="te.delPara">🗑 Supprimer</button>
+      <button id="ptSave" class="btn primary" type="button" data-i18n="te.save">Enregistrer</button>
+    </div>
+    <button class="ghost wide" value="cancel" data-i18n="sig.cancel">Annuler</button>
+  </form>
+</dialog>
 
 <!-- PDF importé -->
 <dialog id="pdfDlg">

@@ -140,3 +140,103 @@ export function buildPdf(pages, { title = 'Document', producer = 'VraiScan' } = 
   push(`trailer\n<< /Size ${total} /Root 1 0 R /Info 3 0 R >>\nstartxref\n${xref}\n%%EOF\n`);
   return new Blob(chunks, { type: 'application/pdf' });
 }
+
+// PDF « propre » : le texte (corrigé) remis en page comme un document tapé,
+// sans l'image. docs : [{ w, h, paragraphs }] (format de l'OCR) ;
+// textOf(paragraphe) → texte, lignes séparées par « \n » là où il faut garder le retour.
+export function buildTextPdf(docs, textOf, { title = 'Document', producer = 'VraiScan' } = {}) {
+  const [PW, PH] = PAGE_SIZES.a4;
+  const ML = 62, MR = 62, MT = 70, MB = 72, WIDTH = PW - ML - MR;
+  const med = (a) => { const s = a.slice().sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 0; };
+  const width = (s, size, bold) => textWidth(winAnsi(s)) * size * (bold ? 1.07 : 1);
+
+  // Paragraphes à écrire : texte, taille, gras, centré.
+  const blocks = [];
+  docs.forEach((d, di) => {
+    const body = med(d.paragraphs.flatMap(p => p.lines.map(l => l.b[3] - l.b[1]))) || 1;
+    d.paragraphs.forEach((p, pi) => {
+      const text = textOf(p).trim();
+      if (!text) return;
+      const lh = med(p.lines.map(l => l.b[3] - l.b[1]));
+      const heading = !p.added && lh > body * 1.3 && text.length < 160;
+      const [x0, , x1] = p.b;
+      const center = !p.added && (x1 - x0) / d.w < 0.7 && Math.abs((x0 + x1) / 2 / d.w - 0.5) < 0.06 && text.length < 200;
+      blocks.push({ text, size: heading ? 15 : 11.5, bold: heading, center, gap: di > 0 && pi === 0 ? 10 : 0 });
+    });
+  });
+
+  // Mise en page : coupure des lignes à la largeur de la page.
+  const pages = [[]];
+  let y = PH - MT;
+  const newPage = () => { pages.push([]); y = PH - MT; };
+  for (const b of blocks) {
+    const lead = b.size * 1.38;
+    const lines = [];
+    for (const part of b.text.split('\n')) {
+      let cur = '';
+      for (const w of part.split(/\s+/).filter(Boolean)) {
+        const cand = cur ? cur + ' ' + w : w;
+        if (cur && width(cand, b.size, b.bold) > WIDTH) { lines.push(cur); cur = w; } else cur = cand;
+      }
+      if (cur) lines.push(cur);
+    }
+    y -= b.gap + (b.bold ? 8 : 0);
+    // Un titre n'est jamais laissé seul en bas de page.
+    if (b.bold && y - lead * 3 < MB) newPage();
+    for (const l of lines) {
+      if (y - lead < MB) newPage();
+      y -= lead;
+      const w = width(l, b.size, b.bold);
+      pages[pages.length - 1].push({ t: l, size: b.size, bold: b.bold, x: b.center ? ML + (WIDTH - w) / 2 : ML, y: y + b.size * 0.25 });
+    }
+    y -= b.size * 0.7;
+  }
+  if (pages.length > 1 && !pages[pages.length - 1].length) pages.pop();
+
+  const chunks = [];
+  let offset = 0;
+  const offsets = [];
+  const push = (data) => { const u = typeof data === 'string' ? enc.encode(data) : data; chunks.push(u); offset += u.length; };
+  const obj = (num, body) => { offsets[num] = offset; push(`${num} 0 obj\n`); for (const part of [].concat(body)) push(part); push('\nendobj\n'); };
+  const str = (s) => {
+    const out = [0x28];
+    for (const c of winAnsi(s)) { if (c === 0x28 || c === 0x29 || c === 0x5c) out.push(0x5c); out.push(c); }
+    out.push(0x29);
+    return new Uint8Array(out);
+  };
+
+  push('%PDF-1.4\n');
+  push(new Uint8Array([0x25, 0xe2, 0xe3, 0xcf, 0xd3, 0x0a]));
+  const n = pages.length;
+  const pageNum = (i) => 6 + i * 2;
+  obj(1, '<< /Type /Catalog /Pages 2 0 R >>');
+  obj(2, `<< /Type /Pages /Kids [${pages.map((_, i) => `${pageNum(i)} 0 R`).join(' ')}] /Count ${n} >>`);
+  obj(3, `<< /Title ${utf16Hex(title)} /Producer ${utf16Hex(producer)} /CreationDate ${pdfDate()} /ModDate ${pdfDate()} >>`);
+  obj(4, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  obj(5, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+  pages.forEach((lines, i) => {
+    const P = pageNum(i), C = P + 1;
+    obj(P, `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${f(PW)} ${f(PH)}] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents ${C} 0 R >>`);
+    const parts = [enc.encode('BT\n')];
+    for (const l of lines) {
+      parts.push(enc.encode(`/${l.bold ? 'F2' : 'F1'} ${f(l.size)} Tf 1 0 0 1 ${f(l.x)} ${f(l.y)} Tm `), str(l.t), enc.encode(' Tj\n'));
+    }
+    if (n > 1) {
+      const num = `${i + 1} / ${n}`;
+      parts.push(enc.encode(`/F1 9 Tf 1 0 0 1 ${f((PW - width(num, 9)) / 2)} 36 Tm `), str(num), enc.encode(' Tj\n'));
+    }
+    parts.push(enc.encode('ET\n'));
+    const len = parts.reduce((s, p) => s + p.length, 0);
+    const content = new Uint8Array(len);
+    let o = 0;
+    for (const p of parts) { content.set(p, o); o += p.length; }
+    obj(C, [`<< /Length ${len} >>\nstream\n`, content, '\nendstream']);
+  });
+  const xref = offset;
+  const total = 6 + n * 2;
+  let x = `xref\n0 ${total}\n0000000000 65535 f \n`;
+  for (let i = 1; i < total; i++) x += `${String(offsets[i]).padStart(10, '0')} 00000 n \n`;
+  push(x);
+  push(`trailer\n<< /Size ${total} /Root 1 0 R /Info 3 0 R >>\nstartxref\n${xref}\n%%EOF\n`);
+  return new Blob(chunks, { type: 'application/pdf' });
+}

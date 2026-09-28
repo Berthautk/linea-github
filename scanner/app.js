@@ -176,6 +176,7 @@ async function renderPage(page) {
 async function commit(page, out) {
   page.proc = await canvasToBlob(out, 'image/jpeg', 0.92);
   page.ocr = null; // l'image a changé : le texte sera relu
+  if (doc) doc.editedAt = Date.now();
   page.w = out.width;
   page.h = out.height;
   page.thumb = await canvasToBlob(fitCanvas(out, 420), 'image/jpeg', 0.8);
@@ -220,10 +221,6 @@ async function addFiles(files, { edit }) {
   });
   renderGrid();
   if (edit && lastId && files.length === 1) openEditor(lastId, 'crop');
-  else if (files.length > 1) {
-    const bad = doc.ids.filter(id => isBad(pages.get(id))).length;
-    if (bad) toast(`⚠️ ${bad} page(s) floue(s) ou avec reflet : touchez-les pour vérifier.`, 5000);
-  }
 }
 
 function isBad(p) {
@@ -237,6 +234,7 @@ function renderGrid() {
   grid.textContent = '';
   $('empty').hidden = doc.ids.length > 0;
   $('exportBtn').disabled = doc.ids.length === 0;
+  updateFlow();
   doc.ids.forEach((id, i) => {
     const tile = document.createElement('div');
     tile.className = 'tile';
@@ -271,10 +269,54 @@ function renderGrid() {
   });
 }
 
+// Où en est le document : 1 photographier, 2 vérifier (page floue ou avec
+// reflet), 3 envoyer, 4 envoyé. Seul le bouton de l'étape suivante ressort.
+function flowStep() {
+  const n = doc.ids.length;
+  if (!n) return 1;
+  if (doc.exportedAt && doc.exportedAt >= (doc.editedAt || 0)) return 4;
+  if (doc.ids.some(id => isBad(pages.get(id)))) return 2;
+  return 3;
+}
+
+function updateFlow() {
+  const step = flowStep();
+  const n = doc.ids.length;
+  const bad = doc.ids.filter(id => isBad(pages.get(id))).length;
+  document.querySelectorAll('#steps li').forEach(li => {
+    const k = +li.dataset.step;
+    li.className = step === 4 || k < step || (k === 2 && step === 3) ? 'done'
+      : k === step ? (step === 2 ? 'warn' : 'now') : '';
+    li.querySelector('.dot').textContent = li.className === 'done' ? '✓' : k;
+  });
+  const cam = $('camBtn'), exp = $('exportBtn');
+  cam.className = 'btn' + (step === 1 ? ' primary big' : '');
+  $('camLabel').textContent = step === 1 ? '📷 Scanner' : '📷 + Page';
+  exp.className = 'btn' + (step === 3 ? ' accent big' : step === 2 ? ' accent' : step === 4 ? ' sent' : '');
+  exp.textContent = step === 4 ? '✓ Envoyé' : '📤 Envoyer';
+  $('newDocBtn').classList.toggle('hl', step === 4);
+  $('nextHint').textContent = [
+    '',
+    'Posez la feuille à plat, bien éclairée, puis appuyez sur 📷 Scanner.',
+    `⚠️ ${bad > 1 ? `${bad} pages sont floues ou ont un reflet` : 'Une page est floue ou a un reflet'} : touchez-la pour vérifier ou la reprendre.`,
+    `${n} page${n > 1 ? 's' : ''} prête${n > 1 ? 's' : ''}. Ajoutez une page ou appuyez sur 📤 Envoyer.`,
+    '✓ Document envoyé. Touchez « ＋ Nouveau » en haut pour le suivant.',
+  ][step];
+}
+
+function markExported() {
+  doc.exportedAt = Date.now();
+  saveLib();
+  updateFlow();
+  $('exClose').textContent = 'Terminé ✓';
+  $('exClose').classList.add('primaryclose');
+}
+
 function move(i, dir) {
   const j = i + dir;
   if (j < 0 || j >= doc.ids.length) return;
   [doc.ids[i], doc.ids[j]] = [doc.ids[j], doc.ids[i]];
+  doc.editedAt = Date.now();
   saveLib();
   renderGrid();
 }
@@ -694,6 +736,7 @@ $('fDel').onclick = async () => {
   if (!confirm('Supprimer cette page ?')) return;
   const id = ed.id;
   doc.ids = doc.ids.filter(x => x !== id);
+  doc.editedAt = Date.now();
   pages.delete(id);
   const u = thumbUrls.get(id);
   if (u) URL.revokeObjectURL(u);
@@ -953,8 +996,18 @@ function updateExportForm() {
   for (const id of ['rowPage', 'rowDpi', 'rowMax', 'rowWm']) $(id).hidden = textOnly;
 }
 
+function resetExportButtons() {
+  $('exSave').textContent = '⬇️ Télécharger';
+  $('exShare').textContent = '📤 Partager';
+  $('exSave').classList.remove('done');
+  $('exShare').classList.remove('done');
+  $('exClose').textContent = 'Fermer';
+  $('exClose').classList.remove('primaryclose');
+}
+
 async function prepareExport() {
   const token = ++ex.token;
+  resetExportButtons();
   ex.files = null;
   updateExportForm();
   $('exShare').disabled = $('exSave').disabled = true;
@@ -1086,6 +1139,9 @@ $('exSave').onclick = () => {
   if (!ex.files) return;
   ex.files.forEach((f, i) => setTimeout(() => download(f), i * 300));
   toast('Fichier enregistré dans « Téléchargements ».');
+  $('exSave').textContent = '✓ Enregistré';
+  $('exSave').classList.add('done');
+  markExported();
 };
 $('exShare').onclick = async () => {
   if (!ex.files) return;
@@ -1093,12 +1149,19 @@ $('exShare').onclick = async () => {
   const saveInstead = (why) => {
     ex.files.forEach((f, i) => setTimeout(() => download(f), i * 300));
     toast(`${why} Le fichier a été enregistré dans « Téléchargements » : envoyez-le depuis WhatsApp ou Gmail (trombone > Document).`, 7000);
+    $('exSave').textContent = '✓ Enregistré';
+    $('exSave').classList.add('done');
+    markExported();
   };
   let ok = false;
   try { ok = !!(navigator.canShare && navigator.canShare(data)); } catch { ok = false; }
   if (!ok) { saveInstead('Ce téléphone ne permet pas de partager ce type de fichier directement.'); return; }
-  try { await navigator.share(data); }
-  catch (e) {
+  try {
+    await navigator.share(data);
+    $('exShare').textContent = '✓ Partagé';
+    $('exShare').classList.add('done');
+    markExported();
+  } catch (e) {
     // Chrome sur Android refuse de partager certains types (Word…).
     if (e.name !== 'AbortError') saveInstead('Partage direct impossible pour ce fichier.');
   }

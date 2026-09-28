@@ -39,6 +39,13 @@
     </div>
   </header>
 
+  <ol id="steps" class="steps" aria-label="Étapes">
+    <li data-step="1"><span class="dot">1</span>Photographier</li>
+    <li data-step="2"><span class="dot">2</span>Vérifier</li>
+    <li data-step="3"><span class="dot">3</span>Envoyer</li>
+  </ol>
+  <p id="nextHint" class="nexthint"></p>
+
   <div class="namebox">
     <label for="docName">Nom du document</label>
     <input id="docName" type="text" autocomplete="off" spellcheck="false" list="nameIdeas">
@@ -53,15 +60,15 @@
   <div id="grid" class="grid"></div>
 
   <footer class="actions">
-    <label class="btn primary">
+    <label id="camBtn" class="btn primary">
       <input id="camIn" type="file" accept="image/*" capture="environment" hidden>
-      <span>📷 Scanner</span>
+      <span id="camLabel">📷 Scanner</span>
     </label>
-    <label class="btn">
+    <label id="fileBtn" class="btn">
       <input id="fileIn" type="file" accept="image/*" multiple hidden>
       <span>🖼️ Importer</span>
     </label>
-    <button id="exportBtn" class="btn accent" type="button" disabled>📤 Envoyer</button>
+    <button id="exportBtn" class="btn" type="button" disabled>📤 Envoyer</button>
   </footer>
 </section>
 
@@ -190,7 +197,7 @@
       <button id="exSave" class="btn" type="button">⬇️ Télécharger</button>
       <button id="exShare" class="btn primary" type="button">📤 Partager</button>
     </div>
-    <button class="ghost wide" value="cancel">Fermer</button>
+    <button id="exClose" class="ghost wide" value="cancel">Fermer</button>
   </form>
 </dialog>
 

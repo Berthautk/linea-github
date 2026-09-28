@@ -75,6 +75,8 @@ function build(sp) {
     for (const [ew, x] of TIERS) { const w = W - 0.35 - x; if (hOf(items, w, size) <= avail) return { ew, x, w }; }
     return null;
   }
+  // sentences, split after . ! ? (and a closing quote) followed by a space: never loses text (decimals such as 8.2 stay whole)
+  const SENT = /[^]*?[.!?]["'”’)]*(?=\s|$)\s*|[^]+$/g;
   function paginate(items, size, sub) {
     const [ew, x] = TIERS[TIERS.length - 1]; const w = W - 0.35 - x; const avail = BH - (sub ? 0.5 : 0);
     const exp = [];
@@ -82,14 +84,14 @@ function build(sp) {
       if (hOf([it], w, size) <= avail) { exp.push(it); return; }
       if (it.runs) {                  // "Term: text" too long: split the text at sentence ends, the term stays on the first part
         const lead = it.runs.length > 1 ? it.runs[0] : null; const body = it.runs[it.runs.length - 1];
-        const sents = body.t.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || [body.t]; let cur = [];
+        const sents = body.t.match(SENT) || [body.t]; let cur = [];
         const mk = (arr, first) => ({ runs: (first && lead ? [lead] : []).concat([Object.assign({}, body, { t: arr.join('').trim() })]) });
         let first = true;
         sents.forEach((x) => { if (cur.length && hOf([mk(cur.concat([x]), first)], w, size) > avail) { exp.push(mk(cur, first)); first = false; cur = [x]; } else cur.push(x); });
         if (cur.length) exp.push(mk(cur, first));
         return;
       }
-      (it.text.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || [it.text]).forEach((p) => exp.push(Object.assign({}, it, { text: p.trim() })));
+      (it.text.match(SENT) || [it.text]).forEach((p) => exp.push(Object.assign({}, it, { text: p.trim() })));
     });
     const pages = []; let cur = [];
     exp.forEach((it) => {
@@ -105,7 +107,7 @@ function build(sp) {
       const pg = pages[p]; const last = pg[pg.length - 1];
       if (pg.length < 2 || hOf(pg, w, size) <= avail || !last.runs) continue;
       const lead = last.runs.length > 1 ? last.runs[0] : null; const body = last.runs[last.runs.length - 1];
-      const sents = body.t.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || [body.t];
+      const sents = body.t.match(SENT) || [body.t];
       let k = sents.length - 1;
       const part = (a, b, withLead) => ({ runs: (withLead && lead ? [lead] : []).concat([Object.assign({}, body, { t: sents.slice(a, b).join('').trim() })]) });
       while (k > 0 && hOf(pg.slice(0, -1).concat([part(0, k, true)]), w, size) > avail) k--;

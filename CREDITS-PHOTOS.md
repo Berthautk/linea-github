@@ -1613,6 +1613,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 2 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Activity 5 (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
 
+
 # F1
 
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
@@ -1760,13 +1761,13 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## F2/01_F2_M1_L01_A_Rapid_Growth_of_the_World_s_Population
 
-- Activity 2 (usa_crowd.jpg) : “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
 - Activity 3 (usa_vaccine.jpg) : “Isatu gets a vaccination for her 5 week old son” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/26372818523)
 - Activity 5 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Board summary (usa_children.jpg) : “African school children” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/2658469563)
 
 ## F2/02_F2_M1_PW01_Calculation_of_the_Demographic_Indices_of_Cameroon
 
-- Activity 2 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
+- Activity 1 (usa_newborn.jpg) : “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
 
 ## F2/03_F2_M1_L02_The_Uneven_Distribution_of_the_World_s_Population
 
@@ -1783,6 +1784,9 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
 - Activity 4 (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
 - Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Board summary (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Board summary (usa_cocoa.jpg) : “Farmer sun drying cocoa beans” by IITA Image Library, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45796762@N03/4598613756)
+- Board summary (f2t_mosquito_net.jpg) : “On Vacation in Africa” by orkomedix, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/30717090@N06/6741038415)
 
 ## F2/06_F2_M1_FS01_Deforestation_in_Cameroon
 
@@ -1790,11 +1794,18 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 2 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
 - Activity 3 (f4_gully.jpg) : “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 - Activity 5 (f2t_tree_planting.jpg) : “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
+- Board summary (f2t_clearing.jpg) : “Slash and burn agriculture in the Amazon” by Matt-Zimmerman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16725630@N00/1524189000)
+- Board summary (f2t_charcoal.jpg) : “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
 
 ## F2/07_F2_M1_L04_Man_in_the_Tropical_Zone
 
 - Activity 3 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
 - Activity 5 (f2t_bushfire.jpg) : “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
+- Board summary (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Board summary (f2t_cotton_field.jpg) : “Cotton Fields, U.S. 65, Tensas Parish, Louisiana (4)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/3934873451)
+- Board summary (f2t_safari.jpg) : “Sri Lankan Leopard” by Shanaka Kalubowila, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50057113@N06/43689916724)
+- Board summary (f2t_drought.jpg) : “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
+- Board summary (f2t_rice_field.jpg) : “Irrigated rice fields in Sefula, Zambia. Photo by Kate Longley, 2013.” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/8608804590)
 
 ## F2/08_F2_M1_FS02_The_Firewood_Crisis
 
@@ -1815,22 +1826,28 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## F2/10_F2_M1_PW03_Identification_of_the_Biological_Resources_of_Cameroon
 
 - Activity 2 (f2t_baobab.jpg) : “What happens if you let weeds grow in centre of road, Dakar, Senegal” by ambabheg, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31518985@N04/5627872663)
-- Activity 3 (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Activity 3 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
 - Activity 4 (f2t_elephants.jpg) : “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
 - Activity 5 (lsa_lion.jpg) : “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
+- Board summary (f2t_rainforest.jpg) : “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Board summary (f2t_shea_tree.jpg) : “Female shea tree (Vitellaria paradoxa) in full flower” by Joel Abroad, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/40295335@N00/5603751456)
 
 ## F2/11_F2_M1_L05_Man_in_the_Hot_Desert_Milieu
 
 - Activity 2 (f2t_erg.jpg) : “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
 - Activity 3 (f2t_oasis.jpg) : “49 Palms Oasis; Twentynine Palms, CA” by Joshua Tree National Park, Public domain 1.0, via Flickr (https://www.flickr.com/photos/115357548@N08/12525367563)
 - Activity 4 (f2t_camels.jpg) : “Merzouga desert, Morocco” by Mycroyance, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/91155980@N07/13157027505)
-- Activity 5 (f2t_desert_well.jpg) : “Well in the desert” by Focx Photography, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/30780900@N02/4117141154)
+- Activity 5 (f2t_sandstorm.jpg) : “Sandstorm at Camp Bastion, Afghanistan” by Defence Images, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/48399297@N04/10343833885)
+- Board summary (f2t_shaduf.jpg) : “A Shadoof” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5908489998)
+- Board summary (f2t_desert_well.jpg) : “Well in the desert” by Focx Photography, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/30780900@N02/4117141154)
+- Board summary (f2t_pivot.jpg) : “Mid-West Agriculture” by Djof, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/10787942@N00/147222315)
 
 ## F2/12_F2_M1_FS04_Water_Scarcity
 
 - Activity 1 (f4_fetchwater.jpg) : “Women fetch water in Kilte-Awlaelo woreda, Tigray” by UNICEF Ethiopia, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/86783452@N02/14056445728)
 - Activity 3 (f4_borehole.jpg) : “i'll fight you for it...” by the apostrophe, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/66441426@N00/4019192363)
 - Activity 4 (f4_leakingtap.jpg) : “Drip” by jronaldlee, CC BY 2.0, via Flickr (https://www.flickr.com/photos/37176760@N06/5996590138)
+- Board summary (usa_irrigation.jpg) : “Irrigation Canals in Farah Province Afgahnistan” by USAID_IMAGES, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46658241@N06/14784748647)
 
 ## F2/13_F2_M2_L06_Country_Sides_in_Africa
 
@@ -1838,12 +1855,21 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 2 (usa_hillvillage.jpg) : “Village built into the hillside” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/5677301357)
 - Activity 4 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
 - Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Board summary (f2t_cassava_farm.jpg) : “Workshop in Lushoto, Tanzania” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/8551480688)
+- Board summary (usa_herders.jpg) : “Young cattle herders in Sénégal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/525185172)
+- Board summary (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
 
 ## F2/14_F2_M2_L07_Towns_in_Africa
 
 - Activity 1 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
 - Activity 3 (f2t_street_vendor.jpg) : “Roadside vendor roasts maize cobs for sale in Timau” by CIMMYT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/25375356457)
 - Activity 4 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Activity 5 (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+- Board summary (usa_suburb.jpg) : “Chicago suburbs from the air” by Scorpions and Centaurs, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/62736719@N00/2912708983)
+- Board summary (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
+- Board summary (f2t_moto_taxi.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
+- Board summary (f2t_tailor.jpg) : “A tailor of Wa” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/8154947468)
+- Board summary (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
 
 ## F2/15_F2_M2_FS05_Informal_Sector_Activities_in_African_Cities
 
@@ -1867,6 +1893,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 3 (usa_busstation.jpg) : “Wadi Halfa Bus Station” by D-Stanley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/79721788@N00/8651154444)
 - Activity 4 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
 - Activity 5 (f2t_phone_farmer.jpg) : “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
+- Board summary (f2t_market.jpg) : “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)
+- Board summary (f2t_street_vendor.jpg) : “Roadside vendor roasts maize cobs for sale in Timau” by CIMMYT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/25375356457)
 
 ## F2/19_F2_M2_FS07_Rural_Exodus_in_Cameroon
 

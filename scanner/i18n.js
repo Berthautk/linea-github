@@ -1,0 +1,300 @@
+// Français / English. Chaque clé : [français, anglais].
+// Dans le HTML : data-i18n (texte), data-i18n-ph (placeholder),
+// data-i18n-aria (aria-label), data-i18n-title (title).
+
+const D = {
+  'app.tagline': ['Le vrai scanner, dans votre téléphone.', 'The real scanner, in your phone.'],
+  'bar.lib': ['📁 Mes docs', '📁 My docs'],
+  'bar.new': ['＋ Nouveau', '＋ New'],
+  'bar.about': ['À propos', 'About'],
+  'bar.lang': ['Change language: English', 'Changer de langue : français'],
+  'tab.doc': ['📄 Document', '📄 Document'],
+  'tab.dossier': ['📂 Dossier', '📂 Application file'],
+
+  // Étapes
+  'step.1': ['Photographier', 'Capture'],
+  'step.2': ['Vérifier', 'Check'],
+  'step.3': ['Envoyer', 'Send'],
+  'hint.1': ['Posez la feuille à plat, bien éclairée, puis appuyez sur 📷 Scanner.', 'Lay the sheet flat in good light, then tap 📷 Scan.'],
+  'hint.2one': ['⚠️ Une page est floue ou a un reflet : touchez-la pour vérifier ou la reprendre.', '⚠️ A page is blurry or has glare: tap it to check or retake it.'],
+  'hint.2many': ['⚠️ {n} pages sont floues ou ont un reflet : touchez-les pour vérifier ou les reprendre.', '⚠️ {n} pages are blurry or have glare: tap them to check or retake them.'],
+  'hint.3': ['{n} page(s) prête(s). Ajoutez une page ou appuyez sur 📤 Envoyer.', '{n} page(s) ready. Add a page or tap 📤 Send.'],
+  'hint.4': ['✓ Document envoyé. Touchez « ＋ Nouveau » en haut pour le suivant.', '✓ Document sent. Tap “＋ New” at the top for the next one.'],
+
+  'doc.name': ['Nom du document', 'Document name'],
+  'empty.title': ["Aucune page pour l'instant.", 'No pages yet.'],
+  'empty.text': ['Posez le document à plat sur une surface <b>plus foncée</b> que le papier, dans un endroit bien éclairé, puis appuyez sur <b>Scanner</b>.', 'Lay the document flat on a surface <b>darker</b> than the paper, in good light, then tap <b>Scan</b>.'],
+  'empty.small': ['Gratuit, sans compte, sans publicité ; vos documents restent sur votre téléphone.', 'Free, no account, no ads; your documents stay on your phone.'],
+  'btn.scan': ['📷 Scanner', '📷 Scan'],
+  'btn.addPage': ['📷 + Page', '📷 + Page'],
+  'btn.import': ['🖼️ Importer', '🖼️ Import'],
+  'btn.send': ['📤 Envoyer', '📤 Send'],
+  'btn.sent': ['✓ Envoyé', '✓ Sent'],
+  'tile.page': ['Page {n}', 'Page {n}'],
+  'tile.bad': ['Photo floue ou avec reflet', 'Blurry photo or glare'],
+  'tile.before': ['Déplacer avant', 'Move earlier'],
+  'tile.after': ['Déplacer après', 'Move later'],
+
+  // Éditeur
+  'ed.back': ['← Retour', '← Back'],
+  'ed.crop': ['Recadrer', 'Crop'],
+  'ed.filter': ['Rendu', 'Look'],
+  'ed.anno': ['Signer / masquer', 'Sign / redact'],
+  'ed.count': ['Page {i}/{n}', 'Page {i}/{n}'],
+  'ed.retake': ['📷 Reprendre', '📷 Retake'],
+  'crop.hint': ['Faites glisser les 4 coins sur les bords du document.', 'Drag the 4 corners onto the edges of the document.'],
+  'crop.auto': ['✨ Auto', '✨ Auto'],
+  'crop.full': ["⬜ Toute l'image", '⬜ Whole image'],
+  'crop.ok': ['Valider ✓', 'Confirm ✓'],
+  'f.crop': ['✂️ Recadrer', '✂️ Crop'],
+  'f.rotL': ['Tourner à gauche', 'Rotate left'],
+  'f.rotR': ['Tourner à droite', 'Rotate right'],
+  'f.sign': ['✍️ Signer', '✍️ Sign'],
+  'f.del': ['Supprimer la page', 'Delete page'],
+  'f.book': ['📖 Séparer 2 pages', '📖 Split 2 pages'],
+  'f.read': ['🔊 Écouter', '🔊 Listen'],
+  'f.stop': ['⏹ Arrêter', '⏹ Stop'],
+  'f.next': ['📷 Page suivante', '📷 Next page'],
+  'f.done': ['Terminé ✓', 'Done ✓'],
+  'a.hint': ["Déplacez l'élément au doigt ; le rond en bas à droite change sa taille.", 'Drag the item with your finger; the dot at the bottom right resizes it.'],
+  'a.sig': ['✍️ Signature', '✍️ Signature'],
+  'a.mask': ['⬛ Masquer une zone', '⬛ Hide an area'],
+  'a.del': ["Retirer l'élément choisi", 'Remove selected item'],
+  'q.blurry': ["Photo floue : le texte risque d'être illisible.", 'Blurry photo: the text may be unreadable.'],
+  'q.glare': ['Reflet de lumière détecté : une partie peut être effacée.', 'Glare detected: part of the page may be washed out.'],
+  'q.tip': ['Reprenez la photo sans flash, téléphone immobile.', 'Retake the photo without flash, holding the phone still.'],
+
+  // Rendus
+  'flt.desk': ['Scanner de bureau', 'Desktop scanner'],
+  'flt.desk.h': ['Comme un scanner à plat : fond blanc, tons naturels, texte net, cachets en couleur', 'Like a flatbed scanner: white background, natural tones, sharp text, stamps in colour'],
+  'flt.scan': ['Contrasté', 'High contrast'],
+  'flt.scan.h': ['Fond blanc éclatant, texte très noir (écritures pâles, crayon)', 'Bright white background, very black text (faint writing, pencil)'],
+  'flt.gray': ['Gris', 'Grey'],
+  'flt.gray.h': ['Niveaux de gris, fond blanc', 'Greyscale, white background'],
+  'flt.bw': ['Photocopie', 'Photocopy'],
+  'flt.bw.h': ['Noir et blanc pur, comme une photocopieuse', 'Pure black and white, like a photocopier'],
+  'flt.color': ['Couleur', 'Colour'],
+  'flt.color.h': ['Couleurs réelles corrigées (cartes, photos, diplômes)', 'True colours corrected (cards, photos, diplomas)'],
+  'flt.original': ['Original', 'Original'],
+  'flt.original.h': ['Sans retouche', 'No changes'],
+
+  // Busy / toasts
+  'busy.analyse': ['Analyse de la photo…', 'Analysing photo…'],
+  'busy.pageOf': ['Page {i} sur {n}…', 'Page {i} of {n}…'],
+  'busy.load': ['Chargement…', 'Loading…'],
+  'busy.work': ['Traitement…', 'Processing…'],
+  'busy.straighten': ['Redressement…', 'Straightening…'],
+  'busy.open': ['Ouverture…', 'Opening…'],
+  'busy.sig': ['Extraction de la signature…', 'Extracting signature…'],
+  'busy.backup': ['Préparation de la sauvegarde…', 'Preparing backup…'],
+  'busy.restore': ['Restauration…', 'Restoring…'],
+  'busy.read': ['Lecture du texte…', 'Reading text…'],
+  'toast.badImage': ['Impossible de lire une des images.', 'One of the images could not be read.'],
+  'toast.noEdges': ['Bords non trouvés : placez les coins à la main.', 'Edges not found: place the corners by hand.'],
+  'toast.newDoc': ["Nouveau document. L'ancien est dans « Mes docs ».", 'New document. The previous one is in “My docs”.'],
+  'toast.noSig': ['Aucune signature trouvée sur la photo.', 'No signature found in the photo.'],
+  'toast.signFirst': ["Signez d'abord dans le cadre.", 'Sign in the box first.'],
+  'toast.saved': ['Fichier enregistré dans « Téléchargements ».', 'File saved to “Downloads”.'],
+  'toast.shareNo': ['Ce téléphone ne permet pas de partager ce type de fichier directement.', 'This phone cannot share this type of file directly.'],
+  'toast.shareFail': ['Partage direct impossible pour ce fichier.', 'Direct sharing is not possible for this file.'],
+  'toast.savedInstead': ['{why} Le fichier a été enregistré dans « Téléchargements » : envoyez-le depuis WhatsApp ou Gmail (trombone > Document).', '{why} The file was saved to “Downloads”: send it from WhatsApp or Gmail (paperclip > Document).'],
+  'toast.backupDone': ['Sauvegarde enregistrée ({size}). Gardez-la sur Drive ou une clé USB.', 'Backup saved ({size}). Keep it on Drive or a USB stick.'],
+  'toast.notBackup': ["Ce fichier n'est pas une sauvegarde VraiScan.", 'This file is not a VraiScan backup.'],
+  'toast.restored': ['{n} document(s) restauré(s).', '{n} document(s) restored.'],
+  'toast.split': ['Page séparée en 2.', 'Page split in two.'],
+  'toast.noSplit': ['Pas de pli central trouvé : la page a été coupée en son milieu.', 'No central fold found: the page was cut in the middle.'],
+  'toast.noSpeech': ["La lecture à voix haute n'est pas disponible sur ce téléphone.", 'Read-aloud is not available on this phone.'],
+  'toast.noText': ['Aucun texte trouvé sur cette page.', 'No text found on this page.'],
+  'confirm.delPage': ['Supprimer cette page ?', 'Delete this page?'],
+  'confirm.delDoc': ['Supprimer « {name} » de ce téléphone ?', 'Delete “{name}” from this phone?'],
+
+  // Export
+  'ex.title': ['Enregistrer / envoyer', 'Save / send'],
+  'ex.name': ['Nom du fichier', 'File name'],
+  'ex.format': ['Format', 'Format'],
+  'ex.f.pdf': ['PDF (comme un scan : image des pages)', 'PDF (like a scan: page images)'],
+  'ex.f.pdfocr': ['PDF avec texte cherchable et copiable', 'PDF with searchable, copyable text'],
+  'ex.f.docx': ['Word (.docx) : texte modifiable', 'Word (.docx): editable text'],
+  'ex.f.txt': ['Texte seul (.txt)', 'Plain text (.txt)'],
+  'ex.f.jpg': ['Images JPG (une par page)', 'JPG images (one per page)'],
+  'ex.lang': ['Langue du document', 'Document language'],
+  'ex.l.both': ['Français et anglais', 'French and English'],
+  'ex.l.fr': ['Français', 'French'],
+  'ex.l.en': ['Anglais', 'English'],
+  'ex.layout': ['Mise en page', 'Layout'],
+  'ex.p.a4': ['A4 (comme un scanner de bureau)', 'A4 (like a desktop scanner)'],
+  'ex.p.id': ["Carte d'identité : recto + verso sur une page A4, taille réelle", 'ID card: front + back on one A4 page, actual size'],
+  'ex.p.letter': ['Lettre US', 'US Letter'],
+  'ex.p.fit': ['Taille du document (sans marges)', 'Document size (no margins)'],
+  'ex.dpi': ['Qualité', 'Quality'],
+  'ex.d.150': ['Légère — 150 ppp (WhatsApp, e-mail)', 'Light — 150 dpi (WhatsApp, e-mail)'],
+  'ex.d.200': ['Standard — 200 ppp', 'Standard — 200 dpi'],
+  'ex.d.300': ['Scanner — 300 ppp (comme en ville, dossiers officiels)', 'Scanner — 300 dpi (like a print shop, official files)'],
+  'ex.max': ['Taille maximale du fichier (sites de dépôt en ligne)', 'Maximum file size (online upload sites)'],
+  'ex.m.none': ['Pas de limite', 'No limit'],
+  'ex.safe': ['Nom de fichier accepté par les sites (sans espaces ni accents)', 'File name accepted by upload sites (no spaces or accents)'],
+  'ex.wm': ['Filigrane de protection (facultatif)', 'Protection watermark (optional)'],
+  'ex.wm.ph': ['Ex. : Copie réservée au dossier de concours ENS 2026', 'E.g. Copy for the 2026 ENS exam application only'],
+  'ex.wm.help': ["Le filigrane empêche qu'une copie de vos pièces soit réutilisée pour autre chose. Le texte reste lisible dessous.", 'The watermark stops a copy of your documents being reused for anything else. The text stays readable underneath.'],
+  'ex.download': ['⬇️ Télécharger', '⬇️ Download'],
+  'ex.share': ['📤 Partager', '📤 Share'],
+  'ex.downloaded': ['✓ Enregistré', '✓ Saved'],
+  'ex.shared': ['✓ Partagé', '✓ Shared'],
+  'ex.close': ['Fermer', 'Close'],
+  'ex.finish': ['Terminé ✓', 'Done ✓'],
+  'ex.listen': ['🔊 Écouter le texte', '🔊 Listen to the text'],
+  'ex.preparing': ['Préparation du fichier…', 'Preparing file…'],
+  'ex.compress': ['Compression… ({dpi} ppp)', 'Compressing… ({dpi} dpi)'],
+  'ex.readPage': ['Lecture du texte… page {i}/{n}', 'Reading text… page {i}/{n}'],
+  'ex.ocrFail': ['La lecture du texte a échoué sur cet appareil.', 'Text recognition failed on this device.'],
+  'ex.noText': ['Aucun texte reconnu. Essayez le rendu « Scanner de bureau » ou « Contrasté », ou vérifiez la langue.', 'No text recognised. Try the “Desktop scanner” or “High contrast” look, or check the language.'],
+  'ex.lowDocx': ['{low} mot(s) sur {all} à vérifier : ils sont surlignés en jaune dans Word.', '{low} of {all} word(s) to check: they are highlighted in yellow in Word.'],
+  'ex.low': ['{low} mot(s) sur {all} lus avec un doute.', '{low} of {all} word(s) read with doubt.'],
+  'ex.infoText': ['{n} page(s) · texte modifiable · {size}', '{n} page(s) · editable text · {size}'],
+  'ex.info': ['{n} page(s) · {f} fichier(s) · {size} · {dpi} ppp', '{n} page(s) · {f} file(s) · {size} · {dpi} dpi'],
+  'ex.searchable': [' · texte cherchable', ' · searchable text'],
+  'ex.compressed': [' (compressé pour tenir sous {max})', ' (compressed to fit under {max})'],
+  'ex.tooBig': ['Impossible de descendre sous {max} en restant lisible. Retirez des pages ou envoyez-les en plusieurs fichiers.', 'Cannot go under {max} and stay readable. Remove pages or send them as several files.'],
+  'ex.bad': ["⚠️ {n} page(s) floue(s) ou avec reflet : vérifiez avant d'envoyer.", '⚠️ {n} blurry page(s) or glare: check before sending.'],
+  'ex.odd': ['Nombre impair de pages : la dernière carte sera seule sur sa feuille.', 'Odd number of pages: the last card will be alone on its sheet.'],
+  'ex.idNoText': ["Mise en page carte : le texte cherchable n'est pas ajouté.", 'Card layout: searchable text is not added.'],
+
+  // Bibliothèque
+  'lib.title': ['Mes documents', 'My documents'],
+  'lib.help': ['Tout est enregistré sur ce téléphone seulement. Faites de temps en temps une sauvegarde complète et gardez-la sur Drive ou sur une clé USB : si vous changez de téléphone ou videz le navigateur, vous pourrez tout restaurer.', 'Everything is stored on this phone only. Make a full backup from time to time and keep it on Drive or a USB stick: if you change phones or clear the browser, you can restore everything.'],
+  'lib.backup': ['💾 Sauvegarde complète', '💾 Full backup'],
+  'lib.restore': ['📥 Restaurer', '📥 Restore'],
+  'lib.pages': ['{n} page(s)', '{n} page(s)'],
+  'lib.pieces': ['{n} pièce(s)', '{n} document(s)'],
+  'lib.open': ['ouvert', 'open'],
+  'lib.del': ['Supprimer {name}', 'Delete {name}'],
+
+  // Signature
+  'sig.title': ['Votre signature', 'Your signature'],
+  'sig.help': ['Signez avec le doigt dans le cadre, ou prenez en photo votre signature faite au stylo sur une feuille blanche.', 'Sign with your finger in the box, or take a photo of your pen signature on white paper.'],
+  'sig.blue': ['Bleu', 'Blue'],
+  'sig.black': ['Noir', 'Black'],
+  'sig.clear': ['Effacer', 'Clear'],
+  'sig.photo': ['📷 Depuis une photo', '📷 From a photo'],
+  'sig.use': ['Placer sur la page', 'Place on page'],
+  'sig.cancel': ['Annuler', 'Cancel'],
+
+  // À propos
+  'about.tag': ['<b>Le vrai scanner, dans votre téléphone.</b>', '<b>The real scanner, in your phone.</b>'],
+  'about.text': ["Gratuit, sans compte, sans publicité, sans abonnement. Vos documents restent sur ce téléphone : aucune photo, aucun texte n'est envoyé sur internet, même la lecture du texte (Word, PDF cherchable) se fait sur l'appareil.", 'Free, no account, no ads, no subscription. Your documents stay on this phone: no photo or text is sent over the internet; even text recognition (Word, searchable PDF) runs on the device.'],
+  'about.tip': ['Pour un résultat de scanner de bureau : feuille à plat sur une surface plus foncée, bonne lumière sans flash, téléphone immobile au-dessus de la feuille, qualité « Scanner — 300 ppp ».', 'For desktop-scanner results: sheet flat on a darker surface, good light without flash, phone held still above the sheet, “Scanner — 300 dpi” quality.'],
+  'about.lang': ['Langue', 'Language'],
+  'about.def': ['Rendu par défaut des nouvelles pages', 'Default look for new pages'],
+  'about.privacy': ['Politique de confidentialité', 'Privacy policy'],
+  'about.version': ['Version {v} · moteur de lecture du texte : Tesseract (Apache 2.0)', 'Version {v} · text recognition engine: Tesseract (Apache 2.0)'],
+
+  // Dossier
+  'ds.name': ['Nom du dossier', 'Application file name'],
+  'ds.name.ph': ['Ex. : Dossier de concours ENS 2026', 'E.g. 2026 exam application'],
+  'ds.holder': ['Votre nom, tel qu\'il figure sur vos pièces (facultatif)', 'Your name as it appears on your documents (optional)'],
+  'ds.holder.ph': ['Ex. : NGONO Marie Claire', 'E.g. NGONO Marie Claire'],
+  'ds.holder.help': ['Sert à vérifier que le même nom figure sur chaque pièce.', 'Used to check the same name appears on every document.'],
+  'ds.segAdd': ['➕ Ajouter une pièce', '➕ Add a document'],
+  'ds.segMine': ['📁 Mon dossier', '📁 My file'],
+  'ds.search': ['Rechercher : CNI, casier, diplôme…', 'Search: ID card, criminal record, diploma…'],
+  'ds.noResult': ['Aucune pièce ne correspond. Choisissez « Autre pièce » dans la liste.', 'No matching document. Choose “Other document” in the list.'],
+  'ds.empty': ['Votre dossier est vide. Touchez « ➕ Ajouter une pièce », choisissez la pièce (par exemple la CNI), puis scannez-la : elle se range ici avec son nom.', 'Your file is empty. Tap “➕ Add a document”, choose the document (for example your ID card), then scan it: it is filed here with its name.'],
+  'ds.inFile': ['déjà dans le dossier', 'already in the file'],
+  'ds.pages': ['{n} page(s)', '{n} page(s)'],
+  'ds.edit': ['✏️ Modifier', '✏️ Edit'],
+  'ds.redo': ['🔄 Recommencer', '🔄 Redo'],
+  'ds.addPage': ['＋ Page', '＋ Page'],
+  'ds.remove': ['Retirer du dossier', 'Remove from file'],
+  'ds.up': ['Monter', 'Move up'],
+  'ds.down': ['Descendre', 'Move down'],
+  'ds.confirmRemove': ['Retirer « {name} » du dossier ?', 'Remove “{name}” from the file?'],
+  'ds.confirmRedo': ['Recommencer « {name} » ? Les pages actuelles seront remplacées.', 'Redo “{name}”? The current pages will be replaced.'],
+  'ds.added': ['✓ {name} ajouté(e) au dossier', '✓ {name} added to the file'],
+  'ds.btnAdd': ['➕ Pièce', '➕ Document'],
+  'ds.btnCheck': ['🔎 Vérifier', '🔎 Check'],
+  'ds.btnSend': ['📤 Envoyer', '📤 Send'],
+  'ds.count': ['{n} pièce(s) dans le dossier', '{n} document(s) in the file'],
+  'ds.card': ['Recto puis verso : scannez les deux faces.', 'Front then back: scan both sides.'],
+  'ds.photo': ['Cadrez le visage ; le fond doit être blanc.', 'Frame the face; the background must be white.'],
+  'ds.otherName': ['Nom de la pièce', 'Document name'],
+  'ds.otherName.ph': ['Ex. : Attestation de stage', 'E.g. Internship certificate'],
+  'ds.scanIt': ['📷 Scanner', '📷 Scan'],
+  'ds.importIt': ['🖼️ Importer une photo', '🖼️ Import a photo'],
+  'ds.cancel': ['Annuler', 'Cancel'],
+  'ds.piece': ['Pièce : {name}', 'Document: {name}'],
+  'ds.monthsRule': ['À dater de moins de {m} mois', 'Must be under {m} months old'],
+
+  // Envoi du dossier
+  'dx.title': ['Envoyer le dossier', 'Send the file'],
+  'dx.name': ['Nom du dossier (nom du fichier .zip)', 'File name (.zip name)'],
+  'dx.format': ['Format des pièces', 'Document format'],
+  'dx.f.pdf': ['Un PDF par pièce (conseillé)', 'One PDF per document (recommended)'],
+  'dx.f.jpg': ['Images JPG (sites qui refusent le PDF)', 'JPG images (sites that refuse PDF)'],
+  'dx.f.one': ['Un seul PDF avec toutes les pièces', 'A single PDF with all documents'],
+  'dx.max': ['Taille maximale par fichier', 'Maximum size per file'],
+  'dx.photo': ["Photo d'identité", 'ID photo'],
+  'dx.ph.4x4': ['4 × 4 cm, moins de 50 Ko', '4 × 4 cm, under 50 KB'],
+  'dx.ph.3545': ['35 × 45 mm, moins de 50 Ko', '35 × 45 mm, under 50 KB'],
+  'dx.ph.free': ['Taille libre (même règle que les autres pièces)', 'Free size (same rule as other documents)'],
+  'dx.safe': ['Noms acceptés par les sites : 01_CNI.pdf (sans espaces ni accents)', 'Names accepted by upload sites: 01_NIC.pdf (no spaces or accents)'],
+  'dx.zip': ['⬇️ Télécharger le dossier (.zip)', '⬇️ Download the file (.zip)'],
+  'dx.files': ['📤 Partager les fichiers', '📤 Share the files'],
+  'dx.ready': ['{n} fichier(s) · {size} au total', '{n} file(s) · {size} in total'],
+  'dx.fileOk': ['✓', '✓'],
+  'dx.fileBig': ['⚠️ trop lourd', '⚠️ too large'],
+  'dx.empty': ['Ajoutez au moins une pièce au dossier.', 'Add at least one document to the file.'],
+  'dx.preparing': ['Préparation de « {name} »…', 'Preparing “{name}”…'],
+  'dx.zipNote': ['Le .zip rassemble toutes les pièces : pratique pour les garder ou les envoyer par e-mail. Sur la plupart des sites, déposez les fichiers un par un (bouton Partager, ou décompressez le .zip).', 'The .zip groups all documents: handy to keep or e-mail them. On most sites, upload the files one by one (Share button, or unzip).'],
+
+  // Vérification
+  'ck.title': ['Vérification du dossier', 'File check'],
+  'ck.intro': ["Indicatif : l'application lit les dates et les noms sur vos pièces. Vérifiez toujours vous-même.", 'Indicative: the app reads dates and names on your documents. Always check yourself.'],
+  'ck.run': ['Lecture des pièces… {i}/{n}', 'Reading documents… {i}/{n}'],
+  'ck.ok': ['✓ Rien à signaler', '✓ Nothing to report'],
+  'ck.blurry': ['⚠️ Page floue ou avec reflet : reprenez-la.', '⚠️ Blurry page or glare: retake it.'],
+  'ck.old': ['⚠️ La date la plus récente lue est le {date} : la pièce semble avoir plus de {m} mois.', '⚠️ The most recent date read is {date}: the document seems older than {m} months.'],
+  'ck.fresh': ['✓ Date la plus récente lue : {date} (moins de {m} mois).', '✓ Most recent date read: {date} (under {m} months).'],
+  'ck.noDate': ['❔ Date non trouvée : vérifiez qu\'elle a moins de {m} mois.', '❔ Date not found: check it is under {m} months old.'],
+  'ck.nameMissing': ['⚠️ Nom non retrouvé : « {part} » absent de cette pièce. Vérifiez l\'orthographe.', '⚠️ Name not found: “{part}” is missing from this document. Check the spelling.'],
+  'ck.nameOk': ['✓ Nom retrouvé.', '✓ Name found.'],
+  'ck.photoBg': ['⚠️ Le fond de la photo ne semble pas blanc.', '⚠️ The photo background does not look white.'],
+  'ck.photoOk': ['✓ Fond clair.', '✓ Light background.'],
+  'ck.close': ['Fermer', 'Close'],
+  'ck.runBtn': ['🔎 Lancer la vérification', '🔎 Run the check'],
+  'ck.empty': ['Le dossier est vide.', 'The file is empty.'],
+
+  // Divers
+  'size.kb': ['{n} Ko', '{n} KB'],
+  'size.mb': ['{n} Mo', '{n} MB'],
+  'name.scan': ['Scan', 'Scan'],
+  'name.dossier': ['Dossier', 'File'],
+};
+
+let cur = 'fr';
+
+export function getLang() { return cur; }
+
+export function setLang(l) {
+  cur = l === 'en' ? 'en' : 'fr';
+  document.documentElement.lang = cur;
+}
+
+export function t(key, vars) {
+  const e = D[key];
+  let s = e ? e[cur === 'en' ? 1 : 0] : key;
+  if (vars) for (const k in vars) s = s.split(`{${k}}`).join(vars[k]);
+  return s;
+}
+
+// Texte selon la langue pour un objet { fr, en }.
+export function L(o) { return o ? (cur === 'en' ? o.en : o.fr) : ''; }
+
+export function applyI18n(root = document) {
+  root.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t(el.dataset.i18n);
+    if (/<[a-z]/i.test(v)) el.innerHTML = v; else el.textContent = v;
+  });
+  root.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  root.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
+  root.querySelectorAll('[data-i18n-title]').forEach(el => { el.title = t(el.dataset.i18nTitle); });
+}

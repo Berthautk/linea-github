@@ -4,26 +4,38 @@ import {
   assessQuality, drawWatermark, inkToAlpha, trimAlpha, estimateSkew, rotateSmall, cleanBorders,
 } from './imgproc.js';
 import { buildPdf, PAGE_SIZES } from './pdf.js';
-import { recognize, plainText } from './ocr.js';
-import { buildDocx } from './docx.js';
+import { recognize, plainText, paragraphText } from './ocr.js';
+import { buildDocx, zip } from './docx.js';
 import * as store from './store.js';
+import { t, L, getLang, setLang, applyI18n } from './i18n.js';
+import { CATEGORIES, PIECES, DOSSIER_NAMES, pieceById, slug } from './catalog.js';
 
-export const APP_VERSION = '1.0.0';
+export const APP_VERSION = '1.1.0';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
 
-// Bibliothèque : plusieurs documents, chacun avec ses pages.
-const lib = { docs: [] };          // { id, name, ids, updated }
-let doc = null;                    // document ouvert
+// Bibliothèque : documents simples et dossiers de candidature.
+// Un dossier a en plus : kind 'dossier', pieces [{ key, cid, label, ids }], holder.
+// Pour tous : ids = toutes les pages, dans l'ordre.
+const lib = { docs: [] };
+let doc = null;                    // document ou dossier ouvert
 const pages = new Map();           // pages du document ouvert
 const thumbUrls = new Map();
 
 /* ------------------------------ utilitaires ------------------------------ */
 
-function defaultName() {
+const prefs = {
+  get(k, d = '') { try { return localStorage.getItem('ls.' + k) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('ls.' + k, v); } catch { /* navigation privée */ } },
+};
+
+function stamp() {
   const d = new Date(), p = (n) => String(n).padStart(2, '0');
-  return `Scan ${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}h${p(d.getMinutes())}`;
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}h${p(d.getMinutes())}`;
+}
+function defaultName(kind = 'doc') {
+  return `${t(kind === 'dossier' ? 'name.dossier' : 'name.scan')} ${stamp()}`;
 }
 
 function safeName(s) {
@@ -36,7 +48,8 @@ function uid() {
 }
 
 function fmtSize(n) {
-  return n >= 1e6 ? `${(n / 1e6).toFixed(1).replace('.', ',')} Mo` : `${Math.max(1, Math.round(n / 1e3))} Ko`;
+  if (n >= 1e6) return t('size.mb', { n: (n / 1e6).toFixed(1).replace('.', getLang() === 'fr' ? ',' : '.') });
+  return t('size.kb', { n: Math.max(1, Math.round(n / 1e3)) });
 }
 
 function blobToDataUrl(b) {
@@ -62,11 +75,6 @@ function loadImg(src) {
   return imgCache.get(src);
 }
 
-const prefs = {
-  get(k, d = '') { try { return localStorage.getItem('ls.' + k) ?? d; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem('ls.' + k, v); } catch { /* navigation privée */ } },
-};
-
 let busyDepth = 0;
 async function busy(text, fn) {
   busyDepth++;
@@ -76,24 +84,70 @@ async function busy(text, fn) {
   try { return await fn(); }
   finally { if (--busyDepth === 0) $('busy').hidden = true; }
 }
-function setBusyText(t) { $('busyText').textContent = t; }
+function setBusyText(s) { $('busyText').textContent = s; }
 
 let toastTimer;
 function toast(msg, ms = 3500) {
-  const t = $('toast');
-  t.textContent = msg;
-  t.hidden = false;
+  const el = $('toast');
+  el.textContent = msg;
+  el.hidden = false;
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => (t.hidden = true), ms);
+  toastTimer = setTimeout(() => (el.hidden = true), ms);
 }
 
 function saveLib() {
   if (doc) doc.updated = Date.now();
   return store.putMeta('library', {
-    docs: lib.docs.map(d => ({ ...d, ids: d.ids.slice() })),
+    docs: lib.docs.map(d => ({
+      ...d, ids: d.ids.slice(),
+      pieces: d.pieces ? d.pieces.map(p => ({ ...p, ids: p.ids.slice() })) : undefined,
+    })),
     current: doc && doc.id,
   });
 }
+
+function download(file) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(file);
+  a.download = file.name;
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
+
+// Partage direct ; si le téléphone refuse, le fichier est enregistré.
+async function shareOrSave(files, title, onDone) {
+  const data = { files, title };
+  const saveInstead = (why) => {
+    files.forEach((f, i) => setTimeout(() => download(f), i * 300));
+    toast(t('toast.savedInstead', { why }), 7000);
+    onDone('saved');
+  };
+  let ok = false;
+  try { ok = !!(navigator.canShare && navigator.canShare(data)); } catch { ok = false; }
+  if (!ok) { saveInstead(t('toast.shareNo')); return; }
+  try {
+    await navigator.share(data);
+    onDone('shared');
+  } catch (e) {
+    // Chrome sur Android refuse de partager certains types (Word, zip…).
+    if (e.name !== 'AbortError') saveInstead(t('toast.shareFail'));
+  }
+}
+
+// Petit sélecteur de fichier créé à la volée (appareil photo ou galerie).
+function pickFiles({ camera, multiple }, cb) {
+  const inp = document.createElement('input');
+  inp.type = 'file';
+  inp.accept = 'image/*';
+  if (camera) inp.setAttribute('capture', 'environment');
+  if (multiple) inp.multiple = true;
+  inp.onchange = () => { const f = [...inp.files]; if (f.length) cb(f); };
+  inp.click();
+}
+
+const isDossier = () => !!(doc && doc.kind === 'dossier');
 
 /* ------------------------------ traitement ------------------------------ */
 
@@ -115,8 +169,8 @@ async function getWarped(page) {
   if (cache.warpKey !== key) {
     const flat = warp(orig, page.quad);
     page.quality = assessQuality(flat);
-    // Redressement fin : lignes de texte parfaitement horizontales.
-    page.skew = estimateSkew(flat);
+    // Redressement fin : lignes de texte parfaitement horizontales (pas pour une photo d'identité).
+    page.skew = page.kind === 'photo' ? 0 : estimateSkew(flat);
     cache.warped = rotateSmall(flat, page.skew);
     cache.warpKey = key;
     cache.baseKey = null;
@@ -186,41 +240,69 @@ async function commit(page, out) {
   await store.putPage(page);
 }
 
+// Photo d'identité : cadre centré au format 4:5 (ou toute l'image si elle
+// est déjà recadrée) ; pas de détection de bords.
+function photoQuad(w, h) {
+  const target = 4 / 5;
+  const r = w / h;
+  if (Math.abs(r - target) < 0.12 || Math.abs(r - 1) < 0.06) return defaultQuad(w, h, 0);
+  let cw = w, ch = h;
+  if (r > target) cw = h * target; else ch = w / target;
+  const x = (w - cw) / 2, y = (h - ch) / 2;
+  return [{ x, y }, { x: x + cw, y }, { x: x + cw, y: y + ch }, { x, y: y + ch }];
+}
+
 async function loadPhoto(page, file) {
   const canvas = await blobToCanvas(file, MAX_SRC);
   page.orig = await canvasToBlob(canvas, 'image/jpeg', 0.93);
-  page.quad = detectQuad(canvas) || defaultQuad(canvas.width, canvas.height);
+  page.quad = page.kind === 'photo'
+    ? photoQuad(canvas.width, canvas.height)
+    : detectQuad(canvas) || defaultQuad(canvas.width, canvas.height);
   resetCache(page.id, canvas);
 }
 
-async function addFiles(files, { edit }) {
+function defaultFilter() {
+  const f = prefs.get('defFilter', 'desk');
+  return FILTERS.some(x => x.id === f) ? f : 'desk';
+}
+
+// Ajoute des photos au document, ou à une pièce du dossier.
+async function addFiles(files, { edit, piece = null, at = -1 }) {
   files = [...files].filter(f => f && (f.type.startsWith('image/') || !f.type));
-  if (!files.length) return;
-  let lastId = null;
-  await busy('Analyse de la photo…', async () => {
+  if (!files.length) return [];
+  const added = [];
+  const kind = piece ? (pieceById(piece.cid)?.kind || 'doc') : 'doc';
+  await busy(t('busy.analyse'), async () => {
     for (let i = 0; i < files.length; i++) {
-      if (files.length > 1) setBusyText(`Page ${i + 1} sur ${files.length}…`);
+      if (files.length > 1) setBusyText(t('busy.pageOf', { i: i + 1, n: files.length }));
       try {
-        const page = { id: uid(), rot: 0, filter: 'desk', overlays: [] };
+        const page = { id: uid(), rot: 0, filter: defaultFilter(), overlays: [], kind };
         await loadPhoto(page, files[i]);
         pages.set(page.id, page);
-        // Carte (CNI, permis, carte d'étudiant) : fond coloré et photo, on
-        // garde les vraies couleurs au lieu de blanchir le fond.
         const w = await getWarped(page);
-        if (Math.abs(Math.max(w.width, w.height) / Math.min(w.width, w.height) - 85.6 / 54) < 0.07) page.filter = 'color';
+        // Carte (CNI, permis…) ou photo d'identité : fond coloré et photo, on
+        // garde les vraies couleurs au lieu de blanchir le fond.
+        const isCard = Math.abs(Math.max(w.width, w.height) / Math.min(w.width, w.height) - 85.6 / 54) < 0.07;
+        if (kind === 'photo' || kind === 'card' || isCard) page.filter = 'color';
         await nextFrame();
         await commit(page, await renderPage(page));
-        doc.ids.push(page.id);
-        lastId = page.id;
+        added.push(page.id);
       } catch (e) {
         console.error(e);
-        toast('Impossible de lire une des images.');
+        toast(t('toast.badImage'));
       }
+    }
+    if (piece) {
+      if (at >= 0) piece.ids.splice(at, 0, ...added); else piece.ids.push(...added);
+      syncIds();
+    } else {
+      doc.ids.push(...added);
     }
     await saveLib();
   });
-  renderGrid();
-  if (edit && lastId && files.length === 1) openEditor(lastId, 'crop');
+  refreshHome();
+  if (edit && added.length && files.length === 1) openEditor(added[added.length - 1], 'crop');
+  return added;
 }
 
 function isBad(p) {
@@ -228,6 +310,22 @@ function isBad(p) {
 }
 
 /* ------------------------------ écran principal ------------------------------ */
+
+function refreshHome() {
+  if (isDossier()) renderDossier(); else renderGrid();
+}
+
+function showView() {
+  const ds = isDossier();
+  $('docView').hidden = ds;
+  $('dossierView').hidden = !ds;
+  $('docActions').hidden = ds;
+  $('dsActions').hidden = !ds;
+  $('tabDoc').classList.toggle('on', !ds);
+  $('tabDossier').classList.toggle('on', ds);
+  $('tabDoc').setAttribute('aria-selected', String(!ds));
+  $('tabDossier').setAttribute('aria-selected', String(ds));
+}
 
 function renderGrid() {
   const grid = $('grid');
@@ -239,7 +337,7 @@ function renderGrid() {
     const tile = document.createElement('div');
     tile.className = 'tile';
     const img = document.createElement('img');
-    img.alt = `Page ${i + 1}`;
+    img.alt = t('tile.page', { n: i + 1 });
     img.src = thumbUrls.get(id) || '';
     const num = document.createElement('span');
     num.className = 'num';
@@ -249,17 +347,17 @@ function renderGrid() {
       const f = document.createElement('span');
       f.className = 'flag';
       f.textContent = '⚠️';
-      f.title = 'Photo floue ou avec reflet';
+      f.title = t('tile.bad');
       tile.append(f);
     }
     const mv = document.createElement('div');
     mv.className = 'mv';
     const left = document.createElement('button');
     left.type = 'button'; left.textContent = '‹'; left.disabled = i === 0;
-    left.setAttribute('aria-label', 'Déplacer avant');
+    left.setAttribute('aria-label', t('tile.before'));
     const right = document.createElement('button');
     right.type = 'button'; right.textContent = '›'; right.disabled = i === doc.ids.length - 1;
-    right.setAttribute('aria-label', 'Déplacer après');
+    right.setAttribute('aria-label', t('tile.after'));
     left.onclick = (e) => { e.stopPropagation(); move(i, -1); };
     right.onclick = (e) => { e.stopPropagation(); move(i, 1); };
     mv.append(left, right);
@@ -291,25 +389,21 @@ function updateFlow() {
   });
   const cam = $('camBtn'), exp = $('exportBtn');
   cam.className = 'btn' + (step === 1 ? ' primary big' : '');
-  $('camLabel').textContent = step === 1 ? '📷 Scanner' : '📷 + Page';
+  $('camLabel').textContent = step === 1 ? t('btn.scan') : t('btn.addPage');
   exp.className = 'btn' + (step === 3 ? ' accent big' : step === 2 ? ' accent' : step === 4 ? ' sent' : '');
-  exp.textContent = step === 4 ? '✓ Envoyé' : '📤 Envoyer';
+  exp.textContent = step === 4 ? t('btn.sent') : t('btn.send');
   $('newDocBtn').classList.toggle('hl', step === 4);
   $('nextHint').textContent = [
-    '',
-    'Posez la feuille à plat, bien éclairée, puis appuyez sur 📷 Scanner.',
-    `⚠️ ${bad > 1 ? `${bad} pages sont floues ou ont un reflet` : 'Une page est floue ou a un reflet'} : touchez-la pour vérifier ou la reprendre.`,
-    `${n} page${n > 1 ? 's' : ''} prête${n > 1 ? 's' : ''}. Ajoutez une page ou appuyez sur 📤 Envoyer.`,
-    '✓ Document envoyé. Touchez « ＋ Nouveau » en haut pour le suivant.',
+    '', t('hint.1'), bad > 1 ? t('hint.2many', { n: bad }) : t('hint.2one'), t('hint.3', { n }), t('hint.4'),
   ][step];
 }
 
-function markExported() {
+function markExported(closeBtn) {
   doc.exportedAt = Date.now();
   saveLib();
-  updateFlow();
-  $('exClose').textContent = 'Terminé ✓';
-  $('exClose').classList.add('primaryclose');
+  if (!isDossier()) updateFlow(); else renderDossier();
+  $(closeBtn).textContent = t('ex.finish');
+  $(closeBtn).classList.add('primaryclose');
 }
 
 function move(i, dir) {
@@ -322,6 +416,10 @@ function move(i, dir) {
 }
 
 /* ------------------------------ bibliothèque ------------------------------ */
+
+function syncIds() {
+  if (doc && doc.pieces) doc.ids = doc.pieces.flatMap(p => p.ids);
+}
 
 async function openDoc(id) {
   for (const u of thumbUrls.values()) URL.revokeObjectURL(u);
@@ -339,32 +437,59 @@ async function openDoc(id) {
     thumbUrls.set(pid, URL.createObjectURL(p.thumb || p.proc));
     doc.ids.push(pid);
   }
-  $('docName').value = doc.name;
+  if (doc.kind === 'dossier') {
+    doc.pieces = (doc.pieces || []).map(pc => ({ ...pc, ids: pc.ids.filter(x => pages.has(x)) }));
+    syncIds();
+    prefs.set('lastDossier', doc.id);
+    $('dsName').value = doc.name;
+  } else {
+    prefs.set('lastDoc', doc.id);
+    $('docName').value = doc.name;
+  }
   await saveLib();
-  renderGrid();
+  showView();
+  refreshHome();
 }
 
-function newDocRecord(name = defaultName()) {
-  const d = { id: uid(), name, ids: [], updated: Date.now() };
+function newDocRecord(kind = 'doc') {
+  const d = { id: uid(), name: defaultName(kind), ids: [], updated: Date.now(), kind };
+  if (kind === 'dossier') { d.pieces = []; d.holder = ''; }
   lib.docs.unshift(d);
   return d;
 }
 
 async function newDoc() {
-  if (!doc.ids.length) { doc.name = defaultName(); $('docName').value = doc.name; return saveLib(); }
-  await openDoc(newDocRecord().id);
-  toast('Nouveau document. L\'ancien est dans « Mes documents ».');
+  const kind = isDossier() ? 'dossier' : 'doc';
+  if (!doc.ids.length) {
+    doc.name = defaultName(kind);
+    if (kind === 'dossier') { $('dsName').value = doc.name; doc.pieces = []; } else $('docName').value = doc.name;
+    return saveLib();
+  }
+  await openDoc(newDocRecord(kind).id);
+  toast(t('toast.newDoc'));
+}
+
+// Onglets : chacun rouvre le dernier document (ou dossier) utilisé.
+async function switchTab(kind) {
+  if ((kind === 'dossier') === isDossier()) return;
+  const lastId = prefs.get(kind === 'dossier' ? 'lastDossier' : 'lastDoc');
+  let d = lib.docs.find(x => x.id === lastId && (x.kind === 'dossier') === (kind === 'dossier'));
+  if (!d) d = lib.docs.slice().sort((a, b) => (b.updated || 0) - (a.updated || 0))
+    .find(x => (x.kind === 'dossier') === (kind === 'dossier'));
+  if (!d) d = newDocRecord(kind);
+  await busy(t('busy.open'), () => openDoc(d.id));
 }
 
 async function deleteDoc(id) {
   const d = lib.docs.find(x => x.id === id);
-  if (!d || !confirm(`Supprimer « ${d.name} » de ce téléphone ?`)) return;
+  if (!d || !confirm(t('confirm.delDoc', { name: d.name }))) return;
   const ids = d.id === doc.id ? doc.ids : d.ids;
   for (const pid of ids) await store.delPage(pid);
   lib.docs = lib.docs.filter(x => x.id !== id);
   if (d.id === doc.id) {
-    if (!lib.docs.length) newDocRecord();
-    await openDoc(lib.docs[0].id);
+    const kind = d.kind === 'dossier' ? 'dossier' : 'doc';
+    const next = lib.docs.find(x => (x.kind === 'dossier') === (kind === 'dossier')) || newDocRecord(kind);
+    await openDoc(next.id);
   } else await saveLib();
   renderLib();
 }
@@ -391,40 +516,47 @@ async function renderLib() {
     const meta = document.createElement('div');
     meta.className = 'meta';
     const b = document.createElement('b');
-    b.textContent = d.name;
+    b.textContent = `${d.kind === 'dossier' ? '📂' : '📄'} ${d.name}`;
     const s = document.createElement('span');
-    const date = d.updated ? new Date(d.updated).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
-    s.textContent = `${ids.length} page${ids.length > 1 ? 's' : ''}${date ? ' · ' + date : ''}${d.id === doc.id ? ' · ouvert' : ''}`;
+    const date = d.updated ? new Date(d.updated).toLocaleDateString(getLang() === 'en' ? 'en-GB' : 'fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+    const count = d.kind === 'dossier'
+      ? t('lib.pieces', { n: (d.id === doc.id ? doc.pieces : d.pieces || []).length })
+      : t('lib.pages', { n: ids.length });
+    s.textContent = `${count}${date ? ' · ' + date : ''}${d.id === doc.id ? ' · ' + t('lib.open') : ''}`;
     meta.append(b, s);
     const del = document.createElement('button');
     del.type = 'button';
     del.textContent = '🗑';
-    del.setAttribute('aria-label', `Supprimer ${d.name}`);
+    del.setAttribute('aria-label', t('lib.del', { name: d.name }));
     del.onclick = (e) => { e.stopPropagation(); deleteDoc(d.id); };
     it.append(thumb, meta, del);
     it.onclick = async () => {
       $('libDlg').close();
-      if (d.id !== doc.id) await busy('Ouverture…', () => openDoc(d.id));
+      if (d.id !== doc.id) await busy(t('busy.open'), () => openDoc(d.id));
     };
     box.append(it);
   }
 }
 
-// Sauvegarde complète : un seul fichier avec tous les documents et photos.
+// Sauvegarde complète : un seul fichier avec tous les documents, dossiers et photos.
 async function backupAll() {
-  await busy('Préparation de la sauvegarde…', async () => {
-    const out = { app: 'vraiscan', version: 1, created: new Date().toISOString(), docs: [] };
+  await busy(t('busy.backup'), async () => {
+    const out = { app: 'vraiscan', version: 2, created: new Date().toISOString(), docs: [] };
     const sig = await store.getMeta('signature');
     if (sig) out.signature = sig;
     for (const d of lib.docs) {
-      const ids = d.id === doc.id ? doc.ids : d.ids;
-      const od = { name: d.name, updated: d.updated, pages: [] };
+      const cur = d.id === doc.id;
+      const ids = cur ? doc.ids : d.ids;
+      const od = { name: d.name, updated: d.updated, kind: d.kind || 'doc', holder: d.holder, pages: [] };
+      if (d.kind === 'dossier') {
+        od.pieces = (cur ? doc.pieces : d.pieces || []).map(pc => ({ cid: pc.cid, label: pc.label, n: pc.ids.length }));
+      }
       for (const pid of ids) {
-        const p = pages.get(pid) && d.id === doc.id ? pages.get(pid) : await store.getPage(pid);
+        const p = cur && pages.get(pid) ? pages.get(pid) : await store.getPage(pid);
         if (!p) continue;
         od.pages.push({
           quad: p.quad, rot: p.rot, filter: p.filter, overlays: p.overlays || [], quality: p.quality,
-          w: p.w, h: p.h,
+          w: p.w, h: p.h, kind: p.kind,
           orig: await blobToDataUrl(p.orig), proc: await blobToDataUrl(p.proc),
           thumb: p.thumb ? await blobToDataUrl(p.thumb) : null,
         });
@@ -433,11 +565,11 @@ async function backupAll() {
     }
     const d = new Date(), pad = (n) => String(n).padStart(2, '0');
     const file = new File([JSON.stringify(out)],
-      `VraiScan - sauvegarde ${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.vraiscan`,
+      `VraiScan_${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.vraiscan`,
       { type: 'application/octet-stream' });
     download(file);
     prefs.set('lastBackup', String(Date.now()));
-    toast(`Sauvegarde enregistrée (${fmtSize(file.size)}). Gardez-la sur Drive ou une clé USB.`, 5000);
+    toast(t('toast.backupDone', { size: fmtSize(file.size) }), 5000);
   });
 }
 
@@ -445,17 +577,18 @@ async function restoreBackup(file) {
   let data;
   try { data = JSON.parse(await file.text()); } catch { data = null; }
   if (!data || !['vraiscan', 'linea-scan'].includes(data.app) || !Array.isArray(data.docs)) {
-    toast('Ce fichier n\'est pas une sauvegarde VraiScan.');
+    toast(t('toast.notBackup'));
     return;
   }
   let n = 0;
-  await busy('Restauration…', async () => {
+  await busy(t('busy.restore'), async () => {
     if (data.signature && !(await store.getMeta('signature'))) await store.putMeta('signature', data.signature);
     for (const od of data.docs) {
-      const d = { id: uid(), name: od.name || defaultName(), ids: [], updated: od.updated || Date.now() };
+      const kind = od.kind === 'dossier' ? 'dossier' : 'doc';
+      const d = { id: uid(), name: od.name || defaultName(kind), ids: [], updated: od.updated || Date.now(), kind };
       for (const sp of od.pages || []) {
         const p = {
-          id: uid(), quad: sp.quad, rot: sp.rot || 0, filter: sp.filter || 'desk',
+          id: uid(), quad: sp.quad, rot: sp.rot || 0, filter: sp.filter || 'desk', kind: sp.kind || 'doc',
           overlays: sp.overlays || [], quality: sp.quality, w: sp.w, h: sp.h,
           orig: await dataUrlToBlob(sp.orig), proc: await dataUrlToBlob(sp.proc),
           thumb: sp.thumb ? await dataUrlToBlob(sp.thumb) : null,
@@ -463,13 +596,22 @@ async function restoreBackup(file) {
         await store.putPage(p);
         d.ids.push(p.id);
       }
+      if (kind === 'dossier') {
+        d.holder = od.holder || '';
+        let k = 0;
+        d.pieces = (od.pieces || []).map(pc => {
+          const ids = d.ids.slice(k, k + (pc.n || 0));
+          k += pc.n || 0;
+          return { key: uid(), cid: pc.cid, label: pc.label, ids };
+        });
+      }
       lib.docs.push(d);
       n++;
     }
     await saveLib();
   });
   renderLib();
-  toast(`${n} document(s) restauré(s).`);
+  toast(t('toast.restored', { n }));
 }
 
 /* ------------------------------ éditeur ------------------------------ */
@@ -482,20 +624,33 @@ function showScreen(name) {
   $('editor').hidden = name !== 'editor';
 }
 
+function edCounter() {
+  const piece = isDossier() ? pieceOf(ed.id) : null;
+  if (piece) {
+    const i = piece.ids.indexOf(ed.id);
+    $('edCount').textContent = t('ed.count', { i: i + 1, n: piece.ids.length });
+    $('edPiece').textContent = t('ds.piece', { name: pieceName(piece) });
+    $('edPiece').hidden = false;
+  } else {
+    const idx = doc.ids.indexOf(ed.id);
+    $('edCount').textContent = idx >= 0 ? t('ed.count', { i: idx + 1, n: doc.ids.length }) : '';
+    $('edPiece').hidden = true;
+  }
+}
+
 async function openEditor(id, mode) {
   ed.id = id;
   showScreen('editor');
-  const idx = doc.ids.indexOf(id);
-  $('edCount').textContent = idx >= 0 ? `Page ${idx + 1}/${doc.ids.length}` : '';
+  edCounter();
   await setMode(mode);
 }
 
 function showQuality(page) {
   const q = page && page.quality;
   const msgs = [];
-  if (q && q.blurry) msgs.push('Photo floue : le texte risque d\'être illisible.');
-  if (q && q.reflet) msgs.push('Reflet de lumière détecté : une partie peut être effacée.');
-  $('qText').textContent = msgs.length ? '⚠️ ' + msgs.join(' ') + ' Reprenez la photo sans flash, téléphone immobile.' : '';
+  if (q && q.blurry) msgs.push(t('q.blurry'));
+  if (q && q.reflet) msgs.push(t('q.glare'));
+  $('qText').textContent = msgs.length ? '⚠️ ' + msgs.join(' ') + ' ' + t('q.tip') : '';
   $('qWarn').hidden = !msgs.length || ed.mode === 'crop';
 }
 
@@ -503,20 +658,21 @@ async function setMode(mode) {
   ed.mode = mode;
   ed.sel = -1;
   const page = pages.get(ed.id);
-  $('edTitle').textContent = { crop: 'Recadrer', filter: 'Rendu', anno: 'Signer / masquer' }[mode];
+  $('edTitle').textContent = t({ crop: 'ed.crop', filter: 'ed.filter', anno: 'ed.anno' }[mode]);
   $('cropTools').hidden = mode !== 'crop';
   $('filterTools').hidden = mode !== 'filter';
   $('annoTools').hidden = mode !== 'anno';
   $('overlay').textContent = '';
+  stopReading();
   if (mode === 'crop') {
-    const orig = await busy('Chargement…', () => getOrig(page));
+    const orig = await busy(t('busy.load'), () => getOrig(page));
     ed.quad = page.quad.map(p => ({ ...p }));
     showCanvas(orig);
   } else if (mode === 'filter') {
     renderChips();
-    showCanvas(await busy('Traitement…', () => renderPage(page)));
+    showCanvas(await busy(t('busy.work'), () => renderPage(page)));
   } else {
-    showCanvas(await busy('Traitement…', () => renderBase(page)));
+    showCanvas(await busy(t('busy.work'), () => renderBase(page)));
   }
   showQuality(page);
 }
@@ -597,26 +753,26 @@ function nearestHandle(pt) {
 }
 
 function drawLoupe(pt, e) {
-  const L = $('loupe');
-  const lc = L.getContext('2d');
+  const Lp = $('loupe');
+  const lc = Lp.getContext('2d');
   // Zone vue dans la loupe : grossissement x2,2 par rapport à l'affichage.
-  const span = (L.width / 2.2) * unit();
+  const span = (Lp.width / 2.2) * unit();
   lc.fillStyle = '#000';
-  lc.fillRect(0, 0, L.width, L.height);
-  lc.drawImage(ed.shown, pt.x - span / 2, pt.y - span / 2, span, span, 0, 0, L.width, L.height);
+  lc.fillRect(0, 0, Lp.width, Lp.height);
+  lc.drawImage(ed.shown, pt.x - span / 2, pt.y - span / 2, span, span, 0, 0, Lp.width, Lp.height);
   lc.strokeStyle = '#4fb3ff';
   lc.lineWidth = 1.5;
   lc.beginPath();
-  lc.moveTo(L.width / 2, 20); lc.lineTo(L.width / 2, L.height - 20);
-  lc.moveTo(20, L.height / 2); lc.lineTo(L.width - 20, L.height / 2);
+  lc.moveTo(Lp.width / 2, 20); lc.lineTo(Lp.width / 2, Lp.height - 20);
+  lc.moveTo(20, Lp.height / 2); lc.lineTo(Lp.width - 20, Lp.height / 2);
   lc.stroke();
   const st = $('stage').getBoundingClientRect();
   let lx = e.clientX - st.left - 65, ly = e.clientY - st.top - 170;
   if (ly < 4) ly = e.clientY - st.top + 50;
   lx = Math.max(4, Math.min(st.width - 134, lx));
-  L.style.left = `${lx}px`;
-  L.style.top = `${ly}px`;
-  L.hidden = false;
+  Lp.style.left = `${lx}px`;
+  Lp.style.top = `${ly}px`;
+  Lp.hidden = false;
 }
 
 // Sélection d'une signature ou d'un masque : poignée de taille, puis intérieur.
@@ -684,9 +840,10 @@ ov.addEventListener('pointerup', endDrag);
 ov.addEventListener('pointercancel', endDrag);
 
 $('cAuto').onclick = () => {
-  const q = detectQuad(ed.shown);
+  const page = pages.get(ed.id);
+  const q = page && page.kind === 'photo' ? photoQuad(ed.shown.width, ed.shown.height) : detectQuad(ed.shown);
   if (q) { ed.quad = q; drawOverlay(); }
-  else toast('Bords non trouvés : placez les coins à la main.');
+  else toast(t('toast.noEdges'));
 };
 $('cFull').onclick = () => {
   ed.quad = defaultQuad(ed.shown.width, ed.shown.height, 0);
@@ -695,8 +852,8 @@ $('cFull').onclick = () => {
 $('cOk').onclick = async () => {
   const page = pages.get(ed.id);
   page.quad = orderQuad(ed.quad);
-  await busy('Redressement…', async () => commit(page, await renderPage(page)));
-  renderGrid();
+  await busy(t('busy.straighten'), async () => commit(page, await renderPage(page)));
+  refreshHome();
   setMode('filter');
 };
 
@@ -708,24 +865,39 @@ function renderChips() {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'chip' + (page.filter === f.id ? ' on' : '');
-    b.textContent = f.label;
+    b.textContent = t(`flt.${f.id}`);
     b.onclick = () => applyEdit(p => { p.filter = f.id; });
     box.append(b);
   }
-  $('fHint').textContent = FILTERS.find(f => f.id === page.filter)?.hint || '';
+  $('fHint').textContent = t(`flt.${page.filter}.h`);
 }
 
 async function applyEdit(change) {
   const page = pages.get(ed.id);
   change(page);
   renderChips();
-  const out = await busy('Traitement…', async () => {
+  const out = await busy(t('busy.work'), async () => {
     const o = await renderPage(page);
     await commit(page, o);
     return o;
   });
   showCanvas(out);
-  renderGrid();
+  refreshHome();
+}
+
+// Retire une page du document (et de sa pièce, dans un dossier).
+async function removePage(id) {
+  doc.ids = doc.ids.filter(x => x !== id);
+  if (doc.pieces) {
+    for (const pc of doc.pieces) pc.ids = pc.ids.filter(x => x !== id);
+    doc.pieces = doc.pieces.filter(pc => pc.ids.length);
+  }
+  doc.editedAt = Date.now();
+  pages.delete(id);
+  const u = thumbUrls.get(id);
+  if (u) URL.revokeObjectURL(u);
+  thumbUrls.delete(id);
+  await store.delPage(id);
 }
 
 $('fRotL').onclick = () => applyEdit(p => { p.rot = (p.rot + 270) % 360; rotateOverlays(p, 270); });
@@ -733,31 +905,31 @@ $('fRotR').onclick = () => applyEdit(p => { p.rot = (p.rot + 90) % 360; rotateOv
 $('fCrop').onclick = () => setMode('crop');
 $('fAnno').onclick = () => setMode('anno');
 $('fDel').onclick = async () => {
-  if (!confirm('Supprimer cette page ?')) return;
-  const id = ed.id;
-  doc.ids = doc.ids.filter(x => x !== id);
-  doc.editedAt = Date.now();
-  pages.delete(id);
-  const u = thumbUrls.get(id);
-  if (u) URL.revokeObjectURL(u);
-  thumbUrls.delete(id);
-  await store.delPage(id);
+  if (!confirm(t('confirm.delPage'))) return;
+  await removePage(ed.id);
   await saveLib();
   closeEditor();
 };
 $('fDone').onclick = () => closeEditor();
 $('edBack').onclick = async () => {
   const page = pages.get(ed.id);
-  if (ed.mode === 'anno' && page) await busy('Traitement…', async () => commit(page, await renderPage(page)));
-  if (ed.mode === 'crop' && page && !page.proc) await busy('Traitement…', async () => commit(page, await renderPage(page)));
+  if (ed.mode === 'anno' && page) await busy(t('busy.work'), async () => commit(page, await renderPage(page)));
+  if (ed.mode === 'crop' && page && !page.proc) await busy(t('busy.work'), async () => commit(page, await renderPage(page)));
   if (ed.mode === 'filter') closeEditor(); else setMode('filter');
 };
 
 function closeEditor() {
+  const last = ed.id;
+  stopReading();
   ed.id = null;
   ed.shown = null;
   showScreen('home');
-  renderGrid();
+  if (isDossier()) {
+    showSeg('mine');
+    renderDossier();
+    const pc = last && pieceOf(last);
+    if (pc) flashPiece(pc.key);
+  } else renderGrid();
 }
 
 // Annotation
@@ -776,9 +948,111 @@ $('aDel').onclick = () => {
 };
 $('aOk').onclick = async () => {
   const page = pages.get(ed.id);
-  await busy('Traitement…', async () => commit(page, await renderPage(page)));
-  renderGrid();
+  await busy(t('busy.work'), async () => commit(page, await renderPage(page)));
+  refreshHome();
   setMode('filter');
+};
+
+/* ------------------------------ livre : séparer 2 pages ------------------------------ */
+
+// Cherche le pli central (bande verticale la plus sombre entre 40 et 60 %
+// de la largeur). Renvoie la position en fraction, ou 0,5 à défaut.
+function findGutter(src) {
+  const c = fitCanvas(src, 800);
+  const w = c.width, h = c.height;
+  const d = c.getContext('2d', { willReadFrequently: true }).getImageData(0, 0, w, h).data;
+  const col = new Float32Array(w);
+  for (let x = 0; x < w; x++) {
+    let s = 0;
+    for (let y = Math.floor(h * 0.1); y < h * 0.9; y += 2) {
+      const j = (y * w + x) * 4;
+      s += 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2];
+    }
+    col[x] = s;
+  }
+  const a = Math.floor(w * 0.4), b = Math.ceil(w * 0.6);
+  let best = a, min = Infinity, sum = 0;
+  for (let x = a; x < b; x++) { sum += col[x]; if (col[x] < min) { min = col[x]; best = x; } }
+  const mean = sum / (b - a);
+  return { at: min < mean * 0.93 ? best / w : 0.5, found: min < mean * 0.93 };
+}
+
+$('fBook').onclick = async () => {
+  const page = pages.get(ed.id);
+  if (!page) return;
+  let firstId = null, found = true;
+  await busy(t('busy.work'), async () => {
+    const flat = rotateCanvas(await getWarped(page), page.rot);
+    const g = findGutter(flat);
+    found = g.found;
+    const cut = Math.round(flat.width * g.at);
+    const halves = [[0, cut], [cut, flat.width - cut]].map(([x, w]) => {
+      const c = makeCanvas(w, flat.height);
+      c.getContext('2d').drawImage(flat, x, 0, w, flat.height, 0, 0, w, flat.height);
+      return c;
+    });
+    const newIds = [];
+    for (const half of halves) {
+      const np = { id: uid(), rot: 0, filter: page.filter, overlays: [], kind: page.kind || 'doc' };
+      np.orig = await canvasToBlob(half, 'image/jpeg', 0.93);
+      np.quad = defaultQuad(half.width, half.height, 0);
+      resetCache(np.id, half);
+      pages.set(np.id, np);
+      await commit(np, await renderPage(np));
+      newIds.push(np.id);
+    }
+    const replace = (arr) => { const i = arr.indexOf(page.id); if (i >= 0) arr.splice(i, 1, ...newIds); };
+    replace(doc.ids);
+    if (doc.pieces) doc.pieces.forEach(pc => replace(pc.ids));
+    pages.delete(page.id);
+    await store.delPage(page.id);
+    await saveLib();
+    firstId = newIds[0];
+  });
+  toast(found ? t('toast.split') : t('toast.noSplit'));
+  refreshHome();
+  if (firstId) openEditor(firstId, 'filter');
+};
+
+/* ------------------------------ lecture à voix haute ------------------------------ */
+
+let speaking = false;
+function stopReading() {
+  if (speaking && 'speechSynthesis' in window) speechSynthesis.cancel();
+  speaking = false;
+  $('fRead').textContent = t('f.read');
+}
+
+async function pageText(page) {
+  if (!page.ocr || page.ocr.lang !== 'fra+eng') {
+    const paragraphs = await recognize(page.proc, 'fra+eng');
+    page.ocr = { lang: 'fra+eng', w: page.w, h: page.h, paragraphs };
+    await store.putPage(page);
+  }
+  return page.ocr.paragraphs.map(paragraphText).join('\n\n');
+}
+
+function speak(text, btn) {
+  if (!('speechSynthesis' in window)) { toast(t('toast.noSpeech')); return; }
+  if (!text.trim()) { toast(t('toast.noText')); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  // Langue : celle qui ressemble le plus au texte.
+  const fr = (text.match(/\b(le|la|les|des|du|est|et|pour|avec)\b/gi) || []).length;
+  const en = (text.match(/\b(the|and|of|is|for|with|this)\b/gi) || []).length;
+  u.lang = fr >= en ? 'fr-FR' : 'en-GB';
+  u.onend = u.onerror = () => { speaking = false; btn.textContent = t(btn.id === 'fRead' ? 'f.read' : 'ex.listen'); };
+  speaking = true;
+  btn.textContent = t('f.stop');
+  speechSynthesis.speak(u);
+}
+
+$('fRead').onclick = async () => {
+  if (speaking) { stopReading(); return; }
+  const page = pages.get(ed.id);
+  let text = '';
+  try { text = await busy(t('busy.read'), () => pageText(page)); } catch (e) { console.error(e); toast(t('ex.ocrFail')); return; }
+  speak(text, $('fRead'));
 };
 
 /* ------------------------------ signature ------------------------------ */
@@ -851,12 +1125,12 @@ $('sigPhoto').onchange = async () => {
   const f = $('sigPhoto').files[0];
   $('sigPhoto').value = '';
   if (!f) return;
-  await busy('Extraction de la signature…', async () => {
+  await busy(t('busy.sig'), async () => {
     const c = await blobToCanvas(f, 1600);
     const q = detectQuad(c);
     const flat = q ? warp(c, q, 1600) : c;
     const ink = trimAlpha(inkToAlpha(flat), 4);
-    if (!ink) { toast('Aucune signature trouvée sur la photo.'); return; }
+    if (!ink) { toast(t('toast.noSig')); return; }
     clearPad();
     const s = Math.min(pad.width / ink.width, pad.height / ink.height) * 0.95;
     pctx.drawImage(ink, (pad.width - ink.width * s) / 2, (pad.height - ink.height * s) / 2, ink.width * s, ink.height * s);
@@ -866,7 +1140,7 @@ $('sigPhoto').onchange = async () => {
 
 $('sigUse').onclick = async () => {
   const ink = sig.dirty && trimAlpha(pad, 6);
-  if (!ink) { toast('Signez d\'abord dans le cadre.'); return; }
+  if (!ink) { toast(t('toast.signFirst')); return; }
   const src = ink.toDataURL('image/png');
   await store.putMeta('signature', src);
   $('sigDlg').close();
@@ -877,10 +1151,22 @@ $('sigUse').onclick = async () => {
   drawOverlay();
 };
 
-/* ------------------------------ exportation ------------------------------ */
+/* ------------------------------ exportation (commune) ------------------------------ */
 
-const ex = { files: null, token: 0 };
-const MM = 72 / 25.4;
+const ex = { files: null, token: 0, ocr: null };
+const SIZES = [0, 100, 200, 300, 500, 1000, 2000, 5000];
+
+function fillSizes(sel, value) {
+  const v = value ?? sel.value;
+  sel.textContent = '';
+  for (const k of SIZES) {
+    const o = document.createElement('option');
+    o.value = String(k);
+    o.textContent = k ? fmtSize(k * 1000) : t('ex.m.none');
+    sel.append(o);
+  }
+  sel.value = String(v || 0);
+}
 
 function pageLayout(w, h, kind) {
   const portrait = h >= w;
@@ -894,11 +1180,12 @@ function pageLayout(w, h, kind) {
   return { size: [PW, PH], box: [(PW - bw) / 2, (PH - bh) / 2, bw, bh] };
 }
 
-// Une « feuille » = une page du fichier final.
-function sheetPlan(kind) {
-  if (kind !== 'id') return doc.ids.map(id => [id]);
+// Une « feuille » = une page du fichier final. Mise en page « carte » :
+// recto et verso sur la même feuille A4.
+function sheetPlan(ids, kind) {
+  if (kind !== 'id') return ids.map(id => [id]);
   const out = [];
-  for (let i = 0; i < doc.ids.length; i += 2) out.push(doc.ids.slice(i, i + 2));
+  for (let i = 0; i < ids.length; i += 2) out.push(ids.slice(i, i + 2));
   return out;
 }
 
@@ -930,13 +1217,13 @@ async function renderSheet(ids, kind, dpi, wm) {
   return { canvas: scaled, lay };
 }
 
-async function encodeAll(plan, kind, dpi, q, wm, token) {
+async function encodeSheets(plan, kind, dpi, q, wm, stillValid) {
   const out = [];
   for (const ids of plan) {
     const { canvas, lay } = await renderSheet(ids, kind, dpi, wm);
     const blob = await canvasToBlob(canvas, 'image/jpeg', q);
     out.push({ blob, lay, px: [canvas.width, canvas.height] });
-    if (token !== ex.token) return null;
+    if (!stillValid()) return null;
     await nextFrame();
   }
   return out;
@@ -951,16 +1238,29 @@ function compressionSteps(dpi, q0) {
   return all.filter(([d, q]) => d <= dpi && q <= q0 && !seen.has(`${d}|${q}`) && seen.add(`${d}|${q}`));
 }
 
+async function pdfFromSheets(out, title, ocrs) {
+  const pdfPages = [];
+  for (let i = 0; i < out.length; i++) {
+    const o = out[i];
+    const pg = { jpeg: new Uint8Array(await o.blob.arrayBuffer()), px: o.px, size: o.lay.size, box: o.lay.box };
+    if (ocrs && ocrs[i]) pg.words = wordsInPdf(ocrs[i], o.lay.box);
+    pdfPages.push(pg);
+  }
+  return buildPdf(pdfPages, { title });
+}
+
+/* ------------------------------ exportation d'un document ------------------------------ */
+
 const OCR_FORMATS = ['pdfocr', 'docx', 'txt'];
 const LOW_CONF = 60;
 
 // Lit le texte de chaque page (une seule fois : le résultat est gardé avec la page).
-async function ensureOcr(lang, token) {
+async function ensureOcr(ids, lang, token) {
   const out = [];
-  for (let i = 0; i < doc.ids.length; i++) {
-    const page = pages.get(doc.ids[i]);
+  for (let i = 0; i < ids.length; i++) {
+    const page = pages.get(ids[i]);
     if (!page.ocr || page.ocr.lang !== lang) {
-      const label = `Lecture du texte… page ${i + 1}/${doc.ids.length}`;
+      const label = t('ex.readPage', { i: i + 1, n: ids.length });
       $('exInfo').textContent = label;
       const paragraphs = await recognize(page.proc, lang, (p) => {
         if (token === ex.token) $('exInfo').textContent = `${label} (${Math.round(p * 100)} %)`;
@@ -997,58 +1297,68 @@ function updateExportForm() {
 }
 
 function resetExportButtons() {
-  $('exSave').textContent = '⬇️ Télécharger';
-  $('exShare').textContent = '📤 Partager';
+  $('exSave').textContent = t('ex.download');
+  $('exShare').textContent = t('ex.share');
   $('exSave').classList.remove('done');
   $('exShare').classList.remove('done');
-  $('exClose').textContent = 'Fermer';
+  $('exClose').textContent = t('ex.close');
   $('exClose').classList.remove('primaryclose');
+}
+
+function exportFileName(s) {
+  return $('exSafe').checked ? slug(s, 80) : safeName(s);
 }
 
 async function prepareExport() {
   const token = ++ex.token;
   resetExportButtons();
   ex.files = null;
+  ex.ocr = null;
+  $('exListen').hidden = true;
   updateExportForm();
   $('exShare').disabled = $('exSave').disabled = true;
   $('exWarn').hidden = true;
-  $('exInfo').textContent = 'Préparation du fichier…';
-  const name = safeName($('exName').value);
+  $('exInfo').textContent = t('ex.preparing');
+  const title = safeName($('exName').value);
+  const name = exportFileName($('exName').value);
   const format = $('exFormat').value, dpi = +$('exDpi').value, kind = $('exPage').value;
   const lang = $('exLang').value;
   const maxBytes = +$('exMax').value * 1000;
   const wm = $('exWm').value;
   const q0 = dpi >= 300 ? 0.9 : dpi >= 200 ? 0.86 : 0.8;
-  const plan = sheetPlan(kind);
+  const ids = doc.ids;
+  const plan = sheetPlan(ids, kind);
   const warns = [];
-  const n = doc.ids.length;
+  const n = ids.length;
 
   let ocr = null;
   if (OCR_FORMATS.includes(format)) {
     try {
-      ocr = await ensureOcr(lang, token);
+      ocr = await ensureOcr(ids, lang, token);
     } catch (e) {
       console.error(e);
       if (token !== ex.token) return;
-      $('exInfo').textContent = 'La lecture du texte a échoué sur cet appareil.';
+      $('exInfo').textContent = t('ex.ocrFail');
       return;
     }
     if (!ocr) return;
+    ex.ocr = ocr;
+    $('exListen').hidden = false;
     const low = ocr.reduce((s, o) => s + o.paragraphs.reduce((a, p) => a + p.lines.reduce((b, l) => b + l.words.filter(w => w.c < LOW_CONF).length, 0), 0), 0);
     const all = ocr.reduce((s, o) => s + o.paragraphs.reduce((a, p) => a + p.lines.reduce((b, l) => b + l.words.length, 0), 0), 0);
-    if (!all) warns.push('Aucun texte reconnu. Essayez le rendu « Scanner de bureau » ou « Contrasté », ou vérifiez la langue.');
-    else if (format === 'docx' && low) warns.push(`${low} mot(s) sur ${all} à vérifier : ils sont surlignés en jaune dans Word.`);
-    else if (low) warns.push(`${low} mot(s) sur ${all} lus avec un doute.`);
+    if (!all) warns.push(t('ex.noText'));
+    else if (format === 'docx' && low) warns.push(t('ex.lowDocx', { low, all }));
+    else if (low) warns.push(t('ex.low', { low, all }));
   }
 
   if (format === 'docx' || format === 'txt') {
     const file = format === 'docx'
-      ? new File([buildDocx(ocr, { title: name })], `${name}.docx`,
+      ? new File([buildDocx(ocr, { title })], `${name}.docx`,
         { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' })
       : new File([plainText(ocr.map(o => o.paragraphs))], `${name}.txt`, { type: 'text/plain;charset=utf-8' });
     if (token !== ex.token) return;
     ex.files = [file];
-    $('exInfo').textContent = `${n} page${n > 1 ? 's' : ''} · texte modifiable · ${fmtSize(file.size)}`;
+    $('exInfo').textContent = t('ex.infoText', { n, size: fmtSize(file.size) });
     $('exWarn').textContent = warns.join(' ');
     $('exWarn').hidden = !warns.length;
     $('exSave').disabled = $('exShare').disabled = false;
@@ -1058,17 +1368,12 @@ async function prepareExport() {
   const pdfLike = format === 'pdf' || format === 'pdfocr';
   const pack = async (out) => {
     if (pdfLike) {
-      const pdfPages = [];
-      for (let i = 0; i < out.length; i++) {
-        const o = out[i];
-        const pg = { jpeg: new Uint8Array(await o.blob.arrayBuffer()), px: o.px, size: o.lay.size, box: o.lay.box };
-        if (ocr && kind !== 'id') pg.words = wordsInPdf(ocr[i], o.lay.box);
-        pdfPages.push(pg);
-      }
-      return [new File([buildPdf(pdfPages, { title: name })], `${name}.pdf`, { type: 'application/pdf' })];
+      const blob = await pdfFromSheets(out, title, ocr && kind !== 'id' ? ocr : null);
+      return [new File([blob], `${name}.pdf`, { type: 'application/pdf' })];
     }
+    const sep = $('exSafe').checked ? '_p' : ' - page ';
     return out.map((o, i) => new File([o.blob],
-      out.length > 1 ? `${name} - page ${i + 1}.jpg` : `${name}.jpg`, { type: 'image/jpeg' }));
+      out.length > 1 ? `${name}${sep}${i + 1}.jpg` : `${name}.jpg`, { type: 'image/jpeg' }));
   };
   // Pour les JPG, la limite s'applique à chaque image (c'est ce que vérifient les sites).
   const tooBig = (files) => maxBytes && (pdfLike
@@ -1076,8 +1381,8 @@ async function prepareExport() {
 
   let files, used = [dpi, q0], fits = true;
   for (const [d, q] of maxBytes ? compressionSteps(dpi, q0) : [[dpi, q0]]) {
-    $('exInfo').textContent = maxBytes ? `Compression… (${d} ppp)` : 'Préparation du fichier…';
-    const out = await encodeAll(plan, kind, d, q, wm, token);
+    $('exInfo').textContent = maxBytes ? t('ex.compress', { dpi: d }) : t('ex.preparing');
+    const out = await encodeSheets(plan, kind, d, q, wm, () => token === ex.token);
     if (!out) return;
     files = await pack(out);
     used = [d, q];
@@ -1087,34 +1392,25 @@ async function prepareExport() {
   if (token !== ex.token) return;
   ex.files = files;
   const total = files.reduce((s, f) => s + f.size, 0);
-  let info = `${n} page${n > 1 ? 's' : ''} · ${files.length} fichier${files.length > 1 ? 's' : ''} · ${fmtSize(total)} · ${used[0]} ppp`;
-  if (format === 'pdfocr' && kind !== 'id') info += ' · texte cherchable';
-  if (maxBytes && fits && (used[0] !== dpi || used[1] !== q0)) info += ` (compressé pour tenir sous ${fmtSize(maxBytes)})`;
+  let info = t('ex.info', { n, f: files.length, size: fmtSize(total), dpi: used[0] });
+  if (format === 'pdfocr' && kind !== 'id') info += t('ex.searchable');
+  if (maxBytes && fits && (used[0] !== dpi || used[1] !== q0)) info += t('ex.compressed', { max: fmtSize(maxBytes) });
   $('exInfo').textContent = info;
-  if (maxBytes && !fits) warns.push(`Impossible de descendre sous ${fmtSize(maxBytes)} en restant lisible. Retirez des pages ou envoyez-les en plusieurs fichiers.`);
-  const bad = doc.ids.filter(id => isBad(pages.get(id))).length;
-  if (bad) warns.push(`⚠️ ${bad} page(s) floue(s) ou avec reflet : vérifiez avant d'envoyer.`);
-  if (kind === 'id' && n % 2) warns.push('Nombre impair de pages : la dernière carte sera seule sur sa feuille.');
-  if (kind === 'id' && format === 'pdfocr') warns.push('Mise en page carte : le texte cherchable n\'est pas ajouté.');
+  if (maxBytes && !fits) warns.push(t('ex.tooBig', { max: fmtSize(maxBytes) }));
+  const bad = ids.filter(id => isBad(pages.get(id))).length;
+  if (bad) warns.push(t('ex.bad', { n: bad }));
+  if (kind === 'id' && n % 2) warns.push(t('ex.odd'));
+  if (kind === 'id' && format === 'pdfocr') warns.push(t('ex.idNoText'));
   $('exWarn').textContent = warns.join(' ');
   $('exWarn').hidden = !warns.length;
   $('exSave').disabled = false;
   $('exShare').disabled = false;
 }
 
-function download(file) {
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(file);
-  a.download = file.name;
-  document.body.append(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
-}
-
 $('exportBtn').onclick = () => {
   $('exName').value = doc.name;
   $('exWm').value = prefs.get('wm');
+  $('exSafe').checked = prefs.get('safeNames', '1') === '1';
   // Que des cartes (CNI recto + verso…) : on propose la photocopie sur une page A4.
   const isCard = (p) => p && p.w && Math.abs(Math.max(p.w, p.h) / Math.min(p.w, p.h) - 85.6 / 54) < 0.07;
   if (doc.ids.length && doc.ids.every(id => isCard(pages.get(id)))) $('exPage').value = 'id';
@@ -1122,6 +1418,7 @@ $('exportBtn').onclick = () => {
   prepareExport();
 };
 for (const id of ['exFormat', 'exDpi', 'exPage', 'exMax', 'exLang']) $(id).onchange = prepareExport;
+$('exSafe').onchange = () => { prefs.set('safeNames', $('exSafe').checked ? '1' : '0'); prepareExport(); };
 let nameTimer;
 $('exName').oninput = () => {
   doc.name = $('exName').value;
@@ -1138,34 +1435,543 @@ $('exWm').oninput = () => {
 $('exSave').onclick = () => {
   if (!ex.files) return;
   ex.files.forEach((f, i) => setTimeout(() => download(f), i * 300));
-  toast('Fichier enregistré dans « Téléchargements ».');
-  $('exSave').textContent = '✓ Enregistré';
+  toast(t('toast.saved'));
+  $('exSave').textContent = t('ex.downloaded');
   $('exSave').classList.add('done');
-  markExported();
+  markExported('exClose');
 };
-$('exShare').onclick = async () => {
+$('exShare').onclick = () => {
   if (!ex.files) return;
-  const data = { files: ex.files, title: safeName($('exName').value) };
-  const saveInstead = (why) => {
-    ex.files.forEach((f, i) => setTimeout(() => download(f), i * 300));
-    toast(`${why} Le fichier a été enregistré dans « Téléchargements » : envoyez-le depuis WhatsApp ou Gmail (trombone > Document).`, 7000);
-    $('exSave').textContent = '✓ Enregistré';
-    $('exSave').classList.add('done');
-    markExported();
-  };
-  let ok = false;
-  try { ok = !!(navigator.canShare && navigator.canShare(data)); } catch { ok = false; }
-  if (!ok) { saveInstead('Ce téléphone ne permet pas de partager ce type de fichier directement.'); return; }
-  try {
-    await navigator.share(data);
-    $('exShare').textContent = '✓ Partagé';
-    $('exShare').classList.add('done');
-    markExported();
-  } catch (e) {
-    // Chrome sur Android refuse de partager certains types (Word…).
-    if (e.name !== 'AbortError') saveInstead('Partage direct impossible pour ce fichier.');
-  }
+  shareOrSave(ex.files, safeName($('exName').value), (how) => {
+    const btn = how === 'shared' ? 'exShare' : 'exSave';
+    $(btn).textContent = t(how === 'shared' ? 'ex.shared' : 'ex.downloaded');
+    $(btn).classList.add('done');
+    markExported('exClose');
+  });
 };
+$('exListen').onclick = () => {
+  if (speaking) { speechSynthesis.cancel(); speaking = false; $('exListen').textContent = t('ex.listen'); return; }
+  if (!ex.ocr) return;
+  speak(ex.ocr.map(o => o.paragraphs.map(paragraphText).join('\n\n')).join('\n\n'), $('exListen'));
+};
+$('exportDlg').addEventListener('close', () => {
+  if (speaking) { speechSynthesis.cancel(); speaking = false; }
+});
+
+/* ------------------------------ dossier de candidature ------------------------------ */
+
+function pieceOf(pageId) {
+  return doc.pieces ? doc.pieces.find(p => p.ids.includes(pageId)) : null;
+}
+
+function pieceName(pc) {
+  if (pc.label) return pc.label;
+  const c = pieceById(pc.cid);
+  if (!c) return '?';
+  const ab = c.abbr ? L(c.abbr) : '';
+  return ab ? `${L(c)} (${ab})` : L(c);
+}
+
+// « 01_CNI » (noms acceptés par les sites) ou « 01 - Carte nationale d'identité (CNI) ».
+function pieceFileBase(pc, idx, safe) {
+  const nn = String(idx + 1).padStart(2, '0');
+  const c = pieceById(pc.cid);
+  if (safe) {
+    const base = pc.label || (c && c.abbr ? L(c.abbr) : c ? L(c) : 'Piece');
+    return `${nn}_${slug(base, 40)}`;
+  }
+  return `${nn} - ${safeName(pieceName(pc))}`;
+}
+
+let dsSeg = 'add';
+function showSeg(which) {
+  dsSeg = which;
+  $('segAdd').classList.toggle('on', which === 'add');
+  $('segMine').classList.toggle('on', which === 'mine');
+  $('dsAdd').hidden = which !== 'add';
+  $('dsMine').hidden = which !== 'mine';
+}
+$('segAdd').onclick = () => showSeg('add');
+$('segMine').onclick = () => showSeg('mine');
+$('dsAddBtn').onclick = () => { showSeg('add'); $('dsSearch').focus(); };
+
+const norm = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+function renderCatalog() {
+  const box = $('dsCatalog');
+  box.textContent = '';
+  const q = norm($('dsSearch').value.trim());
+  const inFile = new Set((doc.pieces || []).map(p => p.cid));
+  let shown = 0;
+  for (const cat of CATEGORIES) {
+    const items = PIECES.filter(p => p.cat === cat.id).filter(p => !q ||
+      norm(`${p.fr} ${p.en} ${p.abbr ? p.abbr.fr + ' ' + p.abbr.en : ''} ${p.rule ? L(p.rule) : ''}`).includes(q));
+    if (!items.length) continue;
+    const sec = document.createElement('section');
+    sec.className = 'cat';
+    const h = document.createElement('h3');
+    h.textContent = L(cat);
+    sec.append(h);
+    for (const p of items) {
+      shown++;
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'pitem' + (inFile.has(p.id) && p.id !== 'autre' ? ' has' : '');
+      const title = document.createElement('b');
+      title.textContent = L(p) + (p.abbr ? ` (${L(p.abbr)})` : '');
+      b.append(title);
+      const sub = document.createElement('span');
+      const bits = [];
+      if (inFile.has(p.id) && p.id !== 'autre') bits.push('✓ ' + t('ds.inFile'));
+      if (p.months) bits.push(t('ds.monthsRule', { m: p.months }));
+      if (p.rule) bits.push(L(p.rule));
+      sub.textContent = bits.join(' · ');
+      if (bits.length) b.append(sub);
+      b.onclick = () => openPieceDlg(p);
+      sec.append(b);
+    }
+    box.append(sec);
+  }
+  if (!shown) {
+    const pEl = document.createElement('p');
+    pEl.className = 'muted';
+    pEl.textContent = t('ds.noResult');
+    box.append(pEl);
+  }
+}
+$('dsSearch').oninput = renderCatalog;
+
+let pcTarget = null; // entrée du catalogue choisie
+function openPieceDlg(p) {
+  pcTarget = p;
+  $('pcTitle').textContent = L(p) + (p.abbr ? ` (${L(p.abbr)})` : '');
+  const bits = [];
+  if (p.months) bits.push(t('ds.monthsRule', { m: p.months }) + '.');
+  if (p.rule) bits.push(L(p.rule));
+  $('pcRule').textContent = bits.join(' ');
+  const hint = p.kind === 'card' ? t('ds.card') : p.kind === 'photo' ? t('ds.photo') : '';
+  $('pcHint').textContent = hint;
+  $('pcHint').hidden = !hint;
+  $('pcOtherRow').hidden = p.id !== 'autre';
+  $('pcOther').value = '';
+  $('pieceDlg').showModal();
+}
+
+async function startPiece(files) {
+  const p = pcTarget;
+  if (!p || !files.length) return;
+  $('pieceDlg').close();
+  const label = p.id === 'autre' ? ($('pcOther').value.trim() || L(p)) : null;
+  const pc = { key: uid(), cid: p.id, label, ids: [] };
+  doc.pieces.push(pc);
+  const added = await addFiles(files, { edit: true, piece: pc });
+  if (!added.length) {
+    doc.pieces = doc.pieces.filter(x => x !== pc);
+    await saveLib();
+    renderDossier();
+    return;
+  }
+  toast(t('ds.added', { name: pieceName(pc) }));
+  if (files.length > 1) { showSeg('mine'); renderDossier(); flashPiece(pc.key); }
+}
+for (const id of ['pcCam', 'pcFile']) {
+  $(id).onchange = () => {
+    const files = [...$(id).files];
+    $(id).value = '';
+    startPiece(files);
+  };
+}
+
+function flashPiece(key) {
+  requestAnimationFrame(() => {
+    const el = document.querySelector(`#dsList li[data-key="${key}"]`);
+    if (!el) return;
+    el.classList.add('flash');
+    el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    setTimeout(() => el.classList.remove('flash'), 1600);
+  });
+}
+
+function renderDossier() {
+  if (!isDossier()) return;
+  const list = $('dsList');
+  list.textContent = '';
+  const n = doc.pieces.length;
+  $('dsCount').textContent = n;
+  $('dsEmpty').hidden = n > 0;
+  const safe = prefs.get('safeNames', '1') === '1';
+  doc.pieces.forEach((pc, i) => {
+    const li = document.createElement('li');
+    li.dataset.key = pc.key;
+    const img = document.createElement('img');
+    img.alt = '';
+    img.src = thumbUrls.get(pc.ids[0]) || '';
+    img.onclick = () => pc.ids[0] && openEditor(pc.ids[0], 'filter');
+    const body = document.createElement('div');
+    body.className = 'pbody';
+    const title = document.createElement('b');
+    title.textContent = `${String(i + 1).padStart(2, '0')} · ${pieceName(pc)}`;
+    const file = document.createElement('span');
+    file.className = 'fname';
+    file.textContent = `${pieceFileBase(pc, i, safe)}.${pieceById(pc.cid)?.kind === 'photo' ? 'jpg' : 'pdf'}`;
+    const meta = document.createElement('span');
+    meta.className = 'pmeta';
+    const bad = pc.ids.some(id => isBad(pages.get(id)));
+    const cat = pieceById(pc.cid);
+    const bits = [t('ds.pages', { n: pc.ids.length })];
+    if (bad) bits.push('⚠️ ' + t('tile.bad'));
+    if (cat && cat.months) bits.push('⏳ ' + t('ds.monthsRule', { m: cat.months }));
+    meta.textContent = bits.join(' · ');
+    const acts = document.createElement('div');
+    acts.className = 'pacts';
+    const btn = (label, fn, cls = '', aria) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'mini ' + cls;
+      b.textContent = label;
+      if (aria) b.setAttribute('aria-label', aria);
+      b.onclick = fn;
+      acts.append(b);
+      return b;
+    };
+    btn(t('ds.edit'), () => pc.ids[0] && openEditor(pc.ids[0], 'filter'));
+    btn(t('ds.addPage'), () => pickFiles({ camera: true }, (f) => addFiles(f, { edit: true, piece: pc })));
+    btn(t('ds.redo'), () => {
+      if (!confirm(t('ds.confirmRedo', { name: pieceName(pc) }))) return;
+      pickFiles({ camera: true }, async (f) => {
+        const old = pc.ids.slice();
+        const added = await addFiles(f, { edit: true, piece: pc, at: 0 });
+        if (!added.length) return;
+        for (const id of old) {
+          pc.ids = pc.ids.filter(x => x !== id);
+          pages.delete(id);
+          await store.delPage(id);
+        }
+        syncIds();
+        await saveLib();
+        refreshHome();
+      });
+    });
+    const up = btn('↑', () => movePiece(i, -1), '', t('ds.up'));
+    up.disabled = i === 0;
+    const down = btn('↓', () => movePiece(i, 1), '', t('ds.down'));
+    down.disabled = i === n - 1;
+    btn('🗑', async () => {
+      if (!confirm(t('ds.confirmRemove', { name: pieceName(pc) }))) return;
+      for (const id of pc.ids.slice()) await removePage(id);
+      doc.pieces = doc.pieces.filter(x => x !== pc);
+      syncIds();
+      await saveLib();
+      renderDossier();
+    }, 'danger', t('ds.remove'));
+    body.append(title, file, meta, acts);
+    li.append(img, body);
+    list.append(li);
+  });
+  $('dsSendBtn').disabled = n === 0;
+  $('dsCheckBtn').disabled = n === 0;
+  $('dsSendBtn').className = 'btn' + (n ? ' accent big' : '');
+  $('dsAddBtn').className = 'btn' + (n ? '' : ' primary big');
+  renderCatalog();
+}
+
+function movePiece(i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= doc.pieces.length) return;
+  [doc.pieces[i], doc.pieces[j]] = [doc.pieces[j], doc.pieces[i]];
+  syncIds();
+  doc.editedAt = Date.now();
+  saveLib();
+  renderDossier();
+}
+
+$('dsName').oninput = () => { doc.name = $('dsName').value; saveLib(); };
+$('dsName').onblur = () => { doc.name = safeName($('dsName').value); $('dsName').value = doc.name; saveLib(); };
+$('dsHolder').oninput = () => { doc.holder = $('dsHolder').value; saveLib(); };
+
+/* --- Envoi du dossier --- */
+
+const dx = { files: null, token: 0 };
+
+// Photo d'identité au format demandé (4×4 cm ou 35×45 mm à 300 ppp), sous 50 Ko.
+async function photoFile(pc, name, fmt) {
+  const src = await blobToCanvas(pages.get(pc.ids[0]).proc, 1e5);
+  const [tw, th] = fmt === '3545' ? [413, 531] : [472, 472];
+  const r = tw / th;
+  let cw = src.width, ch = src.height;
+  if (cw / ch > r) cw = ch * r; else ch = cw / r;
+  const crop = makeCanvas(cw, ch);
+  crop.getContext('2d').drawImage(src, (src.width - cw) / 2, (src.height - ch) / 2, cw, ch, 0, 0, cw, ch);
+  const out = resizeCanvas(crop, tw, th);
+  let blob;
+  for (const q of [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3]) {
+    blob = await canvasToBlob(out, 'image/jpeg', q);
+    if (blob.size <= 50000) break;
+  }
+  return { file: new File([blob], `${name}.jpg`, { type: 'image/jpeg' }), fits: blob.size <= 50000, limit: 50000 };
+}
+
+// Fichiers d'une pièce, sous la taille maximale si possible.
+async function pieceFiles(pc, idx, opts, stillValid) {
+  const c = pieceById(pc.cid);
+  const kind = c?.kind || 'doc';
+  const base = pieceFileBase(pc, idx, opts.safe);
+  if (kind === 'photo' && opts.photo !== 'free') {
+    const r = await photoFile(pc, base, opts.photo);
+    return [r];
+  }
+  const layout = kind === 'card' && pc.ids.length >= 1 ? 'id' : 'a4';
+  const plan = sheetPlan(pc.ids, layout);
+  let files = null, fits = true;
+  for (const [d, q] of opts.max ? compressionSteps(300, 0.9) : [[300, 0.9]]) {
+    const out = await encodeSheets(plan, layout, d, q, '', stillValid);
+    if (!out) return null;
+    if (opts.format === 'jpg') {
+      const sep = opts.safe ? '_p' : ' - page ';
+      files = out.map((o, i) => new File([o.blob], out.length > 1 ? `${base}${sep}${i + 1}.jpg` : `${base}.jpg`, { type: 'image/jpeg' }));
+    } else {
+      files = [new File([await pdfFromSheets(out, pieceName(pc))], `${base}.pdf`, { type: 'application/pdf' })];
+    }
+    fits = !opts.max || files.every(f => f.size <= opts.max);
+    if (fits) break;
+  }
+  return files.map(f => ({ file: f, fits: !opts.max || f.size <= opts.max, limit: opts.max }));
+}
+
+async function prepareDossierExport() {
+  const token = ++dx.token;
+  const still = () => token === dx.token;
+  dx.files = null;
+  $('dxZip').disabled = $('dxShare').disabled = true;
+  $('dxZip').textContent = t('dx.zip');
+  $('dxShare').textContent = t('dx.files');
+  $('dxZip').classList.remove('done');
+  $('dxShare').classList.remove('done');
+  $('dxClose').textContent = t('ex.close');
+  $('dxClose').classList.remove('primaryclose');
+  $('dxWarn').hidden = true;
+  $('dxList').textContent = '';
+  const pieces = doc.pieces.filter(p => p.ids.length);
+  if (!pieces.length) { $('dxInfo').textContent = t('dx.empty'); return; }
+  const opts = {
+    format: $('dxFormat').value, max: +$('dxMax').value * 1000,
+    photo: $('dxPhoto').value, safe: $('dxSafe').checked,
+  };
+  const dname = opts.safe ? slug($('dxName').value, 80) : safeName($('dxName').value);
+  $('dxInfo').textContent = t('dx.preparing', { name: dname });
+  let entries = [];
+  if (opts.format === 'one') {
+    // Un seul PDF : toutes les feuilles de toutes les pièces, dans l'ordre.
+    const sheets = [];
+    for (const pc of pieces) {
+      const kind = pieceById(pc.cid)?.kind || 'doc';
+      const layout = kind === 'card' ? 'id' : 'a4';
+      for (const ids of sheetPlan(pc.ids, layout)) sheets.push({ ids, layout });
+    }
+    let file = null;
+    for (const [d, q] of opts.max ? compressionSteps(300, 0.9) : [[300, 0.9]]) {
+      const out = [];
+      for (const s of sheets) {
+        const r = await encodeSheets([s.ids], s.layout, d, q, '', still);
+        if (!r) return;
+        out.push(r[0]);
+      }
+      file = new File([await pdfFromSheets(out, $('dxName').value)], `${dname}.pdf`, { type: 'application/pdf' });
+      if (!opts.max || file.size <= opts.max) break;
+    }
+    entries = [{ file, fits: !opts.max || file.size <= opts.max, limit: opts.max }];
+  } else {
+    for (let i = 0; i < doc.pieces.length; i++) {
+      const pc = doc.pieces[i];
+      if (!pc.ids.length) continue;
+      const r = await pieceFiles(pc, i, opts, still);
+      if (!r) return;
+      entries.push(...r);
+      if (!still()) return;
+    }
+  }
+  if (!still()) return;
+  dx.files = entries.map(e => e.file);
+  dx.zipName = `${dname}.zip`;
+  const list = $('dxList');
+  for (const e of entries) {
+    const li = document.createElement('li');
+    li.className = e.fits ? '' : 'big';
+    li.textContent = `${e.fits ? '✓' : '⚠️'} ${e.file.name} · ${fmtSize(e.file.size)}${e.fits ? '' : ' · ' + t('dx.fileBig')}`;
+    list.append(li);
+  }
+  const total = entries.reduce((s, e) => s + e.file.size, 0);
+  $('dxInfo').textContent = t('dx.ready', { n: entries.length, size: fmtSize(total) });
+  const warns = [];
+  const over = entries.filter(e => !e.fits);
+  if (over.length) warns.push(t('ex.tooBig', { max: fmtSize(over[0].limit) }));
+  const bad = doc.ids.filter(id => isBad(pages.get(id))).length;
+  if (bad) warns.push(t('ex.bad', { n: bad }));
+  $('dxWarn').textContent = warns.join(' ');
+  $('dxWarn').hidden = !warns.length;
+  $('dxZip').disabled = $('dxShare').disabled = false;
+}
+
+$('dsSendBtn').onclick = () => {
+  $('dxName').value = doc.name;
+  $('dxSafe').checked = prefs.get('safeNames', '1') === '1';
+  fillSizes($('dxMax'), prefs.get('dxMax', '300'));
+  $('dsExportDlg').showModal();
+  prepareDossierExport();
+};
+for (const id of ['dxFormat', 'dxPhoto']) $(id).onchange = prepareDossierExport;
+$('dxMax').onchange = () => { prefs.set('dxMax', $('dxMax').value); prepareDossierExport(); };
+$('dxSafe').onchange = () => { prefs.set('safeNames', $('dxSafe').checked ? '1' : '0'); prepareDossierExport(); renderDossier(); };
+let dxTimer;
+$('dxName').oninput = () => {
+  doc.name = $('dxName').value;
+  $('dsName').value = doc.name;
+  saveLib();
+  clearTimeout(dxTimer);
+  dxTimer = setTimeout(prepareDossierExport, 500);
+};
+$('dxZip').onclick = async () => {
+  if (!dx.files) return;
+  const entries = [];
+  for (const f of dx.files) entries.push({ name: f.name, data: new Uint8Array(await f.arrayBuffer()) });
+  download(new File([zip(entries)], dx.zipName, { type: 'application/zip' }));
+  toast(t('toast.saved'));
+  $('dxZip').textContent = t('ex.downloaded');
+  $('dxZip').classList.add('done');
+  markExported('dxClose');
+};
+$('dxShare').onclick = () => {
+  if (!dx.files) return;
+  shareOrSave(dx.files, doc.name, (how) => {
+    const b = how === 'shared' ? 'dxShare' : 'dxZip';
+    $(b).textContent = t(how === 'shared' ? 'ex.shared' : 'ex.downloaded');
+    $(b).classList.add('done');
+    markExported('dxClose');
+  });
+};
+
+/* --- Vérification du dossier (indicative) --- */
+
+const MONTHS = {
+  janvier: 1, fevrier: 2, mars: 3, avril: 4, mai: 5, juin: 6, juillet: 7, aout: 8,
+  septembre: 9, octobre: 10, novembre: 11, decembre: 12,
+  january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8,
+  september: 9, october: 10, november: 11, december: 12,
+};
+
+// Toutes les dates lisibles dans un texte (jj/mm/aaaa, aaaa-mm-jj, « 12 mars 2026 », « March 12, 2026 »).
+export function findDates(text) {
+  const out = [];
+  const s = norm(text);
+  const now = new Date();
+  const push = (y, m, d) => {
+    if (y < 100) y += 2000;
+    if (y < 1950 || y > now.getFullYear() + 1 || m < 1 || m > 12 || d < 1 || d > 31) return;
+    const dt = new Date(y, m - 1, d);
+    if (dt.getMonth() !== m - 1) return;
+    if (dt.getTime() <= now.getTime() + 864e5) out.push(dt);
+  };
+  let m;
+  const r1 = /\b(\d{1,2})\s*[/.\-]\s*(\d{1,2})\s*[/.\-]\s*(\d{4}|\d{2})\b/g;
+  while ((m = r1.exec(s))) push(+m[3], +m[2], +m[1]);
+  const r2 = /\b(\d{4})\s*[/.\-]\s*(\d{1,2})\s*[/.\-]\s*(\d{1,2})\b/g;
+  while ((m = r2.exec(s))) push(+m[1], +m[2], +m[3]);
+  const names = Object.keys(MONTHS).join('|');
+  const r3 = new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${names})\\s+(\\d{4})\\b`, 'g');
+  while ((m = r3.exec(s))) push(+m[3], MONTHS[m[2]], +m[1]);
+  const r4 = new RegExp(`\\b(${names})\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(\\d{4})\\b`, 'g');
+  while ((m = r4.exec(s))) push(+m[3], MONTHS[m[1]], +m[2]);
+  return out;
+}
+
+function fmtDate(d) {
+  return d.toLocaleDateString(getLang() === 'en' ? 'en-GB' : 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function photoBackgroundLight(canvas) {
+  const c = fitCanvas(canvas, 300);
+  const w = c.width, h = c.height;
+  const d = c.getContext('2d', { willReadFrequently: true }).getImageData(0, 0, w, h).data;
+  let s = 0, sat = 0, n = 0;
+  const band = Math.max(2, Math.round(w * 0.08));
+  for (let y = 0; y < h * 0.6; y++)
+    for (let x = 0; x < w; x++) {
+      if (x >= band && x < w - band && y >= band) continue;
+      const j = (y * w + x) * 4;
+      s += 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2];
+      sat += Math.max(d[j], d[j + 1], d[j + 2]) - Math.min(d[j], d[j + 1], d[j + 2]);
+      n++;
+    }
+  return s / n > 185 && sat / n < 45;
+}
+
+async function runCheck() {
+  const list = $('ckList');
+  list.textContent = '';
+  $('ckRun').disabled = true;
+  try { await checkPieces(list); } finally { $('ckRun').disabled = false; }
+}
+
+async function checkPieces(list) {
+  const pieces = doc.pieces.filter(p => p.ids.length);
+  if (!pieces.length) { $('ckStatus').textContent = t('ck.empty'); return; }
+  const holder = norm(doc.holder || '').split(/[^a-z0-9]+/).filter(x => x.length >= 3);
+  for (let i = 0; i < pieces.length; i++) {
+    const pc = pieces[i];
+    const c = pieceById(pc.cid);
+    $('ckStatus').textContent = t('ck.run', { i: i + 1, n: pieces.length });
+    const msgs = [];
+    if (pc.ids.some(id => isBad(pages.get(id)))) msgs.push(t('ck.blurry'));
+    if (c && c.kind === 'photo') {
+      const cv = await blobToCanvas(pages.get(pc.ids[0]).proc, 800);
+      msgs.push(photoBackgroundLight(cv) ? t('ck.photoOk') : t('ck.photoBg'));
+    } else if ((c && c.months) || holder.length) {
+      let text = '';
+      try {
+        for (const id of pc.ids) text += '\n' + await pageText(pages.get(id));
+      } catch (e) { console.error(e); }
+      if (c && c.months) {
+        const dates = findDates(text);
+        if (!dates.length) msgs.push(t('ck.noDate', { m: c.months }));
+        else {
+          const last = dates.reduce((a, b) => (a > b ? a : b));
+          const limit = new Date();
+          limit.setMonth(limit.getMonth() - c.months);
+          msgs.push(last < limit
+            ? t('ck.old', { date: fmtDate(last), m: c.months })
+            : t('ck.fresh', { date: fmtDate(last), m: c.months }));
+        }
+      }
+      if (holder.length) {
+        const nt = norm(text);
+        const missing = holder.find(part => !nt.includes(part));
+        msgs.push(missing ? t('ck.nameMissing', { part: missing.toUpperCase() }) : t('ck.nameOk'));
+      }
+    }
+    if (!msgs.length) msgs.push(t('ck.ok'));
+    const li = document.createElement('li');
+    const b = document.createElement('b');
+    b.textContent = `${String(doc.pieces.indexOf(pc) + 1).padStart(2, '0')} · ${pieceName(pc)}`;
+    li.append(b);
+    for (const m of msgs) {
+      const p = document.createElement('p');
+      p.textContent = m;
+      p.className = m.startsWith('⚠️') ? 'warn' : m.startsWith('❔') ? 'maybe' : 'ok';
+      li.append(p);
+    }
+    list.append(li);
+  }
+  $('ckStatus').textContent = '';
+}
+$('dsCheckBtn').onclick = () => {
+  $('dsHolder').value = doc.holder || '';
+  $('ckList').textContent = '';
+  $('ckStatus').textContent = '';
+  $('checkDlg').showModal();
+  // Nom déjà connu : on vérifie tout de suite.
+  if (doc.holder) runCheck();
+};
+$('ckRun').onclick = () => runCheck();
 
 /* ------------------------------ entrées ------------------------------ */
 
@@ -1174,7 +1980,14 @@ function bindInput(id, edit) {
   inp.onchange = async () => {
     const files = [...inp.files];
     inp.value = '';
-    if (id === 'camNext') closeEditor();
+    if (id === 'camNext') {
+      // Page suivante : dans un dossier, elle va dans la même pièce.
+      const pc = isDossier() && ed.id ? pieceOf(ed.id) : null;
+      showScreen('home');
+      ed.id = null;
+      await addFiles(files, { edit, piece: pc });
+      return;
+    }
     await addFiles(files, { edit });
   };
 }
@@ -1187,13 +2000,13 @@ $('camRetake').onchange = async () => {
   $('camRetake').value = '';
   const page = pages.get(ed.id);
   if (!f || !page) return;
-  await busy('Analyse de la photo…', async () => {
+  await busy(t('busy.analyse'), async () => {
     await loadPhoto(page, f);
     page.rot = 0;
     page.overlays = [];
     await commit(page, await renderPage(page));
   });
-  renderGrid();
+  refreshHome();
   setMode('crop');
 };
 
@@ -1205,7 +2018,14 @@ $('docName').onblur = () => {
 };
 
 $('newDocBtn').onclick = () => newDoc();
-$('aboutBtn').onclick = () => { $('appVersion').textContent = APP_VERSION; $('aboutDlg').showModal(); };
+$('tabDoc').onclick = () => switchTab('doc');
+$('tabDossier').onclick = () => switchTab('dossier');
+$('aboutBtn').onclick = () => {
+  $('appVersion').textContent = t('about.version', { v: APP_VERSION });
+  $('setLang').value = getLang();
+  $('setFilter').value = defaultFilter();
+  $('aboutDlg').showModal();
+};
 $('libBtn').onclick = async () => {
   await renderLib();
   $('libDlg').showModal();
@@ -1217,9 +2037,59 @@ $('bkLoad').onchange = async () => {
   if (f) await restoreBackup(f);
 };
 
+/* ------------------------------ langue ------------------------------ */
+
+function fillLists() {
+  const lang = getLang();
+  const ideas = $('nameIdeas');
+  ideas.textContent = '';
+  for (const p of PIECES) {
+    if (p.id === 'autre') continue;
+    const o = document.createElement('option');
+    o.value = L(p);
+    ideas.append(o);
+  }
+  const ds = $('dsNames');
+  ds.textContent = '';
+  const y = new Date().getFullYear();
+  for (const n of DOSSIER_NAMES[lang]) {
+    const o = document.createElement('option');
+    o.value = `${n} ${y}`;
+    ds.append(o);
+  }
+  fillSizes($('exMax'));
+  fillSizes($('dxMax'));
+  const sf = $('setFilter');
+  const cur = sf.value || defaultFilter();
+  sf.textContent = '';
+  for (const f of FILTERS) {
+    const o = document.createElement('option');
+    o.value = f.id;
+    o.textContent = t(`flt.${f.id}`);
+    sf.append(o);
+  }
+  sf.value = cur;
+}
+
+function applyLang(l) {
+  setLang(l);
+  prefs.set('lang', getLang());
+  applyI18n();
+  $('langBtn').textContent = getLang() === 'fr' ? 'EN' : 'FR';
+  fillLists();
+  if (doc) refreshHome();
+  if (ed.id) { edCounter(); setMode(ed.mode); }
+}
+
+$('langBtn').onclick = () => applyLang(getLang() === 'fr' ? 'en' : 'fr');
+$('setLang').onchange = () => applyLang($('setLang').value);
+$('setFilter').onchange = () => prefs.set('defFilter', $('setFilter').value);
+
 /* ------------------------------ démarrage ------------------------------ */
 
 async function init() {
+  const saved0 = prefs.get('lang', '');
+  applyLang(saved0 || ((navigator.language || 'fr').toLowerCase().startsWith('fr') ? 'fr' : 'en'));
   let saved = await store.getMeta('library');
   if (!saved) {
     // Ancienne version : un seul document.
@@ -1228,11 +2098,13 @@ async function init() {
     if (saved.docs.length) saved.current = saved.docs[0].id;
   }
   lib.docs = saved.docs || [];
-  if (!lib.docs.length) newDocRecord();
+  if (!lib.docs.length) newDocRecord('doc');
   const cur = lib.docs.find(d => d.id === saved.current) || lib.docs[0];
   await openDoc(cur.id);
-  // Raccourci « Mes documents » de l'icône de l'application.
-  if (new URLSearchParams(location.search).get('open') === 'library') $('libBtn').click();
+  const params = new URLSearchParams(location.search);
+  // Raccourcis de l'icône de l'application.
+  if (params.get('open') === 'library') $('libBtn').click();
+  if (params.get('open') === 'dossier') switchTab('dossier');
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
@@ -1240,4 +2112,7 @@ async function init() {
 init();
 
 // Pour les tests automatiques.
-window.__vraiscan = { lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, restoreBackup };
+window.__vraiscan = {
+  lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, dx, restoreBackup, findDates,
+  switchTab, applyLang,
+};

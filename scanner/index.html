@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VraiScan</title>
-<meta name="description" content="VraiScan : le vrai scanner, dans votre téléphone. Rendu de scanner de bureau, PDF, Word, gratuit et hors ligne.">
+<meta name="description" content="VraiScan : le vrai scanner, dans votre téléphone. Rendu de scanner de bureau, PDF, Word, dossiers de candidature. Gratuit et hors ligne.">
 <meta name="theme-color" content="#0f3d5e">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -13,78 +13,106 @@
 </head>
 <body>
 
-<datalist id="nameIdeas">
-  <option value="CNI recto-verso">
-  <option value="Acte de naissance">
-  <option value="Diplôme">
-  <option value="Relevé de notes">
-  <option value="Certificat de scolarité">
-  <option value="Attestation">
-  <option value="Certificat médical">
-  <option value="Casier judiciaire">
-  <option value="Demande manuscrite">
-  <option value="Reçu de paiement">
-  <option value="Contrat">
-  <option value="Facture">
-</datalist>
+<datalist id="nameIdeas"></datalist>
+<datalist id="dsNames"></datalist>
 
-<!-- Écran principal : le document en cours -->
+<!-- Écran principal -->
 <section id="home" class="screen">
   <header class="bar">
     <div class="brand">VraiScan</div>
     <div class="barbtns">
-      <button id="aboutBtn" class="ghost" type="button" aria-label="À propos">ⓘ</button>
-      <button id="libBtn" class="ghost" type="button">📁 Mes docs</button>
-      <button id="newDocBtn" class="ghost" type="button">＋ Nouveau</button>
+      <button id="langBtn" class="ghost lang" type="button" data-i18n-aria="bar.lang">EN</button>
+      <button id="aboutBtn" class="ghost" type="button" data-i18n-aria="bar.about">ⓘ</button>
+      <button id="libBtn" class="ghost" type="button" data-i18n="bar.lib">📁 Mes docs</button>
+      <button id="newDocBtn" class="ghost" type="button" data-i18n="bar.new">＋ Nouveau</button>
     </div>
   </header>
 
-  <ol id="steps" class="steps" aria-label="Étapes">
-    <li data-step="1"><span class="dot">1</span>Photographier</li>
-    <li data-step="2"><span class="dot">2</span>Vérifier</li>
-    <li data-step="3"><span class="dot">3</span>Envoyer</li>
-  </ol>
-  <p id="nextHint" class="nexthint"></p>
+  <nav class="tabs" role="tablist">
+    <button id="tabDoc" class="tab on" type="button" role="tab" data-i18n="tab.doc">📄 Document</button>
+    <button id="tabDossier" class="tab" type="button" role="tab" data-i18n="tab.dossier">📂 Dossier</button>
+  </nav>
 
-  <div class="namebox">
-    <label for="docName">Nom du document</label>
-    <input id="docName" type="text" autocomplete="off" spellcheck="false" list="nameIdeas">
+  <!-- Document simple -->
+  <div id="docView">
+    <ol id="steps" class="steps">
+      <li data-step="1"><span class="dot">1</span><span data-i18n="step.1">Photographier</span></li>
+      <li data-step="2"><span class="dot">2</span><span data-i18n="step.2">Vérifier</span></li>
+      <li data-step="3"><span class="dot">3</span><span data-i18n="step.3">Envoyer</span></li>
+    </ol>
+    <p id="nextHint" class="nexthint"></p>
+
+    <div class="namebox">
+      <label for="docName" data-i18n="doc.name">Nom du document</label>
+      <input id="docName" type="text" autocomplete="off" spellcheck="false" list="nameIdeas">
+    </div>
+
+    <div id="empty" class="empty">
+      <p class="big" data-i18n="empty.title">Aucune page pour l'instant.</p>
+      <p data-i18n="empty.text"></p>
+      <p class="muted" data-i18n="empty.small"></p>
+    </div>
+
+    <div id="grid" class="grid"></div>
   </div>
 
-  <div id="empty" class="empty">
-    <p class="big">Aucune page pour l'instant.</p>
-    <p>Posez le document à plat sur une surface <b>plus foncée</b> que le papier, dans un endroit bien éclairé, puis appuyez sur <b>Scanner</b>.</p>
-    <p class="muted">Le vrai scanner, dans votre téléphone. Gratuit, sans compte, sans publicité ; vos documents restent sur votre téléphone.</p>
-  </div>
+  <!-- Dossier de candidature -->
+  <div id="dossierView" hidden>
+    <div class="namebox">
+      <label for="dsName" data-i18n="ds.name">Nom du dossier</label>
+      <input id="dsName" type="text" autocomplete="off" spellcheck="false" list="dsNames" data-i18n-ph="ds.name.ph">
+    </div>
 
-  <div id="grid" class="grid"></div>
+    <div class="segs" role="tablist">
+      <button id="segAdd" class="seg on" type="button" role="tab" data-i18n="ds.segAdd">➕ Ajouter une pièce</button>
+      <button id="segMine" class="seg" type="button" role="tab"><span data-i18n="ds.segMine">📁 Mon dossier</span> <b id="dsCount" class="count">0</b></button>
+    </div>
+
+    <div id="dsAdd" class="dspanel">
+      <input id="dsSearch" class="search" type="search" autocomplete="off" data-i18n-ph="ds.search">
+      <div id="dsCatalog"></div>
+    </div>
+
+    <div id="dsMine" class="dspanel" hidden>
+      <p id="dsEmpty" class="muted" data-i18n="ds.empty"></p>
+      <ol id="dsList" class="dslist"></ol>
+    </div>
+  </div>
 
   <footer class="actions">
-    <label id="camBtn" class="btn primary">
-      <input id="camIn" type="file" accept="image/*" capture="environment" hidden>
-      <span id="camLabel">📷 Scanner</span>
-    </label>
-    <label id="fileBtn" class="btn">
-      <input id="fileIn" type="file" accept="image/*" multiple hidden>
-      <span>🖼️ Importer</span>
-    </label>
-    <button id="exportBtn" class="btn" type="button" disabled>📤 Envoyer</button>
+    <div id="docActions" class="actrow">
+      <label id="camBtn" class="btn primary">
+        <input id="camIn" type="file" accept="image/*" capture="environment" hidden>
+        <span id="camLabel">📷 Scanner</span>
+      </label>
+      <label id="fileBtn" class="btn">
+        <input id="fileIn" type="file" accept="image/*" multiple hidden>
+        <span data-i18n="btn.import">🖼️ Importer</span>
+      </label>
+      <button id="exportBtn" class="btn" type="button" disabled data-i18n="btn.send">📤 Envoyer</button>
+    </div>
+    <div id="dsActions" class="actrow" hidden>
+      <button id="dsAddBtn" class="btn" type="button" data-i18n="ds.btnAdd">➕ Pièce</button>
+      <button id="dsCheckBtn" class="btn" type="button" data-i18n="ds.btnCheck">🔎 Vérifier</button>
+      <button id="dsSendBtn" class="btn" type="button" data-i18n="ds.btnSend">📤 Envoyer le dossier</button>
+    </div>
   </footer>
 </section>
 
 <!-- Éditeur d'une page -->
 <section id="editor" class="screen dark" hidden>
   <header class="bar">
-    <button id="edBack" class="ghost" type="button">← Retour</button>
-    <div id="edTitle" class="brand">Recadrer</div>
+    <button id="edBack" class="ghost" type="button" data-i18n="ed.back">← Retour</button>
+    <div id="edTitle" class="brand"></div>
     <span id="edCount" class="muted"></span>
   </header>
+  <p id="edPiece" class="edpiece" hidden></p>
 
   <div id="qWarn" class="qwarn" hidden>
     <span id="qText"></span>
     <label class="btn small">
       <input id="camRetake" type="file" accept="image/*" capture="environment" hidden>
-      <span>📷 Reprendre</span>
+      <span data-i18n="ed.retake">📷 Reprendre</span>
     </label>
   </div>
 
@@ -97,11 +125,11 @@
   </div>
 
   <div id="cropTools" class="tools">
-    <p class="hint">Faites glisser les 4 coins sur les bords du document.</p>
+    <p class="hint" data-i18n="crop.hint"></p>
     <div class="row">
-      <button id="cAuto" class="btn small" type="button">✨ Auto</button>
-      <button id="cFull" class="btn small" type="button">⬜ Toute l'image</button>
-      <button id="cOk" class="btn primary" type="button">Valider ✓</button>
+      <button id="cAuto" class="btn small" type="button" data-i18n="crop.auto">✨ Auto</button>
+      <button id="cFull" class="btn small" type="button" data-i18n="crop.full">⬜ Toute l'image</button>
+      <button id="cOk" class="btn primary" type="button" data-i18n="crop.ok">Valider ✓</button>
     </div>
   </div>
 
@@ -109,134 +137,211 @@
     <div id="chips" class="chips"></div>
     <p id="fHint" class="hint"></p>
     <div class="row">
-      <button id="fCrop" class="btn small" type="button">✂️ Recadrer</button>
-      <button id="fRotL" class="btn small" type="button" aria-label="Tourner à gauche">⟲</button>
-      <button id="fRotR" class="btn small" type="button" aria-label="Tourner à droite">⟳</button>
-      <button id="fAnno" class="btn small" type="button">✍️ Signer</button>
-      <button id="fDel" class="btn small danger" type="button" aria-label="Supprimer la page">🗑</button>
+      <button id="fCrop" class="btn small" type="button" data-i18n="f.crop">✂️ Recadrer</button>
+      <button id="fRotL" class="btn small" type="button" data-i18n-aria="f.rotL">⟲</button>
+      <button id="fRotR" class="btn small" type="button" data-i18n-aria="f.rotR">⟳</button>
+      <button id="fAnno" class="btn small" type="button" data-i18n="f.sign">✍️ Signer</button>
+      <button id="fDel" class="btn small danger" type="button" data-i18n-aria="f.del">🗑</button>
+    </div>
+    <div class="row">
+      <button id="fBook" class="btn small" type="button" data-i18n="f.book">📖 Séparer 2 pages</button>
+      <button id="fRead" class="btn small" type="button" data-i18n="f.read">🔊 Écouter</button>
     </div>
     <div class="row">
       <label class="btn">
         <input id="camNext" type="file" accept="image/*" capture="environment" hidden>
-        <span>📷 Page suivante</span>
+        <span data-i18n="f.next">📷 Page suivante</span>
       </label>
-      <button id="fDone" class="btn primary" type="button">Terminé ✓</button>
+      <button id="fDone" class="btn primary" type="button" data-i18n="f.done">Terminé ✓</button>
     </div>
   </div>
 
   <div id="annoTools" class="tools" hidden>
-    <p class="hint">Déplacez l'élément au doigt ; le rond en bas à droite change sa taille.</p>
+    <p class="hint" data-i18n="a.hint"></p>
     <div class="row">
-      <button id="aSig" class="btn small" type="button">✍️ Signature</button>
-      <button id="aMask" class="btn small" type="button">⬛ Masquer une zone</button>
-      <button id="aDel" class="btn small danger" type="button" disabled aria-label="Retirer l'élément choisi">🗑</button>
+      <button id="aSig" class="btn small" type="button" data-i18n="a.sig">✍️ Signature</button>
+      <button id="aMask" class="btn small" type="button" data-i18n="a.mask">⬛ Masquer une zone</button>
+      <button id="aDel" class="btn small danger" type="button" disabled data-i18n-aria="a.del">🗑</button>
     </div>
     <div class="row">
-      <button id="aOk" class="btn primary" type="button">Valider ✓</button>
+      <button id="aOk" class="btn primary" type="button" data-i18n="crop.ok">Valider ✓</button>
     </div>
   </div>
 </section>
 
-<!-- Exportation -->
+<!-- Exportation d'un document -->
 <dialog id="exportDlg">
   <form method="dialog" class="dlg">
-    <h2>Enregistrer / envoyer</h2>
-    <label>Nom du fichier
+    <h2 data-i18n="ex.title">Enregistrer / envoyer</h2>
+    <label><span data-i18n="ex.name">Nom du fichier</span>
       <input id="exName" type="text" autocomplete="off" spellcheck="false" list="nameIdeas">
     </label>
-    <label>Format
+    <label><span data-i18n="ex.format">Format</span>
       <select id="exFormat">
-        <option value="pdf">PDF (comme un scan : image des pages)</option>
-        <option value="pdfocr">PDF avec texte cherchable et copiable</option>
-        <option value="docx">Word (.docx) : texte modifiable</option>
-        <option value="txt">Texte seul (.txt)</option>
-        <option value="jpg">Images JPG (une par page)</option>
+        <option value="pdf" data-i18n="ex.f.pdf"></option>
+        <option value="pdfocr" data-i18n="ex.f.pdfocr"></option>
+        <option value="docx" data-i18n="ex.f.docx"></option>
+        <option value="txt" data-i18n="ex.f.txt"></option>
+        <option value="jpg" data-i18n="ex.f.jpg"></option>
       </select>
     </label>
-    <label id="rowLang" hidden>Langue du document
+    <label id="rowLang" hidden><span data-i18n="ex.lang">Langue du document</span>
       <select id="exLang">
-        <option value="fra+eng">Français et anglais</option>
-        <option value="fra">Français</option>
-        <option value="eng">Anglais</option>
+        <option value="fra+eng" data-i18n="ex.l.both"></option>
+        <option value="fra" data-i18n="ex.l.fr"></option>
+        <option value="eng" data-i18n="ex.l.en"></option>
       </select>
     </label>
-    <label id="rowPage">Mise en page
+    <label id="rowPage"><span data-i18n="ex.layout">Mise en page</span>
       <select id="exPage">
-        <option value="a4">A4 (comme un scanner de bureau)</option>
-        <option value="id">Carte d'identité : recto + verso sur une page A4, taille réelle</option>
-        <option value="letter">Lettre US</option>
-        <option value="fit">Taille du document (sans marges)</option>
+        <option value="a4" data-i18n="ex.p.a4"></option>
+        <option value="id" data-i18n="ex.p.id"></option>
+        <option value="letter" data-i18n="ex.p.letter"></option>
+        <option value="fit" data-i18n="ex.p.fit"></option>
       </select>
     </label>
-    <label id="rowDpi">Qualité
+    <label id="rowDpi"><span data-i18n="ex.dpi">Qualité</span>
       <select id="exDpi">
-        <option value="150">Légère — 150 ppp (WhatsApp, e-mail)</option>
-        <option value="200">Standard — 200 ppp</option>
-        <option value="300" selected>Scanner — 300 ppp (comme en ville, dossiers officiels)</option>
+        <option value="150" data-i18n="ex.d.150"></option>
+        <option value="200" data-i18n="ex.d.200"></option>
+        <option value="300" selected data-i18n="ex.d.300"></option>
       </select>
     </label>
-    <label id="rowMax">Taille maximale du fichier (sites de dépôt en ligne)
-      <select id="exMax">
-        <option value="0">Pas de limite</option>
-        <option value="300">300 Ko</option>
-        <option value="500">500 Ko</option>
-        <option value="1000">1 Mo</option>
-        <option value="2000">2 Mo</option>
-        <option value="5000">5 Mo</option>
-      </select>
+    <label id="rowMax"><span data-i18n="ex.max">Taille maximale du fichier</span>
+      <select id="exMax" class="sizesel"></select>
     </label>
+    <label class="check"><input id="exSafe" type="checkbox" checked> <span data-i18n="ex.safe"></span></label>
     <div id="rowWm">
-      <label>Filigrane de protection (facultatif)
-        <input id="exWm" type="text" autocomplete="off" placeholder="Ex. : Copie réservée au dossier de concours ENS 2026">
+      <label><span data-i18n="ex.wm">Filigrane de protection (facultatif)</span>
+        <input id="exWm" type="text" autocomplete="off" data-i18n-ph="ex.wm.ph">
       </label>
-      <p class="muted small">Le filigrane empêche qu'une copie de vos pièces soit réutilisée pour autre chose. Le texte reste lisible dessous.</p>
+      <p class="muted small" data-i18n="ex.wm.help"></p>
     </div>
     <p id="exInfo" class="muted"></p>
     <p id="exWarn" class="warn" hidden></p>
+    <button id="exListen" class="btn small" type="button" hidden data-i18n="ex.listen">🔊 Écouter le texte</button>
     <div class="row">
-      <button id="exSave" class="btn" type="button">⬇️ Télécharger</button>
-      <button id="exShare" class="btn primary" type="button">📤 Partager</button>
+      <button id="exSave" class="btn" type="button" data-i18n="ex.download">⬇️ Télécharger</button>
+      <button id="exShare" class="btn primary" type="button" data-i18n="ex.share">📤 Partager</button>
     </div>
-    <button id="exClose" class="ghost wide" value="cancel">Fermer</button>
+    <button id="exClose" class="ghost wide" value="cancel" data-i18n="ex.close">Fermer</button>
+  </form>
+</dialog>
+
+<!-- Choix d'une pièce du dossier -->
+<dialog id="pieceDlg">
+  <form method="dialog" class="dlg">
+    <h2 id="pcTitle"></h2>
+    <p id="pcRule" class="muted small"></p>
+    <p id="pcHint" class="hintbox" hidden></p>
+    <label id="pcOtherRow" hidden><span data-i18n="ds.otherName">Nom de la pièce</span>
+      <input id="pcOther" type="text" autocomplete="off" data-i18n-ph="ds.otherName.ph">
+    </label>
+    <div class="row">
+      <label class="btn primary">
+        <input id="pcCam" type="file" accept="image/*" capture="environment" hidden>
+        <span data-i18n="ds.scanIt">📷 Scanner</span>
+      </label>
+      <label class="btn">
+        <input id="pcFile" type="file" accept="image/*" multiple hidden>
+        <span data-i18n="ds.importIt">🖼️ Importer une photo</span>
+      </label>
+    </div>
+    <button class="ghost wide" value="cancel" data-i18n="ds.cancel">Annuler</button>
+  </form>
+</dialog>
+
+<!-- Envoi du dossier -->
+<dialog id="dsExportDlg">
+  <form method="dialog" class="dlg">
+    <h2 data-i18n="dx.title">Envoyer le dossier</h2>
+    <label><span data-i18n="dx.name">Nom du dossier</span>
+      <input id="dxName" type="text" autocomplete="off" spellcheck="false" list="dsNames">
+    </label>
+    <label><span data-i18n="dx.format">Format des pièces</span>
+      <select id="dxFormat">
+        <option value="pdf" data-i18n="dx.f.pdf"></option>
+        <option value="jpg" data-i18n="dx.f.jpg"></option>
+        <option value="one" data-i18n="dx.f.one"></option>
+      </select>
+    </label>
+    <label><span data-i18n="dx.max">Taille maximale par fichier</span>
+      <select id="dxMax" class="sizesel"></select>
+    </label>
+    <label><span data-i18n="dx.photo">Photo d'identité</span>
+      <select id="dxPhoto">
+        <option value="4x4" data-i18n="dx.ph.4x4"></option>
+        <option value="3545" data-i18n="dx.ph.3545"></option>
+        <option value="free" data-i18n="dx.ph.free"></option>
+      </select>
+    </label>
+    <label class="check"><input id="dxSafe" type="checkbox" checked> <span data-i18n="dx.safe"></span></label>
+    <ul id="dxList" class="dxlist"></ul>
+    <p id="dxInfo" class="muted"></p>
+    <p id="dxWarn" class="warn" hidden></p>
+    <p class="muted small" data-i18n="dx.zipNote"></p>
+    <div class="row">
+      <button id="dxZip" class="btn" type="button" data-i18n="dx.zip">⬇️ Télécharger le dossier (.zip)</button>
+    </div>
+    <div class="row">
+      <button id="dxShare" class="btn primary" type="button" data-i18n="dx.files">📤 Partager les fichiers</button>
+    </div>
+    <button id="dxClose" class="ghost wide" value="cancel" data-i18n="ex.close">Fermer</button>
+  </form>
+</dialog>
+
+<!-- Vérification du dossier -->
+<dialog id="checkDlg">
+  <form method="dialog" class="dlg">
+    <h2 data-i18n="ck.title">Vérification du dossier</h2>
+    <p class="muted small" data-i18n="ck.intro"></p>
+    <label><span data-i18n="ds.holder"></span>
+      <input id="dsHolder" type="text" autocomplete="off" spellcheck="false" data-i18n-ph="ds.holder.ph">
+    </label>
+    <p class="muted small" data-i18n="ds.holder.help"></p>
+    <button id="ckRun" class="btn primary" type="button" data-i18n="ck.runBtn">🔎 Lancer la vérification</button>
+    <p id="ckStatus" class="muted"></p>
+    <ul id="ckList" class="cklist"></ul>
+    <button class="ghost wide" value="cancel" data-i18n="ck.close">Fermer</button>
   </form>
 </dialog>
 
 <!-- Bibliothèque -->
 <dialog id="libDlg">
   <form method="dialog" class="dlg">
-    <h2>Mes documents</h2>
+    <h2 data-i18n="lib.title">Mes documents</h2>
     <div id="libList" class="liblist"></div>
-    <p class="muted small">Tout est enregistré sur ce téléphone seulement. Faites de temps en temps une sauvegarde complète et gardez-la sur Drive ou sur une clé USB : si vous changez de téléphone ou videz le navigateur, vous pourrez tout restaurer.</p>
+    <p class="muted small" data-i18n="lib.help"></p>
     <div class="row">
-      <button id="bkSave" class="btn" type="button">💾 Sauvegarde complète</button>
+      <button id="bkSave" class="btn" type="button" data-i18n="lib.backup">💾 Sauvegarde complète</button>
       <label class="btn">
         <input id="bkLoad" type="file" accept=".vraiscan,.lineascan,application/json,application/octet-stream" hidden>
-        <span>📥 Restaurer</span>
+        <span data-i18n="lib.restore">📥 Restaurer</span>
       </label>
     </div>
-    <button class="ghost wide" value="cancel">Fermer</button>
+    <button class="ghost wide" value="cancel" data-i18n="ex.close">Fermer</button>
   </form>
 </dialog>
 
 <!-- Signature -->
 <dialog id="sigDlg">
   <form method="dialog" class="dlg">
-    <h2>Votre signature</h2>
-    <p class="muted small">Signez avec le doigt dans le cadre, ou prenez en photo votre signature faite au stylo sur une feuille blanche.</p>
+    <h2 data-i18n="sig.title">Votre signature</h2>
+    <p class="muted small" data-i18n="sig.help"></p>
     <canvas id="sigPad" class="sigpad" width="900" height="360"></canvas>
     <div class="row">
-      <button id="sigBlue" class="chip light on" type="button">Bleu</button>
-      <button id="sigBlack" class="chip light" type="button">Noir</button>
-      <button id="sigClear" class="btn small" type="button">Effacer</button>
+      <button id="sigBlue" class="chip light on" type="button" data-i18n="sig.blue">Bleu</button>
+      <button id="sigBlack" class="chip light" type="button" data-i18n="sig.black">Noir</button>
+      <button id="sigClear" class="btn small" type="button" data-i18n="sig.clear">Effacer</button>
     </div>
     <div class="row">
       <label class="btn small">
         <input id="sigPhoto" type="file" accept="image/*" capture="environment" hidden>
-        <span>📷 Depuis une photo</span>
+        <span data-i18n="sig.photo">📷 Depuis une photo</span>
       </label>
-      <button id="sigUse" class="btn primary" type="button">Placer sur la page</button>
+      <button id="sigUse" class="btn primary" type="button" data-i18n="sig.use">Placer sur la page</button>
     </div>
-    <button class="ghost wide" value="cancel">Annuler</button>
+    <button class="ghost wide" value="cancel" data-i18n="sig.cancel">Annuler</button>
   </form>
 </dialog>
 
@@ -244,16 +349,25 @@
 <dialog id="aboutDlg">
   <form method="dialog" class="dlg">
     <h2>VraiScan</h2>
-    <p><b>Le vrai scanner, dans votre téléphone.</b></p>
-    <p class="muted">Gratuit, sans compte, sans publicité, sans abonnement. Vos documents restent sur ce téléphone : aucune photo, aucun texte n'est envoyé sur internet, même la lecture du texte (Word, PDF cherchable) se fait sur l'appareil.</p>
-    <p class="muted small">Pour un résultat de scanner de bureau : feuille à plat sur une surface plus foncée, bonne lumière sans flash, téléphone immobile au-dessus de la feuille, qualité « Scanner — 300 ppp ».</p>
-    <p><a href="privacy.html" target="_blank" rel="noopener">Politique de confidentialité</a></p>
-    <p class="muted small">Version <span id="appVersion"></span> · moteur de lecture du texte : Tesseract (Apache 2.0)</p>
-    <button class="ghost wide" value="cancel">Fermer</button>
+    <p data-i18n="about.tag"></p>
+    <p class="muted" data-i18n="about.text"></p>
+    <p class="muted small" data-i18n="about.tip"></p>
+    <label><span data-i18n="about.lang">Langue</span>
+      <select id="setLang">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </label>
+    <label><span data-i18n="about.def">Rendu par défaut</span>
+      <select id="setFilter"></select>
+    </label>
+    <p><a href="privacy.html" target="_blank" rel="noopener" data-i18n="about.privacy">Politique de confidentialité</a></p>
+    <p id="appVersion" class="muted small"></p>
+    <button class="ghost wide" value="cancel" data-i18n="ex.close">Fermer</button>
   </form>
 </dialog>
 
-<div id="busy" class="busy" hidden><div class="spinner"></div><p id="busyText">Traitement…</p></div>
+<div id="busy" class="busy" hidden><div class="spinner"></div><p id="busyText"></p></div>
 <div id="toast" class="toast" hidden></div>
 
 <script type="module" src="app.js"></script>

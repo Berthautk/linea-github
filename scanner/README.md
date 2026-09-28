@@ -1,6 +1,18 @@
 # VraiScan — le vrai scanner, dans votre téléphone
 
-Application web installable (PWA), publiable sur Google Play, qui transforme la photo d'un document en un fichier identique à celui d'un scanner de bureau. Gratuite, sans compte, sans filigrane, sans publicité. Les photos restent sur le téléphone : rien n'est envoyé sur internet, même la lecture du texte.
+Application web installable (PWA), publiable sur Google Play, **en français et en anglais**, qui transforme la photo d'un document en un fichier identique à celui d'un scanner de bureau, et qui prépare des **dossiers de candidature complets**. Gratuite, sans compte, sans filigrane, sans publicité. Les photos restent sur le téléphone : rien n'est envoyé sur internet, même la lecture du texte.
+
+## Dossier de candidature
+
+Onglet **📂 Dossier** : on constitue un dossier pièce par pièce.
+
+1. **Ajouter une pièce** : la liste contient 65 pièces rangées en 8 catégories (identité et état civil, études, emploi, santé et casier, argent et logement, voyage et visa, formulaires, autre), avec leur sigle — « Carte nationale d'identité (CNI) » — et la règle habituelle (« à dater de moins de 3 mois », « recto puis verso »…). Recherche par mot : « casier », « CNI », « diplôme ». Liste complète et sources : [`PIECES.md`](PIECES.md).
+2. On touche la pièce, on la **scanne** (ou on importe une photo) ; on recadre, on choisit le rendu, on ajoute le verso ou d'autres pages.
+3. La pièce se range dans **Mon dossier**, numérotée, avec son nom de fichier : `01_CNI.pdf`, `02_Acte_de_naissance.pdf`… Pour chaque pièce : ✏️ modifier, ＋ page, 🔄 recommencer, ↑ ↓ changer l'ordre, 🗑 retirer.
+4. **🔎 Vérifier** (indicatif) : page floue ou avec reflet ; date la plus récente lue sur les pièces qui doivent avoir moins de 3 ou 6 mois ; même nom sur chaque pièce (si le nom est saisi) ; fond blanc de la photo d'identité.
+5. **📤 Envoyer** : un PDF par pièce, des images JPG (sites qui refusent le PDF) ou un seul PDF ; taille maximale par fichier (300 Ko par défaut, comme Campus France) ; photo d'identité en 4 × 4 cm ou 35 × 45 mm et moins de 50 Ko ; noms acceptés par les sites (sans espaces ni accents). Tout le dossier en un **.zip** au nom choisi (propositions : « Dossier de concours 2026 », « Dossier Campus France 2026 »…), ou partage des fichiers.
+
+Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso sur une page A4, à la taille réelle.
 
 ## Ce qu'elle fait
 
@@ -26,6 +38,11 @@ Application web installable (PWA), publiable sur Google Play, qui transforme la 
 - **Mes documents** : tous les documents restent sur le téléphone, rangés, avec leur nom (liste de noms courants : acte de naissance, relevé de notes…).
 - **Sauvegarde complète en un fichier** et restauration sur un autre téléphone.
 - **Export** en PDF, PDF cherchable, Word, texte ou JPG, 150 / 200 / 300 ppp, **partage direct** (WhatsApp, Gmail, Drive…).
+- **Livres et cahiers** : « 📖 Séparer 2 pages » coupe une double page au niveau du pli.
+- **🔊 Écouter** : lecture à voix haute du texte de la page (lu sur le téléphone).
+- **Noms de fichiers acceptés par les sites** (sans espaces ni accents), réglable.
+- **Rendu par défaut** au choix (À propos).
+- **Français / English** : bouton FR/EN en haut, ou dans À propos.
 - **Hors ligne**, sans compte, sans publicité, sans abonnement.
 
 ## Ce qu'elle corrige par rapport à CamScanner
@@ -72,7 +89,9 @@ Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf
 | Fichier | Rôle |
 |---|---|
 | `index.html`, `app.css` | Écrans |
-| `app.js` | Déroulement : photo, recadrage, rendus, signature, bibliothèque, export, partage |
+| `app.js` | Déroulement : photo, recadrage, rendus, signature, bibliothèque, export, partage, dossier, vérification |
+| `catalog.js` | Catalogue des pièces (français et anglais) ; [`PIECES.md`](PIECES.md) en est tiré |
+| `i18n.js` | Tous les textes en français et en anglais |
 | `imgproc.js` | Détection des bords, perspective, redressement fin, rendus, nettoyage des bords, contrôle qualité |
 | `ocr.js` | Lecture du texte sur le téléphone (Tesseract, dans `vendor/tesseract/`) |
 | `docx.js` | Fichier Word (sans bibliothèque) |

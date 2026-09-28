@@ -39,6 +39,12 @@ PDF, WORD ET TEXTE
 • Texte seul (.txt), images JPG.
 • Français et anglais.
 
+DOSSIERS DE CANDIDATURE
+• Choisissez vos pièces dans une liste de 65 documents : CNI, acte de naissance, casier judiciaire, diplômes, relevés, certificat médical, justificatifs, visa…
+• Scannez-les une par une : chacune se range dans votre dossier, numérotée et nommée (01_CNI.pdf, 02_Acte_de_naissance.pdf…).
+• Vérification : pièces floues, dates de plus de 3 mois, nom différent d'une pièce à l'autre.
+• Envoi du dossier complet en .zip ou fichier par fichier, sous la taille demandée (300 Ko…), photo d'identité 4×4 de moins de 50 Ko.
+
 PENSÉ POUR LES DOSSIERS
 • Carte d'identité recto-verso sur une seule page A4, à la taille réelle.
 • Taille maximale du fichier (300 Ko à 5 Mo) pour les sites d'inscription et de concours.
@@ -46,7 +52,9 @@ PENSÉ POUR LES DOSSIERS
 • Alerte dès la photo si elle est floue ou a un reflet, avec un bouton pour la reprendre.
 • Signature : au doigt, ou tirée d'une photo de votre signature au stylo.
 • Masquer une zone (numéro, adresse) avant d'envoyer.
-• Nom du fichier au choix, avec des suggestions (acte de naissance, relevé de notes…).
+• Nom du fichier au choix, accepté par les sites de dépôt (sans espaces ni accents).
+• Livres : séparation d'une double page ; lecture à voix haute du texte.
+• En français et en anglais.
 
 VOS DOCUMENTS RESTENT CHEZ VOUS
 • Aucun compte, aucune publicité, aucun abonnement.
@@ -64,7 +72,7 @@ Conseil pour un résultat parfait : posez la feuille à plat sur une surface plu
 **Notes de version (1.0.0)**
 
 ```
-Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, carte d'identité recto-verso, taille maximale, signature, sauvegarde complète.
+Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. En français et en anglais.
 ```
 
 ---
@@ -100,6 +108,12 @@ PDF, WORD AND TEXT
 • Searchable PDF with selectable text.
 • Editable Word (.docx) conversion; uncertain words are highlighted.
 • Plain text, JPG images. French and English.
+
+APPLICATION FILES
+• Pick your documents from a list of 65: ID card, birth certificate, criminal record, diplomas, transcripts, medical certificate, proofs, visa…
+• Scan them one by one: each is filed, numbered and named (01_NIC.pdf, 02_Birth_certificate.pdf…).
+• Checks: blurry pages, dates older than 3 months, name differing between documents.
+• Send the whole file as a .zip or file by file, under the required size, with a 4×4 ID photo under 50 KB.
 
 MADE FOR PAPERWORK
 • ID card front and back on one A4 page, at real size.

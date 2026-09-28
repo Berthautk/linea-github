@@ -26,3 +26,18 @@ Ces règles s'appliquent à toutes les classes (premier et second cycle). Modèl
 - Questions de **découverte** : l'élève découvre la notion (ce qu'il observe, pourquoi, comment on l'appelle) avant qu'on la nomme.
 - **Une seule question par diapositive**, suivie de sa réponse sur la diapositive suivante. Jamais plusieurs questions (a), (b), (c) d'affilée sur la même diapositive.
 - Choisir **une ou deux questions pertinentes** par activité, pas davantage.
+
+## 5. Devoir (homework)
+- **Une seule phrase très courte** (sujet, verbe, complément). Pas de long texte, pas de plusieurs points.
+- Le devoir **prépare la leçon suivante** : on prend une petite partie de la prochaine leçon et on la donne à chercher (ex. « List three types of rainfall. », « Draw a map of the relief of Cameroon. »), pour que les élèves ne soient pas perdus au début de cette leçon.
+- **Pas** de devoirs du type « demande à tes parents / à ta mère… ».
+- La correction du devoir est faite au début de la leçon suivante.
+
+## 6. Second cycle (LSA, USA)
+- Les leçons sont plus développées qu'au premier cycle : quand on demande des éléments, on entre dans le détail avec des exemples concrets ; un point peut occuper plusieurs diapositives, avec images ou dessins d'illustration.
+- On ne développe que les sous-branches pour lesquelles l'enseignant a fourni un support de cours. Le support montre le niveau de détail attendu ; on le reformule avec ses propres mots.
+- **Géographie du Cameroun** : les supports de l'enseignant contiennent des données propres au Cameroun, compilées par lui ; on s'appuie fortement dessus.
+- **Toutes les informations sont vérifiées** et mises à jour si nécessaire (chiffres, dates, noms) : c'est le niveau Advanced.
+
+## 7. Premier cycle
+- Au premier cycle (F2T surtout), le résumé au tableau reste court : seulement les points du syllabus, en puces, une phrase courte par point.

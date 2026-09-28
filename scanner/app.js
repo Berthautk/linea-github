@@ -11,9 +11,9 @@ import { t, L, getLang, setLang, applyI18n } from './i18n.js';
 import { CATEGORIES, PIECES, DOSSIER_NAMES, pieceById, slug } from './catalog.js';
 import { isPdf, openPdf, renderPdfPage, closePdf } from './pdfin.js';
 import { createReader } from './reader.js';
-import { createTextEditor, refitOcr } from './textedit.js';
+import { createTextEditor, refitOcr, ocrUnreliable } from './textedit.js';
 
-export const APP_VERSION = '1.3.0';
+export const APP_VERSION = '1.3.1';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -1449,6 +1449,8 @@ async function prepareExport() {
     $('exListen').hidden = false;
     const low = ocr.reduce((s, o) => s + o.paragraphs.reduce((a, p) => a + p.lines.reduce((b, l) => b + l.words.filter(w => w.c < LOW_CONF).length, 0), 0), 0);
     const all = ocr.reduce((s, o) => s + o.paragraphs.reduce((a, p) => a + p.lines.reduce((b, l) => b + l.words.length, 0), 0), 0);
+    const hand = ocr.filter(o => ocrUnreliable(o)).length;
+    if (hand) warns.push(t('ex.hand', { n: hand }));
     if (!all) warns.push(t('ex.noText'));
     else if (format === 'docx' && low) warns.push(t('ex.lowDocx', { low, all }));
     else if (low) warns.push(t('ex.low', { low, all }));

@@ -5,6 +5,7 @@
 
 import { recognize, linesText } from './ocr.js';
 import { t, getLang } from './i18n.js';
+import { ocrUnreliable } from './textedit.js';
 
 const $ = (id) => document.getElementById(id);
 const RATES = [0.75, 1, 1.25, 1.5, 1.75, 2];
@@ -95,6 +96,8 @@ export function createReader(ctx) {
 
   function buildUnits(i) {
     const units = [];
+    // Page écrite à la main non transcrite : le texte lu n'aurait pas de sens.
+    if (ocrUnreliable(pageAt(i).ocr)) return units;
     pageParas(i).forEach((p, k) => { for (const s of sentences(p)) units.push({ text: s, para: k }); });
     return units;
   }
@@ -205,8 +208,16 @@ export function createReader(ctx) {
     if (hasText(page) && !st.units.length) {
       const p = document.createElement('p');
       p.className = 'muted';
-      p.textContent = t('rd.noText');
+      const hand = ocrUnreliable(page.ocr);
+      p.textContent = t(hand ? 'rd.hand' : 'rd.noText');
       box.append(p);
+      if (hand) {
+        const img = document.createElement('img');
+        img.className = 'rdimg';
+        img.alt = t('tile.page', { n: i + 1 });
+        img.src = ctx.thumbUrl(page, true);
+        box.append(img);
+      }
       return;
     }
     let para = -1, el = null;

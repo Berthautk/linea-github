@@ -344,3 +344,7 @@ dialog::backdrop { background: rgba(0,0,0,.5); }
 .trbody .row { display: flex; gap: 8px; }
 #transc .rdmain .btn, #texted .rdmain .btn { flex: 1; }
 #trPara.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+.tebad { margin: 0 0 14px; padding: 12px; border-radius: 10px; background: #fff4d6; color: #3b2a00; border: 1px solid #e8c35a; display: flex; flex-direction: column; gap: 10px; font-family: system-ui, sans-serif; font-size: 16px; }
+.tebad p { margin: 0; }
+.tebody details { color: var(--muted); }
+.tebody summary { cursor: pointer; margin-bottom: 10px; font-size: 15px; }

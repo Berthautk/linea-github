@@ -65,6 +65,17 @@ function linesFrom(text, boxes, lh, frame) {
   });
 }
 
+// Texte lu par l'OCR qui ne ressemble pas à du texte (page écrite à la main,
+// photo illisible) : trop de mots douteux ou trop peu de vrais mots.
+export function ocrUnreliable(ocr) {
+  if (!ocr || ocr.edited || ocr.pdf || ocr.hand) return false;
+  const ws = ocr.paragraphs.flatMap(p => p.lines.flatMap(l => l.words));
+  if (ws.length < 3) return false;
+  const low = ws.filter(w => (w.c ?? 100) < LOW).length / ws.length;
+  const wordlike = ws.filter(w => /^[(«"]?[\p{L}'’-]{3,}[.,;:!?»")]*$/u.test(w.t)).length / ws.length;
+  return low > 0.35 || wordlike < 0.3;
+}
+
 export function paraText(p) {
   return p.lines.map(l => l.words.map(w => w.t).join(' ')).join('\n');
 }
@@ -102,52 +113,149 @@ export function detectLines(img) {
   const d = x.getImageData(0, 0, W, H).data;
   const lum = new Float32Array(W * H);
   for (let i = 0, j = 0; i < d.length; i += 4, j++) lum[j] = 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
-  // Fond : médiane des luminosités ; encre : nettement plus sombre.
-  const sample = [];
-  for (let j = 0; j < lum.length; j += 97) sample.push(lum[j]);
-  const bg = median(sample);
-  const thr = Math.min(bg - 45, bg * 0.72);
+  // Encre : nettement plus sombre que le papier autour (seuil local, qui suit
+  // les ombres et les plis de la feuille).
+  const R = 14, IW = W + 1;
+  const integ = new Float64Array(IW * (H + 1));
+  for (let y = 0; y < H; y++) {
+    let row = 0;
+    for (let xx = 0; xx < W; xx++) { row += lum[y * W + xx]; integ[(y + 1) * IW + xx + 1] = integ[y * IW + xx + 1] + row; }
+  }
+  const ink = new Uint8Array(W * H);
+  for (let y = 0; y < H; y++) {
+    const ya = Math.max(0, y - R), yb = Math.min(H, y + R + 1);
+    for (let xx = 0; xx < W; xx++) {
+      const xa = Math.max(0, xx - R), xb = Math.min(W, xx + R + 1);
+      const mean = (integ[yb * IW + xb] - integ[ya * IW + xb] - integ[yb * IW + xa] + integ[ya * IW + xa]) / ((yb - ya) * (xb - xa));
+      const v = lum[y * W + xx];
+      if (v < mean * 0.8 && v < mean - 22) ink[y * W + xx] = 1;
+    }
+  }
+  // Lignes du cahier, marges, plis, bords : longs traits droits, effacés.
+  const longH = Math.round(W * 0.07), longV = Math.round(H * 0.05);
+  for (let y = 0; y < H; y++) {
+    let st = -1;
+    for (let xx = 0; xx <= W; xx++) {
+      const on = xx < W && (ink[y * W + xx] || (y > 0 && ink[(y - 1) * W + xx] && xx > 0 && ink[y * W + xx - 1]));
+      if (on && st < 0) st = xx;
+      if (!on && st >= 0) { if (xx - st >= longH) for (let k = st; k < xx; k++) ink[y * W + k] = 2; st = -1; }
+    }
+  }
+  for (let xx = 0; xx < W; xx++) {
+    let st = -1;
+    for (let y = 0; y <= H; y++) {
+      const on = y < H && ink[y * W + xx];
+      if (on && st < 0) st = y;
+      if (!on && st >= 0) { if (y - st >= longV) for (let k = st; k < y; k++) ink[k * W + xx] = 2; st = -1; }
+    }
+  }
+  const isInk = (i) => ink[i] === 1;
+  // Cahier ligné : l'écart entre ses lignes donne la hauteur d'une ligne d'écriture.
+  let ruled = 0;
+  {
+    const centers = [];
+    let st = -1;
+    for (let y = 0; y <= H; y++) {
+      let n = 0;
+      if (y < H) for (let xx = 0; xx < W; xx++) if (ink[y * W + xx] === 2) n++;
+      const on = n > W * 0.25;
+      if (on && st < 0) st = y;
+      if (!on && st >= 0) { centers.push((st + y) / 2); st = -1; }
+    }
+    const d = centers.slice(1).map((c, i) => c - centers[i]).filter(v => v > 6);
+    if (d.length >= 3) ruled = median(d);
+  }
   const mx = Math.round(W * 0.03); // marges ignorées (ombres de bord)
   const rows = new Float32Array(H);
   for (let y = 0; y < H; y++) {
     let n = 0;
-    for (let xx = mx; xx < W - mx; xx++) if (lum[y * W + xx] < thr) n++;
+    for (let xx = mx; xx < W - mx; xx++) if (isInk(y * W + xx)) n++;
     rows[y] = n;
   }
-  const minInk = Math.max(2, (W - 2 * mx) * 0.004);
+  // Profil lissé (les traits fins d'une écriture laissent des trous).
+  const sm = new Float32Array(H);
+  for (let y = 0; y < H; y++) {
+    let v = 0, n = 0;
+    for (let k = -3; k <= 3; k++) if (y + k >= 0 && y + k < H) { v += rows[y + k]; n++; }
+    sm[y] = v / n;
+  }
+  const minInk = Math.max(1.5, (W - 2 * mx) * 0.004);
   let bands = [];
   let start = -1;
   for (let y = 0; y <= H; y++) {
-    const ink = y < H && rows[y] >= minInk;
-    if (ink && start < 0) start = y;
-    if (!ink && start >= 0) { bands.push([start, y]); start = -1; }
+    const on = y < H && sm[y] >= minInk;
+    if (on && start < 0) start = y;
+    if (!on && start >= 0) { bands.push([start, y]); start = -1; }
   }
+  if (!bands.length) return [];
+  // Poussières et restes de lignes du cahier : trop peu d'encre.
+  const mass = (b) => { let m = 0; for (let y = b[0]; y < b[1]; y++) m += rows[y]; return m; };
+  const maxMass = Math.max(...bands.map(mass));
+  // Reste d'une ligne du cahier : l'encre tient sur 1 à 4 rangées de pixels,
+  // alors qu'une écriture s'étale sur toute la hauteur des lettres.
+  const spread = (b) => {
+    let peak = 0, n = 0;
+    for (let y = b[0]; y < b[1]; y++) peak = Math.max(peak, rows[y]);
+    for (let y = b[0]; y < b[1]; y++) if (rows[y] > peak * 0.3) n++;
+    return n;
+  };
+  // Trait fin et penché (ligne du cahier) : 1 ou 2 pixels d'encre par colonne ;
+  // une lettre en a davantage (jambages, boucles).
+  const thickness = (b) => {
+    let cols = 0, px = 0;
+    for (let xx = mx; xx < W - mx; xx++) {
+      let n = 0;
+      for (let y = b[0]; y < b[1]; y++) if (isInk(y * W + xx)) n++;
+      if (n) { cols++; px += n; }
+    }
+    return cols ? px / cols : 0;
+  };
+  bands = bands.filter(b => mass(b) >= Math.max(40, maxMass * 0.08) && spread(b) > 4 && thickness(b) > 2.4
+    && (!ruled || b[1] - b[0] >= ruled * 0.45));
   if (!bands.length) return [];
   // Recolle les morceaux d'une même ligne (points des i, accents, jambages).
   const h0 = median(bands.map(b => b[1] - b[0])) || 10;
   const merged = [];
   for (const b of bands) {
     const last = merged[merged.length - 1];
-    if (last && (b[0] - last[1] < h0 * 0.35 || (b[1] - b[0]) < h0 * 0.3 && b[0] - last[1] < h0 * 0.6)) last[1] = b[1];
+    if (last && b[0] - last[1] < h0 * 0.25) last[1] = b[1];
     else merged.push(b.slice());
   }
-  bands = merged.filter(b => b[1] - b[0] >= Math.max(4, h0 * 0.3));
+  bands = merged;
   // Lignes collées : coupées au creux d'encre.
-  const hm = median(bands.map(b => b[1] - b[0])) || h0;
+  // Hauteur d'une ligne d'écriture : l'écart du cahier ligné, sinon la hauteur
+  // habituelle des bandes, entre 2,5 et 4,5 % de la largeur de la page.
+  const hm = ruled || Math.min(W * 0.045, Math.max(W * 0.025, median(bands.map(b => b[1] - b[0])) || h0));
   const out = [];
   const split = (b) => {
-    if (b[1] - b[0] < hm * 1.9) { out.push(b); return; }
+    if (b[1] - b[0] < hm * 1.6) { out.push(b); return; }
     let best = -1, bv = Infinity;
-    for (let y = b[0] + Math.round(hm * 0.6); y < b[1] - hm * 0.6; y++) if (rows[y] < bv) { bv = rows[y]; best = y; }
+    for (let y = b[0] + Math.round(hm * 0.7); y < b[1] - hm * 0.7; y++) if (sm[y] < bv) { bv = sm[y]; best = y; }
     if (best < 0) { out.push(b); return; }
     split([b[0], best]);
     split([best, b[1]]);
   };
-  bands.forEach(split);
+  for (const b of bands) {
+    const from = out.length;
+    split(b);
+    // Morceau trop léger (jambages, queues de lettres) : rendu à la ligne voisine.
+    const parts = out.splice(from);
+    const avg = parts.reduce((m, q) => m + mass(q), 0) / parts.length;
+    const kept = [];
+    for (const q of parts) {
+      if (parts.length > 1 && mass(q) < avg * 0.3) {
+        if (kept.length) kept[kept.length - 1][1] = q[1]; else q.light = true;
+        if (kept.length) continue;
+      }
+      if (kept.length && kept[kept.length - 1].light) { q[0] = kept.pop()[0]; }
+      kept.push(q);
+    }
+    out.push(...kept);
+  }
   // Étendue horizontale de chaque ligne.
   return out.map(([y0, y1]) => {
     let x0 = W, x1 = 0;
-    for (let y = y0; y < y1; y++) for (let xx = mx; xx < W - mx; xx++) if (lum[y * W + xx] < thr) { if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; }
+    for (let y = y0; y < y1; y++) for (let xx = mx; xx < W - mx; xx++) if (isInk(y * W + xx)) { if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; }
     return [x0, y0, Math.max(x0 + 1, x1), y1].map(v => Math.round(v / scale));
   }).filter(b => b[2] - b[0] > 8 / scale);
 }
@@ -242,13 +350,40 @@ export function createTextEditor(ctx) {
     const body = $('teBody');
     body.textContent = '';
     const ocr = page.ocr;
-    const low = lowCount(page);
-    const totalLow = doc().ids.reduce((s, id) => s + lowCount(ctx.pages.get(id)), 0);
+    const bad = ocrUnreliable(ocr);
+    const low = bad ? 0 : lowCount(page);
+    const totalLow = doc().ids.reduce((s, id) => {
+      const q = ctx.pages.get(id);
+      return s + (q && !ocrUnreliable(q.ocr) ? lowCount(q) : 0);
+    }, 0);
     $('teHint').textContent = !ocr || !ocr.paragraphs.length ? t('te.empty')
-      : low ? t('te.hintLow', { n: low }) : t('te.hintOk');
+      : bad ? t('te.badHint') : low ? t('te.hintLow', { n: low }) : t('te.hintOk');
     $('teNextLow').hidden = !totalLow;
     $('teNextLow').textContent = t('te.nextLow', { n: totalLow });
+    $('teHand').classList.toggle('primary', bad || !ocr || !ocr.paragraphs.length);
     if (!ocr) return;
+    // Lecture peu fiable : on le dit, on propose la transcription, et le texte
+    // lu n'est montré que sur demande.
+    let target = body;
+    if (bad) {
+      const box = document.createElement('div');
+      box.className = 'tebad';
+      const p = document.createElement('p');
+      p.textContent = t('te.bad');
+      const go = document.createElement('button');
+      go.type = 'button';
+      go.className = 'btn primary';
+      go.textContent = t('te.badGo');
+      go.onclick = () => $('teHand').click();
+      box.append(p, go);
+      body.append(box);
+      const det = document.createElement('details');
+      const sum = document.createElement('summary');
+      sum.textContent = t('te.badShow');
+      det.append(sum);
+      body.append(det);
+      target = det;
+    }
     ocr.paragraphs.forEach((p, pi) => {
       const div = document.createElement('div');
       div.className = 'tpara';
@@ -271,7 +406,7 @@ export function createTextEditor(ctx) {
       ed.setAttribute('aria-label', t('te.editPara'));
       ed.onclick = () => openPara(pi);
       div.append(ed);
-      body.append(div);
+      target.append(div);
     });
   }
 
@@ -399,7 +534,7 @@ export function createTextEditor(ctx) {
       });
       if (!found.length) { ctx.toast(t('tr.noLines')); return; }
       // Texte déjà reconnu sur la ligne (parties imprimées) : proposé.
-      const ocrWords = page.ocr && !page.ocr.hand ? page.ocr.paragraphs.flatMap(p => p.lines.flatMap(l => l.words)) : [];
+      const ocrWords = page.ocr && !page.ocr.hand && !ocrUnreliable(page.ocr) ? page.ocr.paragraphs.flatMap(p => p.lines.flatMap(l => l.words)) : [];
       const gaps = found.slice(1).map((b, i) => b[1] - found[i][3]);
       // Écart ordinaire entre deux lignes : le bas de la distribution (les
       // grands écarts sont justement les changements de paragraphe).

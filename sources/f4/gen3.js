@@ -95,7 +95,7 @@ function build(sp) {
     exp.forEach((it) => {
       if (cur.length && hOf(cur.concat([it]), w, size) > avail) {
         // never leave an announcing sentence (intro) alone at the bottom of a page: carry it to the next page
-        const last = cur[cur.length - 1]; const carry = last && last.intro ? [cur.pop()] : [];
+        const last = cur[cur.length - 1]; const carry = last && (last.intro || last.head) ? [cur.pop()] : [];
         if (cur.length) pages.push(cur); cur = carry.concat([it]);
       } else cur.push(it);
     });
@@ -145,6 +145,22 @@ function build(sp) {
     });
     return out;
   }
+  // board summary "figure" slide: one point (term + 1–3 sentences) on the left, its diagram on the right
+  function fslide(sec, title, sub, items, img, caption, nt) {
+    const s = add(); section(s, sec);
+    s.addText(title, { x: 0.4, y: 1.1, w: W - 0.8, h: 0.8, fontFace: TNR, fontSize: 36, bold: true, color: RED, align: 'center', valign: 'middle', margin: 0, fit: 'shrink' });
+    let y = BY;
+    if (sub) { s.addText(sub, { x: 0.4, y: BY - 0.05, w: 5.6, h: 0.5, fontFace: TNR, fontSize: 30, bold: true, color: RED, align: 'left', valign: 'middle', margin: 0, fit: 'shrink' }); y += 0.5; }
+    const tw = 5.3, th = FTY - 0.1 - y; let size = 36;
+    while (size > 22 && hOf(items, tw, size) > th) size -= 2;
+    if (size < 28) warn.push(`slide ${n}: ${title} (figure) text small (${size} pt)`);
+    s.addText(runsOf(items, size), { x: 0.4, y, w: tw, h: th, fontFace: TNR, valign: 'top', align: 'left', margin: 0 });
+    const p = imgPath(img); const [iw, ih] = sizeOf(p); const bx = 5.85, bw = W - 0.2 - bx, by = BY, bh = (caption ? 6.62 : 7.0) - BY;
+    let w = bw, h = bw * ih / iw; if (h > bh) { h = bh; w = bh * iw / ih; }
+    s.addImage({ path: p, x: bx + (bw - w) / 2, y: by + (bh - h) / 2, w, h });
+    if (caption) s.addText(caption, { x: bx, y: 6.66, w: bw, h: 0.38, fontFace: TNR, fontSize: 16, italic: true, color: GREY, align: 'center', valign: 'middle', margin: 0 });
+    note(s, nt); return s;
+  }
   function picture(sec, title, img, caption, nt) {
     const s = add(); section(s, sec);
     s.addText(title, { x: 0.5, y: 1.1, w: W - 1, h: 0.8, fontFace: TNR, fontSize: 36, bold: true, color: RED, align: 'center', valign: 'middle', margin: 0 });
@@ -190,7 +206,7 @@ function build(sp) {
 
   // ---------- 3. objectives, recall, situation ----------
   tslide('OBJECTIVES', 'Objectives', [{ text: 'By the end of this lesson, you should be able to:', bold: true }].concat(sp.objectives.map((o) => ({ text: o, bullet: 'num' }))),
-    { note: `By the end of this lesson, you should be able to do three things. ${sp.objectives.map((o, i) => `Number ${i + 1}: ${lc1(dot(o))}`).join(' ')}` });
+    { note: `By the end of this lesson, you should be able to do ${['one thing', 'two things', 'three things', 'four things', 'five things'][sp.objectives.length - 1] || 'several things'}. ${sp.objectives.map((o, i) => `Number ${i + 1}: ${lc1(dot(o))}`).join(' ')}` });
   tslide('PREVIOUS KNOWLEDGE', 'Previous Knowledge', sp.recall.map((r) => ({ text: r, bullet: true })),
     { note: `Let us first remember what you already know. ${sp.recall.map(dot).join(' ')} Keep this in mind, because we shall build on it today.` });
   const sit = Array.isArray(sp.situation) ? sp.situation.join(' ') : sp.situation;
@@ -217,20 +233,36 @@ function build(sp) {
   // ---------- 5. board summary ----------
   tslide('BOARD SUMMARY', 'Board Summary', [{ text: 'Topic: ' + sp.topic, bold: true }, { text: 'Sub-topic: ' + sp.subtopic, bold: true }, { text: lessonName, bold: true, color: RED }],
     { note: 'Now we are going to copy the board summary. Write the title and the headings neatly in your notebooks. I will give you enough time for each slide, so do not rush.' });
+  // an item is [term, text, img?, caption?]; text may be an array: the term line is followed by one bullet per element
+  const itemRuns = (lead, text) => (Array.isArray(text)
+    ? [{ runs: [{ t: lead, b: true }], head: true }].concat(text.map((x) => ({ text: String(x).replace(/ %/g, ' %'), bullet: true })))
+    : [{ runs: [{ t: lead + ' ', b: true }, { t: String(text).replace(/ %/g, ' %') }] }]);
   sp.summary.forEach((part) => {
-    const items = [];
-    if (part.intro) items.push({ runs: [{ t: part.intro, i: true }], intro: true });
-    (part.items || []).forEach(([lead, text]) => items.push({ runs: [{ t: lead + ' ', b: true }, { t: String(text).replace(/ %/g, ' %') }] }));
     const head = part.sub || part.title;
-    tslide('BOARD SUMMARY', part.title, items, {
-      sub: part.sub,
-      note: (i, N, pg) => {
-        const terms = pg.filter((x) => x.runs && x.runs.length > 1).map((x) => x.runs[0].t.trim().replace(/:$/, ''));
-        const h = /^DEFINITIONS/.test(head) ? 'the definitions' : head.replace(/^[0-9IVX]+\.\s*|^[A-Z]\)\s*/, '');
-        return (i === 0 ? `Let us copy ${h}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : `We continue with ${h}. `)
-          + (terms.length ? `On this slide we have ${terms.length > 1 ? terms.slice(0, -1).join(', ') + ' and ' + terms[terms.length - 1] : terms[0]}. Write each point on a new line, with the key term first, and explain it in your own words when we revise.` : 'Copy this carefully.')
-          + (i === N - 1 ? '' : ' When you finish, we go to the next slide.');
-      },
+    const hName = /^DEFINITIONS/.test(head) ? 'the definitions' : head.replace(/^[0-9IVX]+\.\s*|^[A-Z]\)\s*/, '');
+    // a run of items without a picture goes on text slides; an item with a picture gets its own figure slide
+    const groups = []; let cur = null;
+    (part.items || []).forEach((it) => { if (it[2]) { groups.push({ fig: it }); cur = null; } else { if (!cur) { cur = { list: [] }; groups.push(cur); } cur.list.push(it); } });
+    if (!groups.length) groups.push({ list: [] });
+    groups.forEach((g, gi) => {
+      const introRun = gi === 0 && part.intro ? [{ runs: [{ t: part.intro, i: true }], intro: true }] : [];
+      if (g.fig) {
+        const [lead, text, img, cap] = g.fig; const term = lead.replace(/:$/, '');
+        fslide('BOARD SUMMARY', part.title, part.sub, introRun.concat(itemRuns(lead, text)), img, cap ? 'Illustration: ' + cap.replace(/\.$/, '') : null,
+          `${gi === 0 ? `Let us copy ${hName}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : ''}Copy the point on ${term} on the left, then draw the diagram on the right${cap ? ': ' + lc1(cap.replace(/\.$/, '')) : ''}. Give it a title and label it clearly.`);
+        return;
+      }
+      const items = introRun.slice();
+      g.list.forEach(([lead, text]) => items.push(...itemRuns(lead, text)));
+      tslide('BOARD SUMMARY', part.title, items, {
+        sub: part.sub,
+        note: (i, N, pg) => {
+          const terms = pg.filter((x) => x.runs && !x.intro).map((x) => x.runs[0].t.trim().replace(/:$/, ''));
+          return (i === 0 && gi === 0 ? `Let us copy ${hName}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : `We continue with ${hName}. `)
+            + (terms.length ? `On this slide we have ${terms.length > 1 ? terms.slice(0, -1).join(', ') + ' and ' + terms[terms.length - 1] : terms[0]}. Write each point on a new line, with the key term first, and explain it in your own words when we revise.` : 'Copy this carefully.')
+            + (i === N - 1 ? '' : ' When you finish, we go to the next slide.');
+        },
+      });
     });
     if (part.draw) {
       const s = picture('BOARD SUMMARY', part.title, part.draw.img, 'Illustration: ' + (part.draw.caption || '').replace(/\.$/, ''),

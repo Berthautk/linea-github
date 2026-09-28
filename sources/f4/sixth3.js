@@ -48,6 +48,7 @@ function prepare(seq) {
       if (!sp.hwAnswer) console.warn('!! ' + sp.file + ': no homework answer');
       if (!sp.action) console.warn('!! ' + sp.file + ': no action to take');
       sp.summary.forEach((p) => (p.items || []).forEach(([h, t]) => {
+        if (Array.isArray(t)) return;   // term followed by a bulleted list (advantages, disadvantages...)
         const k = (t.match(/[.!?](\s|$)/g) || []).length; const def = /DEFINITION/i.test(p.title) || /Meaning|Definition/i.test(p.title + ' ' + (p.sub || ''));
         const lo = second ? (def ? 1 : 2) : 1, hi = second ? 3 : (def ? 2 : 1);
         if (k < lo || k > hi) console.warn(`!! ${sp.file}: "${h}" has ${k} sentence(s)`);

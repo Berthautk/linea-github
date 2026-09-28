@@ -3,6 +3,8 @@
 // previous homework and announces the next lesson.
 const fs = require('fs');
 const { build } = require('./gen3');
+const HW = require('./v3/homework');   // short homework preparing the next lesson + answer, per level
+const hwOf = (B, l) => (HW[B.level] || {})[l.src || key(l)];
 const CRED = '/home/claude/f4/photos/credits.json';
 const OUT = '/home/claude/v3out/';
 const CLASS = { LSA: 'Lower Sixth Arts', USA: 'Upper Sixth Arts', F1: 'Form 1', F2: 'Form 2', F3: 'Form 4', F4: 'Form 4', F5: 'Form 5', F2T: 'Form 2 Technical' };
@@ -25,6 +27,9 @@ function prepare(seq) {
     if (sp.bullets === undefined) sp.bullets = B.level === 'F2T';   // F2T: short bulleted points in the board summary
     const prev = i > 0 ? seq[i - 1] : null, next = i < seq.length - 1 ? seq[i + 1] : null;
     const prevSp = prev ? Object.assign({}, prev.L, prev.P || {}) : null;
+    const h = hwOf(B, l); if (!h && HW[B.level]) console.warn('!! no new homework for ' + (l.src || key(l)));
+    if (h) { sp.homework = h[0]; sp.hwAnswer = h[1]; delete sp.homeworkTag; }
+    const ph = prev && hwOf(prev.B, prev.L); if (ph) { prevSp.homework = ph[0]; prevSp.hwAnswer = ph[1]; }
     Object.assign(sp, {
       cls: CLASS[B.level], clsHeader: CLASS[B.level].toUpperCase(), school: SCHOOL[B.level], level: B.level,
       lesson: nameOf(sp), lessonLabel: `${kind} ${sp.no}: ${sp.title}`,

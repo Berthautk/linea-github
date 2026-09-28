@@ -1619,6 +1619,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 
 
+
+
 # F1
 
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
@@ -2535,3 +2537,80 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 2 (lsa_wouri_sat.jpg) : “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)
 - Activity 4 (f4_port.jpg) : “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
 - Activity 5 (lsa_streetflood.jpg) : “Vicenza flooding Nov.1, 2010” by US Army Africa, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36281822@N08/5157191333)
+
+# LSA/Geography of Cameroon
+
+## LSA/Geography of Cameroon/01_LSA_CAM_L01_Relief_of_Cameroon
+
+- Activity 2 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Activity 5 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+- Board summary (usa_bamenda.jpg) : “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+- Board summary (lsa_adamawa.jpg) : “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
+- Board summary (lsa_wouri_sat.jpg) : “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)
+- Board summary (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+
+## LSA/Geography of Cameroon/02_LSA_CAM_L02_The_Climate_of_Cameroon
+
+- Board summary (f2t_harmattan.jpg) : “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Board summary (usa_bamenda.jpg) : “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+
+## LSA/Geography of Cameroon/03_LSA_CAM_L03_Soils_of_Cameroon
+
+- Activity 2 (f4_redsoil.jpg) : “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
+- Activity 3 (f2t_cracked_soil.jpg) : “Cracked Earth” by Aleatoric Consonance, CC BY 2.0, via Flickr (https://www.flickr.com/photos/93921318@N00/3772011444)
+- Activity 4 (lsa_mtcameroon.jpg) : “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
+- Activity 5 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+- Board summary (f2t_laterite.jpg) : “Laterite soil bricks in Richard Rebello's farm” by India Water Portal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/21623815@N03/10720461943)
+- Board summary (f2t_black_soil.jpg) : “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+
+## LSA/Geography of Cameroon/04_LSA_CAM_L04_Vegetation_of_Cameroon
+
+- Activity 2 (lsa_mangrove.jpg) : “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
+- Activity 3 (f2t_savanna.jpg) : “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
+- Activity 4 (f2t_tree_planting_sahel.jpg) : “Nyando Climate Smart Villages Media Visit” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/9720026817)
+- Activity 5 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Board summary (usa_bamenda.jpg) : “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+- Board summary (lsa_adamawa.jpg) : “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
+
+## LSA/Geography of Cameroon/05_LSA_CAM_L05_The_Drainage_of_Cameroon
+
+- Activity 2 (lsa_wouri.jpg) : “Fishing on the Wouri River” by Karlplatz, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/36973264@N00/3158348)
+- Activity 3 (f2t_lake_chad.jpg) : “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
+- Activity 4 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+- Activity 5 (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+- Board summary (f2t_lagdo.jpg) : “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
+
+## LSA/Geography of Cameroon/06_LSA_CAM_L06_Population_Change_in_Cameroon
+
+- Activity 5 (usa_refugee.jpg) : “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
+
+## LSA/Geography of Cameroon/07_LSA_CAM_L07_Urbanisation_in_Cameroon
+
+- Activity 2 (lsa_yaounde.jpg) : “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
+- Activity 4 (f2t_cattle_market.jpg) : “Discussing the price” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7313656038)
+- Activity 5 (usa_traffic.jpg) : “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
+- Board summary (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Board summary (f2t_benue.jpg) : “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
+- Board summary (usa_slum.jpg) : “Mathare” by Book Aid International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45024905@N07/4135561707)
+
+## LSA/Geography of Cameroon/08_LSA_CAM_L08_Agricultural_Development_and_Change_in_Cameroon
+
+- Activity 1 (usa_womenfarm.jpg) : “Women doing work on crops” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2073350635)
+- Activity 3 (lsa_oilpalm.jpg) : “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
+- Activity 4 (usa_herders.jpg) : “Young cattle herders in Sénégal (West Africa)” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/525185172)
+- Activity 5 (f2t_field_trial.jpg) : “CIMMYT international wheat nurseries growing in Ecuador” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/5958068839)
+
+## LSA/Geography of Cameroon/09_LSA_CAM_L09_Management_of_Forest_Resources_in_Cameroon
+
+- Activity 2 (f2t_logging_truck.jpg) : “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
+- Activity 3 (f2t_charcoal.jpg) : “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
+- Activity 4 (usa_clearcut.jpg) : “Managed Destruction” by Harlz_, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/35169553@N06/4295797661)
+- Board summary (usa_sawmill.jpg) : “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
+
+## LSA/Geography of Cameroon/10_LSA_CAM_L10_Management_of_Mineral_and_Energy_Resources_in_Cameroon
+
+- Activity 2 (usa_offshore.jpg) : “Rig I” by Tuftronic10000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36574363@N00/367931994)
+- Activity 3 (usa_goldminers.jpg) : “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1873057946)
+- Activity 4 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+- Activity 5 (usa_openpit.jpg) : “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
+- Board summary (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)

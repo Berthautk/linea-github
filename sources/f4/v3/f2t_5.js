@@ -19,7 +19,7 @@ module.exports = {
     summary: [
       D([['Continent:', 'It is a very large mass of land.'],
         ['Plateau:', 'It is a large area of high, flat land.']]),
-      { title: '1. Location', intro: 'Africa is located as follows:',
+      { title: '1. Location', intro: 'The location and size of Africa are the following:',
         items: [['Latitudes:', 'From about 37° N to 35° S, crossed by the Equator.', 'africa_location_big.png', 'Africa and the seas around it'],
           ['Longitudes:', 'From about 17° W to 51° E.'],
           ['Oceans and seas:', 'Atlantic Ocean, Indian Ocean, Mediterranean Sea and Red Sea.'],
@@ -92,7 +92,7 @@ module.exports = {
           ['Desert vegetation:', 'Few scattered plants in the Sahara and the Kalahari.'],
           ['Mediterranean vegetation:', 'Olive trees and shrubs at the north and south tips.'],
           ['Mountain vegetation:', 'Forests and grass on high mountains.']] },
-      { title: '2. Drainage', intro: 'Africa has the following main rivers and lakes:',
+      { title: '2. Drainage', intro: 'The main rivers and lakes of Africa and their importance are the following:',
         items: [['The Nile:', 'The longest river, flowing into the Mediterranean Sea.', 'africa_drainage_big.png', 'the rivers and lakes of Africa'],
           ['The Congo:', 'It carries the most water, into the Atlantic Ocean.'],
           ['The Niger:', 'It flows into the Gulf of Guinea, and the Benue joins it.'],

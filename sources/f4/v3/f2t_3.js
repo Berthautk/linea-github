@@ -78,7 +78,7 @@ module.exports = {
     summary: [
       D([['Mixed farming:', 'It is growing crops and rearing animals on the same farm.'],
         ['Mechanisation:', 'It is the use of machines on farms.']]),
-      { title: 'Farming in the Temperate Region', intro: 'The main types of farming are the following:',
+      { title: 'Farming in the Temperate Region', intro: 'The main types of farming and the reasons for their productivity are the following:',
         items: [['Mixed farming:', 'Crops and animals in Western Europe.', 'f2t_mixed_farm.jpg', 'mixed farming'],
           ['Dairy farming:', 'Milk, butter and cheese in the Netherlands and Denmark.', 'f2t_dairy.jpg', 'dairy farming'],
           ['Wheat farming:', 'Huge wheat farms with machines in Canada and Ukraine.', 'f2t_combine.jpg', 'harvesting wheat'],

@@ -54,7 +54,7 @@ module.exports = {
           ['Abrasion (corrasion):', 'Stones and sand thrown by the waves wear away the cliff.'],
           ['Attrition:', 'Stones carried by the waves hit one another and become small and round.'],
           ['Solution (corrosion):', 'Sea water dissolves some rocks, such as limestone.']] },
-      { title: '2. Erosional Features', intro: 'Wave erosion forms the following features:',
+      { title: '2. Erosional Features', intro: 'The erosional features of waves and local examples are the following:',
         items: [['Capes and bays:', 'Where hard and soft rocks alternate, hard rock remains as capes and soft rock is worn back into bays.', 'capes_bays.png', 'capes and bays'],
           ['Cliff and wave-cut platform:', 'Waves cut a notch at the foot of the rock, the top collapses, and the cliff retreats, leaving a flat rock platform.', 'cliff_platform.png', 'cliff and wave-cut platform'],
           ['Cave:', 'Waves enlarge a crack at the foot of a headland into a hollow.', 'headland_last.png', 'cave, arch, stack and stump'],

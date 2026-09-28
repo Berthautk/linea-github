@@ -105,7 +105,7 @@ L.push({ no: 14, title: 'The Drainage of Cameroon', subtopic: 'Background of Cam
         ['Chad basin:', 'The Logone and Chari flow to Lake Chad.'],
         ['Congo basin:', 'The Sangha, Dja and Kadéï flow to the Congo.']],
       draw: { img: 'cameroon_drainage_big.png', caption: 'the drainage basins of Cameroon' } },
-    { title: '2. Main Drainage Characteristics', intro: 'The rivers of Cameroon have the following characteristics:',
+    { title: '2. Main Drainage Characteristics', intro: 'The characteristics and uses of the rivers of Cameroon are the following:',
       items: [['Watersheds:', 'The Adamawa Plateau and the Western Highlands are the main watersheds.'],
         ['Regime:', 'Rivers are full in the rainy season and low in the dry season.'],
         ['Uses:', 'Waterfalls and rapids favour hydro-electricity but limit navigation.']] },

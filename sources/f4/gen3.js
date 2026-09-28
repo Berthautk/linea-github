@@ -109,7 +109,11 @@ function build(sp) {
       let k = sents.length - 1;
       const part = (a, b, withLead) => ({ runs: (withLead && lead ? [lead] : []).concat([Object.assign({}, body, { t: sents.slice(a, b).join('').trim() })]) });
       while (k > 0 && hOf(pg.slice(0, -1).concat([part(0, k, true)]), w, size) > avail) k--;
-      if (k === 0) { pages.splice(p + 1, 0, [pg.pop()]); continue; }
+      if (k === 0) {
+        // the last item cannot be split: if only an announcing sentence would stay behind, keep them together (smaller font)
+        if (pg.slice(0, -1).every((x) => x.intro || x.head)) { pg.shrink = true; continue; }
+        pages.splice(p + 1, 0, [pg.pop()]); continue;
+      }
       pg[pg.length - 1] = part(0, k, true);
       const rest = part(k, sents.length, false);
       if (pages[p + 1] && hOf([rest].concat(pages[p + 1]), w, size) <= avail) pages[p + 1].unshift(rest); else pages.splice(p + 1, 0, [rest]);
@@ -138,8 +142,9 @@ function build(sp) {
       s.addText(t, { x: pl.x, y: 1.1, w: pl.w, h: 0.8, fontFace: o.titleFace || TNR, fontSize: 36, bold: true, color: RED, align: 'center', valign: 'middle', margin: 0, fit: 'shrink' });
       let y = BY;
       if (o.sub) { const st = o.sub + (i > 0 ? ' (continued)' : ''); const ss = Math.min(32, Math.floor(pl.w * 72 / (st.length * 0.5))); s.addText(st, { x: pl.x, y: BY - 0.05, w: pl.w, h: 0.5, fontFace: TNR, fontSize: ss, bold: true, color: RED, align: 'left', valign: 'middle', margin: 0 }); y += 0.5; }
-      const est = hOf(pg, pl.w, size); if (est > FTY - 0.05 - y + 0.05) warn.push(`slide ${n}: ${title} est ${est.toFixed(2)}`);
-      s.addText(runsOf(pg, size), { x: pl.x, y, w: pl.w, h: FTY - 0.05 - y, fontFace: o.face || TNR, valign: o.valign || 'top', align: o.align || 'left', margin: 0 });
+      let sz = size; while (pg.shrink && sz > 28 && hOf(pg, pl.w, sz) > FTY - 0.05 - y) sz -= 2;
+      const est = hOf(pg, pl.w, sz); if (est > FTY - 0.05 - y + 0.05) warn.push(`slide ${n}: ${title} est ${est.toFixed(2)}`);
+      s.addText(runsOf(pg, sz), { x: pl.x, y, w: pl.w, h: FTY - 0.05 - y, fontFace: o.face || TNR, valign: o.valign || 'top', align: o.align || 'left', margin: 0 });
       note(s, typeof o.note === 'function' ? o.note(i, pages.length, pg) : (i === pages.length - 1 || o.noteAll ? o.note : o.noteCont || 'Take your time to copy this part; we will continue together.'));
       out.push(s);
     });

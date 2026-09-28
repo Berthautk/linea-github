@@ -169,7 +169,7 @@ module.exports = {
         ['Source:', 'It is the place where a river begins.'],
         ['Mouth:', 'It is the place where a river ends in a sea, a lake or another river.'],
         ['Load:', 'It is the material carried by a river.']]),
-      { title: '1. Illustration of the Long Profile', intro: 'The long profile of a river has three courses:',
+      { title: '1. Illustration of the Long Profile', intro: 'The three courses and the shape of the long profile are the following:',
         items: [['The upper course:', 'The slope is steep, the water is fast, and the river cuts down.', 'long_profile_big.png', 'the long profile of a river'],
           ['The middle course:', 'The slope is gentle, the valley widens, and the river cuts sideways.'],
           ['The lower course:', 'The land is almost flat, the water is slow, and the river drops its load.'],

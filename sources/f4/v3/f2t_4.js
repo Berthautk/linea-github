@@ -48,12 +48,12 @@ module.exports = {
     summary: [
       D([['Formal sector:', 'It is made of registered activities that pay taxes.'],
         ['Informal sector:', 'It is made of small activities that are not registered.']]),
-      { title: '1. The Formal Sector', intro: 'The formal sector has the following characteristics:',
+      { title: '1. The Formal Sector', intro: 'The characteristics and examples of the formal sector are the following:',
         items: [['Registered:', 'Businesses are registered and pay taxes.', 'f2t_bank.jpg', 'a bank'],
           ['Contracts and salaries:', 'Workers have contracts and monthly salaries.'],
           ['Social security:', 'Workers are insured by the CNPS and get a pension.'],
           ['Examples:', 'Banks, SODECOTON, CICAM, schools and hospitals.']] },
-      { title: '2. The Informal Sector', intro: 'The informal sector has the following characteristics:',
+      { title: '2. The Informal Sector', intro: 'The characteristics and examples of the informal sector are the following:',
         items: [['Not registered:', 'Workers pay few or no taxes.', 'f2t_moto_taxi.jpg', 'moto-taxis'],
           ['No contract:', 'Income changes every day.'],
           ['Small capital:', 'It needs little money to start.'],
@@ -151,7 +151,7 @@ module.exports = {
     action: 'Study hard and use ICT to create new knowledge.',
     summary: [
       D([['Quaternary sector:', 'It is made of activities based on knowledge, research and information.']]),
-      { title: 'Examples of Quaternary Activities', intro: 'The quaternary sector includes the following activities:',
+      { title: 'Examples of Quaternary Activities', intro: 'The activities and importance of the quaternary sector are the following:',
         items: [['Research:', 'IRAD creates better seeds and animal breeds.', 'f2t_field_trial.jpg', 'a research field'],
           ['Universities:', 'Teaching and research, as at the University of Garoua.'],
           ['Information technology:', 'Software, websites and phone apps.', 'f2t_computer_class.jpg', 'a computer class'],

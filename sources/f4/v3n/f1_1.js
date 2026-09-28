@@ -134,7 +134,7 @@ L.push({ kind: 'Practical Work', no: 1, title: 'Representation of the Earth\'s S
         ['Scale:', 'It shows the relation between a distance on the map and the real distance on the ground.', 'scale_types_big.png', 'ways of writing a scale'],
         ['Cardinal points and north arrow:', 'They show the directions: north, south, east and west.', 'bearings_big.png', 'the cardinal points'],
         ['Grid lines, latitudes and longitudes:', 'They help us to locate places on the map.', 'cameroon_grid_big.png', 'grid lines on a map of Cameroon']] },
-    { title: '3. Reading the Scale and Calculating Distances', intro: 'We calculate a real distance in the following steps:',
+    { title: '3. Reading the Scale and Calculating Distances', intro: 'We calculate a real distance as follows:',
       items: [['Step 1:', 'We measure the distance between the two places on the map with a ruler.'],
         ['Step 2:', 'We multiply the map distance by the value of the scale.'],
         ['Step 3:', 'We write the answer in kilometres.'],

@@ -1,10 +1,14 @@
 import {
   MAX_SRC, makeCanvas, blobToCanvas, canvasToBlob, detectQuad, defaultQuad, orderQuad,
   warp, rotateCanvas, enhance, fitCanvas, resizeCanvas, FILTERS,
-  assessQuality, drawWatermark, inkToAlpha, trimAlpha,
+  assessQuality, drawWatermark, inkToAlpha, trimAlpha, estimateSkew, rotateSmall, cleanBorders,
 } from './imgproc.js';
 import { buildPdf, PAGE_SIZES } from './pdf.js';
+import { recognize, plainText } from './ocr.js';
+import { buildDocx } from './docx.js';
 import * as store from './store.js';
+
+export const APP_VERSION = '1.0.0';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -109,10 +113,13 @@ async function getWarped(page) {
   const orig = await getOrig(page);
   const key = JSON.stringify(page.quad);
   if (cache.warpKey !== key) {
-    cache.warped = warp(orig, page.quad);
+    const flat = warp(orig, page.quad);
+    page.quality = assessQuality(flat);
+    // Redressement fin : lignes de texte parfaitement horizontales.
+    page.skew = estimateSkew(flat);
+    cache.warped = rotateSmall(flat, page.skew);
     cache.warpKey = key;
     cache.baseKey = null;
-    page.quality = assessQuality(cache.warped);
   }
   return cache.warped;
 }
@@ -123,6 +130,8 @@ async function renderBase(page) {
   const key = `${page.rot}|${page.filter}`;
   if (cache.baseKey !== key) {
     cache.base = enhance(rotateCanvas(warped, page.rot), page.filter);
+    // Bords propres comme sur un scanner (sauf rendus « couleur » et « original »).
+    if (['desk', 'scan', 'gray', 'bw'].includes(page.filter)) cleanBorders(cache.base);
     cache.baseKey = key;
   }
   return cache.base;
@@ -166,6 +175,7 @@ async function renderPage(page) {
 
 async function commit(page, out) {
   page.proc = await canvasToBlob(out, 'image/jpeg', 0.92);
+  page.ocr = null; // l'image a changé : le texte sera relu
   page.w = out.width;
   page.h = out.height;
   page.thumb = await canvasToBlob(fitCanvas(out, 420), 'image/jpeg', 0.8);
@@ -190,7 +200,7 @@ async function addFiles(files, { edit }) {
     for (let i = 0; i < files.length; i++) {
       if (files.length > 1) setBusyText(`Page ${i + 1} sur ${files.length}…`);
       try {
-        const page = { id: uid(), rot: 0, filter: 'scan', overlays: [] };
+        const page = { id: uid(), rot: 0, filter: 'desk', overlays: [] };
         await loadPhoto(page, files[i]);
         pages.set(page.id, page);
         // Carte (CNI, permis, carte d'étudiant) : fond coloré et photo, on
@@ -361,7 +371,7 @@ async function renderLib() {
 // Sauvegarde complète : un seul fichier avec tous les documents et photos.
 async function backupAll() {
   await busy('Préparation de la sauvegarde…', async () => {
-    const out = { app: 'linea-scan', version: 1, created: new Date().toISOString(), docs: [] };
+    const out = { app: 'vraiscan', version: 1, created: new Date().toISOString(), docs: [] };
     const sig = await store.getMeta('signature');
     if (sig) out.signature = sig;
     for (const d of lib.docs) {
@@ -381,7 +391,7 @@ async function backupAll() {
     }
     const d = new Date(), pad = (n) => String(n).padStart(2, '0');
     const file = new File([JSON.stringify(out)],
-      `Linea Scan - sauvegarde ${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.lineascan`,
+      `VraiScan - sauvegarde ${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.vraiscan`,
       { type: 'application/octet-stream' });
     download(file);
     prefs.set('lastBackup', String(Date.now()));
@@ -392,8 +402,8 @@ async function backupAll() {
 async function restoreBackup(file) {
   let data;
   try { data = JSON.parse(await file.text()); } catch { data = null; }
-  if (!data || data.app !== 'linea-scan' || !Array.isArray(data.docs)) {
-    toast('Ce fichier n\'est pas une sauvegarde Linea Scan.');
+  if (!data || !['vraiscan', 'linea-scan'].includes(data.app) || !Array.isArray(data.docs)) {
+    toast('Ce fichier n\'est pas une sauvegarde VraiScan.');
     return;
   }
   let n = 0;
@@ -403,7 +413,7 @@ async function restoreBackup(file) {
       const d = { id: uid(), name: od.name || defaultName(), ids: [], updated: od.updated || Date.now() };
       for (const sp of od.pages || []) {
         const p = {
-          id: uid(), quad: sp.quad, rot: sp.rot || 0, filter: sp.filter || 'scan',
+          id: uid(), quad: sp.quad, rot: sp.rot || 0, filter: sp.filter || 'desk',
           overlays: sp.overlays || [], quality: sp.quality, w: sp.w, h: sp.h,
           orig: await dataUrlToBlob(sp.orig), proc: await dataUrlToBlob(sp.proc),
           thumb: sp.thumb ? await dataUrlToBlob(sp.thumb) : null,
@@ -898,35 +908,122 @@ function compressionSteps(dpi, q0) {
   return all.filter(([d, q]) => d <= dpi && q <= q0 && !seen.has(`${d}|${q}`) && seen.add(`${d}|${q}`));
 }
 
+const OCR_FORMATS = ['pdfocr', 'docx', 'txt'];
+const LOW_CONF = 60;
+
+// Lit le texte de chaque page (une seule fois : le résultat est gardé avec la page).
+async function ensureOcr(lang, token) {
+  const out = [];
+  for (let i = 0; i < doc.ids.length; i++) {
+    const page = pages.get(doc.ids[i]);
+    if (!page.ocr || page.ocr.lang !== lang) {
+      const label = `Lecture du texte… page ${i + 1}/${doc.ids.length}`;
+      $('exInfo').textContent = label;
+      const paragraphs = await recognize(page.proc, lang, (p) => {
+        if (token === ex.token) $('exInfo').textContent = `${label} (${Math.round(p * 100)} %)`;
+      });
+      page.ocr = { lang, w: page.w, h: page.h, paragraphs };
+      await store.putPage(page);
+    }
+    if (token !== ex.token) return null;
+    out.push(page.ocr);
+  }
+  return out;
+}
+
+// Mots de la page en points PDF, placés sur l'image (ligne de base en bas du mot).
+function wordsInPdf(ocr, box) {
+  const [bx, by, bw, bh] = box;
+  const sx = bw / ocr.w, sy = bh / ocr.h;
+  const words = [];
+  for (const p of ocr.paragraphs)
+    for (const l of p.lines)
+      for (const w of l.words) {
+        const [x0, y0, x1, y1] = w.b;
+        const h = (y1 - y0) * sy;
+        words.push({ t: w.t, x: bx + x0 * sx, y: by + (ocr.h - y1) * sy + h * 0.21, w: (x1 - x0) * sx, h });
+      }
+  return words;
+}
+
+function updateExportForm() {
+  const format = $('exFormat').value;
+  const textOnly = format === 'docx' || format === 'txt';
+  $('rowLang').hidden = !OCR_FORMATS.includes(format);
+  for (const id of ['rowPage', 'rowDpi', 'rowMax', 'rowWm']) $(id).hidden = textOnly;
+}
+
 async function prepareExport() {
   const token = ++ex.token;
   ex.files = null;
+  updateExportForm();
   $('exShare').disabled = $('exSave').disabled = true;
   $('exWarn').hidden = true;
   $('exInfo').textContent = 'Préparation du fichier…';
   const name = safeName($('exName').value);
   const format = $('exFormat').value, dpi = +$('exDpi').value, kind = $('exPage').value;
+  const lang = $('exLang').value;
   const maxBytes = +$('exMax').value * 1000;
   const wm = $('exWm').value;
   const q0 = dpi >= 300 ? 0.9 : dpi >= 200 ? 0.86 : 0.8;
   const plan = sheetPlan(kind);
+  const warns = [];
+  const n = doc.ids.length;
 
+  let ocr = null;
+  if (OCR_FORMATS.includes(format)) {
+    try {
+      ocr = await ensureOcr(lang, token);
+    } catch (e) {
+      console.error(e);
+      if (token !== ex.token) return;
+      $('exInfo').textContent = 'La lecture du texte a échoué sur cet appareil.';
+      return;
+    }
+    if (!ocr) return;
+    const low = ocr.reduce((s, o) => s + o.paragraphs.reduce((a, p) => a + p.lines.reduce((b, l) => b + l.words.filter(w => w.c < LOW_CONF).length, 0), 0), 0);
+    const all = ocr.reduce((s, o) => s + o.paragraphs.reduce((a, p) => a + p.lines.reduce((b, l) => b + l.words.length, 0), 0), 0);
+    if (!all) warns.push('Aucun texte reconnu. Essayez le rendu « Scanner de bureau » ou « Contrasté », ou vérifiez la langue.');
+    else if (format === 'docx' && low) warns.push(`${low} mot(s) sur ${all} à vérifier : ils sont surlignés en jaune dans Word.`);
+    else if (low) warns.push(`${low} mot(s) sur ${all} lus avec un doute.`);
+  }
+
+  if (format === 'docx' || format === 'txt') {
+    const file = format === 'docx'
+      ? new File([buildDocx(ocr, { title: name })], `${name}.docx`,
+        { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' })
+      : new File([plainText(ocr.map(o => o.paragraphs))], `${name}.txt`, { type: 'text/plain;charset=utf-8' });
+    if (token !== ex.token) return;
+    ex.files = [file];
+    $('exInfo').textContent = `${n} page${n > 1 ? 's' : ''} · texte modifiable · ${fmtSize(file.size)}`;
+    $('exWarn').textContent = warns.join(' ');
+    $('exWarn').hidden = !warns.length;
+    $('exSave').disabled = $('exShare').disabled = false;
+    return;
+  }
+
+  const pdfLike = format === 'pdf' || format === 'pdfocr';
   const pack = async (out) => {
-    if (format === 'pdf') {
+    if (pdfLike) {
       const pdfPages = [];
-      for (const o of out) pdfPages.push({ jpeg: new Uint8Array(await o.blob.arrayBuffer()), px: o.px, size: o.lay.size, box: o.lay.box });
+      for (let i = 0; i < out.length; i++) {
+        const o = out[i];
+        const pg = { jpeg: new Uint8Array(await o.blob.arrayBuffer()), px: o.px, size: o.lay.size, box: o.lay.box };
+        if (ocr && kind !== 'id') pg.words = wordsInPdf(ocr[i], o.lay.box);
+        pdfPages.push(pg);
+      }
       return [new File([buildPdf(pdfPages, { title: name })], `${name}.pdf`, { type: 'application/pdf' })];
     }
     return out.map((o, i) => new File([o.blob],
       out.length > 1 ? `${name} - page ${i + 1}.jpg` : `${name}.jpg`, { type: 'image/jpeg' }));
   };
   // Pour les JPG, la limite s'applique à chaque image (c'est ce que vérifient les sites).
-  const tooBig = (files) => maxBytes && (format === 'pdf'
+  const tooBig = (files) => maxBytes && (pdfLike
     ? files[0].size > maxBytes : files.some(f => f.size > maxBytes));
 
   let files, used = [dpi, q0], fits = true;
   for (const [d, q] of maxBytes ? compressionSteps(dpi, q0) : [[dpi, q0]]) {
-    if (maxBytes) $('exInfo').textContent = `Compression… (${d} ppp)`;
+    $('exInfo').textContent = maxBytes ? `Compression… (${d} ppp)` : 'Préparation du fichier…';
     const out = await encodeAll(plan, kind, d, q, wm, token);
     if (!out) return;
     files = await pack(out);
@@ -937,15 +1034,15 @@ async function prepareExport() {
   if (token !== ex.token) return;
   ex.files = files;
   const total = files.reduce((s, f) => s + f.size, 0);
-  const n = doc.ids.length;
   let info = `${n} page${n > 1 ? 's' : ''} · ${files.length} fichier${files.length > 1 ? 's' : ''} · ${fmtSize(total)} · ${used[0]} ppp`;
+  if (format === 'pdfocr' && kind !== 'id') info += ' · texte cherchable';
   if (maxBytes && fits && (used[0] !== dpi || used[1] !== q0)) info += ` (compressé pour tenir sous ${fmtSize(maxBytes)})`;
   $('exInfo').textContent = info;
-  const warns = [];
   if (maxBytes && !fits) warns.push(`Impossible de descendre sous ${fmtSize(maxBytes)} en restant lisible. Retirez des pages ou envoyez-les en plusieurs fichiers.`);
   const bad = doc.ids.filter(id => isBad(pages.get(id))).length;
   if (bad) warns.push(`⚠️ ${bad} page(s) floue(s) ou avec reflet : vérifiez avant d'envoyer.`);
   if (kind === 'id' && n % 2) warns.push('Nombre impair de pages : la dernière carte sera seule sur sa feuille.');
+  if (kind === 'id' && format === 'pdfocr') warns.push('Mise en page carte : le texte cherchable n\'est pas ajouté.');
   $('exWarn').textContent = warns.join(' ');
   $('exWarn').hidden = !warns.length;
   $('exSave').disabled = false;
@@ -971,7 +1068,7 @@ $('exportBtn').onclick = () => {
   $('exportDlg').showModal();
   prepareExport();
 };
-for (const id of ['exFormat', 'exDpi', 'exPage', 'exMax']) $(id).onchange = prepareExport;
+for (const id of ['exFormat', 'exDpi', 'exPage', 'exMax', 'exLang']) $(id).onchange = prepareExport;
 let nameTimer;
 $('exName').oninput = () => {
   doc.name = $('exName').value;
@@ -1040,6 +1137,7 @@ $('docName').onblur = () => {
 };
 
 $('newDocBtn').onclick = () => newDoc();
+$('aboutBtn').onclick = () => { $('appVersion').textContent = APP_VERSION; $('aboutDlg').showModal(); };
 $('libBtn').onclick = async () => {
   await renderLib();
   $('libDlg').showModal();
@@ -1065,6 +1163,8 @@ async function init() {
   if (!lib.docs.length) newDocRecord();
   const cur = lib.docs.find(d => d.id === saved.current) || lib.docs[0];
   await openDoc(cur.id);
+  // Raccourci « Mes documents » de l'icône de l'application.
+  if (new URLSearchParams(location.search).get('open') === 'library') $('libBtn').click();
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
@@ -1072,4 +1172,4 @@ async function init() {
 init();
 
 // Pour les tests automatiques.
-window.__lineaScan = { lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, restoreBackup };
+window.__vraiscan = { lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, restoreBackup };

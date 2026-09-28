@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Linea Scan</title>
-<meta name="description" content="Scanner de documents gratuit : photo, recadrage automatique, rendu scanner, PDF, partage direct.">
+<title>VraiScan</title>
+<meta name="description" content="VraiScan : le vrai scanner, dans votre téléphone. Rendu de scanner de bureau, PDF, Word, gratuit et hors ligne.">
 <meta name="theme-color" content="#0f3d5e">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -31,9 +31,10 @@
 <!-- Écran principal : le document en cours -->
 <section id="home" class="screen">
   <header class="bar">
-    <div class="brand">Linea Scan</div>
+    <div class="brand">VraiScan</div>
     <div class="barbtns">
-      <button id="libBtn" class="ghost" type="button">📁 Mes documents</button>
+      <button id="aboutBtn" class="ghost" type="button" aria-label="À propos">ⓘ</button>
+      <button id="libBtn" class="ghost" type="button">📁 Mes docs</button>
       <button id="newDocBtn" class="ghost" type="button">＋ Nouveau</button>
     </div>
   </header>
@@ -46,7 +47,7 @@
   <div id="empty" class="empty">
     <p class="big">Aucune page pour l'instant.</p>
     <p>Posez le document à plat sur une surface <b>plus foncée</b> que le papier, dans un endroit bien éclairé, puis appuyez sur <b>Scanner</b>.</p>
-    <p class="muted">Gratuit, sans compte, sans filigrane, sans publicité. Les photos restent sur votre téléphone.</p>
+    <p class="muted">Le vrai scanner, dans votre téléphone. Gratuit, sans compte, sans publicité ; vos documents restent sur votre téléphone.</p>
   </div>
 
   <div id="grid" class="grid"></div>
@@ -60,7 +61,7 @@
       <input id="fileIn" type="file" accept="image/*" multiple hidden>
       <span>🖼️ Importer</span>
     </label>
-    <button id="exportBtn" class="btn accent" type="button" disabled>📄 PDF / Envoyer</button>
+    <button id="exportBtn" class="btn accent" type="button" disabled>📤 Envoyer</button>
   </footer>
 </section>
 
@@ -104,7 +105,7 @@
       <button id="fCrop" class="btn small" type="button">✂️ Recadrer</button>
       <button id="fRotL" class="btn small" type="button" aria-label="Tourner à gauche">⟲</button>
       <button id="fRotR" class="btn small" type="button" aria-label="Tourner à droite">⟳</button>
-      <button id="fAnno" class="btn small" type="button">✍️ Signer / masquer</button>
+      <button id="fAnno" class="btn small" type="button">✍️ Signer</button>
       <button id="fDel" class="btn small danger" type="button" aria-label="Supprimer la page">🗑</button>
     </div>
     <div class="row">
@@ -138,11 +139,21 @@
     </label>
     <label>Format
       <select id="exFormat">
-        <option value="pdf">PDF (un seul fichier, toutes les pages)</option>
+        <option value="pdf">PDF (comme un scan : image des pages)</option>
+        <option value="pdfocr">PDF avec texte cherchable et copiable</option>
+        <option value="docx">Word (.docx) : texte modifiable</option>
+        <option value="txt">Texte seul (.txt)</option>
         <option value="jpg">Images JPG (une par page)</option>
       </select>
     </label>
-    <label>Mise en page
+    <label id="rowLang" hidden>Langue du document
+      <select id="exLang">
+        <option value="fra+eng">Français et anglais</option>
+        <option value="fra">Français</option>
+        <option value="eng">Anglais</option>
+      </select>
+    </label>
+    <label id="rowPage">Mise en page
       <select id="exPage">
         <option value="a4">A4 (comme un scanner de bureau)</option>
         <option value="id">Carte d'identité : recto + verso sur une page A4, taille réelle</option>
@@ -150,14 +161,14 @@
         <option value="fit">Taille du document (sans marges)</option>
       </select>
     </label>
-    <label>Qualité
+    <label id="rowDpi">Qualité
       <select id="exDpi">
         <option value="150">Légère — 150 ppp (WhatsApp, e-mail)</option>
-        <option value="200" selected>Standard — 200 ppp</option>
-        <option value="300">Haute — 300 ppp (impression, dossiers officiels)</option>
+        <option value="200">Standard — 200 ppp</option>
+        <option value="300" selected>Scanner — 300 ppp (comme en ville, dossiers officiels)</option>
       </select>
     </label>
-    <label>Taille maximale du fichier (sites de dépôt en ligne)
+    <label id="rowMax">Taille maximale du fichier (sites de dépôt en ligne)
       <select id="exMax">
         <option value="0">Pas de limite</option>
         <option value="300">300 Ko</option>
@@ -167,10 +178,12 @@
         <option value="5000">5 Mo</option>
       </select>
     </label>
-    <label>Filigrane de protection (facultatif)
-      <input id="exWm" type="text" autocomplete="off" placeholder="Ex. : Copie réservée au dossier de concours ENS 2026">
-    </label>
-    <p class="muted small">Le filigrane empêche qu'une copie de vos pièces soit réutilisée pour autre chose. Le texte reste lisible dessous.</p>
+    <div id="rowWm">
+      <label>Filigrane de protection (facultatif)
+        <input id="exWm" type="text" autocomplete="off" placeholder="Ex. : Copie réservée au dossier de concours ENS 2026">
+      </label>
+      <p class="muted small">Le filigrane empêche qu'une copie de vos pièces soit réutilisée pour autre chose. Le texte reste lisible dessous.</p>
+    </div>
     <p id="exInfo" class="muted"></p>
     <p id="exWarn" class="warn" hidden></p>
     <div class="row">
@@ -190,7 +203,7 @@
     <div class="row">
       <button id="bkSave" class="btn" type="button">💾 Sauvegarde complète</button>
       <label class="btn">
-        <input id="bkLoad" type="file" accept=".lineascan,application/json" hidden>
+        <input id="bkLoad" type="file" accept=".vraiscan,.lineascan,application/json,application/octet-stream" hidden>
         <span>📥 Restaurer</span>
       </label>
     </div>
@@ -217,6 +230,19 @@
       <button id="sigUse" class="btn primary" type="button">Placer sur la page</button>
     </div>
     <button class="ghost wide" value="cancel">Annuler</button>
+  </form>
+</dialog>
+
+<!-- À propos -->
+<dialog id="aboutDlg">
+  <form method="dialog" class="dlg">
+    <h2>VraiScan</h2>
+    <p><b>Le vrai scanner, dans votre téléphone.</b></p>
+    <p class="muted">Gratuit, sans compte, sans publicité, sans abonnement. Vos documents restent sur ce téléphone : aucune photo, aucun texte n'est envoyé sur internet, même la lecture du texte (Word, PDF cherchable) se fait sur l'appareil.</p>
+    <p class="muted small">Pour un résultat de scanner de bureau : feuille à plat sur une surface plus foncée, bonne lumière sans flash, téléphone immobile au-dessus de la feuille, qualité « Scanner — 300 ppp ».</p>
+    <p><a href="privacy.html" target="_blank" rel="noopener">Politique de confidentialité</a></p>
+    <p class="muted small">Version <span id="appVersion"></span> · moteur de lecture du texte : Tesseract (Apache 2.0)</p>
+    <button class="ghost wide" value="cancel">Fermer</button>
   </form>
 </dialog>
 

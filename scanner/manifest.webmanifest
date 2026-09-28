@@ -1,17 +1,32 @@
 {
-  "name": "Linea Scan",
-  "short_name": "Linea Scan",
-  "description": "Scanner de documents gratuit : recadrage automatique, rendu scanner, PDF, partage direct.",
+  "id": "./",
+  "name": "VraiScan — le vrai scanner",
+  "short_name": "VraiScan",
+  "description": "Le vrai scanner, dans votre téléphone : rendu de scanner de bureau, PDF, PDF cherchable, Word, carte d'identité recto-verso, signature. Gratuit, sans compte, hors ligne.",
   "lang": "fr",
-  "start_url": "./",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f5f7",
+  "orientation": "any",
+  "background_color": "#0f3d5e",
   "theme_color": "#0f3d5e",
+  "categories": ["productivity", "utilities", "business"],
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
-    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
-  ]
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/monochrome.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "monochrome" }
+  ],
+  "screenshots": [
+    { "src": "store/screenshots/1-accueil.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Vos documents, prêts à envoyer" },
+    { "src": "store/screenshots/2-recadrage.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Recadrage automatique" },
+    { "src": "store/screenshots/3-rendu.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Rendu de scanner de bureau" },
+    { "src": "store/screenshots/4-export.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "PDF, Word, taille maximale" }
+  ],
+  "shortcuts": [
+    { "name": "Mes documents", "url": "./?open=library", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "prefer_related_applications": false
 }

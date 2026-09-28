@@ -2,7 +2,7 @@
 // Si le navigateur ferme la page pendant la prise de photo, les pages déjà
 // scannées sont retrouvées au retour.
 
-const DB = 'linea-scan', VER = 1;
+const DB = 'vraiscan', VER = 1;
 let dbp;
 
 function open() {

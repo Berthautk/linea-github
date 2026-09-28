@@ -1,7 +1,10 @@
 // Traitement d'image : détection du document, redressement de la perspective,
 // filtres « scanner ». Tout est fait en JavaScript pur, sur l'appareil.
 
-export const MAX_SRC = 3000;
+// 4000 px : une page A4 qui remplit la photo garde ~300 ppp après redressement.
+export const MAX_SRC = 4000;
+// Côté long d'une page A4 à 300 ppp (comme un scanner de bureau).
+export const A4_300 = 3508;
 
 export function makeCanvas(w, h) {
   const c = document.createElement('canvas');
@@ -390,7 +393,7 @@ function homography(from, to) {
 const A4 = Math.SQRT2;
 const ID1 = 85.6 / 54; // carte d'identité, carte bancaire, permis (format ID-1)
 
-export function warp(src, quad, maxLong = MAX_SRC) {
+export function warp(src, quad, maxLong = A4_300) {
   const q = quad;
   const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
   let ow = (dist(q[0], q[1]) + dist(q[3], q[2])) / 2;
@@ -443,7 +446,8 @@ export function warp(src, quad, maxLong = MAX_SRC) {
 /* ------------------------------------------------------------------ */
 
 export const FILTERS = [
-  { id: 'scan', label: 'Scanner', hint: 'Fond blanc, texte net, couleurs (tampons, signatures) conservées' },
+  { id: 'desk', label: 'Scanner de bureau', hint: 'Comme un scanner à plat : fond blanc, tons naturels, texte net, cachets en couleur' },
+  { id: 'scan', label: 'Contrasté', hint: 'Fond blanc éclatant, texte très noir (écritures pâles, crayon)' },
   { id: 'gray', label: 'Gris', hint: 'Niveaux de gris, fond blanc' },
   { id: 'bw', label: 'Photocopie', hint: 'Noir et blanc pur, comme une photocopieuse' },
   { id: 'color', label: 'Couleur', hint: 'Couleurs réelles corrigées (cartes, photos, diplômes)' },
@@ -542,8 +546,10 @@ export function enhance(src, mode) {
   }
 
   const { bg, f, bw, bh } = estimateBackground(d, w, h);
-  // Courbe : papier -> blanc pur, encre -> noir, gris moyens assombris.
-  const LO = 0.14, HI = 0.86, GAMMA = 1.35;
+  // Courbe : papier -> blanc pur, encre -> noir. « desk » garde des tons
+  // naturels (comme un scanner à plat) ; « scan » assombrit les gris moyens.
+  const desk = mode === 'desk';
+  const [LO, HI, GAMMA, SAT] = desk ? [0.07, 0.9, 1.12, 1.08] : [0.14, 0.86, 1.35, 1.3];
   const curve = new Uint8ClampedArray(1024);
   for (let i = 0; i < 1024; i++) {
     const n = i / 1023 * 1.25;
@@ -568,10 +574,10 @@ export function enhance(src, mode) {
       const bb = bB[a] * w00 + bB[b] * w10 + bB[c] * w01 + bB[e] * w11;
       const j = (y * w + x) * 4;
       const nr = d[j] / br, ng = d[j + 1] / bgc, nb = d[j + 2] / bb;
-      if (mode === 'scan') {
+      if (mode === 'scan' || desk) {
         let r = curve[idx(nr)], g = curve[idx(ng)], bl = curve[idx(nb)];
         const m = (r + g + bl) / 3;
-        d[j] = m + (r - m) * 1.3; d[j + 1] = m + (g - m) * 1.3; d[j + 2] = m + (bl - m) * 1.3;
+        d[j] = m + (r - m) * SAT; d[j + 1] = m + (g - m) * SAT; d[j + 2] = m + (bl - m) * SAT;
       } else {
         const n = 0.299 * nr + 0.587 * ng + 0.114 * nb;
         let v;
@@ -584,7 +590,88 @@ export function enhance(src, mode) {
       }
     }
   }
+  if (desk || mode === 'gray') sharpen(d, w, h, 0.55, 3);
   octx.putImageData(img, 0, 0);
+  return out;
+}
+
+// Accentuation (masque flou) sur la luminance, seulement sur les vrais bords
+// (seuil) pour ne pas faire ressortir le grain de l'appareil photo.
+function sharpen(d, w, h, amount, threshold) {
+  const n = w * h;
+  const Y = new Float32Array(n), t = new Float32Array(n), B = new Float32Array(n);
+  for (let i = 0, j = 0; i < n; i++, j += 4) Y[i] = 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2];
+  for (let y = 0; y < h; y++) {
+    const r = y * w;
+    for (let x = 0; x < w; x++) {
+      const a = x > 0 ? Y[r + x - 1] : Y[r + x], c = x < w - 1 ? Y[r + x + 1] : Y[r + x];
+      t[r + x] = (a + 2 * Y[r + x] + c) / 4;
+    }
+  }
+  for (let y = 0; y < h; y++) {
+    const up = y > 0 ? -w : 0, dn = y < h - 1 ? w : 0;
+    for (let x = 0; x < w; x++) {
+      const i = y * w + x;
+      B[i] = (t[i + up] + 2 * t[i] + t[i + dn]) / 4;
+    }
+  }
+  for (let i = 0, j = 0; i < n; i++, j += 4) {
+    const diff = Y[i] - B[i];
+    if (diff > threshold || diff < -threshold) {
+      const k = amount * diff;
+      d[j] += k; d[j + 1] += k; d[j + 2] += k;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Redressement fin : lignes de texte parfaitement horizontales         */
+/* ------------------------------------------------------------------ */
+
+// Angle (degrés) dont il faut tourner la page pour que les lignes de texte
+// soient horizontales, ou 0. Méthode du profil de projection : à l'angle
+// juste, les lignes de texte donnent des pics très marqués.
+export function estimateSkew(src) {
+  const c = fitCanvas(src, 900);
+  const w = c.width, h = c.height;
+  const d = ctx2d(c).getImageData(0, 0, w, h).data;
+  let sum = 0;
+  const g = new Float32Array(w * h);
+  for (let i = 0, j = 0; i < g.length; i++, j += 4) { g[i] = 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2]; sum += g[i]; }
+  const mean = sum / g.length;
+  const xs = [], ys = [];
+  const m = Math.round(Math.min(w, h) * 0.05); // ignore les bords
+  for (let y = m; y < h - m; y += 1)
+    for (let x = m; x < w - m; x += 1)
+      if (g[y * w + x] < mean - 50) { xs.push(x); ys.push(y); }
+  if (xs.length < 300 || xs.length > g.length * 0.3) return 0;
+  const score = (deg) => {
+    const a = deg * Math.PI / 180, sn = Math.sin(a), cs = Math.cos(a);
+    const off = w, bins = new Float32Array(h + 2 * w);
+    for (let k = 0; k < xs.length; k++) bins[Math.round(ys[k] * cs - xs[k] * sn) + off]++;
+    let s = 0;
+    for (let k = 1; k < bins.length; k++) { const dd = bins[k] - bins[k - 1]; s += dd * dd; }
+    return s;
+  };
+  let best = 0, bs = score(0);
+  const s0 = bs;
+  for (let deg = -3; deg <= 3.001; deg += 0.25) { const v = score(deg); if (v > bs) { bs = v; best = deg; } }
+  for (let deg = best - 0.2; deg <= best + 0.2001; deg += 0.05) { const v = score(deg); if (v > bs) { bs = v; best = deg; } }
+  best = Math.round(best * 100) / 100;
+  return Math.abs(best) >= 0.3 && bs > s0 * 1.08 ? best : 0;
+}
+
+// Tourne la page d'un petit angle ; les coins découverts sont remplis de blanc.
+export function rotateSmall(src, deg) {
+  if (!deg) return src;
+  const out = makeCanvas(src.width, src.height);
+  const ctx = ctx2d(out);
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, out.width, out.height);
+  ctx.translate(out.width / 2, out.height / 2);
+  ctx.rotate(-deg * Math.PI / 180);
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(src, -src.width / 2, -src.height / 2);
   return out;
 }
 
@@ -695,4 +782,56 @@ export function trimAlpha(src, pad = 8) {
   const out = makeCanvas(x1 - x0 + 1, y1 - y0 + 1);
   ctx2d(out).drawImage(src, x0, y0, out.width, out.height, 0, 0, out.width, out.height);
   return out;
+}
+
+/* ------------------------------------------------------------------ */
+/* Nettoyage des bords : comme sur une vitre de scanner                 */
+/* ------------------------------------------------------------------ */
+
+// Efface ce qui touche le bord de la page dans une marge étroite (morceaux
+// de table, ombre du bord de la feuille) sans toucher au texte, qui ne
+// touche pas le bord.
+export function cleanBorders(canvas, margin = 0.03) {
+  const W = canvas.width, H = canvas.height;
+  const sc = Math.min(1, 900 / Math.max(W, H));
+  const w = Math.max(8, Math.round(W * sc)), h = Math.max(8, Math.round(H * sc));
+  const small = resizeCanvas(canvas, w, h);
+  const d = ctx2d(small).getImageData(0, 0, w, h).data;
+  const mx = Math.max(2, Math.round(w * margin)), my = Math.max(2, Math.round(h * margin));
+  const band = (x, y) => x < mx || y < my || x >= w - mx || y >= h - my;
+  const dark = (i) => d[i * 4] + d[i * 4 + 1] + d[i * 4 + 2] < 3 * 244;
+  const mark = new Uint8Array(w * h);
+  const stack = [];
+  for (let x = 0; x < w; x++) stack.push(x, (h - 1) * w + x);
+  for (let y = 0; y < h; y++) stack.push(y * w, y * w + w - 1);
+  while (stack.length) {
+    const p = stack.pop();
+    if (mark[p] || !dark(p)) continue;
+    const x = p % w, y = (p / w) | 0;
+    if (!band(x, y)) continue;
+    mark[p] = 1;
+    if (x > 0) stack.push(p - 1);
+    if (x < w - 1) stack.push(p + 1);
+    if (y > 0) stack.push(p - w);
+    if (y < h - 1) stack.push(p + w);
+  }
+  const ctx = ctx2d(canvas);
+  ctx.fillStyle = '#fff';
+  // Liseré extérieur (1,2 %) toujours blanc : les documents ont au moins
+  // 1,5 cm de marge, et c'est là que restent les bouts de table.
+  const e = Math.round(Math.min(W, H) * 0.012);
+  ctx.fillRect(0, 0, W, e); ctx.fillRect(0, H - e, W, e);
+  ctx.fillRect(0, 0, e, H); ctx.fillRect(W - e, 0, e, H);
+  const cw = W / w, ch = H / h;
+  for (let y = 0; y < h; y++) {
+    let x = 0;
+    while (x < w) {
+      if (!mark[y * w + x]) { x++; continue; }
+      const x0 = x;
+      while (x < w && mark[y * w + x]) x++;
+      // Petit débord pour couvrir les pixels voisins à pleine résolution.
+      ctx.fillRect(x0 * cw - 1, y * ch - 1, (x - x0) * cw + 2, ch + 2);
+    }
+  }
+  return canvas;
 }

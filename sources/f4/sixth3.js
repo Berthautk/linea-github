@@ -22,6 +22,7 @@ function prepare(seq) {
     if (P && P.secs) sp.activities = l.activities.map((a, k) => Object.assign({}, a, { sec: P.secs[k] || a.sec }));
     if (P && P.activities) sp.activities = P.activities;
     const kind = sp.kind || 'Lesson';
+    if (sp.bullets === undefined) sp.bullets = B.level === 'F2T';   // F2T: short bulleted points in the board summary
     const prev = i > 0 ? seq[i - 1] : null, next = i < seq.length - 1 ? seq[i + 1] : null;
     const prevSp = prev ? Object.assign({}, prev.L, prev.P || {}) : null;
     Object.assign(sp, {

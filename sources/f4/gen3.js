@@ -241,7 +241,7 @@ function build(sp) {
   // an item is [term, text, img?, caption?]; text may be an array: the term line is followed by one bullet per element
   const itemRuns = (lead, text) => (Array.isArray(text)
     ? [{ runs: [{ t: lead, b: true }], head: true }].concat(text.map((x) => ({ text: String(x).replace(/ %/g, ' %'), bullet: true })))
-    : [{ runs: [{ t: lead + ' ', b: true }, { t: String(text).replace(/ %/g, ' %') }] }]);
+    : [{ runs: [{ t: lead + ' ', b: true }, { t: String(text).replace(/ %/g, ' %') }], bullet: !!sp.bullets }]);
   sp.summary.forEach((part) => {
     const head = part.sub || part.title;
     const hName = /^DEFINITIONS/.test(head) ? 'the definitions' : head.replace(/^[0-9IVX]+\.\s*|^[A-Z]\)\s*/, '');

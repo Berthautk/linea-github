@@ -14,6 +14,21 @@ Onglet **📂 Dossier** : on constitue un dossier pièce par pièce.
 
 Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso sur une page A4, à la taille réelle.
 
+## Scanner vite : la caméra intégrée (livres, piles de feuilles)
+
+**📷 Scanner** ouvre la caméra dans l'application, qui reste ouverte d'une page à l'autre :
+
+- un **cadre suit la page en direct** (jaune : page trouvée ; vert : immobile, prête) ;
+- **un geste par page** : on touche le bouton, la page est recadrée, redressée et rangée en arrière-plan pendant qu'on passe à la suivante ;
+- **⏱ Auto** : la photo part seule quand la page est bien cadrée et immobile ; après chaque photo, l'application attend que la page soit tournée (mouvement) puis de nouveau immobile — pas de doublon ;
+- **📖 Double page** : chaque photo du livre ouvert donne 2 pages, coupées au pli ;
+- **↺ Reprendre** retire la dernière page (signalée ⚠️ si elle est floue) ; **📱 Photo classique** revient à l'appareil photo du téléphone ; 🔦 lampe si le téléphone en a une ;
+- l'écran reste allumé ; « Terminé » : une seule page ouvre son rendu, plusieurs pages s'affichent dans le document.
+
+Aussi pour « Page suivante » et les pièces du dossier. Si la caméra est refusée, l'appareil photo du téléphone est utilisé comme avant.
+
+Limites : les pages bombées près de la reliure ne sont pas aplaties ; selon le téléphone, la photo de la caméra intégrée peut être moins fine que celle de l'appareil photo.
+
 ## Importer un PDF, le lire, l'écouter
 
 **📥 Importer** accepte aussi les PDF (reçus par WhatsApp, e-mail, téléchargés). Le lecteur de PDF de Mozilla (pdf.js, Apache 2.0) est embarqué dans `vendor/pdfjs/` : tout se fait sur le téléphone, hors ligne.
@@ -129,6 +144,7 @@ Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf
 | `docx.js` | Fichier Word (sans bibliothèque) |
 | `pdf.js` | PDF, avec couche de texte cherchable, et PDF propre (texte seul) (sans bibliothèque) |
 | `pdfin.js` | Import de PDF : pages en images, texte du PDF repris (pdf.js, dans `vendor/pdfjs/`) |
+| `camera.js` | Caméra intégrée : cadre en direct, photo automatique, double page |
 | `textedit.js` | Correction du texte, transcription ligne par ligne (détection des lignes d'écriture) |
 | `reader.js` | Mode lecture : lecture à voix haute phrase par phrase, position retenue |
 | `store.js` | Enregistrement local (IndexedDB) |

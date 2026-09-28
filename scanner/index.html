@@ -155,7 +155,7 @@
       <button id="fText" class="btn small" type="button" data-i18n="f.text">✏️ Texte</button>
     </div>
     <div class="row">
-      <label class="btn">
+      <label id="camNextBtn" class="btn">
         <input id="camNext" type="file" accept="image/*" capture="environment" hidden>
         <span data-i18n="f.next">📷 Page suivante</span>
       </label>
@@ -247,7 +247,7 @@
       <input id="pcOther" type="text" autocomplete="off" data-i18n-ph="ds.otherName.ph">
     </label>
     <div class="row">
-      <label class="btn primary">
+      <label id="pcCamBtn" class="btn primary">
         <input id="pcCam" type="file" accept="image/*" capture="environment" hidden>
         <span data-i18n="ds.scanIt">📷 Scanner</span>
       </label>
@@ -375,6 +375,30 @@
     <button class="ghost wide" value="cancel" data-i18n="ex.close">Fermer</button>
   </form>
 </dialog>
+
+<!-- Caméra intégrée : scanner vite, page après page -->
+<section id="cam" class="screen cam" hidden>
+  <video id="camVideo" playsinline muted autoplay></video>
+  <svg id="camQuad" class="camquad" aria-hidden="true"><polygon id="camPoly"/></svg>
+  <div id="camFlash" class="camflash"></div>
+  <header class="camtop">
+    <button id="camClose" class="camic" type="button" data-i18n-aria="cam.close">✕</button>
+    <span id="camCount" class="camcount"></span>
+    <button id="camTorch" class="camic" type="button" hidden data-i18n-aria="cam.torch">🔦</button>
+  </header>
+  <p id="camHint" class="camhint" aria-live="polite"></p>
+  <div class="camopts">
+    <button id="camAuto" class="camopt" type="button" data-i18n="cam.auto">⏱ Auto</button>
+    <button id="camBook" class="camopt" type="button" data-i18n="cam.book">📖 Double page</button>
+    <button id="camUndo" class="camopt" type="button" hidden data-i18n="cam.undo">↺ Reprendre</button>
+    <button id="camNative" class="camopt" type="button" data-i18n="cam.native">📱 Photo classique</button>
+  </div>
+  <footer class="cambar">
+    <button id="camThumb" class="camthumb" type="button" hidden data-i18n-aria="cam.see"><img id="camThumbImg" alt=""><b id="camBadge" hidden>⚠️</b></button>
+    <button id="camShot" class="camshot" type="button" data-i18n-aria="cam.shoot"></button>
+    <button id="camDone" class="camdone" type="button" data-i18n="f.done">Terminé ✓</button>
+  </footer>
+</section>
 
 <!-- Mode lecture -->
 <section id="reader" class="screen reader" hidden>

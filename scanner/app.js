@@ -12,8 +12,9 @@ import { CATEGORIES, PIECES, DOSSIER_NAMES, pieceById, slug } from './catalog.js
 import { isPdf, openPdf, renderPdfPage, closePdf } from './pdfin.js';
 import { createReader } from './reader.js';
 import { createTextEditor, refitOcr, ocrUnreliable } from './textedit.js';
+import { createCamera, liveCameraSupported } from './camera.js';
 
-export const APP_VERSION = '1.3.1';
+export const APP_VERSION = '1.4.0';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -263,13 +264,36 @@ function photoQuad(w, h) {
   return [{ x, y }, { x: x + cw, y }, { x: x + cw, y: y + ch }, { x, y: y + ch }];
 }
 
-async function loadPhoto(page, file) {
+async function loadPhoto(page, file, quadHint = null) {
   const canvas = await blobToCanvas(file, MAX_SRC);
   page.orig = await canvasToBlob(canvas, 'image/jpeg', 0.93);
   page.quad = page.kind === 'photo'
     ? photoQuad(canvas.width, canvas.height)
-    : detectQuad(canvas) || defaultQuad(canvas.width, canvas.height);
+    : detectQuad(canvas) || hintQuad(quadHint, canvas) || defaultQuad(canvas.width, canvas.height);
   resetCache(page.id, canvas);
+}
+
+// Cadre vu dans l'aperçu de la caméra, repris si la photo a le même format.
+function hintQuad(h, canvas) {
+  if (!h || !h.quad || !h.frameW) return null;
+  if (Math.abs(canvas.width / canvas.height - h.frameW / h.frameH) > 0.03) return null;
+  const k = canvas.width / h.frameW;
+  return h.quad.map(p => ({ x: p.x * k, y: p.y * k }));
+}
+
+// Une photo → une page prête (recadrée, redressée, rendu appliqué, enregistrée).
+async function makePage(file, { kind = 'doc', quadHint = null } = {}) {
+  const page = { id: uid(), rot: 0, filter: defaultFilter(), overlays: [], kind };
+  await loadPhoto(page, file, quadHint);
+  pages.set(page.id, page);
+  const w = await getWarped(page);
+  // Carte (CNI, permis…) ou photo d'identité : fond coloré et photo, on
+  // garde les vraies couleurs au lieu de blanchir le fond.
+  const isCard = Math.abs(Math.max(w.width, w.height) / Math.min(w.width, w.height) - 85.6 / 54) < 0.07;
+  if (kind === 'photo' || kind === 'card' || isCard) page.filter = 'color';
+  await nextFrame();
+  await commit(page, await renderPage(page));
+  return page;
 }
 
 function defaultFilter() {
@@ -293,16 +317,7 @@ async function addFiles(files, { edit, piece = null, at = -1 }) {
     for (let i = 0; i < files.length; i++) {
       if (files.length > 1) setBusyText(t('busy.pageOf', { i: i + 1, n: files.length }));
       try {
-        const page = { id: uid(), rot: 0, filter: defaultFilter(), overlays: [], kind };
-        await loadPhoto(page, files[i]);
-        pages.set(page.id, page);
-        const w = await getWarped(page);
-        // Carte (CNI, permis…) ou photo d'identité : fond coloré et photo, on
-        // garde les vraies couleurs au lieu de blanchir le fond.
-        const isCard = Math.abs(Math.max(w.width, w.height) / Math.min(w.width, w.height) - 85.6 / 54) < 0.07;
-        if (kind === 'photo' || kind === 'card' || isCard) page.filter = 'color';
-        await nextFrame();
-        await commit(page, await renderPage(page));
+        const page = await makePage(files[i], { kind });
         added.push(page.id);
       } catch (e) {
         console.error(e);
@@ -752,6 +767,7 @@ function showScreen(name) {
   $('reader').hidden = name !== 'reader';
   $('texted').hidden = name !== 'texted';
   $('transc').hidden = name !== 'transc';
+  $('cam').hidden = name !== 'cam';
 }
 
 function edCounter() {
@@ -1105,37 +1121,46 @@ function findGutter(src) {
   return { at: min < mean * 0.93 ? best / w : 0.5, found: min < mean * 0.93 };
 }
 
+// Double page (livre ouvert) → deux pages, coupées au pli. Remplace la page
+// dans le document et dans sa pièce du dossier.
+async function splitPage(page) {
+  const flat = rotateCanvas(await getWarped(page), page.rot);
+  const g = findGutter(flat);
+  const cut = Math.round(flat.width * g.at);
+  const halves = [[0, cut], [cut, flat.width - cut]].map(([x, w]) => {
+    const c = makeCanvas(w, flat.height);
+    c.getContext('2d').drawImage(flat, x, 0, w, flat.height, 0, 0, w, flat.height);
+    return c;
+  });
+  const newIds = [];
+  for (const half of halves) {
+    const np = { id: uid(), rot: 0, filter: page.filter, overlays: [], kind: page.kind || 'doc' };
+    np.orig = await canvasToBlob(half, 'image/jpeg', 0.93);
+    np.quad = defaultQuad(half.width, half.height, 0);
+    resetCache(np.id, half);
+    pages.set(np.id, np);
+    await commit(np, await renderPage(np));
+    newIds.push(np.id);
+  }
+  const replace = (arr) => { const i = arr.indexOf(page.id); if (i >= 0) arr.splice(i, 1, ...newIds); };
+  replace(doc.ids);
+  if (doc.pieces) doc.pieces.forEach(pc => replace(pc.ids));
+  pages.delete(page.id);
+  const old = thumbUrls.get(page.id);
+  if (old) { URL.revokeObjectURL(old); thumbUrls.delete(page.id); }
+  await store.delPage(page.id);
+  return { ids: newIds, found: g.found };
+}
+
 $('fBook').onclick = async () => {
   const page = pages.get(ed.id);
   if (!page) return;
   let firstId = null, found = true;
   await busy(t('busy.work'), async () => {
-    const flat = rotateCanvas(await getWarped(page), page.rot);
-    const g = findGutter(flat);
-    found = g.found;
-    const cut = Math.round(flat.width * g.at);
-    const halves = [[0, cut], [cut, flat.width - cut]].map(([x, w]) => {
-      const c = makeCanvas(w, flat.height);
-      c.getContext('2d').drawImage(flat, x, 0, w, flat.height, 0, 0, w, flat.height);
-      return c;
-    });
-    const newIds = [];
-    for (const half of halves) {
-      const np = { id: uid(), rot: 0, filter: page.filter, overlays: [], kind: page.kind || 'doc' };
-      np.orig = await canvasToBlob(half, 'image/jpeg', 0.93);
-      np.quad = defaultQuad(half.width, half.height, 0);
-      resetCache(np.id, half);
-      pages.set(np.id, np);
-      await commit(np, await renderPage(np));
-      newIds.push(np.id);
-    }
-    const replace = (arr) => { const i = arr.indexOf(page.id); if (i >= 0) arr.splice(i, 1, ...newIds); };
-    replace(doc.ids);
-    if (doc.pieces) doc.pieces.forEach(pc => replace(pc.ids));
-    pages.delete(page.id);
-    await store.delPage(page.id);
+    const r = await splitPage(page);
+    found = r.found;
     await saveLib();
-    firstId = newIds[0];
+    firstId = r.ids[0];
   });
   toast(found ? t('toast.split') : t('toast.noSplit'));
   refreshHome();
@@ -1738,7 +1763,10 @@ function renderDossier() {
       return b;
     };
     btn(t('ds.edit'), () => pc.ids[0] && openEditor(pc.ids[0], 'filter'));
-    btn(t('ds.addPage'), () => pickFiles({ camera: true }, (f) => addFiles(f, { edit: true, piece: pc })));
+    btn(t('ds.addPage'), () => {
+      const native = () => pickFiles({ camera: true }, (f) => addFiles(f, { edit: true, piece: pc }));
+      if (useLiveCam()) openCam({ piece: pc, native }); else native();
+    });
     btn(t('ds.redo'), () => {
       if (!confirm(t('ds.confirmRedo', { name: pieceName(pc) }))) return;
       pickFiles({ camera: true }, async (f) => {
@@ -2235,6 +2263,160 @@ $('fText').onclick = () => textEd.open({ index: doc.ids.indexOf(ed.id), from: 'e
 $('rdEdit').onclick = () => { const i = reader.index; reader.pause(); textEd.open({ index: i, from: 'reader' }); };
 $('exEdit').onclick = () => { $('exportDlg').close(); textEd.open({ from: 'export' }); };
 
+/* ------------------------------ caméra intégrée ------------------------------ */
+
+// Les photos sont traitées une à une en arrière-plan pendant qu'on continue.
+const camQ = { list: [], running: false, groups: [], target: null };
+let camBypass = false, camDenied = false;
+const useLiveCam = () => !camDenied && liveCameraSupported();
+
+const camera = createCamera({
+  capture(blob, info) { camQ.list.push({ blob, info }); camPump(); },
+  pending: () => camQ.list.length + (camQ.running ? 1 : 0),
+  added: () => camQ.groups.reduce((n, g) => n + g.length, 0),
+  prefs,
+  toast,
+  showScreen,
+  onClose: (reason) => camFinish(reason),
+});
+
+async function camPump() {
+  if (camQ.running) return;
+  camQ.running = true;
+  camera.refresh();
+  try {
+    while (camQ.list.length) {
+      const { blob, info } = camQ.list.shift();
+      const tg = camQ.target;
+      if (!tg) break;
+      try {
+        const kind = tg.piece ? (pieceById(tg.piece.cid)?.kind || 'doc') : 'doc';
+        const page = await makePage(blob, { kind, quadHint: info });
+        if (tg.piece) { tg.piece.ids.push(page.id); syncIds(); } else doc.ids.push(page.id);
+        let ids = [page.id];
+        if (info.book && kind === 'doc') ids = (await splitPage(page)).ids;
+        camQ.groups.push(ids);
+        doc.editedAt = Date.now();
+        await saveLib();
+        const bad = ids.some(id => isBad(pages.get(id)));
+        camera.showThumb(thumbUrls.get(ids[ids.length - 1]));
+        $('camBadge').hidden = !bad;
+        $('camUndo').hidden = false;
+        if (bad) toast(t('cam.blurry'), 4000);
+      } catch (e) {
+        console.error(e);
+        toast(t('toast.badImage'));
+      }
+      camera.refresh();
+    }
+  } finally {
+    camQ.running = false;
+    camera.refresh();
+  }
+}
+
+// Supprime la dernière page prise (ou les deux moitiés d'une double page).
+$('camUndo').onclick = async () => {
+  if (camQ.running || camQ.list.length) { toast(t('cam.wait')); return; }
+  const ids = camQ.groups.pop();
+  if (!ids) return;
+  for (const id of ids) {
+    doc.ids = doc.ids.filter(x => x !== id);
+    if (doc.pieces) doc.pieces.forEach(pc => { pc.ids = pc.ids.filter(x => x !== id); });
+    pages.delete(id);
+    const u = thumbUrls.get(id);
+    if (u) { URL.revokeObjectURL(u); thumbUrls.delete(id); }
+    await store.delPage(id);
+  }
+  syncIds();
+  await saveLib();
+  camera._st.shots = Math.max(0, camera._st.shots - 1);
+  camera._st.lastShot = null;
+  const last = camQ.groups[camQ.groups.length - 1];
+  if (last) camera.showThumb(thumbUrls.get(last[last.length - 1])); else { $('camThumb').hidden = true; $('camUndo').hidden = true; }
+  $('camBadge').hidden = true;
+  camera.refresh();
+  toast(t('cam.undone'));
+};
+
+async function openCam(target) {
+  camQ.target = target;
+  camQ.groups = [];
+  camQ.list = [];
+  $('camUndo').hidden = true;
+  $('camBadge').hidden = true;
+  const ok = await camera.open();
+  if (!ok) {
+    camDenied = true;
+    camQ.target = null;
+    if (target.newPiece) { doc.pieces = doc.pieces.filter(x => x !== target.piece); await saveLib(); }
+    toast(t('cam.denied'), 5000);
+    if (target.native) { camBypass = true; target.native(); camBypass = false; }
+  }
+}
+
+async function camFinish(reason) {
+  if (camQ.running || camQ.list.length) {
+    await busy(t('cam.finishing'), async () => {
+      while (camQ.running || camQ.list.length) {
+        setBusyText(t('cam.finishingN', { n: camQ.list.length + (camQ.running ? 1 : 0) }));
+        await new Promise(r => setTimeout(r, 200));
+      }
+    });
+  }
+  const tg = camQ.target || {};
+  const added = camQ.groups.flat();
+  camQ.target = null;
+  showScreen('home');
+  if (tg.piece) {
+    if (!tg.piece.ids.length && tg.newPiece) doc.pieces = doc.pieces.filter(x => x !== tg.piece);
+    await saveLib();
+    if (tg.piece.ids.length && reason !== 'native') {
+      if (tg.newPiece) toast(t('ds.added', { name: pieceName(tg.piece) }));
+      showSeg('mine');
+      renderDossier();
+      flashPiece(tg.piece.key);
+    }
+  }
+  refreshHome();
+  if (reason === 'native') {
+    if (tg.native) { camBypass = true; tg.native(); camBypass = false; }
+    return;
+  }
+  const oneShot = camQ.groups.length === 1 && added.length === 1;
+  if (oneShot) openEditor(added[0], 'filter');
+  else if (added.length) toast(t('cam.added', { n: added.length }), 4000);
+}
+
+// Les boutons « Scanner » ouvrent la caméra intégrée ; la photo classique
+// du téléphone reste possible (bouton dans la caméra, ou si la caméra est refusée).
+function hookCam(labelId, inputId, makeTarget) {
+  $(labelId).addEventListener('click', (e) => {
+    if (camBypass || !useLiveCam()) return;
+    e.preventDefault();
+    const target = makeTarget();
+    if (!target) return;
+    target.native = () => $(inputId).click();
+    openCam(target);
+  });
+}
+hookCam('camBtn', 'camIn', () => ({}));
+hookCam('camNextBtn', 'camNext', () => {
+  const pc = isDossier() && ed.id ? pieceOf(ed.id) : null;
+  showScreen('home');
+  ed.id = null;
+  return { piece: pc };
+});
+hookCam('pcCamBtn', 'pcCam', () => {
+  const p = pcTarget;
+  if (!p) return null;
+  $('pieceDlg').close();
+  const label = p.id === 'autre' ? ($('pcOther').value.trim() || L(p)) : null;
+  const pc = { key: uid(), cid: p.id, label, ids: [] };
+  doc.pieces.push(pc);
+  return { piece: pc, newPiece: true };
+});
+
 /* ------------------------------ démarrage ------------------------------ */
 
 async function init() {
@@ -2264,5 +2446,5 @@ init();
 // Pour les tests automatiques.
 window.__vraiscan = {
   lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, dx, restoreBackup, findDates,
-  switchTab, applyLang, importPdf, reader, textEd,
+  switchTab, applyLang, importPdf, reader, textEd, camera, splitPage,
 };

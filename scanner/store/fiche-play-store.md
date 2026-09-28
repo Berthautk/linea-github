@@ -32,6 +32,11 @@ UN RENDU DE VRAI SCANNER
 • Qualité 300 ppp, pages au format A4.
 • Autres rendus : Contrasté, Gris, Photocopie (noir et blanc), Couleur, Original.
 
+SCANNER UN LIVRE EN QUELQUES MINUTES
+• La caméra reste ouverte : un geste par page, ou photo automatique dès que la page est immobile.
+• Double page : le livre ouvert est coupé en deux pages.
+• Recadrage et redressement automatiques, en arrière-plan.
+
 PDF, WORD ET TEXTE
 • PDF d'une ou plusieurs pages.
 • PDF avec texte cherchable et copiable.
@@ -80,10 +85,10 @@ Envoyez vos documents en un geste par WhatsApp, e-mail ou Drive, ou enregistrez-
 Conseil pour un résultat parfait : posez la feuille à plat sur une surface plus foncée, dans un endroit bien éclairé, sans flash, et tenez le téléphone immobile au-dessus.
 ```
 
-**Notes de version (1.3.0)**
+**Notes de version (1.4.0)**
 
 ```
-Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. Import de PDF, conversion en Word, mode lecture à voix haute avec reprise, correction du texte, transcription des pages écrites à la main et PDF propre. En français et en anglais.
+Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. Import de PDF, conversion en Word, mode lecture à voix haute avec reprise, correction du texte, transcription des pages écrites à la main, PDF propre, caméra intégrée pour scanner un livre page après page. En français et en anglais.
 ```
 
 ---
@@ -113,6 +118,11 @@ A REAL SCANNER LOOK
 • “Desktop scanner” rendering: white background, shadows removed, sharp text, natural tones.
 • Stamps and signatures keep their color.
 • 300 dpi quality, A4 pages.
+
+SCAN A BOOK IN MINUTES
+• The camera stays open: one tap per page, or automatic photo as soon as the page is still.
+• Two-page mode: the open book is split into two pages.
+• Automatic cropping and straightening, in the background.
 
 PDF, WORD AND TEXT
 • Single or multi-page PDF.

@@ -114,7 +114,10 @@ export function buildDocx(pages, { title = 'Document', highlight = true } = {}) 
       const pushWord = (w, space) => {
         const hl = highlight && w.c < LOW_CONF ? '<w:highlight w:val="yellow"/>' : '';
         const pr = hl ? rPr.replace('</w:rPr>', `${hl}</w:rPr>`) : rPr;
-        runs.push(`<w:r>${pr}<w:t xml:space="preserve">${esc((space ? ' ' : '') + w.t)}</w:t></w:r>`);
+        const text = (space ? ' ' : '') + w.t;
+        // Mots voisins de même mise en forme : un seul bloc (fichier plus léger).
+        const last = runs[runs.length - 1];
+        if (last && last.pr === pr && last.t != null) last.t += text; else runs.push({ pr, t: text });
       };
       if (flowing) {
         // Recolle les mots coupés en fin de ligne.
@@ -133,17 +136,19 @@ export function buildDocx(pages, { title = 'Document', highlight = true } = {}) 
           });
         });
         words.forEach((w, i) => {
-          if (w.br) runs.push(`<w:r>${rPr}<w:br/></w:r>`);
+          if (w.br) runs.push({ pr: rPr, br: true });
           pushWord(w, i > 0 && !w.br);
         });
       } else {
         p.lines.forEach((l, li) => {
-          if (li > 0) runs.push(`<w:r>${rPr}<w:br/></w:r>`);
+          if (li > 0) runs.push({ pr: rPr, br: true });
           l.words.forEach((w, i) => pushWord(w, i > 0));
         });
       }
       const pPr = `<w:pPr><w:spacing w:before="${Math.round(before * 20)}" w:after="0"/>${jc ? `<w:jc w:val="${jc}"/>` : ''}</w:pPr>`;
-      body.push(`<w:p>${pPr}${runs.join('')}</w:p>`);
+      const xml = runs.map(r => r.br ? `<w:r>${r.pr}<w:br/></w:r>`
+        : `<w:r>${r.pr}<w:t xml:space="preserve">${esc(r.t)}</w:t></w:r>`).join('');
+      body.push(`<w:p>${pPr}${xml}</w:p>`);
     }
     if (!pg.paragraphs.length) body.push('<w:p><w:r><w:t>(Aucun texte reconnu sur cette page.)</w:t></w:r></w:p>');
   });

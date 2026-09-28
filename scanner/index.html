@@ -53,6 +53,11 @@
       <p class="muted" data-i18n="empty.small"></p>
     </div>
 
+    <div id="readRow" class="readrow" hidden>
+      <button id="readBtn" class="btn" type="button" data-i18n="rd.btn">🎧 Lire et écouter</button>
+      <span id="readInfo" class="muted small"></span>
+    </div>
+
     <div id="grid" class="grid"></div>
   </div>
 
@@ -86,8 +91,8 @@
         <span id="camLabel">📷 Scanner</span>
       </label>
       <label id="fileBtn" class="btn">
-        <input id="fileIn" type="file" accept="image/*" multiple hidden>
-        <span data-i18n="btn.import">🖼️ Importer</span>
+        <input id="fileIn" type="file" accept="image/*,application/pdf,.pdf" multiple hidden>
+        <span data-i18n="btn.import">📥 Importer</span>
       </label>
       <button id="exportBtn" class="btn" type="button" disabled data-i18n="btn.send">📤 Envoyer</button>
     </div>
@@ -243,7 +248,7 @@
         <span data-i18n="ds.scanIt">📷 Scanner</span>
       </label>
       <label class="btn">
-        <input id="pcFile" type="file" accept="image/*" multiple hidden>
+        <input id="pcFile" type="file" accept="image/*,application/pdf,.pdf" multiple hidden>
         <span data-i18n="ds.importIt">🖼️ Importer une photo</span>
       </label>
     </div>
@@ -367,7 +372,45 @@
   </form>
 </dialog>
 
-<div id="busy" class="busy" hidden><div class="spinner"></div><p id="busyText"></p></div>
+<!-- Mode lecture -->
+<section id="reader" class="screen reader" hidden>
+  <header class="bar">
+    <button id="rdBack" class="ghost" type="button" data-i18n="ed.back">← Retour</button>
+    <div id="rdTitle" class="brand"></div>
+    <span id="rdPage" class="muted"></span>
+  </header>
+  <p id="rdStatus" class="rdstatus" aria-live="polite"></p>
+  <article id="rdText" class="rdtext"></article>
+  <footer class="rdctl">
+    <div class="rdmain">
+      <button id="rdPrevPage" class="rdb" type="button" data-i18n-aria="rd.prevPage"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+      <button id="rdBackPara" class="rdb" type="button" data-i18n-aria="rd.prevPara"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M11 18V6l-8.5 6zm.5-6 8.5 6V6z"/></svg></button>
+      <button id="rdPlay" class="rdb play" type="button"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
+      <button id="rdFwdPara" class="rdb" type="button" data-i18n-aria="rd.nextPara"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4 18l8.5-6L4 6zm9-12v12l8.5-6z"/></svg></button>
+      <button id="rdNextPage" class="rdb" type="button" data-i18n-aria="rd.nextPage"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
+    </div>
+    <div class="rdopts">
+      <label class="rdgo"><span data-i18n="rd.pageLbl">Page</span> <input id="rdGo" type="number" min="1" inputmode="numeric"></label>
+      <label class="rdrate"><span data-i18n="rd.speed">Vitesse</span> <select id="rdRate"></select></label>
+      <button id="rdSmaller" class="rdb sm" type="button" data-i18n-aria="rd.smaller">A−</button>
+      <button id="rdBigger" class="rdb sm" type="button" data-i18n-aria="rd.bigger">A+</button>
+      <button id="rdImg" class="rdb sm" type="button" data-i18n-aria="rd.image">🖼</button>
+    </div>
+  </footer>
+</section>
+
+<!-- PDF importé -->
+<dialog id="pdfDlg">
+  <form method="dialog" class="dlg">
+    <h2 id="pdTitle"></h2>
+    <p id="pdInfo"></p>
+    <button id="pdRead" class="btn primary wide" type="button" data-i18n="rd.btn">🎧 Lire et écouter</button>
+    <button id="pdWord" class="btn wide" type="button" data-i18n="pdf.word">📝 Convertir en Word</button>
+    <button class="ghost wide" value="cancel" data-i18n="pdf.keep">✓ Garder dans mes documents</button>
+  </form>
+</dialog>
+
+<div id="busy" class="busy" hidden><div class="spinner"></div><p id="busyText"></p><button id="busyStop" class="btn small" type="button" hidden data-i18n="pdf.stop">⏹ Arrêter l'import</button></div>
 <div id="toast" class="toast" hidden></div>
 
 <script type="module" src="app.js"></script>

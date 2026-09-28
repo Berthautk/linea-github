@@ -14,6 +14,25 @@ Onglet **📂 Dossier** : on constitue un dossier pièce par pièce.
 
 Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso sur une page A4, à la taille réelle.
 
+## Importer un PDF, le lire, l'écouter
+
+**📥 Importer** accepte aussi les PDF (reçus par WhatsApp, e-mail, téléchargés). Le lecteur de PDF de Mozilla (pdf.js, Apache 2.0) est embarqué dans `vendor/pdfjs/` : tout se fait sur le téléphone, hors ligne.
+
+- **PDF fait sur ordinateur** : le texte du PDF est repris tel quel, sans faute et tout de suite, même pour des centaines de pages.
+- **PDF scanné** (images) : chaque page devient une page VraiScan ; le texte est lu sur le téléphone (Tesseract), page par page.
+- Après l'import : **🎧 Lire et écouter**, **📝 Convertir en Word**, ou garder le document. Un PDF protégé demande son mot de passe. L'import peut être arrêté : les pages déjà importées sont gardées. Dans un dossier, un PDF peut servir de pièce.
+
+**🎧 Mode lecture** (aussi depuis l'accueil, l'éditeur et l'export) :
+
+- texte en grands caractères, phrase lue surlignée ; toucher une phrase pour lire à partir de là ;
+- ⏮ ⏪ ▶ ⏩ ⏭ : page précédente, paragraphe précédent, lecture/pause, paragraphe suivant, page suivante ; aller à une page ; vitesse 0,75× à 2× ; taille du texte ; voir l'image de la page ;
+- lecture phrase par phrase avec la voix du téléphone (français ou anglais selon la page) ;
+- numéros de page et en-têtes/pieds de page répétés sautés, mots mal reconnus écartés ;
+- pages scannées : le texte est lu pendant l'écoute, en commençant par la page en cours, et gardé ;
+- position retenue : « Reprendre page 37/300 », même le lendemain ; l'écran reste allumé pendant l'écoute.
+
+Limites : la lecture du texte d'une page scannée prend quelques secondes sur un téléphone ; une page occupe environ 300 à 500 Ko ; l'écoute peut s'arrêter si l'écran est éteint ou si l'on change d'application (elle reprend la phrase au retour) ; l'écriture manuscrite n'est pas lue.
+
 ## Ce qu'elle fait
 
 - **Photo ou import** : appareil photo du téléphone (meilleure mise au point) ou images de la galerie, plusieurs à la fois.
@@ -39,7 +58,7 @@ Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso 
 - **Sauvegarde complète en un fichier** et restauration sur un autre téléphone.
 - **Export** en PDF, PDF cherchable, Word, texte ou JPG, 150 / 200 / 300 ppp, **partage direct** (WhatsApp, Gmail, Drive…).
 - **Livres et cahiers** : « 📖 Séparer 2 pages » coupe une double page au niveau du pli.
-- **🔊 Écouter** : lecture à voix haute du texte de la page (lu sur le téléphone).
+- **🎧 Lire et écouter** : mode lecture à voix haute (voir plus haut).
 - **Noms de fichiers acceptés par les sites** (sans espaces ni accents), réglable.
 - **Rendu par défaut** au choix (À propos).
 - **Français / English** : bouton FR/EN en haut, ou dans À propos.
@@ -96,5 +115,7 @@ Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf
 | `ocr.js` | Lecture du texte sur le téléphone (Tesseract, dans `vendor/tesseract/`) |
 | `docx.js` | Fichier Word (sans bibliothèque) |
 | `pdf.js` | PDF, avec couche de texte cherchable (sans bibliothèque) |
+| `pdfin.js` | Import de PDF : pages en images, texte du PDF repris (pdf.js, dans `vendor/pdfjs/`) |
+| `reader.js` | Mode lecture : lecture à voix haute phrase par phrase, position retenue |
 | `store.js` | Enregistrement local (IndexedDB) |
 | `sw.js`, `manifest.webmanifest`, `icons/` | Installation et mode hors ligne |

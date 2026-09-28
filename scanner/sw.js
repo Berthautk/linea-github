@@ -1,12 +1,13 @@
 // Mode hors ligne : l'application reste utilisable sans connexion.
-const CACHE = 'vraiscan-v4';
+const CACHE = 'vraiscan-v5';
 const CORE = [
   './', 'index.html', 'app.css', 'app.js', 'imgproc.js', 'pdf.js', 'docx.js', 'ocr.js', 'store.js',
-  'i18n.js', 'catalog.js',
+  'i18n.js', 'catalog.js', 'pdfin.js', 'reader.js',
   'privacy.html', 'manifest.webmanifest',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-192.png', 'icons/maskable-512.png',
 ];
-// Moteur de lecture du texte (~9 Mo) : mis en cache au premier usage, pas à l'installation.
+// Moteur de lecture du texte (~9 Mo) et lecteur de PDF (~3 Mo) : mis en cache
+// au premier usage, pas à l'installation.
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));

@@ -39,6 +39,11 @@ PDF, WORD ET TEXTE
 • Texte seul (.txt), images JPG.
 • Français et anglais.
 
+IMPORTER UN PDF, L'ÉCOUTER
+• Importez un PDF, même de plusieurs centaines de pages : convertissez-le en Word ou écoutez-le.
+• Mode lecture : le texte en grand, la phrase lue surlignée, pause, paragraphe suivant, vitesse, reprise là où vous vous êtes arrêté.
+• Pages scannées : le texte est lu sur le téléphone pendant que vous écoutez.
+
 DOSSIERS DE CANDIDATURE
 • Choisissez vos pièces dans une liste de 65 documents : CNI, acte de naissance, casier judiciaire, diplômes, relevés, certificat médical, justificatifs, visa…
 • Scannez-les une par une : chacune se range dans votre dossier, numérotée et nommée (01_CNI.pdf, 02_Acte_de_naissance.pdf…).
@@ -53,7 +58,7 @@ PENSÉ POUR LES DOSSIERS
 • Signature : au doigt, ou tirée d'une photo de votre signature au stylo.
 • Masquer une zone (numéro, adresse) avant d'envoyer.
 • Nom du fichier au choix, accepté par les sites de dépôt (sans espaces ni accents).
-• Livres : séparation d'une double page ; lecture à voix haute du texte.
+• Livres : séparation d'une double page.
 • En français et en anglais.
 
 VOS DOCUMENTS RESTENT CHEZ VOUS
@@ -69,10 +74,10 @@ Envoyez vos documents en un geste par WhatsApp, e-mail ou Drive, ou enregistrez-
 Conseil pour un résultat parfait : posez la feuille à plat sur une surface plus foncée, dans un endroit bien éclairé, sans flash, et tenez le téléphone immobile au-dessus.
 ```
 
-**Notes de version (1.0.0)**
+**Notes de version (1.2.0)**
 
 ```
-Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. En français et en anglais.
+Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. Import de PDF, conversion en Word et mode lecture à voix haute avec reprise. En français et en anglais.
 ```
 
 ---
@@ -108,6 +113,11 @@ PDF, WORD AND TEXT
 • Searchable PDF with selectable text.
 • Editable Word (.docx) conversion; uncertain words are highlighted.
 • Plain text, JPG images. French and English.
+
+IMPORT A PDF, LISTEN TO IT
+• Import a PDF, even hundreds of pages long: convert it to Word or listen to it.
+• Reading mode: large text, the sentence being read is highlighted, pause, next paragraph, speed, resume where you stopped.
+• Scanned pages: the text is read on the phone while you listen.
 
 APPLICATION FILES
 • Pick your documents from a list of 65: ID card, birth certificate, criminal record, diplomas, transcripts, medical certificate, proofs, visa…

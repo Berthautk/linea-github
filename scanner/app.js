@@ -9,8 +9,10 @@ import { buildDocx, zip } from './docx.js';
 import * as store from './store.js';
 import { t, L, getLang, setLang, applyI18n } from './i18n.js';
 import { CATEGORIES, PIECES, DOSSIER_NAMES, pieceById, slug } from './catalog.js';
+import { isPdf, openPdf, renderPdfPage, closePdf } from './pdfin.js';
+import { createReader } from './reader.js';
 
-export const APP_VERSION = '1.1.0';
+export const APP_VERSION = '1.2.0';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -159,7 +161,7 @@ function resetCache(id, orig = null) {
 }
 
 async function getOrig(page) {
-  if (cache.id !== page.id || !cache.orig) resetCache(page.id, await blobToCanvas(page.orig, MAX_SRC));
+  if (cache.id !== page.id || !cache.orig) resetCache(page.id, await blobToCanvas(page.orig || page.proc, MAX_SRC));
   return cache.orig;
 }
 
@@ -170,7 +172,7 @@ async function getWarped(page) {
     const flat = warp(orig, page.quad);
     page.quality = assessQuality(flat);
     // Redressement fin : lignes de texte parfaitement horizontales (pas pour une photo d'identité).
-    page.skew = page.kind === 'photo' ? 0 : estimateSkew(flat);
+    page.skew = page.kind === 'photo' || page.src === 'pdf' ? 0 : estimateSkew(flat);
     cache.warped = rotateSmall(flat, page.skew);
     cache.warpKey = key;
     cache.baseKey = null;
@@ -228,6 +230,8 @@ async function renderPage(page) {
 }
 
 async function commit(page, out) {
+  // Page de PDF : l'image d'origine n'est gardée à part qu'à la première retouche.
+  if (!page.orig) page.orig = page.proc;
   page.proc = await canvasToBlob(out, 'image/jpeg', 0.92);
   page.ocr = null; // l'image a changé : le texte sera relu
   if (doc) doc.editedAt = Date.now();
@@ -268,7 +272,13 @@ function defaultFilter() {
 
 // Ajoute des photos au document, ou à une pièce du dossier.
 async function addFiles(files, { edit, piece = null, at = -1 }) {
-  files = [...files].filter(f => f && (f.type.startsWith('image/') || !f.type));
+  const pdfs = [...files].filter(isPdf);
+  files = [...files].filter(f => f && !isPdf(f) && (f.type.startsWith('image/') || !f.type));
+  if (pdfs.length) {
+    const added = files.length ? await addFiles(files, { edit: false, piece, at }) : [];
+    for (const f of pdfs) added.push(...await importPdf(f, { piece, at: at >= 0 ? at + added.length : -1 }));
+    return added;
+  }
   if (!files.length) return [];
   const added = [];
   const kind = piece ? (pieceById(piece.cid)?.kind || 'doc') : 'doc';
@@ -305,6 +315,99 @@ async function addFiles(files, { edit, piece = null, at = -1 }) {
   return added;
 }
 
+/* ------------------------------ import de PDF ------------------------------ */
+
+let stopAsked = false;
+$('busyStop').onclick = () => { stopAsked = true; $('busyStop').disabled = true; };
+
+// Pages d'un PDF → pages du document (ou de la pièce du dossier). Un PDF
+// importé dans un document qui a déjà des pages ouvre un nouveau document.
+async function importPdf(file, { piece = null, at = -1 } = {}) {
+  let pdf;
+  try {
+    pdf = await busy(t('busy.pdfOpen'), () => openPdf(file, (again) => prompt(t(again ? 'pdf.badPass' : 'pdf.pass'))));
+  } catch (e) {
+    console.error(e);
+    toast(e && e.name === 'PasswordException' ? t('pdf.locked') : t('pdf.bad'));
+    return [];
+  }
+  const n = pdf.numPages;
+  // Place disponible (≈ 350 Ko par page).
+  try {
+    const est = await navigator.storage.estimate();
+    if (est.quota && est.quota - est.usage < n * 350e3 && !confirm(t('pdf.space', { n }))) { closePdf(pdf); return []; }
+  } catch { /* estimation indisponible */ }
+  const title = (file.name || '').replace(/\.pdf$/i, '').replace(/[_]+/g, ' ').trim();
+  if (!piece && !isDossier()) {
+    if (doc.ids.length) await openDoc(newDocRecord('doc').id);
+    if (title) { doc.name = safeName(title); $('docName').value = doc.name; }
+  }
+  const added = [];
+  let withText = 0;
+  stopAsked = false;
+  $('busyStop').hidden = false;
+  $('busyStop').disabled = false;
+  try {
+    await busy(t('busy.pdfPage', { i: 1, n }), async () => {
+      for (let i = 1; i <= n && !stopAsked; i++) {
+        setBusyText(t('busy.pdfPage', { i, n }));
+        try {
+          const { canvas, paragraphs, quality } = await renderPdfPage(pdf, i);
+          const page = { id: uid(), rot: 0, filter: 'original', overlays: [], kind: 'doc', src: 'pdf', skew: 0 };
+          page.proc = await canvasToBlob(canvas, 'image/jpeg', quality);
+          page.quad = defaultQuad(canvas.width, canvas.height, 0);
+          page.w = canvas.width;
+          page.h = canvas.height;
+          page.thumb = await canvasToBlob(fitCanvas(canvas, 420), 'image/jpeg', 0.8);
+          if (paragraphs) { page.ocr = { lang: 'pdf', pdf: true, w: page.w, h: page.h, paragraphs }; withText++; }
+          canvas.width = canvas.height = 0;
+          await store.putPage(page);
+          pages.set(page.id, page);
+          thumbUrls.set(page.id, URL.createObjectURL(page.thumb));
+          added.push(page.id);
+          // Rangé au fur et à mesure : rien n'est perdu si l'application est fermée.
+          if (piece) {
+            if (at >= 0) piece.ids.splice(at + added.length - 1, 0, page.id); else piece.ids.push(page.id);
+            syncIds();
+          } else doc.ids.push(page.id);
+          if (i % 10 === 0 || i === n) await saveLib();
+        } catch (e) {
+          console.error(e);
+          toast(t('pdf.pageFail', { i }));
+        }
+        await nextFrame();
+      }
+      if (doc) doc.editedAt = Date.now();
+      await saveLib();
+    });
+  } finally {
+    $('busyStop').hidden = true;
+    closePdf(pdf);
+  }
+  if (added.length >= 20 && navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  refreshHome();
+  if (!piece && added.length) showPdfDlg(added.length, n, withText);
+  else if (added.length < n) toast(t('pdf.partial', { k: added.length, n }));
+  return added;
+}
+
+function showPdfDlg(k, n, withText) {
+  $('pdTitle').textContent = doc.name;
+  const lines = [k < n ? t('pdf.partial', { k, n }) : t('pdf.done', { n: k })];
+  if (withText === k) lines.push(t('pdf.hasText'));
+  else if (!withText) lines.push(t('pdf.scanned'));
+  else lines.push(t('pdf.mixed', { a: withText, b: k - withText }));
+  $('pdInfo').textContent = lines.join(' ');
+  $('pdfDlg').showModal();
+}
+
+$('pdRead').onclick = () => { $('pdfDlg').close(); reader.open({ index: 0, autoplay: true }); };
+$('pdWord').onclick = () => {
+  $('pdfDlg').close();
+  $('exFormat').value = 'docx';
+  $('exportBtn').click();
+};
+
 function isBad(p) {
   return !!(p && p.quality && (p.quality.blurry || p.quality.reflet));
 }
@@ -333,6 +436,7 @@ function renderGrid() {
   $('empty').hidden = doc.ids.length > 0;
   $('exportBtn').disabled = doc.ids.length === 0;
   updateFlow();
+  updateReadRow();
   doc.ids.forEach((id, i) => {
     const tile = document.createElement('div');
     tile.className = 'tile';
@@ -365,6 +469,20 @@ function renderGrid() {
     tile.onclick = () => openEditor(id, 'filter');
     grid.append(tile);
   });
+}
+
+// « Lire et écouter » : avec la page où l'on s'était arrêté.
+function updateReadRow() {
+  const n = doc.ids.length;
+  $('readRow').hidden = !n;
+  if (!n) return;
+  const i = doc.readPos ? doc.ids.indexOf(doc.readPos.id) : -1;
+  const ready = doc.ids.filter(id => { const p = pages.get(id); return p && p.ocr; }).length;
+  const parts = [];
+  if (i >= 0) parts.push(t('rd.resume', { i: i + 1, n }));
+  else parts.push(t('lib.pages', { n }));
+  if (ready < n) parts.push(t('rd.textReady', { r: ready, n }));
+  $('readInfo').textContent = parts.join(' · ');
 }
 
 // Où en est le document : 1 photographier, 2 vérifier (page floue ou avec
@@ -521,7 +639,8 @@ async function renderLib() {
     const date = d.updated ? new Date(d.updated).toLocaleDateString(getLang() === 'en' ? 'en-GB' : 'fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
     const count = d.kind === 'dossier'
       ? t('lib.pieces', { n: (d.id === doc.id ? doc.pieces : d.pieces || []).length })
-      : t('lib.pages', { n: ids.length });
+      : t('lib.pages', { n: ids.length }) + (d.readPos && ids.indexOf(d.readPos.id) >= 0
+        ? ' · 🎧 ' + t('rd.pShort', { i: ids.indexOf(d.readPos.id) + 1 }) : '');
     s.textContent = `${count}${date ? ' · ' + date : ''}${d.id === doc.id ? ' · ' + t('lib.open') : ''}`;
     meta.append(b, s);
     const del = document.createElement('button');
@@ -556,8 +675,8 @@ async function backupAll() {
         if (!p) continue;
         od.pages.push({
           quad: p.quad, rot: p.rot, filter: p.filter, overlays: p.overlays || [], quality: p.quality,
-          w: p.w, h: p.h, kind: p.kind,
-          orig: await blobToDataUrl(p.orig), proc: await blobToDataUrl(p.proc),
+          w: p.w, h: p.h, kind: p.kind, src: p.src, skew: p.skew, ocr: p.ocr || null,
+          orig: p.orig ? await blobToDataUrl(p.orig) : null, proc: await blobToDataUrl(p.proc),
           thumb: p.thumb ? await blobToDataUrl(p.thumb) : null,
         });
       }
@@ -590,7 +709,8 @@ async function restoreBackup(file) {
         const p = {
           id: uid(), quad: sp.quad, rot: sp.rot || 0, filter: sp.filter || 'desk', kind: sp.kind || 'doc',
           overlays: sp.overlays || [], quality: sp.quality, w: sp.w, h: sp.h,
-          orig: await dataUrlToBlob(sp.orig), proc: await dataUrlToBlob(sp.proc),
+          src: sp.src, skew: sp.skew, ocr: sp.ocr || null,
+          orig: sp.orig ? await dataUrlToBlob(sp.orig) : null, proc: await dataUrlToBlob(sp.proc),
           thumb: sp.thumb ? await dataUrlToBlob(sp.thumb) : null,
         };
         await store.putPage(p);
@@ -622,6 +742,7 @@ const SVGNS = 'http://www.w3.org/2000/svg';
 function showScreen(name) {
   $('home').hidden = name !== 'home';
   $('editor').hidden = name !== 'editor';
+  $('reader').hidden = name !== 'reader';
 }
 
 function edCounter() {
@@ -663,7 +784,6 @@ async function setMode(mode) {
   $('filterTools').hidden = mode !== 'filter';
   $('annoTools').hidden = mode !== 'anno';
   $('overlay').textContent = '';
-  stopReading();
   if (mode === 'crop') {
     const orig = await busy(t('busy.load'), () => getOrig(page));
     ed.quad = page.quad.map(p => ({ ...p }));
@@ -920,7 +1040,6 @@ $('edBack').onclick = async () => {
 
 function closeEditor() {
   const last = ed.id;
-  stopReading();
   ed.id = null;
   ed.shown = null;
   showScreen('home');
@@ -1016,15 +1135,8 @@ $('fBook').onclick = async () => {
 
 /* ------------------------------ lecture à voix haute ------------------------------ */
 
-let speaking = false;
-function stopReading() {
-  if (speaking && 'speechSynthesis' in window) speechSynthesis.cancel();
-  speaking = false;
-  $('fRead').textContent = t('f.read');
-}
-
 async function pageText(page) {
-  if (!page.ocr || page.ocr.lang !== 'fra+eng') {
+  if (!page.ocr || !(page.ocr.pdf || page.ocr.lang === 'fra+eng')) {
     const paragraphs = await recognize(page.proc, 'fra+eng');
     page.ocr = { lang: 'fra+eng', w: page.w, h: page.h, paragraphs };
     await store.putPage(page);
@@ -1032,28 +1144,8 @@ async function pageText(page) {
   return page.ocr.paragraphs.map(paragraphText).join('\n\n');
 }
 
-function speak(text, btn) {
-  if (!('speechSynthesis' in window)) { toast(t('toast.noSpeech')); return; }
-  if (!text.trim()) { toast(t('toast.noText')); return; }
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  // Langue : celle qui ressemble le plus au texte.
-  const fr = (text.match(/\b(le|la|les|des|du|est|et|pour|avec)\b/gi) || []).length;
-  const en = (text.match(/\b(the|and|of|is|for|with|this)\b/gi) || []).length;
-  u.lang = fr >= en ? 'fr-FR' : 'en-GB';
-  u.onend = u.onerror = () => { speaking = false; btn.textContent = t(btn.id === 'fRead' ? 'f.read' : 'ex.listen'); };
-  speaking = true;
-  btn.textContent = t('f.stop');
-  speechSynthesis.speak(u);
-}
-
-$('fRead').onclick = async () => {
-  if (speaking) { stopReading(); return; }
-  const page = pages.get(ed.id);
-  let text = '';
-  try { text = await busy(t('busy.read'), () => pageText(page)); } catch (e) { console.error(e); toast(t('ex.ocrFail')); return; }
-  speak(text, $('fRead'));
-};
+// Lecture : ouvre le mode lecture sur cette page.
+$('fRead').onclick = () => reader.open({ index: doc.ids.indexOf(ed.id), autoplay: true, from: 'editor' });
 
 /* ------------------------------ signature ------------------------------ */
 
@@ -1259,7 +1351,8 @@ async function ensureOcr(ids, lang, token) {
   const out = [];
   for (let i = 0; i < ids.length; i++) {
     const page = pages.get(ids[i]);
-    if (!page.ocr || page.ocr.lang !== lang) {
+    // Texte du PDF d'origine, ou déjà lu en français + anglais : gardé.
+    if (!page.ocr || !(page.ocr.lang === lang || page.ocr.pdf || page.ocr.lang === 'fra+eng')) {
       const label = t('ex.readPage', { i: i + 1, n: ids.length });
       $('exInfo').textContent = label;
       const paragraphs = await recognize(page.proc, lang, (p) => {
@@ -1450,13 +1543,9 @@ $('exShare').onclick = () => {
   });
 };
 $('exListen').onclick = () => {
-  if (speaking) { speechSynthesis.cancel(); speaking = false; $('exListen').textContent = t('ex.listen'); return; }
-  if (!ex.ocr) return;
-  speak(ex.ocr.map(o => o.paragraphs.map(paragraphText).join('\n\n')).join('\n\n'), $('exListen'));
+  $('exportDlg').close();
+  reader.open({ index: 0, autoplay: true });
 };
-$('exportDlg').addEventListener('close', () => {
-  if (speaking) { speechSynthesis.cancel(); speaking = false; }
-});
 
 /* ------------------------------ dossier de candidature ------------------------------ */
 
@@ -2079,11 +2168,35 @@ function applyLang(l) {
   fillLists();
   if (doc) refreshHome();
   if (ed.id) { edCounter(); setMode(ed.mode); }
+  reader.relabel();
 }
 
 $('langBtn').onclick = () => applyLang(getLang() === 'fr' ? 'en' : 'fr');
 $('setLang').onchange = () => applyLang($('setLang').value);
 $('setFilter').onchange = () => prefs.set('defFilter', $('setFilter').value);
+
+/* ------------------------------ mode lecture ------------------------------ */
+
+let fullUrl = null;
+const reader = createReader({
+  getDoc: () => doc,
+  pages,
+  putPage: (p) => store.putPage(p),
+  saveLib,
+  showScreen,
+  toast,
+  prefs,
+  thumbUrl(page, full) {
+    if (!full) return thumbUrls.get(page.id);
+    if (fullUrl) URL.revokeObjectURL(fullUrl);
+    fullUrl = URL.createObjectURL(page.proc);
+    return fullUrl;
+  },
+  onClose(from) {
+    if (from === 'home') refreshHome();
+  },
+});
+$('readBtn').onclick = () => reader.open();
 
 /* ------------------------------ démarrage ------------------------------ */
 
@@ -2114,5 +2227,5 @@ init();
 // Pour les tests automatiques.
 window.__vraiscan = {
   lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, dx, restoreBackup, findDates,
-  switchTab, applyLang,
+  switchTab, applyLang, importPdf, reader,
 };

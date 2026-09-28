@@ -1621,6 +1621,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 
 
+
 # F1
 
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
@@ -2614,3 +2615,41 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Activity 4 (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
 - Activity 5 (usa_openpit.jpg) : “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
 - Board summary (lsa_bauxite.jpg) : “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
+
+## LSA/Geography of Cameroon/11_LSA_CAM_L11_Management_of_Water_Resources_in_Cameroon
+
+- Activity 2 (f2t_fishing.jpg) : “Fishermen, Lake Tana” by A.Davey, CC BY 2.0, via Flickr (https://www.flickr.com/photos/40595948@N00/2260748777)
+- Activity 3 (f4_ricefield.jpg) : “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
+- Activity 4 (lsa_wouri.jpg) : “Fishing on the Wouri River” by Karlplatz, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/36973264@N00/3158348)
+- Activity 5 (f2t_lagdo.jpg) : “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
+- Board summary (usa_fishing.jpg) : “Empty beaches” by ludwig.troller, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/124845120@N03/14285811155)
+- Board summary (lsa_nachtigal.jpg) : “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
+
+## LSA/Geography of Cameroon/12_LSA_CAM_L12_Industrial_Development_and_Change_in_Cameroon
+
+- Activity 1 (f2t_textile_factory.jpg) : “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
+- Activity 3 (f2t_aluminium.jpg) : “Kurri Kurri aluminium” by yewenyi, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30265340@N00/2971223932)
+- Activity 4 (usa_carfactory.jpg) : “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
+- Activity 5 (f2t_factory_workers.jpg) : “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
+
+## LSA/Geography of Cameroon/13_LSA_CAM_L13_Transport_Development_in_Cameroon
+
+- Activity 2 (f2t_train.jpg) : “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
+- Activity 3 (usa_container.jpg) : “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
+- Activity 4 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Activity 5 (f5_motorway.jpg) : “'Mini Stack' Interchange of Interstate 10, Loop 202, and State Route 5” by squeaks2569, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38478466@N06/5180259860)
+- Board summary (usa_airport.jpg) : “Airplane” by jeffk, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44124372247@N01/59597563)
+
+## LSA/Geography of Cameroon/14_LSA_CAM_L14_Tourism_Development_in_Cameroon
+
+- Activity 2 (lsa_mandara.jpg) : “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
+- Activity 3 (usa_bandjoun.jpg) : “Bandjoun's chefferie: I - the approach past the royal quarters” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7326237514)
+- Activity 4 (usa_hotel.jpg) : “Laguna Pool” by Prayitno / Thank you for (12 millions +) view, CC BY 2.0, via Flickr (https://www.flickr.com/photos/34128007@N04/14216582552)
+- Activity 5 (f2t_muddy_road.jpg) : “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
+- Board summary (usa_limbe.jpg) : “Sunset in Limbe” by visulogik, CC BY 2.0, via Flickr (https://www.flickr.com/photos/55671677@N00/2202334428)
+
+## LSA/Geography of Cameroon/15_LSA_CAM_L15_Contrasts_in_Development_within_Cameroon
+
+- Activity 4 (lsa_douala.jpg) : “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
+- Activity 5 (usa_school.jpg) : “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
+- Board summary (lsa_adamawa.jpg) : “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)

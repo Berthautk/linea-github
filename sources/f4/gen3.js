@@ -237,7 +237,7 @@ function build(sp) {
 
   // ---------- 5. board summary ----------
   tslide('BOARD SUMMARY', 'Board Summary', [{ text: 'Topic: ' + sp.topic, bold: true }, { text: 'Sub-topic: ' + sp.subtopic, bold: true }, { text: lessonName, bold: true, color: RED }],
-    { note: 'Now we are going to copy the board summary. Write the title and the headings neatly in your notebooks. I will give you enough time for each slide, so do not rush.' });
+    { size: (sp.topic + sp.subtopic + lessonName).length > 110 ? 32 : 40, note: 'Now we are going to copy the board summary. Write the title and the headings neatly in your notebooks. I will give you enough time for each slide, so do not rush.' });
   // an item is [term, text, img?, caption?]; text may be an array: the term line is followed by one bullet per element
   const itemRuns = (lead, text) => (Array.isArray(text)
     ? [{ runs: [{ t: lead, b: true }], head: true }].concat(text.map((x) => ({ text: String(x).replace(/ %/g, ' %'), bullet: true })))

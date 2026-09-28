@@ -12,7 +12,7 @@ def cols(name, title, heads, bodies, colors, fs_b=18):
     fig, ax = canvas('white'); n = len(heads); w = (12.2 - 0.2 * (n - 1)) / n
     if title: txt(ax, 6.4, 4.6, title, 22, NAVY)
     for k, (h, b, c) in enumerate(zip(heads, bodies, colors)):
-        x = 0.3 + k * (w + 0.2); box_(ax, x, 3.1, w, 0.95, h, c, fs=20 if n <= 3 else (18 if n == 4 else 13)); txt(ax, x + w / 2, 1.7, b, fs_b, c)
+        x = 0.3 + k * (w + 0.2); base = 20 if n <= 3 else (18 if n == 4 else 13); longest = max(len(t) for t in h.split('\n')); box_(ax, x, 3.1, w, 0.95, h, c, fs=min(base, int(0.88 * w * 72 / (longest * 0.66)))); txt(ax, x + w / 2, 1.7, b, fs_b, c)
     save(fig, name)
 
 

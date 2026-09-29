@@ -45,6 +45,8 @@ Ces règles s'appliquent à toutes les classes (premier et second cycle). Modèl
 - **Suivre le syllabus point par point** : chaque ligne du syllabus devient un titre ou un sous-titre (ex. *1. Meaning and Sources of Moisture* → *A) Meaning*, *B) Sources*). On ne se contente pas de nommer les éléments : chacun est expliqué en 2 ou 3 phrases qui répondent au titre ou au sous-titre, et le petit paragraphe doit être cohérent en lui-même.
 - **Un point = une diapositive** : le terme en gras et ses 2 ou 3 phrases restent ensemble sur une seule diapositive, avec une image à côté quand elle aide à comprendre (option `pointPerSlide` du générateur).
 - Modèle validé pour un cours de sciences physiques : LSA Meteorology, Lesson 10 (*Nature of Moisture*).
+- **Respecter le sens exact du titre** : *relevance* ou *importance* = uniquement les apports positifs ; *effects* ou *impacts* = positifs et négatifs ; *problems* ou *difficulties* = problème puis conséquence ; *measures* ou *solutions* = ce qui est fait puis comment cela résout le problème.
+- Appliqué (2026) à toutes les leçons LSA et USA faites d'après les supports de M. Kamdem : météorologie, climatologie (L19–L21, FS1), géomorphologie (L1–L16, FS1, FS2), géographie du Cameroun (L1–L15), population (L1–L18, PW1–PW4), statistiques (QT2–QT4).
 
 ## 7. Premier cycle
 - Au premier cycle (F2T surtout), le résumé au tableau reste court : seulement les points du syllabus, en puces, une phrase courte par point.

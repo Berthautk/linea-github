@@ -16,6 +16,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 # F1
 
+# F1
+
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
 
 - Photo, Activity 1: “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
@@ -1444,10 +1446,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 4: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 5: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 
-## LSA/Climatology/04_LSA_CLIM_L21_Mountain_Climates
-
-- Photo, board summary (Human use): “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
-
 ## LSA/Geography of Cameroon/01_LSA_CAM_L01_Relief_of_Cameroon
 
 - Photo, board summary (The Benue depression): “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
@@ -1455,11 +1453,12 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## LSA/Geography of Cameroon/02_LSA_CAM_L02_The_Climate_of_Cameroon
 
 - Photo, board summary (The Harmattan): “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
-- Photo, board summary (Location): “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+- Photo, board summary (Location and temperature): “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
 
 ## LSA/Geography of Cameroon/03_LSA_CAM_L03_Soils_of_Cameroon
 
-- Photo, board summary (Characteristics): “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Photo, board summary (Location): “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
+- Photo, board summary (Mountain soils): “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
 
 ## LSA/Geography of Cameroon/04_LSA_CAM_L04_Vegetation_of_Cameroon
 
@@ -1495,14 +1494,21 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 4: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 5: “Students in Primary Seven at Zanaki Primary School” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/33423887921)
-- Photo, board summary (Lagging region: the Adamawa): “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
+- Photo, board summary (The lagging region, the Adamawa): “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
 
 ## LSA/Geomorphology/01_LSA_GEOMO_L01_Origin_of_the_Earth
 
 - Photo, Activity 3: “Hubble Spies Charming Spiral Galaxy Bursting with Stars” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/15766783527)
 - Photo, Activity 5: “dinosaur” by ianturton, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/16041363@N00/9555513)
-- Photo, board summary (Life in the Precambrian): “Western Australia, Stromatolites Sharks Bay” by VladPix, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/62825712@N07/8766549873)
-- Photo, board summary (Palaeozoic ("ancient life", 541–252 million years ago)): “Trilobite Fossil at NMNH” by Mr.TinDC, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/7471115@N08/2948579998)
+- Photo, board summary (Precambrian (4,600 to 541 million years ago)): “Western Australia, Stromatolites Sharks Bay” by VladPix, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/62825712@N07/8766549873)
+- Photo, board summary (Palaeozoic (541 to 252 million years ago)): “Trilobite Fossil at NMNH” by Mr.TinDC, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/7471115@N08/2948579998)
+
+## LSA/Geomorphology/02_LSA_GEOMO_L02_Internal_Structure_of_the_Earth
+
+- Photo, Activity 4: “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Photo, board summary (Sedimentary rocks): “Grand Canyon: Tapeats Sandstone 0283” by Grand Canyon NPS, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50693818@N08/8238057843)
+- Photo, board summary (Metamorphic rocks): “Marble quarry, Carrara” by Russell Carman, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/11328254@N02/2095886412)
+- Photo, board summary (Internal (endogenic) forces): “Happy Anniversary Hawaii” by U.S. Geological Survey, CC0 1.0, via Flickr (https://www.flickr.com/photos/27784370@N05/14802198589)
 
 ## LSA/Geomorphology/03_LSA_GEOMO_FS01_Early_Theories_of_Crustal_Movements
 
@@ -1518,7 +1524,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## LSA/Geomorphology/05_LSA_GEOMO_L03_Theory_of_Plate_Tectonics
 
 - Photo, Activity 4: “faultfind_48” by dsearls, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/52614599@N00/15392616)
-- Photo, board summary (Consequences): “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
 
 ## LSA/Geomorphology/06_LSA_GEOMO_L04_Landforms_at_Constructive_or_Divergent_Margins
 
@@ -1535,9 +1540,9 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## LSA/Geomorphology/08_LSA_GEOMO_L06_Volcanism
 
-- Photo, board summary (Shield (basic lava) cones): “Fire and Stars” by howardignatius, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/25659032@N07/39966052052)
-- Photo, board summary (Composite cones (stratovolcanoes)): “Mayon Volcano, Albay, Luzon, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/20591774278)
-- Photo, board summary (Lava plateau): “Snapshot, Daguoye Columnar Basalt, Penghu, Taiwan, 隨拍, 池東大菓葉玄武岩, 大菓葉柱狀” by bryan..., CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/91049143@N00/52316527525)
+- Photo, board summary (Basic lava cones (shield volcanoes)): “Fire and Stars” by howardignatius, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/25659032@N07/39966052052)
+- Photo, board summary (Composite cones (strato-volcanoes)): “Mayon Volcano, Albay, Luzon, Philippines” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/20591774278)
+- Photo, board summary (Lava plateaux): “Snapshot, Daguoye Columnar Basalt, Penghu, Taiwan, 隨拍, 池東大菓葉玄武岩, 大菓葉柱狀” by bryan..., CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/91049143@N00/52316527525)
 
 ## LSA/Geomorphology/09_LSA_GEOMO_L07_Volcanoes_and_Man
 
@@ -1547,12 +1552,12 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 2: “Recording drum from Golitsyn seismograph” by Galitzin, Boris; Masing, Hugo, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co8647018/recording-drum-from-golitsyn-seismograph)
 - Photo, Activity 4: “Collapsed buildings in earthquake-hit Chautara, Nepal” by DFID - UK Department for International Development, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14214150@N02/16693413433)
-- Photo, board summary (Example): “Tsunami damage” by robertodevido, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/63082042@N00/5531541425)
+- Photo, board summary (Tsunamis): “Tsunami damage” by robertodevido, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/63082042@N00/5531541425)
 
 ## LSA/Geomorphology/11_LSA_GEOMO_L09_Denudation_and_Weathering
 
 - Photo, Activity 5: “Stones 'n' Roots” by erix!, CC BY 2.0, via Flickr (https://www.flickr.com/photos/68387408@N00/55692423)
-- Photo, board summary (Erosion): “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
+- Photo, board summary (Erosion, transport and deposition): “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 
 ## LSA/Geomorphology/12_LSA_GEOMO_L10_Intensity_and_Factors_of_Weathering
 
@@ -1574,7 +1579,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## LSA/Geomorphology/15_LSA_GEOMO_L13_Processes_and_Features_of_Mass_Wasting
 
-- Photo, board summary (Landslides): “Siuslaw National Forest, landslide, road failure.jpg” by Forest Service Pacific Northwest Region, Public domain 1.0, via Flickr (https://www.flickr.com/photos/135886671@N08/36218241110)
 - Photo, board summary (Mudflows and debris flows): “Lahar (mudflow) remnants from Mount Ruapehu” by Wade Tregaskis, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7725552@N06/502073245)
 
 ## LSA/Geomorphology/16_LSA_GEOMO_L14_Erosional_Processes_and_the_Fluvial_System
@@ -1590,6 +1594,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## LSA/Geomorphology/18_LSA_GEOMO_L16_Coastal_Processes_and_Features
 
 - Photo, board summary (Pollution): “Exxon Valdez Oil Spill - 0038” by ARLIS Reference, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/51606297@N07/4750613516)
+- Photo, board summary (Destruction of mangroves): “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
 
 ## LSA/Geomorphology/19_LSA_GEOMO_FS03_Relief_of_Cameroon
 
@@ -1699,6 +1704,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 1: “Sunset Over the Indian Ocean (NASA, International Space Station Scienc” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/8134997029)
 - Photo, Activity 4: “Sandstorm at Camp Bastion, Afghanistan” by Defence Images, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/48399297@N04/10343833885)
 - Photo, Activity 5: “Mist” by Art by MarkAC, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60580775@N08/40783321332)
+- Photo, board summary (Smoke, soot and ash): “Forest Fires in Greece” by Lotus R, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/66012345@N00/964251167)
 
 ## LSA/Meteorology/02_LSA_MET_L02_Structure_of_the_Atmosphere
 
@@ -1719,6 +1725,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## LSA/Meteorology/07_LSA_MET_L07_Geographical_Factors_Affecting_Temperature
 
 - Photo, Activity 2: “Kilimanjaro” by ian 1602, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98181641@N00/2179855841)
+- Photo, board summary (Winds from warm regions): “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
 
 ## LSA/Meteorology/08_LSA_MET_L08_Vertical_Distribution_of_Temperature
 
@@ -1729,23 +1736,21 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 4: “Rising above the Inversion” by Pictoscribe -, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/70414856@N00/6535713585)
 - Photo, Activity 5: “Beijing smog” by kevin dooley, CC BY 2.0, via Flickr (https://www.flickr.com/photos/12836528@N00/386198516)
 - Photo, board summary (Frost): “Frosty Morning” by Tom Gill., CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10199807@N00/4283143427)
+- Photo, board summary (Advection fog): “Mist” by Art by MarkAC, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60580775@N08/40783321332)
 
 ## LSA/Meteorology/10_LSA_MET_L10_Nature_of_Moisture
 
-- Photo, Activity 2: “Thrice” by mpardo.photo, CC0 1.0, via Flickr (https://www.flickr.com/photos/130551911@N05/16875162129)
-- Photo, Activity 5: “Sling hydrometer used on 1953 Mount Everest expedition” by G H Zeal Limited, CC BY-NC-SA 4.0, via sciencemuseum (https://collection.sciencemuseumgroup.org.uk/objects/co8593941/sling-hydrometer-used-on-1953-mount-everest-expedition)
+- Photo, board summary (Temperature): “Mist” by Art by MarkAC, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/60580775@N08/40783321332)
+- Photo, board summary (Vegetation cover): “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
+- Photo, board summary (Formation of clouds and precipitation): “Rising above the Inversion” by Pictoscribe -, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/70414856@N00/6535713585)
+- Photo, board summary (Transfer of heat energy): “When it rains in Africa!” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/31286250004)
+- Photo, board summary (Agriculture and livestock): “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
 
 ## LSA/Meteorology/11_LSA_MET_L11_Forms_of_Condensation_and_Precipitation
 
-- Photo, Activity 2: “Epic Cloud (Explored)” by Christina Ann VanMeter, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/54129831@N02/6984912657)
-- Photo, Activity 3: “Dew drops on grass” by Ervins Strauhmanis, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76523360@N03/9537409567)
-- Photo, Activity 4: “Hailstones (4 July 2010) (Limon, eastern Colorado, USA) 3” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/15148092311)
-- Photo, board summary (Cumulonimbus): “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
-
-## LSA/Meteorology/12_LSA_MET_L12_Global_Distribution_of_Precipitation
-
-- Photo, Activity 3: “Desert trekking in Merzouga” by Antonio Cinotti , CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/46378751@N02/15331399979)
-- Photo, board summary (Continental air masses): “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Photo, board summary (Snow): “Peaceful Winter” by `James Wheeler, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/24128704@N08/25673217581)
+- Photo, board summary (Frost and rime): “Frosty Morning” by Tom Gill., CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10199807@N00/4283143427)
+- Photo, board summary (Rainfall (formation process)): “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
 
 ## LSA/Meteorology/13_LSA_MET_L13_Pressure_Systems
 
@@ -1766,6 +1771,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 2: “Running in the rain” by VinothChandar, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44345361@N06/10960940954)
 - Photo, Activity 4: “Bamenda sob a poeira do Harmattan” by carlosoliveirareis, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/54218923@N00/387054136)
+- Photo, board summary (The rainy season in Cameroon): “Farmer” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35708569412)
 
 ## LSA/Meteorology/17_LSA_MET_L17_Local_Winds
 
@@ -1780,6 +1786,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 2: “wea01144” by NOAA Photo Library, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51647007@N08/5083800180)
 - Photo, Activity 3: “ILX - Central Illinois Doppler Radar - NOAA” by HAM guy, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10728157@N00/363045232)
+- Photo, board summary (Rainfall (precipitation)): “Sarasota - Rain Gauge (in 23rd Year)” by roger4336, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/24736216@N07/8370429863)
 
 # USA
 
@@ -2114,7 +2121,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 3: “Newborn baby rests” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/19845580540)
 - Photo, Activity 4: “London Heathrow T4 arrivals” by markhillary, CC BY 2.0, via Flickr (https://www.flickr.com/photos/56087830@N00/1568955656)
-- Photo, board summary (Complete count): “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
+- Photo, board summary (Frequency): “Wax market” by zouzouwizman, CC BY 2.0, via Flickr (https://www.flickr.com/photos/61111202@N00/12129001)
 
 ## USA/Population Geography/02_USA_POP_L02_Population_Distribution_and_Density
 
@@ -2123,14 +2130,9 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 ## USA/Population Geography/04_USA_POP_L03_Spatial_Population_Distribution_and_its_Factors
 
 - Photo, board summary (The non-ecumene): “Fall Tundra Landscape” by Andrea Pokrzywinski, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65781065@N00/2891717078)
-- Photo, board summary (Relief): “View of the Himalaya Mountain Range” by NASA Johnson, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/29988733@N04/10678470543)
-- Photo, board summary (Tropical highlands): “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
+- Photo, board summary (Relief and latitude): “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
 - Photo, board summary (Industrial development): “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
 - Photo, board summary (Technology and wealth): “Desalinization plant at Guantanamo Bay, Cuba” by U.S. Navy Seabee Museum, CC BY 2.0, via Flickr (https://www.flickr.com/photos/60248384@N05/6847412393)
-
-## USA/Population Geography/05_USA_POP_PW02_Population_Distribution_and_Altitude
-
-- Photo, board summary (Example of Cameroon): “Bamenda, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11293877215)
 
 ## USA/Population Geography/07_USA_POP_L05_Population_Structure
 
@@ -2164,7 +2166,7 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 3: “Flood in Accra” by Stig Nygaard, CC BY 2.0, via Flickr (https://www.flickr.com/photos/10259776@N00/181742000)
 - Photo, Activity 4: “propaganda posters, one child policy” by kattebelletje, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/97249369@N00/3349125321)
-- Photo, board summary (Wars and conflicts): “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
+- Photo, board summary (Wars and natural disasters): “Secretary-General Visits Refugee Camps in Chad” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/6140060599)
 
 ## USA/Population Geography/15_USA_POP_L11_The_Modern_Demographic_Explosion_and_Population_Policies
 

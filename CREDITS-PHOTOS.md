@@ -10,6 +10,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 # F1
 
+# F1
+
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
 
 - Photo, Activity 1: “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
@@ -2224,37 +2226,41 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 2: “Aerial of Greenwood, 1969” by Seattle Municipal Archives, CC BY 2.0, via Flickr (https://www.flickr.com/photos/24256351@N04/10161924795)
 - Photo, Activity 5: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 
-## USA/Practical Geography/11_USA_PRA_QT02_Data_Collection_Sources_and_Techniques
+## USA/Practical Geography/12_USA_PRA_QT03a_Measures_of_Central_Tendency_Range_and_Quartiles
 
-- Photo, Activity 4: “Farmers Use Ribbon Tape Measure a Crop Field” by IFPRI, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/49258007@N03/28439241155)
+- Photo, Activity 4: “maximum minimum thermometer” by Leo Reynolds, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/49968232@N00/7928521796)
 
-## USA/Practical Geography/14_USA_PRA_FW01_Getting_Geographical_Coordinates
+## USA/Practical Geography/14_USA_PRA_QT03c_Measures_of_Association_Spearman
+
+- Photo, Activity 5: “Humic Dystrudept (fine-loamy, isotic, frigid)” by SoilScience.info, CC BY 2.0, via Flickr (https://www.flickr.com/photos/22503286@N06/5140645742)
+
+## USA/Practical Geography/16_USA_PRA_FW01_Getting_Geographical_Coordinates
 
 - Photo, Activity 2: “Harvey Butchart's hiking map” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/5289678354)
 - Photo, Activity 4: “DAPA GPS Fruit 5” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/4821530518)
 
-## USA/Practical Geography/15_USA_PRA_FW03_Fieldwork_in_Hydrology_Running_Water
+## USA/Practical Geography/17_USA_PRA_FW03_Fieldwork_in_Hydrology_Running_Water
 
 - Photo, Activity 3: “Pebbles” by Squidz, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/49186419@N00/8046011884)
 - Photo, Activity 5: “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 
-## USA/Practical Geography/16_USA_PRA_FW04_Fieldwork_in_Geomorphology_Rivers_and_Coasts
+## USA/Practical Geography/18_USA_PRA_FW04_Fieldwork_in_Geomorphology_Rivers_and_Coasts
 
 - Photo, Activity 3: “Ox-bow” by colinjackson1972, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8253719@N04/2329293239)
 - Photo, Activity 5: “Carpinteria Bluffs, California (5)” by Ken Lund, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/75683070@N00/4063056130)
 
-## USA/Practical Geography/17_USA_PRA_FW05_Fieldwork_in_Biogeography_Soils_and_Vegetation
+## USA/Practical Geography/19_USA_PRA_FW05_Fieldwork_in_Biogeography_Soils_and_Vegetation
 
 - Photo, Activity 2: “Soil Auger sample” by SAGT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/46860625@N07/4971829421)
 - Photo, Activity 3: “Vegetation Monitoring, Katmai NPP” by swanNPS, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/90673956@N06/16796099732)
 - Photo, Activity 5: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 
-## USA/Practical Geography/18_USA_PRA_FW06_Fieldwork_on_Economic_Activities
+## USA/Practical Geography/20_USA_PRA_FW06_Fieldwork_on_Economic_Activities
 
 - Photo, Activity 2: “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
 - Photo, Activity 3: “Zulu woman at a reconstructed traditional village in South Africa roll” by gbaku, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/72105154@N00/2355358070)
 
-## USA/Practical Geography/19_USA_PRA_FW07_Fieldwork_on_Settlement
+## USA/Practical Geography/21_USA_PRA_FW07_Fieldwork_on_Settlement
 
 - Photo, Activity 2: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 5: “Sandga Market in Douala, Cameroon” by The Advocacy Project, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/42487558@N00/3636438732)

@@ -118,6 +118,11 @@ function seqNative(specFile) {
 function overlay(seq, prefix) {
   const N = [].concat(...fs.readdirSync(__dirname + '/v3n').filter((f) => f.startsWith(prefix + '_')).sort().map((f) => { const S = require('./v3n/' + f); return S.L.map((l) => ({ L: l, B: S.B, P: l })); }));
   const X = fs.existsSync(__dirname + '/v3n/' + prefix + '.js') ? require('./v3n/' + prefix) : {};
-  return seq.map((e) => N.find((n) => key(n.L) === key(e.L)) || (X[key(e.L)] ? { L: Object.assign({}, e.L, X[key(e.L)]), B: e.B, P: Object.assign({}, e.P, X[key(e.L)]) } : e));
+  // a native lesson replaces the old one with the same key; several natives may replace one old lesson (field "replaces")
+  return [].concat(...seq.map((e) => {
+    const k = key(e.L); const hit = N.filter((n) => key(n.L) === k || n.L.replaces === k);
+    if (hit.length) return hit;
+    return [X[k] ? { L: Object.assign({}, e.L, X[k]), B: e.B, P: Object.assign({}, e.P, X[k]) } : e];
+  }));
 }
 module.exports = { run, prepare, seqOf, seqFirst, seqNative, arrange, key, overlay };

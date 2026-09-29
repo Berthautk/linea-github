@@ -9,5 +9,5 @@ const seq = [].concat(
       ...L(14, 19), 'Practical Work 2', ...L(20, 23), 'Practical Work 3', ...L(24, 26), 'Further Study 5', 'Lesson 27', 'Practical Work 4',
       'Lesson 28', 'Lesson 29', 'Practical Work 5', 'Lesson 30', 'Further Study 6', 'Lesson 31', 'Further Study 7']),
   seqOf('./v2_usa_env1', './v3/usa_env'), seqOf('./v2_usa_env2', './v3/usa_env'),
-  seqOf('./v2_usa_prac1', './v3/usa_prac'), seqOf('./v2_usa_prac2', './v3/usa_prac'));
+  seqOf('./v2_usa_prac1', './v3/usa_prac'), overlay(seqOf('./v2_usa_prac2', './v3/usa_prac'), 'usaprac'));
 run(seq, process.argv.slice(2).length ? process.argv.slice(2) : null);

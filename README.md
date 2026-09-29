@@ -24,7 +24,7 @@ Chaque leçon dure **2 périodes (5 activités)**, et chaque point du résumé a
 | Dossier | Contenu | Leçons |
 |---|---|---|
 | `lecons/LSA/Meteorology/` | Module 1 (météorologie, d'après les notes de cours de M. Kamdem) | L1 à L18 (atmosphère, énergie, température, humidité, pressions, vents, masses d'air), FS2 (observation, prévision et cartographie du temps) — 19 fichiers |
-| `lecons/LSA/Climatology/` | Module 1 (climatologie) | L19 (climat et classification de Köppen), FS1 (perturbations tropicales), L20 (microclimats), L21 (climats de montagne), FS3 (climat du Cameroun) — 5 fichiers |
+| `lecons/LSA/Climatology/` | Module 1 (climatologie ; L19, FS1, L20 et L21 d'après les notes de cours de M. Kamdem) | L19 (climat et classification de Köppen), FS1 (perturbations tropicales), L20 (microclimats), L21 (climats de montagne), FS3 (climat du Cameroun) — 5 fichiers |
 | `lecons/LSA/Hydrology/` | Module 1 (hydrologie) | L22 à L34, FS4 (réseau hydrographique du Cameroun), PW1 (hydrogrammes et régimes), PW2 (morphométrie des bassins) — 16 fichiers |
 | `lecons/LSA/Geomorphology/` | Module 2 (géomorphologie, d'après les notes de cours de M. Kamdem) | L1 à L16, FS1 (premières théories), FS2 (expansion des fonds océaniques), FS3 (relief du Cameroun) — 19 fichiers |
 | `lecons/LSA/Biogeography/` | Module 3 (sols, végétation, écosystèmes) | L1 à L28, FS1 (sols du Cameroun), FS2 (végétation du Cameroun), FS3 (services des écosystèmes), PW1 (texture du sol), PW2 (productivité) — 33 fichiers |

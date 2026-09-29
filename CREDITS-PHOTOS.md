@@ -14,6 +14,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 # F1
 
+# F1
+
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
 
 - Photo, Activity 1: “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
@@ -1429,25 +1431,22 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## LSA/Climatology/01_LSA_CLIM_L19_Meaning_of_Climate_and_K_ppen_s_Classification
 
-- Photo, Activity 1: “Adelaide. Urrbrae. The weather station at the Waite campus of the Univ” by denisbin, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/82134796@N03/49865994827)
+- Photo, Activity 2: “Adelaide. Urrbrae. The weather station at the Waite campus of the Univ” by denisbin, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/82134796@N03/49865994827)
 
 ## LSA/Climatology/02_LSA_CLIM_FS01_Tropical_Weather_Disturbances
 
 - Photo, Activity 2: “06172012 Sunday evening pulse storms/cumulonimbi” by StormRider93 | Into the Storm, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/65232104@N04/7395715628)
-- Photo, Activity 3: “NASA's Aqua Satellite Captures Hurricane Danielle” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/4931591817)
-- Photo, Activity 5: “Nazma Begum” by IRRI Images, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/86712369@N00/2247242477)
+- Photo, board summary (Causes): “NASA's Aqua Satellite Captures Hurricane Danielle” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/4931591817)
 
 ## LSA/Climatology/03_LSA_CLIM_L20_Micro_climates
 
-- Photo, Activity 1: “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)
-- Photo, Activity 3: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
-- Photo, Activity 4: “Lake Kamburu” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644146245)
+- Photo, Activity 2: “Lake Kamburu” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644146245)
+- Photo, Activity 4: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 5: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 
 ## LSA/Climatology/04_LSA_CLIM_L21_Mountain_Climates
 
-- Photo, Activity 2: “Kilimanjaro” by ian 1602, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98181641@N00/2179855841)
-- Photo, Activity 5: “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
+- Photo, board summary (Human use): “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
 
 ## LSA/Geography of Cameroon/01_LSA_CAM_L01_Relief_of_Cameroon
 

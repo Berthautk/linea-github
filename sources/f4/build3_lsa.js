@@ -4,7 +4,8 @@ const L = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => 'Lesson ' + (a +
 const seq = [].concat(
   // syllabus: FS1 (tropical disturbances) comes after Lesson 19; FS2 and FS3 after Lesson 21
   // Meteorology (Lessons 1-18 and Further Study 2) rewritten natively in v3n/lsamet_*.js, in its own folder; the rest stays in Climatology
-  overlay(arrange(seqOf('./v2_lsa_clim', './v3/lsa_clim'), [...L(1, 19), 'Further Study 1', 'Lesson 20', 'Lesson 21', 'Further Study 2', 'Further Study 3']), 'lsamet'),
+  // Climatology (Lesson 19, Further Study 1, Lessons 20-21) rewritten natively in v3n/lsaclim_1.js; Further Study 3 kept
+  overlay(overlay(arrange(seqOf('./v2_lsa_clim', './v3/lsa_clim'), [...L(1, 19), 'Further Study 1', 'Lesson 20', 'Lesson 21', 'Further Study 2', 'Further Study 3']), 'lsamet'), 'lsaclim'),
   // syllabus: PW1 and PW2 come before FS4 (drainage of Cameroon)
   arrange(seqOf('./v2_lsa_hydro', './v3/lsa_hydro'), [...L(22, 34), 'Practical Work 1', 'Practical Work 2', 'Further Study 4']),
   overlay(seqOf('./v2_lsa_geo', './v3/lsa_geo'), 'lsageo'),

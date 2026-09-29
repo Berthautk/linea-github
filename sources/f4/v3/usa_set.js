@@ -427,3 +427,5 @@ module.exports = {
     hwAnswer: 'Douala: low, swampy site on the Wouri estuary. Problems: floods, traffic jams and unplanned quarters (e.g. slums near swamps).',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 22"] = Object.assign(module.exports["Lesson 22"] || {}, { homework: "List three natural resources found in Cameroon.", hwAnswer: "Examples: forests, oil, gas, bauxite, iron ore, rivers, fertile soils (any three).", homeworkTag: '' });

@@ -242,3 +242,5 @@ module.exports = {
     hwAnswer: 'Ferrallitic soils – cocoa (South); ferruginous soils – cotton (North); black earths – muskwari sorghum (Far North); volcanic soils – bananas and tea (South West); hydromorphic soils – rice (Logone).',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 11"] = Object.assign(module.exports["Lesson 11"] || {}, { homework: "Define natural vegetation.", hwAnswer: "Natural vegetation is the plant cover that grows in an area without being planted or changed by people.", homeworkTag: '' });

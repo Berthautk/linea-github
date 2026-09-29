@@ -363,8 +363,8 @@ L.push({ kind: 'Further Study', no: 2, title: 'Weather Observation, Prediction, 
     ['What is a synoptic chart and how is it used?', 'A weather map summarising conditions over a large area at one time; it is used to analyse and forecast the weather.']],
   remediation: ['Rainfall is measured with a rain ______.', 'Lines of equal pressure are ______.', 'Silver iodide is used for cloud ______.'],
   remediationAnswers: '1. gauge 2. isobars 3. seeding',
-  homework: 'Name the two air masses that affect the climate of Cameroon.',
-  hwAnswer: 'The dry tropical continental air (Harmattan) from the Sahara and the moist tropical maritime air (south-west monsoon) from the Atlantic.',
+  homework: "Define hydrology.",
+  hwAnswer: "Hydrology is the science that studies water on and under the surface of the Earth, its movements and its distribution.",
   bilingual: [['Weather forecast', 'La prévision météorologique'], ['Rain gauge', 'Le pluviomètre'], ['Barometer', 'Le baromètre'], ['Weather map', 'La carte météorologique'], ['Isobar', "L'isobare"], ['Cloud seeding', "L'ensemencement des nuages"]],
 });
 

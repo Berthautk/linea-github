@@ -329,8 +329,8 @@ L.push({ no: 18, title: 'Theories of Population and Resources: Malthus and Boser
     ['Give one weakness of each theory.', 'Malthus underestimated technology; Boserup is too optimistic and ignores environmental limits.']],
   remediation: ['Malthus published his essay in ______.', 'According to Malthus, food grows ______.', 'Boserup\'s theory is ______.'],
   remediationAnswers: '1. 1798 2. arithmetically 3. optimistic',
-  homework: 'State the population of Cameroon at the 2005 census.',
-  hwAnswer: '17,463,836 people (about 17.5 million).',
+  homework: "Define a settlement.",
+  hwAnswer: "A settlement is a place where people live, from a single house to a large city.",
   bilingual: [['Population growth', 'La croissance démographique'], ['Resources', 'Les ressources'], ['Theory', 'La théorie'], ['Famine', 'La famine'], ['Invention', "L'invention"], ['Intensification', "L'intensification"]],
 });
 

@@ -356,3 +356,6 @@ module.exports = {
     hwAnswer: 'Example: cocoa – build chocolate and cocoa-butter factories near the producing areas; this would add value, create jobs and increase export earnings.',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 13"] = Object.assign(module.exports["Lesson 13"] || {}, { homework: "Name two factories of your town and what they produce.", hwAnswer: "Examples in Garoua: CICAM (cloth), SODECOTON (cotton fibre and oil), the brewery (drinks).", homeworkTag: '' });
+module.exports["Lesson 26"] = Object.assign(module.exports["Lesson 26"] || {}, { homework: "Name four means of transport used in Cameroon.", hwAnswer: "Road (lorries, cars, motorbikes), rail, air and water (ships, canoes).", homeworkTag: '' });

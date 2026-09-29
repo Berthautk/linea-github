@@ -318,3 +318,5 @@ module.exports = {
     hwAnswer: 'Example (North vs Douala): literacy about 40 % vs 90 %; electricity access about 30 % vs 90 %; industrial jobs few vs many. Projects: tar the rural roads and build a vocational training centre.',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 14"] = Object.assign(module.exports["Lesson 14"] || {}, { homework: "List five conventional signs used on topographic maps.", hwAnswer: "Examples: roads, railways, rivers, contours, settlements, churches, schools, spot heights (any five).", homeworkTag: '' });

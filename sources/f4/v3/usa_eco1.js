@@ -232,3 +232,5 @@ module.exports = {
     hwAnswer: 'Forest products at home: firewood or charcoal, wooden furniture and doors, bush mango (ndo\'o), honey, palm products and medicinal barks.',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 10"] = Object.assign(module.exports["Lesson 10"] || {}, { homework: "Name three sources of energy used in your home.", hwAnswer: "Examples: electricity, firewood, charcoal, cooking gas, kerosene, solar panels (any three).", homeworkTag: '' });

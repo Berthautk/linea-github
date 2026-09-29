@@ -204,3 +204,6 @@ module.exports = {
     hwAnswer: 'Answers vary. A good advertisement names the site and region, shows what to see and do, how to get there, where to stay and a catchy slogan.',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 30"] = Object.assign(module.exports["Lesson 30"] || {}, { homework: "Name two tourist sites in Cameroon.", hwAnswer: "Examples: Waza National Park, Kribi and the Lob\u00e9 Falls, Mount Cameroon, Rhumsiki, the Foumban palace (any two).", homeworkTag: '' });
+module.exports["Lesson 31"] = Object.assign(module.exports["Lesson 31"] || {}, { homework: "Name two causes of air pollution in your town.", hwAnswer: "Examples: vehicle and motorbike exhaust, smoke from firewood and bush fires, dust, factory smoke (any two).", homeworkTag: '' });

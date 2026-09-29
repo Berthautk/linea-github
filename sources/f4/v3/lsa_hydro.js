@@ -328,3 +328,5 @@ module.exports = {
     hwAnswer: 'Example: 12 first-order, 3 second-order and 1 third-order streams. Bifurcation ratios: 12 ÷ 3 = 4 and 3 ÷ 1 = 3; mean ratio = 3.5.',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Practical Work 2"] = Object.assign(module.exports["Practical Work 2"] || {}, { homework: "Find out the age of the Earth.", hwAnswer: "The Earth is about 4.6 billion years old.", homeworkTag: '' });

@@ -443,8 +443,8 @@ L.push({ no: 16, title: 'Coastal Processes and Features', topic: T, subtopic: E,
     ['Describe the formation of a stack.', 'A crack in a headland is enlarged into a cave, then an arch; the arch collapses, leaving a stack.']],
   remediation: ['The distance of open water over which wind blows is the ______.', 'Waves going up the beach are the ______.', 'A ridge of sand closing a bay is a ______.'],
   remediationAnswers: '1. fetch 2. swash 3. bar',
-  homework: 'Name the highest mountain of Cameroon.',
-  hwAnswer: 'Mount Cameroon (4,095 m).',
+  homework: "Name the four components of soil.",
+  hwAnswer: "Mineral matter, organic matter (humus), water and air.",
   bilingual: [['Coast', 'La côte'], ['Wave', 'La vague'], ['Erosion', "L'érosion"], ['Beach', 'La plage'], ['Tide', 'La marée'], ['Cliff', 'La falaise']],
 });
 

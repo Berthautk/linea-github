@@ -18,6 +18,8 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 # F1
 
+# F1
+
 ## F1/01_F1_M1_L01_Geography_Meaning_Branches_Methods_and_Importance
 
 - Photo, Activity 1: “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
@@ -1296,33 +1298,26 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 4: “20130501-NRCS-LSC-0605” by USDAgov, Public domain 1.0, via Flickr (https://www.flickr.com/photos/41284017@N08/8725089904)
 - Photo, Activity 5: “Pahoehoe Lava Flow” by graysky., CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/20021588@N00/540223861)
 
-## LSA/Biogeography/13_LSA_BIO_FS01_Soils_of_Cameroon
-
-- Photo, Activity 2: “in the middle of nowhere, morocco” by mariusz kluzniak, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/39997856@N03/8398997251)
-- Photo, Activity 3: “My date palm. Cool, huh?” by Hair Squared, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/73119211@N00/3804244479)
-- Photo, Activity 4: “Carlo in the tea” by luigig, CC BY 2.0, via Flickr (https://www.flickr.com/photos/51035803402@N01/3175986747)
-- Photo, Activity 5: “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
-
-## LSA/Biogeography/14_LSA_BIO_L12_Meaning_of_Natural_Vegetation
+## LSA/Biogeography/13_LSA_BIO_L12_Meaning_of_Natural_Vegetation
 
 - Photo, Activity 1: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Photo, Activity 2: “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
 - Photo, Activity 3: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 - Photo, Activity 5: “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
 
-## LSA/Biogeography/15_LSA_BIO_L13_Evolution_of_Vegetation_over_Time_Plant_Succession
+## LSA/Biogeography/14_LSA_BIO_L13_Evolution_of_Vegetation_over_Time_Plant_Succession
 
 - Photo, Activity 3: “Lichens on rock - Mason Lake” by brewbooks, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/93452909@N00/2924427336)
 - Photo, Activity 5: “20111216-NRCS-LSC-0355” by USDAgov, CC BY 2.0, via Flickr (https://www.flickr.com/photos/41284017@N08/6551564351)
 
-## LSA/Biogeography/16_LSA_BIO_L14_The_Concept_of_Climax_Vegetation
+## LSA/Biogeography/15_LSA_BIO_L14_The_Concept_of_Climax_Vegetation
 
 - Photo, Activity 2: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Photo, Activity 3: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 - Photo, Activity 4: “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
 - Photo, Activity 5: “Saskatchewan field in August, Alfalfa Medicago sativa” by ocean.flynn, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/89488115@N00/1535397596)
 
-## LSA/Biogeography/17_LSA_BIO_L15_Examples_of_Plant_Succession
+## LSA/Biogeography/16_LSA_BIO_L15_Examples_of_Plant_Succession
 
 - Photo, Activity 1: “Fern Growing in Lava” by Ed Suominen, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/37960170@N07/9688955410)
 - Photo, Activity 2: “Moss growing in rock crevace” by binarydreams, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30479406@N00/1399948300)
@@ -1330,101 +1325,94 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 4: “Young, Shrubby Forest” by Wayne National Forest, Public domain 1.0, via Flickr (https://www.flickr.com/photos/39244790@N04/53956302430)
 - Photo, Activity 5: “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
 
-## LSA/Biogeography/18_LSA_BIO_L16_Spatial_Distribution_of_Vegetation
+## LSA/Biogeography/17_LSA_BIO_L16_Spatial_Distribution_of_Vegetation
 
 - Photo, Activity 3: “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
 - Photo, Activity 5: “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
 
-## LSA/Biogeography/19_LSA_BIO_FS02_Vegetation_of_Cameroon
-
-- Photo, Activity 2: “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
-- Photo, Activity 3: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
-- Photo, Activity 4: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
-- Photo, Activity 5: “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
-
-## LSA/Biogeography/20_LSA_BIO_L17_Meaning_of_Ecology_and_Ecosystems
+## LSA/Biogeography/18_LSA_BIO_L17_Meaning_of_Ecology_and_Ecosystems
 
 - Photo, Activity 2: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 - Photo, Activity 3: “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
 - Photo, Activity 4: “Zebra” by mape_s, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50931380@N00/333863114)
 - Photo, Activity 5: “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
 
-## LSA/Biogeography/21_LSA_BIO_L18_The_Ecosystem_as_a_System
+## LSA/Biogeography/19_LSA_BIO_L18_The_Ecosystem_as_a_System
 
 - Photo, Activity 2: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Photo, Activity 3: “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
 - Photo, Activity 4: “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
 - Photo, Activity 5: “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 
-## LSA/Biogeography/22_LSA_BIO_L19_Examples_of_Ecosystems_The_Pond
+## LSA/Biogeography/20_LSA_BIO_L19_Examples_of_Ecosystems_The_Pond
 
 - Photo, Activity 2: “Rieve's Pond Water Lilies 2015” by matthewbeziat, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/109690096@N08/20146588069)
 - Photo, Activity 3: “Fishermen, Lake Tana” by A.Davey, CC BY 2.0, via Flickr (https://www.flickr.com/photos/40595948@N00/2260748777)
 - Photo, Activity 4: “Gooderstone Water Gardens - pond - water lilies” by ell brown, CC BY 2.0, via Flickr (https://www.flickr.com/photos/39415781@N06/5993988041)
 - Photo, Activity 5: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 
-## LSA/Biogeography/23_LSA_BIO_L20_Interactions_within_Ecosystems
+## LSA/Biogeography/21_LSA_BIO_L20_Interactions_within_Ecosystems
 
 - Photo, Activity 3: “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
 - Photo, Activity 4: “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
 
-## LSA/Biogeography/24_LSA_BIO_L21_Energy_Flows_in_Ecosystems
+## LSA/Biogeography/22_LSA_BIO_L21_Energy_Flows_in_Ecosystems
 
 - Photo, Activity 1: “Scientists Propose Mechanism to Describe Solar Eruptions of All Sizes” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/36084784530)
 - Photo, Activity 4: “Zebra” by mape_s, CC BY 2.0, via Flickr (https://www.flickr.com/photos/50931380@N00/333863114)
 - Photo, Activity 5: “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
 
-## LSA/Biogeography/25_LSA_BIO_L22_Trophic_Levels_Food_Chains_and_Food_Webs
+## LSA/Biogeography/23_LSA_BIO_L22_Trophic_Levels_Food_Chains_and_Food_Webs
 
 - Photo, Activity 2: “hunt is on” by @Doug88888, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/29468339@N02/2930690305)
 - Photo, Activity 4: “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
 - Photo, Activity 5: “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
 
-## LSA/Biogeography/26_LSA_BIO_L23_Nutrient_Cycling_and_the_Gersmehl_Model
+## LSA/Biogeography/24_LSA_BIO_L23_Nutrient_Cycling_and_the_Gersmehl_Model
 
 - Photo, Activity 2: “Heavily earthworm-infested soil” by esagor, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/7357861@N03/1993224477)
 - Photo, Activity 3: “Mushroom, underneath_2012-09-21-14.51.00 ZS PMax” by Sam Droege, Public domain 1.0, via Flickr (https://www.flickr.com/photos/54563451@N08/8016189217)
 - Photo, Activity 4: “Stones 'n' Roots” by erix!, CC BY 2.0, via Flickr (https://www.flickr.com/photos/68387408@N00/55692423)
 - Photo, Activity 5: “Soil erosion in the central Mexican Highlands” by CIMMYT, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/44760652@N05/6244930288)
 
-## LSA/Biogeography/27_LSA_BIO_L24_Nutrient_Cycling_in_Contrasting_Ecosystems
+## LSA/Biogeography/25_LSA_BIO_L24_Nutrient_Cycling_in_Contrasting_Ecosystems
 
 - Photo, Activity 2: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Photo, Activity 3: “Aerial view of oil palm plantation” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/38802487905)
 - Photo, Activity 4: “John Deere Combine” by SnoShuu, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/85888233@N00/2776467094)
 - Photo, Activity 5: “Battleship Lake” by `James Wheeler, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/24128704@N08/16587218945)
 
-## LSA/Biogeography/28_LSA_BIO_L25_Nutrient_Cycling_and_Ecosystem_Management
+## LSA/Biogeography/26_LSA_BIO_L25_Nutrient_Cycling_and_Ecosystem_Management
 
 - Photo, Activity 2: “Women sowing okra in zai holes” by abossuet, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/30450178@N07/7175750825)
 - Photo, Activity 3: “Farmer applies fertilizer on his rice field” by IRRI Images, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/86712369@N00/5366605498)
 - Photo, Activity 4: “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
 - Photo, Activity 5: “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
 
-## LSA/Biogeography/29_LSA_BIO_L26_Productivity_of_Ecosystems
+## LSA/Biogeography/27_LSA_BIO_L26_Productivity_of_Ecosystems
 
 - Photo, Activity 3: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Photo, Activity 4: “Fall Tundra Landscape” by Andrea Pokrzywinski, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65781065@N00/2891717078)
 - Photo, Activity 5: “Vegetation Monitoring, Katmai NPP” by swanNPS, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/90673956@N06/16796099732)
 
-## LSA/Biogeography/30_LSA_BIO_PW02_Measurement_of_Ecosystem_Productivity
+## LSA/Biogeography/28_LSA_BIO_PW02_Measurement_of_Ecosystem_Productivity
 
 - Photo, Activity 3: “Vegetation Monitoring, Katmai NPP” by swanNPS, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/90673956@N06/16796099732)
 - Photo, Activity 4: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 
-## LSA/Biogeography/31_LSA_BIO_L27_Biomes
+## LSA/Biogeography/29_LSA_BIO_L27_Biomes
 
 - Photo, Activity 3: “David R. Johnson Natural Area (3)” by Nicholas_T, CC BY 2.0, via Flickr (https://www.flickr.com/photos/14922165@N00/10682288495)
 - Photo, Activity 4: “Saskatchewan field in August, Alfalfa Medicago sativa” by ocean.flynn, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/89488115@N00/1535397596)
 - Photo, Activity 5: “Fall Tundra Landscape” by Andrea Pokrzywinski, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65781065@N00/2891717078)
 
-## LSA/Biogeography/32_LSA_BIO_L28_Characteristics_of_Tropical_Biomes
+## LSA/Biogeography/30_LSA_BIO_L28_Characteristics_of_Tropical_Biomes
 
 - Photo, Activity 1: “Amazon 11” by CIAT International Center for Tropical Agriculture, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/38476503@N08/5641587148)
 - Photo, Activity 3: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 - Photo, Activity 5: “Saguaro and teddy bear cholla with mountains in background” by Martin LaBar, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/32454422@N00/443523984)
 
-## LSA/Biogeography/33_LSA_BIO_FS03_Ecosystem_Services
+## LSA/Biogeography/31_LSA_BIO_FS03_Ecosystem_Services
 
 - Photo, Activity 2: “Kenyan food, farming and landscapes” by CGIAR Climate, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/55227776@N04/14310899853)
 - Photo, Activity 3: “MEDICINE MARKET - SEOUL” by U.S. Army Korea (Historical Image Archive), CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/28486074@N08/2920744660)
@@ -1596,13 +1584,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, board summary (Pollution): “Exxon Valdez Oil Spill - 0038” by ARLIS Reference, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/51606297@N07/4750613516)
 - Photo, board summary (Destruction of mangroves): “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
 
-## LSA/Geomorphology/19_LSA_GEOMO_FS03_Relief_of_Cameroon
-
-- Photo, Activity 2: “Mount Cameroon” by John & Mel Kots, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/26745817@N00/2347261849)
-- Photo, Activity 3: “At Dang and its livestock market” by 10b travelling / Carsten ten Brink, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/77334245@N00/7311224966)
-- Photo, Activity 4: “Rhumsiki peak, North Cameroon” by krishna.naudin, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/141297921@N05/25989204581)
-- Photo, Activity 5: “Pitchavaram waterway - Mangrove forest” by Balaji.B Photography, CC BY 2.0, via Flickr (https://www.flickr.com/photos/81073027@N00/1745978833)
-
 ## LSA/Hydrology/01_LSA_HYDRO_L22_Introduction_to_Hydrology
 
 - Photo, Activity 1: “Blue Marble, Eastern Hemisphere March 2014” by NASA Goddard Photo and Video, CC BY 2.0, via nasa (https://www.flickr.com/photos/24662369@N07/14990033062)
@@ -1693,12 +1674,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 4: “Duala, Camerún (Douala, Cameroon)” by migmasat, Public domain 1.0, via Flickr (https://www.flickr.com/photos/197415759@N06/54386998088)
 
-## LSA/Hydrology/16_LSA_HYDRO_FS04_The_Drainage_of_Cameroon
-
-- Photo, Activity 3: “Chutes de Natchigal” by friel, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/91702411@N00/2692932)
-- Photo, Activity 4: “Niamey, Niger” by LenDog64, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/45968460@N03/4422209893)
-- Photo, Activity 5: “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
-
 ## LSA/Meteorology/01_LSA_MET_L01_The_Meaning_and_Composition_of_the_Atmosphere
 
 - Photo, Activity 1: “Sunset Over the Indian Ocean (NASA, International Space Station Scienc” by NASA's Marshall Space Flight Center, CC BY-NC 2.0, via nasa (https://www.flickr.com/photos/28634332@N05/8134997029)
@@ -1748,9 +1723,9 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 ## LSA/Meteorology/11_LSA_MET_L11_Forms_of_Condensation_and_Precipitation
 
+- Photo, board summary (Rainfall (formation process)): “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
 - Photo, board summary (Snow): “Peaceful Winter” by `James Wheeler, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/24128704@N08/25673217581)
 - Photo, board summary (Frost and rime): “Frosty Morning” by Tom Gill., CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10199807@N00/4283143427)
-- Photo, board summary (Rainfall (formation process)): “Heavy rain. Johannesburg, South Africa” by varfolomeev, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/45427632@N02/49745935146)
 
 ## LSA/Meteorology/13_LSA_MET_L13_Pressure_Systems
 
@@ -1860,65 +1835,37 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 3: “Terraced Hillside” by AdamCohn, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/96142515@N00/6311042523)
 - Photo, Activity 4: “Allotment garden” by tacowitte, CC BY 2.0, via Flickr (https://www.flickr.com/photos/31817492@N00/1509608412)
 
-## USA/Economic Geography/12_USA_ECO_FS01_Agricultural_Development_and_Change_in_Cameroon
-
-- Photo, Activity 2: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/46914753474)
-- Photo, Activity 3: “Banana Plantation” by AfricaTravelAssociation, CC BY 2.0, via Flickr (https://www.flickr.com/photos/65134942@N06/8164706151)
-- Photo, Activity 4: “Fulani cattle breed of West Africa” by International Livestock Research Institute, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7155605@N03/48125675226)
-- Photo, Activity 5: “Harvesting coffee, Cameroon” by jbdodane, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/27998473@N02/11590251453)
-
-## USA/Economic Geography/13_USA_ECO_L11_Energy_Resources
+## USA/Economic Geography/12_USA_ECO_L11_Energy_Resources
 
 - Photo, Activity 4: “Rig I” by Tuftronic10000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36574363@N00/367931994)
 - Photo, Activity 5: “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
 
-## USA/Economic Geography/14_USA_ECO_L13_Minerals_and_Mining
+## USA/Economic Geography/13_USA_ECO_L13_Minerals_and_Mining
 
 - Photo, Activity 3: “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
 - Photo, Activity 4: “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1873057946)
 
-## USA/Economic Geography/15_USA_ECO_FS02_Management_of_Forest_Resources_in_Cameroon
-
-- Photo, Activity 2: “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
-- Photo, Activity 3: “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
-- Photo, Activity 4: “Charcoal, made from tree branches” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/25644159775)
-- Photo, Activity 5: “Haitian Students Breathe New Life into Depleted Pine Forest” by United Nations Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/35483578@N03/5860275159)
-
-## USA/Economic Geography/16_USA_ECO_FS03_Management_of_Mineral_and_Energy_Resources_in_Cameroon
-
-- Photo, Activity 2: “Rig I” by Tuftronic10000, CC BY 2.0, via Flickr (https://www.flickr.com/photos/36574363@N00/367931994)
-- Photo, Activity 3: “Mining in Kailo” by Julien Harneis, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/16935515@N00/1873057946)
-- Photo, Activity 4: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
-- Photo, Activity 5: “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
-
-## USA/Economic Geography/17_USA_ECO_FS04_Management_of_Water_Resources_in_Cameroon
-
-- Photo, Activity 2: “Empty beaches” by ludwig.troller, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/124845120@N03/14285811155)
-- Photo, Activity 3: “Lake Chad: almost gone” by GRIDArendal, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/148768555@N05/32323646926)
-- Photo, Activity 4: “A woman harvesting rice, Barotse floodplain, Zambia. Photo by Georgina” by WorldFish, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/61545321@N06/7848727138)
-- Photo, Activity 5: “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
-
-## USA/Economic Geography/18_USA_ECO_L14_What_is_Manufacturing
+## USA/Economic Geography/14_USA_ECO_L14_What_is_Manufacturing
 
 - Photo, Activity 1: “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
 - Photo, Activity 3: “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
 - Photo, Activity 5: “Lowell Massachusetts - Boott Cotton Mills Museum Weave Room” by Onasill ~ Bill- 81M views, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/7156765@N05/43677799854)
 
-## USA/Economic Geography/19_USA_ECO_L15_Industrial_Location
+## USA/Economic Geography/15_USA_ECO_L15_Industrial_Location
 
 - Photo, Activity 2: “CBCF Project, Yogyakarta” by CIFOR, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/45423546@N07/35977173724)
 - Photo, Activity 3: “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
 - Photo, Activity 4: “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
 - Photo, Activity 5: “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
 
-## USA/Economic Geography/20_USA_ECO_L16_Factors_of_Industrial_Location
+## USA/Economic Geography/16_USA_ECO_L16_Factors_of_Industrial_Location
 
 - Photo, Activity 2: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
 - Photo, Activity 3: “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
 - Photo, Activity 4: “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
 - Photo, Activity 5: “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
 
-## USA/Economic Geography/21_USA_ECO_L17_Government_Policy_and_Industrial_Location
+## USA/Economic Geography/17_USA_ECO_L17_Government_Policy_and_Industrial_Location
 
 - Photo, Activity 1: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 2: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
@@ -1926,122 +1873,101 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 4: “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
 - Photo, Activity 5: “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
 
-## USA/Economic Geography/22_USA_ECO_L18_The_Changing_Nature_of_Industrial_Location
+## USA/Economic Geography/18_USA_ECO_L18_The_Changing_Nature_of_Industrial_Location
 
 - Photo, Activity 2: “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
 - Photo, Activity 3: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
 - Photo, Activity 5: “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
 
-## USA/Economic Geography/23_USA_ECO_L19_Industrial_Agglomerations
+## USA/Economic Geography/19_USA_ECO_L19_Industrial_Agglomerations
 
 - Photo, Activity 1: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 3: “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
 - Photo, Activity 4: “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
 - Photo, Activity 5: “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
 
-## USA/Economic Geography/24_USA_ECO_PW02_Measuring_Industrial_Agglomeration_The_Location_Quotient
+## USA/Economic Geography/20_USA_ECO_PW02_Measuring_Industrial_Agglomeration_The_Location_Quotient
 
 - Photo, Activity 3: “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
 - Photo, Activity 5: “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
 
-## USA/Economic Geography/25_USA_ECO_L20_Functional_Linkages
+## USA/Economic Geography/21_USA_ECO_L20_Functional_Linkages
 
 - Photo, Activity 2: “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
 - Photo, Activity 3: “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
 - Photo, Activity 4: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 - Photo, Activity 5: “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
 
-## USA/Economic Geography/26_USA_ECO_L21_Industrial_Inertia
+## USA/Economic Geography/22_USA_ECO_L21_Industrial_Inertia
 
 - Photo, Activity 1: “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
 - Photo, Activity 3: “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
 - Photo, Activity 5: “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
 
-## USA/Economic Geography/27_USA_ECO_L22_New_Trends_in_Manufacturing
+## USA/Economic Geography/23_USA_ECO_L22_New_Trends_in_Manufacturing
 
 - Photo, Activity 1: “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
 - Photo, Activity 2: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
 - Photo, Activity 4: “General Photos: Turkmenistan” by Asian Development Bank, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58037435@N08/8800569339)
 - Photo, Activity 5: “rover 200 framing line” by spencer_cooper, CC BY-ND 2.0, via Flickr (https://www.flickr.com/photos/80889122@N06/7481166880)
 
-## USA/Economic Geography/28_USA_ECO_L23_Weber_s_Least_Cost_Model
+## USA/Economic Geography/24_USA_ECO_L23_Weber_s_Least_Cost_Model
 
 - Photo, Activity 1: “Blue Wildebeest in the Lowveld” by Martin_Heigan, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/97303475@N00/2089079933)
 - Photo, Activity 5: “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
 
-## USA/Economic Geography/29_USA_ECO_PW03_Material_Index_Location_Triangles_and_Isodapanes
+## USA/Economic Geography/25_USA_ECO_PW03_Material_Index_Location_Triangles_and_Isodapanes
 
 - Photo, Activity 4: “Bauxite mine near Itea, Greece” by Jason-Morrison, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/8998833@N07/929316608)
 
-## USA/Economic Geography/30_USA_ECO_L24_Other_Theories_of_Industrial_Location_L_sch_and_Smith
+## USA/Economic Geography/26_USA_ECO_L24_Other_Theories_of_Industrial_Location_L_sch_and_Smith
 
 - Photo, Activity 4: “Knight-Crane Convergence Lab” by Knight Foundation, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/9133668@N08/6242015734)
 
-## USA/Economic Geography/31_USA_ECO_L25_Sub_optimal_Industrial_Location
+## USA/Economic Geography/27_USA_ECO_L25_Sub_optimal_Industrial_Location
 
 - Photo, Activity 2: “Photo by USAID East Africa” by U.S. Agency for International Development, CC0 1.0, via rawpixel (https://www.rawpixel.com/image/4051097/image-public-domain-person-building)
 - Photo, Activity 3: “Using mobile technology to give feedback about the crop trials” by Bioversity International, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/50383637@N07/15019002626)
 - Photo, Activity 4: “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
 - Photo, Activity 5: “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
 
-## USA/Economic Geography/32_USA_ECO_L26_Impacts_of_Manufacturing_on_the_Environment
+## USA/Economic Geography/28_USA_ECO_L26_Impacts_of_Manufacturing_on_the_Environment
 
 - Photo, Activity 2: “Belval steel works, Luxembourg, May 1995” by sludgegulper, CC BY-SA 2.0, via Flickr (https://www.flickr.com/photos/28179929@N08/4991135732)
 - Photo, Activity 3: “Fishing on the Wouri River” by Karlplatz, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/36973264@N00/3158348)
 - Photo, Activity 4: “2017-91-06” by Community Archives of Belleville & Hastings County, CC0 1.0, via Flickr (https://www.flickr.com/photos/134017397@N03/37070933734)
 - Photo, Activity 5: “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
 
-## USA/Economic Geography/33_USA_ECO_FS05_Industrial_Development_and_Change_in_Cameroon
-
-- Photo, Activity 1: “Schneider Weisse bottling line” by Bernt Rostad, CC BY 2.0, via Flickr (https://www.flickr.com/photos/67975030@N00/8434576955)
-- Photo, Activity 3: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
-- Photo, Activity 4: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
-- Photo, Activity 5: “20080326_03 Aluminium smelter” by Bush Philosopher - Dave Clarke, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/73115147@N00/2402063103)
-
-## USA/Economic Geography/34_USA_ECO_L27_Transport
+## USA/Economic Geography/29_USA_ECO_L27_Transport
 
 - Photo, Activity 1: “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
 - Photo, Activity 2: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/47586053052)
 - Photo, Activity 3: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
 - Photo, Activity 4: “Airplane” by jeffk, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44124372247@N01/59597563)
 
-## USA/Economic Geography/35_USA_ECO_PW04_Calculating_and_Illustrating_Transport_Costs
+## USA/Economic Geography/30_USA_ECO_PW04_Calculating_and_Illustrating_Transport_Costs
 
 - Photo, Activity 5: “Logging truck, Cameroon” by World Resources, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/26107309@N05/4764354366)
 
-## USA/Economic Geography/36_USA_ECO_L28_Transport_Networks
+## USA/Economic Geography/31_USA_ECO_L28_Transport_Networks
 
 - Photo, Activity 3: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
 - Photo, Activity 4: “Nairobi Traffic Jam” by rogiro, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/43132185@N00/48712135)
 
-## USA/Economic Geography/37_USA_ECO_L29_Transport_Network_Efficiency
+## USA/Economic Geography/32_USA_ECO_L29_Transport_Network_Efficiency
 
 - Photo, Activity 3: “Traveling by truck” by World Bank Photo Collection, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/10816734@N03/2628517227)
 - Photo, Activity 4: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
 
-## USA/Economic Geography/39_USA_ECO_L30_The_Taaffe_Morrill_and_Gould_Model
+## USA/Economic Geography/34_USA_ECO_L30_The_Taaffe_Morrill_and_Gould_Model
 
 - Photo, Activity 2: “JAXPORT Welcomes Largest Container Ship To Date” by JAXPORT, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/24847875@N05/17069054628)
 - Photo, Activity 5: “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
 
-## USA/Economic Geography/40_USA_ECO_FS06_Transport_Development_in_Cameroon
-
-- Photo, Activity 2: “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
-- Photo, Activity 3: “Airplane” by jeffk, CC BY 2.0, via Flickr (https://www.flickr.com/photos/44124372247@N01/59597563)
-- Photo, Activity 4: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
-- Photo, Activity 5: “Container Ships @ Port of Oakland” by jdnx, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21442511@N08/3464243881)
-
-## USA/Economic Geography/41_USA_ECO_L31_Tourism
+## USA/Economic Geography/35_USA_ECO_L31_Tourism
 
 - Photo, Activity 1: “Crowded Sunny Beach, Bulgaria” by phototouring, CC BY-NC-SA 2.0, via Flickr (https://www.flickr.com/photos/19054742@N00/1557605901)
 - Photo, Activity 3: “African Bush Elephant, Amboseli National Park, Kenya” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/37211779966)
-
-## USA/Economic Geography/42_USA_ECO_FS07_Tourism_Development_in_Cameroon
-
-- Photo, Activity 2: “Sunset in Limbe” by visulogik, CC BY 2.0, via Flickr (https://www.flickr.com/photos/55671677@N00/2202334428)
-- Photo, Activity 3: “Laguna Pool” by Prayitno / Thank you for (12 millions +) view, CC BY 2.0, via Flickr (https://www.flickr.com/photos/34128007@N04/14216582552)
-- Photo, Activity 4: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
-- Photo, Activity 5: “African Bush Elephants, Maasai Mara” by Ray in Manila, CC BY 2.0, via Flickr (https://www.flickr.com/photos/21186555@N07/50627864261)
 
 ## USA/Environment and Development/01_USA_ENV_L01_Pollution
 
@@ -2111,11 +2037,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 1: “Girls from the village of Mwachilolo head to the Pump Aid Elephant wat” by PumpAid, CC BY 2.0, via Flickr (https://www.flickr.com/photos/84463652@N06/8161357208)
 - Photo, Activity 3: “WFP food distribution” by UNAMID Photo, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/58538810@N03/12495227734)
-
-## USA/Environment and Development/15_USA_ENV_FS01_Contrast_in_Development_within_Cameroon
-
-- Photo, Activity 4: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
-- Photo, Activity 5: “Cameroon - UN Women's Gender Road Project” by UN Women Gallery, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/51431730@N04/40672356003)
 
 ## USA/Population Geography/01_USA_POP_L01_Sources_of_Population_Data
 
@@ -2204,10 +2125,6 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 
 - Photo, Activity 3: “Imagine a world without trees” by aloshbennett, CC BY 2.0, via Flickr (https://www.flickr.com/photos/13203757@N00/3480223314)
 - Photo, Activity 5: “South Holston Lake, (Virginia-Tennessee border, USA)” by James St. John, CC BY 2.0, via Flickr (https://www.flickr.com/photos/47445767@N05/39221734762)
-
-## USA/Population Geography/23_USA_POP_FS01_Population_Change_in_Cameroon
-
-- Photo, Activity 5: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
 
 ## USA/Practical Geography/02_USA_PRA_MA02_Remote_Sensing_Aerial_Photographs_and_GIS
 
@@ -2413,9 +2330,3 @@ Toutes les photos sont sous licence libre (Creative Commons ou domaine public), 
 - Photo, Activity 3: “New Town Housing, Fullers Slade, Milton Keynes” by The JR James Archive, University of Sheffield, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/98068999@N05/9253665547)
 - Photo, Activity 4: “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
 - Photo, Activity 5: “Noor Ouarzazate III Solar Plant” by Richard Allaway, CC BY 2.0, via Flickr (https://www.flickr.com/photos/16287002@N00/52769922684)
-
-## USA/Settlement Geography/25_USA_SET_FS01_Urbanisation_in_Cameroon
-
-- Photo, Activity 3: “Train de nuit” by Huard, CC BY-NC-ND 2.0, via Flickr (https://www.flickr.com/photos/41569561@N07/5499545979)
-- Photo, Activity 4: “Douala” by christing-O-, CC BY 2.0, via Flickr (https://www.flickr.com/photos/76187282@N00/7227535754)
-- Photo, Activity 5: “Yaoundé” by wili_hybrid, CC BY-NC 2.0, via Flickr (https://www.flickr.com/photos/62223880@N00/5677034246)

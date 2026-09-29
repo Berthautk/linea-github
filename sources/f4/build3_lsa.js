@@ -10,4 +10,6 @@ const seq = [].concat(
   arrange(seqOf('./v2_lsa_hydro', './v3/lsa_hydro'), [...L(22, 34), 'Practical Work 1', 'Practical Work 2', 'Further Study 4']),
   overlay(seqOf('./v2_lsa_geo', './v3/lsa_geo'), 'lsageo'),
   seqOf('./v2_lsa_bio1', './v3/lsa_bio_a'), seqOf('./v2_lsa_bio2', './v3/lsa_bio_b'));
-run(seq, process.argv.slice(2).length ? process.argv.slice(2) : null);
+// Further Studies on Cameroon are taught in the Geography of Cameroon sub-branch (build3_new.js LSACAM), not repeated here
+const kept = seq.filter((e) => !/Cameroon/.test(e.L.title));
+run(kept, process.argv.slice(2).length ? process.argv.slice(2) : null);

@@ -348,3 +348,5 @@ module.exports = {
     hwAnswer: 'Near a river: provisioning – fish and water; regulating – flood control and water purification; cultural – bathing, ceremonies; supporting – soil formation on the banks.',
   },
 };
+// homework preparing the new next lesson (Further Studies on Cameroon moved to Geography of Cameroon)
+module.exports["Lesson 16"] = Object.assign(module.exports["Lesson 16"] || {}, { homework: "Define an ecosystem.", hwAnswer: "An ecosystem is a community of living things interacting with each other and with their non-living environment (soil, water, air).", homeworkTag: '' });

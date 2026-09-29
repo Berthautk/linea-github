@@ -42,6 +42,9 @@ Ces règles s'appliquent à toutes les classes (premier et second cycle). Modèl
   - une mesure : 1) ce qui est fait ; 2) comment elle résout le problème (« It reduces inequality because… ») ;
   - une difficulté : 1) le problème ; 2) sa conséquence (« As a result… », « They therefore… »).
   - Modèle validé : LSA Geography of Cameroon, Lesson 15, section 5.
+- **Suivre le syllabus point par point** : chaque ligne du syllabus devient un titre ou un sous-titre (ex. *1. Meaning and Sources of Moisture* → *A) Meaning*, *B) Sources*). On ne se contente pas de nommer les éléments : chacun est expliqué en 2 ou 3 phrases qui répondent au titre ou au sous-titre, et le petit paragraphe doit être cohérent en lui-même.
+- **Un point = une diapositive** : le terme en gras et ses 2 ou 3 phrases restent ensemble sur une seule diapositive, avec une image à côté quand elle aide à comprendre (option `pointPerSlide` du générateur).
+- Modèle validé pour un cours de sciences physiques : LSA Meteorology, Lesson 10 (*Nature of Moisture*).
 
 ## 7. Premier cycle
 - Au premier cycle (F2T surtout), le résumé au tableau reste court : seulement les points du syllabus, en puces, une phrase courte par point.

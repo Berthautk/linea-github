@@ -157,12 +157,12 @@ function build(sp) {
     const s = add(); section(s, sec);
     s.addText(title, { x: 0.4, y: 1.1, w: W - 0.8, h: 0.8, fontFace: TNR, fontSize: 36, bold: true, color: RED, align: 'center', valign: 'middle', margin: 0, fit: 'shrink' });
     let y = BY;
-    if (sub) { s.addText(sub, { x: 0.4, y: BY - 0.05, w: 5.6, h: 0.5, fontFace: TNR, fontSize: 30, bold: true, color: RED, align: 'left', valign: 'middle', margin: 0, fit: 'shrink' }); y += 0.5; }
-    const tw = 5.3, th = FTY - 0.1 - y; let size = 36;
+    if (sub) { s.addText(sub, { x: 0.4, y: BY - 0.05, w: sp.pointPerSlide ? 6.6 : 5.6, h: 0.5, fontFace: TNR, fontSize: 30, bold: true, color: RED, align: 'left', valign: 'middle', margin: 0, fit: 'shrink' }); y += 0.5; }
+    const tw = sp.pointPerSlide ? 6.6 : 5.3, th = FTY - 0.1 - y; let size = 36;
     while (size > 22 && hOf(items, tw, size) > th) size -= 2;
     if (size < 28) warn.push(`slide ${n}: ${title} (figure) text small (${size} pt)`);
     s.addText(runsOf(items, size), { x: 0.4, y, w: tw, h: th, fontFace: TNR, valign: 'top', align: 'left', margin: 0 });
-    const p = imgPath(img); const [iw, ih] = sizeOf(p); const bx = 5.85, bw = W - 0.2 - bx, by = BY, bh = (caption ? 6.62 : 7.0) - BY;
+    const p = imgPath(img); const [iw, ih] = sizeOf(p); const bx = sp.pointPerSlide ? 7.15 : 5.85, bw = W - 0.2 - bx, by = BY, bh = (caption ? 6.62 : 7.0) - BY;
     let w = bw, h = bw * ih / iw; if (h > bh) { h = bh; w = bh * iw / ih; }
     s.addImage({ path: p, x: bx + (bw - w) / 2, y: by + (bh - h) / 2, w, h });
     if (caption) s.addText(caption, { x: bx, y: 6.66, w: bw, h: 0.38, fontFace: TNR, fontSize: 16, italic: true, color: GREY, align: 'center', valign: 'middle', margin: 0 });
@@ -262,6 +262,18 @@ function build(sp) {
         const [lead, text, img, cap] = g.fig; const term = lead.replace(/:$/, '');
         fslide('BOARD SUMMARY', part.title, part.sub, introRun.concat(itemRuns(lead, text)), img, cap ? 'Illustration: ' + cap.replace(/\.$/, '') : null,
           `${gi === 0 ? `Let us copy ${hName}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : ''}Copy the point on ${term} on the left, then draw the diagram on the right${cap ? ': ' + lc1(cap.replace(/\.$/, '')) : ''}. Give it a title and label it clearly.`);
+        return;
+      }
+      if (sp.pointPerSlide && !/^DEFINITIONS/.test(part.title)) {
+        // second cycle: each point with its 2-3 explaining sentences stays whole on one slide (font reduced if needed)
+        g.list.forEach(([lead, text], k) => {
+          const its = (k === 0 ? introRun : []).concat(itemRuns(lead, text));
+          let size = 40; while (size > 26 && !place(its, size, part.sub)) size -= 2;
+          if (size < 28) warn.push(`${part.title}: point "${lead}" small (${size} pt)`);
+          const term = lead.replace(/:$/, '');
+          tslide('BOARD SUMMARY', part.title, its, { sub: part.sub, size,
+            note: `${k === 0 && gi === 0 ? `Let us copy ${hName}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : `We continue with ${hName}. `}Copy the point on ${term}: write the key term first, then its explanation.` });
+        });
         return;
       }
       const items = introRun.slice();

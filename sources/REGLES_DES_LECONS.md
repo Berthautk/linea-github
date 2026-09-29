@@ -38,6 +38,10 @@ Ces règles s'appliquent à toutes les classes (premier et second cycle). Modèl
 - On ne développe que les sous-branches pour lesquelles l'enseignant a fourni un support de cours. Le support montre le niveau de détail attendu ; on le reformule avec ses propres mots.
 - **Géographie du Cameroun** : les supports de l'enseignant contiennent des données propres au Cameroun, compilées par lui ; on s'appuie fortement dessus.
 - **Toutes les informations sont vérifiées** et mises à jour si nécessaire (chiffres, dates, noms) : c'est le niveau Advanced.
+- **Rédaction des éléments** (mesures, difficultés, causes, conséquences…) : sous chaque sous-titre (ex. *A) Political and Administrative Measures*, *C) Difficulties and Challenges*), **3 ou 4 éléments au maximum**. Chaque élément = un terme en gras + **2 phrases développées** :
+  - une mesure : 1) ce qui est fait ; 2) comment elle résout le problème (« It reduces inequality because… ») ;
+  - une difficulté : 1) le problème ; 2) sa conséquence (« As a result… », « They therefore… »).
+  - Modèle validé : LSA Geography of Cameroon, Lesson 15, section 5.
 
 ## 7. Premier cycle
 - Au premier cycle (F2T surtout), le résumé au tableau reste court : seulement les points du syllabus, en puces, une phrase courte par point.

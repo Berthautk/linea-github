@@ -122,8 +122,19 @@ export function getStoredConfig(): FirebaseConfig | null {
     console.error('Error reading stored Firebase config', e);
   }
 
-  return null;
+  // 3. The household's Firebase project (these values are public by design;
+  // access is protected by firestore.rules).
+  return DEFAULT_FIREBASE_CONFIG;
 }
+
+export const DEFAULT_FIREBASE_CONFIG: FirebaseConfig = {
+  apiKey: 'AIzaSyDieFCkyM_Mex3-oqTGiPHjWp6--gJ5lS0',
+  authDomain: 'nsangaweh-budget.firebaseapp.com',
+  projectId: 'nsangaweh-budget',
+  storageBucket: 'nsangaweh-budget.firebasestorage.app',
+  messagingSenderId: '937670477218',
+  appId: '1:937670477218:web:d1af93f066a3f45cf49efb',
+};
 
 export function saveCustomConfig(config: FirebaseConfig) {
   localStorage.setItem(LOCAL_CONFIG_KEY, JSON.stringify(config));

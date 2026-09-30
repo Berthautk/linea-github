@@ -42,9 +42,10 @@ describe('momoParser', () => {
         ts: Date.now(),
         t: 'out' as const,
         amt: 25000,
-        p: null,
+        categoryId: null,
+        lineId: null,
         w: 'w-momo',
-        l: 'Envoi Cabrel',
+        label: 'Envoi Cabrel',
         ref: '18274910283',
       },
     ];

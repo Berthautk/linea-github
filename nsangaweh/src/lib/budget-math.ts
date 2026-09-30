@@ -1,30 +1,4 @@
-import {
-  Entry,
-  EntryType,
-  FamilyCalculation,
-  MemberData,
-  MonthCalculation,
-  MonthData,
-  PlanLine,
-  RankedExpense,
-  Wallet,
-} from './types';
-
-export const GROUPS = [
-  'Revenus',
-  'Logement',
-  'Enfants',
-  'Maison',
-  'Soutien famille',
-  'Santé',
-  'Transport',
-  'Repas',
-  'Dettes',
-  'Frais',
-  'Provisions',
-  'Tontine',
-  'Autres',
-] as const;
+import { Category, Entry, EntryType, MonthDoc, MonthLine, Wallet } from './types';
 
 export const DEFAULT_WALLETS: Wallet[] = [
   {
@@ -60,44 +34,6 @@ export const DEFAULT_WALLETS: Wallet[] = [
     initialBalance: 0,
   },
 ];
-
-export const SEED_DATA: Record<string, MonthData> = {
-  '2026-09': {
-    seeded: true,
-    plan: [
-      { id: 'p-rev-1', g: 'Revenus', l: 'Revenus du mois', a: 0, t: 'in' },
-      { id: 'p-log-1', g: 'Logement', l: 'Loyer', a: 0, t: 'out' },
-      { id: 'p-log-2', g: 'Logement', l: 'Eau', a: 0, t: 'out' },
-      { id: 'p-log-3', g: 'Logement', l: 'Électricité', a: 10000, t: 'out' },
-      {
-        id: 'p-enf-1',
-        g: 'Enfants',
-        l: 'Scolarité et fournitures des enfants',
-        a: 120000,
-        t: 'out',
-      },
-      { id: 'p-mai-1', g: 'Maison', l: 'Femme de ménage', a: 0, t: 'out' },
-      { id: 'p-fam-1', g: 'Soutien famille', l: 'Maman', a: 10000, t: 'out' },
-      { id: 'p-fam-2', g: 'Soutien famille', l: 'Cabrel', a: 17500, t: 'out' },
-      {
-        id: 'p-fam-3',
-        g: 'Soutien famille',
-        l: 'Transport maman',
-        a: 20000,
-        t: 'out',
-      },
-      { id: 'p-san-1', g: 'Santé', l: 'Remède', a: 12000, t: 'out' },
-      { id: 'p-san-2', g: 'Santé', l: 'Consultation', a: 0, t: 'out' },
-      { id: 'p-tra-1', g: 'Transport', l: 'Réparation moto', a: 13000, t: 'out' },
-      { id: 'p-tra-2', g: 'Transport', l: 'Pousse-pousse', a: 10000, t: 'out' },
-      { id: 'p-rep-1', g: 'Repas', l: 'Petit déjeuner', a: 50000, t: 'out' },
-      { id: 'p-det-1', g: 'Dettes', l: 'Chaussures', a: 17000, t: 'out' },
-      { id: 'p-det-2', g: 'Dettes', l: 'Beurre', a: 5000, t: 'out' },
-      { id: 'p-det-3', g: 'Dettes', l: 'Claude', a: 10000, t: 'out' },
-    ],
-    entries: [],
-  },
-};
 
 /**
  * Format integer FCFA into readable French format with narrow non-breaking space
@@ -268,397 +204,140 @@ export function getBudgetMonthForDate(dateStr: string, monthStartDay: number = 1
   return `${y}-${m < 10 ? '0' : ''}${m}`;
 }
 
-/**
- * Calculate month figures:
- * IMPORTANT: Épargne (type 'save') is counted as savings, NEVER as expense (out).
- * Entries with status === 'declined' are excluded from calculations.
- */
-export function calcMonth(data?: MonthData): MonthCalculation {
-  const mData = data || { plan: [], entries: [] };
-  let inc = 0;
-  let out = 0;
-  let saved = 0;
-  let offOut = 0;
-  const byGroup: Record<string, number> = {};
-  const byPlan: Record<string, number> = {};
+/** Number of months from `from` to `to` (both YYYY-MM). */
+export function monthDiff(from: string, to: string): number {
+  const [fy, fm] = from.split('-').map((v) => parseInt(v, 10));
+  const [ty, tm] = to.split('-').map((v) => parseInt(v, 10));
+  return (ty - fy) * 12 + (tm - fm);
+}
 
-  GROUPS.forEach((g) => {
-    byGroup[g] = 0;
-  });
-  byGroup['Hors plan'] = 0;
+export function monthNumber(monthKey: string): number {
+  return parseInt(monthKey.slice(5, 7), 10);
+}
 
-  mData.plan.forEach((p) => {
-    byPlan[p.id] = 0;
-  });
+export const MONTH_NAMES = [
+  'janvier',
+  'février',
+  'mars',
+  'avril',
+  'mai',
+  'juin',
+  'juillet',
+  'août',
+  'septembre',
+  'octobre',
+  'novembre',
+  'décembre',
+];
 
-  mData.entries.forEach((e) => {
-    // Exclude declined entries from active totals
-    if (e.status === 'declined') return;
+/** "d'octobre" / "de septembre" for "Créer le plan d'octobre". */
+export function deMonth(monthKey: string): string {
+  const name = MONTH_NAMES[monthNumber(monthKey) - 1] || monthKey;
+  return /^[aeiouyéèêàâîïôûh]/i.test(name) ? `d’${name}` : `de ${name}`;
+}
 
-    if (e.t === 'in') {
-      inc += e.amt;
-    } else if (e.t === 'save') {
-      saved += e.amt;
-      // Also if provision/goal, record into byGroup
-      const rubric = e.p ? mData.plan.find((x) => x.id === e.p)?.g || 'Provisions' : 'Provisions';
-      byGroup[rubric] = (byGroup[rubric] || 0) + e.amt;
-      if (e.p) {
-        byPlan[e.p] = (byPlan[e.p] || 0) + e.amt;
-      }
-    } else {
-      // Outflow (expense)
-      out += e.amt;
-      if (e.fee && e.fee > 0) {
-        out += e.fee;
-        byGroup['Frais'] = (byGroup['Frais'] || 0) + e.fee;
-      }
-      if (e.p && byPlan[e.p] !== undefined) {
-        byPlan[e.p] = (byPlan[e.p] || 0) + e.amt;
-        const line = mData.plan.find((p) => p.id === e.p);
-        if (line) {
-          byGroup[line.g] = (byGroup[line.g] || 0) + e.amt;
-        } else {
-          byGroup['Hors plan'] = (byGroup['Hors plan'] || 0) + e.amt;
-          offOut += e.amt;
-        }
-      } else {
-        byGroup['Hors plan'] = (byGroup['Hors plan'] || 0) + e.amt;
-        offOut += e.amt;
-      }
-    }
-  });
-
-  let pIn = 0;
-  let pOut = 0;
-  let pSave = 0;
-  let toPay = 0;
-  let unset = 0;
-
-  mData.plan.forEach((p) => {
-    const a = p.a || 0;
-    if (p.t === 'in') {
-      pIn += a;
-    } else if (p.t === 'save') {
-      pSave += a;
-      const actual = byPlan[p.id] || 0;
-      if (a === 0) unset++;
-      else if (actual < a) toPay += a - actual;
-    } else {
-      pOut += a;
-      const actual = byPlan[p.id] || 0;
-      if (a === 0) unset++;
-      else if (actual < a) toPay += a - actual;
-    }
-  });
-
-  const solde = inc - out;
-  const free = solde - toPay;
-
-  return {
-    monthKey: '',
-    monthData: mData,
-    inc,
-    out,
-    saved,
-    pIn,
-    pOut,
-    pSave,
-    toPay,
-    free,
-    unset,
-    byGroup,
-    byPlan,
-    offOut,
-  };
+export interface QuickParse {
+  type: 'in' | 'out' | 'save';
+  amt: number | null;
+  label: string;
+  line: MonthLine | null;
 }
 
 /**
- * Calculate consolidated family totals
- */
-export function calcFamily(members: MemberData[], monthKey: string): FamilyCalculation {
-  let inc = 0;
-  let out = 0;
-  let saved = 0;
-  let pIn = 0;
-  let pOut = 0;
-  let pSave = 0;
-  let toPay = 0;
-  const byGroup: Record<string, number> = {};
-  const planned: Record<string, number> = {};
-
-  GROUPS.forEach((g) => {
-    byGroup[g] = 0;
-    planned[g] = 0;
-  });
-  byGroup['Hors plan'] = 0;
-
-  const per = members.map((m) => {
-    const mData = m.months[monthKey] || { plan: [], entries: [] };
-    const c = calcMonth(mData);
-    inc += c.inc;
-    out += c.out;
-    saved += c.saved;
-    pIn += c.pIn;
-    pOut += c.pOut;
-    pSave += c.pSave;
-    toPay += c.toPay;
-
-    GROUPS.forEach((g) => {
-      byGroup[g] = (byGroup[g] || 0) + (c.byGroup[g] || 0);
-    });
-    byGroup['Hors plan'] = (byGroup['Hors plan'] || 0) + c.offOut;
-
-    mData.plan.forEach((p) => {
-      planned[p.g] = (planned[p.g] || 0) + (p.a || 0);
-    });
-
-    return {
-      uid: m.uid,
-      name: m.name,
-      color: m.color,
-      me: m.me,
-      inc: c.inc,
-      out: c.out,
-      saved: c.saved,
-      pOut: c.pOut,
-      toPay: c.toPay,
-      monthData: mData,
-    };
-  });
-
-  const solde = inc - out;
-  const free = solde - toPay;
-
-  return {
-    monthKey,
-    inc,
-    out,
-    saved,
-    pIn,
-    pOut,
-    pSave,
-    toPay,
-    free,
-    byGroup,
-    planned,
-    per,
-  };
-}
-
-/**
- * Rank expenses (sorties) from highest to lowest
- * Epargne is NOT an expense, so it is excluded from ranked expenses.
- */
-export function rankExpenses(
-  memberList: Array<{ monthData: MonthData; name?: string }>
-): RankedExpense[] {
-  const map: Record<string, { amt: number; group: string; who?: string }> = {};
-
-  memberList.forEach(({ monthData, name }) => {
-    monthData.entries.forEach((e) => {
-      if (e.t !== 'out' || e.status === 'declined') return;
-      let label = e.l;
-      let group = 'Hors plan';
-      if (e.p) {
-        const line = monthData.plan.find((p) => p.id === e.p);
-        if (line) {
-          label = line.l;
-          group = line.g;
-        }
-      }
-      const key = `${group}::${label}`;
-      if (!map[key]) {
-        map[key] = { amt: 0, group, who: name };
-      }
-      map[key].amt += e.amt;
-    });
-  });
-
-  return Object.entries(map)
-    .map(([key, data]) => ({
-      label: key.split('::')[1],
-      group: data.group,
-      amt: data.amt,
-      who: data.who,
-    }))
-    .sort((a, b) => b.amt - a.amt);
-}
-
-/**
- * Label and group resolver for entries
- */
-export function getEntryLabel(
-  mData: MonthData,
-  e: Entry
-): { l: string; g: string } {
-  if (e.p) {
-    const line = mData.plan.find((p) => p.id === e.p);
-    if (line) return { l: line.l, g: line.g };
-  }
-  return {
-    l: e.l || (e.t === 'in' ? 'Entrée diverse' : e.t === 'save' ? 'Épargne' : 'Dépense diverse'),
-    g: e.t === 'save' ? 'Provisions' : 'Hors plan',
-  };
-}
-
-/**
- * Quick smart 1-line text entry parser
- * Examples: "5000 beurre", "+150000 salaire", "5k pousse"
+ * Quick smart 1-line text entry parser.
+ * Examples: "5000 beurre", "+150000 salaire", "5k pousse".
+ * Matches against the month's own lines; the entry type follows the rubric kind.
  */
 export function parseQuick(
   text: string,
-  monthData?: MonthData
-): {
-  type: EntryType;
-  amt: number | null;
-  label: string;
-  planLine: PlanLine | null;
-} {
+  month?: Pick<MonthDoc, 'lines'>,
+  categories: Category[] = []
+): QuickParse {
   const raw = text.trim();
-  if (!raw) {
-    return { type: 'out', amt: null, label: '', planLine: null };
-  }
+  if (!raw) return { type: 'out', amt: null, label: '', line: null };
 
-  let type: EntryType = 'out';
+  let type: 'in' | 'out' | 'save' = 'out';
+  let explicit = false;
   let working = raw;
-
   if (working.startsWith('+')) {
     type = 'in';
+    explicit = true;
     working = working.slice(1).trim();
   } else if (working.startsWith('-')) {
-    type = 'out';
+    explicit = true;
     working = working.slice(1).trim();
   }
 
-  // Check amount at start
-  const firstToken = working.split(/\s+/)[0];
-  const parsedAmt = parseAmount(firstToken);
+  const tokens = working.split(/\s+/);
+  let amt = parseAmount(tokens[0]);
   let labelPart = '';
-
-  if (parsedAmt !== null) {
-    labelPart = working.slice(firstToken.length).trim();
+  if (amt !== null) {
+    labelPart = tokens.slice(1).join(' ');
   } else {
-    // Check amount at end
-    const lastToken = working.split(/\s+/).pop() || '';
-    const parsedEndAmt = parseAmount(lastToken);
-    if (parsedEndAmt !== null) {
-      labelPart = working.slice(0, working.length - lastToken.length).trim();
-      return resolveMatch(type, parsedEndAmt, labelPart, monthData);
+    const last = tokens[tokens.length - 1] || '';
+    amt = parseAmount(last);
+    labelPart = amt !== null ? tokens.slice(0, -1).join(' ') : working;
+  }
+
+  const nLabel = norm(labelPart);
+  const line = matchLine(labelPart, month?.lines || [], categories);
+  if (line) {
+    const kind = categories.find((c) => c.id === line.categoryId)?.kind;
+    if (kind) type = kind;
+  } else if (!explicit) {
+    const incomeKeywords = ['salaire', 'revenu', 'vente', 'paie', 'prime', 'bourse', 'honoraires'];
+    const saveKeywords = ['epargne', 'economie', 'reserve'];
+    if (incomeKeywords.some((k) => nLabel.includes(k))) type = 'in';
+    if (saveKeywords.some((k) => nLabel.includes(k))) type = 'save';
+  }
+
+  return { type, amt, label: line ? line.label : labelPart.trim(), line };
+}
+
+/** Best-scoring month line for a free label (exact > contains > shared words). */
+export function matchLine(
+  label: string,
+  lines: MonthLine[],
+  categories: Category[] = []
+): MonthLine | null {
+  const nLabel = norm(label).trim();
+  if (!nLabel) return null;
+  const archivedCats = new Set(categories.filter((c) => c.archived).map((c) => c.id));
+  const words = nLabel.split(/\s+/).filter((w) => w.length >= 3);
+  let best: MonthLine | null = null;
+  let bestScore = 0;
+  lines.forEach((l) => {
+    if (l.archived || archivedCats.has(l.categoryId)) return;
+    const n = norm(l.label);
+    let score = 0;
+    if (n === nLabel) score = 100;
+    else if (n.includes(nLabel) || nLabel.includes(n)) score = 70;
+    else words.forEach((w) => n.includes(w) && (score += 30));
+    if (score > bestScore && score >= 30) {
+      bestScore = score;
+      best = l;
     }
-  }
-
-  return resolveMatch(type, parsedAmt, labelPart, monthData);
+  });
+  return best;
 }
 
-function resolveMatch(
-  explicitType: EntryType,
-  amt: number | null,
-  rawLabel: string,
-  monthData?: MonthData
-): {
-  type: EntryType;
-  amt: number | null;
-  label: string;
-  planLine: PlanLine | null;
-} {
-  let type = explicitType;
-  const nLabel = norm(rawLabel);
-
-  const incomeKeywords = [
-    'salaire',
-    'revenu',
-    'vente',
-    'paie',
-    'prime',
-    'bourse',
-    'remboursement',
-    'gain',
-    'honoraires',
-    'virement recu',
-  ];
-
-  if (explicitType === 'out' && incomeKeywords.some((k) => nLabel.includes(k))) {
-    type = 'in';
-  }
-
-  const saveKeywords = ['epargne', 'provision', 'tontine', 'economie', 'reserve'];
-  if (saveKeywords.some((k) => nLabel.includes(k))) {
-    type = 'save';
-  }
-
-  let matchedPlan: PlanLine | null = null;
-
-  if (monthData && monthData.plan.length && rawLabel.trim()) {
-    const candidates = monthData.plan.filter((p) => p.t === type);
-    const labelWords = nLabel.split(/\s+/).filter((w) => w.length >= 3);
-
-    let bestScore = 0;
-    candidates.forEach((p) => {
-      const pNorm = norm(p.l);
-      let score = 0;
-      if (pNorm === nLabel) {
-        score = 100;
-      } else if (pNorm.includes(nLabel) || nLabel.includes(pNorm)) {
-        score = 70;
-      } else {
-        labelWords.forEach((w) => {
-          if (pNorm.includes(w)) score += 30;
-        });
-      }
-      if (score > bestScore && score >= 30) {
-        bestScore = score;
-        matchedPlan = p;
-      }
-    });
-  }
-
-  const cleanLabel = rawLabel.trim();
-  const displayLabel = matchedPlan ? (matchedPlan as PlanLine).l : cleanLabel;
-
-  return {
-    type,
-    amt,
-    label: displayLabel,
-    planLine: matchedPlan,
-  };
-}
-
-/**
- * End-of-month Forecast calculation
- */
+/** End-of-month forecast from the spending pace. */
 export function computeForecast(
-  calc: MonthCalculation,
+  calc: { inc: number; out: number },
   currentMonth: string
-): {
-  forecastBalance: number;
-  dailyPace: number;
-  daysPassed: number;
-  daysLeft: number;
-  topRubrics: Array<{ rubric: string; amt: number }>;
-} {
+): { forecastBalance: number; dailyPace: number; daysPassed: number; daysLeft: number } {
   const totalDays = daysInMonth(currentMonth);
-  const now = new Date();
   const isCurrentMonth = currentMonth === todayStr().slice(0, 7);
-  const currentDay = isCurrentMonth ? Math.min(now.getDate(), totalDays) : totalDays;
+  const currentDay = isCurrentMonth ? Math.min(new Date().getDate(), totalDays) : totalDays;
   const daysPassed = Math.max(1, currentDay);
   const daysLeft = Math.max(0, totalDays - currentDay);
-
   const dailyPace = calc.out / daysPassed;
-  const projectedExtraSpending = dailyPace * daysLeft;
-  // If there are still planned payments not yet made, they are considered in the forecast
-  const forecastBalance = calc.inc - (calc.out + projectedExtraSpending);
-
-  const rubricEntries = Object.entries(calc.byGroup)
-    .filter(([g, amt]) => g !== 'Revenus' && amt > 0)
-    .map(([rubric, amt]) => ({ rubric, amt }))
-    .sort((a, b) => b.amt - a.amt);
-
+  const forecastBalance = calc.inc - (calc.out + dailyPace * daysLeft);
   return {
     forecastBalance: Math.round(forecastBalance),
     dailyPace: Math.round(dailyPace),
     daysPassed,
     daysLeft,
-    topRubrics: rubricEntries.slice(0, 3),
   };
 }
 
@@ -667,7 +346,8 @@ export interface MonthInsightData {
   inc: number;
   out: number;
   pOut: number;
-  byGroup: Record<string, number>;
+  /** Spending per rubric display name. */
+  byRubric: Record<string, number>;
 }
 
 export function getInsights(dataList: MonthInsightData[]): string[] {
@@ -679,38 +359,40 @@ export function getInsights(dataList: MonthInsightData[]): string[] {
 
   if (latest.inc > 0) {
     const rate = Math.round(((latest.inc - latest.out) / latest.inc) * 100);
-    if (rate >= 20) {
-      insights.push(`Bravo ! Vous conservez <b>${rate}%</b> de vos revenus.`);
-    } else if (rate > 0) {
-      insights.push(`Solde positif : <b>${rate}%</b> de vos revenus non dépensés.`);
-    } else {
-      insights.push(`Attention : vos dépenses dépassent vos entrées ce mois-ci.`);
-    }
+    if (rate >= 20) insights.push(`Vous conservez <b>${rate}%</b> de vos revenus.`);
+    else if (rate > 0) insights.push(`<b>${rate}%</b> de vos revenus ne sont pas dépensés.`);
+    else insights.push('Vos dépenses dépassent vos revenus reçus ce mois-ci.');
   }
 
   if (dataList.length >= 2) {
     const prev = dataList[dataList.length - 2];
     if (prev.out > 0) {
       const diff = Math.round(((latest.out - prev.out) / prev.out) * 100);
-      if (diff > 0) {
-        insights.push(`Dépenses en hausse de <b>+${diff}%</b> par rapport au mois précédent.`);
-      } else if (diff < 0) {
-        insights.push(`Dépenses maîtrisées en baisse de <b>${diff}%</b> par rapport au mois précédent.`);
-      }
+      if (diff > 0) insights.push(`Dépenses en hausse de <b>${diff}%</b> par rapport au mois précédent.`);
+      else if (diff < 0) insights.push(`Dépenses en baisse de <b>${-diff}%</b> par rapport au mois précédent.`);
     }
   }
 
-  const topRubric = Object.entries(latest.byGroup)
-    .filter(([g]) => g !== 'Revenus')
-    .sort((a, b) => b[1] - a[1])[0];
-  if (topRubric && topRubric[1] > 0) {
-    insights.push(`Poste principal : <b>${topRubric[0]}</b> (${fmt(topRubric[1])} F).`);
+  const top = Object.entries(latest.byRubric).sort((a, b) => b[1] - a[1])[0];
+  if (top && top[1] > 0) {
+    insights.push(`Poste principal : <b>${escapeHtml(top[0])}</b> (${fmt(top[1])} F).`);
   }
 
   if (latest.pOut > 0) {
     const execRate = Math.round((latest.out / latest.pOut) * 100);
-    insights.push(`Exécution du plan : <b>${execRate}%</b> du budget prévu engagé.`);
+    insights.push(`Vous avez dépensé <b>${execRate}%</b> du montant prévu.`);
   }
 
   return insights.length > 0 ? insights : ['Vos données sont prêtes pour l’analyse.'];
 }
+
+export function escapeHtml(s: string): string {
+  return s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+}
+
+/** Default label when the user did not type one. */
+export function defaultEntryLabel(t: EntryType): string {
+  return t === 'in' ? 'Revenu' : t === 'save' ? 'Épargne' : t === 'transfer' ? 'Virement' : 'Dépense';
+}
+
+export type { Entry };

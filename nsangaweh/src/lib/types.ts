@@ -1,31 +1,83 @@
-export type EntryType = 'in' | 'out' | 'save';
+export type EntryType = 'in' | 'out' | 'save' | 'transfer';
 export type EntrySource = 'manual' | 'sms' | 'voice' | 'recurring';
 export type ApprovalStatus = 'pending' | 'approved' | 'declined';
 
-export interface PlanLine {
+/* ------------------------------------------------------------------ */
+/* Dynamic budget structure: every rubric and line is user data.       */
+/* ------------------------------------------------------------------ */
+
+export type CategoryKind = 'out' | 'in' | 'save';
+export type BudgetMode = 'lines' | 'envelope';
+
+/** A rubric ("Logement", "Revenus"...), created, renamed and deleted by the user. */
+export interface Category {
   id: string;
-  g: string; // group / rubric
-  l: string; // label
-  a: number; // planned amount (integer FCFA)
-  t: EntryType; // 'in' | 'out' | 'save'
-  commitmentId?: string;
-  provisionId?: string;
+  name: string;
+  icon: string; // Lucide icon name from ICON_CHOICES
+  color: string; // one of PALETTE
+  order: number;
+  kind: CategoryKind;
+  budgetMode: BudgetMode;
+  envelopeAmount?: number | null; // default envelope for new months
+  archived: boolean;
+  createdAt: number;
+  linkedTo?: 'debts'; // fed by the Carnet de dettes
+}
+
+export type Recurrence =
+  | { kind: 'once'; month: string }
+  | { kind: 'monthly'; startMonth?: string; endMonth?: string }
+  | { kind: 'everyNMonths'; n: number; startMonth: string; endMonth?: string }
+  | { kind: 'months'; months: number[]; startMonth?: string; endMonth?: string }
+  | { kind: 'yearly'; month: number; startMonth?: string; endMonth?: string };
+
+/** A budget line template. Month plans are generated from active items. */
+export interface BudgetItem {
+  id: string;
+  categoryId: string;
+  label: string;
+  amount: number | null; // null = "sans montant fixé"
+  recurrence: Recurrence;
+  active: boolean;
+  order: number;
+  archived: boolean;
+  note?: string;
+  remind?: boolean;
+}
+
+export type LineOrigin = 'recurring' | 'oneoff' | 'manual' | 'debt';
+
+/** What the user sees in a given month. Independent from other months. */
+export interface MonthLine {
+  id: string;
+  itemId?: string;
+  categoryId: string;
+  label: string;
+  amount: number | null;
+  origin: LineOrigin;
+  note?: string;
+  order?: number;
+  archived?: boolean; // deleted but kept because entries reference it
+  debtId?: string;
+  remind?: boolean;
 }
 
 export interface Entry {
   id: string;
   d: string; // YYYY-MM-DD
   ts: number; // timestamp ms
-  t: EntryType; // 'in' | 'out' | 'save'
+  t: EntryType; // 'transfer' is a move between wallets, never spending
   amt: number; // integer FCFA
-  p: string | null; // plan line id or null
-  l: string; // free label
+  categoryId: string | null;
+  lineId: string | null;
+  label: string; // snapshot for history
   w: string; // wallet id
-  fee?: number; // integer FCFA
-  ref?: string; // transaction ID / receipt reference
-  who?: string; // recipient or sender
-  src?: EntrySource; // 'manual' | 'sms' | 'voice' | 'recurring'
-  status?: ApprovalStatus; // 'pending' | 'approved' | 'declined'
+  toW?: string; // destination wallet for transfers
+  fee?: number;
+  ref?: string;
+  who?: string;
+  src?: EntrySource;
+  status?: ApprovalStatus;
   declinedBy?: string;
   approvedAt?: number;
   debtId?: string;
@@ -33,9 +85,50 @@ export interface Entry {
   goalId?: string;
 }
 
-export interface MonthData {
-  plan: PlanLine[];
+export interface MonthDoc {
+  lines: MonthLine[];
   entries: Entry[];
+  envelopes?: Record<string, number | null>; // categoryId -> amount for this month
+  planCreated?: boolean;
+  createdAt?: number;
+  fromTemplate?: boolean;
+  updated?: number;
+}
+
+export interface MemberBudget {
+  categories: Category[];
+  items: BudgetItem[];
+  debts: Debt[];
+  commitments: Commitment[];
+  months: Record<string, MonthDoc>;
+}
+
+/* Old storage format (before the dynamic model), kept for migration only. */
+export interface LegacyPlanLine {
+  id: string;
+  g: string;
+  l: string;
+  a: number;
+  t: 'in' | 'out' | 'save';
+  commitmentId?: string;
+  provisionId?: string;
+}
+
+export interface LegacyEntry {
+  id: string;
+  d: string;
+  ts: number;
+  t: 'in' | 'out' | 'save';
+  amt: number;
+  p: string | null;
+  l: string;
+  w: string;
+  [key: string]: unknown;
+}
+
+export interface LegacyMonthData {
+  plan: LegacyPlanLine[];
+  entries: LegacyEntry[];
   updated?: number;
   seeded?: boolean;
 }
@@ -74,7 +167,8 @@ export interface Debt {
 export interface Commitment {
   id: string;
   label: string;
-  rubric: string;
+  categoryId: string;
+  itemId?: string;
   amount: number;
   dayOfMonth: number; // 1-28
   wallet: string;
@@ -97,7 +191,7 @@ export interface ProvisionSpending {
   date: string;
   amt: number;
   label: string;
-  rubric: string;
+  categoryId: string;
 }
 
 export interface Provision {
@@ -158,8 +252,8 @@ export interface Tontine {
 export interface RecipientMemory {
   id: string;
   name: string; // person or merchant name
-  rubric: string;
-  planLineLabel?: string;
+  categoryId: string;
+  itemId?: string;
   defaultWallet?: string;
 }
 
@@ -177,7 +271,10 @@ export interface HouseholdSettings {
   monthStartDay: number; // 1 to 28
   approvalThreshold: number; // e.g. 50000
   approvalEnabled: boolean;
-  exemptRubrics: string[];
+  exemptCategoryIds?: string[];
+  /** Famille view only: normalised rubric name -> canonical normalised name. */
+  rubricMerges?: Record<string, string>;
+  rubricMergesDismissed?: string[];
   plan: 'free' | 'premium';
   trialEndsAt?: number;
   premiumEnabled?: boolean; // dev test override
@@ -191,74 +288,22 @@ export interface HouseholdMeta {
   settings: HouseholdSettings;
 }
 
+/** Stored in households/{hid}/members/{uid}. */
 export interface MemberProfile {
-  uid: string;
   name: string;
-  color: string;
-  joined: number;
+  color?: string;
+  joined?: number;
+  budgetSetupDone?: boolean;
+  templateStripDismissed?: boolean;
+  envelopeRollover?: boolean;
 }
 
-export interface MemberData {
+/** A household member with their own budget structure (used by Famille). */
+export interface MemberData extends MemberBudget {
   uid: string;
   name: string;
   color?: string;
   me: boolean;
-  months: Record<string, MonthData>;
-  wallets?: Wallet[];
-  debts?: Debt[];
-  commitments?: Commitment[];
-  provisions?: Provision[];
-  tontines?: Tontine[];
-}
-
-export interface MonthCalculation {
-  monthKey: string;
-  monthData: MonthData;
-  inc: number; // actual income
-  out: number; // actual expenses
-  saved: number; // actual savings / provisions
-  pIn: number; // planned income
-  pOut: number; // planned expenses
-  pSave: number; // planned savings
-  toPay: number; // remaining planned expenses to pay
-  free: number; // solde - toPay
-  unset: number; // number of plan lines with a === 0
-  byGroup: Record<string, number>;
-  byPlan: Record<string, number>;
-  offOut: number; // non-planned expenses
-}
-
-export interface FamilyCalculation {
-  monthKey: string;
-  inc: number;
-  out: number;
-  saved: number;
-  pIn: number;
-  pOut: number;
-  pSave: number;
-  toPay: number;
-  free: number;
-  byGroup: Record<string, number>;
-  planned: Record<string, number>;
-  per: Array<{
-    uid: string;
-    name: string;
-    color?: string;
-    me: boolean;
-    inc: number;
-    out: number;
-    saved: number;
-    pOut: number;
-    toPay: number;
-    monthData: MonthData;
-  }>;
-}
-
-export interface RankedExpense {
-  label: string;
-  group: string;
-  amt: number;
-  who?: string;
 }
 
 export interface QuotaUsage {

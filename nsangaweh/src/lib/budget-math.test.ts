@@ -1,22 +1,39 @@
 import { describe, expect, it } from 'vitest';
 import {
-  calcFamily,
-  calcMonth,
   computeForecast,
+  deMonth,
   fmt,
   fmtS,
   generateHouseholdCode,
   getBudgetMonthForDate,
-  norm,
-  parseAmount,
   parseQuick,
-  rankExpenses,
-  SEED_DATA,
 } from './budget-math';
+import { calcMonth, rankExpenses } from './calc';
 import { parseFrenchNumberWords, parseVoiceTranscript } from './frenchNumbers';
 import { cleanMomoAmount, parseMomoSMS } from './momoParser';
 import { MOMO_FIXTURES } from './momoParser.fixtures';
-import { Entry, MonthData, PlanLine } from './types';
+import { Category, Entry, MonthDoc } from './types';
+
+const cat = (id: string, name: string, kind: Category['kind'] = 'out'): Category => ({
+  id,
+  name,
+  icon: 'Shapes',
+  color: '#475569',
+  order: 0,
+  kind,
+  budgetMode: 'lines',
+  archived: false,
+  createdAt: 0,
+});
+const entry = (p: Partial<Entry> & Pick<Entry, 'id' | 't' | 'amt'>): Entry => ({
+  d: '2026-09-01',
+  ts: 1,
+  categoryId: null,
+  lineId: null,
+  label: '',
+  w: 'cash',
+  ...p,
+});
 
 describe('NSANGAWEH Core Logic & Tests', () => {
   describe('Formatting & Pure Helpers', () => {
@@ -46,77 +63,58 @@ describe('NSANGAWEH Core Logic & Tests', () => {
   });
 
   describe('Budget Math & Epargne Rule', () => {
-    it('counts type save as epargne and NEVER as depense', () => {
-      const mData: MonthData = {
-        plan: [
-          { id: 'p1', g: 'Revenus', l: 'Salaire', a: 500000, t: 'in' },
-          { id: 'p2', g: 'Logement', l: 'Loyer', a: 150000, t: 'out' },
-          { id: 'p3', g: 'Provisions', l: 'Rentrée scolaire', a: 50000, t: 'save' },
-        ],
-        entries: [
-          { id: 'e1', d: '2026-09-01', ts: 1, t: 'in', amt: 500000, p: 'p1', l: '', w: 'cash' },
-          { id: 'e2', d: '2026-09-02', ts: 2, t: 'out', amt: 150000, p: 'p2', l: '', w: 'cash' },
-          { id: 'e3', d: '2026-09-03', ts: 3, t: 'save', amt: 50000, p: 'p3', l: '', w: 'cash' },
-        ],
-      };
+    const cats = [cat('rev', 'Revenus', 'in'), cat('log', 'Logement'), cat('prov', 'Provisions', 'save')];
+    const month: MonthDoc = {
+      planCreated: true,
+      lines: [
+        { id: 'p1', categoryId: 'rev', label: 'Salaire', amount: 500000, origin: 'recurring' },
+        { id: 'p2', categoryId: 'log', label: 'Loyer', amount: 150000, origin: 'recurring' },
+        { id: 'p3', categoryId: 'prov', label: 'Rentrée scolaire', amount: 50000, origin: 'recurring' },
+      ],
+      entries: [
+        entry({ id: 'e1', t: 'in', amt: 500000, categoryId: 'rev', lineId: 'p1' }),
+        entry({ id: 'e2', t: 'out', amt: 150000, categoryId: 'log', lineId: 'p2' }),
+        entry({ id: 'e3', t: 'save', amt: 50000, categoryId: 'prov', lineId: 'p3' }),
+      ],
+    };
 
-      const c = calcMonth(mData);
+    it('counts type save as epargne and NEVER as depense', () => {
+      const c = calcMonth(cats, month);
       expect(c.inc).toBe(500000);
-      // Depenses must be ONLY 150000, NOT 200000
       expect(c.out).toBe(150000);
       expect(c.saved).toBe(50000);
-      // Solde = inc - out = 350000
-      expect(c.inc - c.out).toBe(350000);
-
-      // Ranked expenses must NOT include the 50000 save
-      const ranked = rankExpenses([{ monthData: mData }]);
-      expect(ranked.some((r) => r.group === 'Provisions')).toBe(false);
+      const ranked = rankExpenses([{ categories: cats, month }]);
+      expect(ranked.some((r) => r.category?.id === 'prov')).toBe(false);
       expect(ranked[0].amt).toBe(150000);
     });
 
     it('excludes declined entries from active totals', () => {
-      const mData: MonthData = {
-        plan: [{ id: 'p1', g: 'Logement', l: 'Loyer', a: 150000, t: 'out' }],
-        entries: [
-          {
-            id: 'e1',
-            d: '2026-09-02',
-            ts: 1,
-            t: 'out',
-            amt: 150000,
-            p: 'p1',
-            l: '',
-            w: 'cash',
-            status: 'declined',
-          },
-        ],
-      };
-      const c = calcMonth(mData);
+      const c = calcMonth(cats, {
+        ...month,
+        entries: [entry({ id: 'e1', t: 'out', amt: 150000, categoryId: 'log', lineId: 'p2', status: 'declined' })],
+      });
       expect(c.out).toBe(0);
     });
 
     it('computes end-of-month forecast based on pace and remaining days', () => {
-      const mData: MonthData = {
-        plan: [{ id: 'p1', g: 'Revenus', l: 'Revenu', a: 300000, t: 'in' }],
-        entries: [
-          { id: 'e1', d: '2026-09-01', ts: 1, t: 'in', amt: 300000, p: 'p1', l: '', w: 'cash' },
-          { id: 'e2', d: '2026-09-05', ts: 2, t: 'out', amt: 50000, p: null, l: 'Repas', w: 'cash' },
-        ],
-      };
-      const c = calcMonth(mData);
-      const forecast = computeForecast(c, '2026-09');
+      const forecast = computeForecast({ inc: 300000, out: 50000 }, '2026-09');
       expect(forecast.dailyPace).toBeGreaterThan(0);
-      expect(forecast.topRubrics.length).toBeGreaterThan(0);
     });
   });
 
   describe('One-line Quick Parser', () => {
-    it('parses quick entries with amount prefixes and suffixes', () => {
-      const p = parseQuick('5000 beurre', SEED_DATA['2026-09']);
+    const cats = [cat('det', 'Dettes')];
+    const month: MonthDoc = {
+      lines: [{ id: 'l-beurre', categoryId: 'det', label: 'Beurre', amount: 5000, origin: 'oneoff' }],
+      entries: [],
+    };
+
+    it('parses quick entries with amount prefixes and matches the month line', () => {
+      const p = parseQuick('5000 beurre', month, cats);
       expect(p.type).toBe('out');
       expect(p.amt).toBe(5000);
       expect(p.label).toBe('Beurre');
-      expect(p.planLine?.id).toBe('p-det-2');
+      expect(p.line?.id).toBe('l-beurre');
     });
 
     it('auto-switches to income on keywords like salaire', () => {
@@ -129,6 +127,11 @@ describe('NSANGAWEH Core Logic & Tests', () => {
       const p = parseQuick('+25000 prime');
       expect(p.type).toBe('in');
       expect(p.amt).toBe(25000);
+    });
+
+    it('writes month names with the right French elision', () => {
+      expect(deMonth('2026-10')).toBe('d’octobre');
+      expect(deMonth('2026-09')).toBe('de septembre');
     });
   });
 
@@ -160,8 +163,9 @@ describe('NSANGAWEH Core Logic & Tests', () => {
           ts: 1,
           t: 'out',
           amt: 25000,
-          p: null,
-          l: 'Cabrel',
+          categoryId: null,
+          lineId: null,
+          label: 'Cabrel',
           w: 'momo',
           ref: '18274910283',
         },

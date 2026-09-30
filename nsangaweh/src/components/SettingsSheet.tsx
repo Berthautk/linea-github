@@ -28,15 +28,25 @@ import {
 import { exportLedgerToCSV } from '../lib/csv-export';
 import { getQuotaTracker } from '../lib/firebase';
 import { triggerHaptic } from '../lib/haptics';
-import { HouseholdSettings, MonthData } from '../lib/types';
+import { RubricBadge } from '../lib/icons';
+import { TEMPLATES } from '../lib/templates';
+import { Category, HouseholdSettings, MemberBudget } from '../lib/types';
 import { SmsTesterModal } from './SmsTesterModal';
+import { ActionSheet, Toggle } from './ui';
 
 interface SettingsSheetProps {
   isOpen: boolean;
   userName: string;
   userEmail: string;
   householdId: string;
-  months: Record<string, MonthData>;
+  budget: MemberBudget;
+  rollover: boolean;
+  onToggleRollover: (v: boolean) => void;
+  onRestoreCategory: (id: string) => void;
+  onMoveEntries: (fromId: string, toId: string) => void;
+  onApplyTemplate: (templateId: string) => void;
+  onOpenSetup: (step: 'pick' | 'import') => void;
+  onPrepareMonth: () => void;
   householdSettings?: HouseholdSettings;
   onClose: () => void;
   onUpdateName: (name: string) => void;
@@ -51,7 +61,14 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
   userName,
   userEmail,
   householdId,
-  months,
+  budget,
+  rollover,
+  onToggleRollover,
+  onRestoreCategory,
+  onMoveEntries,
+  onApplyTemplate,
+  onOpenSetup,
+  onPrepareMonth,
   householdSettings,
   onClose,
   onUpdateName,
@@ -61,6 +78,16 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
   onDeleteAccount,
 }) => {
   const [nameInput, setNameInput] = useState(userName);
+  const [moving, setMoving] = useState<Category | null>(null);
+  const [moveTarget, setMoveTarget] = useState<Category | null>(null);
+  const [templateAsk, setTemplateAsk] = useState<string | null>(null);
+  React.useEffect(() => {
+    if (isOpen) setNameInput(userName);
+  }, [isOpen, userName]);
+  const archived = budget.categories.filter((c) => c.archived);
+  const activeCats = budget.categories.filter((c) => !c.archived).sort((a, b) => a.order - b.order);
+  const entriesOf = (id: string) =>
+    Object.values(budget.months).reduce((s, m) => s + m.entries.filter((e) => e.categoryId === id).length, 0);
   const [copied, setCopied] = useState(false);
   const [themeMode, setThemeMode] = useState<'system' | 'light' | 'dark'>(() => {
     return (localStorage.getItem('nsangaweh-theme') as any) || 'system';
@@ -164,7 +191,7 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
 
   const handleExportCSV = () => {
     triggerHaptic('success');
-    exportLedgerToCSV(months, userName || 'Utilisateur', householdId || 'Local');
+    exportLedgerToCSV(budget, userName || 'Utilisateur', householdId || 'Local');
   };
 
   const executeDeleteAccount = async () => {
@@ -235,6 +262,70 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
             <span className="text-[11px] text-[var(--color-text-muted)] truncate block">
               Compte : <b>{userEmail || 'Mode local'}</b>
             </span>
+          </div>
+
+          {/* Budget structure */}
+          <div className="p-3.5 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex flex-col gap-2">
+            <span className="text-xs font-heading font-bold text-[var(--color-text)]">Mon budget</span>
+            <div className="grid grid-cols-3 gap-1.5">
+              <button type="button" onClick={onPrepareMonth} className="min-h-10 px-2 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-[11px] font-bold">
+                Préparer le mois
+              </button>
+              <button type="button" onClick={() => onOpenSetup('pick')} className="min-h-10 px-2 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-[11px] font-bold">
+                Choisir des rubriques
+              </button>
+              <button type="button" onClick={() => onOpenSetup('import')} className="min-h-10 px-2 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-[11px] font-bold">
+                Importer ma fiche
+              </button>
+            </div>
+            <Toggle
+              checked={rollover}
+              onChange={onToggleRollover}
+              label="Reporter automatiquement le solde non dépensé d’une rubrique au mois suivant"
+              hint="Pour les enveloppes : ce qui reste s’ajoute au mois suivant."
+            />
+          </div>
+
+          {/* Archived rubrics */}
+          <div className="p-3.5 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex flex-col gap-2">
+            <span className="text-xs font-heading font-bold text-[var(--color-text)]">Rubriques archivées</span>
+            {!archived.length ? (
+              <span className="text-[11px] text-[var(--color-text-muted)]">
+                Aucune. Une rubrique supprimée qui a des opérations est archivée ici, avec son historique.
+              </span>
+            ) : (
+              archived.map((c) => (
+                <div key={c.id} className="flex items-center gap-2">
+                  <RubricBadge icon={c.icon} color={c.color} size="sm" />
+                  <span className="flex-1 min-w-0 leading-tight">
+                    <span className="block text-xs font-semibold truncate">{c.name}</span>
+                    <span className="block text-[10px] text-[var(--color-text-muted)]">{entriesOf(c.id)} opération(s)</span>
+                  </span>
+                  <button type="button" onClick={() => onRestoreCategory(c.id)} className="px-2 py-1.5 rounded-lg text-[11px] font-bold text-[var(--color-primary)]">
+                    Restaurer
+                  </button>
+                  <button type="button" onClick={() => setMoving(c)} className="px-2 py-1.5 rounded-lg text-[11px] font-bold text-[var(--color-text-muted)]">
+                    Déplacer
+                  </button>
+                </div>
+              ))
+            )}
+          </div>
+
+          {/* Templates */}
+          <div className="p-3.5 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex flex-col gap-2">
+            <span className="text-xs font-heading font-bold text-[var(--color-text)]">Modèles</span>
+            {TEMPLATES.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                onClick={() => setTemplateAsk(t.id)}
+                className="w-full p-2.5 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-left"
+              >
+                <span className="block text-xs font-bold">{t.name}</span>
+                <span className="block text-[10px] text-[var(--color-text-muted)]">{t.description}</span>
+              </button>
+            ))}
           </div>
 
           {/* 2. Household code */}
@@ -521,6 +612,49 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
           </div>
         </div>
       </div>
+
+      <ActionSheet
+        open={!!moving && !moveTarget}
+        title={`Déplacer les opérations de « ${moving?.name || ''} »`}
+        message="Choisissez la rubrique qui recevra toutes ses opérations. La rubrique archivée sera ensuite supprimée."
+        onClose={() => setMoving(null)}
+        actions={activeCats
+          .filter((c) => c.kind === moving?.kind)
+          .map((c) => ({ label: c.name, onClick: () => setMoveTarget(c) }))}
+      />
+      <ActionSheet
+        open={!!moving && !!moveTarget}
+        title="Confirmer le déplacement"
+        message={`${moving ? entriesOf(moving.id) : 0} opération(s) de « ${moving?.name} » iront dans « ${moveTarget?.name} ». Les montants et les dates ne changent pas.`}
+        onClose={() => setMoveTarget(null)}
+        actions={[
+          {
+            label: 'Déplacer les opérations',
+            onClick: () => {
+              if (moving && moveTarget) onMoveEntries(moving.id, moveTarget.id);
+              setMoving(null);
+              setMoveTarget(null);
+            },
+          },
+          { label: 'Annuler', onClick: () => setMoveTarget(null) },
+        ]}
+      />
+      <ActionSheet
+        open={!!templateAsk}
+        title="Appliquer le modèle"
+        message="Les rubriques et lignes du modèle sont ajoutées au mois affiché. Vos rubriques existantes du même nom sont réutilisées. Vous pourrez annuler."
+        onClose={() => setTemplateAsk(null)}
+        actions={[
+          {
+            label: 'Ajouter au mois affiché',
+            onClick: () => {
+              if (templateAsk) onApplyTemplate(templateAsk);
+              setTemplateAsk(null);
+            },
+          },
+          { label: 'Annuler', onClick: () => setTemplateAsk(null) },
+        ]}
+      />
 
       {/* Modals: SMS Tester */}
       <SmsTesterModal

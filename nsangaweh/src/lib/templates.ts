@@ -144,6 +144,11 @@ export function applyTemplate(b: MemberBudget, t: BudgetTemplate, monthKey: stri
     if (!c.ok) return c;
     next = c.budget;
     for (const l of r.lines) {
+      // A line the month already has in this rubric is kept as is.
+      const existing = next.months[monthKey]?.lines.some(
+        (x) => !x.archived && x.categoryId === c.id && nameKey(x.label) === nameKey(l.label)
+      );
+      if (existing) continue;
       const a = addLine(next, monthKey, {
         categoryId: c.id!,
         label: l.label,

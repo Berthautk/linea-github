@@ -14,13 +14,14 @@ import {
 } from 'lucide-react';
 import { fmt, generateId, todayStr } from '../lib/budget-math';
 import { triggerHaptic } from '../lib/haptics';
-import { Commitment, Entry, Wallet } from '../lib/types';
+import { Category, Commitment, Entry, Wallet } from '../lib/types';
 
 interface CommitmentsSheetProps {
   isOpen: boolean;
   commitments: Commitment[];
   entries: Entry[];
   wallets: Wallet[];
+  categories: Category[];
   currentMonth: string;
   onClose: () => void;
   onUpdateCommitments: (updated: Commitment[]) => void;
@@ -32,6 +33,7 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
   commitments,
   entries,
   wallets,
+  categories,
   currentMonth,
   onClose,
   onUpdateCommitments,
@@ -51,7 +53,9 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
   const [newPhone, setNewPhone] = useState('');
   const [newAmount, setNewAmount] = useState('');
   const [newDay, setNewDay] = useState('5');
-  const [newWallet, setNewWallet] = useState(wallets[0]?.id || 'wallet-momo');
+  const [newWallet, setNewWallet] = useState(wallets[0]?.id || '');
+  const outCategories = categories.filter((c) => !c.archived && c.kind === 'out').sort((a, b) => a.order - b.order);
+  const [newCategoryId, setNewCategoryId] = useState('');
 
   if (!isOpen) return null;
 
@@ -61,8 +65,8 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
   const totalSentThisYear = commitments.reduce((acc, c) => {
     const cEntries = yearEntries.filter(
       (e) =>
-        e.l.toLowerCase().includes(c.recipient.toLowerCase()) ||
-        e.l.toLowerCase().includes(c.label.toLowerCase()) ||
+        e.label.toLowerCase().includes(c.recipient.toLowerCase()) ||
+        e.label.toLowerCase().includes(c.label.toLowerCase()) ||
         e.who?.toLowerCase().includes(c.recipient.toLowerCase())
     );
     return acc + cEntries.reduce((subAcc, e) => subAcc + e.amt, 0);
@@ -74,17 +78,17 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
       (e) =>
         e.d.startsWith(currentMonth) &&
         e.t === 'out' &&
-        (e.l.toLowerCase().includes(c.recipient.toLowerCase()) ||
-          e.l.toLowerCase().includes(c.label.toLowerCase()) ||
+        (e.label.toLowerCase().includes(c.recipient.toLowerCase()) ||
+          e.label.toLowerCase().includes(c.label.toLowerCase()) ||
           e.who?.toLowerCase() === c.recipient.toLowerCase())
     );
   };
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newLabel.trim() || !newRecipient.trim()) return;
+    if (!newLabel.trim() || !newRecipient.trim() || !newCategoryId) return;
     const amt = parseInt(newAmount, 10);
-    if (!amt || amt <= 0) return;
+    if (!amt || amt <= 0 || amt > 999_999_999) return;
     triggerHaptic('success');
 
     const newC: Commitment = {
@@ -92,7 +96,7 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
       label: newLabel.trim(),
       recipient: newRecipient.trim(),
       phone: newPhone.trim() || undefined,
-      rubric: 'Soutien famille',
+      categoryId: newCategoryId,
       amount: amt,
       dayOfMonth: parseInt(newDay, 10) || 5,
       wallet: newWallet,
@@ -133,7 +137,7 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
           <div className="flex items-center gap-2">
             <HeartHandshake size={18} className="text-pink-600" />
             <h3 className="m-0 text-base font-heading font-bold text-[var(--color-text)]">
-              Engagements & Soutien famille
+              Engagements réguliers
             </h3>
           </div>
           <button
@@ -293,6 +297,21 @@ export const CommitmentsSheet: React.FC<CommitmentsSheetProps> = ({
                       ))}
                     </select>
                   </div>
+
+                  <select
+                    value={newCategoryId}
+                    onChange={(e) => setNewCategoryId(e.target.value)}
+                    className="w-full px-2.5 py-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]"
+                    aria-label="Rubrique"
+                    required
+                  >
+                    <option value="">Choisir la rubrique…</option>
+                    {outCategories.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name}
+                      </option>
+                    ))}
+                  </select>
 
                   <input
                     type="tel"

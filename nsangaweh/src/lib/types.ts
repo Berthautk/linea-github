@@ -93,6 +93,8 @@ export interface MonthDoc {
   createdAt?: number;
   fromTemplate?: boolean;
   updated?: number;
+  /** Copy of the old-format plan kept after migration. */
+  legacyPlan?: LegacyPlanLine[];
 }
 
 export interface MemberBudget {

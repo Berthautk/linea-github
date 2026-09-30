@@ -13,36 +13,33 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import {
-  addMonth,
-  calcFamily,
-  calcMonth,
-  compact,
-  currentMonthKey,
-  fmt,
-  fmtS,
-  getInsights,
-  GROUPS,
-  MonthInsightData,
-  shortMonth,
-} from '../lib/budget-math';
+import { addMonth, compact, fmt, fmtS, getInsights, MonthInsightData, shortMonth } from '../lib/budget-math';
+import { calcMonth } from '../lib/calc';
+import { aggregateFamily } from '../lib/family';
 import { triggerHaptic } from '../lib/haptics';
 import { MemberData } from '../lib/types';
 
 interface EvolutionScreenProps {
   isCloudMode: boolean;
   members: MemberData[];
+  currentMonth: string;
+  merges: Record<string, string>;
 }
 
-export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
-  isCloudMode,
-  members,
-}) => {
+/** One row of the per-rubric table: a rubric id (Moi) or a normalised name (Famille). */
+interface RubricSeries {
+  key: string;
+  name: string;
+  archived: boolean;
+}
+
+export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, members, currentMonth, merges }) => {
   const [scope, setScope] = useState<'me' | 'fam'>('me');
   const [periodMonths, setPeriodMonths] = useState<3 | 6 | 12>(6);
   const [viewMode, setViewMode] = useState<'graphique' | 'details'>('graphique');
 
-  const curM = currentMonthKey();
+  const curM = currentMonth;
+  const me = members.find((m) => m.me);
 
   const slots: Array<{
     monthKey: string;
@@ -51,53 +48,56 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
     solde: number;
     pOut: number;
     byGroup: Record<string, number>;
+    byRubric: Record<string, number>;
   }> = [];
+  const series = new Map<string, RubricSeries>();
 
   for (let i = periodMonths - 1; i >= 0; i--) {
     const k = addMonth(curM, -i);
-
-    if (scope === 'me') {
-      const meMember = members.find((m) => m.me);
-      const mData = meMember?.months[k];
-      const c = calcMonth(mData);
-      slots.push({
-        monthKey: k,
-        inc: c.inc,
-        out: c.out,
-        solde: c.inc - c.out,
-        pOut: c.pOut,
-        byGroup: c.byGroup,
+    if (scope === 'me' || !isCloudMode) {
+      const c = calcMonth(me?.categories || [], me?.months[k], k);
+      const byGroup: Record<string, number> = {};
+      const byRubric: Record<string, number> = {};
+      c.expense.forEach((cc) => {
+        if (cc.kind !== 'out' || !cc.actual) return;
+        byGroup[cc.id] = cc.actual;
+        byRubric[cc.category.name] = cc.actual;
+        series.set(cc.id, { key: cc.id, name: cc.category.name, archived: cc.category.archived });
       });
+      if (c.uncategorizedOut) {
+        byGroup.__none = c.uncategorizedOut;
+        series.set('__none', { key: '__none', name: 'Sans rubrique', archived: false });
+      }
+      slots.push({ monthKey: k, inc: c.inc, out: c.out, solde: c.inc - c.out - c.saved, pOut: c.pOut, byGroup, byRubric });
     } else {
-      const fam = calcFamily(members, k);
-      slots.push({
-        monthKey: k,
-        inc: fam.inc,
-        out: fam.out,
-        solde: fam.inc - fam.out,
-        pOut: fam.pOut,
-        byGroup: fam.byGroup,
+      const fam = aggregateFamily(members, k, merges);
+      const byGroup: Record<string, number> = {};
+      const byRubric: Record<string, number> = {};
+      [...fam.shared, ...fam.unmatched].forEach((r) => {
+        if (r.kind !== 'out' || !r.actual) return;
+        byGroup[r.key] = r.actual;
+        byRubric[r.name] = r.actual;
+        if (!series.has(r.key)) series.set(r.key, { key: r.key, name: r.name, archived: false });
       });
+      if (fam.uncategorizedOut) {
+        byGroup.__none = fam.uncategorizedOut;
+        series.set('__none', { key: '__none', name: 'Sans rubrique', archived: false });
+      }
+      slots.push({ monthKey: k, inc: fam.inc, out: fam.out, solde: fam.inc - fam.out - fam.saved, pOut: fam.pOut, byGroup, byRubric });
     }
   }
 
   const chartData = slots.map((s) => ({
     name: shortMonth(s.monthKey),
     monthKey: s.monthKey,
-    Entrées: s.inc,
-    Sorties: s.out,
+    Revenus: s.inc,
+    Dépenses: s.out,
     Solde: s.solde,
   }));
 
-  const withData = slots
+  const withData: MonthInsightData[] = slots
     .filter((s) => s.inc > 0 || s.out > 0)
-    .map((s) => ({
-      monthKey: s.monthKey,
-      inc: s.inc,
-      out: s.out,
-      pOut: s.pOut,
-      byGroup: s.byGroup,
-    })) as MonthInsightData[];
+    .map((s) => ({ monthKey: s.monthKey, inc: s.inc, out: s.out, pOut: s.pOut, byRubric: s.byRubric }));
 
   const insightsList = getInsights(withData);
 
@@ -107,9 +107,12 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
       ? Math.max(0, Math.round(((latestMonth.inc - latestMonth.out) / latestMonth.inc) * 100))
       : 0;
 
-  const activeRubrics = GROUPS.filter((g) => g !== 'Revenus')
-    .concat(['Hors plan'] as any)
-    .filter((g) => slots.some((s) => (s.byGroup[g] || 0) > 0));
+  // A rubric created mid-year simply starts then; archived ones stay in history.
+  const activeRubrics = [...series.values()].map((s) => s.key);
+  const rubricName = (k: string) => {
+    const s = series.get(k);
+    return s ? `${s.name}${s.archived ? ' (archivée)' : ''}` : k;
+  };
 
   let maxRubricVal = 0;
   slots.forEach((s) => {
@@ -175,7 +178,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
                   : 'text-[var(--color-text-muted)]'
               }`}
             >
-              {p}m
+              {p} mois
             </button>
           ))}
         </div>
@@ -222,14 +225,14 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
           >
             <div className="flex justify-between items-center text-xs">
               <span className="font-heading font-bold text-[var(--color-text)]">
-                Entrées, sorties & solde
+                Revenus, dépenses et solde
               </span>
               <div className="flex items-center gap-2 text-[10px] text-[var(--color-text-muted)]">
                 <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-xs bg-[var(--color-income)]" /> Entrées
+                  <span className="w-2 h-2 rounded-xs bg-[var(--color-income)]" /> Revenus reçus
                 </span>
                 <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-xs bg-[var(--color-expense)]" /> Sorties
+                  <span className="w-2 h-2 rounded-xs bg-[var(--color-expense)]" /> Dépenses
                 </span>
               </div>
             </div>
@@ -259,8 +262,8 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
                       fontSize: '11px',
                     }}
                   />
-                  <Bar dataKey="Entrées" fill="#12A150" radius={[3, 3, 0, 0]} maxBarSize={18} />
-                  <Bar dataKey="Sorties" fill="#E5484D" radius={[3, 3, 0, 0]} maxBarSize={18} />
+                  <Bar dataKey="Revenus" fill="#12A150" radius={[3, 3, 0, 0]} maxBarSize={18} />
+                  <Bar dataKey="Dépenses" fill="#E5484D" radius={[3, 3, 0, 0]} maxBarSize={18} />
                   <Line
                     type="monotone"
                     dataKey="Solde"
@@ -278,7 +281,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
             <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-3 shadow-2xs flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-semibold text-[var(--color-text-muted)] block uppercase">
-                  Taux d'épargne
+                  Part des revenus non dépensée
                 </span>
                 <b className="font-heading font-extrabold text-base text-[var(--color-text)] num">
                   {savingsRate}%
@@ -292,7 +295,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
             <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-3 shadow-2xs flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-semibold text-[var(--color-text-muted)] block uppercase">
-                  Solde actuel
+                  Solde du mois (reçu − dépensé − épargné)
                 </span>
                 <b
                   className={`font-heading font-extrabold text-base num ${
@@ -356,7 +359,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({
                   {activeRubrics.map((group) => (
                     <tr key={group} className="border-b border-[var(--color-border)]/40">
                       <td className="py-1.5 pr-2 font-semibold text-[var(--color-text)] truncate max-w-[120px]">
-                        {group}
+                        {rubricName(group)}
                       </td>
                       {slots.map((s) => {
                         const v = s.byGroup[group] || 0;

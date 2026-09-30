@@ -1,45 +1,29 @@
-import { getEntryLabel } from './budget-math';
-import { MonthData } from './types';
+import { describeEntry } from './calc';
+import { MemberBudget } from './types';
 
-/**
- * Exports user financial operations to a standard CSV file
- */
-export function exportLedgerToCSV(
-  months: Record<string, MonthData>,
-  userName: string,
-  householdId: string
-) {
-  const rows: string[][] = [
-    ['Mois', 'Date', 'Type', 'Montant (FCFA)', 'Rubrique', 'Libelle', 'Auteur', 'Foyer'],
-  ];
+const TYPE_LABEL = { in: 'Revenu', out: 'Dépense', save: 'Épargne', transfer: 'Virement' } as const;
 
-  const sortedMonths = Object.keys(months).sort();
+const q = (s: string) => `"${String(s).replace(/"/g, '""')}"`;
 
-  sortedMonths.forEach((mk) => {
-    const m = months[mk];
-    if (!m || !m.entries) return;
-
-    m.entries.forEach((e) => {
-      const el = getEntryLabel(m, e);
-      rows.push([
-        mk,
-        e.d,
-        e.t === 'in' ? 'Entrée' : 'Sortie',
-        String(e.amt),
-        `"${el.g.replace(/"/g, '""')}"`,
-        `"${el.l.replace(/"/g, '""')}"`,
-        `"${userName.replace(/"/g, '""')}"`,
-        `"${householdId}"`,
-      ]);
+/** Export every entry with its rubric and line names (resolved from ids). */
+export function exportLedgerToCSV(budget: MemberBudget, userName: string, householdId: string) {
+  const rows: string[][] = [['Mois', 'Date', 'Type', 'Montant (FCFA)', 'Rubrique', 'Libellé', 'Auteur', 'Foyer']];
+  const cats = new Map(budget.categories.map((c) => [c.id, c]));
+  Object.keys(budget.months)
+    .sort()
+    .forEach((mk) => {
+      const m = budget.months[mk];
+      m.entries.forEach((e) => {
+        const d = describeEntry(e, cats, m);
+        rows.push([mk, e.d, TYPE_LABEL[e.t], String(e.amt), q(d.category?.name || 'Sans rubrique'), q(d.label), q(userName), q(householdId)]);
+      });
     });
-  });
 
-  const csvContent = '\uFEFF' + rows.map((r) => r.join(';')).join('\r\n');
-  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
+  const csv = '﻿' + rows.map((r) => r.join(';')).join('\r\n');
+  const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
   const link = document.createElement('a');
-  link.setAttribute('href', url);
-  link.setAttribute('download', `nsangaweh-budget-${new Date().toISOString().slice(0, 10)}.csv`);
+  link.href = url;
+  link.download = `nsangaweh-budget-${new Date().toISOString().slice(0, 10)}.csv`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

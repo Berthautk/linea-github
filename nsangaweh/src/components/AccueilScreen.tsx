@@ -2,643 +2,795 @@ import React, { useState } from 'react';
 import {
   ArrowDownLeft,
   ArrowUpRight,
+  CalendarPlus,
   ChevronDown,
   ChevronUp,
-  Edit3,
+  ClipboardList,
+  GripVertical,
+  HandCoins,
   Info,
+  ListChecks,
+  MoreHorizontal,
+  PiggyBank,
+  Plus,
   Sparkles,
   X,
 } from 'lucide-react';
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-import {
-  daysInMonth,
-  fmt,
-  fmtS,
-  GROUPS,
-  monthName,
-  rankExpenses,
-  todayStr,
-} from '../lib/budget-math';
+import { currentMonthKey, daysInMonth, fmt, fmtS, monthName, todayStr } from '../lib/budget-math';
+import { CategoryCalc, LineCalc, MonthCalc, rankExpenses } from '../lib/calc';
+import { useDragReorder, useRowGestures } from '../lib/gestures';
 import { triggerHaptic } from '../lib/haptics';
-import { getRubricConfig, RubricIconBadge } from '../lib/rubrics';
-import { EntryType, MonthCalculation, PlanLine } from '../lib/types';
+import { NO_RUBRIC_STYLE, RubricBadge } from '../lib/icons';
+import { Category, MonthLine } from '../lib/types';
+import { ActionSheet, PrimaryButton } from './ui';
 
-interface AccueilScreenProps {
-  currentMonth: string;
-  calc: MonthCalculation;
+interface Props {
+  monthKey: string;
+  calc: MonthCalc;
+  categories: Category[];
   myName: string;
-  previousMonthWithPlan: string | null;
-  onOpenQuickAdd: (type?: EntryType) => void;
-  onOpenPlanEditor: () => void;
-  onCopyPreviousPlan: (fromMonthKey: string) => void;
-  onStartBlankPlan: () => void;
+  showTemplateStrip: boolean;
+  previousPlanned: string | null;
+  openRubric: string | null;
+  onToggleRubric: (id: string | null) => void;
+  onDismissStrip: () => void;
+  onAddIncome: () => void;
+  onAddRubric: () => void;
+  onAddLine: (categoryId?: string) => void;
+  onEditLine: (line: MonthLine) => void;
+  onPayLine: (line: MonthLine) => void;
+  onRubricMenu: (cat: Category) => void;
+  onEditEnvelope: (cat: Category) => void;
+  onReorderCategories: (ids: string[]) => void;
+  onReorderLines: (ids: string[]) => void;
+  onStartMonth: () => void;
+  onPrepareMonth: () => void;
+  onChooseRubrics: () => void;
+  onImport: () => void;
 }
 
-export const AccueilScreen: React.FC<AccueilScreenProps> = ({
-  currentMonth,
-  calc,
-  myName,
-  previousMonthWithPlan,
-  onOpenPlanEditor,
-  onCopyPreviousPlan,
-  onStartBlankPlan,
-}) => {
-  // Navigation inside Accueil: Plan (default) | Classement | Graphique
+export const AccueilScreen: React.FC<Props> = (props) => {
+  const { monthKey, calc, categories } = props;
   const [subTab, setSubTab] = useState<'plan' | 'classement' | 'graphique'>('plan');
+  const [reorder, setReorder] = useState(false);
+  const [plusMenu, setPlusMenu] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
-  // Accordion: only one rubric open at a time, collapsed by default
-  const [openRubric, setOpenRubric] = useState<string | null>(null);
+  const active = categories.filter((c) => !c.archived);
 
-  // Slim seed banner dismissed state
-  const [isBannerDismissed, setIsBannerDismissed] = useState(false);
-
-  // Info modal for "Libre après paiements prévus"
-  const [showFreeInfoModal, setShowFreeInfoModal] = useState(false);
-
-  const mData = calc.monthData;
-  const isCurrentMonth = currentMonth === new Date().toISOString().slice(0, 7);
-
-  // Toggle rubric accordion (single open at a time)
-  const toggleRubric = (groupName: string) => {
-    triggerHaptic('light');
-    setOpenRubric((prev) => (prev === groupName ? null : groupName));
-  };
-
-  // If month is completely empty
-  if (!mData.plan.length && !mData.entries.length) {
+  // 1. Brand-new user: friendly empty state, never an empty list.
+  if (!active.length && !calc.month.entries.length) {
     return (
-      <div className="flex flex-col gap-3 py-2">
-        <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-5 shadow-xs flex flex-col gap-3 text-center items-center">
-          <div className="w-12 h-12 rounded-2xl bg-[var(--color-primary-light)] text-[var(--color-primary)] flex items-center justify-center">
-            <Sparkles size={24} />
-          </div>
-
-          <h3 className="m-0 text-base font-heading font-extrabold text-[var(--color-text)]">
-            Commencer {monthName(currentMonth)}
-          </h3>
-
-          <p className="m-0 text-xs text-[var(--color-text-muted)] max-w-xs">
-            {previousMonthWithPlan
-              ? `Reprenez le plan de ${monthName(previousMonthWithPlan)} ou créez un plan vide.`
-              : 'Créez votre plan prévisionnel ligne par ligne.'}
+      <div className="flex flex-col gap-3 py-3">
+        <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-3xl p-6 shadow-2xs flex flex-col items-center text-center gap-3">
+          <svg viewBox="0 0 200 120" className="w-48 h-28" aria-hidden="true">
+            <rect x="30" y="20" width="140" height="90" rx="16" fill="var(--color-primary-light)" />
+            <rect x="48" y="40" width="70" height="10" rx="5" fill="var(--color-primary)" opacity="0.7" />
+            <rect x="48" y="60" width="104" height="8" rx="4" fill="var(--color-primary)" opacity="0.35" />
+            <rect x="48" y="76" width="86" height="8" rx="4" fill="var(--color-primary)" opacity="0.35" />
+            <circle cx="160" cy="26" r="16" fill="var(--color-accent)" />
+            <path d="M153 26h14M160 19v14" stroke="white" strokeWidth="3" strokeLinecap="round" />
+          </svg>
+          <h2 className="m-0 text-base font-heading font-extrabold text-[var(--color-text)]">Votre budget est prêt à être construit</h2>
+          <p className="m-0 text-xs text-[var(--color-text-muted)] max-w-xs leading-relaxed">
+            Choisissez vos rubriques dans une liste, ou collez votre fiche habituelle. Tout reste modifiable.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-2 w-full max-w-xs pt-1">
-            {previousMonthWithPlan && (
-              <button
-                type="button"
-                onClick={() => onCopyPreviousPlan(previousMonthWithPlan)}
-                className="w-full py-2.5 px-3 rounded-xl bg-[var(--color-primary)] text-white font-heading font-bold text-xs shadow-xs hover:bg-[var(--color-primary-dark)] active:scale-95 transition"
-              >
-                Reprendre {monthName(previousMonthWithPlan)}
-              </button>
-            )}
-            <button
-              type="button"
-              onClick={onStartBlankPlan}
-              className="w-full py-2.5 px-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-subtle)] text-[var(--color-text)] font-semibold text-xs hover:border-[var(--color-primary)] active:scale-95 transition"
-            >
-              Plan vide
-            </button>
+          <div className="w-full max-w-xs flex flex-col gap-2 pt-1">
+            <PrimaryButton onClick={props.onChooseRubrics}>
+              <ListChecks size={18} /> Choisir des rubriques
+            </PrimaryButton>
+            <PrimaryButton tone="ghost" onClick={props.onImport}>
+              <ClipboardList size={18} /> Importer ma fiche
+            </PrimaryButton>
           </div>
         </section>
       </div>
     );
   }
 
-  // Balance & calculations
-  const solde = calc.inc - calc.out;
-  const free = solde - calc.toPay;
-  const progressPct = calc.pOut > 0 ? Math.min(100, (calc.out / calc.pOut) * 100) : 0;
-  const isOverBudget = calc.pOut > 0 && calc.out > calc.pOut;
-
-  // Remaining days in month
-  const totalDays = daysInMonth(currentMonth);
-  const currentDay = isCurrentMonth ? parseInt(todayStr().slice(8, 10), 10) : 1;
-  const daysLeft = isCurrentMonth ? Math.max(1, totalDays - currentDay + 1) : 0;
-
-  // Donut chart data
-  const pieData: Array<{ name: string; value: number; color: string }> = GROUPS.filter(
-    (g) => g !== 'Revenus'
-  )
-    .map((g) => ({
-      name: g as string,
-      value: calc.byGroup[g] || 0,
-      color: getRubricConfig(g).color,
-    }))
-    .filter((d) => d.value > 0);
-
-  if ((calc.offOut || 0) > 0) {
-    pieData.push({
-      name: 'Hors plan',
-      value: calc.offOut,
-      color: getRubricConfig('Hors plan').color,
-    });
-  }
-
-  const rankedItems = rankExpenses([{ monthData: mData, name: myName }]);
-  const maxRankAmt = rankedItems[0]?.amt || 1;
-  const totalRankAmt = rankedItems.reduce((acc, i) => acc + i.amt, 0);
-
-  // Group sorting: active rubrics with pending remaining first, completed/empty dimmed at bottom
-  const allRubricsWithData = GROUPS.filter(
-    (g) => mData.plan.some((p) => p.g === g) || (calc.byGroup[g] || 0) > 0
-  );
-
-  const activeWithRemaining: string[] = [];
-  const activeCompleted: string[] = [];
-
-  allRubricsWithData.forEach((g) => {
-    const lines = mData.plan.filter((p) => p.g === g);
-    const planned = lines.reduce((acc, p) => acc + (p.a || 0), 0);
-    const actual = lines.reduce((acc, p) => acc + (calc.byPlan[p.id] || 0), 0);
-    const hasUnset = lines.some((p) => !p.a);
-    const rem = planned - actual;
-
-    if (g === 'Revenus') {
-      activeWithRemaining.push(g);
-    } else if (rem > 0 || hasUnset) {
-      activeWithRemaining.push(g);
-    } else {
-      activeCompleted.push(g);
-    }
-  });
-
-  const sortedRubrics = [...activeWithRemaining, ...activeCompleted];
+  const noPlan = !calc.hasPlan;
 
   return (
-    <div className="flex flex-col gap-2.5 pb-20">
-      {/* 1. Slim dismissible notification line (40px) */}
-      {!isBannerDismissed && mData.seeded && calc.unset > 0 && (
-        <div className="h-10 px-3 rounded-xl bg-[var(--color-warning-soft)] border border-[var(--color-warning)]/30 flex items-center justify-between text-xs text-[var(--color-text)] shadow-2xs">
-          <div className="flex items-center gap-1.5 min-w-0">
-            <Sparkles size={14} className="text-[var(--color-warning)] shrink-0" />
-            <span className="truncate font-medium">
-              Fiche pré-remplie · <b>{calc.unset} montant{calc.unset > 1 ? 's' : ''} à fixer</b>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              type="button"
-              onClick={onOpenPlanEditor}
-              className="text-[var(--color-primary)] font-heading font-bold text-xs hover:underline cursor-pointer"
-            >
-              Voir
-            </button>
-            <button
-              type="button"
-              onClick={() => setIsBannerDismissed(true)}
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] p-0.5 cursor-pointer"
-              aria-label="Fermer"
-            >
-              <X size={14} />
-            </button>
-          </div>
+    <div className="flex flex-col gap-2.5 pb-24">
+      {props.showTemplateStrip && calc.unsetCount > 0 && (
+        <div className="h-10 px-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-between text-xs text-[var(--color-text)]">
+          <span className="truncate">
+            Fiche pré-remplie · {calc.unsetCount} ligne{calc.unsetCount > 1 ? 's' : ''} sans montant
+          </span>
+          <button
+            type="button"
+            onClick={props.onDismissStrip}
+            className="p-1 text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+            aria-label="Ne plus afficher"
+          >
+            <X size={14} />
+          </button>
         </div>
       )}
 
-      {/* 2. Compact Balance Card (max 150px tall) */}
-      <section
-        className="rounded-2xl p-3.5 text-white shadow-md relative overflow-hidden flex flex-col justify-between max-h-[150px]"
-        style={{
-          background: 'linear-gradient(145deg, #0B6E4F 0%, #084C38 100%)',
-        }}
-        aria-label="Solde et prévisions"
-      >
-        {/* Top: Net balance + edit plan link */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-baseline gap-2">
-            <h1 className="m-0 text-3xl font-heading font-extrabold tracking-tight num leading-none text-white">
-              {fmtS(solde)}
-            </h1>
-            <span className="text-xs font-heading font-bold text-emerald-300">
-              FCFA
+      {noPlan && (
+        <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-4 shadow-2xs flex flex-col gap-2.5">
+          <div className="flex items-center gap-2.5">
+            <span className="w-10 h-10 rounded-xl bg-[var(--color-primary-light)] text-[var(--color-primary)] flex items-center justify-center shrink-0">
+              <CalendarPlus size={20} />
             </span>
+            <div className="min-w-0">
+              <h3 className="m-0 text-sm font-heading font-extrabold text-[var(--color-text)]">
+                Le plan de {monthName(monthKey).toLowerCase()} n’est pas encore créé
+              </h3>
+              <p className="m-0 text-[11px] text-[var(--color-text-muted)]">
+                Les lignes qui reviennent chaque mois sont proposées, les ponctuelles ne le sont pas.
+              </p>
+            </div>
           </div>
+          <div className="grid grid-cols-2 gap-2">
+            <PrimaryButton onClick={props.onPrepareMonth}>Préparer {monthName(monthKey).split(' ')[0].toLowerCase()}</PrimaryButton>
+            <PrimaryButton tone="ghost" onClick={props.onStartMonth}>
+              Commencer {monthName(monthKey).split(' ')[0].toLowerCase()}
+            </PrimaryButton>
+          </div>
+        </section>
+      )}
+
+      <BalanceCard calc={calc} monthKey={monthKey} onAddIncome={props.onAddIncome} onInfo={() => setShowInfo(true)} />
+
+      <IncomeSection calc={calc} onAddIncome={props.onAddIncome} onEditLine={props.onEditLine} onPayLine={props.onPayLine} />
+
+      <div className="grid grid-cols-3 p-1 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-2xs">
+        {(['plan', 'classement', 'graphique'] as const).map((t) => (
+          <button
+            key={t}
+            type="button"
+            onClick={() => {
+              triggerHaptic('light');
+              setSubTab(t);
+            }}
+            className={`py-1.5 rounded-lg text-xs font-heading font-bold transition ${
+              subTab === t ? 'bg-[var(--color-primary)] text-white shadow-xs' : 'text-[var(--color-text-muted)]'
+            }`}
+          >
+            {t === 'plan' ? 'Plan' : t === 'classement' ? 'Classement' : 'Graphique'}
+          </button>
+        ))}
+      </div>
+
+      {subTab === 'plan' && (
+        <>
+          <div className="flex items-center justify-between px-1">
+            <h2 className="m-0 text-sm font-heading font-extrabold text-[var(--color-text)]">
+              Dépenses et épargne
+            </h2>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => {
+                  triggerHaptic('light');
+                  setReorder((r) => !r);
+                  props.onToggleRubric(null);
+                }}
+                className={`h-8 px-3 rounded-full text-xs font-heading font-bold transition ${
+                  reorder ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-primary)] hover:bg-[var(--color-primary-light)]'
+                }`}
+              >
+                {reorder ? 'Terminé' : 'Modifier'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setPlusMenu(true)}
+                className="w-8 h-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center shadow-xs active:scale-95"
+                aria-label="Ajouter"
+              >
+                <Plus size={18} />
+              </button>
+            </div>
+          </div>
+
+          <RubricList {...props} reorder={reorder} />
+
+          {calc.uncategorizedOut > 0 && (
+            <div className="h-12 px-3.5 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <RubricBadge {...NO_RUBRIC_STYLE} size="sm" />
+                <span className="text-xs font-semibold text-[var(--color-text)] truncate">Sans rubrique</span>
+              </div>
+              <span className="text-xs font-heading font-bold num">{fmt(calc.uncategorizedOut)} F</span>
+            </div>
+          )}
 
           <button
             type="button"
-            onClick={onOpenPlanEditor}
-            className="text-[11px] font-heading font-bold px-2.5 py-1 rounded-full bg-white/15 hover:bg-white/25 active:scale-95 text-emerald-100 flex items-center gap-1 transition"
+            onClick={props.onAddRubric}
+            className="h-12 rounded-2xl border-2 border-dashed border-[var(--color-border)] text-xs font-heading font-bold text-[var(--color-primary)] flex items-center justify-center gap-1.5 hover:border-[var(--color-primary)] transition"
           >
-            <Edit3 size={12} />
-            Modifier le plan
+            <Plus size={16} /> Ajouter une rubrique
           </button>
-        </div>
+        </>
+      )}
 
-        {/* Middle: Entrées and Sorties on a single row */}
-        <div className="flex items-center justify-between text-xs py-1">
-          <div className="flex items-center gap-1.5">
-            <ArrowDownLeft size={14} className="text-emerald-300" />
-            <span className="text-emerald-100 font-medium">Entrées:</span>
-            <b className="num text-white">{fmt(calc.inc)} F</b>
-            <span className="text-[10px] text-emerald-200/70 num">({fmt(calc.pIn)})</span>
-          </div>
+      {subTab === 'classement' && <Ranking calc={calc} categories={categories} myName={props.myName} />}
+      {subTab === 'graphique' && <Chart calc={calc} />}
 
-          <div className="flex items-center gap-1.5">
-            <ArrowUpRight size={14} className="text-rose-300" />
-            <span className="text-rose-100 font-medium">Sorties:</span>
-            <b className="num text-white">{fmt(calc.out)} F</b>
-            <span className="text-[10px] text-rose-200/70 num">({fmt(calc.pOut)})</span>
-          </div>
-        </div>
+      <ActionSheet
+        open={plusMenu}
+        title="Ajouter"
+        onClose={() => setPlusMenu(false)}
+        actions={[
+          {
+            label: 'Ajouter une rubrique',
+            onClick: () => {
+              setPlusMenu(false);
+              props.onAddRubric();
+            },
+          },
+          {
+            label: 'Ajouter une ligne',
+            onClick: () => {
+              setPlusMenu(false);
+              props.onAddLine();
+            },
+          },
+          {
+            label: 'Réorganiser',
+            hint: 'Glissez les poignées pour changer l’ordre',
+            onClick: () => {
+              setPlusMenu(false);
+              setReorder(true);
+              props.onToggleRubric(null);
+            },
+          },
+        ]}
+      />
 
-        {/* Thin progress bar */}
-        <div className="w-full h-1.5 rounded-full bg-black/25 overflow-hidden my-0.5">
-          <div
-            className={`h-full rounded-full transition-all duration-300 ${
-              isOverBudget ? 'bg-rose-400' : 'bg-emerald-300'
-            }`}
-            style={{ width: `${progressPct}%` }}
-          />
-        </div>
+      {showInfo && <FreeInfo calc={calc} monthKey={monthKey} onClose={() => setShowInfo(false)} />}
+    </div>
+  );
+};
 
-        {/* Single-line "Libre après paiements prévus" with info icon */}
-        <div className="flex items-center justify-between text-[11px] text-emerald-100 truncate pt-0.5">
-          <div className="flex items-center gap-1 truncate">
-            <span>Libre après prévus :</span>
-            <b className={`num font-bold ${free < 0 ? 'text-rose-300' : 'text-emerald-200'}`}>
-              {fmtS(free)} F
-            </b>
-            {daysLeft > 0 && free > 0 && (
-              <span className="text-emerald-200/80 num truncate">
-                · {fmt(free / daysLeft)} F/j
+/* --------------------------------- balance --------------------------------- */
+
+function daysLeftIn(monthKey: string): number {
+  if (monthKey !== currentMonthKey()) return 0;
+  return Math.max(1, daysInMonth(monthKey) - parseInt(todayStr().slice(8, 10), 10) + 1);
+}
+
+const BalanceCard: React.FC<{ calc: MonthCalc; monthKey: string; onAddIncome: () => void; onInfo: () => void }> = ({
+  calc,
+  monthKey,
+  onAddIncome,
+  onInfo,
+}) => {
+  const pct = calc.pOut > 0 ? Math.min(100, (calc.out / calc.pOut) * 100) : 0;
+  const over = calc.pOut > 0 && calc.out > calc.pOut;
+  const daysLeft = daysLeftIn(monthKey);
+  const free = calc.free;
+
+  return (
+    <section
+      className="rounded-2xl p-3.5 text-white shadow-md flex flex-col gap-1.5"
+      style={{ background: 'linear-gradient(145deg, #0B6E4F 0%, #084C38 100%)' }}
+      aria-label="Solde du mois"
+    >
+      {free !== null ? (
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0">
+            <span className="block text-[11px] text-emerald-100">
+              Libre après les paiements prévus{calc.freeBasis === 'planned' ? ', sur revenus prévus' : ''}
+            </span>
+            <div className="flex items-baseline gap-1.5">
+              <b className={`text-3xl font-heading font-extrabold num leading-tight ${free < 0 ? 'text-rose-200' : 'text-white'}`}>
+                {fmtS(free)}
+              </b>
+              <span className="text-xs font-heading font-bold text-emerald-300">F</span>
+            </div>
+            {free > 0 && daysLeft > 0 && (
+              <span className="block text-[11px] text-emerald-200/90 num">
+                soit {fmt(free / daysLeft)} F par jour pendant {daysLeft} jour{daysLeft > 1 ? 's' : ''}
               </span>
             )}
           </div>
-          <button
-            type="button"
-            onClick={() => setShowFreeInfoModal(true)}
-            className="text-emerald-200 hover:text-white p-0.5 shrink-0"
-            aria-label="Détail du reste à vivre"
-          >
-            <Info size={13} />
+          <button type="button" onClick={onInfo} className="p-1 text-emerald-200 hover:text-white" aria-label="Comment ce montant est calculé">
+            <Info size={15} />
           </button>
         </div>
-      </section>
+      ) : (
+        <div className="flex flex-col gap-1.5">
+          <span className="text-[11px] text-emerald-100">Ajoutez vos revenus pour voir ce qu’il vous reste.</span>
+          <button
+            type="button"
+            onClick={onAddIncome}
+            className="self-start h-8 px-3 rounded-full bg-white/15 hover:bg-white/25 text-xs font-heading font-bold flex items-center gap-1"
+          >
+            <Plus size={14} /> Ajouter un revenu
+          </button>
+        </div>
+      )}
 
-      {/* 5. Segmented Control inside Accueil: Plan | Classement | Graphique */}
-      <div className="grid grid-cols-3 p-1 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-2xs">
-        {[
-          { id: 'plan', label: 'Plan' },
-          { id: 'classement', label: 'Classement' },
-          { id: 'graphique', label: 'Graphique' },
-        ].map((tab) => {
-          const isActive = subTab === tab.id;
-          return (
-            <button
-              key={tab.id}
-              type="button"
-              onClick={() => {
-                triggerHaptic('light');
-                setSubTab(tab.id as any);
-              }}
-              className={`py-1.5 rounded-lg text-xs font-heading font-bold transition ${
-                isActive
-                  ? 'bg-[var(--color-primary)] text-white shadow-xs'
-                  : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)]'
-              }`}
-            >
-              {tab.label}
-            </button>
-          );
-        })}
+      <div className="flex flex-col gap-0.5 text-[11px] pt-1 border-t border-white/10">
+        <div className="flex items-center gap-1.5">
+          <ArrowDownLeft size={13} className="text-emerald-300 shrink-0" />
+          <span className="text-emerald-100">
+            Reçu <b className="num text-white">{fmt(calc.inc)} F</b> · prévu <b className="num text-white">{fmt(calc.pIn)} F</b>
+          </span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <ArrowUpRight size={13} className="text-rose-300 shrink-0" />
+          <span className="text-emerald-100">
+            Dépensé <b className="num text-white">{fmt(calc.out)} F</b> · prévu <b className="num text-white">{fmt(calc.pOut)} F</b>
+          </span>
+        </div>
+        {(calc.saved > 0 || calc.pSave > 0) && (
+          <div className="flex items-center gap-1.5">
+            <PiggyBank size={13} className="text-amber-200 shrink-0" />
+            <span className="text-emerald-100">
+              Épargné <b className="num text-white">{fmt(calc.saved)} F</b> · prévu <b className="num text-white">{fmt(calc.pSave)} F</b>
+            </span>
+          </div>
+        )}
       </div>
 
-      {/* CONTENT 1: Accordion Rubrics List (56px rows, single open at a time) */}
-      {subTab === 'plan' && (
-        <section className="flex flex-col gap-1.5" aria-label="Rubriques budgétaires">
-          {sortedRubrics.map((group) => {
-            const linesInGroup = mData.plan.filter((p) => p.g === group);
-            const totalActual = linesInGroup.reduce(
-              (acc, p) => acc + (calc.byPlan[p.id] || 0),
-              0
-            );
-            const totalPlanned = linesInGroup.reduce((acc, p) => acc + (p.a || 0), 0);
-            const unsetCount = linesInGroup.filter((p) => !p.a).length;
-            const isOpen = openRubric === group;
-
-            const isDone =
-              group !== 'Revenus' &&
-              totalPlanned > 0 &&
-              totalActual === totalPlanned &&
-              unsetCount === 0;
-
-            const rubricPct =
-              totalPlanned > 0
-                ? Math.min(100, (totalActual / totalPlanned) * 100)
-                : totalActual > 0
-                ? 100
-                : 0;
-
-            return (
-              <div
-                key={group}
-                className={`bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-2xs transition-all ${
-                  isDone && !isOpen ? 'opacity-65' : ''
-                }`}
-              >
-                {/* 56px Header Row */}
-                <div
-                  onClick={() => toggleRubric(group)}
-                  className="h-14 px-3.5 flex items-center justify-between gap-2.5 cursor-pointer hover:bg-[var(--color-surface-subtle)]/50 active:bg-[var(--color-surface-subtle)] transition"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <RubricIconBadge groupName={group} size="sm" />
-                    <div className="min-w-0 flex items-center gap-1.5">
-                      <span className="font-heading font-bold text-xs text-[var(--color-text)] truncate">
-                        {group}
-                      </span>
-                      {unsetCount > 0 && (
-                        <span className="px-1.5 py-0.5 rounded-full bg-[var(--color-warning-soft)] text-[var(--color-warning)] text-[10px] font-bold shrink-0">
-                          {unsetCount} à fixer
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 shrink-0">
-                    <div className="text-right leading-tight text-xs">
-                      <b className="font-heading font-bold text-[var(--color-text)] num">
-                        {fmt(totalActual)}
-                      </b>
-                      <span className="text-[10px] text-[var(--color-text-muted)] num">
-                        {' '}
-                        / {totalPlanned ? fmt(totalPlanned) : '–'} F
-                      </span>
-                    </div>
-
-                    <div className="text-[var(--color-text-muted)]">
-                      {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Thin progress line under row */}
-                <div className="w-full h-1 bg-[var(--color-border)]/40">
-                  <div
-                    className={`h-full transition-all duration-300 ${
-                      totalPlanned > 0 && totalActual > totalPlanned
-                        ? 'bg-[var(--color-expense)]'
-                        : 'bg-[var(--color-primary)]'
-                    }`}
-                    style={{ width: `${rubricPct}%` }}
-                  />
-                </div>
-
-                {/* Expanded Lines (44px each with status dots) */}
-                {isOpen && (
-                  <div className="p-2 bg-[var(--color-surface-subtle)]/40 border-t border-[var(--color-border)]/50 flex flex-col gap-1 animate-in slide-in-from-top-1 duration-150">
-                    {linesInGroup.map((p) => {
-                      const act = calc.byPlan[p.id] || 0;
-                      const a = p.a || 0;
-                      const dotColor = getStatusDotColor(p, act);
-
-                      return (
-                        <div
-                          key={p.id}
-                          className="h-11 px-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60 flex items-center justify-between gap-2 shadow-2xs"
-                        >
-                          <div className="flex items-center gap-2 min-w-0">
-                            <span
-                              className={`w-2 h-2 rounded-full shrink-0 ${dotColor.bg}`}
-                              title={dotColor.title}
-                            />
-                            <span className="font-medium text-xs text-[var(--color-text)] truncate">
-                              {p.l}
-                            </span>
-                          </div>
-
-                          <div className="text-right whitespace-nowrap text-xs">
-                            <b className="font-heading font-bold text-[var(--color-text)] num">
-                              {fmt(act)}
-                            </b>
-                            <span className="text-[11px] text-[var(--color-text-muted)] num">
-                              {' '}
-                              / {a ? fmt(a) : '–'} F
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </section>
+      {calc.pOut > 0 && (
+        <div className="w-full h-1.5 rounded-full bg-black/25 overflow-hidden" aria-hidden="true">
+          <div className={`h-full rounded-full ${over ? 'bg-rose-400' : 'bg-emerald-300'}`} style={{ width: `${pct}%` }} />
+        </div>
       )}
+    </section>
+  );
+};
 
-      {/* CONTENT 2: Classement (Mes plus grandes dépenses) */}
-      {subTab === 'classement' && (
-        <section
-          className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-4 shadow-2xs flex flex-col gap-2"
-          aria-label="Classement des dépenses"
-        >
-          <div className="flex justify-between items-center pb-1">
-            <span className="text-xs font-heading font-bold text-[var(--color-text)]">
-              Mes plus grandes sorties
-            </span>
-            <span className="text-[11px] text-[var(--color-text-muted)] num">
-              Total {fmt(calc.out)} F
-            </span>
+const FreeInfo: React.FC<{ calc: MonthCalc; monthKey: string; onClose: () => void }> = ({ calc, monthKey, onClose }) => {
+  const basis = calc.freeBasis === 'planned' ? calc.pIn : calc.inc;
+  const daysLeft = daysLeftIn(monthKey);
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 p-4" onClick={onClose}>
+      <div
+        className="w-full max-w-xs bg-[var(--color-surface)] p-5 rounded-2xl shadow-xl flex flex-col gap-2.5 text-xs text-[var(--color-text)]"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-label="Calcul du montant libre"
+      >
+        <h4 className="m-0 text-sm font-heading font-bold">Comment ce montant est calculé</h4>
+        <div className="bg-[var(--color-surface-subtle)] p-2.5 rounded-xl flex flex-col gap-1 text-[11px]">
+          <Row label={calc.freeBasis === 'planned' ? 'Revenus prévus' : 'Revenus reçus'} value={`+${fmt(basis)} F`} />
+          <Row label="Déjà dépensé" value={`−${fmt(calc.out)} F`} />
+          {calc.saved > 0 && <Row label="Déjà épargné" value={`−${fmt(calc.saved)} F`} />}
+          <Row label="Paiements prévus restants" value={`−${fmt(calc.toPay)} F`} />
+          <div className="border-t border-[var(--color-border)] pt-1 font-bold text-[var(--color-primary)]">
+            <Row label="Libre après les paiements prévus" value={`${fmtS(calc.free || 0)} F`} />
           </div>
+        </div>
+        {(calc.free || 0) > 0 && daysLeft > 0 && (
+          <p className="m-0 text-[11px] text-[var(--color-text-muted)]">
+            Environ <b>{fmt((calc.free || 0) / daysLeft)} F par jour</b> pour les {daysLeft} jours restants.
+          </p>
+        )}
+        <PrimaryButton onClick={onClose}>Compris</PrimaryButton>
+      </div>
+    </div>
+  );
+};
 
-          {!rankedItems.length ? (
-            <p className="m-0 py-4 text-xs text-[var(--color-text-muted)] text-center">
-              Aucune dépense enregistrée ce mois-ci.
-            </p>
-          ) : (
-            <div className="flex flex-col">
-              {rankedItems.slice(0, 10).map((item, idx) => {
-                const pctOfTot = totalRankAmt > 0 ? Math.round((item.amt / totalRankAmt) * 100) : 0;
-                const barWidth = maxRankAmt > 0 ? (item.amt / maxRankAmt) * 100 : 0;
+const Row: React.FC<{ label: string; value: string }> = ({ label, value }) => (
+  <div className="flex justify-between gap-2">
+    <span>{label}</span>
+    <b className="num whitespace-nowrap">{value}</b>
+  </div>
+);
 
-                return (
-                  <div
-                    key={idx}
-                    className="py-2 border-t border-[var(--color-border)]/50 first:border-t-0 flex flex-col gap-1"
-                  >
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2 min-w-0">
-                        <span className="w-4 text-center text-xs font-heading font-bold text-[var(--color-primary)]">
-                          {idx + 1}
-                        </span>
-                        <RubricIconBadge groupName={item.group} size="sm" />
-                        <span className="font-semibold text-xs text-[var(--color-text)] truncate">
-                          {item.label}
-                        </span>
-                        <small className="text-[10px] text-[var(--color-text-muted)] shrink-0">
-                          {pctOfTot}%
-                        </small>
-                      </div>
+/* --------------------------------- income --------------------------------- */
 
-                      <span className="font-heading font-bold text-xs text-[var(--color-text)] num whitespace-nowrap">
-                        {fmt(item.amt)} F
-                      </span>
-                    </div>
-
-                    <div className="w-full h-1.5 rounded-full bg-[var(--color-surface-subtle)] overflow-hidden pl-6">
-                      <div
-                        className="h-full rounded-full bg-[var(--color-primary)]"
-                        style={{ width: `${barWidth}%` }}
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </section>
-      )}
-
-      {/* CONTENT 3: Graphique (Donut Chart des sorties) */}
-      {subTab === 'graphique' && (
-        <section
-          className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-4 shadow-2xs flex flex-col gap-3"
-          aria-label="Graphique des dépenses"
+const IncomeSection: React.FC<{
+  calc: MonthCalc;
+  onAddIncome: () => void;
+  onEditLine: (l: MonthLine) => void;
+  onPayLine: (l: MonthLine) => void;
+}> = ({ calc, onAddIncome, onEditLine, onPayLine }) => {
+  const lines = calc.income.flatMap((c) => c.lines.map((l) => ({ l, c })));
+  const unlined = calc.income.reduce((s, c) => s + c.unplanned, 0) + calc.uncategorizedIn;
+  return (
+    <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-2.5 shadow-2xs flex flex-col gap-1" aria-label="Revenus du mois">
+      <div className="flex items-center justify-between px-1">
+        <h2 className="m-0 text-xs font-heading font-extrabold text-[var(--color-text)]">Revenus du mois</h2>
+        <button
+          type="button"
+          onClick={onAddIncome}
+          className="h-7 px-2 rounded-full text-[11px] font-heading font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] flex items-center gap-0.5"
         >
-          <div className="flex justify-between items-center">
-            <span className="text-xs font-heading font-bold text-[var(--color-text)]">
-              Répartition par rubrique
-            </span>
-            <span className="text-xs font-semibold text-[var(--color-text-muted)] num">
-              Total {fmt(calc.out)} F
-            </span>
-          </div>
-
-          {!pieData.length ? (
-            <p className="m-0 py-6 text-xs text-[var(--color-text-muted)] text-center">
-              Aucune dépense pour l’instant ce mois-ci.
-            </p>
-          ) : (
-            <>
-              <div className="h-44 w-full flex items-center justify-center">
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie
-                      data={pieData}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={46}
-                      outerRadius={70}
-                      paddingAngle={3}
-                      dataKey="value"
-                    >
-                      {pieData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip
-                      formatter={(value: any) => [`${fmt(Number(value))} FCFA`, 'Dépensé']}
-                      contentStyle={{
-                        backgroundColor: 'var(--color-surface)',
-                        borderColor: 'var(--color-border)',
-                        borderRadius: '12px',
-                        fontSize: '11px',
-                        fontFamily: 'var(--font-heading)',
-                      }}
-                    />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-
-              <div className="flex flex-wrap gap-1.5 justify-center">
-                {pieData.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-[var(--color-surface-subtle)] text-[10px] font-medium text-[var(--color-text)]"
-                  >
-                    <span
-                      className="w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ backgroundColor: item.color }}
-                    />
-                    <span>{item.name}</span>
-                    <b className="num text-[var(--color-text-muted)]">
-                      {Math.round((item.value / calc.out) * 100)}%
-                    </b>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-        </section>
+          <Plus size={13} /> Ajouter un revenu
+        </button>
+      </div>
+      {!lines.length && !unlined && (
+        <p className="m-0 px-1 pb-1 text-[11px] text-[var(--color-text-muted)]">Aucun revenu prévu ni reçu ce mois-ci.</p>
       )}
+      {lines.map(({ l, c }) => (
+        <LineRow key={l.line.id} lc={l} cat={c.category} income onEdit={onEditLine} onPay={onPayLine} />
+      ))}
+      {unlined > 0 && (
+        <div className="h-9 px-3 flex items-center justify-between text-xs text-[var(--color-text-muted)]">
+          <span>Autres revenus reçus</span>
+          <b className="num text-[var(--color-text)]">{fmt(unlined)} F</b>
+        </div>
+      )}
+    </section>
+  );
+};
 
-      {/* Info Modal for "Libre après paiements prévus" */}
-      {showFreeInfoModal && (
+/* --------------------------------- rubrics --------------------------------- */
+
+const RubricList: React.FC<Props & { reorder: boolean }> = (props) => {
+  const { calc, reorder } = props;
+  const rubrics = calc.expense.filter((c) => !c.category.archived || c.actual > 0);
+  const ids = rubrics.map((r) => r.id);
+  const drag = useDragReorder(ids, props.onReorderCategories);
+  const byId = new Map(rubrics.map((r) => [r.id, r]));
+
+  if (!rubrics.length) {
+    return (
+      <p className="m-0 px-1 text-xs text-[var(--color-text-muted)]">
+        Aucune rubrique de dépense. Ajoutez-en une avec le bouton ci-dessous.
+      </p>
+    );
+  }
+
+  return (
+    <section className="flex flex-col gap-1.5" aria-label="Rubriques">
+      {drag.order.map((id) => {
+        const cc = byId.get(id)!;
+        return (
+          <div key={id} ref={drag.register(id)} style={drag.rowStyle(id)}>
+            <RubricRow
+              cc={cc}
+              open={!reorder && props.openRubric === id}
+              reorder={reorder}
+              handle={drag.handleProps(id)}
+              onToggle={() => props.onToggleRubric(props.openRubric === id ? null : id)}
+              onMenu={() => props.onRubricMenu(cc.category)}
+              onAddLine={() => props.onAddLine(id)}
+              onEditLine={props.onEditLine}
+              onPayLine={props.onPayLine}
+              onEditEnvelope={() => props.onEditEnvelope(cc.category)}
+              onReorderLines={props.onReorderLines}
+            />
+          </div>
+        );
+      })}
+    </section>
+  );
+};
+
+const RubricRow: React.FC<{
+  cc: CategoryCalc;
+  open: boolean;
+  reorder: boolean;
+  handle: ReturnType<ReturnType<typeof useDragReorder>['handleProps']>;
+  onToggle: () => void;
+  onMenu: () => void;
+  onAddLine: () => void;
+  onEditLine: (l: MonthLine) => void;
+  onPayLine: (l: MonthLine) => void;
+  onEditEnvelope: () => void;
+  onReorderLines: (ids: string[]) => void;
+}> = ({ cc, open, reorder, handle, onToggle, onMenu, onAddLine, onEditLine, onPayLine, onEditEnvelope, onReorderLines }) => {
+  const g = useRowGestures({
+    onTap: reorder ? undefined : () => {
+      triggerHaptic('light');
+      onToggle();
+    },
+    onLongPress: reorder ? undefined : onMenu,
+    onSwipeLeft: reorder ? undefined : onMenu,
+  });
+  const cat = cc.category;
+  const pct = cc.planned > 0 ? Math.min(100, (cc.actual / cc.planned) * 100) : 0;
+  const over = cc.planned > 0 && cc.actual > cc.planned;
+  const done = cc.planned > 0 && cc.remaining === 0 && !over;
+
+  return (
+    <div
+      className={`bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-2xs ${
+        done && !open && !reorder ? 'opacity-70' : ''
+      }`}
+    >
+      <div className="relative">
+        {g.dx < 0 && (
+          <div className="absolute inset-0 flex items-center justify-end pr-4 bg-[var(--color-surface-subtle)] text-[11px] font-bold text-[var(--color-text-muted)]">
+            Options
+          </div>
+        )}
         <div
-          className="fixed inset-0 z-60 flex items-center justify-center bg-black/60 p-4"
-          onClick={() => setShowFreeInfoModal(false)}
+          {...g.handlers}
+          style={g.style}
+          className="relative h-14 pl-2 pr-1 flex items-center gap-2 bg-[var(--color-surface)] cursor-pointer select-none"
+          aria-expanded={open}
         >
-          <div
-            className="w-full max-w-xs bg-[var(--color-surface)] p-5 rounded-2xl shadow-xl flex flex-col gap-2.5 text-xs text-[var(--color-text)] leading-relaxed"
-            onClick={(e) => e.stopPropagation()}
+          {reorder && (
+            <span {...handle} className="w-8 h-10 flex items-center justify-center text-[var(--color-text-muted)]" aria-label={`Déplacer ${cat.name}`}>
+              <GripVertical size={18} />
+            </span>
+          )}
+          <RubricBadge icon={cat.icon} color={cat.color} size="sm" className={reorder ? '' : 'ml-1.5'} />
+          <div className="min-w-0 flex-1 leading-tight">
+            <span className="block font-heading font-bold text-xs text-[var(--color-text)] truncate">{cat.name}</span>
+            <span className="block text-[10px] text-[var(--color-text-muted)] truncate">
+              {cat.archived
+                ? 'Archivée'
+                : cc.mode === 'envelope'
+                ? 'Enveloppe'
+                : `${cc.lines.length} ligne${cc.lines.length > 1 ? 's' : ''}`}
+              {cat.kind === 'save' ? ' · épargne' : ''}
+              {cat.linkedTo === 'debts' ? ' · carnet de dettes' : ''}
+            </span>
+          </div>
+          {!reorder && (
+            <div className="text-right leading-tight text-xs shrink-0">
+              <b className="font-heading font-bold text-[var(--color-text)] num">{fmt(cc.actual)}</b>
+              <span className="text-[10px] text-[var(--color-text-muted)] num"> / {cc.planned ? fmt(cc.planned) : '–'} F</span>
+            </div>
+          )}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onMenu();
+            }}
+            onPointerDown={(e) => e.stopPropagation()}
+            className="w-9 h-10 flex items-center justify-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] shrink-0"
+            aria-label={`Options de ${cat.name}`}
           >
-            <div className="flex justify-between items-center">
-              <h4 className="m-0 text-sm font-heading font-bold">Reste à vivre calculé</h4>
-              <button
-                type="button"
-                onClick={() => setShowFreeInfoModal(false)}
-                className="text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
-              >
-                <X size={16} />
-              </button>
-            </div>
+            <MoreHorizontal size={18} />
+          </button>
+          {!reorder && <span className="text-[var(--color-text-muted)] pr-1">{open ? <ChevronUp size={15} /> : <ChevronDown size={15} />}</span>}
+        </div>
+      </div>
 
-            <p className="m-0 text-[11px] text-[var(--color-text-muted)]">
-              Le montant libre correspond à votre solde actuel moins les paiements encore à
-              effectuer ce mois-ci :
-            </p>
+      {!reorder && (
+        <div className="w-full h-1 bg-[var(--color-border)]/40" aria-hidden="true">
+          <div
+            className={`h-full ${over ? 'bg-[var(--color-expense)]' : ''}`}
+            style={{ width: `${pct}%`, backgroundColor: over ? undefined : cat.color }}
+          />
+        </div>
+      )}
 
-            <div className="bg-[var(--color-surface-subtle)] p-2.5 rounded-xl flex flex-col gap-1 text-[11px]">
-              <div className="flex justify-between">
-                <span>Solde actuel :</span>
-                <b className="num">{fmtS(solde)} F</b>
-              </div>
-              <div className="flex justify-between text-rose-500">
-                <span>Factures prévues restantes :</span>
-                <b className="num">−{fmt(calc.toPay)} F</b>
-              </div>
-              <div className="border-t border-[var(--color-border)] pt-1 flex justify-between font-bold text-[var(--color-primary)]">
-                <span>Libre après prévus :</span>
-                <b className="num">{fmtS(free)} F</b>
-              </div>
-            </div>
-
-            {daysLeft > 0 && free > 0 && (
-              <p className="m-0 text-[11px] text-[var(--color-text-muted)]">
-                Soit environ <b>{fmt(free / daysLeft)} F par jour</b> pour les {daysLeft} jours
-                restants de ce mois.
-              </p>
-            )}
-
+      {open && (
+        <div className="p-2 bg-[var(--color-surface-subtle)]/40 border-t border-[var(--color-border)]/50 flex flex-col gap-1">
+          {cc.mode === 'envelope' ? (
             <button
               type="button"
-              onClick={() => setShowFreeInfoModal(false)}
-              className="mt-1 w-full py-2 rounded-xl bg-[var(--color-primary)] text-white font-bold"
+              onClick={onEditEnvelope}
+              className="h-11 px-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60 flex items-center justify-between text-xs"
             >
-              Compris
+              <span className="font-medium text-[var(--color-text)]">Enveloppe du mois</span>
+              <span className="num">
+                {cc.envelope === null ? (
+                  <span className="text-[var(--color-text-muted)]">Sans montant</span>
+                ) : (
+                  <>
+                    <b>{fmt(cc.actual)}</b>
+                    <span className="text-[var(--color-text-muted)]"> / {fmt(cc.envelope)} F · reste {fmt(cc.remaining)} F</span>
+                  </>
+                )}
+              </span>
             </button>
-          </div>
+          ) : (
+            <LineList cc={cc} onEditLine={onEditLine} onPayLine={onPayLine} onReorderLines={onReorderLines} />
+          )}
+          {cc.mode === 'lines' && cc.unplanned > 0 && (
+            <div className="h-9 px-3 flex items-center justify-between text-[11px] text-[var(--color-text-muted)]">
+              <span>Dépenses hors lignes</span>
+              <b className="num text-[var(--color-text)]">{fmt(cc.unplanned)} F</b>
+            </div>
+          )}
+          {!cat.archived && (
+            <button
+              type="button"
+              onClick={onAddLine}
+              className="h-9 rounded-xl text-[11px] font-heading font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] flex items-center justify-center gap-1"
+            >
+              <Plus size={13} /> Ajouter une ligne
+            </button>
+          )}
+          <span className="text-[10px] text-center text-[var(--color-text-muted)]">
+            Touchez une ligne pour la modifier · glissez vers la droite pour payer
+          </span>
         </div>
       )}
     </div>
   );
 };
 
-// Compact status dot helper (green = payé, blue = reste, red = dépassé, orange = à fixer)
-function getStatusDotColor(p: PlanLine, act: number): { bg: string; title: string } {
-  const a = p.a || 0;
-  if (!a) {
-    return { bg: 'bg-[var(--color-warning)]', title: 'À fixer' };
+const LineList: React.FC<{
+  cc: CategoryCalc;
+  onEditLine: (l: MonthLine) => void;
+  onPayLine: (l: MonthLine) => void;
+  onReorderLines: (ids: string[]) => void;
+}> = ({ cc, onEditLine, onPayLine, onReorderLines }) => {
+  const [sorting, setSorting] = useState(false);
+  const ids = cc.lines.map((l) => l.line.id);
+  const drag = useDragReorder(ids, onReorderLines);
+  const byId = new Map(cc.lines.map((l) => [l.line.id, l]));
+  if (!cc.lines.length) {
+    return <p className="m-0 px-2 py-1 text-[11px] text-[var(--color-text-muted)]">Aucune ligne ce mois-ci.</p>;
   }
-  if (act > a) {
-    return { bg: 'bg-[var(--color-expense)]', title: `Dépassé (+${fmt(act - a)})` };
+  return (
+    <>
+      {drag.order.map((id) => (
+        <div key={id} ref={drag.register(id)} style={drag.rowStyle(id)} className="flex items-center gap-1">
+          {sorting && (
+            <span {...drag.handleProps(id)} className="w-7 h-10 flex items-center justify-center text-[var(--color-text-muted)]" aria-label="Déplacer">
+              <GripVertical size={16} />
+            </span>
+          )}
+          <div className="flex-1 min-w-0">
+            <LineRow lc={byId.get(id)!} cat={cc.category} onEdit={onEditLine} onPay={onPayLine} />
+          </div>
+        </div>
+      ))}
+      {cc.lines.length > 1 && (
+        <button
+          type="button"
+          onClick={() => setSorting((s) => !s)}
+          className="self-end h-7 px-2 text-[10px] font-bold text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+        >
+          {sorting ? 'Terminé' : 'Réorganiser les lignes'}
+        </button>
+      )}
+    </>
+  );
+};
+
+function lineStatus(lc: LineCalc, income: boolean): { dot: string; label: string } {
+  const a = lc.line.amount;
+  if (a === null) {
+    return lc.line.remind
+      ? { dot: 'bg-[var(--color-warning)]', label: 'À fixer' }
+      : { dot: 'bg-[var(--color-border)]', label: 'Sans montant' };
   }
-  if (act === a) {
-    return { bg: 'bg-[var(--color-income)]', title: 'Payé' };
-  }
-  return { bg: 'bg-[var(--color-info)]', title: `Reste ${fmt(a - act)}` };
+  if (lc.paid > a) return { dot: 'bg-[var(--color-expense)]', label: `Dépassé de ${fmt(lc.paid - a)} F` };
+  if (lc.paid >= a && a > 0) return { dot: 'bg-[var(--color-income)]', label: income ? 'Reçu' : 'Payé' };
+  return { dot: 'bg-[var(--color-info)]', label: `Reste ${fmt(a - lc.paid)} F` };
 }
+
+const LineRow: React.FC<{
+  lc: LineCalc;
+  cat: Category;
+  income?: boolean;
+  onEdit: (l: MonthLine) => void;
+  onPay: (l: MonthLine) => void;
+}> = ({ lc, income = false, onEdit, onPay }) => {
+  const g = useRowGestures({
+    onTap: () => {
+      triggerHaptic('light');
+      onEdit(lc.line);
+    },
+    onSwipeRight: () => onPay(lc.line),
+  });
+  const st = lineStatus(lc, income);
+  const a = lc.line.amount;
+  return (
+    <div className="relative rounded-xl overflow-hidden">
+      {g.dx > 0 && (
+        <div className="absolute inset-0 flex items-center pl-3 gap-1 bg-[var(--color-income)] text-white text-[11px] font-bold">
+          <HandCoins size={14} /> {income ? 'Reçu' : 'Payer'}
+        </div>
+      )}
+      <div
+        {...g.handlers}
+        style={g.style}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => e.key === 'Enter' && onEdit(lc.line)}
+        className="relative h-11 px-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60 flex items-center justify-between gap-2 cursor-pointer active:bg-[var(--color-surface-subtle)]"
+        aria-label={`${lc.line.label}, ${st.label}`}
+      >
+        <div className="flex items-center gap-2 min-w-0">
+          <span className={`w-2 h-2 rounded-full shrink-0 ${st.dot}`} title={st.label} />
+          <span className="font-medium text-xs text-[var(--color-text)] truncate">{lc.line.label}</span>
+          {lc.line.origin === 'oneoff' && (
+            <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] shrink-0">
+              ce mois
+            </span>
+          )}
+        </div>
+        <div className="text-right whitespace-nowrap text-xs">
+          {a === null ? (
+            <span className={`text-[11px] ${lc.line.remind ? 'text-[var(--color-warning)] font-bold' : 'text-[var(--color-text-muted)]'}`}>
+              {lc.paid ? `${fmt(lc.paid)} F · ` : ''}
+              {lc.line.remind ? 'À fixer' : 'Sans montant'}
+            </span>
+          ) : (
+            <>
+              <b className="font-heading font-bold text-[var(--color-text)] num">{fmt(lc.paid)}</b>
+              <span className="text-[11px] text-[var(--color-text-muted)] num"> / {fmt(a)} F</span>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* ------------------------------ ranking & chart ------------------------------ */
+
+const Ranking: React.FC<{ calc: MonthCalc; categories: Category[]; myName: string }> = ({ calc, categories, myName }) => {
+  const items = rankExpenses([{ categories, month: calc.month, name: myName }]);
+  const max = items[0]?.amt || 1;
+  const total = items.reduce((s, i) => s + i.amt, 0);
+  return (
+    <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-4 shadow-2xs flex flex-col gap-2">
+      <div className="flex justify-between items-center">
+        <span className="text-xs font-heading font-bold">Mes plus grandes dépenses</span>
+        <span className="text-[11px] text-[var(--color-text-muted)] num">Total {fmt(calc.out)} F</span>
+      </div>
+      {!items.length ? (
+        <p className="m-0 py-4 text-xs text-[var(--color-text-muted)] text-center">Aucune dépense enregistrée ce mois-ci.</p>
+      ) : (
+        items.slice(0, 10).map((it, i) => (
+          <div key={it.key} className="py-1.5 border-t border-[var(--color-border)]/50 first:border-t-0 flex flex-col gap-1">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="w-4 text-center text-xs font-heading font-bold text-[var(--color-primary)]">{i + 1}</span>
+                <RubricBadge icon={it.category?.icon} color={it.category?.color} size="sm" />
+                <span className="font-semibold text-xs truncate">{it.label}</span>
+                <small className="text-[10px] text-[var(--color-text-muted)] shrink-0">{Math.round((it.amt / total) * 100)} %</small>
+              </div>
+              <span className="font-heading font-bold text-xs num whitespace-nowrap">{fmt(it.amt)} F</span>
+            </div>
+            <div className="w-full h-1.5 rounded-full bg-[var(--color-surface-subtle)] overflow-hidden">
+              <div className="h-full rounded-full" style={{ width: `${(it.amt / max) * 100}%`, backgroundColor: it.category?.color || NO_RUBRIC_STYLE.color }} />
+            </div>
+          </div>
+        ))
+      )}
+    </section>
+  );
+};
+
+const Chart: React.FC<{ calc: MonthCalc }> = ({ calc }) => {
+  const data = calc.expense
+    .filter((c) => c.kind === 'out' && c.actual > 0)
+    .map((c) => ({ name: c.category.name, value: c.actual, color: c.category.color }));
+  if (calc.uncategorizedOut > 0) data.push({ name: 'Sans rubrique', value: calc.uncategorizedOut, color: NO_RUBRIC_STYLE.color });
+  const total = data.reduce((s, d) => s + d.value, 0);
+  return (
+    <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-4 shadow-2xs flex flex-col gap-3">
+      <div className="flex justify-between items-center">
+        <span className="text-xs font-heading font-bold">Dépenses par rubrique</span>
+        <span className="text-xs font-semibold text-[var(--color-text-muted)] num">Total {fmt(total)} F</span>
+      </div>
+      {!data.length ? (
+        <p className="m-0 py-6 text-xs text-[var(--color-text-muted)] text-center">Aucune dépense pour l’instant ce mois-ci.</p>
+      ) : (
+        <>
+          <div className="h-44 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie data={data} cx="50%" cy="50%" innerRadius={46} outerRadius={70} paddingAngle={3} dataKey="value">
+                  {data.map((d) => (
+                    <Cell key={d.name} fill={d.color} />
+                  ))}
+                </Pie>
+                <Tooltip
+                  formatter={(v: any) => [`${fmt(Number(v))} F`, 'Dépensé']}
+                  contentStyle={{
+                    backgroundColor: 'var(--color-surface)',
+                    borderColor: 'var(--color-border)',
+                    borderRadius: '12px',
+                    fontSize: '11px',
+                  }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="flex flex-wrap gap-1.5 justify-center">
+            {data.map((d) => (
+              <span key={d.name} className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-[var(--color-surface-subtle)] text-[10px] font-medium">
+                <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: d.color }} />
+                {d.name} <b className="num text-[var(--color-text-muted)]">{Math.round((d.value / total) * 100)} %</b>
+              </span>
+            ))}
+          </div>
+        </>
+      )}
+    </section>
+  );
+};

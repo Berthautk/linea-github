@@ -54,19 +54,20 @@ export const WalletsSheet: React.FC<WalletsSheetProps> = ({
   if (!isOpen) return null;
 
   // Compute live wallet balances
-  // Balance = initial + entries(in) - entries(out) - fees
+  // Balance = initial + received - spent - saved; a transfer moves money between
+  // two wallets. Fees are their own entries, so they are not subtracted twice.
   const getWalletBalance = (wId: string, initial = 0) => {
     let bal = initial;
     entries.forEach((e) => {
       if (e.status === 'declined') return;
-      if (e.w === wId) {
-        if (e.t === 'in') {
-          bal += e.amt;
-        } else if (e.t === 'out' || e.t === 'save') {
-          bal -= e.amt;
-          if (e.fee) bal -= e.fee;
-        }
+      if (e.t === 'transfer') {
+        if (e.w === wId) bal -= e.amt;
+        if (e.toW === wId) bal += e.amt;
+        return;
       }
+      if (e.w !== wId) return;
+      if (e.t === 'in') bal += e.amt;
+      else bal -= e.amt;
     });
     return bal;
   };

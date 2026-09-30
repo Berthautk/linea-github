@@ -25,6 +25,8 @@ import {
   persistentMultipleTabManager,
   query,
   setDoc,
+  updateDoc,
+  writeBatch,
 } from 'firebase/firestore';
 
 export {
@@ -43,6 +45,8 @@ export {
   onSnapshot,
   query,
   limit,
+  updateDoc,
+  writeBatch,
 };
 
 export interface FirebaseConfig {
@@ -203,6 +207,7 @@ export function initFirebase(config: FirebaseConfig): {
     try {
       // Use multi-tab offline persistence
       firestoreDb = initializeFirestore(firebaseApp, {
+        ignoreUndefinedProperties: true,
         localCache: persistentLocalCache({
           tabManager: persistentMultipleTabManager(),
         }),

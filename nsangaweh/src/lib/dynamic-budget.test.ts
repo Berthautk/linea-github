@@ -397,7 +397,8 @@ describe('Validation', () => {
     expect(validateAmount(-1).ok).toBe(false);
     expect(validateAmount(12.5).ok).toBe(false);
     expect(validateAmount(1_000_000_000).ok).toBe(false);
-    expect(validateAmount('').ok && validateAmount('').value).toBeNull();
+    const empty = validateAmount('');
+    expect(empty.ok && empty.value).toBeNull();
   });
 
   it('names are trimmed and limited to 40 characters', () => {

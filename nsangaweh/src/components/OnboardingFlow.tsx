@@ -539,7 +539,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
             if (authMode === 'signin') {
               onSignIn(email.trim(), password);
             } else {
-              onSignUp(email.trim(), password, firstName.trim() || 'Moi', selectedColor);
+              onSignUp(email.trim(), password, firstName.trim(), selectedColor);
             }
           }}
           className="flex flex-col gap-3.5"

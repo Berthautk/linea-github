@@ -2,7 +2,9 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Helper functions
+    // ------------------------------------------------------------------
+    // Helpers
+    // ------------------------------------------------------------------
     function isSignedIn() {
       return request.auth != null;
     }
@@ -11,18 +13,132 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == uid;
     }
 
-    function isValidId(id) {
-      return id is string && id.size() > 0 && id.size() <= 128;
-    }
-
     function isValidHouseholdId(hid) {
       return hid is string && hid.size() == 10 && hid.matches('^[A-Z2-9]{10}$');
     }
 
+    // Only the (at most two) partners listed in the household document.
     function isHouseholdMember(hid) {
-      return isSignedIn() && (
-        request.auth.uid in get(/databases/$(database)/documents/households/$(hid)).data.members
-      );
+      return isSignedIn() && isValidHouseholdId(hid) &&
+        request.auth.uid in get(/databases/$(database)/documents/households/$(hid)).data.members;
+    }
+
+    function isAmount(v) {
+      return v is int && v >= 0 && v <= 999999999;
+    }
+
+    function isAmountOrNull(v) {
+      return v == null || isAmount(v);
+    }
+
+    function isName(v) {
+      return v is string && v.size() > 0 && v.size() <= 40;
+    }
+
+    function isShortText(v, max) {
+      return v is string && v.size() <= max;
+    }
+
+    function isMonthKey(v) {
+      return v is string && v.matches('^[0-9]{4}-(0[1-9]|1[0-2])$');
+    }
+
+    function optional(d, key, ok) {
+      return !(key in d) || ok;
+    }
+
+    // ------------------------------------------------------------------
+    // Budget structure validation (dynamic rubrics, items, month plans)
+    // ------------------------------------------------------------------
+    function isValidCategory(d, id) {
+      return d.keys().hasAll(['id', 'name', 'icon', 'color', 'order', 'kind', 'budgetMode', 'archived', 'createdAt'])
+        && d.keys().hasOnly(['id', 'name', 'icon', 'color', 'order', 'kind', 'budgetMode', 'envelopeAmount', 'archived', 'createdAt', 'linkedTo'])
+        && d.id == id
+        && isName(d.name)
+        && isShortText(d.icon, 40)
+        && d.color is string && d.color.matches('^#[0-9A-Fa-f]{6}$')
+        && d.order is int && d.order >= 0 && d.order <= 10000
+        && d.kind in ['out', 'in', 'save']
+        && d.budgetMode in ['lines', 'envelope']
+        && optional(d, 'envelopeAmount', isAmountOrNull(d.get('envelopeAmount', null)))
+        && d.archived is bool
+        && d.createdAt is int
+        && optional(d, 'linkedTo', d.get('linkedTo', '') == 'debts');
+    }
+
+    function isValidRecurrence(r) {
+      return r is map
+        && r.kind in ['once', 'monthly', 'everyNMonths', 'months', 'yearly']
+        && r.keys().hasOnly(['kind', 'month', 'months', 'n', 'startMonth', 'endMonth'])
+        && (r.kind != 'once' || isMonthKey(r.month))
+        && (r.kind != 'yearly' || (r.month is int && r.month >= 1 && r.month <= 12))
+        && (r.kind != 'everyNMonths' || (r.n is int && r.n >= 1 && r.n <= 24 && isMonthKey(r.startMonth)))
+        && (r.kind != 'months' || (r.months is list && r.months.size() >= 1 && r.months.size() <= 12))
+        && optional(r, 'startMonth', isMonthKey(r.get('startMonth', '')))
+        && optional(r, 'endMonth', isMonthKey(r.get('endMonth', '')));
+    }
+
+    function isValidItem(d, id) {
+      return d.keys().hasAll(['id', 'categoryId', 'label', 'amount', 'recurrence', 'active', 'order', 'archived'])
+        && d.keys().hasOnly(['id', 'categoryId', 'label', 'amount', 'recurrence', 'active', 'order', 'archived', 'note', 'remind'])
+        && d.id == id
+        && isShortText(d.categoryId, 128)
+        && isName(d.label)
+        && isAmountOrNull(d.amount)
+        && isValidRecurrence(d.recurrence)
+        && d.active is bool
+        && d.archived is bool
+        && d.order is int
+        && optional(d, 'note', isShortText(d.get('note', ''), 200))
+        && optional(d, 'remind', d.get('remind', false) is bool);
+    }
+
+    // One document per month: this month's own plan lines and entries.
+    // Arrays cannot be inspected element by element in rules; their size is bounded
+    // and every value is validated by the app before writing.
+    function isValidMonth(d) {
+      return d.keys().hasAll(['lines', 'entries'])
+        && d.keys().hasOnly(['lines', 'entries', 'envelopes', 'planCreated', 'createdAt', 'fromTemplate', 'updated', 'legacyPlan'])
+        && d.lines is list && d.lines.size() <= 300
+        && d.entries is list && d.entries.size() <= 3000
+        && optional(d, 'envelopes', d.get('envelopes', {}) is map && d.get('envelopes', {}).size() <= 100)
+        && optional(d, 'planCreated', d.get('planCreated', false) is bool)
+        && optional(d, 'fromTemplate', d.get('fromTemplate', false) is bool)
+        && optional(d, 'createdAt', d.get('createdAt', 0) is int)
+        && optional(d, 'updated', d.get('updated', 0) is int)
+        && optional(d, 'legacyPlan', d.get('legacyPlan', []) is list && d.get('legacyPlan', []).size() <= 300);
+    }
+
+    function isValidDebt(d, id) {
+      return d.keys().hasAll(['id', 'person', 'direction', 'principal', 'createdAt', 'payments', 'status'])
+        && d.keys().hasOnly(['id', 'person', 'phone', 'direction', 'principal', 'createdAt', 'dueDate', 'note', 'payments', 'shared', 'status'])
+        && d.id == id
+        && isName(d.person)
+        && d.direction in ['i_owe', 'they_owe']
+        && isAmount(d.principal) && d.principal > 0
+        && d.payments is list && d.payments.size() <= 500
+        && d.status in ['active', 'settled']
+        && optional(d, 'note', isShortText(d.get('note', ''), 200));
+    }
+
+    function isValidCommitment(d, id) {
+      return d.keys().hasAll(['id', 'label', 'categoryId', 'amount', 'dayOfMonth', 'recipient', 'active', 'startMonth'])
+        && d.id == id
+        && isShortText(d.label, 80)
+        && isShortText(d.categoryId, 128)
+        && isAmount(d.amount)
+        && d.dayOfMonth is int && d.dayOfMonth >= 1 && d.dayOfMonth <= 28
+        && isShortText(d.recipient, 80)
+        && d.active is bool
+        && isMonthKey(d.startMonth);
+    }
+
+    function isValidProfile(d) {
+      return d.keys().hasOnly(['name', 'color', 'joined', 'budgetSetupDone', 'templateStripDismissed', 'envelopeRollover'])
+        && optional(d, 'name', isShortText(d.get('name', ''), 40))
+        && optional(d, 'budgetSetupDone', d.get('budgetSetupDone', false) is bool)
+        && optional(d, 'templateStripDismissed', d.get('templateStripDismissed', false) is bool)
+        && optional(d, 'envelopeRollover', d.get('envelopeRollover', false) is bool);
     }
 
     // Default deny
@@ -30,73 +146,86 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
-    // Household document
+    // ------------------------------------------------------------------
+    // Household
+    // ------------------------------------------------------------------
     match /households/{hid} {
+      // Readable with the code, so a partner can join.
       allow read: if isSignedIn() && isValidHouseholdId(hid);
       allow create: if isSignedIn() && isValidHouseholdId(hid)
         && request.resource.data.joinCode == hid
         && request.resource.data.members.hasOnly([request.auth.uid]);
       allow update: if isSignedIn() && isValidHouseholdId(hid) && (
-        // Allow partner to join by adding only their own uid
+        // A partner joins by adding only their own uid (two members at most).
         (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members'])
           && request.resource.data.members.size() <= 2
-          && request.auth.uid in request.resource.data.members)
+          && request.auth.uid in request.resource.data.members
+          && resource.data.members.toSet().difference(request.resource.data.members.toSet()).size() == 0)
         ||
-        // Allow members to update settings
-        (request.auth.uid in resource.data.members)
+        // Members change the shared settings (Famille merges are a small map).
+        (request.auth.uid in resource.data.members
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['settings', 'members'])
+          && request.resource.data.members == resource.data.members
+          && (!('rubricMerges' in request.resource.data.settings) || request.resource.data.settings.rubricMerges.size() <= 200))
       );
       allow delete: if isSignedIn() && isValidHouseholdId(hid) && request.auth.uid in resource.data.members;
 
-      // Shared Goals
       match /goals/{goalId} {
-        allow read, write: if isSignedIn() && isValidHouseholdId(hid);
+        allow read, write: if isHouseholdMember(hid);
       }
 
-      // Shared Approvals
       match /approvals/{approvalId} {
-        allow read, write: if isSignedIn() && isValidHouseholdId(hid);
+        allow read, write: if isHouseholdMember(hid);
       }
 
-      // Member profiles
+      // Each partner writes only in their own folder; both can read the household.
       match /members/{uid} {
-        allow read: if isSignedIn() && isValidHouseholdId(hid);
-        allow create, update: if isOwner(uid) && isValidHouseholdId(hid);
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isOwner(uid) && isHouseholdMember(hid) && isValidProfile(request.resource.data);
         allow delete: if isOwner(uid);
 
-        // Member monthly budget plans & entries
-        match /months/{monthId} {
-          allow read: if isSignedIn() && isValidHouseholdId(hid);
-          allow create, update: if isOwner(uid) && isValidHouseholdId(hid);
+        match /categories/{catId} {
+          allow read: if isHouseholdMember(hid);
+          allow create, update: if isOwner(uid) && isValidCategory(request.resource.data, catId);
           allow delete: if isOwner(uid);
         }
 
-        // Member private subcollections (wallets, debts, commitments, provisions, tontines)
-        match /wallets/{docId} {
-          allow read: if isSignedIn() && isValidHouseholdId(hid);
-          allow write: if isOwner(uid);
+        match /items/{itemId} {
+          allow read: if isHouseholdMember(hid);
+          allow create, update: if isOwner(uid) && isValidItem(request.resource.data, itemId);
+          allow delete: if isOwner(uid);
+        }
+
+        match /months/{monthId} {
+          allow read: if isHouseholdMember(hid);
+          allow create, update: if isOwner(uid) && isMonthKey(monthId) && isValidMonth(request.resource.data);
+          allow delete: if isOwner(uid);
         }
 
         match /debts/{docId} {
-          allow read: if isSignedIn() && isValidHouseholdId(hid) && (
-            isOwner(uid) || resource.data.shared == true
-          );
-          allow write: if isOwner(uid);
+          allow read: if isOwner(uid) || (isHouseholdMember(hid) && resource.data.shared == true);
+          allow create, update: if isOwner(uid) && isValidDebt(request.resource.data, docId);
+          allow delete: if isOwner(uid);
         }
 
         match /commitments/{docId} {
-          allow read: if isSignedIn() && isValidHouseholdId(hid);
+          allow read: if isHouseholdMember(hid);
+          allow create, update: if isOwner(uid) && isValidCommitment(request.resource.data, docId);
+          allow delete: if isOwner(uid);
+        }
+
+        match /wallets/{docId} {
+          allow read: if isHouseholdMember(hid);
           allow write: if isOwner(uid);
         }
 
         match /provisions/{docId} {
-          allow read: if isSignedIn() && isValidHouseholdId(hid);
+          allow read: if isHouseholdMember(hid);
           allow write: if isOwner(uid);
         }
 
         match /tontines/{docId} {
-          allow read: if isSignedIn() && isValidHouseholdId(hid) && (
-            isOwner(uid) || resource.data.shared == true
-          );
+          allow read: if isOwner(uid) || (isHouseholdMember(hid) && resource.data.shared == true);
           allow write: if isOwner(uid);
         }
 

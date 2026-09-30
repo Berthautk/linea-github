@@ -72,7 +72,7 @@ export const PlusHubScreen: React.FC<PlusHubScreenProps> = ({
   const commitmentsStatus =
     activeCommitments.length > 0
       ? `${activeCommitments.length} mensuel${activeCommitments.length > 1 ? 's' : ''} · ${fmt(commitmentsAmt)} F`
-      : 'Soutien famille régulier';
+      : 'Envois réguliers à des proches';
 
   const provisionsTotalSaved = provisions.reduce((acc, p) => {
     const totalContr = p.contributions.reduce((cAcc, c) => cAcc + c.amt, 0);
@@ -94,7 +94,7 @@ export const PlusHubScreen: React.FC<PlusHubScreenProps> = ({
       ? `${tontines.length} njangi actif`
       : 'Tours de table & njangi';
 
-  const walletsStatus = `${wallets.length || 4} comptes & soldes`;
+  const walletsStatus = `${wallets.length} compte${wallets.length > 1 ? 's' : ''} et soldes`;
 
   const tiles: Array<{
     id: PlusModule;
@@ -122,7 +122,7 @@ export const PlusHubScreen: React.FC<PlusHubScreenProps> = ({
     },
     {
       id: 'engagements',
-      title: 'Soutien famille',
+      title: 'Engagements',
       status: commitmentsStatus,
       icon: HeartHandshake,
       color: '#EC4899',
@@ -192,9 +192,6 @@ export const PlusHubScreen: React.FC<PlusHubScreenProps> = ({
         <h2 className="m-0 text-base font-heading font-extrabold text-[var(--color-text)]">
           Outils & fonctionnalités
         </h2>
-        <span className="text-xs font-semibold text-[var(--color-text-muted)]">
-          10 modules
-        </span>
       </div>
 
       {/* 2-column grid of tiles */}

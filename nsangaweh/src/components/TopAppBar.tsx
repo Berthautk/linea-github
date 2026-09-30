@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bell, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Bell, ChevronLeft, ChevronRight, UserRound } from 'lucide-react';
 import { addMonth, monthLabel } from '../lib/budget-math';
 import { triggerHaptic } from '../lib/haptics';
 
@@ -24,8 +24,8 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
 }) => {
   const hour = new Date().getHours();
   const greeting = hour >= 18 || hour < 5 ? 'Bonsoir' : 'Bonjour';
-  const displayName = userName ? userName : 'vous';
-  const initial = displayName.charAt(0).toUpperCase();
+  const displayName = (userName || '').trim();
+  const initial = displayName ? displayName.charAt(0).toUpperCase() : '';
 
   const syncDotColor =
     syncStatus === 'cloud'
@@ -57,7 +57,7 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
             className="w-9 h-9 rounded-full bg-[var(--color-primary)] text-white font-heading font-bold text-xs flex items-center justify-center shadow-xs hover:scale-105 active:scale-95 transition-all cursor-pointer"
             aria-label="Ouvrir les paramètres"
           >
-            {initial}
+            {initial || <UserRound size={16} />}
           </button>
           <span
             className={`absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full border-2 border-[var(--color-surface)] ${syncDotColor}`}
@@ -66,12 +66,14 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
         </div>
 
         <div className="min-w-0 leading-tight">
-          <p className="m-0 text-[11px] font-medium text-[var(--color-text-muted)] truncate">
-            {greeting}
-          </p>
-          <h2 className="m-0 text-sm font-heading font-bold text-[var(--color-text)] truncate">
-            {displayName}
-          </h2>
+          {displayName ? (
+            <>
+              <p className="m-0 text-[11px] font-medium text-[var(--color-text-muted)] truncate">{greeting}</p>
+              <h2 className="m-0 text-sm font-heading font-bold text-[var(--color-text)] truncate">{displayName}</h2>
+            </>
+          ) : (
+            <h2 className="m-0 text-sm font-heading font-bold text-[var(--color-text)] truncate">{greeting}</h2>
+          )}
         </div>
       </div>
 

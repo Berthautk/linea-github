@@ -1,564 +1,378 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {
-  AlertCircle,
-  Calendar,
-  Check,
-  Clipboard,
-  Delete,
-  Mic,
-  MicOff,
-  Sparkles,
-  Wallet as WalletIcon,
-  X,
-} from 'lucide-react';
-import {
-  currentMonthKey,
-  DEFAULT_WALLETS,
-  fmt,
-  GROUPS,
-  parseQuick,
-  todayStr,
-} from '../lib/budget-math';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { AlertCircle, Calendar, Check, Clipboard, Mic, MicOff, Sparkles, Wallet as WalletIcon, X } from 'lucide-react';
+import { currentMonthKey, defaultEntryLabel, fmt, matchLine, parseQuick, todayStr } from '../lib/budget-math';
+import { MonthCalc, sortCategories } from '../lib/calc';
+import { OTHER_RUBRIC_DEFAULT } from '../lib/catalog';
 import { parseVoiceTranscript } from '../lib/frenchNumbers';
 import { triggerHaptic } from '../lib/haptics';
+import { RubricBadge } from '../lib/icons';
 import { parseMomoSMS } from '../lib/momoParser';
-import { RubricIconBadge } from '../lib/rubrics';
-import {
-  Entry,
-  EntrySource,
-  EntryType,
-  MonthCalculation,
-  PlanLine,
-  RecipientMemory,
-  Wallet,
-} from '../lib/types';
+import { Category, EntrySource, MonthLine, RecipientMemory, Wallet } from '../lib/types';
+import { MAX_NAME_LENGTH } from '../lib/validation';
+import { Keypad } from './ui';
 
-interface QuickAddSheetProps {
-  isOpen: boolean;
-  currentMonth: string;
-  calc: MonthCalculation;
-  wallets?: Wallet[];
-  recipientMemories?: RecipientMemory[];
-  initialType?: EntryType;
-  onClose: () => void;
-  onSave: (entry: {
-    type: EntryType;
-    amt: number;
-    label: string;
-    date: string;
-    plan: PlanLine | null;
-    walletId: string;
-    fee?: number;
-    ref?: string;
-    who?: string;
-    src?: EntrySource;
-    saveMemory?: { name: string; rubric: string; lineLabel?: string };
-  }) => void;
+type Kind = 'in' | 'out' | 'save';
+
+export interface QuickAddDraft {
+  type: Kind;
+  amt: number;
+  label: string;
+  date: string;
+  categoryId: string | null;
+  lineId: string | null;
+  walletId: string;
+  fee?: number;
+  ref?: string;
+  who?: string;
+  src?: EntrySource;
+  /** Create a one-off line for this month first ("Autres" when categoryId is null). */
+  createOneoff?: { categoryId: string | null };
+  saveMemory?: { name: string; categoryId: string };
 }
 
-export const QuickAddSheet: React.FC<QuickAddSheetProps> = ({
+export interface QuickAddPrefill {
+  lineId: string;
+  amount?: number;
+}
+
+interface Props {
+  isOpen: boolean;
+  currentMonth: string;
+  calc: MonthCalc;
+  categories: Category[];
+  wallets: Wallet[];
+  recipientMemories?: RecipientMemory[];
+  initialType?: Kind;
+  prefill?: QuickAddPrefill | null;
+  onClose: () => void;
+  onSave: (d: QuickAddDraft) => void;
+}
+
+export const QuickAddSheet: React.FC<Props> = ({
   isOpen,
   currentMonth,
   calc,
-  wallets = DEFAULT_WALLETS,
+  categories,
+  wallets,
   recipientMemories = [],
   initialType = 'out',
+  prefill,
   onClose,
   onSave,
 }) => {
-  // Top segmented control: Saisie | SMS | Voix
-  const [tabMode, setTabMode] = useState<'saisie' | 'sms' | 'voix'>('saisie');
-
-  // Saisie states
-  const [type, setType] = useState<EntryType>(initialType);
-  const [amountStr, setAmountStr] = useState<string>('');
-  const [selectedPlanLine, setSelectedPlanLine] = useState<PlanLine | null>(null);
-  const [customLabel, setCustomLabel] = useState<string>('');
-  const [selectedWalletId, setSelectedWalletId] = useState<string>(() => {
-    return localStorage.getItem('nsangaweh-last-wallet') || wallets[0]?.id || 'wallet-cash';
-  });
+  const [tab, setTab] = useState<'saisie' | 'sms' | 'voix'>('saisie');
+  const [type, setType] = useState<Kind>(initialType);
+  const [amountStr, setAmountStr] = useState('');
+  const [pick, setPick] = useState<{ lineId: string | null; categoryId: string } | null>(null);
+  const [label, setLabel] = useState('');
+  const [showOneoff, setShowOneoff] = useState(false);
+  const [walletId, setWalletId] = useState<string>(() => localStorage.getItem('nsangaweh-last-wallet') || wallets[0]?.id || '');
   const [dateMode, setDateMode] = useState<'today' | 'yesterday' | 'custom'>('today');
-  const [customDate, setCustomDate] = useState<string>(() =>
-    currentMonth === currentMonthKey() ? todayStr() : `${currentMonth}-01`
-  );
-  const [isSmartTextMode, setIsSmartTextMode] = useState(false);
-  const [smartInputText, setSmartInputText] = useState('');
+  const [customDate, setCustomDate] = useState(`${currentMonth}-01`);
+  const [smart, setSmart] = useState(false);
+  const [smartText, setSmartText] = useState('');
 
-  // SMS states
-  const [smsRawText, setSmsRawText] = useState('');
-  const [parsedSms, setParsedSms] = useState<any | null>(null);
-  const [smsAmt, setSmsAmt] = useState<string>('');
-  const [smsFee, setSmsFee] = useState<string>('');
-  const [smsWho, setSmsWho] = useState<string>('');
-  const [smsRef, setSmsRef] = useState<string>('');
-  const [smsType, setSmsType] = useState<EntryType>('out');
-  const [smsRubric, setSmsRubric] = useState<string>('Repas');
-  const [smsWalletId, setSmsWalletId] = useState<string>('wallet-momo');
-  const [alwaysClassifyPerson, setAlwaysClassifyPerson] = useState(false);
+  const [smsText, setSmsText] = useState('');
+  const [sms, setSms] = useState<ReturnType<typeof parseMomoSMS> | null>(null);
+  const [smsAmt, setSmsAmt] = useState('');
+  const [smsFee, setSmsFee] = useState('');
+  const [smsWho, setSmsWho] = useState('');
+  const [smsRef, setSmsRef] = useState('');
+  const [smsType, setSmsType] = useState<Kind>('out');
+  const [smsCat, setSmsCat] = useState('');
+  const [smsWallet, setSmsWallet] = useState('');
+  const [remember, setRemember] = useState(false);
 
-  // Voice states
-  const [isListening, setIsListening] = useState(false);
-  const [voiceTranscript, setVoiceTranscript] = useState('');
-  const [voiceParsed, setVoiceParsed] = useState<any | null>(null);
-  const [speechSupported, setSpeechSupported] = useState(true);
-  const recognitionRef = useRef<any>(null);
+  const [listening, setListening] = useState(false);
+  const [voiceText, setVoiceText] = useState('');
+  const [voice, setVoice] = useState<ReturnType<typeof parseVoiceTranscript> | null>(null);
+  const [speechOk, setSpeechOk] = useState(true);
+  const recRef = useRef<any>(null);
 
-  // Reset when opened
+  const catById = useMemo(() => new Map(categories.map((c) => [c.id, c])), [categories]);
+  const lines = calc.month.lines.filter((l) => !l.archived && !catById.get(l.categoryId)?.archived);
+
+  // Reset only when the sheet opens.
   useEffect(() => {
-    if (isOpen) {
-      setTabMode('saisie');
+    if (!isOpen) return;
+    setTab('saisie');
+    setSmart(false);
+    setSmartText('');
+    setDateMode(currentMonth === currentMonthKey() ? 'today' : 'custom');
+    setCustomDate(currentMonth === currentMonthKey() ? todayStr() : `${currentMonth}-01`);
+    setSmsText('');
+    setSms(null);
+    setVoiceText('');
+    setVoice(null);
+    setListening(false);
+    setShowOneoff(false);
+    setLabel('');
+    const line = prefill ? calc.month.lines.find((l) => l.id === prefill.lineId) : undefined;
+    if (line) {
+      const kind = catById.get(line.categoryId)?.kind || 'out';
+      setType(kind);
+      setPick({ lineId: line.id, categoryId: line.categoryId });
+      setAmountStr(prefill?.amount ? String(prefill.amount) : '');
+    } else {
       setType(initialType);
+      setPick(null);
       setAmountStr('');
-      setSelectedPlanLine(null);
-      setCustomLabel('');
-      setIsSmartTextMode(false);
-      setSmartInputText('');
-      setDateMode('today');
-      setCustomDate(currentMonth === currentMonthKey() ? todayStr() : `${currentMonth}-01`);
-      setSmsRawText('');
-      setParsedSms(null);
-      setVoiceTranscript('');
-      setVoiceParsed(null);
-      setIsListening(false);
     }
-  }, [isOpen, initialType, currentMonth]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
 
-  // Clean up speech recognition
-  useEffect(() => {
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.abort();
-      }
-    };
-  }, []);
+  useEffect(() => () => recRef.current?.abort?.(), []);
 
   if (!isOpen) return null;
 
-  // Keypad Handlers
-  const handleKeyPress = (char: string) => {
-    triggerHaptic('light');
-    if (amountStr.length >= 9) return;
-    if (amountStr === '' && (char === '0' || char === '000')) return;
-
-    if (char === '000') {
-      if (amountStr !== '') {
-        setAmountStr((prev) => prev + '000');
-      }
-    } else {
-      setAmountStr((prev) => prev + char);
-    }
-  };
-
-  const handleBackspace = () => {
-    triggerHaptic('light');
-    setAmountStr((prev) => prev.slice(0, -1));
-  };
-
-  const handleClear = () => {
-    triggerHaptic('light');
-    setAmountStr('');
-  };
-
-  // Plan line chip selection
-  const handleChipClick = (p: PlanLine) => {
-    triggerHaptic('light');
-    if (selectedPlanLine?.id === p.id) {
-      setSelectedPlanLine(null);
-    } else {
-      setSelectedPlanLine(p);
-      setCustomLabel('');
-      const act = calc.byPlan[p.id] || 0;
-      const rem = Math.max(0, (p.a || 0) - act);
-      if (rem > 0 && amountStr === '') {
-        setAmountStr(String(rem));
-      }
-    }
-  };
-
-  // Resolve target date
   const resolvedDate = (() => {
     if (dateMode === 'custom') return customDate;
-    const now = new Date();
-    if (dateMode === 'yesterday') {
-      now.setDate(now.getDate() - 1);
-    }
-    const pad = (n: number) => (n < 10 ? '0' : '') + n;
-    return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+    const d = new Date();
+    if (dateMode === 'yesterday') d.setDate(d.getDate() - 1);
+    const p = (n: number) => String(n).padStart(2, '0');
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
   })();
 
-  // 1. Submit Saisie
-  const handleSubmitSaisie = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
+  const remainingOf = (l: MonthLine) => Math.max(0, (l.amount || 0) - (calc.byLine[l.id] || 0));
+  const kindCats = sortCategories(categories.filter((c) => !c.archived && c.kind === type));
+  const typeLines = lines.filter((l) => catById.get(l.categoryId)?.kind === type);
+  const envelopeCats = kindCats.filter((c) => calc.byCategory[c.id]?.mode === 'envelope');
+  const labelMatch = !pick && label.trim() ? matchLine(label, typeLines, categories) : null;
 
-    if (isSmartTextMode) {
-      const parsed = parseQuick(smartInputText, calc.monthData);
-      if (!parsed || !parsed.amt || parsed.amt <= 0) {
-        triggerHaptic('warning');
-        return;
-      }
-      triggerHaptic('success');
-      localStorage.setItem('nsangaweh-last-wallet', selectedWalletId);
-      onSave({
-        type: parsed.type,
-        amt: parsed.amt,
-        label: parsed.label,
-        date: resolvedDate,
-        plan: parsed.planLine,
-        walletId: selectedWalletId,
-        src: 'manual',
-      });
-      onClose();
-      return;
-    }
-
-    const amt = parseInt(amountStr, 10);
-    if (!amt || amt <= 0) {
-      triggerHaptic('warning');
-      return;
-    }
-
-    const finalLabel = selectedPlanLine
-      ? selectedPlanLine.l
-      : customLabel.trim() || (type === 'in' ? 'Revenu' : type === 'save' ? 'Épargne' : 'Dépense');
-
+  const finish = (d: QuickAddDraft) => {
     triggerHaptic('success');
-    localStorage.setItem('nsangaweh-last-wallet', selectedWalletId);
-    onSave({
-      type,
-      amt,
-      label: finalLabel,
-      date: resolvedDate,
-      plan: selectedPlanLine,
-      walletId: selectedWalletId,
-      src: 'manual',
-    });
+    if (d.walletId) localStorage.setItem('nsangaweh-last-wallet', d.walletId);
+    onSave(d);
     onClose();
   };
 
-  // 2. Parse SMS
-  const handleParseSmsText = (text: string) => {
-    setSmsRawText(text);
-    if (!text.trim()) {
-      setParsedSms(null);
-      return;
+  const submitSaisie = (oneoffCat?: string | null) => {
+    if (smart) {
+      const p = parseQuick(smartText, calc.month, categories);
+      if (!p.amt) return triggerHaptic('warning');
+      return finish({
+        type: p.type,
+        amt: p.amt,
+        label: p.label || defaultEntryLabel(p.type),
+        date: resolvedDate,
+        categoryId: p.line?.categoryId || null,
+        lineId: p.line?.id || null,
+        walletId,
+        src: 'manual',
+      });
     }
+    const amt = parseInt(amountStr, 10);
+    if (!amt || amt <= 0) return triggerHaptic('warning');
+    const chosenLine = pick?.lineId ? lines.find((l) => l.id === pick.lineId) : labelMatch;
+    const cleanLabel = label.trim().slice(0, MAX_NAME_LENGTH);
+    finish({
+      type,
+      amt,
+      label: chosenLine?.label || cleanLabel || (pick ? catById.get(pick.categoryId)?.name || '' : '') || defaultEntryLabel(type),
+      date: resolvedDate,
+      categoryId: chosenLine?.categoryId || pick?.categoryId || (oneoffCat !== undefined ? oneoffCat : null),
+      lineId: chosenLine?.id || null,
+      walletId,
+      src: 'manual',
+      createOneoff: oneoffCat !== undefined ? { categoryId: oneoffCat } : undefined,
+    });
+  };
 
-    const res = parseMomoSMS(text, calc.monthData.entries);
-    setParsedSms(res);
-
+  const parseSms = (text: string) => {
+    setSmsText(text);
+    if (!text.trim()) return setSms(null);
+    const res = parseMomoSMS(text, calc.month.entries);
+    setSms(res);
     if (res.amount) setSmsAmt(String(res.amount));
     if (res.fee) setSmsFee(String(res.fee));
     if (res.who) setSmsWho(res.who);
     if (res.ref) setSmsRef(res.ref);
     setSmsType(res.direction === 'in' ? 'in' : 'out');
-
-    // Auto-select wallet
-    if (res.operator === 'MTN') {
-      const mtnW = wallets.find((w) => w.type === 'momo');
-      if (mtnW) setSmsWalletId(mtnW.id);
-    } else if (res.operator === 'Orange') {
-      const omW = wallets.find((w) => w.type === 'om');
-      if (omW) setSmsWalletId(omW.id);
-    }
-
-    // Check Recipient Memory
-    if (res.who) {
-      const mem = recipientMemories.find(
-        (m) => m.name.toLowerCase() === res.who?.toLowerCase()
-      );
-      if (mem) {
-        setSmsRubric(mem.rubric);
-      } else if (res.type === 'paiement') {
-        setSmsRubric('Logement');
-      } else {
-        setSmsRubric('Soutien famille');
-      }
-    }
+    const w =
+      res.operator === 'MTN' ? wallets.find((x) => x.type === 'momo') : res.operator === 'Orange' ? wallets.find((x) => x.type === 'om') : undefined;
+    setSmsWallet(w?.id || wallets[0]?.id || '');
+    const mem = res.who ? recipientMemories.find((m) => m.name.toLowerCase() === res.who!.toLowerCase()) : undefined;
+    setSmsCat(mem && catById.get(mem.categoryId) && !catById.get(mem.categoryId)!.archived ? mem.categoryId : '');
   };
 
-  const handlePasteClipboard = async () => {
-    triggerHaptic('light');
-    try {
-      if (navigator.clipboard && navigator.clipboard.readText) {
-        const txt = await navigator.clipboard.readText();
-        if (txt) {
-          handleParseSmsText(txt);
-        }
-      }
-    } catch {
-      // Clipboard read denied / unsupported
-    }
-  };
-
-  const handleSubmitSms = () => {
+  const submitSms = () => {
     const amt = parseInt(smsAmt, 10);
-    if (!amt || amt <= 0) return;
-
-    triggerHaptic('success');
-    const feeVal = parseInt(smsFee, 10) || 0;
-
-    // Look for matching plan line in chosen rubric
-    const matchedLine =
-      calc.monthData.plan.find(
-        (p) =>
-          p.g === smsRubric &&
-          (p.l.toLowerCase().includes(smsWho.toLowerCase()) ||
-            smsWho.toLowerCase().includes(p.l.toLowerCase()))
-      ) || null;
-
-    const label = smsWho
-      ? `${smsWho}`
-      : matchedLine
-      ? matchedLine.l
-      : parsedSms?.type || 'Opération MoMo';
-
-    onSave({
+    if (!amt) return;
+    const inCat = smsCat ? lines.filter((l) => l.categoryId === smsCat) : [];
+    const line = smsWho ? matchLine(smsWho, inCat, categories) : null;
+    finish({
       type: smsType,
       amt,
-      label,
+      label: line?.label || smsWho || 'Opération Mobile Money',
       date: resolvedDate,
-      plan: matchedLine,
-      walletId: smsWalletId,
-      fee: feeVal,
-      ref: smsRef,
-      who: smsWho,
+      categoryId: smsCat || null,
+      lineId: line?.id || null,
+      walletId: smsWallet || walletId,
+      fee: parseInt(smsFee, 10) || 0,
+      ref: smsRef || undefined,
+      who: smsWho || undefined,
       src: 'sms',
-      saveMemory:
-        alwaysClassifyPerson && smsWho
-          ? { name: smsWho, rubric: smsRubric, lineLabel: matchedLine?.l }
-          : undefined,
+      saveMemory: remember && smsWho && smsCat ? { name: smsWho, categoryId: smsCat } : undefined,
     });
-    onClose();
   };
 
-  // 3. Web Speech API handler
-  const handleToggleVoice = () => {
-    triggerHaptic('medium');
-    const SpeechRecognition =
-      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-      setSpeechSupported(false);
-      return;
+  const toggleVoice = () => {
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) return setSpeechOk(false);
+    if (listening) {
+      recRef.current?.stop();
+      return setListening(false);
     }
-
-    if (isListening) {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-      }
-      setIsListening(false);
-      return;
-    }
-
     try {
-      const recognition = new SpeechRecognition();
-      recognition.lang = 'fr-FR';
-      recognition.continuous = false;
-      recognition.interimResults = true;
-
-      recognition.onstart = () => {
-        setIsListening(true);
-        setVoiceTranscript('');
-        setVoiceParsed(null);
+      const r = new SR();
+      r.lang = 'fr-FR';
+      r.interimResults = true;
+      r.onstart = () => {
+        setListening(true);
+        setVoiceText('');
+        setVoice(null);
       };
-
-      recognition.onresult = (event: any) => {
-        const transcript = Array.from(event.results)
-          .map((result: any) => result[0].transcript)
+      r.onresult = (ev: any) => {
+        const t = Array.from(ev.results)
+          .map((x: any) => x[0].transcript)
           .join('');
-        setVoiceTranscript(transcript);
-        const parsed = parseVoiceTranscript(transcript);
-        setVoiceParsed(parsed);
+        setVoiceText(t);
+        setVoice(parseVoiceTranscript(t));
       };
-
-      recognition.onerror = () => {
-        setIsListening(false);
-      };
-
-      recognition.onend = () => {
-        setIsListening(false);
-      };
-
-      recognitionRef.current = recognition;
-      recognition.start();
+      r.onerror = () => setListening(false);
+      r.onend = () => setListening(false);
+      recRef.current = r;
+      r.start();
     } catch {
-      setSpeechSupported(false);
-      setIsListening(false);
+      setSpeechOk(false);
     }
   };
 
-  const handleSubmitVoice = () => {
-    if (!voiceParsed || !voiceParsed.amount) return;
-    triggerHaptic('success');
-
-    const matchedLine =
-      calc.monthData.plan.find(
-        (p) =>
-          p.t === voiceParsed.type &&
-          p.l.toLowerCase().includes(voiceParsed.label.toLowerCase())
-      ) || null;
-
-    onSave({
-      type: voiceParsed.type,
-      amt: voiceParsed.amount,
-      label: voiceParsed.label,
-      date: voiceParsed.dateStr || resolvedDate,
-      plan: matchedLine,
-      walletId: selectedWalletId,
+  const submitVoice = () => {
+    if (!voice?.amount) return;
+    const vType: Kind = voice.type === 'in' ? 'in' : 'out';
+    const line = matchLine(voice.label, lines.filter((l) => catById.get(l.categoryId)?.kind === vType), categories);
+    finish({
+      type: vType,
+      amt: voice.amount,
+      label: line?.label || voice.label || defaultEntryLabel(vType),
+      date: voice.dateStr || resolvedDate,
+      categoryId: line?.categoryId || null,
+      lineId: line?.id || null,
+      walletId,
       src: 'voice',
     });
-    onClose();
   };
 
-  const planLinesForType = calc.monthData.plan.filter(
-    (p) => (p.t || 'out') === type
-  );
+  const typeLabel = (t: Kind) => (t === 'out' ? 'Dépense' : t === 'in' ? 'Revenu' : 'Épargne');
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 backdrop-blur-xs animate-in fade-in duration-200"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Noter une opération"
-      onClick={onClose}
-    >
-      <div
-        className="w-full max-w-[480px] bg-[var(--color-surface)] rounded-t-[28px] border-t border-[var(--color-border)] shadow-[var(--shadow-raised)] flex flex-col max-h-[92vh] overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Top Header Pill with Tabs */}
-        <div className="pt-3 pb-2 px-5 flex flex-col gap-2.5 border-b border-[var(--color-border)] shrink-0">
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 animate-in fade-in duration-150" role="dialog" aria-modal="true" aria-label="Noter une opération" onClick={onClose}>
+      <div className="w-full max-w-[480px] bg-[var(--color-surface)] rounded-t-[28px] border-t border-[var(--color-border)] shadow-[var(--shadow-raised)] flex flex-col max-h-[94dvh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+        <div className="pt-3 pb-2 px-4 flex flex-col gap-2 border-b border-[var(--color-border)] shrink-0">
           <span className="w-9 h-1 rounded-full bg-[var(--color-border)] mx-auto" />
-
           <div className="flex items-center justify-between">
-            {/* Segmented Mode: Saisie | SMS | Voix */}
             <div className="flex p-0.5 bg-[var(--color-surface-subtle)] rounded-xl border border-[var(--color-border)]">
               {(['saisie', 'sms', 'voix'] as const).map((m) => (
                 <button
                   key={m}
                   type="button"
-                  onClick={() => {
-                    triggerHaptic('light');
-                    setTabMode(m);
-                  }}
-                  className={`px-3 py-1 rounded-lg text-xs font-heading font-bold transition capitalize ${
-                    tabMode === m
-                      ? 'bg-[var(--color-surface)] text-[var(--color-primary)] shadow-xs'
-                      : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)]'
+                  onClick={() => setTab(m)}
+                  className={`px-3 py-1 rounded-lg text-xs font-heading font-bold transition ${
+                    tab === m ? 'bg-[var(--color-surface)] text-[var(--color-primary)] shadow-xs' : 'text-[var(--color-text-muted)]'
                   }`}
                 >
                   {m === 'saisie' ? 'Saisie' : m === 'sms' ? 'SMS MoMo' : 'Voix'}
                 </button>
               ))}
             </div>
-
-            <button
-              type="button"
-              onClick={onClose}
-              className="w-8 h-8 rounded-full flex items-center justify-center text-[var(--color-text-muted)] hover:bg-[var(--color-surface-subtle)]"
-            >
+            <button type="button" onClick={onClose} className="w-9 h-9 rounded-full flex items-center justify-center text-[var(--color-text-muted)]" aria-label="Fermer">
               <X size={18} />
             </button>
           </div>
         </div>
 
-        {/* Scrollable Body */}
-        <div className="flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-3.5 no-scrollbar">
-          {/* TAB 1: SAISIE */}
-          {tabMode === 'saisie' && (
+        <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-3 flex flex-col gap-3 no-scrollbar">
+          {tab === 'saisie' && (
             <>
-              {/* Type Switcher: Sortie / Entrée / Épargne */}
-              <div className="grid grid-cols-3 p-1 bg-[var(--color-surface-subtle)] rounded-xl border border-[var(--color-border)] shrink-0">
-                {(['out', 'in', 'save'] as const).map((t) => {
-                  const isActive = type === t;
-                  const label = t === 'out' ? 'Sortie' : t === 'in' ? 'Entrée' : 'Épargne';
-                  return (
-                    <button
-                      key={t}
-                      type="button"
-                      onClick={() => {
-                        triggerHaptic('light');
-                        setType(t);
-                        setSelectedPlanLine(null);
-                      }}
-                      className={`py-1.5 rounded-lg text-xs font-heading font-bold transition text-center ${
-                        isActive
-                          ? t === 'in'
-                            ? 'bg-[var(--color-income)] text-white shadow-xs'
-                            : t === 'save'
-                            ? 'bg-[var(--color-primary)] text-white shadow-xs'
-                            : 'bg-[var(--color-expense)] text-white shadow-xs'
-                          : 'text-[var(--color-text-muted)]'
-                      }`}
-                    >
-                      {label}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Amount Display */}
-              <div className="py-2.5 px-4 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex items-center justify-between">
-                <span className="text-xs font-heading font-semibold text-[var(--color-text-muted)]">
-                  Montant
-                </span>
-                <div className="flex items-baseline gap-1.5">
-                  <span
-                    className={`text-3xl font-heading font-extrabold tracking-tight num ${
-                      amountStr ? 'text-[var(--color-text)]' : 'text-[var(--color-text-muted)]/50'
+              <div className="grid grid-cols-3 p-1 bg-[var(--color-surface-subtle)] rounded-xl border border-[var(--color-border)]">
+                {(['out', 'in', 'save'] as const).map((t) => (
+                  <button
+                    key={t}
+                    type="button"
+                    onClick={() => {
+                      setType(t);
+                      setPick(null);
+                      setShowOneoff(false);
+                    }}
+                    className={`py-1.5 rounded-lg text-xs font-heading font-bold transition ${
+                      type === t
+                        ? `${t === 'in' ? 'bg-[var(--color-income)]' : t === 'save' ? 'bg-[var(--color-primary)]' : 'bg-[var(--color-expense)]'} text-white shadow-xs`
+                        : 'text-[var(--color-text-muted)]'
                     }`}
                   >
-                    {amountStr ? fmt(parseInt(amountStr, 10)) : '0'}
-                  </span>
-                  <span className="text-xs font-heading font-bold text-[var(--color-primary)]">
-                    FCFA
-                  </span>
-                </div>
+                    {typeLabel(t)}
+                  </button>
+                ))}
               </div>
 
-              {/* Plan line chips or Smart Text */}
-              {!isSmartTextMode ? (
-                <>
-                  {/* Horizontally scrollable chips */}
-                  {planLinesForType.length > 0 && (
-                    <div className="flex flex-col gap-1.5">
-                      <span className="text-[11px] font-semibold text-[var(--color-text-muted)] px-1">
-                        Lignes prévues ({type === 'in' ? 'entrées' : 'sorties'}) :
-                      </span>
-                      <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-                        {planLinesForType.map((p) => {
-                          const isSel = selectedPlanLine?.id === p.id;
-                          const act = calc.byPlan[p.id] || 0;
-                          const rem = Math.max(0, (p.a || 0) - act);
+              {!smart && (
+                <div className="py-2 px-4 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex items-center justify-between">
+                  <span className="text-xs font-heading font-semibold text-[var(--color-text-muted)]">Montant</span>
+                  <span className="flex items-baseline gap-1.5">
+                    <span className={`text-3xl font-heading font-extrabold num ${amountStr ? '' : 'text-[var(--color-text-muted)]/50'}`}>
+                      {amountStr ? fmt(parseInt(amountStr, 10)) : '0'}
+                    </span>
+                    <span className="text-xs font-heading font-bold text-[var(--color-primary)]">F</span>
+                  </span>
+                </div>
+              )}
 
+              {!smart ? (
+                <>
+                  {(typeLines.length > 0 || envelopeCats.length > 0) && (
+                    <div className="flex flex-col gap-1.5">
+                      <span className="text-[11px] font-semibold text-[var(--color-text-muted)] px-1">Pour quelle ligne ?</span>
+                      <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+                        {typeLines.map((l) => {
+                          const c = catById.get(l.categoryId);
+                          const sel = pick?.lineId === l.id;
+                          const rem = remainingOf(l);
                           return (
                             <button
-                              key={p.id}
+                              key={l.id}
                               type="button"
-                              onClick={() => handleChipClick(p)}
-                              className={`shrink-0 h-9 px-2.5 rounded-full flex items-center gap-1.5 border text-xs font-medium transition ${
-                                isSel
-                                  ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)] shadow-xs'
-                                  : 'bg-[var(--color-surface)] border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-primary)]'
+                              onClick={() => {
+                                triggerHaptic('light');
+                                if (sel) return setPick(null);
+                                setPick({ lineId: l.id, categoryId: l.categoryId });
+                                if (rem > 0 && !amountStr) setAmountStr(String(rem));
+                              }}
+                              className={`shrink-0 h-9 pl-1 pr-2.5 rounded-full flex items-center gap-1.5 border text-xs font-medium transition ${
+                                sel ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'bg-[var(--color-surface)] border-[var(--color-border)]'
                               }`}
                             >
-                              <RubricIconBadge
-                                groupName={p.g}
-                                size="sm"
-                                className={isSel ? 'bg-white/20 text-white' : ''}
-                              />
-                              <span className="truncate max-w-[120px]">{p.l}</span>
-                              {rem > 0 && (
-                                <span
-                                  className={`text-[10px] num px-1 rounded-full ${
-                                    isSel
-                                      ? 'bg-white/25 text-white'
-                                      : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
-                                  }`}
-                                >
-                                  reste {fmt(rem)}
-                                </span>
-                              )}
+                              <RubricBadge icon={c?.icon} color={sel ? '#FFFFFF' : c?.color} size="sm" className="!w-7 !h-7 rounded-full" />
+                              <span className="truncate max-w-[120px]">{l.label}</span>
+                              {rem > 0 && <span className={`text-[10px] num ${sel ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>reste {fmt(rem)}</span>}
+                            </button>
+                          );
+                        })}
+                        {envelopeCats.map((c) => {
+                          const sel = pick && !pick.lineId && pick.categoryId === c.id;
+                          const rem = calc.byCategory[c.id]?.remaining || 0;
+                          return (
+                            <button
+                              key={c.id}
+                              type="button"
+                              onClick={() => setPick(sel ? null : { lineId: null, categoryId: c.id })}
+                              className={`shrink-0 h-9 pl-1 pr-2.5 rounded-full flex items-center gap-1.5 border text-xs font-medium transition ${
+                                sel ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'bg-[var(--color-surface)] border-[var(--color-border)]'
+                              }`}
+                            >
+                              <RubricBadge icon={c.icon} color={sel ? '#FFFFFF' : c.color} size="sm" className="!w-7 !h-7 rounded-full" />
+                              <span className="truncate max-w-[120px]">{c.name}</span>
+                              {rem > 0 && <span className={`text-[10px] num ${sel ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>reste {fmt(rem)}</span>}
                             </button>
                           );
                         })}
@@ -566,341 +380,281 @@ export const QuickAddSheet: React.FC<QuickAddSheetProps> = ({
                     </div>
                   )}
 
-                  {/* Free Label input if no line selected */}
-                  {!selectedPlanLine && (
+                  {!pick && (
                     <input
                       type="text"
-                      value={customLabel}
-                      onChange={(e) => setCustomLabel(e.target.value)}
-                      placeholder="Libellé libre (ex : Pousseur, Beignets, Don)"
-                      className="w-full px-3.5 py-2 text-xs rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-hidden font-medium"
+                      value={label}
+                      maxLength={MAX_NAME_LENGTH}
+                      onChange={(e) => {
+                        setLabel(e.target.value);
+                        setShowOneoff(false);
+                      }}
+                      placeholder="Libellé (ex : Pousseur, Beignets, Don)"
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] focus:border-[var(--color-primary)] focus:outline-hidden"
+                      aria-label="Libellé"
                     />
+                  )}
+
+                  {!pick && labelMatch && (
+                    <span className="text-[11px] text-[var(--color-text-muted)] px-1">
+                      Sera rangé dans la ligne « {labelMatch.label} » ({catById.get(labelMatch.categoryId)?.name}).
+                    </span>
+                  )}
+
+                  {!pick && label.trim() && !labelMatch && type !== 'in' && (
+                    <div className="p-2.5 rounded-2xl border border-dashed border-[var(--color-border)] flex flex-col gap-2">
+                      {!showOneoff ? (
+                        <button
+                          type="button"
+                          onClick={() => setShowOneoff(true)}
+                          className="text-xs font-heading font-bold text-[var(--color-primary)] text-left"
+                        >
+                          + Créer une ligne ponctuelle pour ce mois
+                        </button>
+                      ) : (
+                        <>
+                          <span className="text-[11px] text-[var(--color-text-muted)]">
+                            Dans quelle rubrique ? La ligne « {label.trim()} » sera créée pour ce mois seulement.
+                          </span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {kindCats.map((c) => (
+                              <button
+                                key={c.id}
+                                type="button"
+                                onClick={() => submitSaisie(c.id)}
+                                className="h-9 pl-1 pr-2.5 rounded-full border border-[var(--color-border)] flex items-center gap-1.5 text-xs font-semibold"
+                              >
+                                <RubricBadge icon={c.icon} color={c.color} size="sm" className="!w-7 !h-7 rounded-full" />
+                                {c.name}
+                              </button>
+                            ))}
+                            {!kindCats.some((c) => c.name.toLowerCase() === OTHER_RUBRIC_DEFAULT.name.toLowerCase()) && (
+                              <button
+                                type="button"
+                                onClick={() => submitSaisie(null)}
+                                className="h-9 px-3 rounded-full border border-[var(--color-border)] text-xs font-semibold"
+                              >
+                                {OTHER_RUBRIC_DEFAULT.name}
+                              </button>
+                            )}
+                          </div>
+                        </>
+                      )}
+                    </div>
                   )}
                 </>
               ) : (
-                /* Smart Text Input */
                 <div className="flex flex-col gap-1.5">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      autoFocus
-                      value={smartInputText}
-                      onChange={(e) => setSmartInputText(e.target.value)}
-                      placeholder='Ex : "5000 beurre", "+150000 salaire", "5k taxi"'
-                      className="w-full pl-3 pr-8 py-2.5 text-xs rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-hidden font-medium"
-                    />
-                    <Sparkles
-                      size={15}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--color-accent)]"
-                    />
-                  </div>
-                  {smartInputText.trim() && (
-                    <div className="p-2 rounded-xl bg-[var(--color-primary-light)] text-[11px] text-[var(--color-primary)] font-medium">
-                      Aperçu : {parseQuick(smartInputText, calc.monthData).type === 'in' ? 'Entrée' : 'Sortie'} ·{' '}
-                      <b>{fmt(parseQuick(smartInputText, calc.monthData).amt)} F</b> →{' '}
-                      {parseQuick(smartInputText, calc.monthData).label}
-                    </div>
-                  )}
+                  <input
+                    type="text"
+                    autoFocus
+                    value={smartText}
+                    onChange={(e) => setSmartText(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && submitSaisie()}
+                    placeholder="Ex : 5000 beurre, +150000 salaire, 5k taxi"
+                    className="w-full px-3 py-2.5 text-sm rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] focus:border-[var(--color-primary)] focus:outline-hidden"
+                    aria-label="Saisie en une ligne"
+                  />
+                  {smartText.trim() &&
+                    (() => {
+                      const p = parseQuick(smartText, calc.month, categories);
+                      return (
+                        <div className="p-2 rounded-xl bg-[var(--color-primary-light)] text-[11px] text-[var(--color-primary)] font-medium">
+                          {typeLabel(p.type)} · <b>{fmt(p.amt)} F</b> · {p.label || '—'}
+                          {p.line ? ` · ${catById.get(p.line.categoryId)?.name}` : ' · sans ligne'}
+                        </div>
+                      );
+                    })()}
                 </div>
               )}
 
-              {/* Wallet and Date Chips Row */}
-              <div className="flex items-center justify-between gap-2 pt-0.5">
-                {/* Wallet Selector Chip */}
-                <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5 min-w-0">
                   <WalletIcon size={14} className="text-[var(--color-text-muted)] shrink-0" />
                   {wallets.map((w) => (
                     <button
                       key={w.id}
                       type="button"
-                      onClick={() => {
-                        triggerHaptic('light');
-                        setSelectedWalletId(w.id);
-                      }}
-                      className={`px-2 py-1 rounded-lg text-[10px] font-bold transition shrink-0 ${
-                        selectedWalletId === w.id
-                          ? 'bg-[var(--color-primary)] text-white shadow-2xs'
-                          : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
+                      onClick={() => setWalletId(w.id)}
+                      className={`px-2 py-1 rounded-lg text-[10px] font-bold shrink-0 ${
+                        walletId === w.id ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
                       }`}
                     >
                       {w.name}
                     </button>
                   ))}
                 </div>
-
-                {/* Date Chips */}
                 <div className="flex items-center gap-1 shrink-0">
-                  <Calendar size={13} className="text-[var(--color-text-muted)] shrink-0" />
-                  {(['today', 'yesterday'] as const).map((d) => (
-                    <button
-                      key={d}
-                      type="button"
-                      onClick={() => {
-                        triggerHaptic('light');
-                        setDateMode(d);
-                      }}
-                      className={`px-2 py-1 rounded-lg text-[10px] font-bold transition ${
-                        dateMode === d
-                          ? 'bg-[var(--color-text)] text-white shadow-2xs'
-                          : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
-                      }`}
-                    >
-                      {d === 'today' ? "Aujourd'hui" : 'Hier'}
-                    </button>
-                  ))}
+                  <Calendar size={13} className="text-[var(--color-text-muted)]" />
+                  {currentMonth === currentMonthKey() ? (
+                    (['today', 'yesterday'] as const).map((d) => (
+                      <button
+                        key={d}
+                        type="button"
+                        onClick={() => setDateMode(d)}
+                        className={`px-2 py-1 rounded-lg text-[10px] font-bold ${
+                          dateMode === d ? 'bg-[var(--color-text)] text-[var(--color-surface)]' : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
+                        }`}
+                      >
+                        {d === 'today' ? 'Aujourd’hui' : 'Hier'}
+                      </button>
+                    ))
+                  ) : (
+                    <input
+                      type="date"
+                      value={customDate}
+                      onChange={(e) => setCustomDate(e.target.value)}
+                      className="px-1.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--color-surface-subtle)]"
+                      aria-label="Date"
+                    />
+                  )}
                 </div>
               </div>
 
-              {/* Toggle Smart Text */}
-              <div className="flex justify-between items-center text-[11px] text-[var(--color-text-muted)]">
-                <button
-                  type="button"
-                  onClick={() => {
-                    triggerHaptic('light');
-                    setIsSmartTextMode(!isSmartTextMode);
-                  }}
-                  className="hover:text-[var(--color-primary)] flex items-center gap-1 font-semibold"
-                >
-                  <Sparkles size={12} className="text-[var(--color-accent)]" />
-                  {isSmartTextMode ? 'Retour au clavier numérique' : 'Saisie rapide en 1 ligne'}
-                </button>
-              </div>
-
-              {/* Custom Numeric Keypad (when not in smart text mode) */}
-              {!isSmartTextMode && (
-                <div className="grid grid-cols-3 gap-1.5 pt-1">
-                  {['1', '2', '3', '4', '5', '6', '7', '8', '9', '000', '0'].map((digit) => (
-                    <button
-                      key={digit}
-                      type="button"
-                      onClick={() => handleKeyPress(digit)}
-                      className="h-11 rounded-xl bg-[var(--color-surface-subtle)] text-[var(--color-text)] font-heading font-bold text-base hover:bg-[var(--color-border)] active:scale-95 transition cursor-pointer"
-                    >
-                      {digit}
-                    </button>
-                  ))}
-
-                  <button
-                    type="button"
-                    onClick={handleBackspace}
-                    onContextMenu={(e) => {
-                      e.preventDefault();
-                      handleClear();
-                    }}
-                    className="h-11 rounded-xl bg-[var(--color-surface-subtle)] text-[var(--color-text)] flex items-center justify-center hover:bg-[var(--color-border)] active:scale-95 transition cursor-pointer"
-                    aria-label="Effacer"
-                  >
-                    <Delete size={18} />
-                  </button>
-                </div>
-              )}
-
-              {/* Save Button */}
               <button
                 type="button"
-                onClick={() => handleSubmitSaisie()}
-                className="w-full py-3.5 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm shadow-[var(--shadow-fab)] hover:bg-[var(--color-primary-dark)] active:scale-95 transition flex items-center justify-center gap-2 cursor-pointer mt-1"
+                onClick={() => setSmart((s) => !s)}
+                className="self-start text-[11px] font-semibold text-[var(--color-text-muted)] hover:text-[var(--color-primary)] flex items-center gap-1"
               >
-                <Check size={18} />
-                Enregistrer l'opération
+                <Sparkles size={12} className="text-[var(--color-accent)]" />
+                {smart ? 'Retour au clavier numérique' : 'Saisie rapide en 1 ligne'}
               </button>
+
+              {!smart && <Keypad value={amountStr} onChange={setAmountStr} />}
             </>
           )}
 
-          {/* TAB 2: SMS (Mobile Money) */}
-          {tabMode === 'sms' && (
+          {tab === 'sms' && (
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-heading font-bold text-[var(--color-text)]">
-                  Collez le SMS de confirmation MTN ou Orange
-                </span>
+                <span className="text-xs font-heading font-bold">Collez le SMS de confirmation MTN ou Orange</span>
                 <button
                   type="button"
-                  onClick={handlePasteClipboard}
+                  onClick={async () => {
+                    try {
+                      const t = await navigator.clipboard?.readText?.();
+                      if (t) parseSms(t);
+                    } catch {
+                      /* clipboard refused */
+                    }
+                  }}
                   className="px-2.5 py-1 rounded-xl bg-[var(--color-primary-light)] text-[var(--color-primary)] text-xs font-bold flex items-center gap-1"
                 >
-                  <Clipboard size={13} />
-                  Coller
+                  <Clipboard size={13} /> Coller
                 </button>
               </div>
-
               <textarea
                 rows={3}
-                value={smsRawText}
-                onChange={(e) => handleParseSmsText(e.target.value)}
-                placeholder="Ex : Transfert effectue avec succes. Vous avez envoye 25 000 FCFA a CABREL KAMGA... ID transaction: 18274910283."
-                className="w-full p-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-subtle)] text-xs text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-hidden font-mono leading-relaxed"
+                value={smsText}
+                onChange={(e) => parseSms(e.target.value)}
+                placeholder="Ex : Transfert effectue avec succes. Vous avez envoye 25 000 FCFA a ... ID transaction: 18274910283."
+                className="w-full p-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-subtle)] text-xs font-mono leading-relaxed"
               />
-
-              {parsedSms && (
-                <div className="p-3.5 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] shadow-xs flex flex-col gap-2.5 animate-in fade-in">
+              {sms && (
+                <div className="p-3 rounded-2xl border border-[var(--color-border)] flex flex-col gap-2">
                   <div className="flex items-center justify-between">
                     <span className="px-2 py-0.5 rounded-full bg-[var(--color-primary-light)] text-[var(--color-primary)] text-[10px] font-bold">
-                      {parsedSms.operator} · {parsedSms.type.toUpperCase()}
+                      {sms.operator} · {sms.type}
                     </span>
-                    {parsedSms.isDuplicate && (
+                    {sms.isDuplicate && (
                       <span className="px-2 py-0.5 rounded-full bg-[var(--color-warning-soft)] text-[var(--color-warning)] text-[10px] font-bold flex items-center gap-1">
-                        <AlertCircle size={10} />
-                        Déjà enregistré
+                        <AlertCircle size={10} /> Déjà enregistré
                       </span>
                     )}
                   </div>
-
-                  {/* Editable Fields */}
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div>
-                      <label className="text-[10px] text-[var(--color-text-muted)] font-semibold block">
-                        Montant (FCFA)
-                      </label>
-                      <input
-                        type="number"
-                        value={smsAmt}
-                        onChange={(e) => setSmsAmt(e.target.value)}
-                        className="w-full px-2.5 py-1.5 rounded-lg border border-[var(--color-border)] font-bold text-xs num"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="text-[10px] text-[var(--color-text-muted)] font-semibold block">
-                        Frais (FCFA)
-                      </label>
-                      <input
-                        type="number"
-                        value={smsFee}
-                        onChange={(e) => setSmsFee(e.target.value)}
-                        className="w-full px-2.5 py-1.5 rounded-lg border border-[var(--color-border)] font-bold text-xs num"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div>
-                      <label className="text-[10px] text-[var(--color-text-muted)] font-semibold block">
-                        Destinataire / Émetteur
-                      </label>
-                      <input
-                        type="text"
-                        value={smsWho}
-                        onChange={(e) => setSmsWho(e.target.value)}
-                        className="w-full px-2.5 py-1.5 rounded-lg border border-[var(--color-border)] font-medium text-xs"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="text-[10px] text-[var(--color-text-muted)] font-semibold block">
-                        Rubrique
-                      </label>
-                      <select
-                        value={smsRubric}
-                        onChange={(e) => setSmsRubric(e.target.value)}
-                        className="w-full px-2 py-1.5 rounded-lg border border-[var(--color-border)] font-medium text-xs bg-[var(--color-surface)]"
-                      >
-                        {GROUPS.map((g) => (
-                          <option key={g} value={g}>
-                            {g}
+                    <label className="flex flex-col gap-0.5">
+                      <span className="text-[10px] text-[var(--color-text-muted)] font-semibold">Montant (F)</span>
+                      <input inputMode="numeric" value={smsAmt} onChange={(e) => setSmsAmt(e.target.value.replace(/\D/g, '').slice(0, 9))} className="px-2.5 py-1.5 rounded-lg border border-[var(--color-border)] font-bold num" />
+                    </label>
+                    <label className="flex flex-col gap-0.5">
+                      <span className="text-[10px] text-[var(--color-text-muted)] font-semibold">Frais (F)</span>
+                      <input inputMode="numeric" value={smsFee} onChange={(e) => setSmsFee(e.target.value.replace(/\D/g, '').slice(0, 9))} className="px-2.5 py-1.5 rounded-lg border border-[var(--color-border)] font-bold num" />
+                    </label>
+                    <label className="flex flex-col gap-0.5">
+                      <span className="text-[10px] text-[var(--color-text-muted)] font-semibold">Destinataire ou émetteur</span>
+                      <input value={smsWho} onChange={(e) => setSmsWho(e.target.value)} className="px-2.5 py-1.5 rounded-lg border border-[var(--color-border)]" />
+                    </label>
+                    <label className="flex flex-col gap-0.5">
+                      <span className="text-[10px] text-[var(--color-text-muted)] font-semibold">Rubrique</span>
+                      <select value={smsCat} onChange={(e) => setSmsCat(e.target.value)} className="px-2 py-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
+                        <option value="">Sans rubrique</option>
+                        {sortCategories(categories.filter((c) => !c.archived && c.kind === smsType)).map((c) => (
+                          <option key={c.id} value={c.id}>
+                            {c.name}
                           </option>
                         ))}
                       </select>
-                    </div>
+                    </label>
                   </div>
-
-                  {/* Recipient Memory prompt */}
-                  {smsWho && (
-                    <label className="flex items-center gap-2 text-[11px] text-[var(--color-text-muted)] cursor-pointer pt-1">
-                      <input
-                        type="checkbox"
-                        checked={alwaysClassifyPerson}
-                        onChange={(e) => setAlwaysClassifyPerson(e.target.checked)}
-                        className="rounded-xs text-[var(--color-primary)]"
-                      />
-                      Toujours classer <b>{smsWho}</b> dans <b>{smsRubric}</b>
+                  {smsWho && smsCat && (
+                    <label className="flex items-center gap-2 text-[11px] text-[var(--color-text-muted)]">
+                      <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
+                      Toujours ranger <b>{smsWho}</b> dans <b>{catById.get(smsCat)?.name}</b>
                     </label>
                   )}
-
-                  <button
-                    type="button"
-                    onClick={handleSubmitSms}
-                    className="w-full py-3 rounded-xl bg-[var(--color-primary)] text-white font-heading font-bold text-xs shadow-xs hover:bg-[var(--color-primary-dark)] active:scale-95 transition mt-1"
-                  >
-                    Valider l'opération SMS
-                  </button>
+                  {!!parseInt(smsFee, 10) && (
+                    <span className="text-[10px] text-[var(--color-text-muted)]">Les frais sont notés à part, comme une dépense sans rubrique.</span>
+                  )}
                 </div>
               )}
             </div>
           )}
 
-          {/* TAB 3: VOIX */}
-          {tabMode === 'voix' && (
+          {tab === 'voix' && (
             <div className="flex flex-col items-center gap-4 py-4 text-center">
               <div className="max-w-xs">
-                <span className="text-sm font-heading font-bold text-[var(--color-text)] block">
-                  Dictez votre dépense en français
-                </span>
-                <small className="text-xs text-[var(--color-text-muted)] mt-1 block">
-                  Exemples : « Cinq mille beurre », « Vingt-cinq mille Maman », « Cent vingt mille
-                  scolarité hier »
-                </small>
+                <span className="text-sm font-heading font-bold block">Dictez votre dépense en français</span>
+                <small className="text-xs text-[var(--color-text-muted)] mt-1 block">Exemples : « cinq mille beurre », « vingt-cinq mille maman »</small>
               </div>
-
-              {!speechSupported ? (
-                <div className="p-3 rounded-xl bg-[var(--color-warning-soft)] text-[var(--color-warning)] text-xs text-left">
-                  La reconnaissance vocale Web Speech n'est pas disponible sur ce navigateur.
-                  Utilisez la saisie en 1 ligne sur l'onglet Saisie.
+              {!speechOk ? (
+                <div className="p-3 rounded-xl bg-[var(--color-warning-soft)] text-xs text-left">
+                  La reconnaissance vocale n’est pas disponible sur ce navigateur. Utilisez la saisie en 1 ligne.
                 </div>
               ) : (
                 <button
                   type="button"
-                  onClick={handleToggleVoice}
-                  className={`w-20 h-20 rounded-full flex items-center justify-center text-white shadow-lg transition transform active:scale-95 cursor-pointer ${
-                    isListening
-                      ? 'bg-rose-500 animate-pulse ring-8 ring-rose-200'
-                      : 'bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)]'
-                  }`}
+                  onClick={toggleVoice}
+                  className={`w-20 h-20 rounded-full flex items-center justify-center text-white shadow-lg ${listening ? 'bg-rose-500 animate-pulse' : 'bg-[var(--color-primary)]'}`}
+                  aria-label={listening ? 'Arrêter' : 'Parler'}
                 >
-                  {isListening ? <MicOff size={32} /> : <Mic size={32} />}
+                  {listening ? <MicOff size={32} /> : <Mic size={32} />}
                 </button>
               )}
-
-              {isListening && (
-                <span className="text-xs font-semibold text-rose-500 animate-pulse">
-                  Écoute en cours… Parlez distinctement
-                </span>
-              )}
-
-              {voiceTranscript && (
-                <div className="w-full p-3 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] text-left flex flex-col gap-2">
-                  <span className="text-[10px] uppercase font-bold text-[var(--color-text-muted)]">
-                    Texte entendu :
-                  </span>
-                  <p className="m-0 text-xs text-[var(--color-text)] italic">
-                    « {voiceTranscript} »
-                  </p>
-
-                  {voiceParsed && voiceParsed.amount ? (
-                    <div className="p-2.5 rounded-xl bg-[var(--color-primary-light)] text-[var(--color-primary)] flex items-center justify-between text-xs font-bold">
+              {voiceText && (
+                <div className="w-full p-3 rounded-2xl bg-[var(--color-surface-subtle)] text-left flex flex-col gap-2">
+                  <p className="m-0 text-xs italic">« {voiceText} »</p>
+                  {voice?.amount ? (
+                    <div className="p-2.5 rounded-xl bg-[var(--color-primary-light)] text-[var(--color-primary)] flex justify-between text-xs font-bold">
                       <span>
-                        {voiceParsed.type === 'in' ? 'Entrée' : 'Sortie'} : {voiceParsed.label}
+                        {voice.type === 'in' ? 'Revenu' : 'Dépense'} : {voice.label}
                       </span>
-                      <span className="num text-sm">{fmt(voiceParsed.amount)} F</span>
+                      <span className="num">{fmt(voice.amount)} F</span>
                     </div>
                   ) : (
-                    <small className="text-[11px] text-[var(--color-text-muted)]">
-                      Dites un montant et un motif (ex : « 5000 transport »).
-                    </small>
+                    <small className="text-[11px] text-[var(--color-text-muted)]">Dites un montant et un motif.</small>
                   )}
                 </div>
               )}
-
-              {voiceParsed && voiceParsed.amount && (
-                <button
-                  type="button"
-                  onClick={handleSubmitVoice}
-                  className="w-full py-3.5 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm shadow-xs hover:bg-[var(--color-primary-dark)] active:scale-95 transition"
-                >
-                  Confirmer et enregistrer
-                </button>
-              )}
             </div>
+          )}
+        </div>
+
+        <div className="px-4 pt-2 pb-[calc(12px+env(safe-area-inset-bottom,0px))] border-t border-[var(--color-border)] shrink-0">
+          {tab === 'saisie' && (
+            <button type="button" onClick={() => submitSaisie()} className="w-full min-h-12 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm flex items-center justify-center gap-2 active:scale-[0.98]">
+              <Check size={18} /> Enregistrer
+            </button>
+          )}
+          {tab === 'sms' && (
+            <button type="button" disabled={!sms} onClick={submitSms} className="w-full min-h-12 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm disabled:opacity-40">
+              Valider l’opération SMS
+            </button>
+          )}
+          {tab === 'voix' && (
+            <button type="button" disabled={!voice?.amount} onClick={submitVoice} className="w-full min-h-12 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm disabled:opacity-40">
+              Confirmer et enregistrer
+            </button>
           )}
         </div>
       </div>

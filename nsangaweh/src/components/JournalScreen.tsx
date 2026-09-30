@@ -7,15 +7,17 @@ import {
   Search,
   X,
 } from 'lucide-react';
-import { fmt, getEntryLabel, GROUPS, todayStr } from '../lib/budget-math';
+import { fmt, todayStr } from '../lib/budget-math';
+import { describeEntry, MonthCalc, sortCategories } from '../lib/calc';
 import { triggerHaptic } from '../lib/haptics';
-import { RubricIconBadge } from '../lib/rubrics';
-import { Entry, MonthCalculation } from '../lib/types';
+import { NO_RUBRIC_STYLE, RubricBadge } from '../lib/icons';
+import { Category, Entry } from '../lib/types';
 import { EntryEditSheet } from './EntryEditSheet';
 
 interface JournalScreenProps {
   currentMonth: string;
-  calc: MonthCalculation;
+  calc: MonthCalc;
+  categories: Category[];
   onUpdateEntry: (updated: Entry) => void;
   onDeleteEntry: (id: string) => void;
   onOpenQuickAdd: () => void;
@@ -24,6 +26,7 @@ interface JournalScreenProps {
 export const JournalScreen: React.FC<JournalScreenProps> = ({
   currentMonth,
   calc,
+  categories,
   onUpdateEntry,
   onDeleteEntry,
   onOpenQuickAdd,
@@ -35,7 +38,13 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
   const [expandedOlderDays, setExpandedOlderDays] = useState<Record<string, boolean>>({});
   const [visibleLimit, setVisibleLimit] = useState<number>(30);
 
-  const mData = calc.monthData;
+  const mData = calc.month;
+  const catMap = useMemo(() => new Map(categories.map((c) => [c.id, c])), [categories]);
+  const labelOf = (e: Entry) => {
+    const d = describeEntry(e, catMap, mData);
+    const fallback = e.t === 'transfer' ? 'Virement entre comptes' : 'Sans rubrique';
+    return { l: d.label || fallback, g: d.category?.name || fallback, c: d.category };
+  };
   const today = todayStr();
   const yesterday = (() => {
     const d = new Date();
@@ -49,8 +58,8 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
     return mData.entries
       .filter((e) => {
         if (typeFilter !== 'all' && e.t !== typeFilter) return false;
-        const el = getEntryLabel(mData, e);
-        if (rubricFilter !== 'all' && el.g !== rubricFilter) return false;
+        const el = labelOf(e);
+        if (rubricFilter !== 'all' && (el.c?.id || 'none') !== rubricFilter) return false;
         if (searchTerm.trim()) {
           const term = searchTerm.toLowerCase();
           const matchLabel = el.l.toLowerCase().includes(term);
@@ -65,7 +74,8 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
         if (a.d > b.d) return -1;
         return b.ts - a.ts;
       });
-  }, [mData, typeFilter, rubricFilter, searchTerm]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mData, typeFilter, rubricFilter, searchTerm, catMap]);
 
   // Paginated visible entries
   const visibleEntries = useMemo(() => {
@@ -148,12 +158,14 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
             className="py-1.5 pl-2 pr-5 rounded-xl text-[11px] font-heading font-semibold bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text)] appearance-none cursor-pointer max-w-[100px] truncate"
           >
             <option value="all">Rubrique</option>
-            {GROUPS.map((g) => (
-              <option key={g} value={g}>
-                {g}
-              </option>
-            ))}
-            <option value="Hors plan">Hors plan</option>
+            {sortCategories(categories)
+              .filter((c) => !c.archived || mData.entries.some((e) => e.categoryId === c.id))
+              .map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                </option>
+              ))}
+            <option value="none">Sans rubrique</option>
           </select>
           <Filter
             size={10}
@@ -190,7 +202,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
               isTodayOrYesterday || !!expandedOlderDays[dateStr];
 
             const dayOutTotal = dayEntries
-              .filter((x) => x.t === 'out')
+              .filter((x) => x.t === 'out' && x.status !== 'declined')
               .reduce((acc, x) => acc + x.amt, 0);
 
             const dayInTotal = dayEntries
@@ -210,7 +222,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
                   <div className="flex items-center gap-1.5 font-heading font-bold capitalize text-[var(--color-text)]">
                     <span>{dayFormatted}</span>
                     <span className="text-[10px] text-[var(--color-text-muted)] font-normal">
-                      ({dayEntries.length})
+                      · {dayEntries.length} opération{dayEntries.length > 1 ? 's' : ''}
                     </span>
                   </div>
 
@@ -235,8 +247,9 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
                 {isDayExpanded && (
                   <div className="divide-y divide-[var(--color-border)]/50">
                     {dayEntries.map((e) => {
-                      const el = getEntryLabel(mData, e);
+                      const el = labelOf(e);
                       const isIncome = e.t === 'in';
+                      const isNeutral = e.t === 'transfer' || e.t === 'save';
 
                       return (
                         <div
@@ -248,7 +261,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
                           className="h-[52px] px-3.5 flex items-center justify-between gap-2 hover:bg-[var(--color-surface-subtle)]/40 active:bg-[var(--color-surface-subtle)] transition cursor-pointer"
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
-                            <RubricIconBadge groupName={el.g} size="sm" />
+                            <RubricBadge icon={el.c?.icon || NO_RUBRIC_STYLE.icon} color={el.c?.color} size="sm" />
                             <div className="min-w-0 leading-tight">
                               <span className="font-semibold text-xs text-[var(--color-text)] block truncate">
                                 {el.l}
@@ -261,10 +274,14 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
 
                           <span
                             className={`font-heading font-bold text-xs num whitespace-nowrap ${
-                              isIncome ? 'text-[var(--color-income)]' : 'text-[var(--color-expense)]'
+                              isIncome
+                                ? 'text-[var(--color-income)]'
+                                : isNeutral
+                                ? 'text-[var(--color-text-muted)]'
+                                : 'text-[var(--color-expense)]'
                             }`}
                           >
-                            {isIncome ? '+' : '−'}
+                            {isIncome ? '+' : isNeutral ? '' : '−'}
                             {fmt(e.amt)} F
                           </span>
                         </div>
@@ -296,7 +313,8 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
       <EntryEditSheet
         isOpen={!!editingEntry}
         entry={editingEntry}
-        calc={calc}
+        month={mData}
+        categories={categories}
         onClose={() => setEditingEntry(null)}
         onSave={(updated) => {
           onUpdateEntry(updated);

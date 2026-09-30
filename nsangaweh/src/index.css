@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0B6E4F;
+  --color-primary-dark: #084C38;
+  --color-primary-light: #E8F5EE;
+  --color-accent: #F5B700;
+  --color-background: #F6F8F7;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F0F4F2;
+  --color-text: #0F1F1A;
+  --color-text-muted: #6B7A74;
+  --color-border: #E6ECE9;
+  --color-income: #12A150;
+  --color-income-soft: #E6F8EE;
+  --color-expense: #E5484D;
+  --color-expense-soft: #FEECEE;
+  --color-warning: #F59E0B;
+  --color-warning-soft: #FEF3C7;
+  --color-info: #2563EB;
+  --color-info-soft: #EFF6FF;
+
+  --shadow-card: 0 4px 20px -2px rgba(11, 110, 79, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --shadow-raised: 0 10px 30px -4px rgba(11, 110, 79, 0.14), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  --shadow-fab: 0 12px 28px -4px rgba(11, 110, 79, 0.38);
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary: #34D399;
+    --color-primary-dark: #059669;
+    --color-primary-light: #064E3B;
+    --color-accent: #FBBF24;
+    --color-background: #0A1210;
+    --color-surface: #121C18;
+    --color-surface-subtle: #182520;
+    --color-text: #E8F1ED;
+    --color-text-muted: #8FA29A;
+    --color-border: #1E2D27;
+    --color-income: #34D399;
+    --color-income-soft: #064E3B;
+    --color-expense: #F87171;
+    --color-expense-soft: #451A1A;
+    --color-warning: #FBBF24;
+    --color-warning-soft: #382708;
+    --color-info: #60A5FA;
+    --color-info-soft: #1E3A8A;
+
+    --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+    --shadow-raised: 0 10px 30px -4px rgba(0, 0, 0, 0.5);
+    --shadow-fab: 0 12px 28px -4px rgba(52, 211, 153, 0.3);
+
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-primary: #34D399;
+  --color-primary-dark: #059669;
+  --color-primary-light: #064E3B;
+  --color-accent: #FBBF24;
+  --color-background: #0A1210;
+  --color-surface: #121C18;
+  --color-surface-subtle: #182520;
+  --color-text: #E8F1ED;
+  --color-text-muted: #8FA29A;
+  --color-border: #1E2D27;
+  --color-income: #34D399;
+  --color-income-soft: #064E3B;
+  --color-expense: #F87171;
+  --color-expense-soft: #451A1A;
+  --color-warning: #FBBF24;
+  --color-warning-soft: #382708;
+  --color-info: #60A5FA;
+  --color-info-soft: #1E3A8A;
+
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  --shadow-raised: 0 10px 30px -4px rgba(0, 0, 0, 0.5);
+  --shadow-fab: 0 12px 28px -4px rgba(52, 211, 153, 0.3);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* App container with centered frame on desktop/tablets */
+.mobile-app-shell {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom horizontal scroll bar hides */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shimmer animation for skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-subtle) 25%,
+    var(--color-border) 37%,
+    var(--color-surface-subtle) 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}

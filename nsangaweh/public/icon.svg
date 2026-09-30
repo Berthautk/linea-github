@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="emGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B6E4F" />
+      <stop offset="100%" stop-color="#084C38" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded squircle emerald card -->
+  <rect width="512" height="512" rx="128" fill="url(#emGrad)" />
+  <!-- Gold accent badge dot -->
+  <circle cx="395" cy="125" r="28" fill="#F5B700" />
+  <!-- Bold crisp N Monogram in white -->
+  <path d="M140 372V140h52l128 152V140h52v232h-52L192 220v152z" fill="#ffffff" />
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "NSANGAWEH",
+  "description": "Budget familial en FCFA pour couples avec synchronisation hors-ligne et gestion à deux.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

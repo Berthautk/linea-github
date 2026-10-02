@@ -1,5 +1,5 @@
 // Mode hors ligne : l'application reste utilisable sans connexion.
-const CACHE = 'vraiscan-v8';
+const CACHE = 'vraiscan-v9';
 const CORE = [
   './', 'index.html', 'app.css', 'app.js', 'imgproc.js', 'pdf.js', 'docx.js', 'ocr.js', 'store.js',
   'i18n.js', 'catalog.js', 'pdfin.js', 'reader.js', 'textedit.js', 'camera.js',

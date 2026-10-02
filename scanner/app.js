@@ -1,5 +1,5 @@
 import {
-  MAX_SRC, makeCanvas, blobToCanvas, canvasToBlob, detectQuad, defaultQuad, orderQuad,
+  MAX_SRC, makeCanvas, blobToCanvas, decodePhoto, canvasToBlob, detectQuad, defaultQuad, orderQuad,
   warp, rotateCanvas, enhance, fitCanvas, resizeCanvas, FILTERS,
   assessQuality, drawWatermark, inkToAlpha, trimAlpha, estimateSkew, rotateSmall, cleanBorders,
 } from './imgproc.js';
@@ -8,13 +8,13 @@ import { recognize, plainText, paragraphText } from './ocr.js';
 import { buildDocx, zip } from './docx.js';
 import * as store from './store.js';
 import { t, L, getLang, setLang, applyI18n } from './i18n.js';
-import { CATEGORIES, PIECES, DOSSIER_NAMES, pieceById, slug } from './catalog.js';
+import { CATEGORIES, PIECES, DOSSIER_NAMES, SYNONYMS, pieceById, slug } from './catalog.js';
 import { isPdf, openPdf, renderPdfPage, closePdf } from './pdfin.js';
 import { createReader } from './reader.js';
 import { createTextEditor, refitOcr, ocrUnreliable } from './textedit.js';
 import { createCamera, liveCameraSupported } from './camera.js';
 
-export const APP_VERSION = '1.4.0';
+export const APP_VERSION = '1.4.1';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -171,10 +171,12 @@ async function getWarped(page) {
   const orig = await getOrig(page);
   const key = JSON.stringify(page.quad);
   if (cache.warpKey !== key) {
-    const flat = warp(orig, page.quad);
-    page.quality = assessQuality(flat);
+    const flat = warp(orig, page.quad, page.maxLong || undefined);
+    // Contrôle de netteté et redressement fin sur une seule copie réduite.
+    const small = fitCanvas(flat, 1400);
+    page.quality = assessQuality(small);
     // Redressement fin : lignes de texte parfaitement horizontales (pas pour une photo d'identité).
-    page.skew = page.kind === 'photo' || page.src === 'pdf' ? 0 : estimateSkew(flat);
+    page.skew = page.kind === 'photo' || page.src === 'pdf' ? 0 : estimateSkew(small);
     cache.warped = rotateSmall(flat, page.skew);
     cache.warpKey = key;
     cache.baseKey = null;
@@ -265,12 +267,23 @@ function photoQuad(w, h) {
 }
 
 async function loadPhoto(page, file, quadHint = null) {
-  const canvas = await blobToCanvas(file, MAX_SRC);
-  page.orig = await canvasToBlob(canvas, 'image/jpeg', 0.93);
+  // Une seule lecture de la photo ; les bords sont cherchés sur une petite copie.
+  const { canvas, small, resized } = await decodePhoto(file, MAX_SRC);
+  // Photo JPEG gardée telle quelle (pas de réencodage : plus rapide, sans perte).
+  page.orig = !resized && file.type === 'image/jpeg' ? file : await canvasToBlob(canvas, 'image/jpeg', 0.93);
+  const k = canvas.width / small.width;
+  const found = page.kind === 'photo' ? null : detectQuad(small);
   page.quad = page.kind === 'photo'
     ? photoQuad(canvas.width, canvas.height)
-    : detectQuad(canvas) || hintQuad(quadHint, canvas) || defaultQuad(canvas.width, canvas.height);
+    : (found && found.map(p => ({ x: p.x * k, y: p.y * k }))) || hintQuad(quadHint, canvas) || defaultQuad(canvas.width, canvas.height);
   resetCache(page.id, canvas);
+}
+
+// Carte (CNI, permis…) ou photo d'identité : fond coloré et photo, on garde
+// les vraies couleurs au lieu de blanchir le fond.
+function autoFilter(page, warped) {
+  const isCard = Math.abs(Math.max(warped.width, warped.height) / Math.min(warped.width, warped.height) - 85.6 / 54) < 0.07;
+  if (page.kind === 'photo' || page.kind === 'card' || isCard) page.filter = 'color';
 }
 
 // Cadre vu dans l'aperçu de la caméra, repris si la photo a le même format.
@@ -282,15 +295,13 @@ function hintQuad(h, canvas) {
 }
 
 // Une photo → une page prête (recadrée, redressée, rendu appliqué, enregistrée).
-async function makePage(file, { kind = 'doc', quadHint = null } = {}) {
+// maxLong : côté long de la page (défaut : A4 à 300 ppp ; plus petit = plus rapide).
+async function makePage(file, { kind = 'doc', quadHint = null, maxLong = 0 } = {}) {
   const page = { id: uid(), rot: 0, filter: defaultFilter(), overlays: [], kind };
+  if (maxLong) page.maxLong = maxLong;
   await loadPhoto(page, file, quadHint);
   pages.set(page.id, page);
-  const w = await getWarped(page);
-  // Carte (CNI, permis…) ou photo d'identité : fond coloré et photo, on
-  // garde les vraies couleurs au lieu de blanchir le fond.
-  const isCard = Math.abs(Math.max(w.width, w.height) / Math.min(w.width, w.height) - 85.6 / 54) < 0.07;
-  if (kind === 'photo' || kind === 'card' || isCard) page.filter = 'color';
+  autoFilter(page, await getWarped(page));
   await nextFrame();
   await commit(page, await renderPage(page));
   return page;
@@ -314,10 +325,18 @@ async function addFiles(files, { edit, piece = null, at = -1 }) {
   const added = [];
   const kind = piece ? (pieceById(piece.cid)?.kind || 'doc') : 'doc';
   await busy(t('busy.analyse'), async () => {
+    // Une seule photo, ouverte au recadrage : elle n'est traitée qu'après
+    // « Valider » (sinon elle le serait deux fois).
+    const defer = edit && files.length === 1;
     for (let i = 0; i < files.length; i++) {
       if (files.length > 1) setBusyText(t('busy.pageOf', { i: i + 1, n: files.length }));
       try {
-        const page = await makePage(files[i], { kind });
+        let page;
+        if (defer) {
+          page = { id: uid(), rot: 0, filter: defaultFilter(), overlays: [], kind, autoFilter: true };
+          await loadPhoto(page, files[i]);
+          pages.set(page.id, page);
+        } else page = await makePage(files[i], { kind });
         added.push(page.id);
       } catch (e) {
         console.error(e);
@@ -997,7 +1016,10 @@ $('cFull').onclick = () => {
 $('cOk').onclick = async () => {
   const page = pages.get(ed.id);
   page.quad = orderQuad(ed.quad);
-  await busy(t('busy.straighten'), async () => commit(page, await renderPage(page)));
+  await busy(t('busy.straighten'), async () => {
+    if (page.autoFilter) { autoFilter(page, await getWarped(page)); delete page.autoFilter; }
+    await commit(page, await renderPage(page));
+  });
   refreshHome();
   setMode('filter');
 };
@@ -1059,7 +1081,10 @@ $('fDone').onclick = () => closeEditor();
 $('edBack').onclick = async () => {
   const page = pages.get(ed.id);
   if (ed.mode === 'anno' && page) await busy(t('busy.work'), async () => commit(page, await renderPage(page)));
-  if (ed.mode === 'crop' && page && !page.proc) await busy(t('busy.work'), async () => commit(page, await renderPage(page)));
+  if (ed.mode === 'crop' && page && !page.proc) await busy(t('busy.work'), async () => {
+    if (page.autoFilter) { autoFilter(page, await getWarped(page)); delete page.autoFilter; }
+    await commit(page, await renderPage(page));
+  });
   if (ed.mode === 'filter') closeEditor(); else setMode('filter');
 };
 
@@ -1625,15 +1650,30 @@ $('dsAddBtn').onclick = () => { showSeg('add'); $('dsSearch').focus(); };
 
 const norm = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+// Recherche par mots : chaque mot tapé (sauf « de », « la »…) doit commencer un
+// mot du nom de la pièce, de son sigle ou de ses autres noms.
+const STOP = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'un', 'une', 'et', 'en', 'a', 'au', 'of', 'the', 'and', 'an', 'my', 'mon', 'ma', 'mes']);
+const words = (s) => norm(s).split(/[^a-z0-9°]+/).filter(w => w && !STOP.has(w));
+function pieceMatch(p, qw) {
+  if (!qw.length) return 1;
+  const own = words(`${p.fr} ${p.en} ${p.abbr ? p.abbr.fr + ' ' + p.abbr.en : ''}`);
+  const syn = words(SYNONYMS[p.id] || '');
+  const has = (list, w) => list.some(x => x.startsWith(w) || (w.length >= 5 && x.startsWith(w.slice(0, -1))));
+  if (qw.every(w => has(own, w))) return 2;           // trouvée par son nom
+  if (qw.every(w => has(own, w) || has(syn, w))) return 1; // par un autre nom
+  return 0;
+}
+let catQuery = '';
 function renderCatalog() {
   const box = $('dsCatalog');
   box.textContent = '';
-  const q = norm($('dsSearch').value.trim());
+  const raw = $('dsSearch').value.trim();
+  const qw = words(raw);
+  catQuery = raw;
   const inFile = new Set((doc.pieces || []).map(p => p.cid));
-  let shown = 0;
+  let shown = 0, byName = false;
   for (const cat of CATEGORIES) {
-    const items = PIECES.filter(p => p.cat === cat.id).filter(p => !q ||
-      norm(`${p.fr} ${p.en} ${p.abbr ? p.abbr.fr + ' ' + p.abbr.en : ''} ${p.rule ? L(p.rule) : ''}`).includes(q));
+    const items = PIECES.filter(p => p.cat === cat.id).filter(p => pieceMatch(p, qw) && !(qw.length && p.id === 'autre'));
     if (!items.length) continue;
     const sec = document.createElement('section');
     sec.className = 'cat';
@@ -1642,6 +1682,7 @@ function renderCatalog() {
     sec.append(h);
     for (const p of items) {
       shown++;
+      if (pieceMatch(p, qw) === 2) byName = true;
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'pitem' + (inFile.has(p.id) && p.id !== 'autre' ? ' has' : '');
@@ -1660,18 +1701,37 @@ function renderCatalog() {
     }
     box.append(sec);
   }
-  if (!shown) {
-    const pEl = document.createElement('p');
-    pEl.className = 'muted';
-    pEl.textContent = t('ds.noResult');
-    box.append(pEl);
+  // Pièce absente du catalogue : on l'ajoute sous le nom tapé.
+  if (qw.length && !byName) {
+    if (!shown) {
+      const pEl = document.createElement('p');
+      pEl.className = 'muted';
+      pEl.textContent = t('ds.noResult');
+      box.append(pEl);
+    }
+    const add = document.createElement('button');
+    add.type = 'button';
+    add.className = 'pitem addown';
+    const b = document.createElement('b');
+    b.textContent = t('ds.addOwn', { name: cap(raw) });
+    add.append(b);
+    add.onclick = () => openPieceDlg(pieceById('autre'), cap(raw));
+    box.append(add);
   }
 }
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 $('dsSearch').oninput = renderCatalog;
 
 let pcTarget = null; // entrée du catalogue choisie
-function openPieceDlg(p) {
+// name : nom proposé (pièce trouvée par un autre nom, ou ajoutée telle quelle).
+function openPieceDlg(p, name = null) {
   pcTarget = p;
+  // Trouvée par un autre nom (« certificat de réussite » → Attestation de
+  // réussite) : on garde le nom tapé.
+  if (name == null && catQuery && p.id !== 'autre') {
+    const qw = words(catQuery), shownName = words(`${L(p)} ${p.abbr ? L(p.abbr) : ''}`);
+    if (qw.length && !qw.every(w => shownName.some(x => x.startsWith(w)))) name = cap(catQuery);
+  }
   $('pcTitle').textContent = L(p) + (p.abbr ? ` (${L(p.abbr)})` : '');
   const bits = [];
   if (p.months) bits.push(t('ds.monthsRule', { m: p.months }) + '.');
@@ -1680,17 +1740,24 @@ function openPieceDlg(p) {
   const hint = p.kind === 'card' ? t('ds.card') : p.kind === 'photo' ? t('ds.photo') : '';
   $('pcHint').textContent = hint;
   $('pcHint').hidden = !hint;
-  $('pcOtherRow').hidden = p.id !== 'autre';
-  $('pcOther').value = '';
+  // Le nom de la pièce est modifiable (ex. « Diplôme de licence »).
+  $('pcOtherRow').hidden = false;
+  $('pcOther').value = name || (p.id === 'autre' ? '' : L(p));
   $('pieceDlg').showModal();
+}
+
+// Nom choisi pour la pièce ; null = nom du catalogue (suit la langue).
+function pieceLabel(p) {
+  const v = $('pcOther').value.trim();
+  if (p.id === 'autre') return v || L(p);
+  return v && v !== L(p) && v !== p.fr && v !== p.en ? v : null;
 }
 
 async function startPiece(files) {
   const p = pcTarget;
   if (!p || !files.length) return;
   $('pieceDlg').close();
-  const label = p.id === 'autre' ? ($('pcOther').value.trim() || L(p)) : null;
-  const pc = { key: uid(), cid: p.id, label, ids: [] };
+  const pc = { key: uid(), cid: p.id, label: pieceLabel(p), ids: [] };
   doc.pieces.push(pc);
   const added = await addFiles(files, { edit: true, piece: pc });
   if (!added.length) {
@@ -2267,6 +2334,7 @@ $('exEdit').onclick = () => { $('exportDlg').close(); textEd.open({ from: 'expor
 
 // Les photos sont traitées une à une en arrière-plan pendant qu'on continue.
 const camQ = { list: [], running: false, groups: [], target: null };
+const FAST_LONG = 2480;
 let camBypass = false, camDenied = false;
 const useLiveCam = () => !camDenied && liveCameraSupported();
 
@@ -2291,7 +2359,9 @@ async function camPump() {
       if (!tg) break;
       try {
         const kind = tg.piece ? (pieceById(tg.piece.cid)?.kind || 'doc') : 'doc';
-        const page = await makePage(blob, { kind, quadHint: info });
+        // Hors dossier (livre, notes) : pages à ~210 ppp, deux fois plus rapides ;
+        // les pièces du dossier gardent 300 ppp.
+        const page = await makePage(blob, { kind, quadHint: info, maxLong: tg.piece ? 0 : FAST_LONG });
         if (tg.piece) { tg.piece.ids.push(page.id); syncIds(); } else doc.ids.push(page.id);
         let ids = [page.id];
         if (info.book && kind === 'doc') ids = (await splitPage(page)).ids;
@@ -2411,8 +2481,7 @@ hookCam('pcCamBtn', 'pcCam', () => {
   const p = pcTarget;
   if (!p) return null;
   $('pieceDlg').close();
-  const label = p.id === 'autre' ? ($('pcOther').value.trim() || L(p)) : null;
-  const pc = { key: uid(), cid: p.id, label, ids: [] };
+  const pc = { key: uid(), cid: p.id, label: pieceLabel(p), ids: [] };
   doc.pieces.push(pc);
   return { piece: pc, newPiece: true };
 });

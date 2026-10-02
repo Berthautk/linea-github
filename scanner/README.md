@@ -14,6 +14,8 @@ Onglet **📂 Dossier** : on constitue un dossier pièce par pièce.
 
 Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso sur une page A4, à la taille réelle.
 
+La recherche se fait par mots et connaît les autres noms des pièces (« certificat de réussite », « licence », « BTS », « extrait de naissance »…). Le nom de chaque pièce est modifiable (ex. « Diplôme de licence ») ; une pièce absente de la liste s'ajoute sous le nom tapé (« ＋ Ajouter « … » comme pièce »).
+
 ## Scanner vite : la caméra intégrée (livres, piles de feuilles)
 
 **📷 Scanner** ouvre la caméra dans l'application, qui reste ouverte d'une page à l'autre :
@@ -26,6 +28,8 @@ Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso 
 - l'écran reste allumé ; « Terminé » : une seule page ouvre son rendu, plusieurs pages s'affichent dans le document.
 
 Aussi pour « Page suivante » et les pièces du dossier. Si la caméra est refusée, l'appareil photo du téléphone est utilisé comme avant.
+
+Hors dossier, les pages prises avec la caméra intégrée sont traitées à ~210 ppp (deux fois plus vite) ; les pièces du dossier et les photos classiques gardent 300 ppp.
 
 Limites : les pages bombées près de la reliure ne sont pas aplaties ; selon le téléphone, la photo de la caméra intégrée peut être moins fine que celle de l'appareil photo.
 

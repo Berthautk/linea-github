@@ -40,6 +40,25 @@ async function decode(blob) {
   }
 }
 
+// Photo décodée une seule fois : l'image (côté ≤ maxSide), une petite copie
+// pour trouver les bords, et resized = la photo a dû être réduite.
+export async function decodePhoto(blob, maxSide = MAX_SRC, smallSide = 640) {
+  const bmp = await decode(blob);
+  const w0 = bmp.naturalWidth || bmp.width, h0 = bmp.naturalHeight || bmp.height;
+  const s = Math.min(1, maxSide / Math.max(w0, h0));
+  const canvas = makeCanvas(w0 * s, h0 * s);
+  const ctx = ctx2d(canvas);
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(bmp, 0, 0, canvas.width, canvas.height);
+  const k = Math.min(1, smallSide / Math.max(w0, h0));
+  const small = makeCanvas(w0 * k, h0 * k);
+  const sctx = ctx2d(small);
+  sctx.imageSmoothingQuality = 'high';
+  sctx.drawImage(bmp, 0, 0, small.width, small.height);
+  if (bmp.close) bmp.close();
+  return { canvas, small, resized: s < 1 };
+}
+
 // Charge une photo (fichier ou blob) dans un canvas, en limitant sa taille.
 export async function blobToCanvas(blob, maxSide = MAX_SRC) {
   const bmp = await decode(blob);
@@ -598,28 +617,27 @@ export function enhance(src, mode) {
 // Accentuation (masque flou) sur la luminance, seulement sur les vrais bords
 // (seuil) pour ne pas faire ressortir le grain de l'appareil photo.
 function sharpen(d, w, h, amount, threshold) {
+  // Entiers et petits tableaux (luminance sur 8 bits, flou horizontal sur
+  // 16 bits) : bien plus rapide sur téléphone que des tableaux de flottants.
   const n = w * h;
-  const Y = new Float32Array(n), t = new Float32Array(n), B = new Float32Array(n);
-  for (let i = 0, j = 0; i < n; i++, j += 4) Y[i] = 0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2];
+  const Y = new Uint8Array(n), T = new Uint16Array(n);
+  for (let i = 0, j = 0; i < n; i++, j += 4) Y[i] = (77 * d[j] + 150 * d[j + 1] + 29 * d[j + 2] + 128) >> 8;
   for (let y = 0; y < h; y++) {
     const r = y * w;
-    for (let x = 0; x < w; x++) {
-      const a = x > 0 ? Y[r + x - 1] : Y[r + x], c = x < w - 1 ? Y[r + x + 1] : Y[r + x];
-      t[r + x] = (a + 2 * Y[r + x] + c) / 4;
-    }
+    T[r] = 3 * Y[r] + Y[r + 1];
+    for (let x = 1; x < w - 1; x++) T[r + x] = Y[r + x - 1] + 2 * Y[r + x] + Y[r + x + 1];
+    T[r + w - 1] = Y[r + w - 2] + 3 * Y[r + w - 1];
   }
+  const th = threshold * 16;
   for (let y = 0; y < h; y++) {
-    const up = y > 0 ? -w : 0, dn = y < h - 1 ? w : 0;
+    const r = y * w, up = y > 0 ? r - w : r, dn = y < h - 1 ? r + w : r;
     for (let x = 0; x < w; x++) {
-      const i = y * w + x;
-      B[i] = (t[i + up] + 2 * t[i] + t[i + dn]) / 4;
-    }
-  }
-  for (let i = 0, j = 0; i < n; i++, j += 4) {
-    const diff = Y[i] - B[i];
-    if (diff > threshold || diff < -threshold) {
-      const k = amount * diff;
-      d[j] += k; d[j + 1] += k; d[j + 2] += k;
+      // diff = Y - flou 3×3 (pondéré 1-2-1), en seizièmes.
+      const diff16 = 16 * Y[r + x] - (T[up + x] + 2 * T[r + x] + T[dn + x]);
+      if (diff16 > th || diff16 < -th) {
+        const k = (amount * diff16) / 16, j = (r + x) * 4;
+        d[j] += k; d[j + 1] += k; d[j + 2] += k;
+      }
     }
   }
 }

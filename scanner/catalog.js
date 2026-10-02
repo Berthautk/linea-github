@@ -165,6 +165,28 @@ export const DOSSIER_NAMES = {
     'Residence permit application'],
 };
 
+// Autres noms sous lesquels on cherche une pièce (recherche du catalogue).
+export const SYNONYMS = {
+  cni: "carte d'identité pièce d'identité ID card identity",
+  passeport: 'passport',
+  naissance: "extrait de naissance acte de naissance copie intégrale birth",
+  diplome: 'licence master doctorat bts hnd dut deug bac baccalauréat probatoire bepc cep cap gce brevet ' +
+    'diplôme de licence certificat de réussite parchemin attestation de diplôme degree bachelor',
+  attestation_reussite: 'certificat de réussite attestation de succès relevé provisoire attestation de diplôme ' +
+    'licence master bts bac success certificate',
+  releves_univ: 'relevé de notes licence master transcript bulletin',
+  releve_bac: 'bac baccalauréat gce a level',
+  scolarite: "certificat d'inscription attestation d'inscription enrolment",
+  casier: 'casier judiciaire bulletin 3 criminal record',
+  certif_medical: 'visite médicale aptitude physique medical',
+  domicile: 'facture eneo camwater cde loyer quittance de loyer',
+  quittance: 'reçu paiement frais de concours bordereau receipt',
+  cv: 'cv curriculum resume',
+  motivation: 'lettre de motivation cover letter',
+  attestation_travail: "attestation d'emploi certificat de travail employment",
+  honneur: "déclaration sur l'honneur",
+};
+
 export function pieceById(id) {
   return PIECES.find(p => p.id === id);
 }

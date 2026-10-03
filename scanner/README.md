@@ -1,6 +1,21 @@
-# VraiScan — le vrai scanner, dans votre téléphone
+# Paperlume — scannez, comprenez, écoutez
 
-Application web installable (PWA), publiable sur Google Play, **en français et en anglais**, qui transforme la photo d'un document en un fichier identique à celui d'un scanner de bureau, et qui prépare des **dossiers de candidature complets**. Gratuite, sans compte, sans filigrane, sans publicité. Les photos restent sur le téléphone : rien n'est envoyé sur internet, même la lecture du texte.
+*Anciennement VraiScan.* Application web installable (PWA), publiable sur Google Play, **en français et en anglais**, qui transforme la photo d'un document en un fichier identique à celui d'un scanner de bureau, le rend **cherchable, résumable et écoutable**, et prépare des **dossiers de candidature complets**. Gratuite, sans compte, sans filigrane, sans publicité. Les photos restent sur le téléphone : rien n'est envoyé sur internet, même la lecture du texte.
+
+## Après le scan : chercher, résumer, écouter
+
+Sur l'écran du document, une barre de 4 outils :
+
+- **🎧 Écouter** : mode lecture à voix haute (voir plus bas).
+- **🔎 Chercher** : un mot ou une expression → la liste des pages où il apparaît, avec le passage ; toucher un résultat ouvre la lecture à cette phrase. Les variantes sont retrouvées (« photosynthèse » trouve « photosynthesis », sans accents ni majuscules). Dans le document ou **toute la bibliothèque**. Les pages dont le texte n'est pas encore lu : bouton « Lire le texte des N pages restantes ».
+- **✨ Résumé** : *Express* (5 phrases), *Détaillé* (15), *Fiche* (mots-clés, questions à trous, phrases clés) ; chaque phrase renvoie à sa page. À écouter, copier ou partager. C'est un résumé **extractif** calculé sur le téléphone (les phrases les plus importantes, reprises telles quelles), pas une intelligence artificielle en ligne.
+- **✏️ Corriger** : correction du texte et transcription des pages manuscrites.
+
+**Ma bibliothèque** (📁) : recherche par nom, recherche dans le texte de tous les documents, catégories proposées automatiquement et modifiables (📚 Études, 💼 Travail, 🏛 Administration, 💰 Finance, 📖 Personnel), carte **Continuer la lecture**.
+
+**Code de verrouillage** (À propos) : cache l'application à l'ouverture et après une minute en arrière-plan (empreinte SHA-256 du code ; les fichiers ne sont pas chiffrés).
+
+**Écran d'une page** : les rendus, puis 5 icônes (✂️ Recadrer, ⟳ Tourner, ✍️ Signer, ✏️ Texte, ⋯ Plus : tourner à gauche, séparer 2 pages, écouter, dupliquer, supprimer), puis « Page suivante » et « Terminé ».
 
 ## Dossier de candidature
 
@@ -17,6 +32,8 @@ Les cartes (CNI, titre de séjour, carte d'étudiant) sont mises recto et verso 
 La recherche se fait par mots et connaît les autres noms des pièces (« certificat de réussite », « licence », « BTS », « extrait de naissance »…). Le nom de chaque pièce est modifiable (ex. « Diplôme de licence ») ; une pièce absente de la liste s'ajoute sous le nom tapé (« ＋ Ajouter « … » comme pièce »).
 
 ## Scanner vite : la caméra intégrée (livres, piles de feuilles)
+
+**Modes**, au-dessus du bouton de prise : *Document* (rendu scanner de bureau), *Livre* (livre ouvert, coupé au pli en 2 pages), *Carte* (couleurs vraies), *Reçu* et *Tableau* (texte très contrasté). Le dernier mode est retenu ; une pièce du dossier impose le sien (Carte pour une CNI).
 
 **📷 Scanner** ouvre la caméra dans l'application, qui reste ouverte d'une page à l'autre :
 
@@ -38,7 +55,7 @@ Limites : les pages bombées près de la reliure ne sont pas aplaties ; selon le
 **📥 Importer** accepte aussi les PDF (reçus par WhatsApp, e-mail, téléchargés). Le lecteur de PDF de Mozilla (pdf.js, Apache 2.0) est embarqué dans `vendor/pdfjs/` : tout se fait sur le téléphone, hors ligne.
 
 - **PDF fait sur ordinateur** : le texte du PDF est repris tel quel, sans faute et tout de suite, même pour des centaines de pages.
-- **PDF scanné** (images) : chaque page devient une page VraiScan ; le texte est lu sur le téléphone (Tesseract), page par page.
+- **PDF scanné** (images) : chaque page devient une page Paperlume ; le texte est lu sur le téléphone (Tesseract), page par page.
 - Après l'import : **🎧 Lire et écouter**, **📝 Convertir en Word**, ou garder le document. Un PDF protégé demande son mot de passe. L'import peut être arrêté : les pages déjà importées sont gardées. Dans un dossier, un PDF peut servir de pièce.
 
 **🎧 Mode lecture** (aussi depuis l'accueil, l'éditeur et l'export) :
@@ -100,7 +117,7 @@ Le texte corrigé ou transcrit est gardé avec la page (même après une rotatio
 
 D'après les avis (Trustpilot : 1,9/5 ; note « réelle » 3,2/5 sur 45 000 avis) :
 
-| Reproche fait à CamScanner | VraiScan |
+| Reproche fait à CamScanner | Paperlume |
 |---|---|
 | Essai qui devient un abonnement annuel, prélèvements après résiliation | Gratuit, pas d'abonnement, aucun paiement possible |
 | Filigrane et paiement pour exporter ou partager | Aucun filigrane imposé ; export et partage libres |
@@ -127,13 +144,21 @@ Tout est prêt dans [`store/`](store/) :
 | [`store/PUBLIER.md`](store/PUBLIER.md) | **Le guide pas à pas** : mise en ligne, compte développeur, fabrication de l'application Android (PWABuilder), test fermé de 14 jours avec 12 testeurs, demande de mise en production |
 | [`store/fiche-play-store.md`](store/fiche-play-store.md) | Textes de la fiche en français et en anglais, aux bonnes longueurs |
 | [`store/questionnaires.md`](store/questionnaires.md) | Réponses : sécurité des données, classification, public cible, annonces |
-| `store/icon-512.png`, `store/feature-graphic.png`, `store/screenshots/` | Icône 512 × 512, image de présentation 1024 × 500, 5 captures 1080 × 1920 |
+| `store/icon-512.png`, `store/feature-graphic.png`, `store/screenshots/` | Icône 512 × 512, image de présentation 1024 × 500, 8 captures 1080 × 1920 |
 | `store/twa-manifest.json`, `.well-known/assetlinks.json`, `.nojekyll` | Configuration de l'application Android et liaison avec le site |
 | [`privacy.html`](privacy.html) | Politique de confidentialité (français et anglais) |
 
 ## Changer de nom
 
-Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf.js` (producteur du PDF), `app.js` (sauvegarde) et `store/`. Rechercher « VraiScan » et remplacer.
+Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf.js` (producteur du PDF), `app.js` (sauvegarde), `i18n.js` et `store/`. Rechercher « Paperlume » et remplacer. Garder le nom interne de la base (`store.js`, `vraiscan`) : le changer ferait perdre les documents déjà enregistrés. Les sauvegardes `.vraiscan` restent lisibles.
+
+## Ce qui n'est pas fait (et pourquoi)
+
+- **Questions libres à une IA, traduction, explications** : il faudrait un service d'IA en ligne (coût par page, documents envoyés sur internet). Possible plus tard en option, avec l'accord explicite de l'utilisateur.
+- **Extraction des tableaux vers Excel, formules** : le moteur de lecture du texte ne reconnaît pas la structure des tableaux.
+- **Pages courbées aplaties, doigts effacés** : non faits ; poser le livre bien à plat.
+- **Chiffrement des fichiers, empreinte digitale, synchronisation cloud** : le code cache l'application mais ne chiffre pas ; pas de serveur.
+- **Montant / date / commerçant d'un reçu** : non extraits automatiquement.
 
 ## Fichiers
 
@@ -149,6 +174,7 @@ Le nom apparaît dans `index.html`, `manifest.webmanifest`, `privacy.html`, `pdf
 | `pdf.js` | PDF, avec couche de texte cherchable, et PDF propre (texte seul) (sans bibliothèque) |
 | `pdfin.js` | Import de PDF : pages en images, texte du PDF repris (pdf.js, dans `vendor/pdfjs/`) |
 | `camera.js` | Caméra intégrée : cadre en direct, photo automatique, double page |
+| `insight.js` | Recherche dans le texte, résumé et fiche de révision, catégories, export Markdown et HTML |
 | `textedit.js` | Correction du texte, transcription ligne par ligne (détection des lignes d'écriture) |
 | `reader.js` | Mode lecture : lecture à voix haute phrase par phrase, position retenue |
 | `store.js` | Enregistrement local (IndexedDB) |

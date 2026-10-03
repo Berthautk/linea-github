@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>VraiScan</title>
-<meta name="description" content="VraiScan : le vrai scanner, dans votre téléphone. Rendu de scanner de bureau, PDF, Word, dossiers de candidature. Gratuit et hors ligne.">
+<title>Paperlume</title>
+<meta name="description" content="Paperlume : scannez, comprenez, écoutez. Rendu de scanner de bureau, PDF, Word, lecture à voix haute, recherche, dossiers de candidature. Gratuit et hors ligne.">
 <meta name="theme-color" content="#0f3d5e">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -19,7 +19,7 @@
 <!-- Écran principal -->
 <section id="home" class="screen">
   <header class="bar">
-    <div class="brand">VraiScan</div>
+    <div class="brand">Paperlume</div>
     <div class="barbtns">
       <button id="langBtn" class="ghost lang" type="button" data-i18n-aria="bar.lang">EN</button>
       <button id="aboutBtn" class="ghost" type="button" data-i18n-aria="bar.about">ⓘ</button>
@@ -53,10 +53,14 @@
       <p class="muted" data-i18n="empty.small"></p>
     </div>
 
-    <div id="readRow" class="readrow" hidden>
-      <button id="readBtn" class="btn" type="button" data-i18n="rd.btn">🎧 Lire et écouter</button>
-      <button id="editTextBtn" class="btn" type="button" data-i18n="te.btn">✏️ Corriger</button>
-      <span id="readInfo" class="muted small"></span>
+    <div id="readRow" class="doctools" hidden>
+      <div class="iconbar light">
+        <button id="readBtn" class="ib" type="button"><span>🎧</span><small data-i18n="ib.listen">Écouter</small></button>
+        <button id="searchBtn" class="ib" type="button"><span>🔎</span><small data-i18n="ib.search">Chercher</small></button>
+        <button id="sumBtn" class="ib" type="button"><span>✨</span><small data-i18n="ib.summary">Résumé</small></button>
+        <button id="editTextBtn" class="ib" type="button"><span>✏️</span><small data-i18n="ib.correct">Corriger</small></button>
+      </div>
+      <p id="readInfo" class="muted small"></p>
     </div>
 
     <div id="grid" class="grid"></div>
@@ -142,17 +146,12 @@
   <div id="filterTools" class="tools" hidden>
     <div id="chips" class="chips"></div>
     <p id="fHint" class="hint"></p>
-    <div class="row">
-      <button id="fCrop" class="btn small" type="button" data-i18n="f.crop">✂️ Recadrer</button>
-      <button id="fRotL" class="btn small" type="button" data-i18n-aria="f.rotL">⟲</button>
-      <button id="fRotR" class="btn small" type="button" data-i18n-aria="f.rotR">⟳</button>
-      <button id="fAnno" class="btn small" type="button" data-i18n="f.sign">✍️ Signer</button>
-      <button id="fDel" class="btn small danger" type="button" data-i18n-aria="f.del">🗑</button>
-    </div>
-    <div class="row">
-      <button id="fBook" class="btn small" type="button" data-i18n="f.book">📖 Séparer 2 pages</button>
-      <button id="fRead" class="btn small" type="button" data-i18n="f.read">🔊 Écouter</button>
-      <button id="fText" class="btn small" type="button" data-i18n="f.text">✏️ Texte</button>
+    <div class="iconbar">
+      <button id="fCrop" class="ib" type="button"><span>✂️</span><small data-i18n="ib.crop">Recadrer</small></button>
+      <button id="fRotR" class="ib" type="button"><span>⟳</span><small data-i18n="ib.rotate">Tourner</small></button>
+      <button id="fAnno" class="ib" type="button"><span>✍️</span><small data-i18n="ib.sign">Signer</small></button>
+      <button id="fText" class="ib" type="button"><span>✏️</span><small data-i18n="ib.text">Texte</small></button>
+      <button id="fMore" class="ib" type="button"><span>⋯</span><small data-i18n="ib.more">Plus</small></button>
     </div>
     <div class="row">
       <label id="camNextBtn" class="btn">
@@ -176,6 +175,18 @@
   </div>
 </section>
 
+<!-- Plus d'actions sur la page -->
+<dialog id="moreDlg" class="sheet">
+  <form method="dialog" class="dlg sheetlist">
+    <button id="fRotL" type="button"><span>⟲</span><span data-i18n="more.rotL">Tourner à gauche</span></button>
+    <button id="fBook" type="button"><span>📖</span><span data-i18n="more.book">Séparer 2 pages (livre ouvert)</span></button>
+    <button id="fRead" type="button"><span>🎧</span><span data-i18n="more.read">Écouter cette page</span></button>
+    <button id="fDup" type="button"><span>⧉</span><span data-i18n="more.dup">Dupliquer la page</span></button>
+    <button id="fDel" type="button" class="danger"><span>🗑</span><span data-i18n="more.del">Supprimer la page</span></button>
+    <button class="ghost wide" value="cancel" data-i18n="sig.cancel">Annuler</button>
+  </form>
+</dialog>
+
 <!-- Exportation d'un document -->
 <dialog id="exportDlg">
   <form method="dialog" class="dlg">
@@ -190,6 +201,8 @@
         <option value="docx" data-i18n="ex.f.docx"></option>
         <option value="pdftext" data-i18n="ex.f.pdftext"></option>
         <option value="txt" data-i18n="ex.f.txt"></option>
+        <option value="md" data-i18n="ex.f.md"></option>
+        <option value="html" data-i18n="ex.f.html"></option>
         <option value="jpg" data-i18n="ex.f.jpg"></option>
       </select>
     </label>
@@ -318,13 +331,17 @@
 <!-- Bibliothèque -->
 <dialog id="libDlg">
   <form method="dialog" class="dlg">
-    <h2 data-i18n="lib.title">Mes documents</h2>
+    <h2 data-i18n="lib.title">Ma bibliothèque</h2>
+    <input id="libSearch" class="search" type="search" enterkeyhint="search" autocomplete="off" data-i18n-ph="lib.searchPh">
+    <button id="libFull" class="btn small" type="button" hidden></button>
+    <div id="libCats" class="libcats"></div>
+    <button id="libResume" class="resume" type="button" hidden></button>
     <div id="libList" class="liblist"></div>
     <p class="muted small" data-i18n="lib.help"></p>
     <div class="row">
       <button id="bkSave" class="btn" type="button" data-i18n="lib.backup">💾 Sauvegarde complète</button>
       <label class="btn">
-        <input id="bkLoad" type="file" accept=".vraiscan,.lineascan,application/json,application/octet-stream" hidden>
+        <input id="bkLoad" type="file" accept=".paperlume,.vraiscan,.lineascan,application/json,application/octet-stream" hidden>
         <span data-i18n="lib.restore">📥 Restaurer</span>
       </label>
     </div>
@@ -357,7 +374,7 @@
 <!-- À propos -->
 <dialog id="aboutDlg">
   <form method="dialog" class="dlg">
-    <h2>VraiScan</h2>
+    <h2>Paperlume</h2>
     <p data-i18n="about.tag"></p>
     <p class="muted" data-i18n="about.text"></p>
     <p class="muted small" data-i18n="about.tip"></p>
@@ -370,6 +387,11 @@
     <label><span data-i18n="about.def">Rendu par défaut</span>
       <select id="setFilter"></select>
     </label>
+    <div class="pinrow">
+      <span data-i18n="pin.label">🔒 Code de verrouillage</span>
+      <button id="pinSet" class="btn small" type="button"></button>
+    </div>
+    <p class="muted small" data-i18n="pin.help"></p>
     <p><a href="privacy.html" target="_blank" rel="noopener" data-i18n="about.privacy">Politique de confidentialité</a></p>
     <p id="appVersion" class="muted small"></p>
     <button class="ghost wide" value="cancel" data-i18n="ex.close">Fermer</button>
@@ -387,9 +409,15 @@
     <button id="camTorch" class="camic" type="button" hidden data-i18n-aria="cam.torch">🔦</button>
   </header>
   <p id="camHint" class="camhint" aria-live="polite"></p>
+  <div id="camModes" class="cammodes" role="tablist">
+    <button data-m="doc" type="button" data-i18n="cam.mode.doc">Document</button>
+    <button data-m="livre" type="button" data-i18n="cam.mode.livre">Livre</button>
+    <button data-m="carte" type="button" data-i18n="cam.mode.carte">Carte</button>
+    <button data-m="recu" type="button" data-i18n="cam.mode.recu">Reçu</button>
+    <button data-m="tableau" type="button" data-i18n="cam.mode.tableau">Tableau</button>
+  </div>
   <div class="camopts">
     <button id="camAuto" class="camopt" type="button" data-i18n="cam.auto">⏱ Auto</button>
-    <button id="camBook" class="camopt" type="button" data-i18n="cam.book">📖 Double page</button>
     <button id="camUndo" class="camopt" type="button" hidden data-i18n="cam.undo">↺ Reprendre</button>
     <button id="camNative" class="camopt" type="button" data-i18n="cam.native">📱 Photo classique</button>
   </div>
@@ -397,6 +425,47 @@
     <button id="camThumb" class="camthumb" type="button" hidden data-i18n-aria="cam.see"><img id="camThumbImg" alt=""><b id="camBadge" hidden>⚠️</b></button>
     <button id="camShot" class="camshot" type="button" data-i18n-aria="cam.shoot"></button>
     <button id="camDone" class="camdone" type="button" data-i18n="f.done">Terminé ✓</button>
+  </footer>
+</section>
+
+<!-- Recherche dans le texte -->
+<section id="search" class="screen reader" hidden>
+  <header class="bar">
+    <button id="seBack" class="ghost" type="button" data-i18n="ed.back">← Retour</button>
+    <div class="brand" data-i18n="se.title">Rechercher</div>
+    <span></span>
+  </header>
+  <div class="sebox">
+    <input id="seInput" class="search" type="search" enterkeyhint="search" autocomplete="off" data-i18n-ph="se.ph">
+    <div class="segs">
+      <button id="seDoc" class="seg on" type="button" data-i18n="se.doc">Ce document</button>
+      <button id="seLib" class="seg" type="button" data-i18n="se.lib">Toute la bibliothèque</button>
+    </div>
+  </div>
+  <div class="prep"><p id="seStatus" class="muted small"></p><button id="sePrep" class="btn small" type="button" hidden></button></div>
+  <ol id="seList" class="selist"></ol>
+</section>
+
+<!-- Résumé et fiche de révision -->
+<section id="summ" class="screen reader" hidden>
+  <header class="bar">
+    <button id="smBack" class="ghost" type="button" data-i18n="ed.back">← Retour</button>
+    <div id="smTitle" class="brand"></div>
+    <span></span>
+  </header>
+  <div class="segs smsegs">
+    <button id="smShort" class="seg on" type="button" data-i18n="sm.short">Express</button>
+    <button id="smLong" class="seg" type="button" data-i18n="sm.long">Détaillé</button>
+    <button id="smCard" class="seg" type="button" data-i18n="sm.card">Fiche</button>
+  </div>
+  <div class="prep"><p id="smStatus" class="muted small"></p><button id="smPrep" class="btn small" type="button" hidden></button></div>
+  <article id="smBody" class="rdtext smbody"></article>
+  <footer class="rdctl">
+    <div class="rdmain">
+      <button id="smListen" class="btn small" type="button" data-i18n="sm.listen">🔊 Écouter</button>
+      <button id="smCopy" class="btn small" type="button" data-i18n="sm.copy">📋 Copier</button>
+      <button id="smShare" class="btn small primary" type="button" data-i18n="sm.share">📤 Partager</button>
+    </div>
   </footer>
 </section>
 
@@ -520,6 +589,33 @@
     <button class="ghost wide" value="cancel" data-i18n="pdf.keep">✓ Garder dans mes documents</button>
   </form>
 </dialog>
+
+<!-- Choisir le code -->
+<dialog id="pinDlg">
+  <form method="dialog" class="dlg">
+    <h2 data-i18n="pin.title">Code de verrouillage</h2>
+    <label><span data-i18n="pin.new">Nouveau code (4 à 8 chiffres)</span>
+      <input id="pinA" type="password" inputmode="numeric" autocomplete="new-password" maxlength="8"></label>
+    <label><span data-i18n="pin.again">Encore une fois</span>
+      <input id="pinB" type="password" inputmode="numeric" autocomplete="new-password" maxlength="8"></label>
+    <p id="pinMsg" class="warn" hidden></p>
+    <div class="row">
+      <button class="btn" value="cancel" data-i18n="sig.cancel">Annuler</button>
+      <button id="pinOk" class="btn primary" type="button" data-i18n="te.save">Enregistrer</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Écran verrouillé -->
+<div id="lock" class="lock" hidden>
+  <div class="lockbox">
+    <div class="brand">Paperlume</div>
+    <p data-i18n="pin.enter">Entrez votre code</p>
+    <input id="lockIn" type="password" inputmode="numeric" autocomplete="current-password" maxlength="8">
+    <button id="lockOk" class="btn primary" type="button" data-i18n="pin.unlock">Déverrouiller</button>
+    <p id="lockMsg" class="lockmsg"></p>
+  </div>
+</div>
 
 <div id="busy" class="busy" hidden><div class="spinner"></div><p id="busyText"></p><button id="busyStop" class="btn small" type="button" hidden data-i18n="pdf.stop">⏹ Arrêter l'import</button></div>
 <div id="toast" class="toast" hidden></div>

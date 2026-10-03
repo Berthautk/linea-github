@@ -1,4 +1,4 @@
-# Pièces des dossiers — catalogue de VraiScan
+# Pièces des dossiers — catalogue de Paperlume
 
 Liste des pièces proposées dans la section **Dossier** de l'application (65 pièces, 8 catégories), en français et en anglais.
 Elle est tirée des listes officielles et des guides cités plus bas : concours et carrières de la fonction publique (Cameroun, Côte d'Ivoire, Sénégal), passeport et CNI (Cameroun), mariage, banque, pension CNPS, permis de conduire, Campus France, visas et titre de séjour (France), bourses.

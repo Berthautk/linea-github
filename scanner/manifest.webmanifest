@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "VraiScan — le vrai scanner",
-  "short_name": "VraiScan",
-  "description": "Le vrai scanner, dans votre téléphone : rendu de scanner de bureau, PDF, PDF cherchable, Word, carte d'identité recto-verso, signature. Gratuit, sans compte, hors ligne.",
+  "name": "Paperlume — scanner, lecture, PDF",
+  "short_name": "Paperlume",
+  "description": "Scannez, comprenez, écoutez : rendu de scanner de bureau, PDF cherchable, Word, lecture à voix haute, recherche, résumé, carte d'identité recto-verso, dossiers. Gratuit, sans compte, hors ligne.",
   "lang": "fr",
   "dir": "ltr",
   "start_url": "./?source=pwa",
@@ -21,11 +21,12 @@
   ],
   "screenshots": [
     { "src": "store/screenshots/1-accueil.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Vos documents, prêts à envoyer" },
-    { "src": "store/screenshots/2-recadrage.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Recadrage automatique" },
     { "src": "store/screenshots/3-rendu.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Rendu de scanner de bureau" },
     { "src": "store/screenshots/4-export.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "PDF, Word, taille maximale" },
     { "src": "store/screenshots/6-pieces.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Les pièces du dossier" },
-    { "src": "store/screenshots/7-dossier.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Mon dossier, nommé et prêt" }
+    { "src": "store/screenshots/7-dossier.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Mon dossier, nommé et prêt" },
+    { "src": "store/screenshots/8-recherche.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Recherche dans le texte" },
+    { "src": "store/screenshots/9-resume.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Résumé et fiche de révision" }
   ],
   "shortcuts": [
     { "name": "Mes documents", "url": "./?open=library", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },

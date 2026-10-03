@@ -83,7 +83,7 @@ function textLayer(words) {
 
 // pages : [{ jpeg: Uint8Array, px: [l, h], box: [x, y, l, h] en points, size: [l, h] en points,
 //            words?: [{ t, x, y (ligne de base), w, h }] en points }]
-export function buildPdf(pages, { title = 'Document', producer = 'VraiScan' } = {}) {
+export function buildPdf(pages, { title = 'Document', producer = 'Paperlume' } = {}) {
   const chunks = [];
   let offset = 0;
   const offsets = [];
@@ -144,7 +144,7 @@ export function buildPdf(pages, { title = 'Document', producer = 'VraiScan' } = 
 // PDF « propre » : le texte (corrigé) remis en page comme un document tapé,
 // sans l'image. docs : [{ w, h, paragraphs }] (format de l'OCR) ;
 // textOf(paragraphe) → texte, lignes séparées par « \n » là où il faut garder le retour.
-export function buildTextPdf(docs, textOf, { title = 'Document', producer = 'VraiScan' } = {}) {
+export function buildTextPdf(docs, textOf, { title = 'Document', producer = 'Paperlume' } = {}) {
   const [PW, PH] = PAGE_SIZES.a4;
   const ML = 62, MR = 62, MT = 70, MB = 72, WIDTH = PW - ML - MR;
   const med = (a) => { const s = a.slice().sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 0; };

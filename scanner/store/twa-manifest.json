@@ -1,8 +1,8 @@
 {
-  "packageId": "io.github.berthautk.vraiscan",
+  "packageId": "io.github.berthautk.paperlume",
   "host": "berthautk.github.io",
-  "name": "VraiScan — le vrai scanner",
-  "launcherName": "VraiScan",
+  "name": "Paperlume — scanner, lecture, PDF",
+  "launcherName": "Paperlume",
   "display": "standalone",
   "orientation": "default",
   "themeColor": "#0F3D5E",
@@ -17,7 +17,7 @@
   "iconUrl": "https://berthautk.github.io/icons/icon-512.png",
   "maskableIconUrl": "https://berthautk.github.io/icons/maskable-512.png",
   "splashScreenFadeOutDuration": 300,
-  "signingKey": { "path": "./signing.keystore", "alias": "vraiscan" },
+  "signingKey": { "path": "./signing.keystore", "alias": "paperlume" },
   "appVersionName": "1.0.0",
   "appVersionCode": 1,
   "shortcuts": [

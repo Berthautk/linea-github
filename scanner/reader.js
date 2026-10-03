@@ -6,9 +6,10 @@
 import { recognize, linesText } from './ocr.js';
 import { t, getLang } from './i18n.js';
 import { ocrUnreliable } from './textedit.js';
+import { fold, queryStems, tokens } from './insight.js';
 
 const $ = (id) => document.getElementById(id);
-const RATES = [0.75, 1, 1.25, 1.5, 1.75, 2];
+const RATES = [0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3];
 const MIN_CONF = 50; // mots lus avec trop peu de certitude : sautés
 
 export function createReader(ctx) {
@@ -257,6 +258,7 @@ export function createReader(ctx) {
   function savePos() {
     const d = doc();
     d.readPos = { id: ids()[st.idx], u: st.u };
+    d.readAt = Date.now();
     clearTimeout(saveTimer);
     saveTimer = setTimeout(() => ctx.saveLib(), 1200);
   }
@@ -463,7 +465,8 @@ export function createReader(ctx) {
 
   /* ---------- ouverture ---------- */
 
-  function open({ index = null, autoplay = false, from = 'home' } = {}) {
+  // find : passage cherché (la lecture commence à la phrase qui le contient).
+  function open({ index = null, autoplay = false, from = 'home', find = '' } = {}) {
     const d = doc();
     if (!d.ids.length) return;
     st.open = true;
@@ -485,6 +488,11 @@ export function createReader(ctx) {
     ctx.showScreen('reader');
     render();
     st.u = Math.min(u, Math.max(0, st.units.length - 1));
+    if (find) {
+      const stems = queryStems(find);
+      const k = st.units.findIndex(x => tokens(x.text).some(tk => stems.some(sm => tk.w.startsWith(sm))));
+      if (k >= 0) st.u = k;
+    }
     highlight();
     status();
     pump();

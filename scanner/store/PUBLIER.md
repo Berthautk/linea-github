@@ -1,6 +1,6 @@
-# Publier VraiScan sur Google Play — pas à pas
+# Publier Paperlume sur Google Play — pas à pas
 
-VraiScan est une application web installable (PWA). Pour Google Play, on l'emballe
+Paperlume est une application web installable (PWA). Pour Google Play, on l'emballe
 dans une vraie application Android appelée **TWA** (*Trusted Web Activity*) : c'est
 la méthode officielle de Google pour publier une PWA. L'application s'ouvre en plein
 écran, sans barre d'adresse, comme n'importe quelle application.
@@ -29,10 +29,10 @@ Solution gratuite : **GitHub Pages sur un dépôt nommé `berthautk.github.io`**
    le dossier `.well-known/` et le fichier `.nojekyll` (sans lui, GitHub Pages
    ignore les dossiers qui commencent par un point).
 3. *Settings > Pages > Deploy from a branch > main / (root)*.
-4. Vérifiez que `https://berthautk.github.io/` ouvre VraiScan, et que
+4. Vérifiez que `https://berthautk.github.io/` ouvre Paperlume, et que
    `https://berthautk.github.io/privacy.html` s'affiche.
 
-(Plus tard, un nom de domaine à vous, par exemple `vraiscan.com`, fonctionne de la
+(Plus tard, un nom de domaine à vous, par exemple `paperlume.app`, fonctionne de la
 même façon : il faudra alors changer l'identifiant du paquet, voir étape 3.)
 
 Avant de continuer, remplacez `[adresse e-mail du développeur]` dans
@@ -52,8 +52,8 @@ Le plus simple, sans rien installer : **PWABuilder** (outil gratuit de Microsoft
 1. Ouvrez https://www.pwabuilder.com et entrez `https://berthautk.github.io/`.
 2. *Package for stores* > **Android** > *Generate package*, avec ces réglages
    (ce sont aussi ceux de `twa-manifest.json`) :
-   - **Package ID** : `io.github.berthautk.vraiscan`
-   - **App name** : `VraiScan — le vrai scanner` ; **Launcher name** : `VraiScan`
+   - **Package ID** : `io.github.berthautk.paperlume`
+   - **App name** : `Paperlume — scanner, lecture, PDF` ; **Launcher name** : `Paperlume`
    - **App version** : `1.0.0` ; **Version code** : `1`
    - **Display mode** : Standalone ; **Status bar / Nav bar color** : `#0F3D5E`
    - **Signing key** : *Create new* — renseignez votre nom et un mot de passe solide.
@@ -72,7 +72,7 @@ mêmes réglages.)
 ## Étape 4 — Créer l'application dans Play Console
 
 *Tout afficher > Créer une application* :
-- Nom : `VraiScan : scanner PDF & Word` ; langue par défaut : Français (France) ;
+- Nom : `Paperlume : scanner PDF & Word` ; langue par défaut : Français (France) ;
 - Application (pas jeu) ; **Gratuite** ; acceptez les déclarations.
 
 Puis remplissez *Configurer votre application* (tableau de bord) :

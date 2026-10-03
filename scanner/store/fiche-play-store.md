@@ -7,88 +7,64 @@ Limites Google : titre 30 caractères, description courte 80, description compl�
 
 ## Français (langue par défaut : fr-FR)
 
-**Nom de l'application** (29 caractères)
+**Nom de l'application** (30 caractères)
 
 ```
-VraiScan : scanner PDF & Word
+Paperlume : scanner PDF & Word
 ```
 
-**Description courte** (77 caractères)
+**Description courte** (78 caractères)
 
 ```
-Le vrai scanner dans votre téléphone : PDF, Word, CNI. Gratuit et hors ligne.
+Scannez, cherchez, résumez, écoutez vos documents. Gratuit et hors ligne.
 ```
 
 **Description complète**
 
 ```
-VraiScan transforme votre téléphone en scanner de bureau. Photographiez un document : il en sort un fichier propre et net, comme s'il avait été scanné sur une machine, prêt à être envoyé.
+Paperlume transforme votre téléphone en scanner de bureau, en liseuse et en lecteur audio. Scannez un document ou un livre entier : il devient un fichier net, que vous pouvez chercher, résumer et écouter. Tout se fait sur le téléphone, sans compte et hors ligne.
 
-UN RENDU DE VRAI SCANNER
-• Recadrage automatique : les bords du document sont trouvés seuls, vous pouvez les ajuster au doigt avec une loupe.
-• Perspective corrigée et lignes de texte remises parfaitement droites.
-• Rendu « Scanner de bureau » : fond blanc, ombres supprimées, texte net, tons naturels.
-• Cachets, tampons et signatures gardent leur couleur.
-• Qualité 300 ppp, pages au format A4.
-• Autres rendus : Contrasté, Gris, Photocopie (noir et blanc), Couleur, Original.
+SCANNEZ
+• Caméra intégrée : la page est cadrée en direct, une photo en un geste ou automatique dès que la page est immobile.
+• Modes Document, Livre (double page coupée au pli), Carte, Reçu, Tableau.
+• Perspective corrigée, lignes redressées, ombres supprimées : un rendu de scanner de bureau, 300 ppp.
+• Livres de plusieurs centaines de pages : traitement en arrière-plan, page floue signalée, reprise à tout moment.
+• Import de photos et de PDF, même de 300 pages.
 
-SCANNER UN LIVRE EN QUELQUES MINUTES
-• La caméra reste ouverte : un geste par page, ou photo automatique dès que la page est immobile.
-• Double page : le livre ouvert est coupé en deux pages.
-• Recadrage et redressement automatiques, en arrière-plan.
+COMPRENEZ
+• Recherche dans le texte : un mot, et la liste des pages où il apparaît, dans un document ou toute la bibliothèque.
+• Résumé automatique : les phrases clés du document, avec leur page.
+• Fiche de révision : mots-clés et questions à trous.
+• Correction du texte en touchant un mot ; pages écrites à la main recopiées ou dictées ligne par ligne.
 
-PDF, WORD ET TEXTE
-• PDF d'une ou plusieurs pages.
-• PDF avec texte cherchable et copiable.
-• Conversion en Word (.docx) modifiable : la mise en page suit le document, et les mots à vérifier sont surlignés en jaune.
-• Texte seul (.txt), images JPG.
-• Français et anglais.
-
-IMPORTER UN PDF, L'ÉCOUTER
-• Importez un PDF, même de plusieurs centaines de pages : convertissez-le en Word ou écoutez-le.
-• Mode lecture : le texte en grand, la phrase lue surlignée, pause, paragraphe suivant, vitesse, reprise là où vous vous êtes arrêté.
-• Pages scannées : le texte est lu sur le téléphone pendant que vous écoutez.
-
-CORRIGER ET ENRICHIR LE TEXTE
-• Touchez un mot pour le corriger en le comparant à la photo ; les mots douteux sont surlignés.
-• Réécrivez ou ajoutez des paragraphes, au clavier ou en dictant.
-• Écrit à la main : chaque ligne s'affiche agrandie, vous la recopiez ou la dictez.
-• Envoi en Word, en PDF ou en « PDF propre », le texte remis au propre.
-
-DOSSIERS DE CANDIDATURE
-• Choisissez vos pièces dans une liste de 65 documents : CNI, acte de naissance, casier judiciaire, diplômes, relevés, certificat médical, justificatifs, visa…
-• Scannez-les une par une : chacune se range dans votre dossier, numérotée et nommée (01_CNI.pdf, 02_Acte_de_naissance.pdf…).
-• Vérification : pièces floues, dates de plus de 3 mois, nom différent d'une pièce à l'autre.
-• Envoi du dossier complet en .zip ou fichier par fichier, sous la taille demandée (300 Ko…), photo d'identité 4×4 de moins de 50 Ko.
-
-PENSÉ POUR LES DOSSIERS
-• Carte d'identité recto-verso sur une seule page A4, à la taille réelle.
-• Taille maximale du fichier (300 Ko à 5 Mo) pour les sites d'inscription et de concours.
-• Filigrane de protection : « Copie réservée au dossier… ».
-• Alerte dès la photo si elle est floue ou a un reflet, avec un bouton pour la reprendre.
-• Signature : au doigt, ou tirée d'une photo de votre signature au stylo.
-• Masquer une zone (numéro, adresse) avant d'envoyer.
-• Nom du fichier au choix, accepté par les sites de dépôt (sans espaces ni accents).
-• Livres : séparation d'une double page.
+ÉCOUTEZ
+• Lecture à voix haute, la phrase lue surlignée, vitesse de 0,75× à 3×.
+• Reprise là où vous vous êtes arrêté, même le lendemain.
 • En français et en anglais.
 
+EXPORTEZ
+• PDF, PDF cherchable, Word (.docx), PDF propre, texte, Markdown, page web, images JPG.
+• Taille maximale (300 Ko…) pour les sites de concours et d'inscription.
+• Partage direct par WhatsApp, e-mail ou Drive.
+
+DOSSIERS DE CANDIDATURE
+• 65 pièces (CNI, acte de naissance, casier judiciaire, diplôme, certificat de réussite…), chacune numérotée et nommée : 01_CNI.pdf…
+• Vérification indicative : pièces floues, dates de plus de 3 mois, nom différent d'une pièce à l'autre.
+• Envoi du dossier complet en .zip, photo d'identité 4×4 de moins de 50 Ko.
+
 VOS DOCUMENTS RESTENT CHEZ VOUS
-• Aucun compte, aucune publicité, aucun abonnement.
-• Tout se fait sur le téléphone, même la lecture du texte : aucune photo n'est envoyée sur internet.
-• Fonctionne hors ligne.
-• « Mes documents » : tout est rangé sur le téléphone.
-• Sauvegarde complète en un seul fichier, à restaurer sur un nouveau téléphone.
+• Bibliothèque rangée par catégories : Études, Travail, Administration, Finance, Personnel.
+• Code de verrouillage.
+• Aucun compte, aucune publicité, aucun abonnement. Aucune photo ni aucun texte n'est envoyé sur internet.
+• Sauvegarde complète en un seul fichier.
 
-PARTAGE DIRECT
-Envoyez vos documents en un geste par WhatsApp, e-mail ou Drive, ou enregistrez-les dans vos fichiers.
-
-Conseil pour un résultat parfait : posez la feuille à plat sur une surface plus foncée, dans un endroit bien éclairé, sans flash, et tenez le téléphone immobile au-dessus.
+Conseil : posez la feuille à plat sur une surface plus foncée, dans un endroit bien éclairé, sans flash.
 ```
 
-**Notes de version (1.4.0)**
+**Notes de version (2.0.0)**
 
 ```
-Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, PDF cherchable, Word, dossiers de candidature (65 pièces, vérification des dates et des noms, envoi en .zip), carte d'identité recto-verso, taille maximale, signature, sauvegarde complète. Import de PDF, conversion en Word, mode lecture à voix haute avec reprise, correction du texte, transcription des pages écrites à la main, PDF propre, caméra intégrée pour scanner un livre page après page. En français et en anglais.
+VraiScan devient Paperlume. Nouveau : recherche dans le texte de vos documents, résumé automatique et fiche de révision, modes de la caméra (document, livre, carte, reçu, tableau), bibliothèque par catégories avec « Continuer la lecture », code de verrouillage, export Markdown et page web, écran de page simplifié.
 ```
 
 ---
@@ -98,69 +74,53 @@ Première version de VraiScan : scanner de bureau dans votre téléphone, PDF, P
 **App name**
 
 ```
-VraiScan: PDF & Word Scanner
+Paperlume: PDF & Word Scanner
 ```
 
 **Short description**
 
 ```
-A real desktop scanner in your phone: PDF, Word, ID cards. Free and offline.
+Scan, search, summarise and listen to your documents. Free and offline.
 ```
 
 **Full description**
 
 ```
-VraiScan turns your phone into a desktop scanner. Take a photo of a document and get a clean, sharp file, as if it had been scanned on a machine, ready to send.
+Paperlume turns your phone into a desktop scanner, a reader and an audio player. Scan a document or a whole book: it becomes a sharp file you can search, summarise and listen to. Everything happens on the phone, with no account and offline.
 
-A REAL SCANNER LOOK
-• Automatic edge detection, adjustable by finger with a magnifier.
-• Perspective correction and perfectly straight text lines.
-• “Desktop scanner” rendering: white background, shadows removed, sharp text, natural tones.
-• Stamps and signatures keep their color.
-• 300 dpi quality, A4 pages.
+SCAN
+• Built-in camera: the page is framed live, one tap per photo or automatic as soon as the page is still.
+• Document, Book (two-page spread split at the fold), Card, Receipt and Board modes.
+• Perspective corrected, lines straightened, shadows removed: a desktop-scanner look, 300 dpi.
+• Books of hundreds of pages: background processing, blurry pages flagged, resume any time.
+• Import photos and PDFs, even 300 pages long.
 
-SCAN A BOOK IN MINUTES
-• The camera stays open: one tap per page, or automatic photo as soon as the page is still.
-• Two-page mode: the open book is split into two pages.
-• Automatic cropping and straightening, in the background.
+UNDERSTAND
+• Full-text search: type a word and get the pages where it appears, in one document or the whole library.
+• Automatic summary: the key sentences of the document, with their page.
+• Study sheet: keywords and fill-in-the-blank questions.
+• Correct the text by tapping a word; copy or dictate handwritten pages line by line.
 
-PDF, WORD AND TEXT
-• Single or multi-page PDF.
-• Searchable PDF with selectable text.
-• Editable Word (.docx) conversion; uncertain words are highlighted.
-• Plain text, JPG images. French and English.
+LISTEN
+• Read-aloud with the current sentence highlighted, speed from 0.75× to 3×.
+• Resume where you stopped, even the next day.
+• French and English.
 
-IMPORT A PDF, LISTEN TO IT
-• Import a PDF, even hundreds of pages long: convert it to Word or listen to it.
-• Reading mode: large text, the sentence being read is highlighted, pause, next paragraph, speed, resume where you stopped.
-• Scanned pages: the text is read on the phone while you listen.
-
-CORRECT AND ENRICH THE TEXT
-• Tap a word to correct it against the photo; doubtful words are highlighted.
-• Rewrite or add paragraphs, by typing or dictating.
-• Handwritten pages: each line is shown enlarged for you to copy or dictate.
-• Send as Word, PDF or “clean PDF” with the text neatly retyped.
+EXPORT
+• PDF, searchable PDF, Word (.docx), clean PDF, text, Markdown, web page, JPG images.
+• Maximum file size (300 KB…) for application portals.
+• Share directly by WhatsApp, e-mail or Drive.
 
 APPLICATION FILES
-• Pick your documents from a list of 65: ID card, birth certificate, criminal record, diplomas, transcripts, medical certificate, proofs, visa…
-• Scan them one by one: each is filed, numbered and named (01_NIC.pdf, 02_Birth_certificate.pdf…).
-• Checks: blurry pages, dates older than 3 months, name differing between documents.
-• Send the whole file as a .zip or file by file, under the required size, with a 4×4 ID photo under 50 KB.
-
-MADE FOR PAPERWORK
-• ID card front and back on one A4 page, at real size.
-• Maximum file size (300 KB to 5 MB) for online application portals.
-• Protection watermark.
-• Blur and glare warning right after the photo.
-• Signature by finger or from a photo of your pen signature.
-• Hide a zone before sending.
+• 65 documents (ID card, birth certificate, criminal record, diploma…), each numbered and named: 01_NIC.pdf…
+• Indicative checks: blurry pages, dates older than 3 months, name differing between documents.
+• Send the whole file as a .zip, ID photo under 50 KB.
 
 YOUR DOCUMENTS STAY WITH YOU
-• No account, no ads, no subscription.
-• Everything runs on the phone, even text recognition. Works offline.
+• Library sorted by category: Studies, Work, Admin, Finance, Personal.
+• Lock code.
+• No account, no ads, no subscription. No photo or text is sent over the internet.
 • Full backup in a single file.
-
-Share directly by WhatsApp, e-mail or Drive.
 ```
 
 ---

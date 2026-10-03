@@ -26,13 +26,20 @@ export function createCamera(ctx) {
   tiny.width = 32; tiny.height = 24;
 
   const auto = () => ctx.prefs.get('camAuto', '0') === '1';
-  const book = () => ctx.prefs.get('camBook', '0') === '1';
+  // Modes : chacun règle le rendu (et la double page pour un livre ouvert).
+  const MODES = ['doc', 'livre', 'carte', 'recu', 'tableau'];
+  let mode = 'doc';
+  const book = () => mode === 'livre';
+  function setMode(m, save = true) {
+    mode = MODES.includes(m) ? m : 'doc';
+    if (save) ctx.prefs.set('camMode', mode);
+    document.querySelectorAll('#camModes button').forEach(b => b.classList.toggle('on', b.dataset.m === mode));
+    st.still = 0;
+  }
 
   function setToggles() {
     $('camAuto').classList.toggle('on', auto());
-    $('camBook').classList.toggle('on', book());
     $('camAuto').setAttribute('aria-pressed', String(auto()));
-    $('camBook').setAttribute('aria-pressed', String(book()));
   }
 
   function setCount() {
@@ -161,7 +168,7 @@ export function createCamera(ctx) {
       st.lastShot = tinyGray();
       st.moved = false;
       st.still = 0;
-      ctx.capture(blob, { quad, frameW: fw, frameH: fh, book: book(), auto: isAuto });
+      ctx.capture(blob, { quad, frameW: fw, frameH: fh, book: book(), mode, auto: isAuto });
       setCount();
       hint(auto() ? (book() ? 'cam.turnBook' : 'cam.turn') : 'cam.next');
     } catch (e) {
@@ -181,7 +188,11 @@ export function createCamera(ctx) {
     } catch { /* l'écran peut s'éteindre */ }
   }
 
-  async function open() {
+  // m : mode imposé (pièce du dossier) ; sinon le dernier mode utilisé.
+  async function open(m = null) {
+    // Ancien réglage « Double page » : devient le mode Livre.
+    if (!ctx.prefs.get('camMode') && ctx.prefs.get('camBook') === '1') ctx.prefs.set('camMode', 'livre');
+    setMode(m || ctx.prefs.get('camMode', 'doc'), !m);
     Object.assign(st, { quad: null, shown: null, miss: 0, prev: null, lastShot: null, still: 0, moved: true, shots: 0, busy: false });
     setToggles();
     setCount();
@@ -249,10 +260,11 @@ export function createCamera(ctx) {
     setToggles();
     if (auto()) ctx.toast(t('cam.autoOn'));
   };
-  $('camBook').onclick = () => {
-    ctx.prefs.set('camBook', book() ? '0' : '1');
-    setToggles();
-    ctx.toast(t(book() ? 'cam.bookOn' : 'cam.bookOff'));
+  $('camModes').onclick = (e) => {
+    const b = e.target.closest('button[data-m]');
+    if (!b) return;
+    setMode(b.dataset.m);
+    ctx.toast(t('cam.mode.' + mode + '.h'));
   };
   $('camTorch').onclick = async () => {
     const on = !$('camTorch').classList.contains('on');

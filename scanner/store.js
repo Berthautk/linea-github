@@ -2,6 +2,8 @@
 // Si le navigateur ferme la page pendant la prise de photo, les pages déjà
 // scannées sont retrouvées au retour.
 
+// Nom interne gardé (ancien nom de l'application) : les documents déjà
+// enregistrés restent disponibles.
 const DB = 'vraiscan', VER = 1;
 let dbp;
 

@@ -13,8 +13,9 @@ import { isPdf, openPdf, renderPdfPage, closePdf } from './pdfin.js';
 import { createReader } from './reader.js';
 import { createTextEditor, refitOcr, ocrUnreliable } from './textedit.js';
 import { createCamera, liveCameraSupported } from './camera.js';
+import { search as searchText, summarize, cloze, guessCategory, fold, toMarkdown, toHtml } from './insight.js';
 
-export const APP_VERSION = '1.4.1';
+export const APP_VERSION = '2.0.0';
 
 const $ = (id) => document.getElementById(id);
 const nextFrame = () => new Promise(r => setTimeout(r, 30));
@@ -296,12 +297,13 @@ function hintQuad(h, canvas) {
 
 // Une photo → une page prête (recadrée, redressée, rendu appliqué, enregistrée).
 // maxLong : côté long de la page (défaut : A4 à 300 ppp ; plus petit = plus rapide).
-async function makePage(file, { kind = 'doc', quadHint = null, maxLong = 0 } = {}) {
+async function makePage(file, { kind = 'doc', quadHint = null, maxLong = 0, look = null } = {}) {
   const page = { id: uid(), rot: 0, filter: defaultFilter(), overlays: [], kind };
   if (maxLong) page.maxLong = maxLong;
   await loadPhoto(page, file, quadHint);
   pages.set(page.id, page);
   autoFilter(page, await getWarped(page));
+  if (look) page.filter = look;
   await nextFrame();
   await commit(page, await renderPage(page));
   return page;
@@ -653,12 +655,66 @@ async function deleteDoc(id) {
   renderLib();
 }
 
+// Catégories de la bibliothèque (proposées d'après le nom et le texte ; on peut les changer).
+const LIBCATS = [['etudes', '📚'], ['travail', '💼'], ['admin', '🏛'], ['finance', '💰'], ['perso', '📖']];
+const libState = { cat: 'all', q: '' };
+function docCat(d) {
+  if (d.cat) return d.cat;
+  if (d.catAuto !== undefined) return d.catAuto;
+  let text = d.name;
+  if (d.id === doc.id) text += ' ' + doc.ids.slice(0, 3).map(id => usableText(pages.get(id))).join(' ');
+  else text += ' ' + d.ids.slice(0, 3).map(id => libText.get(id) || '').join(' ');
+  const g = d.kind === 'dossier' ? 'admin' : guessCategory(text);
+  if (g || d.id === doc.id) d.catAuto = g;   // devinée une fois (document ouvert : texte connu)
+  return g;
+}
+const catLabel = (c) => c ? `${LIBCATS.find(x => x[0] === c)[1]} ${t('cat.' + c)}` : t('cat.none');
+
+function renderLibCats() {
+  const box = $('libCats');
+  box.textContent = '';
+  const counts = {};
+  for (const d of lib.docs) { const c = docCat(d) || 'none'; counts[c] = (counts[c] || 0) + 1; }
+  const mk = (id, label) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = label;
+    b.className = libState.cat === id ? 'on' : '';
+    b.onclick = () => { libState.cat = id; renderLib(); };
+    box.append(b);
+  };
+  mk('all', t('cat.all', { n: lib.docs.length }));
+  for (const [c] of LIBCATS) if (counts[c]) mk(c, `${catLabel(c)} (${counts[c]})`);
+  if (counts.none) mk('none', `${t('cat.none')} (${counts.none})`);
+}
+
 async function renderLib() {
+  renderLibCats();
+  // Continuer la lecture : le dernier document écouté ou lu.
+  const reading = lib.docs.filter(d => d.readPos && d.readAt).sort((a, b) => b.readAt - a.readAt)[0];
+  const rs = $('libResume');
+  rs.hidden = !reading;
+  if (reading) {
+    const ids = reading.id === doc.id ? doc.ids : reading.ids;
+    const i = ids.indexOf(reading.readPos.id);
+    rs.innerHTML = '<span>▶</span><span><b></b><small></small></span>';
+    rs.querySelector('b').textContent = t('lib.resume');
+    rs.querySelector('small').textContent = `${reading.name} — ${t('rd.page', { i: Math.max(1, i + 1), n: ids.length })}`;
+    rs.onclick = async () => {
+      $('libDlg').close();
+      if (reading.id !== doc.id) await busy(t('busy.open'), () => openDoc(reading.id));
+      reader.open();
+    };
+  }
+  const q = fold(libState.q.trim());
+  $('libFull').hidden = !q;
+  $('libFull').textContent = t('lib.full', { q: libState.q.trim() });
   const box = $('libList');
   box.textContent = '';
-  const docs = lib.docs.slice().sort((a, b) => (b.updated || 0) - (a.updated || 0));
-  for (const d of docs) {
-    const it = document.createElement('div');
+  const docs = lib.docs.slice().sort((a, b) => (b.updated || 0) - (a.updated || 0))
+    .filter(d => libState.cat === 'all' || (docCat(d) || 'none') === libState.cat)
+    .filter(d => !q || fold(d.name).includes(q));
+  for (const d of docs) {    const it = document.createElement('div');
     it.className = 'libitem' + (d.id === doc.id ? ' cur' : '');
     const ids = d.id === doc.id ? doc.ids : d.ids;
     let thumb;
@@ -701,7 +757,7 @@ async function renderLib() {
 // Sauvegarde complète : un seul fichier avec tous les documents, dossiers et photos.
 async function backupAll() {
   await busy(t('busy.backup'), async () => {
-    const out = { app: 'vraiscan', version: 2, created: new Date().toISOString(), docs: [] };
+    const out = { app: 'paperlume', version: 2, created: new Date().toISOString(), docs: [] };
     const sig = await store.getMeta('signature');
     if (sig) out.signature = sig;
     for (const d of lib.docs) {
@@ -725,7 +781,7 @@ async function backupAll() {
     }
     const d = new Date(), pad = (n) => String(n).padStart(2, '0');
     const file = new File([JSON.stringify(out)],
-      `VraiScan_${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.vraiscan`,
+      `Paperlume_${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.paperlume`,
       { type: 'application/octet-stream' });
     download(file);
     prefs.set('lastBackup', String(Date.now()));
@@ -736,7 +792,7 @@ async function backupAll() {
 async function restoreBackup(file) {
   let data;
   try { data = JSON.parse(await file.text()); } catch { data = null; }
-  if (!data || !['vraiscan', 'linea-scan'].includes(data.app) || !Array.isArray(data.docs)) {
+  if (!data || !['paperlume', 'vraiscan', 'linea-scan'].includes(data.app) || !Array.isArray(data.docs)) {
     toast(t('toast.notBackup'));
     return;
   }
@@ -787,6 +843,8 @@ function showScreen(name) {
   $('texted').hidden = name !== 'texted';
   $('transc').hidden = name !== 'transc';
   $('cam').hidden = name !== 'cam';
+  $('search').hidden = name !== 'search';
+  $('summ').hidden = name !== 'summ';
 }
 
 function edCounter() {
@@ -1070,6 +1128,25 @@ async function removePage(id) {
 $('fRotL').onclick = () => applyEdit(p => { p.rot = (p.rot + 270) % 360; p.turn = 270; rotateOverlays(p, 270); });
 $('fRotR').onclick = () => applyEdit(p => { p.rot = (p.rot + 90) % 360; p.turn = 90; rotateOverlays(p, 90); });
 $('fCrop').onclick = () => setMode('crop');
+$('fMore').onclick = () => $('moreDlg').showModal();
+// Chaque action de la feuille la referme d'abord.
+$('moreDlg').addEventListener('click', (e) => { if (e.target.closest('button')) $('moreDlg').close(); }, true);
+$('fDup').onclick = async () => {
+  const page = pages.get(ed.id);
+  if (!page) return;
+  const np = { ...page, id: uid(), overlays: (page.overlays || []).map(o => ({ ...o })) };
+  if (np.ocr) np.ocr = JSON.parse(JSON.stringify(np.ocr));
+  delete np.transc;
+  await store.putPage(np);
+  pages.set(np.id, np);
+  thumbUrls.set(np.id, URL.createObjectURL(np.thumb || np.proc));
+  const ins = (arr) => { const i = arr.indexOf(page.id); if (i >= 0) arr.splice(i + 1, 0, np.id); };
+  if (doc.pieces) { doc.pieces.forEach(pc => ins(pc.ids)); syncIds(); } else ins(doc.ids);
+  doc.editedAt = Date.now();
+  await saveLib();
+  toast(t('toast.dup'));
+  await openEditor(np.id, 'filter');
+};
 $('fAnno').onclick = () => setMode('anno');
 $('fDel').onclick = async () => {
   if (!confirm(t('confirm.delPage'))) return;
@@ -1402,7 +1479,8 @@ async function pdfFromSheets(out, title, ocrs) {
 
 /* ------------------------------ exportation d'un document ------------------------------ */
 
-const OCR_FORMATS = ['pdfocr', 'docx', 'txt', 'pdftext'];
+const OCR_FORMATS = ['pdfocr', 'docx', 'txt', 'pdftext', 'md', 'html'];
+const TEXT_FORMATS = ['docx', 'txt', 'pdftext', 'md', 'html'];
 const LOW_CONF = 60;
 
 // Lit le texte de chaque page (une seule fois : le résultat est gardé avec la page).
@@ -1443,7 +1521,7 @@ function wordsInPdf(ocr, box) {
 
 function updateExportForm() {
   const format = $('exFormat').value;
-  const textOnly = format === 'docx' || format === 'txt' || format === 'pdftext';
+  const textOnly = TEXT_FORMATS.includes(format);
   $('rowLang').hidden = !OCR_FORMATS.includes(format);
   $('exEdit').hidden = !OCR_FORMATS.includes(format);
   for (const id of ['rowPage', 'rowDpi', 'rowMax', 'rowWm']) $(id).hidden = textOnly;
@@ -1506,13 +1584,16 @@ async function prepareExport() {
     else if (low) warns.push(t('ex.low', { low, all }));
   }
 
-  if (format === 'docx' || format === 'txt' || format === 'pdftext') {
-    const file = format === 'docx'
-      ? new File([buildDocx(ocr, { title })], `${name}.docx`,
-        { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' })
-      : format === 'pdftext'
-        ? new File([buildTextPdf(ocr, paragraphText, { title })], `${name}.pdf`, { type: 'application/pdf' })
-        : new File([plainText(ocr.map(o => o.paragraphs))], `${name}.txt`, { type: 'text/plain;charset=utf-8' });
+  if (TEXT_FORMATS.includes(format)) {
+    const make = {
+      docx: () => [buildDocx(ocr, { title }), 'docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+      pdftext: () => [buildTextPdf(ocr, paragraphText, { title }), 'pdf', 'application/pdf'],
+      md: () => [toMarkdown(ocr, paragraphText, title), 'md', 'text/markdown;charset=utf-8'],
+      html: () => [toHtml(ocr, paragraphText, title, getLang()), 'html', 'text/html;charset=utf-8'],
+      txt: () => [plainText(ocr.map(o => o.paragraphs)), 'txt', 'text/plain;charset=utf-8'],
+    }[format];
+    const [data, ext, type] = make();
+    const file = new File([data], `${name}.${ext}`, { type });
     if (token !== ex.token) return;
     ex.files = [file];
     $('exInfo').textContent = t('ex.infoText', { n, size: fmtSize(file.size) });
@@ -2222,8 +2303,13 @@ $('aboutBtn').onclick = () => {
   $('appVersion').textContent = t('about.version', { v: APP_VERSION });
   $('setLang').value = getLang();
   $('setFilter').value = defaultFilter();
+  pinLabel();
   $('aboutDlg').showModal();
 };
+$('libSearch').oninput = () => { libState.q = $('libSearch').value; renderLib(); };
+$('libSearch').onkeydown = (e) => { if (e.key === 'Enter') { e.preventDefault(); $('libFull').click(); } };
+// Chercher dans le texte de tous les documents.
+$('libFull').onclick = () => { $('libDlg').close(); se.scope = 'lib'; openSearch('home', libState.q.trim()); };
 $('libBtn').onclick = async () => {
   await renderLib();
   $('libDlg').showModal();
@@ -2330,6 +2416,261 @@ $('fText').onclick = () => textEd.open({ index: doc.ids.indexOf(ed.id), from: 'e
 $('rdEdit').onclick = () => { const i = reader.index; reader.pause(); textEd.open({ index: i, from: 'reader' }); };
 $('exEdit').onclick = () => { $('exportDlg').close(); textEd.open({ from: 'export' }); };
 
+/* ------------------------------ texte des pages : recherche, résumé ------------------------------ */
+
+// Texte utilisable d'une page (rien pour une page écrite à la main non transcrite).
+function usableText(p) {
+  if (!p || !p.ocr || !p.ocr.paragraphs || ocrUnreliable(p.ocr)) return '';
+  return p.ocr.paragraphs.map(paragraphText).join('\n\n');
+}
+function docTexts() {
+  return doc.ids.map((id, i) => ({ key: doc.id, page: i + 1, id, text: usableText(pages.get(id)) }));
+}
+const libText = new Map(); // id de page → texte (documents non ouverts)
+async function libraryTexts() {
+  const out = [];
+  for (const d of lib.docs) {
+    if (d.id === doc.id) { out.push(...docTexts()); continue; }
+    for (let i = 0; i < d.ids.length; i++) {
+      const id = d.ids[i];
+      if (!libText.has(id)) {
+        const p = await store.getPage(id);
+        libText.set(id, usableText(p));
+      }
+      out.push({ key: d.id, page: i + 1, id, text: libText.get(id) });
+    }
+  }
+  return out;
+}
+
+// Pages du document ouvert dont le texte n'a pas encore été lu (OCR).
+const missingText = () => doc.ids.filter(id => { const p = pages.get(id); return p && !p.ocr; });
+const prep = { running: false, stop: false };
+// Lit le texte des pages restantes, page par page, en montrant l'avancement.
+async function prepareText(statusEl, btn, onDone) {
+  if (prep.running) { prep.stop = true; return; }
+  const todo = missingText();
+  prep.running = true;
+  prep.stop = false;
+  btn.textContent = t('prep.stop');
+  try {
+    for (let k = 0; k < todo.length && !prep.stop; k++) {
+      statusEl.textContent = t('prep.reading', { i: k + 1, n: todo.length });
+      try { await pageText(pages.get(todo[k])); } catch (e) { console.error(e); }
+    }
+  } finally {
+    prep.running = false;
+    onDone();
+  }
+}
+function showPrep(statusEl, btn, extra = '') {
+  const miss = missingText().length, n = doc.ids.length;
+  btn.hidden = !miss;
+  btn.textContent = t('prep.go', { n: miss });
+  statusEl.textContent = (miss ? t('prep.partial', { r: n - miss, n }) : t('prep.ready', { n })) + extra;
+}
+
+/* ---------- recherche ---------- */
+
+const se = { scope: 'doc', timer: 0, token: 0, from: 'home' };
+function openSearch(from = 'home', q = '') {
+  se.from = from;
+  showScreen('search');
+  if (q) $('seInput').value = q;
+  setScope(se.scope);
+  $('seInput').focus();
+}
+function setScope(sc) {
+  se.scope = sc;
+  $('seDoc').classList.toggle('on', sc === 'doc');
+  $('seLib').classList.toggle('on', sc === 'lib');
+  runSearch();
+}
+async function runSearch() {
+  const my = ++se.token;
+  const q = $('seInput').value.trim();
+  const list = $('seList');
+  if (se.scope === 'doc') showPrep($('seStatus'), $('sePrep'));
+  else { $('sePrep').hidden = true; $('seStatus').textContent = t('se.libNote', { n: lib.docs.length }); }
+  if (!q) { list.textContent = ''; return; }
+  const texts = se.scope === 'doc' ? docTexts() : await libraryTexts();
+  if (my !== se.token) return;
+  const res = searchText(texts, q);
+  list.textContent = '';
+  const names = new Map(lib.docs.map(d => [d.id, d.name]));
+  // Bibliothèque : on trouve aussi les documents par leur nom.
+  if (se.scope === 'lib') {
+    const qf = fold(q);
+    for (const d of lib.docs) {
+      if (!fold(d.name).includes(qf)) continue;
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.type = 'button';
+      const h = document.createElement('b');
+      h.textContent = `${d.kind === 'dossier' ? '📂' : '📄'} ${d.name}`;
+      b.append(h);
+      b.onclick = async () => { if (d.id !== doc.id) await busy(t('busy.open'), () => openDoc(d.id)); showScreen('home'); };
+      li.append(b);
+      list.append(li);
+    }
+  }
+  $('seStatus').textContent = (res.length ? t('se.found', { n: res.length }) : t('se.none')) + ' · ' + $('seStatus').textContent;
+  for (const r of res.slice(0, 200)) {
+    const li = document.createElement('li');
+    const b = document.createElement('button');
+    b.type = 'button';
+    const h = document.createElement('b');
+    h.textContent = (se.scope === 'lib' ? names.get(r.key) + ' · ' : '') + t('se.page', { n: r.page }) + (r.count > 1 ? ' · ' + t('se.times', { n: r.count }) : '');
+    const sp = document.createElement('span');
+    const mk = document.createElement('mark');
+    mk.textContent = r.match;
+    sp.append(r.before, mk, r.after);
+    b.append(h, sp);
+    b.onclick = () => openAt(r.key, r.page - 1, q, 'search');
+    li.append(b);
+    list.append(li);
+  }
+}
+// Ouvre le mode lecture sur la page trouvée, à la phrase qui contient le mot.
+async function openAt(docId, index, find, from) {
+  if (docId !== doc.id) await busy(t('busy.open'), () => openDoc(docId));
+  reader.open({ index, find, from });
+}
+$('searchBtn').onclick = () => openSearch('home');
+$('seBack').onclick = () => { prep.stop = true; showScreen(se.from === 'summ' ? 'summ' : 'home'); if (se.from !== 'summ') refreshHome(); };
+$('seInput').oninput = () => { clearTimeout(se.timer); se.timer = setTimeout(runSearch, 250); };
+$('seDoc').onclick = () => setScope('doc');
+$('seLib').onclick = () => setScope('lib');
+$('sePrep').onclick = () => prepareText($('seStatus'), $('sePrep'), runSearch);
+
+/* ---------- résumé, fiche de révision ---------- */
+
+const sm = { mode: 'short', data: null, speaking: false };
+function openSummary() {
+  $('smTitle').textContent = doc.name;
+  showScreen('summ');
+  renderSummary();
+}
+function setSumMode(m) {
+  sm.mode = m;
+  for (const [id, k] of [['smShort', 'short'], ['smLong', 'long'], ['smCard', 'card']]) $(id).classList.toggle('on', k === m);
+  renderSummary();
+}
+function pageBtn(r) {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'pg';
+  b.textContent = t('rd.pShort', { i: r.page });
+  const words = (r.text || (r.before || '') + (r.answer || '')).split(/\s+/).filter(Boolean).slice(0, 6).join(' ');
+  b.onclick = () => openAt(r.key, r.page - 1, words, 'summ');
+  return b;
+}
+function renderSummary() {
+  stopSpeak();
+  showPrep($('smStatus'), $('smPrep'));
+  const body = $('smBody');
+  body.textContent = '';
+  const n = sm.mode === 'short' ? 5 : sm.mode === 'long' ? 15 : 10;
+  const r = summarize(docTexts(), n);
+  sm.data = r;
+  if (!r.sentences.length) {
+    const p = document.createElement('p');
+    p.className = 'muted';
+    p.textContent = t('sm.empty');
+    body.append(p);
+    return;
+  }
+  if (sm.mode === 'card') {
+    const h1 = document.createElement('h3');
+    h1.textContent = t('sm.keywords');
+    body.append(h1);
+    const kwBox = document.createElement('div');
+    for (const k of r.keywords) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'kw';
+      b.textContent = k;
+      b.onclick = () => { se.scope = 'doc'; openSearch('summ', k); };
+      kwBox.append(b);
+    }
+    body.append(kwBox);
+    const h2 = document.createElement('h3');
+    h2.textContent = t('sm.quiz');
+    body.append(h2);
+    const ol = document.createElement('ol');
+    for (const q of cloze(r.sentences, r.keywords)) {
+      const li = document.createElement('li');
+      const blank = document.createElement('button');
+      blank.type = 'button';
+      blank.className = 'blank';
+      blank.textContent = q.answer;
+      blank.setAttribute('aria-label', t('sm.reveal'));
+      blank.onclick = () => blank.classList.toggle('show');
+      li.append(q.before, blank, q.after, pageBtn(q));
+      ol.append(li);
+    }
+    body.append(ol);
+    const h3 = document.createElement('h3');
+    h3.textContent = t('sm.key');
+    body.append(h3);
+  }
+  const ol = document.createElement('ol');
+  for (const s of r.sentences) {
+    const li = document.createElement('li');
+    li.append(s.text, pageBtn(s));
+    ol.append(li);
+  }
+  body.append(ol);
+  const note = document.createElement('p');
+  note.className = 'smnote';
+  note.textContent = t('sm.note');
+  body.append(note);
+}
+function summaryText() {
+  if (!sm.data) return '';
+  const lines = [doc.name, ''];
+  if (sm.mode === 'card') lines.push(t('sm.keywords') + ' : ' + sm.data.keywords.join(', '), '');
+  sm.data.sentences.forEach((s, i) => lines.push(`${i + 1}. ${s.text} (${t('rd.pShort', { i: s.page })})`));
+  return lines.join('\n');
+}
+function stopSpeak() {
+  if (sm.speaking && window.speechSynthesis) speechSynthesis.cancel();
+  sm.speaking = false;
+  $('smListen').textContent = t('sm.listen');
+}
+$('smListen').onclick = () => {
+  if (sm.speaking) { stopSpeak(); return; }
+  if (!('speechSynthesis' in window) || !sm.data) { toast(t('toast.noSpeech')); return; }
+  const list = sm.data.sentences.map(s => s.text);
+  sm.speaking = true;
+  $('smListen').textContent = t('f.stop');
+  const lang = /\b(le|la|les|des|est|et)\b/i.test(list.join(' ')) ? 'fr-FR' : 'en-GB';
+  let i = 0;
+  const next = () => {
+    if (!sm.speaking || i >= list.length) { stopSpeak(); return; }
+    const u = new SpeechSynthesisUtterance(list[i++]);
+    u.lang = lang;
+    u.rate = +prefs.get('rdRate', '1') || 1;
+    u.onend = next;
+    u.onerror = () => stopSpeak();
+    speechSynthesis.speak(u);
+  };
+  next();
+};
+$('smCopy').onclick = async () => {
+  try { await navigator.clipboard.writeText(summaryText()); toast(t('sm.copied')); } catch { toast(t('sm.copyFail')); }
+};
+$('smShare').onclick = () => {
+  const name = exportFileName(doc.name + ' - ' + t(sm.mode === 'card' ? 'sm.card' : 'sm.title'));
+  shareOrSave([new File([summaryText()], `${name}.txt`, { type: 'text/plain;charset=utf-8' })], doc.name, () => {});
+};
+$('smShort').onclick = () => setSumMode('short');
+$('smLong').onclick = () => setSumMode('long');
+$('smCard').onclick = () => setSumMode('card');
+$('smBack').onclick = () => { stopSpeak(); prep.stop = true; showScreen('home'); refreshHome(); };
+$('smPrep').onclick = () => prepareText($('smStatus'), $('smPrep'), renderSummary);
+$('sumBtn').onclick = () => openSummary();
+
 /* ------------------------------ caméra intégrée ------------------------------ */
 
 // Les photos sont traitées une à une en arrière-plan pendant qu'on continue.
@@ -2361,7 +2702,9 @@ async function camPump() {
         const kind = tg.piece ? (pieceById(tg.piece.cid)?.kind || 'doc') : 'doc';
         // Hors dossier (livre, notes) : pages à ~210 ppp, deux fois plus rapides ;
         // les pièces du dossier gardent 300 ppp.
-        const page = await makePage(blob, { kind, quadHint: info, maxLong: tg.piece ? 0 : FAST_LONG });
+        // Rendu selon le mode : carte en couleurs vraies, reçu et tableau très contrastés.
+        const look = { carte: 'color', recu: 'scan', tableau: 'scan' }[info.mode] || null;
+        const page = await makePage(blob, { kind, quadHint: info, maxLong: tg.piece ? 0 : FAST_LONG, look });
         if (tg.piece) { tg.piece.ids.push(page.id); syncIds(); } else doc.ids.push(page.id);
         let ids = [page.id];
         if (info.book && kind === 'doc') ids = (await splitPage(page)).ids;
@@ -2415,7 +2758,9 @@ async function openCam(target) {
   camQ.list = [];
   $('camUndo').hidden = true;
   $('camBadge').hidden = true;
-  const ok = await camera.open();
+  // Pièce du dossier : mode imposé (carte pour une CNI, document sinon).
+  const pk = target.piece ? pieceById(target.piece.cid)?.kind : null;
+  const ok = await camera.open(target.piece ? (pk === 'card' ? 'carte' : 'doc') : null);
   if (!ok) {
     camDenied = true;
     camQ.target = null;
@@ -2486,9 +2831,71 @@ hookCam('pcCamBtn', 'pcCam', () => {
   return { piece: pc, newPiece: true };
 });
 
+/* ------------------------------ verrouillage par code ------------------------------ */
+
+// Le code n'est jamais gardé : seulement son empreinte (SHA-256, avec sel).
+async function pinHash(pin, salt) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(salt + ':' + pin));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+const hasPin = () => !!prefs.get('pinHash');
+const lockSt = { tries: 0, until: 0, hiddenAt: 0 };
+function pinLabel() { $('pinSet').textContent = t(hasPin() ? 'pin.on' : 'pin.off'); }
+function lockNow() {
+  if (!hasPin()) return;
+  $('lock').hidden = false;
+  $('lockIn').value = '';
+  $('lockMsg').textContent = '';
+  setTimeout(() => $('lockIn').focus(), 50);
+}
+$('lockOk').onclick = async () => {
+  if (Date.now() < lockSt.until) {
+    $('lockMsg').textContent = t('pin.wait', { s: Math.ceil((lockSt.until - Date.now()) / 1000) });
+    return;
+  }
+  const h = await pinHash($('lockIn').value, prefs.get('pinSalt'));
+  if (h === prefs.get('pinHash')) {
+    lockSt.tries = 0;
+    $('lock').hidden = true;
+    return;
+  }
+  $('lockIn').value = '';
+  if (++lockSt.tries >= 5) { lockSt.until = Date.now() + 30000; lockSt.tries = 0; $('lockMsg').textContent = t('pin.wait', { s: 30 }); }
+  else $('lockMsg').textContent = t('pin.wrong');
+};
+$('lockIn').onkeydown = (e) => { if (e.key === 'Enter') $('lockOk').click(); };
+$('pinSet').onclick = () => {
+  if (hasPin()) {
+    prefs.set('pinHash', '');
+    prefs.set('pinSalt', '');
+    pinLabel();
+    toast(t('pin.removed'));
+    return;
+  }
+  $('pinA').value = $('pinB').value = '';
+  $('pinMsg').hidden = true;
+  $('pinDlg').showModal();
+};
+$('pinOk').onclick = async () => {
+  const a = $('pinA').value, b = $('pinB').value;
+  const msg = !/^\d{4,8}$/.test(a) ? t('pin.bad') : a !== b ? t('pin.diff') : '';
+  if (msg) { $('pinMsg').textContent = msg; $('pinMsg').hidden = false; return; }
+  const salt = uid();
+  prefs.set('pinSalt', salt);
+  prefs.set('pinHash', await pinHash(a, salt));
+  $('pinDlg').close();
+  pinLabel();
+  toast(t('pin.saved'));
+};
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') lockSt.hiddenAt = Date.now();
+  else if (hasPin() && lockSt.hiddenAt && Date.now() - lockSt.hiddenAt > 60000) lockNow();
+});
+
 /* ------------------------------ démarrage ------------------------------ */
 
 async function init() {
+  lockNow();
   const saved0 = prefs.get('lang', '');
   applyLang(saved0 || ((navigator.language || 'fr').toLowerCase().startsWith('fr') ? 'fr' : 'en'));
   let saved = await store.getMeta('library');
@@ -2513,7 +2920,7 @@ async function init() {
 init();
 
 // Pour les tests automatiques.
-window.__vraiscan = {
+window.__paperlume = window.__vraiscan = {
   lib, get doc() { return doc; }, pages, addFiles, prepareExport, ex, dx, restoreBackup, findDates,
   switchTab, applyLang, importPdf, reader, textEd, camera, splitPage,
 };

@@ -40,4 +40,4 @@ Résultat attendu : **PEGI 3 / Tout public**.
 
 La TWA ne demande **aucune autorisation Android sensible** : l'appareil photo est
 ouvert par le sélecteur de fichiers du système (l'application appareil photo du
-téléphone), pas directement par VraiScan.
+téléphone), pas directement par Paperlume.

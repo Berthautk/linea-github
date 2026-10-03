@@ -1,0 +1,31 @@
+# Déploiement de Weldon sur Render (render.com → New → Blueprint).
+# Les clés secrètes (sync: false) sont demandées par Render à la création.
+services:
+  - type: web
+    name: weldon
+    runtime: node
+    rootDir: weldon/server
+    branch: ccr-1380d074-4mi11g
+    buildCommand: npm ci
+    startCommand: npm start
+    plan: 0.5c-512mb
+    healthCheckPath: /api/config
+    envVars:
+      - key: TOKEN_SECRET
+        generateValue: true
+      - key: CHARIOW_API_KEY
+        sync: false
+      - key: CHARIOW_PRODUCT_ID
+        value: prd_9rngwe51
+      - key: CHARIOW_PULSE_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DATA_DIR
+        value: /data
+      - key: PRICE_XAF
+        value: "10000"
+    disk:
+      name: weldon-data
+      mountPath: /data
+      sizeGB: 1

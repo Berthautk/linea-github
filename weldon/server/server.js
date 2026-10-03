@@ -15,7 +15,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 loadEnv(path.join(__dirname, ".env"));
 
 const PORT = Number(process.env.PORT || 8080);
-const PUBLIC_URL = (process.env.PUBLIC_URL || `http://localhost:${PORT}`).replace(/\/$/, "");
+const PUBLIC_URL = (
+  process.env.PUBLIC_URL ||
+  (process.env.RENDER_EXTERNAL_HOSTNAME ? `https://${process.env.RENDER_EXTERNAL_HOSTNAME}` : `http://localhost:${PORT}`)
+).replace(/\/$/, "");
 const CHARIOW_API = "https://api.chariow.com/v1";
 const CHARIOW_API_KEY = process.env.CHARIOW_API_KEY || "";
 const CHARIOW_PRODUCT_ID = process.env.CHARIOW_PRODUCT_ID || "";
@@ -32,7 +35,7 @@ if (!TOKEN_SECRET || TOKEN_SECRET.length < 32) {
   process.exit(1);
 }
 
-const store = createStore(path.join(__dirname, "data"));
+const store = createStore(process.env.DATA_DIR || path.join(__dirname, "data"));
 
 // ---------- Jetons d'accès signés (HMAC) ----------
 

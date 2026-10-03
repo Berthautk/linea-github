@@ -1,5 +1,8 @@
 # Déploiement de Weldon sur Render (render.com → New → Blueprint).
 # Les clés secrètes (sync: false) sont demandées par Render à la création.
+# Plan gratuit pour la phase de test : le site se met en veille après 15 min d'inactivité
+# et les données locales (appareils, quotas) repartent à zéro à chaque redémarrage.
+# Pour le lancement : plan payant + disque persistant (voir le commentaire en bas).
 services:
   - type: web
     name: weldon
@@ -8,7 +11,7 @@ services:
     branch: ccr-1380d074-4mi11g
     buildCommand: npm ci
     startCommand: npm start
-    plan: 0.5c-512mb
+    plan: free
     healthCheckPath: /api/config
     envVars:
       - key: TOKEN_SECRET
@@ -21,11 +24,8 @@ services:
         sync: false
       - key: ANTHROPIC_API_KEY
         sync: false
-      - key: DATA_DIR
-        value: /data
       - key: PRICE_XAF
         value: "10000"
-    disk:
-      name: weldon-data
-      mountPath: /data
-      sizeGB: 1
+    # Lancement : remplacer « plan: free » par « plan: 0.5c-512mb » et ajouter :
+    #   disk: { name: weldon-data, mountPath: /data, sizeGB: 1 }
+    # ainsi que la variable DATA_DIR=/data.

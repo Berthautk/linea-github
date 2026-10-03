@@ -38,11 +38,12 @@ Sans clés Chariow, l'application reste en **mode démo** (paiement simulé). Sa
 
 Chariow fournit une API REST (`https://api.chariow.com/v1`, clé `sk_live_…` en en-tête `Authorization: Bearer`).
 
-### À faire dans le tableau de bord Chariow
+### À faire dans le tableau de bord Chariow (app.chariow.com)
 
-1. Créer un produit numérique **« Weldon – Accès complet 1 an »** à 10 000 FCFA et le publier. Noter son identifiant (`prd_…`) → `CHARIOW_PRODUCT_ID`.
-2. Créer une clé API dans **Paramètres → API** → `CHARIOW_API_KEY`.
-3. Créer un Pulse (webhook) dans **Automatisations → Pulses** vers `https://<votre-domaine>/api/webhooks/chariow`, événement `successful.sale`. Copier le secret de signature `whsec_…` → `CHARIOW_PULSE_SECRET`.
+1. **Créer le produit** : un produit de type « Fichier téléchargeable » nommé **« Weldon – Accès complet 1 an »**, prix 10 000 FCFA (joindre un petit PDF de bienvenue), puis le **publier**. L'API ne voit que les produits publiés.
+2. **Créer une clé API** : **Settings → API Keys → Create API Key**. La clé (`sk_live_…`) ne s'affiche qu'une fois : la copier tout de suite dans `server/.env` → `CHARIOW_API_KEY`. Ne jamais la mettre dans le code de l'application web.
+3. **Vérifier la connexion** : `cd weldon/server && npm run check-chariow`. Le script affiche le nom de la boutique et la liste des produits publiés avec leur identifiant `prd_…`. Copier celui de Weldon → `CHARIOW_PRODUCT_ID`.
+4. **Créer le Pulse** (une fois l'application en ligne en HTTPS) : **Automation → Pulses → Add Pulse**, URL `https://<votre-domaine>/api/webhooks/chariow`, événement `successful.sale`. Ouvrir le Pulse, onglet **Overview → Signing secret**, copier le secret `whsec_…` → `CHARIOW_PULSE_SECRET`.
 
 ### Déroulement d'un paiement
 

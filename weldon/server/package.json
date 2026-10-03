@@ -5,10 +5,13 @@
   "description": "Serveur Weldon : paiement Chariow, contrôle d'accès, correction par IA",
   "type": "module",
   "main": "server.js",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "node server.js",
-    "test": "node --test"
+    "test": "node --test",
+    "check-chariow": "node chariow-check.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

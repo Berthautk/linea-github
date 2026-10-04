@@ -78,6 +78,9 @@ async function chariow(method, route, body) {
       Accept: "application/json",
     },
     body: body ? JSON.stringify(body) : undefined,
+    signal: AbortSignal.timeout(20_000),
+  }).catch((e) => {
+    throw httpError(504, e.name === "TimeoutError" ? "Chariow ne répond pas. Réessayez dans un instant." : "Impossible de joindre Chariow.");
   });
   const json = await res.json().catch(() => ({}));
   if (!res.ok) {

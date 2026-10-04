@@ -6,6 +6,14 @@ import { fileURLToPath } from "node:url";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (f) => fs.readFileSync(path.join(root, "web", f), "utf8");
+const json = (f) => JSON.parse(fs.readFileSync(path.join(root, "content", f), "utf8"));
+const demoData = {
+  concours: json("concours.json"),
+  epreuves: json("epreuves.json"),
+  oral: json("oral.json"),
+  groupes: json("groupes.json"),
+  correction_demo: json("correction_demo.json"),
+};
 const fonts = read("index.html").match(/<link rel="stylesheet" href="(https:\/\/fonts[^"]+)">/)[1];
 
 const html = `<title>Weldon</title>
@@ -16,7 +24,7 @@ ${read("styles.css")}
 </style>
 <div id="root"></div>
 <script>
-${read("data.js")}
+window.WELDON_DEMO = ${JSON.stringify(demoData).replace(/</g, "\\u003c")};
 </script>
 <script>
 ${read("app.js")}

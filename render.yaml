@@ -24,6 +24,12 @@ services:
         sync: false
       - key: ANTHROPIC_API_KEY
         sync: false
+      # E-mail(s) du concepteur : accès complet sans payer (séparés par des virgules)
+      - key: ADMIN_EMAILS
+        sync: false
+      # Base PostgreSQL gratuite (ex. Neon) : sans elle, les comptes sont effacés à chaque redémarrage
+      - key: DATABASE_URL
+        sync: false
       - key: PRICE_XAF
         value: "10000"
     # Lancement : remplacer « plan: free » par « plan: 0.5c-512mb » et ajouter :

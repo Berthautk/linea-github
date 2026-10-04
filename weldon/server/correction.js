@@ -31,12 +31,13 @@ qui s'entraîne sur l'application Weldon. Lis les photos de la copie, compare-la
 référence et au barème fournis, puis rends une évaluation honnête : ne surnote pas, un concours \
 est sélectif. Explique chaque point faible de façon que le candidat sache quoi faire. \
 Si les photos sont illisibles ou hors sujet, mets lisible à false et explique pourquoi dans l'appréciation. \
-Réponds en français (en anglais si la copie est rédigée en anglais).`;
+Réponds dans la langue de l'épreuve indiquée (français ou anglais).`;
 
 export async function correctCopy(input) {
   client ??= new Anthropic();
 
   const contexte = [
+    `Langue de l'épreuve : ${input.lang === "en" ? "anglais (réponds en anglais)" : "français"}`,
     `Concours : ${input.concours}`,
     `Épreuve : ${input.epreuve}`,
     input.duree_minutes ? `Durée officielle : ${input.duree_minutes} min` : "",

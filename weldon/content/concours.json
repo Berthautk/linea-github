@@ -1,0 +1,387 @@
+[
+  {
+    "id": "police-inspecteurs",
+    "sigle": "POLICE",
+    "couleur": "indigo",
+    "groupe": "dgsn",
+    "oral": false,
+    "fr": {
+      "nom": "Élèves inspecteurs de police",
+      "organisme": "DGSN – Délégation Générale à la Sûreté Nationale",
+      "resume": "Recrutement direct au niveau BEPC pour former les inspecteurs de police, agents de terrain chargés des enquêtes et du maintien de l'ordre.",
+      "fiche": {
+        "presentation": "La Sûreté Nationale recrute chaque année des élèves inspecteurs de police. Après leur admission, les élèves suivent une formation dans les écoles de police avant d'être affectés dans les commissariats, les brigades et les unités spécialisées du pays.",
+        "historique": "La police camerounaise est placée sous l'autorité de la Délégation Générale à la Sûreté Nationale (DGSN). Le concours des élèves inspecteurs est organisé par arrêté du Délégué Général, avec inscription en ligne sur concours-dgsn.cm.",
+        "conditions": [
+          "Être de nationalité camerounaise",
+          "Avoir entre 17 et 28 ans au 1er janvier de l'année du concours (session 2026)",
+          "Être titulaire du BEPC ou du GCE O/L (3 matières au moins)",
+          "Être apte physiquement et médicalement"
+        ],
+        "places": "395 places en recrutement direct (session 2026)",
+        "calendrier": "Inscription en ligne puis dépôt du dossier ; écrits en septembre dans les chefs-lieux de région",
+        "epreuves_officielles": [
+          {
+            "nom": "Rédaction (composition française)",
+            "duree": 150,
+            "coef": 3,
+            "note_eliminatoire": 6
+          },
+          {
+            "nom": "Culture générale",
+            "duree": 150,
+            "coef": 5,
+            "note_eliminatoire": 6
+          }
+        ],
+        "autres_epreuves": "Épreuves sportives et visite médicale pour les admissibles",
+        "admission": "Moyenne d'au moins 12/20 sans note éliminatoire",
+        "a_verifier": "Chiffres de la session 2026 relevés sur les annonces publiques ; vérifier l'arrêté de la session en cours."
+      }
+    },
+    "en": {
+      "nom": "Cadet Police Inspectors",
+      "organisme": "DGSN – General Delegation for National Security",
+      "resume": "Direct recruitment at O-Level to train police inspectors, the field officers in charge of investigations and law enforcement.",
+      "fiche": {
+        "presentation": "The National Security recruits cadet police inspectors every year. Once admitted, cadets train in police schools before being posted to police stations, brigades and specialised units across the country.",
+        "historique": "The Cameroon police is placed under the General Delegation for National Security (DGSN). The cadet inspectors' competition is opened by order of the Delegate General, with online registration on concours-dgsn.cm.",
+        "conditions": [
+          "Be a Cameroonian national",
+          "Be between 17 and 28 years old on 1 January of the competition year (2026 session)",
+          "Hold the GCE O/L (at least 3 subjects) or the BEPC",
+          "Be physically and medically fit"
+        ],
+        "places": "395 places by direct recruitment (2026 session)",
+        "calendrier": "Online registration then file submission; written papers in September in the regional headquarters",
+        "epreuves_officielles": [
+          {
+            "nom": "Essay writing",
+            "duree": 150,
+            "coef": 3,
+            "note_eliminatoire": 6
+          },
+          {
+            "nom": "General knowledge",
+            "duree": 150,
+            "coef": 5,
+            "note_eliminatoire": 6
+          }
+        ],
+        "autres_epreuves": "Sports tests and medical examination for eligible candidates",
+        "admission": "Average of at least 12/20 with no eliminatory mark",
+        "a_verifier": "2026 figures taken from public announcements; check the order for the current session."
+      }
+    }
+  },
+  {
+    "id": "gardiens-paix",
+    "sigle": "GP",
+    "couleur": "indigo",
+    "groupe": "dgsn",
+    "oral": false,
+    "fr": {
+      "nom": "Élèves gardiens de la paix",
+      "organisme": "DGSN – Délégation Générale à la Sûreté Nationale",
+      "resume": "Le plus grand recrutement de la police : les gardiens de la paix assurent la sécurité publique, la circulation et la protection des personnes.",
+      "fiche": {
+        "presentation": "Les gardiens de la paix forment le premier corps de la police camerounaise. Après leur formation en école de police, ils sont affectés aux patrouilles, à la circulation routière, à la garde des bâtiments publics et au maintien de l'ordre.",
+        "historique": "Le concours est ouvert chaque année par arrêté du Délégué Général à la Sûreté Nationale, avec inscription en ligne sur concours-dgsn.cm. C'est le corps qui recrute le plus de candidats.",
+        "conditions": [
+          "Être de nationalité camerounaise",
+          "Respecter la limite d'âge fixée par l'arrêté de la session",
+          "Justifier du niveau scolaire exigé par l'arrêté",
+          "Être apte physiquement et médicalement"
+        ],
+        "places": "1 735 places (session 2026)",
+        "calendrier": "Inscription en ligne puis dépôt du dossier ; écrits dans les chefs-lieux de région",
+        "epreuves_officielles": [
+          {
+            "nom": "Rédaction",
+            "duree": 120,
+            "coef": 3
+          },
+          {
+            "nom": "Culture générale",
+            "duree": 120,
+            "coef": 4
+          }
+        ],
+        "autres_epreuves": "Épreuves sportives et visite médicale pour les admissibles",
+        "admission": "Classement après écrits, sport et visite médicale",
+        "a_verifier": "Âge, diplôme, durées et coefficients à vérifier sur l'arrêté de la session en cours."
+      }
+    },
+    "en": {
+      "nom": "Cadet Police Constables",
+      "organisme": "DGSN – General Delegation for National Security",
+      "resume": "The largest police recruitment: police constables ensure public safety, traffic control and the protection of people.",
+      "fiche": {
+        "presentation": "Police constables form the first corps of the Cameroon police. After training in a police school, they are posted to patrols, traffic control, guarding public buildings and law enforcement.",
+        "historique": "The competition is opened every year by order of the Delegate General for National Security, with online registration on concours-dgsn.cm. It is the corps that recruits the most candidates.",
+        "conditions": [
+          "Be a Cameroonian national",
+          "Meet the age limit set by the order for the session",
+          "Hold the level of education required by the order",
+          "Be physically and medically fit"
+        ],
+        "places": "1,735 places (2026 session)",
+        "calendrier": "Online registration then file submission; written papers in the regional headquarters",
+        "epreuves_officielles": [
+          {
+            "nom": "Essay writing",
+            "duree": 120,
+            "coef": 3
+          },
+          {
+            "nom": "General knowledge",
+            "duree": 120,
+            "coef": 4
+          }
+        ],
+        "autres_epreuves": "Sports tests and medical examination for eligible candidates",
+        "admission": "Ranking after written papers, sports and medical examination",
+        "a_verifier": "Age, diploma, durations and coefficients to be checked on the order for the current session."
+      }
+    }
+  },
+  {
+    "id": "emia",
+    "sigle": "EMIA",
+    "couleur": "green",
+    "groupe": "mindef",
+    "oral": true,
+    "fr": {
+      "nom": "École Militaire Interarmées",
+      "organisme": "MINDEF – Ministère de la Défense",
+      "resume": "L'école qui forme les officiers des forces de défense camerounaises. Son cœur de métier : la formation au commandement.",
+      "fiche": {
+        "presentation": "L'EMIA, à Yaoundé, forme les officiers de l'Armée de Terre, de la Marine, de l'Armée de l'Air et de la Gendarmerie. Le concours du Cours « A » recrute directement des bacheliers et des diplômés du supérieur.",
+        "historique": "Créée en 1959, l'école est inaugurée le 18 janvier 1961 sous le nom d'École Militaire Interarmes du Cameroun (EMIAC). Chaque promotion reçoit un nom de baptême à sa sortie.",
+        "conditions": [
+          "Être de nationalité camerounaise, de bonne moralité, avec un casier judiciaire vierge",
+          "Cours « A » (recrutement direct) : avoir entre 18 et 23 ans",
+          "Cours « B » : réservé aux militaires en service, avec une limite d'âge plus élevée",
+          "Être reconnu apte après visite médicale"
+        ],
+        "places": "Fixées chaque année par arrêté du MINDEF",
+        "calendrier": "Ouverture au premier semestre, écrits en milieu d'année, résultats définitifs à l'automne",
+        "epreuves_officielles": [
+          {
+            "nom": "Culture générale",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Mathématiques ou épreuve de spécialité",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Langue (français / anglais)",
+            "duree": 120,
+            "coef": 2
+          }
+        ],
+        "autres_epreuves": "Épreuves sportives, visite médicale et entretien devant un jury",
+        "admission": "Classement final après écrits, sport et oral",
+        "a_verifier": "Durées et coefficients à confirmer sur l'arrêté de la session en cours."
+      }
+    },
+    "en": {
+      "nom": "Joint Military School",
+      "organisme": "MINDEF – Ministry of Defence",
+      "resume": "The school that trains officers of the Cameroon defence forces. Its core mission: training for command.",
+      "fiche": {
+        "presentation": "EMIA, in Yaoundé, trains officers for the Army, the Navy, the Air Force and the Gendarmerie. The Course \"A\" competition directly recruits holders of the Baccalaureate / GCE A Level and university graduates.",
+        "historique": "Created in 1959, the school was inaugurated on 18 January 1961 as the Cameroon Joint Military School (EMIAC). Each graduating class receives a name at its passing-out ceremony.",
+        "conditions": [
+          "Be a Cameroonian national of good conduct with a clean criminal record",
+          "Course \"A\" (direct recruitment): be between 18 and 23 years old",
+          "Course \"B\": reserved for serving soldiers, with a higher age limit",
+          "Be declared fit after a medical examination"
+        ],
+        "places": "Set every year by order of the Ministry of Defence",
+        "calendrier": "Opening in the first half of the year, written papers mid-year, final results in the autumn",
+        "epreuves_officielles": [
+          {
+            "nom": "General knowledge",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Mathematics or specialty paper",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Language (English / French)",
+            "duree": 120,
+            "coef": 2
+          }
+        ],
+        "autres_epreuves": "Sports tests, medical examination and an interview before a panel",
+        "admission": "Final ranking after written papers, sports and oral",
+        "a_verifier": "Durations and coefficients to be confirmed on the order for the current session."
+      }
+    }
+  },
+  {
+    "id": "ens-yaounde",
+    "sigle": "ENS",
+    "couleur": "amber",
+    "groupe": "minesup",
+    "oral": true,
+    "fr": {
+      "nom": "École Normale Supérieure de Yaoundé – 1er cycle",
+      "organisme": "MINESUP – Université de Yaoundé I",
+      "resume": "Forme les professeurs de l'enseignement secondaire général (PCEG au 1er cycle).",
+      "fiche": {
+        "presentation": "L'ENS de Yaoundé forme les enseignants des lycées et collèges. Le concours d'entrée en 1re année du 1er cycle est ouvert aux bacheliers selon les filières.",
+        "historique": "L'ENS de Yaoundé est l'une des plus anciennes grandes écoles du pays. Elle est rattachée à l'Université de Yaoundé I.",
+        "conditions": [
+          "Être titulaire du baccalauréat ou du GCE A/L selon la filière",
+          "Candidats non fonctionnaires : 29 ans au plus au 1er janvier de l'année du concours",
+          "Constituer le dossier demandé par l'arrêté (relevés de notes, acte de naissance, etc.)"
+        ],
+        "places": "Fixées par filière dans l'arrêté du MINESUP",
+        "calendrier": "Écrits du 1er cycle fin août",
+        "epreuves_officielles": [
+          {
+            "nom": "Étude du dossier scolaire",
+            "duree": 0,
+            "coef": "25 %"
+          },
+          {
+            "nom": "Épreuve écrite de spécialité",
+            "duree": 180,
+            "coef": "37,5 %"
+          },
+          {
+            "nom": "Épreuve écrite de culture générale",
+            "duree": 180,
+            "coef": "37,5 %"
+          }
+        ],
+        "autres_epreuves": "Oral d'admission pour les candidats admissibles",
+        "admission": "Dossier (25 %) + écrits (75 %), puis oral",
+        "a_verifier": "Pondération relevée pour la session 2026 ; vérifier l'arrêté MINESUP."
+      }
+    },
+    "en": {
+      "nom": "Higher Teacher Training College Yaoundé – 1st cycle",
+      "organisme": "MINESUP – University of Yaoundé I",
+      "resume": "Trains secondary school teachers (PCEG at the 1st cycle).",
+      "fiche": {
+        "presentation": "ENS Yaoundé (Higher Teacher Training College) trains teachers for secondary schools. The first-year entrance examination of the 1st cycle is open to holders of the GCE A Level or Baccalaureate, depending on the subject.",
+        "historique": "ENS Yaoundé is one of the oldest higher schools in the country. It is attached to the University of Yaoundé I.",
+        "conditions": [
+          "Hold the GCE A Level or the Baccalaureate, depending on the subject",
+          "Candidates who are not civil servants: 29 years old at most on 1 January of the competition year",
+          "Submit the file required by the order (transcripts, birth certificate, etc.)"
+        ],
+        "places": "Set per subject in the MINESUP order",
+        "calendrier": "1st cycle written papers at the end of August",
+        "epreuves_officielles": [
+          {
+            "nom": "Study of school records",
+            "duree": 0,
+            "coef": "25 %"
+          },
+          {
+            "nom": "Written specialty paper",
+            "duree": 180,
+            "coef": "37.5 %"
+          },
+          {
+            "nom": "Written general culture paper",
+            "duree": 180,
+            "coef": "37.5 %"
+          }
+        ],
+        "autres_epreuves": "Oral admission test for eligible candidates",
+        "admission": "Records (25 %) + written papers (75 %), then oral",
+        "a_verifier": "Weighting taken for the 2026 session; check the MINESUP order."
+      }
+    }
+  },
+  {
+    "id": "enam",
+    "sigle": "ENAM",
+    "couleur": "red",
+    "groupe": "minfopra",
+    "oral": true,
+    "fr": {
+      "nom": "École Nationale d'Administration et de Magistrature",
+      "organisme": "MINFOPRA",
+      "resume": "Forme les administrateurs civils, magistrats, greffiers et cadres des régies financières.",
+      "fiche": {
+        "presentation": "L'ENAM, à Yaoundé, prépare aux carrières de la haute fonction publique : administration générale, magistrature, greffes, douanes, impôts, trésor.",
+        "historique": "L'ENAM succède à l'École Camerounaise d'Administration (ECA), créée en 1959 pour former les cadres appelés à prendre la relève de l'administration coloniale.",
+        "conditions": [
+          "Être de nationalité camerounaise",
+          "Cycle A : licence ou master selon la division ; cycle B : baccalauréat ou équivalent",
+          "Limites d'âge fixées par l'arrêté de chaque division"
+        ],
+        "places": "220 places à la session 2026 (toutes divisions)",
+        "calendrier": "Arrêtés en juin, écrits entre août et septembre selon la division",
+        "epreuves_officielles": [
+          {
+            "nom": "Culture générale (dissertation)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Épreuve de spécialité (droit, économie…)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Résumé / note de synthèse",
+            "duree": 180,
+            "coef": 2
+          }
+        ],
+        "autres_epreuves": "Grand oral devant un jury pour les admissibles",
+        "admission": "Classement après écrits et oral",
+        "a_verifier": "Durées et coefficients variables selon la division ; vérifier l'arrêté."
+      }
+    },
+    "en": {
+      "nom": "National School of Administration and Magistracy",
+      "organisme": "MINFOPRA",
+      "resume": "Trains civil administrators, magistrates, court registrars and officials of the revenue services.",
+      "fiche": {
+        "presentation": "ENAM, in Yaoundé, prepares candidates for senior public service careers: general administration, magistracy, court registry, customs, taxation, treasury.",
+        "historique": "ENAM succeeds the Cameroon School of Administration (ECA), created in 1959 to train the officials who would take over from the colonial administration.",
+        "conditions": [
+          "Be a Cameroonian national",
+          "Cycle A: Bachelor's or Master's degree depending on the division; Cycle B: GCE A Level, Baccalaureate or equivalent",
+          "Age limits set by the order of each division"
+        ],
+        "places": "220 places in the 2026 session (all divisions)",
+        "calendrier": "Orders in June, written papers between August and September depending on the division",
+        "epreuves_officielles": [
+          {
+            "nom": "General culture (essay)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Specialty paper (law, economics…)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Summary / synthesis note",
+            "duree": 180,
+            "coef": 2
+          }
+        ],
+        "autres_epreuves": "Final oral before a panel for eligible candidates",
+        "admission": "Ranking after written papers and oral",
+        "a_verifier": "Durations and coefficients vary by division; check the order."
+      }
+    }
+  }
+]

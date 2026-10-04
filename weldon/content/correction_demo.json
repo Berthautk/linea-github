@@ -1,0 +1,54 @@
+{
+  "fr": {
+    "lisible": true,
+    "transcription_resume": "Le candidat introduit le sujet par la jeunesse de la population, développe deux causes (pauvreté, drogue) et propose des patrouilles et des formations.",
+    "note_sur_20": 11.5,
+    "appreciation": "Copie sérieuse et bien organisée, mais l'argumentation reste trop générale. Le lien entre chômage et insécurité est affirmé plus que démontré.",
+    "points_forts": [
+      "Introduction claire avec une problématique posée",
+      "Plan visible en deux parties",
+      "Solutions adaptées au rôle de l'inspecteur de police"
+    ],
+    "points_faibles": [
+      "Aucune nuance : le chômage est présenté comme la seule cause",
+      "Exemples peu précis (aucun quartier, aucun programme d'insertion cité)",
+      "Conclusion sans ouverture"
+    ],
+    "erreurs_langue": [
+      "« les jeunes qui sont désœuvré » → « désœuvrés »",
+      "« malgré que » → « bien que »"
+    ],
+    "conseils": [
+      "Ajoutez une sous-partie « le chômage n'explique pas tout » pour nuancer.",
+      "Citez un programme réel (PIAASI, FNE) et un exemple de ville.",
+      "Gardez 10 minutes à la fin pour relire l'orthographe."
+    ],
+    "gestion_du_temps": "Copie rendue en 1 h 52 sur 2 h 30 : vous aviez le temps de relire et d'enrichir les exemples."
+  },
+  "en": {
+    "lisible": true,
+    "transcription_resume": "The candidate introduces the topic with the youth of the population, develops two causes (poverty, drugs) and proposes patrols and training.",
+    "note_sur_20": 11.5,
+    "appreciation": "Serious, well-organised paper, but the argument remains too general. The link between unemployment and insecurity is stated more than demonstrated.",
+    "points_forts": [
+      "Clear introduction with a stated problem",
+      "Visible two-part plan",
+      "Solutions suited to the role of a police inspector"
+    ],
+    "points_faibles": [
+      "No nuance: unemployment is presented as the only cause",
+      "Vague examples (no neighbourhood or employment programme named)",
+      "Conclusion without an opening"
+    ],
+    "erreurs_langue": [
+      "\"the youths who is unemployed\" → \"who are\"",
+      "\"informations\" → \"information\" (uncountable)"
+    ],
+    "conseils": [
+      "Add a sub-part \"unemployment does not explain everything\" to bring nuance.",
+      "Name a real programme (PIAASI, National Employment Fund) and a town.",
+      "Keep 10 minutes at the end to check spelling."
+    ],
+    "gestion_du_temps": "Paper handed in after 1 h 52 out of 2 h 30: you had time to proofread and strengthen your examples."
+  }
+}

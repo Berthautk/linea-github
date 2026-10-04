@@ -1,0 +1,18 @@
+{
+  "dgsn": {
+    "fr": "DGSN – Sûreté Nationale (Police)",
+    "en": "DGSN – National Security (Police)"
+  },
+  "mindef": {
+    "fr": "MINDEF – Défense",
+    "en": "MINDEF – Defence"
+  },
+  "minesup": {
+    "fr": "MINESUP – Enseignement supérieur",
+    "en": "MINESUP – Higher Education"
+  },
+  "minfopra": {
+    "fr": "MINFOPRA – Fonction publique",
+    "en": "MINFOPRA – Public Service"
+  }
+}

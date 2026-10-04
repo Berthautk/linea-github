@@ -1,0 +1,92 @@
+{
+  "emia": {
+    "fr": {
+      "deroulement": "Entretien d'une vingtaine de minutes devant un jury d'officiers. Le jury évalue la motivation, la présentation, la culture générale, la connaissance de l'institution militaire et l'aptitude au commandement.",
+      "questions": [
+        "Présentez-vous en deux minutes.",
+        "Pourquoi voulez-vous devenir officier ?",
+        "Que savez-vous de l'EMIA et de ses promotions ?",
+        "Quelles qualités doit avoir un chef ?",
+        "Que feriez-vous si un subordonné refusait d'exécuter un ordre ?",
+        "Citez les grandes missions des forces de défense camerounaises."
+      ],
+      "conseils": [
+        "Tenue sobre, posture droite, regard franc vers le jury.",
+        "Préparez une présentation de deux minutes et répétez-la à voix haute.",
+        "Révisez l'actualité de défense et de sécurité des six derniers mois.",
+        "Répondez avec calme ; si vous ne savez pas, dites-le simplement."
+      ]
+    },
+    "en": {
+      "deroulement": "An interview of about twenty minutes before a panel of officers. The panel assesses motivation, presentation, general knowledge, knowledge of the military institution and aptitude for command.",
+      "questions": [
+        "Introduce yourself in two minutes.",
+        "Why do you want to become an officer?",
+        "What do you know about EMIA and its graduating classes?",
+        "What qualities should a leader have?",
+        "What would you do if a subordinate refused to carry out an order?",
+        "Name the main missions of the Cameroon defence forces."
+      ],
+      "conseils": [
+        "Sober outfit, upright posture, look the panel in the eye.",
+        "Prepare a two-minute introduction and rehearse it out loud.",
+        "Review defence and security news from the last six months.",
+        "Answer calmly; if you do not know, say so simply."
+      ]
+    }
+  },
+  "ens-yaounde": {
+    "fr": {
+      "deroulement": "Oral d'admission pour les candidats admissibles : entretien portant sur la motivation pour le métier d'enseignant et sur la discipline choisie.",
+      "questions": [
+        "Pourquoi voulez-vous enseigner ?",
+        "Comment géreriez-vous une classe de 80 élèves ?",
+        "Expliquez une notion de votre discipline comme à des élèves de 6e."
+      ],
+      "conseils": [
+        "Montrez votre goût de la transmission avec un exemple vécu.",
+        "Entraînez-vous à expliquer simplement une notion de votre matière."
+      ]
+    },
+    "en": {
+      "deroulement": "Oral admission test for eligible candidates: an interview on motivation for the teaching profession and on the chosen subject.",
+      "questions": [
+        "Why do you want to teach?",
+        "How would you manage a class of 80 students?",
+        "Explain a notion from your subject as you would to Form 1 students."
+      ],
+      "conseils": [
+        "Show your love of teaching with a real-life example.",
+        "Practise explaining a notion of your subject simply."
+      ]
+    }
+  },
+  "enam": {
+    "fr": {
+      "deroulement": "Grand oral devant un jury de hauts fonctionnaires et magistrats : tirage d'un sujet, courte préparation, exposé puis questions.",
+      "questions": [
+        "Quel est le rôle du préfet dans l'administration territoriale ?",
+        "Qu'est-ce que la séparation des pouvoirs ?",
+        "Comment lutter contre la corruption dans l'administration ?"
+      ],
+      "conseils": [
+        "Annoncez un plan en deux parties dès le début de l'exposé.",
+        "Maîtrisez la Constitution et l'organisation administrative du pays.",
+        "Gardez un ton mesuré et neutre sur les questions politiques."
+      ]
+    },
+    "en": {
+      "deroulement": "Final oral before a panel of senior civil servants and magistrates: you draw a topic, prepare briefly, give a presentation, then answer questions.",
+      "questions": [
+        "What is the role of the Senior Divisional Officer in territorial administration?",
+        "What is the separation of powers?",
+        "How can corruption in the public service be fought?"
+      ],
+      "conseils": [
+        "Announce a two-part plan at the start of your presentation.",
+        "Master the Constitution and the administrative organisation of the country.",
+        "Keep a measured, neutral tone on political questions."
+      ]
+    }
+  }
+}

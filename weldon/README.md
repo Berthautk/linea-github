@@ -8,14 +8,19 @@ Fonctionne dans le navigateur (ordinateur, tablette, téléphone), s'installe co
 
 | Dossier | Rôle |
 |---|---|
-| `web/` | L'application (HTML, CSS, JavaScript sans framework). `data.js` contient le catalogue : concours, épreuves, corrigés, oral. |
+| `web/` | L'application (HTML, CSS, JavaScript sans framework), en français et en anglais. |
+| `content/` | Le catalogue : `concours.json` (fiches FR/EN), `epreuves.json` (sujets, barèmes, corrigés), `oral.json`, `groupes.json`. |
 | `server/` | Serveur Node.js : sert l'application, gère le paiement Chariow, délivre les accès d'un an, corrige les copies avec l'IA. |
 | `tools/build-demo.mjs` | Produit `dist/weldon-demo.html`, une démo autonome en un seul fichier (paiement et correction simulés). |
 
 ## Les sections de l'application
 
+Chaque élève crée **son propre compte** (e-mail + mot de passe), puis choisit sa **section francophone ou anglophone**. Tout le contenu (fiches, épreuves, corrigés, oral, interface) suit la section choisie ; on peut en changer depuis « Mon compte ».
+
+Les épreuves sont classées par **école** (regroupées par ministère : DGSN, MINDEF, MINESUP, MINFOPRA…), puis par **session** (2025, 2024…), avec dans chaque session les épreuves du concours (ex. Rédaction / Essay writing et Culture générale / General knowledge).
+
 1. **Les concours** : présentation de chaque concours (historique, conditions, limite d'âge, épreuves, durées, coefficients, oral, calendrier). Gratuit.
-2. **Épreuves** : sujets classés par concours puis par année. Sans abonnement, l'utilisateur choisit **une** épreuve offerte ; les autres sont floutées.
+2. **Épreuves** : école → session → épreuve. Sans abonnement, chaque compte choisit **une** épreuve offerte ; les autres sont verrouillées. Le serveur n'envoie le texte qu'aux comptes autorisés.
 3. **Corrigés rédigés** : chaque sujet entièrement rédigé. Réservé aux abonnés.
 4. **Préparer l'oral** : déroulement, questions fréquentes du jury, conseils. Le déroulement est visible gratuitement, le reste est flouté.
 5. **Salle d'examen** : choix du concours puis de l'épreuve, 2 minutes de préparation (cahier, stylo, calme), sujet affiché avec le chronomètre officiel (ex. 2 h 30), bouton « J'ai terminé », temps enregistré, photos de la copie, correction par l'IA (note /20, points forts, points faibles, fautes de langue, conseils, gestion du temps), puis corrigé rédigé.
@@ -29,7 +34,7 @@ cd weldon/server
 npm install
 cp .env.example .env      # puis remplir TOKEN_SECRET au minimum
 npm start                 # http://localhost:8080
-npm test                  # 7 tests (paiement, jetons, webhook) sans réseau
+npm test                  # 9 tests (comptes, contenu protégé, paiement, webhook) sans réseau
 ```
 
 Sans clés Chariow, l'application reste en **mode démo** (paiement simulé). Sans `ANTHROPIC_API_KEY`, la correction affiche un exemple.
@@ -47,12 +52,12 @@ Chariow fournit une API REST (`https://api.chariow.com/v1`, clé `sk_live_…` e
 
 ### Déroulement d'un paiement
 
-1. L'utilisateur saisit prénom, nom, e-mail et numéro Mobile Money.
+1. L'élève connecté saisit son numéro Mobile Money ; le paiement est ouvert au nom et à l'e-mail de son compte.
 2. Le serveur appelle `POST /v1/checkout` avec `redirect_url = https://<domaine>/?sale={sale_id}` et reçoit `checkout_url`.
 3. L'utilisateur paie sur la page Chariow, puis revient dans Weldon.
-4. Le serveur vérifie la vente avec `GET /v1/sales/{sale_id}` : statut `completed`, bon produit. Il délivre alors un jeton signé valable 365 jours après la date de paiement.
-5. « Retrouver mon accès » (changement de téléphone) : recherche par e-mail dans les ventes de l'année.
-6. Un même achat fonctionne sur 3 appareils au plus (`MAX_DEVICES`) pour limiter le partage de compte.
+4. Le serveur vérifie la vente avec `GET /v1/sales/{sale_id}` : statut `completed`, bon produit, **même e-mail que le compte**. Le compte devient abonné pour 365 jours après la date de paiement.
+5. « Vérifier mon paiement » : recherche chez Chariow des ventes payées avec l'e-mail du compte (utile si le retour automatique a échoué).
+6. L'élève peut se connecter sur autant d'appareils qu'il veut avec son e-mail et son mot de passe. Changer de mot de passe déconnecte les autres appareils.
 
 La clé API reste sur le serveur ; elle n'est jamais envoyée au navigateur. Les Pulses sont vérifiés par HMAC-SHA256 sur le corps brut et dédoublonnés par `x-pulse-delivery-id`.
 
@@ -65,7 +70,7 @@ Il n'existe pas d'IA à la fois gratuite et fiable pour lire une copie manuscrit
 ## Mise en ligne
 
 - **Hébergement** : n'importe quel hébergeur Node.js (Render, Railway, Fly.io, un VPS). Le serveur sert à la fois l'API et l'application. HTTPS est obligatoire (Chariow l'exige pour les Pulses).
-- **Base de données** : le prototype enregistre les appareils et quotas dans `server/data/store.json`. Pour la production, passer à PostgreSQL ou Supabase.
+- **Base de données** : les comptes sont enregistrés dans PostgreSQL via `DATABASE_URL` (Neon propose une base gratuite). Sans elle, un fichier local est utilisé : sur Render gratuit il est effacé à chaque redémarrage.
 - **Play Store** : l'application étant une PWA, on l'emballe avec **Bubblewrap** (Trusted Web Activity) ou **Capacitor**, puis on publie via un compte Google Play Console (25 $ une fois). Google exige ses propres moyens de paiement pour les contenus numériques achetés *dans* une application Play Store : vérifier les règles de facturation de Google Play pour le Cameroun avant la publication. Le site web n'est pas concerné.
 
 ## Nom « Weldon »
@@ -88,9 +93,58 @@ Vérification du 3 octobre 2026 :
 
 MAXA est le concurrent le plus proche. Ses prix sont bas : à 10 000 FCFA, Weldon doit offrir clairement plus (plus de concours, corrigés rédigés, oral, correction de copie).
 
+## Accès concepteur
+
+Les e-mails listés dans `ADMIN_EMAILS` ont **tout l'accès sans payer** et un **espace concepteur** (Mon compte → Espace concepteur) :
+- liste des comptes inscrits, avec leur section et leur statut ;
+- « Offrir un accès » : donne un accès complet pour N jours à un compte existant (testeurs, enseignants partenaires).
+
+## Ajouter des épreuves
+
+Chaque épreuve est une entrée de `content/epreuves.json` :
+
+```json
+{
+  "id": "gp-2023-redaction-fr",
+  "concours": "gardiens-paix",
+  "lang": "fr",
+  "annee": 2023,
+  "matiere": "Rédaction",
+  "duree": 120,
+  "sujet": "Texte du sujet…",
+  "bareme": "Barème…",
+  "corrige": "Corrigé entièrement rédigé…"
+}
+```
+
+`lang` vaut `fr` (section francophone) ou `en` (section anglophone). L'application classe toute seule par école puis par session. Retirer `"exemple": true` pour un vrai sujet officiel.
+
+## Protection contre les captures d'écran
+
+Sur le web, **aucun site ne peut techniquement empêcher une capture d'écran** (le navigateur ne le permet pas). Weldon combine donc :
+- un **filigrane** au nom et à l'e-mail de l'élève sur chaque sujet et corrigé : une capture qui circule désigne son auteur ;
+- le contenu est **masqué** dès que l'application perd le focus (outil de capture, changement d'application) ;
+- les raccourcis de capture (Impr. écran, Cmd+Maj+3/4/5, Win+Maj+S) masquent le contenu et vident le presse-papiers ;
+- copier, couper, clic droit, sélection et impression sont bloqués sur les sujets et corrigés ;
+- le texte n'est envoyé qu'aux comptes autorisés.
+
+Dans l'**application Android** (Play Store, via Capacitor), le blocage devient réel : le drapeau `FLAG_SECURE` interdit captures et enregistrements d'écran (l'écran apparaît noir) :
+
+```java
+// android/app/src/main/java/.../MainActivity.java
+import android.os.Bundle;
+import android.view.WindowManager;
+public class MainActivity extends BridgeActivity {
+  @Override public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+  }
+}
+```
+
 ## Points à décider
 
-1. **Contenu** : le fichier `web/data.js` contient des *sujets d'entraînement* rédigés pour la démo. Les vraies anciennes épreuves doivent être obtenues légalement (sujets publics, accord des auteurs ou rédaction par une équipe d'enseignants). Ne pas recopier les sites concurrents.
-2. **Protection du contenu** : dans le prototype, les épreuves sont chargées dans le navigateur et seulement floutées. Avant le lancement, le serveur doit envoyer sujets et corrigés uniquement aux abonnés (route `/api/content` protégée par jeton).
+1. **Contenu** : `content/epreuves.json` contient des *sujets d'entraînement* rédigés pour la démo. Les vraies anciennes épreuves doivent être obtenues légalement (sujets publics, accord des auteurs ou rédaction par une équipe d'enseignants). Ne pas recopier les sites concurrents.
+2. **Mot de passe oublié** : il faut un service d'envoi d'e-mails (ex. Brevo, gratuit jusqu'à 300 e-mails/jour) pour envoyer un lien de réinitialisation.
 3. **Prix** : propositions à tester : abonnement par concours (ex. 3 000 FCFA), accès complet à 10 000 FCFA, essai gratuit de 7 jours, parrainage via les affiliés Chariow.
 4. **Fiches des concours** : chaque fiche porte un champ `a_verifier`. Vérifier les chiffres sur les arrêtés officiels de la session en cours.

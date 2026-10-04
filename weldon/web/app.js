@@ -54,6 +54,13 @@
       moreSoon: (n) => `${n} autres concours sont décrits dans « Les concours ». Leurs épreuves arrivent au fur et à mesure.`,
       officialNote: "Informations relevées dans les communiqués officiels. Vérifiez toujours l'arrêté de la session en cours.",
       latestPlaces: (y, d) => `${y} : ${d}${/place/i.test(d) ? "" : " places"}`,
+      practiceBlock: "Sujets d'entraînement Weldon",
+      practiceSub: "Rédigés par Weldon au format officiel du concours, avec corrigé complet.",
+      coverage: "Épreuves par concours",
+      coverageSub: (a, b) => `${a} concours sur ${b} ont au moins une épreuve dans cette section.`,
+      thPapers: "Épreuves",
+      thOfficial: "Officielles",
+      thConcours: "Concours",
       presentation: "Présentation",
       pickConcours: "Choisis ton concours",
       pickConcoursSub: "Conditions, limite d'âge, épreuves, coefficients, oral : tout ce qu'il faut savoir avant de déposer ton dossier.",
@@ -228,6 +235,13 @@
       moreSoon: (n) => `${n} other competitions are described under "Competitions". Their papers are being added progressively.`,
       officialNote: "Information taken from official announcements. Always check the order for the current session.",
       latestPlaces: (y, d) => `${y}: ${d}${/place/i.test(d) ? "" : " places"}`,
+      practiceBlock: "Weldon practice papers",
+      practiceSub: "Written by Weldon in the official format of the competition, with a full model answer.",
+      coverage: "Papers per competition",
+      coverageSub: (a, b) => `${a} of ${b} competitions have at least one paper in this section.`,
+      thPapers: "Papers",
+      thOfficial: "Official",
+      thConcours: "Competition",
       presentation: "Overview",
       pickConcours: "Choose your competition",
       pickConcoursSub: "Requirements, age limit, papers, coefficients, oral: everything to know before you apply.",
@@ -921,22 +935,25 @@
   function viewSessions(c, mode) {
     const L = t();
     const eps = epreuvesOf(c.id);
-    const years = [...new Set(eps.map((e) => e.annee))].sort((a, b) => b - a);
-    const blocks = years
-      .map((y) => {
-        const rows = eps
-          .filter((e) => e.annee === y)
+    const official = eps.filter((e) => !e.exemple);
+    const practice = eps.filter((e) => e.exemple);
+    const years = [...new Set(official.map((e) => e.annee))].sort((a, b) => b - a);
+    const groups = years.map((y) => [L.session(y), official.filter((e) => e.annee === y), ""]);
+    if (practice.length) groups.push([L.practiceBlock, practice.sort((a, b) => b.annee - a.annee), L.practiceSub]);
+    const blocks = groups
+      .map(([label, list, sub]) => {
+        const rows = list
           .map((e) => {
             const open = canSee(e, mode);
             const free = state.user.free_id === e.id && !premium() ? `<span class="tag tag-green">${L.offered}</span>` : "";
             const action = mode === "salle" ? `data-start="${e.id}"` : `data-doc="${e.id}" data-mode="${mode}"`;
             const right = open ? `<span class="muted">${hm(e.duree)}</span>${I.chevron}` : `<span class="lock-pill">${I.lock}${mode === "epreuves" && !state.user.free_id ? L.readFree : L.locked}</span>`;
             return `<button type="button" class="paper-row" ${action}>
-                <span style="min-width:0"><b>${esc(e.matiere)}</b><span class="small muted">${hm(e.duree)}${e.exemple ? " · " + L.sampleTag : ""}</span></span>
+                <span style="min-width:0"><b>${esc(e.matiere)}</b><span class="small muted">${hm(e.duree)}${e.exemple ? " · " + L.sampleTag + " " + e.annee : ""}</span></span>
                 <span class="row">${free}${right}</span></button>`;
           })
           .join("");
-        return `<section class="session"><div class="year-label">${L.session(y)}</div><div class="paper-list">${rows}</div></section>`;
+        return `<section class="session"><div class="year-label">${esc(label)}</div>${sub ? `<p class="small muted">${esc(sub)}</p>` : ""}<div class="paper-list">${rows}</div></section>`;
       })
       .join("");
     return `
@@ -962,7 +979,7 @@
     const isCorrige = mode === "corriges";
     return `
       <button type="button" class="back" data-back>${I.back} ${esc(c.nom)}</button>
-      <div><span class="eyebrow">${esc(c.nom)} · ${L.session(meta.annee)}</span>
+      <div><span class="eyebrow">${esc(c.nom)} · ${meta.exemple ? L.practiceBlock : L.session(meta.annee)}</span>
         <h1>${isCorrige ? L.modelAnswer + " — " : ""}${esc(meta.matiere)}</h1></div>
       <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
         <span class="tag tag-line">${L.duration(hm(meta.duree))}</span>
@@ -1288,6 +1305,8 @@
           <p class="err full" id="grant-err" hidden></p>
           <button type="submit" class="btn btn-primary full">${L.grant}</button>
         </form>
+        <h3>${L.coverage} · ${L.section}</h3>
+        ${coverageTable()}
         <h3>${L.adminUsers} (${users.length})</h3>
         <div class="table-wrap"><table><thead><tr><th>${L.thUser}</th><th>Section</th><th>${L.thStatus}</th></tr></thead><tbody>${rows}</tbody></table></div>`,
         true
@@ -1295,6 +1314,21 @@
     } catch (e) {
       toast(e.message);
     }
+  }
+
+  function coverageTable() {
+    const L = t();
+    const rows = state.catalog.concours.map((c) => {
+      const eps = epreuvesOf(c.id);
+      return { c, n: eps.length, off: eps.filter((e) => !e.exemple).length };
+    });
+    const done = rows.filter((r) => r.n).length;
+    rows.sort((a, b) => b.n - a.n || a.c.nom.localeCompare(b.c.nom));
+    const tr = rows
+      .map((r) => `<tr><td><b>${esc(r.c.sigle)}</b> ${esc(r.c.nom)}</td><td>${r.n || "—"}</td><td>${r.off || "—"}</td></tr>`)
+      .join("");
+    return `<p class="small muted">${L.coverageSub(done, rows.length)}</p>
+      <div class="table-wrap" style="max-height:320px;overflow:auto"><table><thead><tr><th>${L.thConcours}</th><th>${L.thPapers}</th><th>${L.thOfficial}</th></tr></thead><tbody>${tr}</tbody></table></div>`;
   }
 
   async function submitGrant(form) {

@@ -309,7 +309,7 @@
           "Épreuves sportives",
           "Visite médicale"
         ],
-        "sessions": "Sessions annuelles (2026 : épreuves le 30 mars)",
+        "sessions": "Sessions annuelles (2026 : épreuves le 30 mars) (documentées : 2015, 2021, 2022, 2023, 2025)",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
       }
@@ -358,7 +358,7 @@
           "Sports tests",
           "Medical examination"
         ],
-        "sessions": "Annual sessions (2026: papers on 30 March)",
+        "sessions": "Annual sessions (2026: papers on 30 March) (documented: 2015, 2021, 2022, 2023, 2025)",
         "places": [],
         "places_note": "Places set by annual order"
       }
@@ -443,6 +443,230 @@
     "source_annales": "Sujets non publiés"
   },
   {
+    "id": "gendarmerie-eleves-gendarmes-sous-officiers",
+    "sigle": "GEND.",
+    "couleur": "indigo",
+    "groupe": "MINDEF",
+    "categorie": "direct",
+    "tutelle": "MINDEF",
+    "oral": false,
+    "fr": {
+      "nom": "Gendarmerie nationale – élèves gendarmes et élèves sous-officiers",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Mathématiques (QCM)",
+          "Français ou anglais",
+          "Épreuves sportives",
+          "Visite médicale"
+        ],
+        "sessions": "2017, 2021, 2022, 2023, 2025",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "3 340 (300 sous-officiers service général, 40 santé militaire, 3 000 élèves gendarmes)"
+          },
+          {
+            "annee": "2017",
+            "detail": "2 500 (270 sous-officiers, 30 santé militaire, 2 200 élèves gendarmes)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "National Gendarmerie – cadet gendarmes and cadet non-commissioned officers",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "General knowledge",
+          "Mathematics (MCQ)",
+          "English or French",
+          "Sports tests",
+          "Medical examination"
+        ],
+        "sessions": "2017, 2021, 2022, 2023, 2025",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "3,340 (300 general-service NCOs, 40 military health, 3,000 cadet gendarmes)"
+          },
+          {
+            "annee": "2017",
+            "detail": "2,500 (270 NCOs, 30 military health, 2,200 cadet gendarmes)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "armees-sous-officiers-soldats-matelots",
+    "sigle": "ARMÉES",
+    "couleur": "green",
+    "groupe": "MINDEF",
+    "categorie": "direct",
+    "tutelle": "MINDEF",
+    "oral": false,
+    "fr": {
+      "nom": "Armées – élèves sous-officiers, soldats et matelots de 2e classe",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Mathématiques",
+          "Langue",
+          "Épreuves sportives",
+          "Visite médicale"
+        ],
+        "sessions": "2017, 2025",
+        "places": [
+          {
+            "annee": "2017",
+            "detail": "3 500 (360 sous-officiers, 40 santé militaire, 600 soldats spécialistes, 2 500 soldats du service général)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Armed forces – cadet NCOs, privates and 2nd-class seamen",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "General knowledge",
+          "Mathematics",
+          "Language",
+          "Sports tests",
+          "Medical examination"
+        ],
+        "sessions": "2017, 2025",
+        "places": [
+          {
+            "annee": "2017",
+            "detail": "3,500 (360 NCOs, 40 military health, 600 specialist soldiers, 2,500 general-service soldiers)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "essal",
+    "sigle": "ESSAL",
+    "couleur": "red",
+    "groupe": "MINDEF",
+    "categorie": "ecole",
+    "tutelle": "MINDEF",
+    "oral": false,
+    "fr": {
+      "nom": "ESSAL – concours de présélection",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Matières fixées par le communiqué du MINDEF"
+        ],
+        "sessions": "2024, 2026",
+        "places": [],
+        "places_note": "Session 2026 : présélection le 14 février 2026."
+      }
+    },
+    "en": {
+      "nom": "ESSAL – pre-selection competition",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "Subjects set by the MINDEF announcement"
+        ],
+        "sessions": "2024, 2026",
+        "places": [],
+        "places_note": "2026 session: pre-selection on 14 February 2026."
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "ecoles-militaires-francaises",
+    "sigle": "EMF",
+    "couleur": "amber",
+    "groupe": "MINDEF",
+    "categorie": "ecole",
+    "tutelle": "MINDEF",
+    "oral": true,
+    "fr": {
+      "nom": "Écoles militaires françaises de formation d'officiers",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Matières fixées par le communiqué du MINDEF"
+        ],
+        "sessions": "2024",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "French military officer training schools",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "Subjects set by the MINDEF announcement"
+        ],
+        "sessions": "2024",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "justice-militaire-enam",
+    "sigle": "J. MIL.",
+    "couleur": "red",
+    "groupe": "MINDEF",
+    "categorie": "formation",
+    "tutelle": "MINDEF / MINFOPRA",
+    "oral": true,
+    "fr": {
+      "nom": "Justice militaire – auditeurs de justice et élèves-greffiers (ENAM)",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Épreuves de la division de la magistrature et des greffes de l'ENAM"
+        ],
+        "sessions": "2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "4 (2 auditeurs de justice, 2 élèves-greffiers)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Military justice – trainee judges and court registrars (ENAM)",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "Papers of the ENAM magistracy and court registry division"
+        ],
+        "sessions": "2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "4 (2 trainee judges, 2 trainee court registrars)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
     "id": "enam",
     "sigle": "ENAM",
     "couleur": "red",
@@ -492,7 +716,7 @@
           "Grand oral",
           "Oral de langue"
         ],
-        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "sessions": "2019, 2020, 2021, 2023, 2024, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -558,7 +782,7 @@
           "Final oral",
           "Language oral"
         ],
-        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "sessions": "2019, 2020, 2021, 2023, 2024, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -869,7 +1093,7 @@
           "Traduction technique",
           "Oral de langue"
         ],
-        "sessions": "2018, 2021, 2023, 2024",
+        "sessions": "2018, 2021, 2022, 2023, 2024",
         "places": [
           {
             "annee": "2024",
@@ -877,6 +1101,10 @@
           },
           {
             "annee": "2023",
+            "detail": "100"
+          },
+          {
+            "annee": "2022",
             "detail": "100"
           },
           {
@@ -901,7 +1129,7 @@
           "Technical translation",
           "Language oral"
         ],
-        "sessions": "2018, 2021, 2023, 2024",
+        "sessions": "2018, 2021, 2022, 2023, 2024",
         "places": [
           {
             "annee": "2024",
@@ -909,6 +1137,10 @@
           },
           {
             "annee": "2023",
+            "detail": "100"
+          },
+          {
+            "annee": "2022",
             "detail": "100"
           },
           {
@@ -1224,7 +1456,7 @@
           "Épreuve de la discipline choisie",
           "Langue"
         ],
-        "sessions": "Sessions annuelles ; relance en 2026 (année 2025-2026)",
+        "sessions": "Sessions annuelles ; relance en 2026 (année 2025-2026) (documentées : 2022, 2024)",
         "places": [],
         "places_note": "Places par filière et par école, fixées par arrêté annuel"
       }
@@ -1270,7 +1502,7 @@
           "Paper in the chosen subject",
           "Language"
         ],
-        "sessions": "Annual sessions; resumed in 2026 (2025-2026 year)",
+        "sessions": "Annual sessions; resumed in 2026 (2025-2026 year) (documented: 2022, 2024)",
         "places": [],
         "places_note": "Places per stream and per school, set by annual order"
       }
@@ -1297,7 +1529,7 @@
           "Culture générale",
           "Langue"
         ],
-        "sessions": "2023, 2024, 2025",
+        "sessions": "2019, 2023, 2024, 2025",
         "places": [
           {
             "annee": "2023",
@@ -1322,7 +1554,7 @@
           "General culture",
           "Language"
         ],
-        "sessions": "2023, 2024, 2025",
+        "sessions": "2019, 2023, 2024, 2025",
         "places": [
           {
             "annee": "2023",
@@ -1395,7 +1627,7 @@
           "Épreuve technique de la filière",
           "Langue"
         ],
-        "sessions": "Sessions annuelles",
+        "sessions": "Sessions annuelles (documentées : 2018, 2019, 2020, 2022, 2026)",
         "places": [],
         "places_note": "Places par filière, fixées par arrêté annuel"
       }
@@ -1409,7 +1641,7 @@
           "Technical paper of the stream",
           "Language"
         ],
-        "sessions": "Annual sessions",
+        "sessions": "Annual sessions (documented: 2018, 2019, 2020, 2022, 2026)",
         "places": [],
         "places_note": "Places per stream, set by annual order"
       }
@@ -1475,7 +1707,7 @@
           "Culture générale",
           "Langue"
         ],
-        "sessions": "Sessions annuelles (1er cycle, 2e cycle, 3e cycle)",
+        "sessions": "Sessions annuelles (1er cycle, 2e cycle, 3e cycle) (documentées : 2024)",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
       }
@@ -1491,7 +1723,7 @@
           "General culture",
           "Language"
         ],
-        "sessions": "Annual sessions (1st, 2nd and 3rd cycle)",
+        "sessions": "Annual sessions (1st, 2nd and 3rd cycle) (documented: 2024)",
         "places": [],
         "places_note": "Places set by annual order"
       }
@@ -1647,7 +1879,7 @@
           "Culture générale",
           "Langue"
         ],
-        "sessions": "Sessions annuelles",
+        "sessions": "Sessions annuelles (documentées : 2018, 2022)",
         "places": [
           {
             "annee": "2024-2025",
@@ -1668,7 +1900,7 @@
           "General culture",
           "Language"
         ],
-        "sessions": "Annual sessions",
+        "sessions": "Annual sessions (documented: 2018, 2022)",
         "places": [
           {
             "annee": "2024-2025",
@@ -1837,6 +2069,306 @@
     "source_annales": "Annales partielles chez les tiers"
   },
   {
+    "id": "enstp",
+    "sigle": "ENSTP",
+    "couleur": "amber",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ENSTP – École nationale supérieure des travaux publics",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Mathématiques",
+          "Physique",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "2021",
+        "places": [],
+        "places_note": "Matières à confirmer sur l'arrêté de la session."
+      }
+    },
+    "en": {
+      "nom": "ENSTP – National Advanced School of Public Works",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Mathematics",
+          "Physics",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "2021",
+        "places": [],
+        "places_note": "Subjects to be confirmed on the session order."
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "iut-bois-mbalmayo",
+    "sigle": "IUT-B",
+    "couleur": "green",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "IUT du Bois de Mbalmayo (Université de Yaoundé I)",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Culture générale (identique pour toutes les filières)",
+          "Mathématiques"
+        ],
+        "sessions": "2017, 2026",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "IUT Bois Mbalmayo – wood technology (University of Yaoundé I)",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "General culture (same paper for all streams)",
+          "Mathematics"
+        ],
+        "sessions": "2017, 2026",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "isabee-belabo",
+    "sigle": "ISABEE",
+    "couleur": "indigo",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ISABEE de Belabo (Université de Bertoua)",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Matières fixées par l'arrêté annuel"
+        ],
+        "sessions": "2023",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "ISABEE Belabo (University of Bertoua)",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Subjects set by the annual order"
+        ],
+        "sessions": "2023",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "ens-classes-scientifiques-speciales",
+    "sigle": "ENS CSS",
+    "couleur": "amber",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ENS de Yaoundé – classes scientifiques spéciales",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Mathématiques",
+          "Sciences physiques",
+          "Culture générale"
+        ],
+        "sessions": "2024",
+        "places": [],
+        "places_note": "Matières à confirmer sur l'arrêté de la session."
+      }
+    },
+    "en": {
+      "nom": "ENS Yaoundé – special science classes",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Mathematics",
+          "Physical sciences",
+          "General culture"
+        ],
+        "sessions": "2024",
+        "places": [],
+        "places_note": "Subjects to be confirmed on the session order."
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "essaca",
+    "sigle": "ESSACA",
+    "couleur": "red",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ESSACA – concours d'entrée",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Matières fixées par l'arrêté annuel"
+        ],
+        "sessions": "2015",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "ESSACA – entrance exam",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Subjects set by the annual order"
+        ],
+        "sessions": "2015",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "enieg-ecoles-normales-dinstituteurs-de-lenseigne",
+    "sigle": "ENIEG",
+    "couleur": "red",
+    "groupe": "MINESEC",
+    "categorie": "ecole",
+    "tutelle": "MINESEC / MINEDUB",
+    "oral": false,
+    "fr": {
+      "nom": "ENIEG et ENIET – écoles normales d'instituteurs (publiques et privées)",
+      "organisme": "MINESEC – Enseignements secondaires",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Français",
+          "Mathématiques",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles (documentées : 2018, 2022, 2024, 2025, 2026)",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "ENIEG and ENIET – primary and technical teacher training colleges (public and private)",
+      "organisme": "MINESEC – Secondary Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "French",
+          "Mathematics",
+          "Language"
+        ],
+        "sessions": "Annual sessions (documented: 2018, 2022, 2024, 2025, 2026)",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "entree-6e-1re-annee-common-entrance",
+    "sigle": "6e",
+    "couleur": "amber",
+    "groupe": "MINESEC",
+    "categorie": "ecole",
+    "tutelle": "MINESEC",
+    "oral": false,
+    "fr": {
+      "nom": "Concours d'entrée en 6e, en 1re année de l'enseignement technique et Common Entrance",
+      "organisme": "MINESEC – Enseignements secondaires",
+      "annuaire": {
+        "matieres": [
+          "Dictée",
+          "Compréhension de texte",
+          "Épreuve de questions",
+          "Problème",
+          "Calcul rapide",
+          "Culture générale"
+        ],
+        "sessions": "2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Épreuves relevées pour 2024 ; selon les années : compréhension de texte, problème et culture générale."
+      }
+    },
+    "en": {
+      "nom": "Entrance into Form 1 / 6e, 1st year of technical education and Common Entrance",
+      "organisme": "MINESEC – Secondary Education",
+      "annuaire": {
+        "matieres": [
+          "Dictation",
+          "Reading comprehension",
+          "Questions paper",
+          "Problem solving",
+          "Mental arithmetic",
+          "General knowledge"
+        ],
+        "sessions": "2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Papers listed for 2024; depending on the year: reading comprehension, problem solving and general knowledge."
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "seconde-technique-4e-annee-bep",
+    "sigle": "2nde T",
+    "couleur": "indigo",
+    "groupe": "MINESEC",
+    "categorie": "ecole",
+    "tutelle": "MINESEC",
+    "oral": false,
+    "fr": {
+      "nom": "Concours d'entrée en seconde technique et en 4e année BEP",
+      "organisme": "MINESEC – Enseignements secondaires",
+      "annuaire": {
+        "matieres": [
+          "Matières fixées par la décision annuelle du MINESEC"
+        ],
+        "sessions": "2018",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Entrance into technical Form 5 / seconde and 4th year BEP",
+      "organisme": "MINESEC – Secondary Education",
+      "annuaire": {
+        "matieres": [
+          "Subjects set by the annual MINESEC decision"
+        ],
+        "sessions": "2018",
+        "places": [],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
     "id": "ietp-instituteurs-de-lenseignement-technique-et-",
     "sigle": "IETP",
     "couleur": "red",
@@ -1951,18 +2483,34 @@
           "Pédagogie",
           "Langue"
         ],
-        "sessions": "2021, 2024",
+        "sessions": "2019, 2020, 2021, 2022, 2023, 2024, 2026",
         "places": [
+          {
+            "annee": "2026",
+            "detail": "3 000 (session 2025, 7e phase)"
+          },
           {
             "annee": "2024",
             "detail": "3 000"
           },
           {
+            "annee": "2023",
+            "detail": "3 000"
+          },
+          {
+            "annee": "2022",
+            "detail": "3 000"
+          },
+          {
             "annee": "2021",
+            "detail": "3 000"
+          },
+          {
+            "annee": "2020",
             "detail": "3 000"
           }
         ],
-        "places_note": null
+        "places_note": "Épreuves de la session 2025 passées le 14 février 2026."
       }
     },
     "en": {
@@ -1974,61 +2522,37 @@
           "Teaching methods",
           "Language"
         ],
-        "sessions": "2021, 2024",
+        "sessions": "2019, 2020, 2021, 2022, 2023, 2024, 2026",
         "places": [
+          {
+            "annee": "2026",
+            "detail": "3,000 (2025 session, 7th phase)"
+          },
           {
             "annee": "2024",
             "detail": "3 000"
           },
           {
+            "annee": "2023",
+            "detail": "3,000"
+          },
+          {
+            "annee": "2022",
+            "detail": "3,000"
+          },
+          {
             "annee": "2021",
             "detail": "3 000"
+          },
+          {
+            "annee": "2020",
+            "detail": "3,000"
           }
         ],
-        "places_note": null
+        "places_note": "2025 session papers were sat on 14 February 2026."
       }
     },
     "source_annales": "Sujets non publiés par l’administration"
-  },
-  {
-    "id": "enieg-ecoles-normales-dinstituteurs-de-lenseigne",
-    "sigle": "ENIEG",
-    "couleur": "red",
-    "groupe": "MINEDUB",
-    "categorie": "ecole",
-    "tutelle": "MINEDUB",
-    "oral": false,
-    "fr": {
-      "nom": "ENIEG – écoles normales d’instituteurs de l’enseignement général",
-      "organisme": "MINEDUB – Éducation de base",
-      "annuaire": {
-        "matieres": [
-          "Culture générale",
-          "Français",
-          "Mathématiques",
-          "Langue"
-        ],
-        "sessions": "Sessions annuelles",
-        "places": [],
-        "places_note": "Places fixées par arrêté annuel"
-      }
-    },
-    "en": {
-      "nom": "ENIEG – teacher training colleges for general education",
-      "organisme": "MINEDUB – Basic Education",
-      "annuaire": {
-        "matieres": [
-          "General culture",
-          "French",
-          "Mathematics",
-          "Language"
-        ],
-        "sessions": "Annual sessions",
-        "places": [],
-        "places_note": "Places set by annual order"
-      }
-    },
-    "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)"
   },
   {
     "id": "sante-publique-medecins-chirurgiens-dentistes-ph",
@@ -2293,6 +2817,54 @@
       }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "ecoles-personnels-infirmiers-sages-femmes",
+    "sigle": "IDE/SF",
+    "couleur": "green",
+    "groupe": "MINSANTE",
+    "categorie": "ecole",
+    "tutelle": "MINSANTE",
+    "oral": false,
+    "fr": {
+      "nom": "Écoles de formation des personnels infirmiers, sages-femmes et médico-sanitaires",
+      "organisme": "MINSANTE – Santé publique",
+      "annuaire": {
+        "matieres": [
+          "Aides-soignants et agents techniques médico-sanitaires : mathématiques, biologie, connaissances générales, langues",
+          "Infirmiers diplômés d'État, sages-femmes et techniciens médico-sanitaires : mathématiques, biologie, physique, chimie, connaissances générales, langues",
+          "Infirmiers spécialisés : anatomie et physiologie, pharmacologie, pathologies médicale et chirurgicale, connaissances générales, langues"
+        ],
+        "sessions": "2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "9 205 (toutes formations)"
+          }
+        ],
+        "places_note": "Matières de la session 2023-2024. Écoles publiques et privées agréées."
+      }
+    },
+    "en": {
+      "nom": "Training schools for nurses, midwives and medical-sanitary staff",
+      "organisme": "MINSANTE – Public Health",
+      "annuaire": {
+        "matieres": [
+          "Nursing aides and medical-sanitary technical agents: mathematics, biology, general knowledge, languages",
+          "State-registered nurses, midwives and medical-sanitary technicians: mathematics, biology, physics, chemistry, general knowledge, languages",
+          "Specialised nurses: anatomy and physiology, pharmacology, medical and surgical pathology, general knowledge, languages"
+        ],
+        "sessions": "2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "9,205 (all programmes)"
+          }
+        ],
+        "places_note": "Subjects of the 2023-2024 session. Approved public and private schools."
+      }
+    },
+    "source_annales": "Sujets non publiés"
   },
   {
     "id": "regies-financieres-tresor",
@@ -2574,7 +3146,7 @@
           "Épreuve de spécialité EPS",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2614,7 +3186,7 @@
           "Physical education specialty paper",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2664,7 +3236,7 @@
           "Épreuves sportives",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2708,7 +3280,7 @@
           "Sports tests",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2761,7 +3333,7 @@
           "Épreuves sportives",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2022, 2023, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2022, 2023, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2792,7 +3364,7 @@
           "Sports tests",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2022, 2023, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2022, 2023, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2833,7 +3405,7 @@
           "Épreuves sportives",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2023, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2023, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -2864,7 +3436,7 @@
           "Sports tests",
           "Oral"
         ],
-        "sessions": "2020, 2021, 2023, 2025, 2026",
+        "sessions": "2018, 2020, 2021, 2023, 2025, 2026",
         "places": [
           {
             "annee": "2026",
@@ -3485,7 +4057,7 @@
           "Épreuves techniques (foresterie, faune)",
           "Langue"
         ],
-        "sessions": "2020, 2023, 2025",
+        "sessions": "2018, 2020, 2023, 2025",
         "places": [
           {
             "annee": "2025",
@@ -3508,7 +4080,7 @@
           "Technical papers (forestry, wildlife)",
           "Language"
         ],
-        "sessions": "2020, 2023, 2025",
+        "sessions": "2018, 2020, 2023, 2025",
         "places": [
           {
             "annee": "2025",
@@ -3835,10 +4407,14 @@
           "Épreuves professionnelles (rédaction, droit de l’information)",
           "Langue"
         ],
-        "sessions": "2020, 2025",
+        "sessions": "2018, 2020, 2025",
         "places": [
           {
             "annee": "2025",
+            "detail": "10"
+          },
+          {
+            "annee": "2018",
             "detail": "10"
           }
         ],
@@ -3854,10 +4430,14 @@
           "Professional papers (writing, media law)",
           "Language"
         ],
-        "sessions": "2020, 2025",
+        "sessions": "2018, 2020, 2025",
         "places": [
           {
             "annee": "2025",
+            "detail": "10"
+          },
+          {
+            "annee": "2018",
             "detail": "10"
           }
         ],
@@ -4015,7 +4595,7 @@
           "Épreuves techniques",
           "Langue"
         ],
-        "sessions": "2019",
+        "sessions": "2018, 2019",
         "places": [
           {
             "annee": "2019",
@@ -4034,7 +4614,7 @@
           "Technical papers",
           "Language"
         ],
-        "sessions": "2019",
+        "sessions": "2018, 2019",
         "places": [
           {
             "annee": "2019",

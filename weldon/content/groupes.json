@@ -15,6 +15,10 @@
     "fr": "MINESUP – Enseignement supérieur",
     "en": "MINESUP – Higher Education"
   },
+  "MINESEC": {
+    "fr": "MINESEC – Enseignements secondaires",
+    "en": "MINESEC – Secondary Education"
+  },
   "MINEDUB": {
     "fr": "MINEDUB – Éducation de base",
     "en": "MINEDUB – Basic Education"

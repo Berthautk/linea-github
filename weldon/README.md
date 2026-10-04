@@ -62,11 +62,18 @@ Chariow fournit une API REST (`https://api.chariow.com/v1`, clé `sk_live_…` e
 
 La clé API reste sur le serveur ; elle n'est jamais envoyée au navigateur. Les Pulses sont vérifiés par HMAC-SHA256 sur le corps brut et dédoublonnés par `x-pulse-delivery-id`.
 
-## Mise en ligne
+## Mise en ligne (Netlify)
 
-- **Hébergement** : n'importe quel hébergeur Node.js (Render, Railway, Fly.io, un VPS). Le serveur sert à la fois l'API et l'application. HTTPS est obligatoire (Chariow l'exige pour les Pulses).
-- **Base de données** : les comptes sont enregistrés dans PostgreSQL via `DATABASE_URL` (Neon propose une base gratuite). Sans elle, un fichier local est utilisé : sur Render gratuit il est effacé à chaque redémarrage.
-- **Play Store** : voir « Application Android » ci-dessous.
+Weldon est hébergé sur **Netlify** (`netlify.toml` à la racine du dépôt) :
+- le site (`weldon/web`) est servi tel quel ;
+- toutes les adresses `/api/*` vont à une **fonction Netlify** (`server/netlify-functions/api.mjs`), qui appelle la logique commune `server/app.js` ;
+- le catalogue (`content/`) est joint à la fonction.
+
+**Réglages Netlify (Site configuration → Environment variables)** : `TOKEN_SECRET` (32 caractères aléatoires minimum), `CHARIOW_API_KEY`, `CHARIOW_PRODUCT_ID`, `CHARIOW_PULSE_SECRET`, et la base de données.
+
+**Base de données** : les comptes sont enregistrés dans PostgreSQL. Le plus simple est **Netlify DB** (extension Neon) : elle crée la base et la variable `NETLIFY_DATABASE_URL` toute seule. Une base Neon créée à part fonctionne aussi avec `DATABASE_URL`. Sans base, les comptes sont perdus.
+
+`server/server.js` reste disponible pour lancer Weldon en local (`npm start`) ou sur un hébergeur Node classique (Render : `render.yaml`).
 
 ## Application Android (Play Store)
 

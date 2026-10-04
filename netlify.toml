@@ -1,0 +1,34 @@
+# Hébergement de Weldon sur Netlify : le site (weldon/web) et l'API (fonction weldon/server/netlify-functions/api.mjs).
+[build]
+  base = "weldon"
+  publish = "web"
+  command = "cd server && npm ci --omit=dev && node ../tools/write-version.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "server/netlify-functions"
+  node_bundler = "esbuild"
+  # Le catalogue (concours, épreuves, corrigés) est lu sur disque par la fonction.
+  included_files = ["content/**", "server/version.json"]
+  # pg charge un module natif facultatif : on le laisse hors du paquet esbuild.
+  external_node_modules = ["pg"]
+
+# Toutes les routes /api/* vont à la fonction.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# Application monopage : les autres adresses affichent l'application.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"

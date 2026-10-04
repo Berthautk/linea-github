@@ -3,7 +3,7 @@
   "appName": "Weldon",
   "webDir": "www",
   "server": {
-    "url": "https://weldon.onrender.com",
+    "url": "https://weldon-cm.netlify.app",
     "cleartext": false,
     "androidScheme": "https"
   },

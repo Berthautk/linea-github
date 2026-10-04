@@ -1333,7 +1333,19 @@
       if (document.hasFocus()) shield(false);
     }, 2500);
   }
-  document.addEventListener("visibilitychange", () => shield(document.hidden));
+  document.addEventListener("visibilitychange", () => {
+    shield(document.hidden);
+    if (!document.hidden && state.user && state.token) {
+      api()
+        .me()
+        .then((u) => {
+          const changed = u.premium !== state.user.premium || u.admin !== state.user.admin;
+          state.user = u;
+          if (changed) render();
+        })
+        .catch(() => {});
+    }
+  });
   window.addEventListener("blur", () => state.user && shield(true));
   window.addEventListener("focus", () => shield(false));
   document.addEventListener("keydown", (ev) => {

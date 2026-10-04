@@ -266,6 +266,7 @@ route("GET", "/api/config", async () => ({
   payment_enabled: Boolean(CHARIOW_API_KEY && CHARIOW_PRODUCT_ID),
   ai_enabled: aiEnabled(),
   accounts_persistent: store.kind === "postgres",
+  version: (process.env.RENDER_GIT_COMMIT || "local").slice(0, 7),
 }));
 
 route("POST", "/api/register", async (req) => {

@@ -27,8 +27,10 @@ const TOKEN_SECRET = process.env.TOKEN_SECRET || "";
 const ACCESS_DAYS = Number(process.env.ACCESS_DAYS || 365);
 const PRICE_XAF = Number(process.env.PRICE_XAF || 10000);
 const SESSION_DAYS = 30;
+// Concepteur de Weldon : accès complet sans payer. ADMIN_EMAILS (Render) peut en ajouter d'autres.
 const ADMIN_EMAILS = new Set(
-  (process.env.ADMIN_EMAILS || "")
+  ["berthautk@gmail.com", ...(process.env.ADMIN_EMAILS || "").split(",")]
+    .join(",")
     .split(",")
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean)

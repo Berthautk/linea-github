@@ -100,12 +100,5 @@ export async function createStore({ databaseUrl, dir }) {
     async logEvent(entry) {
       await kv.set(`pulse:${entry.at}:${entry.delivery_id || Math.random().toString(36).slice(2)}`, entry);
     },
-
-    // Corrections IA par compte et par mois (maîtrise des coûts).
-    async takeCorrectionQuota(email, perMonth) {
-      const key = `quota:${email}:${new Date().toISOString().slice(0, 7)}`;
-      const used = await kv.incr(key);
-      return used <= perMonth;
-    },
   };
 }

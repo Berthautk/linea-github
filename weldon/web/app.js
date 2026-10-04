@@ -5,6 +5,8 @@
   "use strict";
 
   const PREP_SECONDS = 120;
+  // Application Android (Capacitor) : pas de vente d'abonnement dans l'application (règles Google Play).
+  const NATIVE = Boolean(window.Capacitor?.isNativePlatform?.());
 
   // ---------- Textes de l'interface ----------
   const T = {
@@ -55,6 +57,21 @@
       officialNote: "Informations relevées dans les communiqués officiels. Vérifiez toujours l'arrêté de la session en cours.",
       latestPlaces: (y, d) => `${y} : ${d}${/place/i.test(d) ? "" : " places"}`,
       practiceBlock: "Sujets d'entraînement Weldon",
+      inProgress: "En cours",
+      inProgressLong: "Épreuves en cours d'ajout",
+      selfTitle: "Corrigez-vous vous-même",
+      selfHow: "Lisez le corrigé ci-dessous en gardant votre copie à côté. Pour chaque ligne du barème, donnez-vous honnêtement les points mérités : la note se calcule toute seule.",
+      selfGrid: "Votre note selon le barème",
+      selfGlobal: "Votre note",
+      selfSave: "Enregistrer ma note",
+      selfSaved: "Note enregistrée dans « Mes compositions ».",
+      selfHint: "Saisissez vos points pour voir votre note.",
+      selfGood: "Très bien : au-dessus de la moyenne d'admission habituelle (12/20).",
+      selfMid: "Moyenne atteinte, mais beaucoup de concours exigent 12/20. Retravaillez les points perdus.",
+      selfLow: "Sous la moyenne : relisez le corrigé et recomposez ce sujet dans quelques jours.",
+      retry: "Recomposer ce sujet",
+      history: "Mes compositions",
+      thNote: "Note",
       practiceSub: "Rédigés par Weldon au format officiel du concours, avec corrigé complet.",
       coverage: "Épreuves par concours",
       coverageSub: (a, b) => `${a} concours sur ${b} ont au moins une épreuve dans cette section.`,
@@ -106,13 +123,13 @@
       unlockOral: "Débloquer la préparation complète",
       roomTitle: "Salle d'examen",
       roomSub: "Choisissez une école, une session, puis l'épreuve par laquelle vous voulez commencer. Le chronomètre suit la durée officielle.",
-      steps: ["1. Préparation", "2. Composition", "3. Correction"],
+      steps: ["1. Préparation", "2. Composition", "3. Auto-correction"],
       startsIn: "La composition commence dans",
       subjectAuto: "Le sujet s'affichera automatiquement.",
       ready: "Je suis prêt, commencer maintenant",
       setup: "Installez-vous comme le jour J",
       checklist: ["Un cahier ou des feuilles de copie", "Deux stylos (bleu ou noir) et une règle", "Un endroit calme, sans bruit autour de vous", "Téléphone en silencieux, pas d'aide extérieure", "Une bouteille d'eau"],
-      handwrite: "Écrivez votre copie à la main, comme au concours. À la fin, vous la photographierez pour la correction.",
+      handwrite: "Écrivez votre copie à la main, comme au concours. À la fin, vous verrez le corrigé et vous vous noterez avec le barème.",
       quitRoom: "Quitter la salle",
       timeLeft: "Temps restant",
       done: "J'ai terminé",
@@ -121,21 +138,7 @@
       finished: "Copie terminée",
       timeUsed: "Temps utilisé",
       outOf: (d) => `sur ${d} accordées`,
-      photoTitle: "Photographiez votre copie",
-      photoSub: "Une photo par page, bien éclairée, à plat. Jusqu'à 6 pages.",
-      addPhotos: "Prendre ou ajouter des photos",
-      correctMe: "Corriger ma copie",
-      directCorrige: "Voir directement le corrigé",
       newPaper: "Nouvelle épreuve",
-      correcting: "Correction en cours…",
-      correctingSub: "L'IA lit votre copie et la compare au corrigé. Cela prend environ une minute.",
-      exampleCorrection:
-        "<b>Exemple de correction.</b> La correction automatique n'est pas encore activée : la correction affichée est un exemple. Une fois activée, l'IA lira vraiment les photos de votre copie.",
-      appreciation: "Appréciation du correcteur",
-      strengths: "Points forts",
-      weaknesses: "Points à améliorer",
-      language: "Langue",
-      tutorTips: "Conseils du répétiteur",
       shouldWrite: "Ce qu'il fallait écrire",
       modelAnswer: "Corrigé rédigé",
       confirmFreeTitle: "Lire cette épreuve gratuitement ?",
@@ -150,12 +153,13 @@
       timeUpToast: "Temps écoulé. Posez vos stylos.",
       payTitle: "Weldon Accès complet",
       perYearShort: "FCFA / 12 mois",
+      nativeNoSale: "Les abonnements ne sont pas vendus dans l'application. Si vous êtes déjà abonné, utilisez l'e-mail de votre compte Weldon : votre accès complet est reconnu automatiquement.",
       oneTime: "Un seul paiement. Pas de renouvellement automatique.",
       perks: [
         "Toutes les épreuves, classées par école et par session",
         "Tous les corrigés entièrement rédigés",
         "La préparation à l'oral de chaque concours",
-        "La salle d'examen chronométrée avec correction de votre copie",
+        "La salle d'examen chronométrée, avec corrigé et auto-correction",
       ],
       momo: "Numéro Mobile Money",
       payAs: (e) => `Le paiement sera rattaché à votre compte <b>${e}</b>.`,
@@ -236,6 +240,21 @@
       officialNote: "Information taken from official announcements. Always check the order for the current session.",
       latestPlaces: (y, d) => `${y}: ${d}${/place/i.test(d) ? "" : " places"}`,
       practiceBlock: "Weldon practice papers",
+      inProgress: "Coming soon",
+      inProgressLong: "Papers being added",
+      selfTitle: "Mark your own script",
+      selfHow: "Read the model answer below with your script beside you. For each line of the marking guide, honestly give yourself the marks you deserve: your mark is calculated automatically.",
+      selfGrid: "Your mark from the marking guide",
+      selfGlobal: "Your mark",
+      selfSave: "Save my mark",
+      selfSaved: "Mark saved in \"My papers\".",
+      selfHint: "Enter your marks to see your score.",
+      selfGood: "Very good: above the usual admission average (12/20).",
+      selfMid: "Pass mark reached, but many competitions require 12/20. Work on the marks you lost.",
+      selfLow: "Below average: reread the model answer and rewrite this paper in a few days.",
+      retry: "Rewrite this paper",
+      history: "My papers",
+      thNote: "Mark",
       practiceSub: "Written by Weldon in the official format of the competition, with a full model answer.",
       coverage: "Papers per competition",
       coverageSub: (a, b) => `${a} of ${b} competitions have at least one paper in this section.`,
@@ -287,13 +306,13 @@
       unlockOral: "Unlock the full preparation",
       roomTitle: "Exam room",
       roomSub: "Choose a school, a session, then the paper you want to start with. The timer follows the official duration.",
-      steps: ["1. Get ready", "2. Writing", "3. Marking"],
+      steps: ["1. Get ready", "2. Writing", "3. Self-marking"],
       startsIn: "The paper starts in",
       subjectAuto: "The question paper will appear automatically.",
       ready: "I'm ready, start now",
       setup: "Set up as on exam day",
       checklist: ["An exercise book or answer sheets", "Two pens (blue or black) and a ruler", "A quiet place with no noise around you", "Phone on silent, no outside help", "A bottle of water"],
-      handwrite: "Write your answers by hand, as in the real exam. At the end, you will photograph your script for marking.",
+      handwrite: "Write your answers by hand, as in the real exam. At the end, you will see the model answer and mark yourself with the marking guide.",
       quitRoom: "Leave the exam room",
       timeLeft: "Time left",
       done: "I've finished",
@@ -302,21 +321,7 @@
       finished: "Script handed in",
       timeUsed: "Time used",
       outOf: (d) => `out of ${d} allowed`,
-      photoTitle: "Photograph your script",
-      photoSub: "One photo per page, well lit, flat. Up to 6 pages.",
-      addPhotos: "Take or add photos",
-      correctMe: "Mark my script",
-      directCorrige: "Go straight to the model answer",
       newPaper: "New paper",
-      correcting: "Marking in progress…",
-      correctingSub: "The AI is reading your script and comparing it with the model answer. This takes about a minute.",
-      exampleCorrection:
-        "<b>Sample marking.</b> Automatic marking is not switched on yet: the marking shown is an example. Once switched on, the AI will really read the photos of your script.",
-      appreciation: "Examiner's comment",
-      strengths: "Strengths",
-      weaknesses: "To improve",
-      language: "Language",
-      tutorTips: "Tutor's advice",
       shouldWrite: "What you should have written",
       modelAnswer: "Model answer",
       confirmFreeTitle: "Read this paper for free?",
@@ -331,12 +336,13 @@
       timeUpToast: "Time is up. Pens down.",
       payTitle: "Weldon Full access",
       perYearShort: "FCFA / 12 months",
+      nativeNoSale: "Subscriptions are not sold in the app. If you already subscribe, use the email of your Weldon account: your full access is recognised automatically.",
       oneTime: "One payment. No automatic renewal.",
       perks: [
         "All past papers, by school and session",
         "All fully written model answers",
         "Oral preparation for every competition",
-        "The timed exam room with marking of your script",
+        "The timed exam room, with model answer and self-marking",
       ],
       momo: "Mobile Money number",
       payAs: (e) => `The payment will be linked to your account <b>${e}</b>.`,
@@ -425,8 +431,7 @@
     cat: "all",
     exam: local.get("exam", null),
     examDoc: null,
-    photos: [],
-    correction: null,
+    selfScores: {},
     docCache: {},
     oralCache: {},
     booting: true,
@@ -463,7 +468,6 @@
     checkout: (b) => http("/api/checkout", { method: "POST", body: b }),
     verifySale: (id) => http("/api/verify-sale", { method: "POST", body: { sale_id: id } }),
     sync: () => http("/api/sync-subscription", { method: "POST" }),
-    correct: (b) => http("/api/correct", { method: "POST", body: b }),
     adminUsers: () => http("/api/admin/users"),
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
   };
@@ -521,7 +525,7 @@
           lang: l,
           groupes: Object.fromEntries(Object.entries(d.groupes).map(([k, v]) => [k, v[l]])),
           categories: Object.fromEntries(Object.entries(d.categories).map(([k, v]) => [k, v[l]])),
-          concours: d.concours.filter((c) => c[l]).map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, ...c[l] })),
+          concours: d.concours.filter((c) => c[l]).map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, priorite: c.priorite || 999, ...c[l] })),
           epreuves: d.epreuves.filter((e) => e.lang === l).map((e) => ({ id: e.id, concours: e.concours, annee: e.annee, matiere: e.matiere, duree: e.duree, exemple: Boolean(e.exemple), apercu: e.sujet.slice(0, 140) })),
           oral: Object.fromEntries(Object.entries(d.oral).filter(([, v]) => v[l]).map(([k, v]) => [k, { deroulement: v[l].deroulement }])),
         };
@@ -553,7 +557,6 @@
       },
       verifySale: async () => ({ paid: false }),
       sync: async () => profile(current()),
-      correct: async () => ({ ...C().correction_demo[lang()], demo: true }),
       adminUsers: async () => Object.values(users()).map(profile),
       async grant({ email, days }) {
         const all = users();
@@ -577,7 +580,6 @@
     lock: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
     check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>',
     info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>',
-    camera: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="30" height="30"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></svg>',
     back: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
     chevron: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>',
     user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
@@ -790,27 +792,29 @@
   }
 
   // Cartes des écoles, regroupées par ministère / institution.
+  const rank = (c) => (epreuvesOf(c.id).length ? 0 : 1000) + (c.priorite || 999);
   function schoolGroups(mode, filter = () => true) {
     const L = t();
     const groups = {};
-    for (const c of state.catalog.concours) {
+    for (const c of [...state.catalog.concours].sort((a, b) => rank(a) - rank(b))) {
       if (!filter(c)) continue;
-      if (mode !== "fiche" && !epreuvesOf(c.id).length) continue;
       (groups[c.groupe] ||= []).push(c);
     }
     return Object.entries(groups)
+      .sort(([, a], [, b]) => rank(a[0]) - rank(b[0]))
       .map(([g, list]) => {
         const cards = list
           .map((c) => {
             const eps = epreuvesOf(c.id);
-            const years = new Set(eps.map((e) => e.annee));
             const last = c.annuaire?.places?.[0];
             const foot =
               mode === "fiche"
-                ? `${eps.length ? `<span class="tag tag-green">${L.inWeldon(eps.length)}</span>` : ""}${
+                ? `${eps.length ? `<span class="tag tag-green">${L.inWeldon(eps.length)}</span>` : `<span class="tag tag-sun">${L.inProgress}</span>`}${
                     last ? `<span class="tag tag-line">${esc(L.latestPlaces(last.annee, last.detail.split(" (")[0]))}</span>` : ""
                   }${c.oral ? `<span class="tag tag-indigo">${L.oralYes}</span>` : ""}`
-                : `<span class="tag tag-line">${L.sessions(years.size)}</span><span class="tag tag-line">${L.papers(eps.length)}</span>`;
+                : eps.length
+                ? `<span class="tag tag-line">${L.papers(eps.length)}</span>`
+                : `<span class="tag tag-sun">${L.inProgress}</span>`;
             const summary = c.resume || (c.annuaire ? c.annuaire.matieres.join(" · ") : "");
             return `
               <button type="button" class="card card-click" data-school="${c.id}" data-mode="${mode}">
@@ -923,11 +927,10 @@
         premium() ? L.epreuvesSub.premium : state.user.free_id ? L.epreuvesSub.free : L.epreuvesSub.none
       }</p></div>`,
       corriges: premium() ? `<div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${L.corrigesTitle}</h1></div><p class="muted small">${L.corrigesSub}</p></div>` : lockedIntro("corriges"),
-      salle: premium() ? `<div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${L.roomTitle}</h1></div><p class="muted small">${L.roomSub}</p></div>` : lockedIntro("salle"),
+      salle: premium() ? `<div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${L.roomTitle}</h1></div><p class="muted small">${L.roomSub}</p></div>${resultsHistory()}` : lockedIntro("salle"),
     }[mode];
     if (!nav.concours) {
-      const others = state.catalog.concours.filter((c) => !epreuvesOf(c.id).length).length;
-      return intro + demoNotice() + `<p class="eyebrow">${L.chooseSchool}</p>` + schoolGroups(mode) + (others ? `<p class="small muted">${L.moreSoon(others)}</p>` : "");
+      return intro + demoNotice() + `<p class="eyebrow">${L.chooseSchool}</p>` + schoolGroups(mode);
     }
     return viewSessions(concoursById(nav.concours), mode);
   }
@@ -963,7 +966,7 @@
         <div style="min-width:0"><span class="eyebrow">${esc(c.organisme)}</span><h1>${esc(c.nom)}</h1></div>
       </div>
       ${mode !== "epreuves" && !premium() ? lockedIntro(mode) : ""}
-      ${blocks || `<p class="muted">${L.noPapers}</p>`}`;
+      ${blocks || `<div class="notice">${I.info}<span><b>${L.inProgressLong}.</b> ${L.noPapers}</span></div>`}`;
   }
 
   function viewDoc(id, mode) {
@@ -1085,8 +1088,7 @@
   function startExam(id) {
     if (!premium()) return openPaywall();
     state.exam = { id, phase: "prep", prepEnd: Date.now() + PREP_SECONDS * 1000 };
-    state.photos = [];
-    state.correction = null;
+    delete state.selfScores[id];
     local.set("exam", state.exam);
     go("salle", state.nav.salle || {});
   }
@@ -1152,109 +1154,105 @@
     const L = t();
     const e = epreuveMeta(ex.id);
     const used = Math.max(1, Math.round((ex.finishedAt - ex.start) / 60000));
-    const photos = state.photos
-      .map((p, i) => `<figure><img src="${p.url}" alt="Page ${i + 1}"><button type="button" data-rm="${i}" aria-label="×">×</button></figure>`)
-      .join("");
+    const corr = state.docCache[`corriges:${ex.id}`];
+    if (!corr) loadDoc(ex.id, "corriges");
+    const items = parseBareme(corr?.bareme);
+    const scores = state.selfScores[ex.id] || {};
+    const grid = items.length
+      ? items
+          .map(
+            (it, i) => `<div class="score-row"><label for="sc${i}">${esc(it.label)}</label>
+              <span class="score-input"><input id="sc${i}" type="number" inputmode="decimal" min="0" max="${it.max}" step="0.5" data-score="${i}" value="${scores[i] ?? ""}"> / ${fmtScore(it.max)}</span></div>`
+          )
+          .join("")
+      : `<div class="score-row"><label for="sc0">${L.selfGlobal}</label><span class="score-input"><input id="sc0" type="number" inputmode="decimal" min="0" max="20" step="0.5" data-score="0" value="${scores[0] ?? ""}"> / 20</span></div>`;
     return `
       ${steps(2)}
       <div><span class="eyebrow">${esc(e.matiere)} · ${hm(e.duree)}</span><h1>${ex.auto ? L.timeUp : L.finished}</h1></div>
       <div class="fb-cols">
         <article class="card"><span class="eyebrow">${L.timeUsed}</span><div class="countdown" style="font-size:3rem;text-align:left">${hm(used)}</div>
           <p class="small muted">${L.outOf(hm(e.duree))}</p></article>
-        <article class="card"><h3>${L.photoTitle}</h3>
-          <p class="small muted">${L.photoSub}</p>
-          <label class="drop" for="photo-input">${I.camera}<span>${L.addPhotos}</span></label>
-          <input id="photo-input" type="file" accept="image/*" capture="environment" multiple hidden>
-          ${photos ? `<div class="photos">${photos}</div>` : ""}
-        </article>
+        <article class="card"><h3>${L.selfTitle}</h3><p class="small muted">${L.selfHow}</p></article>
       </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button type="button" class="btn btn-primary" data-correct ${state.photos.length || !state.config.ai_enabled ? "" : "disabled"}>${L.correctMe}</button>
-        <button type="button" class="btn btn-ghost" data-doc="${e.id}" data-mode="corriges">${L.directCorrige}</button>
-        <button type="button" class="btn btn-ghost" data-quit>${L.newPaper}</button>
-      </div>
-      <div id="correction">${state.correction ? correctionHtml(state.correction) : ""}</div>`;
-  }
-
-  function correctionHtml(r) {
-    const L = t();
-    if (r.error) return `<p class="err">${esc(r.error)}</p>`;
-    if (r.loading) return `<article class="card"><b>${L.correcting}</b><p class="small muted">${L.correctingSub}</p></article>`;
-    const pct = Math.max(0, Math.min(100, (r.note_sur_20 / 20) * 100));
-    const list = (arr) => `<ul class="clean">${(arr || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
-    const corr = state.docCache[`corriges:${state.exam.id}`];
-    return `
-      ${r.demo ? `<div class="notice">${I.info}<span>${L.exampleCorrection}</span></div>` : ""}
-      <article class="card">
-        <div class="score"><div class="score-ring" style="--p:${pct}"><div><b>${String(r.note_sur_20).replace(".", lang() === "fr" ? "," : ".")}</b><small>/20</small></div></div>
-          <div style="min-width:0;flex:1 1 240px"><span class="eyebrow">${L.appreciation}</span><p>${esc(r.appreciation)}</p></div></div>
+      <div><span class="eyebrow">${L.shouldWrite}</span><h2>${L.modelAnswer}</h2></div>
+      ${corr ? protectedPaper(corr.corrige) : `<p class="muted">…</p>`}
+      <article class="card" id="self-card">
+        <h3>${L.selfGrid}</h3>
+        <div class="score-grid">${grid}</div>
+        <div class="score" style="margin-top:6px"><div class="score-ring" id="self-ring" style="--p:0"><div><b id="self-total">—</b><small>/20</small></div></div>
+          <div style="flex:1 1 220px;display:grid;gap:10px"><p class="small muted" id="self-msg"></p>
+          <button type="button" class="btn btn-primary" data-save-score>${L.selfSave}</button></div></div>
       </article>
-      <div class="fb-cols">
-        <article class="card fb-good"><h3>${L.strengths}</h3>${list(r.points_forts)}</article>
-        <article class="card fb-bad"><h3>${L.weaknesses}</h3>${list(r.points_faibles)}</article>
-        ${r.erreurs_langue?.length ? `<article class="card"><h3>${L.language}</h3>${list(r.erreurs_langue)}</article>` : ""}
-        <article class="card"><h3>${L.tutorTips}</h3>${list(r.conseils)}<p class="small muted">${esc(r.gestion_du_temps)}</p></article>
-      </div>
-      ${corr ? `<div><span class="eyebrow">${L.shouldWrite}</span><h2>${L.modelAnswer}</h2></div>${protectedPaper(corr.corrige)}` : ""}`;
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button type="button" class="btn btn-ghost" data-start="${e.id}">${L.retry}</button>
+        <button type="button" class="btn btn-ghost" data-quit>${L.newPaper}</button>
+      </div>`;
   }
 
-  function compress(file) {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      const url = URL.createObjectURL(file);
-      img.onload = () => {
-        const scale = Math.min(1, 1600 / Math.max(img.width, img.height));
-        const cv = document.createElement("canvas");
-        cv.width = Math.round(img.width * scale);
-        cv.height = Math.round(img.height * scale);
-        cv.getContext("2d").drawImage(img, 0, 0, cv.width, cv.height);
-        const dataUrl = cv.toDataURL("image/jpeg", 0.8);
-        URL.revokeObjectURL(url);
-        resolve({ url: dataUrl, media_type: "image/jpeg", data: dataUrl.split(",")[1] });
-      };
-      img.onerror = () => reject(new Error("Image illisible"));
-      img.src = url;
-    });
-  }
-
-  async function runCorrection() {
-    const ex = state.exam;
-    state.correction = { loading: true };
-    render();
-    try {
-      const corrKey = `corriges:${ex.id}`;
-      if (!state.docCache[corrKey]) state.docCache[corrKey] = await api().corrige(ex.id);
-      if (!state.config.ai_enabled) {
-        await new Promise((ok) => setTimeout(ok, 1200));
-        state.correction = { ...(state.demo ? await demo.correct() : await sampleCorrection()), demo: true };
-      } else {
-        state.correction = await api().correct({
-          epreuve_id: ex.id,
-          temps_utilise_minutes: Math.round((ex.finishedAt - ex.start) / 60000),
-          images: state.photos.map(({ media_type, data }) => ({ media_type, data })),
-        });
-      }
-    } catch (e) {
-      state.correction = { error: e.message };
+  // Barème : une ligne par critère, au format « Critère : N pts » (voir content/GUIDE-CORRIGES.md).
+  function parseBareme(text) {
+    if (!text) return [];
+    const items = [];
+    for (const line of text.split("\n")) {
+      const m = line.trim().match(/^(.*?)\s*:?\s*(\d+(?:[.,]5)?)\s*(?:pts?|points?|marks?)?\s*$/i);
+      if (!m || !m[1].trim()) continue;
+      const max = Number(m[2].replace(",", "."));
+      if (max > 0 && max <= 20) items.push({ label: m[1].replace(/[\s:]+$/, ""), max });
     }
-    render();
-    document.getElementById("correction")?.scrollIntoView({ behavior: "smooth" });
+    const sum = items.reduce((s, x) => s + x.max, 0);
+    return sum >= 5 && sum <= 40 ? items : [];
   }
 
-  // Exemple de correction quand l'IA n'est pas activée sur le serveur.
-  async function sampleCorrection() {
-    const fr = lang() === "fr";
-    return {
-      note_sur_20: 11.5,
-      appreciation: fr
-        ? "Exemple : copie sérieuse et organisée, mais l'argumentation reste trop générale."
-        : "Example: serious, organised script, but the argument remains too general.",
-      points_forts: fr ? ["Introduction claire", "Plan visible"] : ["Clear introduction", "Visible plan"],
-      points_faibles: fr ? ["Exemples peu précis", "Conclusion sans ouverture"] : ["Vague examples", "Conclusion without an opening"],
-      erreurs_langue: [],
-      conseils: fr ? ["Citez des exemples précis tirés du Cameroun."] : ["Use precise examples from Cameroon."],
-      gestion_du_temps: "",
-    };
+  const fmtScore = (n) => String(Math.round(n * 10) / 10).replace(".", lang() === "fr" ? "," : ".");
+
+  function selfTotal(id) {
+    const corr = state.docCache[`corriges:${id}`];
+    const items = parseBareme(corr?.bareme);
+    const scores = state.selfScores[id] || {};
+    const max = items.length ? items.reduce((s, x) => s + x.max, 0) : 20;
+    const keys = items.length ? items.map((_, i) => i) : [0];
+    if (!keys.some((k) => scores[k] !== undefined && scores[k] !== "")) return null;
+    const got = keys.reduce((s, k) => {
+      const lim = items.length ? items[k].max : 20;
+      return s + Math.min(lim, Math.max(0, Number(scores[k]) || 0));
+    }, 0);
+    return (got / max) * 20;
+  }
+
+  function updateSelfTotal() {
+    const L = t();
+    const note = selfTotal(state.exam.id);
+    const ring = document.getElementById("self-ring");
+    if (!ring) return;
+    ring.style.setProperty("--p", note == null ? 0 : (note / 20) * 100);
+    document.getElementById("self-total").textContent = note == null ? "—" : fmtScore(note);
+    document.getElementById("self-msg").textContent = note == null ? L.selfHint : note >= 12 ? L.selfGood : note >= 10 ? L.selfMid : L.selfLow;
+  }
+
+  function saveSelfScore() {
+    const L = t();
+    const ex = state.exam;
+    const note = selfTotal(ex.id);
+    if (note == null) return toast(L.selfHint);
+    const key = "results." + state.user.email;
+    const list = local.get(key, []);
+    list.unshift({ id: ex.id, note: Math.round(note * 10) / 10, minutes: Math.max(1, Math.round((ex.finishedAt - ex.start) / 60000)), date: new Date().toISOString() });
+    local.set(key, list.slice(0, 50));
+    toast(L.selfSaved);
+  }
+
+  function resultsHistory() {
+    const L = t();
+    const list = local.get("results." + state.user?.email, []).filter((r) => epreuveMeta(r.id)).slice(0, 8);
+    if (!list.length) return "";
+    const rows = list
+      .map((r) => {
+        const e = epreuveMeta(r.id);
+        const c = concoursById(e.concours);
+        return `<tr><td><b>${esc(c.sigle)}</b> ${esc(e.matiere)}</td><td>${dateFmt(r.date)}</td><td>${hm(r.minutes)}</td><td><b>${fmtScore(r.note)}</b>/20</td></tr>`;
+      })
+      .join("");
+    return `<article class="card"><h3>${L.history}</h3><div class="table-wrap"><table><thead><tr><th>${L.thPaper}</th><th>Date</th><th>${L.thDuration}</th><th>${L.thNote}</th></tr></thead><tbody>${rows}</tbody></table></div></article>`;
   }
 
   let wakeLock = null;
@@ -1363,14 +1361,14 @@
         </div>
         <div class="modal-body">
           <ul class="perks">${L.perks.map(perk).join("")}</ul>
-          <form class="form" id="pay-form" novalidate>
+          ${NATIVE ? `<p>${L.nativeNoSale}</p><button type="button" class="btn btn-primary btn-block" data-sync>${L.checkPayment}</button>` : `<form class="form" id="pay-form" novalidate>
             <p class="small full">${L.payAs(esc(state.user.email))}</p>
             <div class="field full"><label for="pf-phone">${L.momo}</label><input id="pf-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="6XX XX XX XX"></div>
             <p class="err full" id="pay-err" hidden></p>
             <button class="btn btn-primary btn-block full" type="submit" id="pay-btn">${state.demo ? L.simulatePay : L.pay(fcfa(state.config.price_xaf))}</button>
             <p class="small muted full">${L.payInfo}</p>
           </form>
-          <p class="small">${L.alreadyPaid} <button type="button" class="linkish" data-sync>${L.checkPayment}</button></p>
+          <p class="small">${L.alreadyPaid} <button type="button" class="linkish" data-sync>${L.checkPayment}</button></p>`}
         </div>
       </div>`;
     document.body.append(m);
@@ -1537,6 +1535,7 @@
     else if (tab === "corriges") v.innerHTML = viewBrowse("corriges");
     else if (tab === "oral") v.innerHTML = viewOral();
     else if (tab === "salle") v.innerHTML = viewSalle();
+    if (state.exam?.phase === "done") updateSelfTotal();
     tick();
   }
 
@@ -1633,17 +1632,11 @@
     if ("quit" in d) {
       state.exam = null;
       state.examDoc = null;
-      state.photos = [];
-      state.correction = null;
       local.del("exam");
       releaseWakeLock();
       return render();
     }
-    if (d.rm) {
-      state.photos.splice(Number(d.rm), 1);
-      return render();
-    }
-    if ("correct" in d) return runCorrection();
+    if ("saveScore" in d) return saveSelfScore();
     if ("pay" in d) return openPaywall();
     if ("sync" in d) return syncPayment();
     if ("account" in d) return openAccount();
@@ -1707,22 +1700,14 @@
   });
 
   document.addEventListener("input", (ev) => {
+    if (ev.target.dataset?.score !== undefined) {
+      (state.selfScores[state.exam.id] ||= {})[ev.target.dataset.score] = ev.target.value;
+      return updateSelfTotal();
+    }
     if (ev.target.id !== "concours-search") return;
     state.q = ev.target.value;
     const list = document.getElementById("concours-list");
     if (list) list.innerHTML = concoursList();
-  });
-
-  document.addEventListener("change", async (ev) => {
-    if (ev.target.id !== "photo-input") return;
-    for (const f of [...ev.target.files].slice(0, 6 - state.photos.length)) {
-      try {
-        state.photos.push(await compress(f));
-      } catch {
-        toast("×");
-      }
-    }
-    render();
   });
 
   // ---------- Démarrage ----------

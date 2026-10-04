@@ -1,0 +1,54 @@
+# Construit l'application Android Weldon.
+# - APK de test (à installer directement sur un téléphone) à chaque modification.
+# - AAB signé pour le Play Store si les secrets de signature sont configurés.
+name: Weldon Android
+
+on:
+  push:
+    paths:
+      - "weldon/android-app/**"
+      - ".github/workflows/weldon-android.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Un « if » d'étape ne peut lire que l'environnement du job, pas celui de l'étape elle-même.
+      KEYSTORE_B64: ${{ secrets.WELDON_KEYSTORE_B64 }}
+    defaults:
+      run:
+        working-directory: weldon/android-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npx cap sync android
+      - name: APK de test
+        working-directory: weldon/android-app/android
+        run: ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: weldon-apk-test
+          path: weldon/android-app/android/app/build/outputs/apk/debug/app-debug.apk
+      - name: AAB signé pour le Play Store
+        if: ${{ env.KEYSTORE_B64 != '' }}
+        env:
+          WELDON_KEYSTORE_PASSWORD: ${{ secrets.WELDON_KEYSTORE_PASSWORD }}
+          WELDON_KEY_ALIAS: ${{ secrets.WELDON_KEY_ALIAS }}
+          WELDON_KEY_PASSWORD: ${{ secrets.WELDON_KEY_PASSWORD }}
+        working-directory: weldon/android-app/android
+        run: |
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/weldon.jks"
+          WELDON_KEYSTORE_PATH="$RUNNER_TEMP/weldon.jks" ./gradlew bundleRelease --no-daemon
+      - uses: actions/upload-artifact@v4
+        if: ${{ hashFiles('weldon/android-app/android/app/build/outputs/bundle/release/*.aab') != '' }}
+        with:
+          name: weldon-play-store-aab
+          path: weldon/android-app/android/app/build/outputs/bundle/release/*.aab

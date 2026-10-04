@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Weldon</string>
+    <string name="title_activity_main">Weldon</string>
+    <string name="package_name">cm.weldon.app</string>
+    <string name="custom_url_scheme">cm.weldon.app</string>
+</resources>

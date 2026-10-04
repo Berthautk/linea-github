@@ -17,7 +17,6 @@ Object.assign(process.env, {
   DATA_DIR: dataDir,
 });
 delete process.env.DATABASE_URL;
-delete process.env.ANTHROPIC_API_KEY;
 
 const realFetch = globalThis.fetch;
 const now = new Date().toISOString();
@@ -168,10 +167,4 @@ test("changer de mot de passe déconnecte les autres appareils", async () => {
   assert.equal(r.status, 200);
   assert.equal((await call("GET", "/api/me", undefined, t)).status, 401);
   assert.equal((await call("GET", "/api/me", undefined, r.token)).status, 200);
-});
-
-test("correction réservée aux abonnés", async () => {
-  assert.equal((await call("POST", "/api/correct", {})).status, 401);
-  const t = await register("pasabonne@exemple.cm");
-  assert.equal((await call("POST", "/api/correct", {}, t)).status, 402);
 });

@@ -1,6 +1,6 @@
 # Weldon
 
-Application de préparation aux concours camerounais : fiches des concours, épreuves classées par année, corrigés entièrement rédigés, préparation à l'oral et salle d'examen chronométrée avec correction de la copie par l'IA.
+Application de préparation aux concours camerounais : fiches des concours, épreuves classées par année, corrigés entièrement rédigés, préparation à l'oral et salle d'examen chronométrée avec auto-correction guidée par le barème.
 
 Fonctionne dans le navigateur (ordinateur, tablette, téléphone), s'installe comme une application (PWA) et peut être publiée sur le Play Store.
 
@@ -10,20 +10,21 @@ Fonctionne dans le navigateur (ordinateur, tablette, téléphone), s'installe co
 |---|---|
 | `web/` | L'application (HTML, CSS, JavaScript sans framework), en français et en anglais. |
 | `content/` | Le catalogue : `concours.json` (fiches FR/EN), `epreuves.json` (sujets, barèmes, corrigés), `oral.json`, `groupes.json`. |
-| `server/` | Serveur Node.js : sert l'application, gère le paiement Chariow, délivre les accès d'un an, corrige les copies avec l'IA. |
+| `server/` | Serveur Node.js : sert l'application, gère le paiement Chariow, délivre les accès d'un an, gère les comptes. |
+| `android-app/` | Application Android (Capacitor) pour le Play Store, captures d'écran bloquées. |
 | `tools/build-demo.mjs` | Produit `dist/weldon-demo.html`, une démo autonome en un seul fichier (paiement et correction simulés). |
 
 ## Les sections de l'application
 
 Chaque élève crée **son propre compte** (e-mail + mot de passe), puis choisit sa **section francophone ou anglophone**. Tout le contenu (fiches, épreuves, corrigés, oral, interface) suit la section choisie ; on peut en changer depuis « Mon compte ».
 
-Les épreuves sont classées par **école** (regroupées par ministère : DGSN, MINDEF, MINESUP, MINFOPRA…), puis par **session** (2025, 2024…), avec dans chaque session les épreuves du concours (ex. Rédaction / Essay writing et Culture générale / General knowledge).
+Les épreuves sont classées par **école** (regroupées par ministère : DGSN, MINDEF, MINESUP, MINFOPRA…), puis par **session** (2025, 2024…), avec dans chaque session les épreuves du concours (ex. Rédaction / Essay writing et Culture générale / General knowledge). Les sujets d'entraînement écrits par Weldon sont rangés à part (« Sujets d'entraînement Weldon »). Les concours sont affichés **par ordre de priorité** (champ `priorite` de `concours.json`) ; ceux qui n'ont pas encore d'épreuves portent la mention **« En cours »**.
 
 1. **Les concours** : présentation de chaque concours (historique, conditions, limite d'âge, épreuves, durées, coefficients, oral, calendrier). Gratuit.
 2. **Épreuves** : école → session → épreuve. Sans abonnement, chaque compte choisit **une** épreuve offerte ; les autres sont verrouillées. Le serveur n'envoie le texte qu'aux comptes autorisés.
 3. **Corrigés rédigés** : chaque sujet entièrement rédigé. Réservé aux abonnés.
 4. **Préparer l'oral** : déroulement, questions fréquentes du jury, conseils. Le déroulement est visible gratuitement, le reste est flouté.
-5. **Salle d'examen** : choix du concours puis de l'épreuve, 2 minutes de préparation (cahier, stylo, calme), sujet affiché avec le chronomètre officiel (ex. 2 h 30), bouton « J'ai terminé », temps enregistré, photos de la copie, correction par l'IA (note /20, points forts, points faibles, fautes de langue, conseils, gestion du temps), puis corrigé rédigé.
+5. **Salle d'examen** : choix du concours puis de l'épreuve, 2 minutes de préparation (cahier, stylo, calme), sujet affiché avec le chronomètre officiel (ex. 2 h 30), bouton « J'ai terminé », temps enregistré, puis **auto-correction** : le corrigé s'affiche, l'élève se note ligne par ligne avec le barème et l'application calcule la note sur 20. Les notes sont gardées dans « Mes compositions ».
 
 Abonnement : **10 000 FCFA pour 12 mois**, payé une fois via Chariow (Mobile Money MTN / Orange ou carte).
 
@@ -34,10 +35,10 @@ cd weldon/server
 npm install
 cp .env.example .env      # puis remplir TOKEN_SECRET au minimum
 npm start                 # http://localhost:8080
-npm test                  # 9 tests (comptes, contenu protégé, paiement, webhook) sans réseau
+npm test                  # 8 tests (comptes, contenu protégé, paiement, webhook) sans réseau
 ```
 
-Sans clés Chariow, l'application reste en **mode démo** (paiement simulé). Sans `ANTHROPIC_API_KEY`, la correction affiche un exemple.
+Sans clés Chariow, l'application reste en **mode démo** (paiement simulé).
 
 ## Paiement avec Chariow
 
@@ -61,17 +62,22 @@ Chariow fournit une API REST (`https://api.chariow.com/v1`, clé `sk_live_…` e
 
 La clé API reste sur le serveur ; elle n'est jamais envoyée au navigateur. Les Pulses sont vérifiés par HMAC-SHA256 sur le corps brut et dédoublonnés par `x-pulse-delivery-id`.
 
-## Correction par l'IA
-
-`server/correction.js` envoie les photos de la copie, le sujet, le barème et le corrigé de référence au modèle Claude, qui lit l'écriture manuscrite et rend une évaluation structurée. Chaque abonné a droit à 15 corrections par mois (`AI_MONTHLY_LIMIT`) pour maîtriser les coûts.
-
-Il n'existe pas d'IA à la fois gratuite et fiable pour lire une copie manuscrite et la noter. Une correction (4 pages photographiées) coûte environ 50 à 150 FCFA en appels API. Un abonné qui utiliserait tout son quota chaque mois coûterait plus que les 10 000 FCFA payés ; en pratique la plupart en utilisent bien moins. Ajuster le quota selon l'usage réel observé.
-
 ## Mise en ligne
 
 - **Hébergement** : n'importe quel hébergeur Node.js (Render, Railway, Fly.io, un VPS). Le serveur sert à la fois l'API et l'application. HTTPS est obligatoire (Chariow l'exige pour les Pulses).
 - **Base de données** : les comptes sont enregistrés dans PostgreSQL via `DATABASE_URL` (Neon propose une base gratuite). Sans elle, un fichier local est utilisé : sur Render gratuit il est effacé à chaque redémarrage.
-- **Play Store** : l'application étant une PWA, on l'emballe avec **Bubblewrap** (Trusted Web Activity) ou **Capacitor**, puis on publie via un compte Google Play Console (25 $ une fois). Google exige ses propres moyens de paiement pour les contenus numériques achetés *dans* une application Play Store : vérifier les règles de facturation de Google Play pour le Cameroun avant la publication. Le site web n'est pas concerné.
+- **Play Store** : voir « Application Android » ci-dessous.
+
+## Application Android (Play Store)
+
+Le dossier `android-app/` contient l'application Android (Capacitor). Elle affiche `https://weldon.onrender.com` : toute mise à jour du site est visible dans l'application sans republier sur le Play Store.
+
+- Identifiant : `cm.weldon.app`, Android 6 et plus.
+- **Captures d'écran bloquées** (`FLAG_SECURE` dans `MainActivity.java`) : captures et enregistrements d'écran donnent un écran noir.
+- **Construction automatique** : à chaque modification de `android-app/`, GitHub Actions (`.github/workflows/weldon-android.yml`) produit un **APK de test** (onglet Actions → l'exécution → « weldon-apk-test »), à installer directement sur un téléphone.
+- **Version Play Store (AAB signé)** : produite automatiquement dès que ces secrets GitHub existent : `WELDON_KEYSTORE_B64` (fichier de clé en base64), `WELDON_KEYSTORE_PASSWORD`, `WELDON_KEY_ALIAS`, `WELDON_KEY_PASSWORD`. Garder la clé en lieu sûr : sans elle, impossible de publier des mises à jour.
+- **Paiement** : Google Play impose son propre système de facturation pour le contenu numérique vendu *dans* une application. Pour éviter un refus, l'application Android ne vend pas l'abonnement : elle reconnaît les comptes déjà abonnés (paiement Chariow sur le site) et le compte concepteur. Pour vendre dans l'application, il faudra ajouter Google Play Billing (Google prélève 15 % la première année d'abonnement).
+- Publication : compte Google Play Console (25 $ une fois), fiche de l'application, politique de confidentialité, puis envoi de l'AAB.
 
 ## Nom « Weldon »
 
@@ -128,19 +134,7 @@ Sur le web, **aucun site ne peut techniquement empêcher une capture d'écran** 
 - copier, couper, clic droit, sélection et impression sont bloqués sur les sujets et corrigés ;
 - le texte n'est envoyé qu'aux comptes autorisés.
 
-Dans l'**application Android** (Play Store, via Capacitor), le blocage devient réel : le drapeau `FLAG_SECURE` interdit captures et enregistrements d'écran (l'écran apparaît noir) :
-
-```java
-// android/app/src/main/java/.../MainActivity.java
-import android.os.Bundle;
-import android.view.WindowManager;
-public class MainActivity extends BridgeActivity {
-  @Override public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-  }
-}
-```
+Dans l'**application Android**, le blocage est réel : `FLAG_SECURE` interdit captures et enregistrements d'écran (voir « Application Android »).
 
 ## Points à décider
 

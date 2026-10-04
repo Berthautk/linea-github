@@ -102,7 +102,8 @@
       }
     },
     "categorie": "direct",
-    "tutelle": "DGSN"
+    "tutelle": "DGSN",
+    "priorite": 5
   },
   {
     "id": "gardiens-paix",
@@ -203,7 +204,8 @@
       }
     },
     "categorie": "direct",
-    "tutelle": "DGSN"
+    "tutelle": "DGSN",
+    "priorite": 2
   },
   {
     "id": "police-nationale-commissaires-et-officiers-de-po",
@@ -257,7 +259,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales commissaire/officier de police disponibles chez les tiers"
+    "source_annales": "Annales commissaire/officier de police disponibles chez les tiers",
+    "priorite": 17
   },
   {
     "id": "emia",
@@ -364,7 +367,8 @@
       }
     },
     "categorie": "ecole",
-    "tutelle": "MINDEF"
+    "tutelle": "MINDEF",
+    "priorite": 9
   },
   {
     "id": "recrutement-special-bir",
@@ -500,7 +504,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "priorite": 3
   },
   {
     "id": "armees-sous-officiers-soldats-matelots",
@@ -552,7 +557,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "priorite": 16
   },
   {
     "id": "essal",
@@ -805,7 +811,8 @@
       }
     },
     "categorie": "formation",
-    "tutelle": "MINFOPRA"
+    "tutelle": "MINFOPRA",
+    "priorite": 8
   },
   {
     "id": "enam-division-des-regies-financieres-cycles-a-et",
@@ -1508,7 +1515,8 @@
       }
     },
     "categorie": "ecole",
-    "tutelle": "MINESUP"
+    "tutelle": "MINESUP",
+    "priorite": 13
   },
   {
     "id": "capesa-issea-analystes-statisticiens-et-ingenieu",
@@ -1646,7 +1654,8 @@
         "places_note": "Places per stream, set by annual order"
       }
     },
-    "source_annales": "Annales ENSET disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales ENSET disponibles par année (bibliothèques tierces)",
+    "priorite": 14
   },
   {
     "id": "essec-sciences-economiques-et-commerciales",
@@ -1686,7 +1695,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales ESSEC disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales ESSEC disponibles par année (bibliothèques tierces)",
+    "priorite": 25
   },
   {
     "id": "polytechniques-enspy-enspd-enspm-ensai-egem-egci",
@@ -1728,7 +1738,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales par école et par année (bibliothèques tierces)"
+    "source_annales": "Annales par école et par année (bibliothèques tierces)",
+    "priorite": 15
   },
   {
     "id": "iric-institut-des-relations-internationales",
@@ -1768,7 +1779,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales IRIC disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales IRIC disponibles par année (bibliothèques tierces)",
+    "priorite": 24
   },
   {
     "id": "esstic-sciences-et-techniques-de-linformation-et",
@@ -1858,7 +1870,8 @@
         "places_note": null
       }
     },
-    "source_annales": "33 sujets d’annales FASA référencés chez les bibliothèques tierces"
+    "source_annales": "33 sujets d’annales FASA référencés chez les bibliothèques tierces",
+    "priorite": 20
   },
   {
     "id": "facultes-de-medecine-examen-national-daptitude-m",
@@ -1910,7 +1923,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales par année (bibliothèques tierces)"
+    "source_annales": "Annales par année (bibliothèques tierces)",
+    "priorite": 10
   },
   {
     "id": "emsv-sciences-et-medecine-veterinaire",
@@ -2028,7 +2042,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales IUT/FGI disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales IUT/FGI disponibles par année (bibliothèques tierces)",
+    "priorite": 19
   },
   {
     "id": "ipes-prives-sous-tutelle-academique-enspd-fasa-i",
@@ -2288,7 +2303,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)",
+    "priorite": 7
   },
   {
     "id": "entree-6e-1re-annee-common-entrance",
@@ -2332,7 +2348,8 @@
         "places_note": "Papers listed for 2024; depending on the year: reading comprehension, problem solving and general knowledge."
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "priorite": 1
   },
   {
     "id": "seconde-technique-4e-annee-bep",
@@ -2552,7 +2569,8 @@
         "places_note": "2025 session papers were sat on 14 February 2026."
       }
     },
-    "source_annales": "Sujets non publiés par l’administration"
+    "source_annales": "Sujets non publiés par l’administration",
+    "priorite": 6
   },
   {
     "id": "sante-publique-medecins-chirurgiens-dentistes-ph",
@@ -2640,7 +2658,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales santé publique disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales santé publique disponibles par année (bibliothèques tierces)",
+    "priorite": 18
   },
   {
     "id": "sante-publique-techniques-medico-sanitaires-geni",
@@ -2864,7 +2883,8 @@
         "places_note": "Subjects of the 2023-2024 session. Approved public and private schools."
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "priorite": 4
   },
   {
     "id": "regies-financieres-tresor",
@@ -2924,7 +2944,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "priorite": 12
   },
   {
     "id": "regies-financieres-douanes",
@@ -3000,7 +3021,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "priorite": 11
   },
   {
     "id": "regies-financieres-impots",
@@ -3050,7 +3072,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "priorite": 23
   },
   {
     "id": "concours-professionnels-corps-financiers-impots-",
@@ -3216,7 +3239,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)",
+    "priorite": 21
   },
   {
     "id": "injs-yaounde-cpja-cja-conseillers-jeunesse-et-an",
@@ -3386,7 +3410,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)",
+    "priorite": 22
   },
   {
     "id": "cenajes-bamenda-bertoua-dschang-garoua-mpeps-mep",

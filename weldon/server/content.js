@@ -13,7 +13,6 @@ export function loadContent(dir) {
   const oral = read("oral.json");
   const groupes = read("groupes.json");
   const categories = read("categories.json");
-  const correctionDemo = read("correction_demo.json");
 
   const ids = new Set();
   for (const e of epreuves) {
@@ -27,7 +26,6 @@ export function loadContent(dir) {
   return {
     epreuve: (id) => byId.get(id) || null,
     concours: (id) => concours.find((c) => c.id === id) || null,
-    correctionDemo: (lang) => correctionDemo[lang] || correctionDemo.fr,
 
     // Ce que tout le monde peut voir : fiches, liste des épreuves (sans texte), déroulement de l'oral.
     catalog(lang) {
@@ -37,7 +35,7 @@ export function loadContent(dir) {
         categories: Object.fromEntries(Object.entries(categories).map(([k, v]) => [k, v[lang]])),
         concours: concours
           .filter((c) => c[lang])
-          .map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, ...c[lang] })),
+          .map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, priorite: c.priorite || 999, ...c[lang] })),
         epreuves: epreuves
           .filter((e) => e.lang === lang)
           .map(({ id, concours: cid, annee, matiere, duree, exemple, sujet }) => ({

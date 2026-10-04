@@ -22,8 +22,6 @@ services:
         value: prd_9rngwe51
       - key: CHARIOW_PULSE_SECRET
         sync: false
-      - key: ANTHROPIC_API_KEY
-        sync: false
       # E-mail(s) du concepteur : accès complet sans payer (séparés par des virgules)
       - key: ADMIN_EMAILS
         sync: false

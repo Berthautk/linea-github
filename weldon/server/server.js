@@ -9,7 +9,6 @@ import { fileURLToPath } from "node:url";
 import { loadEnv } from "./env.js";
 import { createStore } from "./store.js";
 import { loadContent, LANGS } from "./content.js";
-import { correctCopy, aiEnabled } from "./correction.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 loadEnv(path.join(__dirname, ".env"));
@@ -264,7 +263,6 @@ route("GET", "/api/config", async () => ({
   price_xaf: PRICE_XAF,
   access_days: ACCESS_DAYS,
   payment_enabled: Boolean(CHARIOW_API_KEY && CHARIOW_PRODUCT_ID),
-  ai_enabled: aiEnabled(),
   accounts_persistent: store.kind === "postgres",
   version: (process.env.RENDER_GIT_COMMIT || "local").slice(0, 7),
 }));
@@ -432,34 +430,6 @@ route("POST", "/api/webhooks/chariow", async (req) => {
     if (u) await syncSubscription(u).catch((e) => console.error("Pulse : synchronisation impossible", e.message));
   }
   return { ok: true };
-});
-
-// Correction d'une copie photographiée (abonnés).
-route("POST", "/api/correct", async (req) => {
-  const u = await currentPremium(req);
-  if (!aiEnabled()) throw httpError(503, "La correction par IA n'est pas encore activée.");
-  const b = await readJson(req, 15 * 1024 * 1024);
-  const e = content.epreuve(str(b.epreuve_id, 80));
-  if (!e) throw httpError(404, "Épreuve introuvable.");
-  const images = (Array.isArray(b.images) ? b.images : [])
-    .slice(0, 6)
-    .filter((im) => ["image/jpeg", "image/png", "image/webp"].includes(im?.media_type) && typeof im.data === "string");
-  if (!images.length) throw httpError(400, "Ajoutez au moins une photo de votre copie.");
-  if (!isAdmin(u) && !(await store.takeCorrectionQuota(u.email, Number(process.env.AI_MONTHLY_LIMIT || 15)))) {
-    throw httpError(429, "Vous avez utilisé toutes vos corrections du mois. Elles se renouvellent le 1er du mois prochain.");
-  }
-  const c = content.concours(e.concours);
-  return correctCopy({
-    lang: e.lang,
-    concours: c[e.lang]?.nom || c.id,
-    epreuve: `${e.matiere} (${e.annee})`,
-    sujet: e.sujet,
-    corrige: e.corrige,
-    bareme: e.bareme || "",
-    duree_minutes: e.duree,
-    temps_utilise_minutes: Number(b.temps_utilise_minutes) || null,
-    images,
-  });
 });
 
 // Espace concepteur : liste des comptes et accès offert (testeurs, partenaires).

@@ -434,3 +434,17 @@ body.shielded .app { filter: blur(24px); }
 .sigle-long { font-size: 0.62rem; letter-spacing: 0; padding-inline: 4px; text-align: center; overflow-wrap: anywhere; }
 .chip .muted { font-weight: 700; opacity: 0.75; }
 .chip[aria-pressed="true"] .muted { color: inherit; }
+
+/* ---------- Auto-correction ---------- */
+.score-grid { display: grid; gap: 0; }
+.score-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--line);
+}
+.score-row label { min-width: 0; font-weight: 600; }
+.score-input { flex: none; display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 700; }
+.score-input input {
+  width: 64px; padding: 8px; border-radius: var(--radius-sm); border: 1.5px solid var(--line);
+  background: var(--bg); color: var(--ink); font: inherit; font-weight: 800; text-align: center;
+}
+.score-input input:focus { outline: none; border-color: var(--green); }

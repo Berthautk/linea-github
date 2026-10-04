@@ -1,0 +1,13 @@
+{
+  "appId": "cm.weldon.app",
+  "appName": "Weldon",
+  "webDir": "www",
+  "server": {
+    "url": "https://weldon.onrender.com",
+    "cleartext": false,
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#0a8f5a"
+  }
+}

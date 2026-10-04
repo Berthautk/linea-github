@@ -1,18 +1,94 @@
 {
-  "dgsn": {
+  "DGSN": {
     "fr": "DGSN – Sûreté Nationale (Police)",
     "en": "DGSN – National Security (Police)"
   },
-  "mindef": {
+  "MINDEF": {
     "fr": "MINDEF – Défense",
     "en": "MINDEF – Defence"
   },
-  "minesup": {
+  "MINFOPRA": {
+    "fr": "MINFOPRA – Fonction publique et Réforme administrative",
+    "en": "MINFOPRA – Public Service and Administrative Reform"
+  },
+  "MINESUP": {
     "fr": "MINESUP – Enseignement supérieur",
     "en": "MINESUP – Higher Education"
   },
-  "minfopra": {
-    "fr": "MINFOPRA – Fonction publique",
-    "en": "MINFOPRA – Public Service"
+  "MINEDUB": {
+    "fr": "MINEDUB – Éducation de base",
+    "en": "MINEDUB – Basic Education"
+  },
+  "MINSANTE": {
+    "fr": "MINSANTE – Santé publique",
+    "en": "MINSANTE – Public Health"
+  },
+  "MINFI": {
+    "fr": "MINFI – Finances",
+    "en": "MINFI – Finance"
+  },
+  "MINJEC": {
+    "fr": "MINJEC – Jeunesse et Éducation civique",
+    "en": "MINJEC – Youth Affairs and Civic Education"
+  },
+  "MINTP": {
+    "fr": "MINTP – Travaux publics",
+    "en": "MINTP – Public Works"
+  },
+  "MINADER": {
+    "fr": "MINADER – Agriculture et Développement rural",
+    "en": "MINADER – Agriculture and Rural Development"
+  },
+  "MINEPIA": {
+    "fr": "MINEPIA – Élevage, Pêches et Industries animales",
+    "en": "MINEPIA – Livestock, Fisheries and Animal Industries"
+  },
+  "MINMIDT": {
+    "fr": "MINMIDT – Mines, Industrie et Développement technologique",
+    "en": "MINMIDT – Mines, Industry and Technological Development"
+  },
+  "MINFOF": {
+    "fr": "MINFOF – Forêts et Faune",
+    "en": "MINFOF – Forestry and Wildlife"
+  },
+  "MINDCAF": {
+    "fr": "MINDCAF – Domaines, Cadastre et Affaires foncières",
+    "en": "MINDCAF – State Property, Surveys and Land Tenure"
+  },
+  "MINPT": {
+    "fr": "MINPT – Postes et Télécommunications",
+    "en": "MINPT – Posts and Telecommunications"
+  },
+  "MINCOM": {
+    "fr": "MINCOM – Communication",
+    "en": "MINCOM – Communication"
+  },
+  "MINTRANSPORTS": {
+    "fr": "MINT – Transports",
+    "en": "MINT – Transport"
+  },
+  "MINCOMMERCE": {
+    "fr": "MINCOMMERCE – Commerce",
+    "en": "MINCOMMERCE – Trade"
+  },
+  "MINTSS": {
+    "fr": "MINTSS – Travail et Sécurité sociale",
+    "en": "MINTSS – Labour and Social Security"
+  },
+  "MINAS": {
+    "fr": "MINAS – Affaires sociales",
+    "en": "MINAS – Social Affairs"
+  },
+  "MINEPDED": {
+    "fr": "MINEPDED – Environnement et Développement durable",
+    "en": "MINEPDED – Environment and Sustainable Development"
+  },
+  "MINEFOP": {
+    "fr": "MINEFOP – Emploi et Formation professionnelle",
+    "en": "MINEFOP – Employment and Vocational Training"
+  },
+  "MINRESI": {
+    "fr": "MINRESI – Recherche scientifique et Innovation",
+    "en": "MINRESI – Scientific Research and Innovation"
   }
 }

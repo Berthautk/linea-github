@@ -3,7 +3,7 @@
     "id": "police-inspecteurs",
     "sigle": "POLICE",
     "couleur": "indigo",
-    "groupe": "dgsn",
+    "groupe": "DGSN",
     "oral": false,
     "fr": {
       "nom": "Élèves inspecteurs de police",
@@ -37,6 +37,20 @@
         "autres_epreuves": "Épreuves sportives et visite médicale pour les admissibles",
         "admission": "Moyenne d'au moins 12/20 sans note éliminatoire",
         "a_verifier": "Chiffres de la session 2026 relevés sur les annonces publiques ; vérifier l'arrêté de la session en cours."
+      },
+      "annuaire": {
+        "matieres": [
+          "Rédaction (composition française)",
+          "Culture générale"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "400 + 100 (recrutement spécial)"
+          }
+        ],
+        "places_note": null
       }
     },
     "en": {
@@ -71,14 +85,30 @@
         "autres_epreuves": "Sports tests and medical examination for eligible candidates",
         "admission": "Average of at least 12/20 with no eliminatory mark",
         "a_verifier": "2026 figures taken from public announcements; check the order for the current session."
+      },
+      "annuaire": {
+        "matieres": [
+          "Essay writing",
+          "General knowledge"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "400 + 100 (special recruitment)"
+          }
+        ],
+        "places_note": null
       }
-    }
+    },
+    "categorie": "direct",
+    "tutelle": "DGSN"
   },
   {
     "id": "gardiens-paix",
     "sigle": "GP",
     "couleur": "indigo",
-    "groupe": "dgsn",
+    "groupe": "DGSN",
     "oral": false,
     "fr": {
       "nom": "Élèves gardiens de la paix",
@@ -110,6 +140,20 @@
         "autres_epreuves": "Épreuves sportives et visite médicale pour les admissibles",
         "admission": "Classement après écrits, sport et visite médicale",
         "a_verifier": "Âge, diplôme, durées et coefficients à vérifier sur l'arrêté de la session en cours."
+      },
+      "annuaire": {
+        "matieres": [
+          "Rédaction",
+          "Culture générale"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "1 735 (recrutement direct)"
+          }
+        ],
+        "places_note": null
       }
     },
     "en": {
@@ -142,14 +186,84 @@
         "autres_epreuves": "Sports tests and medical examination for eligible candidates",
         "admission": "Ranking after written papers, sports and medical examination",
         "a_verifier": "Age, diploma, durations and coefficients to be checked on the order for the current session."
+      },
+      "annuaire": {
+        "matieres": [
+          "Essay writing",
+          "General knowledge"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "1,735 (direct recruitment)"
+          }
+        ],
+        "places_note": null
       }
-    }
+    },
+    "categorie": "direct",
+    "tutelle": "DGSN"
+  },
+  {
+    "id": "police-nationale-commissaires-et-officiers-de-po",
+    "sigle": "CP/OP",
+    "couleur": "green",
+    "groupe": "DGSN",
+    "categorie": "special",
+    "tutelle": "DGSN / MINAT",
+    "oral": true,
+    "fr": {
+      "nom": "Police nationale – commissaires et officiers de police",
+      "organisme": "DGSN – Sûreté Nationale (Police)",
+      "annuaire": {
+        "matieres": [
+          "Culture générale (3 h 15, coef. 3)",
+          "Droit (4 h, coef. 5)",
+          "Oral",
+          "Épreuves physiques",
+          "Visite médicale",
+          "Enquête de moralité"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "50 + 50 commissaires, 100 + 50 officiers"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "National Police – superintendents and police officers",
+      "organisme": "DGSN – National Security (Police)",
+      "annuaire": {
+        "matieres": [
+          "General culture (3 h 15, coef. 3)",
+          "Law (4 h, coef. 5)",
+          "Oral",
+          "Physical tests",
+          "Medical examination",
+          "Background check"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "50 + 50 superintendents, 100 + 50 police officers"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales commissaire/officier de police disponibles chez les tiers"
   },
   {
     "id": "emia",
     "sigle": "EMIA",
     "couleur": "green",
-    "groupe": "mindef",
+    "groupe": "MINDEF",
     "oral": true,
     "fr": {
       "nom": "École Militaire Interarmées",
@@ -165,7 +279,7 @@
           "Être reconnu apte après visite médicale"
         ],
         "places": "Fixées chaque année par arrêté du MINDEF",
-        "calendrier": "Ouverture au premier semestre, écrits en milieu d'année, résultats définitifs à l'automne",
+        "calendrier": "Écrits en début d'année (session 2026 : 30 mars), résultats définitifs à l'automne",
         "epreuves_officielles": [
           {
             "nom": "Culture générale",
@@ -186,6 +300,18 @@
         "autres_epreuves": "Épreuves sportives, visite médicale et entretien devant un jury",
         "admission": "Classement final après écrits, sport et oral",
         "a_verifier": "Durées et coefficients à confirmer sur l'arrêté de la session en cours."
+      },
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Mathématiques",
+          "Physique",
+          "Épreuves sportives",
+          "Visite médicale"
+        ],
+        "sessions": "Sessions annuelles (2026 : épreuves le 30 mars)",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
       }
     },
     "en": {
@@ -202,7 +328,7 @@
           "Be declared fit after a medical examination"
         ],
         "places": "Set every year by order of the Ministry of Defence",
-        "calendrier": "Opening in the first half of the year, written papers mid-year, final results in the autumn",
+        "calendrier": "Written papers early in the year (2026 session: 30 March), final results in the autumn",
         "epreuves_officielles": [
           {
             "nom": "General knowledge",
@@ -223,14 +349,839 @@
         "autres_epreuves": "Sports tests, medical examination and an interview before a panel",
         "admission": "Final ranking after written papers, sports and oral",
         "a_verifier": "Durations and coefficients to be confirmed on the order for the current session."
+      },
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Mathematics",
+          "Physics",
+          "Sports tests",
+          "Medical examination"
+        ],
+        "sessions": "Annual sessions (2026: papers on 30 March)",
+        "places": [],
+        "places_note": "Places set by annual order"
       }
-    }
+    },
+    "categorie": "ecole",
+    "tutelle": "MINDEF"
+  },
+  {
+    "id": "recrutement-special-bir",
+    "sigle": "BIR",
+    "couleur": "red",
+    "groupe": "MINDEF",
+    "categorie": "special",
+    "tutelle": "MINDEF",
+    "oral": false,
+    "fr": {
+      "nom": "Recrutement spécial BIR",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Épreuves physiques",
+          "Tests d’aptitude",
+          "Visite médicale"
+        ],
+        "sessions": "2025",
+        "places": [],
+        "places_note": "Places non communiquées publiquement"
+      }
+    },
+    "en": {
+      "nom": "BIR special recruitment",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "Physical tests",
+          "Aptitude tests",
+          "Medical examination"
+        ],
+        "sessions": "2025",
+        "places": [],
+        "places_note": "Places not publicly announced"
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "eiforces-forces-de-defense-et-securite",
+    "sigle": "EIFORCES",
+    "couleur": "red",
+    "groupe": "MINDEF",
+    "categorie": "ecole",
+    "tutelle": "MINDEF",
+    "oral": false,
+    "fr": {
+      "nom": "EIFORCES – forces de défense et sécurité",
+      "organisme": "MINDEF – Défense",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Droit",
+          "Épreuves sportives"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "EIFORCES – defence and security forces",
+      "organisme": "MINDEF – Defence",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Law",
+          "Sports tests"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "enam",
+    "sigle": "ENAM",
+    "couleur": "red",
+    "groupe": "MINFOPRA",
+    "oral": true,
+    "fr": {
+      "nom": "ENAM – Division administrative (cycles A et B)",
+      "organisme": "MINFOPRA",
+      "resume": "Forme les administrateurs civils, magistrats, greffiers et cadres des régies financières.",
+      "fiche": {
+        "presentation": "L'ENAM, à Yaoundé, prépare aux carrières de la haute fonction publique : administration générale, magistrature, greffes, douanes, impôts, trésor.",
+        "historique": "L'ENAM succède à l'École Camerounaise d'Administration (ECA), créée en 1959 pour former les cadres appelés à prendre la relève de l'administration coloniale.",
+        "conditions": [
+          "Être de nationalité camerounaise",
+          "Cycle A : licence ou master selon la division ; cycle B : baccalauréat ou équivalent",
+          "Limites d'âge fixées par l'arrêté de chaque division"
+        ],
+        "places": "120 places à la session 2026 (cycle A : 70, cycle B : 50)",
+        "calendrier": "Arrêtés en juin, écrits entre août et septembre selon la division",
+        "epreuves_officielles": [
+          {
+            "nom": "Culture générale (dissertation)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Épreuve de spécialité (droit, économie…)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Résumé / note de synthèse",
+            "duree": 180,
+            "coef": 2
+          }
+        ],
+        "autres_epreuves": "Grand oral devant un jury pour les admissibles",
+        "admission": "Classement après écrits et oral",
+        "a_verifier": "Durées et coefficients variables selon la division ; vérifier l'arrêté."
+      },
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Droit constitutionnel et institutions politiques",
+          "Économie générale",
+          "Épreuve de spécialité (droit administratif, droit du travail, psychologie)",
+          "Grand oral",
+          "Oral de langue"
+        ],
+        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "120 (A 70 / B 50)"
+          },
+          {
+            "annee": "2025",
+            "detail": "120 (60/60)"
+          },
+          {
+            "annee": "2024",
+            "detail": "110 (60/50)"
+          },
+          {
+            "annee": "2023",
+            "detail": "60 (cycle A)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "ENAM – Administrative Division (cycles A and B)",
+      "organisme": "MINFOPRA",
+      "resume": "Trains civil administrators, magistrates, court registrars and officials of the revenue services.",
+      "fiche": {
+        "presentation": "ENAM, in Yaoundé, prepares candidates for senior public service careers: general administration, magistracy, court registry, customs, taxation, treasury.",
+        "historique": "ENAM succeeds the Cameroon School of Administration (ECA), created in 1959 to train the officials who would take over from the colonial administration.",
+        "conditions": [
+          "Be a Cameroonian national",
+          "Cycle A: Bachelor's or Master's degree depending on the division; Cycle B: GCE A Level, Baccalaureate or equivalent",
+          "Age limits set by the order of each division"
+        ],
+        "places": "120 places in the 2026 session (cycle A: 70, cycle B: 50)",
+        "calendrier": "Orders in June, written papers between August and September depending on the division",
+        "epreuves_officielles": [
+          {
+            "nom": "General culture (essay)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Specialty paper (law, economics…)",
+            "duree": 240,
+            "coef": 4
+          },
+          {
+            "nom": "Summary / synthesis note",
+            "duree": 180,
+            "coef": 2
+          }
+        ],
+        "autres_epreuves": "Final oral before a panel for eligible candidates",
+        "admission": "Ranking after written papers and oral",
+        "a_verifier": "Durations and coefficients vary by division; check the order."
+      },
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Constitutional law and political institutions",
+          "General economics",
+          "Specialty paper (administrative law, labour law, psychology)",
+          "Final oral",
+          "Language oral"
+        ],
+        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "120 (A 70 / B 50)"
+          },
+          {
+            "annee": "2025",
+            "detail": "120 (60/60)"
+          },
+          {
+            "annee": "2024",
+            "detail": "110 (60/50)"
+          },
+          {
+            "annee": "2023",
+            "detail": "60 (cycle A)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "categorie": "formation",
+    "tutelle": "MINFOPRA"
+  },
+  {
+    "id": "enam-division-des-regies-financieres-cycles-a-et",
+    "sigle": "ENAM",
+    "couleur": "indigo",
+    "groupe": "MINFOPRA",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA",
+    "oral": true,
+    "fr": {
+      "nom": "ENAM – Division des Régies Financières (cycles A et B)",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Droit constitutionnel",
+          "Économie générale",
+          "Comptabilité générale (Impôts, Comptabilité-matières) ou statistiques et économétrie (Prix, poids et mesures)",
+          "Grand oral",
+          "Oral de langue"
+        ],
+        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40"
+          },
+          {
+            "annee": "2025",
+            "detail": "40"
+          },
+          {
+            "annee": "2024",
+            "detail": "70"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "ENAM – Revenue Services Division (cycles A and B)",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Constitutional law",
+          "General economics",
+          "General accounting (Taxation, Stores accounting) or statistics and econometrics (Prices, weights and measures)",
+          "Final oral",
+          "Language oral"
+        ],
+        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40"
+          },
+          {
+            "annee": "2025",
+            "detail": "40"
+          },
+          {
+            "annee": "2024",
+            "detail": "70"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales 2001-2025 : comptabilité, fiscalité, économie, statistiques, droit public"
+  },
+  {
+    "id": "enam-division-de-la-magistrature-et-des-greffes",
+    "sigle": "ENAM",
+    "couleur": "amber",
+    "groupe": "MINFOPRA",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA",
+    "oral": true,
+    "fr": {
+      "nom": "ENAM – Division de la Magistrature et des Greffes",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve de langue",
+          "Organisation judiciaire et administrative des juridictions",
+          "Procédure civile et procédure pénale",
+          "Droit civil",
+          "Droit pénal",
+          "Droit commercial",
+          "Grand oral"
+        ],
+        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "60"
+          },
+          {
+            "annee": "2025",
+            "detail": "70"
+          },
+          {
+            "annee": "2024",
+            "detail": "55 (classique) + 50 (Common Law)"
+          },
+          {
+            "annee": "2023",
+            "detail": "50"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "ENAM – Magistracy and Court Registry Division",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Language paper",
+          "Judicial and administrative organisation of the courts",
+          "Civil and criminal procedure",
+          "Civil law",
+          "Criminal law",
+          "Commercial law",
+          "Final oral"
+        ],
+        "sessions": "2020, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "60"
+          },
+          {
+            "annee": "2025",
+            "detail": "70"
+          },
+          {
+            "annee": "2024",
+            "detail": "55 (civil law) + 50 (Common Law)"
+          },
+          {
+            "annee": "2023",
+            "detail": "50"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales 2001-2025 : droit civil et procédure, droit pénal, droit des affaires, culture générale, organisation judiciaire"
+  },
+  {
+    "id": "enam-concours-special-common-law-expression-angl",
+    "sigle": "ENAM",
+    "couleur": "red",
+    "groupe": "MINFOPRA",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "ENAM – Concours spécial Common Law (expression anglaise)",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Épreuves des divisions concernées, en anglais (culture générale, droit, procédure)"
+        ],
+        "sessions": "2020, 2021, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "50"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2021",
+            "detail": "80"
+          },
+          {
+            "annee": "2020",
+            "detail": "80"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "ENAM – Special Common Law competition (English-speaking)",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "Papers of the divisions concerned, in English (general culture, law, procedure)"
+        ],
+        "sessions": "2020, 2021, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "50"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2021",
+            "detail": "80"
+          },
+          {
+            "annee": "2020",
+            "detail": "80"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales partielles en anglais, sessions récentes"
+  },
+  {
+    "id": "ief-pr-auditeurs-pole-regional-des-regies-financ",
+    "sigle": "IEF-PR",
+    "couleur": "amber",
+    "groupe": "MINFOPRA",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "IEF-PR – Auditeurs (pôle régional des régies financières CEMAC)",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Finances publiques",
+          "Économie",
+          "Culture générale"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40 (9e promotion)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "IEF-PR – Auditors (CEMAC regional centre for revenue services)",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "Public finance",
+          "Economics",
+          "General culture"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40 (9th class)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "services-de-traduction-et-dinterpretation",
+    "sigle": "TRAD.",
+    "couleur": "green",
+    "groupe": "MINFOPRA",
+    "categorie": "direct",
+    "tutelle": "MINFOPRA",
+    "oral": true,
+    "fr": {
+      "nom": "Services de traduction et d’interprétation",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Version et thème",
+          "Traduction technique",
+          "Oral de langue"
+        ],
+        "sessions": "2018, 2021, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "100"
+          },
+          {
+            "annee": "2023",
+            "detail": "100"
+          },
+          {
+            "annee": "2021",
+            "detail": "117"
+          },
+          {
+            "annee": "2018",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Translation and interpretation services",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Translation into and out of English",
+          "Technical translation",
+          "Language oral"
+        ],
+        "sessions": "2018, 2021, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "100"
+          },
+          {
+            "annee": "2023",
+            "detail": "100"
+          },
+          {
+            "annee": "2021",
+            "detail": "117"
+          },
+          {
+            "annee": "2018",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "inspecteurs-de-la-documentation",
+    "sigle": "DOC",
+    "couleur": "indigo",
+    "groupe": "MINFOPRA",
+    "categorie": "direct",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Inspecteurs de la documentation",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Sciences de l’information et documentation",
+          "Langue"
+        ],
+        "sessions": "2019, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "10"
+          },
+          {
+            "annee": "2019",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Documentation inspectors",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Information science and documentation",
+          "Language"
+        ],
+        "sessions": "2019, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "10"
+          },
+          {
+            "annee": "2019",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "secretaires-recrutement-special",
+    "sigle": "SECR.",
+    "couleur": "indigo",
+    "groupe": "MINFOPRA",
+    "categorie": "special",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Secrétaires (recrutement spécial)",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Bureautique",
+          "Langue"
+        ],
+        "sessions": "2020",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "70"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Secretaries (special recruitment)",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Office software",
+          "Language"
+        ],
+        "sessions": "2020",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "70"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "chauffeurs-categorie-3-1",
+    "sigle": "CHAUF.",
+    "couleur": "amber",
+    "groupe": "MINFOPRA",
+    "categorie": "selection",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Chauffeurs (catégorie 3/1)",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Code de la route",
+          "Épreuve pratique de conduite"
+        ],
+        "sessions": "2020",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "400"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Drivers (category 3/1)",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Highway code",
+          "Practical driving test"
+        ],
+        "sessions": "2020",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "400"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "secretaires-de-direction",
+    "sigle": "SEC.D",
+    "couleur": "amber",
+    "groupe": "MINFOPRA",
+    "categorie": "selection",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Secrétaires de direction",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Bureautique",
+          "Langue"
+        ],
+        "sessions": "2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Executive secretaries",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Office software",
+          "Language"
+        ],
+        "sessions": "2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "concours-professionnels-administration-generale",
+    "sigle": "PRO",
+    "couleur": "green",
+    "groupe": "MINFOPRA",
+    "categorie": "professionnel",
+    "tutelle": "MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – administration générale",
+      "organisme": "MINFOPRA – Fonction publique et Réforme administrative",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Droit administratif",
+          "Finances publiques",
+          "Épreuve professionnelle",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "80 (20 administrateurs civils, 20 secrétaires d’administration principaux, 20 secrétaires d’administration, 20 adjoints d’administration)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – general administration",
+      "organisme": "MINFOPRA – Public Service and Administrative Reform",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Administrative law",
+          "Public finance",
+          "Professional paper",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "80 (20 civil administrators, 20 senior administrative secretaries, 20 administrative secretaries, 20 administrative assistants)"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales professionnelles disponibles chez les tiers"
   },
   {
     "id": "ens-yaounde",
     "sigle": "ENS",
     "couleur": "amber",
-    "groupe": "minesup",
+    "groupe": "MINESUP",
     "oral": true,
     "fr": {
       "nom": "École Normale Supérieure de Yaoundé – 1er cycle",
@@ -266,6 +1217,16 @@
         "autres_epreuves": "Oral d'admission pour les candidats admissibles",
         "admission": "Dossier (25 %) + écrits (75 %), puis oral",
         "a_verifier": "Pondération relevée pour la session 2026 ; vérifier l'arrêté MINESUP."
+      },
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve de la discipline choisie",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles ; relance en 2026 (année 2025-2026)",
+        "places": [],
+        "places_note": "Places par filière et par école, fixées par arrêté annuel"
       }
     },
     "en": {
@@ -302,86 +1263,3279 @@
         "autres_epreuves": "Oral admission test for eligible candidates",
         "admission": "Records (25 %) + written papers (75 %), then oral",
         "a_verifier": "Weighting taken for the 2026 session; check the MINESUP order."
+      },
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Paper in the chosen subject",
+          "Language"
+        ],
+        "sessions": "Annual sessions; resumed in 2026 (2025-2026 year)",
+        "places": [],
+        "places_note": "Places per stream and per school, set by annual order"
       }
-    }
+    },
+    "categorie": "ecole",
+    "tutelle": "MINESUP"
   },
   {
-    "id": "enam",
-    "sigle": "ENAM",
-    "couleur": "red",
-    "groupe": "minfopra",
-    "oral": true,
+    "id": "capesa-issea-analystes-statisticiens-et-ingenieu",
+    "sigle": "ISSEA",
+    "couleur": "green",
+    "groupe": "MINESUP",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA / MINESUP",
+    "oral": false,
     "fr": {
-      "nom": "École Nationale d'Administration et de Magistrature",
-      "organisme": "MINFOPRA",
-      "resume": "Forme les administrateurs civils, magistrats, greffiers et cadres des régies financières.",
-      "fiche": {
-        "presentation": "L'ENAM, à Yaoundé, prépare aux carrières de la haute fonction publique : administration générale, magistrature, greffes, douanes, impôts, trésor.",
-        "historique": "L'ENAM succède à l'École Camerounaise d'Administration (ECA), créée en 1959 pour former les cadres appelés à prendre la relève de l'administration coloniale.",
-        "conditions": [
-          "Être de nationalité camerounaise",
-          "Cycle A : licence ou master selon la division ; cycle B : baccalauréat ou équivalent",
-          "Limites d'âge fixées par l'arrêté de chaque division"
+      "nom": "CAPESA / ISSEA – Analystes statisticiens et ingénieurs statisticiens économistes",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Mathématiques",
+          "Statistiques",
+          "Économie",
+          "Culture générale",
+          "Langue"
         ],
-        "places": "220 places à la session 2026 (toutes divisions)",
-        "calendrier": "Arrêtés en juin, écrits entre août et septembre selon la division",
-        "epreuves_officielles": [
+        "sessions": "2023, 2024, 2025",
+        "places": [
           {
-            "nom": "Culture générale (dissertation)",
-            "duree": 240,
-            "coef": 4
+            "annee": "2023",
+            "detail": "80 (30 AS, 20 ISE long, 30 ISE)"
           },
           {
-            "nom": "Épreuve de spécialité (droit, économie…)",
-            "duree": 240,
-            "coef": 4
-          },
-          {
-            "nom": "Résumé / note de synthèse",
-            "duree": 180,
-            "coef": 2
+            "annee": "2025",
+            "detail": "10 techniciens supérieurs de la statistique"
           }
         ],
-        "autres_epreuves": "Grand oral devant un jury pour les admissibles",
-        "admission": "Classement après écrits et oral",
-        "a_verifier": "Durées et coefficients variables selon la division ; vérifier l'arrêté."
+        "places_note": null
       }
     },
     "en": {
-      "nom": "National School of Administration and Magistracy",
-      "organisme": "MINFOPRA",
-      "resume": "Trains civil administrators, magistrates, court registrars and officials of the revenue services.",
-      "fiche": {
-        "presentation": "ENAM, in Yaoundé, prepares candidates for senior public service careers: general administration, magistracy, court registry, customs, taxation, treasury.",
-        "historique": "ENAM succeeds the Cameroon School of Administration (ECA), created in 1959 to train the officials who would take over from the colonial administration.",
-        "conditions": [
-          "Be a Cameroonian national",
-          "Cycle A: Bachelor's or Master's degree depending on the division; Cycle B: GCE A Level, Baccalaureate or equivalent",
-          "Age limits set by the order of each division"
+      "nom": "CAPESA / ISSEA – Statistical analysts and statistician-economist engineers",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Mathematics",
+          "Statistics",
+          "Economics",
+          "General culture",
+          "Language"
         ],
-        "places": "220 places in the 2026 session (all divisions)",
-        "calendrier": "Orders in June, written papers between August and September depending on the division",
-        "epreuves_officielles": [
+        "sessions": "2023, 2024, 2025",
+        "places": [
           {
-            "nom": "General culture (essay)",
-            "duree": 240,
-            "coef": 4
+            "annee": "2023",
+            "detail": "80 (30 AS, 20 ISE long cycle, 30 ISE)"
           },
           {
-            "nom": "Specialty paper (law, economics…)",
-            "duree": 240,
-            "coef": 4
-          },
-          {
-            "nom": "Summary / synthesis note",
-            "duree": 180,
-            "coef": 2
+            "annee": "2025",
+            "detail": "10 senior statistics technicians"
           }
         ],
-        "autres_epreuves": "Final oral before a panel for eligible candidates",
-        "admission": "Ranking after written papers and oral",
-        "a_verifier": "Durations and coefficients vary by division; check the order."
+        "places_note": null
       }
-    }
+    },
+    "source_annales": "Annales ISSEA disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "iford-master-professionnel-en-demographie-1re-an",
+    "sigle": "IFORD",
+    "couleur": "indigo",
+    "groupe": "MINESUP",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA / MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "IFORD – Master professionnel en démographie (1re année)",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Démographie",
+          "Mathématiques",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "2024, 2025, 2026",
+        "places": [],
+        "places_note": "Places limitées, non communiquées dans les communiqués annuels"
+      }
+    },
+    "en": {
+      "nom": "IFORD – Professional Master's in demography (1st year)",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Demography",
+          "Mathematics",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "2024, 2025, 2026",
+        "places": [],
+        "places_note": "Limited places, not stated in the annual announcements"
+      }
+    },
+    "source_annales": "Annales IFORD jusqu’à 2023 (bibliothèques tierces)"
+  },
+  {
+    "id": "enset-ecoles-normales-superieures-de-lenseigneme",
+    "sigle": "ENSET",
+    "couleur": "green",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ENSET – Écoles normales supérieures de l’enseignement technique (Douala, Bambili, Kumba, Ebolowa)",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique de la filière",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places par filière, fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "ENSET – Higher Technical Teacher Training Colleges (Douala, Bambili, Kumba, Ebolowa)",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical paper of the stream",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places per stream, set by annual order"
+      }
+    },
+    "source_annales": "Annales ENSET disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "essec-sciences-economiques-et-commerciales",
+    "sigle": "ESSEC",
+    "couleur": "indigo",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ESSEC – sciences économiques et commerciales",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Économie",
+          "Mathématiques",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "ESSEC – economic and commercial sciences",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Economics",
+          "Mathematics",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales ESSEC disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "polytechniques-enspy-enspd-enspm-ensai-egem-egci",
+    "sigle": "POLY",
+    "couleur": "amber",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "Polytechniques – ENSPY, ENSPD, ENSPM, ENSAI, EGEM, EGCIM, ENSP",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Mathématiques",
+          "Physique",
+          "Chimie",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles (1er cycle, 2e cycle, 3e cycle)",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "Polytechnics – ENSPY, ENSPD, ENSPM, ENSAI, EGEM, EGCIM, ENSP",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Mathematics",
+          "Physics",
+          "Chemistry",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions (1st, 2nd and 3rd cycle)",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales par école et par année (bibliothèques tierces)"
+  },
+  {
+    "id": "iric-institut-des-relations-internationales",
+    "sigle": "IRIC",
+    "couleur": "red",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "IRIC – Institut des relations internationales",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Relations internationales",
+          "Droit international",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "IRIC – International Relations Institute",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "International relations",
+          "International law",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales IRIC disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "esstic-sciences-et-techniques-de-linformation-et",
+    "sigle": "ESSTIC",
+    "couleur": "green",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "ESSTIC – sciences et techniques de l’information et de la communication",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve professionnelle (rédaction, communication)",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "ESSTIC – information and communication sciences and techniques",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Professional paper (writing, communication)",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales ESSTIC disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "fasa-fasa-ipes-agronomie-et-sciences-agricoles",
+    "sigle": "FASA",
+    "couleur": "indigo",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "FASA / FASA-IPES – agronomie et sciences agricoles",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Mathématiques",
+          "Biologie",
+          "Physique-chimie",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles (1 200 places annoncées en 2025/2026)",
+        "places": [
+          {
+            "annee": "2025/2026",
+            "detail": "1 200 places"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "FASA / FASA-IPES – agronomy and agricultural sciences",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Mathematics",
+          "Biology",
+          "Physics and chemistry",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions (1,200 places announced for 2025/2026)",
+        "places": [
+          {
+            "annee": "2025/2026",
+            "detail": "1,200 places"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "33 sujets d’annales FASA référencés chez les bibliothèques tierces"
+  },
+  {
+    "id": "facultes-de-medecine-examen-national-daptitude-m",
+    "sigle": "MÉD",
+    "couleur": "amber",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "Facultés de médecine – examen national d’aptitude (médecine, pharmacie, odontostomatologie)",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Biologie",
+          "Chimie",
+          "Physique",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [
+          {
+            "annee": "2024-2025",
+            "detail": "1 130 places"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Faculties of medicine – national aptitude exam (medicine, pharmacy, dentistry)",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Biology",
+          "Chemistry",
+          "Physics",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [
+          {
+            "annee": "2024-2025",
+            "detail": "1,130 places"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales par année (bibliothèques tierces)"
+  },
+  {
+    "id": "emsv-sciences-et-medecine-veterinaire",
+    "sigle": "EMSV",
+    "couleur": "red",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "EMSV – sciences et médecine vétérinaire",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Biologie",
+          "Physique-chimie",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "EMSV – veterinary science and medicine",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Biology",
+          "Physics and chemistry",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales EMSV (biologie) disponibles"
+  },
+  {
+    "id": "cessi-sciences-infirmieres",
+    "sigle": "CESSI",
+    "couleur": "green",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP / MINSANTE",
+    "oral": false,
+    "fr": {
+      "nom": "CESSI – sciences infirmières",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Biologie",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par décision annuelle"
+      }
+    },
+    "en": {
+      "nom": "CESSI – nursing sciences",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Biology",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual decision"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "iut-fgi-et-ecoles-de-technologie",
+    "sigle": "IUT",
+    "couleur": "indigo",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "IUT, FGI et écoles de technologie",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Mathématiques",
+          "Physique",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "IUT, FGI and technology schools",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Mathematics",
+          "Physics",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales IUT/FGI disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "ipes-prives-sous-tutelle-academique-enspd-fasa-i",
+    "sigle": "IPES",
+    "couleur": "amber",
+    "groupe": "MINESUP",
+    "categorie": "ecole",
+    "tutelle": "MINESUP",
+    "oral": false,
+    "fr": {
+      "nom": "IPES privés sous tutelle académique (ENSPD, FASA, ISABEE, ENSPM…)",
+      "organisme": "MINESUP – Enseignement supérieur",
+      "annuaire": {
+        "matieres": [
+          "Épreuves de la discipline (ingénieur, agronomie, numérique)",
+          "Culture générale",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par décision annuelle"
+      }
+    },
+    "en": {
+      "nom": "Private higher institutes under academic supervision (ENSPD, FASA, ISABEE, ENSPM…)",
+      "organisme": "MINESUP – Higher Education",
+      "annuaire": {
+        "matieres": [
+          "Papers in the discipline (engineering, agronomy, digital)",
+          "General culture",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual decision"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "ietp-instituteurs-de-lenseignement-technique-et-",
+    "sigle": "IETP",
+    "couleur": "red",
+    "groupe": "MINEDUB",
+    "categorie": "selection",
+    "tutelle": "MINFOPRA / MINEDUB",
+    "oral": true,
+    "fr": {
+      "nom": "IETP – Instituteurs de l’enseignement technique et professionnel",
+      "organisme": "MINEDUB – Éducation de base",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique",
+          "Langue",
+          "Entretien"
+        ],
+        "sessions": "2019, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "100"
+          },
+          {
+            "annee": "2025",
+            "detail": "175"
+          },
+          {
+            "annee": "2024",
+            "detail": "60"
+          },
+          {
+            "annee": "2023",
+            "detail": "150"
+          },
+          {
+            "annee": "2022",
+            "detail": "100"
+          },
+          {
+            "annee": "2021",
+            "detail": "130"
+          },
+          {
+            "annee": "2019",
+            "detail": "885"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "IETP – Technical and vocational education teachers",
+      "organisme": "MINEDUB – Basic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical paper",
+          "Language",
+          "Interview"
+        ],
+        "sessions": "2019, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "100"
+          },
+          {
+            "annee": "2025",
+            "detail": "175"
+          },
+          {
+            "annee": "2024",
+            "detail": "60"
+          },
+          {
+            "annee": "2023",
+            "detail": "150"
+          },
+          {
+            "annee": "2022",
+            "detail": "100"
+          },
+          {
+            "annee": "2021",
+            "detail": "130"
+          },
+          {
+            "annee": "2019",
+            "detail": "885"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales IETP (niveaux CAP, BEPC, probatoire) disponibles par année"
+  },
+  {
+    "id": "iemp-contractualisation-des-instituteurs",
+    "sigle": "IEMP",
+    "couleur": "green",
+    "groupe": "MINEDUB",
+    "categorie": "selection",
+    "tutelle": "MINEDUB / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "IEMP – contractualisation des instituteurs",
+      "organisme": "MINEDUB – Éducation de base",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Pédagogie",
+          "Langue"
+        ],
+        "sessions": "2021, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "3 000"
+          },
+          {
+            "annee": "2021",
+            "detail": "3 000"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "IEMP – contract recruitment of primary teachers",
+      "organisme": "MINEDUB – Basic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Teaching methods",
+          "Language"
+        ],
+        "sessions": "2021, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "3 000"
+          },
+          {
+            "annee": "2021",
+            "detail": "3 000"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés par l’administration"
+  },
+  {
+    "id": "enieg-ecoles-normales-dinstituteurs-de-lenseigne",
+    "sigle": "ENIEG",
+    "couleur": "red",
+    "groupe": "MINEDUB",
+    "categorie": "ecole",
+    "tutelle": "MINEDUB",
+    "oral": false,
+    "fr": {
+      "nom": "ENIEG – écoles normales d’instituteurs de l’enseignement général",
+      "organisme": "MINEDUB – Éducation de base",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Français",
+          "Mathématiques",
+          "Langue"
+        ],
+        "sessions": "Sessions annuelles",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "ENIEG – teacher training colleges for general education",
+      "organisme": "MINEDUB – Basic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "French",
+          "Mathematics",
+          "Language"
+        ],
+        "sessions": "Annual sessions",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "sante-publique-medecins-chirurgiens-dentistes-ph",
+    "sigle": "SANTÉ",
+    "couleur": "green",
+    "groupe": "MINSANTE",
+    "categorie": "direct",
+    "tutelle": "MINSANTE / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Santé publique – Médecins, chirurgiens-dentistes, pharmaciens, infirmiers",
+      "organisme": "MINSANTE – Santé publique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique (sciences médicales ou soins infirmiers)",
+          "Langue"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "380 (200 médecins spécialistes, 180 infirmiers)"
+          },
+          {
+            "annee": "2025",
+            "detail": "350 infirmiers"
+          },
+          {
+            "annee": "2024",
+            "detail": "80"
+          },
+          {
+            "annee": "2023",
+            "detail": "310"
+          },
+          {
+            "annee": "2022",
+            "detail": "270"
+          },
+          {
+            "annee": "2021",
+            "detail": "220"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Public health – Doctors, dental surgeons, pharmacists, nurses",
+      "organisme": "MINSANTE – Public Health",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical paper (medical sciences or nursing care)",
+          "Language"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "380 (200 specialist doctors, 180 nurses)"
+          },
+          {
+            "annee": "2025",
+            "detail": "350 nurses"
+          },
+          {
+            "annee": "2024",
+            "detail": "80"
+          },
+          {
+            "annee": "2023",
+            "detail": "310"
+          },
+          {
+            "annee": "2022",
+            "detail": "270"
+          },
+          {
+            "annee": "2021",
+            "detail": "220"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales santé publique disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "sante-publique-techniques-medico-sanitaires-geni",
+    "sigle": "SANTÉ",
+    "couleur": "indigo",
+    "groupe": "MINSANTE",
+    "categorie": "direct",
+    "tutelle": "MINSANTE / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Santé publique – Techniques médico-sanitaires, génie sanitaire, techniques biomédicales",
+      "organisme": "MINSANTE – Santé publique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique",
+          "Langue"
+        ],
+        "sessions": "2020, 2021, 2023, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "120"
+          },
+          {
+            "annee": "2023",
+            "detail": "230"
+          },
+          {
+            "annee": "2021",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Public health – Medical and sanitary techniques, sanitary engineering, biomedical techniques",
+      "organisme": "MINSANTE – Public Health",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical paper",
+          "Language"
+        ],
+        "sessions": "2020, 2021, 2023, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "120"
+          },
+          {
+            "annee": "2023",
+            "detail": "230"
+          },
+          {
+            "annee": "2021",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "sante-publique-recrutement-special-de-personnels",
+    "sigle": "SANTÉ",
+    "couleur": "red",
+    "groupe": "MINSANTE",
+    "categorie": "special",
+    "tutelle": "MINSANTE / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Santé publique – recrutement spécial de personnels soignants",
+      "organisme": "MINSANTE – Santé publique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique",
+          "Langue"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "920"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Public health – special recruitment of care staff",
+      "organisme": "MINSANTE – Public Health",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical paper",
+          "Language"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "920"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Session 2026 en cours de traitement"
+  },
+  {
+    "id": "sages-femmes-maieuticiens",
+    "sigle": "SF",
+    "couleur": "indigo",
+    "groupe": "MINSANTE",
+    "categorie": "selection",
+    "tutelle": "MINSANTE / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Sages-femmes / maïeuticiens",
+      "organisme": "MINSANTE – Santé publique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique obstétricale",
+          "Langue"
+        ],
+        "sessions": "2022, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "50"
+          },
+          {
+            "annee": "2023",
+            "detail": "100"
+          },
+          {
+            "annee": "2022",
+            "detail": "100"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Midwives",
+      "organisme": "MINSANTE – Public Health",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Obstetrics technical paper",
+          "Language"
+        ],
+        "sessions": "2022, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "50"
+          },
+          {
+            "annee": "2023",
+            "detail": "100"
+          },
+          {
+            "annee": "2022",
+            "detail": "100"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "regies-financieres-tresor",
+    "sigle": "TRÉSOR",
+    "couleur": "green",
+    "groupe": "MINFI",
+    "categorie": "direct",
+    "tutelle": "MINFI / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Régies financières – Trésor",
+      "organisme": "MINFI – Finances",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Économie",
+          "Comptabilité",
+          "Finances publiques",
+          "Langue"
+        ],
+        "sessions": "2020, 2021, 2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2021",
+            "detail": "100"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Revenue services – Treasury",
+      "organisme": "MINFI – Finance",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Economics",
+          "Accounting",
+          "Public finance",
+          "Language"
+        ],
+        "sessions": "2020, 2021, 2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2021",
+            "detail": "100"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "regies-financieres-douanes",
+    "sigle": "DOUANES",
+    "couleur": "indigo",
+    "groupe": "MINFI",
+    "categorie": "direct",
+    "tutelle": "MINFI / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Régies financières – Douanes",
+      "organisme": "MINFI – Finances",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Économie",
+          "Droit douanier",
+          "Comptabilité",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "75 (50 active, 25 commis)"
+          },
+          {
+            "annee": "2025",
+            "detail": "150 (120 + 30 préposés)"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Revenue services – Customs",
+      "organisme": "MINFI – Finance",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Economics",
+          "Customs law",
+          "Accounting",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "75 (50 active customs, 25 clerks)"
+          },
+          {
+            "annee": "2025",
+            "detail": "150 (120 + 30 customs guards)"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "regies-financieres-impots",
+    "sigle": "IMPÔTS",
+    "couleur": "amber",
+    "groupe": "MINFI",
+    "categorie": "direct",
+    "tutelle": "MINFI / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Régies financières – Impôts",
+      "organisme": "MINFI – Finances",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Fiscalité",
+          "Comptabilité",
+          "Langue"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "25 contrôleurs adjoints"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Revenue services – Taxation",
+      "organisme": "MINFI – Finance",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Taxation",
+          "Accounting",
+          "Language"
+        ],
+        "sessions": "2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "25 assistant controllers"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "concours-professionnels-corps-financiers-impots-",
+    "sigle": "PRO",
+    "couleur": "red",
+    "groupe": "MINFI",
+    "categorie": "professionnel",
+    "tutelle": "MINFI / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – corps financiers (impôts, trésor, douanes, active des douanes)",
+      "organisme": "MINFI – Finances",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves professionnelles propres au corps (fiscalité, comptabilité publique, droit douanier)",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Recrutement interne par corps, places non plafonnées publiquement"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – finance corps (taxation, treasury, customs, active customs)",
+      "organisme": "MINFI – Finance",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Corps-specific professional papers (taxation, public accounting, customs law)",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Internal recruitment by corps, no public cap on places"
+      }
+    },
+    "source_annales": "Annales professionnelles disponibles chez les tiers"
+  },
+  {
+    "id": "concours-professionnels-comptabilite-matieres-et",
+    "sigle": "PRO",
+    "couleur": "amber",
+    "groupe": "MINFI",
+    "categorie": "professionnel",
+    "tutelle": "MINFI / MINCOMMERCE",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – comptabilité-matières et prix, poids et mesures",
+      "organisme": "MINFI – Finances",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Comptabilité-matières ou métrologie",
+          "Langue"
+        ],
+        "sessions": "2023, 2026",
+        "places": [],
+        "places_note": "Recrutement interne par corps"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – stores accounting and prices, weights and measures",
+      "organisme": "MINFI – Finance",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Stores accounting or metrology",
+          "Language"
+        ],
+        "sessions": "2023, 2026",
+        "places": [],
+        "places_note": "Internal recruitment by corps"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "injs-yaounde-peps-paeps-education-physique-et-sp",
+    "sigle": "INJS",
+    "couleur": "green",
+    "groupe": "MINJEC",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA / MINJEC",
+    "oral": true,
+    "fr": {
+      "nom": "INJS Yaoundé – PEPS / PAEPS (éducation physique et sportive)",
+      "organisme": "MINJEC – Jeunesse et Éducation civique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves sportives",
+          "Épreuve de spécialité EPS",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "20"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2022",
+            "detail": "30"
+          },
+          {
+            "annee": "2020",
+            "detail": "40"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "INJS Yaoundé – PEPS / PAEPS (physical education and sport)",
+      "organisme": "MINJEC – Youth Affairs and Civic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Sports tests",
+          "Physical education specialty paper",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "20"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2022",
+            "detail": "30"
+          },
+          {
+            "annee": "2020",
+            "detail": "40"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "injs-yaounde-cpja-cja-conseillers-jeunesse-et-an",
+    "sigle": "INJS",
+    "couleur": "indigo",
+    "groupe": "MINJEC",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA / MINJEC",
+    "oral": true,
+    "fr": {
+      "nom": "INJS Yaoundé – CPJA / CJA (conseillers jeunesse et animation)",
+      "organisme": "MINJEC – Jeunesse et Éducation civique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Animation socio-éducative",
+          "Épreuves sportives",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "20"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2022",
+            "detail": "30"
+          },
+          {
+            "annee": "2021",
+            "detail": "25"
+          },
+          {
+            "annee": "2020",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "INJS Yaoundé – CPJA / CJA (youth and community advisers)",
+      "organisme": "MINJEC – Youth Affairs and Civic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Socio-educational community work",
+          "Sports tests",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "20"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2022",
+            "detail": "30"
+          },
+          {
+            "annee": "2021",
+            "detail": "25"
+          },
+          {
+            "annee": "2020",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "cenajes-kribi-ipja-ija-iaja",
+    "sigle": "CENAJES",
+    "couleur": "amber",
+    "groupe": "MINJEC",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA / MINJEC",
+    "oral": true,
+    "fr": {
+      "nom": "CENAJES Kribi – IPJA / IJA / IAJA",
+      "organisme": "MINJEC – Jeunesse et Éducation civique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves sportives",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "30"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2020",
+            "detail": "40"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "CENAJES Kribi – IPJA / IJA / IAJA",
+      "organisme": "MINJEC – Youth Affairs and Civic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Sports tests",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2022, 2023, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "30"
+          },
+          {
+            "annee": "2023",
+            "detail": "40"
+          },
+          {
+            "annee": "2020",
+            "detail": "40"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "cenajes-bamenda-bertoua-dschang-garoua-mpeps-mep",
+    "sigle": "CENAJES",
+    "couleur": "red",
+    "groupe": "MINJEC",
+    "categorie": "formation",
+    "tutelle": "MINFOPRA / MINJEC",
+    "oral": true,
+    "fr": {
+      "nom": "CENAJES Bamenda, Bertoua, Dschang, Garoua – MPEPS / MEPS / MAEPS",
+      "organisme": "MINJEC – Jeunesse et Éducation civique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves sportives",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2023, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "30"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          },
+          {
+            "annee": "2020",
+            "detail": "50"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "CENAJES Bamenda, Bertoua, Dschang, Garoua – MPEPS / MEPS / MAEPS",
+      "organisme": "MINJEC – Youth Affairs and Civic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Sports tests",
+          "Oral"
+        ],
+        "sessions": "2020, 2021, 2023, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "30"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          },
+          {
+            "annee": "2020",
+            "detail": "50"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "concours-national-du-meilleur-prix-jeune",
+    "sigle": "PRIX",
+    "couleur": "indigo",
+    "groupe": "MINJEC",
+    "categorie": "special",
+    "tutelle": "MINJEC",
+    "oral": false,
+    "fr": {
+      "nom": "Concours national du meilleur prix jeune",
+      "organisme": "MINJEC – Jeunesse et Éducation civique",
+      "annuaire": {
+        "matieres": [
+          "Présentation de projet entrepreneurial"
+        ],
+        "sessions": "2024",
+        "places": [],
+        "places_note": "Distinctions, sans places d’emploi"
+      }
+    },
+    "en": {
+      "nom": "National best young entrepreneur prize",
+      "organisme": "MINJEC – Youth Affairs and Civic Education",
+      "annuaire": {
+        "matieres": [
+          "Presentation of a business project"
+        ],
+        "sessions": "2024",
+        "places": [],
+        "places_note": "Awards, no jobs offered"
+      }
+    },
+    "source_annales": "Pas d’épreuve écrite"
+  },
+  {
+    "id": "concours-professionnels-jeunesse-et-animation-ed",
+    "sigle": "PRO",
+    "couleur": "green",
+    "groupe": "MINJEC",
+    "categorie": "professionnel",
+    "tutelle": "MINJEC",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – jeunesse et animation, éducation physique et sportive",
+      "organisme": "MINJEC – Jeunesse et Éducation civique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Animation",
+          "EPS",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Recrutement interne par corps"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – youth and community work, physical education and sport",
+      "organisme": "MINJEC – Youth Affairs and Civic Education",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Community work",
+          "Physical education",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Internal recruitment by corps"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "genie-civil",
+    "sigle": "GC",
+    "couleur": "amber",
+    "groupe": "MINTP",
+    "categorie": "direct",
+    "tutelle": "MINTP / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Génie civil",
+      "organisme": "MINTP – Travaux publics",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve technique n°1",
+          "Épreuve technique n°2",
+          "Langue"
+        ],
+        "sessions": "2019, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "50"
+          },
+          {
+            "annee": "2025",
+            "detail": "120"
+          },
+          {
+            "annee": "2024",
+            "detail": "30"
+          },
+          {
+            "annee": "2023",
+            "detail": "130"
+          },
+          {
+            "annee": "2022",
+            "detail": "35"
+          },
+          {
+            "annee": "2019",
+            "detail": "22"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Civil engineering",
+      "organisme": "MINTP – Public Works",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical paper no. 1",
+          "Technical paper no. 2",
+          "Language"
+        ],
+        "sessions": "2019, 2022, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "50"
+          },
+          {
+            "annee": "2025",
+            "detail": "120"
+          },
+          {
+            "annee": "2024",
+            "detail": "30"
+          },
+          {
+            "annee": "2023",
+            "detail": "130"
+          },
+          {
+            "annee": "2022",
+            "detail": "35"
+          },
+          {
+            "annee": "2019",
+            "detail": "22"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales génie civil disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "concours-professionnels-corps-techniques-genie-c",
+    "sigle": "PRO",
+    "couleur": "indigo",
+    "groupe": "MINTP",
+    "categorie": "professionnel",
+    "tutelle": "MINTP / MINADER / MINDCAF / MINMIDT / MINFOF",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – corps techniques (génie civil, génie rural, cadastre, mines et géologie, industries animales, agriculture, eaux et forêts)",
+      "organisme": "MINTP – Travaux publics",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques du corps",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Recrutement interne par corps"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – technical corps (civil engineering, rural engineering, land surveys, mines and geology, animal industries, agriculture, water and forestry)",
+      "organisme": "MINTP – Public Works",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers of the corps",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Internal recruitment by corps"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "agriculture-production-rurale",
+    "sigle": "AGRI",
+    "couleur": "indigo",
+    "groupe": "MINADER",
+    "categorie": "direct",
+    "tutelle": "MINADER / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Agriculture / production rurale",
+      "organisme": "MINADER – Agriculture et Développement rural",
+      "annuaire": {
+        "matieres": [
+          "Culture générale (4 h, coef. 3)",
+          "Épreuve technique n°1 (4 h, coef. 5)",
+          "Épreuve technique n°2 (4 h, coef. 4)",
+          "Langue (2 h, coef. 2)"
+        ],
+        "sessions": "2019, 2021, 2022, 2023, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          },
+          {
+            "annee": "2022",
+            "detail": "20"
+          },
+          {
+            "annee": "2021",
+            "detail": "150"
+          },
+          {
+            "annee": "2019",
+            "detail": "498"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Agriculture / rural production",
+      "organisme": "MINADER – Agriculture and Rural Development",
+      "annuaire": {
+        "matieres": [
+          "General culture (4 h, coef. 3)",
+          "Technical paper no. 1 (4 h, coef. 5)",
+          "Technical paper no. 2 (4 h, coef. 4)",
+          "Language (2 h, coef. 2)"
+        ],
+        "sessions": "2019, 2021, 2022, 2023, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          },
+          {
+            "annee": "2022",
+            "detail": "20"
+          },
+          {
+            "annee": "2021",
+            "detail": "150"
+          },
+          {
+            "annee": "2019",
+            "detail": "498"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales agriculture 2019-2025 (bibliothèques tierces)"
+  },
+  {
+    "id": "genie-rural",
+    "sigle": "GR",
+    "couleur": "amber",
+    "groupe": "MINADER",
+    "categorie": "direct",
+    "tutelle": "MINADER / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Génie rural",
+      "organisme": "MINADER – Agriculture et Développement rural",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques",
+          "Langue"
+        ],
+        "sessions": "2019, 2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "50"
+          },
+          {
+            "annee": "2019",
+            "detail": "60"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Rural engineering",
+      "organisme": "MINADER – Agriculture and Rural Development",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers",
+          "Language"
+        ],
+        "sessions": "2019, 2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "50"
+          },
+          {
+            "annee": "2019",
+            "detail": "60"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "elevage-et-peches-maritimes",
+    "sigle": "ÉLEVAGE",
+    "couleur": "green",
+    "groupe": "MINEPIA",
+    "categorie": "direct",
+    "tutelle": "MINEPIA / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Élevage et pêches maritimes",
+      "organisme": "MINEPIA – Élevage, Pêches et Industries animales",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques (vétérinaire, productions animales)",
+          "Langue"
+        ],
+        "sessions": "2019, 2021, 2022, 2023, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          },
+          {
+            "annee": "2022",
+            "detail": "20"
+          },
+          {
+            "annee": "2021",
+            "detail": "30"
+          },
+          {
+            "annee": "2019",
+            "detail": "70"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Livestock and marine fisheries",
+      "organisme": "MINEPIA – Livestock, Fisheries and Animal Industries",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers (veterinary, animal production)",
+          "Language"
+        ],
+        "sessions": "2019, 2021, 2022, 2023, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "60"
+          },
+          {
+            "annee": "2022",
+            "detail": "20"
+          },
+          {
+            "annee": "2021",
+            "detail": "30"
+          },
+          {
+            "annee": "2019",
+            "detail": "70"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Arrêtés et annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "mines-et-geologie",
+    "sigle": "MINES",
+    "couleur": "red",
+    "groupe": "MINMIDT",
+    "categorie": "direct",
+    "tutelle": "MINMIDT / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Mines et géologie",
+      "organisme": "MINMIDT – Mines, Industrie et Développement technologique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques (géologie, mines)",
+          "Langue"
+        ],
+        "sessions": "2019, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "30"
+          },
+          {
+            "annee": "2021",
+            "detail": "20"
+          },
+          {
+            "annee": "2019",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Mines and geology",
+      "organisme": "MINMIDT – Mines, Industry and Technological Development",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers (geology, mining)",
+          "Language"
+        ],
+        "sessions": "2019, 2021, 2023, 2024, 2025, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "30"
+          },
+          {
+            "annee": "2025",
+            "detail": "20"
+          },
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "30"
+          },
+          {
+            "annee": "2021",
+            "detail": "20"
+          },
+          {
+            "annee": "2019",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "techniques-industrielles",
+    "sigle": "TI",
+    "couleur": "red",
+    "groupe": "MINMIDT",
+    "categorie": "direct",
+    "tutelle": "MINMIDT / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Techniques industrielles",
+      "organisme": "MINMIDT – Mines, Industrie et Développement technologique",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques",
+          "Langue"
+        ],
+        "sessions": "2021, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "50"
+          },
+          {
+            "annee": "2021",
+            "detail": "35"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Industrial techniques",
+      "organisme": "MINMIDT – Mines, Industry and Technological Development",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers",
+          "Language"
+        ],
+        "sessions": "2021, 2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "20"
+          },
+          {
+            "annee": "2023",
+            "detail": "50"
+          },
+          {
+            "annee": "2021",
+            "detail": "35"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "eaux-et-forets-ecogardes",
+    "sigle": "FORÊTS",
+    "couleur": "amber",
+    "groupe": "MINFOF",
+    "categorie": "direct",
+    "tutelle": "MINFOF / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Eaux et forêts / écogardes",
+      "organisme": "MINFOF – Forêts et Faune",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques (foresterie, faune)",
+          "Langue"
+        ],
+        "sessions": "2020, 2023, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "80"
+          },
+          {
+            "annee": "2023",
+            "detail": "80"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Water and forestry / eco-guards",
+      "organisme": "MINFOF – Forestry and Wildlife",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers (forestry, wildlife)",
+          "Language"
+        ],
+        "sessions": "2020, 2023, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "80"
+          },
+          {
+            "annee": "2023",
+            "detail": "80"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "enef-mbalmayo-eaux-et-forets",
+    "sigle": "ENEF",
+    "couleur": "green",
+    "groupe": "MINFOF",
+    "categorie": "ecole",
+    "tutelle": "MINFOF",
+    "oral": false,
+    "fr": {
+      "nom": "ENEF Mbalmayo – eaux et forêts",
+      "organisme": "MINFOF – Forêts et Faune",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Sciences naturelles",
+          "Mathématiques",
+          "Langue"
+        ],
+        "sessions": "2025",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "ENEF Mbalmayo – water and forestry",
+      "organisme": "MINFOF – Forestry and Wildlife",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Natural sciences",
+          "Mathematics",
+          "Language"
+        ],
+        "sessions": "2025",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "cadastre",
+    "sigle": "CADASTRE",
+    "couleur": "red",
+    "groupe": "MINDCAF",
+    "categorie": "direct",
+    "tutelle": "MINDCAF / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Cadastre",
+      "organisme": "MINDCAF – Domaines, Cadastre et Affaires foncières",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques (topographie, foncier)",
+          "Langue"
+        ],
+        "sessions": "2020, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Land surveys (cadastre)",
+      "organisme": "MINDCAF – State Property, Surveys and Land Tenure",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers (topography, land tenure)",
+          "Language"
+        ],
+        "sessions": "2020, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "techniques-des-telecommunications",
+    "sigle": "TÉLÉCOM",
+    "couleur": "green",
+    "groupe": "MINPT",
+    "categorie": "direct",
+    "tutelle": "MINPT / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Techniques des télécommunications",
+      "organisme": "MINPT – Postes et Télécommunications",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques",
+          "Langue"
+        ],
+        "sessions": "2020, 2021, 2023, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40"
+          },
+          {
+            "annee": "2023",
+            "detail": "50"
+          },
+          {
+            "annee": "2021",
+            "detail": "25"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Telecommunications techniques",
+      "organisme": "MINPT – Posts and Telecommunications",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers",
+          "Language"
+        ],
+        "sessions": "2020, 2021, 2023, 2026",
+        "places": [
+          {
+            "annee": "2026",
+            "detail": "40"
+          },
+          {
+            "annee": "2023",
+            "detail": "50"
+          },
+          {
+            "annee": "2021",
+            "detail": "25"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "informatique-et-teleinformatique",
+    "sigle": "INFO",
+    "couleur": "indigo",
+    "groupe": "MINPT",
+    "categorie": "direct",
+    "tutelle": "MINFOPRA / MINPT",
+    "oral": false,
+    "fr": {
+      "nom": "Informatique et téléinformatique",
+      "organisme": "MINPT – Postes et Télécommunications",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Informatique et réseaux",
+          "Langue"
+        ],
+        "sessions": "2020, 2021, 2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "30"
+          },
+          {
+            "annee": "2021",
+            "detail": "26"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Computer science and teleinformatics",
+      "organisme": "MINPT – Posts and Telecommunications",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Computing and networks",
+          "Language"
+        ],
+        "sessions": "2020, 2021, 2023",
+        "places": [
+          {
+            "annee": "2023",
+            "detail": "30"
+          },
+          {
+            "annee": "2021",
+            "detail": "26"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "postes-et-telecommunications",
+    "sigle": "PT",
+    "couleur": "green",
+    "groupe": "MINPT",
+    "categorie": "special",
+    "tutelle": "MINPT / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Postes et télécommunications",
+      "organisme": "MINPT – Postes et Télécommunications",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques",
+          "Langue"
+        ],
+        "sessions": "2020",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "60"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Posts and telecommunications",
+      "organisme": "MINPT – Posts and Telecommunications",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers",
+          "Language"
+        ],
+        "sessions": "2020",
+        "places": [
+          {
+            "annee": "2020",
+            "detail": "60"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "concours-professionnels-postes-et-telecommunicat",
+    "sigle": "PRO",
+    "couleur": "indigo",
+    "groupe": "MINPT",
+    "categorie": "professionnel",
+    "tutelle": "MINPT",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – postes et télécommunications",
+      "organisme": "MINPT – Postes et Télécommunications",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves professionnelles du corps",
+          "Langue"
+        ],
+        "sessions": "2025, 2026",
+        "places": [],
+        "places_note": "Recrutement interne par corps"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – posts and telecommunications",
+      "organisme": "MINPT – Posts and Telecommunications",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Professional papers of the corps",
+          "Language"
+        ],
+        "sessions": "2025, 2026",
+        "places": [],
+        "places_note": "Internal recruitment by corps"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "journalistes",
+    "sigle": "JOURN.",
+    "couleur": "red",
+    "groupe": "MINCOM",
+    "categorie": "direct",
+    "tutelle": "MINCOM / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Journalistes",
+      "organisme": "MINCOM – Communication",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves professionnelles (rédaction, droit de l’information)",
+          "Langue"
+        ],
+        "sessions": "2020, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Journalists",
+      "organisme": "MINCOM – Communication",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Professional papers (writing, media law)",
+          "Language"
+        ],
+        "sessions": "2020, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+  },
+  {
+    "id": "concours-professionnels-information-documentatio",
+    "sigle": "PRO",
+    "couleur": "red",
+    "groupe": "MINCOM",
+    "categorie": "professionnel",
+    "tutelle": "MINCOM / MINFOPRA / MINPT",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – information, documentation, statistiques et démographie, informatique et téléinformatique",
+      "organisme": "MINCOM – Communication",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves professionnelles du corps",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025",
+        "places": [],
+        "places_note": "Recrutement interne par corps"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – information, documentation, statistics and demography, computer science",
+      "organisme": "MINCOM – Communication",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Professional papers of the corps",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025",
+        "places": [],
+        "places_note": "Internal recruitment by corps"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "ifcpa-crtv-journalisme-et-communication",
+    "sigle": "CRTV",
+    "couleur": "green",
+    "groupe": "MINCOM",
+    "categorie": "ecole",
+    "tutelle": "CRTV / MINCOM",
+    "oral": false,
+    "fr": {
+      "nom": "IFCPA / CRTV – journalisme et communication",
+      "organisme": "MINCOM – Communication",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves professionnelles",
+          "Langue"
+        ],
+        "sessions": "2025",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "IFCPA / CRTV – journalism and communication",
+      "organisme": "MINCOM – Communication",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Professional papers",
+          "Language"
+        ],
+        "sessions": "2025",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "experts-en-securite-routiere",
+    "sigle": "ROUTE",
+    "couleur": "red",
+    "groupe": "MINTRANSPORTS",
+    "categorie": "formation",
+    "tutelle": "MINTRANS / MINJEC",
+    "oral": false,
+    "fr": {
+      "nom": "Experts en sécurité routière",
+      "organisme": "MINT – Transports",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Code de la route",
+          "Épreuves techniques"
+        ],
+        "sessions": "2025, 2026",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "240"
+          },
+          {
+            "annee": "2026",
+            "detail": "120"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Road safety experts",
+      "organisme": "MINT – Transport",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Highway code",
+          "Technical papers"
+        ],
+        "sessions": "2025, 2026",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "240"
+          },
+          {
+            "annee": "2026",
+            "detail": "120"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "meteorologie-agents-techniques-adjoints",
+    "sigle": "MÉTÉO",
+    "couleur": "amber",
+    "groupe": "MINTRANSPORTS",
+    "categorie": "direct",
+    "tutelle": "MINTRANSPORTS / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Météorologie – agents techniques adjoints",
+      "organisme": "MINT – Transports",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques",
+          "Langue"
+        ],
+        "sessions": "2019",
+        "places": [
+          {
+            "annee": "2019",
+            "detail": "18"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Meteorology – assistant technical officers",
+      "organisme": "MINT – Transport",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers",
+          "Language"
+        ],
+        "sessions": "2019",
+        "places": [
+          {
+            "annee": "2019",
+            "detail": "18"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "aeronautique-civile",
+    "sigle": "AÉRO",
+    "couleur": "red",
+    "groupe": "MINTRANSPORTS",
+    "categorie": "direct",
+    "tutelle": "MINTRANSPORTS / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Aéronautique civile",
+      "organisme": "MINT – Transports",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques",
+          "Langue"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places non communiquées"
+      }
+    },
+    "en": {
+      "nom": "Civil aviation",
+      "organisme": "MINT – Transport",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Technical papers",
+          "Language"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places not announced"
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "prix-poids-et-mesures",
+    "sigle": "PPM",
+    "couleur": "green",
+    "groupe": "MINCOMMERCE",
+    "categorie": "direct",
+    "tutelle": "MINCOMMERCE / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Prix, poids et mesures",
+      "organisme": "MINCOMMERCE – Commerce",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Métrologie",
+          "Mathématiques",
+          "Langue"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places non communiquées"
+      }
+    },
+    "en": {
+      "nom": "Prices, weights and measures",
+      "organisme": "MINCOMMERCE – Trade",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Metrology",
+          "Mathematics",
+          "Language"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places not announced"
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "travail-et-prevoyance-sociale",
+    "sigle": "TPS",
+    "couleur": "indigo",
+    "groupe": "MINTSS",
+    "categorie": "direct",
+    "tutelle": "MINTSS / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Travail et prévoyance sociale",
+      "organisme": "MINTSS – Travail et Sécurité sociale",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Droit du travail et sécurité sociale",
+          "Langue"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places non communiquées"
+      }
+    },
+    "en": {
+      "nom": "Labour and social welfare",
+      "organisme": "MINTSS – Labour and Social Security",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Labour law and social security",
+          "Language"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places not announced"
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "concours-professionnels-corps-sociaux-et-du-trav",
+    "sigle": "PRO",
+    "couleur": "amber",
+    "groupe": "MINTSS",
+    "categorie": "professionnel",
+    "tutelle": "MINTSS / MINAS",
+    "oral": false,
+    "fr": {
+      "nom": "Concours professionnels – corps sociaux et du travail (travail et prévoyance sociale, affaires sociales)",
+      "organisme": "MINTSS – Travail et Sécurité sociale",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Droit du travail",
+          "Travail social",
+          "Langue"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Recrutement interne par corps"
+      }
+    },
+    "en": {
+      "nom": "Professional competitions – social and labour corps (labour and social welfare, social affairs)",
+      "organisme": "MINTSS – Labour and Social Security",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Labour law",
+          "Social work",
+          "Language"
+        ],
+        "sessions": "2023, 2024, 2025, 2026",
+        "places": [],
+        "places_note": "Internal recruitment by corps"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "affaires-sociales-assistants",
+    "sigle": "AS",
+    "couleur": "amber",
+    "groupe": "MINAS",
+    "categorie": "direct",
+    "tutelle": "MINAS / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Affaires sociales – assistants",
+      "organisme": "MINAS – Affaires sociales",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Travail social",
+          "Langue"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places non communiquées"
+      }
+    },
+    "en": {
+      "nom": "Social affairs – assistants",
+      "organisme": "MINAS – Social Affairs",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Social work",
+          "Language"
+        ],
+        "sessions": "2020",
+        "places": [],
+        "places_note": "Places not announced"
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "specialistes-des-sciences-de-reeducation",
+    "sigle": "RÉÉD.",
+    "couleur": "indigo",
+    "groupe": "MINAS",
+    "categorie": "selection",
+    "tutelle": "MINAS / MINSANTE",
+    "oral": false,
+    "fr": {
+      "nom": "Spécialistes des sciences de rééducation",
+      "organisme": "MINAS – Affaires sociales",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques de rééducation",
+          "Langue"
+        ],
+        "sessions": "2024, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "40"
+          },
+          {
+            "annee": "2024",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Rehabilitation science specialists",
+      "organisme": "MINAS – Social Affairs",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Rehabilitation technical papers",
+          "Language"
+        ],
+        "sessions": "2024, 2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "40"
+          },
+          {
+            "annee": "2024",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "personnels-minas-relevant-du-code-du-travail",
+    "sigle": "MINAS",
+    "couleur": "amber",
+    "groupe": "MINAS",
+    "categorie": "selection",
+    "tutelle": "MINAS / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Personnels MINAS relevant du Code du travail",
+      "organisme": "MINAS – Affaires sociales",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Travail social",
+          "Langue"
+        ],
+        "sessions": "2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "MINAS staff under the Labour Code",
+      "organisme": "MINAS – Social Affairs",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Social work",
+          "Language"
+        ],
+        "sessions": "2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "30"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "ingenieurs-du-genie-de-lenvironnement",
+    "sigle": "ENV.",
+    "couleur": "red",
+    "groupe": "MINEPDED",
+    "categorie": "selection",
+    "tutelle": "MINEPDED / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Ingénieurs du génie de l’environnement",
+      "organisme": "MINEPDED – Environnement et Développement durable",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques environnementales",
+          "Langue"
+        ],
+        "sessions": "2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "5"
+          },
+          {
+            "annee": "2023",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Environmental engineers",
+      "organisme": "MINEPDED – Environment and Sustainable Development",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Environmental technical papers",
+          "Language"
+        ],
+        "sessions": "2023, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "5"
+          },
+          {
+            "annee": "2023",
+            "detail": "10"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "environnementalistes",
+    "sigle": "ENV.",
+    "couleur": "green",
+    "groupe": "MINEPDED",
+    "categorie": "selection",
+    "tutelle": "MINEPDED / MINFOPRA",
+    "oral": false,
+    "fr": {
+      "nom": "Environnementalistes",
+      "organisme": "MINEPDED – Environnement et Développement durable",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuves techniques environnementales",
+          "Langue"
+        ],
+        "sessions": "2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "20"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Environmentalists",
+      "organisme": "MINEPDED – Environment and Sustainable Development",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Environmental technical papers",
+          "Language"
+        ],
+        "sessions": "2025",
+        "places": [
+          {
+            "annee": "2025",
+            "detail": "20"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Sujets non publiés"
+  },
+  {
+    "id": "centres-de-formation-professionnelle",
+    "sigle": "CFP",
+    "couleur": "indigo",
+    "groupe": "MINEFOP",
+    "categorie": "ecole",
+    "tutelle": "MINEFOP",
+    "oral": false,
+    "fr": {
+      "nom": "Centres de formation professionnelle",
+      "organisme": "MINEFOP – Emploi et Formation professionnelle",
+      "annuaire": {
+        "matieres": [
+          "Culture générale",
+          "Épreuve du métier choisi",
+          "Langue"
+        ],
+        "sessions": "2025, 2026",
+        "places": [],
+        "places_note": "Places fixées par arrêté annuel"
+      }
+    },
+    "en": {
+      "nom": "Vocational training centres",
+      "organisme": "MINEFOP – Employment and Vocational Training",
+      "annuaire": {
+        "matieres": [
+          "General culture",
+          "Paper in the chosen trade",
+          "Language"
+        ],
+        "sessions": "2025, 2026",
+        "places": [],
+        "places_note": "Places set by annual order"
+      }
+    },
+    "source_annales": "Annales partielles chez les tiers"
+  },
+  {
+    "id": "chercheurs-recrutement-sur-titre",
+    "sigle": "RECH.",
+    "couleur": "amber",
+    "groupe": "MINRESI",
+    "categorie": "special",
+    "tutelle": "MINRESI / MINFOPRA",
+    "oral": true,
+    "fr": {
+      "nom": "Chercheurs (recrutement sur titre)",
+      "organisme": "MINRESI – Recherche scientifique et Innovation",
+      "annuaire": {
+        "matieres": [
+          "Sélection sur dossier et entretien scientifique"
+        ],
+        "sessions": "2019, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "102"
+          },
+          {
+            "annee": "2019",
+            "detail": "150"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "en": {
+      "nom": "Researchers (recruitment on qualifications)",
+      "organisme": "MINRESI – Scientific Research and Innovation",
+      "annuaire": {
+        "matieres": [
+          "Selection on file and scientific interview"
+        ],
+        "sessions": "2019, 2024",
+        "places": [
+          {
+            "annee": "2024",
+            "detail": "102"
+          },
+          {
+            "annee": "2019",
+            "detail": "150"
+          }
+        ],
+        "places_note": null
+      }
+    },
+    "source_annales": "Pas d’épreuve écrite"
   }
 ]

@@ -39,6 +39,21 @@
       statPapers: "épreuves avec corrigé",
       statFree: "épreuve offerte",
       statSections: "sections : FR et EN",
+      allTypes: "Tous",
+      search: "Rechercher un concours, une école, un ministère…",
+      noResult: "Aucun concours ne correspond à votre recherche.",
+      tutelle: "Ministère de tutelle",
+      category: "Type de recrutement",
+      sessionsDoc: "Sessions",
+      placesPerSession: "Places par session",
+      thYear: "Session",
+      thPlaces: "Places",
+      subjects: "Épreuves et matières",
+      papersSoon: "Les épreuves de ce concours seront ajoutées dans Weldon au fur et à mesure.",
+      inWeldon: (n) => `${n} épreuve${n > 1 ? "s" : ""} dans Weldon`,
+      moreSoon: (n) => `${n} autres concours sont décrits dans « Les concours ». Leurs épreuves arrivent au fur et à mesure.`,
+      officialNote: "Informations relevées dans les communiqués officiels. Vérifiez toujours l'arrêté de la session en cours.",
+      latestPlaces: (y, d) => `${y} : ${d}${/place/i.test(d) ? "" : " places"}`,
       presentation: "Présentation",
       pickConcours: "Choisis ton concours",
       pickConcoursSub: "Conditions, limite d'âge, épreuves, coefficients, oral : tout ce qu'il faut savoir avant de déposer ton dossier.",
@@ -198,6 +213,21 @@
       statPapers: "papers with model answers",
       statFree: "free paper",
       statSections: "sections: EN and FR",
+      allTypes: "All",
+      search: "Search a competition, school or ministry…",
+      noResult: "No competition matches your search.",
+      tutelle: "Supervising ministry",
+      category: "Type of recruitment",
+      sessionsDoc: "Sessions",
+      placesPerSession: "Places per session",
+      thYear: "Session",
+      thPlaces: "Places",
+      subjects: "Papers and subjects",
+      papersSoon: "Papers for this competition will be added to Weldon progressively.",
+      inWeldon: (n) => `${n} paper${n > 1 ? "s" : ""} in Weldon`,
+      moreSoon: (n) => `${n} other competitions are described under "Competitions". Their papers are being added progressively.`,
+      officialNote: "Information taken from official announcements. Always check the order for the current session.",
+      latestPlaces: (y, d) => `${y}: ${d}${/place/i.test(d) ? "" : " places"}`,
       presentation: "Overview",
       pickConcours: "Choose your competition",
       pickConcoursSub: "Requirements, age limit, papers, coefficients, oral: everything to know before you apply.",
@@ -377,6 +407,8 @@
     tab: local.get("tab", "concours"),
     nav: {}, // par onglet : { concours: id } puis { doc: id }
     authMode: "login",
+    q: "",
+    cat: "all",
     exam: local.get("exam", null),
     examDoc: null,
     photos: [],
@@ -474,7 +506,8 @@
         return {
           lang: l,
           groupes: Object.fromEntries(Object.entries(d.groupes).map(([k, v]) => [k, v[l]])),
-          concours: d.concours.filter((c) => c[l]).map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, oral: c.oral, ...c[l] })),
+          categories: Object.fromEntries(Object.entries(d.categories).map(([k, v]) => [k, v[l]])),
+          concours: d.concours.filter((c) => c[l]).map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, ...c[l] })),
           epreuves: d.epreuves.filter((e) => e.lang === l).map((e) => ({ id: e.id, concours: e.concours, annee: e.annee, matiere: e.matiere, duree: e.duree, exemple: Boolean(e.exemple), apercu: e.sujet.slice(0, 140) })),
           oral: Object.fromEntries(Object.entries(d.oral).filter(([, v]) => v[l]).map(([k, v]) => [k, { deroulement: v[l].deroulement }])),
         };
@@ -717,29 +750,59 @@
       </section>
       ${demoNotice()}
       <div class="section-head"><div><span class="eyebrow">${L.presentation}</span><h2>${L.pickConcours}</h2></div><p class="muted small">${L.pickConcoursSub}</p></div>
-      ${schoolGroups("fiche")}`;
+      ${categoryChips()}
+      <input id="concours-search" class="search" type="search" placeholder="${L.search}" value="${esc(state.q)}" autocomplete="off">
+      <div id="concours-list">${concoursList()}</div>`;
+  }
+
+  function categoryChips() {
+    const L = t();
+    const counts = {};
+    for (const c of state.catalog.concours) counts[c.categorie] = (counts[c.categorie] || 0) + 1;
+    const chip = (id, label, n) => `<button type="button" class="chip" data-cat="${id}" aria-pressed="${state.cat === id}">${esc(label)} <span class="muted">${n}</span></button>`;
+    return `<div class="chips" role="group">${chip("all", L.allTypes, state.catalog.concours.length)}${Object.entries(state.catalog.categories)
+      .filter(([k]) => counts[k])
+      .map(([k, v]) => chip(k, v, counts[k]))
+      .join("")}</div>`;
+  }
+
+  const norm = (s) => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  function concoursList() {
+    const q = norm(state.q);
+    const filter = (c) =>
+      (state.cat === "all" || c.categorie === state.cat) &&
+      (!q || norm([c.nom, c.sigle, c.organisme, c.tutelle].join(" ")).includes(q));
+    return schoolGroups("fiche", filter) || `<p class="muted">${t().noResult}</p>`;
   }
 
   // Cartes des écoles, regroupées par ministère / institution.
-  function schoolGroups(mode) {
+  function schoolGroups(mode, filter = () => true) {
     const L = t();
     const groups = {};
-    for (const c of state.catalog.concours) (groups[c.groupe] ||= []).push(c);
+    for (const c of state.catalog.concours) {
+      if (!filter(c)) continue;
+      if (mode !== "fiche" && !epreuvesOf(c.id).length) continue;
+      (groups[c.groupe] ||= []).push(c);
+    }
     return Object.entries(groups)
       .map(([g, list]) => {
         const cards = list
           .map((c) => {
             const eps = epreuvesOf(c.id);
             const years = new Set(eps.map((e) => e.annee));
+            const last = c.annuaire?.places?.[0];
             const foot =
               mode === "fiche"
-                ? `<span class="tag tag-line">${L.writtenPapers(c.fiche.epreuves_officielles.length)}</span>${c.oral ? `<span class="tag tag-indigo">${L.oralYes}</span>` : `<span class="tag tag-line">${L.oralNo}</span>`}`
+                ? `${eps.length ? `<span class="tag tag-green">${L.inWeldon(eps.length)}</span>` : ""}${
+                    last ? `<span class="tag tag-line">${esc(L.latestPlaces(last.annee, last.detail.split(" (")[0]))}</span>` : ""
+                  }${c.oral ? `<span class="tag tag-indigo">${L.oralYes}</span>` : ""}`
                 : `<span class="tag tag-line">${L.sessions(years.size)}</span><span class="tag tag-line">${L.papers(eps.length)}</span>`;
+            const summary = c.resume || (c.annuaire ? c.annuaire.matieres.join(" · ") : "");
             return `
               <button type="button" class="card card-click" data-school="${c.id}" data-mode="${mode}">
-                <div class="row"><div class="sigle c-${c.couleur}">${esc(c.sigle)}</div>
-                  <div style="min-width:0"><h3>${esc(c.nom)}</h3><span class="small muted">${esc(c.organisme)}</span></div></div>
-                ${mode === "fiche" ? `<p class="muted small">${esc(c.resume)}</p>` : ""}
+                <div class="row"><div class="${sigleClass(c)}">${esc(c.sigle)}</div>
+                  <div style="min-width:0"><h3>${esc(c.nom)}</h3><span class="small muted">${esc(state.catalog.categories[c.categorie] || "")}</span></div></div>
+                ${mode === "fiche" && summary ? `<p class="muted small">${esc(summary)}</p>` : ""}
                 <div class="foot"><span class="row">${foot}</span>${I.chevron}</div>
               </button>`;
           })
@@ -749,7 +812,48 @@
       .join("");
   }
 
+  const sigleClass = (c) => `sigle c-${c.couleur}${c.sigle.length > 5 ? " sigle-long" : ""}`;
+
+  function placesTable(a) {
+    const L = t();
+    if (!a) return "";
+    const rows = a.places.map((p) => `<tr><td>${esc(p.annee)}</td><td>${esc(p.detail)}</td></tr>`).join("");
+    return `<article class="card"><h3>${L.placesPerSession}</h3>
+      ${rows ? `<div class="table-wrap"><table><thead><tr><th>${L.thYear}</th><th>${L.thPlaces}</th></tr></thead><tbody>${rows}</tbody></table></div>` : ""}
+      ${a.places_note ? `<p class="small muted">${esc(a.places_note)}</p>` : ""}</article>`;
+  }
+
+  // Fiche courte pour les concours du répertoire (sans fiche détaillée).
+  function viewFicheSimple(c) {
+    const L = t();
+    const a = c.annuaire;
+    const n = epreuvesOf(c.id).length;
+    return `
+      <button type="button" class="back" data-back>${I.back} ${L.allConcours}</button>
+      <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <div class="${sigleClass(c)}" style="width:64px;height:64px">${esc(c.sigle)}</div>
+        <div style="min-width:0"><span class="eyebrow">${esc(state.catalog.categories[c.categorie] || "")}</span><h1>${esc(c.nom)}</h1></div>
+      </div>
+      <div class="fiche">
+        <div style="display:grid;gap:16px;min-width:0">
+          <article class="card"><h3>${L.subjects}</h3><ul class="clean">${a.matieres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>
+          ${placesTable(a)}
+        </div>
+        <aside class="card" style="min-width:0">
+          <dl class="kv">
+            <div><dt>${L.tutelle}</dt><dd>${esc(c.organisme)}${c.tutelle && c.tutelle.includes("/") ? `<br><span class="small muted">${esc(c.tutelle)}</span>` : ""}</dd></div>
+            <div><dt>${L.category}</dt><dd>${esc(state.catalog.categories[c.categorie] || "")}</dd></div>
+            <div><dt>${L.sessionsDoc}</dt><dd>${esc(a.sessions)}</dd></div>
+            <div><dt>${L.oral}</dt><dd>${c.oral ? L.oralYes : L.no}</dd></div>
+          </dl>
+          <div class="notice">${I.info}<span class="small">${n ? L.inWeldon(n) : L.papersSoon} ${L.officialNote}</span></div>
+          ${n ? `<button type="button" class="btn btn-primary" data-jump="epreuves" data-c="${c.id}">${L.seeN(n)}</button>` : ""}
+        </aside>
+      </div>`;
+  }
+
   function viewFiche(c) {
+    if (!c.fiche) return viewFicheSimple(c);
     const L = t();
     const f = c.fiche;
     const rows = f.epreuves_officielles
@@ -759,7 +863,7 @@
     return `
       <button type="button" class="back" data-back>${I.back} ${L.allConcours}</button>
       <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
-        <div class="sigle c-${c.couleur}" style="width:64px;height:64px">${esc(c.sigle)}</div>
+        <div class="${sigleClass(c)}" style="width:64px;height:64px">${esc(c.sigle)}</div>
         <div style="min-width:0"><span class="eyebrow">${esc(c.organisme)}</span><h1>${esc(c.nom)}</h1></div>
       </div>
       <div class="fiche">
@@ -770,6 +874,7 @@
           <article class="card"><h3>${L.fichePapers}</h3>
             <div class="table-wrap"><table><thead><tr><th>${L.thPaper}</th><th>${L.thDuration}</th><th>${L.thCoef}</th><th>${L.thElim}</th></tr></thead><tbody>${rows}</tbody></table></div>
             <p class="small muted">${esc(f.autres_epreuves)}</p></article>
+          ${placesTable(c.annuaire)}
         </div>
         <aside class="card" style="min-width:0">
           <dl class="kv">
@@ -806,7 +911,10 @@
       corriges: premium() ? `<div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${L.corrigesTitle}</h1></div><p class="muted small">${L.corrigesSub}</p></div>` : lockedIntro("corriges"),
       salle: premium() ? `<div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${L.roomTitle}</h1></div><p class="muted small">${L.roomSub}</p></div>` : lockedIntro("salle"),
     }[mode];
-    if (!nav.concours) return intro + demoNotice() + `<p class="eyebrow">${L.chooseSchool}</p>` + schoolGroups(mode);
+    if (!nav.concours) {
+      const others = state.catalog.concours.filter((c) => !epreuvesOf(c.id).length).length;
+      return intro + demoNotice() + `<p class="eyebrow">${L.chooseSchool}</p>` + schoolGroups(mode) + (others ? `<p class="small muted">${L.moreSoon(others)}</p>` : "");
+    }
     return viewSessions(concoursById(nav.concours), mode);
   }
 
@@ -834,7 +942,7 @@
     return `
       <button type="button" class="back" data-back>${I.back} ${L.backTo(L.tabsLong[mode])}</button>
       <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
-        <div class="sigle c-${c.couleur}">${esc(c.sigle)}</div>
+        <div class="${sigleClass(c)}">${esc(c.sigle)}</div>
         <div style="min-width:0"><span class="eyebrow">${esc(c.organisme)}</span><h1>${esc(c.nom)}</h1></div>
       </div>
       ${mode !== "epreuves" && !premium() ? lockedIntro(mode) : ""}
@@ -1459,6 +1567,10 @@
     if (d.jump) return go(d.jump, { concours: d.c });
     if (d.school) return go(d.mode === "fiche" ? "concours" : d.mode, { concours: d.school });
     if (d.oral) return go("oral", { concours: d.oral });
+    if (d.cat) {
+      state.cat = d.cat;
+      return render();
+    }
     if ("back" in d) {
       const nav = state.nav[state.tab] || {};
       return go(state.tab, nav.doc ? { concours: nav.concours } : {});
@@ -1558,6 +1670,13 @@
         btn.disabled = false;
       }
     }
+  });
+
+  document.addEventListener("input", (ev) => {
+    if (ev.target.id !== "concours-search") return;
+    state.q = ev.target.value;
+    const list = document.getElementById("concours-list");
+    if (list) list.innerHTML = concoursList();
   });
 
   document.addEventListener("change", async (ev) => {

@@ -1,0 +1,26 @@
+{
+  "formation": {
+    "fr": "Concours de formation",
+    "en": "Training school competitions"
+  },
+  "direct": {
+    "fr": "Concours directs",
+    "en": "Direct recruitment"
+  },
+  "special": {
+    "fr": "Recrutements spéciaux",
+    "en": "Special recruitment"
+  },
+  "selection": {
+    "fr": "Tests de sélection",
+    "en": "Selection tests"
+  },
+  "professionnel": {
+    "fr": "Concours professionnels",
+    "en": "Professional (internal) competitions"
+  },
+  "ecole": {
+    "fr": "Concours d'entrée dans les écoles",
+    "en": "School entrance exams"
+  }
+}

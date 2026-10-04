@@ -12,6 +12,7 @@ const demoData = {
   epreuves: json("epreuves.json"),
   oral: json("oral.json"),
   groupes: json("groupes.json"),
+  categories: json("categories.json"),
   correction_demo: json("correction_demo.json"),
 };
 const fonts = read("index.html").match(/<link rel="stylesheet" href="(https:\/\/fonts[^"]+)">/)[1];
@@ -24,7 +25,7 @@ ${read("styles.css")}
 </style>
 <div id="root"></div>
 <script>
-window.WELDON_DEMO = ${JSON.stringify(demoData).replace(/</g, "\\u003c")};
+window.WELDON_DEMO = ${JSON.stringify({ ...demoData, concours: demoData.concours.map(({ source_annales, ...c }) => c) }).replace(/</g, "\\u003c")};
 </script>
 <script>
 ${read("app.js")}

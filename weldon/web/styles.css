@@ -412,7 +412,7 @@ th { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; colo
 .paper-text { position: relative; white-space: pre-wrap; }
 .watermark {
   position: absolute; inset: -40px; display: flex; flex-wrap: wrap; align-content: space-around; gap: 60px 40px;
-  transform: rotate(-24deg); pointer-events: none; opacity: 0.09; color: var(--ink);
+  transform: rotate(-24deg); pointer-events: none; opacity: 0.13; color: var(--ink);
   font-weight: 800; font-size: 0.85rem; white-space: nowrap; z-index: 0;
 }
 .shield-screen {
@@ -441,7 +441,18 @@ body.shielded .app { filter: blur(24px); }
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 10px 0; border-bottom: 1px solid var(--line);
 }
+.score-row { align-items: flex-start; }
 .score-row label { min-width: 0; font-weight: 600; }
+.score-row .crit { min-width: 0; display: grid; gap: 4px; }
+.score-row .score-input { padding-top: 2px; }
+.levels { margin: 0; padding-left: 18px; display: grid; gap: 2px; font-size: 0.86rem; color: var(--muted); }
+.grid-block { display: grid; }
+.grid-block + .grid-block { margin-top: 14px; }
+.grid-head {
+  display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; border-radius: var(--radius-sm);
+  background: var(--green-soft, rgba(9, 140, 90, 0.1)); color: var(--ink); font-variant-numeric: tabular-nums;
+}
+.grid-aide { margin: 8px 0 0; color: var(--muted); }
 .score-input { flex: none; display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 700; }
 .score-input input {
   width: 64px; padding: 8px; border-radius: var(--radius-sm); border: 1.5px solid var(--line);

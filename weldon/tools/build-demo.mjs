@@ -3,13 +3,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadContent } from "../server/content.js";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (f) => fs.readFileSync(path.join(root, "web", f), "utf8");
 const json = (f) => JSON.parse(fs.readFileSync(path.join(root, "content", f), "utf8"));
+const content = loadContent(path.join(root, "content"));
 const demoData = {
   concours: json("concours.json"),
-  epreuves: json("epreuves.json"),
+  epreuves: json("epreuves.json").map((e) => content.epreuve(e.id)), // grilles résolues
   oral: json("oral.json"),
   groupes: json("groupes.json"),
   categories: json("categories.json"),

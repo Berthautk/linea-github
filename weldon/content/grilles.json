@@ -1,0 +1,503 @@
+{
+  "_doc": "Grilles d'auto-correction partagées. Une épreuve y renvoie par son champ \"grille\" (voir GUIDE-CORRIGES.md). pts : points du critère ; niveaux : comment se noter.",
+  "dissertation": {
+    "fr": [
+      {
+        "titre": "Introduction",
+        "pts": 3,
+        "criteres": [
+          {
+            "label": "Amener le sujet",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : une ou deux phrases partent d'une idée générale, d'un fait d'actualité ou d'une citation liés au thème, et conduisent naturellement au sujet.",
+              "0,5 pt : accroche présente mais trop vague, trop longue ou sans lien clair avec le sujet.",
+              "0 : pas d'accroche ; la copie commence directement par la question."
+            ]
+          },
+          {
+            "label": "Poser le problème",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : le sujet est reformulé avec vos propres mots et la question centrale (problématique) est clairement posée.",
+              "0,5 pt : sujet recopié mot pour mot, ou question confuse.",
+              "0 : aucune problématique."
+            ]
+          },
+          {
+            "label": "Annoncer le plan",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : les deux parties sont annoncées clairement, dans l'ordre où elles seront traitées.",
+              "0,5 pt : plan annoncé mais flou, ou différent de celui suivi ensuite.",
+              "0 : pas d'annonce du plan."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Développement",
+        "pts": 12,
+        "criteres": [
+          {
+            "label": "Première partie (thèse ou premier axe du sujet)",
+            "pts": 5,
+            "niveaux": [
+              "5 pts : une phrase d'introduction partielle énonce l'idée directrice, puis 2 ou 3 arguments, chacun dans son paragraphe : idée, explication, exemple précis.",
+              "3 à 4 pts : arguments justes, mais un exemple manque ou une explication est trop courte.",
+              "1 à 2 pts : idées seulement énumérées, sans explication ni exemple.",
+              "0 : partie absente ou hors sujet."
+            ]
+          },
+          {
+            "label": "Deuxième partie (antithèse ou second axe : solutions, limites…)",
+            "pts": 5,
+            "niveaux": [
+              "5 pts : une phrase d'introduction partielle énonce l'idée directrice, puis 2 ou 3 arguments, chacun dans son paragraphe : idée, explication, exemple précis.",
+              "3 à 4 pts : arguments justes, mais un exemple manque ou une explication est trop courte.",
+              "1 à 2 pts : idées seulement énumérées, sans explication ni exemple.",
+              "0 : partie absente ou hors sujet."
+            ]
+          },
+          {
+            "label": "Transition et connecteurs logiques",
+            "pts": 2,
+            "niveaux": [
+              "2 pts : une petite synthèse (conclusion partielle) clôt la première partie, une phrase de transition annonce la deuxième, et des connecteurs (d'abord, de plus, cependant, ainsi, enfin…) relient les idées.",
+              "1 pt : synthèse ou transition manquante, ou connecteurs rares.",
+              "0 : parties juxtaposées sans aucun lien."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Conclusion",
+        "pts": 3,
+        "criteres": [
+          {
+            "label": "Bilan",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : rappelle en une ou deux phrases ce que chaque partie a montré, sans recopier le développement.",
+              "0,5 pt : bilan incomplet ou simple répétition.",
+              "0 : pas de bilan."
+            ]
+          },
+          {
+            "label": "Réponse au problème",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : répond clairement à la question posée dans l'introduction (prise de position nuancée).",
+              "0,5 pt : réponse vague ou hésitante.",
+              "0 : aucune réponse."
+            ]
+          },
+          {
+            "label": "Ouverture",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : une question ou une perspective élargit le sujet vers un problème voisin.",
+              "0,5 pt : ouverture banale ou sans rapport avec le sujet.",
+              "0 : pas d'ouverture."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Présentation et langue",
+        "pts": 2,
+        "criteres": [
+          {
+            "label": "Présentation",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : copie propre et lisible, paragraphes nets (alinéa, une ligne sautée entre les grandes parties), sans titres ni numéros.",
+              "0,5 pt : ratures nombreuses, paragraphes mal délimités ou titres apparents.",
+              "0 : copie difficile à lire."
+            ]
+          },
+          {
+            "label": "Orthographe et syntaxe",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : moins de 5 fautes par page.",
+              "0,5 pt : 5 à 10 fautes par page.",
+              "0 : plus de 10 fautes par page."
+            ]
+          }
+        ]
+      }
+    ],
+    "en": [
+      {
+        "titre": "Introduction",
+        "pts": 3,
+        "criteres": [
+          {
+            "label": "Lead-in",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: one or two sentences start from a general idea, a current fact or a quotation linked to the theme, and lead naturally to the topic.",
+              "0.5 mark: lead-in present but too vague, too long or not clearly linked to the topic.",
+              "0: no lead-in; the essay starts directly with the question."
+            ]
+          },
+          {
+            "label": "Statement of the problem",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: the topic is rephrased in your own words and the central question is clearly stated.",
+              "0.5 mark: topic copied word for word, or the question is confused.",
+              "0: no problem stated."
+            ]
+          },
+          {
+            "label": "Outline of the plan",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: both parts are clearly announced, in the order they will be dealt with.",
+              "0.5 mark: plan announced but vague, or different from the one followed.",
+              "0: no outline."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Body",
+        "pts": 12,
+        "criteres": [
+          {
+            "label": "Part one (thesis or first aspect of the topic)",
+            "pts": 5,
+            "niveaux": [
+              "5 marks: a topic sentence states the main idea, then 2 or 3 arguments, one paragraph each: point, explanation, precise example.",
+              "3 to 4 marks: sound arguments, but an example is missing or an explanation is too short.",
+              "1 to 2 marks: ideas only listed, with no explanation or example.",
+              "0: part missing or off topic."
+            ]
+          },
+          {
+            "label": "Part two (antithesis or second aspect: solutions, limits…)",
+            "pts": 5,
+            "niveaux": [
+              "5 marks: a topic sentence states the main idea, then 2 or 3 arguments, one paragraph each: point, explanation, precise example.",
+              "3 to 4 marks: sound arguments, but an example is missing or an explanation is too short.",
+              "1 to 2 marks: ideas only listed, with no explanation or example.",
+              "0: part missing or off topic."
+            ]
+          },
+          {
+            "label": "Transition and linking words",
+            "pts": 2,
+            "niveaux": [
+              "2 marks: a short partial conclusion closes part one, a transition sentence announces part two, and linking words (firstly, moreover, however, therefore, finally…) connect the ideas.",
+              "1 mark: partial conclusion or transition missing, or few linking words.",
+              "0: parts simply placed side by side."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Conclusion",
+        "pts": 3,
+        "criteres": [
+          {
+            "label": "Summary",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: recalls in one or two sentences what each part showed, without copying the body.",
+              "0.5 mark: incomplete summary or plain repetition.",
+              "0: no summary."
+            ]
+          },
+          {
+            "label": "Answer to the problem",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: clearly answers the question asked in the introduction (a balanced position).",
+              "0.5 mark: vague or hesitant answer.",
+              "0: no answer."
+            ]
+          },
+          {
+            "label": "Opening",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: a question or perspective broadens the topic to a related issue.",
+              "0.5 mark: commonplace or unrelated opening.",
+              "0: no opening."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Presentation and language",
+        "pts": 2,
+        "criteres": [
+          {
+            "label": "Presentation",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: clean, legible script, clear paragraphs (indent, a line skipped between the main parts), no headings or numbers.",
+              "0.5 mark: many crossings-out, unclear paragraphs or visible headings.",
+              "0: hard to read."
+            ]
+          },
+          {
+            "label": "Spelling and grammar",
+            "pts": 1,
+            "niveaux": [
+              "1 mark: fewer than 5 mistakes per page.",
+              "0.5 mark: 5 to 10 mistakes per page.",
+              "0: more than 10 mistakes per page."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dissertation-partie-b": {
+    "fr": [
+      {
+        "titre": "Partie B – Introduction",
+        "pts": 1.5,
+        "criteres": [
+          {
+            "label": "Amener le sujet",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : une ou deux phrases partent d'une idée générale, d'un fait d'actualité ou d'une citation liés au thème, et conduisent naturellement au sujet.",
+              "0 : pas d'accroche ; la copie commence directement par la question."
+            ]
+          },
+          {
+            "label": "Poser le problème",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : le sujet est reformulé avec vos propres mots et la question centrale (problématique) est clairement posée.",
+              "0 : aucune problématique."
+            ]
+          },
+          {
+            "label": "Annoncer le plan",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : les deux parties sont annoncées clairement, dans l'ordre où elles seront traitées.",
+              "0 : pas d'annonce du plan."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Partie B – Développement",
+        "pts": 6.0,
+        "criteres": [
+          {
+            "label": "Première partie (thèse ou premier axe du sujet)",
+            "pts": 2.5,
+            "niveaux": [
+              "2,5 pts : une phrase d'introduction partielle énonce l'idée directrice, puis 2 ou 3 arguments, chacun dans son paragraphe : idée, explication, exemple précis.",
+              "1,5 à 2 pts : arguments justes, mais un exemple manque ou une explication est trop courte.",
+              "0,5 à 1 pt : idées seulement énumérées, sans explication ni exemple.",
+              "0 : partie absente ou hors sujet."
+            ]
+          },
+          {
+            "label": "Deuxième partie (antithèse ou second axe : solutions, limites…)",
+            "pts": 2.5,
+            "niveaux": [
+              "2,5 pts : une phrase d'introduction partielle énonce l'idée directrice, puis 2 ou 3 arguments, chacun dans son paragraphe : idée, explication, exemple précis.",
+              "1,5 à 2 pts : arguments justes, mais un exemple manque ou une explication est trop courte.",
+              "0,5 à 1 pt : idées seulement énumérées, sans explication ni exemple.",
+              "0 : partie absente ou hors sujet."
+            ]
+          },
+          {
+            "label": "Transition et connecteurs logiques",
+            "pts": 1.0,
+            "niveaux": [
+              "1 pt : une petite synthèse (conclusion partielle) clôt la première partie, une phrase de transition annonce la deuxième, et des connecteurs (d'abord, de plus, cependant, ainsi, enfin…) relient les idées.",
+              "0,5 pt : synthèse ou transition manquante, ou connecteurs rares.",
+              "0 : parties juxtaposées sans aucun lien."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Partie B – Conclusion",
+        "pts": 1.5,
+        "criteres": [
+          {
+            "label": "Bilan",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : rappelle en une ou deux phrases ce que chaque partie a montré, sans recopier le développement.",
+              "0 : pas de bilan."
+            ]
+          },
+          {
+            "label": "Réponse au problème",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : répond clairement à la question posée dans l'introduction (prise de position nuancée).",
+              "0 : aucune réponse."
+            ]
+          },
+          {
+            "label": "Ouverture",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : une question ou une perspective élargit le sujet vers un problème voisin.",
+              "0 : pas d'ouverture."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Partie B – Présentation et langue",
+        "pts": 1.0,
+        "criteres": [
+          {
+            "label": "Présentation",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : copie propre et lisible, paragraphes nets (alinéa, une ligne sautée entre les grandes parties), sans titres ni numéros.",
+              "0 : copie difficile à lire."
+            ]
+          },
+          {
+            "label": "Orthographe et syntaxe",
+            "pts": 0.5,
+            "niveaux": [
+              "0,5 pt : moins de 5 fautes par page.",
+              "0 : plus de 10 fautes par page."
+            ]
+          }
+        ]
+      }
+    ],
+    "en": [
+      {
+        "titre": "Part B – Introduction",
+        "pts": 1.5,
+        "criteres": [
+          {
+            "label": "Lead-in",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: one or two sentences start from a general idea, a current fact or a quotation linked to the theme, and lead naturally to the topic.",
+              "0: no lead-in; the essay starts directly with the question."
+            ]
+          },
+          {
+            "label": "Statement of the problem",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: the topic is rephrased in your own words and the central question is clearly stated.",
+              "0: no problem stated."
+            ]
+          },
+          {
+            "label": "Outline of the plan",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: both parts are clearly announced, in the order they will be dealt with.",
+              "0: no outline."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Part B – Body",
+        "pts": 6.0,
+        "criteres": [
+          {
+            "label": "Part one (thesis or first aspect of the topic)",
+            "pts": 2.5,
+            "niveaux": [
+              "2.5 marks: a topic sentence states the main idea, then 2 or 3 arguments, one paragraph each: point, explanation, precise example.",
+              "1.5 to 2 marks: sound arguments, but an example is missing or an explanation is too short.",
+              "0.5 to 1 mark: ideas only listed, with no explanation or example.",
+              "0: part missing or off topic."
+            ]
+          },
+          {
+            "label": "Part two (antithesis or second aspect: solutions, limits…)",
+            "pts": 2.5,
+            "niveaux": [
+              "2.5 marks: a topic sentence states the main idea, then 2 or 3 arguments, one paragraph each: point, explanation, precise example.",
+              "1.5 to 2 marks: sound arguments, but an example is missing or an explanation is too short.",
+              "0.5 to 1 mark: ideas only listed, with no explanation or example.",
+              "0: part missing or off topic."
+            ]
+          },
+          {
+            "label": "Transition and linking words",
+            "pts": 1.0,
+            "niveaux": [
+              "1 mark: a short partial conclusion closes part one, a transition sentence announces part two, and linking words (firstly, moreover, however, therefore, finally…) connect the ideas.",
+              "0.5 mark: partial conclusion or transition missing, or few linking words.",
+              "0: parts simply placed side by side."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Part B – Conclusion",
+        "pts": 1.5,
+        "criteres": [
+          {
+            "label": "Summary",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: recalls in one or two sentences what each part showed, without copying the body.",
+              "0: no summary."
+            ]
+          },
+          {
+            "label": "Answer to the problem",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: clearly answers the question asked in the introduction (a balanced position).",
+              "0: no answer."
+            ]
+          },
+          {
+            "label": "Opening",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: a question or perspective broadens the topic to a related issue.",
+              "0: no opening."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Part B – Presentation and language",
+        "pts": 1.0,
+        "criteres": [
+          {
+            "label": "Presentation",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: clean, legible script, clear paragraphs (indent, a line skipped between the main parts), no headings or numbers.",
+              "0: hard to read."
+            ]
+          },
+          {
+            "label": "Spelling and grammar",
+            "pts": 0.5,
+            "niveaux": [
+              "0.5 mark: fewer than 5 mistakes per page.",
+              "0: more than 10 mistakes per page."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "questions": {
+    "fr": "Pour chaque question : tous les points si la réponse est juste, complète et rédigée en phrase complète (ex. « Le plus grand continent au monde est l'Asie ; elle couvre environ 44,6 millions de km², soit près de 30 % des terres émergées. »). Réponse juste mais donnée en un mot, sans phrase : la moitié des points. Question à plusieurs éléments : comptez les éléments justes, comme l'indique la ligne « Points » du corrigé. Réponse fausse ou absente : 0.",
+    "en": "For each question: full marks if the answer is correct, complete and written as a full sentence (e.g. \"The largest continent in the world is Asia; it covers about 44.6 million km², nearly 30% of the Earth's land area.\"). Correct answer given in one word, without a sentence: half the marks. Question with several elements: count the correct elements, as the \"Marks\" line of the model answer shows. Wrong or missing answer: 0."
+  }
+}

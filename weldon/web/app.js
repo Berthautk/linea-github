@@ -60,7 +60,7 @@
       inProgress: "En cours",
       inProgressLong: "Épreuves en cours d'ajout",
       selfTitle: "Corrigez-vous vous-même",
-      selfHow: "Lisez le corrigé ci-dessous en gardant votre copie à côté. Pour chaque ligne du barème, donnez-vous honnêtement les points mérités : la note se calcule toute seule.",
+      selfHow: "Lisez le corrigé ci-dessous en gardant votre copie à côté, puis remplissez le barème qui suit : chaque critère explique ce qui vaut tous les points, la moitié ou zéro. La note se calcule toute seule.",
       selfGrid: "Votre note selon le barème",
       selfGlobal: "Votre note",
       selfSave: "Enregistrer ma note",
@@ -114,7 +114,9 @@
       seeCorrige: "Voir le corrigé",
       seeSujet: "Revoir le sujet",
       composeRoom: "Composer en salle d'examen",
-      scale: "Barème indicatif",
+      scale: "Barème : comment se noter",
+      gridHow: "Pour chaque critère, relisez votre copie, trouvez la phrase qui décrit le mieux ce que vous avez écrit, et donnez-vous les points indiqués.",
+      ptsUnit: (n) => (n > 1 ? "pts" : "pt"),
       oralTitle: "Préparer l'oral",
       oralSub: "Pour les concours qui comportent un oral : comment il se déroule, ce que le jury demande, comment s'y préparer.",
       howOral: "Comment se passe l'oral",
@@ -247,7 +249,7 @@
       inProgress: "Coming soon",
       inProgressLong: "Papers being added",
       selfTitle: "Mark your own script",
-      selfHow: "Read the model answer below with your script beside you. For each line of the marking guide, honestly give yourself the marks you deserve: your mark is calculated automatically.",
+      selfHow: "Read the model answer below with your script beside you, then fill in the marking guide that follows: each criterion explains what earns full, half or no marks. Your mark is calculated automatically.",
       selfGrid: "Your mark from the marking guide",
       selfGlobal: "Your mark",
       selfSave: "Save my mark",
@@ -301,7 +303,9 @@
       seeCorrige: "See the model answer",
       seeSujet: "See the question paper",
       composeRoom: "Write it in the exam room",
-      scale: "Marking guide",
+      scale: "Marking guide: how to mark yourself",
+      gridHow: "For each criterion, reread your script, find the line that best describes what you wrote, and give yourself the marks shown.",
+      ptsUnit: (n) => (n > 1 ? "marks" : "mark"),
       oralTitle: "Oral preparation",
       oralSub: "For competitions with an oral: how it works, what the panel asks and how to prepare.",
       howOral: "How the oral works",
@@ -549,7 +553,7 @@
             save(u);
           } else if (u.free_id !== id) fail("Réservé aux abonnés.", "locked", 402);
         }
-        const { corrige, bareme, ...s } = e;
+        const { corrige, bareme, grille, ...s } = e;
         return s;
       },
       async corrige(id) {
@@ -1013,7 +1017,7 @@
         ${meta.exemple ? `<span class="tag tag-sun">${L.sampleTag}</span>` : ""}
       </div>
       ${protectedPaper(isCorrige ? doc.corrige : doc.sujet, isCorrige ? "" : "ruled")}
-      ${isCorrige && doc.bareme ? `<article class="card protected"><h3>${L.scale}</h3><p class="small" style="white-space:pre-wrap">${esc(doc.bareme)}</p></article>` : ""}
+      ${isCorrige && gridItems(doc).length ? `<article class="card protected"><h3>${L.scale}</h3><p class="small muted">${L.gridHow}</p><div class="score-grid">${gridHtml(doc, null)}</div></article>` : ""}
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         ${
           isCorrige
@@ -1202,15 +1206,9 @@
     const corr = state.docCache[`corriges:${ex.id}`];
     const corrErr = state.docError[`corriges:${ex.id}`];
     if (!corr && !corrErr) loadDoc(ex.id, "corriges");
-    const items = parseBareme(corr?.bareme);
     const scores = state.selfScores[ex.id] || {};
-    const grid = items.length
-      ? items
-          .map(
-            (it, i) => `<div class="score-row"><label for="sc${i}">${esc(it.label)}</label>
-              <span class="score-input"><input id="sc${i}" type="number" inputmode="decimal" min="0" max="${it.max}" step="0.5" data-score="${i}" value="${scores[i] ?? ""}"> / ${fmtScore(it.max)}</span></div>`
-          )
-          .join("")
+    const grid = gridItems(corr).length
+      ? gridHtml(corr, scores)
       : `<div class="score-row"><label for="sc0">${L.selfGlobal}</label><span class="score-input"><input id="sc0" type="number" inputmode="decimal" min="0" max="20" step="0.5" data-score="0" value="${scores[0] ?? ""}"> / 20</span></div>`;
     return `
       ${steps(2)}
@@ -1230,6 +1228,7 @@
       }
       <article class="card" id="self-card">
         <h3>${L.selfGrid}</h3>
+        <p class="small muted">${L.gridHow}</p>
         <div class="score-grid">${grid}</div>
         <div class="score" style="margin-top:6px"><div class="score-ring" id="self-ring" style="--p:0"><div><b id="self-total">—</b><small>/20</small></div></div>
           <div style="flex:1 1 220px;display:grid;gap:10px"><p class="small muted" id="self-msg"></p>
@@ -1239,6 +1238,37 @@
         <button type="button" class="btn btn-ghost" data-start="${e.id}">${L.retry}</button>
         <button type="button" class="btn btn-ghost" data-quit>${L.newPaper}</button>
       </div>`;
+  }
+
+  // Critères notés d'un corrigé : grille détaillée (niveaux) si elle existe, sinon barème en texte.
+  function gridItems(doc) {
+    if (doc?.grille) return doc.grille.flatMap((b) => b.criteres.map((c) => ({ bloc: b.titre, label: c.label, max: c.pts, niveaux: c.niveaux || [] })));
+    return parseBareme(doc?.bareme).map((it) => ({ ...it, niveaux: [] }));
+  }
+
+  // Grille affichée par blocs (Introduction, Développement…) ; avec scores, chaque critère a sa case à remplir.
+  function gridHtml(doc, scores) {
+    const L = t();
+    const unit = (n) => `${fmtScore(n)} ${L.ptsUnit(n)}`;
+    const blocks = doc.grille || [{ titre: "", criteres: gridItems(doc).map((it) => ({ label: it.label, pts: it.max })) }];
+    let i = 0;
+    return blocks
+      .map((b) => {
+        const rows = b.criteres
+          .map((c) => {
+            const k = i++;
+            const field = scores
+              ? `<span class="score-input"><input id="sc${k}" type="number" inputmode="decimal" min="0" max="${c.pts}" step="0.5" data-score="${k}" value="${scores[k] ?? ""}"> / ${fmtScore(c.pts)}</span>`
+              : `<span class="score-input">${unit(c.pts)}</span>`;
+            const levels = (c.niveaux || []).length ? `<ul class="levels">${c.niveaux.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : "";
+            return `<div class="score-row"><div class="crit"><label ${scores ? `for="sc${k}"` : ""}>${esc(c.label)}</label>${levels}</div>${field}</div>`;
+          })
+          .join("");
+        const head = b.titre ? `<div class="grid-head"><b>${esc(b.titre)}</b><span>${unit(b.pts ?? b.criteres.reduce((s, c) => s + c.pts, 0))}</span></div>` : "";
+        const aide = b.aide ? `<p class="small grid-aide">${esc(b.aide)}</p>` : "";
+        return `<section class="grid-block">${head}${aide}${rows}</section>`;
+      })
+      .join("");
   }
 
   // Barème : une ligne par critère, au format « Critère : N pts » (voir content/GUIDE-CORRIGES.md).
@@ -1259,7 +1289,7 @@
 
   function selfTotal(id) {
     const corr = state.docCache[`corriges:${id}`];
-    const items = parseBareme(corr?.bareme);
+    const items = gridItems(corr);
     const scores = state.selfScores[id] || {};
     const max = items.length ? items.reduce((s, x) => s + x.max, 0) : 20;
     const keys = items.length ? items.map((_, i) => i) : [0];
@@ -1540,6 +1570,21 @@
   });
   window.addEventListener("blur", () => state.user && shield(true));
   window.addEventListener("focus", () => shield(false));
+  // Touche Windows / Cmd : sur ordinateur, les raccourcis de capture (Win+Maj+S, Cmd+Maj+4…)
+  // commencent tous par elle. Le contenu est masqué dès qu'elle est enfoncée, avant la capture.
+  let metaTimer;
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Meta" || ev.key === "OS") {
+      clearTimeout(metaTimer);
+      shield(true);
+    }
+  });
+  document.addEventListener("keyup", (ev) => {
+    if (ev.key === "Meta" || ev.key === "OS") {
+      clearTimeout(metaTimer);
+      metaTimer = setTimeout(() => document.hasFocus() && shield(false), 1500);
+    }
+  });
   document.addEventListener("keydown", (ev) => {
     const k = ev.key;
     const shot = k === "PrintScreen" || (ev.metaKey && ev.shiftKey && ["3", "4", "5", "s", "S"].includes(k)) || (ev.ctrlKey && k === "p");

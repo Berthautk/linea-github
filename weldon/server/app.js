@@ -317,7 +317,7 @@ route("GET", "/api/epreuves/:id/sujet", async (req, p) => {
       throw httpError(402, "Vous avez déjà utilisé votre épreuve offerte. Abonnez-vous pour accéder à toutes les épreuves.", { code: "locked" });
     }
   }
-  const { corrige, bareme, ...sujet } = e;
+  const { corrige, bareme, grille, ...sujet } = e;
   return { ...sujet, free_id: u.free_id || null };
 });
 

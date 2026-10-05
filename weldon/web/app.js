@@ -141,6 +141,10 @@
       newPaper: "Nouvelle épreuve",
       shouldWrite: "Ce qu'il fallait écrire",
       modelAnswer: "Corrigé rédigé",
+      corrLoading: "Chargement du corrigé…",
+      corrFailed: "Le corrigé n'a pas pu être chargé. Vérifiez votre connexion internet puis réessayez.",
+      tryAgain: "Réessayer",
+      examFailed: "L'épreuve n'a pas pu être chargée. Vérifiez votre connexion internet puis réessayez.",
       confirmFreeTitle: "Lire cette épreuve gratuitement ?",
       confirmFreeText:
         "Vous avez droit à <b>une seule</b> épreuve offerte. Les autres épreuves, les corrigés, l'oral et la salle d'examen sont réservés aux abonnés.",
@@ -324,6 +328,10 @@
       newPaper: "New paper",
       shouldWrite: "What you should have written",
       modelAnswer: "Model answer",
+      corrLoading: "Loading the model answer…",
+      corrFailed: "The model answer could not be loaded. Check your internet connection and try again.",
+      tryAgain: "Try again",
+      examFailed: "The paper could not be loaded. Check your internet connection and try again.",
       confirmFreeTitle: "Read this paper for free?",
       confirmFreeText:
         "You are entitled to <b>one</b> free paper. All other papers, model answers, the oral and the exam room are for subscribers.",
@@ -433,6 +441,7 @@
     examDoc: null,
     selfScores: {},
     docCache: {},
+    docError: {},
     oralCache: {},
     booting: true,
   };
@@ -1026,11 +1035,16 @@
     const key = `${mode}:${id}`;
     if (pending.has(key)) return;
     pending.add(key);
+    delete state.docError[key];
     try {
       state.docCache[key] = mode === "corriges" ? await api().corrige(id) : await api().sujet(id);
       if (mode === "epreuves" && !premium() && !state.user.free_id) state.user.free_id = id;
       render();
     } catch (e) {
+      if (state.tab === "salle") {
+        state.docError[key] = e.message;
+        return render();
+      }
       state.nav[mode] = { concours: epreuveMeta(id).concours };
       if (e.code === "locked") openPaywall();
       else toast(e.message);
@@ -1084,13 +1098,28 @@
     const ex = state.exam;
     if (premium() && ex && epreuveMeta(ex.id)) {
       if (!state.examDoc || state.examDoc.id !== ex.id) {
-        api()
-          .sujet(ex.id)
-          .then((d) => {
-            state.examDoc = d;
-            render();
-          })
-          .catch((e) => toast(e.message));
+        if (state.examError) {
+          return `<article class="card"><p>${esc(t().examFailed)}</p><p class="small muted">${esc(state.examError)}</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-primary" data-reload-exam>${t().tryAgain}</button>
+            <button type="button" class="btn btn-ghost" data-quit>${t().quitRoom}</button></div></article>`;
+        }
+        // Sujet et corrigé chargés dès l'entrée en salle : la fin d'épreuve ne dépend plus du réseau.
+        if (!pending.has("exam")) {
+          pending.add("exam");
+          api()
+            .corrige(ex.id)
+            .then((d) => {
+              state.examDoc = d;
+              state.docCache[`corriges:${ex.id}`] = d;
+            })
+            .catch((e) => {
+              state.examError = e.message;
+            })
+            .finally(() => {
+              pending.delete("exam");
+              render();
+            });
+        }
         return `<p class="muted">…</p>`;
       }
       if (ex.phase === "prep") return sallePrep(ex);
@@ -1103,6 +1132,7 @@
   function startExam(id) {
     if (!premium()) return openPaywall();
     state.exam = { id, phase: "prep", prepEnd: Date.now() + PREP_SECONDS * 1000 };
+    state.examError = null;
     delete state.selfScores[id];
     local.set("exam", state.exam);
     go("salle", state.nav.salle || {});
@@ -1170,7 +1200,8 @@
     const e = epreuveMeta(ex.id);
     const used = Math.max(1, Math.round((ex.finishedAt - ex.start) / 60000));
     const corr = state.docCache[`corriges:${ex.id}`];
-    if (!corr) loadDoc(ex.id, "corriges");
+    const corrErr = state.docError[`corriges:${ex.id}`];
+    if (!corr && !corrErr) loadDoc(ex.id, "corriges");
     const items = parseBareme(corr?.bareme);
     const scores = state.selfScores[ex.id] || {};
     const grid = items.length
@@ -1190,7 +1221,13 @@
         <article class="card"><h3>${L.selfTitle}</h3><p class="small muted">${L.selfHow}</p></article>
       </div>
       <div><span class="eyebrow">${L.shouldWrite}</span><h2>${L.modelAnswer}</h2></div>
-      ${corr ? protectedPaper(corr.corrige) : `<p class="muted">…</p>`}
+      ${
+        corr
+          ? protectedPaper(corr.corrige)
+          : corrErr
+            ? `<article class="card"><p>${esc(L.corrFailed)}</p><p class="small muted">${esc(corrErr)}</p><button type="button" class="btn btn-primary" data-reload-corr="${ex.id}">${L.tryAgain}</button></article>`
+            : `<p class="muted">${L.corrLoading}</p>`
+      }
       <article class="card" id="self-card">
         <h3>${L.selfGrid}</h3>
         <div class="score-grid">${grid}</div>
@@ -1638,6 +1675,11 @@
       return go("epreuves", { concours: meta.concours, doc: d.freeYes });
     }
     if (d.start) return startExam(d.start);
+    if (d.reloadCorr) return loadDoc(d.reloadCorr, "corriges");
+    if ("reloadExam" in d) {
+      state.examError = null;
+      return render();
+    }
     if ("begin" in d) return beginCompose();
     if ("finish" in d) return confirmFinish();
     if ("finishYes" in d) {
@@ -1647,6 +1689,7 @@
     if ("quit" in d) {
       state.exam = null;
       state.examDoc = null;
+      state.examError = null;
       local.del("exam");
       releaseWakeLock();
       return render();

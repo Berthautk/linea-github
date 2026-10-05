@@ -448,3 +448,17 @@ body.shielded .app { filter: blur(24px); }
   background: var(--bg); color: var(--ink); font: inherit; font-weight: 800; text-align: center;
 }
 .score-input input:focus { outline: none; border-color: var(--green); }
+
+/* ---------- Photos des concours ---------- */
+.concours-banner {
+  position: relative; margin: 0; overflow: hidden; border-radius: 18px;
+  aspect-ratio: 16 / 6; max-width: 100%; display: grid; place-items: center;
+}
+.concours-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.concours-banner figcaption {
+  position: absolute; right: 8px; bottom: 8px; padding: 2px 8px; border-radius: 99px;
+  background: rgb(0 0 0 / 55%); color: #fff; font-size: 0.7rem; font-weight: 700;
+}
+.card.has-photo { padding-top: 0; overflow: hidden; }
+.card-photo { width: calc(100% + 36px); margin: 0 -18px; aspect-ratio: 16 / 7; max-width: none; object-fit: cover; display: block; }
+@media (max-width: 820px) { .concours-banner { aspect-ratio: 16 / 8; } }

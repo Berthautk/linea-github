@@ -13,6 +13,7 @@ export function loadContent(dir) {
   const oral = read("oral.json");
   const groupes = read("groupes.json");
   const categories = read("categories.json");
+  const photos = Object.fromEntries(Object.entries(read("photos.json")).filter(([k]) => !k.startsWith("_")));
 
   const ids = new Set();
   for (const e of epreuves) {
@@ -33,9 +34,10 @@ export function loadContent(dir) {
         lang,
         groupes: Object.fromEntries(Object.entries(groupes).map(([k, v]) => [k, v[lang]])),
         categories: Object.fromEntries(Object.entries(categories).map(([k, v]) => [k, v[lang]])),
+        photos,
         concours: concours
           .filter((c) => c[lang])
-          .map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, priorite: c.priorite || 999, ...c[lang] })),
+          .map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, priorite: c.priorite || 999, theme: c.theme, ...c[lang] })),
         epreuves: epreuves
           .filter((e) => e.lang === lang)
           .map(({ id, concours: cid, annee, matiere, duree, exemple, sujet }) => ({

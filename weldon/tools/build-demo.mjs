@@ -13,6 +13,7 @@ const demoData = {
   oral: json("oral.json"),
   groupes: json("groupes.json"),
   categories: json("categories.json"),
+  photos: json("photos.json"),
 };
 const fonts = read("index.html").match(/<link rel="stylesheet" href="(https:\/\/fonts[^"]+)">/)[1];
 

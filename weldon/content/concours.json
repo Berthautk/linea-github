@@ -103,7 +103,8 @@
     },
     "categorie": "direct",
     "tutelle": "DGSN",
-    "priorite": 5
+    "priorite": 5,
+    "theme": "police"
   },
   {
     "id": "gardiens-paix",
@@ -205,7 +206,8 @@
     },
     "categorie": "direct",
     "tutelle": "DGSN",
-    "priorite": 2
+    "priorite": 2,
+    "theme": "police"
   },
   {
     "id": "police-nationale-commissaires-et-officiers-de-po",
@@ -260,7 +262,8 @@
       }
     },
     "source_annales": "Annales commissaire/officier de police disponibles chez les tiers",
-    "priorite": 17
+    "priorite": 17,
+    "theme": "police"
   },
   {
     "id": "emia",
@@ -368,7 +371,8 @@
     },
     "categorie": "ecole",
     "tutelle": "MINDEF",
-    "priorite": 9
+    "priorite": 9,
+    "theme": "militaire"
   },
   {
     "id": "recrutement-special-bir",
@@ -406,7 +410,8 @@
         "places_note": "Places not publicly announced"
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "militaire"
   },
   {
     "id": "eiforces-forces-de-defense-et-securite",
@@ -444,7 +449,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "militaire"
   },
   {
     "id": "gendarmerie-eleves-gendarmes-sous-officiers",
@@ -505,7 +511,8 @@
       }
     },
     "source_annales": "Sujets non publiés",
-    "priorite": 3
+    "priorite": 3,
+    "theme": "gendarmerie"
   },
   {
     "id": "armees-sous-officiers-soldats-matelots",
@@ -558,7 +565,8 @@
       }
     },
     "source_annales": "Sujets non publiés",
-    "priorite": 16
+    "priorite": 16,
+    "theme": "militaire"
   },
   {
     "id": "essal",
@@ -592,7 +600,8 @@
         "places_note": "2026 session: pre-selection on 14 February 2026."
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "militaire"
   },
   {
     "id": "ecoles-militaires-francaises",
@@ -626,7 +635,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "militaire"
   },
   {
     "id": "justice-militaire-enam",
@@ -670,7 +680,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "justice"
   },
   {
     "id": "enam",
@@ -812,7 +823,8 @@
     },
     "categorie": "formation",
     "tutelle": "MINFOPRA",
-    "priorite": 8
+    "priorite": 8,
+    "theme": "administration"
   },
   {
     "id": "enam-division-des-regies-financieres-cycles-a-et",
@@ -882,7 +894,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales 2001-2025 : comptabilité, fiscalité, économie, statistiques, droit public"
+    "source_annales": "Annales 2001-2025 : comptabilité, fiscalité, économie, statistiques, droit public",
+    "theme": "finance"
   },
   {
     "id": "enam-division-de-la-magistrature-et-des-greffes",
@@ -964,7 +977,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales 2001-2025 : droit civil et procédure, droit pénal, droit des affaires, culture générale, organisation judiciaire"
+    "source_annales": "Annales 2001-2025 : droit civil et procédure, droit pénal, droit des affaires, culture générale, organisation judiciaire",
+    "theme": "justice"
   },
   {
     "id": "enam-concours-special-common-law-expression-angl",
@@ -1032,7 +1046,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales partielles en anglais, sessions récentes"
+    "source_annales": "Annales partielles en anglais, sessions récentes",
+    "theme": "administration"
   },
   {
     "id": "ief-pr-auditeurs-pole-regional-des-regies-financ",
@@ -1080,7 +1095,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "finance"
   },
   {
     "id": "services-de-traduction-et-dinterpretation",
@@ -1162,7 +1178,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "administration"
   },
   {
     "id": "inspecteurs-de-la-documentation",
@@ -1218,7 +1235,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "administration"
   },
   {
     "id": "secretaires-recrutement-special",
@@ -1266,7 +1284,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "administration"
   },
   {
     "id": "chauffeurs-categorie-3-1",
@@ -1314,7 +1333,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "transport"
   },
   {
     "id": "secretaires-de-direction",
@@ -1362,7 +1382,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "administration"
   },
   {
     "id": "concours-professionnels-administration-generale",
@@ -1414,7 +1435,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales professionnelles disponibles chez les tiers"
+    "source_annales": "Annales professionnelles disponibles chez les tiers",
+    "theme": "administration"
   },
   {
     "id": "ens-yaounde",
@@ -1516,7 +1538,8 @@
     },
     "categorie": "ecole",
     "tutelle": "MINESUP",
-    "priorite": 13
+    "priorite": 13,
+    "theme": "enseignant"
   },
   {
     "id": "capesa-issea-analystes-statisticiens-et-ingenieu",
@@ -1576,7 +1599,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales ISSEA disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales ISSEA disponibles par année (bibliothèques tierces)",
+    "theme": "informatique"
   },
   {
     "id": "iford-master-professionnel-en-demographie-1re-an",
@@ -1616,7 +1640,8 @@
         "places_note": "Limited places, not stated in the annual announcements"
       }
     },
-    "source_annales": "Annales IFORD jusqu’à 2023 (bibliothèques tierces)"
+    "source_annales": "Annales IFORD jusqu’à 2023 (bibliothèques tierces)",
+    "theme": "informatique"
   },
   {
     "id": "enset-ecoles-normales-superieures-de-lenseigneme",
@@ -1655,7 +1680,8 @@
       }
     },
     "source_annales": "Annales ENSET disponibles par année (bibliothèques tierces)",
-    "priorite": 14
+    "priorite": 14,
+    "theme": "enseignant"
   },
   {
     "id": "essec-sciences-economiques-et-commerciales",
@@ -1696,7 +1722,8 @@
       }
     },
     "source_annales": "Annales ESSEC disponibles par année (bibliothèques tierces)",
-    "priorite": 25
+    "priorite": 25,
+    "theme": "universite"
   },
   {
     "id": "polytechniques-enspy-enspd-enspm-ensai-egem-egci",
@@ -1739,7 +1766,8 @@
       }
     },
     "source_annales": "Annales par école et par année (bibliothèques tierces)",
-    "priorite": 15
+    "priorite": 15,
+    "theme": "genie"
   },
   {
     "id": "iric-institut-des-relations-internationales",
@@ -1780,7 +1808,8 @@
       }
     },
     "source_annales": "Annales IRIC disponibles par année (bibliothèques tierces)",
-    "priorite": 24
+    "priorite": 24,
+    "theme": "universite"
   },
   {
     "id": "esstic-sciences-et-techniques-de-linformation-et",
@@ -1818,7 +1847,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales ESSTIC disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales ESSTIC disponibles par année (bibliothèques tierces)",
+    "theme": "journalisme"
   },
   {
     "id": "fasa-fasa-ipes-agronomie-et-sciences-agricoles",
@@ -1871,7 +1901,8 @@
       }
     },
     "source_annales": "33 sujets d’annales FASA référencés chez les bibliothèques tierces",
-    "priorite": 20
+    "priorite": 20,
+    "theme": "agriculture"
   },
   {
     "id": "facultes-de-medecine-examen-national-daptitude-m",
@@ -1924,7 +1955,8 @@
       }
     },
     "source_annales": "Annales par année (bibliothèques tierces)",
-    "priorite": 10
+    "priorite": 10,
+    "theme": "medecin"
   },
   {
     "id": "emsv-sciences-et-medecine-veterinaire",
@@ -1964,7 +1996,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales EMSV (biologie) disponibles"
+    "source_annales": "Annales EMSV (biologie) disponibles",
+    "theme": "agriculture"
   },
   {
     "id": "cessi-sciences-infirmieres",
@@ -2002,7 +2035,8 @@
         "places_note": "Places set by annual decision"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "infirmier"
   },
   {
     "id": "iut-fgi-et-ecoles-de-technologie",
@@ -2043,7 +2077,8 @@
       }
     },
     "source_annales": "Annales IUT/FGI disponibles par année (bibliothèques tierces)",
-    "priorite": 19
+    "priorite": 19,
+    "theme": "genie"
   },
   {
     "id": "ipes-prives-sous-tutelle-academique-enspd-fasa-i",
@@ -2081,7 +2116,8 @@
         "places_note": "Places set by annual decision"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "universite"
   },
   {
     "id": "enstp",
@@ -2121,7 +2157,8 @@
         "places_note": "Subjects to be confirmed on the session order."
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "genie"
   },
   {
     "id": "iut-bois-mbalmayo",
@@ -2157,7 +2194,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "genie"
   },
   {
     "id": "isabee-belabo",
@@ -2191,7 +2229,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "agriculture"
   },
   {
     "id": "ens-classes-scientifiques-speciales",
@@ -2229,7 +2268,8 @@
         "places_note": "Subjects to be confirmed on the session order."
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "enseignant"
   },
   {
     "id": "essaca",
@@ -2263,7 +2303,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "universite"
   },
   {
     "id": "enieg-ecoles-normales-dinstituteurs-de-lenseigne",
@@ -2304,7 +2345,8 @@
       }
     },
     "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)",
-    "priorite": 7
+    "priorite": 7,
+    "theme": "enseignant"
   },
   {
     "id": "entree-6e-1re-annee-common-entrance",
@@ -2349,7 +2391,8 @@
       }
     },
     "source_annales": "Sujets non publiés",
-    "priorite": 1
+    "priorite": 1,
+    "theme": "eleves"
   },
   {
     "id": "seconde-technique-4e-annee-bep",
@@ -2383,7 +2426,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "eleves"
   },
   {
     "id": "ietp-instituteurs-de-lenseignement-technique-et-",
@@ -2481,7 +2525,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales IETP (niveaux CAP, BEPC, probatoire) disponibles par année"
+    "source_annales": "Annales IETP (niveaux CAP, BEPC, probatoire) disponibles par année",
+    "theme": "enseignant"
   },
   {
     "id": "iemp-contractualisation-des-instituteurs",
@@ -2570,7 +2615,8 @@
       }
     },
     "source_annales": "Sujets non publiés par l’administration",
-    "priorite": 6
+    "priorite": 6,
+    "theme": "enseignant"
   },
   {
     "id": "sante-publique-medecins-chirurgiens-dentistes-ph",
@@ -2659,7 +2705,8 @@
       }
     },
     "source_annales": "Annales santé publique disponibles par année (bibliothèques tierces)",
-    "priorite": 18
+    "priorite": 18,
+    "theme": "infirmier"
   },
   {
     "id": "sante-publique-techniques-medico-sanitaires-geni",
@@ -2723,7 +2770,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "infirmier"
   },
   {
     "id": "sante-publique-recrutement-special-de-personnels",
@@ -2771,7 +2819,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Session 2026 en cours de traitement"
+    "source_annales": "Session 2026 en cours de traitement",
+    "theme": "infirmier"
   },
   {
     "id": "sages-femmes-maieuticiens",
@@ -2835,7 +2884,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "infirmier"
   },
   {
     "id": "ecoles-personnels-infirmiers-sages-femmes",
@@ -2884,7 +2934,8 @@
       }
     },
     "source_annales": "Sujets non publiés",
-    "priorite": 4
+    "priorite": 4,
+    "theme": "infirmier"
   },
   {
     "id": "regies-financieres-tresor",
@@ -2945,7 +2996,8 @@
       }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
-    "priorite": 12
+    "priorite": 12,
+    "theme": "finance"
   },
   {
     "id": "regies-financieres-douanes",
@@ -3022,7 +3074,8 @@
       }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
-    "priorite": 11
+    "priorite": 11,
+    "theme": "finance"
   },
   {
     "id": "regies-financieres-impots",
@@ -3073,7 +3126,8 @@
       }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
-    "priorite": 23
+    "priorite": 23,
+    "theme": "finance"
   },
   {
     "id": "concours-professionnels-corps-financiers-impots-",
@@ -3111,7 +3165,8 @@
         "places_note": "Internal recruitment by corps, no public cap on places"
       }
     },
-    "source_annales": "Annales professionnelles disponibles chez les tiers"
+    "source_annales": "Annales professionnelles disponibles chez les tiers",
+    "theme": "finance"
   },
   {
     "id": "concours-professionnels-comptabilite-matieres-et",
@@ -3149,7 +3204,8 @@
         "places_note": "Internal recruitment by corps"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "finance"
   },
   {
     "id": "injs-yaounde-peps-paeps-education-physique-et-sp",
@@ -3240,7 +3296,8 @@
       }
     },
     "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)",
-    "priorite": 21
+    "priorite": 21,
+    "theme": "sport"
   },
   {
     "id": "injs-yaounde-cpja-cja-conseillers-jeunesse-et-an",
@@ -3338,7 +3395,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)",
+    "theme": "sport"
   },
   {
     "id": "cenajes-kribi-ipja-ija-iaja",
@@ -3411,7 +3469,8 @@
       }
     },
     "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)",
-    "priorite": 22
+    "priorite": 22,
+    "theme": "sport"
   },
   {
     "id": "cenajes-bamenda-bertoua-dschang-garoua-mpeps-mep",
@@ -3483,7 +3542,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)",
+    "theme": "sport"
   },
   {
     "id": "concours-national-du-meilleur-prix-jeune",
@@ -3517,7 +3577,8 @@
         "places_note": "Awards, no jobs offered"
       }
     },
-    "source_annales": "Pas d’épreuve écrite"
+    "source_annales": "Pas d’épreuve écrite",
+    "theme": "universite"
   },
   {
     "id": "concours-professionnels-jeunesse-et-animation-ed",
@@ -3557,7 +3618,8 @@
         "places_note": "Internal recruitment by corps"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "sport"
   },
   {
     "id": "genie-civil",
@@ -3647,7 +3709,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales génie civil disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales génie civil disponibles par année (bibliothèques tierces)",
+    "theme": "genie"
   },
   {
     "id": "concours-professionnels-corps-techniques-genie-c",
@@ -3685,7 +3748,8 @@
         "places_note": "Internal recruitment by corps"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "genie"
   },
   {
     "id": "agriculture-production-rurale",
@@ -3767,7 +3831,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales agriculture 2019-2025 (bibliothèques tierces)"
+    "source_annales": "Annales agriculture 2019-2025 (bibliothèques tierces)",
+    "theme": "agriculture"
   },
   {
     "id": "genie-rural",
@@ -3823,7 +3888,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "genie"
   },
   {
     "id": "elevage-et-peches-maritimes",
@@ -3911,7 +3977,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Arrêtés et annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Arrêtés et annales disponibles par année (bibliothèques tierces)",
+    "theme": "agriculture"
   },
   {
     "id": "mines-et-geologie",
@@ -3999,7 +4066,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "genie"
   },
   {
     "id": "techniques-industrielles",
@@ -4063,7 +4131,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "genie"
   },
   {
     "id": "eaux-et-forets-ecogardes",
@@ -4119,7 +4188,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "foret"
   },
   {
     "id": "enef-mbalmayo-eaux-et-forets",
@@ -4159,7 +4229,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "foret"
   },
   {
     "id": "cadastre",
@@ -4207,7 +4278,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "genie"
   },
   {
     "id": "techniques-des-telecommunications",
@@ -4271,7 +4343,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "informatique"
   },
   {
     "id": "informatique-et-teleinformatique",
@@ -4327,7 +4400,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "informatique"
   },
   {
     "id": "postes-et-telecommunications",
@@ -4375,7 +4449,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "informatique"
   },
   {
     "id": "concours-professionnels-postes-et-telecommunicat",
@@ -4413,7 +4488,8 @@
         "places_note": "Internal recruitment by corps"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "informatique"
   },
   {
     "id": "journalistes",
@@ -4469,7 +4545,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Annales disponibles par année (bibliothèques tierces)"
+    "source_annales": "Annales disponibles par année (bibliothèques tierces)",
+    "theme": "journalisme"
   },
   {
     "id": "concours-professionnels-information-documentatio",
@@ -4507,7 +4584,8 @@
         "places_note": "Internal recruitment by corps"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "journalisme"
   },
   {
     "id": "ifcpa-crtv-journalisme-et-communication",
@@ -4545,7 +4623,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "journalisme"
   },
   {
     "id": "experts-en-securite-routiere",
@@ -4601,7 +4680,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "transport"
   },
   {
     "id": "meteorologie-agents-techniques-adjoints",
@@ -4649,7 +4729,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "transport"
   },
   {
     "id": "aeronautique-civile",
@@ -4687,7 +4768,8 @@
         "places_note": "Places not announced"
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "transport"
   },
   {
     "id": "prix-poids-et-mesures",
@@ -4727,7 +4809,8 @@
         "places_note": "Places not announced"
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "finance"
   },
   {
     "id": "travail-et-prevoyance-sociale",
@@ -4765,7 +4848,8 @@
         "places_note": "Places not announced"
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "social"
   },
   {
     "id": "concours-professionnels-corps-sociaux-et-du-trav",
@@ -4805,7 +4889,8 @@
         "places_note": "Internal recruitment by corps"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "social"
   },
   {
     "id": "affaires-sociales-assistants",
@@ -4843,7 +4928,8 @@
         "places_note": "Places not announced"
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "social"
   },
   {
     "id": "specialistes-des-sciences-de-reeducation",
@@ -4899,7 +4985,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "infirmier"
   },
   {
     "id": "personnels-minas-relevant-du-code-du-travail",
@@ -4947,7 +5034,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "social"
   },
   {
     "id": "ingenieurs-du-genie-de-lenvironnement",
@@ -5003,7 +5091,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "foret"
   },
   {
     "id": "environnementalistes",
@@ -5051,7 +5140,8 @@
         "places_note": null
       }
     },
-    "source_annales": "Sujets non publiés"
+    "source_annales": "Sujets non publiés",
+    "theme": "foret"
   },
   {
     "id": "centres-de-formation-professionnelle",
@@ -5089,7 +5179,8 @@
         "places_note": "Places set by annual order"
       }
     },
-    "source_annales": "Annales partielles chez les tiers"
+    "source_annales": "Annales partielles chez les tiers",
+    "theme": "universite"
   },
   {
     "id": "chercheurs-recrutement-sur-titre",
@@ -5141,6 +5232,7 @@
         "places_note": null
       }
     },
-    "source_annales": "Pas d’épreuve écrite"
+    "source_annales": "Pas d’épreuve écrite",
+    "theme": "universite"
   }
 ]

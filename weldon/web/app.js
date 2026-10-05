@@ -525,7 +525,8 @@
           lang: l,
           groupes: Object.fromEntries(Object.entries(d.groupes).map(([k, v]) => [k, v[l]])),
           categories: Object.fromEntries(Object.entries(d.categories).map(([k, v]) => [k, v[l]])),
-          concours: d.concours.filter((c) => c[l]).map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, priorite: c.priorite || 999, ...c[l] })),
+          photos: Object.fromEntries(Object.entries(d.photos || {}).filter(([k]) => !k.startsWith("_"))),
+          concours: d.concours.filter((c) => c[l]).map((c) => ({ id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle, oral: c.oral, priorite: c.priorite || 999, theme: c.theme, ...c[l] })),
           epreuves: d.epreuves.filter((e) => e.lang === l).map((e) => ({ id: e.id, concours: e.concours, annee: e.annee, matiere: e.matiere, duree: e.duree, exemple: Boolean(e.exemple), apercu: e.sujet.slice(0, 140) })),
           oral: Object.fromEntries(Object.entries(d.oral).filter(([, v]) => v[l]).map(([k, v]) => [k, { deroulement: v[l].deroulement }])),
         };
@@ -817,7 +818,8 @@
                 : `<span class="tag tag-sun">${L.inProgress}</span>`;
             const summary = c.resume || (c.annuaire ? c.annuaire.matieres.join(" · ") : "");
             return `
-              <button type="button" class="card card-click" data-school="${c.id}" data-mode="${mode}">
+              <button type="button" class="card card-click${photoOf(c) ? " has-photo" : ""}" data-school="${c.id}" data-mode="${mode}">
+                ${photoOf(c) ? `<img class="card-photo" src="img/themes/${esc(photoOf(c).fichier)}" alt="" loading="lazy">` : ""}
                 <div class="row"><div class="${sigleClass(c)}">${esc(c.sigle)}</div>
                   <div style="min-width:0"><h3>${esc(c.nom)}</h3><span class="small muted">${esc(state.catalog.categories[c.categorie] || "")}</span></div></div>
                 ${mode === "fiche" && summary ? `<p class="muted small">${esc(summary)}</p>` : ""}
@@ -828,6 +830,17 @@
         return `<section class="group"><h3 class="group-label">${esc(state.catalog.groupes[g] || g)}</h3><div class="grid">${cards}</div></section>`;
       })
       .join("");
+  }
+
+  // Photo du thème du concours (web/img/themes), affichée seulement si elle existe.
+  const photoOf = (c) => state.catalog.photos?.[c.theme] || null;
+  function banner(c) {
+    const ph = photoOf(c);
+    if (!ph) return "";
+    return `<figure class="concours-banner c-${c.couleur}">
+      <img src="img/themes/${esc(ph.fichier)}" alt="${esc(c.nom)}" loading="lazy">
+      ${ph?.credit ? `<figcaption>${esc(ph.credit)}</figcaption>` : ""}
+    </figure>`;
   }
 
   const sigleClass = (c) => `sigle c-${c.couleur}${c.sigle.length > 5 ? " sigle-long" : ""}`;
@@ -848,6 +861,7 @@
     const n = epreuvesOf(c.id).length;
     return `
       <button type="button" class="back" data-back>${I.back} ${L.allConcours}</button>
+      ${banner(c)}
       <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
         <div class="${sigleClass(c)}" style="width:64px;height:64px">${esc(c.sigle)}</div>
         <div style="min-width:0"><span class="eyebrow">${esc(state.catalog.categories[c.categorie] || "")}</span><h1>${esc(c.nom)}</h1></div>
@@ -880,6 +894,7 @@
     const n = epreuvesOf(c.id).length;
     return `
       <button type="button" class="back" data-back>${I.back} ${L.allConcours}</button>
+      ${banner(c)}
       <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
         <div class="${sigleClass(c)}" style="width:64px;height:64px">${esc(c.sigle)}</div>
         <div style="min-width:0"><span class="eyebrow">${esc(c.organisme)}</span><h1>${esc(c.nom)}</h1></div>

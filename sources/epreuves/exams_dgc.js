@@ -301,7 +301,7 @@ const DF3 = dgcFirst({
 
 // ---------- FORM FOUR (GCE type) ----------
 const DF4 = Object.assign({ full: false }, {
-  file: 'DGCAST_F4_Geography_Seq1_2026-2027.docx', title: 'Form Four Geography – First Sequence', cls: 'FORM FOUR', module: '1', duration: '2 hours',
+  file: 'DGCAST_F4_Geography_Seq1_2026-2027.docx', title: 'Form Four Geography – First Sequence', cls: 'FORM FOUR', module: '1', duration: '1 hour',
   competence: 'Learners are able to explain the characteristics of biomes and to manage soils sustainably.',
   facilitators: ['Mr KAMDEM Emmanuel', 'Mr TABIT Blaise'],
   instructions: ['This paper has two sections, A and B. Answer ALL the questions in each section.', 'Answer each section on a separate answer sheet.', 'The number of marks is given in brackets at the end of each question.'],

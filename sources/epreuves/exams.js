@@ -262,11 +262,10 @@ const F4 = upper({
     gq('(d)', 'Give **two** weaknesses of Rostow’s model of economic growth.', '2 marks'),
     Hc('PHYSICAL GEOGRAPHY'),
     H('QUESTION 2 (10 marks)'),
-    gq('(a)', 'What are destructive (erosive) waves?', '2 marks'),
-    gq('(b)', 'With the aid of well-labelled diagrams, explain the formation of the following features of wave erosion and deposition:', ''),
-    gq('', '(i)  A cliff;', '3 marks'),
-    gq('', '(ii)  A stack;', '3 marks'),
-    gq('', '(iii)  A spit.', '2 marks'),
+    gq('(a)', 'State **two** characteristics of destructive waves.', '2 marks'),
+    gq('(b)', 'With the aid of a well-labelled diagram, explain how a cliff is formed and why it retreats inland.', '3 marks'),
+    gq('(c)', 'Describe the stages through which a headland is eroded to form a stack. Illustrate your answer with diagrams.', '3 marks'),
+    gq('(d)', 'Explain how longshore drift leads to the formation of a spit.', '2 marks'),
   ],
 });
 

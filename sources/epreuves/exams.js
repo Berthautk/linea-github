@@ -88,7 +88,7 @@ function titles(x) {
   ];
 }
 
-const H = (t, o = {}) => P('**' + t + '**', Object.assign({ before: 160, after: 80, size: 24, keepNext: true }, o));
+const H = (t, o = {}) => (o.pageBreak ? new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, children: runs('**' + t + '**') }) : P('**' + t + '**', Object.assign({ before: 160, after: 80, size: 24, keepNext: true }, o)));
 const Hc = (t) => C('**' + t + '**', { before: 160, after: 80, size: 24, keepNext: true });
 
 // MCQ block: two columns of questions, each with options A–D
@@ -207,7 +207,7 @@ const F2 = firstCycle({
 // =====================================================================
 const F3 = firstCycle({
   file: 'F3_Geography_Seq1_2026-2027.docx', title: 'Form Three Geography – First Sequence', cls: 'FORM THREE', module: '1',
-  competence: 'Learners are able to locate places and calculate time on the Earth’s surface.',
+  competence: 'Learners are able to describe the planet Earth and to locate places on its surface.',
   facilitators: ['Mme ASTHA Noura', 'Mr KAMDEM Emmanuel'],
   instructions: ['Answer ALL questions on this question paper. Calculators are allowed.', 'In Section I, mark an (X) on the letter of the correct answer.'],
   body: [
@@ -215,22 +215,22 @@ const F3 = firstCycle({
     H('Section I: Multiple Choice Questions (1 × 5 = 5 marks)'),
     mcq([
       ['From the Sun, the Earth is the:', ['First planet', 'Second planet', 'Third planet', 'Fourth planet']],
-      ['The line of latitude 0° is called the:', ['Greenwich Meridian', 'Equator', 'Tropic of Cancer', 'International Date Line']],
+      ['The natural satellite of the Earth is:', ['The Sun', 'The Moon', 'Mars', 'The Milky Way']],
+      ['The phase of the Moon in which its whole lit face can be seen from the Earth is called the:', ['New Moon', 'First quarter', 'Full Moon', 'Last quarter']],
       ['The line of longitude 0° is called the:', ['Equator', 'International Date Line', 'Greenwich (Prime) Meridian', 'Arctic Circle']],
-      ['Which of the following is a great circle?', ['The Tropic of Cancer', 'The Equator', 'The Arctic Circle', 'The Tropic of Capricorn']],
-      ['The Earth turns through 360° in 24 hours. One degree of longitude therefore corresponds to a time difference of:', ['1 minute', '4 minutes', '15 minutes', '1 hour']],
+      ['Which of the following lines is a great circle?', ['The Tropic of Cancer', 'The Equator', 'The Arctic Circle', 'The Tropic of Capricorn']],
     ]),
-    H('Section II: Calculations (2 × 2 = 4 marks)'),
-    P('**1.** Town A is on latitude **12° N** and town B is on latitude **3° S**, on the same meridian. Taking 1° = 111 km, calculate the distance between the two towns. **(2 marks)**', { line: 300, after: 0 }),
+    H('Section II: Structural Questions (2 × 2 = 4 marks)', { pageBreak: true }),
+    P('**1.** Town A is on latitude **12° N** and town B is on latitude **3° S**, on the same meridian. Taking 1° of latitude = 111 km, calculate the distance between the two towns. **(2 marks)**', { line: 300, after: 0 }),
     ...DOTS(3),
-    P('**2.** When it is **12:00 noon** at Greenwich (0°), what is the local time at Garoua (longitude **13° E**)? Show your working. **(2 marks)**', { before: 120, line: 300, after: 0 }),
+    P('**2.** Give **two** differences between lines of latitude and lines of longitude. **(2 marks)**', { before: 120, line: 300, after: 0 }),
     ...DOTS(3),
     Hc('PART TWO: VERIFICATION OF COMPETENCES (9 marks)'),
-    situation('Your uncle, a trader in Garoua, wants to talk on the telephone with his business partner in New York (United States of America). He calls him at 8:00 a.m., Garoua time, but his partner is angry because he has been woken up in the middle of the night. Your uncle does not understand why it is night in New York when it is morning in Garoua, and he asks you, a Form Three geography student, to help him.'),
+    situation('During a geography lesson in Garoua, your classmate Ali says that the Earth is flat. He explains that when he looks around the town or across the Benue plain, the land looks flat, and that if the Earth were round, people living at the bottom would fall off. Some classmates believe him. Your teacher asks you, a Form Three geography student, to help the class understand the true shape of the Earth.'),
     P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Explain why it is morning in Garoua while it is still night in New York.', '3 marks', 3),
-    ...task(3, 'Cameroon uses the standard time of the meridian 15° E, and New York uses that of the meridian 75° W. Calculate the time in New York when it is 8:00 a.m. in Garoua, showing your working.', '3 marks', 3),
+    ...task(2, 'Give three proofs that show that the Earth is spherical.', '3 marks', 1, ['i)', 'ii)', 'iii)']),
+    ...task(3, 'Using the size of the Earth, explain to Ali why the land around Garoua looks flat, although the Earth is round.', '3 marks', 3),
     P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });

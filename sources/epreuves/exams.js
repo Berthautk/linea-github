@@ -293,9 +293,10 @@ const F5 = upper({
     gq('', '(ii)  Explain **two** physical factors that favour the cultivation of this crop in that area.', '4 marks'),
     gq('', '(iii)  State **one** problem faced by the farmers of this crop.', '1 mark'),
     H('QUESTION 2 (10 marks)'),
-    gq('(a)', 'Define fishing and state **two** methods of fishing used in Cameroon.', '3 marks'),
-    gq('(b)', 'Explain **two** advantages of fishing to the economy of Cameroon.', '4 marks'),
-    gq('(c)', 'State **three** economic benefits of the exploitation of mineral resources to Cameroon.', '3 marks'),
+    gq('(a)', '(i)  Define fishing.', '1 mark'),
+    gq('', '(ii)  Describe **two** methods of fishing used in Cameroon.', '2 marks'),
+    gq('(b)', 'Explain **two** ways in which fishing contributes to the economy of Cameroon.', '4 marks'),
+    gq('(c)', 'Outline **three** economic benefits of the exploitation of mineral resources in Cameroon.', '3 marks'),
   ],
 });
 
@@ -333,9 +334,9 @@ const LSA = upper({
       ['(b)', 'Explain **four** factors that influenced the location of early settlements.', '12 marks'],
       ['(c)', 'With reference to a named town in Cameroon, show how its situation has favoured its growth.', '4 marks']]),
     ...Q(6, 'ECONOMIC GEOGRAPHY', [
-      ['(a)', 'What are economic activities? Name the main sectors into which they are grouped, giving one example of each.', '5 marks'],
-      ['(b)', 'What is meant by non-renewable resources? Give **two** examples.', '5 marks'],
-      ['(c)', 'Explain how agriculture contributes to the economy of Cameroon.', '10 marks']]),
+      ['(a)', 'Distinguish between primary, secondary and tertiary economic activities, giving one example of each from Cameroon.', '6 marks'],
+      ['(b)', 'Why are minerals and fossil fuels described as non-renewable resources?', '4 marks'],
+      ['(c)', 'Assess the contribution of agriculture to the economy of Cameroon.', '10 marks']]),
   ],
 });
 
@@ -367,9 +368,9 @@ const USA = upper({
       ['(a)', 'Account for the rapid growth of towns in Cameroon since independence.', '10 marks'],
       ['(b)', 'Examine the problems facing the exploitation of forests in Cameroon and suggest solutions.', '10 marks']]),
     ...Q(7, 'ECONOMIC GEOGRAPHY AND ENVIRONMENT', [
-      ['(a)', 'With the aid of examples, define agriculture.', '5 marks'],
-      ['(b)', '“Natural resources are either renewable or non-renewable.” Explain this statement, with examples.', '10 marks'],
-      ['(c)', 'Define pollution and briefly explain **three** types of pollution.', '5 marks']]),
+      ['(a)', 'With reference to specific examples, explain the meaning of agriculture.', '4 marks'],
+      ['(b)', '“Some natural resources can be replenished, while others are exhaustible.” Discuss this statement with reference to specific examples.', '10 marks'],
+      ['(c)', 'What is pollution? Examine **three** types of pollution and their effects on the environment.', '6 marks']]),
   ],
 });
 

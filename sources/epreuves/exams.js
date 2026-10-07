@@ -117,7 +117,7 @@ const gq = (label, t, marks) => {
     children: runs(`${label}\t${sub ? sub + '\t' : ''}${text}${marks ? ' **(' + marks + ')**' : ''}`) });
 };
 
-const facilitators = (names) => [C('**FACILITATOR' + (names.length > 1 ? 'S' : '') + ':**', { before: 240, after: 20, size: 22 }), ...names.map((n) => C(n, { after: 0, size: 22 }))];
+const facilitators = (names) => [C('**FACILITATOR' + (names.length > 1 ? 'S' : '') + ':** ' + names.join('  –  '), { before: 160, after: 0, size: 22 })];
 
 function build(x) {
   const children = [header(), new Paragraph({ spacing: { after: 80 }, children: [] }), ...idBlock(x, x.full), ...titles(x), ...x.body, ...facilitators(x.facilitators)];
@@ -246,23 +246,27 @@ const upper = (opts) => Object.assign({ full: false }, opts);
 
 const F4 = upper({
   file: 'F4_Geography_Seq1_2026-2027.docx', title: 'Form Four Geography – First Sequence', cls: 'FORM FOUR', module: '2', duration: '1 hour',
-  competence: 'Learners are able to assess the level of development of countries.',
+  competence: 'Learners are able to assess development and explain wave action on coasts.',
   facilitators: ['Mme ASTHA Noura', 'Mr KAMDEM Emmanuel', 'Mme TSOGO Sylviane'],
   instructions: ['Answer ALL questions. Write your answers on the answer sheets provided.', 'The number of marks is given in brackets at the end of each question.'],
   body: [
     Hc('HUMAN GEOGRAPHY'),
-    H('QUESTION 1 (11 marks)'),
+    H('QUESTION 1 (10 marks)'),
     gq('(a)', '(i)  Define the Human Development Index (HDI).', '2 marks'),
     gq('', '(ii)  State the value from which the HDI of a country is considered very high.', '1 mark'),
     gq('(b)', 'Study **Table 1** below, which shows the HDI of some countries.', ''),
     centred([['Norway', '0.97'], ['Republic of Korea', '0.93'], ['Brazil', '0.76'], ['Cameroon', '0.59'], ['Chad', '0.39']]),
     C('**Table 1:** Human Development Index of selected countries (approximate values, UNDP)', { size: 20, italics: true, before: 40, after: 80 }),
     gq('', 'Using the table, state the level of human development of **Cameroon** and of **Chad**.', '2 marks'),
-    gq('(c)', 'State and briefly explain **three** indicators used to show whether a country is developed or underdeveloped.', '6 marks'),
-    H('QUESTION 2 (9 marks)'),
-    gq('(a)', 'Name **three** regions of the world where Newly Industrialised Countries (NICs) are found.', '3 marks'),
-    gq('(b)', 'Explain **four** strategies used by the Newly Industrialised Countries to develop.', '4 marks'),
-    gq('(c)', 'Give **two** weaknesses of Rostow’s model of economic growth.', '2 marks'),
+    gq('(c)', 'Name **three** regions of the world where Newly Industrialised Countries (NICs) are found.', '3 marks'),
+    gq('(d)', 'Give **two** weaknesses of Rostow’s model of economic growth.', '2 marks'),
+    Hc('PHYSICAL GEOGRAPHY'),
+    H('QUESTION 2 (10 marks)'),
+    gq('(a)', 'What are destructive (erosive) waves?', '2 marks'),
+    gq('(b)', 'With the aid of well-labelled diagrams, explain the formation of the following features of wave erosion and deposition:', ''),
+    gq('', '(i)  A cliff;', '3 marks'),
+    gq('', '(ii)  A stack;', '3 marks'),
+    gq('', '(iii)  A spit.', '2 marks'),
   ],
 });
 
@@ -276,7 +280,7 @@ const cropTable = new Table({ alignment: AlignmentType.CENTER, width: { size: 80
 
 const F5 = upper({
   file: 'F5_Geography_Seq1_2026-2027.docx', title: 'Form Five Geography – First Sequence', cls: 'FORM FIVE', module: 'Human Geography (Form Four programme)', duration: '1 hour',
-  competence: 'Learners are able to manage agricultural, forest and energy resources sustainably.',
+  competence: 'Learners are able to explain the role of agriculture, fishing and mining in the economy of Cameroon.',
   facilitators: ['Mme TSOGO Sylviane', 'Mr NEBASIBI'],
   instructions: ['Answer ALL questions. Write your answers on the answer sheets provided.', 'The number of marks is given in brackets at the end of each question.'],
   body: [
@@ -290,9 +294,9 @@ const F5 = upper({
     gq('', '(ii)  Explain **two** physical factors that favour the cultivation of this crop in that area.', '4 marks'),
     gq('', '(iii)  State **one** problem faced by the farmers of this crop.', '1 mark'),
     H('QUESTION 2 (10 marks)'),
-    gq('(a)', 'Classify the following energy resources into **renewable** and **non-renewable** resources, and present your answer in a table: crude oil, solar energy, natural gas, hydroelectricity, coal, wind energy.', '3 marks'),
-    gq('(b)', 'Explain **three** causes of deforestation in Cameroon.', '6 marks'),
-    gq('(c)', 'Suggest **one** measure that can reduce deforestation in Cameroon.', '1 mark'),
+    gq('(a)', 'Define fishing and state **two** methods of fishing used in Cameroon.', '3 marks'),
+    gq('(b)', 'Explain **two** advantages of fishing to the economy of Cameroon.', '4 marks'),
+    gq('(c)', 'State **three** economic benefits of the exploitation of mineral resources to Cameroon.', '3 marks'),
   ],
 });
 
@@ -330,9 +334,9 @@ const LSA = upper({
       ['(b)', 'Explain **four** factors that influenced the location of early settlements.', '12 marks'],
       ['(c)', 'With reference to a named town in Cameroon, show how its situation has favoured its growth.', '4 marks']]),
     ...Q(6, 'ECONOMIC GEOGRAPHY', [
-      ['(a)', 'Distinguish between renewable and non-renewable natural resources, giving **two** examples of each.', '6 marks'],
-      ['(b)', 'What is agriculture?', '2 marks'],
-      ['(c)', 'Explain **four** reasons why agriculture is important to the economy of developing countries such as Cameroon.', '12 marks']]),
+      ['(a)', 'What are economic activities? Name the main sectors into which they are grouped, giving one example of each.', '5 marks'],
+      ['(b)', 'What is meant by non-renewable resources? Give **two** examples.', '5 marks'],
+      ['(c)', 'Explain how agriculture contributes to the economy of Cameroon.', '10 marks']]),
   ],
 });
 
@@ -363,10 +367,10 @@ const USA = upper({
     ...Q(6, 'GEOGRAPHY OF CAMEROON', [
       ['(a)', 'Account for the rapid growth of towns in Cameroon since independence.', '10 marks'],
       ['(b)', 'Examine the problems facing the exploitation of forests in Cameroon and suggest solutions.', '10 marks']]),
-    ...Q(7, 'ECONOMIC GEOGRAPHY', [
-      ['(a)', 'What are natural resources?', '2 marks'],
-      ['(b)', 'Distinguish between renewable and non-renewable resources, giving **two** examples of each.', '6 marks'],
-      ['(c)', 'Examine the problems caused by the over-exploitation of natural resources, and suggest ways of managing them sustainably.', '12 marks']]),
+    ...Q(7, 'ECONOMIC GEOGRAPHY AND ENVIRONMENT', [
+      ['(a)', 'With the aid of examples, define agriculture.', '5 marks'],
+      ['(b)', '“Natural resources are either renewable or non-renewable.” Explain this statement, with examples.', '10 marks'],
+      ['(c)', 'Define pollution and briefly explain **three** types of pollution.', '5 marks']]),
   ],
 });
 

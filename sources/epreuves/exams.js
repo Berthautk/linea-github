@@ -304,7 +304,7 @@ const F5 = upper({
 // LOWER SIXTH ARTS and UPPER SIXTH ARTS (A Level type, three questions to choose)
 // =====================================================================
 const sixthInstr = ['Answer THREE questions in all, chosen freely from any of the sub-branches below.', 'Each question carries 20 marks. Start each question on a new sheet of paper.', 'Illustrate your answers with well-labelled diagrams and sketch maps where necessary.'];
-const Q = (n, branch, parts) => [H(`SECTION ${'ABCDEFG'[n - 1]}: ${branch}`, { before: 200 }), P(`**Question ${n}**`, { after: 60, keepNext: true }), ...parts.map(([l, t, m]) => gq(l, t, m))];
+const Q = (n, branch, parts) => [H(`SECTION ${'ABCDEFGH'[n - 1]}: ${branch}`, { before: 200 }), P(`**Question ${n}**`, { after: 60, keepNext: true }), ...parts.map(([l, t, m]) => gq(l, t, m))];
 
 const LSA = upper({
   file: 'LSA_Geography_Seq1_2026-2027.docx', title: 'Lower Sixth Arts Geography – First Sequence', cls: 'LOWER SIXTH ARTS', module: 'All sub-branches', duration: '2 hours 15 minutes',
@@ -326,13 +326,13 @@ const LSA = upper({
       ['', '(ii)  Explain how soil texture affects the drainage, the aeration and the fertility of the soil.', '8 marks']]),
     ...Q(4, 'POPULATION GEOGRAPHY', [
       ['(a)', 'Distinguish between a census and a sample survey.', '6 marks'],
-      ['(b)', 'Explain **three** problems faced when conducting a population census in a developing country such as Cameroon.', '9 marks'],
-      ['(c)', '(i)  Cameroon has about 29 million inhabitants on an area of 475,650 km². Calculate its arithmetic density.', '2 marks'],
+      ['(b)', 'Explain **three** problems faced when conducting a population census in developing countries.', '9 marks'],
+      ['(c)', '(i)  A country has 29 million inhabitants on an area of 475,650 km². Calculate its arithmetic density.', '2 marks'],
       ['', '(ii)  Explain why physiological density is a better measure of population pressure than arithmetic density.', '3 marks']]),
     ...Q(5, 'SETTLEMENT GEOGRAPHY', [
       ['(a)', 'Distinguish between the site and the situation of a settlement.', '4 marks'],
       ['(b)', 'Explain **four** factors that influenced the location of early settlements.', '12 marks'],
-      ['(c)', 'With reference to a named town in Cameroon, show how its situation has favoured its growth.', '4 marks']]),
+      ['(c)', 'With reference to a named town, show how its situation has favoured its growth.', '4 marks']]),
     ...Q(6, 'ECONOMIC GEOGRAPHY', [
       ['(a)', 'Distinguish between renewable and non-renewable natural resources, giving **two** examples of each.', '6 marks'],
       ['(b)', 'Distinguish between arable farming, pastoral farming and mixed farming.', '6 marks'],
@@ -351,14 +351,14 @@ const USA = upper({
   instructions: sixthInstr,
   body: [
     ...Q(1, 'GEOMORPHOLOGY', [
-      ['(a)', 'Assess the benefits and the hazards of volcanic activity to man, with reference to Mount Cameroon.', '12 marks'],
+      ['(a)', 'Assess the benefits and the hazards of volcanic activity to man, with reference to specific examples.', '12 marks'],
       ['(b)', 'Examine the measures taken to reduce the damage caused by earthquakes.', '8 marks']]),
     ...Q(2, 'METEOROLOGY', [
       ['(a)', 'Explain how altitude, distance from the sea and ocean currents influence the temperature of a place.', '9 marks'],
       ['(b)', 'What is temperature inversion?', '2 marks'],
       ['(c)', 'With the aid of a diagram, explain how temperature inversion occurs in a valley, and state **two** of its effects.', '9 marks']]),
     ...Q(3, 'POPULATION GEOGRAPHY', [
-      ['(a)', 'Draw the population pyramid of a developing country such as Cameroon and comment on its shape.', '10 marks'],
+      ['(a)', 'Draw the population pyramid of a developing country and comment on its shape.', '10 marks'],
       ['(b)', 'Examine the factors responsible for the rapid growth of the world population since 1950.', '10 marks']]),
     ...Q(4, 'BIOGEOGRAPHY', [
       ['(a)', 'Explain how climate and parent rock influence soil formation.', '8 marks'],
@@ -367,14 +367,17 @@ const USA = upper({
     ...Q(5, 'SETTLEMENT GEOGRAPHY', [
       ['(a)', 'What is the rural-urban fringe?', '3 marks'],
       ['(b)', 'Examine the characteristics of the rural-urban fringe and the land-use conflicts found there.', '9 marks'],
-      ['(c)', 'Explain **four** changes taking place in rural settlements in Cameroon today.', '8 marks']]),
-    ...Q(6, 'GEOGRAPHY OF CAMEROON', [
+      ['(c)', 'Explain **four** changes taking place in rural settlements in developing countries today.', '8 marks']]),
+    ...Q(6, 'ECONOMIC GEOGRAPHY', [
+      ['(a)', 'With reference to specific examples, explain the meaning of agriculture.', '6 marks'],
+      ['(b)', '“Some natural resources can be replenished, while others are exhaustible.” Discuss this statement with reference to specific examples.', '14 marks']]),
+    ...Q(7, 'ENVIRONMENT AND DEVELOPMENT', [
+      ['(a)', 'What is pollution?', '3 marks'],
+      ['(b)', 'Examine **three** types of pollution and their effects on the environment.', '12 marks'],
+      ['(c)', 'Suggest **two** measures that can reduce pollution.', '5 marks']]),
+    ...Q(8, 'GEOGRAPHY OF CAMEROON', [
       ['(a)', 'Account for the rapid growth of towns in Cameroon since independence.', '10 marks'],
       ['(b)', 'Examine the problems facing the exploitation of forests in Cameroon and suggest solutions.', '10 marks']]),
-    ...Q(7, 'ECONOMIC GEOGRAPHY AND ENVIRONMENT', [
-      ['(a)', 'With reference to specific examples, explain the meaning of agriculture.', '4 marks'],
-      ['(b)', '“Some natural resources can be replenished, while others are exhaustible.” Discuss this statement with reference to specific examples.', '10 marks'],
-      ['(c)', 'What is pollution? Examine **three** types of pollution and their effects on the environment.', '6 marks']]),
   ],
 });
 

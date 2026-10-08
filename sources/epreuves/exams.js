@@ -334,9 +334,13 @@ const LSA = upper({
       ['(b)', 'Explain **four** factors that influenced the location of early settlements.', '12 marks'],
       ['(c)', 'With reference to a named town in Cameroon, show how its situation has favoured its growth.', '4 marks']]),
     ...Q(6, 'ECONOMIC GEOGRAPHY', [
-      ['(a)', 'Distinguish between primary, secondary and tertiary economic activities, giving one example of each from Cameroon.', '6 marks'],
-      ['(b)', 'Why are minerals and fossil fuels described as non-renewable resources?', '4 marks'],
-      ['(c)', 'Assess the contribution of agriculture to the economy of Cameroon.', '10 marks']]),
+      ['(a)', 'Distinguish between renewable and non-renewable natural resources, giving **two** examples of each.', '6 marks'],
+      ['(b)', 'Distinguish between arable farming, pastoral farming and mixed farming.', '6 marks'],
+      ['(c)', 'Explain **four** ways in which agriculture is important to the economy of a country.', '8 marks']]),
+    ...Q(7, 'GEOGRAPHY OF CAMEROON', [
+      ['(a)', 'Name the **three** major highlands and the **two** major lowlands of Cameroon.', '5 marks'],
+      ['(b)', 'With the aid of a sketch map, describe the main characteristics of the Western Highlands.', '7 marks'],
+      ['(c)', 'Explain how the air masses and the movement of the ITCZ produce the seasons of Cameroon.', '8 marks']]),
   ],
 });
 

@@ -3,6 +3,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { moisOf } from "./calendar.js";
 
 export const LANGS = ["fr", "en"];
 
@@ -88,7 +89,11 @@ function fiche(c, lang) {
     oral: c.oral, priorite: c.priorite || 999, theme: c.theme, ...texts,
   };
   if (c.acces) out.acces = { ...c.acces, ...acces_txt };
-  if (c.calendrier) out.calendrier = { ...c.calendrier, ...cal_txt };
+  if (c.calendrier) {
+    out.calendrier = { ...c.calendrier, ...cal_txt };
+    const mois = moisOf(c.calendrier);
+    if (mois) out.calendrier.mois = mois;
+  }
   if (debouches) out.debouches = debouches;
   if (variantes?.length) out.variantes = variantes;
   if (c.lien_inscription) out.lien_inscription = c.lien_inscription;

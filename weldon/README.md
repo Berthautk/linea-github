@@ -75,6 +75,20 @@ Weldon est hébergé sur **Netlify** (`netlify.toml` à la racine du dépôt) :
 
 `server/server.js` reste disponible pour lancer Weldon en local (`npm start`) ou sur un hébergeur Node classique (Render : `render.yaml`).
 
+## Orientation, calendrier, annonces et veille
+
+- **Quel concours pour moi ?** : le profil (niveau, série, année de naissance, région, intérêts) classe les concours d'après leurs conditions d'accès. Règles et schéma : `content/SCHEMA-CONCOURS.md`. Rien n'est deviné : une donnée absente donne « à vérifier ».
+- **Calendrier** : les périodes de lancement, de dépôt et d'épreuves sont lues dans `content/concours.json` (`calendrier`). Elles sont toujours « probables » tant qu'un arrêté n'est pas publié.
+- **Suivi** : 2 concours gratuits, illimité avec abonnement. Les rappels (J-30, J-7, J-1) s'affichent dans l'application pour les concours suivis dès qu'une annonce datée est publiée.
+- **Annonces** : le concepteur les publie dans *Mon compte → Espace concepteur → Annonces*. Les nouvelles annonces s'affichent en bandeau « Nouveau ».
+- **Veille automatique** (gratuite, sans IA) : `tools/veille/veille.mjs` lit chaque jour les sites officiels de `tools/veille/sources.json` (en respectant `robots.txt`) et envoie les liens qui ressemblent à une annonce en **brouillon**. Rien n'est public sans votre validation. Elle tourne sur GitHub Actions (`.github/workflows/weldon-veille.yml`), donc ne consomme aucun crédit Netlify.
+  1. Choisir un mot de passe long et le mettre dans Netlify : variable `VEILLE_TOKEN`.
+  2. Dans GitHub → Settings → Secrets and variables → Actions : créer `WELDON_URL` (adresse du site) et `VEILLE_TOKEN` (même valeur).
+  3. Tester : onglet Actions → « Weldon – veille des concours » → Run workflow. Essai sans rien envoyer : `node tools/veille/veille.mjs --dry`.
+- **Alertes WhatsApp** : `WHATSAPP_CHANNEL_URL` (lien de la chaîne) et `WHATSAPP_NUMBER` (votre numéro, avec 237) affichent les boutons correspondants.
+- **Formule mensuelle** : `CHARIOW_PRODUCT_ID_MONTHLY` (produit Chariow « 1 mois »), `PRICE_XAF_MONTHLY`, `ACCESS_DAYS_MONTHLY`. Sans le produit, seule la formule annuelle est proposée.
+- **Données personnelles** : export et suppression du compte depuis *Mon compte* ; pages Confidentialité et Nos promesses.
+
 ## Application Android (Play Store)
 
 Le dossier `android-app/` contient l'application Android (Capacitor). Elle affiche `https://weldon.onrender.com` : toute mise à jour du site est visible dans l'application sans republier sur le Play Store.

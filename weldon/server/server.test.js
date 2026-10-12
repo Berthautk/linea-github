@@ -12,6 +12,7 @@ Object.assign(process.env, {
   CHARIOW_API_KEY: "sk_test_fake",
   CHARIOW_PRODUCT_ID: "prd_weldon",
   CHARIOW_PRODUCT_ID_MONTHLY: "prd_weldon_m",
+  VEILLE_TOKEN: "jeton-de-veille-de-test",
   WHATSAPP_CHANNEL_URL: "https://whatsapp.com/channel/test",
   WHATSAPP_NUMBER: "+237 6 99 00 11 22",
   CHARIOW_PULSE_SECRET: "whsec_test",
@@ -260,4 +261,65 @@ test("export des données et suppression du compte", async () => {
   const reps = await (await call("GET", "/api/admin/reports", undefined, admin)).json();
   assert.ok(!reps.some((r) => r.email === "partir@exemple.cm"));
   assert.ok(await register("partir@exemple.cm", "Nouveau")); // l'adresse est de nouveau libre
+});
+
+test("suivi de concours : 2 gratuits, illimité pour les abonnés", async () => {
+  const t = await register("suiveur@exemple.cm");
+  const cat = await json(await call("GET", "/api/catalog?lang=fr"));
+  const [a, b, c] = cat.concours.map((x) => x.id);
+  assert.deepEqual((await json(await call("POST", "/api/follow", { id: a }, t))).suivis, [a]);
+  assert.deepEqual((await json(await call("POST", "/api/follow", { id: a }, t))).suivis, [a]); // idempotent
+  assert.deepEqual((await json(await call("POST", "/api/follow", { id: b }, t))).suivis, [a, b]);
+  const third = await json(await call("POST", "/api/follow", { id: c }, t));
+  assert.equal(third.status, 402);
+  assert.equal(third.code, "follow_limit");
+  assert.deepEqual((await json(await call("POST", "/api/follow", { id: a, on: false }, t))).suivis, [b]);
+  assert.equal((await call("POST", "/api/follow", { id: "inconnu" }, t)).status, 404);
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  for (const x of cat.concours.slice(0, 5)) assert.equal((await call("POST", "/api/follow", { id: x.id }, admin)).status, 200);
+  assert.equal((await json(await call("GET", "/api/me", undefined, admin))).suivis.length, 5);
+});
+
+test("calendrier : les mois lus dans les périodes sont dans le catalogue", async () => {
+  const cat = await json(await call("GET", "/api/catalog?lang=fr"));
+  const withMonths = cat.concours.filter((c) => c.calendrier?.mois);
+  assert.ok(withMonths.length >= 10);
+  for (const c of withMonths) {
+    for (const k of ["lancement", "depot", "epreuves"]) assert.ok(c.calendrier.mois[k].every((m) => m >= 1 && m <= 12));
+  }
+});
+
+test("annonces : brouillons, publication, veille automatique", async () => {
+  const t = await register("lecteur@exemple.cm");
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  assert.equal((await call("POST", "/api/admin/annonce", { titre: "Ouverture du concours" }, t)).status, 403);
+  assert.equal((await call("POST", "/api/admin/annonce", { titre: "abc" }, admin)).status, 400);
+  const draft = await (await call("POST", "/api/admin/annonce", { titre: "Ouverture du concours des gardiens de la paix", concours: "gardiens-paix", kind: "lancement", date: "2026-12-31", lien: "https://exemple.cm/a", message: "Dépôt jusqu'au 31 décembre." }, admin)).json();
+  assert.equal(draft.status, "draft");
+  assert.equal((await (await call("GET", "/api/annonces")).json()).length, 0); // un brouillon n'est pas public
+  const pub = await (await call("POST", "/api/admin/annonce", { ...draft, publish: true }, admin)).json();
+  assert.equal(pub.id, draft.id);
+  assert.equal(pub.status, "published");
+  const list = await (await call("GET", "/api/annonces")).json();
+  assert.equal(list.length, 1);
+  assert.equal(list[0].concours, "gardiens-paix");
+  assert.equal(list[0].date, "2026-12-31");
+  // mauvaises valeurs nettoyées
+  const odd = await (await call("POST", "/api/admin/annonce", { titre: "Annonce aux valeurs douteuses", concours: "inconnu", kind: "zzz", date: "31/12/2026", lien: "javascript:alert(1)" }, admin)).json();
+  assert.deepEqual([odd.concours, odd.kind, odd.date, odd.lien], [null, "info", null, null]);
+
+  // Veille : jeton obligatoire, doublons ignorés, rejet définitif
+  assert.equal((await call("POST", "/api/veille/draft", { items: [] })).status, 401);
+  assert.equal((await call("POST", "/api/veille/draft", { items: [] }, undefined, { Authorization: "Bearer mauvais" })).status, 401);
+  const auth = { Authorization: "Bearer jeton-de-veille-de-test" };
+  const items = [{ source: "MINESUP", titre: "Concours d'entrée à l'IUS et à l'INUBIL", url: "https://www.minesup.gov.cm/2026/09/29/concours-ius/" }, { source: "X", titre: "x", url: "ftp://nope" }];
+  assert.equal((await json(await call("POST", "/api/veille/draft", { items }, undefined, auth))).created, 1);
+  assert.equal((await json(await call("POST", "/api/veille/draft", { items }, undefined, auth))).created, 0);
+  const all = await (await call("GET", "/api/admin/annonces", undefined, admin)).json();
+  const v = all.find((a) => a.source === "MINESUP");
+  assert.equal(v.status, "draft");
+  assert.equal((await (await call("GET", "/api/annonces")).json()).length, 1); // toujours invisible
+  assert.equal((await call("POST", "/api/admin/annonce-reject", { id: v.id }, admin)).status, 200);
+  assert.equal((await json(await call("POST", "/api/veille/draft", { items }, undefined, auth))).created, 0); // ne revient pas
+  assert.ok(!(await (await call("GET", "/api/admin/annonces", undefined, admin)).json()).some((a) => a.id === v.id));
 });

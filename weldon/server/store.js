@@ -106,6 +106,11 @@ export async function createStore({ databaseUrl, dir }) {
     saveReport: (r) => kv.set(`report:${r.id}`, r),
     listReports: () => kv.list("report:"),
     deleteReport: (id) => kv.del(`report:${id}`),
+    // Annonces de concours (publiées par le concepteur) et brouillons de la veille
+    getAnnonce: (id) => kv.get(`annonce:${id}`),
+    saveAnnonce: (a) => kv.set(`annonce:${a.id}`, a),
+    addAnnonceIfNew: (a) => kv.insert(`annonce:${a.id}`, a),
+    listAnnonces: () => kv.list("annonce:"),
     deleteUser: (email) => kv.del(`user:${email}`),
 
     // true si cette livraison de Pulse a déjà été traitée

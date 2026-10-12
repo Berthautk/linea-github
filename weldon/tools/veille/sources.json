@@ -1,0 +1,37 @@
+{
+  "_doc": "Sources officielles surveillées chaque jour (tools/veille/veille.mjs). Ajouter une entrée { nom, url } pour surveiller un site de plus. Les nouveautés arrivent en brouillon dans l'espace concepteur.",
+  "sources": [
+    {
+      "nom": "MINESUP – Enseignement supérieur",
+      "url": "https://www.minesup.gov.cm/index.php/category/concours/"
+    },
+    {
+      "nom": "MINESUP – Résultats des concours",
+      "url": "https://www.minesup.gov.cm/index.php/category/resultats-des-concours/"
+    },
+    {
+      "nom": "DGSN – Sûreté Nationale",
+      "url": "https://www.dgsn.cm/"
+    },
+    {
+      "nom": "MINFOPRA – Fonction publique",
+      "url": "https://www.minfopra.gov.cm/index.php/fr/"
+    },
+    {
+      "nom": "MINFI – Finances",
+      "url": "https://minfi.gov.cm/"
+    },
+    {
+      "nom": "MINESEC – Enseignement secondaire",
+      "url": "https://www.minesec.gov.cm/"
+    },
+    {
+      "nom": "MINJEC – Jeunesse et Éducation civique",
+      "url": "https://www.minjec.gov.cm/"
+    },
+    {
+      "nom": "Présidence de la République",
+      "url": "https://www.prc.cm/fr/"
+    }
+  ]
+}

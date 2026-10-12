@@ -54,6 +54,8 @@ const PRICE_XAF_MONTHLY = Number(process.env.PRICE_XAF_MONTHLY || 1500);
 const WHATSAPP_CHANNEL_URL = /^https:\/\//.test(process.env.WHATSAPP_CHANNEL_URL || "") ? process.env.WHATSAPP_CHANNEL_URL : "";
 const WHATSAPP_NUMBER = (process.env.WHATSAPP_NUMBER || "").replace(/\D/g, "");
 const SESSION_DAYS = 30;
+const FREE_FOLLOWS = 2; // concours suivis sans abonnement
+const VEILLE_TOKEN = process.env.VEILLE_TOKEN || "";
 // Concepteur de Weldon : accès complet sans payer. ADMIN_EMAILS (Render) peut en ajouter d'autres.
 const ADMIN_EMAILS = new Set(
   ["berthautk@gmail.com", ...(process.env.ADMIN_EMAILS || "").split(",")]
@@ -135,6 +137,7 @@ function profile(u) {
     premium_until: isAdmin(u) ? null : u.premium_until || null,
     free_id: u.free_id || null,
     profil: u.profil || null,
+    suivis: u.suivis || [],
   };
 }
 
@@ -319,6 +322,104 @@ route("GET", "/api/orientation", async (req, _p, url) => {
   if (!u.profil?.niveau) throw httpError(400, "Indiquez d'abord votre niveau d'études.");
   const list = content.catalog(lang).concours;
   return { profil: u.profil, annee_cible: targetYear(), resultats: orient(u.profil, list) };
+});
+
+// Suivre un concours : 2 gratuitement, sans limite pour les abonnés.
+route("POST", "/api/follow", async (req) => {
+  const u = await currentUser(req);
+  const b = await readJson(req);
+  const id = str(b.id, 120);
+  if (!content.concours(id)) throw httpError(404, "Concours introuvable.");
+  const list = new Set(u.suivis || []);
+  if (b.on === false) list.delete(id);
+  else if (!list.has(id)) {
+    if (!isPremium(u) && list.size >= FREE_FOLLOWS) {
+      throw httpError(402, `Sans abonnement, vous pouvez suivre ${FREE_FOLLOWS} concours. Abonnez-vous pour en suivre autant que vous voulez.`, { code: "follow_limit" });
+    }
+    list.add(id);
+  }
+  u.suivis = [...list];
+  await store.saveUser(u);
+  return profile(u);
+});
+
+// Annonces : lancement, date limite, épreuves, résultats. Publiques une fois validées par le concepteur.
+const ANNONCE_KINDS = ["lancement", "date_limite", "epreuves", "resultats", "info"];
+const cleanAnnonce = (b) => {
+  const lien = str(b.lien, 500);
+  const date = str(b.date, 10);
+  return {
+    concours: b.concours && content.concours(str(b.concours, 120)) ? str(b.concours, 120) : null,
+    kind: ANNONCE_KINDS.includes(b.kind) ? b.kind : "info",
+    titre: str(b.titre, 200),
+    titre_en: str(b.titre_en, 200),
+    message: str(b.message, 1000),
+    message_en: str(b.message_en, 1000),
+    date: /^\d{4}-\d{2}-\d{2}$/.test(date) && !Number.isNaN(Date.parse(date)) ? date : null,
+    lien: /^https?:\/\//.test(lien) ? lien : null,
+  };
+};
+
+route("GET", "/api/annonces", async () => {
+  const list = (await store.listAnnonces()).filter((a) => a.status === "published");
+  return list.sort((a, b) => b.published_at.localeCompare(a.published_at)).slice(0, 30);
+});
+
+route("GET", "/api/admin/annonces", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const list = (await store.listAnnonces()).filter((a) => a.status !== "rejected");
+  return list.sort((a, b) => (a.status === b.status ? b.at.localeCompare(a.at) : a.status === "draft" ? -1 : 1)).slice(0, 100);
+});
+
+// Crée ou modifie une annonce ; publish: true la rend publique.
+route("POST", "/api/admin/annonce", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const b = await readJson(req);
+  const fields = cleanAnnonce(b);
+  if (fields.titre.length < 5) throw httpError(400, "Donnez un titre à l'annonce.");
+  const now = new Date().toISOString();
+  let a = b.id ? await store.getAnnonce(str(b.id, 80)) : null;
+  if (b.id && !a) throw httpError(404, "Annonce introuvable.");
+  a = { ...(a || { id: `${Date.now()}-${crypto.randomBytes(3).toString("hex")}`, at: now, source: "concepteur" }), ...fields };
+  if (b.publish) {
+    a.status = "published";
+    a.published_at = a.published_at || now;
+  } else a.status = a.status || "draft";
+  await store.saveAnnonce(a);
+  return a;
+});
+
+// « Supprimer » garde la trace en statut rejected : un lien rejeté ne revient pas dans les brouillons de la veille.
+route("POST", "/api/admin/annonce-reject", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const a = await store.getAnnonce(str((await readJson(req)).id, 80));
+  if (!a) throw httpError(404, "Annonce introuvable.");
+  a.status = "rejected";
+  await store.saveAnnonce(a);
+  return { ok: true };
+});
+
+// Reçoit les brouillons du script de veille (tools/veille). Jeton partagé, comparaison à temps constant.
+route("POST", "/api/veille/draft", async (req) => {
+  const h = req.headers.authorization || "";
+  const digest = (x) => crypto.createHash("sha256").update(x).digest();
+  if (!VEILLE_TOKEN) throw httpError(503, "Veille non configurée.");
+  if (!h.startsWith("Bearer ") || !crypto.timingSafeEqual(digest(h.slice(7)), digest(VEILLE_TOKEN))) throw httpError(401, "Jeton invalide.");
+  const b = await readJson(req, 64_000);
+  const items = Array.isArray(b.items) ? b.items.slice(0, 50) : [];
+  let created = 0;
+  for (const it of items) {
+    const lien = str(it.url, 500);
+    const titre = str(it.titre, 200);
+    if (!/^https?:\/\//.test(lien) || titre.length < 5) continue;
+    const id = "v" + crypto.createHash("sha256").update(lien).digest("hex").slice(0, 16);
+    const ok = await store.addAnnonceIfNew({ id, at: new Date().toISOString(), status: "draft", kind: "info", concours: null, titre, titre_en: "", message: "", message_en: "", date: null, lien, source: str(it.source, 100) || "veille" });
+    if (ok) created++;
+  }
+  return { created };
 });
 
 // Droits de la personne : exporter toutes ses données, supprimer son compte.

@@ -495,6 +495,11 @@
     adminUsers: () => http("/api/admin/users"),
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
     report: (b) => http("/api/report", { method: "POST", body: b }),
+    annonces: () => http("/api/annonces"),
+    follow: (id, on) => http("/api/follow", { method: "POST", body: { id, on } }),
+    adminAnnonces: () => http("/api/admin/annonces"),
+    adminSaveAnnonce: (b) => http("/api/admin/annonce", { method: "POST", body: b }),
+    adminRejectAnnonce: (id) => http("/api/admin/annonce-reject", { method: "POST", body: { id } }),
     exportData: () => http("/api/me/export"),
     deleteAccount: (password) => http("/api/account/delete", { method: "POST", body: { password } }),
     adminReports: () => http("/api/admin/reports"),
@@ -552,6 +557,18 @@
         return save(u);
       },
       report: async () => ({ ok: true }),
+      annonces: async () => [],
+      async follow(id, on) {
+        const u = current();
+        const list = new Set(u.suivis || []);
+        if (on === false) list.delete(id);
+        else list.add(id);
+        u.suivis = [...list];
+        return save(u);
+      },
+      adminAnnonces: async () => [],
+      adminSaveAnnonce: async () => ({ ok: true }),
+      adminRejectAnnonce: async () => ({ ok: true }),
       exportData: async () => ({ compte: profile(current()) }),
       deleteAccount: async () => fail("Non disponible dans la démo.", "demo", 400),
       adminReports: async () => [],
@@ -958,6 +975,117 @@
     },
   };
   const legal = () => LEGAL[lang()];
+
+  // Calendrier, suivi, annonces, rappels
+  const CAL = {
+    fr: {
+      cta: "Calendrier des concours",
+      ctaSub: "Quand les concours sont habituellement lancés, quand déposer son dossier et passer les épreuves.",
+      ctaBtn: "Voir le calendrier",
+      title: "Calendrier des concours",
+      sub: "Les périodes sont probables, d'après les sessions précédentes. La date officielle est toujours celle de l'arrêté.",
+      months: ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"],
+      monthNames: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+      legend: { lancement: "Lancement", depot: "Dépôt des dossiers", epreuves: "Épreuves" },
+      thisMonth: (m) => `En ce moment : ${m} (périodes probables)`,
+      noneThisMonth: "Aucune période connue ce mois-ci.",
+      announcements: "Annonces",
+      noAnn: "Aucune annonce pour le moment. Les annonces officielles vérifiées apparaîtront ici.",
+      newTag: "Nouveau",
+      kinds: { lancement: "Lancement", date_limite: "Date limite", epreuves: "Épreuves", resultats: "Résultats", info: "Information" },
+      inDays: (d) => (d === 0 ? "Aujourd'hui" : d === 1 ? "Demain" : `J-${d}`),
+      dateOn: (d) => `le ${d}`,
+      follow: "Suivre",
+      unfollow: "Ne plus suivre",
+      followed: "Suivi",
+      myFollows: "Mes concours suivis",
+      noFollows: "Suivez un concours avec l'étoile pour voir ses rappels ici.",
+      followHelp: (n) => `Sans abonnement, vous pouvez suivre ${n} concours.`,
+      phaseNow: { lancement: "lancement habituel", depot: "dépôt des dossiers habituel", epreuves: "épreuves habituelles" },
+      noPhase: "Pas de période probable en ce moment.",
+      whatsapp: "Recevoir les alertes sur WhatsApp",
+      contact: "Écrire à Weldon sur WhatsApp",
+      source: "Source",
+      bannerNew: (n) => (n > 1 ? `${n} nouvelles annonces` : "Nouvelle annonce"),
+      seeAnn: "Voir",
+      starLabel: "Suivre ce concours",
+      probable: "probable",
+      adminAnn: "Annonces",
+      adminAnnSub: "Les liens repérés chaque jour par la veille arrivent ici en brouillon. Rien n'est public tant que vous n'avez pas publié.",
+      annNew: "Nouvelle annonce",
+      fConcours: "Concours",
+      fKind: "Type",
+      fTitle: "Titre",
+      fMessage: "Détail (facultatif)",
+      fDate: "Date (facultatif)",
+      fLink: "Lien officiel (facultatif)",
+      fPublish: "Publier tout de suite",
+      save: "Enregistrer",
+      publish: "Publier",
+      reject: "Rejeter",
+      drafts: "Brouillons",
+      published: "Publiée",
+      noConcours: "(aucun)",
+      annSaved: "Annonce enregistrée.",
+    },
+    en: {
+      cta: "Competition calendar",
+      ctaSub: "When competitions are usually launched, when to file your application and sit the exams.",
+      ctaBtn: "See the calendar",
+      title: "Competition calendar",
+      sub: "Periods are probable, based on previous sessions. The official date is always the one in the official order.",
+      months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      legend: { lancement: "Call published", depot: "File deadline", epreuves: "Exams" },
+      thisMonth: (m) => `Right now: ${m} (probable periods)`,
+      noneThisMonth: "No known period this month.",
+      announcements: "Announcements",
+      noAnn: "No announcement yet. Verified official announcements will appear here.",
+      newTag: "New",
+      kinds: { lancement: "Call published", date_limite: "Deadline", epreuves: "Exams", resultats: "Results", info: "Information" },
+      inDays: (d) => (d === 0 ? "Today" : d === 1 ? "Tomorrow" : `D-${d}`),
+      dateOn: (d) => `on ${d}`,
+      follow: "Follow",
+      unfollow: "Unfollow",
+      followed: "Following",
+      myFollows: "Competitions I follow",
+      noFollows: "Follow a competition with the star to see its reminders here.",
+      followHelp: (n) => `Without a subscription you can follow ${n} competitions.`,
+      phaseNow: { lancement: "usual call period", depot: "usual file deadline period", epreuves: "usual exam period" },
+      noPhase: "No probable period right now.",
+      whatsapp: "Get alerts on WhatsApp",
+      contact: "Write to Weldon on WhatsApp",
+      source: "Source",
+      bannerNew: (n) => (n > 1 ? `${n} new announcements` : "New announcement"),
+      seeAnn: "See",
+      starLabel: "Follow this competition",
+      probable: "probable",
+      adminAnn: "Announcements",
+      adminAnnSub: "Links spotted daily by the watch script arrive here as drafts. Nothing is public until you publish it.",
+      annNew: "New announcement",
+      fConcours: "Competition",
+      fKind: "Type",
+      fTitle: "Title",
+      fMessage: "Details (optional)",
+      fDate: "Date (optional)",
+      fLink: "Official link (optional)",
+      fPublish: "Publish right away",
+      save: "Save",
+      publish: "Publish",
+      reject: "Reject",
+      drafts: "Drafts",
+      published: "Published",
+      noConcours: "(none)",
+      annSaved: "Announcement saved.",
+    },
+  };
+  const cal = () => CAL[lang()];
+  const isFollowed = (id) => (state.user?.suivis || []).includes(id);
+  const annText = (a, k) => (lang() === "en" && a[k + "_en"]) || a[k];
+  // Jours calendaires restants (J-7 = dans 7 jours à la même heure, peu importe l'heure de la journée).
+  const daysUntil = (iso) => Math.round((Date.parse(iso + "T00:00:00") - new Date().setHours(0, 0, 0, 0)) / 86400000);
+  const followButton = (id) =>
+    `<button type="button" class="btn btn-ghost btn-small follow ${isFollowed(id) ? "on" : ""}" data-follow="${id}" aria-pressed="${isFollowed(id)}">${isFollowed(id) ? "★ " + cal().followed : "☆ " + cal().follow}</button>`;
   const rev = () => REV[lang()];
   const sourceTag = (doc) => `<span class="tag ${doc.corrige_source === "officiel" ? "tag-green" : "tag-line"}">${doc.corrige_source === "officiel" ? rev().official : rev().proposed}</span>`;
   const reportButton = (id, kind) => `<button type="button" class="btn btn-ghost btn-small" data-report="${id}" data-kind="${kind}">${rev().report}</button>`;
@@ -1125,6 +1253,8 @@
     const nav = state.nav.concours || {};
     if (nav.concours) return viewFiche(concoursById(nav.concours));
     if (nav.orient) return viewOrient();
+    if (nav.calendrier) return viewCalendar();
+    if (!state.annonces && !state.demo) loadAnnonces();
     const O = ori();
     return `
       <section class="hero">
@@ -1145,12 +1275,130 @@
         </div>
       </section>
       ${demoNotice()}
-      ${state.demo ? "" : `<section class="card orient-cta"><div><h2>${O.cta}</h2><p class="muted">${O.ctaSub}</p></div><button type="button" class="btn btn-primary" data-orient>${O.ctaBtn}</button></section>`}
+      ${state.demo ? "" : newBanner() + remindersCard()}
+      ${state.demo ? "" : `<section class="card orient-cta"><div><h2>${O.cta}</h2><p class="muted">${O.ctaSub}</p></div><button type="button" class="btn btn-primary" data-orient>${O.ctaBtn}</button></section>
+        <section class="card orient-cta"><div><h2>${cal().cta}</h2><p class="muted">${cal().ctaSub}</p></div>
+          <div class="cta-buttons"><button type="button" class="btn btn-primary" data-calendar>${cal().ctaBtn}</button>${state.config.whatsapp_channel ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_channel)}" target="_blank" rel="noopener noreferrer">${cal().whatsapp}</a>` : ""}</div></section>`}
       <div class="section-head"><div><span class="eyebrow">${L.presentation}</span><h2>${L.pickConcours}</h2></div><p class="muted small">${L.pickConcoursSub}</p></div>
       ${categoryChips()}
       <input id="concours-search" class="search" type="search" placeholder="${L.search}" value="${esc(state.q)}" autocomplete="off">
       <div id="concours-list">${concoursList()}</div>
       ${scamCard()}`;
+  }
+
+  async function loadAnnonces() {
+    if (state.annoncesLoading) return;
+    state.annoncesLoading = true;
+    try {
+      state.annonces = await api().annonces();
+    } catch {
+      state.annonces = [];
+    }
+    state.annoncesLoading = false;
+    render();
+  }
+
+  const unseenAnn = () => {
+    const seen = local.get("ann_seen", "");
+    return (state.annonces || []).filter((a) => a.published_at > seen);
+  };
+  const markAnnSeen = () => {
+    if (state.annonces?.length) local.set("ann_seen", state.annonces.map((a) => a.published_at).sort().pop());
+  };
+
+  // Bandeau « Nouveau » : annonces publiées depuis la dernière visite du calendrier.
+  function newBanner() {
+    const C = cal();
+    const fresh = unseenAnn();
+    if (!fresh.length) return "";
+    return `<section class="card new-banner"><div><span class="tag tag-sun">${C.newTag}</span> <b>${C.bannerNew(fresh.length)}</b><p class="small">${esc(annText(fresh[0], "titre"))}</p></div>
+      <button type="button" class="btn btn-sun" data-calendar>${C.seeAnn}</button></section>`;
+  }
+
+  // Rappels des concours suivis : annonces datées à J-30, puis période probable en cours.
+  function remindersCard() {
+    const C = cal();
+    const ids = state.user?.suivis || [];
+    if (!ids.length) return "";
+    const month = new Date().getMonth() + 1;
+    const rows = ids
+      .map((id) => {
+        const c = concoursById(id);
+        if (!c) return "";
+        const next = (state.annonces || [])
+          .filter((a) => a.concours === id && a.date && daysUntil(a.date) >= 0)
+          .sort((a, b) => a.date.localeCompare(b.date))[0];
+        let hint;
+        if (next) {
+          const d = daysUntil(next.date);
+          hint = `<span class="tag ${d <= 7 ? "tag-sun" : "tag-green"}">${C.inDays(d)}</span> ${esc(C.kinds[next.kind])} · ${esc(annText(next, "titre"))}`;
+        } else {
+          const phases = Object.entries(c.calendrier?.mois || {}).filter(([, ms]) => ms.includes(month)).map(([k]) => C.phaseNow[k]);
+          hint = phases.length ? `<span class="tag tag-line">${C.probable}</span> ${esc(phases.join(", "))}` : `<span class="muted">${C.noPhase}</span>`;
+        }
+        return `<button type="button" class="paper-row" data-open-cal="${id}"><span style="min-width:0"><b>${esc(c.sigle)} · ${esc(c.nom)}</b><span class="small">${hint}</span></span>${I.chevron}</button>`;
+      })
+      .join("");
+    return `<section class="card"><h2>${C.myFollows}</h2><div class="paper-list">${rows}</div></section>`;
+  }
+
+  // ---------- Calendrier ----------
+  function viewCalendar() {
+    const L = t();
+    const C = cal();
+    if (!state.annonces) loadAnnonces();
+    else markAnnSeen();
+    const month = new Date().getMonth() + 1;
+    const withCal = state.catalog.concours.filter((c) => c.calendrier?.mois);
+    const order = (c) => (isFollowed(c.id) ? 0 : 1000) + (c.priorite || 999);
+    withCal.sort((a, b) => order(a) - order(b));
+    const phases = ["lancement", "depot", "epreuves"];
+
+    const now = withCal
+      .map((c) => ({ c, ph: phases.filter((p) => c.calendrier.mois[p].includes(month)) }))
+      .filter((x) => x.ph.length);
+    const nowHtml = now.length
+      ? `<div class="paper-list">${now.map(({ c, ph }) => `<button type="button" class="paper-row" data-open-cal="${c.id}"><span style="min-width:0"><b>${esc(c.sigle)} · ${esc(c.nom)}</b><span class="small muted">${ph.map((p) => C.phaseNow[p]).join(", ")}</span></span>${I.chevron}</button>`).join("")}</div>`
+      : `<p class="muted">${C.noneThisMonth}</p>`;
+
+    const annHtml = (state.annonces || []).length
+      ? `<div class="ann-list">${state.annonces
+          .map((a) => {
+            const c = a.concours ? concoursById(a.concours) : null;
+            const d = a.date ? daysUntil(a.date) : null;
+            return `<article class="card ann ${c && isFollowed(c.id) ? "mine" : ""}">
+              <div class="ann-top"><span class="tag tag-indigo">${esc(C.kinds[a.kind])}</span>${c ? `<button type="button" class="linkish" data-open-cal="${c.id}">${esc(c.sigle)}</button>` : ""}
+                ${d != null && d >= 0 ? `<span class="tag ${d <= 7 ? "tag-sun" : "tag-green"}">${C.inDays(d)}</span>` : ""}</div>
+              <b>${esc(annText(a, "titre"))}</b>
+              ${annText(a, "message") ? `<p class="small">${esc(annText(a, "message"))}</p>` : ""}
+              ${a.date ? `<p class="small muted">${C.dateOn(dateFmt(a.date))}</p>` : ""}
+              ${a.lien ? `<p class="small"><a href="${esc(a.lien)}" target="_blank" rel="noopener noreferrer">${C.source}</a></p>` : ""}
+            </article>`;
+          })
+          .join("")}</div>`
+      : `<p class="muted">${C.noAnn}</p>`;
+
+    const head = `<tr><th class="sticky">${L.thConcours}</th>${C.months.map((m, i) => `<th class="${i + 1 === month ? "cur" : ""}">${m}</th>`).join("")}</tr>`;
+    const rows = withCal
+      .map((c) => {
+        const cells = C.months
+          .map((_, i) => {
+            const on = phases.filter((p) => c.calendrier.mois[p].includes(i + 1));
+            return `<td class="${i + 1 === month ? "cur" : ""}">${on.map((p) => `<i class="ph ph-${p}" title="${esc(C.legend[p])}"></i>`).join("")}</td>`;
+          })
+          .join("");
+        return `<tr><th class="sticky"><div class="cal-name"><button type="button" class="linkish" data-open-cal="${c.id}">${esc(c.sigle)}</button>
+          <button type="button" class="star ${isFollowed(c.id) ? "on" : ""}" data-follow="${c.id}" aria-pressed="${isFollowed(c.id)}" aria-label="${C.starLabel}: ${esc(c.nom)}">${isFollowed(c.id) ? "★" : "☆"}</button></div></th>${cells}</tr>`;
+      })
+      .join("");
+    const legend = phases.map((p) => `<span class="legend-item"><i class="ph ph-${p}"></i>${C.legend[p]}</span>`).join("");
+    return `<button type="button" class="back" data-back>${I.back} ${L.allConcours}</button>
+      <div><span class="eyebrow">${L.section}</span><h1>${C.title}</h1></div><p class="muted">${C.sub}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">${state.config.whatsapp_channel ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_channel)}" target="_blank" rel="noopener noreferrer">${C.whatsapp}</a>` : ""}${state.config.whatsapp_contact ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_contact)}" target="_blank" rel="noopener noreferrer">${C.contact}</a>` : ""}</div>
+      <section class="orient-group"><h2>${C.announcements}</h2>${annHtml}</section>
+      <section class="orient-group"><h2>${C.thisMonth(C.monthNames[month - 1])}</h2>${nowHtml}</section>
+      <section class="orient-group"><div class="legend">${legend}</div><p class="small muted">${C.followHelp(2)}</p>
+        <div class="table-wrap cal-wrap"><table class="cal"><thead>${head}</thead><tbody>${rows}</tbody></table></div></section>`;
   }
 
   function scamCard() {
@@ -1406,6 +1654,7 @@
       <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
         <div class="${sigleClass(c)}" style="width:64px;height:64px">${esc(c.sigle)}</div>
         <div style="min-width:0"><span class="eyebrow">${esc(state.catalog.categories[c.categorie] || "")}</span><h1>${esc(c.nom)}</h1></div>
+        ${followButton(c.id)}
       </div>
       <div class="fiche">
         <div style="display:grid;gap:16px;min-width:0">
@@ -1440,6 +1689,7 @@
       <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
         <div class="${sigleClass(c)}" style="width:64px;height:64px">${esc(c.sigle)}</div>
         <div style="min-width:0"><span class="eyebrow">${esc(c.organisme)}</span><h1>${esc(c.nom)}</h1></div>
+        ${followButton(c.id)}
       </div>
       <div class="fiche">
         <div style="display:grid;gap:16px;min-width:0">
@@ -1968,7 +2218,25 @@
     const L = t();
     modal(`<h2>${L.admin}</h2><p class="muted">…</p>`, true);
     try {
-      const [users, reports, papers] = await Promise.all([api().adminUsers(), api().adminReports(), api().adminEpreuves()]);
+      const [users, reports, papers, annonces] = await Promise.all([api().adminUsers(), api().adminReports(), api().adminEpreuves(), api().adminAnnonces()]);
+      state.adminAnn = annonces;
+      const C = cal();
+      const concoursOpts = (cur) => `<option value="">${C.noConcours}</option>${state.catalog.concours.map((c) => `<option value="${esc(c.id)}" ${c.id === cur ? "selected" : ""}>${esc(c.sigle)} · ${esc(c.nom.slice(0, 40))}</option>`).join("")}`;
+      const kindOpts = (cur) => Object.entries(C.kinds).map(([k, v]) => `<option value="${k}" ${k === cur ? "selected" : ""}>${esc(v)}</option>`).join("");
+      const draftRows = annonces
+        .filter((a) => a.status === "draft")
+        .map(
+          (a) => `<div class="draft" data-ann-row>
+            <div><b>${a.lien ? `<a href="${esc(a.lien)}" target="_blank" rel="noopener noreferrer">${esc(a.titre)}</a>` : esc(a.titre)}</b><br><span class="small muted">${esc(a.source)} · ${dateFmt(a.at)}</span></div>
+            <div class="draft-actions"><select data-ann-concours aria-label="${C.fConcours}">${concoursOpts(a.concours)}</select><select data-ann-kind aria-label="${C.fKind}">${kindOpts(a.kind)}</select>
+              <button type="button" class="btn btn-primary btn-small" data-ann-publish="${esc(a.id)}">${C.publish}</button>
+              <button type="button" class="btn btn-ghost btn-small" data-ann-reject="${esc(a.id)}">${C.reject}</button></div></div>`
+        )
+        .join("");
+      const pubRows = annonces
+        .filter((a) => a.status === "published")
+        .map((a) => `<tr><td><b>${esc(a.titre)}</b><br><span class="small muted">${esc(C.kinds[a.kind])}${a.concours ? " · " + esc(a.concours) : ""} · ${C.published}</span></td><td><button type="button" class="btn btn-ghost btn-small" data-ann-reject="${esc(a.id)}">${C.reject}</button></td></tr>`)
+        .join("");
       const R = rev();
       const reportRows = reports
         .map(
@@ -2000,6 +2268,21 @@
           <p class="err full" id="grant-err" hidden></p>
           <button type="submit" class="btn btn-primary full">${L.grant}</button>
         </form>
+        <h3>${C.adminAnn} · ${C.drafts} (${annonces.filter((a) => a.status === "draft").length})</h3><p class="small muted">${C.adminAnnSub}</p>
+        ${draftRows || ""}
+        ${pubRows ? `<div class="table-wrap" style="max-height:200px;overflow:auto"><table><tbody>${pubRows}</tbody></table></div>` : ""}
+        <form id="ann-form" class="form" novalidate>
+          <h4 class="full" style="margin:0">${C.annNew}</h4>
+          <div class="field"><label for="an-c">${C.fConcours}</label><select id="an-c" name="concours">${concoursOpts("")}</select></div>
+          <div class="field"><label for="an-k">${C.fKind}</label><select id="an-k" name="kind">${kindOpts("lancement")}</select></div>
+          <div class="field full"><label for="an-t">${C.fTitle}</label><input id="an-t" name="titre" maxlength="200" required></div>
+          <div class="field full"><label for="an-m">${C.fMessage}</label><textarea id="an-m" name="message" rows="2" maxlength="1000"></textarea></div>
+          <div class="field"><label for="an-d">${C.fDate}</label><input id="an-d" name="date" type="date"></div>
+          <div class="field"><label for="an-l">${C.fLink}</label><input id="an-l" name="lien" type="url" placeholder="https://"></div>
+          <label class="full"><input type="checkbox" name="publish" checked> ${C.fPublish}</label>
+          <p class="err full" id="ann-err" hidden></p>
+          <button type="submit" class="btn btn-primary full">${C.save}</button>
+        </form>
         <h3>${R.reportsTitle} (${reports.filter((r) => r.status === "open").length})</h3>
         ${reportRows ? `<div class="table-wrap" style="max-height:260px;overflow:auto"><table><tbody>${reportRows}</tbody></table></div>` : `<p class="small muted">${R.noReports}</p>`}
         <h3>${R.papersTitle}</h3><p class="small muted">${R.papersSub}</p>
@@ -2013,6 +2296,34 @@
     } catch (e) {
       toast(e.message);
     }
+  }
+
+  async function publishDraft(id, row) {
+    const draft = (state.adminAnn || []).find((a) => a.id === id);
+    if (!draft || !row) return;
+    try {
+      await api().adminSaveAnnonce({ ...draft, concours: row.querySelector("[data-ann-concours]").value, kind: row.querySelector("[data-ann-kind]").value, publish: true });
+    } catch (e) {
+      return toast(e.message);
+    }
+    state.annonces = null;
+    toast(cal().annSaved);
+    openAdmin();
+  }
+
+  async function submitAnnonce(form) {
+    const err = form.querySelector("#ann-err");
+    const fd = new FormData(form);
+    try {
+      await api().adminSaveAnnonce({ ...Object.fromEntries(fd), publish: fd.get("publish") === "on" });
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
+      return;
+    }
+    state.annonces = null;
+    toast(cal().annSaved);
+    openAdmin();
   }
 
   function openReport(epreuve, kind) {
@@ -2359,6 +2670,28 @@
       state.cat = d.cat;
       return render();
     }
+    if ("calendar" in d) return go("concours", { calendrier: true });
+    if (d.openCal) return go("concours", { concours: d.openCal, from: "cal" });
+    if (d.follow) {
+      const id = d.follow;
+      try {
+        state.user = await api().follow(id, !isFollowed(id));
+        render();
+      } catch (e) {
+        toast(e.message);
+        if (e.code === "follow_limit") openPaywall();
+      }
+      return;
+    }
+    if (d.annPublish) return publishDraft(d.annPublish, el.closest("[data-ann-row]"));
+    if (d.annReject) {
+      try {
+        await api().adminRejectAnnonce(d.annReject);
+      } catch (e) {
+        return toast(e.message);
+      }
+      return openAdmin();
+    }
     if (d.legal) return openLegal(d.legal);
     if ("export" in d) return exportMyData();
     if ("deleteAccount" in d) return openDeleteAccount();
@@ -2399,6 +2732,7 @@
     if ("back" in d) {
       const nav = state.nav[state.tab] || {};
       if (nav.from === "orient") return go("concours", { orient: true });
+      if (nav.from === "cal") return go("concours", { calendrier: true });
       return go(state.tab, nav.doc ? { concours: nav.concours } : {});
     }
     if (d.doc) {
@@ -2482,6 +2816,7 @@
     if (f.id === "profil-form") return submitProfil(f);
     if (f.id === "report-form") return submitReport(f);
     if (f.id === "delete-form") return submitDelete(f);
+    if (f.id === "ann-form") return submitAnnonce(f);
     if (f.id === "grant-form") return submitGrant(f);
     if (f.id === "auth-form") {
       const err = f.querySelector("#auth-err");

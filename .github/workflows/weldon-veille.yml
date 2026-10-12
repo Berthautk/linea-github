@@ -1,0 +1,32 @@
+name: Weldon – veille des concours
+
+# Chaque jour, lit les sites officiels listés dans weldon/tools/veille/sources.json et envoie à Weldon
+# les liens qui ressemblent à une annonce de concours, en BROUILLON. Le concepteur valide dans son espace.
+# Gratuit : tourne sur GitHub Actions, hors Netlify (aucun crédit consommé).
+#
+# Secrets à créer dans Settings → Secrets and variables → Actions :
+#   WELDON_URL    adresse du site, ex. https://weldon-cm.netlify.app
+#   VEILLE_TOKEN  même valeur que la variable VEILLE_TOKEN du site (Netlify)
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Veille
+        run: node weldon/tools/veille/veille.mjs
+        env:
+          WELDON_URL: ${{ secrets.WELDON_URL }}
+          VEILLE_TOKEN: ${{ secrets.VEILLE_TOKEN }}

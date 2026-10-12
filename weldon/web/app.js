@@ -159,6 +159,11 @@
       timeUpToast: "Temps écoulé. Posez vos stylos.",
       payTitle: "Weldon Accès complet",
       perYearShort: "FCFA / 12 mois",
+      perMonthShort: "FCFA / mois",
+      planAnnual: "12 mois",
+      planMonthly: "1 mois",
+      planMonthlyNote: "Pas de renouvellement automatique : vous repayez quand vous voulez.",
+      planSave: "Le plus avantageux",
       nativeNoSale: "Les abonnements ne sont pas vendus dans l'application. Si vous êtes déjà abonné, utilisez l'e-mail de votre compte Weldon : votre accès complet est reconnu automatiquement.",
       oneTime: "Un seul paiement. Pas de renouvellement automatique.",
       perks: [
@@ -348,6 +353,11 @@
       timeUpToast: "Time is up. Pens down.",
       payTitle: "Weldon Full access",
       perYearShort: "FCFA / 12 months",
+      perMonthShort: "FCFA / month",
+      planAnnual: "12 months",
+      planMonthly: "1 month",
+      planMonthlyNote: "No automatic renewal: you pay again whenever you wish.",
+      planSave: "Best value",
       nativeNoSale: "Subscriptions are not sold in the app. If you already subscribe, use the email of your Weldon account: your full access is recognised automatically.",
       oneTime: "One payment. No automatic renewal.",
       perks: [
@@ -485,6 +495,8 @@
     adminUsers: () => http("/api/admin/users"),
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
     report: (b) => http("/api/report", { method: "POST", body: b }),
+    exportData: () => http("/api/me/export"),
+    deleteAccount: (password) => http("/api/account/delete", { method: "POST", body: { password } }),
     adminReports: () => http("/api/admin/reports"),
     adminCloseReport: (id) => http("/api/admin/report-close", { method: "POST", body: { id } }),
     adminEpreuves: () => http("/api/admin/epreuves"),
@@ -540,6 +552,8 @@
         return save(u);
       },
       report: async () => ({ ok: true }),
+      exportData: async () => ({ compte: profile(current()) }),
+      deleteAccount: async () => fail("Non disponible dans la démo.", "demo", 400),
       adminReports: async () => [],
       adminCloseReport: async () => ({ ok: true }),
       adminEpreuves: async () => [],
@@ -884,6 +898,66 @@
       withdrawn: "Withdrawn",
     },
   };
+  // Confidentialité, promesses, droits de la personne
+  const LEGAL = {
+    fr: {
+      privacy: "Confidentialité",
+      promises: "Nos promesses",
+      export: "Exporter mes données",
+      del: "Supprimer mon compte",
+      delTitle: "Supprimer mon compte",
+      delText: "Votre compte, votre profil et vos signalements seront effacés définitivement. Votre historique de notes, gardé sur cet appareil, sera aussi effacé. Si vous avez payé, pensez à exporter vos données avant : votre abonnement ne pourra pas être retrouvé sur un compte supprimé.",
+      delPw: "Votre mot de passe pour confirmer",
+      delGo: "Supprimer définitivement",
+      deleted: "Votre compte a été supprimé.",
+      privacySections: (cfg) => [
+        ["Ce que nous collectons", "Votre e-mail, votre nom, la langue de votre section et votre mot de passe (conservé chiffré : personne ne peut le lire). Si vous les donnez : niveau d'études, série, année de naissance, région, centres d'intérêt et concours suivis. L'historique de vos notes reste sur votre appareil."],
+        ["Ce que nous ne faisons pas", "Pas de publicité et pas de revente de vos données."],
+        ["Paiement", "Le paiement se fait sur la page sécurisée de Chariow. Weldon ne conserve pas votre numéro Mobile Money : il est transmis directement à Chariow."],
+        ["Où sont vos données", "L'application est hébergée chez Netlify ; les comptes sont dans une base de données PostgreSQL hébergée chez Neon. Les données ne servent qu'à faire fonctionner Weldon."],
+        ["Vos droits", "Depuis « Mon compte », vous pouvez à tout moment exporter toutes vos données ou supprimer votre compte. Chariow conserve de son côté les reçus de vos achats."],
+        ["Aucune affiliation", "Weldon n'est affilié à aucune institution ni à aucun ministère. Les informations sur les concours peuvent changer : vérifiez toujours l'arrêté officiel avant de vous inscrire."],
+        ...(cfg.whatsapp_contact ? [["Nous contacter", `Une question sur vos données ? Écrivez-nous sur WhatsApp : ${cfg.whatsapp_contact}`]] : []),
+      ],
+      promiseItems: [
+        ["Ce qui est gratuit le reste", "Les fiches des concours, l'orientation, le calendrier et une épreuve offerte restent gratuits."],
+        ["Pas de renouvellement automatique", "Vous ne payez que lorsque vous le décidez. Aucun prélèvement ne se fait sans vous."],
+        ["Prix garanti 12 mois", "Le prix que vous avez payé est garanti pour toute la durée de votre abonnement, et un abonné existant ne subit pas une hausse pendant 12 mois."],
+        ["Vos données vous appartiennent", "Vous pouvez les exporter et supprimer votre compte à tout moment."],
+        ["Rien n'est effacé à la fin de l'abonnement", "Votre compte, votre profil et votre progression restent là si vous revenez plus tard."],
+        ["Aucune garantie de réussite", "Weldon vous prépare, mais ne remplace pas votre travail et ne promet jamais un résultat."],
+      ],
+    },
+    en: {
+      privacy: "Privacy",
+      promises: "Our promises",
+      export: "Export my data",
+      del: "Delete my account",
+      delTitle: "Delete my account",
+      delText: "Your account, profile and reports will be erased for good. Your marks history, kept on this device, will be erased too. If you have paid, export your data first: your subscription cannot be recovered on a deleted account.",
+      delPw: "Your password to confirm",
+      delGo: "Delete for good",
+      deleted: "Your account has been deleted.",
+      privacySections: (cfg) => [
+        ["What we collect", "Your e-mail, your name, the language of your section and your password (stored encrypted: nobody can read it). If you give them: level of studies, stream, year of birth, region, interests and followed competitions. Your marks history stays on your device."],
+        ["What we do not do", "No advertising and no selling of your data."],
+        ["Payment", "Payment is made on Chariow's secure page. Weldon does not keep your Mobile Money number: it is passed straight to Chariow."],
+        ["Where your data is", "The app is hosted by Netlify; accounts are kept in a PostgreSQL database hosted by Neon. Data is used only to run Weldon."],
+        ["Your rights", "From “My account” you can export all your data or delete your account at any time. Chariow keeps the receipts of your purchases on its side."],
+        ["No affiliation", "Weldon is not affiliated with any institution or ministry. Information about competitions may change: always check the official order before registering."],
+        ...(cfg.whatsapp_contact ? [["Contact us", `A question about your data? Write to us on WhatsApp: ${cfg.whatsapp_contact}`]] : []),
+      ],
+      promiseItems: [
+        ["What is free stays free", "Competition pages, orientation, the calendar and one free paper remain free."],
+        ["No automatic renewal", "You pay only when you decide to. Nothing is ever charged without you."],
+        ["Price guaranteed for 12 months", "The price you paid is guaranteed for your whole subscription, and an existing subscriber will not face a rise for 12 months."],
+        ["Your data belongs to you", "You can export it and delete your account at any time."],
+        ["Nothing is erased when a subscription ends", "Your account, profile and progress are still there if you come back later."],
+        ["No guarantee of success", "Weldon prepares you, but does not replace your work and never promises a result."],
+      ],
+    },
+  };
+  const legal = () => LEGAL[lang()];
   const rev = () => REV[lang()];
   const sourceTag = (doc) => `<span class="tag ${doc.corrige_source === "officiel" ? "tag-green" : "tag-line"}">${doc.corrige_source === "officiel" ? rev().official : rev().proposed}</span>`;
   const reportButton = (id, kind) => `<button type="button" class="btn btn-ghost btn-small" data-report="${id}" data-kind="${kind}">${rev().report}</button>`;
@@ -956,6 +1030,7 @@
             <button class="btn btn-primary btn-block full" type="submit">${reg ? AUTH.submitRegister : AUTH.submitLogin}</button>
           </form>
           ${reg ? "" : `<p class="small muted">${AUTH.forgot}</p>`}
+          <p class="small"><button type="button" class="linkish" data-legal="privacy">${LEGAL.fr.privacy} · Privacy</button></p>
           ${state.demo ? `<div class="notice">${I.info}<span class="small">${T.fr.demoNotice}</span></div>` : ""}
         </div>
       </div>`;
@@ -1825,7 +1900,68 @@
       <button type="button" class="btn btn-ghost btn-block" data-lang="${lang() === "fr" ? "en" : "fr"}">${L.changeSection}</button>
       ${!premium() ? `<button type="button" class="btn btn-sun btn-block" data-pay>${L.subscribe}</button><button type="button" class="btn btn-ghost btn-block" data-sync>${L.checkPayment}</button>` : ""}
       ${u.admin ? `<button type="button" class="btn btn-primary btn-block" data-admin>${L.admin}</button>` : ""}
-      <button type="button" class="btn btn-ghost btn-block" data-logout>${L.logout}</button>`);
+      <button type="button" class="btn btn-ghost btn-block" data-logout>${L.logout}</button>
+      <div class="legal-links">
+        <button type="button" class="linkish" data-legal="privacy">${legal().privacy}</button>
+        <button type="button" class="linkish" data-legal="promises">${legal().promises}</button>
+        <button type="button" class="linkish" data-export>${legal().export}</button>
+        <button type="button" class="linkish danger" data-delete-account>${legal().del}</button>
+      </div>`);
+  }
+
+  function openLegal(kind) {
+    const G = legal();
+    const items = kind === "privacy" ? G.privacySections(state.config) : G.promiseItems;
+    modal(`<h2>${kind === "privacy" ? G.privacy : G.promises}</h2>
+      <div class="legal">${items.map(([h, p]) => `<section><h3>${esc(h)}</h3><p>${esc(p)}</p></section>`).join("")}</div>`, true);
+  }
+
+  async function exportMyData() {
+    try {
+      const data = await api().exportData();
+      data.historique_notes = local.get("results." + state.user.email, []);
+      const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "weldon-mes-donnees.json";
+      document.body.append(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    } catch (e) {
+      toast(e.message);
+    }
+  }
+
+  function openDeleteAccount() {
+    const G = legal();
+    modal(`<h2>${G.delTitle}</h2><p class="muted">${G.delText}</p>
+      <form id="delete-form" class="form" novalidate>
+        <div class="field full"><label for="df-pw">${G.delPw}</label><input id="df-pw" name="password" type="password" autocomplete="current-password" required></div>
+        <p class="err full" id="delete-err" hidden></p>
+        <button type="submit" class="btn btn-primary btn-block full" style="background:var(--coral)">${G.delGo}</button>
+      </form>`);
+  }
+
+  async function submitDelete(form) {
+    const err = form.querySelector("#delete-err");
+    try {
+      await api().deleteAccount(new FormData(form).get("password"));
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
+      return;
+    }
+    const email = state.user.email;
+    for (const k of ["results." + email, "exam"]) local.del(k);
+    closeModal();
+    setSession(null, null);
+    state.catalog = null;
+    state.docCache = {};
+    state.oralCache = {};
+    state.exam = null;
+    render();
+    toast(legal().deleted);
   }
 
   async function openAdmin() {
@@ -1935,6 +2071,15 @@
   function openPaywall() {
     const L = t();
     const perk = (x) => `<li>${I.check}<span>${x}</span></li>`;
+    const plans = state.config.plans?.length ? state.config.plans : [{ id: "annual", price_xaf: state.config.price_xaf, days: 365 }];
+    const plan = plans.find((x) => x.id === state.plan) || plans[0];
+    const planName = (x) => (x.id === "monthly" ? L.planMonthly : L.planAnnual);
+    const chooser =
+      plans.length > 1
+        ? `<div class="plans" role="group">${plans
+            .map((x) => `<button type="button" class="plan" data-plan="${x.id}" aria-pressed="${x.id === plan.id}"><b>${planName(x)}</b><span>${fmtNum(x.price_xaf)} FCFA</span>${x.id === "annual" ? `<small>${L.planSave}</small>` : ""}</button>`)
+            .join("")}</div>${plan.id === "monthly" ? `<p class="small muted">${L.planMonthlyNote}</p>` : ""}`
+        : "";
     closeModal();
     const m = document.createElement("div");
     m.className = "modal";
@@ -1946,19 +2091,21 @@
         <div class="modal-head">
           <button type="button" class="modal-close" data-close aria-label="×">×</button>
           <span class="eyebrow" style="color:inherit">${L.payTitle}</span>
-          <h2 class="price">${fmtNum(state.config.price_xaf)} <small>${L.perYearShort}</small></h2>
+          <h2 class="price">${fmtNum(plan.price_xaf)} <small>${plan.id === "monthly" ? L.perMonthShort : L.perYearShort}</small></h2>
           <span style="font-weight:700">${L.oneTime}</span>
         </div>
         <div class="modal-body">
           <ul class="perks">${L.perks.map(perk).join("")}</ul>
+          ${NATIVE ? "" : chooser}
           ${NATIVE ? `<p>${L.nativeNoSale}</p><button type="button" class="btn btn-primary btn-block" data-sync>${L.checkPayment}</button>` : `<form class="form" id="pay-form" novalidate>
             <p class="small full">${L.payAs(esc(state.user.email))}</p>
             <div class="field full"><label for="pf-phone">${L.momo}</label><input id="pf-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="6XX XX XX XX"></div>
             <p class="err full" id="pay-err" hidden></p>
-            <button class="btn btn-primary btn-block full" type="submit" id="pay-btn">${state.demo ? L.simulatePay : L.pay(fcfa(state.config.price_xaf))}</button>
+            <button class="btn btn-primary btn-block full" type="submit" id="pay-btn">${state.demo ? L.simulatePay : L.pay(fcfa(plan.price_xaf))}</button>
             <p class="small muted full">${L.payInfo}</p>
           </form>
           <p class="small">${L.alreadyPaid} <button type="button" class="linkish" data-sync>${L.checkPayment}</button></p>`}
+          <p class="small"><button type="button" class="linkish" data-legal="promises">${legal().promises}</button> · <button type="button" class="linkish" data-legal="privacy">${legal().privacy}</button></p>
         </div>
       </div>`;
     document.body.append(m);
@@ -1993,7 +2140,7 @@
     }
     btn.disabled = true;
     try {
-      const r = await api().checkout({ phone, country_code: "CM" });
+      const r = await api().checkout({ phone, country_code: "CM", plan: state.plan || "annual" });
       if (r.step === "payment") {
         window.location.href = r.checkout_url;
         return;
@@ -2212,6 +2359,13 @@
       state.cat = d.cat;
       return render();
     }
+    if (d.legal) return openLegal(d.legal);
+    if ("export" in d) return exportMyData();
+    if ("deleteAccount" in d) return openDeleteAccount();
+    if (d.plan) {
+      state.plan = d.plan;
+      return openPaywall();
+    }
     if ("reveal" in d) {
       state.exam = { ...state.exam, revealed: true };
       local.set("exam", state.exam);
@@ -2327,6 +2481,7 @@
     if (f.id === "pay-form") return submitPay(f);
     if (f.id === "profil-form") return submitProfil(f);
     if (f.id === "report-form") return submitReport(f);
+    if (f.id === "delete-form") return submitDelete(f);
     if (f.id === "grant-form") return submitGrant(f);
     if (f.id === "auth-form") {
       const err = f.querySelector("#auth-err");

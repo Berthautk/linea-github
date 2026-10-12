@@ -11,6 +11,9 @@ Object.assign(process.env, {
   TOKEN_SECRET: "x".repeat(40),
   CHARIOW_API_KEY: "sk_test_fake",
   CHARIOW_PRODUCT_ID: "prd_weldon",
+  CHARIOW_PRODUCT_ID_MONTHLY: "prd_weldon_m",
+  WHATSAPP_CHANNEL_URL: "https://whatsapp.com/channel/test",
+  WHATSAPP_NUMBER: "+237 6 99 00 11 22",
   CHARIOW_PULSE_SECRET: "whsec_test",
   PUBLIC_URL: "http://localhost",
   ADMIN_EMAILS: "concepteur@weldon.cm",
@@ -24,6 +27,7 @@ const sales = {
   sal_paid: { id: "sal_paid", status: "completed", completed_at: now, product: { id: "prd_weldon" }, customer: { email: "awa@exemple.cm" } },
   sal_wait: { id: "sal_wait", status: "awaiting_payment", product: { id: "prd_weldon" }, customer: { email: "awa@exemple.cm" } },
   sal_otherproduct: { id: "sal_otherproduct", status: "completed", completed_at: now, product: { id: "prd_autre" }, customer: { email: "awa@exemple.cm" } },
+  sal_month: { id: "sal_month", status: "completed", completed_at: now, product: { id: "prd_weldon_m" }, customer: { email: "mois@exemple.cm" } },
   sal_bob: { id: "sal_bob", status: "completed", completed_at: now, product: { id: "prd_weldon" }, customer: { email: "bob@exemple.cm" } },
 };
 let lastCheckout = null;
@@ -217,4 +221,43 @@ test("signalement d'erreur, interrupteur par épreuve, corrigé proposé", async
   assert.equal(all.find((e) => e.id === "gp-2025-redaction-fr").off, true);
   assert.equal((await call("POST", "/api/admin/epreuve-switch", { id: "gp-2025-redaction-fr", off: false }, admin)).status, 200);
   assert.equal((await call("GET", "/api/epreuves/gp-2025-redaction-fr/sujet", undefined, admin)).status, 200);
+});
+
+test("formules annuelle et mensuelle, contact WhatsApp", async () => {
+  const cfg = await json(await call("GET", "/api/config"));
+  assert.deepEqual(cfg.plans, [
+    { id: "annual", price_xaf: 10000, days: 365 },
+    { id: "monthly", price_xaf: 1500, days: 30 },
+  ]);
+  assert.equal(cfg.whatsapp_channel, "https://whatsapp.com/channel/test");
+  assert.equal(cfg.whatsapp_contact, "https://wa.me/237699001122");
+  const t = await register("mois@exemple.cm", "Awa Mensuel");
+  assert.equal((await call("POST", "/api/checkout", { phone: "699001122", plan: "monthly" }, t)).status, 200);
+  assert.equal(lastCheckout.product_id, "prd_weldon_m");
+  assert.equal(lastCheckout.custom_metadata.plan, "monthly");
+  await call("POST", "/api/checkout", { phone: "699001122", plan: "inconnu" }, t);
+  assert.equal(lastCheckout.product_id, "prd_weldon"); // formule inconnue : annuelle
+  const ok = await json(await call("POST", "/api/verify-sale", { sale_id: "sal_month" }, t));
+  assert.equal(ok.paid, true);
+  const days = (Date.parse(ok.user.premium_until) - Date.now()) / 864e5;
+  assert.ok(days > 29 && days < 31, `accès mensuel de 30 jours, obtenu ${days}`);
+});
+
+test("export des données et suppression du compte", async () => {
+  const t = await register("partir@exemple.cm", "Awa Partir");
+  await call("POST", "/api/me", { profil: { niveau: "bac" } }, t);
+  await call("POST", "/api/report", { epreuve: "gp-2025-redaction-fr", message: "Une erreur ici" }, t);
+  const exp = await (await call("GET", "/api/me/export", undefined, t)).json();
+  assert.equal(exp.compte.email, "partir@exemple.cm");
+  assert.equal(exp.compte.profil.niveau, "bac");
+  assert.equal(exp.signalements.length, 1);
+  assert.ok(!("pw" in exp.compte) && !JSON.stringify(exp).includes("scrypt"));
+  assert.equal((await call("POST", "/api/account/delete", { password: "mauvais!!" }, t)).status, 401);
+  assert.equal((await call("POST", "/api/account/delete", { password: "motdepasse1" }, t)).status, 200);
+  assert.equal((await call("GET", "/api/me", undefined, t)).status, 401); // le compte n'existe plus
+  assert.equal((await call("POST", "/api/login", { email: "partir@exemple.cm", password: "motdepasse1" })).status, 401);
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  const reps = await (await call("GET", "/api/admin/reports", undefined, admin)).json();
+  assert.ok(!reps.some((r) => r.email === "partir@exemple.cm"));
+  assert.ok(await register("partir@exemple.cm", "Nouveau")); // l'adresse est de nouveau libre
 });

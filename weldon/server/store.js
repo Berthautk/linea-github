@@ -35,6 +35,10 @@ function fileBackend(dir) {
       save();
       return true;
     },
+    async del(k) {
+      delete db[k];
+      save();
+    },
     async incr(k) {
       db[k] = (db[k] || 0) + 1;
       save();
@@ -68,6 +72,9 @@ async function pgBackend(url) {
       const r = await pool.query("INSERT INTO weldon_kv (k, v) VALUES ($1, $2) ON CONFLICT (k) DO NOTHING", [k, JSON.stringify(v)]);
       return r.rowCount === 1;
     },
+    async del(k) {
+      await pool.query("DELETE FROM weldon_kv WHERE k = $1", [k]);
+    },
     async incr(k) {
       const r = await pool.query(
         "INSERT INTO weldon_kv (k, v) VALUES ($1, '1'::jsonb) ON CONFLICT (k) DO UPDATE SET v = to_jsonb((weldon_kv.v)::text::int + 1), updated_at = now() RETURNING v",
@@ -98,6 +105,8 @@ export async function createStore({ databaseUrl, dir }) {
     getReport: (id) => kv.get(`report:${id}`),
     saveReport: (r) => kv.set(`report:${r.id}`, r),
     listReports: () => kv.list("report:"),
+    deleteReport: (id) => kv.del(`report:${id}`),
+    deleteUser: (email) => kv.del(`user:${email}`),
 
     // true si cette livraison de Pulse a déjà été traitée
     async seenDelivery(id) {

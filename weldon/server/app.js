@@ -46,6 +46,13 @@ const CHARIOW_PULSE_SECRET = process.env.CHARIOW_PULSE_SECRET || "";
 const TOKEN_SECRET = process.env.TOKEN_SECRET || "";
 const ACCESS_DAYS = Number(process.env.ACCESS_DAYS || 365);
 const PRICE_XAF = Number(process.env.PRICE_XAF || 10000);
+// Formule mensuelle : active seulement quand son produit Chariow est configuré.
+const CHARIOW_PRODUCT_ID_MONTHLY = process.env.CHARIOW_PRODUCT_ID_MONTHLY || "";
+const ACCESS_DAYS_MONTHLY = Number(process.env.ACCESS_DAYS_MONTHLY || 30);
+const PRICE_XAF_MONTHLY = Number(process.env.PRICE_XAF_MONTHLY || 1500);
+// Contact : chaîne d'alertes et numéro WhatsApp du concepteur (facultatifs)
+const WHATSAPP_CHANNEL_URL = /^https:\/\//.test(process.env.WHATSAPP_CHANNEL_URL || "") ? process.env.WHATSAPP_CHANNEL_URL : "";
+const WHATSAPP_NUMBER = (process.env.WHATSAPP_NUMBER || "").replace(/\D/g, "");
 const SESSION_DAYS = 30;
 // Concepteur de Weldon : accès complet sans payer. ADMIN_EMAILS (Render) peut en ajouter d'autres.
 const ADMIN_EMAILS = new Set(
@@ -170,8 +177,14 @@ async function chariow(method, route, body) {
 }
 
 const saleIsPaid = (sale) => sale && ["completed", "settled"].includes(sale.status);
-const saleMatchesProduct = (sale) => !CHARIOW_PRODUCT_ID || [sale.product?.id, sale.product?.slug].includes(CHARIOW_PRODUCT_ID);
-const saleEnd = (sale) => new Date(Date.parse(sale.completed_at || sale.created_at) + ACCESS_DAYS * DAY_MS).toISOString();
+// Formules d'abonnement : annuelle (toujours) et mensuelle (si son produit Chariow est renseigné).
+const PLANS = [
+  { id: "annual", product: CHARIOW_PRODUCT_ID, price_xaf: PRICE_XAF, days: ACCESS_DAYS },
+  ...(CHARIOW_PRODUCT_ID_MONTHLY ? [{ id: "monthly", product: CHARIOW_PRODUCT_ID_MONTHLY, price_xaf: PRICE_XAF_MONTHLY, days: ACCESS_DAYS_MONTHLY }] : []),
+];
+const salePlan = (sale) => PLANS.find((p) => p.product && [sale.product?.id, sale.product?.slug].includes(p.product)) || null;
+const saleMatchesProduct = (sale) => !CHARIOW_PRODUCT_ID || Boolean(salePlan(sale));
+const saleEnd = (sale) => new Date(Date.parse(sale.completed_at || sale.created_at) + (salePlan(sale)?.days ?? ACCESS_DAYS) * DAY_MS).toISOString();
 
 // Rattache une vente payée au compte : l'accès court ACCESS_DAYS jours après le paiement.
 async function applySale(user, sale) {
@@ -184,7 +197,7 @@ async function applySale(user, sale) {
 // Cherche chez Chariow les achats payés avec l'e-mail du compte.
 async function syncSubscription(user) {
   if (!CHARIOW_API_KEY) return user;
-  const since = new Date(Date.now() - ACCESS_DAYS * DAY_MS).toISOString().slice(0, 10);
+  const since = new Date(Date.now() - Math.max(...PLANS.map((p) => p.days)) * DAY_MS).toISOString().slice(0, 10);
   const data = await chariow("GET", `/sales?status=completed&per_page=100&start_date=${since}&search=${encodeURIComponent(user.email)}`);
   const list = (Array.isArray(data) ? data : data?.data || []).filter(
     (s) => (s.customer?.email || "").toLowerCase() === user.email && saleMatchesProduct(s) && saleIsPaid(s)
@@ -235,6 +248,9 @@ route("GET", "/api/config", async () => ({
   price_xaf: PRICE_XAF,
   access_days: ACCESS_DAYS,
   payment_enabled: Boolean(CHARIOW_API_KEY && CHARIOW_PRODUCT_ID),
+  plans: PLANS.map(({ id, price_xaf, days }) => ({ id, price_xaf, days })),
+  whatsapp_channel: WHATSAPP_CHANNEL_URL || null,
+  whatsapp_contact: WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : null,
   accounts_persistent: store.kind === "postgres",
   version: VERSION,
 }));
@@ -303,6 +319,23 @@ route("GET", "/api/orientation", async (req, _p, url) => {
   if (!u.profil?.niveau) throw httpError(400, "Indiquez d'abord votre niveau d'études.");
   const list = content.catalog(lang).concours;
   return { profil: u.profil, annee_cible: targetYear(), resultats: orient(u.profil, list) };
+});
+
+// Droits de la personne : exporter toutes ses données, supprimer son compte.
+route("GET", "/api/me/export", async (req) => {
+  const u = await currentUser(req);
+  const { pw, token_v, ...compte } = u;
+  const signalements = (await store.listReports()).filter((r) => r.email === u.email);
+  return { exporte_le: new Date().toISOString(), compte, signalements };
+});
+
+route("POST", "/api/account/delete", async (req) => {
+  const u = await currentUser(req);
+  const b = await readJson(req);
+  if (!checkPassword(String(b.password || ""), u.pw)) throw httpError(401, "Mot de passe incorrect.");
+  for (const r of await store.listReports()) if (r.email === u.email) await store.deleteReport(r.id);
+  await store.deleteUser(u.email);
+  return { ok: true };
 });
 
 route("POST", "/api/password", async (req) => {
@@ -377,14 +410,15 @@ route("POST", "/api/checkout", async (req) => {
   const phone = str(b.phone, 20).replace(/\D/g, "").replace(/^237(?=\d{9}$)/, "");
   if (phone.length < 8) throw httpError(400, "Indiquez votre numéro Mobile Money.");
   const [first, ...rest] = u.name.split(/\s+/);
+  const plan = PLANS.find((x) => x.id === b.plan) || PLANS[0];
   const data = await chariow("POST", "/checkout", {
-    product_id: CHARIOW_PRODUCT_ID,
+    product_id: plan.product,
     email: u.email,
     first_name: str(b.first_name, 50) || first.slice(0, 50),
     last_name: str(b.last_name, 50) || rest.join(" ").slice(0, 50) || first.slice(0, 50),
     phone: { number: phone, country_code: str(b.country_code, 2).toUpperCase() || "CM" },
     redirect_url: `${PUBLIC_URL}/?sale={sale_id}`,
-    custom_metadata: { app: "weldon", account: u.email },
+    custom_metadata: { app: "weldon", account: u.email, plan: plan.id },
     customer_ip: req.ip,
   });
   if (data.step === "payment") return { step: "payment", checkout_url: data.payment.checkout_url, sale_id: data.purchase.id };

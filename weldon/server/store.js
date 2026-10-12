@@ -92,6 +92,13 @@ export async function createStore({ databaseUrl, dir }) {
     createUser: (user) => kv.insert(`user:${user.email}`, user),
     listUsers: () => kv.list("user:"),
 
+    // Réglages du concepteur (ex. liste des épreuves retirées) et signalements d'erreurs des élèves
+    getSetting: (k) => kv.get(`setting:${k}`),
+    setSetting: (k, v) => kv.set(`setting:${k}`, v),
+    getReport: (id) => kv.get(`report:${id}`),
+    saveReport: (r) => kv.set(`report:${r.id}`, r),
+    listReports: () => kv.list("report:"),
+
     // true si cette livraison de Pulse a déjà été traitée
     async seenDelivery(id) {
       return !(await kv.insert(`delivery:${id}`, Date.now()));

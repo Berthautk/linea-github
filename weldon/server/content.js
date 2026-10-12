@@ -28,6 +28,7 @@ export function loadContent(dir) {
 
   return {
     epreuve: (id) => byId.get(id) || null,
+    allEpreuves: () => epreuves.map(({ id, concours: cid, lang, annee, matiere, exemple }) => ({ id, concours: cid, lang, annee, matiere, exemple: Boolean(exemple) })),
     concours: (id) => concours.find((c) => c.id === id) || null,
 
     // Ce que tout le monde peut voir : fiches, liste des épreuves (sans texte), déroulement de l'oral.
@@ -100,6 +101,9 @@ function fiche(c, lang) {
 // Grille d'auto-correction : blocs partagés (grilles.json, cités par leur nom) ou propres à l'épreuve.
 // Chaque critère a ses points et ses niveaux (« comment se noter »). Le total doit faire 20.
 function withGrille(e, grilles) {
+  e = { ...e, corrige_source: e.corrige_source || "propose", verifie: e.verifie || "non_verifie" };
+  if (!["officiel", "propose"].includes(e.corrige_source)) throw new Error(`corrige_source inconnu pour ${e.id} : ${e.corrige_source}`);
+  if (!["calcul", "officiel", "non_verifie"].includes(e.verifie)) throw new Error(`verifie inconnu pour ${e.id} : ${e.verifie}`);
   if (!e.grille) return e;
   const blocks = e.grille.flatMap((b) => {
     if (typeof b === "string") {

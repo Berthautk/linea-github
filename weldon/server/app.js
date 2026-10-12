@@ -316,16 +316,32 @@ route("POST", "/api/password", async (req) => {
   return session(u);
 });
 
+// Épreuves retirées par le concepteur (interrupteur de l'espace concepteur) : invisibles et inaccessibles.
+let offCache = { at: 0, set: new Set() };
+async function epreuvesOff() {
+  if (Date.now() - offCache.at < 15000) return offCache.set;
+  offCache = { at: Date.now(), set: new Set((await store.getSetting("epreuves_off")) || []) };
+  return offCache.set;
+}
+async function liveEpreuve(id) {
+  const e = content.epreuve(id);
+  if (!e || (await epreuvesOff()).has(id)) return null;
+  return e;
+}
+
 // Catalogue public : fiches, liste des épreuves classées, déroulement de l'oral.
 route("GET", "/api/catalog", async (req, _p, url) => {
   const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : "fr";
-  return content.catalog(lang);
+  const cat = content.catalog(lang);
+  const off = await epreuvesOff();
+  if (off.size) cat.epreuves = cat.epreuves.filter((e) => !off.has(e.id));
+  return cat;
 });
 
 // Sujet d'une épreuve : abonnés, ou l'unique épreuve offerte du compte.
 route("GET", "/api/epreuves/:id/sujet", async (req, p) => {
   const u = await currentUser(req);
-  const e = content.epreuve(p.id);
+  const e = await liveEpreuve(p.id);
   if (!e) throw httpError(404, "Épreuve introuvable.");
   if (!isPremium(u)) {
     if (!u.free_id) {
@@ -341,7 +357,7 @@ route("GET", "/api/epreuves/:id/sujet", async (req, p) => {
 
 route("GET", "/api/epreuves/:id/corrige", async (req, p) => {
   await currentPremium(req);
-  const e = content.epreuve(p.id);
+  const e = await liveEpreuve(p.id);
   if (!e) throw httpError(404, "Épreuve introuvable.");
   return e;
 });
@@ -440,6 +456,60 @@ route("POST", "/api/admin/grant", async (req) => {
   return profile(target);
 });
 
+// Signaler une erreur dans un sujet, un corrigé ou un barème. Le concepteur les traite dans son espace.
+const REPORT_KINDS = ["sujet", "corrige", "bareme", "autre"];
+route("POST", "/api/report", async (req) => {
+  const u = await currentUser(req);
+  if (tooManyAttempts(`report:${u.email}`)) throw httpError(429, "Trop de signalements. Réessayez plus tard.");
+  const b = await readJson(req);
+  const message = str(b.message, 1000);
+  if (message.length < 5) throw httpError(400, "Décrivez l'erreur en quelques mots.");
+  if (!content.epreuve(str(b.epreuve, 120))) throw httpError(404, "Épreuve introuvable.");
+  const id = `${Date.now()}-${crypto.randomBytes(3).toString("hex")}`;
+  await store.saveReport({
+    id, at: new Date().toISOString(), email: u.email, epreuve: b.epreuve,
+    kind: REPORT_KINDS.includes(b.kind) ? b.kind : "autre", message, status: "open",
+  });
+  return { ok: true };
+});
+
+route("GET", "/api/admin/reports", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  return (await store.listReports()).sort((a, b) => (a.status === b.status ? b.at.localeCompare(a.at) : a.status === "open" ? -1 : 1)).slice(0, 100);
+});
+
+route("POST", "/api/admin/report-close", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const r = await store.getReport(str((await readJson(req)).id, 80));
+  if (!r) throw httpError(404, "Signalement introuvable.");
+  r.status = "closed";
+  r.closed_by = admin.email;
+  await store.saveReport(r);
+  return { ok: true };
+});
+
+// Interrupteur par épreuve : retirer immédiatement une épreuve (droits, erreur grave).
+route("GET", "/api/admin/epreuves", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const off = await epreuvesOff();
+  return content.allEpreuves().map((e) => ({ ...e, off: off.has(e.id) }));
+});
+
+route("POST", "/api/admin/epreuve-switch", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const b = await readJson(req);
+  if (!content.epreuve(str(b.id, 120))) throw httpError(404, "Épreuve introuvable.");
+  const off = new Set((await store.getSetting("epreuves_off")) || []);
+  if (b.off) off.add(b.id);
+  else off.delete(b.id);
+  await store.setSetting("epreuves_off", [...off]);
+  offCache = { at: Date.now(), set: off };
+  return { id: b.id, off: off.has(b.id) };
+});
 
 // Traite une requête : { method, url (URL), headers (clés en minuscules), ip, raw (Buffer) }.
 // Renvoie { status, body } ; body est un objet JSON.

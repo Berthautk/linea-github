@@ -484,6 +484,11 @@
     sync: () => http("/api/sync-subscription", { method: "POST" }),
     adminUsers: () => http("/api/admin/users"),
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
+    report: (b) => http("/api/report", { method: "POST", body: b }),
+    adminReports: () => http("/api/admin/reports"),
+    adminCloseReport: (id) => http("/api/admin/report-close", { method: "POST", body: { id } }),
+    adminEpreuves: () => http("/api/admin/epreuves"),
+    adminSwitch: (id, off) => http("/api/admin/epreuve-switch", { method: "POST", body: { id, off } }),
   };
 
   // Démo : même interface, données embarquées (window.WELDON_DEMO) et comptes dans ce navigateur.
@@ -534,6 +539,11 @@
         if (b.profil) u.profil = { ...(u.profil || {}), ...b.profil };
         return save(u);
       },
+      report: async () => ({ ok: true }),
+      adminReports: async () => [],
+      adminCloseReport: async () => ({ ok: true }),
+      adminEpreuves: async () => [],
+      adminSwitch: async () => ({ ok: true }),
       orientation: async () => fail("L'orientation n'est pas disponible dans la démo.", "demo", 400),
       async catalog(l) {
         const d = C();
@@ -825,6 +835,58 @@
       ],
     },
   };
+  // Fin d'épreuve, signalement d'erreur, nature du corrigé, espace concepteur
+  const REV = {
+    fr: {
+      revealTitle: "Votre copie est terminée",
+      revealText: "Voulez-vous voir le corrigé ? Gardez votre copie à côté : vous allez vous noter vous-même, critère par critère.",
+      revealYes: "Voir le corrigé et me noter",
+      revealLater: "Plus tard (quitter la salle)",
+      report: "Signaler une erreur",
+      reportTitle: "Signaler une erreur",
+      reportWhere: "Où est l'erreur ?",
+      kinds: { sujet: "Dans le sujet", corrige: "Dans le corrigé", bareme: "Dans le barème", autre: "Autre" },
+      reportMsg: "Décrivez l'erreur : la question, la ligne, ce qui est faux.",
+      send: "Envoyer",
+      reportThanks: "Merci, votre signalement a bien été transmis.",
+      proposed: "Corrigé proposé par Weldon",
+      official: "Corrigé officiel",
+      reportsTitle: "Signalements d'erreurs",
+      noReports: "Aucun signalement.",
+      closeReport: "Traité",
+      papersTitle: "Épreuves en ligne",
+      papersSub: "Retirer une épreuve la fait disparaître tout de suite pour tous les élèves.",
+      withdraw: "Retirer",
+      restore: "Remettre",
+      withdrawn: "Retirée",
+    },
+    en: {
+      revealTitle: "Your script is finished",
+      revealText: "Would you like to see the model answer? Keep your script beside you: you will mark yourself, criterion by criterion.",
+      revealYes: "See the model answer and mark myself",
+      revealLater: "Later (leave the room)",
+      report: "Report a mistake",
+      reportTitle: "Report a mistake",
+      reportWhere: "Where is the mistake?",
+      kinds: { sujet: "In the paper", corrige: "In the model answer", bareme: "In the marking guide", autre: "Other" },
+      reportMsg: "Describe the mistake: the question, the line, what is wrong.",
+      send: "Send",
+      reportThanks: "Thank you, your report has been sent.",
+      proposed: "Model answer proposed by Weldon",
+      official: "Official model answer",
+      reportsTitle: "Mistake reports",
+      noReports: "No reports.",
+      closeReport: "Done",
+      papersTitle: "Papers online",
+      papersSub: "Withdrawing a paper makes it disappear at once for all students.",
+      withdraw: "Withdraw",
+      restore: "Restore",
+      withdrawn: "Withdrawn",
+    },
+  };
+  const rev = () => REV[lang()];
+  const sourceTag = (doc) => `<span class="tag ${doc.corrige_source === "officiel" ? "tag-green" : "tag-line"}">${doc.corrige_source === "officiel" ? rev().official : rev().proposed}</span>`;
+  const reportButton = (id, kind) => `<button type="button" class="btn btn-ghost btn-small" data-report="${id}" data-kind="${kind}">${rev().report}</button>`;
   const ori = () => ORI[lang()];
   const levelName = (code) => (code ? ori().levels[code] || code : "");
 
@@ -1407,6 +1469,7 @@
       <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
         <span class="tag tag-line">${L.duration(hm(meta.duree))}</span>
         ${meta.exemple ? `<span class="tag tag-sun">${L.sampleTag}</span>` : ""}
+        ${isCorrige ? sourceTag(doc) : ""}
       </div>
       ${protectedPaper(isCorrige ? doc.corrige : doc.sujet, isCorrige ? "" : "ruled")}
       ${isCorrige && gridItems(doc).length ? `<article class="card protected"><h3>${L.scale}</h3><p class="small muted">${L.gridHow}</p><div class="score-grid">${gridHtml(doc, null)}</div></article>` : ""}
@@ -1417,6 +1480,7 @@
             : `<button type="button" class="btn btn-primary" data-doc="${id}" data-mode="corriges">${premium() ? "" : I.lock + " "}${L.seeCorrige}</button>`
         }
         <button type="button" class="btn btn-ghost" data-start="${id}">${premium() ? "" : I.lock + " "}${L.composeRoom}</button>
+        ${reportButton(id, isCorrige ? "corrige" : "sujet")}
       </div>`;
   }
 
@@ -1610,15 +1674,23 @@
           <p class="small muted">${L.outOf(hm(e.duree))}</p></article>
         <article class="card"><h3>${L.selfTitle}</h3><p class="small muted">${L.selfHow}</p></article>
       </div>
-      <div><span class="eyebrow">${L.shouldWrite}</span><h2>${L.modelAnswer}</h2></div>
       ${
-        corr
+        !ex.revealed
+          ? `<article class="card" style="gap:14px"><h2>${rev().revealTitle}</h2><p class="muted">${rev().revealText}</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-primary" data-reveal>${rev().revealYes}</button>
+              <button type="button" class="btn btn-ghost" data-quit>${rev().revealLater}</button></div></article>`
+          : `<div><span class="eyebrow">${L.shouldWrite}</span><h2>${L.modelAnswer}</h2>${corr ? `<p>${sourceTag(corr)}</p>` : ""}</div>`
+      }
+      ${
+        !ex.revealed
+          ? ""
+          : corr
           ? protectedPaper(corr.corrige)
           : corrErr
             ? `<article class="card"><p>${esc(L.corrFailed)}</p><p class="small muted">${esc(corrErr)}</p><button type="button" class="btn btn-primary" data-reload-corr="${ex.id}">${L.tryAgain}</button></article>`
             : `<p class="muted">${L.corrLoading}</p>`
       }
-      <article class="card" id="self-card">
+      <article class="card" id="self-card" ${ex.revealed ? "" : "hidden"}>
         <h3>${L.selfGrid}</h3>
         <p class="small muted">${L.gridHow}</p>
         <div class="score-grid">${grid}</div>
@@ -1629,6 +1701,7 @@
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <button type="button" class="btn btn-ghost" data-start="${e.id}">${L.retry}</button>
         <button type="button" class="btn btn-ghost" data-quit>${L.newPaper}</button>
+        ${ex.revealed ? reportButton(ex.id, "corrige") : ""}
       </div>`;
   }
 
@@ -1759,7 +1832,21 @@
     const L = t();
     modal(`<h2>${L.admin}</h2><p class="muted">…</p>`, true);
     try {
-      const users = await api().adminUsers();
+      const [users, reports, papers] = await Promise.all([api().adminUsers(), api().adminReports(), api().adminEpreuves()]);
+      const R = rev();
+      const reportRows = reports
+        .map(
+          (r) => `<tr><td><b>${esc(r.epreuve)}</b> · ${esc(R.kinds[r.kind] || r.kind)}<br><span class="small">${esc(r.message)}</span><br><span class="small muted">${esc(r.email)} · ${dateFmt(r.at)}</span></td>
+            <td>${r.status === "open" ? `<button type="button" class="btn btn-ghost btn-small" data-close-report="${esc(r.id)}">${R.closeReport}</button>` : "✓"}</td></tr>`
+        )
+        .join("");
+      const paperRows = papers
+        .filter((e) => e.lang === lang())
+        .map(
+          (e) => `<tr><td><b>${esc(e.id)}</b>${e.off ? ` <span class="tag tag-sun">${R.withdrawn}</span>` : ""}</td>
+            <td><button type="button" class="btn btn-ghost btn-small" data-withdraw-paper="${esc(e.id)}" data-off="${e.off ? 0 : 1}">${e.off ? R.restore : R.withdraw}</button></td></tr>`
+        )
+        .join("");
       const rows = users
         .map(
           (u) =>
@@ -1777,6 +1864,10 @@
           <p class="err full" id="grant-err" hidden></p>
           <button type="submit" class="btn btn-primary full">${L.grant}</button>
         </form>
+        <h3>${R.reportsTitle} (${reports.filter((r) => r.status === "open").length})</h3>
+        ${reportRows ? `<div class="table-wrap" style="max-height:260px;overflow:auto"><table><tbody>${reportRows}</tbody></table></div>` : `<p class="small muted">${R.noReports}</p>`}
+        <h3>${R.papersTitle}</h3><p class="small muted">${R.papersSub}</p>
+        <div class="table-wrap" style="max-height:260px;overflow:auto"><table><tbody>${paperRows}</tbody></table></div>
         <h3>${L.coverage} · ${L.section}</h3>
         ${coverageTable()}
         <h3>${L.adminUsers} (${users.length})</h3>
@@ -1785,6 +1876,31 @@
       );
     } catch (e) {
       toast(e.message);
+    }
+  }
+
+  function openReport(epreuve, kind) {
+    const R = rev();
+    modal(`<h2>${R.reportTitle}</h2>
+      <form id="report-form" class="form" novalidate>
+        <input type="hidden" name="epreuve" value="${esc(epreuve)}">
+        <div class="field full"><label for="rf-kind">${R.reportWhere}</label>
+          <select id="rf-kind" name="kind">${Object.entries(R.kinds).map(([k, v]) => `<option value="${k}" ${k === kind ? "selected" : ""}>${esc(v)}</option>`).join("")}</select></div>
+        <div class="field full"><label for="rf-msg">${R.reportMsg}</label><textarea id="rf-msg" name="message" rows="4" maxlength="1000" required></textarea></div>
+        <p class="err full" id="report-err" hidden></p>
+        <button type="submit" class="btn btn-primary full">${R.send}</button>
+      </form>`);
+  }
+
+  async function submitReport(form) {
+    const err = form.querySelector("#report-err");
+    try {
+      await api().report(Object.fromEntries(new FormData(form)));
+      closeModal();
+      toast(rev().reportThanks);
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
     }
   }
 
@@ -2096,6 +2212,30 @@
       state.cat = d.cat;
       return render();
     }
+    if ("reveal" in d) {
+      state.exam = { ...state.exam, revealed: true };
+      local.set("exam", state.exam);
+      return render();
+    }
+    if (d.report) return openReport(d.report, d.kind);
+    if (d.closeReport) {
+      try {
+        await api().adminCloseReport(d.closeReport);
+      } catch (e) {
+        return toast(e.message);
+      }
+      return openAdmin();
+    }
+    if (d.withdrawPaper) {
+      try {
+        await api().adminSwitch(d.withdrawPaper, d.off === "1");
+        state.catalog = null;
+        loadCatalog();
+      } catch (e) {
+        return toast(e.message);
+      }
+      return openAdmin();
+    }
     if ("orient" in d) return go("concours", { orient: true });
     if ("editProfil" in d) {
       state.editProfil = true;
@@ -2186,6 +2326,7 @@
     const f = ev.target;
     if (f.id === "pay-form") return submitPay(f);
     if (f.id === "profil-form") return submitProfil(f);
+    if (f.id === "report-form") return submitReport(f);
     if (f.id === "grant-form") return submitGrant(f);
     if (f.id === "auth-form") {
       const err = f.querySelector("#auth-err");

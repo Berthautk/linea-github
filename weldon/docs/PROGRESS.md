@@ -14,7 +14,7 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 | C1 Socle | Comptes, profil concours, section FR/EN, admin : fait. Suppression et export de compte, page de confidentialité : à faire. |
 | C2 Catalogue et orientation | Fait : profil, orientation, conditions d'accès sourcées pour 23 concours, section « Éviter les arnaques ». À faire : éditeur de fiches dans l'admin, conditions des autres concours, validation par le concepteur (tout est `to_verify`). |
 | C3 Calendrier, suivi, alertes | À faire. |
-| C4 Simulation d'épreuve | Fait en grande partie. À faire : « Voir le corrigé ? » après la fin, « Signaler une erreur », interrupteur par épreuve, mention corrigé proposé ou officiel. |
+| C4 Simulation d'épreuve | Fait : « Voir le corrigé ? » après la fin, « Signaler une erreur » (signalements traités dans l'espace concepteur), interrupteur par épreuve, mention « corrigé proposé » ou « officiel ». |
 | C5 Plan et méthode | À faire. |
 | C6 Entraînement | À faire. |
 | C7 Abonnement | Annuel en place. À faire : formule mensuelle, lien pour les parents, page « Nos promesses ». |

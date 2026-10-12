@@ -188,3 +188,33 @@ test("changer de mot de passe déconnecte les autres appareils", async () => {
   assert.equal((await call("GET", "/api/me", undefined, t)).status, 401);
   assert.equal((await call("GET", "/api/me", undefined, r.token)).status, 200);
 });
+
+test("signalement d'erreur, interrupteur par épreuve, corrigé proposé", async () => {
+  const t = await register("signal@exemple.cm");
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  assert.equal((await call("POST", "/api/report", { epreuve: "gp-2025-redaction-fr", message: "ok" }, t)).status, 400);
+  assert.equal((await call("POST", "/api/report", { epreuve: "inconnue", message: "Une erreur ici" }, t)).status, 404);
+  assert.equal((await call("POST", "/api/report", { epreuve: "gp-2025-redaction-fr", kind: "corrige", message: "La question 3 est fausse" }, t)).status, 200);
+  assert.equal((await call("GET", "/api/admin/reports", undefined, t)).status, 403);
+  const reps = await (await call("GET", "/api/admin/reports", undefined, admin)).json();
+  assert.equal(reps.length, 1);
+  assert.equal(reps[0].status, "open");
+  assert.equal(reps[0].kind, "corrige");
+  assert.equal((await call("POST", "/api/admin/report-close", { id: reps[0].id }, admin)).status, 200);
+  assert.equal((await (await call("GET", "/api/admin/reports", undefined, admin)).json())[0].status, "closed");
+
+  const full = await json(await call("GET", "/api/epreuves/gp-2025-redaction-fr/corrige", undefined, admin));
+  assert.equal(full.corrige_source, "propose");
+  assert.equal(full.verifie, "non_verifie");
+
+  assert.equal((await call("POST", "/api/admin/epreuve-switch", { id: "gp-2025-redaction-fr", off: true }, t)).status, 403);
+  assert.equal((await call("POST", "/api/admin/epreuve-switch", { id: "gp-2025-redaction-fr", off: true }, admin)).status, 200);
+  const cat = await json(await call("GET", "/api/catalog?lang=fr"));
+  assert.ok(!cat.epreuves.some((e) => e.id === "gp-2025-redaction-fr"));
+  assert.equal((await call("GET", "/api/epreuves/gp-2025-redaction-fr/sujet", undefined, admin)).status, 404);
+  assert.equal((await call("GET", "/api/epreuves/gp-2025-redaction-fr/corrige", undefined, admin)).status, 404);
+  const all = await (await call("GET", "/api/admin/epreuves", undefined, admin)).json();
+  assert.equal(all.find((e) => e.id === "gp-2025-redaction-fr").off, true);
+  assert.equal((await call("POST", "/api/admin/epreuve-switch", { id: "gp-2025-redaction-fr", off: false }, admin)).status, 200);
+  assert.equal((await call("GET", "/api/epreuves/gp-2025-redaction-fr/sujet", undefined, admin)).status, 200);
+});

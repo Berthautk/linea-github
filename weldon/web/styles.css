@@ -514,3 +514,10 @@ body.shielded .app { filter: blur(24px); }
 .scam { border-left: 4px solid var(--sun); }
 .access .kv dd { font-weight: 500; }
 .access .kv dt { margin-top: 4px; }
+
+/* ---------- Signalement d'erreur, espace concepteur ---------- */
+.btn-small { padding: 6px 12px; font-size: 0.85rem; }
+.field textarea {
+  width: 100%; padding: 11px 12px; border-radius: var(--radius-sm); border: 1.5px solid var(--line); background: var(--bg); font: inherit; resize: vertical;
+}
+.field textarea:focus { border-color: var(--green); outline: none; }

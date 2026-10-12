@@ -439,3 +439,39 @@ test("plan à rebours : création, aperçu gratuit d'une semaine, plan complet p
   assert.equal((await json(await call("POST", "/api/plan", { clear: true }, t))).plan, null);
   assert.equal((await json(await call("GET", "/api/plan", undefined, t))).plan, null);
 });
+
+test("éditeur de fiches : le concepteur corrige et valide, l'orientation en tient compte", async () => {
+  const t = await register("fiche@exemple.cm", "Awa Fiche");
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  await call("POST", "/api/me", { lang: "fr", profil: { niveau: "bepc", annee_naissance: 2002 } }, t);
+  const edit = { id: "gardiens-paix", lang: "fr", acces: { niveaux_min: "bepc", age_min: 17, age_max: 20, confiance: "arrete", annee_conditions: 2026 }, calendrier: { mois_lancement: "juin–juillet", mois_epreuves: "septembre", frais_fcfa: 16000 }, lien_inscription: "https://exemple.cm/gp", verified: true, texts: { diplomes: "BEPC exigé (arrêté du 15 juin).", age_note: "17 à 20 ans au 1er janvier." } };
+  assert.equal((await call("POST", "/api/admin/fiche", edit, t)).status, 403);
+  assert.equal((await call("POST", "/api/admin/fiche", { ...edit, acces: { ...edit.acces, niveaux_min: "docteur" } }, admin)).status, 400);
+  assert.equal((await call("POST", "/api/admin/fiche", { ...edit, acces: { ...edit.acces, age_min: 40, age_max: 20 } }, admin)).status, 400);
+  assert.equal((await call("POST", "/api/admin/fiche", { ...edit, lien_inscription: "javascript:alert(1)" }, admin)).status, 400);
+  assert.equal((await call("POST", "/api/admin/fiche", { ...edit, id: "inconnu" }, admin)).status, 404);
+  const res = await call("POST", "/api/admin/fiche", edit, admin);
+  assert.equal(res.status, 200);
+  assert.equal((await res.json()).fiche.status, "verified");
+  const cat = await json(await call("GET", "/api/catalog?lang=fr"));
+  const gp = cat.concours.find((c) => c.id === "gardiens-paix");
+  assert.equal(gp.status, "verified");
+  assert.equal(gp.acces.age_max, 20);
+  assert.equal(gp.acces.confiance, "arrete");
+  assert.equal(gp.acces.diplomes, "BEPC exigé (arrêté du 15 juin).");
+  assert.deepEqual(gp.calendrier.mois.lancement, [6, 7]);
+  assert.equal(gp.calendrier.frais_fcfa, 16000);
+  assert.equal(gp.lien_inscription, "https://exemple.cm/gp");
+  assert.equal(gp.last_verified, new Date().toISOString().slice(0, 10));
+  // La version anglaise garde ses propres textes ; les chiffres corrigés valent pour les deux langues
+  const en = (await json(await call("GET", "/api/catalog?lang=en"))).concours.find((c) => c.id === "gardiens-paix");
+  assert.equal(en.acces.age_max, 20);
+  assert.notEqual(en.acces.diplomes, "BEPC exigé (arrêté du 15 juin).");
+  // Source solide (arrêté) + né en 2002 (23 ou 24 ans > 20) : l'orientation l'exclut
+  const o = await json(await call("GET", "/api/orientation?lang=fr", undefined, t));
+  assert.equal(o.resultats.find((r) => r.id === "gardiens-paix").categorie, "non");
+  // Retour à « à vérifier » : plus d'exclusion définitive
+  await call("POST", "/api/admin/fiche", { ...edit, verified: false, acces: { ...edit.acces, confiance: "secondaire" } }, admin);
+  const o2 = await json(await call("GET", "/api/orientation?lang=fr", undefined, t));
+  assert.equal(o2.resultats.find((r) => r.id === "gardiens-paix").categorie, "improbable");
+});

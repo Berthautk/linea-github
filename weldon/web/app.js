@@ -506,6 +506,7 @@
     quizCheck: (mode, answers) => http("/api/quiz/check", { method: "POST", body: { mode, answers } }),
     follow: (id, on) => http("/api/follow", { method: "POST", body: { id, on } }),
     adminAnnonces: () => http("/api/admin/annonces"),
+    adminSaveFiche: (b) => http("/api/admin/fiche", { method: "POST", body: b }),
     adminSaveAnnonce: (b) => http("/api/admin/annonce", { method: "POST", body: b }),
     adminRejectAnnonce: (id) => http("/api/admin/annonce-reject", { method: "POST", body: { id } }),
     exportData: () => http("/api/me/export"),
@@ -578,6 +579,7 @@
         return save(u);
       },
       adminAnnonces: async () => [],
+      adminSaveFiche: async () => ({ ok: true }),
       adminSaveAnnonce: async () => ({ ok: true }),
       adminRejectAnnonce: async () => ({ ok: true }),
       exportData: async () => ({ compte: profile(current()) }),
@@ -1302,6 +1304,130 @@
     },
   };
   const pl = () => PL[lang()];
+
+  // Éditeur de fiches (espace concepteur)
+  const FI = {
+    fr: {
+      title: "Fiches des concours : conditions d'accès",
+      sub: "Corrigez les conditions après lecture de l'arrêté officiel. Cochez « vérifié » seulement si vous l'avez lu : le concours n'est alors plus classé « à vérifier ». Les textes sont ceux de la section affichée ; changez de section pour l'autre langue.",
+      pick: "Concours",
+      levelMin: "Niveau minimum",
+      levelMax: "Niveau maximum (si l'arrêté en fixe un)",
+      none: "— non précisé —",
+      series: "Séries admises (séparées par des virgules)",
+      seriesHelp: "Laisser vide si aucune série n'est imposée ou si elle n'est pas précisée.",
+      ageMin: "Âge minimum",
+      ageMax: "Âge maximum",
+      noLimit: "L'arrêté dit qu'il n'y a aucune limite d'âge",
+      confidence: "Source des conditions",
+      conf: { secondaire: "Site relais, non officiel", site_officiel: "Site officiel", arrete: "Arrêté lu" },
+      year: "Année de l'arrêté",
+      diplomas: "Diplômes exigés (texte affiché)",
+      seriesNote: "Séries : précision affichée",
+      ageNote: "Âge : précision affichée (date de référence, dérogations…)",
+      fees: "Frais en FCFA",
+      launch: "Lancement (ex. juin–juillet)",
+      deadline: "Dépôt des dossiers (ex. juillet–août)",
+      exams: "Épreuves (ex. septembre)",
+      link: "Lien d'inscription officiel",
+      verified: "J'ai vérifié ces conditions dans l'arrêté officiel",
+      save: "Enregistrer la fiche",
+      saved: "Fiche enregistrée.",
+    },
+    en: {
+      title: "Competition pages: entry requirements",
+      sub: "Correct the requirements after reading the official order. Tick “verified” only if you have read it: the competition is then no longer ranked “to be checked”. Texts are those of the section shown; switch section for the other language.",
+      pick: "Competition",
+      levelMin: "Minimum level",
+      levelMax: "Maximum level (if the order sets one)",
+      none: "— not stated —",
+      series: "Accepted streams (comma separated)",
+      seriesHelp: "Leave empty if no stream is required or if it is not stated.",
+      ageMin: "Minimum age",
+      ageMax: "Maximum age",
+      noLimit: "The order says there is no age limit",
+      confidence: "Source of the requirements",
+      conf: { secondaire: "Relay site, unofficial", site_officiel: "Official website", arrete: "Order read" },
+      year: "Year of the order",
+      diplomas: "Diplomas required (text shown)",
+      seriesNote: "Streams: note shown",
+      ageNote: "Age: note shown (reference date, waivers…)",
+      fees: "Fees in FCFA",
+      launch: "Call published (e.g. June–July)",
+      deadline: "File deadline (e.g. July–August)",
+      exams: "Exams (e.g. September)",
+      link: "Official registration link",
+      verified: "I have checked these requirements in the official order",
+      save: "Save the page",
+      saved: "Page saved.",
+    },
+  };
+  const fi = () => FI[lang()];
+
+  function ficheFields(id) {
+    const F = fi();
+    const O = ori();
+    const c = concoursById(id);
+    const a = c?.acces || {};
+    const k = c?.calendrier || {};
+    const lv = ["cep", ...LEVELS.filter((x) => x !== "terminale")];
+    const levelOpts = (cur) => `<option value="">${F.none}</option>${lv.map((x) => `<option value="${x}" ${x === cur ? "selected" : ""}>${esc(O.levels[x])}</option>`).join("")}`;
+    const num = (v) => (v == null ? "" : esc(v));
+    return `
+      <div class="field"><label for="ff-min">${F.levelMin}</label><select id="ff-min" name="niveaux_min">${levelOpts(a.niveaux_min)}</select></div>
+      <div class="field"><label for="ff-max">${F.levelMax}</label><select id="ff-max" name="niveaux_max">${levelOpts(a.niveaux_max)}</select></div>
+      <div class="field full"><label for="ff-series">${F.series}</label><input id="ff-series" name="series" value="${esc((a.series || []).join(", "))}"><span class="small muted">${F.seriesHelp}</span></div>
+      <div class="field"><label for="ff-amin">${F.ageMin}</label><input id="ff-amin" name="age_min" type="number" min="5" max="70" value="${num(a.age_min)}"></div>
+      <div class="field"><label for="ff-amax">${F.ageMax}</label><input id="ff-amax" name="age_max" type="number" min="5" max="70" value="${num(a.age_max)}"></div>
+      <label class="full"><input type="checkbox" name="age_aucune" ${a.age_aucune ? "checked" : ""}> ${F.noLimit}</label>
+      <div class="field"><label for="ff-conf">${F.confidence}</label><select id="ff-conf" name="confiance">${["secondaire", "site_officiel", "arrete"].map((x) => `<option value="${x}" ${(a.confiance || "secondaire") === x ? "selected" : ""}>${F.conf[x]}</option>`).join("")}</select></div>
+      <div class="field"><label for="ff-year">${F.year}</label><input id="ff-year" name="annee_conditions" type="number" min="2000" max="2100" value="${num(a.annee_conditions)}"></div>
+      <div class="field full"><label for="ff-dip">${F.diplomas}</label><textarea id="ff-dip" name="diplomes" rows="2" maxlength="400">${esc(a.diplomes || "")}</textarea></div>
+      <div class="field full"><label for="ff-sn">${F.seriesNote}</label><textarea id="ff-sn" name="series_note" rows="2" maxlength="400">${esc(a.series_note || "")}</textarea></div>
+      <div class="field full"><label for="ff-an">${F.ageNote}</label><textarea id="ff-an" name="age_note" rows="2" maxlength="400">${esc(a.age_note || "")}</textarea></div>
+      <div class="field"><label for="ff-fees">${F.fees}</label><input id="ff-fees" name="frais_fcfa" type="number" min="0" value="${num(k.frais_fcfa)}"></div>
+      <div class="field"><label for="ff-link">${F.link}</label><input id="ff-link" name="lien_inscription" type="url" placeholder="https://" value="${esc(c?.lien_inscription || "")}"></div>
+      <div class="field"><label for="ff-l">${F.launch}</label><input id="ff-l" name="mois_lancement" value="${esc(k.mois_lancement || "")}"></div>
+      <div class="field"><label for="ff-d">${F.deadline}</label><input id="ff-d" name="mois_limite_depot" value="${esc(k.mois_limite_depot || "")}"></div>
+      <div class="field"><label for="ff-e">${F.exams}</label><input id="ff-e" name="mois_epreuves" value="${esc(k.mois_epreuves || "")}"></div>
+      <label class="full"><input type="checkbox" name="verified" ${c?.status === "verified" ? "checked" : ""}> <b>${F.verified}</b></label>`;
+  }
+
+  async function submitFiche(form) {
+    const err = form.querySelector("#fiche-err");
+    const fd = new FormData(form);
+    const g = (k) => fd.get(k) || "";
+    try {
+      await api().adminSaveFiche({
+        id: g("concours"),
+        lang: lang(),
+        verified: fd.get("verified") === "on",
+        acces: {
+          niveaux_min: g("niveaux_min"),
+          niveaux_max: g("niveaux_max"),
+          series: g("series").split(",").map((x) => x.trim()).filter(Boolean),
+          age_min: g("age_min"),
+          age_max: g("age_max"),
+          age_aucune: fd.get("age_aucune") === "on",
+          confiance: g("confiance"),
+          annee_conditions: g("annee_conditions"),
+        },
+        calendrier: { mois_lancement: g("mois_lancement"), mois_limite_depot: g("mois_limite_depot"), mois_epreuves: g("mois_epreuves"), frais_fcfa: g("frais_fcfa") },
+        lien_inscription: g("lien_inscription"),
+        texts: { diplomes: g("diplomes"), series_note: g("series_note"), age_note: g("age_note") },
+      });
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
+      return;
+    }
+    state.ficheSel = g("concours");
+    state.catalog = null;
+    state.orient = null;
+    loadCatalog();
+    toast(fi().saved);
+    openAdmin();
+  }
 
   // Rappel quotidien : notification locale (application Android), sans serveur.
   const LN = () => window.Capacitor?.Plugins?.LocalNotifications;
@@ -2837,6 +2963,13 @@
           <p class="err full" id="grant-err" hidden></p>
           <button type="submit" class="btn btn-primary full">${L.grant}</button>
         </form>
+        <h3>${fi().title}</h3><p class="small muted">${fi().sub}</p>
+        <form id="fiche-form" class="form" novalidate>
+          <div class="field full"><label for="fiche-select">${fi().pick}</label><select id="fiche-select" name="concours">${state.catalog.concours.map((c) => `<option value="${esc(c.id)}" ${c.id === (state.ficheSel || "gardiens-paix") ? "selected" : ""}>${esc(c.sigle)} · ${esc(c.nom.slice(0, 50))}${c.status === "verified" ? " ✓" : ""}</option>`).join("")}</select></div>
+          <div id="fiche-fields" class="form full" style="grid-template-columns:1fr 1fr">${ficheFields(state.ficheSel || "gardiens-paix")}</div>
+          <p class="err full" id="fiche-err" hidden></p>
+          <button type="submit" class="btn btn-primary full">${fi().save}</button>
+        </form>
         <h3>${C.adminAnn} · ${C.drafts} (${annonces.filter((a) => a.status === "draft").length})</h3><p class="small muted">${C.adminAnnSub}</p>
         ${draftRows || ""}
         ${pubRows ? `<div class="table-wrap" style="max-height:200px;overflow:auto"><table><tbody>${pubRows}</tbody></table></div>` : ""}
@@ -3214,6 +3347,12 @@
     }
   }
 
+  document.addEventListener("change", (ev) => {
+    if (ev.target.id !== "fiche-select") return;
+    state.ficheSel = ev.target.value;
+    document.getElementById("fiche-fields").innerHTML = ficheFields(ev.target.value);
+  });
+
   // ---------- Événements ----------
   document.addEventListener("click", async (ev) => {
     const el = ev.target.closest("button, label");
@@ -3499,6 +3638,7 @@
     if (f.id === "plan-form") return submitPlan(f);
     if (f.id === "delete-form") return submitDelete(f);
     if (f.id === "ann-form") return submitAnnonce(f);
+    if (f.id === "fiche-form") return submitFiche(f);
     if (f.id === "grant-form") return submitGrant(f);
     if (f.id === "auth-form") {
       const err = f.querySelector("#auth-err");

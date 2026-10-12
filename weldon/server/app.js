@@ -8,7 +8,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadEnv } from "./env.js";
 import { createStore } from "./store.js";
-import { loadContent, LANGS } from "./content.js";
+import { loadContent, checkAccesValues, LANGS } from "./content.js";
+import { moisOf } from "./calendar.js";
 import { orient, cleanProfil, targetYear } from "./orientation.js";
 import { buildPlan, subjectThemes, HOURS } from "./plan.js";
 import { dayStr, pickDaily, pickSeries, pickBlanc, emptyQuiz, recordAnswer, dueIds, streak } from "./quiz.js";
@@ -322,7 +323,7 @@ route("GET", "/api/orientation", async (req, _p, url) => {
   const u = await currentUser(req);
   const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
   if (!u.profil?.niveau) throw httpError(400, "Indiquez d'abord votre niveau d'études.");
-  const list = content.catalog(lang).concours;
+  const list = (await catalogLive(lang)).concours;
   return { profil: u.profil, annee_cible: targetYear(), resultats: orient(u.profil, list) };
 });
 
@@ -618,13 +619,103 @@ async function liveEpreuve(id) {
   return e;
 }
 
-// Catalogue public : fiches, liste des épreuves classées, déroulement de l'oral.
-route("GET", "/api/catalog", async (req, _p, url) => {
-  const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : "fr";
+// Corrections des fiches faites par le concepteur dans l'application (conditions vérifiées dans l'arrêté).
+// Elles priment sur content/concours.json et survivent aux mises à jour du code.
+let fichesCache = { at: 0, map: {} };
+async function fichesOverrides() {
+  if (Date.now() - fichesCache.at < 15000) return fichesCache.map;
+  fichesCache = { at: Date.now(), map: (await store.getSetting("fiches")) || {} };
+  return fichesCache.map;
+}
+
+function applyOverride(c, o, lang) {
+  const acces = { ...(c.acces || {}), ...(o.acces || {}), ...(o.texts?.[lang] || {}) };
+  if (Object.keys(acces).length) c.acces = acces;
+  if (o.calendrier || c.calendrier) {
+    const cal = { ...(c.calendrier || {}), ...(o.calendrier || {}) };
+    const mois = moisOf(cal);
+    if (mois) cal.mois = mois;
+    else delete cal.mois;
+    c.calendrier = cal;
+  }
+  if (o.lien_inscription !== undefined) c.lien_inscription = o.lien_inscription || undefined;
+  if (o.status) c.status = o.status;
+  if (o.last_verified) c.last_verified = o.last_verified;
+}
+
+// Catalogue tel que les élèves le voient : épreuves retirées en moins, fiches corrigées en plus.
+async function catalogLive(lang) {
   const cat = content.catalog(lang);
   const off = await epreuvesOff();
   if (off.size) cat.epreuves = cat.epreuves.filter((e) => !off.has(e.id));
+  const over = await fichesOverrides();
+  for (const c of cat.concours) if (over[c.id]) applyOverride(c, over[c.id], lang);
   return cat;
+}
+
+// Catalogue public : fiches, liste des épreuves classées, déroulement de l'oral.
+route("GET", "/api/catalog", async (req, _p, url) => {
+  const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : "fr";
+  return catalogLive(lang);
+});
+
+// Éditeur de fiches : le concepteur corrige les conditions d'accès et les marque « vérifiées ».
+route("POST", "/api/admin/fiche", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const b = await readJson(req);
+  const id = str(b.id, 120);
+  if (!content.concours(id)) throw httpError(404, "Concours introuvable.");
+  const lang = LANGS.includes(b.lang) ? b.lang : "fr";
+  const a = b.acces && typeof b.acces === "object" ? b.acces : {};
+  const num = (v) => (v === "" || v === null || v === undefined ? null : Number(v));
+  const acces = {
+    niveaux_min: a.niveaux_min || null,
+    niveaux_max: a.niveaux_max || null,
+    series: Array.isArray(a.series) && a.series.length ? a.series.map((x) => str(String(x), 20)).filter(Boolean) : null,
+    age_min: num(a.age_min),
+    age_max: num(a.age_max),
+    age_aucune: Boolean(a.age_aucune),
+    confiance: a.confiance || "secondaire",
+    annee_conditions: num(a.annee_conditions),
+  };
+  if (acces.age_aucune) {
+    acces.age_min = null;
+    acces.age_max = null;
+  }
+  const status = b.verified ? "verified" : "to_verify";
+  try {
+    checkAccesValues(id, acces, status);
+  } catch (e) {
+    throw httpError(400, e.message);
+  }
+  const k = b.calendrier && typeof b.calendrier === "object" ? b.calendrier : {};
+  const calendrier = {
+    mois_lancement: str(k.mois_lancement, 80) || null,
+    mois_limite_depot: str(k.mois_limite_depot, 80) || null,
+    mois_epreuves: str(k.mois_epreuves, 80) || null,
+    frais_fcfa: num(k.frais_fcfa),
+  };
+  if (calendrier.frais_fcfa !== null && !(Number.isFinite(calendrier.frais_fcfa) && calendrier.frais_fcfa >= 0 && calendrier.frais_fcfa < 10_000_000)) throw httpError(400, "Frais invalides.");
+  const lien = str(b.lien_inscription, 500);
+  if (lien && !/^https?:\/\//.test(lien)) throw httpError(400, "Le lien d'inscription doit commencer par https://");
+  const t = b.texts && typeof b.texts === "object" ? b.texts : {};
+  const over = { ...((await store.getSetting("fiches")) || {}) };
+  const prev = over[id] || {};
+  over[id] = {
+    ...prev,
+    acces,
+    calendrier,
+    lien_inscription: lien,
+    status,
+    last_verified: dayStr(),
+    texts: { ...(prev.texts || {}), [lang]: { diplomes: str(t.diplomes, 400), series_note: str(t.series_note, 400), age_note: str(t.age_note, 400) } },
+    edited_by: admin.email,
+  };
+  await store.setSetting("fiches", over);
+  fichesCache = { at: Date.now(), map: over };
+  const cat = (await catalogLive(lang)).concours.find((c) => c.id === id);
+  return { id, fiche: cat };
 });
 
 // Sujet d'une épreuve : abonnés, ou l'unique épreuve offerte du compte.

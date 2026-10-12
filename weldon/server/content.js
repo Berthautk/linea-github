@@ -95,18 +95,21 @@ function checkQuiz(bank) {
 // Conditions d'accès : valeurs contrôlées au démarrage, pour qu'une faute de frappe ne fausse jamais l'orientation.
 const NIVEAUX_OK = ["cep", "bepc", "probatoire", "bac", "bac+2", "licence", "master", "doctorat"];
 function checkAcces(c) {
+  checkAccesValues(c.id, c.acces, c.status);
+  for (const x of c.sources || []) if (!x.titre) throw new Error(`Conditions d'accès de ${c.id} : une source n'a pas de titre`);
+}
+
+export function checkAccesValues(id, a, status) {
   const bad = (m) => {
-    throw new Error(`Conditions d'accès de ${c.id} : ${m}`);
+    throw new Error(`Conditions d'accès de ${id} : ${m}`);
   };
-  const a = c.acces;
   if (!a) return;
   for (const k of ["niveaux_min", "niveaux_max"]) if (a[k] != null && !NIVEAUX_OK.includes(a[k])) bad(`${k} inconnu (${a[k]})`);
   if (!["arrete", "site_officiel", "secondaire", "non_trouve"].includes(a.confiance)) bad(`confiance inconnue (${a.confiance})`);
   for (const k of ["age_min", "age_max"]) if (a[k] != null && !(Number.isInteger(a[k]) && a[k] >= 5 && a[k] <= 70)) bad(`${k} invalide (${a[k]})`);
-  if (a.age_min != null && a.age_max != null && a.age_min > a.age_max) bad("age_min dépasse age_max");
+  if (a.age_min != null && a.age_max != null && a.age_min > a.age_max) bad("l'âge minimum dépasse l'âge maximum");
   if (a.series != null && !(Array.isArray(a.series) && a.series.every((x) => typeof x === "string"))) bad("series doit être une liste");
-  if (c.status && !["to_verify", "verified"].includes(c.status)) bad(`status inconnu (${c.status})`);
-  for (const x of c.sources || []) if (!x.titre) bad("une source n'a pas de titre");
+  if (status && !["to_verify", "verified"].includes(status)) bad(`status inconnu (${status})`);
 }
 
 // Fiche publique d'un concours dans une langue : textes de la langue + conditions d'accès structurées.

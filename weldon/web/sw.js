@@ -1,6 +1,6 @@
 // Service worker Weldon : l'application reste utilisable hors connexion
 // (fiches, sujets déjà chargés, chronomètre). Les appels /api passent toujours par le réseau.
-const CACHE = "weldon-v11";
+const CACHE = "weldon-v13";
 const SHELL = ["/", "/index.html", "/styles.css", "/app.js", "/icon.svg", "/manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {

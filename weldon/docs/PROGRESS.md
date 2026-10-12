@@ -12,7 +12,7 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 | Jalon | État |
 |---|---|
 | C1 Socle | Fait : comptes, profil concours, section FR/EN, admin, export et suppression du compte, page de confidentialité. |
-| C2 Catalogue et orientation | Fait : profil, orientation, conditions d'accès sourcées pour 23 concours, section « Éviter les arnaques ». À faire : éditeur de fiches dans l'admin, conditions des autres concours, validation par le concepteur (tout est `to_verify`). |
+| C2 Catalogue et orientation | Fait : profil, orientation, conditions d'accès sourcées pour 23 concours, section « Éviter les arnaques ». Éditeur de fiches dans l'espace concepteur : fait (corriger les conditions, les marquer « vérifiées » après lecture de l'arrêté). À faire : conditions des 70 autres concours, validation par le concepteur (tout est encore `to_verify`). |
 | C3 Calendrier, suivi, alertes | Fait : calendrier annuel, suivi (2 gratuits), annonces avec J-n, bandeau « Nouveau », boutons WhatsApp, veille automatique en brouillons (GitHub Actions). À faire : notifications envoyées à distance (Firebase), après vérification de la faisabilité gratuite. |
 | C4 Simulation d'épreuve | Fait : « Voir le corrigé ? » après la fin, « Signaler une erreur » (signalements traités dans l'espace concepteur), interrupteur par épreuve, mention « corrigé proposé » ou « officiel ». |
 | C5 Plan et méthode | Fait : plan à rebours (3, 5, 8 ou 12 h par semaine, plan d'urgence sous 30 et 14 jours, thèmes faibles prioritaires, première semaine gratuite), séances du jour, carnet d'erreurs, révisions espacées (1, 2, 4, 8, 16 jours), rappel quotidien (application Android). À faire : « Mes questions » (questions personnelles de l'élève). |
@@ -24,3 +24,15 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 ## Points d'attention
 - Aucun arrêté officiel n'a pu être lu pendant la recherche : les conditions viennent de sites relais (`confiance: secondaire`). Le moteur n'exclut donc jamais un candidat sur cette base (« improbable »).
 - Les alertes à distance et la veille automatique : GitHub Actions (gratuit) plutôt que des fonctions Netlify, pour ne pas consommer de crédits.
+
+## Qualité (12 octobre 2026)
+- Lighthouse sur la page de connexion : performance 94, accessibilité 100, bonnes pratiques 96, SEO 100 (vert assombri pour le contraste, `robots.txt` ajouté).
+- 57 tests serveur : tokens, comptes, paiement et Pulse, formules, orientation, calendrier, annonces, veille, quiz, plan, éditeur de fiches, export et suppression de compte.
+- Application Android : la construction passe avec le plugin de notifications locales.
+
+## Reste à faire ou à décider
+- **Notifications envoyées à distance** (nouveau concours, date limite) : faisables gratuitement avec Firebase Cloud Messaging (offre Spark, sans carte). Il faut créer un projet Firebase, déposer `google-services.json` dans l'application Android et créer un compte de service pour un script d'envoi. À lancer seulement si le concepteur le décide.
+- **Lien de paiement pour les parents** : le paiement doit aujourd'hui se faire avec l'e-mail du compte de l'élève.
+- **« Mes questions »** (v3, non fourni) et **fiches de culture générale** : à préciser.
+- Conditions des 70 autres concours et validation de chaque fiche.
+- Banque de questions : contrôle par échantillon (`verifie: non_verifie`), puis enrichissement.

@@ -35,8 +35,8 @@
   "fr": {
    "q": "À quelle date le Cameroun sous tutelle française accéda-t-il à l'indépendance ?",
    "options": [
+    "15 septembre 1960",
     "11 février 1961",
-    "1er octobre 1961",
     "20 mai 1972",
     "1er janvier 1960"
    ],
@@ -46,8 +46,8 @@
   "en": {
    "q": "On what date did French-administered Cameroon become independent?",
    "options": [
+    "15 September 1960",
     "11 February 1961",
-    "1 October 1961",
     "20 May 1972",
     "1 January 1960"
    ],
@@ -64,7 +64,7 @@
   "fr": {
    "q": "Quelle date marque la réunification du Cameroun (Southern Cameroons et République du Cameroun) ?",
    "options": [
-    "1er janvier 1960",
+    "20 septembre 1960",
     "11 février 1961",
     "1er octobre 1961",
     "20 mai 1972"
@@ -75,7 +75,7 @@
   "en": {
    "q": "Which date marks the reunification of Cameroon (Southern Cameroons and the Republic of Cameroon)?",
    "options": [
-    "1 January 1960",
+    "20 September 1960",
     "11 February 1961",
     "1 October 1961",
     "20 May 1972"
@@ -122,10 +122,10 @@
   "fr": {
    "q": "Le nom « Cameroun » vient du portugais « Camarões », qui désigne :",
    "options": [
-    "Les montagnes",
+    "Les hautes montagnes",
     "Les crevettes",
     "Les fleuves",
-    "Les éléphants"
+    "Les singes"
    ],
    "answer": 1,
    "explication": "Les navigateurs portugais appelèrent le Wouri « Rio dos Camarões » (rivière des crevettes)."
@@ -133,8 +133,8 @@
   "en": {
    "q": "The name \"Cameroon\" comes from the Portuguese \"Camarões\", meaning:",
    "options": [
-    "Mountains",
-    "Prawns (shrimps)",
+    "The tall mountains",
+    "Shrimps",
     "Rivers",
     "Elephants"
    ],
@@ -151,23 +151,23 @@
   "fr": {
    "q": "La Conférence de Berlin (1884-1885) avait pour objet principal :",
    "options": [
-    "De fixer les règles du partage colonial de l'Afrique",
-    "De proclamer l'indépendance de l'Afrique",
-    "De créer l'ONU",
-    "D'abolir l'esclavage aux États-Unis"
+    "Proclamer l'indépendance des colonies africaines",
+    "Créer l'Organisation des Nations unies",
+    "Mettre fin à la Première Guerre mondiale",
+    "Régler le partage colonial de l'Afrique"
    ],
-   "answer": 0,
+   "answer": 3,
    "explication": "Les puissances européennes y définirent les règles de l'occupation et du partage de l'Afrique."
   },
   "en": {
    "q": "The main purpose of the Berlin Conference (1884-1885) was:",
    "options": [
-    "To set the rules for the colonial partition of Africa",
-    "To proclaim African independence",
-    "To create the UN",
-    "To abolish slavery in the United States"
+    "To proclaim independence for the African colonies",
+    "To create the United Nations Organization",
+    "To end the First World War",
+    "To regulate the colonial partition of Africa"
    ],
-   "answer": 0,
+   "answer": 3,
    "explication": "European powers defined there the rules for occupying and dividing Africa."
   },
   "source": "weldon",
@@ -180,8 +180,8 @@
   "fr": {
    "q": "Quel pays fut la première colonie d'Afrique subsaharienne à devenir indépendante, en 1957 ?",
    "options": [
-    "Le Nigeria",
-    "La Guinée",
+    "Le Togo",
+    "La Côte d'Ivoire",
     "Le Sénégal",
     "Le Ghana"
    ],
@@ -191,8 +191,8 @@
   "en": {
    "q": "Which country was the first sub-Saharan African colony to become independent, in 1957?",
    "options": [
-    "Nigeria",
-    "Guinea",
+    "Togo",
+    "Ivory Coast",
     "Senegal",
     "Ghana"
    ],
@@ -238,10 +238,10 @@
   "fr": {
    "q": "Que fut décidé par le référendum du 20 mai 1972 au Cameroun ?",
    "options": [
-    "L'indépendance du pays",
     "La réunification des deux Cameroun",
-    "Le passage de l'État fédéral à l'État unitaire",
-    "L'adoption du multipartisme"
+    "L'adoption du multipartisme",
+    "La création d'un État unitaire",
+    "L'indépendance du pays"
    ],
    "answer": 2,
    "explication": "Il supprima le fédéralisme et créa la République unie du Cameroun."
@@ -249,10 +249,10 @@
   "en": {
    "q": "What was decided by the referendum of 20 May 1972 in Cameroon?",
    "options": [
-    "The country's independence",
     "The reunification of the two Cameroons",
-    "The change from a federal to a unitary state",
-    "The adoption of multiparty politics"
+    "The adoption of multiparty politics",
+    "The creation of a unitary state",
+    "The country's independence"
    ],
    "answer": 2,
    "explication": "It abolished federalism and created the United Republic of Cameroon."
@@ -267,10 +267,10 @@
   "fr": {
    "q": "Lors du plébiscite du 11 février 1961, le Southern Cameroons a choisi :",
    "options": [
-    "De rejoindre le Nigeria",
-    "De rejoindre la République du Cameroun",
-    "De rester sous tutelle britannique",
-    "De devenir un État indépendant"
+    "Rejoindre la Fédération du Nigeria",
+    "Rejoindre la République du Cameroun",
+    "Rester sous tutelle de la Grande-Bretagne",
+    "Devenir un État indépendant"
    ],
    "answer": 1,
    "explication": "Le Southern Cameroons vota l'union avec le Cameroun, tandis que le Northern Cameroons choisit le Nigeria."
@@ -278,10 +278,10 @@
   "en": {
    "q": "In the plebiscite of 11 February 1961, Southern Cameroons chose:",
    "options": [
-    "To join Nigeria",
+    "To join the Federation of Nigeria",
     "To join the Republic of Cameroon",
-    "To remain under British rule",
-    "To become a separate independent state"
+    "To remain under British trusteeship",
+    "To become an independent state"
    ],
    "answer": 1,
    "explication": "Southern Cameroons voted to join Cameroon, while Northern Cameroons chose Nigeria."
@@ -296,10 +296,10 @@
   "fr": {
    "q": "Après la Première Guerre mondiale, le Kamerun allemand fut :",
    "options": [
-    "Partagé entre la France et le Royaume-Uni sous mandat de la SDN",
-    "Rattaché à l'Allemagne de l'Ouest",
-    "Rendu à ses chefs traditionnels",
-    "Donné au Portugal"
+    "Partagé entre la France et le Royaume-Uni sous mandat",
+    "Partagé entre la Belgique et l'Italie sous protectorat",
+    "Rendu à ses chefs traditionnels après la guerre",
+    "Placé sous la seule autorité du Portugal"
    ],
    "answer": 0,
    "explication": "Le traité de Versailles retira ses colonies à l'Allemagne ; le Cameroun fut partagé sous mandats de la Société des Nations."
@@ -307,10 +307,10 @@
   "en": {
    "q": "After the First World War, German Kamerun was:",
    "options": [
-    "Divided between France and the United Kingdom under League of Nations mandates",
-    "Attached to West Germany",
-    "Returned to its traditional chiefs",
-    "Given to Portugal"
+    "Split between France and the UK under mandate",
+    "Split between Belgium and Italy as a protectorate",
+    "Returned to its traditional chiefs after the war",
+    "Placed under the sole authority of Portugal"
    ],
    "answer": 0,
    "explication": "The Treaty of Versailles stripped Germany of its colonies; Cameroon was divided under League of Nations mandates."
@@ -325,9 +325,9 @@
   "fr": {
    "q": "Quel parti nationaliste camerounais, fondé en 1948, réclamait l'indépendance et la réunification ?",
    "options": [
-    "L'UNC",
-    "Le RDPC",
+    "L'UC",
     "Le SDF",
+    "Le RDPC",
     "L'UPC"
    ],
    "answer": 3,
@@ -336,9 +336,9 @@
   "en": {
    "q": "Which Cameroonian nationalist party, founded in 1948, demanded independence and reunification?",
    "options": [
-    "The UNC",
-    "The CPDM",
+    "The UC",
     "The SDF",
+    "The CPDM",
     "The UPC"
    ],
    "answer": 3,
@@ -354,23 +354,23 @@
   "fr": {
    "q": "Après la Seconde Guerre mondiale, les Cameroun français et britannique devinrent :",
    "options": [
-    "Des colonies allemandes",
-    "Des protectorats portugais",
-    "Des États indépendants",
-    "Des territoires sous tutelle de l'ONU"
+    "Des territoires sous tutelle de l'ONU",
+    "Des colonies restituées à l'Allemagne",
+    "Des territoires sous protectorat portugais",
+    "Des États indépendants et souverains"
    ],
-   "answer": 3,
+   "answer": 0,
    "explication": "Les mandats de la SDN furent remplacés en 1946 par des tutelles de l'ONU."
   },
   "en": {
    "q": "After the Second World War, French and British Cameroons became:",
    "options": [
-    "German colonies",
-    "Portuguese protectorates",
-    "Independent states",
-    "UN trust territories"
+    "Territories under UN trusteeship",
+    "Colonies handed back to Germany",
+    "Territories under Portuguese protection",
+    "Fully independent sovereign states"
    ],
-   "answer": 3,
+   "answer": 0,
    "explication": "The League mandates were replaced in 1946 by United Nations trusteeships."
   },
   "source": "weldon",
@@ -384,9 +384,9 @@
    "q": "Quelle ville d'Indonésie accueillit en 1955 la conférence réunissant pays africains et asiatiques ?",
    "options": [
     "Djakarta",
-    "Singapour",
+    "Medan",
     "Bandung",
-    "Manille"
+    "Surabaya"
    ],
    "answer": 2,
    "explication": "La conférence de Bandung (1955) affirma la solidarité afro-asiatique contre le colonialisme."
@@ -395,9 +395,9 @@
    "q": "Which Indonesian city hosted the 1955 conference of Asian and African countries?",
    "options": [
     "Jakarta",
-    "Singapore",
+    "Medan",
     "Bandung",
-    "Manila"
+    "Surabaya"
    ],
    "answer": 2,
    "explication": "The Bandung Conference (1955) asserted Afro-Asian solidarity against colonialism."
@@ -412,10 +412,10 @@
   "fr": {
    "q": "L'Organisation de l'unité africaine (OUA) fut créée en 1963 dans quelle ville ?",
    "options": [
-    "Accra",
+    "Léopoldville",
     "Addis-Abeba",
-    "Lagos",
-    "Le Caire"
+    "Monrovia",
+    "Casablanca"
    ],
    "answer": 1,
    "explication": "L'OUA fut fondée à Addis-Abeba, en Éthiopie, en mai 1963."
@@ -423,10 +423,10 @@
   "en": {
    "q": "In which city was the Organisation of African Unity (OAU) created in 1963?",
    "options": [
-    "Accra",
+    "Leopoldville",
     "Addis Ababa",
-    "Lagos",
-    "Cairo"
+    "Monrovia",
+    "Casablanca"
    ],
    "answer": 1,
    "explication": "The OAU was founded in Addis Ababa, Ethiopia, in May 1963."
@@ -455,7 +455,7 @@
     "Nelson Mandela",
     "Thabo Mbeki",
     "Desmond Tutu",
-    "F. W. de Klerk"
+    "Frederik de Klerk"
    ],
    "answer": 0,
    "explication": "The first multiracial elections ended apartheid and brought Mandela to power."
@@ -470,23 +470,23 @@
   "fr": {
    "q": "Quel responsable de la France libre présida la conférence de Brazzaville en 1944 ?",
    "options": [
-    "Charles de Gaulle",
     "Philippe Pétain",
     "Léon Blum",
-    "Georges Pompidou"
+    "Charles de Gaulle",
+    "Vincent Auriol"
    ],
-   "answer": 0,
+   "answer": 2,
    "explication": "De Gaulle y annonça des réformes pour les colonies françaises d'Afrique."
   },
   "en": {
    "q": "Which Free French leader presided over the Brazzaville Conference in 1944?",
    "options": [
-    "Charles de Gaulle",
     "Philippe Pétain",
     "Léon Blum",
-    "Georges Pompidou"
+    "Charles de Gaulle",
+    "Vincent Auriol"
    ],
-   "answer": 0,
+   "answer": 2,
    "explication": "De Gaulle announced there reforms for France's African colonies."
   },
   "source": "weldon",
@@ -499,9 +499,9 @@
   "fr": {
    "q": "Quel empereur du Mali est célèbre pour son pèlerinage à La Mecque en 1324 ?",
    "options": [
-    "Soundiata Keïta",
-    "Soni Ali Ber",
+    "Sonni Ali",
     "Askia Mohammed",
+    "Soundiata Keïta",
     "Mansa Moussa"
    ],
    "answer": 3,
@@ -510,9 +510,9 @@
   "en": {
    "q": "Which emperor of Mali is famous for his pilgrimage to Mecca in 1324?",
    "options": [
-    "Sundiata Keita",
-    "Sunni Ali Ber",
+    "Sunni Ali",
     "Askia Muhammad",
+    "Sundiata Keita",
     "Mansa Musa"
    ],
    "answer": 3,
@@ -528,23 +528,23 @@
   "fr": {
    "q": "Quel roi douala fut pendu par les Allemands en août 1914 pour avoir résisté aux expropriations ?",
    "options": [
-    "Lock Priso",
+    "Charles Atangana Ntsama",
+    "Rudolf Manga Bell",
     "Kum'a Ndumbe",
-    "Rudolf Douala Manga Bell",
-    "Martin-Paul Samba"
+    "Lock Priso"
    ],
-   "answer": 2,
+   "answer": 1,
    "explication": "Rudolf Douala Manga Bell s'opposa à l'expropriation des Douala et fut exécuté en 1914."
   },
   "en": {
    "q": "Which Douala king was hanged by the Germans in August 1914 for resisting expropriation?",
    "options": [
-    "Lock Priso",
+    "Charles Atangana Ntsama",
+    "Rudolf Manga Bell",
     "Kum'a Ndumbe",
-    "Rudolf Douala Manga Bell",
-    "Martin-Paul Samba"
+    "Lock Priso"
    ],
-   "answer": 2,
+   "answer": 1,
    "explication": "Rudolf Douala Manga Bell opposed the expropriation of the Douala and was executed in 1914."
   },
   "source": "weldon",
@@ -559,8 +559,8 @@
    "options": [
     "Buea",
     "Foumban",
-    "Yaoundé",
-    "Bamenda"
+    "Douala",
+    "Bafoussam"
    ],
    "answer": 1,
    "explication": "La conférence de Foumban prépara la Constitution fédérale de 1961."
@@ -570,8 +570,8 @@
    "options": [
     "Buea",
     "Foumban",
-    "Yaoundé",
-    "Bamenda"
+    "Douala",
+    "Bafoussam"
    ],
    "answer": 1,
    "explication": "The Foumban Conference prepared the 1961 federal Constitution."
@@ -586,23 +586,23 @@
   "fr": {
    "q": "La loi-cadre Defferre de 1956 a principalement :",
    "options": [
-    "Créé l'Union française",
-    "Accordé une large autonomie interne aux territoires d'outre-mer",
-    "Supprimé le code de l'indigénat",
-    "Aboli le travail forcé"
+    "Instauré l'Union française pour l'outre-mer",
+    "Supprimé le code de l'indigénat dans les colonies",
+    "Aboli le travail forcé dans tous les territoires",
+    "Accordé l'autonomie interne aux territoires"
    ],
-   "answer": 1,
+   "answer": 3,
    "explication": "Elle donna aux territoires des assemblées et des gouvernements locaux ; l'Union française, l'indigénat et le travail forcé relèvent de 1946."
   },
   "en": {
    "q": "The 1956 Defferre framework law (loi-cadre) mainly:",
    "options": [
-    "Created the French Union",
-    "Granted wide internal autonomy to overseas territories",
-    "Abolished the indigénat code",
-    "Abolished forced labour"
+    "Created the French Union for the overseas empire",
+    "Abolished the indigénat code in the colonies",
+    "Abolished forced labour in all territories",
+    "Granted internal autonomy to the territories"
    ],
-   "answer": 1,
+   "answer": 3,
    "explication": "It gave the territories local assemblies and governments; the French Union, indigénat and forced labour belong to 1946."
   },
   "source": "weldon",
@@ -644,23 +644,23 @@
   "fr": {
    "q": "En 1896, à Adwa, quelle armée africaine vainquit l'armée coloniale italienne ?",
    "options": [
+    "L'Éthiopie de Ménélik II",
     "Le royaume zoulou",
-    "L'empire ashanti",
     "L'empire du Mali",
-    "L'Éthiopie de Ménélik II"
+    "L'empire ashanti de Prempeh"
    ],
-   "answer": 3,
+   "answer": 0,
    "explication": "La victoire d'Adwa garantit l'indépendance de l'Éthiopie face à l'Italie."
   },
   "en": {
    "q": "In 1896 at Adwa, which African army defeated the Italian colonial army?",
    "options": [
+    "Ethiopia under Menelik II",
     "The Zulu kingdom",
-    "The Ashanti empire",
     "The Mali empire",
-    "Ethiopia under Menelik II"
+    "The Ashanti empire of Prempeh"
    ],
-   "answer": 3,
+   "answer": 0,
    "explication": "The victory at Adwa secured Ethiopia's independence against Italy."
   },
   "source": "weldon",
@@ -674,9 +674,9 @@
    "q": "En 1956, Nasser nationalisa :",
    "options": [
     "Le canal de Panama",
-    "Le canal de Kiel",
+    "Le canal de Corinthe",
     "Le canal de Suez",
-    "Le canal de Corinthe"
+    "Le canal Érié"
    ],
    "answer": 2,
    "explication": "Cette nationalisation déclencha la crise de Suez avec la France et le Royaume-Uni."
@@ -685,9 +685,9 @@
    "q": "In 1956 Nasser nationalised:",
    "options": [
     "The Panama Canal",
-    "The Kiel Canal",
+    "The Corinth Canal",
     "The Suez Canal",
-    "The Corinth Canal"
+    "The Erie Canal"
    ],
    "answer": 2,
    "explication": "This nationalisation triggered the Suez crisis with France and the United Kingdom."
@@ -790,22 +790,22 @@
    "q": "Quel pays borde le Cameroun à l'ouest ?",
    "options": [
     "Le Tchad",
-    "Le Nigeria",
     "Le Gabon",
-    "Le Congo"
+    "Le Nigeria",
+    "La Guinée équatoriale"
    ],
-   "answer": 1,
+   "answer": 2,
    "explication": "La frontière ouest du Cameroun est partagée avec le Nigeria."
   },
   "en": {
    "q": "Which country borders Cameroon to the west?",
    "options": [
     "Chad",
-    "Nigeria",
     "Gabon",
-    "Congo"
+    "Nigeria",
+    "Equatorial Guinea"
    ],
-   "answer": 1,
+   "answer": 2,
    "explication": "Cameroon's western border is shared with Nigeria."
   },
   "source": "weldon",
@@ -906,7 +906,7 @@
    "q": "Dans quel pays se trouve le Kilimandjaro, plus haut sommet d'Afrique ?",
    "options": [
     "Le Kenya",
-    "L'Éthiopie",
+    "Le Mozambique",
     "La Tanzanie",
     "L'Ouganda"
    ],
@@ -917,7 +917,7 @@
    "q": "In which country is Kilimanjaro, Africa's highest mountain?",
    "options": [
     "Kenya",
-    "Ethiopia",
+    "Mozambique",
     "Tanzania",
     "Uganda"
    ],
@@ -1082,7 +1082,7 @@
     "Garoua",
     "Bertoua",
     "Ngaoundéré",
-    "Maroua"
+    "Abong-Mbang"
    ],
    "answer": 2,
    "explication": "Ngaoundéré est le chef-lieu de l'Adamaoua."
@@ -1093,7 +1093,7 @@
     "Garoua",
     "Bertoua",
     "Ngaoundéré",
-    "Maroua"
+    "Abong-Mbang"
    ],
    "answer": 2,
    "explication": "Ngaoundéré is the chief town of Adamawa."
@@ -1370,22 +1370,22 @@
    "q": "Quel lac d'Afrique est le plus profond ?",
    "options": [
     "Le Victoria",
-    "Le Tchad",
     "Le Tanganyika",
-    "Le Turkana"
+    "Le Tchad",
+    "Le Malawi (Nyassa)"
    ],
-   "answer": 2,
+   "answer": 1,
    "explication": "Le Tanganyika dépasse 1 400 m de profondeur."
   },
   "en": {
    "q": "Which African lake is the deepest?",
    "options": [
     "Lake Victoria",
-    "Lake Chad",
     "Lake Tanganyika",
-    "Lake Turkana"
+    "Lake Chad",
+    "Lake Malawi (Nyasa)"
    ],
-   "answer": 2,
+   "answer": 1,
    "explication": "Lake Tanganyika exceeds 1,400 m in depth."
   },
   "source": "weldon",
@@ -1441,7 +1441,7 @@
     "The legislature",
     "The executive",
     "The constituent power",
-    "The judiciary"
+    "The judicial power"
    ],
    "answer": 3,
    "explication": "Courts administer justice: this is the judicial power."
@@ -1458,10 +1458,10 @@
    "options": [
     "Genève",
     "Paris",
-    "New York",
-    "Bruxelles"
+    "Washington",
+    "New York"
    ],
-   "answer": 2,
+   "answer": 3,
    "explication": "Le siège principal de l'ONU est à New York."
   },
   "en": {
@@ -1469,10 +1469,10 @@
    "options": [
     "Geneva",
     "Paris",
-    "New York",
-    "Brussels"
+    "Washington",
+    "New York"
    ],
-   "answer": 2,
+   "answer": 3,
    "explication": "The main UN headquarters is in New York."
   },
   "source": "weldon",
@@ -1486,22 +1486,22 @@
    "q": "Où se trouve le siège de l'Union africaine ?",
    "options": [
     "Abuja",
-    "Addis-Abeba",
-    "Nairobi",
-    "Dakar"
+    "Johannesburg",
+    "Dakar",
+    "Addis-Abeba"
    ],
-   "answer": 1,
+   "answer": 3,
    "explication": "L'Union africaine siège à Addis-Abeba, en Éthiopie."
   },
   "en": {
    "q": "Where is the headquarters of the African Union?",
    "options": [
     "Abuja",
-    "Addis Ababa",
-    "Nairobi",
-    "Dakar"
+    "Johannesburg",
+    "Dakar",
+    "Addis Ababa"
    ],
-   "answer": 1,
+   "answer": 3,
    "explication": "The African Union sits in Addis Ababa, Ethiopia."
   },
   "source": "weldon",
@@ -1544,9 +1544,9 @@
    "q": "Quelle est la monnaie du Cameroun ?",
    "options": [
     "Le franc CFA",
-    "Le naira",
-    "Le cedi",
-    "Le rand"
+    "Le franc congolais",
+    "Le shilling kényan",
+    "Le naira"
    ],
    "answer": 0,
    "explication": "Le Cameroun utilise le franc CFA de la zone CEMAC."
@@ -1555,9 +1555,9 @@
    "q": "What is the currency of Cameroon?",
    "options": [
     "The CFA franc",
-    "The naira",
-    "The cedi",
-    "The rand"
+    "The Congolese franc",
+    "The Kenyan shilling",
+    "The naira"
    ],
    "answer": 0,
    "explication": "Cameroon uses the CFA franc of the CEMAC zone."
@@ -1573,7 +1573,7 @@
    "q": "La Constitution est :",
    "options": [
     "Une simple circulaire",
-    "Un décret du maire",
+    "Un décret pris par le maire",
     "Un jugement de la Cour suprême",
     "La norme suprême de l'État"
    ],
@@ -1584,9 +1584,9 @@
    "q": "The Constitution is:",
    "options": [
     "A simple circular",
-    "A mayor's decree",
-    "A Supreme Court judgment",
-    "The supreme norm of the State"
+    "A decree issued by a mayor",
+    "A ruling of the Supreme Court",
+    "The supreme law of the State"
    ],
    "answer": 3,
    "explication": "All laws and acts must comply with the Constitution."
@@ -1602,22 +1602,22 @@
    "q": "Le Commonwealth regroupe surtout d'anciens territoires de quel pays ?",
    "options": [
     "La France",
-    "Le Portugal",
     "Le Royaume-Uni",
-    "L'Allemagne"
+    "Le Portugal",
+    "Les États-Unis d'Amérique"
    ],
-   "answer": 2,
+   "answer": 1,
    "explication": "Le Commonwealth est issu de l'ancien Empire britannique."
   },
   "en": {
    "q": "The Commonwealth mainly brings together former territories of which country?",
    "options": [
     "France",
-    "Portugal",
     "The United Kingdom",
-    "Germany"
+    "Portugal",
+    "The United States of America"
    ],
-   "answer": 2,
+   "answer": 1,
    "explication": "The Commonwealth grew out of the former British Empire."
   },
   "source": "weldon",
@@ -1691,7 +1691,7 @@
     "Le Nigeria",
     "Le Tchad",
     "Le Gabon",
-    "Le Congo"
+    "La Guinée équatoriale"
    ],
    "answer": 0,
    "explication": "La CEMAC regroupe six pays d'Afrique centrale ; le Nigeria n'en fait pas partie."
@@ -1702,7 +1702,7 @@
     "Nigeria",
     "Chad",
     "Gabon",
-    "Congo"
+    "Equatorial Guinea"
    ],
    "answer": 0,
    "explication": "CEMAC groups six Central African countries; Nigeria is not one of them."
@@ -1719,7 +1719,7 @@
    "options": [
     "Yaoundé",
     "Bangui",
-    "Kinshasa",
+    "Brazzaville",
     "Libreville"
    ],
    "answer": 3,
@@ -1730,7 +1730,7 @@
    "options": [
     "Yaoundé",
     "Bangui",
-    "Kinshasa",
+    "Brazzaville",
     "Libreville"
    ],
    "answer": 3,
@@ -1746,23 +1746,23 @@
   "fr": {
    "q": "Où est établi le siège de l'Organisation internationale de la Francophonie ?",
    "options": [
+    "Paris",
     "Bruxelles",
-    "Dakar",
     "Montréal",
-    "Paris"
+    "Lomé"
    ],
-   "answer": 3,
+   "answer": 0,
    "explication": "Le siège de l'OIF est à Paris."
   },
   "en": {
    "q": "Where is the headquarters of the International Organisation of La Francophonie?",
    "options": [
+    "Paris",
     "Brussels",
-    "Dakar",
     "Montreal",
-    "Paris"
+    "Lome"
    ],
-   "answer": 3,
+   "answer": 0,
    "explication": "The OIF headquarters is in Paris."
   },
   "source": "weldon",
@@ -1804,7 +1804,7 @@
   "fr": {
    "q": "Quelles sont les collectivités territoriales décentralisées du Cameroun ?",
    "options": [
-    "Les provinces et les cantons",
+    "Les villes et les cantons",
     "Les régions et les communes",
     "Les départements et les villages",
     "Les arrondissements et les quartiers"
@@ -1815,8 +1815,8 @@
   "en": {
    "q": "What are Cameroon's decentralised local authorities?",
    "options": [
-    "Provinces and cantons",
-    "Regions and councils (communes)",
+    "Cities and cantons",
+    "Regions and councils",
     "Divisions and villages",
     "Subdivisions and neighbourhoods"
    ],
@@ -1833,23 +1833,23 @@
   "fr": {
    "q": "Quel principe veut qu'une personne soit tenue pour innocente tant que sa culpabilité n'est pas établie ?",
    "options": [
-    "La présomption d'innocence",
-    "La non-rétroactivité de la loi",
+    "La non-rétroactivité de la loi pénale",
     "La légalité des délits",
+    "La présomption d'innocence",
     "L'autorité de la chose jugée"
    ],
-   "answer": 0,
+   "answer": 2,
    "explication": "Ce principe protège l'accusé jusqu'à une condamnation définitive."
   },
   "en": {
    "q": "Which principle holds that a person is innocent until proven guilty?",
    "options": [
-    "The presumption of innocence",
-    "Non-retroactivity of law",
+    "Non-retroactivity of criminal law",
     "Legality of offences",
+    "The presumption of innocence",
     "Res judicata"
    ],
-   "answer": 0,
+   "answer": 2,
    "explication": "This principle protects the accused until a final conviction."
   },
   "source": "weldon",
@@ -1891,9 +1891,9 @@
   "fr": {
    "q": "L'Union africaine, lancée en 2002, a remplacé :",
    "options": [
-    "La Ligue arabe",
-    "La CEDEAO",
-    "Le Commonwealth",
+    "La Communauté des États sahélo-sahariens",
+    "La Ligue des États arabes",
+    "Le Mouvement des non-alignés",
     "L'Organisation de l'unité africaine"
    ],
    "answer": 3,
@@ -1902,9 +1902,9 @@
   "en": {
    "q": "The African Union, launched in 2002, replaced:",
    "options": [
-    "The Arab League",
-    "ECOWAS",
-    "The Commonwealth",
+    "The Community of Sahel-Saharan States",
+    "The League of Arab States",
+    "The Non-Aligned Movement",
     "The Organisation of African Unity"
    ],
    "answer": 3,
@@ -1979,7 +1979,7 @@
    "q": "Quelle institution prévue par la révision constitutionnelle de 1996 n'a été installée qu'en 2013 ?",
    "options": [
     "L'Assemblée nationale",
-    "Le Sénat",
+    "Le Sénat de la République",
     "La Cour suprême",
     "Le Conseil économique et social"
    ],
@@ -1990,7 +1990,7 @@
    "q": "Which institution provided for by the 1996 constitutional revision was only installed in 2013?",
    "options": [
     "The National Assembly",
-    "The Senate",
+    "The Senate of the Republic",
     "The Supreme Court",
     "The Economic and Social Council"
    ],
@@ -2007,10 +2007,10 @@
   "fr": {
    "q": "Quel système juridique le Cameroun applique-t-il ?",
    "options": [
-    "Un système mixte de droit civil et de common law",
-    "Uniquement le droit civil",
-    "Uniquement la common law",
-    "Uniquement le droit coutumier"
+    "Un mélange de droit civil et de common law",
+    "Uniquement le droit civil d'origine française",
+    "Uniquement la common law d'origine britannique",
+    "Uniquement le droit coutumier traditionnel"
    ],
    "answer": 0,
    "explication": "Héritage des tutelles française et britannique, les deux traditions coexistent."
@@ -2018,10 +2018,10 @@
   "en": {
    "q": "Which legal system does Cameroon apply?",
    "options": [
-    "A mixed system of civil law and common law",
-    "Civil law only",
-    "Common law only",
-    "Customary law only"
+    "A mix of civil law and common law",
+    "Only civil law, of French origin",
+    "Only common law, of British origin",
+    "Only traditional customary law"
    ],
    "answer": 0,
    "explication": "As a legacy of French and British administration, both traditions coexist."
@@ -2048,7 +2048,7 @@
    "q": "CEMAC succeeded:",
    "options": [
     "ECOWAS",
-    "The OAU",
+    "OAU",
     "ECCAS",
     "UDEAC"
    ],
@@ -2096,7 +2096,7 @@
    "options": [
     "Unité – Progrès – Justice",
     "Paix – Travail – Patrie",
-    "Union – Discipline – Travail",
+    "Union – Travail",
     "Liberté – Égalité – Fraternité"
    ],
    "answer": 1,
@@ -2107,7 +2107,7 @@
    "options": [
     "Unity – Progress – Justice",
     "Peace – Work – Fatherland",
-    "Union – Discipline – Labour",
+    "Union – Work",
     "Liberty – Equality – Fraternity"
    ],
    "answer": 1,
@@ -2124,9 +2124,9 @@
    "q": "Quelle est la date de la fête nationale du Cameroun ?",
    "options": [
     "20 mai",
+    "5 mai",
     "11 février",
-    "1er octobre",
-    "15 août"
+    "1er octobre"
    ],
    "answer": 0,
    "explication": "La fête nationale est célébrée le 20 mai."
@@ -2135,9 +2135,9 @@
    "q": "On what date is Cameroon's National Day celebrated?",
    "options": [
     "20 May",
+    "5 May",
     "11 February",
-    "1 October",
-    "15 August"
+    "1 October"
    ],
    "answer": 0,
    "explication": "National Day is celebrated on 20 May."
@@ -2240,7 +2240,7 @@
    "q": "Quel est le titre de l'hymne national du Cameroun ?",
    "options": [
     "Hymne à la liberté",
-    "La Camerounaise",
+    "Chant de l'indépendance",
     "Chant de ralliement",
     "Chant de l'unité"
    ],
@@ -2251,8 +2251,8 @@
    "q": "What is the title of Cameroon's national anthem?",
    "options": [
     "Hymn to Freedom",
-    "The Cameroonian",
-    "Rallying Song (Chant de ralliement)",
+    "Song of Independence",
+    "The Rallying Song",
     "Song of Unity"
    ],
    "answer": 2,
@@ -2268,7 +2268,7 @@
   "fr": {
    "q": "Que doit faire un conducteur face à un feu tricolore rouge ?",
    "options": [
-    "S'arrêter",
+    "S'arrêter au feu",
     "Ralentir seulement",
     "Klaxonner et passer",
     "Accélérer"
@@ -2279,7 +2279,7 @@
   "en": {
    "q": "What must a driver do at a red traffic light?",
    "options": [
-    "Stop",
+    "Stop at the light",
     "Only slow down",
     "Honk and go through",
     "Speed up"
@@ -2300,7 +2300,7 @@
     "S'exprimer librement",
     "Respecter les lois",
     "Recevoir une éducation",
-    "Circuler librement"
+    "Se déplacer"
    ],
    "answer": 1,
    "explication": "Respecter les lois est un devoir ; les autres propositions sont des droits."
@@ -2311,7 +2311,7 @@
     "Expressing oneself freely",
     "Obeying the laws",
     "Receiving an education",
-    "Moving about freely"
+    "Moving freely"
    ],
    "answer": 1,
    "explication": "Obeying the laws is a duty; the other options are rights."
@@ -2326,10 +2326,10 @@
   "fr": {
    "q": "Quel document sert principalement à prouver l'identité d'un citoyen ?",
    "options": [
-    "La carte grise",
+    "La carte grise du véhicule",
     "Le carnet de santé",
-    "Le relevé de notes",
-    "La carte nationale d'identité"
+    "Le relevé de notes d'examen",
+    "La carte d'identité"
    ],
    "answer": 3,
    "explication": "La carte nationale d'identité atteste l'identité et la nationalité de son titulaire."
@@ -2385,9 +2385,9 @@
    "q": "Que désigne la corruption dans la fonction publique ?",
    "options": [
     "Le respect strict de la hiérarchie",
-    "Le refus d'exécuter un ordre illégal",
-    "L'abus d'une fonction pour obtenir un avantage indu",
-    "Le fait de travailler en équipe"
+    "Le refus d'exécuter un ordre manifestement illégal",
+    "L'abus de fonction pour obtenir un avantage indu",
+    "Le fait de travailler en équipe avec ses collègues"
    ],
    "answer": 2,
    "explication": "La corruption consiste à détourner sa fonction pour un gain personnel ou indu."
@@ -2396,9 +2396,9 @@
    "q": "What does corruption in the public service mean?",
    "options": [
     "Strict respect of the hierarchy",
-    "Refusing to carry out an illegal order",
+    "Refusing to carry out a manifestly illegal order",
     "Abusing a position to obtain an undue advantage",
-    "Working as a team"
+    "Working as a team with one's colleagues"
    ],
    "answer": 2,
    "explication": "Corruption means misusing one's position for personal or undue gain."
@@ -2414,9 +2414,9 @@
    "q": "Un agent public intègre est celui qui…",
    "options": [
     "n'agit que sous surveillance",
-    "agit honnêtement même sans contrôle",
-    "accepte de petits cadeaux",
-    "favorise ses proches"
+    "reste honnête même sans contrôle",
+    "accepte des cadeaux de ses usagers",
+    "favorise ses proches et amis"
    ],
    "answer": 1,
    "explication": "L'intégrité est l'honnêteté constante, indépendamment du contrôle."
@@ -2425,9 +2425,9 @@
    "q": "An agent of integrity in the public service is one who…",
    "options": [
     "acts only when watched",
-    "acts honestly even when unsupervised",
-    "accepts small gifts",
-    "favours relatives"
+    "stays honest even unsupervised",
+    "accepts gifts from service users",
+    "favours relatives and friends"
    ],
    "answer": 1,
    "explication": "Integrity is consistent honesty, whether or not anyone is watching."
@@ -2445,7 +2445,7 @@
     "tous sont traités sans discrimination",
     "seuls les riches sont servis en priorité",
     "les agents choisissent leurs usagers",
-    "le service est réservé aux fonctionnaires"
+    "le service est réservé uniquement aux fonctionnaires"
    ],
    "answer": 0,
    "explication": "Le service public doit traiter tous les usagers de la même manière, sans discrimination."
@@ -2456,7 +2456,7 @@
     "everyone is treated without discrimination",
     "only the rich are served first",
     "agents choose their users",
-    "the service is reserved for civil servants"
+    "the service is reserved for civil servants only"
    ],
    "answer": 0,
    "explication": "The public service must treat all users alike, without discrimination."
@@ -2500,10 +2500,10 @@
   "fr": {
    "q": "Quel est le rôle principal de la ceinture de sécurité ?",
    "options": [
-    "Augmenter la vitesse",
-    "Réduire la consommation",
+    "Augmenter la vitesse du véhicule",
+    "Réduire la consommation de carburant",
     "Retenir l'occupant en cas de choc",
-    "Remplacer le casque"
+    "Remplacer le casque du motard"
    ],
    "answer": 2,
    "explication": "La ceinture retient l'occupant et limite les blessures lors d'un choc ou d'un freinage brutal."
@@ -2511,10 +2511,10 @@
   "en": {
    "q": "What is the main role of the seat belt?",
    "options": [
-    "To increase speed",
-    "To reduce fuel use",
+    "To increase the vehicle's speed",
+    "To lower the engine's fuel consumption",
     "To restrain the occupant in a crash",
-    "To replace the helmet"
+    "To replace the motorcyclist's helmet"
    ],
    "answer": 2,
    "explication": "The belt restrains the occupant and limits injuries in a crash or hard braking."
@@ -2540,8 +2540,8 @@
   "en": {
    "q": "A pedestrian is crossing on a marked crossing. The driver must…",
    "options": [
-    "honk to hurry them",
-    "overtake quickly",
+    "honk to hurry the pedestrian",
+    "overtake the pedestrian",
     "speed up",
     "give way to the pedestrian"
    ],
@@ -2558,9 +2558,9 @@
   "fr": {
    "q": "Quels sont les trois pouvoirs dans la séparation des pouvoirs ?",
    "options": [
-    "Militaire, religieux, économique",
+    "Militaire, ecclésiastique, économique",
     "Exécutif, fiscal, médiatique",
-    "Législatif, syndical, policier",
+    "Législatif, syndical, administratif",
     "Exécutif, législatif, judiciaire"
    ],
    "answer": 3,
@@ -2569,9 +2569,9 @@
   "en": {
    "q": "What are the three powers in the separation of powers?",
    "options": [
-    "Military, religious, economic",
+    "Military, ecclesiastical, economic",
     "Executive, fiscal, media",
-    "Legislative, trade-union, police",
+    "Legislative, trade-union, administrative",
     "Executive, legislative, judicial"
    ],
    "answer": 3,
@@ -2587,7 +2587,7 @@
   "fr": {
    "q": "Un droit « inaliénable » est un droit qui…",
    "options": [
-    "peut être vendu",
+    "peut être vendu ou échangé",
     "est réservé à certains",
     "n'existe qu'en temps de paix",
     "ne peut être retiré ni cédé"
@@ -2598,10 +2598,10 @@
   "en": {
    "q": "An \"inalienable\" right is a right that…",
    "options": [
-    "can be sold",
-    "is reserved for some people",
-    "exists only in peacetime",
-    "cannot be taken away or given up"
+    "can be sold or traded freely",
+    "is reserved for some citizens only",
+    "exists only in time of peace",
+    "cannot be removed or given up"
    ],
    "answer": 3,
    "explication": "An inalienable right belongs to the person and can neither be transferred nor taken away."
@@ -2616,10 +2616,10 @@
   "fr": {
    "q": "Qu'est-ce qu'un conflit d'intérêts pour un agent public ?",
    "options": [
-    "Une situation où un intérêt personnel peut influencer l'exercice de sa fonction",
-    "Un désaccord avec un collègue",
-    "Une grève du personnel",
-    "Un recours hiérarchique"
+    "Un intérêt privé qui peut influencer l'exercice de sa fonction",
+    "Un désaccord durable avec un collègue au sujet d'un dossier",
+    "Un arrêt de travail collectif décidé par l'ensemble du personnel du service",
+    "Un recours hiérarchique formé auprès de son supérieur"
    ],
    "answer": 0,
    "explication": "Il y a conflit d'intérêts quand un intérêt privé peut compromettre l'impartialité de l'agent."
@@ -2627,10 +2627,10 @@
   "en": {
    "q": "What is a conflict of interest for a public agent?",
    "options": [
-    "A situation where a personal interest may influence the exercise of the duty",
-    "A disagreement with a colleague",
-    "A staff strike",
-    "A hierarchical appeal"
+    "A private interest that may influence the performance of one's duty",
+    "A lasting disagreement with a colleague over a case",
+    "A collective work stoppage decided by all the staff of the department",
+    "A hierarchical appeal made to one's superior"
    ],
    "answer": 0,
    "explication": "A conflict of interest exists when a private interest may compromise the agent's impartiality."
@@ -2645,10 +2645,10 @@
   "fr": {
    "q": "Que signifie le principe de présomption d'innocence ?",
    "options": [
-    "L'accusé doit prouver son innocence",
-    "Toute personne est considérée innocente tant que sa culpabilité n'est pas établie",
-    "Un suspect est coupable jusqu'au jugement",
-    "Seuls les mineurs sont présumés innocents"
+    "L'accusé doit prouver lui-même son innocence devant le tribunal",
+    "Toute personne est innocente tant que sa culpabilité n'est pas prouvée",
+    "Un suspect est considéré comme coupable jusqu'à son jugement définitif",
+    "Seuls les mineurs et les personnes âgées sont présumés innocents"
    ],
    "answer": 1,
    "explication": "C'est à l'accusation de prouver la culpabilité ; jusque-là, la personne est présumée innocente."
@@ -2656,10 +2656,10 @@
   "en": {
    "q": "What does the principle of presumption of innocence mean?",
    "options": [
-    "The accused must prove their innocence",
-    "Everyone is considered innocent until proven guilty",
-    "A suspect is guilty until judged",
-    "Only minors are presumed innocent"
+    "The accused must prove their own innocence in court",
+    "Everyone is innocent until their guilt is proven",
+    "A suspect is considered guilty until a final judgment",
+    "Only minors and elderly people are presumed innocent"
    ],
    "answer": 1,
    "explication": "The prosecution must prove guilt; until then the person is presumed innocent."
@@ -2674,10 +2674,10 @@
   "fr": {
    "q": "Qu'est-ce qu'un lanceur d'alerte ?",
    "options": [
-    "Une personne qui signale de bonne foi des actes illégaux ou dangereux",
-    "Un agent qui reçoit des pots-de-vin",
-    "Un journaliste payé par l'État",
-    "Un policier de la circulation"
+    "Quelqu'un qui signale de bonne foi des actes illégaux",
+    "Un agent qui reçoit des pots-de-vin pour fermer les yeux",
+    "Un journaliste rémunéré par l'État pour relayer sa communication",
+    "Un policier chargé de la circulation routière"
    ],
    "answer": 0,
    "explication": "Le lanceur d'alerte révèle de bonne foi des faits illicites ou menaçant l'intérêt général."
@@ -2685,10 +2685,10 @@
   "en": {
    "q": "What is a whistleblower?",
    "options": [
-    "A person who reports in good faith illegal or harmful acts",
-    "An agent who takes bribes",
-    "A journalist paid by the state",
-    "A traffic officer"
+    "Someone who reports illegal acts in good faith",
+    "An agent who takes bribes to look the other way",
+    "A journalist paid by the state to relay its communication",
+    "A traffic officer on road duty"
    ],
    "answer": 0,
    "explication": "A whistleblower discloses in good faith unlawful acts or threats to the public interest."
@@ -2732,9 +2732,9 @@
   "fr": {
    "q": "Quel événement la fête nationale du 20 mai commémore-t-elle ?",
    "options": [
-    "La proclamation de l'indépendance en 1960",
-    "La réunification de 1961",
-    "L'adoption de l'hymne national",
+    "La proclamation de l'indépendance du Cameroun en 1960",
+    "La réunification des deux Cameroun en 1961",
+    "L'adoption du drapeau et de l'hymne nationaux",
     "Le référendum de 1972 instaurant l'État unitaire"
    ],
    "answer": 3,
@@ -2743,9 +2743,9 @@
   "en": {
    "q": "Which event does the National Day of 20 May commemorate?",
    "options": [
-    "The proclamation of independence in 1960",
-    "The 1961 reunification",
-    "The adoption of the national anthem",
+    "The proclamation of Cameroon's independence in 1960",
+    "The reunification of the two Cameroons in 1961",
+    "The adoption of the national flag and anthem",
     "The 1972 referendum establishing the unitary state"
    ],
    "answer": 3,
@@ -2761,9 +2761,9 @@
   "fr": {
    "q": "Sous l'égide de quelle organisation la Charte africaine des droits de l'homme et des peuples a-t-elle été adoptée (1981) ?",
    "options": [
-    "La Communauté européenne",
-    "La Ligue arabe",
-    "Le Commonwealth",
+    "La Communauté économique européenne",
+    "La Ligue des États arabes",
+    "Le Secrétariat du Commonwealth à Londres",
     "L'Organisation de l'unité africaine"
    ],
    "answer": 3,
@@ -2772,9 +2772,9 @@
   "en": {
    "q": "Under which organisation was the African Charter on Human and Peoples' Rights adopted (1981)?",
    "options": [
-    "The European Community",
-    "The Arab League",
-    "The Commonwealth",
+    "The European Economic Community",
+    "The League of Arab States",
+    "The Commonwealth Secretariat in London",
     "The Organisation of African Unity"
    ],
    "answer": 3,
@@ -2821,7 +2821,7 @@
    "options": [
     "Le dioxyde de carbone",
     "L'hélium",
-    "L'oxygène",
+    "L'oxygène (O₂)",
     "L'azote seul"
    ],
    "answer": 2,
@@ -2832,8 +2832,8 @@
    "options": [
     "Carbon dioxide",
     "Helium",
-    "Oxygen",
-    "Nitrogen alone"
+    "Oxygen (O₂)",
+    "Nitrogen only"
    ],
    "answer": 2,
    "explication": "Cells use oxygen to produce energy."
@@ -2906,10 +2906,10 @@
   "fr": {
    "q": "Quel gaz les plantes absorbent-elles lors de la photosynthèse ?",
    "options": [
-    "L'oxygène",
+    "L'oxygène de l'air",
     "Le dioxyde de carbone",
-    "Le méthane",
-    "L'ammoniac"
+    "Le monoxyde de carbone",
+    "L'hydrogène gazeux"
    ],
    "answer": 1,
    "explication": "Les plantes captent le CO₂ et rejettent de l'oxygène."
@@ -2917,10 +2917,10 @@
   "en": {
    "q": "Which gas do plants absorb during photosynthesis?",
    "options": [
-    "Oxygen",
+    "Atmospheric oxygen",
     "Carbon dioxide",
-    "Methane",
-    "Ammonia"
+    "Carbon monoxide",
+    "Hydrogen gas"
    ],
    "answer": 1,
    "explication": "Plants take in CO₂ and release oxygen."
@@ -2938,7 +2938,7 @@
     "Partager ses ustensiles",
     "Se laver les mains au savon",
     "Boire de l'eau non traitée",
-    "Se toucher le visage"
+    "Se toucher souvent le visage"
    ],
    "answer": 1,
    "explication": "Le lavage des mains au savon élimine de nombreux microbes."
@@ -2949,7 +2949,7 @@
     "Sharing utensils",
     "Washing hands with soap",
     "Drinking untreated water",
-    "Touching the face"
+    "Frequently touching the face"
    ],
    "answer": 1,
    "explication": "Washing hands with soap removes many germs."
@@ -2993,7 +2993,7 @@
   "fr": {
    "q": "Quelle planète est la plus proche du Soleil ?",
    "options": [
-    "Vénus",
+    "La Terre",
     "Mercure",
     "Mars",
     "Jupiter"
@@ -3004,7 +3004,7 @@
   "en": {
    "q": "Which planet is closest to the Sun?",
    "options": [
-    "Venus",
+    "The Earth",
     "Mercury",
     "Mars",
     "Jupiter"
@@ -3022,9 +3022,9 @@
   "fr": {
    "q": "Le manque de vitamine C provoque une maladie appelée…",
    "options": [
-    "le rachitisme",
+    "le goitre",
     "le béribéri",
-    "l'anémie falciforme",
+    "le kwashiorkor",
     "le scorbut"
    ],
    "answer": 3,
@@ -3033,9 +3033,9 @@
   "en": {
    "q": "A lack of vitamin C causes a disease called…",
    "options": [
-    "rickets",
+    "goitre",
     "beriberi",
-    "sickle-cell anaemia",
+    "kwashiorkor",
     "scurvy"
    ],
    "answer": 3,
@@ -3053,7 +3053,7 @@
    "options": [
     "Alexander Fleming",
     "Louis Pasteur",
-    "Robert Koch",
+    "Christiaan Eijkman",
     "Edward Jenner"
    ],
    "answer": 0,
@@ -3064,7 +3064,7 @@
    "options": [
     "Alexander Fleming",
     "Louis Pasteur",
-    "Robert Koch",
+    "Christiaan Eijkman",
     "Edward Jenner"
    ],
    "answer": 0,
@@ -3080,10 +3080,10 @@
   "fr": {
    "q": "Que faire en premier face à une plaie qui saigne abondamment ?",
    "options": [
-    "Appliquer de la terre",
-    "Laver à l'alcool sans comprimer",
+    "Appliquer de la terre sur la plaie",
+    "Rincer à l'alcool sans comprimer la plaie",
     "Comprimer la plaie avec un linge propre",
-    "Attendre que cela s'arrête"
+    "Attendre que le saignement s'arrête de lui-même"
    ],
    "answer": 2,
    "explication": "La compression directe est le geste de premiers secours pour arrêter l'hémorragie."
@@ -3091,10 +3091,10 @@
   "en": {
    "q": "What should you do first for a heavily bleeding wound?",
    "options": [
-    "Apply soil",
-    "Rinse with alcohol without pressing",
+    "Apply soil to the wound at once",
+    "Rinse with alcohol without pressing on the wound",
     "Press on the wound with a clean cloth",
-    "Wait for it to stop"
+    "Wait for the bleeding to stop by itself"
    ],
    "answer": 2,
    "explication": "Direct pressure is the first-aid action to stop the bleeding."
@@ -3109,10 +3109,10 @@
   "fr": {
    "q": "Quel est le symbole chimique du sodium ?",
    "options": [
-    "So",
+    "Sod",
     "S",
     "Na",
-    "Sd"
+    "So"
    ],
    "answer": 2,
    "explication": "Le symbole du sodium est Na (du latin natrium)."
@@ -3120,10 +3120,10 @@
   "en": {
    "q": "What is the chemical symbol of sodium?",
    "options": [
-    "So",
+    "Sod",
     "S",
     "Na",
-    "Sd"
+    "So"
    ],
    "answer": 2,
    "explication": "The symbol for sodium is Na (from Latin natrium)."
@@ -3167,10 +3167,10 @@
   "fr": {
    "q": "Quel est le rôle de la couche d'ozone ?",
    "options": [
-    "Filtrer une partie des rayons ultraviolets",
-    "Produire l'oxygène",
-    "Retenir la pluie",
-    "Refroidir les océans"
+    "Filtrer une partie des rayons UV",
+    "Produire l'oxygène que nous respirons",
+    "Retenir la pluie dans l'atmosphère",
+    "Refroidir la surface des océans"
    ],
    "answer": 0,
    "explication": "La couche d'ozone absorbe une grande partie des UV nocifs du Soleil."
@@ -3179,9 +3179,9 @@
    "q": "What is the role of the ozone layer?",
    "options": [
     "To filter part of the ultraviolet rays",
-    "To produce oxygen",
-    "To hold back rain",
-    "To cool the oceans"
+    "To produce the oxygen that we breathe every day",
+    "To hold back rain in the atmosphere",
+    "To cool the surface of the oceans"
    ],
    "answer": 0,
    "explication": "The ozone layer absorbs much of the Sun's harmful UV."
@@ -3196,9 +3196,9 @@
   "fr": {
    "q": "Dans le sigle « USB », que signifie le « B » ?",
    "options": [
+    "Bit",
     "Byte",
     "Base",
-    "Batterie",
     "Bus"
    ],
    "answer": 3,
@@ -3207,9 +3207,9 @@
   "en": {
    "q": "In the acronym \"USB\", what does the \"B\" stand for?",
    "options": [
+    "Bit",
     "Byte",
     "Base",
-    "Battery",
     "Bus"
    ],
    "answer": 3,
@@ -3228,7 +3228,7 @@
     "Les poumons",
     "Le foie",
     "Les reins",
-    "La rate"
+    "La rate et le pancréas"
    ],
    "answer": 2,
    "explication": "Les reins filtrent le sang et forment l'urine."
@@ -3239,7 +3239,7 @@
     "The lungs",
     "The liver",
     "The kidneys",
-    "The spleen"
+    "The spleen and pancreas"
    ],
    "answer": 2,
    "explication": "The kidneys filter the blood and form urine."
@@ -3254,10 +3254,10 @@
   "fr": {
    "q": "Parmi ces gaz de l'air, lequel est un gaz à effet de serre ?",
    "options": [
-    "L'azote",
+    "L'azote de l'atmosphère",
     "Le dioxyde de carbone",
     "L'argon",
-    "Le dioxygène"
+    "Le dioxygène (O₂)"
    ],
    "answer": 1,
    "explication": "Le CO₂ retient la chaleur dans l'atmosphère ; N₂, O₂ et Ar ne le font pratiquement pas."
@@ -3265,7 +3265,7 @@
   "en": {
    "q": "Among these gases in the air, which is a greenhouse gas?",
    "options": [
-    "Nitrogen",
+    "Atmospheric nitrogen",
     "Carbon dioxide",
     "Argon",
     "Dioxygen (O₂)"
@@ -3284,9 +3284,9 @@
    "q": "Quel insecte transmet le paludisme ?",
    "options": [
     "La mouche tsé-tsé",
-    "La puce",
+    "La puce du rat",
     "L'anophèle femelle",
-    "Le criquet"
+    "Le criquet pèlerin du Sahel"
    ],
    "answer": 2,
    "explication": "Le paludisme est transmis par la piqûre de l'anophèle femelle infecté."
@@ -3294,10 +3294,10 @@
   "en": {
    "q": "Which insect transmits malaria?",
    "options": [
-    "The tsetse fly",
-    "The flea",
-    "The female Anopheles mosquito",
-    "The locust"
+    "The tsetse fly of Africa",
+    "The rat flea",
+    "The Anopheles mosquito",
+    "The desert locust"
    ],
    "answer": 2,
    "explication": "Malaria is transmitted by the bite of an infected female Anopheles mosquito."
@@ -3341,10 +3341,10 @@
   "fr": {
    "q": "Quel est le rôle de la chlorophylle ?",
    "options": [
-    "Absorber l'eau du sol",
-    "Capter l'énergie lumineuse pour la photosynthèse",
-    "Protéger contre les insectes",
-    "Stocker l'amidon"
+    "Absorber l'eau et les sels du sol",
+    "Capter la lumière pour la photosynthèse",
+    "Protéger la plante contre les insectes et les maladies",
+    "Stocker l'amidon de la plante"
    ],
    "answer": 1,
    "explication": "La chlorophylle absorbe la lumière nécessaire à la photosynthèse."
@@ -3352,10 +3352,10 @@
   "en": {
    "q": "What is the role of chlorophyll?",
    "options": [
-    "Absorbing water from the soil",
-    "Capturing light energy for photosynthesis",
-    "Protecting against insects",
-    "Storing starch"
+    "Absorbing water and salts from the soil",
+    "Capturing light for photosynthesis",
+    "Protecting the plant against insects and disease",
+    "Storing starch in the plant"
    ],
    "answer": 1,
    "explication": "Chlorophyll absorbs the light needed for photosynthesis."
@@ -3373,7 +3373,7 @@
     "la médecine et la littérature",
     "la paix et la physique",
     "l'économie et la chimie",
-    "deux disciplines scientifiques différentes (physique et chimie)"
+    "la physique et la chimie"
    ],
    "answer": 3,
    "explication": "Elle a reçu le Nobel de physique (1903) puis de chimie (1911)."
@@ -3384,7 +3384,7 @@
     "medicine and literature",
     "peace and physics",
     "economics and chemistry",
-    "two different scientific fields (physics and chemistry)"
+    "physics and chemistry"
    ],
    "answer": 3,
    "explication": "She received the Nobel Prize in Physics (1903) and in Chemistry (1911)."
@@ -3428,8 +3428,8 @@
   "fr": {
    "q": "Quel détroit sépare l'Afrique de l'Europe ?",
    "options": [
-    "Le détroit de Béring",
-    "Le détroit d'Ormuz",
+    "Le détroit des Dardanelles",
+    "Le détroit du Bosphore",
     "Le détroit de Gibraltar",
     "Le détroit de Malacca"
    ],
@@ -3439,8 +3439,8 @@
   "en": {
    "q": "Which strait separates Africa from Europe?",
    "options": [
-    "The Bering Strait",
-    "The Strait of Hormuz",
+    "The Strait of the Dardanelles",
+    "The Bosphorus Strait",
     "The Strait of Gibraltar",
     "The Strait of Malacca"
    ],
@@ -3458,7 +3458,7 @@
    "q": "Dans quel milieu le son ne peut-il pas se propager ?",
    "options": [
     "Le vide",
-    "L'eau",
+    "L'eau de mer",
     "L'acier",
     "L'air"
    ],
@@ -3469,7 +3469,7 @@
    "q": "In which medium can sound not propagate?",
    "options": [
     "A vacuum",
-    "Water",
+    "Sea water",
     "Steel",
     "Air"
    ],
@@ -4588,10 +4588,10 @@
   "fr": {
    "q": "Un prix augmente de 20 %, puis le nouveau prix baisse de 20 %. Que devient le prix final par rapport au prix de départ ?",
    "options": [
-    "Il ne change pas",
-    "Il augmente de 4 %",
-    "Il baisse de 4 %",
-    "Il baisse de 2 %"
+    "Il ne change pas du tout",
+    "Il augmente de 4 % au total",
+    "Il baisse de 4 % au total",
+    "Il baisse de 2 % seulement au total"
    ],
    "answer": 2,
    "explication": "1,2 × 0,8 = 0,96 : le prix final vaut 96 % du prix initial, soit une baisse de 4 %."
@@ -4599,10 +4599,10 @@
   "en": {
    "q": "A price rises by 20%, then the new price falls by 20%. How does the final price compare with the starting price?",
    "options": [
-    "It is unchanged",
-    "It rises by 4%",
-    "It falls by 4%",
-    "It falls by 2%"
+    "It does not change at all",
+    "It rises by 4% in total",
+    "It falls by 4% in total",
+    "It falls by only 2% in total"
    ],
    "answer": 2,
    "explication": "1.2 × 0.8 = 0.96: the final price is 96% of the original, a 4% fall."
@@ -4792,8 +4792,8 @@
    "q": "La longueur d'un rectangle augmente de 25 % et sa largeur diminue de 20 %. Que devient son aire ?",
    "options": [
     "Elle augmente de 5 %",
-    "Elle ne change pas",
-    "Elle diminue de 5 %",
+    "Elle reste inchangée",
+    "Elle diminue d'environ 5 %",
     "Elle augmente de 1 %"
    ],
    "answer": 1,
@@ -4803,8 +4803,8 @@
    "q": "The length of a rectangle increases by 25% and its width decreases by 20%. What happens to its area?",
    "options": [
     "It increases by 5%",
-    "It stays the same",
-    "It decreases by 5%",
+    "It stays unchanged",
+    "It decreases by about 5%",
     "It increases by 1%"
    ],
    "answer": 1,
@@ -4966,7 +4966,7 @@
    "q": "Choisissez la phrase correcte.",
    "options": [
     "Ils sont allés au marché hier.",
-    "Ils ont allé au marché hier.",
+    "Ils ont allé au grand marché hier.",
     "Ils est allés au marché hier.",
     "Ils sont allé au marché hier."
    ],
@@ -5110,7 +5110,7 @@
   "fr": {
    "q": "Complétez : « Les fleurs que j'ai ___ sont magnifiques. »",
    "options": [
-    "cueilli",
+    "cueillions",
     "cueillis",
     "cueillie",
     "cueillies"
@@ -5142,7 +5142,7 @@
     "il prit",
     "il prend",
     "il prenda",
-    "il prenait"
+    "il pris"
    ],
    "answer": 0,
    "explication": "Prendre au passé simple : je pris, tu pris, il prit."
@@ -5180,7 +5180,7 @@
    "q": "Which word is a synonym of \"reluctant\"?",
    "options": [
     "unwilling",
-    "eager",
+    "enthusiastic",
     "careless",
     "hasty"
    ],
@@ -5197,7 +5197,7 @@
   "fr": {
    "q": "Dire « Quelle belle journée ! » sous une pluie battante est une…",
    "options": [
-    "litote",
+    "personnification",
     "métonymie",
     "antiphrase",
     "gradation"
@@ -5284,9 +5284,9 @@
   "fr": {
    "q": "Quel mot est un synonyme de « perspicace » ?",
    "options": [
-    "naïf",
+    "influençable",
     "borné",
-    "distrait",
+    "indifférent",
     "clairvoyant"
    ],
    "answer": 3,
@@ -5325,9 +5325,9 @@
    "q": "Complete: The news ___ shocking.",
    "options": [
     "are",
-    "were",
+    "be",
     "is",
-    "have been"
+    "am"
    ],
    "answer": 2,
    "explication": "News is an uncountable noun taking a singular verb; only \"is\" fits among the options."
@@ -5429,7 +5429,7 @@
   "fr": {
    "q": "Complétez : « Si j'avais su, je ne ___ pas venu. »",
    "options": [
-    "suis",
+    "serions",
     "serais",
     "serai",
     "fusse"
@@ -5440,10 +5440,10 @@
   "en": {
    "q": "What does \"ubiquitous\" mean?",
    "options": [
-    "very rare",
-    "found everywhere",
-    "extremely old",
-    "harmful"
+    "found only in a few places",
+    "present or found everywhere",
+    "extremely old and outdated",
+    "harmful or dangerous to health"
    ],
    "answer": 1,
    "explication": "Ubiquitous describes something that seems present everywhere."
@@ -5471,7 +5471,7 @@
    "options": [
     "will have",
     "would have",
-    "would",
+    "would have been",
     "had"
    ],
    "answer": 1,
@@ -5730,7 +5730,7 @@
   "en": {
    "q": "Complétez : « Il ___ du pain. »",
    "options": [
-    "manges",
+    "mangé",
     "mangeons",
     "mangent",
     "mange"
@@ -5750,8 +5750,8 @@
    "options": [
     "watch",
     "was watching",
-    "am watching",
-    "have watch"
+    "will be watching",
+    "have been watching"
    ],
    "answer": 1,
    "explication": "An action in progress in the past, interrupted by another, uses the past continuous."
@@ -5778,7 +5778,7 @@
    "q": "What does the English word \"library\" mean in French?",
    "options": [
     "librairie",
-    "livre",
+    "bibliographie",
     "lecture",
     "bibliothèque"
    ],
@@ -5818,8 +5818,8 @@
    "q": "Complétez : « Hier, nous ___ au cinéma. »",
    "options": [
     "avons allé",
-    "irons",
-    "allons",
+    "sommes allé",
+    "serions allés",
     "sommes allés"
    ],
    "answer": 3,
@@ -5864,7 +5864,7 @@
   "fr": {
    "q": "Complete: He is ___ than his brother.",
    "options": [
-    "tallest",
+    "tall",
     "more tall",
     "taller",
     "most tall"
@@ -5933,7 +5933,7 @@
   "en": {
    "q": "Complétez : « Les enfants ___ dans le jardin. » (jouer)",
    "options": [
-    "jouons",
+    "jouerons",
     "jouent",
     "jouez",
     "joue"
@@ -5964,7 +5964,7 @@
    "options": [
     "que",
     "où",
-    "qui",
+    "ou",
     "dont"
    ],
    "answer": 1,
@@ -5991,7 +5991,7 @@
   "en": {
    "q": "Complétez : « Je donne le livre à mon frère. Je ___ donne le livre. »",
    "options": [
-    "le",
+    "leur",
     "y",
     "lui",
     "en"
@@ -6010,7 +6010,7 @@
    "q": "Choose the correct sentence.",
    "options": [
     "She asked me where I lived.",
-    "She asked me where did I live.",
+    "She asked where did I live.",
     "She asked me where I did live.",
     "She asked me where do I live."
    ],
@@ -6049,10 +6049,10 @@
   "en": {
    "q": "Lisez : « Marie habite à Douala. Elle travaille dans une banque et prend le bus chaque matin. » Où travaille Marie ?",
    "options": [
-    "À l'école",
-    "À l'hôpital",
+    "Dans une école",
+    "Dans un grand hôpital",
     "Dans une banque",
-    "Au marché"
+    "Dans un marché"
    ],
    "answer": 2,
    "explication": "Le texte dit : « Elle travaille dans une banque »."
@@ -6079,7 +6079,7 @@
    "q": "Quel groupe nominal est féminin ?",
    "options": [
     "une dent",
-    "un problème",
+    "un lit",
     "un silence",
     "un voyage"
    ],
@@ -6097,9 +6097,9 @@
    "q": "Complete: By next year, she ___ here for ten years.",
    "options": [
     "will have worked",
-    "will work",
+    "would have worked",
     "has worked",
-    "is working"
+    "will work"
    ],
    "answer": 0,
    "explication": "The future perfect expresses duration up to a future point."
@@ -6127,7 +6127,7 @@
    "options": [
     "have",
     "had",
-    "will have",
+    "has",
     "would have"
    ],
    "answer": 1,
@@ -6136,7 +6136,7 @@
   "en": {
    "q": "Complétez : « Les lettres que j'ai ___ sont arrivées. »",
    "options": [
-    "écrit",
+    "écrivant",
     "écrits",
     "écrite",
     "écrites"
@@ -6166,7 +6166,7 @@
    "q": "Complétez : « Il est parti sans que nous le ___. »",
    "options": [
     "savons",
-    "saurons",
+    "saurions",
     "sachions",
     "sachons"
    ],
@@ -6194,9 +6194,9 @@
   "en": {
    "q": "Dans « Il a assisté à la réunion », que signifie « assister à » ?",
    "options": [
-    "aider",
+    "venir en aide à",
     "être présent à",
-    "attendre",
+    "attendre quelqu'un",
     "organiser"
    ],
    "answer": 1,
@@ -6212,10 +6212,10 @@
   "fr": {
    "q": "In \"She attended the meeting\", \"attended\" means…",
    "options": [
-    "She went to it",
+    "She was present at it",
     "She waited for it",
-    "She cancelled it",
-    "She postponed it"
+    "She cancelled it in the end",
+    "She postponed it to later"
    ],
    "answer": 0,
    "explication": "\"Attend\" is a false friend: it means to be present at, not to wait."

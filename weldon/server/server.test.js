@@ -415,3 +415,27 @@ test("séries et concours blanc pour les abonnés, signalement d'une question", 
   assert.equal((await call("POST", "/api/report", { epreuve: "quiz:maths-01", message: "La réponse me semble fausse" }, admin)).status, 200);
   assert.equal((await call("POST", "/api/report", { epreuve: "quiz:inconnue-99", message: "La réponse me semble fausse" }, admin)).status, 404);
 });
+
+test("plan à rebours : création, aperçu gratuit d'une semaine, plan complet pour les abonnés", async () => {
+  const t = await register("planneur@exemple.cm", "Awa Plan");
+  await call("POST", "/api/me", { lang: "fr" }, t);
+  assert.equal((await json(await call("GET", "/api/plan", undefined, t))).plan, null);
+  const inDays = (n) => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
+  assert.equal((await call("POST", "/api/plan", { concours: "emia", date: inDays(100), hours: 4 }, t)).status, 400); // heures inconnues
+  assert.equal((await call("POST", "/api/plan", { concours: "emia", date: inDays(-3), hours: 5 }, t)).status, 400); // date passée
+  assert.equal((await call("POST", "/api/plan", { concours: "emia", date: inDays(900), hours: 5 }, t)).status, 400); // trop loin
+  assert.equal((await call("POST", "/api/plan", { concours: "nexiste-pas", date: inDays(100), hours: 5 }, t)).status, 404);
+  const made = await json(await call("POST", "/api/plan", { concours: "emia", date: inDays(100), hours: 5 }, t));
+  assert.equal(made.status, 200);
+  assert.equal(made.built.weeks.length, 15);
+  assert.equal(made.built.mode, "normal");
+  assert.ok(made.built.weeks[0].sessions.length >= 10);
+  assert.ok(made.built.weeks.slice(1).every((w) => w.locked && w.sessions.length === 0)); // gratuit : première semaine seulement
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  await call("POST", "/api/plan", { concours: "emia", date: inDays(100), hours: 8 }, admin);
+  const full = await json(await call("GET", "/api/plan", undefined, admin));
+  assert.ok(full.built.weeks.every((w) => !w.locked && w.sessions.length > 0));
+  assert.ok(full.built.weeks.flatMap((w) => w.sessions).some((s) => s.kind === "quiz_theme"));
+  assert.equal((await json(await call("POST", "/api/plan", { clear: true }, t))).plan, null);
+  assert.equal((await json(await call("GET", "/api/plan", undefined, t))).plan, null);
+});

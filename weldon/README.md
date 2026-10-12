@@ -87,6 +87,8 @@ Weldon est hébergé sur **Netlify** (`netlify.toml` à la racine du dépôt) :
   3. Tester : onglet Actions → « Weldon – veille des concours » → Run workflow. Essai sans rien envoyer : `node tools/veille/veille.mjs --dry`.
 - **Alertes WhatsApp** : `WHATSAPP_CHANNEL_URL` (lien de la chaîne) et `WHATSAPP_NUMBER` (votre numéro, avec 237) affichent les boutons correspondants.
 - **Formule mensuelle** : `CHARIOW_PRODUCT_ID_MONTHLY` (produit Chariow « 1 mois »), `PRICE_XAF_MONTHLY`, `ACCESS_DAYS_MONTHLY`. Sans le produit, seule la formule annuelle est proposée.
+- **S'entraîner** : mini-quiz du jour, séries et concours blanc (abonnés), carnet d'erreurs avec révisions espacées (Leitner : 1, 2, 4, 8, 16 jours). Banque dans `content/quiz.json` : 4 options, une réponse, FR et EN, `verifie: non_verifie` jusqu'à votre contrôle. Les réponses ne quittent le serveur que par la correction.
+- **Mon plan** : plan à rebours selon la date du concours (`server/plan.js`). Rappel quotidien : notification locale dans l'application Android (plugin `@capacitor/local-notifications`).
 - **Données personnelles** : export et suppression du compte depuis *Mon compte* ; pages Confidentialité et Nos promesses.
 
 ## Application Android (Play Store)

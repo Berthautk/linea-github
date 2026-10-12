@@ -10,6 +10,7 @@ import { loadEnv } from "./env.js";
 import { createStore } from "./store.js";
 import { loadContent, LANGS } from "./content.js";
 import { orient, cleanProfil, targetYear } from "./orientation.js";
+import { buildPlan, subjectThemes, HOURS } from "./plan.js";
 import { dayStr, pickDaily, pickSeries, pickBlanc, emptyQuiz, recordAnswer, dueIds, streak } from "./quiz.js";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -430,6 +431,52 @@ route("POST", "/api/quiz/check", async (req) => {
   }
   await store.saveUser(u);
   return { results, streak: streak(qz.days, today), carnet: Object.keys(qz.carnet).length, due: dueIds(qz, today).length };
+});
+
+// ---------- Plan à rebours ----------
+// Sans abonnement : la première semaine seulement ; les suivantes sont verrouillées.
+async function planView(u) {
+  const pl = u.plan;
+  if (!pl) return { plan: null };
+  const lang = u.lang || "fr";
+  const c = content.concours(pl.concours);
+  const off = await epreuvesOff();
+  const papers = content.allEpreuves().filter((e) => e.concours === pl.concours && e.lang === lang && !off.has(e.id)).map((e) => e.id);
+  const { themes, writing } = subjectThemes(c?.[lang]?.annuaire?.matieres || [], lang);
+  const qz = quizOf(u);
+  const weak = Object.entries(qz.stats)
+    .filter(([, x]) => x.ok + x.ko >= 5 && x.ok / (x.ok + x.ko) < 0.7)
+    .sort(([, a], [, b]) => a.ok / (a.ok + a.ko) - b.ok / (b.ok + b.ko))
+    .map(([k]) => k);
+  const built = buildPlan({ examDate: pl.date, today: dayStr(), hours: pl.hours, themes, writing, papers, weak });
+  if (!built) return { plan: pl, built: null, expired: true };
+  const premium = isPremium(u);
+  const weeks = built.weeks.map((w, i) => (premium || i === 0 ? w : { n: w.n, from: w.from, to: w.to, phase: w.phase, focus: w.focus, locked: true, sessions: [] }));
+  return { plan: pl, built: { ...built, weeks }, premium, today: dayStr() };
+}
+
+route("GET", "/api/plan", async (req) => planView(await currentUser(req)));
+
+route("POST", "/api/plan", async (req) => {
+  const u = await currentUser(req);
+  const b = await readJson(req);
+  if (b.clear) {
+    delete u.plan;
+    await store.saveUser(u);
+    return { plan: null };
+  }
+  const concours = str(b.concours, 120);
+  const date = str(b.date, 10);
+  const hours = Number(b.hours);
+  if (!content.concours(concours)) throw httpError(404, "Concours introuvable.");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date))) throw httpError(400, "Indiquez la date du concours.");
+  const today = dayStr();
+  if (date <= today) throw httpError(400, "La date du concours doit être dans le futur.");
+  if (date > new Date(Date.now() + 400 * DAY_MS).toISOString().slice(0, 10)) throw httpError(400, "Cette date est trop lointaine.");
+  if (!HOURS.includes(hours)) throw httpError(400, "Choisissez 3, 5, 8 ou 12 heures par semaine.");
+  u.plan = { concours, date, hours, created: new Date().toISOString() };
+  await store.saveUser(u);
+  return planView(u);
 });
 
 // Suivre un concours : 2 gratuitement, sans limite pour les abonnés.

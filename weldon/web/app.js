@@ -496,6 +496,8 @@
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
     report: (b) => http("/api/report", { method: "POST", body: b }),
     annonces: () => http("/api/annonces"),
+    plan: () => http("/api/plan"),
+    savePlan: (b) => http("/api/plan", { method: "POST", body: b }),
     quizStats: () => http("/api/quiz/stats"),
     quizDaily: (l) => http("/api/quiz/daily?lang=" + l),
     quizRevision: (l) => http("/api/quiz/revision?lang=" + l),
@@ -564,6 +566,8 @@
       },
       report: async () => ({ ok: true }),
       annonces: async () => [],
+      plan: async () => ({ plan: null }),
+      savePlan: async () => fail("Le plan n'est pas disponible dans la démo.", "demo", 400),
       quizStats: async () => fail("L'entraînement n'est pas disponible dans la démo.", "demo", 400),
       async follow(id, on) {
         const u = current();
@@ -1199,6 +1203,120 @@
     },
   };
   const qz = () => QZ[lang()];
+
+  // Mon plan : plan à rebours, séances du jour, rappel quotidien
+  const PL = {
+    fr: {
+      cta: "Mon plan à rebours",
+      ctaSub: "Indiquez la date de votre concours : Weldon construit votre programme semaine par semaine, avec vos thèmes faibles en priorité.",
+      create: "Créer mon plan",
+      open: "Ouvrir mon plan",
+      title: "Mon plan",
+      daysLeft: (d) => (d === 1 ? "Demain : jour J" : `J-${d}`),
+      formConcours: "Concours visé",
+      formDate: "Date du concours",
+      formDateHelp: "Si la date officielle n'est pas encore connue, prenez la date probable : vous pourrez la changer.",
+      formHours: "Heures de travail par semaine",
+      hoursLabel: (h) => `${h} h`,
+      modes: { normal: "Plan complet", court: "Plan court", urgence30: "Plan d'urgence (moins de 30 jours)", urgence14: "Plan d'urgence (moins de 14 jours)" },
+      phases: { bases: "Bases", entrainement: "Entraînement", simulation: "Simulation", final: "Dernière ligne droite" },
+      today: "Aujourd'hui",
+      restDay: "Rien de prévu au plan aujourd'hui : jour de repos, ou avancez sur votre carnet d'erreurs.",
+      dailyTask: "Mini-quiz du jour (5 min)",
+      dailyDone: "Mini-quiz du jour : fait",
+      revTask: (d) => `Révisions du carnet : ${d} question${d > 1 ? "s" : ""}`,
+      kinds: {
+        revision: "Révisions du carnet (25 min)",
+        quiz_theme: (th) => `Série : ${th} (25 min)`,
+        epreuve: (m) => `Épreuve en salle d'examen : ${m}`,
+        blanc: "Concours blanc (40 min)",
+        redaction: "Rédaction chronométrée (1 h)",
+      },
+      go: "Commencer",
+      week: (n) => `Semaine ${n}`,
+      focus: "À travailler",
+      locked: "Plan complet réservé aux abonnés",
+      lockedSub: "Sans abonnement, vous voyez la première semaine. L'abonnement ouvre toutes les semaines, les séries par thème et les concours blancs.",
+      edit: "Modifier mon plan",
+      remove: "Supprimer mon plan",
+      removeSure: "Supprimer votre plan ?",
+      expired: "La date de votre concours est passée. Créez un nouveau plan pour la prochaine session.",
+      saved: "Plan enregistré.",
+      back: "Retour",
+      reminder: "Rappel quotidien",
+      reminderHelp: "Une notification chaque jour à l'heure choisie, pour ne pas laisser passer la journée.",
+      reminderWeb: "Les rappels fonctionnent dans l'application Android de Weldon.",
+      reminderOn: "Activer",
+      reminderOff: "Désactiver",
+      reminderSet: (t) => `Rappel tous les jours à ${t}.`,
+      reminderDenied: "Notifications refusées : autorisez-les dans les réglages du téléphone.",
+      reminderBody: "5 minutes de quiz aujourd'hui ? Votre série et votre plan vous attendent.",
+      weekdays: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+    },
+    en: {
+      cta: "My countdown plan",
+      ctaSub: "Enter the date of your competition: Weldon builds your programme week by week, with your weak themes first.",
+      create: "Create my plan",
+      open: "Open my plan",
+      title: "My plan",
+      daysLeft: (d) => (d === 1 ? "Tomorrow: exam day" : `D-${d}`),
+      formConcours: "Target competition",
+      formDate: "Competition date",
+      formDateHelp: "If the official date is not known yet, use the probable date: you can change it later.",
+      formHours: "Study hours per week",
+      hoursLabel: (h) => `${h} h`,
+      modes: { normal: "Full plan", court: "Short plan", urgence30: "Emergency plan (under 30 days)", urgence14: "Emergency plan (under 14 days)" },
+      phases: { bases: "Foundations", entrainement: "Training", simulation: "Simulation", final: "Final stretch" },
+      today: "Today",
+      restDay: "Nothing planned today: a rest day, or work on your mistakes notebook.",
+      dailyTask: "Daily mini-quiz (5 min)",
+      dailyDone: "Daily mini-quiz: done",
+      revTask: (d) => `Notebook revision: ${d} question${d > 1 ? "s" : ""}`,
+      kinds: {
+        revision: "Notebook revision (25 min)",
+        quiz_theme: (th) => `Series: ${th} (25 min)`,
+        epreuve: (m) => `Paper in the exam room: ${m}`,
+        blanc: "Mock competition (40 min)",
+        redaction: "Timed essay (1 h)",
+      },
+      go: "Start",
+      week: (n) => `Week ${n}`,
+      focus: "To work on",
+      locked: "Full plan for subscribers",
+      lockedSub: "Without a subscription you see the first week. A subscription opens every week, the series by theme and the mock competitions.",
+      edit: "Edit my plan",
+      remove: "Delete my plan",
+      removeSure: "Delete your plan?",
+      expired: "The date of your competition has passed. Create a new plan for the next session.",
+      saved: "Plan saved.",
+      back: "Back",
+      reminder: "Daily reminder",
+      reminderHelp: "A notification every day at the time you choose, so the day does not slip by.",
+      reminderWeb: "Reminders work in the Weldon Android app.",
+      reminderOn: "Turn on",
+      reminderOff: "Turn off",
+      reminderSet: (t) => `Reminder every day at ${t}.`,
+      reminderDenied: "Notifications refused: allow them in the phone settings.",
+      reminderBody: "5 minutes of quiz today? Your streak and your plan are waiting.",
+      weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    },
+  };
+  const pl = () => PL[lang()];
+
+  // Rappel quotidien : notification locale (application Android), sans serveur.
+  const LN = () => window.Capacitor?.Plugins?.LocalNotifications;
+  async function scheduleReminder() {
+    const r = local.get("reminder", null);
+    const plugin = LN();
+    if (!plugin) return;
+    try {
+      await plugin.cancel({ notifications: [{ id: 1001 }] });
+      if (!r?.on) return;
+      await plugin.schedule({ notifications: [{ id: 1001, title: "Weldon", body: pl().reminderBody, schedule: { on: { hour: r.h, minute: r.m }, allowWhileIdle: true } }] });
+    } catch {
+      /* le rappel est un plus : on n'interrompt jamais l'application */
+    }
+  }
   const isFollowed = (id) => (state.user?.suivis || []).includes(id);
   const annText = (a, k) => (lang() === "en" && a[k + "_en"]) || a[k];
   // Jours calendaires restants (J-7 = dans 7 jours à la même heure, peu importe l'heure de la journée).
@@ -1856,6 +1974,7 @@
     const Q = qz();
     const L = t();
     if (state.play) return state.play.finished ? viewQuizResult() : state.play.mode === "blanc" ? viewBlanc() : viewQuestion();
+    if (state.qzView === "plan") return viewPlan();
     if (state.demo) return `<div class="notice">${I.info}<span>${esc(L.demoNotice || "")}</span></div>`;
     if (!state.qzStats) {
       loadQuizHome();
@@ -1887,6 +2006,7 @@
     const dots = Array.from({ length: 30 }, (_, i) => dayUTC(i - 29)).map((d) => `<i class="dot ${active.has(d) ? "on" : ""}" title="${d}"></i>`).join("");
     return `
       <div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${Q.title}</h1></div><p class="muted small">${Q.sub}</p></div>
+      ${planCard()}
       <section class="card"><div class="row-actions"><h2>${Q.daily}</h2><span class="tag ${st.streak ? "tag-sun" : "tag-line"}">${Q.streak(st.streak)}</span></div>
         <p class="muted">${Q.dailySub}</p>${daily}</section>
       <section class="card"><h2>${Q.revision}</h2><p class="muted small">${Q.revSub}</p>
@@ -1900,6 +2020,121 @@
       <section class="card"><h2>${Q.prep}</h2><p class="muted small">${Q.prepSub}</p>
         ${rows.some((r) => r.total) ? `<div class="theme-rows">${bars}</div>` : `<p class="muted">${Q.noStats}</p>`}
         <p class="small muted">${Q.last30}</p><div class="dots">${dots}</div></section>`;
+  }
+
+  function planCard() {
+    const P = pl();
+    const info = state.plan;
+    if (!info) {
+      loadPlan();
+      return "";
+    }
+    if (!info.plan || info.expired) {
+      return `<section class="card"><h2>${P.cta}</h2><p class="muted">${info.expired ? P.expired : P.ctaSub}</p><div><button type="button" class="btn btn-primary" data-plan-open>${P.create}</button></div></section>`;
+    }
+    const c = concoursById(info.plan.concours);
+    return `<section class="card"><div class="row-actions"><h2>${P.title} · ${esc(c?.sigle || "")}</h2><span class="tag tag-sun">${P.daysLeft(info.built.days_left)}</span></div>
+      <p class="muted small">${P.modes[info.built.mode]}</p><div><button type="button" class="btn btn-primary" data-plan-open>${P.open}</button></div></section>`;
+  }
+
+  async function loadPlan() {
+    if (state.planLoading) return;
+    state.planLoading = true;
+    try {
+      state.plan = await api().plan();
+    } catch {
+      state.plan = { plan: null };
+    }
+    state.planLoading = false;
+    render();
+  }
+
+  function planForm() {
+    const P = pl();
+    const cur = state.plan?.plan || {};
+    const mine = state.user.suivis || [];
+    const list = [...state.catalog.concours].sort((a, b) => (mine.includes(a.id) ? 0 : 1000) + (a.priorite || 999) - ((mine.includes(b.id) ? 0 : 1000) + (b.priorite || 999)));
+    const tomorrow = dayUTC(1);
+    return `<form id="plan-form" class="card form" novalidate>
+      <div class="field full"><label for="pl-c">${P.formConcours}</label><select id="pl-c" name="concours" required>${list.map((c) => `<option value="${esc(c.id)}" ${c.id === cur.concours ? "selected" : ""}>${esc(c.sigle)} · ${esc(c.nom.slice(0, 60))}</option>`).join("")}</select></div>
+      <div class="field full"><label for="pl-d">${P.formDate}</label><input id="pl-d" name="date" type="date" min="${tomorrow}" value="${esc(cur.date || "")}" required><span class="small muted">${P.formDateHelp}</span></div>
+      <fieldset class="field full interests"><legend>${P.formHours}</legend><div class="picks">${[3, 5, 8, 12].map((h) => `<label class="pick"><input type="radio" name="hours" value="${h}" ${(cur.hours || 5) === h ? "checked" : ""}><span>${P.hoursLabel(h)}</span></label>`).join("")}</div></fieldset>
+      <p class="err full" id="plan-err" hidden></p>
+      <button class="btn btn-primary btn-block full" type="submit">${P.create}</button></form>`;
+  }
+
+  function viewPlan() {
+    const P = pl();
+    const Q = qz();
+    const back = `<button type="button" class="back" data-plan-back>${I.back} ${Q.title}</button>`;
+    const info = state.plan;
+    if (!info) {
+      loadPlan();
+      return back + `<p class="muted">…</p>`;
+    }
+    if (!info.plan || info.expired || state.planEdit) return `${back}<div><span class="eyebrow">${t().section}</span><h1>${P.title}</h1></div>${info.expired ? `<div class="notice">${I.info}<span>${P.expired}</span></div>` : ""}${planForm()}`;
+    const b = info.built;
+    const c = concoursById(info.plan.concours);
+    const today = dayUTC();
+    const dayName = (d) => `${P.weekdays[new Date(d + "T12:00:00Z").getUTCDay()]} ${dateFmt(d + "T12:00:00Z").replace(/ \d{4}$/, "")}`;
+    const label = (x) => {
+      if (x.kind === "quiz_theme") return P.kinds.quiz_theme(themeName(x.theme));
+      if (x.kind === "epreuve") return P.kinds.epreuve(epreuveMeta(x.epreuve)?.matiere || "");
+      return P.kinds[x.kind];
+    };
+    const startBtn = (x) => `<button type="button" class="btn btn-ghost btn-small" data-plan-start="${x.kind}" data-theme="${esc(x.theme || "")}" data-epreuve="${esc(x.epreuve || "")}">${P.go}</button>`;
+    const week = b.weeks.find((w) => w.from <= today && today <= w.to) || b.weeks[0];
+    const todays = week.sessions.filter((x) => x.day === today);
+    const st = state.qzStats;
+    const todayHtml = `<section class="card"><h2>${P.today}</h2><div class="paper-list">
+      <div class="paper-row static"><span>${st?.daily_done ? P.dailyDone : P.dailyTask}</span>${st?.daily_done ? "✓" : `<button type="button" class="btn btn-ghost btn-small" data-quiz-daily-from-plan>${P.go}</button>`}</div>
+      ${st?.due ? `<div class="paper-row static"><span>${P.revTask(st.due)}</span><button type="button" class="btn btn-ghost btn-small" data-plan-start="revision">${P.go}</button></div>` : ""}
+      ${todays.map((x) => `<div class="paper-row static"><span>${esc(label(x))}</span>${startBtn(x)}</div>`).join("")}
+      </div>${todays.length ? "" : `<p class="small muted">${P.restDay}</p>`}</section>`;
+    const weeksHtml = b.weeks
+      .map((w) => {
+        const current = w === week;
+        const days = {};
+        for (const x of w.sessions) (days[x.day] ||= []).push(x);
+        const inner = w.locked
+          ? `<p class="small muted">${I.lock} ${P.locked}</p>`
+          : Object.entries(days).map(([d, list]) => `<div class="plan-day ${d === today ? "today" : ""}"><b>${esc(dayName(d))}</b><ul>${list.map((x) => `<li>${esc(label(x))}</li>`).join("")}</ul></div>`).join("");
+        return `<details class="fold" ${current ? "open" : ""}><summary><b>${P.week(w.n)}</b> · ${esc(P.phases[w.phase])} <span class="muted small">${dateFmt(w.from + "T12:00:00Z")}</span></summary>
+          <p class="small muted">${P.focus} : ${w.focus.map((k) => esc(themeName(k))).join(", ")}</p>${inner}</details>`;
+      })
+      .join("");
+    const r = local.get("reminder", null) || { on: false, h: 18, m: 0 };
+    const hhmm = `${String(r.h).padStart(2, "0")}:${String(r.m).padStart(2, "0")}`;
+    const reminder = LN()
+      ? `<section class="card"><h2>${P.reminder}</h2><p class="muted small">${P.reminderHelp}</p>
+          <div class="row-actions"><input type="time" id="reminder-time" value="${hhmm}" aria-label="${P.reminder}">
+          <button type="button" class="btn btn-primary btn-small" data-reminder="${r.on ? "off" : "on"}">${r.on ? P.reminderOff : P.reminderOn}</button></div>
+          ${r.on ? `<p class="small ok">${P.reminderSet(hhmm)}</p>` : ""}</section>`
+      : `<section class="card"><h2>${P.reminder}</h2><p class="muted small">${P.reminderWeb}</p></section>`;
+    return `${back}
+      <div class="row" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><div class="${sigleClass(c)}">${esc(c?.sigle || "")}</div>
+        <div style="min-width:0"><span class="eyebrow">${P.modes[b.mode]}</span><h1>${esc(c?.nom || "")}</h1></div></div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tag tag-sun">${P.daysLeft(b.days_left)}</span><span class="small muted">${dateFmt(info.plan.date + "T12:00:00Z")}</span>
+        <button type="button" class="btn btn-ghost btn-small" data-plan-edit>${P.edit}</button><button type="button" class="btn btn-ghost btn-small" data-plan-remove>${P.remove}</button></div>
+      ${todayHtml}
+      ${b.weeks.some((w) => w.locked) ? `<div class="notice">${I.lock}<span><b>${P.locked}.</b> ${P.lockedSub} <button type="button" class="linkish" data-pay>${t().subscribe}</button></span></div>` : ""}
+      <section class="orient-group">${weeksHtml}</section>
+      ${reminder}`;
+  }
+
+  async function submitPlan(form) {
+    const err = form.querySelector("#plan-err");
+    const fd = new FormData(form);
+    try {
+      state.plan = await api().savePlan({ concours: fd.get("concours"), date: fd.get("date"), hours: Number(fd.get("hours")) });
+      state.planEdit = false;
+      state.qzView = "plan";
+      toast(pl().saved);
+      render();
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
+    }
   }
 
   // Lance une session : mode = daily | revision | series | blanc
@@ -3007,12 +3242,77 @@
       if (!state.user.profil?.niveau) return go("concours", { orient: true });
       return render();
     }
-    if (d.tab) return go(d.tab, {});
+    if (d.tab) {
+      if (d.tab === "quiz") {
+        state.qzView = null;
+        state.play = state.play?.finished ? null : state.play;
+      }
+      return go(d.tab, {});
+    }
     if (d.jump) return go(d.jump, { concours: d.c });
     if (d.school) return go(d.mode === "fiche" ? "concours" : d.mode, { concours: d.school });
     if (d.oral) return go("oral", { concours: d.oral });
     if (d.cat) {
       state.cat = d.cat;
+      return render();
+    }
+    if ("planOpen" in d) {
+      state.qzView = "plan";
+      state.planEdit = !state.plan?.plan || state.plan?.expired;
+      return render();
+    }
+    if ("planBack" in d) {
+      state.qzView = null;
+      state.planEdit = false;
+      return render();
+    }
+    if ("planEdit" in d) {
+      state.planEdit = true;
+      return render();
+    }
+    if ("planRemove" in d) {
+      if (!confirm(pl().removeSure)) return;
+      try {
+        state.plan = await api().savePlan({ clear: true });
+      } catch (e) {
+        return toast(e.message);
+      }
+      state.qzView = null;
+      return render();
+    }
+    if (d.planStart) {
+      const k = d.planStart;
+      state.qzView = null;
+      if (k === "revision") return startQuiz("revision");
+      if (k === "blanc") return premium() ? startQuiz("blanc") : openPaywall();
+      if (k === "quiz_theme") {
+        if (!premium()) return openPaywall();
+        state.seriesTheme = d.theme || "";
+        state.seriesN = 20;
+        return startQuiz("series");
+      }
+      if (k === "epreuve" && d.epreuve) return startExam(d.epreuve);
+      return go("salle", {});
+    }
+    if ("quizDailyFromPlan" in d) {
+      state.qzView = null;
+      return startQuiz("daily");
+    }
+    if (d.reminder) {
+      const plugin = LN();
+      if (!plugin) return;
+      const [h, m] = (document.getElementById("reminder-time")?.value || "18:00").split(":").map(Number);
+      if (d.reminder === "off") local.set("reminder", { on: false, h, m });
+      else {
+        try {
+          const perm = await plugin.requestPermissions();
+          if (perm.display !== "granted") return toast(pl().reminderDenied);
+        } catch {
+          return toast(pl().reminderDenied);
+        }
+        local.set("reminder", { on: true, h, m });
+      }
+      await scheduleReminder();
       return render();
     }
     if ("quizDaily" in d) return startQuiz("daily");
@@ -3196,6 +3496,7 @@
     if (f.id === "pay-form") return submitPay(f);
     if (f.id === "profil-form") return submitProfil(f);
     if (f.id === "report-form") return submitReport(f);
+    if (f.id === "plan-form") return submitPlan(f);
     if (f.id === "delete-form") return submitDelete(f);
     if (f.id === "ann-form") return submitAnnonce(f);
     if (f.id === "grant-form") return submitGrant(f);
@@ -3258,6 +3559,7 @@
     state.booting = false;
     render();
     handleReturnFromPayment();
+    if (state.user) scheduleReminder(); // remet en place le rappel quotidien choisi (application Android)
     if ("serviceWorker" in navigator && !state.demo) navigator.serviceWorker.register("/sw.js").catch(() => {});
   }
 

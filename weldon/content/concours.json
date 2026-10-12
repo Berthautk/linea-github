@@ -1348,7 +1348,54 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Cycle A : Licence de l'enseignement supérieur camerounaise (y compris licences professionnelles en droit, économie, comptabilité, gestion) ou diplôme universitaire étranger équivalent. Cycle B : Baccalauréat, ou GCE A Level dans au moins deux matières obtenues à la même session (hors Religious Knowledge), ou capacité en droit, ou titre étranger équivalent. Magistrature (auditeurs de justice) : maîtrise en droit (source secondaire).",
+        "series_note": "Aucune série imposée dans les textes lus. Cycle B : tout baccalauréat ou GCE A Level.",
+        "age_note": "Candidats externes (cycles A et B) : 32 ans au plus au 1er janvier 2025 (session 2025/2026). Candidats internes (fonctionnaires de catégorie B, 5 ans d'ancienneté dans le grade) : 45 ans au plus. Les fonctionnaires ne peuvent pas se présenter au concours externe. Aucun âge minimum trouvé. Limites pour la session 2026/2027 non lues.",
+        "autres": [
+          "Remplir les conditions générales d'accès aux emplois publics (Statut général de la fonction publique)",
+          "Casier judiciaire (bulletin n°3) de moins de 3 mois",
+          "Certificat médical de moins de 3 mois délivré par un médecin de l'administration"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25 000 FCFA pour les candidats externes et internes (session 2025/2026), payés contre quittance à l'agent comptable de l'ENAM à Yaoundé ou aux délégations régionales de la Fonction publique. Montant 2026/2027 non lu.",
+        "pieces": [
+          "Fiche d'inscription timbrée à 1 000 FCFA",
+          "Copie certifiée du diplôme exigé",
+          "Attestation de présentation de l'original du diplôme, signée du gouverneur ou du préfet",
+          "Attestation de présentation de l'original du baccalauréat ou équivalent",
+          "Quittance de paiement",
+          "Casier judiciaire (bulletin n°3)",
+          "Certificat médical",
+          "Copie certifiée de l'acte de naissance",
+          "Candidats internes : autorisation du ministre de la Fonction publique et acte d'intégration"
+        ]
+      },
+      "debouches": "Administrateurs civils, magistrats, greffiers et cadres des régies financières (comptabilité-matières, prix, poids et mesures, douanes) dans la fonction publique camerounaise.",
+      "variantes": [
+        {
+          "nom": "Cycle B – Division administrative",
+          "difference": "Niveau baccalauréat ou GCE A Level, 32 ans au plus au 1er janvier 2025 (externe). Interne : 45 ans au plus. Session 2026/2027 : 50 places (30 administration générale, 10 travail, 10 affaires sociales) selon une source secondaire."
+        },
+        {
+          "nom": "Cycle A – Division administrative",
+          "difference": "Licence. Options : administration générale, économie et finances, affaires sociales, administration du travail (2025) ; 2026/2027 : administration générale 40, travail 20, affaires sociales 10."
+        },
+        {
+          "nom": "Division des régies financières (cycles A et B)",
+          "difference": "Cycle A : licence, 32 ans au plus au 1er janvier 2025 ; 2025 : 20 places douanes. 2026/2027 : comptabilité-matières et prix, poids et mesures (10 + 10 par cycle). Épreuve de spécialité différente (statistiques et économétrie en 2025)."
+        },
+        {
+          "nom": "Division de la magistrature et des greffes",
+          "difference": "Auditeurs de justice : maîtrise en droit (judiciaire, administratif) ; section des comptes : économie, gestion ou informatique (secondaire 2025/2026). Élèves-greffiers (cycle B) et administrateurs des greffes : conditions non trouvées. Session 2026/2027 : dépôt 17 ou 24 juillet, écrits en août."
+        },
+        {
+          "nom": "Concours spécial Common Law",
+          "difference": "Concours en expression anglaise (auditeurs de justice, greffiers). Notice 2024 (secondaire) : 17 à 32 ans au 1er janvier 2024."
+        }
+      ]
     },
     "en": {
       "nom": "ENAM – Administrative Division (cycles A and B)",
@@ -1414,12 +1461,110 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Cycle A: a Cameroonian Licence (including professional licences in law, economics, accounting, management) or an equivalent foreign university degree. Cycle B: Baccalauréat, or GCE A Level in at least two subjects from the same sitting (excluding Religious Knowledge), or a law capacity certificate, or an equivalent foreign title. Magistracy (justice auditors): a Maîtrise in law (secondary source).",
+        "series_note": "No series required in the texts read. Cycle B: any baccalauréat or GCE A Level.",
+        "age_note": "External candidates (cycles A and B): 32 at most on 1 January 2025 (2025/2026 session). Internal candidates (category B civil servants with 5 years in grade): 45 at most. Civil servants cannot apply to the external competition. No minimum age found. Limits for the 2026/2027 session were not read.",
+        "autres": [
+          "Meet the general conditions for public employment (General Civil Service Statute)",
+          "Criminal record extract (bulletin no. 3) under 3 months old",
+          "Medical certificate under 3 months old from a public-service doctor"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25,000 FCFA for external and internal candidates (2025/2026 session), paid against a receipt at the ENAM accounting agent in Yaoundé or at the regional Public Service delegations. 2026/2027 amount not read.",
+        "pieces": [
+          "Registration form stamped at 1,000 FCFA",
+          "Certified copy of the required diploma",
+          "Attestation that the original diploma was presented, signed by the governor or prefect",
+          "Attestation that the original baccalauréat or equivalent was presented",
+          "Payment receipt",
+          "Criminal record extract (bulletin no. 3)",
+          "Medical certificate",
+          "Certified copy of the birth certificate",
+          "Internal candidates: authorisation from the Minister of Public Service and integration act"
+        ]
+      },
+      "debouches": "Civil administrators, magistrates, court clerks and revenue-service officers (stores accounting, prices/weights/measures, customs) in the Cameroonian civil service.",
+      "variantes": [
+        {
+          "nom": "Cycle B – Division administrative",
+          "difference": "Baccalauréat or GCE A Level, 32 at most on 1 January 2025 (external). Internal: 45 at most. 2026/2027: 50 places (30 general administration, 10 labour, 10 social affairs) per a secondary source."
+        },
+        {
+          "nom": "Cycle A – Division administrative",
+          "difference": "Licence. Options: general administration, economics and finance, social affairs, labour administration (2025); 2026/2027: general administration 40, labour 20, social affairs 10."
+        },
+        {
+          "nom": "Division des régies financières (cycles A et B)",
+          "difference": "Cycle A: licence, 32 at most on 1 January 2025; 2025: 20 customs places. 2026/2027: stores accounting and prices/weights/measures (10 + 10 per cycle). Different specialty paper (statistics and econometrics in 2025)."
+        },
+        {
+          "nom": "Division de la magistrature et des greffes",
+          "difference": "Justice auditors: Maîtrise in law (judicial, administrative); accounts section: economics, management or computer science (secondary, 2025/2026). Court-clerk pupils (cycle B) and court-registry administrators: conditions not found. 2026/2027: filing 17 or 24 July, written tests in August."
+        },
+        {
+          "nom": "Concours spécial Common Law",
+          "difference": "English-language competition (justice auditors, court clerks). 2024 notice (secondary): 17 to 32 on 1 January 2024."
+        }
+      ]
     },
     "categorie": "formation",
     "tutelle": "MINFOPRA",
     "priorite": 8,
-    "theme": "administration"
+    "theme": "administration",
+    "acces": {
+      "niveaux_min": "bac",
+      "age_max": 32,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "avril–mai",
+      "mois_limite_depot": "juin–août (selon la division)",
+      "mois_epreuves": "juillet–septembre (selon la division)",
+      "marque": "probable",
+      "frais_fcfa": 25000
+    },
+    "lien_inscription": "https://www.enam.cm",
+    "sources": [
+      {
+        "titre": "Concours ENAM 2025-2026, cycle A division administrative (texte de l'arrêté repris par Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-enam-cameroun-2015-2016-cycle-a-division-administrative-recrutement-de-170-eleves/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Concours ENAM 2025, cycle A division des régies financières (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-enam-cameroun-2015-cycle-a-division-des-regies-financieres-recrutement-de-105-eleves/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Concours ENAM cycle B, division des régies financières (Kamerpower, conditions bac, 32 ans)",
+        "url": "https://kamerpower.com/fr/concours-enam-cameroun-2015-cycle-b-division-des-regies-financieres-recrutement-de-110-eleves/amp/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "ENAM 2025-2026, auditeurs de justice (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-enam-cameroun-2015-2016-70-auditeurs-de-justice-division-de-la-magistrature-et-des-greffes/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Ouverture des concours d'entrée à l'ENAM 2026/2027 (Cameroon Desks)",
+        "url": "https://www.cameroondesks.com/2026/06/concours-enam-2026-2027.html",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Aucun arrêté officiel (enam.cm / minfopra.gov.cm) lu directement. Les conditions viennent de reproductions de l'arrêté 2025/2026 par Kamerpower, dont les effectifs sont incohérents (60 places annoncées, plus de 120 listées). Conditions de la session 2026/2027 (diplômes, âge, frais) non lues ; seuls calendrier et places sont connus par Cameroon Desks, qui indique des arrêtés signés le « jeudi 4 avril 2026 » (le 4 avril 2026 est un samedi : date à vérifier). Le fichier concours.json parle de master pour certaines divisions : seule la maîtrise en droit (auditeurs) est étayée. Conditions du cycle B (bac, 32 ans) issues d'un extrait de recherche de la page cycle B régies financières, page non relue en entier."
   },
   {
     "id": "enam-division-des-regies-financieres-cycles-a-et",
@@ -2524,7 +2669,48 @@
         "sessions": "Sessions annuelles",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Études supérieures de commerce, 1re année (ESSEC Douala, décision 2022) : baccalauréat A, B, C, D, TI ou G, ou GCE A Level avec mathématiques et/ou économie et gestion. ESSEC Garoua (décision 2022) : baccalauréat exigé selon la filière (B, C, D, G1, G2, A, CG, FIG) ou GCE A Level plus GCE O Level en quatre matières.",
+        "series_note": "Série selon l'école et la filière : à Douala (2022) A, B, C, D, TI, G ; à Garoua la liste dépend de la filière (B, C, D, G1, G2, A, CG, FIG).",
+        "age_note": "Aucune limite d'âge dans les décisions lues ; à Garoua, l'âge entre dans la note de scolarité (30 % de la note).",
+        "autres": [
+          "Ouvert aux candidats des deux sexes",
+          "Certificat médical d'un médecin de l'administration de moins de 3 mois",
+          "Candidats fonctionnaires : autorisation du MINFOPRA ou de l'autorité habilitée",
+          "CEMAC : 10 % des places par admission sur titre à Douala"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "ESSEC Douala 2022 : 20 000 FCFA versés à UBA au nom du candidat. ESSEC Garoua 2022 : 25 000 FCFA. Un site secondaire cite 25 000 FCFA pour 2026 (non confirmé).",
+        "pieces": [
+          "Fiche de candidature",
+          "Demande manuscrite timbrée à 1 000 FCFA",
+          "Copie certifiée de l'acte de naissance de moins de 3 mois",
+          "Copie certifiée du baccalauréat ou GCE A Level",
+          "Relevés de notes des deux premiers trimestres de terminale (ou Upper Sixth) pour les candidats sous réserve",
+          "Certificat médical de moins de 3 mois",
+          "Deux photos 4x4",
+          "Reçu de versement des frais",
+          "Grande enveloppe A4 timbrée à 1 000 FCFA",
+          "Autorisation pour les fonctionnaires"
+        ]
+      },
+      "debouches": "Cadres en commerce, comptabilité-audit-finance, gestion des ressources humaines et économie du développement, dans les entreprises, banques et administrations.",
+      "variantes": [
+        {
+          "nom": "ESSEC Douala – études supérieures de commerce (2022)",
+          "difference": "450 places (300 ESSEC, reste IFTIC-SUP) ; trois épreuves de 3 h : mathématiques générales, mathématiques spécialisées, dissertation économique ; 100 % écrit ; épreuve le 26 juillet 2022."
+        },
+        {
+          "nom": "ESSEC Garoua – 1re année (2022)",
+          "difference": "300 places, six filières (CCF, MSC, GRH, MTS, AED, APS) ; deux épreuves écrites (70 %) et note de scolarité (30 %) ; frais de 25 000 FCFA ; épreuves le 12 septembre 2022."
+        },
+        {
+          "nom": "Concours 2025 à l'ESSEC Douala (Études professionnelles approfondies)",
+          "difference": "Source secondaire : 280 places, dossier en ligne avant le 21 juillet 2025 ; conditions d'accès non lues, un site évoque un niveau licence pour 2026. À vérifier avant toute décision."
+        }
+      ]
     },
     "en": {
       "nom": "ESSEC – economic and commercial sciences",
@@ -2539,11 +2725,97 @@
         "sessions": "Annual sessions",
         "places": [],
         "places_note": "Places set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Higher business studies, first year (ESSEC Douala, 2022 decision): baccalauréat A, B, C, D, TI or G, or GCE A Level with mathematics and/or economics and management. ESSEC Garoua (2022 decision): baccalauréat required by track (B, C, D, G1, G2, A, CG, FIG) or GCE A Level plus GCE O Level in four subjects.",
+        "series_note": "Series depend on the school and track: at Douala (2022) A, B, C, D, TI, G; at Garoua the list depends on the track (B, C, D, G1, G2, A, CG, FIG).",
+        "age_note": "No age limit in the decisions read; at Garoua, age enters the school-record score (30% of the mark).",
+        "autres": [
+          "Open to candidates of both sexes",
+          "Medical certificate under 3 months old from a public-service doctor",
+          "Civil-servant candidates: authorisation from MINFOPRA or the competent authority",
+          "CEMAC: 10% of places by file selection at Douala"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "ESSEC Douala 2022: 20,000 FCFA paid at UBA in the candidate's name. ESSEC Garoua 2022: 25,000 FCFA. A secondary site cites 25,000 FCFA for 2026 (unconfirmed).",
+        "pieces": [
+          "Application form",
+          "Handwritten application stamped at 1,000 FCFA",
+          "Certified copy of the birth certificate under 3 months old",
+          "Certified copy of the baccalauréat or GCE A Level",
+          "Transcripts of the first two terms of the final year (or Upper Sixth) for provisional candidates",
+          "Medical certificate under 3 months old",
+          "Two 4x4 photos",
+          "Fee payment receipt",
+          "Large A4 envelope stamped at 1,000 FCFA",
+          "Authorisation for civil servants"
+        ]
+      },
+      "debouches": "Managers in business, accounting-audit-finance, human resources and development economics, in companies, banks and administrations.",
+      "variantes": [
+        {
+          "nom": "ESSEC Douala – études supérieures de commerce (2022)",
+          "difference": "450 places (300 ESSEC, rest at IFTIC-SUP); three 3-hour papers: general mathematics, specialised mathematics, economic essay; 100% written; exam 26 July 2022."
+        },
+        {
+          "nom": "ESSEC Garoua – 1re année (2022)",
+          "difference": "300 places, six tracks (CCF, MSC, GRH, MTS, AED, APS); two written papers (70%) and school-record score (30%); fee 25,000 FCFA; exams 12 September 2022."
+        },
+        {
+          "nom": "Concours 2025 à l'ESSEC Douala (Études professionnelles approfondies)",
+          "difference": "Secondary source: 280 places, online file before 21 July 2025; entry conditions not read, one site mentions licence level for 2026. Check before any decision."
+        }
+      ]
     },
     "source_annales": "Annales ESSEC disponibles par année (bibliothèques tierces)",
     "priorite": 25,
-    "theme": "universite"
+    "theme": "universite",
+    "acces": {
+      "niveaux_min": "bac",
+      "series": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "TI",
+        "G"
+      ],
+      "genre": "tous",
+      "annee_conditions": 2022,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin",
+      "mois_limite_depot": "juillet (Douala) ; septembre (Garoua)",
+      "mois_epreuves": "juillet (Douala) ; septembre (Garoua)",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "https://www.essec-douala.cm",
+    "sources": [
+      {
+        "titre": "Décision 2022, concours d'entrée en 1re année, ESSEC Douala et IFTIC-SUP",
+        "url": "https://minesup.gov.cm/2022/ESSEC%202022_1ere%20annee%20Etudes%20Sup%20de%20Commence_fr.pdf",
+        "type": "arrete",
+        "annee": 2022
+      },
+      {
+        "titre": "Décision 2022, concours d'entrée en 1re année, ESSEC Garoua",
+        "url": "https://minesup.gov.cm/wp-content/uploads/2022/09/ESSEC-UGa-2022_1ere-anneer_fr.pdf",
+        "type": "arrete",
+        "annee": 2022
+      },
+      {
+        "titre": "Concours ESSEC Douala (Infospratiques)",
+        "url": "https://infospratiques.cm/?p=491",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Les arrêtés lus datent de 2022 et ne reflètent peut-être pas la session actuelle : en 2025 le concours ESSEC Douala semble porter sur des « études professionnelles approfondies » et un site secondaire évoque un accès niveau licence en 2026, ce qui contredirait un accès post-bac. À re-vérifier avant d'orienter un bachelier. Aucune décision ESSEC 2025 ou 2026 lue. Les décisions 2022 ne donnent pas de limite d'âge. La nationalité n'est pas indiquée pour Douala ; Garoua ouvre aux Camerounais (CEMAC en traitement national). Numéros des décisions 2022 partiellement illisibles sur les PDF."
   },
   {
     "id": "polytechniques-enspy-enspd-enspm-ensai-egem-egci",
@@ -2567,7 +2839,50 @@
         "sessions": "Sessions annuelles (1er cycle, 2e cycle, 3e cycle) (documentées : 2024)",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "1re année du cycle ingénieur (ENSPY 2025/2026, texte repris par Kamerpower) : baccalauréat C, D, E, F ou TI (ou classes terminales correspondantes), ou GCE A Level scientifique (Pure Mathematics, Physics, Applied Mathematics ou Chemistry) obtenu en une session ; GCE O Level en quatre matières (hors Religious Knowledge) ; ou diplôme équivalent reconnu. Filière génie minier ENSPY Meyomessala 2026 (décision du 12 août 2026) : élèves de terminale scientifique (toutes filières pour HQSE) ou bacheliers/GCE A Level.",
+        "series_note": "Séries C, D, E, F, TI pour l'ENSPY (source secondaire 2025). Les autres écoles (ENSPD, ENSPM, ENSAI, EGEM, EGCIM, ENSP) ont chacune leur arrêté, non lu ici.",
+        "age_note": "ENSPY 1re année : 25 ans au plus au 1er janvier de l'année du concours (source secondaire). Limites des autres écoles et de la filière génie minier 2026 non lues.",
+        "autres": [
+          "Certificat médical d'un médecin de l'administration",
+          "Les inscrits sous réserve présentent l'original du diplôme (ou attestation de réussite) à l'admission",
+          "Pas d'épreuve orale"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "ENSPY : 20 000 FCFA par transfert Express Union (non remboursable), notices 2024-2025 et 2025/2026 (secondaire). Pour les autres écoles, montants non lus.",
+        "pieces": [
+          "Fiche individuelle remplie en ligne (polytechnique.cm/concours)",
+          "Photocopie de la CNI, du récépissé ou de la carte d'étudiant",
+          "Copie certifiée de l'acte de naissance de moins de 3 mois",
+          "Copie certifiée du baccalauréat, GCE A Level ou équivalent (ou attestation)",
+          "Relevés de notes (probatoire ou GCE O Level, baccalauréat ou GCE A Level)",
+          "Quatre photos 4x4",
+          "Certificat médical d'un médecin de l'État",
+          "Enveloppe A4 timbrée à 1 000 FCFA à l'adresse du candidat",
+          "Reçu du transfert de 20 000 FCFA"
+        ]
+      },
+      "debouches": "Ingénieurs de conception et de travaux (génie civil, électrique, mécanique, informatique, mines, agro-industrie, etc.) dans le public et le privé.",
+      "variantes": [
+        {
+          "nom": "ENSPY – cycle ingénieur 1re année",
+          "difference": "400 places en 2025/2026 ; deux épreuves de mathématiques et deux de physique de 3 h ; écrits annoncés les 17 et 18 juillet 2025 (secondaire)."
+        },
+        {
+          "nom": "ENSPY – filière génie minier (Meyomessala), 2026",
+          "difference": "150 places ; épreuves : matières scientifiques et technologiques (3 h) et culture générale et langue (2 h) ; pas d'oral (décision du 12 août 2026, lue)."
+        },
+        {
+          "nom": "ENSPM Maroua et ENSPD Douala",
+          "difference": "ENSPM 2026-2027 : 250 places en ingénieur 1re année, dépôt au 1er octobre 2026, écrits le 4 octobre (secondaire). ENSPD 2026 : 60 places, dépôt au 30 juillet 2026 (secondaire)."
+        },
+        {
+          "nom": "Cycles licence et 3e année",
+          "difference": "Concours distincts (licence en sciences de l'ingénieur, 3e année, master) avec leurs propres conditions."
+        }
+      ]
     },
     "en": {
       "nom": "Polytechnics – ENSPY, ENSPD, ENSPM, ENSAI, EGEM, EGCIM, ENSP",
@@ -2583,11 +2898,99 @@
         "sessions": "Annual sessions (1st, 2nd and 3rd cycle) (documented: 2024)",
         "places": [],
         "places_note": "Places set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "First year of the engineering cycle (ENSPY 2025/2026, text reproduced by Kamerpower): baccalauréat C, D, E, F or TI (or the matching final-year classes), or science GCE A Level (Pure Mathematics, Physics, Applied Mathematics or Chemistry) from one sitting; GCE O Level in four subjects (excluding Religious Knowledge); or a recognised equivalent. ENSPY Meyomessala mining track 2026 (decision of 12 August 2026): final-year science students (all tracks for HSE) or bac/GCE A Level holders.",
+        "series_note": "Series C, D, E, F, TI for ENSPY (secondary source, 2025). The other schools (ENSPD, ENSPM, ENSAI, EGEM, EGCIM, ENSP) each have their own arrêté, not read here.",
+        "age_note": "ENSPY first year: 25 at most on 1 January of the competition year (secondary source). Limits for the other schools and the 2026 mining track were not read.",
+        "autres": [
+          "Medical certificate from a public-service doctor",
+          "Provisional candidates show the original diploma (or attestation of success) on admission",
+          "No oral exam"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "ENSPY: 20,000 FCFA by Express Union transfer (non-refundable), 2024-2025 and 2025/2026 notices (secondary). Other schools' fees not read.",
+        "pieces": [
+          "Individual form completed online (polytechnique.cm/concours)",
+          "Photocopy of national ID, receipt or student card",
+          "Certified copy of the birth certificate under 3 months old",
+          "Certified copy of the baccalauréat, GCE A Level or equivalent (or attestation)",
+          "Transcripts (probatoire or GCE O Level, baccalauréat or GCE A Level)",
+          "Four 4x4 photos",
+          "Medical certificate from a State doctor",
+          "A4 envelope stamped at 1,000 FCFA with the candidate's address",
+          "Receipt of the 20,000 FCFA transfer"
+        ]
+      },
+      "debouches": "Design and works engineers (civil, electrical, mechanical, computing, mining, agro-industry, etc.) in the public and private sectors.",
+      "variantes": [
+        {
+          "nom": "ENSPY – cycle ingénieur 1re année",
+          "difference": "400 places in 2025/2026; two 3-hour mathematics papers and two physics papers; written tests announced for 17-18 July 2025 (secondary)."
+        },
+        {
+          "nom": "ENSPY – filière génie minier (Meyomessala), 2026",
+          "difference": "150 places; papers: scientific and technological subjects (3 h) and general culture and language (2 h); no oral (decision of 12 August 2026, read)."
+        },
+        {
+          "nom": "ENSPM Maroua et ENSPD Douala",
+          "difference": "ENSPM 2026-2027: 250 first-year engineering places, filing by 1 October 2026, written exam 4 October (secondary). ENSPD 2026: 60 places, filing by 30 July 2026 (secondary)."
+        },
+        {
+          "nom": "Cycles licence et 3e année",
+          "difference": "Separate competitions (licence in engineering sciences, third year, master) with their own conditions."
+        }
+      ]
     },
     "source_annales": "Annales par école et par année (bibliothèques tierces)",
     "priorite": 15,
-    "theme": "genie"
+    "theme": "genie",
+    "acces": {
+      "niveaux_min": "bac",
+      "series": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "TI"
+      ],
+      "age_max": 25,
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "mai–août",
+      "mois_limite_depot": "juillet–octobre (selon l'école)",
+      "mois_epreuves": "juillet–octobre (selon l'école)",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "https://polytechnique.cm/concours",
+    "sources": [
+      {
+        "titre": "Concours ENSPY première année cycle ingénieurs 2025-2026 (Kamerpower, texte de l'arrêté)",
+        "url": "https://kamerpower.com/fr/concours-enspy-premiere-annee-cycle-ingenieurs-en-sciences-et-technologies-2020-2021/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Décision n°18260525 du 12 août 2026, ENSPY génie minier Meyomessala",
+        "url": "https://www.minesup.gov.cm/wp-content/uploads/2026/08/CONCOURS-DENTREE-EN-1ERE-ANNEE-DE-LA-FILIERE-GENIE-MINIER-A-LENSPY-SITE-DE-MEYOMESSALA.pdf",
+        "type": "arrete",
+        "annee": 2026
+      },
+      {
+        "titre": "Communiqués MINESUP, concours 2026",
+        "url": "https://www.minesup.gov.cm/index.php/category/concours/",
+        "type": "officiel",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "L'id regroupe sept écoles ; seule l'ENSPY est documentée pour la filière générale, et via Kamerpower (dates incohérentes : délai de dépôt « 9 juillet 2023 » sous un titre 2025/2026). La décision officielle lue (génie minier 2026) ne donne ni limite d'âge ni frais dans les pages lues (page 3 non consultée). La série de la voie générale vient aussi d'un commentaire de forum, mais le texte repris de l'arrêté liste C, D, E, F, TI. Pas d'arrêté 2026 de l'ENSPY générale trouvé."
   },
   {
     "id": "iric-institut-des-relations-internationales",
@@ -2610,7 +3013,42 @@
         "sessions": "Sessions annuelles",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Master professionnel en relations internationales, filière diplomatie : licence en droit, sciences politiques, économiques ou de gestion, lettres ou sciences humaines, ou équivalent reconnu par le ministre de l'Enseignement supérieur. L'IRIC propose aussi d'autres masters (marketing international, banque-monnaie-finance internationales, intégration régionale, communication et action publique) avec leurs conditions propres.",
+        "series_note": "Sans objet : l'accès est au niveau licence.",
+        "age_note": "32 ans au plus au 30 janvier 2025 (concours diplomatie, source secondaire). Autres masters : non lus.",
+        "autres": [
+          "Les candidats étrangers concourent hors quota",
+          "Certificat médical et casier judiciaire de moins de 3 mois",
+          "Candidats en emploi : autorisation écrite de l'employeur pour certains masters"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25 000 FCFA (reçu délivré par l'agent comptable de l'IRIC) ; 30 000 FCFA pour certains candidats en emploi selon d'autres avis (secondaire). Enveloppe A4 timbrée à 500 FCFA.",
+        "pieces": [
+          "Demande d'inscription (secrétariat de l'IRIC ou sites MINESUP/IRIC)",
+          "Acte de naissance certifié de moins de 3 mois",
+          "Copie certifiée du diplôme le plus élevé et relevés de notes",
+          "Certificat médical",
+          "Curriculum vitae",
+          "Photo 4x4",
+          "Reçu de 25 000 FCFA",
+          "Extrait de casier judiciaire de moins de 3 mois",
+          "Enveloppe A4 timbrée à 500 FCFA à l'adresse du candidat"
+        ]
+      },
+      "debouches": "Carrières diplomatiques, organisations internationales et régionales, ministères (relations extérieures), ONG, banque et finance internationales.",
+      "variantes": [
+        {
+          "nom": "Master diplomatie (15 places)",
+          "difference": "Licence pluridisciplinaire ; écrit : relations internationales (3 h) et langue (2 h), puis oral ; 15 places (secondaire)."
+        },
+        {
+          "nom": "Autres masters et filière marketing international",
+          "difference": "Chaque master a son avis : banque-monnaie-finance internationales, intégration régionale et management des institutions communautaires, communication et action publique, marketing international. Conditions non lues en détail."
+        }
+      ]
     },
     "en": {
       "nom": "IRIC – International Relations Institute",
@@ -2625,11 +3063,78 @@
         "sessions": "Annual sessions",
         "places": [],
         "places_note": "Places set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Professional master in international relations, diplomacy track: licence in law, political, economic or management sciences, letters or human sciences, or a recognised equivalent approved by the Minister of Higher Education. IRIC also offers other masters (international marketing, international banking-money-finance, regional integration, public communication and action) with their own conditions.",
+        "series_note": "Not applicable: entry is at licence level.",
+        "age_note": "32 at most on 30 January 2025 (diplomacy competition, secondary source). Other masters: not read.",
+        "autres": [
+          "Foreign candidates compete outside the quota",
+          "Medical certificate and criminal record under 3 months old",
+          "Working candidates: written employer authorisation for some masters"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25,000 FCFA (receipt issued by the IRIC accountant); 30,000 FCFA for some working candidates according to other notices (secondary). A4 envelope stamped at 500 FCFA.",
+        "pieces": [
+          "Registration application (IRIC secretariat or MINESUP/IRIC websites)",
+          "Certified birth certificate under 3 months old",
+          "Certified copy of the highest diploma and transcripts",
+          "Medical certificate",
+          "Curriculum vitae",
+          "4x4 photo",
+          "Receipt for 25,000 FCFA",
+          "Criminal record extract under 3 months old",
+          "A4 envelope stamped at 500 FCFA with the candidate's address"
+        ]
+      },
+      "debouches": "Diplomatic careers, international and regional organisations, ministries (external relations), NGOs, international banking and finance.",
+      "variantes": [
+        {
+          "nom": "Master diplomatie (15 places)",
+          "difference": "Multi-discipline licence; written: international relations (3 h) and language (2 h), then oral; 15 places (secondary)."
+        },
+        {
+          "nom": "Autres masters et filière marketing international",
+          "difference": "Each master has its own notice: international banking-money-finance, regional integration and community institutions management, public communication and action, international marketing. Conditions not read in detail."
+        }
+      ]
     },
     "source_annales": "Annales IRIC disponibles par année (bibliothèques tierces)",
     "priorite": 24,
-    "theme": "universite"
+    "theme": "universite",
+    "acces": {
+      "niveaux_min": "licence",
+      "age_max": 32,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "décembre–janvier",
+      "mois_limite_depot": "janvier",
+      "mois_epreuves": "février",
+      "marque": "probable",
+      "frais_fcfa": 25000
+    },
+    "sources": [
+      {
+        "titre": "Concours IRIC, master diplomatie (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-iric-ouverture-du-concours-dentree-au-cycle-de-master-professionnel-en-relations-internationales-filiere-diplomatie-a-linstitut-des-relations-internationales-du-cameroun-iric-de-l/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Concours IRIC, Banque Monnaie Finance Internationales (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-iric-yaounde-2015-2016-master-banque-monnaie-finance-internationales/",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Faiblement sourcé : uniquement Kamerpower, dont les dates sont incohérentes (page titrée 2026, texte 2025/2026, délai et épreuve en janvier-février 2025). Aucun avis officiel IRIC ou MINESUP lu. Le concours IRIC est un concours de niveau master (licence requise), pas un concours post-bac. Aucun lien officiel vérifié, donc null."
   },
   {
     "id": "esstic-sciences-et-techniques-de-linformation-et",
@@ -2697,7 +3202,44 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Baccalauréat A, C ou D, baccalauréat agricole, ou GCE A Level dans au moins deux matières scientifiques, ou diplôme équivalent (décision n°18260631 du 7 septembre 2026). Les candidats sous réserve doivent présenter l'original du diplôme à l'admission.",
+        "series_note": "Séries A, C, D, baccalauréat agricole ou GCE A Level avec deux matières scientifiques.",
+        "age_note": "Aucune limite d'âge dans la décision 2026.",
+        "autres": [
+          "Ouvert aux Camerounais des deux sexes et aux ressortissants CEMAC (traitement national) justifiant des qualifications",
+          "Certificat médical d'un médecin de l'administration",
+          "Pas d'épreuve orale"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20 000 FCFA de frais de concours, non remboursables, versés à la Commercial Bank Dschang (compte indiqué dans la décision). Fiche timbrée à 1 500 FCFA et enveloppe A4 timbrée à 400 FCFA.",
+        "pieces": [
+          "Fiche de candidature téléchargée après pré-inscription en ligne (sigesonline.univ-dschang.org), timbrée à 1 500 FCFA",
+          "Copie certifiée de l'acte de naissance de moins de 3 mois",
+          "Copies certifiées du baccalauréat ou GCE A Level, du probatoire ou GCE O Level et des relevés de notes",
+          "Certificat médical d'un médecin de l'administration",
+          "Quatre photos 4x4 avec nom et prénom au verso",
+          "Reçu de 20 000 FCFA",
+          "Enveloppe A4 timbrée à 400 FCFA"
+        ]
+      },
+      "debouches": "Ingénieurs agronomes et forestiers (cycle ingénieur filière Agronomie et Foresterie) : production agricole, agro-industrie, développement rural, forêts.",
+      "variantes": [
+        {
+          "nom": "Session 2026/2027 (décision du 7 septembre 2026)",
+          "difference": "1 700 places dans 16 IPES ou plus sous tutelle de la FASA ; dépôt avant le mercredi 30 septembre 2026 à 15 h 30 ; écrits le vendredi 2 octobre 2026 (sciences naturelles, mathématiques, chimie, culture générale, 1 h chacune)."
+        },
+        {
+          "nom": "Session 2025/2026",
+          "difference": "1 200 places ; dépôt au 25 septembre 2025, écrits le 26 septembre 2025 (source secondaire)."
+        },
+        {
+          "nom": "FASA public niveau 3 / niveau 2",
+          "difference": "Concours spéciaux pour entrer directement en 3e année (10 places en 2024-2025, secondaire) ; conditions propres."
+        }
+      ]
     },
     "en": {
       "nom": "FASA / FASA-IPES – agronomy and agricultural sciences",
@@ -2718,11 +3260,92 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Baccalauréat A, C or D, agricultural baccalauréat, or GCE A Level in at least two science subjects, or an equivalent diploma (decision no. 18260631 of 7 September 2026). Provisional candidates must show the original diploma on admission.",
+        "series_note": "Series A, C, D, agricultural baccalauréat or GCE A Level with two science subjects.",
+        "age_note": "No age limit in the 2026 decision.",
+        "autres": [
+          "Open to Cameroonians of both sexes and to CEMAC nationals (national treatment) with the required qualifications",
+          "Medical certificate from a public-service doctor",
+          "No oral exam"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20,000 FCFA contest fee, non-refundable, paid at Commercial Bank Dschang (account given in the decision). Form stamped at 1,500 FCFA and A4 envelope stamped at 400 FCFA.",
+        "pieces": [
+          "Application form downloaded after online pre-registration (sigesonline.univ-dschang.org), stamped at 1,500 FCFA",
+          "Certified copy of the birth certificate under 3 months old",
+          "Certified copies of the baccalauréat or GCE A Level, probatoire or GCE O Level and transcripts",
+          "Medical certificate from a public-service doctor",
+          "Four 4x4 photos with name on the back",
+          "Receipt for 20,000 FCFA",
+          "A4 envelope stamped at 400 FCFA"
+        ]
+      },
+      "debouches": "Agronomy and forestry engineers (engineering cycle, Agronomy and Forestry track): crop production, agro-industry, rural development, forests.",
+      "variantes": [
+        {
+          "nom": "Session 2026/2027 (décision du 7 septembre 2026)",
+          "difference": "1,700 places in 16 or more IPES under FASA; filing before Wednesday 30 September 2026 at 15:30; written tests on Friday 2 October 2026 (natural sciences, mathematics, chemistry, general culture, 1 h each)."
+        },
+        {
+          "nom": "Session 2025/2026",
+          "difference": "1,200 places; filing by 25 September 2025, written tests 26 September 2025 (secondary source)."
+        },
+        {
+          "nom": "FASA public niveau 3 / niveau 2",
+          "difference": "Special competitions for direct entry to third year (10 places in 2024-2025, secondary); own conditions."
+        }
+      ]
     },
     "source_annales": "33 sujets d’annales FASA référencés chez les bibliothèques tierces",
     "priorite": 20,
-    "theme": "agriculture"
+    "theme": "agriculture",
+    "acces": {
+      "niveaux_min": "bac",
+      "series": [
+        "A",
+        "C",
+        "D",
+        "Bac agricole"
+      ],
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "septembre",
+      "mois_limite_depot": "fin septembre",
+      "mois_epreuves": "début octobre",
+      "marque": "officiel",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "http://sigesonline.univ-dschang.org",
+    "sources": [
+      {
+        "titre": "Décision n°18260631 du 7 septembre 2026, concours en 1re année ingénieur Agronomie et Foresterie (IPES sous tutelle FASA)",
+        "url": "https://www.minesup.gov.cm/wp-content/uploads/2026/09/UDs_FASA_1ere_Annee_Ingenieur.pdf",
+        "type": "arrete",
+        "annee": 2026
+      },
+      {
+        "titre": "Décisions portant ouverture des concours à la FASA et à l'UIECC (MINESUP)",
+        "url": "https://www.minesup.gov.cm/index.php/2026/09/08/decisions-portant-ouverture-des-concours-a-la-fasa-et-luiecc/",
+        "type": "officiel",
+        "annee": 2026
+      },
+      {
+        "titre": "Concours CEMAC 1re année ingénieurs FASA/UDs dans les IPES 2025-2026",
+        "url": "https://yop.l-frii.com/formations/cemac-concours-dentree-en-1ere-annee-ingenieurs-filiere-agronomie-et-foresterie-fasa-uds-dans-les-ipes-annee-academique-2025-2026/",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Décision 2026 lue en entier (scan consulté visuellement), mais elle concerne les IPES sous tutelle de la FASA et non le concours public de la FASA à Dschang. Nationalité : la décision cite les Camerounais et les ressortissants CEMAC. Pour la session 2025/2026, les dates ci-dessus (mois) sont celles de 2026 ; la décision indique qu'elle suit le calendrier MINESUP du 17 février 2026."
   },
   {
     "id": "facultes-de-medecine-examen-national-daptitude-m",
@@ -2751,7 +3374,44 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Concours d'entrée en 1re année (sciences biomédicales). Décision 2022 (FMSP Dschang) : élèves de terminale C ou D, ou Upper Sixth scientifique avec GCE O Level en quatre matières ; titulaires du baccalauréat C ou D ou du GCE A Level dans au moins trois matières scientifiques ; ou diplôme équivalent admis par le ministre. Garoua 2026 (secondaire) : bac C ou D ou GCE A Level dans au moins deux matières scientifiques.",
+        "series_note": "Séries C et D ; pour le système anglophone, GCE A Level scientifique (3 matières scientifiques en 2022, 2 à Garoua en 2026). Les inscrits sous réserve doivent présenter l'original du diplôme à l'admission.",
+        "age_note": "Décision 2022 : 23 ans au plus au 1er octobre 2022. Limite de la session actuelle non lue (un guide secondaire parle de 17 à 23 ans au 1er octobre).",
+        "autres": [
+          "Certificat médical attestant l'aptitude aux études biomédicales, délivré par un médecin de l'administration",
+          "Candidats CEMAC admis dans les mêmes conditions (traitement national)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20 000 FCFA de droits d'inscription (décision 2022 ; confirmé à 20 000 FCFA pour Garoua 2026, source secondaire). Formulaire timbré à 1 000 FCFA et enveloppe A4 timbrée à 400 FCFA en 2022.",
+        "pieces": [
+          "Formulaire d'inscription en ligne, timbré et signé",
+          "Reçu de versement des droits",
+          "Copie certifiée de l'acte de naissance de moins de 3 mois",
+          "Copie certifiée du baccalauréat ou GCE A Level, ou attestation de réussite",
+          "Relevés de notes certifiés (probatoire, baccalauréat ou GCE O/A Level)",
+          "Certificat médical d'un médecin de l'administration",
+          "Quatre photos 4x4",
+          "Enveloppe A4 timbrée à l'adresse du candidat"
+        ]
+      },
+      "debouches": "Formation de médecins, pharmaciens et chirurgiens-dentistes ; accès ensuite au cycle médical puis à l'internat et aux spécialisations.",
+      "variantes": [
+        {
+          "nom": "Examen national d'entrée en 4e année",
+          "difference": "Réservé aux titulaires d'une licence biomédicale ; 25 ans au plus au 1er janvier de l'année (source secondaire)."
+        },
+        {
+          "nom": "Spécialisation en médecine",
+          "difference": "Doctorat national en médecine ou pharmacie ; 35 ans au plus au 1er janvier (source secondaire)."
+        },
+        {
+          "nom": "Concours par faculté (Yaoundé I, Douala, Dschang, Buea, Garoua)",
+          "difference": "Chaque faculté publie sa décision ; places, centres et dates varient. Garoua 2026 : 50 places, dépôt au 25 septembre, épreuve le 29 septembre 2026."
+        }
+      ]
     },
     "en": {
       "nom": "Faculties of medicine – national aptitude exam (medicine, pharmacy, dentistry)",
@@ -2772,11 +3432,91 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Entrance competition for first year (biomedical sciences). 2022 decision (FMSP Dschang): final-year C or D students, or science Upper Sixth with GCE O Level in four subjects; holders of the baccalauréat C or D or GCE A Level in at least three science subjects; or an equivalent diploma accepted by the Minister. Garoua 2026 (secondary): bac C or D or GCE A Level in at least two science subjects.",
+        "series_note": "Series C and D; for the English system, science GCE A Level (3 science subjects in 2022, 2 at Garoua in 2026). Provisional candidates must show the original diploma on admission.",
+        "age_note": "2022 decision: 23 at most on 1 October 2022. Current session limit not read (a secondary guide says 17 to 23 on 1 October).",
+        "autres": [
+          "Medical certificate showing fitness for biomedical studies, from a public-service doctor",
+          "CEMAC candidates admitted on the same terms (national treatment)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20,000 FCFA registration fee (2022 decision; also 20,000 FCFA for Garoua 2026, secondary source). Form stamped at 1,000 FCFA and A4 envelope stamped at 400 FCFA in 2022.",
+        "pieces": [
+          "Online registration form, stamped and signed",
+          "Fee payment receipt",
+          "Certified copy of the birth certificate under 3 months old",
+          "Certified copy of the baccalauréat or GCE A Level, or attestation of success",
+          "Certified transcripts (probatoire, baccalauréat or GCE O/A Level)",
+          "Medical certificate from a public-service doctor",
+          "Four 4x4 photos",
+          "Stamped A4 envelope with the candidate's address"
+        ]
+      },
+      "debouches": "Training of doctors, pharmacists and dentists; later access to the medical cycle, then internship and specialisation.",
+      "variantes": [
+        {
+          "nom": "Examen national d'entrée en 4e année",
+          "difference": "For holders of a biomedical licence; 25 at most on 1 January of the year (secondary source)."
+        },
+        {
+          "nom": "Spécialisation en médecine",
+          "difference": "National doctorate in medicine or pharmacy; 35 at most on 1 January (secondary source)."
+        },
+        {
+          "nom": "Concours par faculté (Yaoundé I, Douala, Dschang, Buea, Garoua)",
+          "difference": "Each faculty publishes its own decision; places, centres and dates vary. Garoua 2026: 50 places, filing by 25 September, exam 29 September 2026."
+        }
+      ]
     },
     "source_annales": "Annales par année (bibliothèques tierces)",
     "priorite": 10,
-    "theme": "medecin"
+    "theme": "medecin",
+    "acces": {
+      "niveaux_min": "bac",
+      "series": [
+        "C",
+        "D"
+      ],
+      "age_max": 23,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2022,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juillet–août",
+      "mois_limite_depot": "septembre",
+      "mois_epreuves": "septembre–octobre",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "https://www.minesup.gov.cm/index.php/category/concours/",
+    "sources": [
+      {
+        "titre": "Décision 2022 portant ouverture du concours en 1re année, Faculté de médecine et sciences pharmaceutiques de Dschang",
+        "url": "https://minesup.gov.cm/2022/FMSP%20UDs%202022_1ere%20annee_fr.pdf",
+        "type": "arrete",
+        "annee": 2022
+      },
+      {
+        "titre": "Concours FMSB Garoua 2026, décision n°18260307 du 3 juillet 2026 (Infospratiques)",
+        "url": "https://infospratiques.cm/?p=514",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Examen national d'entrée en 4e année (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-formation-medicale-cameroun-2015-2016-4eme-annee-examen-national-dentree-en-4eme-annee/",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Le concours est organisé faculté par faculté, il n'y a pas d'« examen national » unique pour la 1re année : la fiche du fichier est ambiguë. L'arrêté lu est de 2022 (Dschang) ; les conditions 2026 de Garoua viennent d'une source secondaire et diffèrent (2 matières scientifiques au GCE A Level au lieu de 3). Aucune décision 2025 ou 2026 de Yaoundé I lue. Nationalité : « Camerounais » en 2026 (secondaire) et CEMAC en traitement national ; la décision 2022 ne le dit pas dans la partie lue."
   },
   {
     "id": "emsv-sciences-et-medecine-veterinaire",
@@ -2879,7 +3619,49 @@
         "sessions": "Sessions annuelles",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "1re année (DUT/BTS, formation initiale) : baccalauréat ou GCE A Level, dans les séries propres à chaque mention. MTT-GAPMO : A, C, D, E, CG, FIG, ACC, SES. MTT-GLT : C, D, E, CG, FIG, SES. MTT-OGA : A, ACA, ACC. MTIN (GI, GEII, GRT, GBM) : C, D, E, F2, F3, MHB, TI. MTI (GIM, GMP, GTE, GME, GMI, GC, MET) : C, D, E, F1 à F7, BT. Le GCE A Level est accepté pour toutes les mentions.",
+        "series_note": "Séries variables selon la mention (voir diplômes). Données de la décision du 21 mai 2024 (IUT de Douala et ISE Yaoundé).",
+        "age_note": "29 ans au plus au 1er janvier (la décision 2024 écrit « 1er janvier 2024 » à l'article 2 et « 1er janvier 2023 » à l'article 4 : incohérence interne). Ouvert aussi aux candidats étrangers.",
+        "autres": [
+          "Certificat de scolarité de la classe de terminale",
+          "Certificat médical d'un médecin fonctionnaire de moins de 3 mois attestant l'aptitude aux études supérieures",
+          "Ouvert aux Camerounais des deux sexes et aux étrangers de 29 ans au plus"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20 000 FCFA de droits d'inscription (décision 2024), plus fiche timbrée à 1 500 FCFA et enveloppe A4 timbrée à 400 FCFA. Les IUT privés et sous tutelle ouvrent plus tard (juillet à octobre).",
+        "pieces": [
+          "Fiche de renseignements remplie en ligne (iut-douala.cm), imprimée, signée et timbrée à 1 500 FCFA",
+          "Copie certifiée de l'acte de naissance de moins de 3 mois",
+          "Copie certifiée de l'un des diplômes ouvrant droit au concours",
+          "Certificat de scolarité de la classe de terminale",
+          "Certificat médical d'un médecin fonctionnaire de moins de 3 mois",
+          "Quatre photos 4x4",
+          "Reçu bancaire de 20 000 FCFA",
+          "Enveloppe A4 timbrée à 400 FCFA à l'adresse du candidat"
+        ]
+      },
+      "debouches": "Techniciens supérieurs (DUT, BTS) en génie industriel, informatique, réseaux, génie civil, logistique, gestion, avec poursuite possible en licence technologique.",
+      "variantes": [
+        {
+          "nom": "IUT de Douala et ISE Yaoundé, 1re année (2024)",
+          "difference": "1 013 places (863 à Douala, 150 à l'ISE) ; écrit le 9 juillet 2024 : culture générale (coef 2), mathématiques (coef 3), épreuve de spécialité (coef 3), 2 h chacune ; dépôt avant le 5 juillet 2024."
+        },
+        {
+          "nom": "Autres IUT et instituts (Bandjoun, IUS, INUBIL, etc.)",
+          "difference": "IUT Fotso Victor de Bandjoun (Université de Dschang) : bac ou GCE A Level dans au moins deux matières de spécialité (source secondaire 2021). IUS et INUBIL : décisions 2026-2027 publiées le 29 septembre 2026 par le MINESUP, non lues en détail."
+        },
+        {
+          "nom": "FGI (Faculté de génie industriel, Douala)",
+          "difference": "Concours distinct ; seule une notice 2019 (secondaire, via moteur de recherche) a été vue : terminale C, D, E, F, BT ou GCE A Level, épreuves de physique et de mathématiques. Non vérifié pour une session récente."
+        },
+        {
+          "nom": "3e année (licence de technologie)",
+          "difference": "Concours distinct pour titulaires d'un DUT/BTS ou équivalent ; frais de 25 000 FCFA cités pour IUT Douala 3e année (secondaire)."
+        }
+      ]
     },
     "en": {
       "nom": "IUT, FGI and technology schools",
@@ -2894,11 +3676,91 @@
         "sessions": "Annual sessions",
         "places": [],
         "places_note": "Places set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "First year (DUT/BTS, initial training): baccalauréat or GCE A Level, in the series set for each track. MTT-GAPMO: A, C, D, E, CG, FIG, ACC, SES. MTT-GLT: C, D, E, CG, FIG, SES. MTT-OGA: A, ACA, ACC. MTIN (GI, GEII, GRT, GBM): C, D, E, F2, F3, MHB, TI. MTI (GIM, GMP, GTE, GME, GMI, GC, MET): C, D, E, F1 to F7, BT. GCE A Level is accepted for all tracks.",
+        "series_note": "Series vary by track (see diplomas). Data from the decision of 21 May 2024 (IUT Douala and ISE Yaoundé).",
+        "age_note": "29 at most on 1 January (the 2024 decision says '1 January 2024' in article 2 and '1 January 2023' in article 4: internal inconsistency). Also open to foreign candidates.",
+        "autres": [
+          "School certificate for the final-year class",
+          "Medical certificate under 3 months old from a civil-service doctor showing fitness for higher studies",
+          "Open to Cameroonians of both sexes and to foreigners aged 29 at most"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20,000 FCFA registration fee (2024 decision), plus form stamped at 1,500 FCFA and A4 envelope stamped at 400 FCFA. Private and supervised institutes open later (July to October).",
+        "pieces": [
+          "Information form completed online (iut-douala.cm), printed, signed and stamped at 1,500 FCFA",
+          "Certified copy of the birth certificate under 3 months old",
+          "Certified copy of one of the diplomas giving access",
+          "School certificate for the final-year class",
+          "Medical certificate under 3 months old from a civil-service doctor",
+          "Four 4x4 photos",
+          "Bank receipt for 20,000 FCFA",
+          "A4 envelope stamped at 400 FCFA with the candidate's address"
+        ]
+      },
+      "debouches": "Higher technicians (DUT, BTS) in industrial engineering, IT, networks, civil engineering, logistics and management, with possible continuation to a technological licence.",
+      "variantes": [
+        {
+          "nom": "IUT de Douala et ISE Yaoundé, 1re année (2024)",
+          "difference": "1,013 places (863 in Douala, 150 at ISE); written exam 9 July 2024: general culture (coef 2), mathematics (coef 3), specialty paper (coef 3), 2 h each; filing before 5 July 2024."
+        },
+        {
+          "nom": "Autres IUT et instituts (Bandjoun, IUS, INUBIL, etc.)",
+          "difference": "IUT Fotso Victor of Bandjoun (University of Dschang): bac or GCE A Level in at least two specialty subjects (secondary source 2021). IUS and INUBIL: 2026-2027 decisions published 29 September 2026 by MINESUP, not read in detail."
+        },
+        {
+          "nom": "FGI (Faculté de génie industriel, Douala)",
+          "difference": "Separate competition; only a 2019 notice (secondary, via search) was seen: final-year C, D, E, F, BT or GCE A Level, physics and mathematics papers. Not verified for a recent session."
+        },
+        {
+          "nom": "3e année (licence de technologie)",
+          "difference": "Separate competition for DUT/BTS holders or equivalent; 25,000 FCFA fee cited for IUT Douala third year (secondary)."
+        }
+      ]
     },
     "source_annales": "Annales IUT/FGI disponibles par année (bibliothèques tierces)",
     "priorite": 19,
-    "theme": "genie"
+    "theme": "genie",
+    "acces": {
+      "niveaux_min": "bac",
+      "age_max": 29,
+      "genre": "tous",
+      "annee_conditions": 2024,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "mai",
+      "mois_limite_depot": "juillet",
+      "mois_epreuves": "juillet",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "https://www.iut-douala.cm",
+    "sources": [
+      {
+        "titre": "Décision portant ouverture du concours en 1re année, Division de la formation initiale, IUT Douala et ISE (21 mai 2024)",
+        "url": "https://www.minesup.gov.cm/wp-content/uploads/2024/05/Concours-IUT_UDla_2024_1ere-annee_Division-de-la-Formation-Initiale_fr.pdf",
+        "type": "arrete",
+        "annee": 2024
+      },
+      {
+        "titre": "Concours d'entrée à l'IUS, à l'INUBIL et au CEFR (MINESUP, 29 septembre 2026)",
+        "url": "https://www.minesup.gov.cm/index.php/2026/09/29/concours-dentree-a-lius-a-linubil-et-au-cefr/",
+        "type": "officiel",
+        "annee": 2026
+      },
+      {
+        "titre": "Concours IUT Douala 2026 (Infospratiques)",
+        "url": "https://infospratiques.cm/?p=434",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "L'id regroupe IUT, FGI et écoles de technologie : seule la décision IUT Douala/ISE 2024 a été lue en entier (scan consulté visuellement). Pas de décision 2025 ou 2026 de l'IUT de Douala lue. Les décisions 2026 de l'IUS et de l'INUBIL sont listées par le MINESUP mais leurs conditions n'ont pas été lues. L'URL d'inscription iut-douala.cm vient de la décision 2024. Âge : incohérence de dates dans la décision (voir age_note). Nationalité non classée car la décision admet aussi les étrangers."
   },
   {
     "id": "ipes-prives-sous-tutelle-academique-enspd-fasa-i",
@@ -4102,7 +4964,41 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Contrôleurs adjoints (catégorie C) : BEPC ou GCE Ordinary Level en quatre matières (hors religion), ou diplôme équivalent reconnu. Commis (catégorie D) : CEP ou FSLC.",
+        "series_note": "Aucune série exigée.",
+        "age_note": "17 à 29 ans. Le texte de la session 2025 reprend une date de référence 2021 (1er janvier 2021) et une fenêtre de naissance 1990-2002 qui ne concordent pas : limite à vérifier dans l'arrêté du concours en cours.",
+        "autres": [
+          "Remplir les conditions générales d'accès aux emplois publics (Statut général de la fonction publique)",
+          "Certificat médical d'un médecin du secteur public",
+          "Casier judiciaire (bulletin n°3)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Session 2025 (secondaire) : 15 000 FCFA de quittance, fiche timbrée à 1 000 FCFA, enveloppe timbrée à 500 FCFA. Les montants ont augmenté dans d'autres concours MINFOPRA en 2026 (20 000 FCFA) : à vérifier.",
+        "pieces": [
+          "Fiche d'inscription timbrée",
+          "Copie certifiée de l'acte de naissance",
+          "Casier judiciaire (bulletin n°3)",
+          "Copies certifiées des diplômes exigés et attestation de présentation de l'original",
+          "Certificat médical d'un médecin du secteur public",
+          "Quittance de paiement",
+          "Deux photos 4x4",
+          "Enveloppe timbrée à l'adresse du candidat"
+        ]
+      },
+      "debouches": "Contrôleur adjoint ou commis du Trésor (MINFI) : comptabilité publique, recouvrement et paiement des dépenses de l'État.",
+      "variantes": [
+        {
+          "nom": "Commis du Trésor (catégorie D)",
+          "difference": "CEP ou FSLC ; 25 places en 2025 (75 contrôleurs adjoints + 25 commis)."
+        },
+        {
+          "nom": "ENAM – régies financières",
+          "difference": "Voie de niveau licence ou bac par l'école ; voir la fiche ENAM."
+        }
+      ]
     },
     "en": {
       "nom": "Revenue services – Treasury",
@@ -4127,11 +5023,78 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Assistant controllers (category C): BEPC or GCE Ordinary Level in four subjects (excluding religion), or a recognised equivalent. Clerks (category D): CEP or FSLC.",
+        "series_note": "No series required.",
+        "age_note": "17 to 29. The 2025 session text carries a 2021 reference date (1 January 2021) and a 1990-2002 birth window that do not match: check the limit in the current competition's arrêté.",
+        "autres": [
+          "Meet the general conditions for public employment (General Civil Service Statute)",
+          "Medical certificate from a public-sector doctor",
+          "Criminal record extract (bulletin no. 3)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "2025 session (secondary): 15,000 FCFA receipt, form stamped at 1,000 FCFA, envelope stamped at 500 FCFA. Other MINFOPRA competitions rose to 20,000 FCFA in 2026: check.",
+        "pieces": [
+          "Stamped registration form",
+          "Certified copy of the birth certificate",
+          "Criminal record extract (bulletin no. 3)",
+          "Certified copies of the required diplomas and attestation that the originals were presented",
+          "Medical certificate from a public-sector doctor",
+          "Payment receipt",
+          "Two 4x4 photos",
+          "Stamped envelope with the candidate's address"
+        ]
+      },
+      "debouches": "Assistant controller or clerk at the Treasury (MINFI): public accounting, collection and payment of State expenditure.",
+      "variantes": [
+        {
+          "nom": "Commis du Trésor (catégorie D)",
+          "difference": "CEP or FSLC; 25 places in 2025 (75 assistant controllers + 25 clerks)."
+        },
+        {
+          "nom": "ENAM – régies financières",
+          "difference": "Licence- or bac-level route via the school; see the ENAM entry."
+        }
+      ]
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
     "priorite": 12,
-    "theme": "finance"
+    "theme": "finance",
+    "acces": {
+      "niveaux_min": "cep",
+      "age_min": 17,
+      "age_max": 29,
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin–juillet",
+      "mois_limite_depot": "juillet",
+      "mois_epreuves": "août",
+      "marque": "probable",
+      "frais_fcfa": 15000
+    },
+    "lien_inscription": "https://concoursonline.minfopra.gov.cm",
+    "sources": [
+      {
+        "titre": "Concours direct 100 régies financières (Trésor) (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-direct-controleurs-adjoints-des-regies-financieres-tresor-recrutement",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Concours Trésor Public Cameroun 2026 (Infospratiques)",
+        "url": "https://infospratiques.cm/concours-tresor-public-cameroun/",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Faiblement sourcé : un seul texte secondaire (session 2025, épreuves 7-8 août 2025, dépôt 23 juillet 2025), avec dates de référence incohérentes. La nationalité n'est pas indiquée dans ce texte (null). Aucune information trouvée pour une session Trésor 2026. Un guide secondaire parle de 17-30 ans et de plusieurs catégories (A, B, C) : non confirmé. Arrêté officiel non lu."
   },
   {
     "id": "regies-financieres-douanes",
@@ -4172,7 +5135,49 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Brigadiers des douanes (catégorie C, active) : BEPC, CAP ou GCE Ordinary Level en quatre matières (hors religion), ou diplôme étranger équivalent. Préposés des douanes et commis (catégorie D) : CEP ou FSLC.",
+        "series_note": "Aucune série exigée.",
+        "age_note": "17 ans au moins et 29 ans au plus au 1er janvier 2026 (né entre le 01/01/1997 et le 01/01/2009). Les titulaires de la carte nationale d'invalidité bénéficient d'une dispense d'âge de 5 ans au plus.",
+        "autres": [
+          "Remplir les conditions générales d'accès aux emplois publics",
+          "Aptitude physique attestée par un certificat médical d'un médecin du secteur public",
+          "Casier judiciaire (bulletin n°3)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20 000 FCFA (quittance Express Union), plus fiche timbrée à 1 500 FCFA et enveloppe timbrée à 1 500 FCFA (session 2026). En 2025, une source donne 20 000 FCFA aussi.",
+        "pieces": [
+          "Fiche d'inscription timbrée à 1 500 FCFA",
+          "Copie certifiée de l'acte de naissance",
+          "Casier judiciaire (bulletin n°3)",
+          "Copie certifiée du diplôme exigé et attestation de présentation de l'original",
+          "Certificat médical d'un médecin du secteur public",
+          "Quittance de versement",
+          "Deux photos 4x4",
+          "Enveloppe timbrée à l'adresse du candidat"
+        ]
+      },
+      "debouches": "Agents de la Direction générale des douanes : brigadiers et préposés (corps actif, en uniforme) ou commis, avec évolution de carrière selon la catégorie.",
+      "variantes": [
+        {
+          "nom": "Commis des douanes (catégorie D)",
+          "difference": "CEP ou FSLC. 25 places en 2026. Programme de niveau CM2."
+        },
+        {
+          "nom": "Corps actif : préposés (catégorie D) et brigadiers (catégorie C)",
+          "difference": "50 places en 2026 (25 brigadiers avec BEPC/CAP/GCE O/L, 25 préposés avec CEP/FSLC)."
+        },
+        {
+          "nom": "Contrôleurs adjoints des douanes (catégorie C)",
+          "difference": "BEPC/CAP/GCE O/L ; 17-29 ans. Session 2025 (secondaire) : 60 postes de contrôleurs adjoints, épreuves annoncées le 15 octobre 2025 (dates contradictoires)."
+        },
+        {
+          "nom": "ENAM – régies financières (cycles A et B)",
+          "difference": "Niveau licence ou bac, voie par l'école : voir la fiche ENAM."
+        }
+      ]
     },
     "en": {
       "nom": "Revenue services – Customs",
@@ -4205,11 +5210,93 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Customs brigadiers (category C, uniformed): BEPC, CAP or GCE Ordinary Level in four subjects (excluding religion), or an equivalent foreign diploma. Customs guards and clerks (category D): CEP or FSLC.",
+        "series_note": "No series required.",
+        "age_note": "At least 17 and at most 29 on 1 January 2026 (born between 01/01/1997 and 01/01/2009). Holders of the national disability card get an age waiver of up to 5 years.",
+        "autres": [
+          "Meet the general conditions for public employment",
+          "Physical fitness shown by a medical certificate from a public-sector doctor",
+          "Criminal record extract (bulletin no. 3)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20,000 FCFA (Express Union receipt), plus a registration form stamped at 1,500 FCFA and a stamped envelope at 1,500 FCFA (2026 session). A 2025 source also gives 20,000 FCFA.",
+        "pieces": [
+          "Registration form stamped at 1,500 FCFA",
+          "Certified copy of the birth certificate",
+          "Criminal record extract (bulletin no. 3)",
+          "Certified copy of the required diploma and attestation that the original was presented",
+          "Medical certificate from a public-sector doctor",
+          "Payment receipt",
+          "Two 4x4 photos",
+          "Stamped envelope with the candidate's address"
+        ]
+      },
+      "debouches": "Agents of the Customs Directorate: brigadiers and guards (uniformed corps) or clerks, with career progression by category.",
+      "variantes": [
+        {
+          "nom": "Commis des douanes (catégorie D)",
+          "difference": "CEP or FSLC. 25 places in 2026. CM2-level syllabus."
+        },
+        {
+          "nom": "Corps actif : préposés (catégorie D) et brigadiers (catégorie C)",
+          "difference": "50 places in 2026 (25 brigadiers with BEPC/CAP/GCE O/L, 25 guards with CEP/FSLC)."
+        },
+        {
+          "nom": "Contrôleurs adjoints des douanes (catégorie C)",
+          "difference": "BEPC/CAP/GCE O/L; 17-29. 2025 session (secondary): 60 controller-assistant posts, exams announced 15 October 2025 (contradictory dates)."
+        },
+        {
+          "nom": "ENAM – régies financières (cycles A et B)",
+          "difference": "Licence or bac level, via the school: see the ENAM entry."
+        }
+      ]
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
     "priorite": 11,
-    "theme": "finance"
+    "theme": "finance",
+    "acces": {
+      "niveaux_min": "cep",
+      "age_min": 17,
+      "age_max": 29,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin",
+      "mois_limite_depot": "fin juin",
+      "mois_epreuves": "juillet",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "https://concoursonline.minfopra.gov.cm",
+    "sources": [
+      {
+        "titre": "Concours Douanes et Impôts Cameroun 2026, arrêtés MINFOPRA n°57, 58, 60 du 4 juin 2026 (Cameroon Desks)",
+        "url": "https://www.cameroondesks.com/2026/06/concours-douanes-et-impots-cameroun-20.html",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Concours de douane 2026-2027 (Kamerpower)",
+        "url": "https://kamerpower.com/fr/concours-de-douane-2023-2024-au-cameroun/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Concours de douane Cameroun : conditions (Infospratiques)",
+        "url": "https://infospratiques.cm/?p=66",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Aucun texte de MINFOPRA lu directement ; données de l'arrêté 2026 reprises par Cameroon Desks. Kamerpower (session 2025) est incohérent (fenêtre d'âge, dates 2025 sous un titre 2026). Une source secondaire mentionne une taille minimale (1,68 m hommes, 1,60 m femmes) ; Cameroon Desks 2026 ne la mentionne pas, donc non retenue. Résultats définitifs 2026 déjà publiés (août 2026) : la prochaine session est à surveiller."
   },
   {
     "id": "regies-financieres-impots",
@@ -4237,7 +5324,37 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Contrôleurs adjoints des impôts (catégorie C) : BEPC, CAP ou GCE Ordinary Level en quatre matières (hors religion), ou diplôme étranger équivalent.",
+        "series_note": "Aucune série exigée.",
+        "age_note": "17 ans au moins et 29 ans au plus au 1er janvier 2026. Dispense de 5 ans au plus pour les personnes handicapées titulaires de la carte nationale d'invalidité.",
+        "autres": [
+          "Remplir les conditions générales d'accès aux emplois publics",
+          "Certificat médical d'un médecin du secteur public",
+          "Casier judiciaire (bulletin n°3)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20 000 FCFA (quittance Express Union), plus fiche timbrée à 1 500 FCFA et enveloppe timbrée à 1 500 FCFA (session 2026).",
+        "pieces": [
+          "Fiche d'inscription timbrée à 1 500 FCFA",
+          "Copie certifiée de l'acte de naissance",
+          "Casier judiciaire (bulletin n°3)",
+          "Copie certifiée du diplôme exigé et attestation de présentation de l'original",
+          "Certificat médical d'un médecin du secteur public",
+          "Quittance de versement",
+          "Deux photos 4x4",
+          "Enveloppe timbrée à l'adresse du candidat"
+        ]
+      },
+      "debouches": "Contrôleur adjoint à la Direction générale des impôts (catégorie C) : assiette, contrôle et recouvrement des impôts.",
+      "variantes": [
+        {
+          "nom": "ENAM – régies financières (impôts, cycles A et B)",
+          "difference": "Voie de niveau licence (cycle A) ou bac (cycle B) par l'école ; voir la fiche ENAM. En 2025/2026 la division proposait comptabilité-matières ou prix, poids et mesures."
+        }
+      ]
     },
     "en": {
       "nom": "Revenue services – Taxation",
@@ -4257,11 +5374,75 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Assistant tax controllers (category C): BEPC, CAP or GCE Ordinary Level in four subjects (excluding religion), or an equivalent foreign diploma.",
+        "series_note": "No series required.",
+        "age_note": "At least 17 and at most 29 on 1 January 2026. Up to 5 years' waiver for disabled persons holding the national disability card.",
+        "autres": [
+          "Meet the general conditions for public employment",
+          "Medical certificate from a public-sector doctor",
+          "Criminal record extract (bulletin no. 3)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20,000 FCFA (Express Union receipt), plus a registration form stamped at 1,500 FCFA and a stamped envelope at 1,500 FCFA (2026 session).",
+        "pieces": [
+          "Registration form stamped at 1,500 FCFA",
+          "Certified copy of the birth certificate",
+          "Criminal record extract (bulletin no. 3)",
+          "Certified copy of the required diploma and attestation that the original was presented",
+          "Medical certificate from a public-sector doctor",
+          "Payment receipt",
+          "Two 4x4 photos",
+          "Stamped envelope with the candidate's address"
+        ]
+      },
+      "debouches": "Assistant controller at the General Directorate of Taxation (category C): tax assessment, control and collection.",
+      "variantes": [
+        {
+          "nom": "ENAM – régies financières (impôts, cycles A et B)",
+          "difference": "Licence-level (cycle A) or bac-level (cycle B) route via the school; see the ENAM entry. In 2025/2026 the division offered stores accounting or prices/weights/measures."
+        }
+      ]
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
     "priorite": 23,
-    "theme": "finance"
+    "theme": "finance",
+    "acces": {
+      "niveaux_min": "bepc",
+      "age_min": 17,
+      "age_max": 29,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin",
+      "mois_limite_depot": "fin juin",
+      "mois_epreuves": "juillet",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "lien_inscription": "https://concoursonline.minfopra.gov.cm",
+    "sources": [
+      {
+        "titre": "Concours Douanes et Impôts Cameroun 2026, arrêtés MINFOPRA du 4 juin 2026 (Cameroon Desks)",
+        "url": "https://www.cameroondesks.com/2026/06/concours-douanes-et-impots-cameroun-20.html",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Concours des Impôts Cameroun 2026 (Infospratiques)",
+        "url": "https://infospratiques.cm/concours-impots-cameroun/",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Session 2026 : 25 contrôleurs adjoints (impôts), dépôt avant le 26 juin, écrits le 11 juillet 2026. Données uniquement de sites secondaires ; un guide général donne 17-30 ans et BEPC ou probatoire, en contradiction avec la source 2026 (17-29, BEPC/CAP/GCE O/L) : la valeur 2026 est retenue. Arrêté officiel non lu directement. En 2025 il n'est pas établi qu'un concours impôts distinct ait eu lieu."
   },
   {
     "id": "concours-professionnels-corps-financiers-impots-",

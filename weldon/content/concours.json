@@ -51,7 +51,37 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "BEPC ou GCE Ordinary Level obtenu en au moins 3 matières (recrutement direct, selon sites secondaires).",
+        "series_note": "Aucune série mentionnée.",
+        "age_note": "Limite d'âge non trouvée de façon fiable pour 2026 (un site donne 18–28 ans mais il est peu fiable sur le gardien de la paix).",
+        "autres": [
+          "Taille minimale 1,57 m (femmes), 1,62 m (hommes) (conditions générales DGSN, secondaire)",
+          "Droits civiques, bonne moralité, apte au service actif",
+          "Pas de condamnation à plus de 6 mois de prison",
+          "Jamais exclu d'une école de police"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "16 000 F pour inspecteurs (Digital Business Africa) ; visite médicale d'incorporation probablement 25 000 F comme pour les autres corps (non confirmé).",
+        "pieces": [
+          "Demande manuscrite timbrée",
+          "Fiche d'inscription signée, 2 photos 4x4",
+          "Reçu de paiement",
+          "Acte de naissance certifié",
+          "Diplôme certifié et attestation de présentation de l'original",
+          "Bulletin n°3 (moins de 3 mois)",
+          "Certificat médical"
+        ]
+      },
+      "debouches": "Agents de terrain et d'enquête : commissariats, brigades, unités spécialisées.",
+      "variantes": [
+        {
+          "nom": "Concours spécial inspecteurs",
+          "difference": "Réservé aux fonctionnaires DGSN (environ 100 places selon un site secondaire), sans épreuves physiques ni enquête de moralité."
+        }
+      ]
     },
     "en": {
       "nom": "Cadet Police Inspectors",
@@ -99,12 +129,74 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "BEPC or GCE Ordinary Level in at least 3 subjects (direct recruitment, per secondary sites).",
+        "series_note": "No series mentioned.",
+        "age_note": "Age limit not reliably found for 2026 (one site says 18–28 but it is unreliable on the gardien contest).",
+        "autres": [
+          "Minimum height 1.57 m (women), 1.62 m (men) (DGSN general conditions, secondary)",
+          "Civic rights, good conduct, fit for active service",
+          "No prison sentence over 6 months",
+          "Never expelled from a police school"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "16,000 FCFA for inspectors (Digital Business Africa); incorporation medical likely 25,000 FCFA as other corps (unconfirmed).",
+        "pieces": [
+          "Handwritten stamped application",
+          "Signed registration form, 2 photos 4x4",
+          "Payment receipt",
+          "Certified birth certificate",
+          "Certified diploma and proof original was presented",
+          "Bulletin n°3 (under 3 months)",
+          "Medical certificate"
+        ]
+      },
+      "debouches": "Field and investigation officers: police stations, brigades, specialised units.",
+      "variantes": [
+        {
+          "nom": "Concours spécial inspecteurs",
+          "difference": "Reserved for DGSN civil servants (about 100 places per a secondary site), no physical tests or background check."
+        }
+      ]
     },
     "categorie": "direct",
     "tutelle": "DGSN",
     "priorite": 5,
-    "theme": "police"
+    "theme": "police",
+    "acces": {
+      "niveaux_min": "bepc",
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin–juillet",
+      "mois_limite_depot": "juillet–août",
+      "mois_epreuves": "septembre–octobre",
+      "marque": "probable",
+      "frais_fcfa": 16000
+    },
+    "lien_inscription": "https://www.concours-dgsn.cm",
+    "sources": [
+      {
+        "titre": "Digital Business Africa – Concours police 2026",
+        "url": "https://www.digitalbusiness.africa/cameroun-concours-de-la-police-2026-plus-que-trois-jours-pour-postuler-sur-www-concours-dgsn-cm/",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Infospratiques – Concours police 2026 (inspecteurs)",
+        "url": "https://infospratiques.cm/?p=474",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Arrêté du 15 juin 2026 non lu. Âge NON trouvé. Places directes 395 (secondaire) ; date limite 21 août 2026 ; écrit 26 septembre (un seul site, non vérifié). La page infospratiques ?p=474 n'a pas été lue en détail ; le diplôme provient du résumé de recherche. Le fichier concours.json indique 17–28 ans : non confirmé par une source lue."
   },
   {
     "id": "gardiens-paix",
@@ -156,7 +248,37 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "CEP (CEPE), FSLC ou équivalent reconnu (selon un site secondaire résumant l'arrêté DGSN du 15 juin 2026).",
+        "series_note": "Aucune série exigée (diplôme de niveau primaire).",
+        "age_note": "17 ans au moins et 27 ans au plus au 1er janvier 2026 (nés entre le 1er janvier 1999 et le 1er janvier 2009). Dérogations non trouvées.",
+        "autres": [
+          "Taille minimale : 1,57 m (femmes), 1,62 m (hommes)",
+          "Jouir de ses droits civiques, bonne moralité",
+          "Apte au service actif de jour et de nuit",
+          "Aucune condamnation à plus de 6 mois de prison",
+          "Ne pas avoir été exclu d'une école ou d'un centre de formation de la police",
+          "Les fonctionnaires de la DGSN en poste ne peuvent pas passer le concours direct"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "16 000 F de frais de concours, plus 1 500 F de timbre sur la demande ; 25 000 F de visite médicale d'incorporation, payés seulement par les admissibles aux écrits.",
+        "pieces": [
+          "Demande manuscrite sur papier timbré à 1 500 F",
+          "Fiche d'inscription signée avec 2 photos 4x4",
+          "Reçu de paiement des frais",
+          "Acte de naissance certifié (moins de 6 mois)",
+          "Diplôme certifié et attestation de présentation de l'original",
+          "Bulletin n°3 (moins de 3 mois)",
+          "Certificat médical",
+          "Fiche de renseignements timbrée",
+          "Certificat de taille timbré",
+          "Enveloppe A4 timbrée adressée au candidat",
+          "CNI (le récépissé n'est pas accepté)"
+        ]
+      },
+      "debouches": "Premier corps de la police : patrouille, circulation, sécurité publique. Formation à Mutengene puis affectation en commissariat."
     },
     "en": {
       "nom": "Cadet Police Constables",
@@ -202,12 +324,76 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "CEP (CEPE), FSLC or a recognised equivalent (per a secondary site summarising the DGSN arrêté of 15 June 2026).",
+        "series_note": "No series required (primary-level certificate).",
+        "age_note": "At least 17 and at most 27 on 1 January 2026 (born between 1 Jan 1999 and 1 Jan 2009). Waivers not found.",
+        "autres": [
+          "Minimum height: 1.57 m (women), 1.62 m (men)",
+          "Full civic rights, good conduct",
+          "Fit for day and night active service",
+          "No prison sentence over 6 months",
+          "Never expelled from a police school or training centre",
+          "Serving DGSN civil servants cannot sit the direct contest"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "16,000 FCFA contest fee, plus 1,500 FCFA stamp on the application; 25,000 FCFA incorporation medical, paid only by those who pass the written tests.",
+        "pieces": [
+          "Handwritten application on stamped paper (1,500 FCFA)",
+          "Signed registration form with two 4x4 photos",
+          "Fee payment receipt",
+          "Certified birth certificate (under 6 months)",
+          "Certified diploma and proof the original was presented",
+          "Bulletin n°3 criminal record (under 3 months)",
+          "Medical certificate",
+          "Stamped information form",
+          "Stamped height certificate",
+          "Stamped A4 envelope addressed to the candidate",
+          "National ID card (receipt not accepted)"
+        ]
+      },
+      "debouches": "Entry rank of the police: patrol, traffic, public safety. Training at Mutengene, then posting to a police station."
     },
     "categorie": "direct",
     "tutelle": "DGSN",
     "priorite": 2,
-    "theme": "police"
+    "theme": "police",
+    "acces": {
+      "niveaux_min": "cep",
+      "age_min": 17,
+      "age_max": 27,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin–juillet",
+      "mois_limite_depot": "juillet–août",
+      "mois_epreuves": "septembre–octobre",
+      "marque": "probable",
+      "frais_fcfa": 16000
+    },
+    "lien_inscription": "https://www.concours-dgsn.cm",
+    "sources": [
+      {
+        "titre": "Infospratiques – Concours Gardiens de la paix 2026",
+        "url": "https://infospratiques.cm/concours-gardiens-paix-cameroun-2026/",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Digital Business Africa – Concours de la police 2026",
+        "url": "https://www.digitalbusiness.africa/cameroun-concours-de-la-police-2026-plus-que-trois-jours-pour-postuler-sur-www-concours-dgsn-cm/",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Texte de l'arrêté (15 juin 2026) non lu directement ; conditions issues d'un site secondaire, recoupées en partie par un second (taille, conditions générales, frais). Un autre site (infospratiques ?p=65) donne 18–25 ans, 1,68 m/1,60 m : divergent, écarté. Date limite initiale 31 juillet 2026, prorogée au 21 août 2026 ; écrits le 3 octobre 2026 (secondaire). Places : 1 735 (autre source : 1 768). Les dates 2026 sont passées au 12 octobre 2026. Aucune dérogation d'âge trouvée."
   },
   {
     "id": "police-nationale-commissaires-et-officiers-de-po",
@@ -237,7 +423,46 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Commissaires : Licence, Bachelor ou diplôme technique supérieur équivalent. Officiers : Baccalauréat (ou GCE A Level, selon un site secondaire).",
+        "series_note": "Aucune série mentionnée. niveaux_min = bac correspond au corps des officiers ; commissaires = licence.",
+        "age_note": "Commissaires : 17 à 30 ans au 1er janvier 2026 (site secondaire). Officiers : âge non trouvé de façon fiable.",
+        "autres": [
+          "Taille minimale 1,57 m (femmes), 1,62 m (hommes) (commissaires, secondaire)",
+          "Droits civiques, bonne moralité, aptitude au service actif",
+          "Pas de condamnation à plus de 6 mois de prison",
+          "Jamais exclu d'une école de police",
+          "Épreuves physiques, visite médicale et enquête de moralité"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "21 000 F de frais de concours (commissaires et officiers) ; visite médicale d'incorporation 25 000 F (commissaires, secondaire).",
+        "pieces": [
+          "Demande manuscrite sur papier timbré à 1 500 F",
+          "Fiche d'inscription signée, 2 photos 4x4",
+          "Reçu de paiement",
+          "Acte de naissance et diplôme certifiés",
+          "Bulletin n°3",
+          "Certificat médical",
+          "Enveloppe A4 timbrée adressée au candidat"
+        ]
+      },
+      "debouches": "Cadres de commandement de la police (commissaires) et cadres d'encadrement (officiers), formés à l'ENSP de Yaoundé.",
+      "variantes": [
+        {
+          "nom": "Commissaires de police",
+          "difference": "Licence ; 17–30 ans au 1/1/2026 ; 50 places directes (dont 3 médecins) selon Cameroon Tribune, 45 selon un autre site ; écrit le 12 septembre 2026 (secondaire)."
+        },
+        {
+          "nom": "Officiers de police",
+          "difference": "Baccalauréat ; 100 places directes (dont 2 géomètres-topographes) ou 98 selon un autre site ; âge non trouvé."
+        },
+        {
+          "nom": "Concours spéciaux",
+          "difference": "Réservés aux fonctionnaires DGSN confirmés dans le grade requis (50 commissaires, 50 officiers)."
+        }
+      ]
     },
     "en": {
       "nom": "National Police – superintendents and police officers",
@@ -259,11 +484,88 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Commissioners: Licence, Bachelor's or equivalent higher technical diploma. Officers: Baccalauréat (or GCE A Level, per a secondary site).",
+        "series_note": "No series mentioned. niveaux_min = bac is for the officer corps; commissioners = licence.",
+        "age_note": "Commissioners: 17 to 30 on 1 January 2026 (secondary site). Officers: age not reliably found.",
+        "autres": [
+          "Minimum height 1.57 m (women), 1.62 m (men) (commissioners, secondary)",
+          "Civic rights, good conduct, fit for active service",
+          "No prison sentence over 6 months",
+          "Never expelled from a police school",
+          "Physical tests, medical exam and background check"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "21,000 FCFA contest fee (commissioners and officers); 25,000 FCFA incorporation medical (commissioners, secondary).",
+        "pieces": [
+          "Handwritten application on 1,500 FCFA stamped paper",
+          "Signed registration form, 2 photos 4x4",
+          "Payment receipt",
+          "Certified birth certificate and diploma",
+          "Bulletin n°3",
+          "Medical certificate",
+          "Stamped A4 envelope addressed to candidate"
+        ]
+      },
+      "debouches": "Police command (commissioners) and supervisory (officers) ranks, trained at ENSP Yaoundé.",
+      "variantes": [
+        {
+          "nom": "Commissaires de police",
+          "difference": "Licence; 17–30 on 1/1/2026; 50 direct places (incl. 3 doctors) per Cameroon Tribune, 45 per another site; written exam 12 Sept 2026 (secondary)."
+        },
+        {
+          "nom": "Officiers de police",
+          "difference": "Baccalauréat; 100 direct places (incl. 2 surveyors) or 98 per another site; age not found."
+        },
+        {
+          "nom": "Concours spéciaux",
+          "difference": "Reserved for DGSN civil servants confirmed in the required rank (50 commissioners, 50 officers)."
+        }
+      ]
     },
     "source_annales": "Annales commissaire/officier de police disponibles chez les tiers",
     "priorite": 17,
-    "theme": "police"
+    "theme": "police",
+    "acces": {
+      "niveaux_min": "bac",
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin–juillet",
+      "mois_limite_depot": "juillet–août",
+      "mois_epreuves": "septembre",
+      "marque": "probable",
+      "frais_fcfa": 21000
+    },
+    "lien_inscription": "https://www.concours-dgsn.cm",
+    "sources": [
+      {
+        "titre": "Infospratiques – Élève-commissaire 2026",
+        "url": "https://infospratiques.cm/?p=476",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Digital Business Africa – Concours police 2026",
+        "url": "https://www.digitalbusiness.africa/cameroun-concours-de-la-police-2026-plus-que-trois-jours-pour-postuler-sur-www-concours-dgsn-cm/",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Cameroon Tribune – Recrutement police 2500",
+        "url": "https://www.cameroon-tribune.cm/article.html/77718/en.html/recrutement-la-police-2500",
+        "type": "secondaire",
+        "annee": 2026
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Arrêtés du 15 juin 2026 (publiés sur concours-dgsn.cm) non lus. Âge et conditions des officiers NON trouvés. Dates limites divergentes : 31 juillet (initial), 14 août (SMS, Digital Business Africa). Cameroon Tribune lu seulement via résumé de recherche. La limite d'âge des commissaires est issue d'une seule page secondaire."
   },
   {
     "id": "emia",
@@ -318,7 +620,34 @@
         "sessions": "Sessions annuelles (2026 : épreuves le 30 mars) (documentées : 2015, 2021, 2022, 2023, 2025)",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Tronc A (civils) : Baccalauréat toutes séries ou GCE A Level (3 matières hors religion) et au moins une année d'études supérieures réussie. Tronc C (civils diplômés) : diplôme de l'enseignement supérieur ou d'ingénieur. Tronc B2 : sous-officiers diplômés du supérieur.",
+        "series_note": "Baccalauréat toutes séries.",
+        "age_note": "Tronc A : 18 ans au moins et 23 ans au plus (réf. 31 décembre, année indiquée 2026 dans la source ; à vérifier). Tronc C : 18 à 26 ans. Tronc B2 : 32 ans au plus.",
+        "autres": [
+          "Bonne moralité, casier judiciaire vierge",
+          "Aptitude médicale et physique"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Frais non trouvés."
+      },
+      "debouches": "Officier des armées de Terre, de l'Air, de la Marine ou de la Gendarmerie après formation à l'EMIA de Yaoundé.",
+      "variantes": [
+        {
+          "nom": "Tronc A",
+          "difference": "Civils bac + 1 an d'études supérieures, 125 places."
+        },
+        {
+          "nom": "Tronc C",
+          "difference": "Civils diplômés du supérieur, 18–26 ans, 40 places."
+        },
+        {
+          "nom": "Tronc B2 / Cours B",
+          "difference": "Sous-officiers diplômés du supérieur, 5 places, 32 ans au plus."
+        }
+      ]
     },
     "en": {
       "nom": "Joint Military School",
@@ -367,12 +696,71 @@
         "sessions": "Annual sessions (2026: papers on 30 March) (documented: 2015, 2021, 2022, 2023, 2025)",
         "places": [],
         "places_note": "Places set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Tronc A (civilians): Baccalauréat any series or GCE A Level (3 subjects excl. religion) plus at least one successful year of higher education. Tronc C (graduate civilians): higher-education or engineering diploma. Tronc B2: NCOs with higher-education diploma.",
+        "series_note": "Baccalauréat, all series.",
+        "age_note": "Tronc A: at least 18 and at most 23 (reference 31 December, year given as 2026 in the source; to verify). Tronc C: 18 to 26. Tronc B2: max 32.",
+        "autres": [
+          "Good conduct, clean criminal record",
+          "Medical and physical fitness"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Fees not found."
+      },
+      "debouches": "Officer in the Army, Air Force, Navy or Gendarmerie after training at EMIA Yaoundé.",
+      "variantes": [
+        {
+          "nom": "Tronc A",
+          "difference": "Civilians with bac + 1 year of higher education, 125 places."
+        },
+        {
+          "nom": "Tronc C",
+          "difference": "Graduate civilians, 18–26, 40 places."
+        },
+        {
+          "nom": "Tronc B2 / Cours B",
+          "difference": "NCOs with higher-education diploma, 5 places, max age 32."
+        }
+      ]
     },
     "categorie": "ecole",
     "tutelle": "MINDEF",
     "priorite": 9,
-    "theme": "militaire"
+    "theme": "militaire",
+    "acces": {
+      "niveaux_min": "bac",
+      "age_min": 18,
+      "age_max": 23,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "septembre",
+      "mois_limite_depot": "octobre–novembre",
+      "mois_epreuves": "janvier",
+      "marque": "probable"
+    },
+    "sources": [
+      {
+        "titre": "Kamerpower – Lancement concours EMIA",
+        "url": "https://kamerpower.com/fr/cameroun-le-gouvernement-lance-le-concours-dentree-en-emia-yaounde/amp/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Infospratiques – Concours EMIA",
+        "url": "https://infospratiques.cm/concours-emia-cameroun/",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Contenu Kamerpower obtenu via résumé de recherche seulement (la page n'a pas pu être lue). Communiqué de septembre 2025, épreuves 17–18 janvier 2026 ; la date de référence « 31 décembre 2026 » semble incohérente. Aucun communiqué MINDEF officiel lu. Infospratiques donne 18–23 ans et bac seul : conflit sur le Bac+1. Le fichier concours.json mentionne des écrits le 30 mars 2026, non recoupé. Frais et pièces non trouvés."
   },
   {
     "id": "recrutement-special-bir",
@@ -483,7 +871,48 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Non établi de façon fiable. Sources secondaires : BEPC, CAP ou GCE O/L (4 matières hors religion) pour les élèves-gendarmes spécialistes ; BEPC pour musiciens et conducteurs, CAP pour techniciens. Le diplôme des élèves-gendarmes service général et des sous-officiers n'est pas indiqué dans les pages lues.",
+        "series_note": "Aucune série mentionnée.",
+        "age_note": "Communiqué de novembre 2025 (relayé) : nés entre le 1/1/2002 et le 1/1/2008 pour élèves-gendarmes service général et sous-officiers service général ; entre le 1/1/1997 et le 1/1/2008 pour sous-officiers santé militaire ; entre le 1/1/2000 et le 1/1/2008 pour élèves-gendarmes spécialistes. Un autre site donne 18–25 ans au 31/12/2025 : contradictoire.",
+        "autres": [
+          "Célibataire, ne pas contracter mariage avant 3 ans de service (secondaire)",
+          "Taille minimale 1,67 m (hommes), 1,60 m (femmes) (secondaire, article antérieur)",
+          "Casier judiciaire vierge, bonne moralité, aptitude physique (secondaire)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Un site secondaire : 10 000 F (élève-gendarme service général), 25 000 F (spécialiste), 15 000 F (sous-officier), hors frais de dossier ; site de service payant, non officiel.",
+        "pieces": [
+          "Demande manuscrite timbrée",
+          "Acte de naissance",
+          "Copie certifiée du diplôme exigé et du diplôme le plus élevé",
+          "Attestation de présentation de l'original du diplôme",
+          "Bulletin n°3",
+          "Certificat de nationalité",
+          "Certificat de célibat",
+          "Fiche de renseignements",
+          "4 photos 4x4",
+          "Enveloppe timbrée",
+          "CV"
+        ]
+      },
+      "debouches": "Carrière dans la Gendarmerie nationale (sécurité publique, police judiciaire militaire).",
+      "variantes": [
+        {
+          "nom": "Officiers de gendarmerie (via EMIA)",
+          "difference": "Les officiers sont recrutés par le concours de l'EMIA (voir fiche EMIA)."
+        },
+        {
+          "nom": "Élèves-gendarmes spécialistes",
+          "difference": "Musiciens, conducteurs d'engins/poids lourds (BEPC + permis), techniciens (CAP) ; limites d'âge distinctes."
+        },
+        {
+          "nom": "Sous-officiers santé militaire",
+          "difference": "Limite d'âge plus haute (nés à partir du 1/1/1997) ; diplôme d'infirmier probable mais non confirmé pour la gendarmerie."
+        }
+      ]
     },
     "en": {
       "nom": "National Gendarmerie – cadet gendarmes and cadet non-commissioned officers",
@@ -508,11 +937,88 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Not reliably established. Secondary sources: BEPC, CAP or GCE O/L (4 subjects excluding religion) for specialist cadet gendarmes; BEPC for musicians and drivers, CAP for technicians. The diploma for general-service cadet gendarmes and NCOs is not stated in the pages read.",
+        "series_note": "No series mentioned.",
+        "age_note": "Nov 2025 communiqué (relayed): born between 1/1/2002 and 1/1/2008 for general-service cadet gendarmes and NCOs; 1/1/1997 to 1/1/2008 for military-health NCOs; 1/1/2000 to 1/1/2008 for specialist cadets. Another site says 18–25 on 31/12/2025: conflicting.",
+        "autres": [
+          "Single, no marriage before 3 years of service (secondary)",
+          "Minimum height 1.67 m (men), 1.60 m (women) (secondary, earlier article)",
+          "Clean criminal record, good conduct, physical fitness (secondary)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "One secondary site: 10,000 FCFA (general-service cadet gendarme), 25,000 (specialist), 15,000 (NCO), excluding dossier costs; commercial, non-official site.",
+        "pieces": [
+          "Handwritten stamped application",
+          "Birth certificate",
+          "Certified copy of required diploma and highest diploma",
+          "Certificate showing the original diploma was presented",
+          "Bulletin n°3",
+          "Certificate of nationality",
+          "Certificate of celibacy",
+          "Information sheet",
+          "4 passport photos 4x4",
+          "Stamped envelope",
+          "CV"
+        ]
+      },
+      "debouches": "Career in the National Gendarmerie (public security, military judicial police).",
+      "variantes": [
+        {
+          "nom": "Officiers de gendarmerie (via EMIA)",
+          "difference": "Officers are recruited via the EMIA contest (see EMIA sheet)."
+        },
+        {
+          "nom": "Élèves-gendarmes spécialistes",
+          "difference": "Musicians, heavy-vehicle drivers (BEPC + licence), technicians (CAP); different age limits."
+        },
+        {
+          "nom": "Sous-officiers santé militaire",
+          "difference": "Higher age ceiling (born from 1/1/1997); nursing diploma likely but not confirmed for gendarmerie."
+        }
+      ]
     },
     "source_annales": "Sujets non publiés",
     "priorite": 3,
-    "theme": "gendarmerie"
+    "theme": "gendarmerie",
+    "acces": {
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "septembre–octobre",
+      "mois_limite_depot": "novembre–décembre",
+      "mois_epreuves": "janvier–avril",
+      "marque": "probable",
+      "frais_fcfa": 10000
+    },
+    "sources": [
+      {
+        "titre": "Cameroon Desks – Recrutement sous-officiers et élèves-gendarmes (nov. 2025)",
+        "url": "https://www.cameroondesks.com/2025/11/conditions-et-delai-de-candidature-gendarmerie.html",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Kamerpower – Concours Gendarmerie nationale 2026-2027",
+        "url": "https://kamerpower.com/fr/events/concours-gendarmerie-nationale-cameroun/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Cameroon Desks – Inscription en ligne élèves gendarmes 2025",
+        "url": "https://www.cameroondesks.com/2025/09/inscription-en-ligne-concours-eleves-gendarme-2025.html",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Aucun communiqué officiel lu. Sources secondaires incohérentes (âge, diplôme, dates : dépôt 28 nov puis 26 déc 2025, écrit 19 avril 2026 ou janvier). Diplôme des élèves-gendarmes service général NON trouvé ; frais d'un site commercial seulement. niveaux_min laissé null volontairement. Fiche concours.json mentionne des sessions passées ; rien d'officiel pour la prochaine session."
   },
   {
     "id": "armees-sous-officiers-soldats-matelots",
@@ -541,7 +1047,36 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Soldats et matelots de 2e classe : BEPC, ou GCE O Level en 4 matières (hors religion), ou équivalent. Sous-officiers (service général) : Probatoire ou GCE A Level en au moins 2 matières, ou GCE O Level en 6 matières à défaut.",
+        "series_note": "Aucune série mentionnée.",
+        "age_note": "18 à 23 ans au 31 décembre 2025 (nés entre le 31/12/2002 et le 31/12/2007), soldats et sous-officiers service général. Santé militaire : jusqu'à 28 ans.",
+        "autres": [
+          "Taille minimale 1,66 m (garçons), 1,60 m (filles)",
+          "Célibataire sans enfant à charge",
+          "Casier judiciaire vierge, bonne moralité",
+          "Apte aux épreuves sportives, intellectuelles et médicales"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Frais non trouvés."
+      },
+      "debouches": "Carrière militaire dans l'Armée de Terre, la Marine ou l'Armée de l'Air.",
+      "variantes": [
+        {
+          "nom": "Élèves sous-officiers des armées (service général)",
+          "difference": "Niveau Probatoire/GCE A Level, 18–23 ans ; 700 places en 2025."
+        },
+        {
+          "nom": "Sous-officiers santé militaire",
+          "difference": "Jusqu'à 28 ans ; diplôme d'État d'infirmier ou de technicien médico-sanitaire obligatoire ; 40 places."
+        },
+        {
+          "nom": "École Navale (matelots)",
+          "difference": "Un site secondaire cite CEP/BEPC/Probatoire et 18–22 ans au 1/1/2026 : non recoupé."
+        }
+      ]
     },
     "en": {
       "nom": "Armed forces – cadet NCOs, privates and 2nd-class seamen",
@@ -562,11 +1097,71 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Soldiers and 2nd-class seamen: BEPC, or GCE O Level in 4 subjects (excl. religion), or equivalent. NCOs (general service): Probatoire or GCE A Level in at least 2 subjects, or GCE O Level in 6 subjects otherwise.",
+        "series_note": "No series mentioned.",
+        "age_note": "18 to 23 on 31 December 2025 (born 31/12/2002 to 31/12/2007), soldiers and general-service NCOs. Military health: up to 28.",
+        "autres": [
+          "Minimum height 1.66 m (boys), 1.60 m (girls)",
+          "Single with no dependent children",
+          "Clean criminal record, good conduct",
+          "Fit for sports, academic and medical tests"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Fees not found."
+      },
+      "debouches": "Military career in the Army, Navy or Air Force.",
+      "variantes": [
+        {
+          "nom": "Élèves sous-officiers des armées (service général)",
+          "difference": "Probatoire/GCE A Level, 18–23; 700 places in 2025."
+        },
+        {
+          "nom": "Sous-officiers santé militaire",
+          "difference": "Up to 28; state nursing or medico-sanitary technician diploma required; 40 places."
+        },
+        {
+          "nom": "École Navale (matelots)",
+          "difference": "One secondary site cites CEP/BEPC/Probatoire and 18–22 on 1/1/2026: unverified."
+        }
+      ]
     },
     "source_annales": "Sujets non publiés",
     "priorite": 16,
-    "theme": "militaire"
+    "theme": "militaire",
+    "acces": {
+      "niveaux_min": "bepc",
+      "age_min": 18,
+      "age_max": 23,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "septembre",
+      "mois_limite_depot": "octobre–novembre",
+      "marque": "probable"
+    },
+    "sources": [
+      {
+        "titre": "Cameroon Desks – Recrutement militaire MINDEF 2025 (communiqué reproduit)",
+        "url": "https://www.cameroondesks.com/2025/09/concours-recrutement-militaire-m.html",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Cameroon Tribune – Recrutement armées et gendarmerie",
+        "url": "https://cameroon-tribune.cm/article.html/54731/fr.html/details_2",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Communiqué du Ministre délégué à la Défense publié 20 septembre 2025, lu via un site secondaire ; texte officiel non lu. Frais, pièces, dates d'épreuves non trouvés. 5 330 soldats/matelots et 700 sous-officiers en 2025."
   },
   {
     "id": "essal",
@@ -1488,7 +2083,44 @@
         "sessions": "Sessions annuelles ; relance en 2026 (année 2025-2026) (documentées : 2022, 2024)",
         "places": [],
         "places_note": "Places par filière et par école, fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Baccalauréat ou GCE A Level correspondant à la filière visée (bac scientifique pour Sciences fondamentales, littéraire pour Lettres/Arts, toute série pour Sciences sociales et humaines), avec Probatoire/GCE O Level.",
+        "series_note": "Dépend de la filière : séries scientifiques (maths-informatique, physique, biologie), littéraires/langues, ou toutes séries (philosophie, histoire-géo, etc.). Diplôme éventuellement de l'année en cours (admission conditionnelle).",
+        "age_note": "29 ans au plus au 1er janvier de l'année du concours pour les candidats non fonctionnaires (session 2026). Un guide secondaire cite 28 ans : non confirmé.",
+        "autres": [
+          "Candidats étrangers admis aux mêmes conditions académiques selon places disponibles",
+          "Certificat médical d'un médecin public attestant l'aptitude à enseigner",
+          "Casier judiciaire bulletin n°3 de moins de 3 mois",
+          "Fonctionnaires : autorisation du ministre"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20 000 FCFA (session 2026, payables par Express Union, MTN MoMo ou compte CCA Bank), non remboursables.",
+        "pieces": [
+          "Formulaire de candidature",
+          "Acte de naissance certifié de moins de 6 mois",
+          "Relevés de notes certifiés (Probatoire/O-L et Bac/A-L)",
+          "Diplôme ou attestation de réussite certifié de moins de 6 mois",
+          "Casier judiciaire bulletin n°3",
+          "Certificat médical d'un médecin public",
+          "Reçu de paiement",
+          "Enveloppe A4 timbrée à l'adresse du candidat",
+          "2 photos d'identité",
+          "Fonctionnaires : autorisation du ministre"
+        ]
+      },
+      "debouches": "Formation de professeurs de l'enseignement secondaire général (PCEG au 1er cycle) ; places 2026 : 175 réparties en 8 filières.",
+      "variantes": [
+        {
+          "nom": "ENS Yaoundé 2e cycle",
+          "difference": "Entrée en 1re année du 2e cycle (niveau licence) ; non détaillé ici."
+        },
+        {
+          "nom": "ENS Bambili",
+          "difference": "Non mentionnée dans les sources lues ; aucune condition trouvée."
+        }
+      ]
     },
     "en": {
       "nom": "Higher Teacher Training College Yaoundé – 1st cycle",
@@ -1534,12 +2166,85 @@
         "sessions": "Annual sessions; resumed in 2026 (2025-2026 year) (documented: 2022, 2024)",
         "places": [],
         "places_note": "Places per stream and per school, set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Baccalauréat or GCE A Level matching the chosen stream (science for fundamental sciences, arts for languages/letters, any for social and human sciences), with Probatoire/GCE O Level.",
+        "series_note": "Depends on the stream: science (maths-computer science, physics, biology), arts/languages, or any series (philosophy, history-geography, etc.). Diploma of the current year may be accepted conditionally.",
+        "age_note": "At most 29 on 1 January of the competition year for non-civil-servant candidates (2026 session). One secondary guide says 28: unconfirmed.",
+        "autres": [
+          "Foreign candidates admitted under same academic conditions subject to available places",
+          "Medical certificate from a public doctor confirming fitness to teach",
+          "Criminal record bulletin no. 3 under 3 months old",
+          "Civil servants: minister's authorisation"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "20,000 FCFA (2026 session, payable via Express Union, MTN MoMo or CCA Bank account), non-refundable.",
+        "pieces": [
+          "Application form",
+          "Certified birth certificate under 6 months old",
+          "Certified transcripts (Probatoire/O-L and Bac/A-L)",
+          "Certified diploma or success attestation under 6 months old",
+          "Criminal record bulletin no. 3",
+          "Medical certificate from a public doctor",
+          "Payment receipt",
+          "Stamped A4 envelope with candidate's address",
+          "2 passport photos",
+          "Civil servants: minister's authorisation"
+        ]
+      },
+      "debouches": "Training as general secondary school teachers (PCEG at the 1st cycle); 175 places in 2026 across 8 streams.",
+      "variantes": [
+        {
+          "nom": "ENS Yaoundé 2e cycle",
+          "difference": "Entry into 1st year of the 2nd cycle (bachelor level); not detailed here."
+        },
+        {
+          "nom": "ENS Bambili",
+          "difference": "Not mentioned in the sources read; no conditions found."
+        }
+      ]
     },
     "categorie": "ecole",
     "tutelle": "MINESUP",
     "priorite": 13,
-    "theme": "enseignant"
+    "theme": "enseignant",
+    "acces": {
+      "niveaux_min": "bac",
+      "series": [
+        "Science",
+        "Arts"
+      ],
+      "age_max": 29,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "décembre–janvier",
+      "mois_limite_depot": "février",
+      "mois_epreuves": "mars",
+      "marque": "probable",
+      "frais_fcfa": 20000
+    },
+    "sources": [
+      {
+        "titre": "Kamerpower - Concours ENS Yaoundé 1ère année 1er cycle (avis 2026-2027)",
+        "url": "https://kamerpower.com/fr/concours-ens-de-yaounde-2015-2016-1ere-annee-du-1er-cycle-ens-ecole-normale-superieure-de-luniversite-de-yaounde-l",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "MINESUP - ENS Yaoundé 1er cycle (arrêté 2022, PDF scanné non lisible)",
+        "url": "https://minesup.gov.cm/2022/ENS%20Yde%201_1er%20cycle_fr.pdf",
+        "type": "arrete",
+        "annee": 2022
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Le PDF officiel MINESUP 2022 est une image scannée que je n'ai pas pu lire : conditions tirées d'un relais secondaire (avis 2026). Le fichier concours.json parle de coefficients (dossier 25 %, écrits 75 %) cohérent avec la source. Dates 2026 : dépôt 13 février, écrits en mars (libellé de date confus dans la source). ENS Bambili : rien trouvé."
   },
   {
     "id": "capesa-issea-analystes-statisticiens-et-ingenieu",
@@ -1663,7 +2368,43 @@
         "sessions": "Sessions annuelles (documentées : 2018, 2019, 2020, 2022, 2026)",
         "places": [],
         "places_note": "Places par filière, fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "1re année 1er cycle : Bac B, G1, G2, G3, BT/ESF ou GCE A/L en économie/secrétariat/comptabilité (Techniques de gestion) ; Bac C, D, E, F, I ou séries BT industrielles ou GCE A/L en au moins 2 matières scientifiques (Ingénierie). 3e année : BTS, DUT ou HND. 2e cycle : licence adaptée à l'option. Source : arrêté MINESUP n°160650/A du 25 juillet 2022 (année 2023-2024).",
+        "series_note": "Série selon la filière (Techniques de gestion vs Ingénierie) ; Brevet professionnel non accepté. Anciens fonctionnaires : Bac + CAPIET.",
+        "age_note": "1re année 1er cycle : moins de 28 ans au 1er janvier 2024 ; 3e année 1er cycle : moins de 31 ans ; 1re année 2e cycle : moins de 32 ans. Fonctionnaires exemptés de la limite d'âge. Source de 2022 (cycle 2023-2024).",
+        "autres": [
+          "Candidats privés et étrangers admissibles après étude du dossier selon les places",
+          "Certificat médical (médecin de la fonction publique)",
+          "Certificat de non-condamnation"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "15 000 FCFA, non remboursables (arrêté de 2022 reproduit) ; montant à revérifier pour la session en cours.",
+        "pieces": [
+          "Formulaire de candidature",
+          "Relevés de notes de Première et Terminale signés et certifiés",
+          "Acte de naissance certifié de moins de 3 mois",
+          "Copies certifiées des diplômes (+ Probatoire/GCE O/L)",
+          "Certificat médical de moins de 3 mois",
+          "Certificat de non-condamnation de moins de 3 mois",
+          "4 photos d'identité",
+          "Reçu de paiement des 15 000 FCFA",
+          "2 enveloppes 28x37 (une timbrée à l'adresse du candidat)",
+          "Équivalence officielle pour tout diplôme étranger"
+        ]
+      },
+      "debouches": "Formation d'enseignants de l'enseignement technique (lycées techniques, collèges d'enseignement technique) ; sites : Douala, Bambili, Kumba, Ebolowa.",
+      "variantes": [
+        {
+          "nom": "3e année du 1er cycle",
+          "difference": "Pour les titulaires de BTS, DUT ou HND dans les spécialités listées."
+        },
+        {
+          "nom": "1re année du 2e cycle",
+          "difference": "Licence adaptée à l'option (ex. Gestion, Physique, Droit/Lettres pour Techniques administratives, ou diplôme d'ingénieur sur dossier)."
+        }
+      ]
     },
     "en": {
       "nom": "ENSET – Higher Technical Teacher Training Colleges (Douala, Bambili, Kumba, Ebolowa)",
@@ -1677,11 +2418,90 @@
         "sessions": "Annual sessions (documented: 2018, 2019, 2020, 2022, 2026)",
         "places": [],
         "places_note": "Places per stream, set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "1st year 1st cycle: Bac B, G1, G2, G3, BT/ESF or GCE A/L in economics/secretarial/accounting (Management); Bac C, D, E, F, I or industrial BT series or GCE A/L in at least 2 science subjects (Engineering). 3rd year: BTS, DUT or HND. 2nd cycle: bachelor's degree matching the option. Source: MINESUP order no. 160650/A of 25 July 2022 (2023-2024 year).",
+        "series_note": "Series depend on stream (Management vs Engineering); Brevet Professionnel not accepted. Civil servants: Bac + CAPIET.",
+        "age_note": "1st year 1st cycle: under 28 on 1 Jan 2024; 3rd year 1st cycle: under 31; 1st year 2nd cycle: under 32. Civil servants exempt from the age limit. 2022 source (2023-2024 cycle).",
+        "autres": [
+          "Private and foreign candidates admitted after file review subject to places",
+          "Medical certificate (public service doctor)",
+          "Certificate of non-conviction"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "15,000 FCFA, non-refundable (2022 order as reproduced); recheck amount for the current session.",
+        "pieces": [
+          "Application form",
+          "Signed and certified Lower and Upper Sixth transcripts",
+          "Certified birth certificate under 3 months old",
+          "Certified diploma copies (+ Probatoire/GCE O/L)",
+          "Medical certificate under 3 months old",
+          "Non-conviction certificate under 3 months old",
+          "4 passport photos",
+          "Receipt for 15,000 FCFA",
+          "2 envelopes 28x37 (one stamped, self-addressed)",
+          "Official equivalence for any foreign diploma"
+        ]
+      },
+      "debouches": "Training of technical-education teachers (technical high schools and colleges); sites: Douala, Bambili, Kumba, Ebolowa.",
+      "variantes": [
+        {
+          "nom": "3e année du 1er cycle",
+          "difference": "For BTS, DUT or HND holders in listed specialities."
+        },
+        {
+          "nom": "1re année du 2e cycle",
+          "difference": "Bachelor's degree matching the option (e.g. Management, Physics, Law/Letters for Administrative Techniques, or engineering diploma by file review)."
+        }
+      ]
     },
     "source_annales": "Annales ENSET disponibles par année (bibliothèques tierces)",
     "priorite": 14,
-    "theme": "enseignant"
+    "theme": "enseignant",
+    "acces": {
+      "niveaux_min": "bac",
+      "series": [
+        "B",
+        "G1",
+        "G2",
+        "G3",
+        "C",
+        "D",
+        "E",
+        "F",
+        "I"
+      ],
+      "age_max": 28,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2022,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juillet",
+      "mois_limite_depot": "septembre",
+      "mois_epreuves": "septembre",
+      "marque": "probable",
+      "frais_fcfa": 15000
+    },
+    "sources": [
+      {
+        "titre": "Kamerpower - ENSET Douala (reproduit l'arrêté N°160650/A/MINESUP du 25/07/2022)",
+        "url": "https://kamerpower.com/enset-douala-entrance-2015-2016-1st-year-3rd-year-second-cycle-1st-year-2nd-cycle-university-of-douala/",
+        "type": "secondaire",
+        "annee": 2022
+      },
+      {
+        "titre": "MINESUP - ENSET Douala 2nd cycle 2022",
+        "url": "https://minesup.gov.cm/2022/ENSET%20Douala_2nd%20cycle_fr.pdf",
+        "type": "arrete",
+        "annee": 2022
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Texte de l'arrêté 2022 (cycle 2023-2024) lu via un relais secondaire ; les PDF MINESUP existent mais n'ont pas été lus. Aucun avis plus récent (2025/2026) trouvé : âge et frais peuvent avoir changé. Le nom du concours dans concours.json mentionne Douala, Bambili, Kumba, Ebolowa, mais l'arrêté lu ne cible que Douala."
   },
   {
     "id": "essec-sciences-economiques-et-commerciales",
@@ -2327,7 +3147,40 @@
         "sessions": "Sessions annuelles (documentées : 2018, 2022, 2024, 2025, 2026)",
         "places": [],
         "places_note": "Places fixées par arrêté annuel"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Selon l'arrêté d'organisation (reproduit par un agrégateur) : 1re année = BEPC ou GCE O Level en 4 matières minimum en une session (hors Religious Knowledge) ou équivalent ; 2e année = Probatoire ou GCE O Level 5 matières + A Level 1 matière ; 3e année = Baccalauréat ou GCE A Level 2 matières. Le communiqué d'ouverture 2025 rapporté exige, lui, le Baccalauréat de l'enseignement général ou équivalent.",
+        "series_note": "Toutes séries de l'enseignement général.",
+        "age_note": "17 ans au moins et 32 ans au plus au 1er janvier de l'année du concours (arrêté d'organisation et communiqué 2025). Un guide secondaire pour 2026 donne 30 ans : conflit non résolu.",
+        "autres": [
+          "Candidats étrangers admissibles à titre spécial par décision du ministre",
+          "Aptitude physique et mentale ; casier judiciaire vierge (guide secondaire)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Session 2025 (communiqué rapporté) : 10 000 FCFA de frais d'inscription payés en ligne + 1 500 FCFA de timbre fiscal. Montant fixé chaque année.",
+        "pieces": [
+          "Acte de naissance certifié de moins de 3 mois",
+          "Copie certifiée du diplôme requis",
+          "Casier judiciaire bulletin n°3 de moins de 3 mois",
+          "Certificat médical d'un médecin public de moins de 3 mois",
+          "2 fiches de renseignements",
+          "Certificat de nationalité",
+          "Preuve de paiement des frais",
+          "Reçu du timbre fiscal"
+        ]
+      },
+      "debouches": "Formation de 2 ans d'instituteur de l'enseignement général (ENIEG) ; 7 000 places en 2025 d'après le communiqué rapporté. Les ENIET (technique) existent aussi.",
+      "variantes": [
+        {
+          "nom": "ENIET (enseignement technique)",
+          "difference": "Écoles normales d'instituteurs de l'enseignement technique ; conditions non détaillées dans les sources lues."
+        },
+        {
+          "nom": "ENIEG privées",
+          "difference": "Recrutement par les écoles privées ; conditions non lues."
+        }
+      ]
     },
     "en": {
       "nom": "ENIEG and ENIET – primary and technical teacher training colleges (public and private)",
@@ -2342,11 +3195,77 @@
         "sessions": "Annual sessions (documented: 2018, 2022, 2024, 2025, 2026)",
         "places": [],
         "places_note": "Places set by annual order"
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Per the organising order (reproduced by an aggregator): Year 1 = BEPC or GCE O Level in at least 4 subjects in one sitting (excluding Religious Knowledge) or equivalent; Year 2 = Probatoire or GCE O Level 5 subjects + A Level 1 subject; Year 3 = Baccalauréat or GCE A Level 2 subjects. The reported 2025 opening notice, however, requires the general-education Baccalauréat or equivalent.",
+        "series_note": "All series of general education.",
+        "age_note": "At least 17 and at most 32 on 1 January of the competition year (organising order and 2025 notice). A secondary 2026 guide says 30: unresolved conflict.",
+        "autres": [
+          "Foreign candidates may be admitted on special decision of the minister",
+          "Physical and mental fitness; clean criminal record (secondary guide)"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "2025 session (reported notice): 10,000 FCFA registration paid online + 1,500 FCFA fiscal stamp. Amount set each year.",
+        "pieces": [
+          "Certified birth certificate under 3 months old",
+          "Certified copy of required diploma",
+          "Criminal record bulletin no. 3 under 3 months old",
+          "Medical certificate from a public doctor under 3 months old",
+          "2 information forms",
+          "Nationality certificate",
+          "Proof of fee payment",
+          "Fiscal stamp receipt"
+        ]
+      },
+      "debouches": "Two-year training as a general-education primary teacher (ENIEG); 7,000 places in 2025 per the reported notice. ENIET (technical) also exist.",
+      "variantes": [
+        {
+          "nom": "ENIET (enseignement technique)",
+          "difference": "Technical-education primary teacher colleges; conditions not detailed in the sources read."
+        },
+        {
+          "nom": "ENIEG privées",
+          "difference": "Recruitment by private colleges; conditions not read."
+        }
+      ]
     },
     "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)",
     "priorite": 7,
-    "theme": "enseignant"
+    "theme": "enseignant",
+    "acces": {
+      "niveaux_min": "bepc",
+      "age_min": 17,
+      "age_max": 32,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juin",
+      "mois_limite_depot": "juillet",
+      "mois_epreuves": "juillet–août",
+      "marque": "probable",
+      "frais_fcfa": 10000
+    },
+    "sources": [
+      {
+        "titre": "YOP L-FRII - ouverture concours ENIEG publiques session 2025 (relais du communiqué MINESEC du 20/06/2025)",
+        "url": "https://yop.l-frii.com/formations/cameroun-ouverture-du-concours-dentree-aux-ecoles-normales-dinstituteurs-de-lenseignement-general-enieg-publiques-session-2025/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "Kamerpower - Concours ENIEG (texte de l'arrêté d'organisation)",
+        "url": "https://kamerpower.com/fr/concours-enieg-au-cameroun-epreuves-resultats",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Aucun PDF officiel lu directement. CONFLIT : l'arrêté d'organisation prévoit 3 niveaux d'entrée (BEPC / Probatoire / Bac) mais le communiqué 2025 rapporté exige le Bac ; le niveau min 'bepc' est le plus bas du texte d'organisation, à confirmer pour la session en cours. Plafond d'âge : 32 (deux sources) vs 30 (un guide). Le communiqué rapporté contient une incohérence de date (5 juillet 2024 vs 2025), épreuves écrites rapportées le 30 juillet 2025 ; mois calendrier basés sur 2025."
   },
   {
     "id": "entree-6e-1re-annee-common-entrance",
@@ -2573,7 +3492,41 @@
           }
         ],
         "places_note": "Épreuves de la session 2025 passées le 14 février 2026."
-      }
+      },
+      "acces_txt": {
+        "diplomes": "CAPIEMP (ou Teacher's Grade One Certificate) obtenu avant la session 2026.",
+        "series_note": "Aucune série citée ; le niveau d'étude préalable exigé pour le CAPIEMP n'est pas précisé dans la source lue (niveau 'probatoire' = hypothèse non sourcée).",
+        "age_note": "Moins de 40 ans au 31 décembre (opération 2026). Pour le test MINFOPRA 2025, un plafond de 40 ans au 31 décembre 2025 est rapporté, ainsi qu'un CAPIEMP obtenu au plus tard en 2020 ; formulation 'moins de 40' vs 'au plus 40' variable selon les sources.",
+        "autres": [
+          "Carte nationale d'identité (copie certifiée)",
+          "Casier judiciaire bulletin n°3",
+          "Certificat/fiche médicale",
+          "Engagement sur l'honneur à servir dans toute région du pays"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Aucun frais mentionné dans la source lue.",
+        "pieces": [
+          "Demande timbrée adressée au ministre de l'Éducation de base",
+          "2 photos d'identité",
+          "Acte de naissance (copie certifiée)",
+          "2 copies certifiées du CAPIEMP / Grade One",
+          "Photocopie non timbrée du diplôme professionnel",
+          "Copie certifiée de la CNI",
+          "Casier judiciaire bulletin n°3",
+          "Fiche d'examen médical",
+          "2 fiches de renseignements d'état civil",
+          "Engagement sur l'honneur à servir sur tout le territoire",
+          "Acte de mariage si applicable"
+        ]
+      },
+      "debouches": "Recrutement comme instituteur contractuel de l'enseignement maternel et primaire (3 000 postes par phase selon le fichier).",
+      "variantes": [
+        {
+          "nom": "Conversion des maîtres des parents",
+          "difference": "Voie distincte : critères de conversion (service actif dans une école publique, contrat validé par l'inspecteur, bulletins de salaire récents) rapportés par un site secondaire pour 2024."
+        }
+      ]
     },
     "en": {
       "nom": "IEMP – contract recruitment of primary teachers",
@@ -2612,11 +3565,75 @@
           }
         ],
         "places_note": "2025 session papers were sat on 14 February 2026."
-      }
+      },
+      "acces_txt": {
+        "diplomes": "CAPIEMP (or Teacher's Grade One Certificate) obtained before the 2026 session.",
+        "series_note": "No series mentioned; the prior academic level for the CAPIEMP is not stated in the source read ('probatoire' level is an unsourced assumption).",
+        "age_note": "Under 40 on 31 December (2026 operation). For the 2025 MINFOPRA test, a 40-year ceiling at 31 December 2025 and a CAPIEMP obtained by 2020 at the latest are reported; wording 'under 40' vs 'at most 40' varies between sources.",
+        "autres": [
+          "National ID card (certified copy)",
+          "Criminal record extract, bulletin no. 3",
+          "Medical certificate/form",
+          "Sworn pledge to serve in any region of the country"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "No fee mentioned in the source read.",
+        "pieces": [
+          "Stamped application to the Minister of Basic Education",
+          "2 passport photos",
+          "Certified birth certificate",
+          "2 certified copies of the CAPIEMP / Grade One",
+          "Unstamped photocopy of the professional diploma",
+          "Certified copy of national ID card",
+          "Criminal record extract, bulletin no. 3",
+          "Medical examination form",
+          "2 civil status information forms",
+          "Sworn pledge to serve anywhere in the country",
+          "Marriage certificate if applicable"
+        ]
+      },
+      "debouches": "Recruitment as a contract teacher in nursery and primary education (3,000 posts per phase per the file).",
+      "variantes": [
+        {
+          "nom": "Conversion des maîtres des parents",
+          "difference": "Separate route: conversion criteria (active service in a public school, contract validated by inspector, recent pay slips) reported by a secondary site for 2024."
+        }
+      ]
     },
     "source_annales": "Sujets non publiés par l’administration",
     "priorite": 6,
-    "theme": "enseignant"
+    "theme": "enseignant",
+    "acces": {
+      "age_max": 40,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2026,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "novembre–janvier",
+      "mois_limite_depot": "décembre–janvier",
+      "mois_epreuves": "février",
+      "marque": "probable"
+    },
+    "sources": [
+      {
+        "titre": "Kamerpower - MINEDUB contractualisation 3e opération exercice 2026",
+        "url": "https://kamerpower.com/fr/minedub-cameroun-contractualisation-des-instituteurs-operation",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Kamerpower - Concours spéciaux MINFOPRA 2025-2026 instituteurs",
+        "url": "https://kamerpower.com/fr/concours-speciaux-minfopra-recrutement-fonctionnaires-education-nationale",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Aucun texte officiel MINEDUB/MINFOPRA lu directement ; données d'un agrégateur. Nationalité non explicitement indiquée dans la source (mise à 'camerounaise' car emploi public ; à vérifier). Mois de lancement/limite/épreuves déduits : dépôt 6-31 janvier 2026 (opération MINEDUB), dépôt MINFOPRA prolongé au 16/12/2025, épreuves le 14 février 2026 d'après le fichier concours.json. Un autre article intitulé 2025 renvoie en réalité à 2023 (ignoré)."
   },
   {
     "id": "sante-publique-medecins-chirurgiens-dentistes-ph",
@@ -2912,7 +3929,43 @@
           }
         ],
         "places_note": "Matières de la session 2023-2024. Écoles publiques et privées agréées."
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Aides-soignants et ATMS : BEPC, CAP ou GCE O Level (4 matières hors religion). Infirmiers diplômés d'État et sages-femmes : Baccalauréat (séries A, B, C, D, TI, BIL selon une page ; scientifique A, C, D, F7 selon une autre). Infirmiers spécialisés : diplôme d'État d'infirmier ou infirmier principal.",
+        "series_note": "Pour IDE et sages-femmes seulement ; la liste des séries diffère selon la page (une autre ne cite que A, C, D, F7). TMS : selon l'option.",
+        "age_note": "Sources contradictoires au 1er janvier 2026 : 18–30 ans (Kamerpower), 18–35 (candidats ordinaires) et 21–45 (candidats en activité) (Cameroon Desks, qui cite aussi 17–30). Spécialisation infirmiers : 40 ans au plus.",
+        "autres": [
+          "Certificat médical d'aptitude d'une structure publique",
+          "Kamerpower indique « Camerounais ou étranger des deux sexes »"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Montant non trouvé ; paiement par dépôt bancaire ou mobile money.",
+        "pieces": [
+          "Fiche d'inscription MINSANTE",
+          "Demande manuscrite timbrée à 1 500 F (avec choix de 3 établissements : 1 public, 2 privés)",
+          "Acte de naissance (moins de 3 mois)",
+          "Diplôme certifié et attestation de présentation de l'original",
+          "Bulletin n°3 (moins de 3 mois)",
+          "Certificat médical d'une structure publique",
+          "CNI valide (inscription en ligne)"
+        ]
+      },
+      "debouches": "Formation d'infirmiers, sages-femmes, techniciens médico-sanitaires et aides-soignants pour les hôpitaux publics et privés.",
+      "variantes": [
+        {
+          "nom": "Aides-soignants / ATMS",
+          "difference": "Niveau BEPC/CAP/GCE O Level."
+        },
+        {
+          "nom": "IDE et sages-femmes",
+          "difference": "Niveau Baccalauréat, séries scientifiques ou lettres selon la page."
+        },
+        {
+          "nom": "Infirmiers spécialisés",
+          "difference": "Diplôme d'État d'infirmier requis ; limite d'âge 40 ans."
+        }
+      ]
     },
     "en": {
       "nom": "Training schools for nurses, midwives and medical-sanitary staff",
@@ -2931,11 +3984,92 @@
           }
         ],
         "places_note": "Subjects of the 2023-2024 session. Approved public and private schools."
-      }
+      },
+      "acces_txt": {
+        "diplomes": "Nursing aides and ATMS: BEPC, CAP or GCE O Level (4 subjects excl. religion). State-registered nurses and midwives: Baccalauréat (series A, B, C, D, TI, BIL per one page; scientific A, C, D, F7 per another). Specialised nurses: state nursing diploma or senior nurse.",
+        "series_note": "For nurses and midwives only; the series list differs by page (another lists only A, C, D, F7). TMS: depends on option.",
+        "age_note": "Conflicting sources on 1 January 2026: 18–30 (Kamerpower), 18–35 (regular) and 21–45 (working candidates) (Cameroon Desks, which also cites 17–30). Nurse specialisation: max 40.",
+        "autres": [
+          "Medical fitness certificate from a public facility",
+          "Kamerpower says “Cameroonian or foreign, both sexes”"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "Amount not found; payment by bank deposit or mobile money.",
+        "pieces": [
+          "MINSANTE registration form",
+          "Handwritten application stamped 1,500 FCFA (choose 3 schools: 1 public, 2 private)",
+          "Birth certificate (under 3 months)",
+          "Certified diploma and proof original was presented",
+          "Bulletin n°3 (under 3 months)",
+          "Medical certificate from a public facility",
+          "Valid national ID card (online registration)"
+        ]
+      },
+      "debouches": "Training of nurses, midwives, medico-sanitary technicians and nursing aides for public and private hospitals.",
+      "variantes": [
+        {
+          "nom": "Aides-soignants / ATMS",
+          "difference": "BEPC/CAP/GCE O Level."
+        },
+        {
+          "nom": "IDE et sages-femmes",
+          "difference": "Baccalauréat level; series vary by page."
+        },
+        {
+          "nom": "Infirmiers spécialisés",
+          "difference": "State nursing diploma required; age limit 40."
+        }
+      ]
     },
     "source_annales": "Sujets non publiés",
     "priorite": 4,
-    "theme": "infirmier"
+    "theme": "infirmier",
+    "acces": {
+      "niveaux_min": "bepc",
+      "series": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "TI",
+        "BIL"
+      ],
+      "age_min": 18,
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "juillet",
+      "mois_limite_depot": "août",
+      "mois_epreuves": "août–septembre",
+      "marque": "probable"
+    },
+    "lien_inscription": "https://www.minsante.cm/concours",
+    "sources": [
+      {
+        "titre": "Cameroon Desks – Concours infirmiers MINSANTE",
+        "url": "https://www.cameroondesks.com/2025/08/concours-infirmiers-minsante-inscription-en-ligne-aug.html",
+        "type": "secondaire",
+        "annee": 2026
+      },
+      {
+        "titre": "Kamerpower – Concours personnels médico-sanitaires",
+        "url": "https://kamerpower.com/fr/concours-personnels-medico-sanitaires-cameroun-2015-2016-dans-les-ecoles-publiques-et-privees-ministere-de-la-sante-publique/amp/",
+        "type": "secondaire",
+        "annee": 2025
+      },
+      {
+        "titre": "MINSANTE – Concours 2020 (PDF scanné, non lisible)",
+        "url": "https://www.minsante.cm/site/sites/default/files/CONCOURS%20MINSANTE%202020-1.pdf",
+        "type": "officiel",
+        "annee": 2020
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Arrêté/communiqué officiel non lu (le PDF MINSANTE 2020 est un scan illisible). Âge et séries contradictoires entre sources secondaires ; frais et dates exactes absents. Épreuves : 9 sept. 2025 selon un avis, 23 août 2025 selon un autre."
   },
   {
     "id": "regies-financieres-tresor",
@@ -3253,7 +4387,48 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "PEPS (externes) : diplôme de l'enseignement supérieur toutes filières (la source dit 'baccalauréat de l'enseignement supérieur') ou diplôme étranger équivalent. PAEPS (externes) : Baccalauréat toutes séries, ou GCE A/L dans au moins 2 matières (hors Religious Knowledge), ou équivalent.",
+        "series_note": "Toutes séries/filières. Le diplôme PEPS est probablement une licence ('bac+3'), formulation de la source ambiguë.",
+        "age_note": "Externes : 17 à 31 ans au 1er janvier 2025 ; internes (fonctionnaires) jusqu'à 40 ans. Session 2025/2026.",
+        "autres": [
+          "Remplir les conditions générales d'accès aux emplois publics (Statut général de la fonction publique)",
+          "Aptitude au métier (certificat médical d'un médecin public)",
+          "Casier judiciaire bulletin n°3",
+          "Aucune condition de taille citée"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25 000 FCFA (reçu Express Union) + formulaire timbré à 1 000 FCFA + enveloppe timbrée (montant ambigu dans la source, environ 1 500 FCFA).",
+        "pieces": [
+          "Formulaire d'inscription timbré (1 000 FCFA)",
+          "Acte de naissance certifié",
+          "Casier judiciaire bulletin n°3",
+          "Copie certifiée du diplôme requis + attestation de présentation de l'original",
+          "Certificat médical d'un médecin public",
+          "Fiche de renseignements légalisée",
+          "Reçu de paiement 25 000 FCFA",
+          "2 photos 4x4",
+          "Enveloppe timbrée",
+          "Internes : acte d'intégration/reclassement et autorisation de concourir du ministre de la Fonction publique"
+        ]
+      },
+      "debouches": "Formation de professeurs certifiés (PEPS) ou adjoints (PAEPS) d'éducation physique et sportive, fonctionnaires.",
+      "variantes": [
+        {
+          "nom": "PAEPS",
+          "difference": "Niveau Bac / GCE A/L (2 matières) ; 10 places en 2025."
+        },
+        {
+          "nom": "PEPS",
+          "difference": "Niveau diplôme supérieur ; 10 places en 2025 ; un maximum de 24 meilleurs étudiants PAEPS3 peuvent passer directement en PEPS1."
+        },
+        {
+          "nom": "Candidats internes",
+          "difference": "Fonctionnaires : PEPS = PAEPS ou PEPS avec 3 ans d'ancienneté ; plafond 40 ans."
+        }
+      ]
     },
     "en": {
       "nom": "INJS Yaoundé – PEPS / PAEPS (physical education and sport)",
@@ -3293,11 +4468,78 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "PEPS (external): higher-education diploma in any field (source says 'higher-education baccalauréat') or recognised foreign equivalent. PAEPS (external): Baccalauréat any series, or GCE A/L in at least 2 subjects (excluding Religious Knowledge), or equivalent.",
+        "series_note": "All series/fields. The PEPS diploma is probably a bachelor's degree; source wording is ambiguous.",
+        "age_note": "External: 17 to 31 on 1 January 2025; internal (civil servants) up to 40. 2025/2026 session.",
+        "autres": [
+          "Meet the general conditions for public employment (Civil Service General Statute)",
+          "Fitness for the job (medical certificate from a public doctor)",
+          "Criminal record bulletin no. 3",
+          "No height requirement cited"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25,000 FCFA (Express Union receipt) + 1,000 FCFA stamped form + stamped envelope (amount ambiguous in source, about 1,500 FCFA).",
+        "pieces": [
+          "Stamped registration form (1,000 FCFA)",
+          "Certified birth certificate",
+          "Criminal record bulletin no. 3",
+          "Certified copy of required diploma + attestation that the original was shown",
+          "Medical certificate from a public doctor",
+          "Legalised information sheet",
+          "25,000 FCFA payment receipt",
+          "2 photos 4x4",
+          "Stamped envelope",
+          "Internal: integration/reclassification act and minister's authorisation to compete"
+        ]
+      },
+      "debouches": "Training as certified (PEPS) or assistant (PAEPS) physical education teachers, civil servants.",
+      "variantes": [
+        {
+          "nom": "PAEPS",
+          "difference": "Bac / GCE A/L level (2 subjects); 10 places in 2025."
+        },
+        {
+          "nom": "PEPS",
+          "difference": "Higher-diploma level; 10 places in 2025; up to 24 top PAEPS3 students may move directly into PEPS1."
+        },
+        {
+          "nom": "Candidats internes",
+          "difference": "Civil servants: with 3 years' seniority in the lower grade; 40-year ceiling."
+        }
+      ]
     },
     "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)",
     "priorite": 21,
-    "theme": "sport"
+    "theme": "sport",
+    "acces": {
+      "age_min": 17,
+      "age_max": 31,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "avril",
+      "mois_limite_depot": "juillet",
+      "mois_epreuves": "juillet–août",
+      "marque": "probable",
+      "frais_fcfa": 25000
+    },
+    "sources": [
+      {
+        "titre": "Kamerpower - Concours INJS Yaoundé PEPS PAEPS 2025-2026",
+        "url": "https://kamerpower.com/fr/concours-injs-de-yaounde-2015-2016-peps-paeps-minfopra-concours-institut-national-de-la-jeunesse-et-des-sports-injs-yaounde",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Source unique, secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 11 juillet, épreuves physiques 29-30 juillet, écrites 2-3 août. Le diplôme PEPS est libellé de façon ambiguë. Une autre recherche donnait 10 places pour chaque cycle, alors que concours.json indique 20 en 2025 (total PEPS + PAEPS). Pas d'avis 2026 trouvé."
   },
   {
     "id": "injs-yaounde-cpja-cja-conseillers-jeunesse-et-an",
@@ -3435,7 +4677,47 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "IPJA (externes) : Baccalauréat toutes séries ou GCE A/L (2 matières, hors Religious Knowledge) ou équivalent. IJA (externes) : Probatoire, ou GCE O/L (4 matières) + A/L (1 matière), ou équivalent. IAJA : diplôme non précisé dans la source lue.",
+        "series_note": "Toutes séries.",
+        "age_note": "Externes : 17 à 31 ans au 1er janvier 2025 ; internes jusqu'à 40 ans. Session 2025/2026. Une source donne 1998 comme année de naissance minimale des externes, une autre 1994 : conflit sur les dates exactes.",
+        "autres": [
+          "Conditions générales d'accès aux emplois publics (Statut général de la fonction publique)",
+          "Aptitude au métier d'instructeur (certificat médical d'un médecin public)",
+          "Casier judiciaire bulletin n°3"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25 000 FCFA (reçu) + formulaire timbré 1 000 FCFA + enveloppe timbrée 1 500 FCFA. Une mention en lettres ('quinze mille') contredit le chiffre : à vérifier.",
+        "pieces": [
+          "Formulaire timbré (1 000 FCFA)",
+          "Acte de naissance certifié",
+          "Casier judiciaire bulletin n°3",
+          "Copie certifiée du diplôme + attestation de présentation de l'original",
+          "Certificat médical d'un médecin public",
+          "Fiche de renseignements légalisée",
+          "Reçu de paiement",
+          "2 photos 4x4",
+          "Enveloppe timbrée (1 500 FCFA)",
+          "Internes : acte d'intégration/reclassement et autorisation de concourir du ministre de la Fonction publique"
+        ]
+      },
+      "debouches": "Formation d'instructeurs de la jeunesse et de l'animation (IPJA principal, IJA, IAJA), cadres de la jeunesse dans la fonction publique.",
+      "variantes": [
+        {
+          "nom": "IJA",
+          "difference": "Niveau Probatoire / GCE O/L + A/L (1 matière)."
+        },
+        {
+          "nom": "IAJA",
+          "difference": "Cycle d'entrée ; diplôme exigé non indiqué dans la source lue."
+        },
+        {
+          "nom": "Candidats internes",
+          "difference": "Instructeurs en poste avec 3 ans d'ancienneté dans le grade inférieur, ou personnels des forces armées/police/administration pénitentiaire ; plafond 40 ans."
+        }
+      ]
     },
     "en": {
       "nom": "CENAJES Kribi – IPJA / IJA / IAJA",
@@ -3466,11 +4748,78 @@
           }
         ],
         "places_note": null
-      }
+      },
+      "acces_txt": {
+        "diplomes": "IPJA (external): Baccalauréat any series or GCE A/L (2 subjects, excluding Religious Knowledge) or equivalent. IJA (external): Probatoire, or GCE O/L (4 subjects) + A/L (1 subject), or equivalent. IAJA: diploma not stated in the source read.",
+        "series_note": "All series.",
+        "age_note": "External: 17 to 31 on 1 January 2025; internal up to 40. 2025/2026 session. One source gives 1998 as earliest birth year for external candidates, another 1994: conflict on exact dates.",
+        "autres": [
+          "General conditions for public employment (Civil Service General Statute)",
+          "Fitness for instructor work (medical certificate from a public doctor)",
+          "Criminal record bulletin no. 3"
+        ]
+      },
+      "cal_txt": {
+        "frais_note": "25,000 FCFA (receipt) + 1,000 FCFA stamped form + 1,500 FCFA stamped envelope. A mention in words ('fifteen thousand') contradicts the figure: verify.",
+        "pieces": [
+          "Stamped form (1,000 FCFA)",
+          "Certified birth certificate",
+          "Criminal record bulletin no. 3",
+          "Certified diploma copy + attestation that the original was shown",
+          "Medical certificate from a public doctor",
+          "Legalised information sheet",
+          "Payment receipt",
+          "2 photos 4x4",
+          "Stamped envelope (1,500 FCFA)",
+          "Internal: integration/reclassification act and minister's authorisation to compete"
+        ]
+      },
+      "debouches": "Training as youth and community instructors (IPJA principal, IJA, IAJA), youth officials in the civil service.",
+      "variantes": [
+        {
+          "nom": "IJA",
+          "difference": "Probatoire / GCE O/L + A/L (1 subject) level."
+        },
+        {
+          "nom": "IAJA",
+          "difference": "Entry grade; required diploma not stated in the source read."
+        },
+        {
+          "nom": "Candidats internes",
+          "difference": "Serving instructors with 3 years' seniority in the lower grade, or armed forces/police/prison staff; 40-year ceiling."
+        }
+      ]
     },
     "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)",
     "priorite": 22,
-    "theme": "sport"
+    "theme": "sport",
+    "acces": {
+      "niveaux_min": "probatoire",
+      "age_min": 17,
+      "age_max": 31,
+      "nationalite": "camerounaise",
+      "genre": "tous",
+      "annee_conditions": 2025,
+      "confiance": "secondaire"
+    },
+    "calendrier": {
+      "mois_lancement": "avril",
+      "mois_limite_depot": "juillet",
+      "mois_epreuves": "août",
+      "marque": "probable",
+      "frais_fcfa": 25000
+    },
+    "sources": [
+      {
+        "titre": "Kamerpower - Concours CENAJES Kribi 2025-2026 (IPJA, IJA, IAJA)",
+        "url": "https://kamerpower.com/fr/concours-cenajes-de-kribi-2015-2016-ipja-ija-centre-national-de-la-jeunesse-et-des-sports/",
+        "type": "secondaire",
+        "annee": 2025
+      }
+    ],
+    "last_verified": "2026-10-12",
+    "status": "to_verify",
+    "recherche_notes": "Source unique secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 18 juillet, épreuves physiques 5-6 août, écrites 9-10 août. Places : 10 par cycle selon la source, concours.json donne 30 au total (cohérent). Niveau min 'probatoire' repose sur IJA/IAJA ; IAJA non précisé donc peut être plus bas. Aucun avis 2026 trouvé."
   },
   {
     "id": "cenajes-bamenda-bertoua-dschang-garoua-mpeps-mep",

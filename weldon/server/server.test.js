@@ -97,6 +97,26 @@ test("inscription, connexion, comptes séparés", async () => {
   assert.equal(me.lang, "en");
 });
 
+test("profil et orientation : conditions du catalogue, profil validé", async () => {
+  const t = await register("orient@exemple.cm");
+  assert.equal((await call("GET", "/api/orientation", undefined, t)).status, 400); // pas encore de profil
+  assert.equal((await call("POST", "/api/me", { profil: { niveau: "docteur" } }, t)).status, 400);
+  assert.equal((await call("POST", "/api/me", { profil: { annee_naissance: 1800 } }, t)).status, 400);
+  const me = await json(await call("POST", "/api/me", { lang: "fr", profil: { niveau: "bac", serie: "c", annee_naissance: 2004, interets: ["ordre", "zzz"] } }, t));
+  assert.deepEqual(me.profil, { niveau: "bac", serie: "C", annee_naissance: 2004, interets: ["ordre"] });
+  assert.equal((await json(await call("POST", "/api/me", { profil: { region: "littoral" } }, t))).profil.niveau, "bac"); // fusion, rien d'effacé
+  const o = await json(await call("GET", "/api/orientation?lang=fr", undefined, t));
+  assert.equal(o.status, 200);
+  const cat = await json(await call("GET", "/api/catalog?lang=fr"));
+  assert.equal(o.resultats.length, cat.concours.length);
+  assert.ok(o.resultats.every((r) => ["bien", "adapte", "possible", "improbable", "inconnu", "non"].includes(r.categorie)));
+  // Rien n'est déclaré « bien adapté » sans source solide : toutes les conditions sont encore à vérifier
+  assert.ok(o.resultats.filter((r) => r.categorie === "bien").every((r) => cat.concours.find((c) => c.id === r.id).status === "to_verify"));
+  // Un concours sans conditions renseignées reste « inconnu », jamais deviné
+  assert.equal(o.resultats.find((r) => r.id === "enam")?.categorie === "bien", false);
+  assert.equal((await call("GET", "/api/orientation", undefined, undefined)).status, 401);
+});
+
 test("une seule épreuve offerte par compte, corrigés réservés", async () => {
   const t = await register("gratuit@exemple.cm");
   const s1 = await json(await call("GET", "/api/epreuves/pol-2025-redaction-fr/sujet", undefined, t));

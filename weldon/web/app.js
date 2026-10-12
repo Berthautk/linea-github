@@ -475,6 +475,7 @@
     me: () => http("/api/me"),
     update: (b) => http("/api/me", { method: "POST", body: b }),
     catalog: (l) => http("/api/catalog?lang=" + l),
+    orientation: (l) => http("/api/orientation?lang=" + l),
     sujet: (id) => http(`/api/epreuves/${id}/sujet`),
     corrige: (id) => http(`/api/epreuves/${id}/corrige`),
     oral: (cid, l) => http(`/api/oral/${cid}?lang=${l}`),
@@ -530,8 +531,10 @@
       async update(b) {
         const u = current();
         if (b.lang) u.lang = b.lang;
+        if (b.profil) u.profil = { ...(u.profil || {}), ...b.profil };
         return save(u);
       },
+      orientation: async () => fail("L'orientation n'est pas disponible dans la démo.", "demo", 400),
       async catalog(l) {
         const d = C();
         return {
@@ -600,6 +603,230 @@
   };
   const LOGO = `<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="var(--green)"/><path d="M9 12l4.6 16L20 15l6.4 13L31 12" fill="none" stroke="var(--green-ink)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="4" fill="var(--sun)"/></svg>`;
   const BRAND = `<div class="brand">${LOGO}<span class="brand-name">Wel<span>don</span></span></div>`;
+
+  // ---------- Orientation : textes (la logique est côté serveur, server/orientation.js) ----------
+  const LEVELS = ["bepc", "probatoire", "terminale", "bac", "bac+2", "licence", "master", "doctorat"];
+  const SERIES_BY_LANG = { fr: ["A", "C", "D", "E", "TI", "F", "G", "AUTRE"], en: ["ARTS", "SCIENCE", "TECH", "AUTRE"] };
+  const REGIONS = ["adamaoua", "centre", "est", "extreme-nord", "littoral", "nord", "nord-ouest", "ouest", "sud", "sud-ouest"];
+  const INTERESTS = ["ordre", "enseignement", "sante", "administration", "finances", "technique", "nature", "ecoles"];
+  const ORI = {
+    fr: {
+      cta: "Quel concours pour moi ?",
+      ctaSub: "Indiquez votre niveau, votre série et votre âge : Weldon classe les concours accessibles et explique pourquoi.",
+      ctaBtn: "Trouver mon concours",
+      title: "Quel concours pour moi ?",
+      sub: "Le but n'est pas de passer n'importe quel concours, mais celui qui correspond à votre projet.",
+      formTitle: "Votre profil",
+      formSub: "Une minute suffit. Vous pourrez le modifier à tout moment.",
+      level: "Niveau d'études",
+      levelPh: "Choisissez votre niveau",
+      levels: {
+        cep: "CEP (certificat d'études primaires)",
+        bepc: "BEPC / GCE Ordinary Level",
+        probatoire: "Probatoire / Lower Sixth",
+        terminale: "En Terminale / Upper Sixth (bac pas encore obtenu)",
+        bac: "Baccalauréat / GCE Advanced Level",
+        "bac+2": "Bac + 2 (BTS, DUT, DEUG…)",
+        licence: "Licence",
+        master: "Master",
+        doctorat: "Doctorat",
+      },
+      series: "Série du baccalauréat",
+      seriesHelp: "Pour ceux qui ont le bac ou qui le préparent.",
+      seriesPh: "Choisissez votre série",
+      seriesNames: { A: "A (littéraire)", C: "C (maths et sciences physiques)", D: "D (maths et sciences de la vie)", E: "E (maths et techniques)", TI: "TI (technologies de l'information)", F: "F (techniques industrielles)", G: "G (gestion, commerce)", ARTS: "Arts", SCIENCE: "Science", TECH: "Technique", AUTRE: "Autre / je ne sais pas" },
+      birth: "Année de naissance",
+      birthHelp: "Seulement l'année : elle sert à vérifier les limites d'âge.",
+      region: "Région (facultatif)",
+      regionPh: "—",
+      regions: { adamaoua: "Adamaoua", centre: "Centre", est: "Est", "extreme-nord": "Extrême-Nord", littoral: "Littoral", nord: "Nord", "nord-ouest": "Nord-Ouest", ouest: "Ouest", sud: "Sud", "sud-ouest": "Sud-Ouest" },
+      interests: "Ce qui vous attire (facultatif)",
+      interestsHelp: "Cela sert à classer les concours, jamais à en exclure.",
+      interestNames: { ordre: "Ordre, sécurité et défense", enseignement: "Enseignement, jeunesse et sport", sante: "Santé et action sociale", administration: "Administration, justice et communication", finances: "Finances et douanes", technique: "Ingénierie, numérique et transports", nature: "Agriculture, élevage et environnement", ecoles: "Grandes écoles et économie" },
+      save: "Voir mes concours",
+      edit: "Modifier mon profil",
+      born: (y) => `né(e) en ${y}`,
+      target: (y) => `Âge calculé pour la session ${y}.`,
+      loading: "Analyse de votre profil…",
+      groups: {
+        bien: ["Bien adaptés", "Votre profil répond aux conditions connues."],
+        adapte: ["Adaptés", "Vous remplissez les conditions, mais votre niveau ou vos centres d'intérêt s'éloignent un peu."],
+        possible: ["Possibles : à vérifier", "Un point reste à confirmer dans l'arrêté officiel."],
+        improbable: ["Probablement hors conditions", "Une condition ne semble pas remplie, selon une source non officielle. Vérifiez l'arrêté avant d'abandonner."],
+        inconnu: ["Conditions pas encore renseignées", "Nous n'avons pas encore vérifié leurs conditions : consultez l'arrêté officiel."],
+        non: ["Non accessibles avec ce profil", "Une condition vérifiée n'est pas remplie."],
+      },
+      none: "Aucun concours dans cette catégorie.",
+      open: "Voir la fiche",
+      verify: "À vérifier",
+      reason(r, lv) {
+        const list = (r.series || []).join(", ");
+        const age = r.age_min != null && r.age_max != null ? `${r.age_min} à ${r.age_max} ans` : r.age_max != null ? `${r.age_max} ans au plus` : `${r.age_min} ans au moins`;
+        const weak = r.weak ? " (source non officielle)" : "";
+        return {
+          level_ok: `Niveau demandé : ${lv(r.min)} : vous l'avez.`,
+          level_over: "Vous dépassez le niveau demandé.",
+          level_low: `Niveau demandé : ${lv(r.min)} ou plus${weak}.`,
+          level_high: `Réservé aux niveaux jusqu'à : ${lv(r.max)}${weak}.`,
+          level_terminale: "Le baccalauréat est exigé : vous devrez l'avoir obtenu avant le dépôt du dossier (à confirmer).",
+          level_unknown: "Niveau demandé non précisé : à vérifier.",
+          series_ok: `Votre série est admise (${list}).`,
+          series_no: `Séries admises : ${list}${weak}.`,
+          series_unknown: `Séries admises : ${list}. Indiquez la vôtre pour savoir.`,
+          series_system: `Séries citées : ${list}. Elles ne correspondent pas à votre système : à vérifier.`,
+          series_free: "Pas de série imposée dans les conditions connues.",
+          diploma_check: "Vérifiez que votre filière correspond au diplôme demandé.",
+          age_ok: `Âge demandé : ${age} : vous êtes dans la limite.`,
+          age_over: `Limite d'âge : ${age}${weak}.`,
+          age_under: `Âge demandé : ${age}${weak}.`,
+          age_border: `Âge demandé : ${age}. Selon votre date de naissance exacte, vous pouvez être juste dans la limite ou juste au-dessus.`,
+          age_unknown: `Une limite d'âge existe (${age}) : indiquez votre année de naissance.`,
+          age_missing: "Limite d'âge non précisée dans nos sources : à vérifier.",
+          age_none: "Pas de limite d'âge.",
+          interest_match: "Correspond à ce qui vous attire.",
+          interest_other: "Éloigné de ce qui vous attire.",
+          no_data: "Conditions pas encore renseignées.",
+        }[r.code];
+      },
+      accessTitle: "Conditions d'accès",
+      accessNote: (y) => `Conditions ${y ? "de la session " + y : "relevées"}, à confirmer dans l'arrêté officiel.`,
+      diplomas: "Diplômes",
+      seriesLabel: "Séries",
+      ageLabel: "Âge",
+      ageText: (a) => (a.age_min != null && a.age_max != null ? `${a.age_min} à ${a.age_max} ans` : a.age_max != null ? `${a.age_max} ans au plus` : `${a.age_min} ans au moins`),
+      others: "Autres conditions",
+      nationality: "Nationalité",
+      cameroonian: "Camerounaise",
+      outcomes: "Débouchés",
+      periodTitle: "Période habituelle (probable)",
+      launch: "Lancement",
+      deadline: "Dépôt des dossiers",
+      exams: "Épreuves",
+      fees: "Frais",
+      dossier: "Pièces du dossier",
+      variants: "Autres corps ou cycles",
+      register: "Inscription officielle",
+      sources: "Sources",
+      lastVerified: (d) => `Dernière vérification : ${d}`,
+      unverified: "Informations à vérifier : elles n'ont pas encore été confirmées par un texte officiel.",
+      scamTitle: "Éviter les arnaques",
+      scam: [
+        "Aucun concours ne se gagne en payant : personne ne peut vous garantir une place.",
+        "Les frais officiels et les inscriptions se vérifient uniquement sur les sites officiels du ministère ou de l'école.",
+        "Méfiez-vous de ceux qui demandent de l'argent pour « placer » ou « accélérer » un dossier.",
+        "Weldon n'est affilié à aucune institution. Les informations peuvent changer : vérifiez toujours l'arrêté de la session.",
+      ],
+    },
+    en: {
+      cta: "Which competition is right for me?",
+      ctaSub: "Tell us your level, series and age: Weldon ranks the competitions you can enter and explains why.",
+      ctaBtn: "Find my competition",
+      title: "Which competition is right for me?",
+      sub: "The aim is not to sit just any competition, but the one that fits your plans.",
+      formTitle: "Your profile",
+      formSub: "One minute is enough. You can change it at any time.",
+      level: "Level of studies",
+      levelPh: "Choose your level",
+      levels: {
+        cep: "First School Leaving Certificate (CEP)",
+        bepc: "GCE Ordinary Level / BEPC",
+        probatoire: "Lower Sixth / Probatoire",
+        terminale: "In Upper Sixth / Terminale (A Level not yet obtained)",
+        bac: "GCE Advanced Level / Baccalauréat",
+        "bac+2": "Two years after A Level (HND, DUT…)",
+        licence: "Bachelor's degree",
+        master: "Master's degree",
+        doctorat: "Doctorate",
+      },
+      series: "A Level stream",
+      seriesHelp: "For those who have their A Level or are preparing it.",
+      seriesPh: "Choose your stream",
+      seriesNames: { A: "A (literary)", C: "C (maths and physics)", D: "D (maths and life sciences)", E: "E (maths and technology)", TI: "TI (information technology)", F: "F (industrial technology)", G: "G (management, commerce)", ARTS: "Arts", SCIENCE: "Science", TECH: "Technical", AUTRE: "Other / I don't know" },
+      birth: "Year of birth",
+      birthHelp: "The year only: it is used to check age limits.",
+      region: "Region (optional)",
+      regionPh: "—",
+      regions: { adamaoua: "Adamawa", centre: "Centre", est: "East", "extreme-nord": "Far North", littoral: "Littoral", nord: "North", "nord-ouest": "North-West", ouest: "West", sud: "South", "sud-ouest": "South-West" },
+      interests: "What attracts you (optional)",
+      interestsHelp: "This is used to rank competitions, never to rule any out.",
+      interestNames: { ordre: "Law enforcement, security and defence", enseignement: "Teaching, youth and sport", sante: "Health and social work", administration: "Administration, justice and communication", finances: "Finance and customs", technique: "Engineering, digital and transport", nature: "Agriculture, livestock and environment", ecoles: "Top schools and economics" },
+      save: "See my competitions",
+      edit: "Edit my profile",
+      born: (y) => `born in ${y}`,
+      target: (y) => `Age worked out for the ${y} session.`,
+      loading: "Analysing your profile…",
+      groups: {
+        bien: ["Well suited", "Your profile meets the known conditions."],
+        adapte: ["Suited", "You meet the conditions, but your level or interests are a little off."],
+        possible: ["Possible: to be checked", "One point still has to be confirmed in the official order."],
+        improbable: ["Probably outside the conditions", "A condition does not seem to be met, according to an unofficial source. Check the official order before giving up."],
+        inconnu: ["Conditions not yet recorded", "We have not yet checked their conditions: read the official order."],
+        non: ["Not open to this profile", "A verified condition is not met."],
+      },
+      none: "No competition in this category.",
+      open: "See the page",
+      verify: "To be checked",
+      reason(r, lv) {
+        const list = (r.series || []).join(", ");
+        const age = r.age_min != null && r.age_max != null ? `${r.age_min} to ${r.age_max} years` : r.age_max != null ? `${r.age_max} years at most` : `${r.age_min} years at least`;
+        const weak = r.weak ? " (unofficial source)" : "";
+        return {
+          level_ok: `Level required: ${lv(r.min)}: you have it.`,
+          level_over: "You are above the level required.",
+          level_low: `Level required: ${lv(r.min)} or higher${weak}.`,
+          level_high: `Reserved for levels up to: ${lv(r.max)}${weak}.`,
+          level_terminale: "An A Level / Baccalauréat is required: you will need to have it before submitting your file (to be confirmed).",
+          level_unknown: "Level required not specified: to be checked.",
+          series_ok: `Your stream is accepted (${list}).`,
+          series_no: `Streams accepted: ${list}${weak}.`,
+          series_unknown: `Streams accepted: ${list}. Enter yours to find out.`,
+          series_system: `Streams quoted: ${list}. They do not match your system: to be checked.`,
+          series_free: "No stream required in the known conditions.",
+          diploma_check: "Check that your field matches the diploma required.",
+          age_ok: `Age required: ${age}: you are within the limit.`,
+          age_over: `Age limit: ${age}${weak}.`,
+          age_under: `Age required: ${age}${weak}.`,
+          age_border: `Age required: ${age}. Depending on your exact birth date, you may be just inside the limit or just over it.`,
+          age_unknown: `There is an age limit (${age}): enter your year of birth.`,
+          age_missing: "Age limit not stated in our sources: to be checked.",
+          age_none: "No age limit.",
+          interest_match: "Matches what attracts you.",
+          interest_other: "Far from what attracts you.",
+          no_data: "Conditions not yet recorded.",
+        }[r.code];
+      },
+      accessTitle: "Entry requirements",
+      accessNote: (y) => `Conditions ${y ? "of the " + y + " session" : "found"}, to be confirmed in the official order.`,
+      diplomas: "Diplomas",
+      seriesLabel: "Streams",
+      ageLabel: "Age",
+      ageText: (a) => (a.age_min != null && a.age_max != null ? `${a.age_min} to ${a.age_max} years` : a.age_max != null ? `${a.age_max} years at most` : `${a.age_min} years at least`),
+      others: "Other conditions",
+      nationality: "Nationality",
+      cameroonian: "Cameroonian",
+      outcomes: "Career prospects",
+      periodTitle: "Usual period (probable)",
+      launch: "Call published",
+      deadline: "File deadline",
+      exams: "Exams",
+      fees: "Fees",
+      dossier: "Documents for the file",
+      variants: "Other corps or cycles",
+      register: "Official registration",
+      sources: "Sources",
+      lastVerified: (d) => `Last checked: ${d}`,
+      unverified: "To be checked: this information has not yet been confirmed by an official text.",
+      scamTitle: "Avoiding scams",
+      scam: [
+        "No competition is won by paying: nobody can guarantee you a place.",
+        "Official fees and registrations are checked only on the official websites of the ministry or school.",
+        "Beware of anyone who asks for money to “place” or “speed up” a file.",
+        "Weldon is not affiliated with any institution. Information may change: always check the official order of the session.",
+      ],
+    },
+  };
+  const ori = () => ORI[lang()];
+  const levelName = (code) => (code ? ori().levels[code] || code : "");
 
   const TABS = ["concours", "epreuves", "corriges", "oral", "salle"];
   const PREMIUM_TABS = new Set(["corriges", "oral", "salle"]);
@@ -760,6 +987,8 @@
     const L = t();
     const nav = state.nav.concours || {};
     if (nav.concours) return viewFiche(concoursById(nav.concours));
+    if (nav.orient) return viewOrient();
+    const O = ori();
     return `
       <section class="hero">
         <div>
@@ -779,10 +1008,172 @@
         </div>
       </section>
       ${demoNotice()}
+      ${state.demo ? "" : `<section class="card orient-cta"><div><h2>${O.cta}</h2><p class="muted">${O.ctaSub}</p></div><button type="button" class="btn btn-primary" data-orient>${O.ctaBtn}</button></section>`}
       <div class="section-head"><div><span class="eyebrow">${L.presentation}</span><h2>${L.pickConcours}</h2></div><p class="muted small">${L.pickConcoursSub}</p></div>
       ${categoryChips()}
       <input id="concours-search" class="search" type="search" placeholder="${L.search}" value="${esc(state.q)}" autocomplete="off">
-      <div id="concours-list">${concoursList()}</div>`;
+      <div id="concours-list">${concoursList()}</div>
+      ${scamCard()}`;
+  }
+
+  function scamCard() {
+    const O = ori();
+    return `<article class="card scam"><h3>${I.info} ${O.scamTitle}</h3><ul class="clean">${O.scam.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>`;
+  }
+
+  // ---------- « Quel concours pour moi ? » ----------
+  function viewOrient() {
+    const L = t();
+    const O = ori();
+    const p = state.user.profil || {};
+    const back = `<button type="button" class="back" data-back>${I.back} ${L.allConcours}</button>`;
+    const head = `<div><span class="eyebrow">${L.section}</span><h1>${O.title}</h1></div><p class="muted">${O.sub}</p>`;
+    if (!p.niveau || state.editProfil) return back + head + orientForm(p);
+    const summary = [
+      O.levels[p.niveau],
+      p.serie && p.serie !== "AUTRE" ? O.seriesNames[p.serie] : "",
+      p.annee_naissance ? O.born(p.annee_naissance) : "",
+      p.region ? O.regions[p.region] : "",
+    ].filter(Boolean);
+    const top = `${back}${head}<section class="card profil-summary"><div class="chips">${summary.map((x) => `<span class="tag tag-line">${esc(x)}</span>`).join("")}</div>
+      <button type="button" class="btn btn-ghost" data-edit-profil>${O.edit}</button></section>`;
+    if (!state.orient) {
+      loadOrient();
+      return top + `<p class="muted">${O.loading}</p>`;
+    }
+    const by = {};
+    for (const r of state.orient.resultats) (by[r.categorie] ||= []).push(r);
+    const card = (r) => {
+      const c = concoursById(r.id);
+      if (!c) return "";
+      const reasons = r.raisons
+        .map((x) => ({ ok: x, text: O.reason(x, levelName) }))
+        .filter((x) => x.text)
+        .map(({ ok: x, text }) => `<li class="r-${x.ok === true ? "ok" : x.ok === false ? "ko" : "chk"}"><span aria-hidden="true">${x.ok === true ? "✓" : x.ok === false ? "✕" : "!"}</span><span>${esc(text)}</span></li>`)
+        .join("");
+      return `<article class="card result">
+        <div class="row" style="display:flex;gap:12px;align-items:center"><div class="${sigleClass(c)}">${esc(c.sigle)}</div>
+          <div style="min-width:0"><b>${esc(c.nom)}</b><span class="small muted" style="display:block">${esc(c.organisme)}</span></div></div>
+        <ul class="reasons">${reasons}</ul>
+        <div class="row-actions"><span class="tag tag-line">${O.verify}</span><button type="button" class="btn btn-ghost" data-open-orient="${c.id}">${O.open}</button></div>
+      </article>`;
+    };
+    const compact = (r) => {
+      const c = concoursById(r.id);
+      return c ? `<button type="button" class="paper-row" data-open-orient="${c.id}"><span style="min-width:0"><b>${esc(c.nom)}</b><span class="small muted">${esc(c.organisme)}</span></span>${I.chevron}</button>` : "";
+    };
+    const open = ["bien", "adapte", "possible"];
+    const folded = ["improbable", "inconnu", "non"];
+    const section = (k) => {
+      const list = by[k] || [];
+      if (!list.length && open.includes(k)) return "";
+      if (!list.length) return "";
+      const [title, sub] = O.groups[k];
+      const body = k === "inconnu" ? `<div class="paper-list">${list.map(compact).join("")}</div>` : `<div class="results">${list.map(card).join("")}</div>`;
+      const inner = `<p class="small muted">${esc(sub)}</p>${body}`;
+      return folded.includes(k)
+        ? `<details class="fold"><summary><b>${esc(title)}</b> <span class="muted">${list.length}</span></summary>${inner}</details>`
+        : `<section class="orient-group"><h2>${esc(title)} <span class="muted">${list.length}</span></h2>${inner}</section>`;
+    };
+    const any = open.some((k) => (by[k] || []).length);
+    return `${top}
+      <p class="small muted">${O.target(state.orient.annee_cible)}</p>
+      ${any ? "" : `<div class="notice">${I.info}<span>${O.none}</span></div>`}
+      ${[...open, ...folded].map(section).join("")}
+      ${scamCard()}`;
+  }
+
+  async function loadOrient() {
+    if (state.orientLoading) return;
+    state.orientLoading = true;
+    try {
+      state.orient = await api().orientation(lang());
+    } catch (e) {
+      toast(e.message);
+      state.editProfil = true;
+    }
+    state.orientLoading = false;
+    render();
+  }
+
+  function orientForm(p) {
+    const O = ori();
+    const opt = (v, label, cur) => `<option value="${esc(v)}" ${cur === v ? "selected" : ""}>${esc(label)}</option>`;
+    const years = new Date().getFullYear();
+    return `<form id="profil-form" class="card form" novalidate>
+      <div class="full"><h2>${O.formTitle}</h2><p class="muted small">${O.formSub}</p></div>
+      <div class="field full"><label for="pf-niveau">${O.level}</label>
+        <select id="pf-niveau" name="niveau" required><option value="">${O.levelPh}</option>${LEVELS.map((v) => opt(v, O.levels[v], p.niveau)).join("")}</select></div>
+      <div class="field full"><label for="pf-serie">${O.series}</label>
+        <select id="pf-serie" name="serie"><option value="">${O.seriesPh}</option>${SERIES_BY_LANG[lang()].map((v) => opt(v, O.seriesNames[v], p.serie)).join("")}</select>
+        <span class="small muted">${O.seriesHelp}</span></div>
+      <div class="field"><label for="pf-birth">${O.birth}</label>
+        <input id="pf-birth" name="annee_naissance" type="number" inputmode="numeric" min="${years - 70}" max="${years - 8}" placeholder="2005" value="${p.annee_naissance || ""}">
+        <span class="small muted">${O.birthHelp}</span></div>
+      <div class="field"><label for="pf-region">${O.region}</label>
+        <select id="pf-region" name="region"><option value="">${O.regionPh}</option>${REGIONS.map((v) => opt(v, O.regions[v], p.region)).join("")}</select></div>
+      <fieldset class="field full interests"><legend>${O.interests}</legend><p class="small muted">${O.interestsHelp}</p>
+        <div class="picks">${INTERESTS.map((v) => `<label class="pick"><input type="checkbox" name="interets" value="${v}" ${(p.interets || []).includes(v) ? "checked" : ""}><span>${esc(O.interestNames[v])}</span></label>`).join("")}</div></fieldset>
+      <p class="err full" id="profil-err" hidden></p>
+      <button class="btn btn-primary btn-block full" type="submit">${O.save}</button>
+    </form>`;
+  }
+
+  async function submitProfil(f) {
+    const fd = new FormData(f);
+    const err = f.querySelector("#profil-err");
+    const niveau = fd.get("niveau");
+    if (!niveau) {
+      err.textContent = ori().levelPh + ".";
+      err.hidden = false;
+      return;
+    }
+    try {
+      state.user = await api().update({
+        profil: { niveau, serie: fd.get("serie") || "", annee_naissance: fd.get("annee_naissance") || "", region: fd.get("region") || "", interets: fd.getAll("interets") },
+      });
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
+      return;
+    }
+    state.editProfil = false;
+    state.orient = null;
+    render();
+  }
+
+  // Conditions d'accès structurées d'une fiche (niveau, séries, âge…), toujours « à confirmer dans l'arrêté ».
+  function accessCard(c) {
+    const a = c.acces;
+    const O = ori();
+    if (!a) return "";
+    const row = (k, v) => (v ? `<div><dt>${k}</dt><dd>${v}</dd></div>` : "");
+    const hasAge = a.age_min != null || a.age_max != null;
+    const cal = c.calendrier || {};
+    const period = [
+      cal.mois_lancement ? `${O.launch} : ${esc(cal.mois_lancement)}` : "",
+      cal.mois_limite_depot ? `${O.deadline} : ${esc(cal.mois_limite_depot)}` : "",
+      cal.mois_epreuves ? `${O.exams} : ${esc(cal.mois_epreuves)}` : "",
+    ].filter(Boolean);
+    const fees = cal.frais_fcfa != null ? fcfa(cal.frais_fcfa) + (cal.frais_note ? " · " + esc(cal.frais_note) : "") : cal.frais_note ? esc(cal.frais_note) : "";
+    return `<article class="card access"><h3>${O.accessTitle}</h3>
+      <dl class="kv">
+        ${row(O.diplomas, esc(a.diplomes || (a.niveaux_min ? levelName(a.niveaux_min) : "")))}
+        ${row(O.seriesLabel, a.series_note ? esc(a.series_note) : a.series?.length ? esc(a.series.join(", ")) : "")}
+        ${row(O.ageLabel, hasAge ? esc(a.age_note || O.ageText(a)) : a.age_note ? esc(a.age_note) : "")}
+        ${row(O.nationality, a.nationalite ? O.cameroonian : "")}
+        ${row(O.others, a.autres?.length ? `<ul class="clean">${a.autres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "")}
+        ${row(O.fees, fees)}
+        ${row(O.periodTitle, period.length ? period.join("<br>") : "")}
+        ${row(O.dossier, cal.pieces?.length ? `<ul class="clean">${cal.pieces.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "")}
+        ${row(O.outcomes, c.debouches ? esc(c.debouches) : "")}
+        ${row(O.variants, c.variantes?.length ? `<ul class="clean">${c.variantes.map((v) => `<li><b>${esc(v.nom)}</b> : ${esc(v.difference)}</li>`).join("")}</ul>` : "")}
+      </dl>
+      <div class="notice">${I.info}<span class="small">${O.accessNote(a.annee_conditions)} ${c.status !== "verified" ? O.unverified : ""}</span></div>
+      ${c.lien_inscription ? `<p class="small"><a href="${esc(c.lien_inscription)}" target="_blank" rel="noopener noreferrer">${O.register}</a></p>` : ""}
+      ${c.sources?.length ? `<details class="sources"><summary class="small">${O.sources} (${c.sources.length})</summary><ul class="clean small">${c.sources.map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.titre || x.url)}</a>` : esc(x.titre)}${x.annee ? " (" + esc(x.annee) + ")" : ""}</li>`).join("")}</ul></details>` : ""}
+      ${c.last_verified ? `<p class="small muted">${O.lastVerified(dateFmt(c.last_verified))}</p>` : ""}
+    </article>`;
   }
 
   function categoryChips() {
@@ -882,6 +1273,7 @@
       <div class="fiche">
         <div style="display:grid;gap:16px;min-width:0">
           <article class="card"><h3>${L.subjects}</h3><ul class="clean">${a.matieres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>
+          ${accessCard(c)}
           ${placesTable(a)}
         </div>
         <aside class="card" style="min-width:0">
@@ -916,7 +1308,7 @@
         <div style="display:grid;gap:16px;min-width:0">
           <article class="card"><h3>${L.presentation}</h3><p>${esc(f.presentation)}</p></article>
           <article class="card"><h3>${L.ficheHistory}</h3><p>${esc(f.historique)}</p></article>
-          <article class="card"><h3>${L.ficheConditions}</h3><ul class="clean">${f.conditions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>
+          ${c.acces ? accessCard(c) : `<article class="card"><h3>${L.ficheConditions}</h3><ul class="clean">${f.conditions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>`}
           <article class="card"><h3>${L.fichePapers}</h3>
             <div class="table-wrap"><table><thead><tr><th>${L.thPaper}</th><th>${L.thDuration}</th><th>${L.thCoef}</th><th>${L.thElim}</th></tr></thead><tbody>${rows}</tbody></table></div>
             <p class="small muted">${esc(f.autres_epreuves)}</p></article>
@@ -1689,8 +2081,11 @@
       }
       state.nav = {};
       state.docCache = {};
+      state.orient = null;
       state.exam = null;
       local.del("exam");
+      // Nouveau compte sans profil : on l'emmène directement à « Quel concours pour moi ? »
+      if (!state.user.profil?.niveau) return go("concours", { orient: true });
       return render();
     }
     if (d.tab) return go(d.tab, {});
@@ -1701,8 +2096,15 @@
       state.cat = d.cat;
       return render();
     }
+    if ("orient" in d) return go("concours", { orient: true });
+    if ("editProfil" in d) {
+      state.editProfil = true;
+      return render();
+    }
+    if (d.openOrient) return go("concours", { concours: d.openOrient, from: "orient" });
     if ("back" in d) {
       const nav = state.nav[state.tab] || {};
+      if (nav.from === "orient") return go("concours", { orient: true });
       return go(state.tab, nav.doc ? { concours: nav.concours } : {});
     }
     if (d.doc) {
@@ -1783,6 +2185,7 @@
     ev.preventDefault();
     const f = ev.target;
     if (f.id === "pay-form") return submitPay(f);
+    if (f.id === "profil-form") return submitProfil(f);
     if (f.id === "grant-form") return submitGrant(f);
     if (f.id === "auth-form") {
       const err = f.querySelector("#auth-err");

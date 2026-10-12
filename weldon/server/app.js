@@ -9,6 +9,7 @@ import { fileURLToPath } from "node:url";
 import { loadEnv } from "./env.js";
 import { createStore } from "./store.js";
 import { loadContent, LANGS } from "./content.js";
+import { orient, cleanProfil, targetYear } from "./orientation.js";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 loadEnv(path.join(HERE, ".env"));
@@ -126,6 +127,7 @@ function profile(u) {
     premium: Boolean(isPremium(u)),
     premium_until: isAdmin(u) ? null : u.premium_until || null,
     free_id: u.free_id || null,
+    profil: u.profil || null,
   };
 }
 
@@ -283,8 +285,24 @@ route("POST", "/api/me", async (req) => {
   const b = await readJson(req);
   if (LANGS.includes(b.lang)) u.lang = b.lang;
   if (str(b.name, 80)) u.name = str(b.name, 80);
+  if (b.profil && typeof b.profil === "object") {
+    try {
+      u.profil = { ...(u.profil || {}), ...cleanProfil(b.profil) };
+    } catch (e) {
+      throw httpError(e.status || 400, e.message);
+    }
+  }
   await store.saveUser(u);
   return profile(u);
+});
+
+// « Quel concours pour moi ? » : classe les concours selon le profil du compte et leurs conditions d'accès.
+route("GET", "/api/orientation", async (req, _p, url) => {
+  const u = await currentUser(req);
+  const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
+  if (!u.profil?.niveau) throw httpError(400, "Indiquez d'abord votre niveau d'études.");
+  const list = content.catalog(lang).concours;
+  return { profil: u.profil, annee_cible: targetYear(), resultats: orient(u.profil, list) };
 });
 
 route("POST", "/api/password", async (req) => {

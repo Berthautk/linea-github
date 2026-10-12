@@ -1,0 +1,6266 @@
+[
+ {
+  "id": "histoire-01",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "Qui fut le premier président de la République du Cameroun ?",
+   "options": [
+    "Ahmadou Ahidjo",
+    "Paul Biya",
+    "John Ngu Foncha",
+    "Ruben Um Nyobè"
+   ],
+   "answer": 0,
+   "explication": "Ahmadou Ahidjo dirigea le pays dès l'indépendance en 1960."
+  },
+  "en": {
+   "q": "Who was the first President of the Republic of Cameroon?",
+   "options": [
+    "Ahmadou Ahidjo",
+    "Paul Biya",
+    "John Ngu Foncha",
+    "Ruben Um Nyobè"
+   ],
+   "answer": 0,
+   "explication": "Ahmadou Ahidjo led the country from independence in 1960."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-02",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "À quelle date le Cameroun sous tutelle française accéda-t-il à l'indépendance ?",
+   "options": [
+    "11 février 1961",
+    "1er octobre 1961",
+    "20 mai 1972",
+    "1er janvier 1960"
+   ],
+   "answer": 3,
+   "explication": "L'indépendance du Cameroun français fut proclamée le 1er janvier 1960."
+  },
+  "en": {
+   "q": "On what date did French-administered Cameroon become independent?",
+   "options": [
+    "11 February 1961",
+    "1 October 1961",
+    "20 May 1972",
+    "1 January 1960"
+   ],
+   "answer": 3,
+   "explication": "Independence of French Cameroun was proclaimed on 1 January 1960."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-03",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle date marque la réunification du Cameroun (Southern Cameroons et République du Cameroun) ?",
+   "options": [
+    "1er janvier 1960",
+    "11 février 1961",
+    "1er octobre 1961",
+    "20 mai 1972"
+   ],
+   "answer": 2,
+   "explication": "Le 1er octobre 1961, le Cameroun méridional britannique rejoignit la République du Cameroun, formant la République fédérale."
+  },
+  "en": {
+   "q": "Which date marks the reunification of Cameroon (Southern Cameroons and the Republic of Cameroon)?",
+   "options": [
+    "1 January 1960",
+    "11 February 1961",
+    "1 October 1961",
+    "20 May 1972"
+   ],
+   "answer": 2,
+   "explication": "On 1 October 1961 the former British Southern Cameroons joined the Republic of Cameroon, forming the Federal Republic."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-04",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle puissance européenne établit un protectorat sur le Cameroun en 1884 ?",
+   "options": [
+    "La France",
+    "L'Allemagne",
+    "Le Royaume-Uni",
+    "Le Portugal"
+   ],
+   "answer": 1,
+   "explication": "Le traité germano-douala de juillet 1884 fonda le protectorat allemand du Kamerun."
+  },
+  "en": {
+   "q": "Which European power established a protectorate over Cameroon in 1884?",
+   "options": [
+    "France",
+    "Germany",
+    "The United Kingdom",
+    "Portugal"
+   ],
+   "answer": 1,
+   "explication": "The Germano-Douala treaty of July 1884 founded the German protectorate of Kamerun."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-05",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "Le nom « Cameroun » vient du portugais « Camarões », qui désigne :",
+   "options": [
+    "Les montagnes",
+    "Les crevettes",
+    "Les fleuves",
+    "Les éléphants"
+   ],
+   "answer": 1,
+   "explication": "Les navigateurs portugais appelèrent le Wouri « Rio dos Camarões » (rivière des crevettes)."
+  },
+  "en": {
+   "q": "The name \"Cameroon\" comes from the Portuguese \"Camarões\", meaning:",
+   "options": [
+    "Mountains",
+    "Prawns (shrimps)",
+    "Rivers",
+    "Elephants"
+   ],
+   "answer": 1,
+   "explication": "Portuguese navigators called the Wouri \"Rio dos Camarões\" (river of prawns)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-06",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "La Conférence de Berlin (1884-1885) avait pour objet principal :",
+   "options": [
+    "De fixer les règles du partage colonial de l'Afrique",
+    "De proclamer l'indépendance de l'Afrique",
+    "De créer l'ONU",
+    "D'abolir l'esclavage aux États-Unis"
+   ],
+   "answer": 0,
+   "explication": "Les puissances européennes y définirent les règles de l'occupation et du partage de l'Afrique."
+  },
+  "en": {
+   "q": "The main purpose of the Berlin Conference (1884-1885) was:",
+   "options": [
+    "To set the rules for the colonial partition of Africa",
+    "To proclaim African independence",
+    "To create the UN",
+    "To abolish slavery in the United States"
+   ],
+   "answer": 0,
+   "explication": "European powers defined there the rules for occupying and dividing Africa."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-07",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel pays fut la première colonie d'Afrique subsaharienne à devenir indépendante, en 1957 ?",
+   "options": [
+    "Le Nigeria",
+    "La Guinée",
+    "Le Sénégal",
+    "Le Ghana"
+   ],
+   "answer": 3,
+   "explication": "Le Ghana de Kwame Nkrumah accéda à l'indépendance le 6 mars 1957."
+  },
+  "en": {
+   "q": "Which country was the first sub-Saharan African colony to become independent, in 1957?",
+   "options": [
+    "Nigeria",
+    "Guinea",
+    "Senegal",
+    "Ghana"
+   ],
+   "answer": 3,
+   "explication": "Kwame Nkrumah's Ghana became independent on 6 March 1957."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-08",
+  "theme": "histoire",
+  "niveau": "facile",
+  "fr": {
+   "q": "En quelle année la Première Guerre mondiale a-t-elle commencé ?",
+   "options": [
+    "1905",
+    "1918",
+    "1914",
+    "1939"
+   ],
+   "answer": 2,
+   "explication": "Elle débuta en 1914 et s'acheva en 1918."
+  },
+  "en": {
+   "q": "In which year did the First World War begin?",
+   "options": [
+    "1905",
+    "1918",
+    "1914",
+    "1939"
+   ],
+   "answer": 2,
+   "explication": "It began in 1914 and ended in 1918."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-09",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Que fut décidé par le référendum du 20 mai 1972 au Cameroun ?",
+   "options": [
+    "L'indépendance du pays",
+    "La réunification des deux Cameroun",
+    "Le passage de l'État fédéral à l'État unitaire",
+    "L'adoption du multipartisme"
+   ],
+   "answer": 2,
+   "explication": "Il supprima le fédéralisme et créa la République unie du Cameroun."
+  },
+  "en": {
+   "q": "What was decided by the referendum of 20 May 1972 in Cameroon?",
+   "options": [
+    "The country's independence",
+    "The reunification of the two Cameroons",
+    "The change from a federal to a unitary state",
+    "The adoption of multiparty politics"
+   ],
+   "answer": 2,
+   "explication": "It abolished federalism and created the United Republic of Cameroon."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-10",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Lors du plébiscite du 11 février 1961, le Southern Cameroons a choisi :",
+   "options": [
+    "De rejoindre le Nigeria",
+    "De rejoindre la République du Cameroun",
+    "De rester sous tutelle britannique",
+    "De devenir un État indépendant"
+   ],
+   "answer": 1,
+   "explication": "Le Southern Cameroons vota l'union avec le Cameroun, tandis que le Northern Cameroons choisit le Nigeria."
+  },
+  "en": {
+   "q": "In the plebiscite of 11 February 1961, Southern Cameroons chose:",
+   "options": [
+    "To join Nigeria",
+    "To join the Republic of Cameroon",
+    "To remain under British rule",
+    "To become a separate independent state"
+   ],
+   "answer": 1,
+   "explication": "Southern Cameroons voted to join Cameroon, while Northern Cameroons chose Nigeria."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-11",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Après la Première Guerre mondiale, le Kamerun allemand fut :",
+   "options": [
+    "Partagé entre la France et le Royaume-Uni sous mandat de la SDN",
+    "Rattaché à l'Allemagne de l'Ouest",
+    "Rendu à ses chefs traditionnels",
+    "Donné au Portugal"
+   ],
+   "answer": 0,
+   "explication": "Le traité de Versailles retira ses colonies à l'Allemagne ; le Cameroun fut partagé sous mandats de la Société des Nations."
+  },
+  "en": {
+   "q": "After the First World War, German Kamerun was:",
+   "options": [
+    "Divided between France and the United Kingdom under League of Nations mandates",
+    "Attached to West Germany",
+    "Returned to its traditional chiefs",
+    "Given to Portugal"
+   ],
+   "answer": 0,
+   "explication": "The Treaty of Versailles stripped Germany of its colonies; Cameroon was divided under League of Nations mandates."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-12",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel parti nationaliste camerounais, fondé en 1948, réclamait l'indépendance et la réunification ?",
+   "options": [
+    "L'UNC",
+    "Le RDPC",
+    "Le SDF",
+    "L'UPC"
+   ],
+   "answer": 3,
+   "explication": "L'Union des populations du Cameroun, avec Ruben Um Nyobè, mena la lutte nationaliste."
+  },
+  "en": {
+   "q": "Which Cameroonian nationalist party, founded in 1948, demanded independence and reunification?",
+   "options": [
+    "The UNC",
+    "The CPDM",
+    "The SDF",
+    "The UPC"
+   ],
+   "answer": 3,
+   "explication": "The Union des Populations du Cameroun, led by Ruben Um Nyobè, led the nationalist struggle."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-13",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Après la Seconde Guerre mondiale, les Cameroun français et britannique devinrent :",
+   "options": [
+    "Des colonies allemandes",
+    "Des protectorats portugais",
+    "Des États indépendants",
+    "Des territoires sous tutelle de l'ONU"
+   ],
+   "answer": 3,
+   "explication": "Les mandats de la SDN furent remplacés en 1946 par des tutelles de l'ONU."
+  },
+  "en": {
+   "q": "After the Second World War, French and British Cameroons became:",
+   "options": [
+    "German colonies",
+    "Portuguese protectorates",
+    "Independent states",
+    "UN trust territories"
+   ],
+   "answer": 3,
+   "explication": "The League mandates were replaced in 1946 by United Nations trusteeships."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-14",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelle ville d'Indonésie accueillit en 1955 la conférence réunissant pays africains et asiatiques ?",
+   "options": [
+    "Djakarta",
+    "Singapour",
+    "Bandung",
+    "Manille"
+   ],
+   "answer": 2,
+   "explication": "La conférence de Bandung (1955) affirma la solidarité afro-asiatique contre le colonialisme."
+  },
+  "en": {
+   "q": "Which Indonesian city hosted the 1955 conference of Asian and African countries?",
+   "options": [
+    "Jakarta",
+    "Singapore",
+    "Bandung",
+    "Manila"
+   ],
+   "answer": 2,
+   "explication": "The Bandung Conference (1955) asserted Afro-Asian solidarity against colonialism."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-15",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "L'Organisation de l'unité africaine (OUA) fut créée en 1963 dans quelle ville ?",
+   "options": [
+    "Accra",
+    "Addis-Abeba",
+    "Lagos",
+    "Le Caire"
+   ],
+   "answer": 1,
+   "explication": "L'OUA fut fondée à Addis-Abeba, en Éthiopie, en mai 1963."
+  },
+  "en": {
+   "q": "In which city was the Organisation of African Unity (OAU) created in 1963?",
+   "options": [
+    "Accra",
+    "Addis Ababa",
+    "Lagos",
+    "Cairo"
+   ],
+   "answer": 1,
+   "explication": "The OAU was founded in Addis Ababa, Ethiopia, in May 1963."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-16",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Qui devint en 1994 le premier président sud-africain élu lors d'élections multiraciales ?",
+   "options": [
+    "Nelson Mandela",
+    "Thabo Mbeki",
+    "Desmond Tutu",
+    "Frederik de Klerk"
+   ],
+   "answer": 0,
+   "explication": "Les premières élections multiraciales mirent fin à l'apartheid et portèrent Mandela au pouvoir."
+  },
+  "en": {
+   "q": "Who became in 1994 the first South African president elected in multiracial elections?",
+   "options": [
+    "Nelson Mandela",
+    "Thabo Mbeki",
+    "Desmond Tutu",
+    "F. W. de Klerk"
+   ],
+   "answer": 0,
+   "explication": "The first multiracial elections ended apartheid and brought Mandela to power."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-17",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel responsable de la France libre présida la conférence de Brazzaville en 1944 ?",
+   "options": [
+    "Charles de Gaulle",
+    "Philippe Pétain",
+    "Léon Blum",
+    "Georges Pompidou"
+   ],
+   "answer": 0,
+   "explication": "De Gaulle y annonça des réformes pour les colonies françaises d'Afrique."
+  },
+  "en": {
+   "q": "Which Free French leader presided over the Brazzaville Conference in 1944?",
+   "options": [
+    "Charles de Gaulle",
+    "Philippe Pétain",
+    "Léon Blum",
+    "Georges Pompidou"
+   ],
+   "answer": 0,
+   "explication": "De Gaulle announced there reforms for France's African colonies."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-18",
+  "theme": "histoire",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel empereur du Mali est célèbre pour son pèlerinage à La Mecque en 1324 ?",
+   "options": [
+    "Soundiata Keïta",
+    "Soni Ali Ber",
+    "Askia Mohammed",
+    "Mansa Moussa"
+   ],
+   "answer": 3,
+   "explication": "Mansa Moussa distribua tant d'or lors de son voyage qu'il fit connaître la richesse du Mali."
+  },
+  "en": {
+   "q": "Which emperor of Mali is famous for his pilgrimage to Mecca in 1324?",
+   "options": [
+    "Sundiata Keita",
+    "Sunni Ali Ber",
+    "Askia Muhammad",
+    "Mansa Musa"
+   ],
+   "answer": 3,
+   "explication": "Mansa Musa spread so much gold on his journey that he made Mali's wealth famous."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-19",
+  "theme": "histoire",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel roi douala fut pendu par les Allemands en août 1914 pour avoir résisté aux expropriations ?",
+   "options": [
+    "Lock Priso",
+    "Kum'a Ndumbe",
+    "Rudolf Douala Manga Bell",
+    "Martin-Paul Samba"
+   ],
+   "answer": 2,
+   "explication": "Rudolf Douala Manga Bell s'opposa à l'expropriation des Douala et fut exécuté en 1914."
+  },
+  "en": {
+   "q": "Which Douala king was hanged by the Germans in August 1914 for resisting expropriation?",
+   "options": [
+    "Lock Priso",
+    "Kum'a Ndumbe",
+    "Rudolf Douala Manga Bell",
+    "Martin-Paul Samba"
+   ],
+   "answer": 2,
+   "explication": "Rudolf Douala Manga Bell opposed the expropriation of the Douala and was executed in 1914."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-20",
+  "theme": "histoire",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Dans quelle ville se tint en juillet 1961 la conférence constitutionnelle entre représentants du Southern Cameroons et de la République du Cameroun ?",
+   "options": [
+    "Buea",
+    "Foumban",
+    "Yaoundé",
+    "Bamenda"
+   ],
+   "answer": 1,
+   "explication": "La conférence de Foumban prépara la Constitution fédérale de 1961."
+  },
+  "en": {
+   "q": "In which town was the July 1961 constitutional conference between Southern Cameroons and the Republic of Cameroon held?",
+   "options": [
+    "Buea",
+    "Foumban",
+    "Yaoundé",
+    "Bamenda"
+   ],
+   "answer": 1,
+   "explication": "The Foumban Conference prepared the 1961 federal Constitution."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-21",
+  "theme": "histoire",
+  "niveau": "difficile",
+  "fr": {
+   "q": "La loi-cadre Defferre de 1956 a principalement :",
+   "options": [
+    "Créé l'Union française",
+    "Accordé une large autonomie interne aux territoires d'outre-mer",
+    "Supprimé le code de l'indigénat",
+    "Aboli le travail forcé"
+   ],
+   "answer": 1,
+   "explication": "Elle donna aux territoires des assemblées et des gouvernements locaux ; l'Union française, l'indigénat et le travail forcé relèvent de 1946."
+  },
+  "en": {
+   "q": "The 1956 Defferre framework law (loi-cadre) mainly:",
+   "options": [
+    "Created the French Union",
+    "Granted wide internal autonomy to overseas territories",
+    "Abolished the indigénat code",
+    "Abolished forced labour"
+   ],
+   "answer": 1,
+   "explication": "It gave the territories local assemblies and governments; the French Union, indigénat and forced labour belong to 1946."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-22",
+  "theme": "histoire",
+  "niveau": "difficile",
+  "fr": {
+   "q": "En quelle année les forces allemandes furent-elles chassées du Kamerun par les Alliés ?",
+   "options": [
+    "1916",
+    "1914",
+    "1919",
+    "1922"
+   ],
+   "answer": 0,
+   "explication": "Les dernières troupes allemandes se rendirent à Mora en février 1916."
+  },
+  "en": {
+   "q": "In which year were German forces driven out of Kamerun by the Allies?",
+   "options": [
+    "1916",
+    "1914",
+    "1919",
+    "1922"
+   ],
+   "answer": 0,
+   "explication": "The last German troops surrendered at Mora in February 1916."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-23",
+  "theme": "histoire",
+  "niveau": "difficile",
+  "fr": {
+   "q": "En 1896, à Adwa, quelle armée africaine vainquit l'armée coloniale italienne ?",
+   "options": [
+    "Le royaume zoulou",
+    "L'empire ashanti",
+    "L'empire du Mali",
+    "L'Éthiopie de Ménélik II"
+   ],
+   "answer": 3,
+   "explication": "La victoire d'Adwa garantit l'indépendance de l'Éthiopie face à l'Italie."
+  },
+  "en": {
+   "q": "In 1896 at Adwa, which African army defeated the Italian colonial army?",
+   "options": [
+    "The Zulu kingdom",
+    "The Ashanti empire",
+    "The Mali empire",
+    "Ethiopia under Menelik II"
+   ],
+   "answer": 3,
+   "explication": "The victory at Adwa secured Ethiopia's independence against Italy."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "histoire-24",
+  "theme": "histoire",
+  "niveau": "difficile",
+  "fr": {
+   "q": "En 1956, Nasser nationalisa :",
+   "options": [
+    "Le canal de Panama",
+    "Le canal de Kiel",
+    "Le canal de Suez",
+    "Le canal de Corinthe"
+   ],
+   "answer": 2,
+   "explication": "Cette nationalisation déclencha la crise de Suez avec la France et le Royaume-Uni."
+  },
+  "en": {
+   "q": "In 1956 Nasser nationalised:",
+   "options": [
+    "The Panama Canal",
+    "The Kiel Canal",
+    "The Suez Canal",
+    "The Corinth Canal"
+   ],
+   "answer": 2,
+   "explication": "This nationalisation triggered the Suez crisis with France and the United Kingdom."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-01",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle ville est la capitale politique du Cameroun ?",
+   "options": [
+    "Yaoundé",
+    "Douala",
+    "Bafoussam",
+    "Garoua"
+   ],
+   "answer": 0,
+   "explication": "Yaoundé, dans la région du Centre, est la capitale politique."
+  },
+  "en": {
+   "q": "Which city is the political capital of Cameroon?",
+   "options": [
+    "Yaoundé",
+    "Douala",
+    "Bafoussam",
+    "Garoua"
+   ],
+   "answer": 0,
+   "explication": "Yaoundé, in the Centre region, is the political capital."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-02",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le point culminant du Cameroun ?",
+   "options": [
+    "Le mont Oku",
+    "Le mont Manengouba",
+    "Les monts Bamboutos",
+    "Le mont Cameroun"
+   ],
+   "answer": 3,
+   "explication": "Le mont Cameroun culmine à environ 4 040 m."
+  },
+  "en": {
+   "q": "What is the highest point in Cameroon?",
+   "options": [
+    "Mount Oku",
+    "Mount Manengouba",
+    "The Bamboutos Mountains",
+    "Mount Cameroon"
+   ],
+   "answer": 3,
+   "explication": "Mount Cameroon rises to about 4,040 m."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-03",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Combien de régions compte le Cameroun ?",
+   "options": [
+    "8",
+    "12",
+    "10",
+    "7"
+   ],
+   "answer": 2,
+   "explication": "Le Cameroun est divisé en dix régions."
+  },
+  "en": {
+   "q": "How many regions does Cameroon have?",
+   "options": [
+    "8",
+    "12",
+    "10",
+    "7"
+   ],
+   "answer": 2,
+   "explication": "Cameroon is divided into ten regions."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-04",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel pays borde le Cameroun à l'ouest ?",
+   "options": [
+    "Le Tchad",
+    "Le Nigeria",
+    "Le Gabon",
+    "Le Congo"
+   ],
+   "answer": 1,
+   "explication": "La frontière ouest du Cameroun est partagée avec le Nigeria."
+  },
+  "en": {
+   "q": "Which country borders Cameroon to the west?",
+   "options": [
+    "Chad",
+    "Nigeria",
+    "Gabon",
+    "Congo"
+   ],
+   "answer": 1,
+   "explication": "Cameroon's western border is shared with Nigeria."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-05",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le chef-lieu de la région du Littoral ?",
+   "options": [
+    "Buea",
+    "Douala",
+    "Bertoua",
+    "Limbé"
+   ],
+   "answer": 1,
+   "explication": "Douala est le chef-lieu du Littoral et la capitale économique."
+  },
+  "en": {
+   "q": "What is the chief town of the Littoral region?",
+   "options": [
+    "Buea",
+    "Douala",
+    "Bertoua",
+    "Limbe"
+   ],
+   "answer": 1,
+   "explication": "Douala is the chief town of the Littoral and the economic capital."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-06",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le plus grand pays d'Afrique par la superficie ?",
+   "options": [
+    "L'Algérie",
+    "La RD Congo",
+    "Le Soudan",
+    "La Libye"
+   ],
+   "answer": 0,
+   "explication": "L'Algérie est le plus vaste pays africain."
+  },
+  "en": {
+   "q": "Which is the largest country in Africa by area?",
+   "options": [
+    "Algeria",
+    "DR Congo",
+    "Sudan",
+    "Libya"
+   ],
+   "answer": 0,
+   "explication": "Algeria is Africa's largest country."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-07",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le plus long fleuve d'Afrique ?",
+   "options": [
+    "Le Congo",
+    "Le Niger",
+    "Le Zambèze",
+    "Le Nil"
+   ],
+   "answer": 3,
+   "explication": "Le Nil mesure environ 6 650 km."
+  },
+  "en": {
+   "q": "What is the longest river in Africa?",
+   "options": [
+    "The Congo",
+    "The Niger",
+    "The Zambezi",
+    "The Nile"
+   ],
+   "answer": 3,
+   "explication": "The Nile is about 6,650 km long."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-08",
+  "theme": "geographie",
+  "niveau": "facile",
+  "fr": {
+   "q": "Dans quel pays se trouve le Kilimandjaro, plus haut sommet d'Afrique ?",
+   "options": [
+    "Le Kenya",
+    "L'Éthiopie",
+    "La Tanzanie",
+    "L'Ouganda"
+   ],
+   "answer": 2,
+   "explication": "Le Kilimandjaro est situé en Tanzanie."
+  },
+  "en": {
+   "q": "In which country is Kilimanjaro, Africa's highest mountain?",
+   "options": [
+    "Kenya",
+    "Ethiopia",
+    "Tanzania",
+    "Uganda"
+   ],
+   "answer": 2,
+   "explication": "Kilimanjaro is located in Tanzania."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-09",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel est le chef-lieu de la région de l'Extrême-Nord ?",
+   "options": [
+    "Garoua",
+    "Ngaoundéré",
+    "Maroua",
+    "Bertoua"
+   ],
+   "answer": 2,
+   "explication": "Maroua est le chef-lieu de l'Extrême-Nord."
+  },
+  "en": {
+   "q": "What is the chief town of the Far North region?",
+   "options": [
+    "Garoua",
+    "Ngaoundéré",
+    "Maroua",
+    "Bertoua"
+   ],
+   "answer": 2,
+   "explication": "Maroua is the chief town of the Far North."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-10",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel est le chef-lieu de la région du Sud-Ouest ?",
+   "options": [
+    "Limbé",
+    "Buea",
+    "Kumba",
+    "Bamenda"
+   ],
+   "answer": 1,
+   "explication": "Buea, au pied du mont Cameroun, est le chef-lieu du Sud-Ouest."
+  },
+  "en": {
+   "q": "What is the chief town of the Southwest region?",
+   "options": [
+    "Limbe",
+    "Buea",
+    "Kumba",
+    "Bamenda"
+   ],
+   "answer": 1,
+   "explication": "Buea, at the foot of Mount Cameroon, is the chief town of the Southwest."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-11",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Lequel de ces pays n'a pas de frontière terrestre avec le Cameroun ?",
+   "options": [
+    "Le Niger",
+    "Le Tchad",
+    "Le Gabon",
+    "La Guinée équatoriale"
+   ],
+   "answer": 0,
+   "explication": "Le Cameroun touche le Nigeria, le Tchad, la RCA, le Congo, le Gabon et la Guinée équatoriale, mais pas le Niger."
+  },
+  "en": {
+   "q": "Which of these countries has no land border with Cameroon?",
+   "options": [
+    "Niger",
+    "Chad",
+    "Gabon",
+    "Equatorial Guinea"
+   ],
+   "answer": 0,
+   "explication": "Cameroon borders Nigeria, Chad, CAR, Congo, Gabon and Equatorial Guinea, but not Niger."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-12",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "La Bénoué, qui prend sa source sur le plateau de l'Adamaoua, est un affluent :",
+   "options": [
+    "Du Congo",
+    "Du Nil",
+    "De la Sanaga",
+    "Du Niger"
+   ],
+   "answer": 3,
+   "explication": "Elle traverse le nord du Cameroun puis rejoint le Niger au Nigeria."
+  },
+  "en": {
+   "q": "The Benue, which rises on the Adamawa plateau, is a tributary of:",
+   "options": [
+    "The Congo",
+    "The Nile",
+    "The Sanaga",
+    "The Niger"
+   ],
+   "answer": 3,
+   "explication": "It crosses northern Cameroon and joins the Niger in Nigeria."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-13",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Le climat du sud du Cameroun est de type :",
+   "options": [
+    "Sahélien à une saison des pluies",
+    "Désertique",
+    "Méditerranéen",
+    "Équatorial à quatre saisons"
+   ],
+   "answer": 3,
+   "explication": "Le Sud connaît deux saisons des pluies et deux saisons sèches."
+  },
+  "en": {
+   "q": "The climate of southern Cameroon is:",
+   "options": [
+    "Sahelian with one rainy season",
+    "Desert",
+    "Mediterranean",
+    "Equatorial with four seasons"
+   ],
+   "answer": 3,
+   "explication": "The South has two rainy and two dry seasons."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-14",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel est le chef-lieu de la région de l'Adamaoua ?",
+   "options": [
+    "Garoua",
+    "Bertoua",
+    "Ngaoundéré",
+    "Maroua"
+   ],
+   "answer": 2,
+   "explication": "Ngaoundéré est le chef-lieu de l'Adamaoua."
+  },
+  "en": {
+   "q": "What is the chief town of the Adamawa region?",
+   "options": [
+    "Garoua",
+    "Bertoua",
+    "Ngaoundéré",
+    "Maroua"
+   ],
+   "answer": 2,
+   "explication": "Ngaoundéré is the chief town of Adamawa."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-15",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelle est la capitale du Tchad ?",
+   "options": [
+    "Bangui",
+    "N'Djamena",
+    "Brazzaville",
+    "Libreville"
+   ],
+   "answer": 1,
+   "explication": "N'Djamena est la capitale du Tchad."
+  },
+  "en": {
+   "q": "What is the capital of Chad?",
+   "options": [
+    "Bangui",
+    "N'Djamena",
+    "Brazzaville",
+    "Libreville"
+   ],
+   "answer": 1,
+   "explication": "N'Djamena is the capital of Chad."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-16",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel détroit sépare l'Afrique de l'Europe à l'ouest de la Méditerranée ?",
+   "options": [
+    "Le détroit de Gibraltar",
+    "Le détroit de Bab-el-Mandeb",
+    "Le détroit de Béring",
+    "Le canal du Mozambique"
+   ],
+   "answer": 0,
+   "explication": "Le détroit de Gibraltar sépare le Maroc de l'Espagne."
+  },
+  "en": {
+   "q": "Which strait separates Africa from Europe at the western end of the Mediterranean?",
+   "options": [
+    "The Strait of Gibraltar",
+    "The Bab-el-Mandeb Strait",
+    "The Bering Strait",
+    "The Mozambique Channel"
+   ],
+   "answer": 0,
+   "explication": "The Strait of Gibraltar separates Morocco from Spain."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-17",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel grand fleuve africain coupe l'équateur deux fois ?",
+   "options": [
+    "Le Congo",
+    "Le Nil",
+    "Le Niger",
+    "Le Zambèze"
+   ],
+   "answer": 0,
+   "explication": "Le Congo traverse l'équateur en deux points de son cours."
+  },
+  "en": {
+   "q": "Which great African river crosses the Equator twice?",
+   "options": [
+    "The Congo",
+    "The Nile",
+    "The Niger",
+    "The Zambezi"
+   ],
+   "answer": 0,
+   "explication": "The Congo crosses the Equator at two points on its course."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-18",
+  "theme": "geographie",
+  "niveau": "moyen",
+  "fr": {
+   "q": "La côte du Cameroun s'ouvre sur :",
+   "options": [
+    "Le golfe d'Aden",
+    "Le golfe du Mexique",
+    "Le canal du Mozambique",
+    "Le golfe de Guinée"
+   ],
+   "answer": 3,
+   "explication": "Le Cameroun donne sur l'océan Atlantique par le golfe de Guinée."
+  },
+  "en": {
+   "q": "Cameroon's coast opens onto:",
+   "options": [
+    "The Gulf of Aden",
+    "The Gulf of Mexico",
+    "The Mozambique Channel",
+    "The Gulf of Guinea"
+   ],
+   "answer": 3,
+   "explication": "Cameroon opens onto the Atlantic Ocean through the Gulf of Guinea."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-19",
+  "theme": "geographie",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel est le chef-lieu de la région du Sud ?",
+   "options": [
+    "Kribi",
+    "Sangmélima",
+    "Ebolowa",
+    "Mbalmayo"
+   ],
+   "answer": 2,
+   "explication": "Ebolowa est le chef-lieu de la région du Sud."
+  },
+  "en": {
+   "q": "What is the chief town of the South region?",
+   "options": [
+    "Kribi",
+    "Sangmelima",
+    "Ebolowa",
+    "Mbalmayo"
+   ],
+   "answer": 2,
+   "explication": "Ebolowa is the chief town of the South region."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-20",
+  "theme": "geographie",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel cours d'eau, affluent du lac Tchad, forme en partie la frontière entre le Cameroun et le Tchad ?",
+   "options": [
+    "La Sanaga",
+    "Le Logone",
+    "Le Wouri",
+    "Le Nyong"
+   ],
+   "answer": 1,
+   "explication": "Le Logone coule vers le Chari puis le lac Tchad et sert de frontière sur une partie de son cours."
+  },
+  "en": {
+   "q": "Which river, flowing towards Lake Chad, forms part of the border between Cameroon and Chad?",
+   "options": [
+    "The Sanaga",
+    "The Logone",
+    "The Wouri",
+    "The Nyong"
+   ],
+   "answer": 1,
+   "explication": "The Logone flows to the Chari and Lake Chad and forms part of the border."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-21",
+  "theme": "geographie",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Lequel de ces pays n'a pas de rivage sur le lac Victoria ?",
+   "options": [
+    "L'Ouganda",
+    "Le Rwanda",
+    "Le Kenya",
+    "La Tanzanie"
+   ],
+   "answer": 1,
+   "explication": "Le lac Victoria est partagé entre l'Ouganda, le Kenya et la Tanzanie."
+  },
+  "en": {
+   "q": "Which of these countries has no shoreline on Lake Victoria?",
+   "options": [
+    "Uganda",
+    "Rwanda",
+    "Kenya",
+    "Tanzania"
+   ],
+   "answer": 1,
+   "explication": "Lake Victoria is shared by Uganda, Kenya and Tanzania."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-22",
+  "theme": "geographie",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Lequel de ces pays est traversé par l'équateur ?",
+   "options": [
+    "Le Gabon",
+    "Le Cameroun",
+    "Le Nigeria",
+    "Le Tchad"
+   ],
+   "answer": 0,
+   "explication": "L'équateur traverse notamment le Gabon ; le Cameroun reste au nord."
+  },
+  "en": {
+   "q": "Which of these countries is crossed by the Equator?",
+   "options": [
+    "Gabon",
+    "Cameroon",
+    "Nigeria",
+    "Chad"
+   ],
+   "answer": 0,
+   "explication": "The Equator crosses Gabon, among others; Cameroon lies entirely north of it."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-23",
+  "theme": "geographie",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Comment s'appelle le sommet principal du mont Cameroun ?",
+   "options": [
+    "Etinde",
+    "Oku",
+    "Manengouba",
+    "Fako"
+   ],
+   "answer": 3,
+   "explication": "Fako est le plus haut sommet du volcan ; Etinde est un cône secondaire."
+  },
+  "en": {
+   "q": "What is the name of the main summit of Mount Cameroon?",
+   "options": [
+    "Etinde",
+    "Oku",
+    "Manengouba",
+    "Fako"
+   ],
+   "answer": 3,
+   "explication": "Fako is the highest summit of the volcano; Etinde is a secondary cone."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "geographie-24",
+  "theme": "geographie",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel lac d'Afrique est le plus profond ?",
+   "options": [
+    "Le Victoria",
+    "Le Tchad",
+    "Le Tanganyika",
+    "Le Turkana"
+   ],
+   "answer": 2,
+   "explication": "Le Tanganyika dépasse 1 400 m de profondeur."
+  },
+  "en": {
+   "q": "Which African lake is the deepest?",
+   "options": [
+    "Lake Victoria",
+    "Lake Chad",
+    "Lake Tanganyika",
+    "Lake Turkana"
+   ],
+   "answer": 2,
+   "explication": "Lake Tanganyika exceeds 1,400 m in depth."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-01",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "De quelles chambres le Parlement camerounais se compose-t-il ?",
+   "options": [
+    "L'Assemblée nationale et le Sénat",
+    "Le Sénat et le Conseil d'État",
+    "L'Assemblée nationale et la Cour suprême",
+    "Le Sénat et la Chambre des chefs"
+   ],
+   "answer": 0,
+   "explication": "Le Parlement est bicaméral : Assemblée nationale et Sénat."
+  },
+  "en": {
+   "q": "Which chambers make up Cameroon's Parliament?",
+   "options": [
+    "The National Assembly and the Senate",
+    "The Senate and the Council of State",
+    "The National Assembly and the Supreme Court",
+    "The Senate and the House of Chiefs"
+   ],
+   "answer": 0,
+   "explication": "Parliament is bicameral: National Assembly and Senate."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-02",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel pouvoir est exercé par les cours et tribunaux ?",
+   "options": [
+    "Le pouvoir législatif",
+    "Le pouvoir exécutif",
+    "Le pouvoir constituant",
+    "Le pouvoir judiciaire"
+   ],
+   "answer": 3,
+   "explication": "Les juridictions rendent la justice : c'est le pouvoir judiciaire."
+  },
+  "en": {
+   "q": "Which power is exercised by courts and tribunals?",
+   "options": [
+    "The legislature",
+    "The executive",
+    "The constituent power",
+    "The judiciary"
+   ],
+   "answer": 3,
+   "explication": "Courts administer justice: this is the judicial power."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-03",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "Où se trouve le siège de l'ONU ?",
+   "options": [
+    "Genève",
+    "Paris",
+    "New York",
+    "Bruxelles"
+   ],
+   "answer": 2,
+   "explication": "Le siège principal de l'ONU est à New York."
+  },
+  "en": {
+   "q": "Where is the headquarters of the UN?",
+   "options": [
+    "Geneva",
+    "Paris",
+    "New York",
+    "Brussels"
+   ],
+   "answer": 2,
+   "explication": "The main UN headquarters is in New York."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-04",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "Où se trouve le siège de l'Union africaine ?",
+   "options": [
+    "Abuja",
+    "Addis-Abeba",
+    "Nairobi",
+    "Dakar"
+   ],
+   "answer": 1,
+   "explication": "L'Union africaine siège à Addis-Abeba, en Éthiopie."
+  },
+  "en": {
+   "q": "Where is the headquarters of the African Union?",
+   "options": [
+    "Abuja",
+    "Addis Ababa",
+    "Nairobi",
+    "Dakar"
+   ],
+   "answer": 1,
+   "explication": "The African Union sits in Addis Ababa, Ethiopia."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-05",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelles sont les deux langues officielles du Cameroun ?",
+   "options": [
+    "Le français et l'arabe",
+    "Le français et l'anglais",
+    "L'anglais et l'allemand",
+    "Le français et le fulfulde"
+   ],
+   "answer": 1,
+   "explication": "La Constitution consacre le français et l'anglais, d'égale valeur."
+  },
+  "en": {
+   "q": "What are Cameroon's two official languages?",
+   "options": [
+    "French and Arabic",
+    "French and English",
+    "English and German",
+    "French and Fulfulde"
+   ],
+   "answer": 1,
+   "explication": "The Constitution establishes French and English, with equal status."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-06",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle est la monnaie du Cameroun ?",
+   "options": [
+    "Le franc CFA",
+    "Le naira",
+    "Le cedi",
+    "Le rand"
+   ],
+   "answer": 0,
+   "explication": "Le Cameroun utilise le franc CFA de la zone CEMAC."
+  },
+  "en": {
+   "q": "What is the currency of Cameroon?",
+   "options": [
+    "The CFA franc",
+    "The naira",
+    "The cedi",
+    "The rand"
+   ],
+   "answer": 0,
+   "explication": "Cameroon uses the CFA franc of the CEMAC zone."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-07",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "La Constitution est :",
+   "options": [
+    "Une simple circulaire",
+    "Un décret du maire",
+    "Un jugement de la Cour suprême",
+    "La norme suprême de l'État"
+   ],
+   "answer": 3,
+   "explication": "Toutes les lois et actes doivent respecter la Constitution."
+  },
+  "en": {
+   "q": "The Constitution is:",
+   "options": [
+    "A simple circular",
+    "A mayor's decree",
+    "A Supreme Court judgment",
+    "The supreme norm of the State"
+   ],
+   "answer": 3,
+   "explication": "All laws and acts must comply with the Constitution."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-08",
+  "theme": "institutions",
+  "niveau": "facile",
+  "fr": {
+   "q": "Le Commonwealth regroupe surtout d'anciens territoires de quel pays ?",
+   "options": [
+    "La France",
+    "Le Portugal",
+    "Le Royaume-Uni",
+    "L'Allemagne"
+   ],
+   "answer": 2,
+   "explication": "Le Commonwealth est issu de l'ancien Empire britannique."
+  },
+  "en": {
+   "q": "The Commonwealth mainly brings together former territories of which country?",
+   "options": [
+    "France",
+    "Portugal",
+    "The United Kingdom",
+    "Germany"
+   ],
+   "answer": 2,
+   "explication": "The Commonwealth grew out of the former British Empire."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-09",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Combien de membres permanents compte le Conseil de sécurité de l'ONU ?",
+   "options": [
+    "3",
+    "10",
+    "5",
+    "15"
+   ],
+   "answer": 2,
+   "explication": "Les cinq membres permanents sont les États-Unis, la Russie, la Chine, la France et le Royaume-Uni."
+  },
+  "en": {
+   "q": "How many permanent members does the UN Security Council have?",
+   "options": [
+    "3",
+    "10",
+    "5",
+    "15"
+   ],
+   "answer": 2,
+   "explication": "They are the United States, Russia, China, France and the United Kingdom."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-10",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Lequel de ces pays est membre de la CEDEAO ?",
+   "options": [
+    "Le Cameroun",
+    "Le Sénégal",
+    "Le Gabon",
+    "Le Tchad"
+   ],
+   "answer": 1,
+   "explication": "Le Sénégal est un pays fondateur de la CEDEAO, organisation ouest-africaine."
+  },
+  "en": {
+   "q": "Which of these countries is a member of ECOWAS?",
+   "options": [
+    "Cameroon",
+    "Senegal",
+    "Gabon",
+    "Chad"
+   ],
+   "answer": 1,
+   "explication": "Senegal is a founding member of ECOWAS, a West African organisation."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-11",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Lequel de ces pays n'est pas membre de la CEMAC ?",
+   "options": [
+    "Le Nigeria",
+    "Le Tchad",
+    "Le Gabon",
+    "Le Congo"
+   ],
+   "answer": 0,
+   "explication": "La CEMAC regroupe six pays d'Afrique centrale ; le Nigeria n'en fait pas partie."
+  },
+  "en": {
+   "q": "Which of these countries is not a member of CEMAC?",
+   "options": [
+    "Nigeria",
+    "Chad",
+    "Gabon",
+    "Congo"
+   ],
+   "answer": 0,
+   "explication": "CEMAC groups six Central African countries; Nigeria is not one of them."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-12",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Où se trouve le siège de la CEEAC (Communauté économique des États de l'Afrique centrale) ?",
+   "options": [
+    "Yaoundé",
+    "Bangui",
+    "Kinshasa",
+    "Libreville"
+   ],
+   "answer": 3,
+   "explication": "Le secrétariat de la CEEAC est à Libreville, au Gabon."
+  },
+  "en": {
+   "q": "Where is the headquarters of ECCAS (Economic Community of Central African States)?",
+   "options": [
+    "Yaoundé",
+    "Bangui",
+    "Kinshasa",
+    "Libreville"
+   ],
+   "answer": 3,
+   "explication": "The ECCAS secretariat is in Libreville, Gabon."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-13",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Où est établi le siège de l'Organisation internationale de la Francophonie ?",
+   "options": [
+    "Bruxelles",
+    "Dakar",
+    "Montréal",
+    "Paris"
+   ],
+   "answer": 3,
+   "explication": "Le siège de l'OIF est à Paris."
+  },
+  "en": {
+   "q": "Where is the headquarters of the International Organisation of La Francophonie?",
+   "options": [
+    "Brussels",
+    "Dakar",
+    "Montreal",
+    "Paris"
+   ],
+   "answer": 3,
+   "explication": "The OIF headquarters is in Paris."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-14",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel organe contrôle la conformité des lois à la Constitution au Cameroun ?",
+   "options": [
+    "La Cour des comptes",
+    "Le Conseil économique et social",
+    "Le Conseil constitutionnel",
+    "La Chambre de commerce"
+   ],
+   "answer": 2,
+   "explication": "La Constitution de 1996 a institué le Conseil constitutionnel."
+  },
+  "en": {
+   "q": "Which body checks that laws comply with the Constitution in Cameroon?",
+   "options": [
+    "The Audit Bench",
+    "The Economic and Social Council",
+    "The Constitutional Council",
+    "The Chamber of Commerce"
+   ],
+   "answer": 2,
+   "explication": "The 1996 Constitution established the Constitutional Council."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-15",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelles sont les collectivités territoriales décentralisées du Cameroun ?",
+   "options": [
+    "Les provinces et les cantons",
+    "Les régions et les communes",
+    "Les départements et les villages",
+    "Les arrondissements et les quartiers"
+   ],
+   "answer": 1,
+   "explication": "La Constitution reconnaît les régions et les communes comme collectivités décentralisées."
+  },
+  "en": {
+   "q": "What are Cameroon's decentralised local authorities?",
+   "options": [
+    "Provinces and cantons",
+    "Regions and councils (communes)",
+    "Divisions and villages",
+    "Subdivisions and neighbourhoods"
+   ],
+   "answer": 1,
+   "explication": "The Constitution recognises regions and councils as decentralised authorities."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-16",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel principe veut qu'une personne soit tenue pour innocente tant que sa culpabilité n'est pas établie ?",
+   "options": [
+    "La présomption d'innocence",
+    "La non-rétroactivité de la loi",
+    "La légalité des délits",
+    "L'autorité de la chose jugée"
+   ],
+   "answer": 0,
+   "explication": "Ce principe protège l'accusé jusqu'à une condamnation définitive."
+  },
+  "en": {
+   "q": "Which principle holds that a person is innocent until proven guilty?",
+   "options": [
+    "The presumption of innocence",
+    "Non-retroactivity of law",
+    "Legality of offences",
+    "Res judicata"
+   ],
+   "answer": 0,
+   "explication": "This principle protects the accused until a final conviction."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-17",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Qui dirige une commune au Cameroun ?",
+   "options": [
+    "Le maire",
+    "Le préfet",
+    "Le gouverneur",
+    "Le sous-préfet"
+   ],
+   "answer": 0,
+   "explication": "Le maire est l'exécutif de la commune ; préfet, sous-préfet et gouverneur relèvent de l'État."
+  },
+  "en": {
+   "q": "Who heads a council (commune) in Cameroon?",
+   "options": [
+    "The mayor",
+    "The prefect",
+    "The governor",
+    "The sub-prefect"
+   ],
+   "answer": 0,
+   "explication": "The mayor is the council's executive; prefect, sub-prefect and governor represent the State."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-18",
+  "theme": "institutions",
+  "niveau": "moyen",
+  "fr": {
+   "q": "L'Union africaine, lancée en 2002, a remplacé :",
+   "options": [
+    "La Ligue arabe",
+    "La CEDEAO",
+    "Le Commonwealth",
+    "L'Organisation de l'unité africaine"
+   ],
+   "answer": 3,
+   "explication": "L'UA a succédé à l'OUA lors du sommet de Durban en 2002."
+  },
+  "en": {
+   "q": "The African Union, launched in 2002, replaced:",
+   "options": [
+    "The Arab League",
+    "ECOWAS",
+    "The Commonwealth",
+    "The Organisation of African Unity"
+   ],
+   "answer": 3,
+   "explication": "The AU succeeded the OAU at the Durban summit in 2002."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-19",
+  "theme": "institutions",
+  "niveau": "difficile",
+  "fr": {
+   "q": "En quelle année le Cameroun (ex-français) fut-il admis à l'ONU ?",
+   "options": [
+    "1958",
+    "1961",
+    "1960",
+    "1963"
+   ],
+   "answer": 2,
+   "explication": "Il fut admis le 20 septembre 1960."
+  },
+  "en": {
+   "q": "In which year was Cameroon (the former French territory) admitted to the UN?",
+   "options": [
+    "1958",
+    "1961",
+    "1960",
+    "1963"
+   ],
+   "answer": 2,
+   "explication": "It was admitted on 20 September 1960."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-20",
+  "theme": "institutions",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Par son arrêt de 2002, la Cour internationale de justice a attribué la souveraineté sur la presqu'île de Bakassi :",
+   "options": [
+    "Au Nigeria",
+    "Au Cameroun",
+    "À la Guinée équatoriale",
+    "Au Gabon"
+   ],
+   "answer": 1,
+   "explication": "L'arrêt du 10 octobre 2002 reconnut Bakassi au Cameroun."
+  },
+  "en": {
+   "q": "In its 2002 judgment, the International Court of Justice attributed sovereignty over the Bakassi peninsula to:",
+   "options": [
+    "Nigeria",
+    "Cameroon",
+    "Equatorial Guinea",
+    "Gabon"
+   ],
+   "answer": 1,
+   "explication": "The judgment of 10 October 2002 recognised Bakassi as Cameroonian."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-21",
+  "theme": "institutions",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quelle institution prévue par la révision constitutionnelle de 1996 n'a été installée qu'en 2013 ?",
+   "options": [
+    "L'Assemblée nationale",
+    "Le Sénat",
+    "La Cour suprême",
+    "Le Conseil économique et social"
+   ],
+   "answer": 1,
+   "explication": "Le Sénat, créé en 1996, tint sa première session en 2013."
+  },
+  "en": {
+   "q": "Which institution provided for by the 1996 constitutional revision was only installed in 2013?",
+   "options": [
+    "The National Assembly",
+    "The Senate",
+    "The Supreme Court",
+    "The Economic and Social Council"
+   ],
+   "answer": 1,
+   "explication": "The Senate, created in 1996, held its first session in 2013."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-22",
+  "theme": "institutions",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel système juridique le Cameroun applique-t-il ?",
+   "options": [
+    "Un système mixte de droit civil et de common law",
+    "Uniquement le droit civil",
+    "Uniquement la common law",
+    "Uniquement le droit coutumier"
+   ],
+   "answer": 0,
+   "explication": "Héritage des tutelles française et britannique, les deux traditions coexistent."
+  },
+  "en": {
+   "q": "Which legal system does Cameroon apply?",
+   "options": [
+    "A mixed system of civil law and common law",
+    "Civil law only",
+    "Common law only",
+    "Customary law only"
+   ],
+   "answer": 0,
+   "explication": "As a legacy of French and British administration, both traditions coexist."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-23",
+  "theme": "institutions",
+  "niveau": "difficile",
+  "fr": {
+   "q": "La CEMAC a succédé à :",
+   "options": [
+    "La CEDEAO",
+    "L'OUA",
+    "La CEEAC",
+    "L'UDEAC"
+   ],
+   "answer": 3,
+   "explication": "L'Union douanière et économique de l'Afrique centrale fut remplacée par la CEMAC."
+  },
+  "en": {
+   "q": "CEMAC succeeded:",
+   "options": [
+    "ECOWAS",
+    "The OAU",
+    "ECCAS",
+    "UDEAC"
+   ],
+   "answer": 3,
+   "explication": "The Central African Customs and Economic Union was replaced by CEMAC."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "institutions-24",
+  "theme": "institutions",
+  "niveau": "difficile",
+  "fr": {
+   "q": "En quelle année le Cameroun a-t-il adhéré au Commonwealth ?",
+   "options": [
+    "1961",
+    "1972",
+    "1995",
+    "1987"
+   ],
+   "answer": 2,
+   "explication": "Le Cameroun a rejoint le Commonwealth en novembre 1995."
+  },
+  "en": {
+   "q": "In which year did Cameroon join the Commonwealth?",
+   "options": [
+    "1961",
+    "1972",
+    "1995",
+    "1987"
+   ],
+   "answer": 2,
+   "explication": "Cameroon joined the Commonwealth in November 1995."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-01",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle est la devise du Cameroun ?",
+   "options": [
+    "Unité – Progrès – Justice",
+    "Paix – Travail – Patrie",
+    "Union – Discipline – Travail",
+    "Liberté – Égalité – Fraternité"
+   ],
+   "answer": 1,
+   "explication": "La devise nationale est « Paix – Travail – Patrie »."
+  },
+  "en": {
+   "q": "What is the motto of Cameroon?",
+   "options": [
+    "Unity – Progress – Justice",
+    "Peace – Work – Fatherland",
+    "Union – Discipline – Labour",
+    "Liberty – Equality – Fraternity"
+   ],
+   "answer": 1,
+   "explication": "The national motto is \"Peace – Work – Fatherland\"."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-02",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle est la date de la fête nationale du Cameroun ?",
+   "options": [
+    "20 mai",
+    "11 février",
+    "1er octobre",
+    "15 août"
+   ],
+   "answer": 0,
+   "explication": "La fête nationale est célébrée le 20 mai."
+  },
+  "en": {
+   "q": "On what date is Cameroon's National Day celebrated?",
+   "options": [
+    "20 May",
+    "11 February",
+    "1 October",
+    "15 August"
+   ],
+   "answer": 0,
+   "explication": "National Day is celebrated on 20 May."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-03",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel symbole figure sur la bande rouge du drapeau camerounais ?",
+   "options": [
+    "Un croissant jaune",
+    "Un soleil rouge",
+    "Une étoile dorée",
+    "Un aigle doré"
+   ],
+   "answer": 2,
+   "explication": "Le drapeau est vert, rouge, jaune en bandes verticales, avec une étoile dorée sur la bande rouge."
+  },
+  "en": {
+   "q": "Which symbol appears on the red stripe of the Cameroonian flag?",
+   "options": [
+    "A yellow crescent",
+    "A red sun",
+    "A gold star",
+    "A golden eagle"
+   ],
+   "answer": 2,
+   "explication": "The flag has vertical green, red and yellow stripes, with a gold star on the red stripe."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-04",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel numéro d'urgence faut-il composer pour joindre la gendarmerie au Cameroun ?",
+   "options": [
+    "113",
+    "117",
+    "118",
+    "119"
+   ],
+   "answer": 0,
+   "explication": "Le 113 est le numéro de la gendarmerie (117 police, 118 sapeurs-pompiers)."
+  },
+  "en": {
+   "q": "Which emergency number should you dial to reach the gendarmerie in Cameroon?",
+   "options": [
+    "113",
+    "117",
+    "118",
+    "119"
+   ],
+   "answer": 0,
+   "explication": "113 is the gendarmerie number (117 is police, 118 is the fire brigade)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-05",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel numéro d'urgence permet d'appeler les sapeurs-pompiers ?",
+   "options": [
+    "117",
+    "113",
+    "118",
+    "115"
+   ],
+   "answer": 2,
+   "explication": "Le 118 est le numéro des sapeurs-pompiers."
+  },
+  "en": {
+   "q": "Which emergency number reaches the fire brigade?",
+   "options": [
+    "117",
+    "113",
+    "118",
+    "115"
+   ],
+   "answer": 2,
+   "explication": "118 is the fire brigade number."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-06",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le titre de l'hymne national du Cameroun ?",
+   "options": [
+    "Hymne à la liberté",
+    "La Camerounaise",
+    "Chant de ralliement",
+    "Chant de l'unité"
+   ],
+   "answer": 2,
+   "explication": "L'hymne national, « O Cameroun, berceau de nos ancêtres », s'intitule « Chant de ralliement »."
+  },
+  "en": {
+   "q": "What is the title of Cameroon's national anthem?",
+   "options": [
+    "Hymn to Freedom",
+    "The Cameroonian",
+    "Rallying Song (Chant de ralliement)",
+    "Song of Unity"
+   ],
+   "answer": 2,
+   "explication": "The national anthem, \"O Cameroon, Cradle of our Forefathers\", is titled \"Rallying Song\"."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-07",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Que doit faire un conducteur face à un feu tricolore rouge ?",
+   "options": [
+    "S'arrêter",
+    "Ralentir seulement",
+    "Klaxonner et passer",
+    "Accélérer"
+   ],
+   "answer": 0,
+   "explication": "Le feu rouge impose l'arrêt complet du véhicule."
+  },
+  "en": {
+   "q": "What must a driver do at a red traffic light?",
+   "options": [
+    "Stop",
+    "Only slow down",
+    "Honk and go through",
+    "Speed up"
+   ],
+   "answer": 0,
+   "explication": "A red light requires the vehicle to come to a complete stop."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-08",
+  "theme": "civisme",
+  "niveau": "facile",
+  "fr": {
+   "q": "Lequel de ces éléments est un devoir du citoyen ?",
+   "options": [
+    "S'exprimer librement",
+    "Respecter les lois",
+    "Recevoir une éducation",
+    "Circuler librement"
+   ],
+   "answer": 1,
+   "explication": "Respecter les lois est un devoir ; les autres propositions sont des droits."
+  },
+  "en": {
+   "q": "Which of these is a duty of the citizen?",
+   "options": [
+    "Expressing oneself freely",
+    "Obeying the laws",
+    "Receiving an education",
+    "Moving about freely"
+   ],
+   "answer": 1,
+   "explication": "Obeying the laws is a duty; the other options are rights."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-09",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel document sert principalement à prouver l'identité d'un citoyen ?",
+   "options": [
+    "La carte grise",
+    "Le carnet de santé",
+    "Le relevé de notes",
+    "La carte nationale d'identité"
+   ],
+   "answer": 3,
+   "explication": "La carte nationale d'identité atteste l'identité et la nationalité de son titulaire."
+  },
+  "en": {
+   "q": "Which document mainly serves to prove a citizen's identity?",
+   "options": [
+    "The vehicle registration document",
+    "The health record booklet",
+    "The academic transcript",
+    "The national identity card"
+   ],
+   "answer": 3,
+   "explication": "The national identity card attests the holder's identity and nationality."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-10",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "En quelle année la Déclaration universelle des droits de l'homme a-t-elle été adoptée par l'ONU ?",
+   "options": [
+    "1945",
+    "1948",
+    "1960",
+    "1966"
+   ],
+   "answer": 1,
+   "explication": "Elle a été adoptée le 10 décembre 1948 à Paris."
+  },
+  "en": {
+   "q": "In which year was the Universal Declaration of Human Rights adopted by the UN?",
+   "options": [
+    "1945",
+    "1948",
+    "1960",
+    "1966"
+   ],
+   "answer": 1,
+   "explication": "It was adopted on 10 December 1948 in Paris."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-11",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Que désigne la corruption dans la fonction publique ?",
+   "options": [
+    "Le respect strict de la hiérarchie",
+    "Le refus d'exécuter un ordre illégal",
+    "L'abus d'une fonction pour obtenir un avantage indu",
+    "Le fait de travailler en équipe"
+   ],
+   "answer": 2,
+   "explication": "La corruption consiste à détourner sa fonction pour un gain personnel ou indu."
+  },
+  "en": {
+   "q": "What does corruption in the public service mean?",
+   "options": [
+    "Strict respect of the hierarchy",
+    "Refusing to carry out an illegal order",
+    "Abusing a position to obtain an undue advantage",
+    "Working as a team"
+   ],
+   "answer": 2,
+   "explication": "Corruption means misusing one's position for personal or undue gain."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-12",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un agent public intègre est celui qui…",
+   "options": [
+    "n'agit que sous surveillance",
+    "agit honnêtement même sans contrôle",
+    "accepte de petits cadeaux",
+    "favorise ses proches"
+   ],
+   "answer": 1,
+   "explication": "L'intégrité est l'honnêteté constante, indépendamment du contrôle."
+  },
+  "en": {
+   "q": "An agent of integrity in the public service is one who…",
+   "options": [
+    "acts only when watched",
+    "acts honestly even when unsupervised",
+    "accepts small gifts",
+    "favours relatives"
+   ],
+   "answer": 1,
+   "explication": "Integrity is consistent honesty, whether or not anyone is watching."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-13",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Le principe d'égalité des usagers devant le service public signifie que…",
+   "options": [
+    "tous sont traités sans discrimination",
+    "seuls les riches sont servis en priorité",
+    "les agents choisissent leurs usagers",
+    "le service est réservé aux fonctionnaires"
+   ],
+   "answer": 0,
+   "explication": "Le service public doit traiter tous les usagers de la même manière, sans discrimination."
+  },
+  "en": {
+   "q": "The principle of equality of users before the public service means that…",
+   "options": [
+    "everyone is treated without discrimination",
+    "only the rich are served first",
+    "agents choose their users",
+    "the service is reserved for civil servants"
+   ],
+   "answer": 0,
+   "explication": "The public service must treat all users alike, without discrimination."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-14",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelles sont les langues officielles du Cameroun ?",
+   "options": [
+    "Le français et l'arabe",
+    "L'anglais et le pidgin",
+    "Le français et l'anglais",
+    "Le français et le fulfulde"
+   ],
+   "answer": 2,
+   "explication": "Le français et l'anglais sont les deux langues officielles."
+  },
+  "en": {
+   "q": "What are the official languages of Cameroon?",
+   "options": [
+    "French and Arabic",
+    "English and Pidgin",
+    "French and English",
+    "French and Fulfulde"
+   ],
+   "answer": 2,
+   "explication": "French and English are the two official languages."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-15",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel est le rôle principal de la ceinture de sécurité ?",
+   "options": [
+    "Augmenter la vitesse",
+    "Réduire la consommation",
+    "Retenir l'occupant en cas de choc",
+    "Remplacer le casque"
+   ],
+   "answer": 2,
+   "explication": "La ceinture retient l'occupant et limite les blessures lors d'un choc ou d'un freinage brutal."
+  },
+  "en": {
+   "q": "What is the main role of the seat belt?",
+   "options": [
+    "To increase speed",
+    "To reduce fuel use",
+    "To restrain the occupant in a crash",
+    "To replace the helmet"
+   ],
+   "answer": 2,
+   "explication": "The belt restrains the occupant and limits injuries in a crash or hard braking."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-16",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un piéton est engagé sur un passage protégé. Le conducteur doit…",
+   "options": [
+    "klaxonner pour le presser",
+    "le dépasser rapidement",
+    "accélérer",
+    "lui céder le passage"
+   ],
+   "answer": 3,
+   "explication": "Le piéton engagé sur un passage protégé est prioritaire."
+  },
+  "en": {
+   "q": "A pedestrian is crossing on a marked crossing. The driver must…",
+   "options": [
+    "honk to hurry them",
+    "overtake quickly",
+    "speed up",
+    "give way to the pedestrian"
+   ],
+   "answer": 3,
+   "explication": "A pedestrian already on a marked crossing has priority."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-17",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quels sont les trois pouvoirs dans la séparation des pouvoirs ?",
+   "options": [
+    "Militaire, religieux, économique",
+    "Exécutif, fiscal, médiatique",
+    "Législatif, syndical, policier",
+    "Exécutif, législatif, judiciaire"
+   ],
+   "answer": 3,
+   "explication": "La séparation distingue les pouvoirs exécutif, législatif et judiciaire."
+  },
+  "en": {
+   "q": "What are the three powers in the separation of powers?",
+   "options": [
+    "Military, religious, economic",
+    "Executive, fiscal, media",
+    "Legislative, trade-union, police",
+    "Executive, legislative, judicial"
+   ],
+   "answer": 3,
+   "explication": "The separation distinguishes the executive, legislative and judicial powers."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-18",
+  "theme": "civisme",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un droit « inaliénable » est un droit qui…",
+   "options": [
+    "peut être vendu",
+    "est réservé à certains",
+    "n'existe qu'en temps de paix",
+    "ne peut être retiré ni cédé"
+   ],
+   "answer": 3,
+   "explication": "Un droit inaliénable est attaché à la personne et ne peut ni être cédé ni être retiré."
+  },
+  "en": {
+   "q": "An \"inalienable\" right is a right that…",
+   "options": [
+    "can be sold",
+    "is reserved for some people",
+    "exists only in peacetime",
+    "cannot be taken away or given up"
+   ],
+   "answer": 3,
+   "explication": "An inalienable right belongs to the person and can neither be transferred nor taken away."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-19",
+  "theme": "civisme",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Qu'est-ce qu'un conflit d'intérêts pour un agent public ?",
+   "options": [
+    "Une situation où un intérêt personnel peut influencer l'exercice de sa fonction",
+    "Un désaccord avec un collègue",
+    "Une grève du personnel",
+    "Un recours hiérarchique"
+   ],
+   "answer": 0,
+   "explication": "Il y a conflit d'intérêts quand un intérêt privé peut compromettre l'impartialité de l'agent."
+  },
+  "en": {
+   "q": "What is a conflict of interest for a public agent?",
+   "options": [
+    "A situation where a personal interest may influence the exercise of the duty",
+    "A disagreement with a colleague",
+    "A staff strike",
+    "A hierarchical appeal"
+   ],
+   "answer": 0,
+   "explication": "A conflict of interest exists when a private interest may compromise the agent's impartiality."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-20",
+  "theme": "civisme",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Que signifie le principe de présomption d'innocence ?",
+   "options": [
+    "L'accusé doit prouver son innocence",
+    "Toute personne est considérée innocente tant que sa culpabilité n'est pas établie",
+    "Un suspect est coupable jusqu'au jugement",
+    "Seuls les mineurs sont présumés innocents"
+   ],
+   "answer": 1,
+   "explication": "C'est à l'accusation de prouver la culpabilité ; jusque-là, la personne est présumée innocente."
+  },
+  "en": {
+   "q": "What does the principle of presumption of innocence mean?",
+   "options": [
+    "The accused must prove their innocence",
+    "Everyone is considered innocent until proven guilty",
+    "A suspect is guilty until judged",
+    "Only minors are presumed innocent"
+   ],
+   "answer": 1,
+   "explication": "The prosecution must prove guilt; until then the person is presumed innocent."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-21",
+  "theme": "civisme",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Qu'est-ce qu'un lanceur d'alerte ?",
+   "options": [
+    "Une personne qui signale de bonne foi des actes illégaux ou dangereux",
+    "Un agent qui reçoit des pots-de-vin",
+    "Un journaliste payé par l'État",
+    "Un policier de la circulation"
+   ],
+   "answer": 0,
+   "explication": "Le lanceur d'alerte révèle de bonne foi des faits illicites ou menaçant l'intérêt général."
+  },
+  "en": {
+   "q": "What is a whistleblower?",
+   "options": [
+    "A person who reports in good faith illegal or harmful acts",
+    "An agent who takes bribes",
+    "A journalist paid by the state",
+    "A traffic officer"
+   ],
+   "answer": 0,
+   "explication": "A whistleblower discloses in good faith unlawful acts or threats to the public interest."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-22",
+  "theme": "civisme",
+  "niveau": "difficile",
+  "fr": {
+   "q": "À quelle date la réunification du Cameroun (rattachement du Southern Cameroons) a-t-elle eu lieu ?",
+   "options": [
+    "1er janvier 1960",
+    "1er octobre 1961",
+    "20 mai 1972",
+    "11 février 1961"
+   ],
+   "answer": 1,
+   "explication": "La réunification est intervenue le 1er octobre 1961."
+  },
+  "en": {
+   "q": "On what date did the reunification of Cameroon (the Southern Cameroons joining) take place?",
+   "options": [
+    "1 January 1960",
+    "1 October 1961",
+    "20 May 1972",
+    "11 February 1961"
+   ],
+   "answer": 1,
+   "explication": "Reunification took place on 1 October 1961."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-23",
+  "theme": "civisme",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel événement la fête nationale du 20 mai commémore-t-elle ?",
+   "options": [
+    "La proclamation de l'indépendance en 1960",
+    "La réunification de 1961",
+    "L'adoption de l'hymne national",
+    "Le référendum de 1972 instaurant l'État unitaire"
+   ],
+   "answer": 3,
+   "explication": "Le 20 mai 1972, un référendum a remplacé la fédération par l'État unitaire."
+  },
+  "en": {
+   "q": "Which event does the National Day of 20 May commemorate?",
+   "options": [
+    "The proclamation of independence in 1960",
+    "The 1961 reunification",
+    "The adoption of the national anthem",
+    "The 1972 referendum establishing the unitary state"
+   ],
+   "answer": 3,
+   "explication": "On 20 May 1972 a referendum replaced the federation with the unitary state."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "civisme-24",
+  "theme": "civisme",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Sous l'égide de quelle organisation la Charte africaine des droits de l'homme et des peuples a-t-elle été adoptée (1981) ?",
+   "options": [
+    "La Communauté européenne",
+    "La Ligue arabe",
+    "Le Commonwealth",
+    "L'Organisation de l'unité africaine"
+   ],
+   "answer": 3,
+   "explication": "La Charte a été adoptée à Nairobi en 1981 par l'OUA."
+  },
+  "en": {
+   "q": "Under which organisation was the African Charter on Human and Peoples' Rights adopted (1981)?",
+   "options": [
+    "The European Community",
+    "The Arab League",
+    "The Commonwealth",
+    "The Organisation of African Unity"
+   ],
+   "answer": 3,
+   "explication": "The Charter was adopted in Nairobi in 1981 by the OAU."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-01",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel organe pompe le sang dans le corps humain ?",
+   "options": [
+    "Le cœur",
+    "Le foie",
+    "Les poumons",
+    "L'estomac"
+   ],
+   "answer": 0,
+   "explication": "Le cœur est le muscle qui propulse le sang dans les vaisseaux."
+  },
+  "en": {
+   "q": "Which organ pumps blood around the human body?",
+   "options": [
+    "The heart",
+    "The liver",
+    "The lungs",
+    "The stomach"
+   ],
+   "answer": 0,
+   "explication": "The heart is the muscle that pushes blood through the vessels."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-02",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel gaz l'être humain a-t-il besoin d'inspirer pour vivre ?",
+   "options": [
+    "Le dioxyde de carbone",
+    "L'hélium",
+    "L'oxygène",
+    "L'azote seul"
+   ],
+   "answer": 2,
+   "explication": "Les cellules utilisent l'oxygène pour produire de l'énergie."
+  },
+  "en": {
+   "q": "Which gas must humans breathe in to live?",
+   "options": [
+    "Carbon dioxide",
+    "Helium",
+    "Oxygen",
+    "Nitrogen alone"
+   ],
+   "answer": 2,
+   "explication": "Cells use oxygen to produce energy."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-03",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le plus grand océan du monde ?",
+   "options": [
+    "L'océan Atlantique",
+    "L'océan Pacifique",
+    "L'océan Indien",
+    "L'océan Arctique"
+   ],
+   "answer": 1,
+   "explication": "Le Pacifique couvre à lui seul environ un tiers de la surface du globe."
+  },
+  "en": {
+   "q": "What is the largest ocean in the world?",
+   "options": [
+    "The Atlantic Ocean",
+    "The Pacific Ocean",
+    "The Indian Ocean",
+    "The Arctic Ocean"
+   ],
+   "answer": 1,
+   "explication": "The Pacific alone covers about one third of the globe's surface."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-04",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "À quelle température l'eau pure bout-elle au niveau de la mer ?",
+   "options": [
+    "100 °C",
+    "90 °C",
+    "80 °C",
+    "120 °C"
+   ],
+   "answer": 0,
+   "explication": "Au niveau de la mer, l'eau bout à 100 °C."
+  },
+  "en": {
+   "q": "At what temperature does pure water boil at sea level?",
+   "options": [
+    "100 °C",
+    "90 °C",
+    "80 °C",
+    "120 °C"
+   ],
+   "answer": 0,
+   "explication": "At sea level, water boils at 100 °C."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-05",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel gaz les plantes absorbent-elles lors de la photosynthèse ?",
+   "options": [
+    "L'oxygène",
+    "Le dioxyde de carbone",
+    "Le méthane",
+    "L'ammoniac"
+   ],
+   "answer": 1,
+   "explication": "Les plantes captent le CO₂ et rejettent de l'oxygène."
+  },
+  "en": {
+   "q": "Which gas do plants absorb during photosynthesis?",
+   "options": [
+    "Oxygen",
+    "Carbon dioxide",
+    "Methane",
+    "Ammonia"
+   ],
+   "answer": 1,
+   "explication": "Plants take in CO₂ and release oxygen."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-06",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle mesure limite le mieux la transmission des microbes ?",
+   "options": [
+    "Partager ses ustensiles",
+    "Se laver les mains au savon",
+    "Boire de l'eau non traitée",
+    "Se toucher le visage"
+   ],
+   "answer": 1,
+   "explication": "Le lavage des mains au savon élimine de nombreux microbes."
+  },
+  "en": {
+   "q": "Which measure best limits the spread of germs?",
+   "options": [
+    "Sharing utensils",
+    "Washing hands with soap",
+    "Drinking untreated water",
+    "Touching the face"
+   ],
+   "answer": 1,
+   "explication": "Washing hands with soap removes many germs."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-07",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le plus grand continent par sa superficie ?",
+   "options": [
+    "L'Afrique",
+    "L'Amérique du Nord",
+    "L'Europe",
+    "L'Asie"
+   ],
+   "answer": 3,
+   "explication": "L'Asie est le continent le plus vaste."
+  },
+  "en": {
+   "q": "Which is the largest continent by area?",
+   "options": [
+    "Africa",
+    "North America",
+    "Europe",
+    "Asia"
+   ],
+   "answer": 3,
+   "explication": "Asia is the largest continent."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-08",
+  "theme": "sciences",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle planète est la plus proche du Soleil ?",
+   "options": [
+    "Vénus",
+    "Mercure",
+    "Mars",
+    "Jupiter"
+   ],
+   "answer": 1,
+   "explication": "Mercure est la planète la plus proche du Soleil."
+  },
+  "en": {
+   "q": "Which planet is closest to the Sun?",
+   "options": [
+    "Venus",
+    "Mercury",
+    "Mars",
+    "Jupiter"
+   ],
+   "answer": 1,
+   "explication": "Mercury is the planet nearest to the Sun."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-09",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Le manque de vitamine C provoque une maladie appelée…",
+   "options": [
+    "le rachitisme",
+    "le béribéri",
+    "l'anémie falciforme",
+    "le scorbut"
+   ],
+   "answer": 3,
+   "explication": "La carence en vitamine C entraîne le scorbut."
+  },
+  "en": {
+   "q": "A lack of vitamin C causes a disease called…",
+   "options": [
+    "rickets",
+    "beriberi",
+    "sickle-cell anaemia",
+    "scurvy"
+   ],
+   "answer": 3,
+   "explication": "Vitamin C deficiency leads to scurvy."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-10",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Qui a découvert la pénicilline en 1928 ?",
+   "options": [
+    "Alexander Fleming",
+    "Louis Pasteur",
+    "Robert Koch",
+    "Edward Jenner"
+   ],
+   "answer": 0,
+   "explication": "Alexander Fleming a observé l'effet antibactérien de la moisissure Penicillium."
+  },
+  "en": {
+   "q": "Who discovered penicillin in 1928?",
+   "options": [
+    "Alexander Fleming",
+    "Louis Pasteur",
+    "Robert Koch",
+    "Edward Jenner"
+   ],
+   "answer": 0,
+   "explication": "Alexander Fleming observed the antibacterial effect of the Penicillium mould."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-11",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Que faire en premier face à une plaie qui saigne abondamment ?",
+   "options": [
+    "Appliquer de la terre",
+    "Laver à l'alcool sans comprimer",
+    "Comprimer la plaie avec un linge propre",
+    "Attendre que cela s'arrête"
+   ],
+   "answer": 2,
+   "explication": "La compression directe est le geste de premiers secours pour arrêter l'hémorragie."
+  },
+  "en": {
+   "q": "What should you do first for a heavily bleeding wound?",
+   "options": [
+    "Apply soil",
+    "Rinse with alcohol without pressing",
+    "Press on the wound with a clean cloth",
+    "Wait for it to stop"
+   ],
+   "answer": 2,
+   "explication": "Direct pressure is the first-aid action to stop the bleeding."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-12",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel est le symbole chimique du sodium ?",
+   "options": [
+    "So",
+    "S",
+    "Na",
+    "Sd"
+   ],
+   "answer": 2,
+   "explication": "Le symbole du sodium est Na (du latin natrium)."
+  },
+  "en": {
+   "q": "What is the chemical symbol of sodium?",
+   "options": [
+    "So",
+    "S",
+    "Na",
+    "Sd"
+   ],
+   "answer": 2,
+   "explication": "The symbol for sodium is Na (from Latin natrium)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-13",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel savant a formulé la loi de la gravitation universelle ?",
+   "options": [
+    "Isaac Newton",
+    "Albert Einstein",
+    "Galilée",
+    "Charles Darwin"
+   ],
+   "answer": 0,
+   "explication": "Isaac Newton a formulé la gravitation universelle au XVIIᵉ siècle."
+  },
+  "en": {
+   "q": "Which scientist formulated the law of universal gravitation?",
+   "options": [
+    "Isaac Newton",
+    "Albert Einstein",
+    "Galileo",
+    "Charles Darwin"
+   ],
+   "answer": 0,
+   "explication": "Isaac Newton formulated universal gravitation in the 17th century."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-14",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel est le rôle de la couche d'ozone ?",
+   "options": [
+    "Filtrer une partie des rayons ultraviolets",
+    "Produire l'oxygène",
+    "Retenir la pluie",
+    "Refroidir les océans"
+   ],
+   "answer": 0,
+   "explication": "La couche d'ozone absorbe une grande partie des UV nocifs du Soleil."
+  },
+  "en": {
+   "q": "What is the role of the ozone layer?",
+   "options": [
+    "To filter part of the ultraviolet rays",
+    "To produce oxygen",
+    "To hold back rain",
+    "To cool the oceans"
+   ],
+   "answer": 0,
+   "explication": "The ozone layer absorbs much of the Sun's harmful UV."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-15",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Dans le sigle « USB », que signifie le « B » ?",
+   "options": [
+    "Byte",
+    "Base",
+    "Batterie",
+    "Bus"
+   ],
+   "answer": 3,
+   "explication": "USB signifie Universal Serial Bus."
+  },
+  "en": {
+   "q": "In the acronym \"USB\", what does the \"B\" stand for?",
+   "options": [
+    "Byte",
+    "Base",
+    "Battery",
+    "Bus"
+   ],
+   "answer": 3,
+   "explication": "USB stands for Universal Serial Bus."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-16",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quels organes filtrent le sang et produisent l'urine ?",
+   "options": [
+    "Les poumons",
+    "Le foie",
+    "Les reins",
+    "La rate"
+   ],
+   "answer": 2,
+   "explication": "Les reins filtrent le sang et forment l'urine."
+  },
+  "en": {
+   "q": "Which organs filter the blood and produce urine?",
+   "options": [
+    "The lungs",
+    "The liver",
+    "The kidneys",
+    "The spleen"
+   ],
+   "answer": 2,
+   "explication": "The kidneys filter the blood and form urine."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-17",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Parmi ces gaz de l'air, lequel est un gaz à effet de serre ?",
+   "options": [
+    "L'azote",
+    "Le dioxyde de carbone",
+    "L'argon",
+    "Le dioxygène"
+   ],
+   "answer": 1,
+   "explication": "Le CO₂ retient la chaleur dans l'atmosphère ; N₂, O₂ et Ar ne le font pratiquement pas."
+  },
+  "en": {
+   "q": "Among these gases in the air, which is a greenhouse gas?",
+   "options": [
+    "Nitrogen",
+    "Carbon dioxide",
+    "Argon",
+    "Dioxygen (O₂)"
+   ],
+   "answer": 1,
+   "explication": "CO₂ traps heat in the atmosphere; N₂, O₂ and Ar practically do not."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-18",
+  "theme": "sciences",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel insecte transmet le paludisme ?",
+   "options": [
+    "La mouche tsé-tsé",
+    "La puce",
+    "L'anophèle femelle",
+    "Le criquet"
+   ],
+   "answer": 2,
+   "explication": "Le paludisme est transmis par la piqûre de l'anophèle femelle infecté."
+  },
+  "en": {
+   "q": "Which insect transmits malaria?",
+   "options": [
+    "The tsetse fly",
+    "The flea",
+    "The female Anopheles mosquito",
+    "The locust"
+   ],
+   "answer": 2,
+   "explication": "Malaria is transmitted by the bite of an infected female Anopheles mosquito."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-19",
+  "theme": "sciences",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quelle est la fosse océanique la plus profonde connue ?",
+   "options": [
+    "La fosse de Porto Rico",
+    "La fosse de Java",
+    "La fosse du Pérou-Chili",
+    "La fosse des Mariannes"
+   ],
+   "answer": 3,
+   "explication": "La fosse des Mariannes, dans le Pacifique, dépasse 10 900 m de profondeur."
+  },
+  "en": {
+   "q": "What is the deepest known oceanic trench?",
+   "options": [
+    "The Puerto Rico Trench",
+    "The Java Trench",
+    "The Peru–Chile Trench",
+    "The Mariana Trench"
+   ],
+   "answer": 3,
+   "explication": "The Mariana Trench, in the Pacific, exceeds 10,900 m in depth."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-20",
+  "theme": "sciences",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel est le rôle de la chlorophylle ?",
+   "options": [
+    "Absorber l'eau du sol",
+    "Capter l'énergie lumineuse pour la photosynthèse",
+    "Protéger contre les insectes",
+    "Stocker l'amidon"
+   ],
+   "answer": 1,
+   "explication": "La chlorophylle absorbe la lumière nécessaire à la photosynthèse."
+  },
+  "en": {
+   "q": "What is the role of chlorophyll?",
+   "options": [
+    "Absorbing water from the soil",
+    "Capturing light energy for photosynthesis",
+    "Protecting against insects",
+    "Storing starch"
+   ],
+   "answer": 1,
+   "explication": "Chlorophyll absorbs the light needed for photosynthesis."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-21",
+  "theme": "sciences",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Marie Curie est la seule personne à avoir reçu le prix Nobel dans…",
+   "options": [
+    "la médecine et la littérature",
+    "la paix et la physique",
+    "l'économie et la chimie",
+    "deux disciplines scientifiques différentes (physique et chimie)"
+   ],
+   "answer": 3,
+   "explication": "Elle a reçu le Nobel de physique (1903) puis de chimie (1911)."
+  },
+  "en": {
+   "q": "Marie Curie was the first person to receive Nobel Prizes in…",
+   "options": [
+    "medicine and literature",
+    "peace and physics",
+    "economics and chemistry",
+    "two different scientific fields (physics and chemistry)"
+   ],
+   "answer": 3,
+   "explication": "She received the Nobel Prize in Physics (1903) and in Chemistry (1911)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-22",
+  "theme": "sciences",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Combien de chromosomes comptent les cellules non sexuelles de l'être humain ?",
+   "options": [
+    "23",
+    "44",
+    "48",
+    "46"
+   ],
+   "answer": 3,
+   "explication": "Les cellules somatiques humaines ont 46 chromosomes (23 paires)."
+  },
+  "en": {
+   "q": "How many chromosomes do human non-sex (somatic) cells have?",
+   "options": [
+    "23",
+    "44",
+    "48",
+    "46"
+   ],
+   "answer": 3,
+   "explication": "Human somatic cells have 46 chromosomes (23 pairs)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-23",
+  "theme": "sciences",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel détroit sépare l'Afrique de l'Europe ?",
+   "options": [
+    "Le détroit de Béring",
+    "Le détroit d'Ormuz",
+    "Le détroit de Gibraltar",
+    "Le détroit de Malacca"
+   ],
+   "answer": 2,
+   "explication": "Le détroit de Gibraltar relie l'Atlantique à la Méditerranée entre l'Espagne et le Maroc."
+  },
+  "en": {
+   "q": "Which strait separates Africa from Europe?",
+   "options": [
+    "The Bering Strait",
+    "The Strait of Hormuz",
+    "The Strait of Gibraltar",
+    "The Strait of Malacca"
+   ],
+   "answer": 2,
+   "explication": "The Strait of Gibraltar links the Atlantic and the Mediterranean between Spain and Morocco."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "sciences-24",
+  "theme": "sciences",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Dans quel milieu le son ne peut-il pas se propager ?",
+   "options": [
+    "Le vide",
+    "L'eau",
+    "L'acier",
+    "L'air"
+   ],
+   "answer": 0,
+   "explication": "Le son nécessite un milieu matériel ; il ne se propage pas dans le vide."
+  },
+  "en": {
+   "q": "In which medium can sound not propagate?",
+   "options": [
+    "A vacuum",
+    "Water",
+    "Steel",
+    "Air"
+   ],
+   "answer": 0,
+   "explication": "Sound needs a material medium; it cannot travel through a vacuum."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-01",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complétez la série : 2, 4, 6, 8, ?",
+   "options": [
+    "8",
+    "10",
+    "12",
+    "9"
+   ],
+   "answer": 1,
+   "explication": "On ajoute 2 à chaque terme : 8 + 2 = 10."
+  },
+  "en": {
+   "q": "Complete the series: 2, 4, 6, 8, ?",
+   "options": [
+    "8",
+    "10",
+    "12",
+    "9"
+   ],
+   "answer": 1,
+   "explication": "Add 2 each time: 8 + 2 = 10."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-02",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complétez la série : 5, 10, 15, 20, ?",
+   "options": [
+    "30",
+    "24",
+    "22",
+    "25"
+   ],
+   "answer": 3,
+   "explication": "On ajoute 5 : 20 + 5 = 25."
+  },
+  "en": {
+   "q": "Complete the series: 5, 10, 15, 20, ?",
+   "options": [
+    "30",
+    "24",
+    "22",
+    "25"
+   ],
+   "answer": 3,
+   "explication": "Add 5: 20 + 5 = 25."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-03",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complétez la série : A, C, E, G, ?",
+   "options": [
+    "H",
+    "J",
+    "I",
+    "K"
+   ],
+   "answer": 2,
+   "explication": "On saute une lettre à chaque fois : G, (H), I."
+  },
+  "en": {
+   "q": "Complete the series: A, C, E, G, ?",
+   "options": [
+    "H",
+    "J",
+    "I",
+    "K"
+   ],
+   "answer": 2,
+   "explication": "Skip one letter each time: G, (H), I."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-04",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel mot est l'intrus : lundi, mardi, juin, jeudi ?",
+   "options": [
+    "lundi",
+    "mardi",
+    "jeudi",
+    "juin"
+   ],
+   "answer": 3,
+   "explication": "Juin est un mois, les autres sont des jours de la semaine."
+  },
+  "en": {
+   "q": "Which is the odd one out: Monday, Tuesday, June, Thursday?",
+   "options": [
+    "Monday",
+    "Tuesday",
+    "Thursday",
+    "June"
+   ],
+   "answer": 3,
+   "explication": "June is a month; the others are days of the week."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-05",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Hier, nous étions mercredi. Quel jour sera-t-il demain ?",
+   "options": [
+    "jeudi",
+    "samedi",
+    "vendredi",
+    "mercredi"
+   ],
+   "answer": 2,
+   "explication": "Hier = mercredi, donc aujourd'hui = jeudi et demain = vendredi."
+  },
+  "en": {
+   "q": "Yesterday was Wednesday. What day will tomorrow be?",
+   "options": [
+    "Thursday",
+    "Saturday",
+    "Friday",
+    "Wednesday"
+   ],
+   "answer": 2,
+   "explication": "Yesterday = Wednesday, so today = Thursday and tomorrow = Friday."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-06",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Paul est plus grand que Marc, et Marc est plus grand que Jean. Qui est le plus petit ?",
+   "options": [
+    "Jean",
+    "Marc",
+    "Paul",
+    "On ne peut pas savoir"
+   ],
+   "answer": 0,
+   "explication": "Paul > Marc > Jean : Jean est le plus petit."
+  },
+  "en": {
+   "q": "Paul is taller than Marc, and Marc is taller than Jean. Who is the shortest?",
+   "options": [
+    "Jean",
+    "Marc",
+    "Paul",
+    "Cannot be known"
+   ],
+   "answer": 0,
+   "explication": "Paul > Marc > Jean: Jean is the shortest."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-07",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Oiseau est à voler ce que poisson est à… ?",
+   "options": [
+    "marcher",
+    "ramper",
+    "nager",
+    "grimper"
+   ],
+   "answer": 2,
+   "explication": "Le mode de déplacement d'un oiseau est voler, celui d'un poisson est nager."
+  },
+  "en": {
+   "q": "Bird is to fly as fish is to…?",
+   "options": [
+    "walk",
+    "crawl",
+    "swim",
+    "climb"
+   ],
+   "answer": 2,
+   "explication": "A bird moves by flying, a fish by swimming."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-08",
+  "theme": "logique",
+  "niveau": "facile",
+  "fr": {
+   "q": "Trois stylos coûtent chacun 250 FCFA. Quel est le prix total ?",
+   "options": [
+    "700 FCFA",
+    "650 FCFA",
+    "800 FCFA",
+    "750 FCFA"
+   ],
+   "answer": 3,
+   "explication": "3 × 250 = 750."
+  },
+  "en": {
+   "q": "Three pens cost 250 FCFA each. What is the total price?",
+   "options": [
+    "700 FCFA",
+    "650 FCFA",
+    "800 FCFA",
+    "750 FCFA"
+   ],
+   "answer": 3,
+   "explication": "3 × 250 = 750."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-09",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez la série : 3, 6, 12, 24, ?",
+   "options": [
+    "48",
+    "36",
+    "30",
+    "42"
+   ],
+   "answer": 0,
+   "explication": "On double chaque terme : 24 × 2 = 48."
+  },
+  "en": {
+   "q": "Complete the series: 3, 6, 12, 24, ?",
+   "options": [
+    "48",
+    "36",
+    "30",
+    "42"
+   ],
+   "answer": 0,
+   "explication": "Double each term: 24 × 2 = 48."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-10",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez la série : 1, 4, 9, 16, 25, ?",
+   "options": [
+    "30",
+    "35",
+    "36",
+    "49"
+   ],
+   "answer": 2,
+   "explication": "Carrés successifs : 6² = 36."
+  },
+  "en": {
+   "q": "Complete the series: 1, 4, 9, 16, 25, ?",
+   "options": [
+    "30",
+    "35",
+    "36",
+    "49"
+   ],
+   "answer": 2,
+   "explication": "Successive squares: 6² = 36."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-11",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez la série : 2, 3, 5, 8, 12, ?",
+   "options": [
+    "17",
+    "16",
+    "18",
+    "15"
+   ],
+   "answer": 0,
+   "explication": "Les écarts augmentent de 1 : +1, +2, +3, +4, +5 ; 12 + 5 = 17."
+  },
+  "en": {
+   "q": "Complete the series: 2, 3, 5, 8, 12, ?",
+   "options": [
+    "17",
+    "16",
+    "18",
+    "15"
+   ],
+   "answer": 0,
+   "explication": "The gaps grow by 1: +1, +2, +3, +4, +5; 12 + 5 = 17."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-12",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez la série : B, E, H, K, ?",
+   "options": [
+    "M",
+    "O",
+    "L",
+    "N"
+   ],
+   "answer": 3,
+   "explication": "On avance de 3 lettres : K → L, M, N."
+  },
+  "en": {
+   "q": "Complete the series: B, E, H, K, ?",
+   "options": [
+    "M",
+    "O",
+    "L",
+    "N"
+   ],
+   "answer": 3,
+   "explication": "Move forward 3 letters: K → L, M, N."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-13",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Tous les gendarmes sont disciplinés. Paul est gendarme. Que peut-on conclure ?",
+   "options": [
+    "Paul n'est pas discipliné",
+    "Paul est discipliné",
+    "Tous les disciplinés sont gendarmes",
+    "Paul est le chef"
+   ],
+   "answer": 1,
+   "explication": "Paul appartient à la classe des gendarmes, donc il est discipliné."
+  },
+  "en": {
+   "q": "All gendarmes are disciplined. Paul is a gendarme. What can be concluded?",
+   "options": [
+    "Paul is not disciplined",
+    "Paul is disciplined",
+    "All disciplined people are gendarmes",
+    "Paul is the chief"
+   ],
+   "answer": 1,
+   "explication": "Paul belongs to the class of gendarmes, so he is disciplined."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-14",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Si le 1er d'un mois de 31 jours est un lundi, quel jour est le 29 de ce mois ?",
+   "options": [
+    "mardi",
+    "lundi",
+    "dimanche",
+    "samedi"
+   ],
+   "answer": 1,
+   "explication": "28 jours = 4 semaines exactement, donc le 29 tombe le même jour que le 1er."
+  },
+  "en": {
+   "q": "If the 1st of a 31-day month is a Monday, what day is the 29th?",
+   "options": [
+    "Tuesday",
+    "Monday",
+    "Sunday",
+    "Saturday"
+   ],
+   "answer": 1,
+   "explication": "28 days = exactly 4 weeks, so the 29th falls on the same day as the 1st."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-15",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un train part à 14 h 45 et voyage 3 h 30. À quelle heure arrive-t-il ?",
+   "options": [
+    "18 h 45",
+    "17 h 45",
+    "18 h 00",
+    "18 h 15"
+   ],
+   "answer": 3,
+   "explication": "14 h 45 + 3 h = 17 h 45 ; + 30 min = 18 h 15."
+  },
+  "en": {
+   "q": "A train leaves at 14:45 and travels for 3 h 30. When does it arrive?",
+   "options": [
+    "18:45",
+    "17:45",
+    "18:00",
+    "18:15"
+   ],
+   "answer": 3,
+   "explication": "14:45 + 3 h = 17:45; + 30 min = 18:15."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-16",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Cinq coureurs : A arrive avant B, B avant C, D avant A, et C avant E. Qui arrive troisième ?",
+   "options": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
+   "answer": 2,
+   "explication": "Ordre : D, A, B, C, E. Le troisième est B."
+  },
+  "en": {
+   "q": "Five runners: A finishes before B, B before C, D before A, and C before E. Who finishes third?",
+   "options": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
+   "answer": 2,
+   "explication": "Order: D, A, B, C, E. The third is B."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-17",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "2 est à 8 comme 3 est à 27. 4 est alors à ?",
+   "options": [
+    "64",
+    "48",
+    "16",
+    "12"
+   ],
+   "answer": 0,
+   "explication": "La relation est le cube : 2³ = 8, 3³ = 27, donc 4³ = 64."
+  },
+  "en": {
+   "q": "2 is to 8 as 3 is to 27. Then 4 is to ?",
+   "options": [
+    "64",
+    "48",
+    "16",
+    "12"
+   ],
+   "answer": 0,
+   "explication": "The relation is the cube: 2³ = 8, 3³ = 27, so 4³ = 64."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-18",
+  "theme": "logique",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un père a quatre fois l'âge de son fils. La somme de leurs âges est 50 ans. Quel âge a le fils ?",
+   "options": [
+    "8 ans",
+    "10 ans",
+    "12 ans",
+    "15 ans"
+   ],
+   "answer": 1,
+   "explication": "x + 4x = 50 donc 5x = 50 et x = 10."
+  },
+  "en": {
+   "q": "A father is four times as old as his son. The sum of their ages is 50. How old is the son?",
+   "options": [
+    "8 years",
+    "10 years",
+    "12 years",
+    "15 years"
+   ],
+   "answer": 1,
+   "explication": "x + 4x = 50, so 5x = 50 and x = 10."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-19",
+  "theme": "logique",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez la série : 1, 1, 2, 3, 5, 8, 13, ?",
+   "options": [
+    "20",
+    "26",
+    "18",
+    "21"
+   ],
+   "answer": 3,
+   "explication": "Chaque terme est la somme des deux précédents : 8 + 13 = 21."
+  },
+  "en": {
+   "q": "Complete the series: 1, 1, 2, 3, 5, 8, 13, ?",
+   "options": [
+    "20",
+    "26",
+    "18",
+    "21"
+   ],
+   "answer": 3,
+   "explication": "Each term is the sum of the previous two: 8 + 13 = 21."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-20",
+  "theme": "logique",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez la série : 2, 6, 12, 20, 30, ?",
+   "options": [
+    "40",
+    "42",
+    "44",
+    "36"
+   ],
+   "answer": 1,
+   "explication": "Termes n(n+1) : 6 × 7 = 42 (écarts 4, 6, 8, 10, 12)."
+  },
+  "en": {
+   "q": "Complete the series: 2, 6, 12, 20, 30, ?",
+   "options": [
+    "40",
+    "42",
+    "44",
+    "36"
+   ],
+   "answer": 1,
+   "explication": "Terms n(n+1): 6 × 7 = 42 (gaps 4, 6, 8, 10, 12)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-21",
+  "theme": "logique",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez la série : A, Z, B, Y, C, X, ?",
+   "options": [
+    "W",
+    "D",
+    "V",
+    "E"
+   ],
+   "answer": 1,
+   "explication": "Deux suites alternées : A, B, C, D (avance) et Z, Y, X (recule). Le terme suivant est D."
+  },
+  "en": {
+   "q": "Complete the series: A, Z, B, Y, C, X, ?",
+   "options": [
+    "W",
+    "D",
+    "V",
+    "E"
+   ],
+   "answer": 1,
+   "explication": "Two interleaved series: A, B, C, D (forward) and Z, Y, X (backward). The next term is D."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-22",
+  "theme": "logique",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quel est l'angle entre les aiguilles d'une horloge à 2 h 30 ?",
+   "options": [
+    "105°",
+    "90°",
+    "120°",
+    "75°"
+   ],
+   "answer": 0,
+   "explication": "Aiguille des heures : 2×30 + 15 = 75° ; minutes : 180° ; écart = 105°."
+  },
+  "en": {
+   "q": "What is the angle between the clock hands at 2:30?",
+   "options": [
+    "105°",
+    "90°",
+    "120°",
+    "75°"
+   ],
+   "answer": 0,
+   "explication": "Hour hand: 2×30 + 15 = 75°; minute hand: 180°; difference = 105°."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-23",
+  "theme": "logique",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Le 10 mars est un vendredi. Quel jour est le 10 avril de la même année ?",
+   "options": [
+    "dimanche",
+    "mardi",
+    "lundi",
+    "samedi"
+   ],
+   "answer": 2,
+   "explication": "Mars compte 31 jours ; 31 = 4 semaines + 3 jours ; vendredi + 3 = lundi."
+  },
+  "en": {
+   "q": "10 March is a Friday. What day is 10 April of the same year?",
+   "options": [
+    "Sunday",
+    "Tuesday",
+    "Monday",
+    "Saturday"
+   ],
+   "answer": 2,
+   "explication": "March has 31 days; 31 = 4 weeks + 3 days; Friday + 3 = Monday."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "logique-24",
+  "theme": "logique",
+  "niveau": "difficile",
+  "fr": {
+   "q": "La moyenne de 5 nombres est 12. On ajoute un sixième nombre, 24. Quelle est la nouvelle moyenne ?",
+   "options": [
+    "14",
+    "13",
+    "15",
+    "18"
+   ],
+   "answer": 0,
+   "explication": "Somme initiale 60 ; (60 + 24) / 6 = 14."
+  },
+  "en": {
+   "q": "The average of 5 numbers is 12. A sixth number, 24, is added. What is the new average?",
+   "options": [
+    "14",
+    "13",
+    "15",
+    "18"
+   ],
+   "answer": 0,
+   "explication": "Initial sum 60; (60 + 24) / 6 = 14."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-01",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "Combien font 15 % de 240 ?",
+   "options": [
+    "24",
+    "36",
+    "32",
+    "40"
+   ],
+   "answer": 1,
+   "explication": "15/100 × 240 = 36."
+  },
+  "en": {
+   "q": "What is 15% of 240?",
+   "options": [
+    "24",
+    "36",
+    "32",
+    "40"
+   ],
+   "answer": 1,
+   "explication": "15/100 × 240 = 36."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-02",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle est la moyenne de 12, 15, 18 et 15 ?",
+   "options": [
+    "15",
+    "14",
+    "16",
+    "18"
+   ],
+   "answer": 0,
+   "explication": "(12+15+18+15)/4 = 60/4 = 15."
+  },
+  "en": {
+   "q": "What is the mean of 12, 15, 18 and 15?",
+   "options": [
+    "15",
+    "14",
+    "16",
+    "18"
+   ],
+   "answer": 0,
+   "explication": "(12+15+18+15)/4 = 60/4 = 15."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-03",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le périmètre d'un rectangle de 12 m de long et 7 m de large ?",
+   "options": [
+    "19 m",
+    "84 m",
+    "38 m",
+    "31 m"
+   ],
+   "answer": 2,
+   "explication": "P = 2 × (12 + 7) = 38 m."
+  },
+  "en": {
+   "q": "What is the perimeter of a rectangle 12 m long and 7 m wide?",
+   "options": [
+    "19 m",
+    "84 m",
+    "38 m",
+    "31 m"
+   ],
+   "answer": 2,
+   "explication": "P = 2 × (12 + 7) = 38 m."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-04",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "Combien font les 3/4 de 80 ?",
+   "options": [
+    "60",
+    "40",
+    "45",
+    "20"
+   ],
+   "answer": 0,
+   "explication": "80 ÷ 4 = 20, puis 20 × 3 = 60."
+  },
+  "en": {
+   "q": "What is 3/4 of 80?",
+   "options": [
+    "60",
+    "40",
+    "45",
+    "20"
+   ],
+   "answer": 0,
+   "explication": "80 ÷ 4 = 20, then 20 × 3 = 60."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-05",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "Résoudre 3x + 5 = 26. Quelle est la valeur de x ?",
+   "options": [
+    "6",
+    "8",
+    "7",
+    "9"
+   ],
+   "answer": 2,
+   "explication": "3x = 26 − 5 = 21, donc x = 7."
+  },
+  "en": {
+   "q": "Solve 3x + 5 = 26. What is the value of x?",
+   "options": [
+    "6",
+    "8",
+    "7",
+    "9"
+   ],
+   "answer": 2,
+   "explication": "3x = 26 − 5 = 21, so x = 7."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-06",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "2,5 km équivalent à combien de mètres ?",
+   "options": [
+    "250 m",
+    "25 000 m",
+    "2 500 m",
+    "205 m"
+   ],
+   "answer": 2,
+   "explication": "2,5 × 1000 = 2 500 m."
+  },
+  "en": {
+   "q": "How many metres are there in 2.5 km?",
+   "options": [
+    "250 m",
+    "25,000 m",
+    "2,500 m",
+    "205 m"
+   ],
+   "answer": 2,
+   "explication": "2.5 × 1000 = 2,500 m."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-07",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "5 cahiers identiques coûtent 1 500 FCFA. Combien coûtent 8 de ces cahiers ?",
+   "options": [
+    "2 400 FCFA",
+    "2 000 FCFA",
+    "2 200 FCFA",
+    "2 800 FCFA"
+   ],
+   "answer": 0,
+   "explication": "Un cahier : 1 500 ÷ 5 = 300 FCFA ; 8 × 300 = 2 400 FCFA."
+  },
+  "en": {
+   "q": "5 identical exercise books cost 1,500 FCFA. How much do 8 of them cost?",
+   "options": [
+    "2,400 FCFA",
+    "2,000 FCFA",
+    "2,200 FCFA",
+    "2,800 FCFA"
+   ],
+   "answer": 0,
+   "explication": "One book: 1,500 ÷ 5 = 300 FCFA; 8 × 300 = 2,400 FCFA."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-08",
+  "theme": "maths",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle est l'aire d'un carré de côté 9 m ?",
+   "options": [
+    "36 m²",
+    "81 m²",
+    "18 m²",
+    "72 m²"
+   ],
+   "answer": 1,
+   "explication": "A = 9 × 9 = 81 m²."
+  },
+  "en": {
+   "q": "What is the area of a square with side 9 m?",
+   "options": [
+    "36 m²",
+    "81 m²",
+    "18 m²",
+    "72 m²"
+   ],
+   "answer": 1,
+   "explication": "A = 9 × 9 = 81 m²."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-09",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un article coûte 25 000 FCFA. Une réduction de 20 % est accordée. Quel est le nouveau prix ?",
+   "options": [
+    "5 000 FCFA",
+    "22 500 FCFA",
+    "21 000 FCFA",
+    "20 000 FCFA"
+   ],
+   "answer": 3,
+   "explication": "Réduction : 0,20 × 25 000 = 5 000 ; prix : 25 000 − 5 000 = 20 000 FCFA."
+  },
+  "en": {
+   "q": "An item costs 25,000 FCFA. A 20% discount is given. What is the new price?",
+   "options": [
+    "5,000 FCFA",
+    "22,500 FCFA",
+    "21,000 FCFA",
+    "20,000 FCFA"
+   ],
+   "answer": 3,
+   "explication": "Discount: 0.20 × 25,000 = 5,000; price: 25,000 − 5,000 = 20,000 FCFA."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-10",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un train roule à 90 km/h pendant 2 h 40 min. Quelle distance parcourt-il ?",
+   "options": [
+    "180 km",
+    "240 km",
+    "225 km",
+    "270 km"
+   ],
+   "answer": 1,
+   "explication": "2 h 40 min = 8/3 h ; 90 × 8/3 = 240 km."
+  },
+  "en": {
+   "q": "A train travels at 90 km/h for 2 h 40 min. What distance does it cover?",
+   "options": [
+    "180 km",
+    "240 km",
+    "225 km",
+    "270 km"
+   ],
+   "answer": 1,
+   "explication": "2 h 40 min = 8/3 h; 90 × 8/3 = 240 km."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-11",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "On partage 360 000 FCFA entre trois personnes dans le rapport 2 : 3 : 4. Quelle est la plus grande part ?",
+   "options": [
+    "120 000 FCFA",
+    "180 000 FCFA",
+    "160 000 FCFA",
+    "140 000 FCFA"
+   ],
+   "answer": 2,
+   "explication": "2+3+4 = 9 parts ; 360 000 ÷ 9 = 40 000 ; 4 × 40 000 = 160 000 FCFA."
+  },
+  "en": {
+   "q": "360,000 FCFA is shared among three people in the ratio 2 : 3 : 4. What is the largest share?",
+   "options": [
+    "120,000 FCFA",
+    "180,000 FCFA",
+    "160,000 FCFA",
+    "140,000 FCFA"
+   ],
+   "answer": 2,
+   "explication": "2+3+4 = 9 parts; 360,000 ÷ 9 = 40,000; 4 × 40,000 = 160,000 FCFA."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-12",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "6 ouvriers terminent un chantier en 10 jours. Combien de jours faudrait-il à 4 ouvriers (même rendement) ?",
+   "options": [
+    "12 jours",
+    "15 jours",
+    "18 jours",
+    "20 jours"
+   ],
+   "answer": 1,
+   "explication": "Travail total : 6 × 10 = 60 jours-ouvrier ; 60 ÷ 4 = 15 jours."
+  },
+  "en": {
+   "q": "6 workers finish a job in 10 days. How many days would 4 workers take (same rate)?",
+   "options": [
+    "12 days",
+    "15 days",
+    "18 days",
+    "20 days"
+   ],
+   "answer": 1,
+   "explication": "Total work: 6 × 10 = 60 worker-days; 60 ÷ 4 = 15 days."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-13",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelle est l'aire d'un triangle de base 14 cm et de hauteur 9 cm ?",
+   "options": [
+    "63 cm²",
+    "126 cm²",
+    "23 cm²",
+    "56 cm²"
+   ],
+   "answer": 0,
+   "explication": "A = (14 × 9) / 2 = 63 cm²."
+  },
+  "en": {
+   "q": "What is the area of a triangle with base 14 cm and height 9 cm?",
+   "options": [
+    "63 cm²",
+    "126 cm²",
+    "23 cm²",
+    "56 cm²"
+   ],
+   "answer": 0,
+   "explication": "A = (14 × 9) / 2 = 63 cm²."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-14",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Résoudre 2(x − 3) + 4 = 3x − 5. Quelle est la valeur de x ?",
+   "options": [
+    "7",
+    "2",
+    "3",
+    "−3"
+   ],
+   "answer": 2,
+   "explication": "2x − 2 = 3x − 5, donc x = 3. Vérification : 4 = 4."
+  },
+  "en": {
+   "q": "Solve 2(x − 3) + 4 = 3x − 5. What is the value of x?",
+   "options": [
+    "7",
+    "2",
+    "3",
+    "−3"
+   ],
+   "answer": 2,
+   "explication": "2x − 2 = 3x − 5, so x = 3. Check: 4 = 4."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-15",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un prix augmente de 20 %, puis le nouveau prix baisse de 20 %. Que devient le prix final par rapport au prix de départ ?",
+   "options": [
+    "Il ne change pas",
+    "Il augmente de 4 %",
+    "Il baisse de 4 %",
+    "Il baisse de 2 %"
+   ],
+   "answer": 2,
+   "explication": "1,2 × 0,8 = 0,96 : le prix final vaut 96 % du prix initial, soit une baisse de 4 %."
+  },
+  "en": {
+   "q": "A price rises by 20%, then the new price falls by 20%. How does the final price compare with the starting price?",
+   "options": [
+    "It is unchanged",
+    "It rises by 4%",
+    "It falls by 4%",
+    "It falls by 2%"
+   ],
+   "answer": 2,
+   "explication": "1.2 × 0.8 = 0.96: the final price is 96% of the original, a 4% fall."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-16",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un automobiliste fait l'aller à 60 km/h et le retour (même trajet) à 40 km/h. Quelle est sa vitesse moyenne sur l'ensemble ?",
+   "options": [
+    "50 km/h",
+    "52 km/h",
+    "45 km/h",
+    "48 km/h"
+   ],
+   "answer": 3,
+   "explication": "Vitesse moyenne = distance totale / temps total = 2×60×40 / (60+40) = 48 km/h (moyenne harmonique)."
+  },
+  "en": {
+   "q": "A driver goes out at 60 km/h and returns (same route) at 40 km/h. What is his average speed for the whole trip?",
+   "options": [
+    "50 km/h",
+    "52 km/h",
+    "45 km/h",
+    "48 km/h"
+   ],
+   "answer": 3,
+   "explication": "For distance d: time = d/60 + d/40; speed = 2×60×40/(60+40) = 48 km/h."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-17",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "On mélange 3 L de sirop et 9 L d'eau. Quel pourcentage du mélange est du sirop ?",
+   "options": [
+    "30 %",
+    "33 %",
+    "20 %",
+    "25 %"
+   ],
+   "answer": 3,
+   "explication": "Volume total 12 L ; 3/12 = 1/4 = 25 %."
+  },
+  "en": {
+   "q": "3 L of syrup are mixed with 9 L of water. What percentage of the mixture is syrup?",
+   "options": [
+    "30 %",
+    "33 %",
+    "20 %",
+    "25 %"
+   ],
+   "answer": 3,
+   "explication": "Total volume 12 L; 3/12 = 1/4 = 25%."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-18",
+  "theme": "maths",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Un père a 4 fois l'âge de son fils. La somme de leurs âges est 45 ans. Quel est l'âge du fils ?",
+   "options": [
+    "11 ans",
+    "12 ans",
+    "15 ans",
+    "9 ans"
+   ],
+   "answer": 3,
+   "explication": "x + 4x = 45, donc 5x = 45 et x = 9 ans."
+  },
+  "en": {
+   "q": "A father is 4 times as old as his son. The sum of their ages is 45. How old is the son?",
+   "options": [
+    "11 years",
+    "12 years",
+    "15 years",
+    "9 years"
+   ],
+   "answer": 3,
+   "explication": "x + 4x = 45, so 5x = 45 and x = 9 years."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-19",
+  "theme": "maths",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Un capital de 400 000 FCFA est placé à intérêt simple au taux de 6 % par an pendant 3 ans. Quel est l'intérêt obtenu ?",
+   "options": [
+    "72 000 FCFA",
+    "24 000 FCFA",
+    "60 000 FCFA",
+    "84 000 FCFA"
+   ],
+   "answer": 0,
+   "explication": "I = 400 000 × 0,06 × 3 = 72 000 FCFA."
+  },
+  "en": {
+   "q": "400,000 FCFA is invested at 6% simple interest per year for 3 years. What interest is earned?",
+   "options": [
+    "72,000 FCFA",
+    "24,000 FCFA",
+    "60,000 FCFA",
+    "84,000 FCFA"
+   ],
+   "answer": 0,
+   "explication": "I = 400,000 × 0.06 × 3 = 72,000 FCFA."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-20",
+  "theme": "maths",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Un robinet A remplit un réservoir en 6 h, un robinet B en 3 h. Ouverts ensemble, en combien de temps le remplissent-ils ?",
+   "options": [
+    "4 h 30 min",
+    "2 h",
+    "3 h",
+    "1 h 30 min"
+   ],
+   "answer": 1,
+   "explication": "En 1 h : 1/6 + 1/3 = 1/2 du réservoir ; il faut donc 2 h."
+  },
+  "en": {
+   "q": "Tap A fills a tank in 6 h and tap B in 3 h. Opened together, how long do they take to fill it?",
+   "options": [
+    "4 h 30 min",
+    "2 h",
+    "3 h",
+    "1 h 30 min"
+   ],
+   "answer": 1,
+   "explication": "In 1 h: 1/6 + 1/3 = 1/2 of the tank, so it takes 2 h."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-21",
+  "theme": "maths",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Quelle est la somme des entiers de 1 à 40 ?",
+   "options": [
+    "820",
+    "800",
+    "840",
+    "780"
+   ],
+   "answer": 0,
+   "explication": "n(n+1)/2 = 40 × 41 / 2 = 820."
+  },
+  "en": {
+   "q": "What is the sum of the integers from 1 to 40?",
+   "options": [
+    "820",
+    "800",
+    "840",
+    "780"
+   ],
+   "answer": 0,
+   "explication": "n(n+1)/2 = 40 × 41 / 2 = 820."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-22",
+  "theme": "maths",
+  "niveau": "difficile",
+  "fr": {
+   "q": "La longueur d'un rectangle augmente de 25 % et sa largeur diminue de 20 %. Que devient son aire ?",
+   "options": [
+    "Elle augmente de 5 %",
+    "Elle ne change pas",
+    "Elle diminue de 5 %",
+    "Elle augmente de 1 %"
+   ],
+   "answer": 1,
+   "explication": "1,25 × 0,80 = 1 : l'aire est inchangée."
+  },
+  "en": {
+   "q": "The length of a rectangle increases by 25% and its width decreases by 20%. What happens to its area?",
+   "options": [
+    "It increases by 5%",
+    "It stays the same",
+    "It decreases by 5%",
+    "It increases by 1%"
+   ],
+   "answer": 1,
+   "explication": "1.25 × 0.80 = 1: the area is unchanged."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-23",
+  "theme": "maths",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Un sac contient 5 boules rouges, 3 bleues et 2 vertes. On tire 2 boules successivement sans remise. Quelle est la probabilité que les deux soient rouges ?",
+   "options": [
+    "1/4",
+    "1/5",
+    "4/9",
+    "2/9"
+   ],
+   "answer": 3,
+   "explication": "P = 5/10 × 4/9 = 20/90 = 2/9."
+  },
+  "en": {
+   "q": "A bag contains 5 red, 3 blue and 2 green balls. Two balls are drawn one after the other without replacement. What is the probability that both are red?",
+   "options": [
+    "1/4",
+    "1/5",
+    "4/9",
+    "2/9"
+   ],
+   "answer": 3,
+   "explication": "P = 5/10 × 4/9 = 20/90 = 2/9."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "maths-24",
+  "theme": "maths",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Si 2x + 3y = 23 et x + y = 9, quelle est la valeur de x × y ?",
+   "options": [
+    "18",
+    "24",
+    "21",
+    "20"
+   ],
+   "answer": 3,
+   "explication": "y = 9 − x donne 2x + 27 − 3x = 23, d'où x = 4, y = 5 et xy = 20."
+  },
+  "en": {
+   "q": "If 2x + 3y = 23 and x + y = 9, what is the value of x × y?",
+   "options": [
+    "18",
+    "24",
+    "21",
+    "20"
+   ],
+   "answer": 3,
+   "explication": "y = 9 − x gives 2x + 27 − 3x = 23, so x = 4, y = 5 and xy = 20."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-01",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le féminin de « acteur » ?",
+   "options": [
+    "actrice",
+    "acteuse",
+    "acteure",
+    "actère"
+   ],
+   "answer": 0,
+   "explication": "Les noms en -teur font souvent leur féminin en -trice : acteur, actrice."
+  },
+  "en": {
+   "q": "Choose the correct form: She ___ to school every day.",
+   "options": [
+    "go",
+    "goes",
+    "going",
+    "gone"
+   ],
+   "answer": 1,
+   "explication": "A third-person singular subject takes -es in the simple present: she goes."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-02",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le pluriel de « cheval » ?",
+   "options": [
+    "chevals",
+    "chevaus",
+    "chevaux",
+    "chevalx"
+   ],
+   "answer": 2,
+   "explication": "Les noms en -al font leur pluriel en -aux : cheval, chevaux."
+  },
+  "en": {
+   "q": "What is the plural of \"child\"?",
+   "options": [
+    "childs",
+    "childrens",
+    "childes",
+    "children"
+   ],
+   "answer": 3,
+   "explication": "Child has an irregular plural: children."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-03",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel est le contraire de « généreux » ?",
+   "options": [
+    "prodigue",
+    "avare",
+    "aimable",
+    "riche"
+   ],
+   "answer": 1,
+   "explication": "Est généreux celui qui donne volontiers ; son contraire est avare."
+  },
+  "en": {
+   "q": "What is the opposite of \"ancient\"?",
+   "options": [
+    "old",
+    "historic",
+    "modern",
+    "antique"
+   ],
+   "answer": 2,
+   "explication": "Ancient means very old; its antonym is modern."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-04",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Choisissez la phrase correcte.",
+   "options": [
+    "Ils sont allés au marché hier.",
+    "Ils ont allé au marché hier.",
+    "Ils est allés au marché hier.",
+    "Ils sont allé au marché hier."
+   ],
+   "answer": 0,
+   "explication": "Aller se conjugue avec être et le participe s'accorde avec le sujet : ils sont allés."
+  },
+  "en": {
+   "q": "Complete: I have lived here ___ 2015.",
+   "options": [
+    "for",
+    "from",
+    "during",
+    "since"
+   ],
+   "answer": 3,
+   "explication": "Since is used with a starting point in time (2015)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-05",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quel mot est un synonyme de « rapide » ?",
+   "options": [
+    "lent",
+    "véloce",
+    "paresseux",
+    "tranquille"
+   ],
+   "answer": 1,
+   "explication": "Véloce signifie qui se déplace très vite, comme rapide."
+  },
+  "en": {
+   "q": "Which spelling is correct?",
+   "options": [
+    "neccessary",
+    "necesary",
+    "necessary",
+    "neccesary"
+   ],
+   "answer": 2,
+   "explication": "Necessary has one c and two s's."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-06",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complétez : « Demain, je ___ mon travail. » (finir)",
+   "options": [
+    "finirais",
+    "finirai",
+    "finis",
+    "finissais"
+   ],
+   "answer": 1,
+   "explication": "Demain exprime le futur simple : je finirai."
+  },
+  "en": {
+   "q": "Which word is closest in meaning to \"big\"?",
+   "options": [
+    "large",
+    "tiny",
+    "narrow",
+    "slim"
+   ],
+   "answer": 0,
+   "explication": "Large is a synonym of big."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-07",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle orthographe est correcte ?",
+   "options": [
+    "acceuillir",
+    "accuillir",
+    "aqueillir",
+    "accueillir"
+   ],
+   "answer": 3,
+   "explication": "Le verbe s'écrit accueillir : on garde « cueillir » après « ac- »."
+  },
+  "en": {
+   "q": "Complete: There ___ many students in the hall.",
+   "options": [
+    "is",
+    "was",
+    "are",
+    "be"
+   ],
+   "answer": 2,
+   "explication": "Many students is plural, so the verb is are."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-08",
+  "theme": "langue1",
+  "niveau": "facile",
+  "fr": {
+   "q": "Quelle est la nature du mot « rapidement » ?",
+   "options": [
+    "adjectif",
+    "adverbe",
+    "nom",
+    "préposition"
+   ],
+   "answer": 1,
+   "explication": "Rapidement est invariable et modifie un verbe : c'est un adverbe."
+  },
+  "en": {
+   "q": "What is the past tense of \"buy\"?",
+   "options": [
+    "buyed",
+    "boughten",
+    "buyt",
+    "bought"
+   ],
+   "answer": 3,
+   "explication": "Buy is irregular: buy, bought, bought."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-09",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez : « Les fleurs que j'ai ___ sont magnifiques. »",
+   "options": [
+    "cueilli",
+    "cueillis",
+    "cueillie",
+    "cueillies"
+   ],
+   "answer": 3,
+   "explication": "Le COD « que » (les fleurs) est placé avant l'auxiliaire avoir : le participe s'accorde au féminin pluriel."
+  },
+  "en": {
+   "q": "Complete: If it rains tomorrow, we ___ at home.",
+   "options": [
+    "will stay",
+    "would stay",
+    "stayed",
+    "would have stayed"
+   ],
+   "answer": 0,
+   "explication": "The first conditional uses if + present simple and will + verb."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-10",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelle est la forme du passé simple de « prendre » à la 3e personne du singulier ?",
+   "options": [
+    "il prit",
+    "il prend",
+    "il prenda",
+    "il prenait"
+   ],
+   "answer": 0,
+   "explication": "Prendre au passé simple : je pris, tu pris, il prit."
+  },
+  "en": {
+   "q": "Complete: She is afraid ___ snakes.",
+   "options": [
+    "from",
+    "at",
+    "of",
+    "with"
+   ],
+   "answer": 2,
+   "explication": "The adjective afraid is followed by the preposition of."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-11",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Dans « Cet homme est un lion », quelle figure de style est employée ?",
+   "options": [
+    "une comparaison",
+    "une hyperbole",
+    "une métaphore",
+    "une antiphrase"
+   ],
+   "answer": 2,
+   "explication": "Il y a une identification directe sans outil de comparaison : c'est une métaphore."
+  },
+  "en": {
+   "q": "Which word is a synonym of \"reluctant\"?",
+   "options": [
+    "unwilling",
+    "eager",
+    "careless",
+    "hasty"
+   ],
+   "answer": 0,
+   "explication": "Reluctant means unwilling or hesitant to do something."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-12",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Dire « Quelle belle journée ! » sous une pluie battante est une…",
+   "options": [
+    "litote",
+    "métonymie",
+    "antiphrase",
+    "gradation"
+   ],
+   "answer": 2,
+   "explication": "L'antiphrase consiste à dire le contraire de ce que l'on pense, avec ironie."
+  },
+  "en": {
+   "q": "Complete: Each of the students ___ a book.",
+   "options": [
+    "have",
+    "are having",
+    "having",
+    "has"
+   ],
+   "answer": 3,
+   "explication": "Each takes a singular verb: each of the students has."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-13",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez : « Il faut que tu ___ à l'heure. »",
+   "options": [
+    "sois",
+    "es",
+    "seras",
+    "soit"
+   ],
+   "answer": 0,
+   "explication": "Après « il faut que », on emploie le subjonctif : que tu sois."
+  },
+  "en": {
+   "q": "Complete: She said she ___ the film before.",
+   "options": [
+    "has seen",
+    "had seen",
+    "have seen",
+    "sees"
+   ],
+   "answer": 1,
+   "explication": "Reported speech after said (past) shifts to the past perfect: had seen."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-14",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez : « Ils ___ partis sans rien dire. »",
+   "options": [
+    "sont",
+    "son",
+    "sons",
+    "sond"
+   ],
+   "answer": 0,
+   "explication": "Il s'agit du verbe être au présent (ils sont partis) ; « son » est un déterminant possessif."
+  },
+  "en": {
+   "q": "Which spelling is correct?",
+   "options": [
+    "seperate",
+    "separate",
+    "separete",
+    "sepparate"
+   ],
+   "answer": 1,
+   "explication": "Separate has the pattern -par-: se-par-ate."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-15",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quel mot est un synonyme de « perspicace » ?",
+   "options": [
+    "naïf",
+    "borné",
+    "distrait",
+    "clairvoyant"
+   ],
+   "answer": 3,
+   "explication": "Perspicace désigne quelqu'un qui comprend vite et finement, donc clairvoyant."
+  },
+  "en": {
+   "q": "What is the opposite of \"scarce\"?",
+   "options": [
+    "rare",
+    "limited",
+    "meagre",
+    "abundant"
+   ],
+   "answer": 3,
+   "explication": "Scarce means in short supply; abundant means plentiful."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-16",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Quelle orthographe est correcte ?",
+   "options": [
+    "dévelopement",
+    "devellopement",
+    "développement",
+    "développment"
+   ],
+   "answer": 2,
+   "explication": "On écrit développement avec deux p et un seul l."
+  },
+  "en": {
+   "q": "Complete: The news ___ shocking.",
+   "options": [
+    "are",
+    "were",
+    "is",
+    "have been"
+   ],
+   "answer": 2,
+   "explication": "News is an uncountable noun taking a singular verb; only \"is\" fits among the options."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-17",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complétez : « Bien qu'il ___ malade, il est venu. »",
+   "options": [
+    "est",
+    "soit",
+    "était",
+    "sera"
+   ],
+   "answer": 1,
+   "explication": "La locution « bien que » est suivie du subjonctif : qu'il soit."
+  },
+  "en": {
+   "q": "Complete: I look forward to ___ you.",
+   "options": [
+    "seeing",
+    "see",
+    "saw",
+    "have seen"
+   ],
+   "answer": 0,
+   "explication": "In \"look forward to\", to is a preposition followed by the -ing form."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-18",
+  "theme": "langue1",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Dans « Il parle à ses amis », quelle est la fonction de « à ses amis » ?",
+   "options": [
+    "complément d'objet direct",
+    "complément circonstanciel de lieu",
+    "complément d'objet indirect",
+    "attribut du sujet"
+   ],
+   "answer": 2,
+   "explication": "Le complément est introduit par la préposition à et répond à « à qui ? » : c'est un COI."
+  },
+  "en": {
+   "q": "Complete: The letter ___ yesterday.",
+   "options": [
+    "wrote",
+    "was written",
+    "is written",
+    "has written"
+   ],
+   "answer": 1,
+   "explication": "A passive in the past needs was/were + past participle; yesterday points to the past."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-19",
+  "theme": "langue1",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez : « Elle s'est ___ la main. »",
+   "options": [
+    "lavée",
+    "lavés",
+    "lavées",
+    "lavé"
+   ],
+   "answer": 3,
+   "explication": "Le COD (la main) est placé après le verbe : le participe passé reste invariable."
+  },
+  "en": {
+   "q": "Complete: Hardly had he arrived ___ the rain started.",
+   "options": [
+    "than",
+    "then",
+    "as",
+    "when"
+   ],
+   "answer": 3,
+   "explication": "The correlative structure is \"hardly ... when\"."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-20",
+  "theme": "langue1",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez : « Si j'avais su, je ne ___ pas venu. »",
+   "options": [
+    "suis",
+    "serais",
+    "serai",
+    "fusse"
+   ],
+   "answer": 1,
+   "explication": "Après « si + plus-que-parfait », on emploie le conditionnel : je ne serais pas venu."
+  },
+  "en": {
+   "q": "What does \"ubiquitous\" mean?",
+   "options": [
+    "very rare",
+    "found everywhere",
+    "extremely old",
+    "harmful"
+   ],
+   "answer": 1,
+   "explication": "Ubiquitous describes something that seems present everywhere."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-21",
+  "theme": "langue1",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Lequel de ces groupes est un pléonasme ?",
+   "options": [
+    "entrer dans la salle",
+    "descendre l'escalier",
+    "lever la main",
+    "monter en haut"
+   ],
+   "answer": 3,
+   "explication": "Monter implique déjà d'aller vers le haut : « monter en haut » est redondant."
+  },
+  "en": {
+   "q": "Complete: Had I known, I ___ come earlier.",
+   "options": [
+    "will have",
+    "would have",
+    "would",
+    "had"
+   ],
+   "answer": 1,
+   "explication": "The third conditional with inversion (Had I known) takes would have + past participle."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-22",
+  "theme": "langue1",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Dans « Il a bu un verre », quelle figure de style désigne « un verre » ?",
+   "options": [
+    "une métaphore",
+    "un oxymore",
+    "une gradation",
+    "une métonymie"
+   ],
+   "answer": 3,
+   "explication": "Le contenant (verre) désigne le contenu (la boisson) : c'est une métonymie."
+  },
+  "en": {
+   "q": "\"He is as brave as a lion\" is an example of…",
+   "options": [
+    "a simile",
+    "a metaphor",
+    "personification",
+    "irony"
+   ],
+   "answer": 0,
+   "explication": "A simile compares two things using \"as\" or \"like\"."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-23",
+  "theme": "langue1",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez : « Les lois ___ par l'Assemblée ont été promulguées. »",
+   "options": [
+    "votés",
+    "votée",
+    "votées",
+    "votais"
+   ],
+   "answer": 2,
+   "explication": "Le participe employé comme adjectif s'accorde avec « lois » : féminin pluriel."
+  },
+  "en": {
+   "q": "Complete: She insisted ___ paying the bill.",
+   "options": [
+    "in",
+    "at",
+    "on",
+    "for"
+   ],
+   "answer": 2,
+   "explication": "The verb insist is followed by the preposition on."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue1-24",
+  "theme": "langue1",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complétez : « ___ tu dises, je resterai. »",
+   "options": [
+    "Quoi que",
+    "Quoique",
+    "Quoi qu'",
+    "Quoique que"
+   ],
+   "answer": 0,
+   "explication": "Quoi que (en deux mots) signifie « quelle que soit la chose que » ; quoique signifie « bien que »."
+  },
+  "en": {
+   "q": "Which spelling is correct?",
+   "options": [
+    "accommodation",
+    "accomodation",
+    "acommodation",
+    "accommodacion"
+   ],
+   "answer": 0,
+   "explication": "Accommodation is written with double c and double m."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-01",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "Choose the correct word: She ___ a doctor.",
+   "options": [
+    "is",
+    "are",
+    "am",
+    "be"
+   ],
+   "answer": 0,
+   "explication": "With the subject \"she\", the verb to be is \"is\"."
+  },
+  "en": {
+   "q": "Complétez : « Je ___ étudiant. »",
+   "options": [
+    "suis",
+    "es",
+    "est",
+    "sommes"
+   ],
+   "answer": 0,
+   "explication": "Avec le sujet « je », le verbe être se conjugue « suis »."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-02",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "Choose the correct word: Every morning, my brother ___ to school.",
+   "options": [
+    "goes",
+    "go",
+    "going",
+    "gone"
+   ],
+   "answer": 0,
+   "explication": "In the simple present, the third person singular takes -es: he goes."
+  },
+  "en": {
+   "q": "Complétez : « ___ table est grande. »",
+   "options": [
+    "La",
+    "Le",
+    "Un",
+    "Les"
+   ],
+   "answer": 0,
+   "explication": "Le mot « table » est féminin singulier : on dit « la table »."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-03",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "What is the opposite of \"hot\"?",
+   "options": [
+    "big",
+    "slow",
+    "cold",
+    "dry"
+   ],
+   "answer": 2,
+   "explication": "Hot and cold are opposites."
+  },
+  "en": {
+   "q": "Complétez : « Nous ___ au marché. »",
+   "options": [
+    "allez",
+    "vont",
+    "vas",
+    "allons"
+   ],
+   "answer": 3,
+   "explication": "Au présent, aller se conjugue : nous allons."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-04",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complete: My birthday is ___ May.",
+   "options": [
+    "on",
+    "in",
+    "at",
+    "to"
+   ],
+   "answer": 1,
+   "explication": "We use \"in\" with months: in May."
+  },
+  "en": {
+   "q": "Quel est le pluriel de « journal » ?",
+   "options": [
+    "journals",
+    "journaux",
+    "journales",
+    "journalx"
+   ],
+   "answer": 1,
+   "explication": "Les noms en -al font leur pluriel en -aux."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-05",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "What is the plural of \"woman\"?",
+   "options": [
+    "womans",
+    "womens",
+    "women",
+    "woman"
+   ],
+   "answer": 2,
+   "explication": "Woman has an irregular plural: women."
+  },
+  "en": {
+   "q": "Quel est le contraire de « grand » ?",
+   "options": [
+    "large",
+    "lourd",
+    "rapide",
+    "petit"
+   ],
+   "answer": 3,
+   "explication": "Grand et petit sont des contraires."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-06",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complete: How ___ brothers do you have?",
+   "options": [
+    "much",
+    "long",
+    "more",
+    "many"
+   ],
+   "answer": 3,
+   "explication": "We use \"many\" with countable nouns such as brothers."
+  },
+  "en": {
+   "q": "Complétez : « Il ___ du pain. »",
+   "options": [
+    "manges",
+    "mangeons",
+    "mangent",
+    "mange"
+   ],
+   "answer": 3,
+   "explication": "Au présent, le verbe manger à la 3e personne du singulier s'écrit « il mange »."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-07",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "Complete: I ___ TV when you called.",
+   "options": [
+    "watch",
+    "was watching",
+    "am watching",
+    "have watch"
+   ],
+   "answer": 1,
+   "explication": "An action in progress in the past, interrupted by another, uses the past continuous."
+  },
+  "en": {
+   "q": "Quand dit-on « bonsoir » ?",
+   "options": [
+    "Le matin",
+    "À midi",
+    "Au lever du soleil",
+    "Le soir"
+   ],
+   "answer": 3,
+   "explication": "« Bonsoir » est une salutation que l'on emploie à partir de la fin d'après-midi."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-08",
+  "theme": "langue2",
+  "niveau": "facile",
+  "fr": {
+   "q": "What does the English word \"library\" mean in French?",
+   "options": [
+    "librairie",
+    "livre",
+    "lecture",
+    "bibliothèque"
+   ],
+   "answer": 3,
+   "explication": "\"Library\" is a false friend: it means a place to borrow books, not a bookshop."
+  },
+  "en": {
+   "q": "Quel est le féminin de « ami » ?",
+   "options": [
+    "amie",
+    "amine",
+    "amitié",
+    "amis"
+   ],
+   "answer": 0,
+   "explication": "On ajoute un -e : un ami, une amie."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-09",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complete: She has worked here ___ five years.",
+   "options": [
+    "since",
+    "during",
+    "ago",
+    "for"
+   ],
+   "answer": 3,
+   "explication": "\"For\" is used with a duration (five years); \"since\" needs a starting point."
+  },
+  "en": {
+   "q": "Complétez : « Hier, nous ___ au cinéma. »",
+   "options": [
+    "avons allé",
+    "irons",
+    "allons",
+    "sommes allés"
+   ],
+   "answer": 3,
+   "explication": "Aller se conjugue avec l'auxiliaire être au passé composé : nous sommes allés."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-10",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complete: If I ___ rich, I would travel the world.",
+   "options": [
+    "am",
+    "were",
+    "will be",
+    "would be"
+   ],
+   "answer": 1,
+   "explication": "The second conditional uses if + past (were) and would + verb."
+  },
+  "en": {
+   "q": "Complétez : « Il faut que tu ___ attentif. »",
+   "options": [
+    "sois",
+    "es",
+    "seras",
+    "serais"
+   ],
+   "answer": 0,
+   "explication": "Après « il faut que », on utilise le subjonctif présent : que tu sois."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-11",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complete: He is ___ than his brother.",
+   "options": [
+    "tallest",
+    "more tall",
+    "taller",
+    "most tall"
+   ],
+   "answer": 2,
+   "explication": "Short adjectives form the comparative with -er: taller than."
+  },
+  "en": {
+   "q": "Complétez : « Je vais ___ France. »",
+   "options": [
+    "à",
+    "au",
+    "en",
+    "de"
+   ],
+   "answer": 2,
+   "explication": "Devant un pays féminin, on emploie « en » : en France."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-12",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complete: I am looking forward ___ you.",
+   "options": [
+    "to see",
+    "for seeing",
+    "at see",
+    "to seeing"
+   ],
+   "answer": 3,
+   "explication": "\"Look forward to\" is followed by the -ing form: to seeing."
+  },
+  "en": {
+   "q": "Quel est le futur simple de « voir » à la 1re personne du singulier ?",
+   "options": [
+    "je voirai",
+    "je verrai",
+    "je vairai",
+    "je verrais"
+   ],
+   "answer": 1,
+   "explication": "Voir a un futur irrégulier : je verrai."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-13",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "What does \"actually\" mean?",
+   "options": [
+    "actuellement",
+    "autrefois",
+    "en fait",
+    "bientôt"
+   ],
+   "answer": 2,
+   "explication": "\"Actually\" is a false friend meaning \"in fact\"; \"currently\" means actuellement."
+  },
+  "en": {
+   "q": "Complétez : « Les enfants ___ dans le jardin. » (jouer)",
+   "options": [
+    "jouons",
+    "jouent",
+    "jouez",
+    "joue"
+   ],
+   "answer": 1,
+   "explication": "Le sujet est à la 3e personne du pluriel : ils jouent."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-14",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complete: The book ___ I bought is interesting.",
+   "options": [
+    "that",
+    "who",
+    "what",
+    "where"
+   ],
+   "answer": 0,
+   "explication": "\"That\" introduces a relative clause referring to a thing."
+  },
+  "en": {
+   "q": "Complétez : « C'est la maison ___ j'habite. »",
+   "options": [
+    "que",
+    "où",
+    "qui",
+    "dont"
+   ],
+   "answer": 1,
+   "explication": "Le pronom relatif « où » remplace un complément de lieu."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-15",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Complete: You ___ smoke here. It is forbidden.",
+   "options": [
+    "don't have to",
+    "mustn't",
+    "needn't",
+    "may"
+   ],
+   "answer": 1,
+   "explication": "\"Mustn't\" expresses prohibition."
+  },
+  "en": {
+   "q": "Complétez : « Je donne le livre à mon frère. Je ___ donne le livre. »",
+   "options": [
+    "le",
+    "y",
+    "lui",
+    "en"
+   ],
+   "answer": 2,
+   "explication": "« Lui » remplace un complément d'objet indirect désignant une personne (à mon frère)."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-16",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Choose the correct sentence.",
+   "options": [
+    "She asked me where I lived.",
+    "She asked me where did I live.",
+    "She asked me where I did live.",
+    "She asked me where do I live."
+   ],
+   "answer": 0,
+   "explication": "In reported questions, we use normal word order without do/did."
+  },
+  "en": {
+   "q": "Quel mot est synonyme de « commencer » ?",
+   "options": [
+    "terminer",
+    "débuter",
+    "finir",
+    "cesser"
+   ],
+   "answer": 1,
+   "explication": "Débuter et commencer sont des synonymes."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-17",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Which word is a synonym of \"begin\"?",
+   "options": [
+    "finish",
+    "stop",
+    "continue",
+    "start"
+   ],
+   "answer": 3,
+   "explication": "Begin and start mean the same thing."
+  },
+  "en": {
+   "q": "Lisez : « Marie habite à Douala. Elle travaille dans une banque et prend le bus chaque matin. » Où travaille Marie ?",
+   "options": [
+    "À l'école",
+    "À l'hôpital",
+    "Dans une banque",
+    "Au marché"
+   ],
+   "answer": 2,
+   "explication": "Le texte dit : « Elle travaille dans une banque »."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-18",
+  "theme": "langue2",
+  "niveau": "moyen",
+  "fr": {
+   "q": "Read: \"Tom wakes up at 6, has a shower, then walks to the office. He never takes the bus.\" How does Tom go to work?",
+   "options": [
+    "By bus",
+    "On foot",
+    "By car",
+    "By bike"
+   ],
+   "answer": 1,
+   "explication": "The text says he walks to the office."
+  },
+  "en": {
+   "q": "Quel groupe nominal est féminin ?",
+   "options": [
+    "une dent",
+    "un problème",
+    "un silence",
+    "un voyage"
+   ],
+   "answer": 0,
+   "explication": "Dent est un nom féminin ; les trois autres sont masculins."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-19",
+  "theme": "langue2",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complete: By next year, she ___ here for ten years.",
+   "options": [
+    "will have worked",
+    "will work",
+    "has worked",
+    "is working"
+   ],
+   "answer": 0,
+   "explication": "The future perfect expresses duration up to a future point."
+  },
+  "en": {
+   "q": "Complétez : « Si j'avais de l'argent, j'___ une voiture. »",
+   "options": [
+    "achèterais",
+    "achèterai",
+    "achetais",
+    "aurais acheté"
+   ],
+   "answer": 0,
+   "explication": "Après « si + imparfait », on emploie le conditionnel présent."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-20",
+  "theme": "langue2",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complete: I wish I ___ more time.",
+   "options": [
+    "have",
+    "had",
+    "will have",
+    "would have"
+   ],
+   "answer": 1,
+   "explication": "After \"wish\" about the present, we use the past simple: had."
+  },
+  "en": {
+   "q": "Complétez : « Les lettres que j'ai ___ sont arrivées. »",
+   "options": [
+    "écrit",
+    "écrits",
+    "écrite",
+    "écrites"
+   ],
+   "answer": 3,
+   "explication": "Le COD « que » (les lettres) précède l'auxiliaire avoir : accord au féminin pluriel."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-21",
+  "theme": "langue2",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complete: He suggested ___ to the cinema.",
+   "options": [
+    "to go",
+    "to going",
+    "going",
+    "went"
+   ],
+   "answer": 2,
+   "explication": "The verb suggest is followed by the -ing form."
+  },
+  "en": {
+   "q": "Complétez : « Il est parti sans que nous le ___. »",
+   "options": [
+    "savons",
+    "saurons",
+    "sachions",
+    "sachons"
+   ],
+   "answer": 2,
+   "explication": "La locution « sans que » est suivie du subjonctif : que nous sachions."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-22",
+  "theme": "langue2",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complete: Despite ___ tired, he kept working.",
+   "options": [
+    "to be",
+    "he was",
+    "being",
+    "been"
+   ],
+   "answer": 2,
+   "explication": "After the preposition \"despite\", we use the -ing form: being."
+  },
+  "en": {
+   "q": "Dans « Il a assisté à la réunion », que signifie « assister à » ?",
+   "options": [
+    "aider",
+    "être présent à",
+    "attendre",
+    "organiser"
+   ],
+   "answer": 1,
+   "explication": "« Assister à » signifie être présent ; ce n'est pas « attendre »."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-23",
+  "theme": "langue2",
+  "niveau": "difficile",
+  "fr": {
+   "q": "In \"She attended the meeting\", \"attended\" means…",
+   "options": [
+    "She went to it",
+    "She waited for it",
+    "She cancelled it",
+    "She postponed it"
+   ],
+   "answer": 0,
+   "explication": "\"Attend\" is a false friend: it means to be present at, not to wait."
+  },
+  "en": {
+   "q": "Complétez : « Elle se souvient ___ son enfance. »",
+   "options": [
+    "à",
+    "pour",
+    "de",
+    "sur"
+   ],
+   "answer": 2,
+   "explication": "Le verbe se souvenir se construit avec la préposition « de »."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ },
+ {
+  "id": "langue2-24",
+  "theme": "langue2",
+  "niveau": "difficile",
+  "fr": {
+   "q": "Complete: Scarcely had we left ___ it began to rain.",
+   "options": [
+    "than",
+    "then",
+    "since",
+    "when"
+   ],
+   "answer": 3,
+   "explication": "The structure is \"scarcely ... when\"."
+  },
+  "en": {
+   "q": "Quel est le passé simple de « finir » à la 3e personne du pluriel ?",
+   "options": [
+    "ils finissèrent",
+    "ils finirant",
+    "ils finirent",
+    "ils finirons"
+   ],
+   "answer": 2,
+   "explication": "Au passé simple, les verbes en -ir font : ils finirent."
+  },
+  "source": "weldon",
+  "verifie": "non_verifie"
+ }
+]

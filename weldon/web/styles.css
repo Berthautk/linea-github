@@ -339,15 +339,15 @@ th { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; colo
   .main { padding-block: 16px 110px; }
   .tabbar {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
-    display: grid; grid-template-columns: repeat(5, 1fr);
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
     padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
     background: var(--surface); border-top: 1px solid var(--line);
   }
   .tabbar button {
-    display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 2px;
-    border: 0; background: none; color: var(--muted); font-size: 0.7rem; font-weight: 800; cursor: pointer; border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 1px;
+    border: 0; background: none; color: var(--muted); font-size: 0.64rem; font-weight: 800; cursor: pointer; border-radius: 10px;
   }
-  .tabbar svg { width: 24px; height: 24px; }
+  .tabbar svg { width: 22px; height: 22px; }
   .tabbar button[aria-current="page"] { color: var(--green); background: var(--green-soft); }
   .hero, .fiche, .prep { grid-template-columns: minmax(0, 1fr); }
   .form { grid-template-columns: 1fr; }
@@ -565,3 +565,46 @@ i.ph-epreuves { background: var(--green); }
 .draft { display: grid; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .draft-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .draft-actions select { max-width: 200px; padding: 6px 8px; border-radius: var(--radius-sm); border: 1.5px solid var(--line); background: var(--bg); }
+
+/* ---------- Entraînement : quiz, révisions, concours blanc ---------- */
+.question { gap: 14px; }
+.question h2 { margin: 0; font-size: clamp(1.1rem, 2.6vw, 1.35rem); line-height: 1.35; }
+.options { display: grid; gap: 10px; }
+.option {
+  display: flex; gap: 12px; align-items: flex-start; text-align: left; padding: 12px 14px; border-radius: var(--radius-sm);
+  border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font-weight: 600;
+}
+.option:hover:not(:disabled) { border-color: var(--green); }
+.option .letter {
+  flex: none; width: 26px; height: 26px; border-radius: 99px; display: grid; place-items: center; font-size: 0.8rem; font-weight: 800;
+  background: var(--bg); border: 1.5px solid var(--line);
+}
+.option.picked { border-color: var(--green); background: var(--green-soft); }
+.option.good { border-color: var(--green); background: var(--green-soft); }
+.option.good .letter { background: var(--green); color: var(--green-ink); border-color: var(--green); }
+.option.bad { border-color: var(--coral); background: var(--coral-soft); }
+.option.bad .letter { background: var(--coral); color: #fff; border-color: var(--coral); }
+.option:disabled { cursor: default; opacity: 1; }
+.feedback { padding: 14px; border-radius: var(--radius-sm); display: grid; gap: 8px; }
+.feedback.ok { background: var(--green-soft); }
+.feedback.ko { background: var(--coral-soft); }
+.feedback p { margin: 0; font-weight: 500; }
+.progress-line { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.progress-line i { display: block; height: 100%; background: var(--green); transition: width 0.3s; }
+.qdots { display: flex; flex-wrap: wrap; gap: 6px; }
+.qdot { width: 34px; height: 34px; border-radius: 8px; border: 1.5px solid var(--line); background: var(--surface); color: var(--muted); font-weight: 800; cursor: pointer; }
+.qdot.done { background: var(--green-soft); color: var(--ink); border-color: var(--green); }
+.qdot.cur { outline: 3px solid var(--sun); outline-offset: 1px; }
+.theme-rows { display: grid; gap: 10px; }
+.theme-row { display: grid; grid-template-columns: minmax(110px, 1.1fr) 2fr minmax(90px, 1fr); gap: 10px; align-items: center; font-weight: 700; }
+.bar { height: 10px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--green); }
+.bar i.low { background: var(--coral); }
+.bar i.mid { background: var(--sun); }
+.dots { display: grid; grid-template-columns: repeat(30, 1fr); gap: 3px; max-width: 520px; }
+.dot { aspect-ratio: 1; border-radius: 3px; background: var(--line); }
+.dot.on { background: var(--green); }
+.review { gap: 6px; }
+.bad-text { color: var(--coral); font-weight: 800; }
+.good-text { color: var(--green); font-weight: 800; }
+@media (max-width: 560px) { .theme-row { grid-template-columns: 1fr; gap: 4px; } }

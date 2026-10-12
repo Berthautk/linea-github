@@ -15,6 +15,9 @@ export function loadContent(dir) {
   const groupes = read("groupes.json");
   const categories = read("categories.json");
   const grilles = read("grilles.json");
+  const quiz = fs.existsSync(path.join(dir, "quiz.json")) ? read("quiz.json") : [];
+  checkQuiz(quiz);
+  const quizById = new Map(quiz.map((q) => [q.id, q]));
   const photos = Object.fromEntries(Object.entries(read("photos.json")).filter(([k]) => !k.startsWith("_")));
 
   const ids = new Set();
@@ -29,6 +32,11 @@ export function loadContent(dir) {
 
   return {
     epreuve: (id) => byId.get(id) || null,
+    // Banque de questions d'entraînement. Les réponses ne sortent que par la correction (/api/quiz/check).
+    quizIds: () => quiz.map((q) => q.id).sort(),
+    quizThemes: () => [...new Set(quiz.map((q) => q.theme))],
+    quizQuestion: (id) => quizById.get(id) || null,
+    quizList: () => quiz,
     allEpreuves: () => epreuves.map(({ id, concours: cid, lang, annee, matiere, exemple }) => ({ id, concours: cid, lang, annee, matiere, exemple: Boolean(exemple) })),
     concours: (id) => concours.find((c) => c.id === id) || null,
 
@@ -61,6 +69,27 @@ export function loadContent(dir) {
 
     oralFull: (concoursId, lang) => oral[concoursId]?.[lang] || null,
   };
+}
+
+// Banque de questions : 4 options, une réponse, dans les deux langues ; refus au démarrage sinon.
+const NIVEAUX_QUIZ = ["facile", "moyen", "difficile"];
+function checkQuiz(bank) {
+  const ids = new Set();
+  for (const q of bank) {
+    const bad = (m) => {
+      throw new Error(`Question ${q.id} : ${m}`);
+    };
+    if (!q.id || ids.has(q.id)) bad("identifiant manquant ou en double");
+    ids.add(q.id);
+    if (!q.theme) bad("thème manquant");
+    if (!NIVEAUX_QUIZ.includes(q.niveau)) bad(`niveau inconnu (${q.niveau})`);
+    for (const l of LANGS) {
+      const v = q[l];
+      if (!v?.q || !v.explication) bad(`texte ou explication manquant (${l})`);
+      if (!Array.isArray(v.options) || v.options.length !== 4 || new Set(v.options).size !== 4 || v.options.some((o) => !o)) bad(`il faut 4 options distinctes (${l})`);
+      if (!Number.isInteger(v.answer) || v.answer < 0 || v.answer > 3) bad(`réponse hors 0..3 (${l})`);
+    }
+  }
 }
 
 // Conditions d'accès : valeurs contrôlées au démarrage, pour qu'une faute de frappe ne fausse jamais l'orientation.

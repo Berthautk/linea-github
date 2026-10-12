@@ -10,6 +10,7 @@ import { loadEnv } from "./env.js";
 import { createStore } from "./store.js";
 import { loadContent, LANGS } from "./content.js";
 import { orient, cleanProfil, targetYear } from "./orientation.js";
+import { dayStr, pickDaily, pickSeries, pickBlanc, emptyQuiz, recordAnswer, dueIds, streak } from "./quiz.js";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 loadEnv(path.join(HERE, ".env"));
@@ -324,6 +325,113 @@ route("GET", "/api/orientation", async (req, _p, url) => {
   return { profil: u.profil, annee_cible: targetYear(), resultats: orient(u.profil, list) };
 });
 
+// ---------- Entraînement : quiz du jour, séries, concours blanc, carnet d'erreurs ----------
+const quizOf = (u) => (u.quiz ||= emptyQuiz());
+const userLang = (u, url) => (LANGS.includes(url?.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr");
+// Question sans sa réponse.
+const pubQ = (q, lang) => ({ id: q.id, theme: q.theme, niveau: q.niveau, q: q[lang].q, options: q[lang].options });
+const needPremium = (u) => {
+  if (!isPremium(u)) throw httpError(402, "Réservé aux abonnés.", { code: "locked" });
+};
+const dailyIds = (day) => pickDaily(content.quizList(), day);
+
+route("GET", "/api/quiz/daily", async (req, _p, url) => {
+  const u = await currentUser(req);
+  const lang = userLang(u, url);
+  const today = dayStr();
+  const ids = dailyIds(today);
+  const qz = quizOf(u);
+  const answered = qz.daily?.date === today ? qz.daily.answers : {};
+  const results = {};
+  for (const id of ids) {
+    if (!answered[id]) continue;
+    const q = content.quizQuestion(id);
+    results[id] = { choice: answered[id].choice, ok: answered[id].ok, answer: q[lang].answer, explication: q[lang].explication };
+  }
+  const done = ids.every((id) => answered[id]);
+  return { date: today, questions: ids.map((id) => pubQ(content.quizQuestion(id), lang)), results, done, score: done ? ids.filter((id) => answered[id].ok).length : null };
+});
+
+route("GET", "/api/quiz/series", async (req, _p, url) => {
+  const u = await currentUser(req);
+  needPremium(u);
+  const n = [10, 20, 40].includes(Number(url.searchParams.get("n"))) ? Number(url.searchParams.get("n")) : 10;
+  const theme = url.searchParams.get("theme") || "";
+  const niveau = url.searchParams.get("niveau") || "";
+  const ids = pickSeries(content.quizList(), { theme: content.quizThemes().includes(theme) ? theme : "", niveau, n });
+  if (!ids.length) throw httpError(404, "Aucune question pour ce choix.");
+  const lang = userLang(u, url);
+  return { questions: ids.map((id) => pubQ(content.quizQuestion(id), lang)) };
+});
+
+route("GET", "/api/quiz/blanc", async (req, _p, url) => {
+  const u = await currentUser(req);
+  needPremium(u);
+  const lang = userLang(u, url);
+  const ids = pickBlanc(content.quizList(), 40);
+  return { duree: 40, questions: ids.map((id) => pubQ(content.quizQuestion(id), lang)) };
+});
+
+route("GET", "/api/quiz/revision", async (req, _p, url) => {
+  const u = await currentUser(req);
+  const lang = userLang(u, url);
+  const qz = quizOf(u);
+  const due = dueIds(qz, dayStr()).filter((id) => content.quizQuestion(id));
+  return { due: due.length, carnet: Object.keys(qz.carnet).length, questions: due.slice(0, 20).map((id) => pubQ(content.quizQuestion(id), lang)) };
+});
+
+route("GET", "/api/quiz/stats", async (req, _p, url) => {
+  const u = await currentUser(req);
+  const qz = quizOf(u);
+  const today = dayStr();
+  const perTheme = {};
+  for (const q of content.quizList()) perTheme[q.theme] = (perTheme[q.theme] || 0) + 1;
+  return {
+    themes: qz.stats,
+    bank: perTheme,
+    carnet: Object.keys(qz.carnet).length,
+    due: dueIds(qz, today).length,
+    streak: streak(qz.days, today),
+    days: qz.days.filter((d) => d >= new Date(Date.now() - 29 * DAY_MS).toISOString().slice(0, 10)),
+    daily_done: qz.daily?.date === today && dailyIds(today).every((id) => qz.daily.answers[id]),
+    daily_score: qz.daily?.date === today ? Object.values(qz.daily.answers).filter((x) => x.ok).length : 0,
+  };
+});
+
+// Correction. Le mode décide qui a le droit de connaître la réponse :
+//  daily : les questions du jour (gratuit) ; revision : les questions de son carnet (gratuit) ; series, blanc : abonnés.
+route("POST", "/api/quiz/check", async (req) => {
+  const u = await currentUser(req);
+  const b = await readJson(req, 30_000);
+  const mode = ["daily", "revision", "series", "blanc"].includes(b.mode) ? b.mode : "";
+  if (!mode) throw httpError(400, "Mode inconnu.");
+  if (mode === "series" || mode === "blanc") needPremium(u);
+  const lang = u.lang || "fr";
+  const today = dayStr();
+  const qz = quizOf(u);
+  const todays = new Set(dailyIds(today));
+  if (mode === "daily" && qz.daily?.date !== today) qz.daily = { date: today, answers: {} };
+  const answers = (Array.isArray(b.answers) ? b.answers : []).slice(0, 50);
+  const results = [];
+  for (const a of answers) {
+    const q = content.quizQuestion(str(a.id, 80));
+    const choice = Number(a.choice);
+    if (!q || !Number.isInteger(choice) || choice < 0 || choice > 3) throw httpError(400, "Réponse invalide.");
+    if (mode === "daily" && !todays.has(q.id)) throw httpError(403, "Cette question ne fait pas partie du quiz du jour.");
+    if (mode === "revision" && !qz.carnet[q.id]) throw httpError(403, "Cette question n'est pas dans votre carnet.");
+    const v = q[lang];
+    const prev = mode === "daily" ? qz.daily.answers[q.id] : null;
+    const ok = prev ? prev.ok : choice === v.answer; // la réponse du jour compte une seule fois
+    if (!prev) {
+      recordAnswer(qz, q, ok, today);
+      if (mode === "daily") qz.daily.answers[q.id] = { choice, ok };
+    }
+    results.push({ id: q.id, choice: prev ? prev.choice : choice, ok, answer: v.answer, explication: v.explication });
+  }
+  await store.saveUser(u);
+  return { results, streak: streak(qz.days, today), carnet: Object.keys(qz.carnet).length, due: dueIds(qz, today).length };
+});
+
 // Suivre un concours : 2 gratuitement, sans limite pour les abonnés.
 route("POST", "/api/follow", async (req) => {
   const u = await currentUser(req);
@@ -599,7 +707,8 @@ route("POST", "/api/report", async (req) => {
   const b = await readJson(req);
   const message = str(b.message, 1000);
   if (message.length < 5) throw httpError(400, "Décrivez l'erreur en quelques mots.");
-  if (!content.epreuve(str(b.epreuve, 120))) throw httpError(404, "Épreuve introuvable.");
+  const target = str(b.epreuve, 120);
+  if (!content.epreuve(target) && !(target.startsWith("quiz:") && content.quizQuestion(target.slice(5)))) throw httpError(404, "Épreuve introuvable.");
   const id = `${Date.now()}-${crypto.randomBytes(3).toString("hex")}`;
   await store.saveReport({
     id, at: new Date().toISOString(), email: u.email, epreuve: b.epreuve,

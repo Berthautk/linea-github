@@ -323,3 +323,95 @@ test("annonces : brouillons, publication, veille automatique", async () => {
   assert.equal((await json(await call("POST", "/api/veille/draft", { items }, undefined, auth))).created, 0); // ne revient pas
   assert.ok(!(await (await call("GET", "/api/admin/annonces", undefined, admin)).json()).some((a) => a.id === v.id));
 });
+
+test("quiz du jour, carnet d'erreurs et révisions espacées", async () => {
+  const t = await register("quizeur@exemple.cm", "Awa Quiz");
+  await call("POST", "/api/me", { lang: "fr" }, t);
+  const d = await json(await call("GET", "/api/quiz/daily", undefined, t));
+  assert.equal(d.status, 200);
+  assert.equal(d.questions.length, 5);
+  assert.equal(d.done, false);
+  assert.ok(d.questions.every((q) => q.options.length === 4 && !("answer" in q) && !("explication" in q)));
+  assert.doesNotMatch(JSON.stringify(d), /"answer"/); // aucune réponse ne sort avant la correction
+  const again = await json(await call("GET", "/api/quiz/daily", undefined, t));
+  assert.deepEqual(again.questions.map((q) => q.id), d.questions.map((q) => q.id)); // même quiz toute la journée
+
+  // Droits : un élève gratuit ne peut corriger que le quiz du jour et son carnet
+  const other = (await json(await call("GET", "/api/quiz/series?theme=maths", undefined, t))).status;
+  assert.equal(other, 402);
+  const stranger = "maths-01";
+  const notToday = d.questions.some((q) => q.id === stranger) ? "maths-02" : stranger;
+  assert.equal((await call("POST", "/api/quiz/check", { mode: "daily", answers: [{ id: notToday, choice: 0 }] }, t)).status, 403);
+  assert.equal((await call("POST", "/api/quiz/check", { mode: "revision", answers: [{ id: notToday, choice: 0 }] }, t)).status, 403);
+  assert.equal((await call("POST", "/api/quiz/check", { mode: "series", answers: [{ id: notToday, choice: 0 }] }, t)).status, 402);
+  assert.equal((await call("POST", "/api/quiz/check", { mode: "blanc", answers: [] }, t)).status, 402);
+  assert.equal((await call("POST", "/api/quiz/check", { mode: "zzz", answers: [] }, t)).status, 400);
+  assert.equal((await call("POST", "/api/quiz/check", { mode: "daily", answers: [{ id: d.questions[0].id, choice: 7 }] }, t)).status, 400);
+
+  // Première question : on se trompe exprès (la bonne réponse est révélée par la correction)
+  const first = d.questions[0];
+  const probe = await json(await call("POST", "/api/quiz/check", { mode: "daily", answers: [{ id: first.id, choice: 0 }] }, t));
+  const r0 = probe.results[0];
+  assert.equal(r0.ok, r0.answer === 0);
+  assert.ok(r0.explication.length > 5);
+  // Rejouer la même question ne compte pas deux fois
+  const replay = await json(await call("POST", "/api/quiz/check", { mode: "daily", answers: [{ id: first.id, choice: (r0.answer + 1) % 4 }] }, t));
+  assert.equal(replay.results[0].ok, r0.ok);
+  assert.equal(replay.results[0].choice, 0);
+  // Les quatre autres : toutes fausses
+  const rest = [];
+  for (const q of d.questions.slice(1)) {
+    const peek = await json(await call("POST", "/api/quiz/check", { mode: "daily", answers: [{ id: q.id, choice: 0 }] }, t));
+    rest.push(peek.results[0]);
+  }
+  const done = await json(await call("GET", "/api/quiz/daily", undefined, t));
+  assert.equal(done.done, true);
+  assert.equal(done.score, [r0, ...rest].filter((r) => r.ok).length);
+  assert.ok(Object.values(done.results).every((r) => typeof r.answer === "number"));
+  const st = await json(await call("GET", "/api/quiz/stats", undefined, t));
+  assert.equal(st.daily_done, true);
+  assert.equal(st.streak, 1);
+  const wrongCount = [r0, ...rest].filter((r) => !r.ok).length;
+  assert.equal(st.carnet, wrongCount);
+  assert.equal(st.due, 0); // une erreur revient le lendemain
+  assert.equal(Object.values(st.themes).reduce((n, x) => n + x.ok + x.ko, 0), 5);
+
+  // Le lendemain : on simule l'échéance
+  const u = await mod.store.getUser("quizeur@exemple.cm");
+  const wrongId = Object.keys(u.quiz.carnet)[0];
+  if (wrongId) {
+    u.quiz.carnet[wrongId].due = "2000-01-01";
+    await mod.store.saveUser(u);
+    const rev = await json(await call("GET", "/api/quiz/revision", undefined, t));
+    assert.equal(rev.due, 1);
+    assert.equal(rev.questions[0].id, wrongId);
+    const sol = (await json(await call("POST", "/api/quiz/check", { mode: "revision", answers: [{ id: wrongId, choice: 0 }] }, t))).results[0];
+    const good = await json(await call("POST", "/api/quiz/check", { mode: "revision", answers: [{ id: wrongId, choice: sol.answer }] }, t));
+    assert.equal(good.results[0].ok, true);
+    const after = await mod.store.getUser("quizeur@exemple.cm");
+    assert.ok(after.quiz.carnet[wrongId].box >= 1 || !after.quiz.carnet[wrongId]); // espacé ou maîtrisé
+  }
+});
+
+test("séries et concours blanc pour les abonnés, signalement d'une question", async () => {
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  await call("POST", "/api/me", { lang: "fr" }, admin);
+  const s = await json(await call("GET", "/api/quiz/series?theme=maths&n=20", undefined, admin));
+  assert.equal(s.status, 200);
+  assert.equal(s.questions.length, 20);
+  assert.ok(s.questions.every((q) => q.theme === "maths"));
+  assert.equal((await call("GET", "/api/quiz/series?theme=inconnu&n=10", undefined, admin)).status, 200); // thème inconnu : tous les thèmes
+  const b = await json(await call("GET", "/api/quiz/blanc", undefined, admin));
+  assert.equal(b.questions.length, 40);
+  assert.equal(b.duree, 40);
+  assert.ok(new Set(b.questions.map((q) => q.theme)).size >= 8);
+  const res = await json(await call("POST", "/api/quiz/check", { mode: "blanc", answers: b.questions.slice(0, 10).map((q) => ({ id: q.id, choice: 1 })) }, admin));
+  assert.equal(res.results.length, 10);
+  assert.ok(res.results.every((r) => "answer" in r && "explication" in r));
+  // En anglais, les questions sont dans l'autre langue
+  const en = await json(await call("GET", "/api/quiz/series?theme=langue2&n=10&lang=en", undefined, admin));
+  assert.ok(en.questions.length > 0);
+  // Signalement d'une question
+  assert.equal((await call("POST", "/api/report", { epreuve: "quiz:maths-01", message: "La réponse me semble fausse" }, admin)).status, 200);
+  assert.equal((await call("POST", "/api/report", { epreuve: "quiz:inconnue-99", message: "La réponse me semble fausse" }, admin)).status, 404);
+});

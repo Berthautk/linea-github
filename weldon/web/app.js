@@ -11,8 +11,8 @@
   // ---------- Textes de l'interface ----------
   const T = {
     fr: {
-      tabs: { concours: "Concours", epreuves: "Épreuves", corriges: "Corrigés", oral: "Oral", salle: "Salle" },
-      tabsLong: { concours: "Les concours", epreuves: "Épreuves", corriges: "Corrigés rédigés", oral: "Préparer l'oral", salle: "Salle d'examen" },
+      tabs: { concours: "Concours", quiz: "Quiz", epreuves: "Épreuves", corriges: "Corrigés", oral: "Oral", salle: "Salle" },
+      tabsLong: { concours: "Les concours", quiz: "S'entraîner", epreuves: "Épreuves", corriges: "Corrigés rédigés", oral: "Préparer l'oral", salle: "Salle d'examen" },
       section: "Section francophone",
       changeSection: "Passer en section anglophone",
       subscribe: "S'abonner",
@@ -205,8 +205,8 @@
       wakeUp: "Connexion au serveur…",
     },
     en: {
-      tabs: { concours: "Exams", epreuves: "Papers", corriges: "Answers", oral: "Oral", salle: "Exam room" },
-      tabsLong: { concours: "Competitions", epreuves: "Past papers", corriges: "Model answers", oral: "Oral preparation", salle: "Exam room" },
+      tabs: { concours: "Exams", quiz: "Quiz", epreuves: "Papers", corriges: "Answers", oral: "Oral", salle: "Exam room" },
+      tabsLong: { concours: "Competitions", quiz: "Practice", epreuves: "Past papers", corriges: "Model answers", oral: "Oral preparation", salle: "Exam room" },
       section: "Anglophone section",
       changeSection: "Switch to the francophone section",
       subscribe: "Subscribe",
@@ -496,6 +496,12 @@
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
     report: (b) => http("/api/report", { method: "POST", body: b }),
     annonces: () => http("/api/annonces"),
+    quizStats: () => http("/api/quiz/stats"),
+    quizDaily: (l) => http("/api/quiz/daily?lang=" + l),
+    quizRevision: (l) => http("/api/quiz/revision?lang=" + l),
+    quizSeries: (theme, n, l) => http(`/api/quiz/series?lang=${l}&n=${n}&theme=${encodeURIComponent(theme || "")}`),
+    quizBlanc: (l) => http("/api/quiz/blanc?lang=" + l),
+    quizCheck: (mode, answers) => http("/api/quiz/check", { method: "POST", body: { mode, answers } }),
     follow: (id, on) => http("/api/follow", { method: "POST", body: { id, on } }),
     adminAnnonces: () => http("/api/admin/annonces"),
     adminSaveAnnonce: (b) => http("/api/admin/annonce", { method: "POST", body: b }),
@@ -558,6 +564,7 @@
       },
       report: async () => ({ ok: true }),
       annonces: async () => [],
+      quizStats: async () => fail("L'entraînement n'est pas disponible dans la démo.", "demo", 400),
       async follow(id, on) {
         const u = current();
         const list = new Set(u.suivis || []);
@@ -631,6 +638,7 @@
   // ---------- Icônes ----------
   const I = {
     concours: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>',
+    quiz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.6 2.2c-.8.4-1.2 1-1.2 1.8M12 17h.01"/></svg>',
     epreuves: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>',
     corriges: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8.5 15l2.5 2.5 4.5-5"/></svg>',
     oral: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
@@ -1080,6 +1088,117 @@
     },
   };
   const cal = () => CAL[lang()];
+
+  // Entraînement : quiz du jour, révisions, séries, concours blanc
+  const QZ = {
+    fr: {
+      title: "S'entraîner",
+      sub: "Des questions originales, dans le style des concours. Chaque erreur entre dans votre carnet et revient au bon moment.",
+      themes: { histoire: "Histoire", geographie: "Géographie", institutions: "Institutions", civisme: "Éducation civique", sciences: "Culture scientifique", logique: "Logique", maths: "Mathématiques", langue1: "Français", langue2: "Anglais" },
+      daily: "Mini-quiz du jour",
+      dailySub: "5 questions, 5 minutes. Revenez chaque jour : c'est la régularité qui fait retenir.",
+      start: "Commencer",
+      resume: "Continuer",
+      seeAnswers: "Revoir mes réponses",
+      doneToday: (a, b) => `Terminé aujourd'hui : ${a} sur ${b}.`,
+      comeBack: "Un nouveau quiz vous attend demain.",
+      streak: (d) => (d ? `${d} jour${d > 1 ? "s" : ""} d'affilée` : "Commencez une série aujourd'hui"),
+      revision: "Révisions du jour",
+      revSub: "Les questions ratées reviennent après 1, 2, 4, 8 puis 16 jours, jusqu'à ce que vous les maîtrisiez.",
+      revDue: (d) => (d ? `${d} question${d > 1 ? "s" : ""} à revoir aujourd'hui` : "Rien à revoir aujourd'hui, bravo."),
+      carnet: (c) => `${c} dans votre carnet d'erreurs`,
+      revStart: "Réviser maintenant",
+      series: "Séries par thème",
+      seriesSub: "10, 20 ou 40 questions, avec la correction après chaque réponse.",
+      allThemes: "Tous les thèmes",
+      launch: "Lancer la série",
+      blanc: "Concours blanc",
+      blancSub: "40 questions de tous les thèmes en 40 minutes. La correction vient à la fin, comme à l'examen.",
+      blancStart: "Passer le concours blanc",
+      locked: "Réservé aux abonnés",
+      prep: "Ma préparation",
+      prepSub: "Vos résultats par thème : les plus faibles d'abord.",
+      noStats: "Répondez à quelques questions pour voir vos résultats.",
+      notTried: "pas encore essayé",
+      last30: "30 derniers jours",
+      qOf: (i, n) => `Question ${i} sur ${n}`,
+      next: "Question suivante",
+      prev: "Précédente",
+      seeResult: "Voir mon résultat",
+      correct: "Bonne réponse !",
+      wrong: "Ce n'est pas ça.",
+      goodAnswer: "La bonne réponse",
+      yourAnswer: "Votre réponse",
+      unanswered: "Pas de réponse",
+      leave: "Quitter",
+      leaveSure: "Quitter maintenant ? Vos réponses déjà corrigées sont gardées.",
+      timeLeft: "Temps restant",
+      submit: "Terminer et corriger",
+      submitSure: (m) => `Il reste ${m} question(s) sans réponse. Terminer quand même ?`,
+      score: "Votre score",
+      verdict: (p) => (p >= 80 ? "Excellent travail." : p >= 60 ? "Bon résultat, continuez." : p >= 40 ? "Des bases à consolider : vos erreurs reviendront en révision." : "Ne vous découragez pas : relisez les explications, vos erreurs reviendront en révision."),
+      review: "À retenir : vos erreurs",
+      perfect: "Aucune erreur !",
+      back: "Retour à l'entraînement",
+      report: "Signaler une erreur",
+      timeUp: "Temps écoulé : correction en cours.",
+      limit: "Réservé aux abonnés",
+    },
+    en: {
+      title: "Practice",
+      sub: "Original questions in the style of the competitions. Every mistake goes into your notebook and comes back at the right time.",
+      themes: { histoire: "History", geographie: "Geography", institutions: "Institutions", civisme: "Civics", sciences: "Science and general culture", logique: "Logic", maths: "Mathematics", langue1: "English language", langue2: "French" },
+      daily: "Daily mini-quiz",
+      dailySub: "5 questions, 5 minutes. Come back every day: regularity is what makes things stick.",
+      start: "Start",
+      resume: "Continue",
+      seeAnswers: "Review my answers",
+      doneToday: (a, b) => `Done today: ${a} out of ${b}.`,
+      comeBack: "A new quiz is waiting for you tomorrow.",
+      streak: (d) => (d ? `${d} day${d > 1 ? "s" : ""} in a row` : "Start a streak today"),
+      revision: "Today's revision",
+      revSub: "Questions you missed come back after 1, 2, 4, 8 then 16 days, until you master them.",
+      revDue: (d) => (d ? `${d} question${d > 1 ? "s" : ""} to review today` : "Nothing to review today, well done."),
+      carnet: (c) => `${c} in your mistakes notebook`,
+      revStart: "Review now",
+      series: "Series by theme",
+      seriesSub: "10, 20 or 40 questions, with the correction after each answer.",
+      allThemes: "All themes",
+      launch: "Start the series",
+      blanc: "Mock competition",
+      blancSub: "40 questions from every theme in 40 minutes. The correction comes at the end, as in the real exam.",
+      blancStart: "Take the mock competition",
+      locked: "Subscribers only",
+      prep: "My preparation",
+      prepSub: "Your results by theme: weakest first.",
+      noStats: "Answer a few questions to see your results.",
+      notTried: "not tried yet",
+      last30: "Last 30 days",
+      qOf: (i, n) => `Question ${i} of ${n}`,
+      next: "Next question",
+      prev: "Previous",
+      seeResult: "See my result",
+      correct: "Correct!",
+      wrong: "Not quite.",
+      goodAnswer: "The right answer",
+      yourAnswer: "Your answer",
+      unanswered: "No answer",
+      leave: "Leave",
+      leaveSure: "Leave now? Answers already marked are kept.",
+      timeLeft: "Time left",
+      submit: "Finish and mark",
+      submitSure: (m) => `${m} question(s) left unanswered. Finish anyway?`,
+      score: "Your score",
+      verdict: (p) => (p >= 80 ? "Excellent work." : p >= 60 ? "A good result, keep going." : p >= 40 ? "Some basics to consolidate: your mistakes will come back in revision." : "Don't be discouraged: reread the explanations, your mistakes will come back in revision."),
+      review: "To remember: your mistakes",
+      perfect: "No mistakes!",
+      back: "Back to practice",
+      report: "Report a mistake",
+      timeUp: "Time is up: marking in progress.",
+      limit: "Subscribers only",
+    },
+  };
+  const qz = () => QZ[lang()];
   const isFollowed = (id) => (state.user?.suivis || []).includes(id);
   const annText = (a, k) => (lang() === "en" && a[k + "_en"]) || a[k];
   // Jours calendaires restants (J-7 = dans 7 jours à la même heure, peu importe l'heure de la journée).
@@ -1092,7 +1211,7 @@
   const ori = () => ORI[lang()];
   const levelName = (code) => (code ? ori().levels[code] || code : "");
 
-  const TABS = ["concours", "epreuves", "corriges", "oral", "salle"];
+  const TABS = ["concours", "quiz", "epreuves", "corriges", "oral", "salle"];
   const PREMIUM_TABS = new Set(["corriges", "oral", "salle"]);
 
   // ---------- Utilitaires ----------
@@ -1714,6 +1833,221 @@
           ${n ? `<button type="button" class="btn btn-ghost" data-jump="salle" data-c="${c.id}">${L.trainRoom}</button>` : ""}
         </aside>
       </div>`;
+  }
+
+  // ---------- Entraînement ----------
+  const themeName = (k) => qz().themes[k] || k;
+  const dayUTC = (offset = 0) => new Date(Date.now() + offset * 86400000).toISOString().slice(0, 10);
+
+  async function loadQuizHome() {
+    if (state.qzLoading) return;
+    state.qzLoading = true;
+    try {
+      state.qzStats = await api().quizStats();
+      if (state.qzStats.daily_done) state.qzDaily = await api().quizDaily(lang());
+    } catch (e) {
+      state.qzStats = { error: e.message, themes: {}, bank: {}, days: [] };
+    }
+    state.qzLoading = false;
+    render();
+  }
+
+  function viewQuiz() {
+    const Q = qz();
+    const L = t();
+    if (state.play) return state.play.finished ? viewQuizResult() : state.play.mode === "blanc" ? viewBlanc() : viewQuestion();
+    if (state.demo) return `<div class="notice">${I.info}<span>${esc(L.demoNotice || "")}</span></div>`;
+    if (!state.qzStats) {
+      loadQuizHome();
+      return `<div><span class="eyebrow">${L.section}</span><h1>${Q.title}</h1></div><p class="muted">…</p>`;
+    }
+    const st = state.qzStats;
+    if (st.error) return `<div><h1>${Q.title}</h1></div><div class="notice">${I.info}<span>${esc(st.error)}</span></div>`;
+    const lock = (txt) => (premium() ? "" : `<span class="lock-pill">${I.lock}${txt}</span>`);
+    const daily = st.daily_done
+      ? `<p class="ok">${Q.doneToday(st.daily_score ?? state.qzDaily?.score ?? 0, 5)}</p><p class="small muted">${Q.comeBack}</p><button type="button" class="btn btn-ghost" data-quiz-daily>${Q.seeAnswers}</button>`
+      : `<button type="button" class="btn btn-primary" data-quiz-daily>${Q.start}</button>`;
+    const themes = Object.keys(st.bank).sort();
+    const chips = [["", Q.allThemes], ...themes.map((k) => [k, themeName(k)])]
+      .map(([k, label]) => `<button type="button" class="chip" data-series-theme="${k}" aria-pressed="${(state.seriesTheme || "") === k}">${esc(label)}</button>`)
+      .join("");
+    const sizes = [10, 20, 40].map((k) => `<button type="button" class="chip" data-series-n="${k}" aria-pressed="${(state.seriesN || 10) === k}">${k}</button>`).join("");
+    const rows = Object.keys(st.bank)
+      .map((k) => {
+        const s = st.themes[k] || { ok: 0, ko: 0 };
+        const total = s.ok + s.ko;
+        return { k, total, pct: total ? Math.round((s.ok / total) * 100) : null, ok: s.ok };
+      })
+      .sort((a, b) => (a.pct ?? 101) - (b.pct ?? 101) || a.k.localeCompare(b.k))
+      .sort((a, b) => (a.total ? 0 : 1) - (b.total ? 0 : 1));
+    const bars = rows
+      .map((r) => `<div class="theme-row"><span>${esc(themeName(r.k))}</span><span class="bar"><i class="${r.pct == null ? "" : r.pct < 50 ? "low" : r.pct < 75 ? "mid" : "high"}" style="width:${r.pct ?? 0}%"></i></span><span class="small muted">${r.pct == null ? Q.notTried : `${r.ok}/${r.total} · ${r.pct} %`}</span></div>`)
+      .join("");
+    const active = new Set(st.days);
+    const dots = Array.from({ length: 30 }, (_, i) => dayUTC(i - 29)).map((d) => `<i class="dot ${active.has(d) ? "on" : ""}" title="${d}"></i>`).join("");
+    return `
+      <div class="section-head"><div><span class="eyebrow">${L.section}</span><h1>${Q.title}</h1></div><p class="muted small">${Q.sub}</p></div>
+      <section class="card"><div class="row-actions"><h2>${Q.daily}</h2><span class="tag ${st.streak ? "tag-sun" : "tag-line"}">${Q.streak(st.streak)}</span></div>
+        <p class="muted">${Q.dailySub}</p>${daily}</section>
+      <section class="card"><h2>${Q.revision}</h2><p class="muted small">${Q.revSub}</p>
+        <p><b>${Q.revDue(st.due)}</b><br><span class="small muted">${Q.carnet(st.carnet)}</span></p>
+        ${st.due ? `<button type="button" class="btn btn-primary" data-quiz-revision>${Q.revStart}</button>` : ""}</section>
+      <section class="card"><div class="row-actions"><h2>${Q.series}</h2>${lock(Q.locked)}</div><p class="muted small">${Q.seriesSub}</p>
+        <div class="chips" role="group">${chips}</div><div class="chips" role="group">${sizes}</div>
+        <div><button type="button" class="btn btn-primary" data-quiz-series>${Q.launch}</button></div></section>
+      <section class="card"><div class="row-actions"><h2>${Q.blanc}</h2>${lock(Q.locked)}</div><p class="muted">${Q.blancSub}</p>
+        <div><button type="button" class="btn btn-primary" data-quiz-blanc>${Q.blancStart}</button></div></section>
+      <section class="card"><h2>${Q.prep}</h2><p class="muted small">${Q.prepSub}</p>
+        ${rows.some((r) => r.total) ? `<div class="theme-rows">${bars}</div>` : `<p class="muted">${Q.noStats}</p>`}
+        <p class="small muted">${Q.last30}</p><div class="dots">${dots}</div></section>`;
+  }
+
+  // Lance une session : mode = daily | revision | series | blanc
+  async function startQuiz(mode, opts = {}) {
+    const Q = qz();
+    try {
+      let data;
+      if (mode === "daily") data = await api().quizDaily(lang());
+      else if (mode === "revision") data = await api().quizRevision(lang());
+      else if (mode === "series") data = await api().quizSeries(state.seriesTheme || "", state.seriesN || 10, lang());
+      else data = await api().quizBlanc(lang());
+      if (!data.questions.length) return toast(Q.revDue(0));
+      const play = { mode, questions: data.questions, i: 0, choice: {}, result: { ...(data.results || {}) }, finished: false };
+      if (mode === "daily") {
+        play.i = Math.max(0, data.questions.findIndex((q) => !play.result[q.id]));
+        if (data.done) {
+          play.finished = true;
+        }
+        for (const [id, r] of Object.entries(play.result)) play.choice[id] = r.choice;
+      }
+      if (mode === "blanc") play.endAt = Date.now() + data.duree * 60 * 1000;
+      state.play = play;
+      render();
+      window.scrollTo({ top: 0 });
+    } catch (e) {
+      if (e.code === "locked") return openPaywall();
+      toast(e.message);
+    }
+  }
+
+  const playTitle = (mode) => ({ daily: qz().daily, revision: qz().revision, series: qz().series, blanc: qz().blanc })[mode];
+
+  function viewQuestion() {
+    const Q = qz();
+    const pl = state.play;
+    const q = pl.questions[pl.i];
+    const r = pl.result[q.id];
+    const opts = q.options
+      .map((o, k) => {
+        const cls = r ? (k === r.answer ? "good" : k === r.choice ? "bad" : "") : "";
+        return `<button type="button" class="option ${cls}" data-pick="${k}" ${r ? "disabled" : ""}><span class="letter">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`;
+      })
+      .join("");
+    const last = pl.i === pl.questions.length - 1;
+    const fb = r
+      ? `<div class="feedback ${r.ok ? "ok" : "ko"}"><b>${r.ok ? Q.correct : Q.wrong}</b>${r.ok ? "" : ` ${Q.goodAnswer} : ${esc(q.options[r.answer])}.`}<p>${esc(r.explication)}</p>
+          <div class="row-actions"><button type="button" class="btn btn-primary" data-quiz-next>${last ? Q.seeResult : Q.next}</button>
+          <button type="button" class="linkish small" data-report-q="${esc(q.id)}">${Q.report}</button></div></div>`
+      : "";
+    return `
+      <div class="row-actions"><span class="eyebrow">${playTitle(pl.mode)} · ${themeName(q.theme)}</span><button type="button" class="linkish small" data-quiz-leave>${Q.leave}</button></div>
+      <div class="progress-line"><i style="width:${((pl.i + (r ? 1 : 0)) / pl.questions.length) * 100}%"></i></div>
+      <article class="card protected question"><span class="small muted">${Q.qOf(pl.i + 1, pl.questions.length)}</span><h2>${esc(q.q)}</h2><div class="options">${opts}</div>${fb}</article>`;
+  }
+
+  function viewBlanc() {
+    const Q = qz();
+    const pl = state.play;
+    const q = pl.questions[pl.i];
+    const picked = pl.choice[q.id];
+    const opts = q.options
+      .map((o, k) => `<button type="button" class="option ${picked === k ? "picked" : ""}" data-pick="${k}"><span class="letter">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`)
+      .join("");
+    const grid = pl.questions.map((x, k) => `<button type="button" class="qdot ${k === pl.i ? "cur" : ""} ${pl.choice[x.id] != null ? "done" : ""}" data-goto="${k}" aria-label="${k + 1}">${k + 1}</button>`).join("");
+    return `
+      <div class="exam-bar" data-bar><div><div class="small" style="opacity:.8;font-weight:700">${Q.timeLeft}</div><div class="timer" data-tick="blanc">${clock(pl.endAt - Date.now())}</div></div>
+        <div class="progress" aria-hidden="true"><i data-tick="blanc-progress"></i></div>
+        <button type="button" class="btn btn-sun" data-quiz-submit>${Q.submit}</button></div>
+      <article class="card protected question"><span class="small muted">${Q.qOf(pl.i + 1, pl.questions.length)} · ${themeName(q.theme)}</span><h2>${esc(q.q)}</h2><div class="options">${opts}</div>
+        <div class="row-actions"><button type="button" class="btn btn-ghost" data-quiz-prev ${pl.i === 0 ? "disabled" : ""}>${Q.prev}</button>
+          <button type="button" class="btn btn-ghost" data-quiz-next ${pl.i === pl.questions.length - 1 ? "disabled" : ""}>${Q.next}</button></div></article>
+      <div class="qdots">${grid}</div>`;
+  }
+
+  function viewQuizResult() {
+    const Q = qz();
+    const pl = state.play;
+    const total = pl.questions.length;
+    const good = pl.questions.filter((q) => pl.result[q.id]?.ok).length;
+    const pct = Math.round((good / total) * 100);
+    const wrong = pl.questions.filter((q) => !pl.result[q.id]?.ok);
+    const review = wrong
+      .map((q) => {
+        const r = pl.result[q.id];
+        const mine = r?.choice != null ? q.options[r.choice] : null;
+        return `<article class="card protected review"><span class="small muted">${themeName(q.theme)}</span><b>${esc(q.q)}</b>
+          <p class="small">${Q.yourAnswer} : <span class="bad-text">${mine ? esc(mine) : Q.unanswered}</span><br>${Q.goodAnswer} : <span class="good-text">${r ? esc(q.options[r.answer]) : "—"}</span></p>
+          ${r ? `<p class="small muted">${esc(r.explication)}</p>` : ""}
+          <button type="button" class="linkish small" data-report-q="${esc(q.id)}">${Q.report}</button></article>`;
+      })
+      .join("");
+    return `<div><span class="eyebrow">${playTitle(pl.mode)}</span><h1>${Q.score}</h1></div>
+      <section class="card" style="align-items:center;text-align:center"><div class="score-ring" style="--p:${pct}"><div><b>${good}</b><small>/${total}</small></div></div><p><b>${pct} %</b> · ${Q.verdict(pct)}</p></section>
+      ${wrong.length ? `<h2>${Q.review} (${wrong.length})</h2><div style="display:grid;gap:12px">${review}</div>` : `<div class="notice">${I.info}<span>${Q.perfect}</span></div>`}
+      <div><button type="button" class="btn btn-primary" data-quiz-back>${Q.back}</button></div>`;
+  }
+
+  async function quizPick(k) {
+    const pl = state.play;
+    const q = pl.questions[pl.i];
+    if (pl.mode === "blanc") {
+      pl.choice[q.id] = k;
+      return render();
+    }
+    if (pl.result[q.id]) return;
+    pl.choice[q.id] = k;
+    try {
+      const r = await api().quizCheck(pl.mode, [{ id: q.id, choice: k }]);
+      pl.result[q.id] = r.results[0];
+      state.qzStats = null; // les chiffres de l'accueil sont à rafraîchir
+    } catch (e) {
+      delete pl.choice[q.id];
+      if (e.code === "locked") {
+        state.play = null;
+        return openPaywall();
+      }
+      toast(e.message);
+    }
+    render();
+  }
+
+  async function finishBlanc(auto) {
+    const pl = state.play;
+    if (pl.finished || pl.submitting) return;
+    pl.submitting = true;
+    if (auto) toast(qz().timeUp);
+    try {
+      const answers = Object.entries(pl.choice).map(([id, choice]) => ({ id, choice }));
+      const r = answers.length ? await api().quizCheck("blanc", answers) : { results: [] };
+      for (const x of r.results) pl.result[x.id] = x;
+      pl.finished = true;
+      state.qzStats = null;
+    } catch (e) {
+      toast(e.message);
+    }
+    pl.submitting = false;
+    render();
+  }
+
+  function quizNext(delta) {
+    const pl = state.play;
+    const i = pl.i + delta;
+    if (i >= pl.questions.length) {
+      pl.finished = true;
+      state.qzStats = null;
+    } else if (i >= 0) pl.i = i;
+    render();
+    window.scrollTo({ top: 0 });
   }
 
   // ---------- Épreuves, corrigés, salle : école → sessions par année → épreuve ----------
@@ -2594,6 +2928,7 @@
     const v = document.getElementById("view");
     const tab = state.tab;
     if (tab === "concours") v.innerHTML = viewConcours();
+    else if (tab === "quiz") v.innerHTML = viewQuiz();
     else if (tab === "epreuves") v.innerHTML = viewBrowse("epreuves");
     else if (tab === "corriges") v.innerHTML = viewBrowse("corriges");
     else if (tab === "oral") v.innerHTML = viewOral();
@@ -2616,6 +2951,16 @@
   }
 
   function tick() {
+    const pl = state.play;
+    if (state.tab === "quiz" && pl?.mode === "blanc" && !pl.finished) {
+      const left = pl.endAt - Date.now();
+      if (left <= 0) return finishBlanc(true);
+      const el = document.querySelector('[data-tick="blanc"]');
+      if (el) el.textContent = clock(left);
+      const bar = document.querySelector('[data-tick="blanc-progress"]');
+      if (bar) bar.style.width = (1 - left / (40 * 60 * 1000)) * 100 + "%";
+      document.querySelector("[data-bar]")?.classList.toggle("warn", left < 5 * 60 * 1000);
+    }
     const ex = state.exam;
     if (state.tab !== "salle" || !ex || !state.examDoc) return;
     const now = Date.now();
@@ -2670,6 +3015,42 @@
       state.cat = d.cat;
       return render();
     }
+    if ("quizDaily" in d) return startQuiz("daily");
+    if ("quizRevision" in d) return startQuiz("revision");
+    if ("quizSeries" in d) return premium() ? startQuiz("series") : openPaywall();
+    if ("quizBlanc" in d) return premium() ? startQuiz("blanc") : openPaywall();
+    if (d.seriesTheme !== undefined) {
+      state.seriesTheme = d.seriesTheme;
+      return render();
+    }
+    if (d.seriesN) {
+      state.seriesN = Number(d.seriesN);
+      return render();
+    }
+    if (d.pick !== undefined) return quizPick(Number(d.pick));
+    if ("quizNext" in d) return quizNext(1);
+    if ("quizPrev" in d) return quizNext(-1);
+    if (d.goto !== undefined) {
+      state.play.i = Number(d.goto);
+      return render();
+    }
+    if ("quizSubmit" in d) {
+      const left = state.play.questions.length - Object.keys(state.play.choice).length;
+      if (left && !confirm(qz().submitSure(left))) return;
+      return finishBlanc(false);
+    }
+    if ("quizLeave" in d) {
+      if (!confirm(qz().leaveSure)) return;
+      state.play = null;
+      state.qzStats = null;
+      return render();
+    }
+    if ("quizBack" in d) {
+      state.play = null;
+      state.qzStats = null;
+      return render();
+    }
+    if (d.reportQ) return openReport("quiz:" + d.reportQ, "autre");
     if ("calendar" in d) return go("concours", { calendrier: true });
     if (d.openCal) return go("concours", { concours: d.openCal, from: "cal" });
     if (d.follow) {

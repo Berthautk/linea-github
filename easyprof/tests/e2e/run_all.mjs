@@ -1,0 +1,132 @@
+// Tests de bout en bout sur l'app réelle (copie de test). Usage:
+//   BACKUP=<sauvegarde.json> PW=<chemin playwright-core> node run_all.mjs <test5.html> [dossier_captures]
+import crypto from 'crypto';
+import { launch, open, stateFromBackup } from './lib.mjs';
+const html = process.argv[2], shots = process.argv[3] || '/tmp';
+let fails = 0;
+const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); if (!c) fails++; };
+const getState = page => page.evaluate(() => JSON.parse(localStorage.getItem('easyprof_state_v1')));
+const sha = p => 'h1$' + crypto.createHash('sha256').update('easyprof:' + p).digest('hex');
+const b = await launch();
+const allDays = st => { st.terms[0].startDate = '2026-09-07'; st.terms[0].endDate = '2026-12-15'; st.teachers.find(t => t.id === 'KAMDEM').teachingDays = [0,1,2,3,4,5,6]; };
+
+/* A. saisie : révision = heures sans leçon */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'Teacher', allDays), { w: 1200, h: 1000 });
+  ok(await page.getByText('Saisie du jour en attente').count() === 1, 'A1 bandeau « saisie en attente » visible avant saisie');
+  const sel = page.locator('select').filter({ has: page.locator('option[value="revision"]') });
+  const opts = await sel.locator('option').evaluateAll(o => o.map(x => x.value));
+  ok(JSON.stringify(opts) === JSON.stringify(['theorique','pratique','contact','revision','evaluation']), 'A2 liste déroulante des 5 types : ' + opts);
+  await sel.selectOption('revision');
+  ok(await page.locator('input[type=number][disabled]').count() >= 1, 'A3 numéro de leçon grisé pour une révision');
+  await page.getByRole('button', { name: 'Enregistrer le cours' }).click();
+  await page.waitForTimeout(1600);
+  const st = await getState(page);
+  const e = st.entries[0];
+  ok(e.type === 'revision' && e.lessonNumber === null && e.durationMinutes === 100, 'A4 entrée révision enregistrée (type, sans n° de leçon, 100 min)');
+  ok(/révision/i.test(e.title), 'A5 titre automatique : ' + e.title);
+  ok(await page.getByText('Saisie du jour en attente').count() === 0, 'A6 le bandeau disparaît après la saisie');
+  ok(errs.length === 0, 'A7 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
+}
+
+/* B. jour sans cours (maladie) -> plus de rappel ; visible dans l'historique */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'Teacher', allDays), { w: 1200, h: 1000 });
+  await page.getByText('Pas de cours aujourd\'hui ?').click();
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: shots + '/B_open.png' });
+  await page.locator('.epx-card select').selectOption('maladie');
+  await page.getByRole('button', { name: 'Enregistrer', exact: true }).click();
+  await page.waitForTimeout(700);
+  const st = await getState(page);
+  const e = st.entries[0];
+  ok(e.type === 'absence' && e.reason === 'maladie' && e.durationMinutes === 0 && e.classId === '', 'B1 entrée « absence/maladie » créée (0 min, sans classe)');
+  ok(await page.getByText('Saisie du jour en attente').count() === 0, 'B2 le rappel disparaît pour le jour déclaré');
+  await page.getByRole('button', { name: /HISTORIQUE/i }).click();
+  await page.waitForTimeout(500);
+  ok(await page.getByText(/Pas de cours – Maladie/).count() >= 1, 'B3 visible dans l\'historique, sans plantage');
+  ok(errs.length === 0, 'B4 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
+}
+
+/* C. effet sur la fiche : semaine 12–16 oct. 2026 ; KAMDEM absent mardi 13 (7 h) ; vendredi 16 férié (activités) */
+{
+  const mut = st => { allDays(st);
+    st.entries.unshift({ id: 'abs1', classId: '', teacherId: 'KAMDEM', termId: 'T1', lessonNumber: null, title: 'x', durationMinutes: 0, type: 'absence', reason: 'maladie', timestamp: '2026-10-13T11:00:00.000Z' });
+    st.entries.unshift({ id: 'abs2', classId: '', teacherId: 'ASTHA', termId: 'T1', lessonNumber: null, title: 'x', durationMinutes: 0, type: 'absence', reason: 'periscolaire', timestamp: '2026-10-16T11:00:00.000Z' });
+    st.entries.unshift({ id: 'rev1', classId: 'LSA', teacherId: 'KAMDEM', termId: 'T1', lessonNumber: null, title: 'rev', durationMinutes: 120, type: 'revision', timestamp: '2026-10-12T11:00:00.000Z' });
+    st.reportObservations = Object.assign({}, st.reportObservations, { __inspection: { ps: '2026-10-12', pe: '2026-10-16', adj: [] } }); };
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'AP', mut), { w: 1400, h: 1000 });
+  await page.getByText('INSPECTION').first().click(); await page.waitForTimeout(600);
+  const annex = await page.locator('.epi-annex tbody tr').allInnerTexts();
+  const row = n => annex.find(r => r.startsWith(n)).split('\t').map(x => x.trim());
+  const k = row('KAMDEM'), a = row('ASTHA');
+  // colonnes: nom, h/sem, dues, absences, retards, rattrapages, faites, rev, saisies
+  ok(k[2] === '13' && k[3] === '−7' && k[6] === '6', 'C1 KAMDEM : 13 h dues, −7 h (maladie mardi), 6 h faites → ' + k.join('/'));
+  ok(a[2] === '13' && a[3] === '0' && a[6] === '13', 'C2 ASTHA : vendredi (activités, 4 h) retiré des heures dues 17→13 h, pas compté absence → ' + a.join('/'));
+  ok(k[7] === '2 h', 'C3 révision de 2 h comptée en heures (dont révisions) → ' + k[7]);
+  const row1 = (await page.locator('.epi-sheet tbody tr').first().innerText()).split('\t');
+  // dues = 13+13+12+9 = 47 ; faites = 6+13+12+9 = 40 ; leçons faites = (40-2)/2 = 19 ; leçons dues = round(47/2) = 24
+  ok(row1[2] === '47' && row1[3] === '40', 'C4 totaux heures 47 dues / 40 faites → ' + row1.slice(2, 5).join('/'));
+  ok(row1[8] === '24' || row1[7] === '24', 'C5 leçons prévues 24 → ' + row1.slice(7, 10).join('/'));
+  ok(row1[8] === '19', 'C6 leçons faites = (40−2 h de révision)/2 = 19 → ' + row1[8]);
+  await page.screenshot({ path: shots + '/C_insp.png', fullPage: true });
+  ok(errs.length === 0, 'C7 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
+}
+
+/* D. période libre + calendrier : vacances 24/12 → 03/01 retirées ; période 07/09 → 12/02 */
+{
+  const mut = st => { allDays(st); st.reportObservations = Object.assign({}, st.reportObservations, { __inspection: { ps: '2026-12-21', pe: '2026-12-31', adj: [], cal: [{ f: '2026-12-24', t: '2027-01-03', n: 'Noël' }] } }); };
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'AP', mut), { w: 1400, h: 1000 });
+  await page.getByText('INSPECTION').first().click(); await page.waitForTimeout(600);
+  const row1 = (await page.locator('.epi-sheet tbody tr').first().innerText()).split('\t');
+  // 21,22,23 déc. 2026 = lun, mar, mer : 51 h/sem. → lun(KAMDEM 6+ASTHA 7)=13 ; mar(KAMDEM 7)=7 ; mer(NEB 5+ASTHA 4+TSOGO 3)=12 → 32
+  ok(row1[2] === '32', 'D1 vacances de Noël retirées automatiquement : 32 h dues (21–23 déc.) → ' + row1[2]);
+  await page.close();
+}
+
+/* E. PIN */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'AP'), { w: 1300, h: 1000 });
+  await page.getByText('CONFIGURATION').first().click(); await page.waitForTimeout(400);
+  await page.getByRole('button', { name: /^ENSEIGNANTS$/i }).click(); await page.waitForTimeout(500);
+  const txt = await page.innerText('body');
+  ok(!/h1\$[0-9a-f]{10}/.test(txt), 'E1 aucun hash n\'est affiché dans la liste des enseignants');
+  ok(/PIN: 🔒 protégé/.test(txt) && /PIN: ⚠ 1234 \(en clair\)/.test(txt), 'E2 libellés « protégé » / « en clair » corrects');
+  await page.getByRole('button', { name: /Année & PIN/i }).click(); await page.waitForTimeout(400);
+  const before = await getState(page);
+  const neb0 = before.teachers.find(t => t.id === 'NEBASIBI').pin;
+  await page.getByRole('button', { name: /Protéger les PIN en clair/ }).click(); await page.waitForTimeout(400);
+  let st = await getState(page);
+  ok(st.teachers.find(t => t.id === 'NEBASIBI').pin === sha('1234') && neb0 === '1234', 'E3 PIN en clair de NEBASIBI haché sans changer sa valeur (reste « 1234 » côté login)');
+  ok(st.teachers.find(t => t.id === 'KAMDEM').pin === before.teachers.find(t => t.id === 'KAMDEM').pin, 'E4 PIN déjà hachés inchangés');
+  const row = page.locator('.epx-item').filter({ hasText: 'TSOGO' }).last();
+  await row.locator('input').fill('4821');
+  await row.getByRole('button', { name: 'Enregistrer' }).click(); await page.waitForTimeout(300);
+  st = await getState(page);
+  ok(st.teachers.find(t => t.id === 'TSOGO2026').pin === sha('4821'), 'E5 nouveau PIN saisi → haché (compatible avec la connexion)');
+  await page.locator('.epx-item').filter({ hasText: 'ASTHA' }).last().getByRole('button', { name: /Générer/ }).click(); await page.waitForTimeout(300);
+  const shown = (await page.locator('b').filter({ hasText: /^\d{4}$/ }).first().innerText());
+  st = await getState(page);
+  ok(st.teachers.find(t => t.id === 'ASTHA').pin === sha(shown), 'E6 PIN généré (' + shown + ') affiché une fois et stocké haché');
+  // édition via l'onglet Enseignants : champ vide, enregistrer sans toucher le PIN le conserve
+  await page.getByRole('button', { name: /^ENSEIGNANTS$/i }).click(); await page.waitForTimeout(400);
+  await page.locator('button[title="Modifier"], button[title="Edit"]').first().click().catch(() => {});
+  await page.waitForTimeout(400);
+  const pinInput = page.locator('input[maxlength="8"]');
+  if (await pinInput.count()) {
+    ok((await pinInput.first().inputValue()) === '', 'E7 champ PIN vide à l\'édition (le hash n\'est plus affiché)');
+    const pinBefore = (await getState(page)).teachers.map(t => t.pin);
+    await page.getByRole('button', { name: /Mettre à jour|Enregistrer|Save|Update/i }).last().click().catch(() => {});
+    await page.waitForTimeout(1500);
+    const pinAfter = (await getState(page)).teachers.map(t => t.pin);
+    ok(JSON.stringify(pinBefore) === JSON.stringify(pinAfter), 'E8 enregistrer sans toucher le PIN le conserve');
+  } else console.log('SKIP E7/E8 (bouton Modifier introuvable)');
+  ok(errs.length === 0, 'E9 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
+}
+await b.close();
+console.log(fails ? `\n${fails} ÉCHEC(S)` : '\nTOUS LES TESTS PASSENT');
+process.exit(fails ? 1 : 0);

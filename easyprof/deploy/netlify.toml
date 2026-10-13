@@ -1,0 +1,8 @@
+# Alternative Netlify (offre gratuite, sans carte bancaire) : déposer le dossier public/ sur app.netlify.com/drop
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"

@@ -233,3 +233,5 @@ textarea.input { min-height: 84px; resize: vertical; }
   .card { box-shadow: none; border: 0; padding: 0; }
 }
 button.chip { border: 0; cursor: pointer; font-family: inherit; }
+.paper table.follow { font-size: 10px; min-width: 1150px; } .paper table.follow th { font-size: 8.5px; padding: 3px 3px; } .paper table.follow td { padding: 4px 3px; }
+@media print { .paper table.follow { min-width: 0; font-size: 8.5px; } .paper table.follow th { font-size: 7px; } }

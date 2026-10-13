@@ -278,6 +278,32 @@ export function recap(ctx, ps, pe) {
   return { rows, g1, g2, t1: wrap(g1), t2: wrap(g2), total: wrap(rows) };
 }
 
+/** Fiche pédagogique de suivi (censorat / délégation) : une ligne par classe, objectifs annuels, réalisations sur la période, évaluations. */
+export function followUp(ctx, ps, pe) {
+  const rows = ctx.classes.map(c => {
+    const A = ctx.assign.filter(a => a.classId === c.id), ids = new Set(A.map(a => a.teacherId));
+    const th = new Set(), pr = new Set(); let hours = 0, digital = 0, lastEval = null;
+    for (const t of ctx.teachers) for (const e of ctx.byTeacher[t.id] || []) {
+      if (e.classId !== c.id || e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
+      ids.add(t.id); hours += (+e.minutes || 0) / 60; if (e.digital) digital++;
+      if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical' && e.n != null) pr.add(t.id + '|' + e.n);
+      if (e.eval && +e.eval.evaluated > 0 && (!lastEval || e.date >= lastEval.date)) lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 };
+    }
+    for (const r of ctx.regul) if (r.classId === c.id && ids.has(r.teacherId) && r.d >= ps && r.d <= pe) hours += +r.h || 0;
+    let yearDue = 0; for (const id of ids) yearDue += dueRange(ctx, id, ctx.ys, ctx.ye).byClass[c.id] || 0;
+    const planTh = A.reduce((x, a) => x + (+a.th || 0), 0), planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), planH = A.reduce((x, a) => x + (+a.hours || 0), 0);
+    const objH = planH || yearDue, lessonsPlan = planTh + planPr, objTh = lessonsPlan ? objH * planTh / lessonsPlan : objH, objPr = objH - objTh;
+    const eff = +((c.effectif || {}).total) || 0, ev = lastEval ? lastEval.evaluated : 0, ok = lastEval ? lastEval.passed : 0;
+    return { id: c.id, name: c.name, cycle: c.cycle, teachers: [...ids].map(i => (ctx.teacher(i) || {}).short || (ctx.teacher(i) || {}).name || '').filter(Boolean),
+      planTh, th: th.size, planPr, pr: pr.size, digital, objH: r1(objH), objTh: Math.round(objTh), objPr: Math.round(objPr), hours: r1(hours), eff, ev, ok };
+  });
+  const fin = (r) => ({ ...r, rateTh: pct(r.th, r.planTh), ratePr: pct(r.pr, r.planPr), rateDg: pct(r.digital, r.planPr), rateH: pct(r.hours, r.objH), rateEv: pct(r.ev, r.eff), rateOk: pct(r.ok, r.ev) });
+  const sum = (list) => fin(list.reduce((a, r) => ({ planTh: a.planTh + r.planTh, th: a.th + r.th, planPr: a.planPr + r.planPr, pr: a.pr + r.pr, digital: a.digital + r.digital, objH: a.objH + r.objH,
+    objTh: a.objTh + r.objTh, objPr: a.objPr + r.objPr, hours: a.hours + r.hours, eff: a.eff + r.eff, ev: a.ev + r.ev, ok: a.ok + r.ok }), { planTh: 0, th: 0, planPr: 0, pr: 0, digital: 0, objH: 0, objTh: 0, objPr: 0, hours: 0, eff: 0, ev: 0, ok: 0 }));
+  const all = rows.map(fin), g1 = all.filter(r => r.cycle !== '2nd'), g2 = all.filter(r => r.cycle === '2nd');
+  return { g1, g2, t1: sum(g1), t2: sum(g2), total: sum(all), n: all.length };
+}
+
 /** Outil de reprise : propose, pour chaque affectation, les heures et leçons à compter pour que tout soit « à jour » jusqu'à `date` (ce qui n'a pas déjà été saisi). */
 export function catchUp(ctx, date) {
   const cut = minISO(date, ctx.ye), out = [];

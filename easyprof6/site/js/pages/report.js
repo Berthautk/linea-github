@@ -3,7 +3,7 @@ import { html, useState } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Seg, Chip, num1 } from '../ui.js';
-import { makeCtx, stats, factors, recap, periodOf } from '../calc.js';
+import { makeCtx, stats, factors, followUp, periodOf } from '../calc.js';
 import { PeriodBar, ScopeBar, currentTid, periodLabel } from '../widgets.js';
 import { state, setUI, isAP, myId } from '../store.js';
 import { fmt, minISO } from '../dates.js';
@@ -34,6 +34,12 @@ function actionTexts(S) {
   out.push(t('Saisie régulière de tous les enseignants dans EasyProf ; contrôle par l’animateur pédagogique chaque vendredi.'));
   return out.join('\n');
 }
+function Letterhead({ d, hd }) {
+  return html`<div class="hd"><div><b>RÉPUBLIQUE DU CAMEROUN</b><br />Paix – Travail – Patrie<br />MINISTÈRE DES ENSEIGNEMENTS SECONDAIRES<br />${hd.region ? 'DÉLÉGATION RÉGIONALE ' + up(hd.region) : ''}<br />${hd.division ? 'DÉLÉGATION DÉPARTEMENTALE ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div>
+      <div style="align-self:center"><img src="/icons/armoiries.png" alt="" style="width:74px;height:auto;display:block;margin:0 auto 4px" /><div style="font-weight:800;font-size:10px">${up(d.name)}</div></div>
+      <div><b>REPUBLIC OF CAMEROON</b><br />Peace – Work – Fatherland<br />MINISTRY OF SECONDARY EDUCATION<br />${hd.region ? 'REGIONAL DELEGATION FOR ' + up(hd.region) : ''}<br />${hd.division ? 'DIVISIONAL DELEGATION FOR ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div></div>`;
+}
+
 const sg = (n) => html`<span class=${n < 0 ? 'neg' : n > 0 ? 'pos' : ''}>${(n > 0 ? '+' : '') + num1(n)}</span>`;
 
 export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
@@ -41,9 +47,7 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
   const teachers = tid ? ctx.teachers.filter(x => x.id === tid) : ctx.teachers;
   const wk = (x) => (x.slots || []).reduce((s, y) => s + (+y.h || 0), 0);
   return html`<div class="paper">
-    <div class="hd"><div><b>RÉPUBLIQUE DU CAMEROUN</b><br />Paix – Travail – Patrie<br />MINISTÈRE DES ENSEIGNEMENTS SECONDAIRES<br />${hd.region ? 'DÉLÉGATION RÉGIONALE ' + up(hd.region) : ''}<br />${hd.division ? 'DÉLÉGATION DÉPARTEMENTALE ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div>
-      <div style="align-self:center"><img src="/icons/armoiries.png" alt="" style="width:74px;height:auto;display:block;margin:0 auto 4px" /><div style="font-weight:800;font-size:10px">${up(d.name)}</div></div>
-      <div><b>REPUBLIC OF CAMEROON</b><br />Peace – Work – Fatherland<br />MINISTRY OF SECONDARY EDUCATION<br />${hd.region ? 'REGIONAL DELEGATION FOR ' + up(hd.region) : ''}<br />${hd.division ? 'DIVISIONAL DELEGATION FOR ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div></div>
+    <${Letterhead} d=${d} hd=${hd} />
     <h2>${t('Fiche de l’inspection nationale')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Année scolaire')} ${d.year || ''}</div>
     <table><thead><tr><th rowspan="2">${t('Période')}</th><th rowspan="2">${t('Disciplines / Matières')}</th><th colspan="5">${t('Couverture des horaires')}</th><th colspan="5">${t('Couverture des programmes')}</th><th rowspan="2">${t('Identification des facteurs d’écart entre prévisions et exécution (programmes et plans d’horaires)')}</th><th rowspan="2">${t('Actions correctives / de remédiation')}</th></tr>
       <tr><th>${t('Nombre d’heures dues pour la période')}</th><th>${t('Nombre d’heures faites')}</th><th>${t('Écart (+/-) par rapport à la période')}</th><th>${t('Taux de couverture par rapport à la période (%)')}</th><th>${t('Taux de couverture par rapport à l’année (%)')}</th>
@@ -60,15 +64,26 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
       <p style="font-size:10px;margin:6px 0 0">${t('Heures dues : emplois du temps, hors jours fériés, vacances et activités scolaires, comptées jusqu’à aujourd’hui. Heures faites : séances saisies dans EasyProf (révisions et évaluations comptent en heures mais pas en leçons). Leçons attendues : plan annuel de chaque classe réparti selon les heures de cours. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
 }
 
-function Recap({ ctx, p }) {
-  const R = recap(ctx, p.ps, p.pe), lang = getLang();
-  const row = (r, bold) => html`<tr style=${bold ? 'font-weight:800;background:#faf6ec' : ''}><td style="text-align:left">${r.name}</td><td>${r.effectif ? r.effectif.total || r.total || '' : r.total || ''}</td><td>${num1(r.planH)}</td><td>${num1(r.hours)}</td><td>${num1(r.rateH)} %</td><td>${r.planTh}</td><td>${r.th}</td><td>${num1(r.rateTh)} %</td><td>${r.planPr}</td><td>${r.pr}</td><td>${num1(r.ratePr)} %</td><td>${r.digital}</td></tr>`;
-  const cyc = (label, list, tot) => list.length ? html`<tr><td colspan="12" style="text-align:left;background:#F3ECDD;font-weight:800">${label}</td></tr>${list.map(r => row(r))}${row({ ...tot, name: t('Total {c}', { c: label }), effectif: null }, true)}` : null;
-  return html`<div class="paper"><h2>${t('Récapitulatif par classe')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${up(ctx.dept.name)} · ${up(ctx.dept.discipline)} · ${t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) })}</div>
-    <table><thead><tr><th rowspan="2">${t('Classe')}</th><th rowspan="2">${t('Effectif')}</th><th colspan="3">${t('Heures')}</th><th colspan="3">${t('Leçons de théorie')}</th><th colspan="3">${t('Travaux pratiques')}</th><th rowspan="2">${t('Leçons digitalisées')}</th></tr>
-      <tr><th>${t('Prévues')}</th><th>${t('Faites')}</th><th>%</th><th>${t('Prévues')}</th><th>${t('Faites')}</th><th>%</th><th>${t('Prévus')}</th><th>${t('Faits')}</th><th>%</th></tr></thead><tbody>
-      ${R.rows.length ? html`${cyc(t('1er cycle'), R.g1, R.t1)}${cyc(t('2nd cycle'), R.g2, R.t2)}${row({ ...R.total, name: t('TOTAL GÉNÉRAL'), effectif: null }, true)}` : html`<tr><td colspan="12">${t('Aucune classe')}</td></tr>`}</tbody></table>
-    <p style="font-size:10px;margin:6px 0 0">${t('Heures prévues : total annuel indiqué par l’animateur pour chaque enseignant dans la classe (à défaut, heures de l’emploi du temps à ce jour).')}</p></div>`;
+const TERM_END = { T1: 'Fin du 1er trimestre', T2: 'Fin du 2e trimestre', T3: 'Fin du 3e trimestre' };
+function Follow({ ctx, p }) {
+  const F = followUp(ctx, p.ps, p.pe), lang = getLang(), d = ctx.dept, hd = d.header || {};
+  const full = p.kind === 'term' && TERM_END[p.term] ? t(TERM_END[p.term]) : t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) });
+  const P = (v) => num1(v);
+  const tail = (r) => html`<td>${r.eff || ''}</td><td>${r.ev}</td><td>${P(r.rateEv)}</td><td>${r.ok}</td><td>${P(r.rateOk)}</td>`;
+  const body = (r, label) => html`<td>${r.planTh}</td><td>${r.th}</td><td>${r.planPr}</td><td>${r.pr}</td><td>${P(r.ratePr)}</td><td>${r.planPr}</td><td>${r.digital}</td><td>${P(r.rateDg)}</td><td>${P(r.rateTh)}</td>
+    <td>${r.objH}<br /><span style="font-size:8px;color:#666">(${r.objTh} h Th + ${r.objPr} h Pr)</span></td><td>${P(r.hours)}</td><td>${P(r.rateH)}</td>${tail(r)}`;
+  const line = (r) => html`<tr><td style="text-align:left">${r.name}</td><td>${up(d.abbr || d.discipline).slice(0, 4)}</td><td style="text-align:left">${r.teachers.join(', ')}</td>${body(r)}</tr>`;
+  const tot = (label, r, strong) => html`<tr style=${'font-weight:800;background:' + (strong ? '#F3ECDD' : '#EEF6F4')}><td colspan="3" style="text-align:left">${label}</td>${body(r)}</tr>`;
+  const cyc = (label, list, T) => list.length ? html`${list.map(line)}${tot(t('Total {c}', { c: label }), T, false)}` : null;
+  return html`<div class="paper wide">
+    <${Letterhead} d=${d} hd=${hd} />
+    <h2>${t('Fiche pédagogique de suivi')}</h2><div style="text-align:center;font-size:11px;margin-bottom:2px"><b>${full}</b> · ${t('Année scolaire')} ${d.year || ''}</div>
+    <div style="display:flex;justify-content:space-between;font-size:11px;margin:6px 0 8px"><span>${t('Établissement')} : <b>${up(d.name)}</b></span><span>${t('Discipline')} : <b>${up(d.discipline)}</b></span></div>
+    <table class="follow"><thead><tr><th rowspan="2">${t('Classe')}</th><th rowspan="2">${t('Matière')}</th><th rowspan="2">${t('Enseignant(s)')}</th><th>${t('Leçons prévues pour l’année')}</th><th>${t('Leçons faites')}</th><th colspan="3">${t('Travaux pratiques')}</th><th colspan="3">${t('Digitalisation')}</th><th>${t('% leçons couvertes / année')}</th><th>${t('Heures dues pour l’année')}</th><th>${t('Heures faites')}</th><th>${t('% heures couvertes')}</th><th>${t('Effectif')}</th><th>${t('Évalués')}</th><th>${t('% évalués')}</th><th>${t('Moyenne ≥ 10')}</th><th>${t('Taux de réussite (%)')}</th></tr>
+      <tr><th>OBJ</th><th>${t('Faites')}</th><th>${t('Prév.')}</th><th>${t('Faits')}</th><th>%</th><th>${t('Prév.')}</th><th>${t('Faits')}</th><th>%</th><th>%</th><th>OBJ</th><th>${t('Faites')}</th><th>%</th><th>EFF</th><th>EVAL</th><th>%EVAL</th><th>≥10</th><th>%</th></tr></thead>
+      <tbody>${F.n ? html`${cyc(t('1er cycle'), F.g1, F.t1)}${cyc(t('2nd cycle'), F.g2, F.t2)}${tot(t('TOTAL GÉNÉRAL'), F.total, true)}` : html`<tr><td colspan="20">${t('Aucune classe')}</td></tr>`}</tbody></table>
+    <p style="font-size:9px;margin:6px 0 0">${t('Heures dues pour l’année : total fixé par l’animateur pour la classe (à défaut, heures des emplois du temps sur l’année). Évalués et réussite : dernière évaluation saisie dans la période pour la classe.')}</p>
+    <div class="sig"><div>${t('Animateur pédagogique')}<br /><b>${((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div></div>`;
 }
 
 export function Report() {
@@ -79,11 +94,11 @@ export function Report() {
   const who = tid ? (ctx.teacher(tid) || {}).name : '';
   const facts = edit.ft != null ? edit.ft : factorTexts(ctx, S), acts = edit.ac != null ? edit.ac : actionTexts(S);
   return html`<div class="page"><div class="page-h noprint"><h1>${t('Fiche d’inspection')}</h1><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer / PDF')}</button></div>
-    <div class="noprint stack"><${ScopeBar} ctx=${ctx} /><${Seg} options=${[{ id: 'sheet', label: t('Fiche de l’inspection') }, { id: 'recap', label: t('Récapitulatif par classe') }]} value=${tab} onChange=${setTab} />
+    <div class="noprint stack"><${ScopeBar} ctx=${ctx} /><${Seg} options=${[{ id: 'sheet', label: t('Fiche de l’inspection') }, ...(ap ? [{ id: 'recap', label: t('Fiche pédagogique (censorat)') }] : [])]} value=${tab} onChange=${setTab} />
       <div class="card"><div class="card-h"><h3>${t('Période demandée par l’inspecteur')}</h3></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => { setUI({ rperiod: np }); setEdit({ ft: null, ac: null }); }} />
         <div class="row" style="margin-top:10px"><button class="btn soft sm" onClick=${() => setUI({ rperiod: { kind: 'custom', ps: ctx.ys, pe: minISO(ctx.today, ctx.ye) } })}>${t('De la rentrée à aujourd’hui')}</button></div></div>
       ${S.alerts.length ? html`<div class="err">${S.alerts.map(a => a.kind === 'hours' ? t('Couverture horaire sous 80 % : mesures correctives obligatoires.') : a.kind === 'lessons' ? t('Couverture du programme sous 70 % : plan de remédiation.') : t('Taux de réussite sous 40 %.')).join(' ')}</div>` : null}
       ${tab === 'sheet' ? html`<div class="card"><div class="card-h"><h3>${t('Commentaires de la fiche')}</h3><button class="btn soft sm" onClick=${() => setEdit({ ft: null, ac: null })}><${Icon} n="refresh" />${t('Régénérer')}</button></div>
         <div class="grid2"><div class="field"><label>${t('Facteurs d’écart')}</label><textarea class="input" rows="5" value=${facts} onInput=${(e) => setEdit({ ...edit, ft: e.target.value })}></textarea></div><div class="field"><label>${t('Actions correctives')}</label><textarea class="input" rows="5" value=${acts} onInput=${(e) => setEdit({ ...edit, ac: e.target.value })}></textarea></div></div><p class="hint" style="margin-top:8px">${t('Texte proposé automatiquement ; vous pouvez le modifier avant d’imprimer.')}</p></div>` : null}</div>
-    ${tab === 'sheet' ? html`<${Sheet} ctx=${ctx} tid=${tid} S=${S} Y=${Y} p=${p} who=${who} facts=${facts} acts=${acts} />` : html`<${Recap} ctx=${ctx} p=${p} />`}</div>`;
+    ${tab === 'sheet' ? html`<${Sheet} ctx=${ctx} tid=${tid} S=${S} Y=${Y} p=${p} who=${who} facts=${facts} acts=${acts} />` : html`<${Follow} ctx=${ctx} p=${p} />`}</div>`;
 }

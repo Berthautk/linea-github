@@ -25,10 +25,14 @@ Le build patche le bundle par ancres exactes (assertions d'unicité). CSS Tailwi
 `state.reportObservations.__inspection` = `{ps,pe,lh,tt,adj,ft,ac,yh,yl,cal,rd,hol}` (synchronisé `metadata/settings`). `cal`=[{f,t,n}] calendrier, `rd`={motif:true|false} (true = retiré des heures dues). Absences : `entries` (type `absence`).
 
 ## Points ouverts / à valider avec l'AP
-- Dates de fin de trimestre 2026-2027 = proposition (mêmes jours que l'an dernier) ; seul le début de T1 (07/09/2026) est connu. Vacances scolaires et fêtes mobiles (Pâques, Ascension, Tabaski…) à saisir ; seules les fêtes à date fixe sont pré-remplies.
-- Samedis de T1 de KAMDEM (LSA/USA) non inclus dans `teachingDays` (un jour est valable toute l'année).
+- Calendrier 2026-2027 repris de la presse (Journal du Cameroun, Cameroun Online ; arrêté conjoint MINEDUB/MINESEC du 14/08/2026, **texte officiel non consulté**) : T1 07/09→27/11, T2 30/11→05/03 (vacances de Noël 18/12 15h30→04/01), T3 08/03→11/06 (Pâques 25/03 15h30→12/04), fin d'année 30/07/2027. À vérifier sur le site du MINESEC. Les demi-journées de départ en vacances ne sont pas retirées. Fêtes mobiles (Tabaski…) à saisir.
+- Samedi de KAMDEM (USA 8h-10h, LSA 10h30-12h30) : `teachingDays` [1,2,6] + `dayTerms {6:[T1]}` (rappels seulement en T1) ; créneaux d'emploi du temps avec `tm` (trimestre). Les créneaux du samedi ne sont **pas** dans l'emploi du temps par défaut de la fiche : question ouverte (quels samedis ont eu lieu entre le 07/09 et le 09/10 ? 12, 19, 26/09, 03/10). Ce sont des cours normaux, pas des rattrapages : la ligne seed « Rattrapage 2 samedis +8 h » devra être remplacée.
 - Retard/rattrapage KAMDEM saisis sans date : comptés dans toutes les périodes tant qu'ils ne sont pas datés.
 - Taux annuel de la période = heures faites / heures annuelles prévues (somme des classes) ; la situation cumulée est donnée à part.
 - Firestore : vérifier qu'un compte enseignant peut bien écrire une saisie `absence` (règles non consultées).
 - **Pas de service worker** : « PWA » = raccourci avec manifeste ; la mise à jour passe par `Cache-Control: no-cache` (deploy/firebase.json). Les téléphones rechargent la page ; vérifier la version dans Année & PIN.
 - Idées : relance auto des enseignants sans saisie, fiche multi-départements, export PDF direct.
+
+## Démo et architecture
+- `deploy/make_demo.py` : version de démonstration anonymisée (Firebase factice, écritures coupées, PIN 1234) publiée comme artefact privé.
+- `deploy/ARCHITECTURE.md` : hébergement, multi-départements, quotas Spark.

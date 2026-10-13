@@ -13,7 +13,7 @@ export function stateFromBackup(userId = 'KAMDEM', space = 'AP', mutate) {
   if (mutate) mutate(st);
   return st;
 }
-export async function open(browser, html, state, { w = 1300, h = 900 } = {}) {
+export async function open(browser, html, state, { w = 1300, h = 900, time } = {}) {
   const ctx = await browser.newContext({ viewport: { width: w, height: h } });
   const page = await ctx.newPage();
   const errs = [];
@@ -21,6 +21,7 @@ export async function open(browser, html, state, { w = 1300, h = 900 } = {}) {
   page.on('console', m => { if (m.type() === 'error' && !/firebase|net::|Failed to load resource|fonts/i.test(m.text())) errs.push('CONSOLE ' + m.text().slice(0, 200)); });
   await page.route(/^https?:\/\//, r => r.abort());   // aucun réseau
   await page.addInitScript(([s, uid]) => { try { localStorage.setItem('easyprof_state_v1', JSON.stringify(s)); localStorage.setItem('easyprof_profile_chosen', uid); } catch (e) {} }, [state, state.currentUser.id]);
+  if (time) await page.clock.setFixedTime(new Date(time));
   await page.goto('file://' + html);
   await page.waitForTimeout(1500);
   return { page, ctx, errs };

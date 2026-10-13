@@ -71,8 +71,9 @@ s = sub(s, 'c.jsx("input",{type:"number",min:1,className:"w-full bg-[#F7F5F0] bo
         'c.jsx("input",{type:"number",min:1,disabled:(D!=="theorique"&&D!=="pratique"),title:(D!=="theorique"&&D!=="pratique")?(h?"Pas de numéro : cette séance ne compte pas comme leçon":"No number: this session does not count as a lesson"):"",className:"w-full bg-[#F7F5F0] border border-natural-border rounded-xl px-3.5 py-2.5 text-xs text-center font-bold font-mono text-[#2D2926] focus:outline-none focus:border-[#0EA5A0]",style:{opacity:(D!=="theorique"&&D!=="pratique")?.4:1},value:(D!=="theorique"&&D!=="pratique")?"":pe,onChange:ge=>G(Number(ge.target.value))})')
 # bandeau « saisie en attente » : pas de rappel un jour férié du calendrier
 s = sub(s, 'var _now=new Date(),_dow=_now.getDay();if(_tds.indexOf(_dow)===-1)return null;var _today=_now.toDateString();',
-        'var _now=new Date(),_dow=_now.getDay();if(_tds.indexOf(_dow)===-1)return null;if(EPX_offDay(n,_now))return null;var _today=_now.toDateString();')
+        'var _now=new Date(),_dow=_now.getDay();if(!EPX_teachesOn(n,t,_now))return null;if(EPX_offDay(n,_now))return null;var _today=_now.toDateString();')
 # alerte AP « n\'ont pas saisi aujourd\'hui »
+s = sub(s, 'var _ds=Array.isArray(_t.teachingDays)?_t.teachingDays:[];if(_ds.indexOf(_dow)===-1)return false;', 'if(!EPX_teachesOn(n,_t,_now))return false;')
 s = sub(s, 'var _now=new Date(),_dow=_now.getDay(),_td=_now.toDateString();var _due=(s||[]).filter(function(_t){',
         'var _now=new Date(),_dow=_now.getDay(),_td=_now.toDateString();var _off=EPX_offDay(n,_now);var _due=_off?[]:(s||[]).filter(function(_t){')
 # carte « Pas de cours ? » au-dessus de l'en-tête de la page Saisie Enseignant

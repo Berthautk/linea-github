@@ -127,6 +127,49 @@ const allDays = st => { st.terms[0].startDate = '2026-09-07'; st.terms[0].endDat
   ok(errs.length === 0, 'E9 aucune erreur JS ' + JSON.stringify(errs));
   await page.close();
 }
+
+/* F. préréglage 2026-2027 : trimestres officiels, samedi de KAMDEM limité à T1 */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'AP'), { w: 1300, h: 1000 });
+  await page.getByText('CONFIGURATION').first().click(); await page.waitForTimeout(400);
+  await page.getByRole('button', { name: /Année & PIN/i }).click(); await page.waitForTimeout(400);
+  await page.getByRole('button', { name: 'Appliquer ces changements' }).click(); await page.waitForTimeout(400);
+  const st = await getState(page);
+  const T = Object.fromEntries(st.terms.map(t => [t.id, t.startDate + '→' + t.endDate]));
+  ok(T.T1 === '2026-09-07→2026-11-27' && T.T2 === '2026-11-30→2027-03-05' && T.T3 === '2027-03-08→2027-06-11', 'F1 trimestres 2026-2027 appliqués ' + JSON.stringify(T));
+  const k = st.teachers.find(t => t.id === 'KAMDEM');
+  ok(JSON.stringify(k.teachingDays) === '[1,2,6]' && JSON.stringify(k.dayTerms) === '{"6":["T1"]}', 'F2 KAMDEM : lundi, mardi, samedi (T1 seulement)');
+  ok(errs.length === 0, 'F3 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
+}
+
+/* G. rappel du samedi : visible en T1, absent en T2 (état préréglé, horloge figée) */
+for (const [date, expected, label] of [['2026-10-10T08:00:00+01:00', 1, 'samedi 10/10/2026 (T1)'], ['2027-01-09T08:00:00+01:00', 0, 'samedi 09/01/2027 (T2)'], ['2026-10-12T08:00:00+01:00', 1, 'lundi 12/10/2026']]) {
+  const mut = st => { const T = { T1: ['2026-09-07', '2026-11-27'], T2: ['2026-11-30', '2027-03-05'], T3: ['2027-03-08', '2027-06-11'] };
+    st.terms.forEach(t => { t.startDate = T[t.id][0]; t.endDate = T[t.id][1]; }); st.terms[0].status = 'active';
+    const k = st.teachers.find(t => t.id === 'KAMDEM'); k.teachingDays = [1, 2, 6]; k.dayTerms = { 6: ['T1'] }; };
+  const { page } = await open(b, html, stateFromBackup('KAMDEM', 'Teacher', mut), { w: 1200, h: 900, time: date });
+  ok(await page.getByText('Saisie du jour en attente').count() === expected, 'G rappel ' + label + ' → ' + (expected ? 'affiché' : 'absent'));
+  await page.close();
+}
+
+/* H. créneau du samedi limité à T1 dans la fiche */
+{
+  const slot = { d: 6, c: 'USA', h: 2, tm: 'T1' };
+  const mut = st => { st.terms[0].startDate = '2026-09-07'; st.terms[0].endDate = '2026-11-27'; st.terms[1].startDate = '2026-11-30'; st.terms[1].endDate = '2027-03-05';
+    st.reportObservations = Object.assign({}, st.reportObservations, { __inspection: { ps: '2026-09-07', pe: '2026-09-13', adj: [], cal: [], tt: { KAMDEM: [slot] } } }); };
+  let r = await open(b, html, stateFromBackup('KAMDEM', 'AP', mut), { w: 1400, h: 1000 });
+  await r.page.getByText('INSPECTION').first().click(); await r.page.waitForTimeout(500);
+  let row = (await r.page.locator('.epi-sheet tbody tr').first().innerText()).split('\t');
+  ok(row[2] === '2', 'H1 samedi 12/09/2026 (T1) : 2 h dues → ' + row[2]);
+  await r.page.close();
+  const mut2 = st => { mut(st); st.reportObservations.__inspection.ps = '2027-01-04'; st.reportObservations.__inspection.pe = '2027-01-10'; };
+  r = await open(b, html, stateFromBackup('KAMDEM', 'AP', mut2), { w: 1400, h: 1000 });
+  await r.page.getByText('INSPECTION').first().click(); await r.page.waitForTimeout(500);
+  row = (await r.page.locator('.epi-sheet tbody tr').first().innerText()).split('\t');
+  ok(row[2] === '0', 'H2 samedi 09/01/2027 (T2) : créneau limité à T1 → 0 h dues → ' + row[2]);
+  await r.page.close();
+}
 await b.close();
 console.log(fails ? `\n${fails} ÉCHEC(S)` : '\nTOUS LES TESTS PASSENT');
 process.exit(fails ? 1 : 0);

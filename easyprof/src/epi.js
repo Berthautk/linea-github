@@ -42,17 +42,23 @@ function EPI_dueOut(I, r) { return I.rd && I.rd[r] != null ? !!I.rd[r] : EPX_rea
 function EPI_calc(I, st, ps, pe) {
   ps = ps || I.ps; pe = pe || I.pe;
   var off = EPX_offSet(st), days = EPI_days(ps, pe);
+  var termAt = function (iso) { var hit = (st.terms || []).filter(function (t) { return t.startDate <= iso && iso <= t.endDate; })[0]; return hit ? hit.id : ""; };
   var inP = function (a) { return !a.d || (a.d >= ps && a.d <= pe); };
   var rows = (st.teachers || []).filter(function (t) {
     return (I.tt[t.id] || []).length || I.adj.some(function (a) { return a.t === t.id; });
   }).map(function (t) {
-    var slots = I.tt[t.id] || [], hd = {};
-    var weekly = slots.reduce(function (s, x) { hd[(+x.d) % 7] = (hd[(+x.d) % 7] || 0) + (+x.h || 0); return s + (+x.h || 0); }, 0);
+    var slots = I.tt[t.id] || [];
+    var weekly = slots.reduce(function (s, x) { return s + (+x.h || 0); }, 0);
+    /* heures du jour : créneaux du bon jour, et du bon trimestre si le créneau est limité (ex. samedi de T1) */
+    var hOn = function (d) {
+      var tm = termAt(d.iso);
+      return slots.reduce(function (s, x) { return s + ((+x.d) % 7 === d.dow && (!x.tm || !tm || x.tm === tm) ? (+x.h || 0) : 0); }, 0);
+    };
     var decl = {};
     (st.entries || []).forEach(function (e) { if (e.type === "absence" && e.teacherId === t.id) decl[(e.timestamp || "").slice(0, 10)] = e.reason; });
     var due = 0, excused = 0, absD = 0, nOff = 0, declList = [];
     days.forEach(function (d) {
-      var h = hd[d.dow] || 0; if (!h) return;
+      var h = hOn(d); if (!h) return;
       if (off[d.iso]) { nOff += h; return; }
       var r = decl[d.iso];
       if (r && EPI_dueOut(I, r)) { excused += h; declList.push({ d: d.iso, r: r, h: h, out: true }); return; }
@@ -285,11 +291,12 @@ function EPI(props) {
               sel(s.d, [1, 2, 3, 4, 5, 6].map(function (d) { return [d, (fr ? EPI_DFR : EPI_DEN)[d % 7]]; }), function (v) { setS({ d: +v }); }, 80),
               sel(s.c, cls.map(function (c) { return [c.id, c.name]; }).concat(cls.some(function (c) { return c.id === s.c; }) ? [] : [[s.c, s.c]]), function (v) { setS({ c: v }); }, 150),
               h2(EPI_In, { type: "number", value: s.h, cls: "epi-in", onCommit: function (v) { setS({ h: +v || 0 }); } }),
+              sel(s.tm || "", [["", L("toute l'année", "all year")]].concat(terms.map(function (tm) { return [tm.id, tm.id]; })), function (v) { setS({ tm: v }); }, 110),
               h2("button", { className: "epi-btn red", type: "button", onClick: function () { upd(function (c) { var tt = Object.assign({}, c.tt); tt[t.id] = (tt[t.id] || []).filter(function (x, j) { return j !== i; }); return { tt: tt }; }); } }, "×"));
           }),
           h2("button", { className: "epi-btn alt", type: "button", onClick: function () { upd(function (c) { var tt = Object.assign({}, c.tt); tt[t.id] = (tt[t.id] || []).concat([{ d: 1, c: (cls[0] || {}).id || "", h: 1 }]); return { tt: tt }; }); } }, L("+ Créneau", "+ Slot"))) : null);
     }),
-    h2("p", { className: "epi-note" }, L("Une ligne = une plage (jour, classe, nombre d'heures). Vous pouvez y ajouter les samedis.", "One line = one slot (day, class, hours). Saturdays can be added here.")));
+    h2("p", { className: "epi-note" }, L("Une ligne = une plage (jour, classe, nombre d'heures, et trimestre si elle ne vaut pas toute l'année). Vous pouvez y ajouter les samedis.", "One line = one slot (day, class, hours). Saturdays can be added here.")));
 
   var rd = I.rd || {};
   var ctrlRd = h2("div", { className: "epi-card epi-noprint" },

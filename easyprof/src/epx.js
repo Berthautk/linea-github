@@ -46,9 +46,11 @@ function EPX_calendar(st) {
   return (s && Array.isArray(s.cal)) ? s.cal : EPX_calDefault();
 }
 function EPX_calDefault() {
-  /* uniquement les fêtes nationales à date fixe ; vacances et fêtes mobiles : à saisir par l'AP */
-  var F = function (d, n) { return { f: d, t: d, n: n }; };
-  return [F("2026-12-25", "Noël"), F("2027-01-01", "Jour de l'An"), F("2027-02-11", "Fête de la Jeunesse"), F("2027-05-01", "Fête du Travail"), F("2027-05-20", "Fête nationale")];
+  /* Vacances 2026-2027 d'après la presse (Journal du Cameroun, Cameroun Online) : arrêté conjoint MINEDUB/MINESEC du 14/08/2026, texte non consulté -> à confirmer.
+     Les demi-journées (fin des cours le 18/12 et le 25/03 à 15h30) ne sont pas retirées. Fêtes mobiles (Tabaski…) : à saisir. */
+  var F = function (f, t, n) { return { f: f, t: t, n: n }; };
+  return [F("2026-12-19", "2027-01-03", "Vacances de Noël (à confirmer)"), F("2027-02-11", "2027-02-11", "Fête de la Jeunesse"), F("2027-03-26", "2027-04-11", "Vacances de Pâques (à confirmer)"),
+    F("2027-05-01", "2027-05-01", "Fête du Travail"), F("2027-05-06", "2027-05-06", "Ascension"), F("2027-05-20", "2027-05-20", "Fête nationale")];
 }
 function EPX_offSet(st) {
   var set = {}, cal = EPX_calendar(st), s = st.reportObservations && st.reportObservations.__inspection;
@@ -62,6 +64,17 @@ function EPX_offSet(st) {
   return set;
 }
 function EPX_offDay(st, d) { return !!EPX_offSet(st)[EPX_iso(d)]; }
+
+function EPX_termOf(st, d) {
+  var iso = EPX_iso(d), T = st.terms || [], hit = T.filter(function (t) { return t.startDate <= iso && iso <= t.endDate; })[0];
+  return (hit || T.filter(function (t) { return t.status === "active"; })[0] || {}).id || "";
+}
+function EPX_teachesOn(st, t, d) {
+  var days = Array.isArray(t.teachingDays) ? t.teachingDays : [], dow = d.getDay();
+  if (days.indexOf(dow) === -1) return false;
+  var dt = t.dayTerms && t.dayTerms[dow];
+  return !(Array.isArray(dt) && dt.length && dt.indexOf(EPX_termOf(st, d)) === -1);
+}
 
 /* ---------- SHA-256 synchrone (identique à EasyProfHashPin : "h1$" + sha256("easyprof:"+pin)) ---------- */
 function EPX_sha256(ascii) {
@@ -181,9 +194,12 @@ function EPD(p) {
 /* ---------- onglet « Année » de la Configuration ---------- */
 var EPY_PRESET = {
   schoolYear: "2026/2027",
-  terms: { T1: ["2026-09-07", "2026-12-15"], T2: ["2027-01-05", "2027-03-30"], T3: ["2027-04-06", "2027-06-30"] },
-  /* d'après Timetables_2026-2027 : 1=lun … 6=sam. Samedis de T1 (LSA/USA de KAMDEM) : non inclus -> à ajouter si souhaité */
-  days: { ASTHA: [1, 3, 4, 5], KAMDEM: [1, 2], NEBASIBI: [3, 4, 5], TSOGO2026: [3, 4, 5] }
+  /* arrêté conjoint 2026-2027 (d'après la presse, à confirmer) : T2 = 30/11→05/03 (coupé par les vacances de Noël), T3 = 08/03→11/06 (coupé par Pâques) */
+  terms: { T1: ["2026-09-07", "2026-11-27"], T2: ["2026-11-30", "2027-03-05"], T3: ["2027-03-08", "2027-06-11"] },
+  /* jours où le samedi n'est enseigné que certains trimestres : {enseignant: {6: ["T1"]}} */
+  dayTerms: { KAMDEM: { "6": ["T1"] } },
+  /* d'après Timetables_2026-2027 : 1=lun … 6=sam ; KAMDEM enseigne aussi le samedi (USA 8h-10h, LSA 10h30-12h30) */
+  days: { ASTHA: [1, 3, 4, 5], KAMDEM: [1, 2, 6], NEBASIBI: [3, 4, 5], TSOGO2026: [3, 4, 5] }
 };
 function EPY(props) {
   var st = props.state, e = props.onChangeState, fr = st.activeLanguage === "fr";
@@ -200,14 +216,14 @@ function EPY(props) {
   var sameDays = function (a, b) { return JSON.stringify((a || []).slice().sort()) === JSON.stringify((b || []).slice().sort()); };
   var diffs = [];
   terms.forEach(function (t) { var p = EPY_PRESET.terms[t.id]; if (p && (t.startDate !== p[0] || t.endDate !== p[1])) diffs.push(t.id + " : " + t.startDate + " → " + t.endDate + "  ⇒  " + p[0] + " → " + p[1]); });
-  teachers.forEach(function (t) { var p = EPY_PRESET.days[t.id]; if (p && !sameDays(t.teachingDays, p)) diffs.push((t.shortName || t.name) + " : " + L("jours ", "days ") + (Array.isArray(t.teachingDays) && t.teachingDays.length ? t.teachingDays.map(function (d) { return DN[d % 7]; }).join("/") : L("(aucun)", "(none)")) + "  ⇒  " + p.map(function (d) { return DN[d % 7]; }).join("/")); });
+  teachers.forEach(function (t) { var p = EPY_PRESET.days[t.id]; if (p && (!sameDays(t.teachingDays, p) || JSON.stringify(t.dayTerms || null) !== JSON.stringify(EPY_PRESET.dayTerms[t.id] || null))) diffs.push((t.shortName || t.name) + " : " + L("jours ", "days ") + (Array.isArray(t.teachingDays) && t.teachingDays.length ? t.teachingDays.map(function (d) { return DN[d % 7]; }).join("/") : L("(aucun)", "(none)")) + "  ⇒  " + p.map(function (d) { return DN[d % 7]; }).join("/")); });
   if ((st.establishment || {}).schoolYear !== EPY_PRESET.schoolYear) diffs.push(L("Année scolaire : ", "School year: ") + ((st.establishment || {}).schoolYear || "—") + "  ⇒  " + EPY_PRESET.schoolYear);
   var applyPreset = function () {
     e(function (s) {
       return Object.assign({}, s, {
         establishment: Object.assign({}, s.establishment || {}, { schoolYear: EPY_PRESET.schoolYear }),
         terms: (s.terms || []).map(function (t) { var p = EPY_PRESET.terms[t.id]; return p ? Object.assign({}, t, { startDate: p[0], endDate: p[1] }) : t; }),
-        teachers: (s.teachers || []).map(function (t) { var p = EPY_PRESET.days[t.id]; return p ? Object.assign({}, t, { teachingDays: p }) : t; })
+        teachers: (s.teachers || []).map(function (t) { var p = EPY_PRESET.days[t.id]; return p ? Object.assign({}, t, { teachingDays: p, dayTerms: EPY_PRESET.dayTerms[t.id] || null }) : t; })
       });
     });
     toast(L("✓ Configuration 2026-2027 appliquée.", "✓ 2026-2027 setup applied."));
@@ -230,7 +246,7 @@ function EPY(props) {
         EPX_h("p", { className: "epx-note", style: { marginTop: 0 } }, L("Changements proposés (rien n'est modifié tant que vous ne cliquez pas) :", "Proposed changes (nothing changes until you click):")),
         diffs.map(function (d, i) { return EPX_h("div", { key: i, className: "epx-item", style: { fontFamily: "ui-monospace,monospace", fontSize: 11 } }, d); }),
         EPX_h("div", { className: "epx-row", style: { marginTop: 10 } }, EPX_h("button", { className: "epx-btn", type: "button", onClick: applyPreset }, L("Appliquer ces changements", "Apply these changes"))),
-        EPX_h("p", { className: "epx-note" }, L("Seule la date de début du 1er trimestre (07/09/2026) est connue ; les autres dates sont une proposition (mêmes jours que l'an dernier) à corriger ci-dessous selon le calendrier officiel. Jours des enseignants d'après les emplois du temps 2026-2027 ; les samedis de T1 de KAMDEM ne sont pas inclus (à cocher plus bas si vous le souhaitez).", "Only the 1st term start (07/09/2026) is known; other dates are a proposal (same days as last year) to correct below per the official calendar. Teaching days follow the 2026-2027 timetables; KAMDEM's T1 Saturdays are not included (tick below if wanted)."))
+        EPX_h("p", { className: "epx-note" }, L("Dates des trimestres d'après la presse (arrêté conjoint du 14/08/2026, texte officiel non consulté) : à vérifier sur le site du MINESEC. Jours des enseignants d'après les emplois du temps 2026-2027 ; le samedi de KAMDEM est limité au 1er trimestre (modifiable plus bas).", "Term dates come from press reports (joint order of 14/08/2026, official text not consulted): check on the MINESEC site. Teaching days follow the 2026-2027 timetables; KAMDEM's Saturday is limited to term 1 (editable below)."))
       ) : EPX_h("p", { className: "epx-note", style: { marginTop: 0 } }, L("✓ Tout est déjà à jour (année, trimestres, jours d'enseignement).", "✓ Everything is already up to date."))),
     /* 2. trimestres */
     EPX_h("div", { className: "epx-card" },
@@ -251,6 +267,14 @@ function EPY(props) {
         return EPX_h("div", { key: t.id, className: "epx-item" },
           EPX_h("b", { style: { width: 110 } }, t.shortName || t.name),
           [1, 2, 3, 4, 5, 6].map(function (d) { return EPX_h("button", { key: d, type: "button", className: "epx-day" + (cur.indexOf(d) >= 0 ? " on" : ""), onClick: function () { toggleDay(t, d); } }, DN[d]); }),
+          cur.indexOf(6) >= 0 ? EPX_h("span", { className: "epx-note", style: { margin: "0 0 0 6px" } }, L("samedi :", "Saturday:")) : null,
+          cur.indexOf(6) >= 0 ? terms.map(function (tm) {
+            var sel = (t.dayTerms && t.dayTerms["6"]) || terms.map(function (x) { return x.id; }), on = sel.indexOf(tm.id) >= 0;
+            return EPX_h("button", { key: tm.id, type: "button", className: "epx-day" + (on ? " on" : ""), onClick: function () {
+              var nx = on ? sel.filter(function (x) { return x !== tm.id; }) : sel.concat([tm.id]);
+              e(function (s2) { return Object.assign({}, s2, { teachers: (s2.teachers || []).map(function (x) { return x.id === t.id ? Object.assign({}, x, { dayTerms: Object.assign({}, x.dayTerms || {}, { "6": nx }) }) : x; }) }); });
+            } }, tm.id);
+          }) : null,
           cur.length ? null : EPX_h("span", { className: "epx-chip epx-bad" }, L("aucun jour : aucun rappel", "no day: no reminder")));
       })),
     /* 4. calendrier */

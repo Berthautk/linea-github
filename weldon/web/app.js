@@ -927,6 +927,7 @@
       revealText: "Voulez-vous voir le corrigé ? Gardez votre copie à côté : vous allez vous noter vous-même, critère par critère.",
       revealYes: "Voir le corrigé et me noter",
       revealLater: "Plus tard (quitter la salle)",
+      backExam: "Pour sortir de la salle d'examen, utilisez le bouton « Quitter ». Votre chronomètre continue.",
       report: "Signaler une erreur",
       reportTitle: "Signaler une erreur",
       reportWhere: "Où est l'erreur ?",
@@ -950,6 +951,7 @@
       revealText: "Would you like to see the model answer? Keep your script beside you: you will mark yourself, criterion by criterion.",
       revealYes: "See the model answer and mark myself",
       revealLater: "Later (leave the room)",
+      backExam: "To leave the exam room, use the “Leave” button. Your timer keeps running.",
       report: "Report a mistake",
       reportTitle: "Report a mistake",
       reportWhere: "Where is the mistake?",
@@ -1182,6 +1184,11 @@
       unanswered: "Pas de réponse",
       leave: "Quitter",
       leaveSure: "Quitter maintenant ? Vos réponses déjà corrigées sont gardées.",
+      leaveSureBlanc: "Quitter le concours blanc ? Vos réponses ne seront pas corrigées.",
+      leaveYes: "Quitter",
+      stay: "Rester",
+      submitYes: "Terminer",
+      keep: "Continuer",
       timeLeft: "Temps restant",
       submit: "Terminer et corriger",
       submitSure: (m) => `Il reste ${m} question(s) sans réponse. Terminer quand même ?`,
@@ -1235,6 +1242,11 @@
       unanswered: "No answer",
       leave: "Leave",
       leaveSure: "Leave now? Answers already marked are kept.",
+      leaveSureBlanc: "Leave the mock competition? Your answers will not be marked.",
+      leaveYes: "Leave",
+      stay: "Stay",
+      submitYes: "Finish",
+      keep: "Keep going",
       timeLeft: "Time left",
       submit: "Finish and mark",
       submitSure: (m) => `${m} question(s) left unanswered. Finish anyway?`,
@@ -1286,6 +1298,8 @@
       edit: "Modifier mon plan",
       remove: "Supprimer mon plan",
       removeSure: "Supprimer votre plan ?",
+      removeYes: "Supprimer",
+      removeKeep: "Garder",
       expired: "La date de votre concours est passée. Créez un nouveau plan pour la prochaine session.",
       saved: "Plan enregistré.",
       back: "Retour",
@@ -1333,6 +1347,8 @@
       edit: "Edit my plan",
       remove: "Delete my plan",
       removeSure: "Delete your plan?",
+      removeYes: "Delete",
+      removeKeep: "Keep it",
       expired: "The date of your competition has passed. Create a new plan for the next session.",
       saved: "Plan saved.",
       back: "Back",
@@ -2425,7 +2441,7 @@
           <button type="button" class="linkish small" data-report-q="${esc(q.id)}">${Q.report}</button></div></div>`
       : "";
     return `
-      <div class="row-actions"><span class="eyebrow">${playTitle(pl.mode)} · ${themeName(q.theme)}</span><button type="button" class="linkish small" data-quiz-leave>${Q.leave}</button></div>
+      <div class="row-actions"><span class="eyebrow">${playTitle(pl.mode)} · ${themeName(q.theme)}</span><button type="button" class="btn btn-ghost btn-small" data-quiz-leave>✕ ${Q.leave}</button></div>
       <div class="progress-line"><i style="width:${((pl.i + (r ? 1 : 0)) / pl.questions.length) * 100}%"></i></div>
       <article class="card protected question"><span class="small muted">${Q.qOf(pl.i + 1, pl.questions.length)}</span><h2>${esc(q.q)}</h2><div class="options">${opts}</div>${fb}</article>`;
   }
@@ -3254,7 +3270,86 @@
 
   function closeModal() {
     document.getElementById("modal")?.remove();
+    if (state.confirmResolve) {
+      const r = state.confirmResolve;
+      state.confirmResolve = null;
+      r(false); // fermer la fenêtre sans répondre = refuser
+    }
   }
+
+  // Confirmation dans l'application (à la place de la boîte du navigateur, qui affiche l'adresse du site).
+  function askConfirm(text, yes, no) {
+    return new Promise((resolve) => {
+      modal(`<p style="font-weight:700;font-size:1.05rem">${esc(text)}</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-primary" data-confirm="1">${esc(yes)}</button><button type="button" class="btn btn-ghost" data-confirm="0">${esc(no)}</button></div>`);
+      state.confirmResolve = resolve;
+    });
+  }
+
+  // ---------- Bouton Retour du téléphone ----------
+  // Sans cela, Retour quitte toute l'application. Dès qu'on entre dans un écran « enfant » (quiz en cours, fiche,
+  // plan, fenêtre…), on ajoute une entrée d'historique : Retour revient alors d'un niveau, et ne quitte l'application
+  // que depuis un écran principal.
+  function isNested() {
+    if (!state.user) return false;
+    if (document.getElementById("modal")) return true;
+    if (state.play) return true;
+    if (state.tab === "quiz") return state.qzView === "plan";
+    if (state.tab === "salle" && state.exam && ["prep", "compose"].includes(state.exam.phase) && state.examDoc) return true;
+    const nav = state.nav[state.tab] || {};
+    return Boolean(nav.concours || nav.orient || nav.calendrier || nav.doc);
+  }
+
+  function syncHistory() {
+    const nested = isNested();
+    if (nested && !state.sentinel) {
+      history.pushState({ weldon: 1 }, "");
+      state.sentinel = true;
+    } else if (!nested && state.sentinel) {
+      state.sentinel = false;
+      state.popIgnore = (state.popIgnore || 0) + 1;
+      history.back(); // retire l'entrée devenue inutile
+    }
+  }
+
+  function navBack() {
+    const nav = state.nav[state.tab] || {};
+    if (nav.from === "orient") return go("concours", { orient: true });
+    if (nav.from === "cal") return go("concours", { calendrier: true });
+    return go(state.tab, nav.doc ? { concours: nav.concours } : {});
+  }
+
+  async function backOne() {
+    if (document.getElementById("modal")) return closeModal();
+    const pl = state.play;
+    if (pl) {
+      if (pl.mode === "blanc" && !pl.finished && !(await askConfirm(qz().leaveSureBlanc, qz().leaveYes, qz().stay))) return render();
+      state.play = null;
+      state.qzStats = null;
+      return render();
+    }
+    if (state.tab === "salle" && state.exam && ["prep", "compose"].includes(state.exam.phase) && state.examDoc) {
+      toast(rev().backExam);
+      return render(); // l'entrée d'historique est remise : on ne sort pas de la salle par mégarde
+    }
+    if (state.tab === "quiz" && state.qzView === "plan") {
+      if (state.planEdit && state.plan?.plan && !state.plan.expired) state.planEdit = false;
+      else state.qzView = null;
+      return render();
+    }
+    return navBack();
+  }
+
+  window.addEventListener("popstate", () => {
+    if (state.popIgnore > 0) {
+      state.popIgnore--;
+      return;
+    }
+    if (!state.sentinel) return; // rien à faire dans l'application : le navigateur quitte la page
+    state.sentinel = false; // Retour vient de consommer l'entrée
+    backOne();
+  });
+  new MutationObserver(() => syncHistory()).observe(document.body, { childList: true }); // ouverture et fermeture des fenêtres
 
   async function submitPay(form) {
     const L = t();
@@ -3418,6 +3513,7 @@
     else if (tab === "oral") v.innerHTML = viewOral();
     else if (tab === "salle") v.innerHTML = viewSalle();
     if (state.exam?.phase === "done") updateSelfTotal();
+    syncHistory();
     tick();
   }
 
@@ -3526,7 +3622,7 @@
       return render();
     }
     if ("planRemove" in d) {
-      if (!confirm(pl().removeSure)) return;
+      if (!(await askConfirm(pl().removeSure, pl().removeYes, pl().removeKeep))) return;
       try {
         state.plan = await api().savePlan({ clear: true });
       } catch (e) {
@@ -3591,11 +3687,11 @@
     }
     if ("quizSubmit" in d) {
       const left = state.play.questions.length - Object.keys(state.play.choice).length;
-      if (left && !confirm(qz().submitSure(left))) return;
+      if (left && !(await askConfirm(qz().submitSure(left), qz().submitYes, qz().keep))) return;
       return finishBlanc(false);
     }
     if ("quizLeave" in d) {
-      if (!confirm(qz().leaveSure)) return;
+      if (!(await askConfirm(qz().leaveSure, qz().leaveYes, qz().stay))) return;
       state.play = null;
       state.qzStats = null;
       return render();
@@ -3665,11 +3761,12 @@
       return render();
     }
     if (d.openOrient) return go("concours", { concours: d.openOrient, from: "orient" });
-    if ("back" in d) {
-      const nav = state.nav[state.tab] || {};
-      if (nav.from === "orient") return go("concours", { orient: true });
-      if (nav.from === "cal") return go("concours", { calendrier: true });
-      return go(state.tab, nav.doc ? { concours: nav.concours } : {});
+    if ("back" in d) return navBack();
+    if (d.confirm !== undefined) {
+      const r = state.confirmResolve;
+      state.confirmResolve = null;
+      closeModal();
+      return r?.(d.confirm === "1");
     }
     if (d.doc) {
       const meta = epreuveMeta(d.doc);

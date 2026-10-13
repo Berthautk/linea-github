@@ -1,4 +1,4 @@
-// Moteur de calcul EasyProf : heures dues / faites, leçons attendues (rythme), retards, périodes, fiche d'inspection.
+// Moteur de calcul Rekort : heures dues / faites, leçons attendues (rythme), retards, périodes, fiche d'inspection.
 // Fonctions pures : aucune dépendance à l'écran. `state` = { dept, teachers, classes, assign, regul, entries }.
 import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO } from './dates.js';
 import { reasonOf, isLessonType, THRESHOLDS } from './consts.js';

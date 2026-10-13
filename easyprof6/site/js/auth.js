@@ -14,7 +14,7 @@ const DISCIPLINES = [['Géographie', 'GEO'], ['Histoire', 'HIST'], ['Éducation 
 const strip = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '.').replace(/^\.+|\.+$/g, '').slice(0, 20);
 
 function Lang() { return html`<div class="row" style="justify-content:center"><${Seg} options=${[{ id: 'fr', label: 'Français' }, { id: 'en', label: 'English' }]} value=${state.lang} onChange=${setLanguage} /></div>`; }
-function Brand() { return html`<div class="brand"><img src="/icons/icon-192.png" alt="" /><h1>EasyProf</h1><p class="sub">${t('Le suivi pédagogique de votre département, simple et fiable.')}</p></div>`; }
+function Brand() { return html`<div class="brand"><img src="/icons/icon-192.png" alt="" /><h1>Rekort</h1><p class="sub">${t('Le suivi pédagogique de votre département, simple et fiable.')}</p></div>`; }
 
 export function AuthScreen() {
   const [mode, setMode] = useState('login');

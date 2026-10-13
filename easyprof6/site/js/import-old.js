@@ -3,7 +3,7 @@ const TYPE = { theorique: 'lesson', pratique: 'practical', contact: 'orientation
 const cap = (s) => s.toLowerCase().replace(/(^|\s)\S/g, (m) => m.toUpperCase());
 
 export function isOldBackup(j) { return !!(j && (j._easyprofBackup || (j.teachers && j.classes && j.entries && j.establishment))); }
-export function isNewBackup(j) { return !!(j && j.format === 'easyprof6' && j.data); }
+export function isNewBackup(j) { return !!(j && (j.format === 'rekort' || j.format === 'easyprof6') && j.data); }
 
 /** Lit la sauvegarde sans rien modifier : résumé pour l'écran de confirmation. */
 export function summarize(j) {

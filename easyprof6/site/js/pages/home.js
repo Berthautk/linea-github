@@ -48,7 +48,7 @@ function Classes({ rows, ctx, tid }) {
 
 function whatsapp(tc, ctx) {
   const digits = String(tc.phone || '').replace(/[^0-9]/g, ''); if (!digits) return null;
-  return 'https://wa.me/' + digits + '?text=' + encodeURIComponent(t('Bonjour {n}, petit rappel : merci d’enregistrer votre cours du jour sur EasyProf.', { n: tc.name }));
+  return 'https://wa.me/' + digits + '?text=' + encodeURIComponent(t('Bonjour {n}, petit rappel : merci d’enregistrer votre cours du jour sur Rekort.', { n: tc.name }));
 }
 function todayState(ctx, tc) {
   const td = todaySlots(ctx, tc.id);

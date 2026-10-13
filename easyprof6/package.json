@@ -1,9 +1,9 @@
 {
-  "name": "easyprof",
+  "name": "rekort",
   "version": "6.0.0",
   "private": true,
   "type": "module",
-  "description": "EasyProf 6 : suivi pédagogique pour les départements de l'enseignement secondaire (hors ligne d'abord, synchronisation par département).",
+  "description": "Rekort : suivi pédagogique pour les départements de l'enseignement secondaire (hors ligne d'abord, synchronisation par département).",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "dev": "node tools/dev-server.mjs"

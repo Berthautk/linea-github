@@ -24,11 +24,11 @@ function Menu() {
       ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Trimestres, vacances, dernier jour de cours')],
       ['#/settings/classes', 'book', t('Classes'), t('Les classes et leurs effectifs')],
       ['#/settings/team', 'users', t('Équipe'), t('Collègues, emplois du temps, leçons prévues')],
-      ['#/settings/regul', 'clock', t('Heures hors application'), t('Compter des heures faites avant EasyProf')]] : []),
+      ['#/settings/regul', 'clock', t('Heures hors application'), t('Compter des heures faites avant Rekort')]] : []),
     ['#/settings/data', 'download', t('Sauvegarde et import'), ap ? t('Exporter, importer l’ancienne version') : t('Exporter vos données')],
   ];
   return html`<div class="page"><div class="page-h"><h1>${t('Réglages')}</h1></div><div class="card"><div class="list">${items.map(([href, ic, title, sub]) => html`<a class="item" href=${href} style="text-decoration:none;color:inherit"><div class="dot"><${Icon} n=${ic} /></div><div class="grow"><b>${title}</b><span>${sub}</span></div><${Icon} n="right" size="18" /></a>`)}</div></div>
-    <p class="sub" style="text-align:center">EasyProf 6 · ${t('Département')} ${state.data.dept.name}</p></div>`;
+    <p class="sub" style="text-align:center">Rekort · ${t('Département')} ${state.data.dept.name}</p></div>`;
 }
 
 function Profile() {
@@ -43,7 +43,7 @@ function Profile() {
     <form class="card stack" onSubmit=${change}><h3>${t('Changer mon mot de passe')}</h3><div class="grid2"><${Field} label=${t('Mot de passe actuel')}><input class="input" type="password" autocomplete="current-password" value=${pw.old} onInput=${(e) => setPw({ ...pw, old: e.target.value })} required /><//>
       <${Field} label=${t('Nouveau mot de passe')} hint=${t('Au moins 6 caractères.')}><input class="input" type="password" autocomplete="new-password" value=${pw.password} onInput=${(e) => setPw({ ...pw, password: e.target.value })} required /><//></div>
       ${msg && msg.ok ? html`<div class="ok">${msg.ok}</div>` : null}${msg && msg.err ? html`<div class="err">${msg.err}</div>` : null}<button class="btn" style="align-self:flex-start">${t('Changer le mot de passe')}</button></form>
-    <div class="card stack"><h3>${t('Cet appareil')}</h3>${inst ? html`<button class="btn accent" onClick=${async () => { inst.prompt(); await inst.userChoice; window.__epInstall = null; update(() => { }); }}><${Icon} n="download" />${t('Installer EasyProf sur ce téléphone')}</button>` : html`<p class="sub">${t('Pour installer l’application : menu du navigateur › « Ajouter à l’écran d’accueil » ou « Installer l’application ».')}</p>`}
+    <div class="card stack"><h3>${t('Cet appareil')}</h3>${inst ? html`<button class="btn accent" onClick=${async () => { inst.prompt(); await inst.userChoice; window.__epInstall = null; update(() => { }); }}><${Icon} n="download" />${t('Installer Rekort sur ce téléphone')}</button>` : html`<p class="sub">${t('Pour installer l’application : menu du navigateur › « Ajouter à l’écran d’accueil » ou « Installer l’application ».')}</p>`}
       <button class="btn soft" onClick=${() => logout()}><${Icon} n="logout" />${t('Se déconnecter')}</button>
       <button class="btn danger" onClick=${() => confirmDialog({ title: t('Effacer les données de cet appareil ?'), message: t('Vos données restent enregistrées sur le serveur et reviendront à la prochaine connexion. Les saisies pas encore synchronisées seraient perdues.'), confirm: t('Effacer et se déconnecter'), danger: true, onConfirm: () => logout({ wipe: true }) })}>${t('Se déconnecter et effacer cet appareil')}</button></div></div>`;
 }
@@ -107,7 +107,7 @@ function CatchUp({ ctx }) {
   const setRow = (i, k, v) => setRows(rows.map((r, j) => (j === i ? { ...r, [k]: v } : r)));
   const save = () => { replaceStartRegul(rows.filter(r => +r.h > 0 || +r.lessons > 0).map(r => ({ ...r, d: start, d2: date, note: t('Reprise : à jour jusqu’au {d}', { d: fmt(date, lang) }) }))); setRows(null); setToast(t('Reprise enregistrée.')); };
   return html`<div class="card stack"><h3>${t('Démarrer sans être « en retard »')}</h3>
-    <p class="sub">${t('EasyProf compte ce que chacun saisit. Pour les semaines passées, indiquez ici la date jusqu’à laquelle tout était à jour : on ajoute alors, pour chaque classe, les heures et leçons prévues qui n’ont pas été saisies. À partir de cette date, chacun saisit normalement.')}</p>
+    <p class="sub">${t('Rekort compte ce que chacun saisit. Pour les semaines passées, indiquez ici la date jusqu’à laquelle tout était à jour : on ajoute alors, pour chaque classe, les heures et leçons prévues qui n’ont pas été saisies. À partir de cette date, chacun saisit normalement.')}</p>
     ${prev.length ? html`<div class="ok">${t('Reprise déjà enregistrée ({n} lignes), jusqu’au {d}.', { n: prev.length, d: fmt(prev[0].d2, lang) })} <button class="btn sm danger" style="margin-left:8px" onClick=${() => { replaceStartRegul([]); setToast(t('Reprise annulée.')); }}>${t('Annuler la reprise')}</button></div>` : null}
     <div class="row"><${Field} label=${t('Tout était à jour jusqu’au')} class="grow"><input class="input" type="date" min=${start} max=${ctx.today} value=${date} onInput=${(e) => { setDate(e.target.value); setRows(null); }} /><//><button class="btn" style="align-self:flex-end" onClick=${calc}>${t('Calculer')}</button></div>
     ${rows ? (rows.length ? html`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Enseignant · classe')}</th><th>${t('Heures')}</th><th>${t('Leçons')}</th></tr></thead><tbody>${rows.map((r, i) => html`<tr><td style="white-space:normal">${(ctx.teacher(r.teacherId) || {}).short} · ${(ctx.cls(r.classId) || {}).name || r.classId}</td>
@@ -168,8 +168,8 @@ function Data() {
   const [msg, setMsg] = useState('');
   const exportJSON = () => {
     const d = state.data, mine = isAP() ? d : { ...d, entries: d.entries.filter(e => e.teacherId === myId()) };
-    const blob = new Blob([JSON.stringify({ format: 'easyprof6', version: 1, exported: new Date().toISOString(), data: mine }, null, 1)], { type: 'application/json' });
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `easyprof-${(d.dept.abbr || 'dept').toLowerCase()}-${todayISO()}.json`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    const blob = new Blob([JSON.stringify({ format: 'rekort', version: 1, exported: new Date().toISOString(), data: mine }, null, 1)], { type: 'application/json' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `rekort-${(d.dept.abbr || 'dept').toLowerCase()}-${todayISO()}.json`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   };
   const pick = (e) => {
     const file = e.target.files[0]; e.target.value = ''; if (!file) return;
@@ -184,7 +184,7 @@ function Data() {
   };
   return html`<div class="page"><${Back} title=${t('Sauvegarde et import')} />
     <div class="card stack"><h3>${t('Exporter')}</h3><p class="sub">${t('Télécharge un fichier avec vos données : une copie de sécurité à garder.')}</p><button class="btn" style="align-self:flex-start" onClick=${exportJSON}><${Icon} n="download" />${t('Télécharger la sauvegarde')}</button></div>
-    <div class="card stack"><h3>${t('Importer')}</h3><p class="sub">${isAP() ? t('Choisissez le fichier de sauvegarde de l’ancienne version d’EasyProf (Profil › sauvegarde) pour reprendre vos classes, collègues et saisies, ou une sauvegarde EasyProf 6.') : t('Choisissez une sauvegarde EasyProf 6 pour restaurer vos saisies.')}</p>
+    <div class="card stack"><h3>${t('Importer')}</h3><p class="sub">${isAP() ? t('Choisissez le fichier de sauvegarde de l’ancienne version d’EasyProf (Profil › sauvegarde) pour reprendre vos classes, collègues et saisies, ou une sauvegarde Rekort.') : t('Choisissez une sauvegarde Rekort pour restaurer vos saisies.')}</p>
       <label class="btn soft" style="align-self:flex-start;cursor:pointer"><${Icon} n="upload" />${t('Choisir un fichier')}<input type="file" accept=".json,application/json" onChange=${pick} style="display:none" /></label>${msg ? html`<div class="ok">${msg}</div>` : null}</div></div>`;
 }
 

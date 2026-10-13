@@ -1,4 +1,4 @@
-# Mettre EasyProf 6 en ligne sur Netlify (sans ligne de commande)
+# Mettre Rekort en ligne sur Netlify (sans ligne de commande)
 
 Durée : environ 10 minutes, une seule fois. Aucune carte bancaire. Après cela, **vous n'avez plus jamais rien à déployer vous-même** : quand le code change, c'est l'équipe technique (moi) qui publie ; vos collègues ouvrent simplement le lien.
 
@@ -16,7 +16,7 @@ Durée : environ 10 minutes, une seule fois. Aucune carte bancaire. Après cela,
 4. Cliquez **Deploy**. Au bout d'une à deux minutes, le site est en ligne sur une adresse du type `https://xxxx.netlify.app`.
 
 ## 3. Choisir l'adresse
-**Project configuration → General → Project details → Change project name** : par exemple `easyprof-cmr` ; l'adresse devient `https://easyprof-cmr.netlify.app`. C'est ce lien que vous donnerez à vos collègues.
+**Project configuration → General → Project details → Change project name** : par exemple `rekort` (si le nom est libre ; sinon `rekort-cmr`) ; l'adresse devient `https://rekort.netlify.app`. C'est ce lien que vous donnerez à vos collègues.
 
 ## 4. Vérifier que tout marche (5 minutes)
 1. Ouvrez l'adresse, cliquez **Je n'ai pas de compte : créer mon département**, créez votre compte.

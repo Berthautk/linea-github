@@ -1,4 +1,4 @@
-// API EasyProf : comptes, connexion, synchronisation d'un département, gestion de l'équipe.
+// API Rekort : comptes, connexion, synchronisation d'un département, gestion de l'équipe.
 // Chaque département est isolé : toutes les clés de données commencent par son identifiant et chaque appel vérifie le jeton.
 import { kv } from './store.mjs';
 import { hashPassword, verifyPassword, signToken, verifyToken, normUser, validUser, validPassword, randomCode, recoveryCode, rand, now } from './auth.mjs';

@@ -27,10 +27,10 @@ export function App() {
   const m = me(), init = ((m && m.name) || state.session.username).replace(/^(Mr?\.?|Mme|Mlle)\s+/i, '').trim().slice(0, 1).toUpperCase();
   const body = page === 'log' ? html`<${Log} />` : page === 'lessons' ? html`<${Lessons} />` : page === 'report' ? html`<${Report} />` : page === 'settings' ? html`<${Settings} route=${route} />` : html`<${Home} />`;
   return html`<div class="shell">
-    <nav class="nav" aria-label=${t('Navigation')}><div class="brand"><img src="/icons/icon-192.png" alt="" />EasyProf</div>
+    <nav class="nav" aria-label=${t('Navigation')}><div class="brand"><img src="/icons/icon-192.png" alt="" />Rekort</div>
       ${items.map(([id, ic, label]) => html`<a href=${'#/' + id} class=${(page === id ? 'on ' : '') + (id === 'log' ? 'add' : '')} aria-current=${page === id ? 'page' : null}>${id === 'log' ? html`<i><${Icon} n=${ic} /></i>` : html`<${Icon} n=${ic} />`}<span>${label}</span></a>`)}
       <div style="display:none"></div></nav>
-    <div class="main"><header class="top"><img class="logo" src="/icons/icon-192.png" alt="" /><div class="who"><b>${state.data.dept.name || 'EasyProf'}</b><span>${m ? m.name : state.session.username} · ${isAP() ? t('Animateur pédagogique') : t('Enseignant')}</span></div><${SyncChip} onClick=${() => syncNow()} /><a class="avatar" href="#/settings/profile" aria-label=${t('Mon profil')} style="display:grid;place-items:center;text-decoration:none">${init}</a></header>
+    <div class="main"><header class="top"><img class="logo" src="/icons/icon-192.png" alt="" /><div class="who"><b>${state.data.dept.name || 'Rekort'}</b><span>${m ? m.name : state.session.username} · ${isAP() ? t('Animateur pédagogique') : t('Enseignant')}</span></div><${SyncChip} onClick=${() => syncNow()} /><a class="avatar" href="#/settings/profile" aria-label=${t('Mon profil')} style="display:grid;place-items:center;text-decoration:none">${init}</a></header>
       ${state.sync.status === 'auth' ? html`<div class="page" style="padding-bottom:0"><div class="banner"><${Icon} n="lock" size="18" /><span class="grow">${t('Votre session a expiré. Reconnectez-vous pour continuer à synchroniser (vos données sont conservées).')}</span><button class="btn sm" onClick=${() => logout()}>${t('Se reconnecter')}</button></div></div>` : null}
       ${body}</div>
     ${state.modal ? state.modal() : null}${state.recovery ? html`<${RecoverySheet} />` : null}<${Toast} /></div>`;

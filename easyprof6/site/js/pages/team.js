@@ -12,7 +12,7 @@ import { dayName, fmt } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, fresh = true }) {
-  const text = t('EasyProf : bonjour {n}, voici votre accès.\nAdresse : {u}\nIdentifiant : {i}\nMot de passe : {p}\nVous pourrez changer le mot de passe dans Réglages › Mon profil.', { n: name, u: location.origin, i: username, p: password });
+  const text = t('Rekort : bonjour {n}, voici votre accès.\nAdresse : {u}\nIdentifiant : {i}\nMot de passe : {p}\nVous pourrez changer le mot de passe dans Réglages › Mon profil.', { n: name, u: location.origin, i: username, p: password });
   openModal(() => html`<${Modal} title=${fresh ? t('Compte créé') : t('Nouveau mot de passe')} onClose=${closeModal}>
     <p>${t('Donnez ces informations à {n}. Le mot de passe ne sera plus affiché ensuite.', { n: name })}</p>
     <div class="card flat stack" style="gap:6px"><div class="row"><span class="lab">${t('Adresse')}</span><b>${location.origin}</b></div><div class="row"><span class="lab">${t('Identifiant')}</span><b>${username}</b></div><div class="row"><span class="lab">${t('Mot de passe')}</span><span class="code" style="padding:6px 14px;font-size:20px">${password}</span></div></div>
@@ -81,7 +81,7 @@ function Plan({ tc, ctx }) {
   const upd = (a, k, v) => saveAssign({ teacherId: tc.id, classId: a.classId, th: a.th, pr: a.pr, hours: a.hours, [k]: v });
   const tot = mine.reduce((s, a) => s + (+a.th || 0) + (+a.pr || 0), 0);
   return html`<div class="card"><div class="card-h"><h3>${t('Classes et leçons prévues')}</h3><${Chip} tone="info">${tot} ${t('leçons dans l’année')}<//></div>
-    <p class="sub" style="margin-bottom:10px">${t('Indiquez, pour chaque classe de ce collègue, le nombre de leçons à faire dans l’année (programme). EasyProf en déduit où il devrait en être chaque semaine et signale les retards.')}</p>
+    <p class="sub" style="margin-bottom:10px">${t('Indiquez, pour chaque classe de ce collègue, le nombre de leçons à faire dans l’année (programme). Rekort en déduit où il devrait en être chaque semaine et signale les retards.')}</p>
     ${mine.length ? html`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Classe')}</th><th>${t('Leçons de théorie')}</th><th>${t('TP')}</th><th>${t('Heures prévues (facultatif)')}</th><th></th></tr></thead><tbody>
       ${mine.map(a => html`<tr><td>${(ctx.cls(a.classId) || {}).name || a.classId}</td>${['th', 'pr', 'hours'].map(k => html`<td><input class="input" type="number" min="0" inputmode="numeric" style="width:92px;min-height:40px" value=${a[k] || ''} onChange=${(e) => upd(a, k, +e.target.value || 0)} /></td>`)}<td><button class="icon-btn" onClick=${() => removeAssign(tc.id, a.classId)} aria-label=${t('Retirer')}><${Icon} n="x" /></button></td></tr>`)}</tbody></table></div>` : html`<${Empty} icon="📚" title=${t('Aucune classe pour ce collègue')} text=${t('Ajoutez ses classes ci-dessous.')} />`}
     ${free.length ? html`<div class="row" style="margin-top:12px"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter une classe…')}</option>${free.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: tc.id, classId: add, th: 0, pr: 0, hours: 0 }); setAdd(''); }}><${Icon} n="plus" />${t('Ajouter')}</button></div>` : (!ctx.classes.length ? html`<p class="sub">${t('Créez d’abord les classes.')}</p>` : null)}</div>`;

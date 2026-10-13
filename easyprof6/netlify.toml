@@ -1,4 +1,4 @@
-# EasyProf 6 : site statique (dossier site/) + une fonction d'API (netlify/functions/api.mjs) + stockage Netlify Blobs.
+# Rekort : site statique (dossier site/) + une fonction d'API (netlify/functions/api.mjs) + stockage Netlify Blobs.
 [build]
   publish = "site"
   command = "node tools/gen-sw.mjs"

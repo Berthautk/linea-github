@@ -31,7 +31,7 @@ function actionTexts(S) {
     if (a.kind === 'success') out.push(t('Taux de réussite inférieur à 40 % : remédiation obligatoire (art. 21).'));
   }
   if (S.gap < 0) { out.push(t('Organiser des séances de rattrapage (samedis, plages libres) pour les classes dont les cours n’ont pas eu lieu.')); out.push(t('Reprogrammer les leçons en retard et en suivre l’exécution chaque semaine.')); }
-  out.push(t('Saisie régulière de tous les enseignants dans EasyProf ; contrôle par l’animateur pédagogique chaque vendredi.'));
+  out.push(t('Saisie régulière de tous les enseignants dans Rekort ; contrôle par l’animateur pédagogique chaque vendredi.'));
   return out.join('\n');
 }
 function Letterhead({ d, hd }) {
@@ -61,7 +61,7 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
     <div class="annex"><div style="font-weight:800;font-size:12px;margin:0 0 6px">${tid ? t('Annexe : détail de mes heures') : t('Annexe : détail par enseignant')}</div>
       <table><thead><tr><th>${t('Enseignant')}</th><th>${t('H / semaine')}</th><th>${t('Dues')}</th><th>${t('Faites')}</th><th>${t('Écart')}</th><th>${t('Taux')}</th><th>${t('Leçons faites / attendues')}</th><th>${t('Dont révisions et évaluations (h)')}</th><th>${t('Absences déclarées (h)')}</th><th>${t('Retirées des heures dues (h)')}</th></tr></thead><tbody>
       ${teachers.map(x => { const s = stats(ctx, x.id, p.ps, p.pe); return html`<tr><td style="text-align:left">${x.name}</td><td>${num1(wk(x))}</td><td>${num1(s.due)}</td><td><b>${num1(s.hours)}</b></td><td>${sg(s.gap)}</td><td>${num1(s.rate)} %</td><td>${s.lessonsDone} / ${num1(s.lessonsPlanned)}</td><td>${num1(s.revisionH + s.assessH)}</td><td>${num1(s.absent)}</td><td>${num1(s.excused + s.closed)}</td></tr>`; })}</tbody></table>
-      <p style="font-size:10px;margin:6px 0 0">${t('Heures dues : emplois du temps, hors jours fériés, vacances et activités scolaires, comptées jusqu’à aujourd’hui. Heures faites : séances saisies dans EasyProf (révisions et évaluations comptent en heures mais pas en leçons). Leçons attendues : plan annuel de chaque classe réparti selon les heures de cours. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
+      <p style="font-size:10px;margin:6px 0 0">${t('Heures dues : emplois du temps, hors jours fériés, vacances et activités scolaires, comptées jusqu’à aujourd’hui. Heures faites : séances saisies dans Rekort (révisions et évaluations comptent en heures mais pas en leçons). Leçons attendues : plan annuel de chaque classe réparti selon les heures de cours. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
 }
 
 const TERM_END = { T1: 'Fin du 1er trimestre', T2: 'Fin du 2e trimestre', T3: 'Fin du 3e trimestre' };

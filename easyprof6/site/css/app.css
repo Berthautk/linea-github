@@ -1,4 +1,4 @@
-/* EasyProf 6 : design chaleureux, pensé pour le téléphone d'abord. Polices intégrées (aucune requête externe). */
+/* Rekort : design chaleureux, pensé pour le téléphone d'abord. Polices intégrées (aucune requête externe). */
 @font-face { font-family: 'Inter'; src: url('/fonts/inter-latin-wght-normal.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: 'Fraunces'; src: url('/fonts/fraunces-latin-wght-normal.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Fraunces'; src: url('/fonts/fraunces-latin-wght-italic.woff2') format('woff2'); font-weight: 100 900; font-style: italic; font-display: swap; }

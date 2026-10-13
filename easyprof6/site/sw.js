@@ -1,5 +1,5 @@
 // Fichier généré par tools/gen-sw.mjs : ne pas modifier à la main.
-const VERSION = '51764acac5';
+const VERSION = '13cae5fb6c';
 const CACHE = 'ep6-' + VERSION;
 const ASSETS = [
  "/",
@@ -7,9 +7,11 @@ const ASSETS = [
  "/fonts/fraunces-latin-wght-italic.woff2",
  "/fonts/fraunces-latin-wght-normal.woff2",
  "/fonts/inter-latin-wght-normal.woff2",
+ "/icons/armoiries.png",
  "/icons/icon-192.png",
  "/icons/icon-512.png",
  "/icons/icon-maskable-512.png",
+ "/icons/logo.svg",
  "/index.html",
  "/js/actions.js",
  "/js/api.js",

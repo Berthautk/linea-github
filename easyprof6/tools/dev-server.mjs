@@ -29,4 +29,4 @@ export function start(port = 8888, { memory = !!process.env.EP_MEMORY } = {}) {
   });
   return new Promise(resolve => server.listen(port, () => resolve(server)));
 }
-if (process.argv[1] === fileURLToPath(import.meta.url)) start(+process.argv[2] || 8888).then(() => console.log('EasyProf : http://localhost:' + (+process.argv[2] || 8888)));
+if (process.argv[1] === fileURLToPath(import.meta.url)) start(+process.argv[2] || 8888).then(() => console.log('Rekort : http://localhost:' + (+process.argv[2] || 8888)));

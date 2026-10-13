@@ -1,0 +1,21 @@
+{
+  "_doc": "Ordre d'ingestion des recueils (prompt v4, règle de contenu et de coût). Un recueil s'achète un par un : on avance un concours à la fois, et le concepteur ne fournit un recueil que quand il le décide. L'information (catalogue, orientation, calendrier) passe avant les épreuves.",
+  "groupes": [
+    {
+      "n": 1,
+      "titre": "Sessions annuelles à fort volume : en premier",
+      "concours": ["police-inspecteurs", "ens-yaounde", "enam", "enieg-ecoles-normales-dinstituteurs-de-lenseigne", "emia"],
+      "note": "Premier pilote : inspecteur de police (culture générale et rédaction). ENIET est couvert par la fiche ENIEG et ENIET."
+    },
+    {
+      "n": 2,
+      "titre": "Fort volume mais cycle de plusieurs années : seulement à l'approche de la prochaine session probable, ou si la demande est prouvée",
+      "concours": ["armees-sous-officiers", "gendarmerie-eleves-gendarmes-sous-officiers"]
+    },
+    {
+      "n": 3,
+      "titre": "Les autres : santé, douanes, impôts, écoles techniques et d'agriculture",
+      "concours": ["regies-financieres-douanes", "regies-financieres-tresor", "regies-financieres-impots", "ecoles-personnels-infirmiers-sages-femmes", "facultes-de-medecine-examen-national-daptitude-m", "iut-fgi-et-ecoles-de-technologie", "fasa-fasa-ipes-agronomie-et-sciences-agricoles"]
+    }
+  ]
+}

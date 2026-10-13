@@ -114,6 +114,8 @@
       seeCorrige: "Voir le corrigé",
       seeSujet: "Revoir le sujet",
       composeRoom: "Composer en salle d'examen",
+      sourceLabel: "Source du sujet",
+      toCheck: "Passages à vérifier (scan ou photo peu lisible) :",
       scale: "Barème : comment se noter",
       gridHow: "Pour chaque critère, relisez votre copie, trouvez la phrase qui décrit le mieux ce que vous avez écrit, et donnez-vous les points indiqués.",
       ptsUnit: (n) => (n > 1 ? "pts" : "pt"),
@@ -308,6 +310,8 @@
       seeCorrige: "See the model answer",
       seeSujet: "See the question paper",
       composeRoom: "Write it in the exam room",
+      sourceLabel: "Source of the paper",
+      toCheck: "Passages to check (scan or photo hard to read):",
       scale: "Marking guide: how to mark yourself",
       gridHow: "For each criterion, reread your script, find the line that best describes what you wrote, and give yourself the marks shown.",
       ptsUnit: (n) => (n > 1 ? "marks" : "mark"),
@@ -741,7 +745,25 @@
           interest_match: "Correspond à ce qui vous attire.",
           interest_other: "Éloigné de ce qui vous attire.",
           no_data: "Conditions pas encore renseignées.",
+          pause: this.per.pauseReason(r.prochaine),
         }[r.code];
+      },
+      pauseTag: "En pause",
+      per: {
+        title: "Périodicité",
+        types: { annuelle: "Chaque année", irreguliere: "Irrégulière", inconnue: "Périodicité non établie" },
+        everyN: (n) => `Tous les ${n} ans environ`,
+        sessions: "Sessions connues",
+        last: "Dernière session",
+        next: "Prochaine session probable",
+        toConfirm: "à confirmer",
+        pauseTitle: "Concours en pause",
+        pauseText: (y) => `Aucune session n'est attendue avant ${y} environ. Cette date est probable, elle sera à confirmer par l'arrêté officiel.`,
+        alternatives: "Concours alternatifs pour votre profil",
+        needProfile: "Indiquez votre profil pour voir des concours alternatifs.",
+        none: "Aucune alternative trouvée pour ce profil.",
+        conf: { officiel: "source officielle", secondaire: "source relais, non officielle", deduit: "déduit de l'historique", non_trouve: "non confirmé" },
+        pauseReason: (y) => `En pause : prochaine session probable en ${y} (à confirmer).`,
       },
       accessTitle: "Conditions d'accès",
       accessNote: (y) => `Conditions ${y ? "de la session " + y : "relevées"}, à confirmer dans l'arrêté officiel.`,
@@ -848,7 +870,25 @@
           interest_match: "Matches what attracts you.",
           interest_other: "Far from what attracts you.",
           no_data: "Conditions not yet recorded.",
+          pause: this.per.pauseReason(r.prochaine),
         }[r.code];
+      },
+      pauseTag: "On hold",
+      per: {
+        title: "How often",
+        types: { annuelle: "Every year", irreguliere: "Irregular", inconnue: "Frequency not established" },
+        everyN: (n) => `About every ${n} years`,
+        sessions: "Known sessions",
+        last: "Last session",
+        next: "Next probable session",
+        toConfirm: "to be confirmed",
+        pauseTitle: "Competition on hold",
+        pauseText: (y) => `No session is expected before about ${y}. This date is probable and will have to be confirmed by the official order.`,
+        alternatives: "Alternative competitions for your profile",
+        needProfile: "Enter your profile to see alternative competitions.",
+        none: "No alternative found for this profile.",
+        conf: { officiel: "official source", secondaire: "relay site, unofficial", deduit: "inferred from history", non_trouve: "not confirmed" },
+        pauseReason: (y) => `On hold: next probable session in ${y} (to be confirmed).`,
       },
       accessTitle: "Entry requirements",
       accessNote: (y) => `Conditions ${y ? "of the " + y + " session" : "found"}, to be confirmed in the official order.`,
@@ -1003,6 +1043,8 @@
       legend: { lancement: "Lancement", depot: "Dépôt des dossiers", epreuves: "Épreuves" },
       thisMonth: (m) => `En ce moment : ${m} (périodes probables)`,
       noneThisMonth: "Aucune période connue ce mois-ci.",
+      pauseSection: "En pause : pas de session attendue cette année",
+      pauseRow: (y) => `Prochaine session probable : ${y} (à confirmer)`,
       announcements: "Annonces",
       noAnn: "Aucune annonce pour le moment. Les annonces officielles vérifiées apparaîtront ici.",
       newTag: "Nouveau",
@@ -1053,6 +1095,8 @@
       legend: { lancement: "Call published", depot: "File deadline", epreuves: "Exams" },
       thisMonth: (m) => `Right now: ${m} (probable periods)`,
       noneThisMonth: "No known period this month.",
+      pauseSection: "On hold: no session expected this year",
+      pauseRow: (y) => `Next probable session: ${y} (to be confirmed)`,
       announcements: "Announcements",
       noAnn: "No announcement yet. Verified official announcements will appear here.",
       newTag: "New",
@@ -1330,6 +1374,13 @@
       deadline: "Dépôt des dossiers (ex. juillet–août)",
       exams: "Épreuves (ex. septembre)",
       link: "Lien d'inscription officiel",
+      perType: "Périodicité",
+      perTypes: { inconnue: "Non établie", annuelle: "Chaque année", pluriannuelle: "Tous les N ans", irreguliere: "Irrégulière" },
+      perInterval: "Intervalle en années (si tous les N ans)",
+      perSessions: "Années des sessions connues (séparées par des virgules)",
+      perLast: "Dernière session",
+      perNext: "Prochaine session probable",
+      perNote: "Précision affichée sur la périodicité",
       verified: "J'ai vérifié ces conditions dans l'arrêté officiel",
       save: "Enregistrer la fiche",
       saved: "Fiche enregistrée.",
@@ -1357,6 +1408,13 @@
       deadline: "File deadline (e.g. July–August)",
       exams: "Exams (e.g. September)",
       link: "Official registration link",
+      perType: "How often",
+      perTypes: { inconnue: "Not established", annuelle: "Every year", pluriannuelle: "Every N years", irreguliere: "Irregular" },
+      perInterval: "Interval in years (if every N years)",
+      perSessions: "Years of known sessions (comma separated)",
+      perLast: "Last session",
+      perNext: "Next probable session",
+      perNote: "Note shown about the frequency",
       verified: "I have checked these requirements in the official order",
       save: "Save the page",
       saved: "Page saved.",
@@ -1370,6 +1428,7 @@
     const c = concoursById(id);
     const a = c?.acces || {};
     const k = c?.calendrier || {};
+    const per = c?.periodicite || {};
     const lv = ["cep", ...LEVELS.filter((x) => x !== "terminale")];
     const levelOpts = (cur) => `<option value="">${F.none}</option>${lv.map((x) => `<option value="${x}" ${x === cur ? "selected" : ""}>${esc(O.levels[x])}</option>`).join("")}`;
     const num = (v) => (v == null ? "" : esc(v));
@@ -1390,6 +1449,12 @@
       <div class="field"><label for="ff-l">${F.launch}</label><input id="ff-l" name="mois_lancement" value="${esc(k.mois_lancement || "")}"></div>
       <div class="field"><label for="ff-d">${F.deadline}</label><input id="ff-d" name="mois_limite_depot" value="${esc(k.mois_limite_depot || "")}"></div>
       <div class="field"><label for="ff-e">${F.exams}</label><input id="ff-e" name="mois_epreuves" value="${esc(k.mois_epreuves || "")}"></div>
+      <div class="field"><label for="ff-ptype">${F.perType}</label><select id="ff-ptype" name="p_type">${["inconnue", "annuelle", "pluriannuelle", "irreguliere"].map((x) => `<option value="${x}" ${(per.type || "inconnue") === x ? "selected" : ""}>${F.perTypes[x]}</option>`).join("")}</select></div>
+      <div class="field"><label for="ff-pint">${F.perInterval}</label><input id="ff-pint" name="p_intervalle" type="number" min="2" max="10" value="${num(per.intervalle_ans)}"></div>
+      <div class="field full"><label for="ff-psess">${F.perSessions}</label><input id="ff-psess" name="p_sessions" value="${esc((per.sessions || []).join(", "))}"></div>
+      <div class="field"><label for="ff-plast">${F.perLast}</label><input id="ff-plast" name="p_derniere" type="number" min="1990" max="2100" value="${num(per.derniere_session)}"></div>
+      <div class="field"><label for="ff-pnext">${F.perNext}</label><input id="ff-pnext" name="p_prochaine" type="number" min="1990" max="2100" value="${num(per.prochaine_probable)}"></div>
+      <div class="field full"><label for="ff-pnote">${F.perNote}</label><textarea id="ff-pnote" name="p_note" rows="2" maxlength="400">${esc(per.note || "")}</textarea></div>
       <label class="full"><input type="checkbox" name="verified" ${c?.status === "verified" ? "checked" : ""}> <b>${F.verified}</b></label>`;
   }
 
@@ -1415,6 +1480,7 @@
         calendrier: { mois_lancement: g("mois_lancement"), mois_limite_depot: g("mois_limite_depot"), mois_epreuves: g("mois_epreuves"), frais_fcfa: g("frais_fcfa") },
         lien_inscription: g("lien_inscription"),
         texts: { diplomes: g("diplomes"), series_note: g("series_note"), age_note: g("age_note") },
+        periodicite: { type: g("p_type"), intervalle_ans: g("p_intervalle"), sessions: g("p_sessions"), derniere_session: g("p_derniere"), prochaine_probable: g("p_prochaine"), note: g("p_note"), confiance: g("confiance") === "arrete" ? "officiel" : g("confiance") === "site_officiel" ? "officiel" : "secondaire" },
       });
     } catch (e) {
       err.textContent = e.message;
@@ -1717,7 +1783,9 @@
     withCal.sort((a, b) => order(a) - order(b));
     const phases = ["lancement", "depot", "epreuves"];
 
+    const paused = withCal.filter((c) => c.periodicite?.pause);
     const now = withCal
+      .filter((c) => !c.periodicite?.pause)
       .map((c) => ({ c, ph: phases.filter((p) => c.calendrier.mois[p].includes(month)) }))
       .filter((x) => x.ph.length);
     const nowHtml = now.length
@@ -1750,7 +1818,7 @@
             return `<td class="${i + 1 === month ? "cur" : ""}">${on.map((p) => `<i class="ph ph-${p}" title="${esc(C.legend[p])}"></i>`).join("")}</td>`;
           })
           .join("");
-        return `<tr><th class="sticky"><div class="cal-name"><button type="button" class="linkish" data-open-cal="${c.id}">${esc(c.sigle)}</button>
+        return `<tr class="${c.periodicite?.pause ? "pause" : ""}"><th class="sticky"><div class="cal-name"><button type="button" class="linkish" data-open-cal="${c.id}">${esc(c.sigle)}</button>
           <button type="button" class="star ${isFollowed(c.id) ? "on" : ""}" data-follow="${c.id}" aria-pressed="${isFollowed(c.id)}" aria-label="${C.starLabel}: ${esc(c.nom)}">${isFollowed(c.id) ? "★" : "☆"}</button></div></th>${cells}</tr>`;
       })
       .join("");
@@ -1760,6 +1828,7 @@
       <div style="display:flex;gap:10px;flex-wrap:wrap">${state.config.whatsapp_channel ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_channel)}" target="_blank" rel="noopener noreferrer">${C.whatsapp}</a>` : ""}${state.config.whatsapp_contact ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_contact)}" target="_blank" rel="noopener noreferrer">${C.contact}</a>` : ""}</div>
       <section class="orient-group"><h2>${C.announcements}</h2>${annHtml}</section>
       <section class="orient-group"><h2>${C.thisMonth(C.monthNames[month - 1])}</h2>${nowHtml}</section>
+      ${paused.length ? `<section class="orient-group"><h2>${C.pauseSection}</h2><div class="paper-list">${paused.map((c) => `<button type="button" class="paper-row" data-open-cal="${c.id}"><span style="min-width:0"><b>${esc(c.sigle)} · ${esc(c.nom)}</b><span class="small muted">${C.pauseRow(c.periodicite.prochaine_probable)}</span></span>${I.chevron}</button>`).join("")}</div></section>` : ""}
       <section class="orient-group"><div class="legend">${legend}</div><p class="small muted">${C.followHelp(2)}</p>
         <div class="table-wrap cal-wrap"><table class="cal"><thead>${head}</thead><tbody>${rows}</tbody></table></div></section>`;
   }
@@ -1803,6 +1872,7 @@
         <div class="row" style="display:flex;gap:12px;align-items:center"><div class="${sigleClass(c)}">${esc(c.sigle)}</div>
           <div style="min-width:0"><b>${esc(c.nom)}</b><span class="small muted" style="display:block">${esc(c.organisme)}</span></div></div>
         <ul class="reasons">${reasons}</ul>
+        ${r.pause ? `<div class="pause-alts"><span class="tag tag-sun">${O.pauseTag}</span>${(alternativesFor(c.id) || []).length ? `<p class="small"><b>${O.per.alternatives}</b> : ${alternativesFor(c.id).map((a) => `<button type="button" class="linkish" data-open-orient="${a.id}">${esc(a.sigle)}</button>`).join(" · ")}</p>` : ""}</div>` : ""}
         <div class="row-actions"><span class="tag tag-line">${O.verify}</span><button type="button" class="btn btn-ghost" data-open-orient="${c.id}">${O.open}</button></div>
       </article>`;
     };
@@ -1888,6 +1958,48 @@
     state.editProfil = false;
     state.orient = null;
     render();
+  }
+
+  // Concours alternatifs pour le profil : bien adaptés ou adaptés, hors pause, de préférence dans le même domaine.
+  function alternativesFor(id) {
+    const res = state.orient?.resultats;
+    if (!res) return null;
+    const me = res.find((r) => r.id === id);
+    const pool = res.filter((r) => r.id !== id && !r.pause && ["bien", "adapte"].includes(r.categorie));
+    const same = pool.filter((r) => me?.interet && r.interet === me.interet);
+    return [...same, ...pool.filter((r) => !same.includes(r))].slice(0, 3).map((r) => concoursById(r.id)).filter(Boolean);
+  }
+
+  function alternativesBlock(c) {
+    const O = ori();
+    if (!state.user?.profil?.niveau) return `<p class="small">${O.per.needProfile} <button type="button" class="linkish" data-orient>${O.ctaBtn}</button></p>`;
+    if (!state.orient) {
+      loadOrient();
+      return `<p class="small muted">…</p>`;
+    }
+    const alts = alternativesFor(c.id) || [];
+    if (!alts.length) return `<p class="small muted">${O.per.none}</p>`;
+    return `<p class="small"><b>${O.per.alternatives}</b></p><div class="paper-list">${alts
+      .map((a) => `<button type="button" class="paper-row" data-open-orient="${a.id}"><span style="min-width:0"><b>${esc(a.sigle)} · ${esc(a.nom)}</b><span class="small muted">${esc(a.organisme)}</span></span>${I.chevron}</button>`)
+      .join("")}</div>`;
+  }
+
+  function periodCard(c) {
+    const per = c.periodicite;
+    if (!per) return "";
+    const P = ori().per;
+    const type = per.type === "pluriannuelle" ? P.everyN(per.intervalle_ans) : P.types[per.type];
+    const rows = [
+      `<div><dt>${P.title}</dt><dd>${esc(type)}</dd></div>`,
+      per.sessions?.length ? `<div><dt>${P.sessions}</dt><dd>${esc(per.sessions.join(", "))}</dd></div>` : per.derniere_session ? `<div><dt>${P.last}</dt><dd>${esc(per.derniere_session)}</dd></div>` : "",
+      per.prochaine_probable ? `<div><dt>${P.next}</dt><dd>${esc(per.prochaine_probable)} <span class="tag tag-sun">${P.toConfirm}</span></dd></div>` : "",
+    ].join("");
+    const pause = per.pause
+      ? `<div class="notice">${I.info}<span><b>${P.pauseTitle}.</b> ${P.pauseText(per.prochaine_probable)}</span></div>${alternativesBlock(c)}`
+      : "";
+    return `<article class="card"><h3>${P.title}</h3><dl class="kv">${rows}</dl>
+      ${per.note ? `<p class="small">${esc(per.note)}</p>` : ""}
+      <p class="small muted">${per.confiance ? P.conf[per.confiance] || "" : ""}</p>${pause}</article>`;
   }
 
   // Conditions d'accès structurées d'une fiche (niveau, séries, âge…), toujours « à confirmer dans l'arrêté ».
@@ -2022,6 +2134,7 @@
       <div class="fiche">
         <div style="display:grid;gap:16px;min-width:0">
           <article class="card"><h3>${L.subjects}</h3><ul class="clean">${a.matieres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>
+          ${periodCard(c)}
           ${accessCard(c)}
           ${placesTable(a)}
         </div>
@@ -2058,6 +2171,7 @@
         <div style="display:grid;gap:16px;min-width:0">
           <article class="card"><h3>${L.presentation}</h3><p>${esc(f.presentation)}</p></article>
           <article class="card"><h3>${L.ficheHistory}</h3><p>${esc(f.historique)}</p></article>
+          ${periodCard(c)}
           ${c.acces ? accessCard(c) : `<article class="card"><h3>${L.ficheConditions}</h3><ul class="clean">${f.conditions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>`}
           <article class="card"><h3>${L.fichePapers}</h3>
             <div class="table-wrap"><table><thead><tr><th>${L.thPaper}</th><th>${L.thDuration}</th><th>${L.thCoef}</th><th>${L.thElim}</th></tr></thead><tbody>${rows}</tbody></table></div>
@@ -2491,6 +2605,8 @@
         ${meta.exemple ? `<span class="tag tag-sun">${L.sampleTag}</span>` : ""}
         ${isCorrige ? sourceTag(doc) : ""}
       </div>
+      ${meta.source || doc.source ? `<p class="small muted">${esc(t().sourceLabel)} : ${esc(doc.source || meta.source)}</p>` : ""}
+      ${doc.a_verifier?.length ? `<div class="notice">${I.info}<span class="small"><b>${esc(t().toCheck)}</b> ${doc.a_verifier.map(esc).join(" · ")}</span></div>` : ""}
       ${protectedPaper(isCorrige ? doc.corrige : doc.sujet, isCorrige ? "" : "ruled")}
       ${isCorrige && gridItems(doc).length ? `<article class="card protected"><h3>${L.scale}</h3><p class="small muted">${L.gridHow}</p><div class="score-grid">${gridHtml(doc, null)}</div></article>` : ""}
       <div style="display:flex;gap:10px;flex-wrap:wrap">

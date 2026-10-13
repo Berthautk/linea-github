@@ -18,7 +18,7 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 | C5 Plan et méthode | Fait : plan à rebours (3, 5, 8 ou 12 h par semaine, plan d'urgence sous 30 et 14 jours, thèmes faibles prioritaires, première semaine gratuite), séances du jour, carnet d'erreurs, révisions espacées (1, 2, 4, 8, 16 jours), rappel quotidien (application Android). À faire : « Mes questions » (questions personnelles de l'élève). |
 | C6 Entraînement | Fait : onglet « S'entraîner », mini-quiz du jour (gratuit), séries de 10, 20 ou 40 questions et concours blanc de 40 questions en 40 minutes (abonnés), tableau « Ma préparation », 216 questions originales FR/EN (9 thèmes) à valider par échantillon (`verifie: non_verifie`). À faire : enrichir la banque, concours blancs par concours. |
 | C7 Abonnement | Fait : annuel, mensuelle prête (invisible tant que le produit Chariow n'est pas renseigné), page « Nos promesses ». Non retenu pour l'instant : essai de 7 jours (décision : 1 épreuve gratuite). À décider : lien de paiement pour les parents (le paiement doit se faire avec l'e-mail de l'élève, ou une vérification différente). |
-| C8 Extension | À chaque recueil fourni. |
+| C8 Extension | Prêt à recevoir un recueil à la fois : champs `source`, `source_doc`, `rights`, `a_verifier` contrôlés au démarrage, rapport `tools/ingest/report.mjs`, marche dans `docs/CONTENT_INGEST.md`. Aucun recueil n'est encore ingéré (les 17 épreuves sont des sujets d'entraînement Weldon). |
 | C9 « Mes cours » | Plus tard. |
 
 ## Points d'attention
@@ -36,3 +36,9 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 - **« Mes questions »** (v3, non fourni) et **fiches de culture générale** : à préciser.
 - Conditions des 70 autres concours et validation de chaque fiche.
 - Banque de questions : contrôle par échantillon (`verifie: non_verifie`), puis enrichissement.
+
+## Règle de contenu et de coût (prompt v4 mis à jour)
+- Les recueils s'achètent un par un : on avance **un concours à la fois**, et le concepteur ne fournit un recueil que quand il le décide.
+- **L'information passe avant les épreuves** : catalogue, orientation, calendrier (C2, C3) sont faits en premier, avec des sources publiques.
+- Ordre d'ingestion (`tools/ingest/ordre.json`) : 1) sessions annuelles à fort volume (inspecteur de police en pilote, ENS, ENAM, ENIEG et ENIET, EMIA) ; 2) cycles de plusieurs années (armées, gendarmerie), seulement près de la prochaine session probable ou si la demande est prouvée ; 3) les autres.
+- **Périodicité** : chaque fiche peut porter son type (annuelle, tous les N ans, irrégulière), l'historique des sessions et la prochaine session probable, toujours « à confirmer ». Un concours à cycle pluriannuel dont la prochaine session est lointaine est « en pause » : l'orientation, le calendrier et la fiche le disent et proposent des alternatives.

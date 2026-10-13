@@ -1,7 +1,7 @@
 // Tests de la lecture des périodes (calendrier) et de la veille (extraction des annonces).
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseMois, moisOf } from "./calendar.js";
+import { parseMois, moisOf, enPause, targetYear } from "./calendar.js";
 import { extractCandidates, robotsAllows } from "../tools/veille/extract.js";
 
 test("périodes en toutes lettres", () => {
@@ -47,4 +47,15 @@ test("robots.txt : le groupe * décide", () => {
   assert.equal(robotsAllows("User-agent: autre\nDisallow: /\n\nUser-agent: *\nAllow: /\n", "/x"), true);
   assert.equal(robotsAllows("User-agent: *\nDisallow: /prive\n", "/prive/a"), false);
   assert.equal(robotsAllows("", "/x"), true);
+});
+
+test("un concours à cycle de plusieurs années est en pause jusqu'à sa prochaine session probable", () => {
+  const armees = { type: "pluriannuelle", intervalle_ans: 3, derniere_session: 2026, prochaine_probable: 2029 };
+  assert.equal(targetYear(new Date("2026-10-13")), 2027);
+  assert.equal(enPause(armees, new Date("2026-10-13")), true); // 2029 > 2027
+  assert.equal(enPause(armees, new Date("2028-03-01")), true); // 2029 > 2028
+  assert.equal(enPause(armees, new Date("2028-09-01")), false); // dès septembre 2028 on prépare 2029
+  assert.equal(enPause({ ...armees, type: "annuelle" }, new Date("2026-10-13")), false);
+  assert.equal(enPause({ type: "pluriannuelle", intervalle_ans: 3 }, new Date("2026-10-13")), false); // pas de date : jamais présumé en pause
+  assert.equal(enPause(null), false);
 });

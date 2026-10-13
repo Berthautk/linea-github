@@ -3,7 +3,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { moisOf } from "./calendar.js";
+import { moisOf, PERIODICITES } from "./calendar.js";
 
 export const LANGS = ["fr", "en"];
 
@@ -26,8 +26,12 @@ export function loadContent(dir) {
     ids.add(e.id);
     if (!LANGS.includes(e.lang)) throw new Error(`Langue inconnue pour ${e.id} : ${e.lang}`);
     if (!concours.some((c) => c.id === e.concours)) throw new Error(`Concours inconnu pour ${e.id} : ${e.concours}`);
+    checkOfficiel(e);
   }
-  for (const c of concours) checkAcces(c);
+  for (const c of concours) {
+    checkAcces(c);
+    checkPeriodicite(c.id, c.periodicite);
+  }
   const byId = new Map(epreuves.map((e) => [e.id, withGrille(e, grilles)]));
 
   return {
@@ -92,6 +96,21 @@ function checkQuiz(bank) {
   }
 }
 
+// Sujets officiels : on ne publie qu'un texte transcrit, avec sa source et son droit d'usage (jamais le corrigé
+// ni la mise en page d'un auteur de recueil). `source` est affichée aux élèves ; `source_doc` et `rights` restent internes.
+export const RIGHTS = ["recueil_achete", "officiel_public", "autorisation"];
+function checkOfficiel(e) {
+  if (e.exemple) return;
+  const bad = (m) => {
+    throw new Error(`Épreuve officielle ${e.id} : ${m}`);
+  };
+  if (!e.source || typeof e.source !== "string") bad("source manquante (concours, session, organisme)");
+  if (!e.source_doc || typeof e.source_doc !== "string") bad("source_doc manquant (fichier du recueil ou lien)");
+  if (!RIGHTS.includes(e.rights)) bad(`rights inconnu (${e.rights}) : ${RIGHTS.join(" | ")}`);
+  if (e.a_verifier != null && !(Array.isArray(e.a_verifier) && e.a_verifier.every((x) => typeof x === "string"))) bad("a_verifier : liste de textes attendue");
+  if (e.corrige_source === "officiel" && e.verifie === "non_verifie") bad("un corrigé officiel ne peut pas être « non_verifie »");
+}
+
 // Conditions d'accès : valeurs contrôlées au démarrage, pour qu'une faute de frappe ne fausse jamais l'orientation.
 const NIVEAUX_OK = ["cep", "bepc", "probatoire", "bac", "bac+2", "licence", "master", "doctorat"];
 function checkAcces(c) {
@@ -112,10 +131,26 @@ export function checkAccesValues(id, a, status) {
   if (status && !["to_verify", "verified"].includes(status)) bad(`status inconnu (${status})`);
 }
 
+// Périodicité : annuelle, tous les N ans, irrégulière ; historique des sessions et prochaine session probable.
+export function checkPeriodicite(id, per) {
+  if (!per) return;
+  const bad = (m) => {
+    throw new Error(`Périodicité de ${id} : ${m}`);
+  };
+  if (!PERIODICITES.includes(per.type)) bad(`type inconnu (${per.type})`);
+  const year = (v) => Number.isInteger(v) && v >= 1990 && v <= 2100;
+  if (per.type === "pluriannuelle" && !(Number.isInteger(per.intervalle_ans) && per.intervalle_ans >= 2 && per.intervalle_ans <= 10)) bad("intervalle de 2 à 10 ans requis");
+  if (per.intervalle_ans != null && per.type !== "pluriannuelle") bad("un intervalle n'a de sens que pour un cycle de plusieurs années");
+  for (const k of ["sessions", "annees_sans_session"]) if (per[k] != null && !(Array.isArray(per[k]) && per[k].every(year))) bad(`${k} : liste d'années attendue`);
+  for (const k of ["derniere_session", "prochaine_probable"]) if (per[k] != null && !year(per[k])) bad(`${k} invalide`);
+  if (per.prochaine_probable && per.derniere_session && per.prochaine_probable <= per.derniere_session) bad("la prochaine session doit suivre la dernière");
+  if (per.confiance != null && !["officiel", "secondaire", "deduit", "non_trouve"].includes(per.confiance)) bad(`confiance inconnue (${per.confiance})`);
+}
+
 // Fiche publique d'un concours dans une langue : textes de la langue + conditions d'accès structurées.
 // Les champs `acces`, `calendrier`, `sources`… sont neutres (chiffres, codes) ; leurs textes sont dans c[lang].
 function fiche(c, lang) {
-  const { acces_txt, cal_txt, debouches, variantes, ...texts } = c[lang];
+  const { acces_txt, cal_txt, periodicite_txt, debouches, variantes, ...texts } = c[lang];
   const out = {
     id: c.id, sigle: c.sigle, couleur: c.couleur, groupe: c.groupe, categorie: c.categorie, tutelle: c.tutelle,
     oral: c.oral, priorite: c.priorite || 999, theme: c.theme, ...texts,
@@ -126,6 +161,7 @@ function fiche(c, lang) {
     const mois = moisOf(c.calendrier);
     if (mois) out.calendrier.mois = mois;
   }
+  if (c.periodicite) out.periodicite = { ...c.periodicite, ...periodicite_txt };
   if (debouches) out.debouches = debouches;
   if (variantes?.length) out.variantes = variantes;
   if (c.lien_inscription) out.lien_inscription = c.lien_inscription;

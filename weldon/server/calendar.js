@@ -30,3 +30,14 @@ export function moisOf(cal) {
   const mois = { lancement: parseMois(cal.mois_lancement), depot: parseMois(cal.mois_limite_depot), epreuves: parseMois(cal.mois_epreuves) };
   return mois.lancement.length || mois.depot.length || mois.epreuves.length ? mois : null;
 }
+
+// Année du prochain concours : dès septembre, on parle de l'année suivante.
+export const targetYear = (now = new Date()) => now.getFullYear() + (now.getMonth() >= 8 ? 1 : 0);
+
+export const PERIODICITES = ["annuelle", "pluriannuelle", "irreguliere", "inconnue"];
+
+// Un concours à cycle de plusieurs années est « en pause » quand sa prochaine session probable
+// tombe après la prochaine année de concours. Une date probable n'est jamais présentée comme officielle.
+export function enPause(per, now = new Date()) {
+  return Boolean(per && per.type === "pluriannuelle" && Number.isInteger(per.prochaine_probable) && per.prochaine_probable > targetYear(now));
+}

@@ -135,3 +135,16 @@ test("cleanProfil refuse les valeurs inconnues et nettoie les listes", () => {
   });
   assert.deepEqual(cleanProfil({ niveau: "", annee_naissance: "" }), { niveau: null, annee_naissance: null });
 });
+
+test("concours en pause : signalé, jamais exclu, classé après ceux dont la session est proche", () => {
+  const paused = { ...gp(), id: "armees", periodicite: { type: "pluriannuelle", intervalle_ans: 3, derniere_session: 2026, prochaine_probable: 2029 } };
+  const r = evaluate({ niveau: "bepc", annee_naissance: 2002 }, paused, { now: NOW });
+  assert.equal(r.pause, 2029);
+  assert.equal(r.categorie, "bien"); // la pause ne change pas l'éligibilité
+  assert.ok(r.raisons.some((x) => x.code === "pause" && x.prochaine === 2029));
+  assert.equal(evaluate({ niveau: "bepc", annee_naissance: 2002 }, gp(), { now: NOW }).pause, undefined);
+  const list = [{ ...paused, priorite: 1 }, { ...gp(), id: "annuel", priorite: 9 }];
+  assert.deepEqual(orient({ niveau: "bepc", annee_naissance: 2002 }, list, { now: NOW }).map((x) => x.id), ["annuel", "armees"]);
+  // Sans date de prochaine session, rien n'est présumé
+  assert.equal(evaluate({ niveau: "bepc", annee_naissance: 2002 }, { ...gp(), periodicite: { type: "pluriannuelle", intervalle_ans: 3 } }, { now: NOW }).pause, undefined);
+});

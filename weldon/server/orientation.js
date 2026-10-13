@@ -26,8 +26,8 @@ const THEME_INTERET = {
 };
 export const interetOf = (c) => THEME_INTERET[c.theme] || null;
 
-// Année du prochain concours : dès septembre, on parle de l'année suivante.
-export const targetYear = (now = new Date()) => now.getFullYear() + (now.getMonth() >= 8 ? 1 : 0);
+import { targetYear, enPause } from "./calendar.js";
+export { targetYear };
 
 // Seule l'année de naissance est connue : l'âge réel est l'un de deux entiers consécutifs.
 export function ageRange(anneeNaissance, year) {
@@ -145,8 +145,12 @@ export function evaluate(profil, c, { now = new Date() } = {}) {
     raisons.push({ code: offTopic ? "interest_other" : "interest_match", ok: offTopic ? null : true, interet });
   }
 
+  // Concours à cycle de plusieurs années : en pause tant que la prochaine session probable est lointaine
+  const pause = enPause(c.periodicite, now) ? c.periodicite.prochaine_probable : null;
+  if (pause) raisons.push({ code: "pause", ok: null, prochaine: pause });
+
   const categorie = non ? "non" : soft ? "improbable" : doubt ? "possible" : over || offTopic ? "adapte" : "bien";
-  return { categorie, raisons, interet };
+  return { categorie, raisons, interet, ...(pause ? { pause } : {}) };
 }
 
 const ORDRE = { bien: 0, adapte: 1, possible: 2, improbable: 3, inconnu: 4, non: 5 };
@@ -154,7 +158,8 @@ const ORDRE = { bien: 0, adapte: 1, possible: 2, improbable: 3, inconnu: 4, non:
 export function orient(profil, concoursList, opts) {
   return concoursList
     .map((c) => ({ id: c.id, priorite: c.priorite || 999, nom: c.nom || c.id, ...evaluate(profil, c, opts) }))
-    .sort((x, y) => ORDRE[x.categorie] - ORDRE[y.categorie] || x.priorite - y.priorite || x.nom.localeCompare(y.nom))
+    // À catégorie égale, un concours en pause passe après ceux qui ont une session proche
+    .sort((x, y) => ORDRE[x.categorie] - ORDRE[y.categorie] || Boolean(x.pause) - Boolean(y.pause) || x.priorite - y.priorite || x.nom.localeCompare(y.nom))
     .map(({ priorite, nom, ...r }) => r);
 }
 

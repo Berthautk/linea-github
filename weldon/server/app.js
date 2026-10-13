@@ -8,8 +8,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadEnv } from "./env.js";
 import { createStore } from "./store.js";
-import { loadContent, checkAccesValues, LANGS } from "./content.js";
-import { moisOf } from "./calendar.js";
+import { loadContent, checkAccesValues, checkPeriodicite, LANGS } from "./content.js";
+import { moisOf, enPause } from "./calendar.js";
 import { orient, cleanProfil, targetYear } from "./orientation.js";
 import { buildPlan, subjectThemes, HOURS } from "./plan.js";
 import { dayStr, pickDaily, pickSeries, pickBlanc, emptyQuiz, recordAnswer, dueIds, streak } from "./quiz.js";
@@ -629,7 +629,8 @@ async function fichesOverrides() {
 }
 
 function applyOverride(c, o, lang) {
-  const acces = { ...(c.acces || {}), ...(o.acces || {}), ...(o.texts?.[lang] || {}) };
+  const { periodicite_txt, ...accesTxt } = o.texts?.[lang] || {};
+  const acces = { ...(c.acces || {}), ...(o.acces || {}), ...accesTxt };
   if (Object.keys(acces).length) c.acces = acces;
   if (o.calendrier || c.calendrier) {
     const cal = { ...(c.calendrier || {}), ...(o.calendrier || {}) };
@@ -641,6 +642,7 @@ function applyOverride(c, o, lang) {
   if (o.lien_inscription !== undefined) c.lien_inscription = o.lien_inscription || undefined;
   if (o.status) c.status = o.status;
   if (o.last_verified) c.last_verified = o.last_verified;
+  if (o.periodicite) c.periodicite = { ...(c.periodicite || {}), ...o.periodicite, ...(periodicite_txt || {}) };
 }
 
 // Catalogue tel que les élèves le voient : épreuves retirées en moins, fiches corrigées en plus.
@@ -650,6 +652,8 @@ async function catalogLive(lang) {
   if (off.size) cat.epreuves = cat.epreuves.filter((e) => !off.has(e.id));
   const over = await fichesOverrides();
   for (const c of cat.concours) if (over[c.id]) applyOverride(c, over[c.id], lang);
+  // « En pause » dépend de la date du jour : calculé à chaque appel, jamais enregistré
+  for (const c of cat.concours) if (c.periodicite) c.periodicite.pause = enPause(c.periodicite);
   return cat;
 }
 
@@ -684,8 +688,21 @@ route("POST", "/api/admin/fiche", async (req) => {
     acces.age_max = null;
   }
   const status = b.verified ? "verified" : "to_verify";
+  const pin = b.periodicite && typeof b.periodicite === "object" ? b.periodicite : null;
+  const years = (v) => String(v ?? "").split(/[\s,;]+/).filter(Boolean).map(Number);
+  const periodicite = pin
+    ? {
+        type: pin.type || "inconnue",
+        intervalle_ans: pin.type === "pluriannuelle" ? num(pin.intervalle_ans) : null,
+        sessions: years(pin.sessions).sort((x, y) => x - y),
+        derniere_session: num(pin.derniere_session),
+        prochaine_probable: num(pin.prochaine_probable),
+        confiance: pin.confiance || "secondaire",
+      }
+    : null;
   try {
     checkAccesValues(id, acces, status);
+    checkPeriodicite(id, periodicite);
   } catch (e) {
     throw httpError(400, e.message);
   }
@@ -709,7 +726,11 @@ route("POST", "/api/admin/fiche", async (req) => {
     lien_inscription: lien,
     status,
     last_verified: dayStr(),
-    texts: { ...(prev.texts || {}), [lang]: { diplomes: str(t.diplomes, 400), series_note: str(t.series_note, 400), age_note: str(t.age_note, 400) } },
+    ...(periodicite ? { periodicite } : {}),
+    texts: {
+      ...(prev.texts || {}),
+      [lang]: { diplomes: str(t.diplomes, 400), series_note: str(t.series_note, 400), age_note: str(t.age_note, 400), ...(pin ? { periodicite_txt: { note: str(pin.note, 400) } } : {}) },
+    },
     edited_by: admin.email,
   };
   await store.setSetting("fiches", over);
@@ -731,7 +752,7 @@ route("GET", "/api/epreuves/:id/sujet", async (req, p) => {
       throw httpError(402, "Vous avez déjà utilisé votre épreuve offerte. Abonnez-vous pour accéder à toutes les épreuves.", { code: "locked" });
     }
   }
-  const { corrige, bareme, grille, ...sujet } = e;
+  const { corrige, bareme, grille, source_doc, rights, ...sujet } = e;
   return { ...sujet, free_id: u.free_id || null };
 });
 
@@ -739,7 +760,8 @@ route("GET", "/api/epreuves/:id/corrige", async (req, p) => {
   await currentPremium(req);
   const e = await liveEpreuve(p.id);
   if (!e) throw httpError(404, "Épreuve introuvable.");
-  return e;
+  const { source_doc, rights, ...pub } = e; // les références internes du recueil ne sortent jamais
+  return pub;
 });
 
 route("GET", "/api/oral/:cid", async (req, p, url) => {

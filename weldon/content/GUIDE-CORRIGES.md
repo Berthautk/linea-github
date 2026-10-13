@@ -26,11 +26,11 @@ Chaque sujet devient une entrée de `content/epreuves.json` :
 | `grille` | grille d'auto-correction (voir § 4), le total fait 20 |
 | `corrige` | corrigé entièrement rédigé |
 
-Un sujet officiel n'a pas de champ `exemple`. Il est alors rangé sous « Session <année> ». Les sujets écrits par Weldon portent `"exemple": true` et sont rangés à part, dans « Sujets d'entraînement Weldon ».
+Un sujet officiel n'a pas de champ `exemple`. Il doit porter `source` (affichée), `source_doc` et `rights` (internes) ; la marche complète est dans `docs/CONTENT_INGEST.md`. Ne jamais recopier le corrigé d'un auteur de recueil : Weldon rédige ses propres corrigés. Il est alors rangé sous « Session <année> ». Les sujets écrits par Weldon portent `"exemple": true` et sont rangés à part, dans « Sujets d'entraînement Weldon ».
 
 ## 3. Rédaction des corrigés
 
-**Quand le document acheté contient un corrigé**, il est recopié tel quel. Il sert aussi de **modèle** pour les autres sujets du même concours : même structure, même longueur, même niveau d'exigence.
+**Quand le document acheté contient un corrigé**, il n'est **pas recopié** (droit d'auteur du recueil) : il sert de **modèle de structure, de longueur et d'exigence** pour rédiger un corrigé original. Il n'est marqué `officiel` que si le concepteur demande de reprendre ce corrigé précis.
 
 **Quand il n'y a pas de corrigé**, le corrigé est rédigé en suivant le modèle du concours :
 

@@ -475,3 +475,26 @@ test("éditeur de fiches : le concepteur corrige et valide, l'orientation en tie
   const o2 = await json(await call("GET", "/api/orientation?lang=fr", undefined, t));
   assert.equal(o2.resultats.find((r) => r.id === "gardiens-paix").categorie, "improbable");
 });
+
+test("périodicité : saisie par le concepteur, pause calculée, validation", async () => {
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  const base = { id: "emia", lang: "fr", acces: { niveaux_min: "bac", confiance: "secondaire" }, calendrier: {}, lien_inscription: "", verified: false, texts: {} };
+  const year = new Date().getFullYear();
+  const mk = (per) => ({ ...base, periodicite: per });
+  assert.equal((await call("POST", "/api/admin/fiche", mk({ type: "tous les jours" }), admin)).status, 400);
+  assert.equal((await call("POST", "/api/admin/fiche", mk({ type: "pluriannuelle" }), admin)).status, 400); // intervalle requis
+  assert.equal((await call("POST", "/api/admin/fiche", mk({ type: "pluriannuelle", intervalle_ans: 3, derniere_session: 2026, prochaine_probable: 2025 }), admin)).status, 400);
+  const ok = await call("POST", "/api/admin/fiche", mk({ type: "pluriannuelle", intervalle_ans: 3, sessions: "2023, 2026", derniere_session: 2026, prochaine_probable: year + 3, note: "Tous les 3 ans environ." }), admin);
+  assert.equal(ok.status, 200);
+  const emia = (await json(await call("GET", "/api/catalog?lang=fr"))).concours.find((c) => c.id === "emia");
+  assert.equal(emia.periodicite.type, "pluriannuelle");
+  assert.deepEqual(emia.periodicite.sessions, [2023, 2026]);
+  assert.equal(emia.periodicite.pause, true);
+  assert.equal(emia.periodicite.note, "Tous les 3 ans environ.");
+  assert.ok(!("periodicite_txt" in emia.acces)); // les textes de périodicité ne polluent pas les conditions
+  // Annuel : jamais en pause
+  await call("POST", "/api/admin/fiche", mk({ type: "annuelle" }), admin);
+  const again = (await json(await call("GET", "/api/catalog?lang=fr"))).concours.find((c) => c.id === "emia");
+  assert.equal(again.periodicite.pause, false);
+  assert.equal(again.periodicite.intervalle_ans, null);
+});

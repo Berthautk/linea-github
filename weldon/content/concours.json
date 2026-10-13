@@ -2549,7 +2549,10 @@
           "nom": "1re année du 2e cycle",
           "difference": "Licence adaptée à l'option (ex. Gestion, Physique, Droit/Lettres pour Techniques administratives, ou diplôme d'ingénieur sur dossier)."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours d'entrée ouvert chaque année académique d'après les avis MINESUP et relais ; les années 2023-2025 n'ont pas été confirmées ici."
+      }
     },
     "en": {
       "nom": "ENSET – Higher Technical Teacher Training Colleges (Douala, Bambili, Kumba, Ebolowa)",
@@ -2599,7 +2602,10 @@
           "nom": "1re année du 2e cycle",
           "difference": "Bachelor's degree matching the option (e.g. Management, Physics, Law/Letters for Administrative Techniques, or engineering diploma by file review)."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Entrance exam opened each academic year per MINESUP notices and reposts; 2023-2025 not confirmed here."
+      }
     },
     "source_annales": "Annales ENSET disponibles par année (bibliothèques tierces)",
     "priorite": 14,
@@ -2646,7 +2652,29 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Texte de l'arrêté 2022 (cycle 2023-2024) lu via un relais secondaire ; les PDF MINESUP existent mais n'ont pas été lus. Aucun avis plus récent (2025/2026) trouvé : âge et frais peuvent avoir changé. Le nom du concours dans concours.json mentionne Douala, Bambili, Kumba, Ebolowa, mais l'arrêté lu ne cible que Douala."
+    "recherche_notes": "Texte de l'arrêté 2022 (cycle 2023-2024) lu via un relais secondaire ; les PDF MINESUP existent mais n'ont pas été lus. Aucun avis plus récent (2025/2026) trouvé : âge et frais peuvent avoir changé. Le nom du concours dans concours.json mentionne Douala, Bambili, Kumba, Ebolowa, mais l'arrêté lu ne cible que Douala. | Périodicité : Une seule source officielle lue (2021). Kamerpower mélange 2024/2025 et 2026-2027. Les ENS (non ENSET) non traitées.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2021,
+        2022,
+        2026
+      ],
+      "derniere_session": 2026,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "MINESUP - Concours ENSET Ebolowa 2021-2022",
+          "url": "https://minesup.gov.cm/index.php/2021/06/09/concours-dentree-a-lecole-normale-superieure-denseignement-technique-enset-de-luniversite-de-yaounde-i-a-ebolowa-au-titre-de-lannee-academique-2021-2022",
+          "annee": 2021
+        },
+        {
+          "titre": "Kamerpower - Concours ENSET Ebolowa",
+          "url": "https://kamerpower.com/fr/concour-enset-debolowa-2018-2019-1ere-annee-du-1er-cycle",
+          "annee": 2026
+        }
+      ]
+    }
   },
   {
     "id": "essec-sciences-economiques-et-commerciales",
@@ -2710,7 +2738,10 @@
           "nom": "Concours 2025 à l'ESSEC Douala (Études professionnelles approfondies)",
           "difference": "Source secondaire : 280 places, dossier en ligne avant le 21 juillet 2025 ; conditions d'accès non lues, un site évoque un niveau licence pour 2026. À vérifier avant toute décision."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours d'entrée en première année ouvert en 2024 et 2025 (par filière). Vérifiez l'arrêté de l'année."
+      }
     },
     "en": {
       "nom": "ESSEC – economic and commercial sciences",
@@ -2766,7 +2797,10 @@
           "nom": "Concours 2025 à l'ESSEC Douala (Études professionnelles approfondies)",
           "difference": "Secondary source: 280 places, online file before 21 July 2025; entry conditions not read, one site mentions licence level for 2026. Check before any decision."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "First-year entrance exam opened in 2024 and 2025 (by track). Check the yearly decree."
+      }
     },
     "source_annales": "Annales ESSEC disponibles par année (bibliothèques tierces)",
     "priorite": 25,
@@ -2815,7 +2849,28 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Les arrêtés lus datent de 2022 et ne reflètent peut-être pas la session actuelle : en 2025 le concours ESSEC Douala semble porter sur des « études professionnelles approfondies » et un site secondaire évoque un accès niveau licence en 2026, ce qui contredirait un accès post-bac. À re-vérifier avant d'orienter un bachelier. Aucune décision ESSEC 2025 ou 2026 lue. Les décisions 2022 ne donnent pas de limite d'âge. La nationalité n'est pas indiquée pour Douala ; Garoua ouvre aux Camerounais (CEMAC en traitement national). Numéros des décisions 2022 partiellement illisibles sur les PDF."
+    "recherche_notes": "Les arrêtés lus datent de 2022 et ne reflètent peut-être pas la session actuelle : en 2025 le concours ESSEC Douala semble porter sur des « études professionnelles approfondies » et un site secondaire évoque un accès niveau licence en 2026, ce qui contredirait un accès post-bac. À re-vérifier avant d'orienter un bachelier. Aucune décision ESSEC 2025 ou 2026 lue. Les décisions 2022 ne donnent pas de limite d'âge. La nationalité n'est pas indiquée pour Douala ; Garoua ouvre aux Camerounais (CEMAC en traitement national). Numéros des décisions 2022 partiellement illisibles sur les PDF. | Périodicité : Uniquement relais kamerpower via résumés de recherche (pages non relues). Titres 2026-2027 contradictoires avec le texte 2025/2026.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2024,
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - ESSEC Douala 2024-2025",
+          "url": "https://kamerpower.com/fr/essec-douala-concours-2015-2016-filiere-etudes-superieures-de-commerce-premiere-annee/",
+          "annee": 2024
+        },
+        {
+          "titre": "Kamerpower - ESSEC Douala 2025/2026 EPA",
+          "url": "https://kamerpower.com/fr/concours-essec-de-luniversite-de-douala-2015-2016-recrutement-de-225-etudiants-en-premiere-annee/amp/",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "polytechniques-enspy-enspd-enspm-ensai-egem-egci",
@@ -2882,7 +2937,10 @@
           "nom": "Cycles licence et 3e année",
           "difference": "Concours distincts (licence en sciences de l'ingénieur, 3e année, master) avec leurs propres conditions."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours d'entrée organisés chaque année pour chaque école (2025 confirmé, 2026 annoncé par relais). Vérifiez le calendrier de chaque polytechnique."
+      }
     },
     "en": {
       "nom": "Polytechnics – ENSPY, ENSPD, ENSPM, ENSAI, EGEM, EGCIM, ENSP",
@@ -2941,7 +2999,10 @@
           "nom": "Cycles licence et 3e année",
           "difference": "Separate competitions (licence in engineering sciences, third year, master) with their own conditions."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Entrance exams run yearly per school (2025 confirmed, 2026 announced via reposts). Check each polytechnic's calendar."
+      }
     },
     "source_annales": "Annales par école et par année (bibliothèques tierces)",
     "priorite": 15,
@@ -2990,7 +3051,28 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "L'id regroupe sept écoles ; seule l'ENSPY est documentée pour la filière générale, et via Kamerpower (dates incohérentes : délai de dépôt « 9 juillet 2023 » sous un titre 2025/2026). La décision officielle lue (génie minier 2026) ne donne ni limite d'âge ni frais dans les pages lues (page 3 non consultée). La série de la voie générale vient aussi d'un commentaire de forum, mais le texte repris de l'arrêté liste C, D, E, F, TI. Pas d'arrêté 2026 de l'ENSPY générale trouvé."
+    "recherche_notes": "L'id regroupe sept écoles ; seule l'ENSPY est documentée pour la filière générale, et via Kamerpower (dates incohérentes : délai de dépôt « 9 juillet 2023 » sous un titre 2025/2026). La décision officielle lue (génie minier 2026) ne donne ni limite d'âge ni frais dans les pages lues (page 3 non consultée). La série de la voie générale vient aussi d'un commentaire de forum, mais le texte repris de l'arrêté liste C, D, E, F, TI. Pas d'arrêté 2026 de l'ENSPY générale trouvé. | Périodicité : Seules ENSPD et ENSPY ont été vues ; ENSPM, ENSAI, EGEM, EGCI non étudiées. Années antérieures à 2025 non vérifiées.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2025,
+        2026
+      ],
+      "derniere_session": 2026,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "MINESUP - Résultats ENSPD 2025-2026",
+          "url": "https://www.minesup.gov.cm/index.php/2025/09/08/resultats-du-concours-dentree-a-lecole-nationale-superieure-polytechnique-de-douala-enspd-au-titre-de-lannee-academique-2025-2026-results-of-the-competitive-entrance-examination-for-admissio",
+          "annee": 2025
+        },
+        {
+          "titre": "Kamerpower - Concours ENSPY 1re année 2025-2026",
+          "url": "https://kamerpower.com/fr/concours-enspy-premiere-annee-cycle-ingenieurs-en-sciences-et-technologies-2020-2021/",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "iric-institut-des-relations-internationales",
@@ -3048,7 +3130,10 @@
           "nom": "Autres masters et filière marketing international",
           "difference": "Chaque master a son avis : banque-monnaie-finance internationales, intégration régionale et management des institutions communautaires, communication et action publique, marketing international. Conditions non lues en détail."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours de master ouvert chaque année académique depuis 2023-2024 au moins. Vérifiez l'avis du MINESUP."
+      }
     },
     "en": {
       "nom": "IRIC – International Relations Institute",
@@ -3098,7 +3183,10 @@
           "nom": "Autres masters et filière marketing international",
           "difference": "Each master has its own notice: international banking-money-finance, regional integration and community institutions management, public communication and action, international marketing. Conditions not read in detail."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Master entrance exam opened each academic year since at least 2023-2024. Check the MINESUP notice."
+      }
     },
     "source_annales": "Annales IRIC disponibles par année (bibliothèques tierces)",
     "priorite": 24,
@@ -3134,7 +3222,29 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Faiblement sourcé : uniquement Kamerpower, dont les dates sont incohérentes (page titrée 2026, texte 2025/2026, délai et épreuve en janvier-février 2025). Aucun avis officiel IRIC ou MINESUP lu. Le concours IRIC est un concours de niveau master (licence requise), pas un concours post-bac. Aucun lien officiel vérifié, donc null."
+    "recherche_notes": "Faiblement sourcé : uniquement Kamerpower, dont les dates sont incohérentes (page titrée 2026, texte 2025/2026, délai et épreuve en janvier-février 2025). Aucun avis officiel IRIC ou MINESUP lu. Le concours IRIC est un concours de niveau master (licence requise), pas un concours post-bac. Aucun lien officiel vérifié, donc null. | Périodicité : Seul l'avis 2024-2025 est officiel (titre lu). Pour 2023 et 2025 uniquement relais kamerpower ; la date d'écrit 2025 (27 sept. 2024 ?) est incohérente.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2023,
+        2024,
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "MINESUP - Concours IRIC 2024-2025",
+          "url": "https://www.minesup.gov.cm/?p=18697",
+          "annee": 2024
+        },
+        {
+          "titre": "Kamerpower - Concours IRIC 2025-2026",
+          "url": "https://kamerpower.com/fr/concours-iric-2015-2016-contentieux-international-cycle-de-master/",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "esstic-sciences-et-techniques-de-linformation-et",
@@ -3239,7 +3349,10 @@
           "nom": "FASA public niveau 3 / niveau 2",
           "difference": "Concours spéciaux pour entrer directement en 3e année (10 places en 2024-2025, secondaire) ; conditions propres."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Seule la session 2024/2025 est identifiée ; périodicité non établie. Consultez l'Université de Dschang."
+      }
     },
     "en": {
       "nom": "FASA / FASA-IPES – agronomy and agricultural sciences",
@@ -3297,7 +3410,10 @@
           "nom": "FASA public niveau 3 / niveau 2",
           "difference": "Special competitions for direct entry to third year (10 places in 2024-2025, secondary); own conditions."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only the 2024/2025 session is identified; periodicity not established. Check University of Dschang."
+      }
     },
     "source_annales": "33 sujets d’annales FASA référencés chez les bibliothèques tierces",
     "priorite": 20,
@@ -3345,7 +3461,22 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Décision 2026 lue en entier (scan consulté visuellement), mais elle concerne les IPES sous tutelle de la FASA et non le concours public de la FASA à Dschang. Nationalité : la décision cite les Camerounais et les ressortissants CEMAC. Pour la session 2025/2026, les dates ci-dessus (mois) sont celles de 2026 ; la décision indique qu'elle suit le calendrier MINESUP du 17 février 2026."
+    "recherche_notes": "Décision 2026 lue en entier (scan consulté visuellement), mais elle concerne les IPES sous tutelle de la FASA et non le concours public de la FASA à Dschang. Nationalité : la décision cite les Camerounais et les ressortissants CEMAC. Pour la session 2025/2026, les dates ci-dessus (mois) sont celles de 2026 ; la décision indique qu'elle suit le calendrier MINESUP du 17 février 2026. | Périodicité : Les avis niveau I et IV de 2024/2025 portent une date d'août 2023 (probable report) : non listés. Résumé de recherche seulement, page non relue. Rien d'officiel.",
+    "periodicite": {
+      "type": "inconnue",
+      "sessions": [
+        2024
+      ],
+      "derniere_session": 2024,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Concours FASA Dschang",
+          "url": "https://kamerpower.com/fr/universite-dschang-fasa-concours-2015-2016-niveau-i/",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "facultes-de-medecine-examen-national-daptitude-m",
@@ -3411,7 +3542,10 @@
           "nom": "Concours par faculté (Yaoundé I, Douala, Dschang, Buea, Garoua)",
           "difference": "Chaque faculté publie sa décision ; places, centres et dates varient. Garoua 2026 : 50 places, dépôt au 25 septembre, épreuve le 29 septembre 2026."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Seule la session 2023/2024 est confirmée ; le rythme n'a pas pu être établi. Voir les arrêtés du MINESUP."
+      }
     },
     "en": {
       "nom": "Faculties of medicine – national aptitude exam (medicine, pharmacy, dentistry)",
@@ -3469,7 +3603,10 @@
           "nom": "Concours par faculté (Yaoundé I, Douala, Dschang, Buea, Garoua)",
           "difference": "Each faculty publishes its own decision; places, centres and dates vary. Garoua 2026: 50 places, filing by 25 September, exam 29 September 2026."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only the 2023/2024 session is confirmed; the pattern could not be established. See MINESUP decrees."
+      }
     },
     "source_annales": "Annales par année (bibliothèques tierces)",
     "priorite": 10,
@@ -3516,7 +3653,22 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Le concours est organisé faculté par faculté, il n'y a pas d'« examen national » unique pour la 1re année : la fiche du fichier est ambiguë. L'arrêté lu est de 2022 (Dschang) ; les conditions 2026 de Garoua viennent d'une source secondaire et diffèrent (2 matières scientifiques au GCE A Level au lieu de 3). Aucune décision 2025 ou 2026 de Yaoundé I lue. Nationalité : « Camerounais » en 2026 (secondaire) et CEMAC en traitement national ; la décision 2022 ne le dit pas dans la partie lue."
+    "recherche_notes": "Le concours est organisé faculté par faculté, il n'y a pas d'« examen national » unique pour la 1re année : la fiche du fichier est ambiguë. L'arrêté lu est de 2022 (Dschang) ; les conditions 2026 de Garoua viennent d'une source secondaire et diffèrent (2 matières scientifiques au GCE A Level au lieu de 3). Aucune décision 2025 ou 2026 de Yaoundé I lue. Nationalité : « Camerounais » en 2026 (secondaire) et CEMAC en traitement national ; la décision 2022 ne le dit pas dans la partie lue. | Périodicité : La page porte le titre 2024-2025 mais le texte parle de 2023/2024. Une page FMSB Garoua 2024-2025 existe (non lue). Rien d'officiel lu.",
+    "periodicite": {
+      "type": "inconnue",
+      "sessions": [
+        2023
+      ],
+      "derniere_session": 2023,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Examen National d'Aptitude",
+          "url": "https://kamerpower.com/fr/concours-examen-national-daptitude-2015-2016-cameroun-formation-medicale-au-cameroun/",
+          "annee": 2024
+        }
+      ]
+    }
   },
   {
     "id": "emsv-sciences-et-medecine-veterinaire",
@@ -3661,7 +3813,10 @@
           "nom": "3e année (licence de technologie)",
           "difference": "Concours distinct pour titulaires d'un DUT/BTS ou équivalent ; frais de 25 000 FCFA cités pour IUT Douala 3e année (secondaire)."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Les IUT ouvrent un concours chaque année académique d'après les avis MINESUP ; seules 2022 et 2024 sont confirmées ici."
+      }
     },
     "en": {
       "nom": "IUT, FGI and technology schools",
@@ -3718,7 +3873,10 @@
           "nom": "3e année (licence de technologie)",
           "difference": "Separate competition for DUT/BTS holders or equivalent; 25,000 FCFA fee cited for IUT Douala third year (secondary)."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "IUTs open an entrance exam each academic year per MINESUP notices; only 2022 and 2024 confirmed here."
+      }
     },
     "source_annales": "Annales IUT/FGI disponibles par année (bibliothèques tierces)",
     "priorite": 19,
@@ -3760,7 +3918,28 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "L'id regroupe IUT, FGI et écoles de technologie : seule la décision IUT Douala/ISE 2024 a été lue en entier (scan consulté visuellement). Pas de décision 2025 ou 2026 de l'IUT de Douala lue. Les décisions 2026 de l'IUS et de l'INUBIL sont listées par le MINESUP mais leurs conditions n'ont pas été lues. L'URL d'inscription iut-douala.cm vient de la décision 2024. Âge : incohérence de dates dans la décision (voir age_note). Nationalité non classée car la décision admet aussi les étrangers."
+    "recherche_notes": "L'id regroupe IUT, FGI et écoles de technologie : seule la décision IUT Douala/ISE 2024 a été lue en entier (scan consulté visuellement). Pas de décision 2025 ou 2026 de l'IUT de Douala lue. Les décisions 2026 de l'IUS et de l'INUBIL sont listées par le MINESUP mais leurs conditions n'ont pas été lues. L'URL d'inscription iut-douala.cm vient de la décision 2024. Âge : incohérence de dates dans la décision (voir age_note). Nationalité non classée car la décision admet aussi les étrangers. | Périodicité : Rien trouvé pour 2025/2026 ni pour FGI. Le résumé IUT Ngaoundéré (kamerpower) est incohérent : non retenu.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2022,
+        2024
+      ],
+      "derniere_session": 2024,
+      "confiance": "deduit",
+      "sources": [
+        {
+          "titre": "MINESUP - Décision ouverture concours IUT Douala 2024-2025",
+          "url": "https://www.minesup.gov.cm/index.php/2024/05/22/decision-portant-ouverture-du-concours-dentree-a-liut-de-luniversite-de-douala-au-titre-lannee-academique-2024-20245/",
+          "annee": 2024
+        },
+        {
+          "titre": "MINESUP - Résultats IUT Douala 2022-2023",
+          "url": "https://www.minesup.gov.cm/index.php/2022/10/12/resultat-du-concours-dentree-a-linstitut-universitaire-de-technologie-iut-de-luniversite-de-douala-au-titre-de-lannee-academique-2022-2023-results-of-the-com/",
+          "annee": 2022
+        }
+      ]
+    }
   },
   {
     "id": "ipes-prives-sous-tutelle-academique-enspd-fasa-i",
@@ -4042,7 +4221,10 @@
           "nom": "ENIEG privées",
           "difference": "Recrutement par les écoles privées ; conditions non lues."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours d'entrée organisé en juillet chaque année (2024 et 2026 documentés). Effectif 2026 contradictoire selon les sources."
+      }
     },
     "en": {
       "nom": "ENIEG and ENIET – primary and technical teacher training colleges (public and private)",
@@ -4090,7 +4272,10 @@
           "nom": "ENIEG privées",
           "difference": "Recruitment by private colleges; conditions not read."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Entrance exam held in July each year (2024 and 2026 documented). 2026 quota differs between sources."
+      }
     },
     "source_annales": "Annales ENIEG disponibles par année (bibliothèques tierces)",
     "priorite": 7,
@@ -4127,7 +4312,29 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun PDF officiel lu directement. CONFLIT : l'arrêté d'organisation prévoit 3 niveaux d'entrée (BEPC / Probatoire / Bac) mais le communiqué 2025 rapporté exige le Bac ; le niveau min 'bepc' est le plus bas du texte d'organisation, à confirmer pour la session en cours. Plafond d'âge : 32 (deux sources) vs 30 (un guide). Le communiqué rapporté contient une incohérence de date (5 juillet 2024 vs 2025), épreuves écrites rapportées le 30 juillet 2025 ; mois calendrier basés sur 2025."
+    "recherche_notes": "Aucun PDF officiel lu directement. CONFLIT : l'arrêté d'organisation prévoit 3 niveaux d'entrée (BEPC / Probatoire / Bac) mais le communiqué 2025 rapporté exige le Bac ; le niveau min 'bepc' est le plus bas du texte d'organisation, à confirmer pour la session en cours. Plafond d'âge : 32 (deux sources) vs 30 (un guide). Le communiqué rapporté contient une incohérence de date (5 juillet 2024 vs 2025), épreuves écrites rapportées le 30 juillet 2025 ; mois calendrier basés sur 2025. | Périodicité : Effectif 2026: 10 080 / 11 230 / 5 040 selon la page. Une session 2025 (30 juillet) apparaît dans un résumé de recherche mais la date semble être celle de 2024 : non listée. 2025 non confirmée. Années avant 2024 non vérifiées. prochaine_probable 2027 est déduite du rythme.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2024,
+        2026
+      ],
+      "derniere_session": 2026,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Concours ENIEG 2026-2027",
+          "url": "https://kamerpower.com/fr/concours-enieg-2018-2019-cameroun-recrutement12720-eleves-maitres/",
+          "annee": 2026
+        },
+        {
+          "titre": "Yop L-Frii - ENIEG session 2025",
+          "url": "https://yop.l-frii.com/formations/cameroun-ouverture-du-concours-dentree-aux-ecoles-normales-dinstituteurs-de-lenseignement-general-enieg-publiques-session-2025/",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "entree-6e-1re-annee-common-entrance",
@@ -4152,6 +4359,9 @@
         "sessions": "2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
         "places": [],
         "places_note": "Épreuves relevées pour 2024 ; selon les années : compréhension de texte, problème et culture générale."
+      },
+      "periodicite_txt": {
+        "note": "Examen national organisé chaque année en mai (2024 et 2025 confirmés par la presse). Consultez le calendrier annuel du MINEDUB."
       }
     },
     "en": {
@@ -4169,11 +4379,36 @@
         "sessions": "2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026",
         "places": [],
         "places_note": "Papers listed for 2024; depending on the year: reading comprehension, problem solving and general knowledge."
+      },
+      "periodicite_txt": {
+        "note": "National exam held every May (2024 and 2025 confirmed by press). Check the yearly MINEDUB calendar."
       }
     },
     "source_annales": "Sujets non publiés",
     "priorite": 1,
-    "theme": "eleves"
+    "theme": "eleves",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2024,
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Journal du Cameroun - plus de 250 000 élèves face au concours d'entrée en 6e",
+          "url": "https://fr.journalducameroun.com/cameroun-plus-de-250-000-eleves-face-aux-epreuves-du-concours-dentree-en-6e/",
+          "annee": 2025
+        },
+        {
+          "titre": "Kamerpower - Calendrier CEP FSLC Common Entrance MINEDUB",
+          "url": "https://kamerpower.com/fr/calendrier-cep-fslc-examens-et-concours-minedub-cameroun-2019-2020-common-entrance/",
+          "annee": 2025
+        }
+      ]
+    },
+    "recherche_notes": "Périodicité : Une recherche indique une décision MINEDUB du 21/01/2025 fixant l'écrit au 12 mai alors que la presse donne le 13 mai (non résolu). Une mention d'une session le 13 mai 2026 (CRTV) vue seulement dans un résumé de recherche, non lue : non listée. Années 2016-2023 non vérifiées."
   },
   {
     "id": "seconde-technique-4e-annee-bep",
@@ -4388,7 +4623,10 @@
           "nom": "Conversion des maîtres des parents",
           "difference": "Voie distincte : critères de conversion (service actif dans une école publique, contrat validé par l'inspecteur, bulletins de salaire récents) rapportés par un site secondaire pour 2024."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Recrutement par phases successives (3e programme de contractualisation), sans calendrier annuel fixe ; surveillez les avis du MINEDUB."
+      }
     },
     "en": {
       "nom": "IEMP – contract recruitment of primary teachers",
@@ -4461,7 +4699,10 @@
           "nom": "Conversion des maîtres des parents",
           "difference": "Separate route: conversion criteria (active service in a public school, contract validated by inspector, recent pay slips) reported by a secondary site for 2024."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Run in successive phases (third contractualisation programme) with no fixed yearly calendar; watch MINEDUB notices."
+      }
     },
     "source_annales": "Sujets non publiés par l’administration",
     "priorite": 6,
@@ -4495,7 +4736,32 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun texte officiel MINEDUB/MINFOPRA lu directement ; données d'un agrégateur. Nationalité non explicitement indiquée dans la source (mise à 'camerounaise' car emploi public ; à vérifier). Mois de lancement/limite/épreuves déduits : dépôt 6-31 janvier 2026 (opération MINEDUB), dépôt MINFOPRA prolongé au 16/12/2025, épreuves le 14 février 2026 d'après le fichier concours.json. Un autre article intitulé 2025 renvoie en réalité à 2023 (ignoré)."
+    "recherche_notes": "Aucun texte officiel MINEDUB/MINFOPRA lu directement ; données d'un agrégateur. Nationalité non explicitement indiquée dans la source (mise à 'camerounaise' car emploi public ; à vérifier). Mois de lancement/limite/épreuves déduits : dépôt 6-31 janvier 2026 (opération MINEDUB), dépôt MINFOPRA prolongé au 16/12/2025, épreuves le 14 février 2026 d'après le fichier concours.json. Un autre article intitulé 2025 renvoie en réalité à 2023 (ignoré). | Périodicité : Les pages sont incohérentes (phase 5e/7e, session 2025 vs 2026, titre 2023-2024). Des commentaires de lecteurs évoquent des opérations 2017-2023 non confirmées : non listées.",
+    "periodicite": {
+      "type": "irreguliere",
+      "sessions": [
+        2026
+      ],
+      "derniere_session": 2026,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Test de sélection instituteurs 2026",
+          "url": "https://kamerpower.com/fr/events/cameroun-test-recrutement-instituteurs-de-enseignement/",
+          "annee": 2026
+        },
+        {
+          "titre": "Kamerpower - MINEDUB contractualisation 3e opération",
+          "url": "https://kamerpower.com/fr/minedub-cameroun-contractualisation-des-instituteurs-operation/amp/",
+          "annee": 2026
+        },
+        {
+          "titre": "Cameroondesks - Test de recrutement 3000 instituteurs contractuels",
+          "url": "https://www.cameroondesks.com/2023/12/test-de-recrutement-3000-instituteurs-contractuels-iemp-2023-2024.html",
+          "annee": 2026
+        }
+      ]
+    }
   },
   {
     "id": "sante-publique-medecins-chirurgiens-dentistes-ph",
@@ -4827,7 +5093,10 @@
           "nom": "Infirmiers spécialisés",
           "difference": "Diplôme d'État d'infirmier requis ; limite d'âge 40 ans."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours organisé en 2024 et 2025 d'après les résultats publiés ; années intermédiaires non vérifiées. Suivez les communiqués du MINSANTE."
+      }
     },
     "en": {
       "nom": "Training schools for nurses, midwives and medical-sanitary staff",
@@ -4882,7 +5151,10 @@
           "nom": "Infirmiers spécialisés",
           "difference": "State nursing diploma required; age limit 40."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Held in 2024 and 2025 according to published results; intermediate years not verified. Follow MINSANTE notices."
+      }
     },
     "source_annales": "Sujets non publiés",
     "priorite": 4,
@@ -4931,7 +5203,29 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Arrêté/communiqué officiel non lu (le PDF MINSANTE 2020 est un scan illisible). Âge et séries contradictoires entre sources secondaires ; frais et dates exactes absents. Épreuves : 9 sept. 2025 selon un avis, 23 août 2025 selon un autre."
+    "recherche_notes": "Arrêté/communiqué officiel non lu (le PDF MINSANTE 2020 est un scan illisible). Âge et séries contradictoires entre sources secondaires ; frais et dates exactes absents. Épreuves : 9 sept. 2025 selon un avis, 23 août 2025 selon un autre. | Périodicité : Le PDF 2020 n'a été vu que via un résumé de recherche. Un avis kamerpower de 13 205 places (écrit août 2025 ou 17 mars 2026) a des dates contradictoires : non retenu. Dates d'écrit 2024/2025 non trouvées.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2020,
+        2024,
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "deduit",
+      "sources": [
+        {
+          "titre": "Cameroondesks - Résultats Concours MINSANTE 2025",
+          "url": "https://www.cameroondesks.com/2024/09/resultats-concours-minsante-2024-ide-tms-sage-femme-aides-soignantes.html",
+          "annee": 2025
+        },
+        {
+          "titre": "MINSANTE - Concours 2020 (PDF)",
+          "url": "https://www.minsante.cm/site/sites/default/files/CONCOURS%20MINSANTE%202020-1.pdf",
+          "annee": 2020
+        }
+      ]
+    }
   },
   {
     "id": "regies-financieres-tresor",
@@ -5609,7 +5903,10 @@
           "nom": "Candidats internes",
           "difference": "Fonctionnaires : PEPS = PAEPS ou PEPS avec 3 ans d'ancienneté ; plafond 40 ans."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Seule la session 2025 est confirmée ; rythme non établi. Suivez les avis MINFOPRA/MINJEC."
+      }
     },
     "en": {
       "nom": "INJS Yaoundé – PEPS / PAEPS (physical education and sport)",
@@ -5690,7 +5987,10 @@
           "nom": "Candidats internes",
           "difference": "Civil servants: with 3 years' seniority in the lower grade; 40-year ceiling."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only the 2025 session is confirmed; pattern not established. Follow MINFOPRA/MINJEC notices."
+      }
     },
     "source_annales": "Annales INJS disponibles par année (bibliothèques tierces)",
     "priorite": 21,
@@ -5720,7 +6020,22 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Source unique, secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 11 juillet, épreuves physiques 29-30 juillet, écrites 2-3 août. Le diplôme PEPS est libellé de façon ambiguë. Une autre recherche donnait 10 places pour chaque cycle, alors que concours.json indique 20 en 2025 (total PEPS + PAEPS). Pas d'avis 2026 trouvé."
+    "recherche_notes": "Source unique, secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 11 juillet, épreuves physiques 29-30 juillet, écrites 2-3 août. Le diplôme PEPS est libellé de façon ambiguë. Une autre recherche donnait 10 places pour chaque cycle, alors que concours.json indique 20 en 2025 (total PEPS + PAEPS). Pas d'avis 2026 trouvé. | Périodicité : Pages kamerpower avec titres 2024-2025 et 2025-2026 mélangés ; page non relue (résumé de recherche).",
+    "periodicite": {
+      "type": "inconnue",
+      "sessions": [
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Concours INJS Yaoundé PEPS PAEPS",
+          "url": "https://kamerpower.com/fr/concours-injs-de-yaounde-2015-2016-peps-paeps-minfopra-concours-institut-national-de-la-jeunesse-et-des-sports-injs-yaounde",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "injs-yaounde-cpja-cja-conseillers-jeunesse-et-an",
@@ -5898,7 +6213,10 @@
           "nom": "Candidats internes",
           "difference": "Instructeurs en poste avec 3 ans d'ancienneté dans le grade inférieur, ou personnels des forces armées/police/administration pénitentiaire ; plafond 40 ans."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Seule la session 2025/2026 est confirmée ; des commentaires de lecteurs évoquent d'autres années, non vérifiables."
+      }
     },
     "en": {
       "nom": "CENAJES Kribi – IPJA / IJA / IAJA",
@@ -5969,7 +6287,10 @@
           "nom": "Candidats internes",
           "difference": "Serving instructors with 3 years' seniority in the lower grade, or armed forces/police/prison staff; 40-year ceiling."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only the 2025/2026 session is confirmed; reader comments mention other years, unverifiable."
+      }
     },
     "source_annales": "Annales CENAJES disponibles par année (bibliothèques tierces)",
     "priorite": 22,
@@ -6000,7 +6321,22 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Source unique secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 18 juillet, épreuves physiques 5-6 août, écrites 9-10 août. Places : 10 par cycle selon la source, concours.json donne 30 au total (cohérent). Niveau min 'probatoire' repose sur IJA/IAJA ; IAJA non précisé donc peut être plus bas. Aucun avis 2026 trouvé."
+    "recherche_notes": "Source unique secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 18 juillet, épreuves physiques 5-6 août, écrites 9-10 août. Places : 10 par cycle selon la source, concours.json donne 30 au total (cohérent). Niveau min 'probatoire' repose sur IJA/IAJA ; IAJA non précisé donc peut être plus bas. Aucun avis 2026 trouvé. | Périodicité : Commentaires mentionnant 2016, 2017, 2018, 2020, 2021 : non officiels, non listés.",
+    "periodicite": {
+      "type": "inconnue",
+      "sessions": [
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Concours CENAJES Kribi 2025-2026",
+          "url": "https://kamerpower.com/fr/concours-cenajes-de-kribi-2015-2016-ipja-ija-centre-national-de-la-jeunesse-et-des-sports/",
+          "annee": 2025
+        }
+      ]
+    }
   },
   {
     "id": "cenajes-bamenda-bertoua-dschang-garoua-mpeps-mep",

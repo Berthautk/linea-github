@@ -14,3 +14,14 @@ Estimation : en fin d'année un département a ~1 000 à 1 500 documents (`entri
 ## Options
 1. **Un projet Firebase par département ou établissement** (gratuit chacun, quotas séparés, aucun mélange, pas de refonte). Coût : créer le projet, activer Firestore/Auth Google, publier les règles, générer le HTML. Chaque AP est propriétaire de ses données.
 2. **Une base partagée multi-départements** : refonte nécessaire (préfixer tous les chemins par établissement/département, règles de sécurité par rôle, lectures limitées au trimestre actif, cache local, purge des `logs`) + passage probable au plan payant au-delà de quelques départements : exclu par la contrainte « jamais Blaze ».
+
+## Feuille de route : une seule application pour tous (comme une appli grand public)
+Pourquoi ce n'est pas déjà le cas : EasyProf a été conçu pour **un** département ; toutes les données sont dans les mêmes chemins Firestore. Les applications comme Binance sont « multi-locataires » : un seul déploiement, un seul code, et les données de chaque utilisateur sont rangées sous son identifiant, protégées par des règles de sécurité. Personne ne redéploie quand un utilisateur s'inscrit ; on ne redéploie que quand le **code** change.
+
+Ce qu'il faudrait faire (réalisable sur Spark) :
+1. Ranger les données sous `departments/{deptId}/…` (metadata, teachers, classes, entries, logs) et créer `users/{uid}` = {deptId, rôle}.
+2. Règles Firestore : lecture/écriture seulement si l'utilisateur appartient au département ; un enseignant n'écrit que ses propres saisies.
+3. Inscription : un AP crée son département (établissement, discipline), invite ses collègues par e-mail ; chacun se connecte avec Google et arrive dans son département.
+4. Réduire les lectures (cache local persistant, ne charger que le trimestre actif, purger les `logs`) pour rester dans les 50 000 lectures/jour gratuites avec plusieurs départements.
+5. Migrer les données de GBHS Garoua dans la nouvelle structure.
+Limites : test réel impossible sans accès au projet (émulateur Firebase à installer) ; les règles de sécurité sont critiques et doivent être relues avant ouverture à d'autres établissements ; au-delà de quelques dizaines de départements actifs le quota gratuit ne suffirait plus.

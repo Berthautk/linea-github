@@ -29,7 +29,7 @@ function EPI_defaults(st) {
   var A = function (t, kind, h, d, n) { if (has(t)) adj.push({ id: "a" + (++k), t: t, k: kind, h: h, d: d, n: n }); };
   A("TSOGO2026", "abs", 9, "2026-09-07", "Absente semaine 1 (07–11 sept.)");
   A("NEBASIBI", "abs", 12, "2026-09-07", "Absent semaine 1 (07–11 sept.)");
-  A("KAMDEM", "dly", 6, "", "Retard de 3 leçons (3 × 2 h)");
+  A("KAMDEM", "dly", 3, "", "Retards du matin cumulés (3 arrivées vers 8h20 pour un cours à 7h30)");
   A("KAMDEM", "cat", 8, "", "Rattrapage 2 samedis : LSA + USA (2 h chacune)");
   return { ps: "2026-09-07", pe: "2026-10-09", lh: 2, hol: [], tt: T, adj: adj, ft: null, ac: null, yh: 0, yl: 0 };
 }
@@ -38,13 +38,22 @@ function EPI_get(st) {
   var d = EPI_defaults(st);
   return s && typeof s === "object" ? Object.assign({}, d, s) : d;
 }
+function EPI_dayN(a, b) { return Math.round((new Date(b + "T00:00:00Z") - new Date(a + "T00:00:00Z")) / 864e5) + 1; }
+/* part (0..1) d'un ajustement qui tombe dans [ps,pe] : à sa date (ou plage d..d2) ; sans date : répartie sur la période d'inspection de l'AP */
+function EPI_share(a, ps, pe, I) {
+  var w1 = a.d || I.ps, w2 = a.d ? (a.d2 || a.d) : I.pe;
+  if (!w1 || !w2 || w2 < w1) return 0;
+  var o1 = w1 > ps ? w1 : ps, o2 = w2 < pe ? w2 : pe;
+  return o2 < o1 ? 0 : EPI_dayN(o1, o2) / EPI_dayN(w1, w2);
+}
 function EPI_dueOut(I, r) { return I.rd && I.rd[r] != null ? !!I.rd[r] : EPX_reason(r)[4]; }
-function EPI_calc(I, st, ps, pe) {
+function EPI_calc(I, st, ps, pe, only) {
   ps = ps || I.ps; pe = pe || I.pe;
+  var r1 = function (x) { return Math.round(x * 10) / 10; };
   var off = EPX_offSet(st), days = EPI_days(ps, pe);
   var termAt = function (iso) { var hit = (st.terms || []).filter(function (t) { return t.startDate <= iso && iso <= t.endDate; })[0]; return hit ? hit.id : ""; };
-  var inP = function (a) { return !a.d || (a.d >= ps && a.d <= pe); };
   var rows = (st.teachers || []).filter(function (t) {
+    if (only && t.id !== only) return false;
     return (I.tt[t.id] || []).length || I.adj.some(function (a) { return a.t === t.id; });
   }).map(function (t) {
     var slots = I.tt[t.id] || [];
@@ -65,15 +74,15 @@ function EPI_calc(I, st, ps, pe) {
       due += h;
       if (r) { absD += h; declList.push({ d: d.iso, r: r, h: h, out: false }); }
     });
-    var sum = function (k) { return I.adj.filter(function (a) { return a.t === t.id && a.k === k && inP(a); }).reduce(function (s, a) { return s + (+a.h || 0); }, 0); };
+    var sum = function (k) { return I.adj.filter(function (a) { return a.t === t.id && a.k === k; }).reduce(function (s, a) { return s + (+a.h || 0) * EPI_share(a, ps, pe, I); }, 0); };
     var absM = sum("abs"), dly = sum("dly"), cat = sum("cat"), abs = absM + absD;
     var inPeriod = function (e) { var d = (e.timestamp || "").slice(0, 10); return e.teacherId === t.id && d >= ps && d <= pe; };
     var logged = (st.entries || []).filter(function (e) { return inPeriod(e) && !e.isDigitized && e.type !== "absence"; })
       .reduce(function (s, e) { return s + (+e.durationMinutes || 0) / 60; }, 0);
     var rev = (st.entries || []).filter(function (e) { return inPeriod(e) && (e.type === "revision" || e.type === "evaluation"); })
       .reduce(function (s, e) { return s + (+e.durationMinutes || 0) / 60; }, 0);
-    var done = due - abs - dly + cat;
-    return { id: t.id, name: t.shortName || t.name, weekly: weekly, due: due, abs: abs, absM: absM, absD: absD, excused: excused, off: nOff, dly: dly, cat: cat, done: done, rev: Math.min(Math.round(rev * 10) / 10, Math.max(done, 0)), decl: declList, logged: Math.round(logged * 10) / 10 };
+    var done = r1(due - abs - dly + cat);
+    return { id: t.id, name: t.shortName || t.name, weekly: weekly, due: due, abs: r1(abs), absM: r1(absM), absD: absD, excused: excused, off: nOff, dly: r1(dly), cat: r1(cat), done: done, rev: Math.min(Math.round(rev * 10) / 10, Math.max(done, 0)), decl: declList, logged: Math.round(logged * 10) / 10 };
   });
   var sm = function (k) { return rows.reduce(function (s, r) { return s + r[k]; }, 0); };
   var due = sm("due"), done = sm("done"), rev = sm("rev");
@@ -82,7 +91,7 @@ function EPI_calc(I, st, ps, pe) {
   var yl = +I.yl || (st.classes || []).reduce(function (s, c) { return s + (+c.lessonsPlannedYear || 0); }, 0);
   var dueL = Math.round(due / lh), doneL = Math.round(Math.max(done - rev, 0) / lh);
   var pc = function (a, b) { return b > 0 ? Math.round((a / b) * 1000) / 10 : 0; };
-  return { rows: rows, due: due, done: done, gap: done - due, covP: pc(done, due), covY: pc(done, yh), yh: yh, rev: rev, excused: sm("excused"), off: sm("off"),
+  return { ps: ps, pe: pe, rows: rows, due: due, done: done, gap: done - due, covP: pc(done, due), covY: pc(done, yh), yh: yh, rev: rev, excused: sm("excused"), off: sm("off"),
     dueL: dueL, doneL: doneL, gapL: doneL - dueL, covLP: pc(doneL, dueL), covLY: pc(doneL, yl), yl: yl };
 }
 function EPI_names(I, st, id) {
@@ -92,8 +101,10 @@ function EPI_names(I, st, id) {
 function EPI_autoFactors(I, st, R) {
   var fr = st.activeLanguage === "fr";
   var L = [];
-  var inP = function (a) { return !a.d || (a.d >= I.ps && a.d <= I.pe); };
-  var by = function (k) { return I.adj.filter(function (a) { return a.k === k && inP(a) && +a.h > 0; }); };
+  var by = function (k) {
+    return I.adj.filter(function (a) { return a.k === k && +a.h > 0 && EPI_share(a, R.ps, R.pe, I) > 0; })
+      .map(function (a) { return Object.assign({}, a, { h: Math.round(a.h * EPI_share(a, R.ps, R.pe, I) * 10) / 10 }); });
+  };
   var j = function (arr) { return arr.map(function (a) { return EPI_names(I, st, a.t) + " (" + a.h + " h" + (a.n ? " – " + a.n : "") + ")"; }).join("; "); };
   var ab = by("abs"), dl = by("dly"), ca = by("cat");
   if (ab.length) L.push((fr ? "Absences d'enseignants : " : "Teacher absences: ") + j(ab) + ".");
@@ -152,50 +163,14 @@ var EPI_CSS = ".epi{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-ser
 ".epi-item{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px dashed var(--ep-line);padding:6px 0;font-size:12px}.epi-hero{background:linear-gradient(135deg,var(--ep-ink),#1F5B58);color:#fff;border:0}.epi-alert{display:inline-block;margin:8px 6px 0 0;background:#FBE4DC;color:#9C3A1E;border-radius:999px;padding:3px 11px;font-size:11px;font-weight:800}.epi-chip{display:inline-flex;gap:4px;align-items:center;border-radius:999px;padding:2px 9px;font-size:10px;font-weight:700;background:#FFF1D6;color:#8A5A00}" +
 "@media print{@page{size:A4 landscape;margin:10mm}body *{visibility:hidden}.epi-sheet,.epi-sheet *{visibility:visible}.epi-sheet{position:absolute;left:0;top:0;width:100%;border:0;padding:0}.epi-noprint{display:none!important}.epi-annex{page-break-before:always}}";
 function EPI_fmtS(n) { return (n > 0 ? "+" : "") + (Math.round(n * 10) / 10); }
-function EPI(props) {
-  var st = props.state, e = props.onChangeState, fr = st.activeLanguage === "fr";
-  var I = EPI_get(st), R = EPI_calc(I, st);
-  var L = function (a, b) { return fr ? a : b; };
-  var terms = st.terms || [];
-  var t0 = (terms[0] || {}).startDate || "";
-  /* rentrée enregistrée seulement si elle est cohérente avec la période (≤ 13 mois avant la fin) ; sinon on se limite à la période */
-  var yearStart = t0 && t0 <= I.pe && (new Date(I.pe) - new Date(t0)) / 864e5 <= 395 ? t0 : I.ps;
-  var Rc = EPI_calc(I, st, yearStart, I.pe);              /* cumul depuis le début de l'année */
-  var upd = function (patch) {
-    e(function (s) {
-      var cur = EPI_get(s);
-      return Object.assign({}, s, { reportObservations: Object.assign({}, s.reportObservations || {}, { __inspection: Object.assign({}, cur, typeof patch === "function" ? patch(cur) : patch) }) });
-    });
-  };
-  var fs = Y.useState({ t: (st.teachers[0] || {}).id || "", k: "abs", h: "", d: "", n: "" }), F = fs[0], setF = fs[1];
-  var os = Y.useState(null), openT = os[0], setOpenT = os[1];
-  var facts = I.ft != null ? I.ft : EPI_autoFactors(I, st, R);
-  var acts = I.ac != null ? I.ac : EPI_autoActions(I, st, R);
+function EPI_Sheet(p) {
+  var st = p.st, I = p.I, R = p.R, Rc = p.Rc, yearStart = p.yearStart, facts = p.facts, acts = p.acts, who = p.who;
+  var fr = st.activeLanguage === "fr", L = function (a, b) { return fr ? a : b; }, h2 = EPI_h;
   var hd = (st.establishment || {}).header || {};
-  var cls = st.classes || [];
-  var kindLab = { abs: L("Absence", "Absence"), dly: L("Retard", "Delay"), cat: L("Rattrapage", "Catch-up") };
-  var h2 = EPI_h;
   var sgn = function (n) { return h2("span", { className: n < 0 ? "epi-neg" : n > 0 ? "epi-pos" : "" }, EPI_fmtS(n)); };
-  var addAdj = function () {
-    if (!F.t || !(+F.h > 0)) return;
-    upd(function (c) { return { adj: c.adj.concat([{ id: "a" + Date.now(), t: F.t, k: F.k, h: +F.h, d: F.d, n: F.n }]) }; });
-    setF(Object.assign({}, F, { h: "", n: "", d: "" }));
-  };
-  var weekFill = function () {
-    var r = R.rows.find(function (x) { return x.id === F.t; });
-    if (r) setF(Object.assign({}, F, { h: r.weekly, n: F.n || L("Semaine entière", "Whole week") }));
-  };
-  var fieldLab = function (t, child) { return h2("label", { className: "epi-lab" }, t, child); };
-  var sel = function (val, opts, on, w) {
-    return h2("select", { className: "epi-in", value: val, style: w ? { width: w } : null, onChange: function (ev) { on(ev.target.value); } },
-      opts.map(function (o) { return h2("option", { key: o[0], value: o[0] }, o[1]); }));
-  };
-  var tchOpts = (st.teachers || []).map(function (t) { return [t.id, t.shortName || t.name]; });
   var sumK = function (k) { return Math.round(R.rows.reduce(function (s, r) { return s + r[k]; }, 0) * 10) / 10; };
   var weeklyAll = R.rows.reduce(function (s, r) { return s + r.weekly; }, 0);
-
-  /* ---- sheet (fiche officielle) ---- */
-  var sheet = h2("div", { className: "epi-sheet" },
+  return h2("div", { className: "epi-sheet" },
     h2("div", { className: "epi-hd" },
       h2("div", null, h2("b", null, hd.republicFR || hd.countryFR || "REPUBLIQUE DU CAMEROUN"), h2("br"), hd.mottoFR || "Paix-Travail-Patrie", h2("br"), hd.ministryFR || "MINISTERE DES ENSEIGNEMENTS SECONDAIRES", h2("br"), hd.delegationFR || "", h2("br"), hd.regionFR || ""),
       h2("div", { style: { alignSelf: "center", fontWeight: 800, fontSize: 11 } }, (st.establishment || {}).name || ""),
@@ -215,26 +190,70 @@ function EPI(props) {
           h2("th", null, L("Nombre d'heures dues pour la période", "Hours due (period)")), h2("th", null, L("Nombre d'heures faites", "Hours done")), h2("th", null, L("Écart (+/-) par rapport à la période", "Gap (+/-) vs period")), h2("th", null, L("Taux de couverture par rapport à la période (%)", "Coverage rate vs period (%)")), h2("th", null, L("Taux de couverture par rapport à l'année (%)", "Coverage rate vs year (%)")),
           h2("th", null, L("Nombre de leçons prévues pour la période", "Lessons planned (period)")), h2("th", null, L("Nombre de leçons faites", "Lessons done")), h2("th", null, L("Écart (+/-) par rapport à la période", "Gap (+/-) vs period")), h2("th", null, L("Taux de couverture par rapport à la période (%)", "Coverage rate vs period (%)")), h2("th", null, L("Taux de couverture par rapport à l'année (%)", "Coverage rate vs year (%)")))),
       h2("tbody", null, h2("tr", null,
-        h2("td", { style: { fontSize: 11 } }, L("Du ", "From ") + EPI_fmt(I.ps, fr) + L(" au ", " to ") + EPI_fmt(I.pe, fr)),
-        h2("td", { style: { fontWeight: 800 } }, st.discipline || "GEOGRAPHY"),
+        h2("td", { style: { fontSize: 11 } }, L("Du ", "From ") + EPI_fmt(R.ps, fr) + L(" au ", " to ") + EPI_fmt(R.pe, fr)),
+        h2("td", { style: { fontWeight: 800 } }, (st.discipline || "GEOGRAPHY") + (who ? " · " + who : "")),
         h2("td", null, R.due), h2("td", null, R.done), h2("td", null, sgn(R.gap)), h2("td", null, R.covP + " %"), h2("td", null, R.covY + " %"),
         h2("td", null, R.dueL), h2("td", null, R.doneL), h2("td", null, sgn(R.gapL)), h2("td", null, R.covLP + " %"), h2("td", null, R.covLY + " %"),
         h2("td", { className: "l", style: { fontSize: 10, minWidth: 170 } }, facts),
         h2("td", { className: "l", style: { fontSize: 10, minWidth: 170 } }, acts)))),
     h2("p", { style: { fontSize: 10, margin: "6px 0 0" } },
-      h2("b", null, L("Situation cumulée depuis la rentrée (", "Cumulative since the start of the year (") + EPI_fmt(yearStart, fr) + L(" au ", " to ") + EPI_fmt(I.pe, fr) + ") : "),
+      h2("b", null, L("Situation cumulée depuis la rentrée (", "Cumulative since the start of the year (") + EPI_fmt(yearStart, fr) + L(" au ", " to ") + EPI_fmt(R.pe, fr) + ") : "),
       Rc.done + " h " + L("faites sur ", "done out of ") + Rc.due + " h " + L("dues", "due") + " (" + Rc.covP + " %) · " + L("soit ", "i.e. ") + Rc.covY + " % " + L("des ", "of the ") + Rc.yh + " h " + L("annuelles prévues", "planned for the year") + " · " + Rc.doneL + " / " + Rc.dueL + L(" leçons", " lessons") + "."),
     h2("div", { className: "epi-sig" },
-      h2("div", null, L("Animateur Pédagogique (AP)", "Head of Department (HOD)"), h2("br"), h2("b", null, (st.currentUser && st.currentUser.isAP && st.currentUser.name) || "")),
+      h2("div", null, who ? L("Enseignant(e)", "Teacher") : L("Animateur Pédagogique (AP)", "Head of Department (HOD)"), h2("br"), h2("b", null, who || (st.currentUser && st.currentUser.isAP && st.currentUser.name) || "")),
       h2("div", null, L("Censeur / Vice-Principal", "Vice-Principal")),
       h2("div", null, L("Proviseur / Principal", "Principal"))),
     h2("div", { className: "epi-annex", style: { marginTop: 18 } },
-      h2("div", { style: { fontWeight: 800, fontSize: 12, margin: "0 0 6px" } }, L("Annexe – détail par enseignant", "Annex – detail per teacher")),
+      h2("div", { style: { fontWeight: 800, fontSize: 12, margin: "0 0 6px" } }, who ? L("Annexe – détail de mes heures", "Annex – my hours in detail") : L("Annexe – détail par enseignant", "Annex – detail per teacher")),
       h2("table", { className: "epi-tbl" },
         h2("thead", null, h2("tr", null, ["Enseignant|Teacher", "H/sem.|H/week", "Dues|Due", "Absences|Absences", "Retards|Delays", "Rattrapages|Catch-up", "Faites|Done", "dont révisions / éval.|incl. revision / assess.", "Saisies EasyProf|EasyProf logs"].map(function (x, i) { return h2("th", { key: i }, x.split("|")[fr ? 0 : 1]); }))),
         h2("tbody", null, R.rows.map(function (r) { return h2("tr", { key: r.id }, h2("td", { style: { textAlign: "left" } }, r.name), h2("td", null, r.weekly), h2("td", null, r.due), h2("td", null, r.abs ? "−" + r.abs : 0), h2("td", null, r.dly ? "−" + r.dly : 0), h2("td", null, r.cat ? "+" + r.cat : 0), h2("td", { style: { fontWeight: 800 } }, r.done), h2("td", null, r.rev + " h"), h2("td", null, r.logged + " h")); }),
           h2("tr", { style: { fontWeight: 800 } }, h2("td", { style: { textAlign: "left" } }, "TOTAL"), h2("td", null, weeklyAll), h2("td", null, R.due), h2("td", null, "−" + sumK("abs")), h2("td", null, "−" + sumK("dly")), h2("td", null, "+" + sumK("cat")), h2("td", null, R.done), h2("td", null, R.rev + " h"), h2("td", null, sumK("logged") + " h")))),
       h2("p", { style: { fontSize: 10, margin: "6px 0 0" } }, L("Heures faites = heures dues (emplois du temps, hors jours fériés/vacances et activités scolaires) − absences − retards + rattrapages. Les séances de révision et d'évaluation comptent en heures mais pas en leçons. Une leçon = " + I.lh + " h. Heures annuelles prévues : " + R.yh + " h ; leçons annuelles prévues : " + R.yl + ".", "Hours done = hours due (timetables, excluding holidays/breaks and school activities) − absences − delays + catch-ups. Revision and assessment sessions count as hours but not as lessons. One lesson = " + I.lh + " h. Planned yearly hours: " + R.yh + " h; planned yearly lessons: " + R.yl + "."))));
+}
+function EPI(props) {
+  var st = props.state, e = props.onChangeState, fr = st.activeLanguage === "fr";
+  var I = EPI_get(st), R = EPI_calc(I, st);
+  var L = function (a, b) { return fr ? a : b; };
+  var terms = st.terms || [];
+  var t0 = (terms[0] || {}).startDate || "";
+  /* rentrée enregistrée seulement si elle est cohérente avec la période (≤ 13 mois avant la fin) ; sinon on se limite à la période */
+  var yearStart = t0 && t0 <= I.pe && (new Date(I.pe) - new Date(t0)) / 864e5 <= 395 ? t0 : I.ps;
+  var Rc = EPI_calc(I, st, yearStart, I.pe);              /* cumul depuis le début de l'année */
+  var upd = function (patch) {
+    e(function (s) {
+      var cur = EPI_get(s);
+      return Object.assign({}, s, { reportObservations: Object.assign({}, s.reportObservations || {}, { __inspection: Object.assign({}, cur, typeof patch === "function" ? patch(cur) : patch) }) });
+    });
+  };
+  var fs = Y.useState({ t: (st.teachers[0] || {}).id || "", k: "abs", h: "", d: "", d2: "", n: "" }), F = fs[0], setF = fs[1];
+  var os = Y.useState(null), openT = os[0], setOpenT = os[1];
+  var facts = I.ft != null ? I.ft : EPI_autoFactors(I, st, R);
+  var acts = I.ac != null ? I.ac : EPI_autoActions(I, st, R);
+  var hd = (st.establishment || {}).header || {};
+  var cls = st.classes || [];
+  var kindLab = { abs: L("Absence", "Absence"), dly: L("Retard", "Delay"), cat: L("Rattrapage", "Catch-up") };
+  var h2 = EPI_h;
+  var sgn = function (n) { return h2("span", { className: n < 0 ? "epi-neg" : n > 0 ? "epi-pos" : "" }, EPI_fmtS(n)); };
+  var addAdj = function () {
+    if (!F.t || !(+F.h > 0)) return;
+    upd(function (c) { return { adj: c.adj.concat([{ id: "a" + Date.now(), t: F.t, k: F.k, h: +F.h, d: F.d, d2: F.d && F.d2 > F.d ? F.d2 : "", n: F.n }]) }; });
+    setF(Object.assign({}, F, { h: "", n: "", d: "", d2: "" }));
+  };
+  var weekFill = function () {
+    var r = R.rows.find(function (x) { return x.id === F.t; });
+    if (r) setF(Object.assign({}, F, { h: r.weekly, n: F.n || L("Semaine entière", "Whole week") }));
+  };
+  var fieldLab = function (t, child) { return h2("label", { className: "epi-lab" }, t, child); };
+  var sel = function (val, opts, on, w) {
+    return h2("select", { className: "epi-in", value: val, style: w ? { width: w } : null, onChange: function (ev) { on(ev.target.value); } },
+      opts.map(function (o) { return h2("option", { key: o[0], value: o[0] }, o[1]); }));
+  };
+  var tchOpts = (st.teachers || []).map(function (t) { return [t.id, t.shortName || t.name]; });
+  var sumK = function (k) { return Math.round(R.rows.reduce(function (s, r) { return s + r[k]; }, 0) * 10) / 10; };
+  var weeklyAll = R.rows.reduce(function (s, r) { return s + r.weekly; }, 0);
+
+  var sheet = EPI_Sheet({ st: st, I: I, R: R, Rc: Rc, yearStart: yearStart, facts: facts, acts: acts });
 
   /* ---- controls ---- */
   var setPeriod = function (a, b) { upd({ ps: a, pe: b }); };
@@ -271,16 +290,21 @@ function EPI(props) {
       fieldLab(L("Type", "Type"), sel(F.k, [["abs", kindLab.abs], ["dly", kindLab.dly], ["cat", kindLab.cat]], function (v) { setF(Object.assign({}, F, { k: v })); })),
       fieldLab(L("Heures", "Hours"), h2("input", { className: "epi-in", type: "number", step: "0.5", min: "0", style: { width: 70 }, value: F.h, onChange: function (ev) { setF(Object.assign({}, F, { h: ev.target.value })); } })),
       fieldLab(L("Date (conseillé)", "Date (recommended)"), h2("input", { className: "epi-in", type: "date", value: F.d, onChange: function (ev) { setF(Object.assign({}, F, { d: ev.target.value })); } })),
+      fieldLab(L("Jusqu'au (si étalé)", "Until (if spread)"), h2("input", { className: "epi-in", type: "date", value: F.d2, min: F.d, onChange: function (ev) { setF(Object.assign({}, F, { d2: ev.target.value })); } })),
       fieldLab(L("Note", "Note"), h2("input", { className: "epi-in", value: F.n, style: { width: 190 }, onChange: function (ev) { setF(Object.assign({}, F, { n: ev.target.value })); } })),
       h2("button", { className: "epi-btn alt", onClick: weekFill, type: "button" }, L("Semaine entière", "Whole week")),
       h2("button", { className: "epi-btn", onClick: addAdj, type: "button" }, L("+ Ajouter", "+ Add"))),
-    h2("p", { className: "epi-note" }, L("Retard : 3 leçons = 6 h (3 × durée d'une leçon). Rattrapage : heures faites en plus (samedis…). Une ligne sans date est comptée dans toutes les périodes : indiquez une date pour qu'elle ne soit comptée que dans la bonne période.", "Delay: 3 lessons = 6 h. Catch-up: extra hours done (Saturdays…). A line without a date is counted in every period: set a date so it only counts in the right period.")),
+    h2("p", { className: "epi-note" }, L("Retard : 3 leçons = 6 h (3 × durée d'une leçon). Rattrapage : heures faites en plus (samedis…). Une ligne sans date est répartie sur la période d'inspection ci-dessus ; avec une date (ou « jusqu'au »), elle ne compte que dans la bonne période.", "Delay: 3 lessons = 6 h. Catch-up: extra hours done (Saturdays…). A line without a date is counted in every period: set a date so it only counts in the right period.")),
     I.adj.map(function (a) {
+      var setA = function (patch) { upd(function (c) { return { adj: c.adj.map(function (x) { return x.id === a.id ? Object.assign({}, x, patch) : x; }) }; }); };
       return h2("div", { key: a.id, className: "epi-item" },
-        h2("b", null, EPI_names(I, st, a.t)), h2("span", null, kindLab[a.k]), h2("span", { className: a.k === "cat" ? "epi-pos" : "epi-neg" }, (a.k === "cat" ? "+" : "−") + a.h + " h"),
-        h2("span", { style: { color: "var(--ep-muted)" } }, (a.d ? EPI_fmt(a.d, fr) + " · " : "") + (a.n || "")),
-        !a.d ? h2("span", { className: "epi-chip" }, L("sans date : compté partout", "no date: counted everywhere")) : null,
-        a.d && (a.d < I.ps || a.d > I.pe) ? h2("span", { style: { color: "#B45309", fontSize: 10 } }, L("(hors période)", "(outside period)")) : null,
+        h2("b", null, EPI_names(I, st, a.t)), h2("span", null, kindLab[a.k]),
+        h2(EPI_In, { type: "number", value: a.h, cls: "epi-in", onCommit: function (v) { setA({ h: +v || 0 }); } }), h2("span", null, "h"),
+        h2(EPI_In, { type: "date", value: a.d || "", cls: "epi-in", onCommit: function (v) { setA({ d: v }); } }),
+        a.d ? h2(EPI_In, { type: "date", value: a.d2 || "", cls: "epi-in", ph: L("jusqu'au", "until"), onCommit: function (v) { setA({ d2: v > a.d ? v : "" }); } }) : null,
+        h2(EPI_In, { value: a.n || "", cls: "epi-in", ph: L("note", "note"), onCommit: function (v) { setA({ n: v }); } }),
+        !a.d ? h2("span", { className: "epi-chip" }, L("sans date : réparti sur la période d'inspection (" + EPI_fmt(I.ps, true) + " → " + EPI_fmt(I.pe, true) + ")", "no date: spread over the inspection period")) : null,
+        a.d && ((a.d2 || a.d) < I.ps || a.d > I.pe) ? h2("span", { style: { color: "#B45309", fontSize: 10 } }, L("(hors période)", "(outside period)")) : null,
         h2("button", { className: "epi-btn red", type: "button", style: { marginLeft: "auto", padding: "3px 9px" }, onClick: function () { upd(function (c) { return { adj: c.adj.filter(function (x) { return x.id !== a.id; }) }; }); } }, "×"));
     }));
 

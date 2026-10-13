@@ -6,6 +6,7 @@ import re, base64, json
 
 o = open('EasyProf-4.original.html', encoding='utf-8').read()
 epx = open('epx.js', encoding='utf-8').read()
+epx2 = open('epx2.js', encoding='utf-8').read()
 epi = open('epi.js', encoding='utf-8').read()
 
 
@@ -17,30 +18,31 @@ def sub(s, old, new, count=1):
 s = o
 
 # ---------------------------------------------------------------- 1. modules
-s = sub(s, 'function tU(', epx + '\n' + epi + '\nfunction tU(')
+s = sub(s, 'function tU(', epx + '\n' + epx2 + '\n' + epi + '\nfunction tU(')
 
 # ------------------------------------------- 2. GLOBAL TOTAL row (3 missing cells)
 s = sub(s, 'children:D.doneLessons}),c.jsx("td",{className:"border border-black p-1.5 text-center",children:D.plannedDigit})',
         'children:D.doneLessons}),c.jsx("td",{className:"border border-black p-1.5 text-center",children:D.plannedPractical||0}),c.jsx("td",{className:"border border-black p-1.5 text-center",children:D.donePractical||0}),c.jsx("td",{className:"border border-black p-1.5 text-center font-mono",children:Math.round((D.practicalCov||0)*10)/10}),c.jsx("td",{className:"border border-black p-1.5 text-center",children:D.plannedDigit})')
 
 
-# --------------------------------------------- 3/4. tabs "Inspection" (desktop + mobile)
-def clone(s, start_pat, end_pat, repl):
+# --------------------------------------------- 3/4. onglet « Rapport AP » remplacé par « Inspection » (même place, bureau + mobile)
+def rename_block(s, start_pat, end_pat, repl):
     i = s.index(start_pat)
     j = s.index(end_pat, i)
     b = s[i:j]
     nb = repl(b)
     assert nb != b
-    return s[:j] + nb + s[j:]
+    return s[:i] + nb + s[j:]
 
 
-s = clone(s, 'c.jsxs("button",{onClick:()=>Bt("rapport"),className:`flex items-center', 'c.jsxs("button",{onClick:()=>Bt("config")',
-         lambda b: b.replace('"rapport"', '"inspection"').replace('N?"Rapport AP":"AP Report"', 'N?"Inspection":"Inspection"'))
-s = clone(s, 'c.jsxs("button",{onClick:()=>Bt("rapport"),className:`flex flex-col', 'c.jsxs("button",{onClick:()=>Bt("config")',
-         lambda b: b.replace('"rapport"', '"inspection"').replace('N?"Rapport":"Report"', '"Insp."'))
-# 5. render
-s = sub(s, 'At==="rapport"&&c.jsx(tU,{state:n,onChangeState:ge}),',
-        'At==="rapport"&&c.jsx(tU,{state:n,onChangeState:ge}),At==="inspection"&&c.jsx(EPI,{state:n,onChangeState:ge}),')
+s = rename_block(s, 'c.jsxs("button",{onClick:()=>Bt("rapport"),className:`flex items-center', 'c.jsxs("button",{onClick:()=>Bt("config")',
+                 lambda b: b.replace('"rapport"', '"inspection"').replace('N?"Rapport AP":"AP Report"', 'N?"Inspection":"Inspection"'))
+s = rename_block(s, 'c.jsxs("button",{onClick:()=>Bt("rapport"),className:`flex flex-col', 'c.jsxs("button",{onClick:()=>Bt("config")',
+                 lambda b: b.replace('"rapport"', '"inspection"').replace('N?"Rapport":"Report"', '"Insp."'))
+assert s.count('Bt("rapport")') == 0
+s = sub(s, 'At==="rapport"&&c.jsx(tU,{state:n,onChangeState:ge}),', 'At==="inspection"&&c.jsx(EPI,{state:n,onChangeState:ge}),')
+# tableau de bord AP refait
+s = sub(s, 'At==="dashboard"&&c.jsx(iI,{state:n,onNavigateToConfig:()=>Bt("config")}),', 'At==="dashboard"&&c.jsx(EPB,{state:n}),')
 # 6. 7 buttons in mobile nav: tighten padding
 s = s.replace('flex flex-col items-center gap-1 py-1.5 px-3 rounded-xl', 'flex flex-col items-center gap-1 py-1.5 px-1.5 rounded-xl')
 
@@ -82,6 +84,20 @@ s = sub(s, '})(),c.jsxs("div",{className:"flex flex-wrap items-center justify-be
 # historique : libellés pour les types sans numéro de leçon
 s = sub(s, 'children:["Leçon n° ",ge.lessonNumber]', 'children:EPX_lblN(ge,h)')
 s = sub(s, 'children:ge.lessonNumber}),', 'children:EPX_lbl(ge,h)}),')
+
+# ------------------------------------------------ 8b. espace enseignant : « Mon bilan » et « Mes cours » (modifiables)
+s = sub(s, 'children:h?"Mes Statistiques":"My Analytics"', 'children:h?"Mon bilan":"My summary"')
+s = sub(s, 'children:h?"Historique":"Recent Logs"', 'children:h?"Mes cours":"My lessons"')
+_a = s.index('A==="dashboard"&&c.jsxs("div",{className:"space-y-6",children:[c.jsxs("div",{className:"grid grid-cols-2 md:grid-cols-3 gap-4"')
+_i0 = s.index('function eU({state:n,onChangeState:e}){')
+_end = s.index('function tU(', _i0)
+assert s[_end - 4:_end] == ']})}' or s[:_end].endswith(']})}\n' + epx + '\n' + epx2 + '\n' + epi + '\n') or True
+# fin de eU = juste avant le module injecté
+_mod = s.index('/* ===== EasyProf extras (added)')
+assert _a < _mod and s[_mod - 5:_mod].strip().endswith(']})}'), repr(s[_mod - 12:_mod])
+_tail = s.rindex(']})}', _a, _mod)
+s = s[:_a] + 'A==="dashboard"&&c.jsx(EPT,{st:n,e:e,me:t,fr:h}),A==="history"&&c.jsx(EPH,{st:n,e:e,me:t,fr:h})' + s[_tail:]
+s = sub(s, 'Ze.slice(0,3).map(', 'Ze.slice(0,6).map(')
 
 # ------------------------------------------------ 9. Configuration : onglet « Année & PIN »
 s = sub(s, 'children:f?"Classes & Objectifs":"Classes & Annual Goals"})',

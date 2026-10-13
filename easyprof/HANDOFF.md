@@ -37,3 +37,11 @@ Le build patche le bundle par ancres exactes (assertions d'unicité). CSS Tailwi
 ## Démo et architecture
 - `deploy/make_demo.py` : version de démonstration anonymisée (Firebase factice, écritures coupées, PIN 1234) publiée comme artefact privé.
 - `deploy/ARCHITECTURE.md` : hébergement, multi-départements, quotas Spark.
+
+## 5.2 : grand nettoyage (13/10/2026)
+- Supprimé : onglet « Rapport AP » (difficultés, suggestions, procès-verbaux) ; l'onglet Inspection prend sa place.
+- **Tableau de bord AP** (`EPB`, `src/epx2.js`) : couverture horaire et leçons depuis la rentrée, annuelle, trimestre en cours, tableau par trimestre et par enseignant (rappel WhatsApp si pas de saisie).
+- **Espace enseignant** : « Mon bilan » (`EPT`) = KPIs + fiche d'inspection personnelle à dates libres (même moteur `EPI_calc(..., only)` que la fiche AP, année = heures de son emploi du temps), « Mes cours » (`EPH`) = historique complet de la rentrée, filtres, **modification** et suppression avec confirmation.
+- **Ajustements** (retards/rattrapages/absences manuelles) : date ou plage `d..d2` ; sans date = répartis au prorata sur la période d'inspection de l'AP (`EPI_share`). Retard de KAMDEM : 3 h.
+- Questions ouvertes : samedis de KAMDEM réellement tenus (22/09 et 06/10 cités sont des mardis) ; le cours de 3 h 7h30-10h30 est le mardi (USA) dans les données, pas le vendredi.
+- Multi-départements : voir `deploy/ARCHITECTURE.md` (feuille de route d'une base multi-locataires).

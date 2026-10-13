@@ -43,9 +43,9 @@ const allDays = st => { st.terms[0].startDate = '2026-09-07'; st.terms[0].endDat
   const e = st.entries[0];
   ok(e.type === 'absence' && e.reason === 'maladie' && e.durationMinutes === 0 && e.classId === '', 'B1 entrée « absence/maladie » créée (0 min, sans classe)');
   ok(await page.getByText('Saisie du jour en attente').count() === 0, 'B2 le rappel disparaît pour le jour déclaré');
-  await page.getByRole('button', { name: /HISTORIQUE/i }).click();
+  await page.getByRole('button', { name: /MES COURS/i }).click();
   await page.waitForTimeout(500);
-  ok(await page.getByText(/Pas de cours – Maladie/).count() >= 1, 'B3 visible dans l\'historique, sans plantage');
+  ok(await page.locator('.ep2-ent').filter({ hasText: /Maladie/ }).count() >= 1, 'B3 visible dans l\'historique, sans plantage');
   ok(errs.length === 0, 'B4 aucune erreur JS ' + JSON.stringify(errs));
   await page.close();
 }
@@ -192,6 +192,67 @@ for (const [date, expected, label] of [['2026-10-10T08:00:00+01:00', 1, 'samedi 
   ok(/Vacances de Noël \(art\. 4\)/.test(t) && /Vacances de Pâques \(art\. 4\)/.test(t) && /Suivi pédagogique, fin du 1er trimestre/.test(t), 'I4 calendrier de l\'arrêté préchargé (vacances + suivi pédagogique)');
   ok(!/à confirmer/.test(t), 'I5 plus de mention « à confirmer »');
   await r.page.close();
+}
+
+const TERMS = st => { const T = { T1: ['2026-09-07', '2026-11-27'], T2: ['2026-11-30', '2027-03-05'], T3: ['2027-03-08', '2027-06-11'] }; st.terms.forEach(t => { t.startDate = T[t.id][0]; t.endDate = T[t.id][1]; }); st.terms[0].status = 'active'; };
+
+/* J. tableau de bord AP (horloge figée au 09/10/2026) et suppression du rapport AP */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'AP', TERMS), { w: 1300, h: 1000, time: '2026-10-09T12:00:00+01:00' });
+  const nav = await page.innerText('body');
+  ok(!/RAPPORT AP/i.test(nav) && /INSPECTION/.test(nav), 'J1 plus d\'onglet « Rapport AP » ; Inspection en place');
+  const k = await page.locator('.ep2-kpi').allInnerTexts();
+  ok(k.length === 4 && /93\.7 %/.test(k[0]) && /239 \/ 255/.test(k[0]), 'J2 couverture horaire depuis la rentrée = 239/255 = 93,7 % (retard KAMDEM corrigé à 3 h) → ' + k[0].replace(/\n/g, ' '));
+  ok(/93\.8 %/.test(k[1]) && /120 \/ 128/.test(k[1]), 'J3 couverture des leçons 120/128 = 93,8 % → ' + k[1].replace(/\n/g, ' '));
+  ok(/15\.7 %/.test(k[2]) && /1524/.test(k[2]), 'J4 couverture annuelle 15,7 % de 1524 h → ' + k[2].replace(/\n/g, ' '));
+  ok(/T1/.test(k[3]) && /93\.7 %/.test(k[3]), 'J5 trimestre en cours (T1) → ' + k[3].replace(/\n/g, ' '));
+  const tbl = await page.locator('.ep2-tbl').allInnerTexts();
+  ok(/T1/.test(tbl[0]) && /T2/.test(tbl[0]) && /à venir/.test(tbl[0]), 'J6 tableau par trimestre (T2/T3 à venir)');
+  ok(/KAMDEM/.test(tbl[1]) && /TSOGO/.test(tbl[1]) && /ASTHA/.test(tbl[1]) && /NEBASIBI/.test(tbl[1]), 'J7 tableau par enseignant complet');
+  await page.screenshot({ path: shots + '/J_dash.png', fullPage: true });
+  ok(errs.length === 0, 'J8 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
+}
+
+/* K. bilan de l'enseignant : sa fiche, dates libres, année propre à son emploi du temps */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'Teacher', st => { TERMS(st); st.teachers.find(t => t.id === 'KAMDEM').teachingDays = [1, 2, 6]; }), { w: 1300, h: 1000, time: '2026-10-09T12:00:00+01:00' });
+  await page.getByRole('button', { name: /MON BILAN/i }).click(); await page.waitForTimeout(600);
+  const k = await page.locator('.ep2-kpi').allInnerTexts();
+  ok(/70 \/ 65/.test(k[0]), 'K1 bilan KAMDEM rentrée → aujourd\'hui : 70 / 65 h (même moteur que la fiche AP) → ' + k[0].replace(/\n/g, ' '));
+  const row = (await page.locator('.epi-sheet tbody tr').first().innerText()).split('\t');
+  ok(/GEOGRAPHY · Mr\. KAMDEM/.test(row[1]) && row[2] === '65' && row[3] === '70', 'K2 fiche personnelle : 65 h dues, 70 faites → ' + row.slice(1, 4).join(' / '));
+  await page.getByRole('button', { name: /^T1$/ }).click();
+  await page.locator('.ep2-card input[type=date]').first().fill('2026-09-14'); await page.locator('.ep2-card input[type=date]').nth(1).fill('2026-09-18'); await page.waitForTimeout(400);
+  const row2 = (await page.locator('.epi-sheet tbody tr').first().innerText()).split('\t');
+  ok(row2[2] === '13', 'K3 période libre 14→18/09 : 13 h dues (emploi du temps du lundi et du mardi) → ' + row2[2]);
+  ok(/Du 14 septembre 2026 au 18 septembre 2026/.test(row2[0].replace(/\n/g, ' ')), 'K4 période affichée sur la fiche');
+  ok(row2[3] === '13.8', 'K6 retard (−3 h) et rattrapage (+8 h) sans date répartis au prorata sur la période d\'inspection : 5/33 jours → 13 h dues, 13,8 h faites (et non 18 h) → ' + row2[3]);
+  ok(errs.length === 0, 'K5 aucune erreur JS ' + JSON.stringify(errs));
+  await page.screenshot({ path: shots + '/K_bilan.png', fullPage: true });
+  await page.close();
+}
+
+/* L. historique : modifier une saisie (date, titre, type) sans la supprimer */
+{
+  const { page, errs } = await open(b, html, stateFromBackup('KAMDEM', 'Teacher', TERMS), { w: 1300, h: 1000, time: '2026-10-09T12:00:00+01:00' });
+  await page.getByRole('button', { name: /MES COURS/i }).click(); await page.waitForTimeout(500);
+  const n0 = await page.locator('.ep2-ent').count();
+  const first = page.locator('.ep2-ent').filter({ hasText: 'Population distribution' });
+  ok(await first.count() === 1, 'L1 historique complet : ' + n0 + ' saisies listées (pas seulement 3)');
+  await first.getByRole('button', { name: /Modifier/ }).click(); await page.waitForTimeout(300);
+  await page.locator('.ep2-form input[type=date]').fill('2026-09-30');
+  const title = page.locator('.ep2-form input.epx-in').filter({ hasNot: page.locator('[type=date],[type=time],[type=number],[type=checkbox]') }).last();
+  await title.fill('Population distribution (corrigé)');
+  await page.getByRole('button', { name: 'Enregistrer les modifications' }).click(); await page.waitForTimeout(600);
+  const st = await getState(page);
+  const e = st.entries.find(x => /corrigé/.test(x.title || ''));
+  ok(e && e.timestamp.slice(0, 10) === '2026-09-30' && st.entries.length === n0 + (st.entries.length - n0), 'L2 date et titre modifiés sur place, la saisie n\'est pas recréée → ' + (e && e.timestamp));
+  ok(e && e.termId === 'T1' && e.durationMinutes === 120, 'L3 trimestre recalculé et durée conservée (120 min)');
+  await page.locator('.ep2-ent').filter({ hasText: 'corrigé' }).getByRole('button', { name: '🗑' }).click(); await page.waitForTimeout(400);
+  ok(await page.getByText('Confirmer la suppression').count() >= 1, 'L4 la suppression demande une confirmation');
+  ok(errs.length === 0, 'L5 aucune erreur JS ' + JSON.stringify(errs));
+  await page.close();
 }
 await b.close();
 console.log(fails ? `\n${fails} ÉCHEC(S)` : '\nTOUS LES TESTS PASSENT');

@@ -1,0 +1,27 @@
+# EasyProf 6 : site statique (dossier site/) + une fonction d'API (netlify/functions/api.mjs) + stockage Netlify Blobs.
+[build]
+  publish = "site"
+  command = "node tools/gen-sw.mjs"
+  functions = "netlify/functions"
+  # Économie de crédits : un déploiement de production coûte des crédits sur l'offre gratuite.
+  # On ne déploie que si le message du dernier commit contient [deploy] (sinon le build est ignoré).
+  ignore = "git log -1 --pretty=%B | grep -q '\\[deploy\\]' && exit 1 || exit 0"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "same-origin"

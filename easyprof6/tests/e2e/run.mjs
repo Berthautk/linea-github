@@ -106,8 +106,8 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
   const paper = await apPage.locator('.paper').first().innerText();
   ok(/FICHE DE L’INSPECTION NATIONALE/i.test(paper) && /GEOGRAPHY|GÉOGRAPHIE|Géographie/i.test(paper) && /GBHS GAROUA/.test(paper), 'E2 fiche officielle : en-tête, établissement, discipline');
   ok((await apPage.locator('.paper table').first().locator('tbody tr').first().locator('td').count()) === 14, 'E3 fiche : 14 colonnes comme la fiche de l’inspection');
-  await apPage.getByRole('button', { name: /récapitulatif par classe/i }).click(); await apPage.waitForTimeout(300);
-  ok(/TOTAL GÉNÉRAL/.test(await apPage.innerText('body')), 'E4 récapitulatif par classe avec total général');
+  await apPage.getByRole('button', { name: /censorat/i }).click(); await apPage.waitForTimeout(300);
+  const fp = await apPage.innerText('body'); ok(/FICHE PÉDAGOGIQUE DE SUIVI/i.test(fp) && /TOTAL GÉNÉRAL/.test(fp) && (await apPage.locator('.paper img').count()) === 1, 'E4 fiche pédagogique de suivi (censorat) : armoiries et total général');
   await apPage.screenshot({ path: shots + '/e_recap.png', fullPage: true });
 });
 

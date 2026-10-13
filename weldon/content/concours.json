@@ -81,7 +81,10 @@
           "nom": "Concours spécial inspecteurs",
           "difference": "Réservé aux fonctionnaires DGSN (environ 100 places selon un site secondaire), sans épreuves physiques ni enquête de moralité."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours annuel depuis 2024 (400 places environ chaque année), ouvert avec les autres concours de police ; les années 2018-2023 ne sont pas documentées."
+      }
     },
     "en": {
       "nom": "Cadet Police Inspectors",
@@ -159,7 +162,10 @@
           "nom": "Concours spécial inspecteurs",
           "difference": "Reserved for DGSN civil servants (about 100 places per a secondary site), no physical tests or background check."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Annual since 2024 (about 400 places each year), opened together with the other police competitions; 2018-2023 are not documented."
+      }
     },
     "categorie": "direct",
     "tutelle": "DGSN",
@@ -196,7 +202,46 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Arrêté du 15 juin 2026 non lu. Âge NON trouvé. Places directes 395 (secondaire) ; date limite 21 août 2026 ; écrit 26 septembre (un seul site, non vérifié). La page infospratiques ?p=474 n'a pas été lue en détail ; le diplôme provient du résumé de recherche. Le fichier concours.json indique 17–28 ans : non confirmé par une source lue."
+    "recherche_notes": "Arrêté du 15 juin 2026 non lu. Âge NON trouvé. Places directes 395 (secondaire) ; date limite 21 août 2026 ; écrit 26 septembre (un seul site, non vérifié). La page infospratiques ?p=474 n'a pas été lue en détail ; le diplôme provient du résumé de recherche. Le fichier concours.json indique 17–28 ans : non confirmé par une source lue. | Périodicité : Même base que gardiens-paix. Effectifs 2024-2026 : 400, 402 (ou 390/370 selon d'autres guides), 398+5. Aucune session 2018-2023 confirmée. Prochaine session 2027 : déduction du rythme récent.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2017,
+        2024,
+        2025,
+        2026
+      ],
+      "derniere_session": 2026,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Cameroon Desks - Arrêtés ouverture concours police 2023/2024 (2 janv. 2024)",
+          "url": "https://www.cameroondesks.com/2023/12/concours-police-camerounaise2024.html",
+          "annee": 2024
+        },
+        {
+          "titre": "Camer.be - 2270 postes ouverts pour agents de police en 2025 (29 nov. 2024)",
+          "url": "https://www.camer.be/87359/11:1/cameroun-2270-postes-ouverts-pour-agents-de-police-en-2025-cameroon.html",
+          "annee": 2024
+        },
+        {
+          "titre": "Cameroon Desks - Concours de la Police camerounaise 2026 (17 juin 2026)",
+          "url": "https://www.cameroondesks.com/2021/11/recrutement-au-sein-de-la-surete-nationale-2021.html",
+          "annee": 2026
+        },
+        {
+          "titre": "Digital Business Africa - Concours de la police 2026 : plus que trois jours (11 août 2026)",
+          "url": "https://www.digitalbusiness.africa/cameroun-concours-de-la-police-2026-plus-que-trois-jours-pour-postuler-sur-www-concours-dgsn-cm/",
+          "annee": 2026
+        },
+        {
+          "titre": "Camer.be - Concours de la police : 5700 places à pourvoir (mai 2017, vu via résultat de recherche)",
+          "url": "https://www.camer.be/60009/11:1/cameroun-concours-de-la-police-5700-places-a-pourvoir-cameroon.html",
+          "annee": 2017
+        }
+      ]
+    }
   },
   {
     "id": "gardiens-paix",
@@ -278,7 +323,10 @@
           "CNI (le récépissé n'est pas accepté)"
         ]
       },
-      "debouches": "Premier corps de la police : patrouille, circulation, sécurité publique. Formation à Mutengene puis affectation en commissariat."
+      "debouches": "Premier corps de la police : patrouille, circulation, sécurité publique. Formation à Mutengene puis affectation en commissariat.",
+      "periodicite_txt": {
+        "note": "Concours organisé chaque année depuis 2024 (2024, 2025, 2026), généralement ouvert entre janvier et l'été. Les années précédentes (2018-2023) ne sont pas documentées ici."
+      }
     },
     "en": {
       "nom": "Cadet Police Constables",
@@ -354,7 +402,10 @@
           "National ID card (receipt not accepted)"
         ]
       },
-      "debouches": "Entry rank of the police: patrol, traffic, public safety. Training at Mutengene, then posting to a police station."
+      "debouches": "Entry rank of the police: patrol, traffic, public safety. Training at Mutengene, then posting to a police station.",
+      "periodicite_txt": {
+        "note": "Held every year since 2024 (2024, 2025, 2026), usually opening between January and summer. Earlier years (2018-2023) are not documented here."
+      }
     },
     "categorie": "direct",
     "tutelle": "DGSN",
@@ -393,7 +444,46 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Texte de l'arrêté (15 juin 2026) non lu directement ; conditions issues d'un site secondaire, recoupées en partie par un second (taille, conditions générales, frais). Un autre site (infospratiques ?p=65) donne 18–25 ans, 1,68 m/1,60 m : divergent, écarté. Date limite initiale 31 juillet 2026, prorogée au 21 août 2026 ; écrits le 3 octobre 2026 (secondaire). Places : 1 735 (autre source : 1 768). Les dates 2026 sont passées au 12 octobre 2026. Aucune dérogation d'âge trouvée."
+    "recherche_notes": "Texte de l'arrêté (15 juin 2026) non lu directement ; conditions issues d'un site secondaire, recoupées en partie par un second (taille, conditions générales, frais). Un autre site (infospratiques ?p=65) donne 18–25 ans, 1,68 m/1,60 m : divergent, écarté. Date limite initiale 31 juillet 2026, prorogée au 21 août 2026 ; écrits le 3 octobre 2026 (secondaire). Places : 1 735 (autre source : 1 768). Les dates 2026 sont passées au 12 octobre 2026. Aucune dérogation d'âge trouvée. | Périodicité : Annuel seulement établi pour 2024-2026. Aucune session 2018-2023 confirmée (je n'ai trouvé ni confirmé de source ; le lien 'recrutement sûreté nationale 2021' de Cameroon Desks renvoie en réalité à un contenu 2026). Le calendrier a glissé : janvier en 2024-2025, juin en 2026. Prochaine année 2027 déduite du rythme annuel, pas annoncée. Chiffres variables selon les sources (1 735 vs 1 750 vs 1 850).",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2017,
+        2024,
+        2025,
+        2026
+      ],
+      "derniere_session": 2026,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Cameroon Desks - Arrêtés ouverture concours police 2023/2024 (2 janv. 2024)",
+          "url": "https://www.cameroondesks.com/2023/12/concours-police-camerounaise2024.html",
+          "annee": 2024
+        },
+        {
+          "titre": "Camer.be - 2270 postes ouverts pour agents de police en 2025 (29 nov. 2024)",
+          "url": "https://www.camer.be/87359/11:1/cameroun-2270-postes-ouverts-pour-agents-de-police-en-2025-cameroon.html",
+          "annee": 2024
+        },
+        {
+          "titre": "Cameroon Desks - Concours de la Police camerounaise 2026 (17 juin 2026)",
+          "url": "https://www.cameroondesks.com/2021/11/recrutement-au-sein-de-la-surete-nationale-2021.html",
+          "annee": 2026
+        },
+        {
+          "titre": "Digital Business Africa - Concours de la police 2026 : plus que trois jours (11 août 2026)",
+          "url": "https://www.digitalbusiness.africa/cameroun-concours-de-la-police-2026-plus-que-trois-jours-pour-postuler-sur-www-concours-dgsn-cm/",
+          "annee": 2026
+        },
+        {
+          "titre": "Camer.be - Concours de la police : 5700 places à pourvoir (mai 2017, vu via résultat de recherche)",
+          "url": "https://www.camer.be/60009/11:1/cameroun-concours-de-la-police-5700-places-a-pourvoir-cameroon.html",
+          "annee": 2017
+        }
+      ]
+    }
   },
   {
     "id": "police-nationale-commissaires-et-officiers-de-po",
@@ -462,7 +552,10 @@
           "nom": "Concours spéciaux",
           "difference": "Réservés aux fonctionnaires DGSN confirmés dans le grade requis (50 commissaires, 50 officiers)."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours organisé chaque année depuis 2024 avec quelques dizaines à une centaine de places ; avant 2024 les sessions ne sont pas documentées."
+      }
     },
     "en": {
       "nom": "National Police – superintendents and police officers",
@@ -523,7 +616,10 @@
           "nom": "Concours spéciaux",
           "difference": "Reserved for DGSN civil servants confirmed in the required rank (50 commissioners, 50 officers)."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Held every year since 2024 with a few dozen to about a hundred places; sessions before 2024 are not documented."
+      }
     },
     "source_annales": "Annales commissaire/officier de police disponibles chez les tiers",
     "priorite": 17,
@@ -565,7 +661,46 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Arrêtés du 15 juin 2026 (publiés sur concours-dgsn.cm) non lus. Âge et conditions des officiers NON trouvés. Dates limites divergentes : 31 juillet (initial), 14 août (SMS, Digital Business Africa). Cameroon Tribune lu seulement via résumé de recherche. La limite d'âge des commissaires est issue d'une seule page secondaire."
+    "recherche_notes": "Arrêtés du 15 juin 2026 (publiés sur concours-dgsn.cm) non lus. Âge et conditions des officiers NON trouvés. Dates limites divergentes : 31 juillet (initial), 14 août (SMS, Digital Business Africa). Cameroon Tribune lu seulement via résumé de recherche. La limite d'âge des commissaires est issue d'une seule page secondaire. | Périodicité : Mêmes limites que les autres concours police. Les chiffres 2026 viennent de Cameroon Desks et d'un guide infospratiques (45 commissaires, écrit annoncé le 12 sept. 2026, non vérifié). Aucune année sans session confirmée.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2017,
+        2024,
+        2025,
+        2026
+      ],
+      "derniere_session": 2026,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Cameroon Desks - Arrêtés ouverture concours police 2023/2024 (2 janv. 2024)",
+          "url": "https://www.cameroondesks.com/2023/12/concours-police-camerounaise2024.html",
+          "annee": 2024
+        },
+        {
+          "titre": "Camer.be - 2270 postes ouverts pour agents de police en 2025 (29 nov. 2024)",
+          "url": "https://www.camer.be/87359/11:1/cameroun-2270-postes-ouverts-pour-agents-de-police-en-2025-cameroon.html",
+          "annee": 2024
+        },
+        {
+          "titre": "Cameroon Desks - Concours de la Police camerounaise 2026 (17 juin 2026)",
+          "url": "https://www.cameroondesks.com/2021/11/recrutement-au-sein-de-la-surete-nationale-2021.html",
+          "annee": 2026
+        },
+        {
+          "titre": "Digital Business Africa - Concours de la police 2026 : plus que trois jours (11 août 2026)",
+          "url": "https://www.digitalbusiness.africa/cameroun-concours-de-la-police-2026-plus-que-trois-jours-pour-postuler-sur-www-concours-dgsn-cm/",
+          "annee": 2026
+        },
+        {
+          "titre": "Camer.be - Concours de la police : 5700 places à pourvoir (mai 2017, vu via résultat de recherche)",
+          "url": "https://www.camer.be/60009/11:1/cameroun-concours-de-la-police-5700-places-a-pourvoir-cameroon.html",
+          "annee": 2017
+        }
+      ]
+    }
   },
   {
     "id": "emia",
@@ -647,7 +782,10 @@
           "nom": "Tronc B2 / Cours B",
           "difference": "Sous-officiers diplômés du supérieur, 5 places, 32 ans au plus."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Deux sessions seulement confirmées : appel en 2023, puis appel en sept. 2025 avec épreuves en janv. 2026. Prochaine session non annoncée ; suivez les communiqués du MINDEF, surtout à l'automne."
+      }
     },
     "en": {
       "nom": "Joint Military School",
@@ -723,7 +861,10 @@
           "nom": "Tronc B2 / Cours B",
           "difference": "NCOs with higher-education diploma, 5 places, max age 32."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only two sessions confirmed: a 2023 call, then a Sept. 2025 call with exams in Jan. 2026. No next session announced; watch MINDEF communiqués, especially in autumn."
+      }
     },
     "categorie": "ecole",
     "tutelle": "MINDEF",
@@ -760,7 +901,38 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Contenu Kamerpower obtenu via résumé de recherche seulement (la page n'a pas pu être lue). Communiqué de septembre 2025, épreuves 17–18 janvier 2026 ; la date de référence « 31 décembre 2026 » semble incohérente. Aucun communiqué MINDEF officiel lu. Infospratiques donne 18–23 ans et bac seul : conflit sur le Bac+1. Le fichier concours.json mentionne des écrits le 30 mars 2026, non recoupé. Frais et pièces non trouvés."
+    "recherche_notes": "Contenu Kamerpower obtenu via résumé de recherche seulement (la page n'a pas pu être lue). Communiqué de septembre 2025, épreuves 17–18 janvier 2026 ; la date de référence « 31 décembre 2026 » semble incohérente. Aucun communiqué MINDEF officiel lu. Infospratiques donne 18–23 ans et bac seul : conflit sur le Bac+1. Le fichier concours.json mentionne des écrits le 30 mars 2026, non recoupé. Frais et pièces non trouvés. | Périodicité : L'EMIA en est à la 42e promotion (jan. 2026), ce qui laisse penser à un recrutement régulier, mais je n'ai pas pu confirmer les sessions de 2016-2022 ni 2024. Un article de CamerounWeb (non lisible, vu via recherche) évoque les admis d'une 'session 2023' avec présentation le 15 juil. 2024. Les pages Kamerpower sur l'EMIA ont des titres/dates mélangés (2024 vs 2026-2027). Le nombre de places 2025 n'a pas été lu (renvoi au PDF). Type 'irreguliere' retenu faute de pattern prouvé.",
+    "periodicite": {
+      "type": "irreguliere",
+      "sessions": [
+        2023,
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "MINDEF - Concours d'entrée à l'EMIA, 42e promotion, épreuves écrites 17-18 janv. 2026 (27 janv. 2026)",
+          "url": "https://mindef.gov.cm/secretariat-general/2026/01/27/concours-dentree-a-lemia/",
+          "annee": 2026
+        },
+        {
+          "titre": "YOP L-FRII - MINDEF ouverture des concours armée, gendarmerie, EMIA 2025 (22 sept. 2025)",
+          "url": "https://yop.l-frii.com/formations/cameroun-mindef-ouverture-des-concours-de-recrutement-dans-larmee-militaire-gendarmerie-emia-2025/",
+          "annee": 2025
+        },
+        {
+          "titre": "StopBlablaCam - Le Mindef lance le recrutement de 200 jeunes sous-officiers à l'EMIA (18 avr. 2023)",
+          "url": "https://www.stopblablacam.com/societe/1804-10392-forces-armees-le-mindef-lance-le-recrutement-de-200-jeunes-sous-officiers-a-l-emia",
+          "annee": 2023
+        },
+        {
+          "titre": "CamerounWeb - Liste officielle des admis du concours de l'EMIA (session 2023, vu via résultat de recherche, page non lisible)",
+          "url": "https://www.camerounweb.com/CameroonHomePage/NewsArchive/URGENT-voici-la-liste-officielle-des-admis-du-concours-de-l-EMIA-766858",
+          "annee": 2024
+        }
+      ]
+    }
   },
   {
     "id": "recrutement-special-bir",
@@ -912,7 +1084,10 @@
           "nom": "Sous-officiers santé militaire",
           "difference": "Limite d'âge plus haute (nés à partir du 1/1/1997) ; diplôme d'infirmier probable mais non confirmé pour la gendarmerie."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours organisé environ tous les 2 ans (2017, 2019, 2021, 2023, 2025), et non tous les 3 ans. L'appel de 2025 a débouché sur des épreuves en 2026 ; le prochain pourrait être lancé vers 2027."
+      }
     },
     "en": {
       "nom": "National Gendarmerie – cadet gendarmes and cadet non-commissioned officers",
@@ -978,7 +1153,10 @@
           "nom": "Sous-officiers santé militaire",
           "difference": "Higher age ceiling (born from 1/1/1997); nursing diploma likely but not confirmed for gendarmerie."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Held about every 2 years (2017, 2019, 2021, 2023, 2025), not every 3. The 2025 call led to exams in 2026; the next one could be launched around 2027."
+      }
     },
     "source_annales": "Sujets non publiés",
     "priorite": 3,
@@ -1018,7 +1196,63 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun communiqué officiel lu. Sources secondaires incohérentes (âge, diplôme, dates : dépôt 28 nov puis 26 déc 2025, écrit 19 avril 2026 ou janvier). Diplôme des élèves-gendarmes service général NON trouvé ; frais d'un site commercial seulement. niveaux_min laissé null volontairement. Fiche concours.json mentionne des sessions passées ; rien d'officiel pour la prochaine session."
+    "recherche_notes": "Aucun communiqué officiel lu. Sources secondaires incohérentes (âge, diplôme, dates : dépôt 28 nov puis 26 déc 2025, écrit 19 avril 2026 ou janvier). Diplôme des élèves-gendarmes service général NON trouvé ; frais d'un site commercial seulement. niveaux_min laissé null volontairement. Fiche concours.json mentionne des sessions passées ; rien d'officiel pour la prochaine session. | Périodicité : Le schéma bisannuel (années impaires) repose sur 5 points dont certains issus de la presse ou de pages d'agrégateurs : 2021 vient d'un article Cameroon Desks (URL avec '2019' mais contenu 2021-2022, publié le 10 nov. 2021), 2019 d'une dépêche relayée (page camer.be non rechargeable, lue via résumé de recherche). Une page MINDEF Gendarmerie est datée du 27 déc. 2023 (PDF non lu) : sans doute une republication ou un second avis de 2023, non utilisée comme session. Kamerpower donne des dates d'épreuves contradictoires pour 2026 (28 déc. 2025, 15 janv., 27 mars, 19 avril 2026) : ne pas s'y fier. Les années paires 2018, 2020, 2022, 2024 ne sont pas explicitement confirmées comme sans session.",
+    "periodicite": {
+      "type": "pluriannuelle",
+      "intervalle_ans": 2,
+      "sessions": [
+        2017,
+        2019,
+        2021,
+        2023,
+        2025
+      ],
+      "derniere_session": 2025,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Journal du Cameroun - Le gouvernement lance le recrutement de 9 400 élèves gendarmes et militaires (19 sept. 2025)",
+          "url": "https://fr.journalducameroun.com/cameroun-le-gouvernement-lance-le-recrutement-de-9-400-eleves-gendarmes-et-militaires-nse-lance-le-recrutement-de-9-400-eleves-gendarmes-et-militaires/",
+          "annee": 2025
+        },
+        {
+          "titre": "Journal du Cameroun - L'armée recrute plus de 9 000 gendarmes et soldats (26 janv. 2023)",
+          "url": "https://fr.journalducameroun.com/cameroun-larmee-recrute-plus-de-9-000-gendarmes-et-soldats/",
+          "annee": 2023
+        },
+        {
+          "titre": "Cameroon Tribune - Recrutement dans les armées et la gendarmerie : près de 9 500 postes ouverts (31 janv. 2023)",
+          "url": "https://cameroon-tribune.cm/article.html/54731/fr.html/details_2",
+          "annee": 2023
+        },
+        {
+          "titre": "Cameroun24 - Recrutement dans les forces de défense : résultats définitifs (communiqué du 6 févr. 2017)",
+          "url": "https://cameroun24.net/article/37286-recrutement-dans-les-forces-de-defense-les-resultats-disponibles.html",
+          "annee": 2017
+        },
+        {
+          "titre": "Camer.be (relais Cameroon Tribune) - résultats définitifs concours armées/gendarmerie, 9 août 2019 (vu via résultat de recherche, page non rechargeable)",
+          "url": "https://www.camer.be/76327/11:1/societe",
+          "annee": 2019
+        },
+        {
+          "titre": "Cameroon Desks - Résultats phase écrite concours gendarmerie 2021-2022 (10 nov. 2021)",
+          "url": "https://www.cameroondesks.com/2019/08/resultats-definitif-gendarmerie-2019.html",
+          "annee": 2021
+        },
+        {
+          "titre": "MINDEF Gendarmerie nationale - Concours 300 élèves sous-officiers, 40 santé militaire, 3000 élèves-gendarmes (publié 27 déc. 2023)",
+          "url": "https://mindef.gov.cm/gendarmerie-nationale/2023/12/27/concours-pour-le-recrutement-de-300-eleves-sous-officiers-de-gendarmerie-option-service-general-40-sous-officiers-de-gendarmerie-option-sante-militaire-et-3000-eleves-gendarmes/",
+          "annee": 2023
+        },
+        {
+          "titre": "Kamerpower - Concours Gendarmerie Nationale 2026-2027 (page aux dates incohérentes)",
+          "url": "https://kamerpower.com/fr/events/concours-gendarmerie-nationale-cameroun/",
+          "annee": 2026
+        }
+      ]
+    }
   },
   {
     "id": "armees-sous-officiers-soldats-matelots",
@@ -1076,7 +1310,10 @@
           "nom": "École Navale (matelots)",
           "difference": "Un site secondaire cite CEP/BEPC/Probatoire et 18–22 ans au 1/1/2026 : non recoupé."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Recrutement tous les 2 ans environ (2017, 2019, 2023, 2025) : l'appel de 2025 a mené à des épreuves en 2026, donc la suite logique serait un appel vers 2027, sans annonce officielle à ce jour."
+      }
     },
     "en": {
       "nom": "Armed forces – cadet NCOs, privates and 2nd-class seamen",
@@ -1126,7 +1363,10 @@
           "nom": "École Navale (matelots)",
           "difference": "One secondary site cites CEP/BEPC/Probatoire and 18–22 on 1/1/2026: unverified."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Roughly every 2 years (2017, 2019, 2023, 2025): the 2025 call led to exams during 2026, so the next call would logically be around 2027, with no official announcement yet."
+      }
     },
     "source_annales": "Sujets non publiés",
     "priorite": 16,
@@ -1161,7 +1401,57 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Communiqué du Ministre délégué à la Défense publié 20 septembre 2025, lu via un site secondaire ; texte officiel non lu. Frais, pièces, dates d'épreuves non trouvés. 5 330 soldats/matelots et 700 sous-officiers en 2025."
+    "recherche_notes": "Communiqué du Ministre délégué à la Défense publié 20 septembre 2025, lu via un site secondaire ; texte officiel non lu. Frais, pièces, dates d'épreuves non trouvés. 5 330 soldats/matelots et 700 sous-officiers en 2025. | Périodicité : L'hypothèse d'un cycle de 3 ans n'est pas confirmée : les sources montrent plutôt un rythme de 2 ans (2017, 2019, [2021 confirmé pour la gendarmerie, non vérifié pour les armées], 2023, 2025), avec l'appel de 2025 produisant des épreuves en 2026. Le terme 'session 2026' du propriétaire correspond au calendrier des épreuves de l'appel 2025. 2021 : un article Cameroon Desks sur la gendarmerie 2021-2022 existe mais je n'ai pas lu de source distincte pour l'armée, donc 2021 n'est pas listé ici. Les quotas 2025 sont identiques à 2023 (cohérent entre deux sources 2025 lues). L'intervalle 2 ans est déduit d'un nombre restreint de points ; 2018, 2020, 2022, 2024 sans session non établis par une source explicite. Aucune source primaire (communiqué MINDEF d'origine) relue : tout vient de la presse.",
+    "periodicite": {
+      "type": "pluriannuelle",
+      "intervalle_ans": 2,
+      "sessions": [
+        2017,
+        2019,
+        2023,
+        2025
+      ],
+      "derniere_session": 2025,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Journal du Cameroun - Le gouvernement lance le recrutement de 9 400 élèves gendarmes et militaires (19 sept. 2025)",
+          "url": "https://fr.journalducameroun.com/cameroun-le-gouvernement-lance-le-recrutement-de-9-400-eleves-gendarmes-et-militaires-nse-lance-le-recrutement-de-9-400-eleves-gendarmes-et-militaires/",
+          "annee": 2025
+        },
+        {
+          "titre": "Journal du Cameroun - L'armée recrute plus de 9 000 gendarmes et soldats (26 janv. 2023)",
+          "url": "https://fr.journalducameroun.com/cameroun-larmee-recrute-plus-de-9-000-gendarmes-et-soldats/",
+          "annee": 2023
+        },
+        {
+          "titre": "Cameroon Tribune - Recrutement dans les armées et la gendarmerie : près de 9 500 postes ouverts (31 janv. 2023)",
+          "url": "https://cameroon-tribune.cm/article.html/54731/fr.html/details_2",
+          "annee": 2023
+        },
+        {
+          "titre": "Cameroon Desks - Concours recrutement militaire MINDEF 2025 : 700 sous-officiers et 5330 soldats (20 sept. 2025)",
+          "url": "https://www.cameroondesks.com/2025/09/concours-recrutement-militaire-m.html",
+          "annee": 2025
+        },
+        {
+          "titre": "Cameroon Desks - Communiqué MINDEF visites médicales armées 2026 (4 juil. 2026)",
+          "url": "https://www.cameroondesks.com/2026/07/resultats-concours-armeesgendarmerie.html",
+          "annee": 2026
+        },
+        {
+          "titre": "Cameroun24 - Recrutement dans les forces de défense : résultats définitifs (communiqué du 6 févr. 2017)",
+          "url": "https://cameroun24.net/article/37286-recrutement-dans-les-forces-de-defense-les-resultats-disponibles.html",
+          "annee": 2017
+        },
+        {
+          "titre": "Camer.be (relais Cameroon Tribune) - résultats définitifs concours armées/gendarmerie, 9 août 2019 (vu via résultat de recherche, page non rechargeable)",
+          "url": "https://www.camer.be/76327/11:1/societe",
+          "annee": 2019
+        }
+      ]
+    }
   },
   {
     "id": "essal",
@@ -1395,7 +1685,10 @@
           "nom": "Concours spécial Common Law",
           "difference": "Concours en expression anglaise (auditeurs de justice, greffiers). Notice 2024 (secondaire) : 17 à 32 ans au 1er janvier 2024."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Concours annuel, avec arrêtés d'ouverture signés vers avril et épreuves de juillet à septembre. Les places varient chaque année selon les divisions."
+      }
     },
     "en": {
       "nom": "ENAM – Administrative Division (cycles A and B)",
@@ -1508,7 +1801,10 @@
           "nom": "Concours spécial Common Law",
           "difference": "English-language competition (justice auditors, court clerks). 2024 notice (secondary): 17 to 32 on 1 January 2024."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Annual competition, with opening decrees signed around April and exams from July to September. Places vary each year by division."
+      }
     },
     "categorie": "formation",
     "tutelle": "MINFOPRA",
@@ -1564,7 +1860,40 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun arrêté officiel (enam.cm / minfopra.gov.cm) lu directement. Les conditions viennent de reproductions de l'arrêté 2025/2026 par Kamerpower, dont les effectifs sont incohérents (60 places annoncées, plus de 120 listées). Conditions de la session 2026/2027 (diplômes, âge, frais) non lues ; seuls calendrier et places sont connus par Cameroon Desks, qui indique des arrêtés signés le « jeudi 4 avril 2026 » (le 4 avril 2026 est un samedi : date à vérifier). Le fichier concours.json parle de master pour certaines divisions : seule la maîtrise en droit (auditeurs) est étayée. Conditions du cycle B (bac, 32 ans) issues d'un extrait de recherche de la page cycle B régies financières, page non relue en entier."
+    "recherche_notes": "Aucun arrêté officiel (enam.cm / minfopra.gov.cm) lu directement. Les conditions viennent de reproductions de l'arrêté 2025/2026 par Kamerpower, dont les effectifs sont incohérents (60 places annoncées, plus de 120 listées). Conditions de la session 2026/2027 (diplômes, âge, frais) non lues ; seuls calendrier et places sont connus par Cameroon Desks, qui indique des arrêtés signés le « jeudi 4 avril 2026 » (le 4 avril 2026 est un samedi : date à vérifier). Le fichier concours.json parle de master pour certaines divisions : seule la maîtrise en droit (auditeurs) est étayée. Conditions du cycle B (bac, 32 ans) issues d'un extrait de recherche de la page cycle B régies financières, page non relue en entier. | Périodicité : Trois années documentées (2024 de façon indirecte via le volet CEMAC, 2025 et 2026). 2016-2023 non confirmés : les pages Kamerpower ont des titres/URLs mélangés (2015-2016, 2020-2021 ...) et ne sont pas fiables pour dater. Le rythme annuel est déduit des listes d'arrêtés MINFOPRA publiées chaque printemps. L'id 'enam' correspond à l'ensemble ; les autres ids ENAM (régies, magistrature, common law) ne font pas partie de cette tâche.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2024,
+        2025,
+        2026
+      ],
+      "derniere_session": 2026,
+      "prochaine_probable": 2027,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Cameroon Desks - Ouverture des concours d'entrée à l'ENAM 2026/2027 (22 juin 2026, arrêtés du 4 avril 2026)",
+          "url": "https://www.cameroondesks.com/2026/06/concours-enam-2026-2027.html",
+          "annee": 2026
+        },
+        {
+          "titre": "Kamerpower - Concours ENAM 2025-2026 cycle A division administrative (dépôt avant le 6 juin 2025, écrit 5-6 juillet 2025)",
+          "url": "https://kamerpower.com/fr/concours-enam-cameroun-2015-2016-cycle-a-division-administrative-recrutement-de-170-eleves/",
+          "annee": 2025
+        },
+        {
+          "titre": "YOP L-FRII - MINFOPRA ouverture des concours administratifs 2025 (16 avr. 2025, arrêtés du 15 avr. 2025)",
+          "url": "https://yop.l-frii.com/formations/cameroun-minfopra-ouverture-des-concours-adminstratifs-2025-enam-injs-cenajes-issea/",
+          "annee": 2025
+        },
+        {
+          "titre": "Alwihda Info - Les concours d'entrée à l'ENAM ouverts pour les candidats de la CEMAC (30 sept. 2024)",
+          "url": "https://www.alwihdainfo.com/cameroun-les-concours-d-entree-a-l-enam-ouverts-pour-les-candidats-de-la-cemac-a135760/",
+          "annee": 2024
+        }
+      ]
+    }
   },
   {
     "id": "enam-division-des-regies-financieres-cycles-a-et",
@@ -2265,7 +2594,10 @@
           "nom": "ENS Bambili",
           "difference": "Non mentionnée dans les sources lues ; aucune condition trouvée."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Les concours d'entrée aux ENS ont été suspendus environ deux à trois ans (après 2022/2023) puis relancés en janvier 2026. La régularité future n'est pas annoncée."
+      }
     },
     "en": {
       "nom": "Higher Teacher Training College Yaoundé – 1st cycle",
@@ -2348,7 +2680,10 @@
           "nom": "ENS Bambili",
           "difference": "Not mentioned in the sources read; no conditions found."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "ENS entrance competitions were suspended for about two to three years (after 2022/2023) and relaunched in January 2026. Future regularity has not been announced."
+      }
     },
     "categorie": "ecole",
     "tutelle": "MINESUP",
@@ -2389,7 +2724,43 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Le PDF officiel MINESUP 2022 est une image scannée que je n'ai pas pu lire : conditions tirées d'un relais secondaire (avis 2026). Le fichier concours.json parle de coefficients (dossier 25 %, écrits 75 %) cohérent avec la source. Dates 2026 : dépôt 13 février, écrits en mars (libellé de date confus dans la source). ENS Bambili : rien trouvé."
+    "recherche_notes": "Le PDF officiel MINESUP 2022 est une image scannée que je n'ai pas pu lire : conditions tirées d'un relais secondaire (avis 2026). Le fichier concours.json parle de coefficients (dossier 25 %, écrits 75 %) cohérent avec la source. Dates 2026 : dépôt 13 février, écrits en mars (libellé de date confus dans la source). ENS Bambili : rien trouvé. | Périodicité : Conflit : Journal du Cameroun parle de deux ans de suspension, Ecomatin (vu via recherche) de trois ans, dernier concours 2022-2023. Années 2023-2025 notées sans concours (calendrier civil). Avant 2022 (2016-2021) non confirmé ; des PDF MINESUP 2018 et 2019-2020 existent pour d'autres écoles (ENSET Kumba) mais l'ENS Yaoundé n'a pas été vérifiée. Période 'auditeurs libres' à l'ENS Yaoundé pendant la suspension, recrutement d'auditeurs libres suspendu ensuite. Il existe aussi un concours du 2nd cycle et des classes spéciales non traités à part.",
+    "periodicite": {
+      "type": "irreguliere",
+      "sessions": [
+        2022,
+        2026
+      ],
+      "annees_sans_session": [
+        2023,
+        2024,
+        2025
+      ],
+      "derniere_session": 2026,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Journal du Cameroun - Le gouvernement lance des concours d'entrée dans les ENS et les ENSET (14 janv. 2026)",
+          "url": "https://fr.journalducameroun.com/cameroun-le-gouvernement-lance-des-concours-dentree-dans-les-ens-et-les-enset/",
+          "annee": 2026
+        },
+        {
+          "titre": "Cameroon Tribune - Écoles normales supérieures : 2500 places à prendre (15 janv. 2026)",
+          "url": "https://cameroon-tribune.cm/article.html/75028/fr.html/details_2",
+          "annee": 2026
+        },
+        {
+          "titre": "Ecomatin - 2 500 places ouvertes aux concours des ENS et ENSET en 2026 (vu via résultat de recherche)",
+          "url": "https://ecomatin.net/cameroun-2-500-places-ouvertes-aux-concours-des-ens-et-enset-en-2026",
+          "annee": 2026
+        },
+        {
+          "titre": "MINESUP - Arrêté du 29 mars 2022 ouvrant le concours d'entrée en 1re année du 1er cycle de l'ENS de Yaoundé I, année académique 2022/2023",
+          "url": "https://minesup.gov.cm/2022/ENS Yde 1_1er cycle_fr.pdf",
+          "annee": 2022
+        }
+      ]
+    }
   },
   {
     "id": "capesa-issea-analystes-statisticiens-et-ingenieu",
@@ -2652,7 +3023,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Texte de l'arrêté 2022 (cycle 2023-2024) lu via un relais secondaire ; les PDF MINESUP existent mais n'ont pas été lus. Aucun avis plus récent (2025/2026) trouvé : âge et frais peuvent avoir changé. Le nom du concours dans concours.json mentionne Douala, Bambili, Kumba, Ebolowa, mais l'arrêté lu ne cible que Douala. | Périodicité : Une seule source officielle lue (2021). Kamerpower mélange 2024/2025 et 2026-2027. Les ENS (non ENSET) non traitées.",
+    "recherche_notes": "Texte de l'arrêté 2022 (cycle 2023-2024) lu via un relais secondaire ; les PDF MINESUP existent mais n'ont pas été lus. Aucun avis plus récent (2025/2026) trouvé : âge et frais peuvent avoir changé. Le nom du concours dans concours.json mentionne Douala, Bambili, Kumba, Ebolowa, mais l'arrêté lu ne cible que Douala. | Périodicité : Une seule source officielle lue (2021). Kamerpower mélange 2024/2025 et 2026-2027. Les ENS (non ENSET) non traitées. | Périodicité : Une seule source officielle lue (2021). Kamerpower mélange 2024/2025 et 2026-2027. Les ENS (non ENSET) non traitées.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -2849,7 +3220,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Les arrêtés lus datent de 2022 et ne reflètent peut-être pas la session actuelle : en 2025 le concours ESSEC Douala semble porter sur des « études professionnelles approfondies » et un site secondaire évoque un accès niveau licence en 2026, ce qui contredirait un accès post-bac. À re-vérifier avant d'orienter un bachelier. Aucune décision ESSEC 2025 ou 2026 lue. Les décisions 2022 ne donnent pas de limite d'âge. La nationalité n'est pas indiquée pour Douala ; Garoua ouvre aux Camerounais (CEMAC en traitement national). Numéros des décisions 2022 partiellement illisibles sur les PDF. | Périodicité : Uniquement relais kamerpower via résumés de recherche (pages non relues). Titres 2026-2027 contradictoires avec le texte 2025/2026.",
+    "recherche_notes": "Les arrêtés lus datent de 2022 et ne reflètent peut-être pas la session actuelle : en 2025 le concours ESSEC Douala semble porter sur des « études professionnelles approfondies » et un site secondaire évoque un accès niveau licence en 2026, ce qui contredirait un accès post-bac. À re-vérifier avant d'orienter un bachelier. Aucune décision ESSEC 2025 ou 2026 lue. Les décisions 2022 ne donnent pas de limite d'âge. La nationalité n'est pas indiquée pour Douala ; Garoua ouvre aux Camerounais (CEMAC en traitement national). Numéros des décisions 2022 partiellement illisibles sur les PDF. | Périodicité : Uniquement relais kamerpower via résumés de recherche (pages non relues). Titres 2026-2027 contradictoires avec le texte 2025/2026. | Périodicité : Uniquement relais kamerpower via résumés de recherche (pages non relues). Titres 2026-2027 contradictoires avec le texte 2025/2026.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -3051,7 +3422,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "L'id regroupe sept écoles ; seule l'ENSPY est documentée pour la filière générale, et via Kamerpower (dates incohérentes : délai de dépôt « 9 juillet 2023 » sous un titre 2025/2026). La décision officielle lue (génie minier 2026) ne donne ni limite d'âge ni frais dans les pages lues (page 3 non consultée). La série de la voie générale vient aussi d'un commentaire de forum, mais le texte repris de l'arrêté liste C, D, E, F, TI. Pas d'arrêté 2026 de l'ENSPY générale trouvé. | Périodicité : Seules ENSPD et ENSPY ont été vues ; ENSPM, ENSAI, EGEM, EGCI non étudiées. Années antérieures à 2025 non vérifiées.",
+    "recherche_notes": "L'id regroupe sept écoles ; seule l'ENSPY est documentée pour la filière générale, et via Kamerpower (dates incohérentes : délai de dépôt « 9 juillet 2023 » sous un titre 2025/2026). La décision officielle lue (génie minier 2026) ne donne ni limite d'âge ni frais dans les pages lues (page 3 non consultée). La série de la voie générale vient aussi d'un commentaire de forum, mais le texte repris de l'arrêté liste C, D, E, F, TI. Pas d'arrêté 2026 de l'ENSPY générale trouvé. | Périodicité : Seules ENSPD et ENSPY ont été vues ; ENSPM, ENSAI, EGEM, EGCI non étudiées. Années antérieures à 2025 non vérifiées. | Périodicité : Seules ENSPD et ENSPY ont été vues ; ENSPM, ENSAI, EGEM, EGCI non étudiées. Années antérieures à 2025 non vérifiées.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -3222,7 +3593,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Faiblement sourcé : uniquement Kamerpower, dont les dates sont incohérentes (page titrée 2026, texte 2025/2026, délai et épreuve en janvier-février 2025). Aucun avis officiel IRIC ou MINESUP lu. Le concours IRIC est un concours de niveau master (licence requise), pas un concours post-bac. Aucun lien officiel vérifié, donc null. | Périodicité : Seul l'avis 2024-2025 est officiel (titre lu). Pour 2023 et 2025 uniquement relais kamerpower ; la date d'écrit 2025 (27 sept. 2024 ?) est incohérente.",
+    "recherche_notes": "Faiblement sourcé : uniquement Kamerpower, dont les dates sont incohérentes (page titrée 2026, texte 2025/2026, délai et épreuve en janvier-février 2025). Aucun avis officiel IRIC ou MINESUP lu. Le concours IRIC est un concours de niveau master (licence requise), pas un concours post-bac. Aucun lien officiel vérifié, donc null. | Périodicité : Seul l'avis 2024-2025 est officiel (titre lu). Pour 2023 et 2025 uniquement relais kamerpower ; la date d'écrit 2025 (27 sept. 2024 ?) est incohérente. | Périodicité : Seul l'avis 2024-2025 est officiel (titre lu). Pour 2023 et 2025 uniquement relais kamerpower ; la date d'écrit 2025 (27 sept. 2024 ?) est incohérente.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -3461,7 +3832,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Décision 2026 lue en entier (scan consulté visuellement), mais elle concerne les IPES sous tutelle de la FASA et non le concours public de la FASA à Dschang. Nationalité : la décision cite les Camerounais et les ressortissants CEMAC. Pour la session 2025/2026, les dates ci-dessus (mois) sont celles de 2026 ; la décision indique qu'elle suit le calendrier MINESUP du 17 février 2026. | Périodicité : Les avis niveau I et IV de 2024/2025 portent une date d'août 2023 (probable report) : non listés. Résumé de recherche seulement, page non relue. Rien d'officiel.",
+    "recherche_notes": "Décision 2026 lue en entier (scan consulté visuellement), mais elle concerne les IPES sous tutelle de la FASA et non le concours public de la FASA à Dschang. Nationalité : la décision cite les Camerounais et les ressortissants CEMAC. Pour la session 2025/2026, les dates ci-dessus (mois) sont celles de 2026 ; la décision indique qu'elle suit le calendrier MINESUP du 17 février 2026. | Périodicité : Les avis niveau I et IV de 2024/2025 portent une date d'août 2023 (probable report) : non listés. Résumé de recherche seulement, page non relue. Rien d'officiel. | Périodicité : Les avis niveau I et IV de 2024/2025 portent une date d'août 2023 (probable report) : non listés. Résumé de recherche seulement, page non relue. Rien d'officiel.",
     "periodicite": {
       "type": "inconnue",
       "sessions": [
@@ -3653,7 +4024,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Le concours est organisé faculté par faculté, il n'y a pas d'« examen national » unique pour la 1re année : la fiche du fichier est ambiguë. L'arrêté lu est de 2022 (Dschang) ; les conditions 2026 de Garoua viennent d'une source secondaire et diffèrent (2 matières scientifiques au GCE A Level au lieu de 3). Aucune décision 2025 ou 2026 de Yaoundé I lue. Nationalité : « Camerounais » en 2026 (secondaire) et CEMAC en traitement national ; la décision 2022 ne le dit pas dans la partie lue. | Périodicité : La page porte le titre 2024-2025 mais le texte parle de 2023/2024. Une page FMSB Garoua 2024-2025 existe (non lue). Rien d'officiel lu.",
+    "recherche_notes": "Le concours est organisé faculté par faculté, il n'y a pas d'« examen national » unique pour la 1re année : la fiche du fichier est ambiguë. L'arrêté lu est de 2022 (Dschang) ; les conditions 2026 de Garoua viennent d'une source secondaire et diffèrent (2 matières scientifiques au GCE A Level au lieu de 3). Aucune décision 2025 ou 2026 de Yaoundé I lue. Nationalité : « Camerounais » en 2026 (secondaire) et CEMAC en traitement national ; la décision 2022 ne le dit pas dans la partie lue. | Périodicité : La page porte le titre 2024-2025 mais le texte parle de 2023/2024. Une page FMSB Garoua 2024-2025 existe (non lue). Rien d'officiel lu. | Périodicité : La page porte le titre 2024-2025 mais le texte parle de 2023/2024. Une page FMSB Garoua 2024-2025 existe (non lue). Rien d'officiel lu.",
     "periodicite": {
       "type": "inconnue",
       "sessions": [
@@ -3918,7 +4289,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "L'id regroupe IUT, FGI et écoles de technologie : seule la décision IUT Douala/ISE 2024 a été lue en entier (scan consulté visuellement). Pas de décision 2025 ou 2026 de l'IUT de Douala lue. Les décisions 2026 de l'IUS et de l'INUBIL sont listées par le MINESUP mais leurs conditions n'ont pas été lues. L'URL d'inscription iut-douala.cm vient de la décision 2024. Âge : incohérence de dates dans la décision (voir age_note). Nationalité non classée car la décision admet aussi les étrangers. | Périodicité : Rien trouvé pour 2025/2026 ni pour FGI. Le résumé IUT Ngaoundéré (kamerpower) est incohérent : non retenu.",
+    "recherche_notes": "L'id regroupe IUT, FGI et écoles de technologie : seule la décision IUT Douala/ISE 2024 a été lue en entier (scan consulté visuellement). Pas de décision 2025 ou 2026 de l'IUT de Douala lue. Les décisions 2026 de l'IUS et de l'INUBIL sont listées par le MINESUP mais leurs conditions n'ont pas été lues. L'URL d'inscription iut-douala.cm vient de la décision 2024. Âge : incohérence de dates dans la décision (voir age_note). Nationalité non classée car la décision admet aussi les étrangers. | Périodicité : Rien trouvé pour 2025/2026 ni pour FGI. Le résumé IUT Ngaoundéré (kamerpower) est incohérent : non retenu. | Périodicité : Rien trouvé pour 2025/2026 ni pour FGI. Le résumé IUT Ngaoundéré (kamerpower) est incohérent : non retenu.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -4312,7 +4683,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun PDF officiel lu directement. CONFLIT : l'arrêté d'organisation prévoit 3 niveaux d'entrée (BEPC / Probatoire / Bac) mais le communiqué 2025 rapporté exige le Bac ; le niveau min 'bepc' est le plus bas du texte d'organisation, à confirmer pour la session en cours. Plafond d'âge : 32 (deux sources) vs 30 (un guide). Le communiqué rapporté contient une incohérence de date (5 juillet 2024 vs 2025), épreuves écrites rapportées le 30 juillet 2025 ; mois calendrier basés sur 2025. | Périodicité : Effectif 2026: 10 080 / 11 230 / 5 040 selon la page. Une session 2025 (30 juillet) apparaît dans un résumé de recherche mais la date semble être celle de 2024 : non listée. 2025 non confirmée. Années avant 2024 non vérifiées. prochaine_probable 2027 est déduite du rythme.",
+    "recherche_notes": "Aucun PDF officiel lu directement. CONFLIT : l'arrêté d'organisation prévoit 3 niveaux d'entrée (BEPC / Probatoire / Bac) mais le communiqué 2025 rapporté exige le Bac ; le niveau min 'bepc' est le plus bas du texte d'organisation, à confirmer pour la session en cours. Plafond d'âge : 32 (deux sources) vs 30 (un guide). Le communiqué rapporté contient une incohérence de date (5 juillet 2024 vs 2025), épreuves écrites rapportées le 30 juillet 2025 ; mois calendrier basés sur 2025. | Périodicité : Effectif 2026: 10 080 / 11 230 / 5 040 selon la page. Une session 2025 (30 juillet) apparaît dans un résumé de recherche mais la date semble être celle de 2024 : non listée. 2025 non confirmée. Années avant 2024 non vérifiées. prochaine_probable 2027 est déduite du rythme. | Périodicité : Effectif 2026: 10 080 / 11 230 / 5 040 selon la page. Une session 2025 (30 juillet) apparaît dans un résumé de recherche mais la date semble être celle de 2024 : non listée. 2025 non confirmée. Années avant 2024 non vérifiées. prochaine_probable 2027 est déduite du rythme.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -4408,7 +4779,7 @@
         }
       ]
     },
-    "recherche_notes": "Périodicité : Une recherche indique une décision MINEDUB du 21/01/2025 fixant l'écrit au 12 mai alors que la presse donne le 13 mai (non résolu). Une mention d'une session le 13 mai 2026 (CRTV) vue seulement dans un résumé de recherche, non lue : non listée. Années 2016-2023 non vérifiées."
+    "recherche_notes": "Périodicité : Une recherche indique une décision MINEDUB du 21/01/2025 fixant l'écrit au 12 mai alors que la presse donne le 13 mai (non résolu). Une mention d'une session le 13 mai 2026 (CRTV) vue seulement dans un résumé de recherche, non lue : non listée. Années 2016-2023 non vérifiées. | Périodicité : Une recherche indique une décision MINEDUB du 21/01/2025 fixant l'écrit au 12 mai alors que la presse donne le 13 mai (non résolu). Une mention d'une session le 13 mai 2026 (CRTV) vue seulement dans un résumé de recherche, non lue : non listée. Années 2016-2023 non vérifiées."
   },
   {
     "id": "seconde-technique-4e-annee-bep",
@@ -4736,7 +5107,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun texte officiel MINEDUB/MINFOPRA lu directement ; données d'un agrégateur. Nationalité non explicitement indiquée dans la source (mise à 'camerounaise' car emploi public ; à vérifier). Mois de lancement/limite/épreuves déduits : dépôt 6-31 janvier 2026 (opération MINEDUB), dépôt MINFOPRA prolongé au 16/12/2025, épreuves le 14 février 2026 d'après le fichier concours.json. Un autre article intitulé 2025 renvoie en réalité à 2023 (ignoré). | Périodicité : Les pages sont incohérentes (phase 5e/7e, session 2025 vs 2026, titre 2023-2024). Des commentaires de lecteurs évoquent des opérations 2017-2023 non confirmées : non listées.",
+    "recherche_notes": "Aucun texte officiel MINEDUB/MINFOPRA lu directement ; données d'un agrégateur. Nationalité non explicitement indiquée dans la source (mise à 'camerounaise' car emploi public ; à vérifier). Mois de lancement/limite/épreuves déduits : dépôt 6-31 janvier 2026 (opération MINEDUB), dépôt MINFOPRA prolongé au 16/12/2025, épreuves le 14 février 2026 d'après le fichier concours.json. Un autre article intitulé 2025 renvoie en réalité à 2023 (ignoré). | Périodicité : Les pages sont incohérentes (phase 5e/7e, session 2025 vs 2026, titre 2023-2024). Des commentaires de lecteurs évoquent des opérations 2017-2023 non confirmées : non listées. | Périodicité : Les pages sont incohérentes (phase 5e/7e, session 2025 vs 2026, titre 2023-2024). Des commentaires de lecteurs évoquent des opérations 2017-2023 non confirmées : non listées.",
     "periodicite": {
       "type": "irreguliere",
       "sessions": [
@@ -4808,6 +5179,9 @@
           }
         ],
         "places_note": null
+      },
+      "periodicite_txt": {
+        "note": "Concours directs irréguliers : 2017, 2020, 2022 puis 2026, avec de très gros écarts d'effectifs (11 postes en 2020, plus de 400 en 2026). Aucune annonce de prochaine session."
       }
     },
     "en": {
@@ -4847,11 +5221,48 @@
           }
         ],
         "places_note": null
+      },
+      "periodicite_txt": {
+        "note": "Irregular direct competitions: 2017, 2020, 2022 then 2026, with very different sizes (11 posts in 2020, over 400 in 2026). No next session announced."
       }
     },
     "source_annales": "Annales santé publique disponibles par année (bibliothèques tierces)",
     "priorite": 18,
-    "theme": "infirmier"
+    "theme": "infirmier",
+    "periodicite": {
+      "type": "irreguliere",
+      "sessions": [
+        2017,
+        2020,
+        2022,
+        2026
+      ],
+      "derniere_session": 2026,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Journal du Cameroun - Le gouvernement lance un recrutement de 920 personnels soignants (5 févr. 2026)",
+          "url": "https://fr.journalducameroun.com/cameroun-le-gouvernement-lance-un-recrutement-de-920-personnels-soignants/",
+          "annee": 2026
+        },
+        {
+          "titre": "MINFOPRA - Liste des candidats chirurgiens-dentistes et pharmaciens, concours direct 11 postes, session 2020, écrit 17-18 oct. 2020",
+          "url": "https://www.minfopra.gov.cm/images/2020/DDRHE/concoursA1/3/Liste_candidats_Chirurgiens_Dentistes_Pharmaciens_2020.pdf",
+          "annee": 2020
+        },
+        {
+          "titre": "MINSANTE - Affectation de chirurgiens-dentistes lauréats des concours directs des 25 et 26 novembre 2017 (titre vu via recherche)",
+          "url": "https://www.minsante.cm/site/sites/default/files/Affectation%20de%20Chirurgiens-Dentistes%2C%20laur%C3%A9ats%20des%20concours%20directs%20des%2025%20et%2026%20novembre%202017.pdf",
+          "annee": 2017
+        },
+        {
+          "titre": "ONJ Cameroun - Arrêté MINFOPRA du 25 juil. 2022 portant ouverture d'un concours direct Santé publique (titre vu via recherche, page non chargée)",
+          "url": "https://onjcameroun.cm/article/508_arrete-no-012-3-8-4-minfopra-du-2-5-juil-2022-portant-ouverture-dun-concours-direct-sante-publique",
+          "annee": 2022
+        }
+      ]
+    },
+    "recherche_notes": "Périodicité : 2020 : PDF MINFOPRA lu (liste candidats, écrit 17-18 oct. 2020). 2026 : article Journal du Cameroun lu (total 920 annoncé mais détail 875). 2017 et 2022 : titres vus uniquement dans des résultats de recherche (pages/PDF non rechargeables). Une session avec admissibles à l'oral pour des concours directs des 24-25 nov. 2023 a été signalée par un résumé de recherche (non lu) : probable session 2023, non listée. Une 'décision d'affectation 24-25 NOV' et un lot 2018 ont été vus sans année vérifiée. 2024 et 2025 : aucun concours médecins/pharmaciens/dentistes trouvé ; en 2025 seuls infirmiers et techniques médico-sanitaires étaient en direct."
   },
   {
     "id": "sante-publique-techniques-medico-sanitaires-geni",
@@ -5203,7 +5614,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Arrêté/communiqué officiel non lu (le PDF MINSANTE 2020 est un scan illisible). Âge et séries contradictoires entre sources secondaires ; frais et dates exactes absents. Épreuves : 9 sept. 2025 selon un avis, 23 août 2025 selon un autre. | Périodicité : Le PDF 2020 n'a été vu que via un résumé de recherche. Un avis kamerpower de 13 205 places (écrit août 2025 ou 17 mars 2026) a des dates contradictoires : non retenu. Dates d'écrit 2024/2025 non trouvées.",
+    "recherche_notes": "Arrêté/communiqué officiel non lu (le PDF MINSANTE 2020 est un scan illisible). Âge et séries contradictoires entre sources secondaires ; frais et dates exactes absents. Épreuves : 9 sept. 2025 selon un avis, 23 août 2025 selon un autre. | Périodicité : Le PDF 2020 n'a été vu que via un résumé de recherche. Un avis kamerpower de 13 205 places (écrit août 2025 ou 17 mars 2026) a des dates contradictoires : non retenu. Dates d'écrit 2024/2025 non trouvées. | Périodicité : Le PDF 2020 n'a été vu que via un résumé de recherche. Un avis kamerpower de 13 205 places (écrit août 2025 ou 17 mars 2026) a des dates contradictoires : non retenu. Dates d'écrit 2024/2025 non trouvées.",
     "periodicite": {
       "type": "annuelle",
       "sessions": [
@@ -5292,7 +5703,10 @@
           "nom": "ENAM – régies financières",
           "difference": "Voie de niveau licence ou bac par l'école ; voir la fiche ENAM."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Un seul concours direct du Trésor est confirmé (2025, 100 postes). Le Trésor n'apparaît pas dans les concours directs de 2026 ; la fréquence réelle n'est pas établie."
+      }
     },
     "en": {
       "nom": "Revenue services – Treasury",
@@ -5351,7 +5765,10 @@
           "nom": "ENAM – régies financières",
           "difference": "Licence- or bac-level route via the school; see the ENAM entry."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only one direct Treasury competition is confirmed (2025, 100 posts). The Treasury is absent from the 2026 direct competitions; the real frequency is not established."
+      }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
     "priorite": 12,
@@ -5388,7 +5805,37 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Faiblement sourcé : un seul texte secondaire (session 2025, épreuves 7-8 août 2025, dépôt 23 juillet 2025), avec dates de référence incohérentes. La nationalité n'est pas indiquée dans ce texte (null). Aucune information trouvée pour une session Trésor 2026. Un guide secondaire parle de 17-30 ans et de plusieurs catégories (A, B, C) : non confirmé. Arrêté officiel non lu."
+    "recherche_notes": "Faiblement sourcé : un seul texte secondaire (session 2025, épreuves 7-8 août 2025, dépôt 23 juillet 2025), avec dates de référence incohérentes. La nationalité n'est pas indiquée dans ce texte (null). Aucune information trouvée pour une session Trésor 2026. Un guide secondaire parle de 17-30 ans et de plusieurs catégories (A, B, C) : non confirmé. Arrêté officiel non lu. | Périodicité : Source unique et peu fiable (Kamerpower : titre 2026-2027, date limite 'vendredi 23 juillet 2025' qui était un mercredi, âge calculé au 1er janv. 2021). La liste MINFOPRA du 15-16 avr. 2025 lue via YOP ne contient pas le Trésor parmi les concours directs, ce qui contredit ou précède cet arrêté. Des concours professionnels (internes) du Trésor existent en 2026 mais sont hors périmètre. 2016-2024 : commentaires non vérifiés évoquant 2016, 2017, 2019, 2020 : non listés.",
+    "periodicite": {
+      "type": "irreguliere",
+      "sessions": [
+        2025
+      ],
+      "derniere_session": 2025,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "Kamerpower - Concours direct 100 postes Régies Financières (Trésor), arrêté session 2025, épreuves 7-8 août 2025 (page publiée 31 mars 2026, titre 2026-2027)",
+          "url": "https://kamerpower.com/fr/concours-direct-controleurs-adjoints-des-regies-financieres-tresor-recrutement/amp/",
+          "annee": 2025
+        },
+        {
+          "titre": "YOP L-FRII - MINFOPRA ouverture des concours administratifs 2025 (16 avr. 2025, arrêtés du 15 avr. 2025)",
+          "url": "https://yop.l-frii.com/formations/cameroun-minfopra-ouverture-des-concours-adminstratifs-2025-enam-injs-cenajes-issea/",
+          "annee": 2025
+        },
+        {
+          "titre": "YOP L-FRII - Concours directs des 11 et 12 juillet 2026 (Impôts, Douanes) (7 juil. 2026)",
+          "url": "https://yop.l-frii.com/formations/cameroun-candidats-aux-concours-directs-des-11-et-12-juillet-2026-pour-le-recrutement-de-25-brigadiers-des-douanes-communique/",
+          "annee": 2026
+        },
+        {
+          "titre": "Cameroon Desks - Concours professionnels 2026 (Trésor, Impôts, Douanes : arrêtés du 4 juin 2026) - concours internes, hors périmètre direct",
+          "url": "https://www.cameroondesks.com/2026/06/concours-professionnels-fonction-publique-camerounaise-2026.html",
+          "annee": 2026
+        }
+      ]
+    }
   },
   {
     "id": "regies-financieres-douanes",
@@ -5471,7 +5918,10 @@
           "nom": "ENAM – régies financières (cycles A et B)",
           "difference": "Niveau licence ou bac, voie par l'école : voir la fiche ENAM."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Des concours directs aux douanes ont lieu chaque année depuis 2024, avec un nombre de places très variable (20 en 2024, 120 en 2025, environ 75 en 2026). Les arrêtés sortent entre avril et juin."
+      }
     },
     "en": {
       "nom": "Revenue services – Customs",
@@ -5546,7 +5996,10 @@
           "nom": "ENAM – régies financières (cycles A et B)",
           "difference": "Licence or bac level, via the school: see the ENAM entry."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Direct customs competitions have been held every year since 2024, with very variable places (20 in 2024, 120 in 2025, about 75 in 2026). Decrees come out between April and June."
+      }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
     "priorite": 11,
@@ -5590,7 +6043,40 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Aucun texte de MINFOPRA lu directement ; données de l'arrêté 2026 reprises par Cameroon Desks. Kamerpower (session 2025) est incohérent (fenêtre d'âge, dates 2025 sous un titre 2026). Une source secondaire mentionne une taille minimale (1,68 m hommes, 1,60 m femmes) ; Cameroon Desks 2026 ne la mentionne pas, donc non retenue. Résultats définitifs 2026 déjà publiés (août 2026) : la prochaine session est à surveiller."
+    "recherche_notes": "Aucun texte de MINFOPRA lu directement ; données de l'arrêté 2026 reprises par Cameroon Desks. Kamerpower (session 2025) est incohérent (fenêtre d'âge, dates 2025 sous un titre 2026). Une source secondaire mentionne une taille minimale (1,68 m hommes, 1,60 m femmes) ; Cameroon Desks 2026 ne la mentionne pas, donc non retenue. Résultats définitifs 2026 déjà publiés (août 2026) : la prochaine session est à surveiller. | Périodicité : 2024 et 2025 : arrêtés MINFOPRA lus. 2026 : source secondaire (YOP, communiqué du 1er juil. 2026, dépôt jusqu'au 26 juin ; articles divergent sur les effectifs). Avant 2024, aucune session directe confirmée par une source lue. Il existe aussi des concours professionnels (internes) et la voie ENAM division des régies financières, non comptés ici. Prochaine 2027 déduite du rythme.",
+    "periodicite": {
+      "type": "annuelle",
+      "sessions": [
+        2024,
+        2025,
+        2026
+      ],
+      "derniere_session": 2026,
+      "prochaine_probable": 2027,
+      "confiance": "officiel",
+      "sources": [
+        {
+          "titre": "MINFOPRA - Arrêté du 18 juin 2024 : concours direct 20 Contrôleurs Adjoints des Régies Financières (Douanes), session 2024",
+          "url": "https://www.minfopra.gov.cm/images/2024/DDRHE/concours2024/ConcoursDirect/20_CARF_Douanes_Fr.pdf",
+          "annee": 2024
+        },
+        {
+          "titre": "MINFOPRA - Arrêté du 15 avr. 2025 : concours direct 120 personnels des Régies Financières (Douanes), session 2025",
+          "url": "https://www.minfopra.gov.cm/images/2025/DDRHE/SAISON2025/CONCOURSDIRECT/120_Regies_Financieres_Douanes_Fr.pdf",
+          "annee": 2025
+        },
+        {
+          "titre": "YOP L-FRII - Concours directs des 11 et 12 juillet 2026 (Impôts, Douanes) (7 juil. 2026)",
+          "url": "https://yop.l-frii.com/formations/cameroun-candidats-aux-concours-directs-des-11-et-12-juillet-2026-pour-le-recrutement-de-25-brigadiers-des-douanes-communique/",
+          "annee": 2026
+        },
+        {
+          "titre": "Cameroon Desks - Concours professionnels 2026 (Trésor, Impôts, Douanes : arrêtés du 4 juin 2026) - concours internes, hors périmètre direct",
+          "url": "https://www.cameroondesks.com/2026/06/concours-professionnels-fonction-publique-camerounaise-2026.html",
+          "annee": 2026
+        }
+      ]
+    }
   },
   {
     "id": "regies-financieres-impots",
@@ -5648,7 +6134,10 @@
           "nom": "ENAM – régies financières (impôts, cycles A et B)",
           "difference": "Voie de niveau licence (cycle A) ou bac (cycle B) par l'école ; voir la fiche ENAM. En 2025/2026 la division proposait comptabilité-matières ou prix, poids et mesures."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Un seul concours direct des Impôts est confirmé (2026, 25 postes). Pas assez d'historique pour dire s'il est annuel ; surveillez les arrêtés du MINFOPRA au printemps."
+      }
     },
     "en": {
       "nom": "Revenue services – Taxation",
@@ -5698,7 +6187,10 @@
           "nom": "ENAM – régies financières (impôts, cycles A et B)",
           "difference": "Licence-level (cycle A) or bac-level (cycle B) route via the school; see the ENAM entry. In 2025/2026 the division offered stores accounting or prices/weights/measures."
         }
-      ]
+      ],
+      "periodicite_txt": {
+        "note": "Only one direct Tax competition is confirmed (2026, 25 posts). Not enough history to say whether it is annual; watch MINFOPRA decrees in spring."
+      }
     },
     "source_annales": "Annales disponibles par année (bibliothèques tierces)",
     "priorite": 23,
@@ -5736,7 +6228,37 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Session 2026 : 25 contrôleurs adjoints (impôts), dépôt avant le 26 juin, écrits le 11 juillet 2026. Données uniquement de sites secondaires ; un guide général donne 17-30 ans et BEPC ou probatoire, en contradiction avec la source 2026 (17-29, BEPC/CAP/GCE O/L) : la valeur 2026 est retenue. Arrêté officiel non lu directement. En 2025 il n'est pas établi qu'un concours impôts distinct ait eu lieu."
+    "recherche_notes": "Session 2026 : 25 contrôleurs adjoints (impôts), dépôt avant le 26 juin, écrits le 11 juillet 2026. Données uniquement de sites secondaires ; un guide général donne 17-30 ans et BEPC ou probatoire, en contradiction avec la source 2026 (17-29, BEPC/CAP/GCE O/L) : la valeur 2026 est retenue. Arrêté officiel non lu directement. En 2025 il n'est pas établi qu'un concours impôts distinct ait eu lieu. | Périodicité : La liste MINFOPRA 2025 (via YOP) ne contient pas les Impôts en concours direct. Des concours professionnels (internes, ex. 19 nov. 2023, 2026) existent mais concernent des fonctionnaires en poste. Aucune session directe 2016-2025 confirmée. Le fichier PDF MINFOPRA 2026 n'a été vu que par son titre.",
+    "periodicite": {
+      "type": "inconnue",
+      "sessions": [
+        2026
+      ],
+      "derniere_session": 2026,
+      "confiance": "secondaire",
+      "sources": [
+        {
+          "titre": "YOP L-FRII - Concours directs des 11 et 12 juillet 2026 (Impôts, Douanes) (7 juil. 2026)",
+          "url": "https://yop.l-frii.com/formations/cameroun-candidats-aux-concours-directs-des-11-et-12-juillet-2026-pour-le-recrutement-de-25-brigadiers-des-douanes-communique/",
+          "annee": 2026
+        },
+        {
+          "titre": "MINFOPRA - Liste des candidats Contrôleurs Adjoints Impôts, Yaoundé, 2026 (titre seulement, PDF non lu)",
+          "url": "https://www.minfopra.gov.cm/images/2026/DDRHE/DOUANES_IMPOTS/ACTIVESDOUANES/COMMIS/IMPOTS/CONTROLEURS_ADJOINTS_IMPOTS_YAOUNDE_Liste_candidats_2026.pdf",
+          "annee": 2026
+        },
+        {
+          "titre": "YOP L-FRII - MINFOPRA ouverture des concours administratifs 2025 (16 avr. 2025, arrêtés du 15 avr. 2025)",
+          "url": "https://yop.l-frii.com/formations/cameroun-minfopra-ouverture-des-concours-adminstratifs-2025-enam-injs-cenajes-issea/",
+          "annee": 2025
+        },
+        {
+          "titre": "Cameroon Desks - Concours professionnels 2026 (Trésor, Impôts, Douanes : arrêtés du 4 juin 2026) - concours internes, hors périmètre direct",
+          "url": "https://www.cameroondesks.com/2026/06/concours-professionnels-fonction-publique-camerounaise-2026.html",
+          "annee": 2026
+        }
+      ]
+    }
   },
   {
     "id": "concours-professionnels-corps-financiers-impots-",
@@ -6020,7 +6542,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Source unique, secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 11 juillet, épreuves physiques 29-30 juillet, écrites 2-3 août. Le diplôme PEPS est libellé de façon ambiguë. Une autre recherche donnait 10 places pour chaque cycle, alors que concours.json indique 20 en 2025 (total PEPS + PAEPS). Pas d'avis 2026 trouvé. | Périodicité : Pages kamerpower avec titres 2024-2025 et 2025-2026 mélangés ; page non relue (résumé de recherche).",
+    "recherche_notes": "Source unique, secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 11 juillet, épreuves physiques 29-30 juillet, écrites 2-3 août. Le diplôme PEPS est libellé de façon ambiguë. Une autre recherche donnait 10 places pour chaque cycle, alors que concours.json indique 20 en 2025 (total PEPS + PAEPS). Pas d'avis 2026 trouvé. | Périodicité : Pages kamerpower avec titres 2024-2025 et 2025-2026 mélangés ; page non relue (résumé de recherche). | Périodicité : Pages kamerpower avec titres 2024-2025 et 2025-2026 mélangés ; page non relue (résumé de recherche).",
     "periodicite": {
       "type": "inconnue",
       "sessions": [
@@ -6321,7 +6843,7 @@
     ],
     "last_verified": "2026-10-12",
     "status": "to_verify",
-    "recherche_notes": "Source unique secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 18 juillet, épreuves physiques 5-6 août, écrites 9-10 août. Places : 10 par cycle selon la source, concours.json donne 30 au total (cohérent). Niveau min 'probatoire' repose sur IJA/IAJA ; IAJA non précisé donc peut être plus bas. Aucun avis 2026 trouvé. | Périodicité : Commentaires mentionnant 2016, 2017, 2018, 2020, 2021 : non officiels, non listés.",
+    "recherche_notes": "Source unique secondaire (avis MINFOPRA 2025 reproduit). Dates 2025 : dépôt 18 juillet, épreuves physiques 5-6 août, écrites 9-10 août. Places : 10 par cycle selon la source, concours.json donne 30 au total (cohérent). Niveau min 'probatoire' repose sur IJA/IAJA ; IAJA non précisé donc peut être plus bas. Aucun avis 2026 trouvé. | Périodicité : Commentaires mentionnant 2016, 2017, 2018, 2020, 2021 : non officiels, non listés. | Périodicité : Commentaires mentionnant 2016, 2017, 2018, 2020, 2021 : non officiels, non listés.",
     "periodicite": {
       "type": "inconnue",
       "sessions": [

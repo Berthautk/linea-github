@@ -42,3 +42,10 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 - **L'information passe avant les épreuves** : catalogue, orientation, calendrier (C2, C3) sont faits en premier, avec des sources publiques.
 - Ordre d'ingestion (`tools/ingest/ordre.json`) : 1) sessions annuelles à fort volume (inspecteur de police en pilote, ENS, ENAM, ENIEG et ENIET, EMIA) ; 2) cycles de plusieurs années (armées, gendarmerie), seulement près de la prochaine session probable ou si la demande est prouvée ; 3) les autres.
 - **Périodicité** : chaque fiche peut porter son type (annuelle, tous les N ans, irrégulière), l'historique des sessions et la prochaine session probable, toujours « à confirmer ». Un concours à cycle pluriannuel dont la prochaine session est lointaine est « en pause » : l'orientation, le calendrier et la fiche le disent et proposent des alternatives.
+
+## Périodicité : ce que la recherche montre (13 octobre 2026)
+- **Défense (armées, gendarmerie)** : environ **tous les 2 ans** (2017, 2019, 2021 pour la gendarmerie, 2023, 2025), pas tous les 3 ans. L'appel de septembre 2025 a mené à des épreuves en 2026 : « 2023 » et « 2026 » sont deux appels différents. Prochain appel probable vers 2027, déduit du rythme, sans annonce officielle. Source : sites relais, aucun communiqué du MINDEF lu.
+- **EMIA** : irrégulière (2023, puis septembre 2025 avec épreuves en janvier 2026). **ENS** : suspendue 2 à 3 ans après 2022/2023, relancée en janvier 2026.
+- **Annuels** (sessions 2024 à 2026 confirmées) : gardiens de la paix, inspecteurs, commissaires et officiers de police, ENAM ; douanes (décrets du MINFOPRA lus pour 2024 et 2025).
+- Pas assez de sources pour : impôts, médecine, FASA, INJS, CENAJES (« non établie ») ; trésor, santé publique, IEMP (irrégulière).
+- Aucun concours n'est « en pause » aujourd'hui avec ces données. Les concepteurs peuvent corriger depuis l'éditeur de fiches.

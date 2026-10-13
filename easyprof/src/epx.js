@@ -46,11 +46,14 @@ function EPX_calendar(st) {
   return (s && Array.isArray(s.cal)) ? s.cal : EPX_calDefault();
 }
 function EPX_calDefault() {
-  /* Vacances 2026-2027 d'après la presse (Journal du Cameroun, Cameroun Online) : arrêté conjoint MINEDUB/MINESEC du 14/08/2026, texte non consulté -> à confirmer.
-     Les demi-journées (fin des cours le 18/12 et le 25/03 à 15h30) ne sont pas retirées. Fêtes mobiles (Tabaski…) : à saisir. */
+  /* Arrêté conjoint MINEDUB/MINESEC du 14/08/2026 (calendrier 2026/2027) :
+     art. 4 interruptions Noël 18/12 15h30 -> 04/01 7h30 et Pâques 25/03 15h30 -> 12/04 7h30 ;
+     art. 22 : les 2 derniers jours de chaque trimestre sont consacrés au suivi pédagogique (T1 : 26-27/11, T2 : 04-05/03, T3 : 10-11/06).
+     Les demi-journées de départ en vacances (18/12 et 25/03 après 15h30) ne sont pas retirées. Fêtes mobiles (Tabaski…) : à saisir. */
   var F = function (f, t, n) { return { f: f, t: t, n: n }; };
-  return [F("2026-12-19", "2027-01-03", "Vacances de Noël (à confirmer)"), F("2027-02-11", "2027-02-11", "Fête de la Jeunesse"), F("2027-03-26", "2027-04-11", "Vacances de Pâques (à confirmer)"),
-    F("2027-05-01", "2027-05-01", "Fête du Travail"), F("2027-05-06", "2027-05-06", "Ascension"), F("2027-05-20", "2027-05-20", "Fête nationale")];
+  return [F("2026-11-26", "2026-11-27", "Suivi pédagogique, fin du 1er trimestre (art. 22)"), F("2026-12-19", "2027-01-03", "Vacances de Noël (art. 4)"), F("2027-02-11", "2027-02-11", "Fête de la Jeunesse"),
+    F("2027-03-04", "2027-03-05", "Suivi pédagogique, fin du 2e trimestre (art. 22)"), F("2027-03-26", "2027-04-11", "Vacances de Pâques (art. 4)"), F("2027-05-01", "2027-05-01", "Fête du Travail"),
+    F("2027-05-06", "2027-05-06", "Ascension"), F("2027-05-20", "2027-05-20", "Fête nationale"), F("2027-06-10", "2027-06-11", "Suivi pédagogique, fin du 3e trimestre (art. 22)")];
 }
 function EPX_offSet(st) {
   var set = {}, cal = EPX_calendar(st), s = st.reportObservations && st.reportObservations.__inspection;
@@ -183,7 +186,7 @@ function EPD(p) {
       lab(fr ? "Au" : "To", EPX_h("input", { className: "epx-in", type: "date", value: F.t, min: F.f, onChange: function (ev) { set("t", ev.target.value); } })),
       lab(fr ? "Précision (facultatif)" : "Detail (optional)", EPX_h("input", { className: "epx-in", value: F.n, style: { width: 170 }, onChange: function (ev) { set("n", ev.target.value); } })),
       EPX_h("button", { className: "epx-btn", type: "button", onClick: save }, fr ? "Enregistrer" : "Save")),
-    EPX_h("p", { className: "epx-note" }, fr ? "Une fois enregistré, le rappel « saisie en attente » disparaît pour ces jours. Les jours fériés et les activités scolaires ne comptent pas comme absence ; maladie, empêchement et mission comptent comme heures non faites. Les leçons ne sont pas comptées ce jour-là." : "Once saved, the “entry pending” reminder disappears for those days. Public holidays and school activities are not counted as an absence; sickness, impediment and mission count as hours not done. No lesson is counted that day."),
+    EPX_h("p", { className: "epx-note" }, fr ? "Une fois enregistré, le rappel « saisie en attente » disparaît pour ces jours. Les jours fériés et les activités scolaires (péri/post-scolaires : mercredi de 13 h à 15 h, art. 9) ne comptent pas comme absence ; maladie, empêchement et mission comptent comme heures non faites. Les leçons ne sont pas comptées ce jour-là." : "Once saved, the “entry pending” reminder disappears for those days. Public holidays and school activities (Wednesday 1-3 pm, art. 9) are not counted as an absence; sickness, impediment and mission count as hours not done. No lesson is counted that day."),
     mine.length ? EPX_h("div", { style: { marginTop: 6 } }, mine.map(function (x) {
       var r = EPX_reason(x.reason);
       return EPX_h("div", { key: x.id, className: "epx-item" }, EPX_h("span", null, r[3]), EPX_h("b", null, (x.timestamp || "").slice(0, 10)), EPX_h("span", null, fr ? r[1] : r[2]), x.note ? EPX_h("span", { style: { color: "var(--ep-muted)" } }, "· " + x.note) : null,
@@ -194,7 +197,7 @@ function EPD(p) {
 /* ---------- onglet « Année » de la Configuration ---------- */
 var EPY_PRESET = {
   schoolYear: "2026/2027",
-  /* arrêté conjoint 2026-2027 (d'après la presse, à confirmer) : T2 = 30/11→05/03 (coupé par les vacances de Noël), T3 = 08/03→11/06 (coupé par Pâques) */
+  /* arrêté conjoint du 14/08/2026, art. 10 : T2 = 30/11→05/03 (coupé par les vacances de Noël), T3 = 08/03→11/06 (coupé par Pâques) */
   terms: { T1: ["2026-09-07", "2026-11-27"], T2: ["2026-11-30", "2027-03-05"], T3: ["2027-03-08", "2027-06-11"] },
   /* jours où le samedi n'est enseigné que certains trimestres : {enseignant: {6: ["T1"]}} */
   dayTerms: { KAMDEM: { "6": ["T1"] } },
@@ -246,7 +249,7 @@ function EPY(props) {
         EPX_h("p", { className: "epx-note", style: { marginTop: 0 } }, L("Changements proposés (rien n'est modifié tant que vous ne cliquez pas) :", "Proposed changes (nothing changes until you click):")),
         diffs.map(function (d, i) { return EPX_h("div", { key: i, className: "epx-item", style: { fontFamily: "ui-monospace,monospace", fontSize: 11 } }, d); }),
         EPX_h("div", { className: "epx-row", style: { marginTop: 10 } }, EPX_h("button", { className: "epx-btn", type: "button", onClick: applyPreset }, L("Appliquer ces changements", "Apply these changes"))),
-        EPX_h("p", { className: "epx-note" }, L("Dates des trimestres d'après la presse (arrêté conjoint du 14/08/2026, texte officiel non consulté) : à vérifier sur le site du MINESEC. Jours des enseignants d'après les emplois du temps 2026-2027 ; le samedi de KAMDEM est limité au 1er trimestre (modifiable plus bas).", "Term dates come from press reports (joint order of 14/08/2026, official text not consulted): check on the MINESEC site. Teaching days follow the 2026-2027 timetables; KAMDEM's Saturday is limited to term 1 (editable below)."))
+        EPX_h("p", { className: "epx-note" }, L("Dates des trimestres conformes à l'arrêté conjoint du 14/08/2026 (art. 10). Jours des enseignants d'après les emplois du temps 2026-2027 ; le samedi de KAMDEM est limité au 1er trimestre (modifiable plus bas).", "Term dates follow the joint order of 14/08/2026 (art. 10). Teaching days follow the 2026-2027 timetables; KAMDEM's Saturday is limited to term 1 (editable below)."))
       ) : EPX_h("p", { className: "epx-note", style: { marginTop: 0 } }, L("✓ Tout est déjà à jour (année, trimestres, jours d'enseignement).", "✓ Everything is already up to date."))),
     /* 2. trimestres */
     EPX_h("div", { className: "epx-card" },
@@ -289,7 +292,7 @@ function EPY(props) {
         return EPX_h("div", { key: i, className: "epx-item" }, EPX_h("b", null, r.f + (r.t && r.t !== r.f ? " → " + r.t : "")), EPX_h("span", null, r.n || ""),
           EPX_h("button", { className: "epx-btn red", type: "button", style: { marginLeft: "auto", padding: "3px 9px" }, onClick: function () { setCal(cal.filter(function (x, j) { return j !== i; })); } }, "×"));
       }),
-      EPX_h("p", { className: "epx-note" }, L("Ces jours sont retirés des heures dues de la fiche d'inspection et n'envoient aucun rappel. Fêtes à date fixe pré-remplies ; ajoutez les vacances scolaires et les fêtes mobiles (Pâques, Ascension, Tabaski…) selon le calendrier officiel.", "These days are removed from the hours due on the inspection sheet and send no reminder. Fixed-date holidays are pre-filled; add school breaks and moveable holidays per the official calendar."))),
+      EPX_h("p", { className: "epx-note" }, L("Ces jours sont retirés des heures dues de la fiche d'inspection et n'envoient aucun rappel. Pré-rempli d'après l'arrêté conjoint du 14/08/2026 (vacances, deux derniers jours de chaque trimestre consacrés au suivi pédagogique, fêtes légales à date fixe). Ajoutez les fêtes mobiles (Tabaski…) et supprimez ce qui ne convient pas à votre établissement.", "These days are removed from the hours due on the inspection sheet and send no reminder. Fixed-date holidays are pre-filled; add school breaks and moveable holidays per the official calendar."))),
     /* 5. PIN */
     EPX_h("div", { className: "epx-card" },
       EPX_h("h3", null, "🔐 " + L("Codes PIN des enseignants", "Teacher PIN codes")),

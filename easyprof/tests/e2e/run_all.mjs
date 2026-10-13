@@ -170,6 +170,29 @@ for (const [date, expected, label] of [['2026-10-10T08:00:00+01:00', 1, 'samedi 
   ok(row[2] === '0', 'H2 samedi 09/01/2027 (T2) : créneau limité à T1 → 0 h dues → ' + row[2]);
   await r.page.close();
 }
+
+/* I. seuils d'alerte de l'arrêté (art. 18 et 21) et calendrier officiel préchargé */
+{
+  let r = await open(b, html, stateFromBackup('KAMDEM', 'AP'), { w: 1400, h: 1000 });
+  await r.page.getByText('INSPECTION').first().click(); await r.page.waitForTimeout(500);
+  ok(await r.page.locator('.epi-alert').count() === 0, 'I1 92,5 % de couverture : aucune alerte de seuil');
+  await r.page.close();
+  const mut = st => { st.reportObservations = Object.assign({}, st.reportObservations, { __inspection: { ps: '2026-09-07', pe: '2026-10-09', adj: [{ id: 'x', t: 'ASTHA', k: 'abs', h: 60, d: '2026-09-14', n: '' }] } }); };
+  r = await open(b, html, stateFromBackup('KAMDEM', 'AP', mut), { w: 1400, h: 1000 });
+  await r.page.getByText('INSPECTION').first().click(); await r.page.waitForTimeout(500);
+  const alerts = await r.page.locator('.epi-alert').allInnerTexts();
+  ok(alerts.length >= 1 && /80 %/.test(alerts[0]), 'I2 couverture 195/255 = 76,5 % : alerte « sous le seuil de 80 % » → ' + alerts.join(' | '));
+  const row = await r.page.locator('.epi-sheet tbody tr').first().innerText();
+  ok(/art\. 18/.test(row), 'I3 action corrective obligatoire citée dans la fiche (art. 18)');
+  await r.page.close();
+  r = await open(b, html, stateFromBackup('KAMDEM', 'AP'), { w: 1300, h: 1000 });
+  await r.page.getByText('CONFIGURATION').first().click(); await r.page.waitForTimeout(400);
+  await r.page.getByRole('button', { name: /Année & PIN/i }).click(); await r.page.waitForTimeout(400);
+  const t = await r.page.innerText('body');
+  ok(/Vacances de Noël \(art\. 4\)/.test(t) && /Vacances de Pâques \(art\. 4\)/.test(t) && /Suivi pédagogique, fin du 1er trimestre/.test(t), 'I4 calendrier de l\'arrêté préchargé (vacances + suivi pédagogique)');
+  ok(!/à confirmer/.test(t), 'I5 plus de mention « à confirmer »');
+  await r.page.close();
+}
 await b.close();
 console.log(fails ? `\n${fails} ÉCHEC(S)` : '\nTOUS LES TESTS PASSENT');
 process.exit(fails ? 1 : 0);

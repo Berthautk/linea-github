@@ -112,9 +112,18 @@ function EPI_autoFactors(I, st, R) {
   if (R.gap >= 0 && !ab.length && !dl.length && !Object.keys(byR).length) L.push(fr ? "Aucun écart significatif." : "No significant gap.");
   return L.join("\n");
 }
+/* seuils d'alerte de l'arrêté conjoint du 14/08/2026 : couverture horaire < 80 % (art. 18, 21), couverture du programme < 70 % (art. 21) */
+function EPI_alerts(R, fr) {
+  var A = [];
+  if (R.due > 0 && R.covP < 80) A.push(fr ? "Couverture horaire " + R.covP + " % : sous le seuil d'alerte de 80 %" : "Hours coverage " + R.covP + " %: below the 80 % alert threshold");
+  if (R.dueL > 0 && R.covLP < 70) A.push(fr ? "Couverture du programme " + R.covLP + " % : sous le seuil d'alerte de 70 %" : "Syllabus coverage " + R.covLP + " %: below the 70 % alert threshold");
+  return A;
+}
 function EPI_autoActions(I, st, R) {
   var fr = st.activeLanguage === "fr";
   var L = [];
+  if (R.due > 0 && R.covP < 80) L.push(fr ? "Taux de couverture horaire inférieur au seuil de 80 % : mesures correctives obligatoires, à notifier à la Délégation Régionale sous huitaine (arrêté conjoint du 14/08/2026, art. 18)." : "Hours coverage below the 80 % threshold: mandatory corrective measures, to be notified to the Regional Delegation within one week (joint order of 14/08/2026, art. 18).");
+  if (R.dueL > 0 && R.covLP < 70) L.push(fr ? "Taux de couverture du programme inférieur au seuil de 70 % : examen en conseil d'enseignement et plan de remédiation (art. 21)." : "Syllabus coverage below the 70 % threshold: review at the teaching council and remediation plan (art. 21).");
   if (R.gap < 0) {
     L.push(fr ? "Organiser des séances de rattrapage (samedis / plages libres) pour les classes dont les cours n'ont pas eu lieu." : "Organise catch-up sessions (Saturdays / free slots) for classes whose lessons were missed.");
     L.push(fr ? "Reprogrammer les leçons en retard et suivre leur exécution chaque semaine." : "Reschedule delayed lessons and monitor their delivery weekly.");
@@ -140,7 +149,7 @@ var EPI_CSS = ".epi{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-ser
 ".epi-note{font-size:11px;color:var(--ep-muted);margin:8px 0 0;line-height:1.5}.epi-tbl{border-collapse:collapse;width:100%;font-size:12px}.epi-tbl th,.epi-tbl td{border:1px solid #000;padding:5px 6px;text-align:center;vertical-align:middle}.epi-tbl th{background:#F3ECDD;font-size:11px}" +
 ".epi-sheet{background:#fff;border:1px solid var(--ep-line);border-radius:14px;padding:16px;overflow-x:auto;color:#000}.epi-sheet h2{text-align:center;font-size:15px;margin:10px 0 2px;text-transform:uppercase}.epi-hd{display:flex;justify-content:space-between;font-size:9px;text-align:center;line-height:1.35}.epi-hd div{flex:1}" +
 ".epi-tbl td.l{text-align:left;white-space:pre-line}.epi-neg{color:#B3361A;font-weight:800}.epi-pos{color:#1F7A47;font-weight:800}.epi-sig{display:flex;gap:20px;margin-top:22px;font-size:10px;text-align:center}.epi-sig div{flex:1;border:1px dashed #999;min-height:70px;padding:6px}" +
-".epi-item{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px dashed var(--ep-line);padding:6px 0;font-size:12px}.epi-hero{background:linear-gradient(135deg,var(--ep-ink),#1F5B58);color:#fff;border:0}.epi-chip{display:inline-flex;gap:4px;align-items:center;border-radius:999px;padding:2px 9px;font-size:10px;font-weight:700;background:#FFF1D6;color:#8A5A00}" +
+".epi-item{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px dashed var(--ep-line);padding:6px 0;font-size:12px}.epi-hero{background:linear-gradient(135deg,var(--ep-ink),#1F5B58);color:#fff;border:0}.epi-alert{display:inline-block;margin:8px 6px 0 0;background:#FBE4DC;color:#9C3A1E;border-radius:999px;padding:3px 11px;font-size:11px;font-weight:800}.epi-chip{display:inline-flex;gap:4px;align-items:center;border-radius:999px;padding:2px 9px;font-size:10px;font-weight:700;background:#FFF1D6;color:#8A5A00}" +
 "@media print{@page{size:A4 landscape;margin:10mm}body *{visibility:hidden}.epi-sheet,.epi-sheet *{visibility:visible}.epi-sheet{position:absolute;left:0;top:0;width:100%;border:0;padding:0}.epi-noprint{display:none!important}.epi-annex{page-break-before:always}}";
 function EPI_fmtS(n) { return (n > 0 ? "+" : "") + (Math.round(n * 10) / 10); }
 function EPI(props) {
@@ -324,7 +333,8 @@ function EPI(props) {
       h2("div", { style: { display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center", justifyContent: "space-between" } },
         h2("div", null, h2("div", { style: { fontSize: 11, opacity: .8, textTransform: "uppercase", fontWeight: 700, letterSpacing: ".05em" } }, L("Inspection – " + EPI_fmt(I.ps, true) + " → " + EPI_fmt(I.pe, true), "Inspection – " + EPI_fmt(I.ps, false) + " → " + EPI_fmt(I.pe, false))),
           h2("div", { style: { fontSize: 26, fontWeight: 800, color: "#F6C56B", margin: "2px 0" } }, R.done + " / " + R.due + " h · " + R.covP + " %"),
-          h2("div", { style: { fontSize: 12, opacity: .9 } }, R.doneL + " / " + R.dueL + L(" leçons · ", " lessons · ") + R.covLP + " % · " + L("année : ", "year: ") + R.covY + " %")),
+          h2("div", { style: { fontSize: 12, opacity: .9 } }, R.doneL + " / " + R.dueL + L(" leçons · ", " lessons · ") + R.covLP + " % · " + L("année : ", "year: ") + R.covY + " %"),
+          EPI_alerts(R, fr).map(function (x, i) { return h2("div", { key: i, className: "epi-alert" }, "⚠ " + x); })),
         h2("button", { className: "epi-btn", style: { background: "#F6C56B", color: "#3b2a06", padding: "11px 18px", fontSize: 13 }, type: "button", onClick: function () { window.print(); } }, L("🖨 Imprimer / PDF", "🖨 Print / PDF")))),
     ctrlPeriod, ctrlAdj, ctrlTT, ctrlRd, ctrlText, sheet);
 }

@@ -8,7 +8,7 @@ import { state, myId, setToast } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign } from '../actions.js';
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
-import { dayName } from '../dates.js';
+import { dayName, fmt } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, fresh = true }) {
@@ -47,6 +47,14 @@ export function Team() {
 }
 
 const DAYS = [1, 2, 3, 4, 5, 6];
+function OnlyDates({ dates, onChange }) {
+  const [v, setV] = useState(''), lang = getLang();
+  const add = () => { if (v && !dates.includes(v)) onChange([...dates, v].sort()); setV(''); };
+  return html`<div style="margin-top:8px"><div class="row" style="gap:8px;flex-wrap:wrap"><span class="lab">${t('Seulement à ces dates (facultatif)')}</span>
+    ${dates.map(d => html`<button class="chip" type="button" onClick=${() => onChange(dates.filter(x => x !== d))} aria-label=${t('Retirer')}>${fmt(d, lang, { noYear: true })} ✕</button>`)}
+    <input class="input" type="date" style="width:150px" value=${v} onInput=${(e) => setV(e.target.value)} /><button class="btn soft sm" type="button" disabled=${!v} onClick=${add}>${t('Ajouter la date')}</button></div></div>`;
+}
+
 function Slots({ tc, ctx }) {
   const lang = getLang(), slots = tc.slots || [];
   const set = (i, patch) => saveTeacher(tc.id, { slots: slots.map((s, j) => (j === i ? { ...s, ...patch } : s)) });
@@ -61,7 +69,8 @@ function Slots({ tc, ctx }) {
       <input class="input" type="number" step="0.5" min="0" max="12" style="width:84px" value=${s.h} onChange=${(e) => set(i, { h: +e.target.value || 0 })} aria-label=${t('Heures')} /><span class="sub">h</span>
       <button class="icon-btn" onClick=${() => del(i)} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>
       <div class="row" style="gap:8px;margin-top:8px"><span class="lab">${t('Heure de début')}</span><input class="input" type="time" style="width:130px" value=${s.st || ''} onChange=${(e) => set(i, { st: e.target.value })} />
-        <span class="lab">${t('Valable')}</span><select class="input" style="width:auto" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select></div></div>`)}</div>
+        <span class="lab">${t('Valable')}</span><select class="input" style="width:auto" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select></div>
+      <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div>`)}</div>
     <div class="row" style="margin-top:12px"><button class="btn soft" onClick=${add}><${Icon} n="plus" />${t('Ajouter un créneau')}</button></div>
     <p class="hint" style="margin-top:8px">${t('Un créneau = un jour, une classe, un nombre d’heures. Pour un cours de 2 h le lundi puis 3 h le mardi dans la même classe, ajoutez deux créneaux. Un créneau « valable le 1er trimestre » sert par exemple aux samedis de rattrapage de début d’année.')}</p></div>`;
 }

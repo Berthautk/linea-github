@@ -28,11 +28,12 @@ Durée : environ 10 minutes, une seule fois. Aucune carte bancaire. Après cela,
 ## 5. Installer sur le téléphone
 Ouvrir le lien dans Chrome, menu ⋮ › **Installer l'application** (ou **Ajouter à l'écran d'accueil**). L'application s'ouvre ensuite en plein écran et fonctionne **sans Internet** ; elle se synchronise dès qu'il y a du réseau.
 
-## 6. À savoir sur l'offre gratuite
-- Netlify donne **300 crédits par mois** sur l'offre gratuite. Quand ils sont épuisés, **le site est mis en pause jusqu'au mois suivant** (les téléphones qui l'ont déjà installé continuent de fonctionner hors ligne et se resynchronisent après la pause).
-- Un déploiement coûte des crédits. C'est pourquoi `netlify.toml` n'autorise un déploiement automatique que lorsque le message du dernier commit contient **`[deploy]`**. Si vous voulez publier à la main : **Deploys → Trigger deploy → Deploy project without cache**.
-- Pour surveiller la consommation : **Team settings → Usage and billing**.
-- Chaque ouverture de l'application, synchronisation ou saisie en ligne consomme très peu ; quelques dizaines d'utilisateurs actifs tiennent largement dans le quota.
+## 6. À savoir sur l'offre gratuite (chiffres de la documentation Netlify)
+- **300 crédits par mois**, limite stricte : quand ils sont épuisés, le site est mis en pause jusqu'au mois suivant (les téléphones qui ont déjà l'application continuent de fonctionner hors ligne et se resynchronisent après).
+- Tarifs : **15 crédits** par déploiement en production · **2 crédits** pour 10 000 requêtes · **20 crédits** par Go transféré · **10 crédits** par Go-heure de calcul des fonctions.
+- C'est pourquoi `netlify.toml` ne déploie automatiquement que si le message du dernier commit contient **`[deploy]`**. Publication manuelle : **Deploys → Trigger deploy → Deploy project without cache**.
+- La synchronisation passe par le serveur (c'est ce qui permet aux collègues de partager leurs données), mais elle est économe : l'application garde tout sur le téléphone, ne s'adresse au serveur que **quand elle est ouverte à l'écran** (au plus une fois toutes les 3 minutes, plus un envoi 2 secondes après chaque saisie) et le code de l'application est mis en cache sur le téléphone (presque aucun transfert au quotidien).
+- Ordre de grandeur : une centaine d'utilisateurs actifs consomment largement moins de 100 crédits par mois. Surveillance : **Team settings → Usage and billing**.
 
 ## 7. Plusieurs départements, plusieurs établissements
 Rien à faire : chaque personne qui crée un compte obtient **son propre département**, isolé des autres (ses données ne sont visibles que de son équipe). Un collègue sans compte crée simplement le sien ou reçoit un identifiant de son animateur.

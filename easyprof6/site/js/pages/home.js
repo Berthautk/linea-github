@@ -21,7 +21,7 @@ function Setup({ ctx }) {
     { done: others.length > 0 || !!state.ui.soloOk, href: '#/settings/team', title: t('Vos collègues'), sub: t('Créez leurs comptes : ils recevront un identifiant et un mot de passe. (Seul dans le département ? Passez cette étape.)'), skip: () => setUI({ soloOk: true }) },
     { done: slots && plan, href: '#/settings/team', title: t('Emplois du temps et leçons prévues'), sub: t('Pour chaque enseignant : ses cours de la semaine et le nombre de leçons dans chaque classe.') },
     { done: d.regul.some(r => !r.deleted && r.tag === 'start'), opt: true, href: '#/settings/regul', title: t('Reprendre les semaines passées'), sub: t('Indiquez la date jusqu’à laquelle tout était à jour : personne ne démarre « en retard ».') },
-    { done: false, opt: true, href: '#/settings/year', title: t('Calendrier de l’année'), sub: t('Vérifiez les trimestres, vacances et le dernier jour de cours du 3e trimestre.') },
+    { done: false, opt: true, href: '#/settings/year', title: t('Calendrier de l’année'), sub: t('Vérifiez les trimestres et les vacances.') },
   ];
   const n = steps.filter(s => s.done).length; if (steps.filter(s => !s.opt).every(s => s.done)) return null;
   return html`<div class="card"><div class="card-h"><h3>${t('Pour bien démarrer')}</h3><${Chip} tone="info">${n} / ${steps.length}<//></div><div class="bar" style="margin-bottom:6px"><i style=${{ width: n / steps.length * 100 + '%' }}></i></div>

@@ -46,6 +46,7 @@ function slotsOn(ctx, tid, iso) {
   for (const s of (t && t.slots) || []) {
     if (+s.d !== d) continue;
     if (s.tm && term && s.tm !== term) continue;
+    if (s.only && s.only.length && !s.only.includes(iso)) continue;
     res[s.c] = (res[s.c] || 0) + (+s.h || 0); total += +s.h || 0;
   }
   const out = { byClass: res, total };
@@ -228,7 +229,7 @@ export function todaySlots(ctx, tid, iso = ctx.today) {
   const t = ctx.teacher(tid); const rows = [];
   if (!ctx.isTeaching(iso)) return { rows, teaching: false, off: ctx.off.has(iso), reason, entries: mine };
   for (const s of (t && t.slots) || []) {
-    if (+s.d !== dow(iso) || (s.tm && ctx.termOf(iso) && s.tm !== ctx.termOf(iso))) continue;
+    if (+s.d !== dow(iso) || (s.tm && ctx.termOf(iso) && s.tm !== ctx.termOf(iso)) || (s.only && s.only.length && !s.only.includes(iso))) continue;
     const done = mine.some(e => e.classId === s.c);
     rows.push({ c: s.c, h: +s.h || 0, st: s.st || '', done });
   }

@@ -43,5 +43,5 @@ export function startAutoSync() {
   if (started) return; started = true;
   const kick = () => { if (state.session && !document.hidden) syncNow(); };
   document.addEventListener('visibilitychange', kick); window.addEventListener('online', kick);
-  setInterval(kick, 90000); kick();
+  setInterval(kick, 180000); kick();
 }

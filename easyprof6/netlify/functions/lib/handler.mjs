@@ -26,7 +26,7 @@ const num = (v, d = 0) => (Number.isFinite(+v) ? +v : d);
 /* ---------- nettoyage des données reçues ---------- */
 function cleanSlots(slots) {
   if (!Array.isArray(slots)) return [];
-  return slots.slice(0, 80).map(s => ({ d: Math.min(6, Math.max(1, num(s.d, 1))), c: str(s.c, 40), h: Math.min(12, Math.max(0, num(s.h))), tm: str(s.tm, 8), st: str(s.st, 5) }));
+  return slots.slice(0, 80).map(s => ({ d: Math.min(6, Math.max(1, num(s.d, 1))), c: str(s.c, 40), h: Math.min(12, Math.max(0, num(s.h))), tm: str(s.tm, 8), st: str(s.st, 5), only: (Array.isArray(s.only) ? s.only : []).slice(0, 60).map(x => str(x, 10)).filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x)) }));
 }
 function cleanEntry(e, tid) {
   if (!e || typeof e.id !== 'string' || e.id.length > 60) return null;

@@ -24,12 +24,12 @@ test('heures dues du 07/09 au 09/10/2026 : 255 h (référence validée : 65 + 60
   assert.deepEqual(['K', 'N', 'A', 'T'].map(id => stats(c, id, ...P1).due), [65, 60, 85, 45]);
 });
 
-test('calendrier de l’arrêté : vacances de Noël, Pâques, suivi pédagogique et fin réelle du 3e trimestre', () => {
+test('calendrier de l’arrêté : vacances de Noël, Pâques, suivi pédagogique et 3e trimestre aux dates officielles', () => {
   const c = makeCtx(mk(), '2027-06-30');
   const noel = dueRange(c, 'K', '2026-12-19', '2027-01-03'); assert.equal(noel.due, 0); assert.ok(noel.closed > 0);
   assert.equal(dueRange(c, 'K', '2027-03-26', '2027-04-11').due, 0, 'Pâques');
   assert.equal(dueRange(c, 'K', '2026-11-26', '2026-11-27').due, 0, 'deux derniers jours du trimestre');
-  assert.equal(dueRange(c, 'K', '2027-04-12', '2027-06-11').due, 0, '3e trimestre : plus de cours après le dernier jour réel');
+  const t3 = dueRange(c, 'K', '2027-04-12', '2027-06-11').due; assert.ok(t3 > 80 && t3 <= 9 * 13, '3e trimestre : dates officielles maintenues jusqu’au 11/06 (' + t3 + ' h dues pour K)');
   assert.equal(dueRange(c, 'K', '2027-03-08', '2027-03-25').due, 13 * 3, 'du 8 au 25 mars : 3 semaines de cours (lundi + mardi) du 3e trimestre comptent');
   assert.equal(dueRange(c, 'K', '2026-12-14', '2026-12-18').due, 6 + 7, 'semaine de cours avant les vacances (lundi 6 h + mardi 7 h)');
 });
@@ -113,4 +113,13 @@ test('aujourd’hui, numéro suivant, récapitulatif, facteurs', () => {
   assert.equal(lsa.planTh, 50); assert.equal(lsa.planPr, 6); assert.equal(lsa.planH, 106); assert.equal(lsa.th, 1);
   assert.equal(r.total.planTh, 50);
   const f = factors(c, stats(c, null, '2026-10-12', '2026-10-17')); assert.ok(f.some(x => x.kind === 'absence' && x.reason === 'sick'));
+});
+
+test('créneau à dates précises (samedis réellement tenus : 19/09 et 03/10) : les autres samedis ne comptent pas', () => {
+  const st = mk(); st.teachers = [{ id: 'K', name: 'Kamdem', short: 'KAMDEM', role: 'ap', slots: [S(6, 'USA', 2, { only: ['2026-09-19', '2026-10-03'] })] }];
+  const c = makeCtx(st, '2026-10-13');
+  assert.equal(dueRange(c, 'K', '2026-09-07', '2026-10-12').due, 4, 'seulement 2 samedis × 2 h');
+  assert.equal(dueRange(c, 'K', '2026-09-12', '2026-09-12').due, 0);
+  assert.equal(todaySlots(c, 'K', '2026-09-19').rows.length, 1);
+  assert.equal(todaySlots(c, 'K', '2026-09-26').rows.length, 0);
 });

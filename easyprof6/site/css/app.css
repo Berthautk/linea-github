@@ -232,3 +232,4 @@ textarea.input { min-height: 84px; resize: vertical; }
   .paper { border: 0; padding: 0; border-radius: 0; overflow: visible; } .paper .annex { page-break-before: always; }
   .card { box-shadow: none; border: 0; padding: 0; }
 }
+button.chip { border: 0; cursor: pointer; font-family: inherit; }

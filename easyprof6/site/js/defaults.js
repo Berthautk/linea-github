@@ -3,10 +3,9 @@ export const YEAR_DEFAULT = '2026/2027';
 
 export function defaultTerms() {
   return [
-    // T3 : « last » = dernier jour de cours réel (la réalité du terrain : environ 2 semaines de cours au 3e trimestre) ; modifiable.
-    { id: 'T1', name: '1er trimestre', start: '2026-09-07', end: '2026-11-27', last: '2026-11-27' },
-    { id: 'T2', name: '2e trimestre', start: '2026-11-30', end: '2027-03-05', last: '2027-03-05' },
-    { id: 'T3', name: '3e trimestre', start: '2027-03-08', end: '2027-06-11', last: '2027-03-25' },
+    { id: 'T1', name: '1er trimestre', start: '2026-09-07', end: '2026-11-27' },
+    { id: 'T2', name: '2e trimestre', start: '2026-11-30', end: '2027-03-05' },
+    { id: 'T3', name: '3e trimestre', start: '2027-03-08', end: '2027-06-11' },
   ];
 }
 export function defaultCalendar() {

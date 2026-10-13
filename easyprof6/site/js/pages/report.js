@@ -41,9 +41,9 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
   const teachers = tid ? ctx.teachers.filter(x => x.id === tid) : ctx.teachers;
   const wk = (x) => (x.slots || []).reduce((s, y) => s + (+y.h || 0), 0);
   return html`<div class="paper">
-    <div class="hd"><div><b>RÉPUBLIQUE DU CAMEROUN</b><br />Paix – Travail – Patrie<br />MINISTÈRE DES ENSEIGNEMENTS SECONDAIRES<br />${hd.region ? 'DÉLÉGATION RÉGIONALE ' + up(hd.region) : ''}<br />${hd.division ? 'DÉLÉGATION DÉPARTEMENTALE ' + up(hd.division) : ''}</div>
-      <div style="align-self:center;font-weight:800;font-size:11px">${up(d.name)}</div>
-      <div><b>REPUBLIC OF CAMEROON</b><br />Peace – Work – Fatherland<br />MINISTRY OF SECONDARY EDUCATION<br />${hd.region ? 'REGIONAL DELEGATION FOR ' + up(hd.region) : ''}<br />${hd.division ? 'DIVISIONAL DELEGATION FOR ' + up(hd.division) : ''}</div></div>
+    <div class="hd"><div><b>RÉPUBLIQUE DU CAMEROUN</b><br />Paix – Travail – Patrie<br />MINISTÈRE DES ENSEIGNEMENTS SECONDAIRES<br />${hd.region ? 'DÉLÉGATION RÉGIONALE ' + up(hd.region) : ''}<br />${hd.division ? 'DÉLÉGATION DÉPARTEMENTALE ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div>
+      <div style="align-self:center"><img src="/icons/armoiries.png" alt="" style="width:74px;height:auto;display:block;margin:0 auto 4px" /><div style="font-weight:800;font-size:10px">${up(d.name)}</div></div>
+      <div><b>REPUBLIC OF CAMEROON</b><br />Peace – Work – Fatherland<br />MINISTRY OF SECONDARY EDUCATION<br />${hd.region ? 'REGIONAL DELEGATION FOR ' + up(hd.region) : ''}<br />${hd.division ? 'DIVISIONAL DELEGATION FOR ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div></div>
     <h2>${t('Fiche de l’inspection nationale')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Année scolaire')} ${d.year || ''}</div>
     <table><thead><tr><th rowspan="2">${t('Période')}</th><th rowspan="2">${t('Disciplines / Matières')}</th><th colspan="5">${t('Couverture des horaires')}</th><th colspan="5">${t('Couverture des programmes')}</th><th rowspan="2">${t('Identification des facteurs d’écart entre prévisions et exécution (programmes et plans d’horaires)')}</th><th rowspan="2">${t('Actions correctives / de remédiation')}</th></tr>
       <tr><th>${t('Nombre d’heures dues pour la période')}</th><th>${t('Nombre d’heures faites')}</th><th>${t('Écart (+/-) par rapport à la période')}</th><th>${t('Taux de couverture par rapport à la période (%)')}</th><th>${t('Taux de couverture par rapport à l’année (%)')}</th>

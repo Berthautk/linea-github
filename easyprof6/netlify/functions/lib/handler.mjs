@@ -64,7 +64,7 @@ function cleanDept(d, id) {
   const cal = Array.isArray(d.calendar) ? d.calendar.slice(0, 200).map(c => ({ f: str(c.f, 10), t: str(c.t, 10), n: str(c.n, 80) })) : [];
   return {
     id, u: num(d.u, now()), name: str(d.name, 120), discipline: str(d.discipline, 80), abbr: str(d.abbr, 8), system: d.system === 'francophone' ? 'francophone' : 'anglophone',
-    year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), header: hdr, terms, calendar: cal,
+    year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), header: hdr, setup: Object.fromEntries(Object.entries(d.setup || {}).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])), terms, calendar: cal,
     dueOut: d.dueOut && typeof d.dueOut === 'object' ? Object.fromEntries(Object.entries(d.dueOut).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])) : {},
   };
 }
@@ -205,7 +205,8 @@ async function teamAdd(ctx, b) {
   const deptId = ctx.d, meta = await loadMeta(deptId);
   if ((meta.teachers || []).filter(t => !t.deleted).length >= MAX.teachers) return fail(400, 'too_many', 'Nombre maximal de collègues atteint.');
   const name = str(b.name, 80).trim(); if (!name) return fail(400, 'bad_name', 'Indiquez le nom du collègue.');
-  const base = normUser(b.username) || name.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '.').replace(/^\.+|\.+$/g, '').slice(0, 18) || 'prof';
+  const ascii = (x) => String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '').slice(0, 18);
+  const base = normUser(b.username) || ascii(str(b.short, 20) || shortName(name)) || 'prof';
   let username = base.length >= 3 ? base : base + '.prof';
   if (!validUser(username)) return fail(400, 'bad_username', 'Identifiant invalide.');
   if (b.username && (await users().get('u:' + username))) return fail(409, 'username_taken', 'Cet identifiant est déjà utilisé.');
@@ -224,9 +225,25 @@ async function teamReset(ctx, b) {
   const meta = await loadMeta(ctx.d), t = (meta.teachers || []).find(x => x.id === b.teacherId && !x.deleted);
   if (!t) return fail(404, 'not_found', 'Collègue introuvable.');
   const u = await users().get('u:' + t.username); if (!u) return fail(404, 'not_found', 'Compte introuvable.');
-  const password = randomCode(6); Object.assign(u, await hashPassword(password)); delete u.failed; delete u.disabled;
+  let password = randomCode(6);
+  if (b.password != null && b.password !== '') { password = String(b.password); if (!validPassword(password)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.'); }
+  Object.assign(u, await hashPassword(password)); delete u.failed; delete u.disabled;
   await users().set('u:' + t.username, u);
   return json(200, { ok: true, username: t.username, password });
+}
+/** L'animateur change l'identifiant d'un collègue (le mot de passe est conservé). */
+async function teamRename(ctx, b) {
+  const bad = needAP(ctx); if (bad) return bad;
+  const meta = await loadMeta(ctx.d), t = (meta.teachers || []).find(x => x.id === b.teacherId && !x.deleted);
+  if (!t) return fail(404, 'not_found', 'Collègue introuvable.');
+  const username = normUser(b.username); if (!validUser(username)) return fail(400, 'bad_username', 'Identifiant invalide : 3 à 24 caractères (lettres, chiffres, point, tiret).');
+  if (username === t.username) return json(200, { ok: true, username, meta });
+  if (await users().get('u:' + username)) return fail(409, 'username_taken', 'Cet identifiant est déjà utilisé.');
+  const u = await users().get('u:' + t.username); if (!u) return fail(404, 'not_found', 'Compte introuvable.');
+  await users().set('u:' + username, { ...u, username }); await users().delete('u:' + t.username);
+  meta.teachers = meta.teachers.map(x => x.id === t.id ? { ...x, username, u: now() } : x); meta.rev = (meta.rev || 0) + 1;
+  await saveMeta(ctx.d, meta);
+  return json(200, { ok: true, username, meta });
 }
 async function teamRemove(ctx, b) {
   const bad = needAP(ctx); if (bad) return bad;
@@ -276,6 +293,7 @@ export async function handle(req) {
       case '/team/add': return await teamAdd(ctx, body);
       case '/team/reset': return await teamReset(ctx, body);
       case '/team/remove': return await teamRemove(ctx, body);
+      case '/team/rename': return await teamRename(ctx, body);
       case '/me/password': return await changePassword(ctx, body);
       case '/me': return json(200, { ok: true, session: session(ctx.user) });
       default: return fail(404, 'not_found', 'Route inconnue.');

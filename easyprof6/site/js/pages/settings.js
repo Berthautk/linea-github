@@ -12,7 +12,7 @@ import { Team, TeacherDetail, showCredentials } from './team.js';
 import { defaultTerms, defaultCalendar } from '../defaults.js';
 import { REASONS } from '../consts.js';
 import { fmt, todayISO } from '../dates.js';
-import { isOldBackup, isNewBackup, summarize, convert } from '../import-old.js';
+import { isOldBackup, isNewBackup, summarize, convert, surname } from '../import-old.js';
 import { syncNow } from '../sync.js';
 
 const Back = ({ title, children }) => html`<div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${title}</h1></div>${children}</div>`;
@@ -136,9 +136,11 @@ function ImportOld({ json, onDone }) {
   const run = async () => {
     setBusy(true); setErr('');
     try {
-      const map = { [who]: myId() }, made = [];
+      const map = { [who]: myId() }, made = [], here = state.data.teachers.filter(x => !x.deleted);
       for (const tc of sum.teachers) {
         if (tc.id === who) continue;
+        const known = here.find(x => x.id !== myId() && surname(x.name) === surname(tc.name));
+        if (known) { map[tc.id] = known.id; continue; }
         const r = await api('/team/add', { name: tc.name, phone: tc.phone }, state.session.token);
         map[tc.id] = r.teacher.id; made.push({ name: r.teacher.name, username: r.username, password: r.password }); replaceMeta(r.meta);
       }
@@ -160,7 +162,7 @@ function ImportOld({ json, onDone }) {
   return html`<${Modal} title=${t('Importer l’ancienne sauvegarde')} onClose=${closeModal}>
     <p><b>${sum.name}</b> · ${sum.discipline} · ${sum.year}<br /><span class="sub">${sum.classes} ${t('classes')} · ${sum.teachers.length} ${t('enseignants')} · ${sum.entries} ${t('saisies')}</span></p>
     <${Field} label=${t('Qui êtes-vous dans cette sauvegarde ?')}><select class="input" value=${who} onChange=${(e) => setWho(e.target.value)}>${sum.teachers.map(x => html`<option value=${x.id}>${x.name}${x.isAP ? ' (AP)' : ''}</option>`)}</select><//>
-    <p class="hint">${t('Les collègues obtiennent un nouveau compte (identifiant et mot de passe). Les classes, saisies et effectifs sont repris ; le plan de leçons de chaque classe est réparti à parts égales entre ses enseignants (modifiable ensuite).')}</p>
+    <p class="hint">${t('Les collègues déjà présents dans Rekort sont reconnus par leur nom de famille ; les autres reçoivent un nouveau compte (identifiant et mot de passe). Les classes, saisies, effectifs et emplois du temps sont repris ; les saisies déjà importées sont mises à jour sans doublon. Le plan de leçons de chaque classe est réparti à parts égales entre ses enseignants (modifiable ensuite).')}</p>
     ${err ? html`<div class="err">${err}</div>` : null}<button class="btn block" disabled=${busy} onClick=${run}>${busy ? t('Import en cours…') : t('Importer')}</button><//>`;
 }
 

@@ -9,7 +9,7 @@ export const pct = (a, b) => (b > 0 ? Math.round((a / b) * 1000) / 10 : 0);
 /* ---------- contexte (index et calendrier) ---------- */
 export function makeCtx(state, today = todayISO()) {
   const dept = state.dept || {};
-  const terms = (dept.terms || []).filter(t => t.start && t.end).map(t => ({ ...t, last: t.last || t.end })).sort((a, b) => (a.start < b.start ? -1 : 1));
+  const terms = (dept.terms || []).filter(t => t.start && t.end).map(t => ({ ...t, last: t.end })).sort((a, b) => (a.start < b.start ? -1 : 1));
   const off = new Set();
   for (const r of dept.calendar || []) if (r.f) eachDay(r.f, r.t || r.f).forEach(d => off.add(d));
   const teachers = (state.teachers || []).filter(t => !t.deleted);
@@ -177,6 +177,12 @@ export function stats(ctx, tid, ps, pe) {
 }
 
 /** État global en un mot (pour une pastille) : fondé sur les taux, donc valable pour un enseignant comme pour tout le département. */
+/** Collègues sans emploi du temps : leurs heures dues sont inconnues, donc tout pourcentage d'heures serait faux. */
+export function noTimetable(ctx, tid) {
+  const list = tid ? [ctx.teacher(tid)].filter(Boolean) : ctx.teachers;
+  return list.filter(x => !(x.slots || []).some(sl => +sl.h > 0));
+}
+
 export function overall(S) {
   if (!S.due && !S.lessonsPlanned) return 'none';
   const hasL = S.lessonsPlanned >= 1;

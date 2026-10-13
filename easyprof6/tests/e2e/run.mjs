@@ -32,7 +32,7 @@ await step('A. Inscription et configuration par l’animateur', async () => {
   await apPage.getByLabel(/nom complet/i).fill('Mme ASTHA Noura'); await apPage.getByRole('button', { name: /créer le compte/i }).click();
   await apPage.waitForSelector('.sheet .code');
   const password = await tx(apPage, '.sheet .code'), username = await apPage.locator('.sheet .card.flat .row').nth(1).locator('b').innerText();
-  ok(password.length === 6 && username === 'mme.astha.noura', 'A4 compte du collègue créé : ' + username + ' / ' + password);
+  ok(password.length === 6 && username === 'astha', 'A4 compte du collègue créé : ' + username + ' / ' + password);
   teacher = { username, password };
   await apPage.getByRole('button', { name: /fermer/i }).click();
   await apPage.locator('a.item', { hasText: 'ASTHA' }).click(); await apPage.waitForTimeout(400);

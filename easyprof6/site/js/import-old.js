@@ -2,6 +2,13 @@
 const TYPE = { theorique: 'lesson', pratique: 'practical', contact: 'orientation' };
 const cap = (s) => s.toLowerCase().replace(/(^|\s)\S/g, (m) => m.toUpperCase());
 
+const TITLES = /^(mr|mme|mlle|m|dr|prof|pr|mrs|ms)$/i;
+/** Nom de famille en majuscules (même règle que le serveur) : sert à reconnaître un collègue déjà présent. */
+export function surname(name) {
+  const toks = String(name || '').replace(/[.,]/g, ' ').split(/\s+/).filter(w => w && !TITLES.test(w));
+  return (toks.find(w => /^[A-ZÀ-ÝŒ'’-]{3,}$/.test(w)) || toks[toks.length - 1] || '').toUpperCase();
+}
+
 export function isOldBackup(j) { return !!(j && (j._easyprofBackup || (j.teachers && j.classes && j.entries && j.establishment))); }
 export function isNewBackup(j) { return !!(j && (j.format === 'rekort' || j.format === 'easyprof6') && j.data); }
 
@@ -24,7 +31,7 @@ export function convert(j, idFor, now = Date.now()) {
     ids.forEach((tid, i) => assign.push({ id: tid + ':' + c.id, teacherId: tid, classId: c.id, th: Math.floor(th / n) + (i === 0 ? th % n : 0), pr: Math.floor(pr / n) + (i === 0 ? pr % n : 0), hours: Math.floor(hours / n) + (i === 0 ? hours % n : 0), u: now }));
   }
   const slots = {}; const tt = ((j.reportObservations || {}).__inspection || {}).tt || {};
-  for (const [oid, list] of Object.entries(tt)) { const nid = idFor(oid); if (nid) slots[nid] = list.map(s => ({ d: +s.d, c: s.c, h: +s.h, tm: s.tm || '', st: '' })); }
+  for (const [oid, list] of Object.entries(tt)) { const nid = idFor(oid); if (nid) slots[nid] = list.map(s => ({ d: +s.d, c: s.c, h: +s.h, tm: s.tm || '', st: s.st || '', only: Array.isArray(s.only) ? s.only : [] })); }
   const entries = [];
   for (const e of j.entries || []) {
     const tid = idFor(e.teacherId); if (!tid) continue;

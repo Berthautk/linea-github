@@ -37,7 +37,7 @@ test('connexion : bon mot de passe, mauvais mot de passe, verrouillage après 8 
 test('équipe : ajout (mot de passe généré), connexion du collègue, doublons, retrait', async () => {
   fresh(); const ap = await newDept();
   const a = await call('/team/add', { name: 'Noura Astha' }, ap.token);
-  assert.equal(a.status, 200); assert.equal(a.username, 'noura.astha'); assert.equal(a.password.length, 6);
+  assert.equal(a.status, 200); assert.equal(a.username, 'astha', 'identifiant = nom de famille'); assert.equal(a.password.length, 6);
   const b = await call('/team/add', { name: 'Noura Astha' }, ap.token);
   assert.notEqual(b.username, a.username);
   const l = await call('/login', { username: a.username, password: a.password });
@@ -121,4 +121,21 @@ test('mot de passe : changement, récupération par code', async () => {
 test('nom court : le nom de famille en majuscules', () => {
   assert.equal(shortName('Mr. KAMDEM Emmanuel'), 'KAMDEM'); assert.equal(shortName('Mme. ASTHA Noura'), 'ASTHA'); assert.equal(shortName('Mme TSOGO Sylviane'), 'TSOGO');
   assert.equal(shortName('Jean Dupont'), 'DUPONT'); assert.equal(shortName('M. NEBASIBI Ennese'), 'NEBASIBI'); assert.equal(shortName(''), '');
+});
+
+test('équipe : identifiant = nom de famille, changement d’identifiant et mot de passe choisi par l’animateur', async () => {
+  fresh(); const ap = await newDept();
+  const a = await call('/team/add', { name: 'Mme TSOGO Sylviane' }, ap.token);
+  assert.equal(a.username, 'tsogo');
+  const bad = await call('/team/reset', { teacherId: a.teacher.id, password: '123' }, ap.token); assert.equal(bad.status, 400);
+  const r = await call('/team/reset', { teacherId: a.teacher.id, password: 'tsogo26' }, ap.token); assert.equal(r.password, 'tsogo26');
+  assert.equal((await call('/login', { username: 'tsogo', password: 'tsogo26' })).status, 200);
+  const n = await call('/team/rename', { teacherId: a.teacher.id, username: 'sylviane' }, ap.token); assert.equal(n.status, 200); assert.equal(n.username, 'sylviane');
+  assert.equal((await call('/login', { username: 'sylviane', password: 'tsogo26' })).status, 200, 'même mot de passe sous le nouvel identifiant');
+  assert.equal((await call('/login', { username: 'tsogo', password: 'tsogo26' })).status, 401, 'ancien identifiant supprimé');
+  const other = await call('/team/add', { name: 'Mr. AUTRE Paul' }, ap.token);
+  assert.equal((await call('/team/rename', { teacherId: other.teacher.id, username: 'sylviane' }, ap.token)).status, 409, 'identifiant déjà pris');
+  assert.equal((await call('/team/rename', { teacherId: other.teacher.id, username: 'x' }, ap.token)).status, 400);
+  const t = await call('/login', { username: 'sylviane', password: 'tsogo26' });
+  assert.equal((await call('/team/rename', { teacherId: other.teacher.id, username: 'zzz' }, t.token)).status, 403, 'réservé à l’animateur');
 });

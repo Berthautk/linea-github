@@ -4,29 +4,31 @@ import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Bar, Chip, Empty, statusChip, num1 } from '../ui.js';
 import { BarChart } from '../charts.js';
-import { makeCtx, stats, overall, periodOf, classProgress, series, todaySlots, factors } from '../calc.js';
+import { makeCtx, stats, overall, noTimetable, periodOf, classProgress, series, todaySlots, factors } from '../calc.js';
 import { PeriodBar, ScopeBar, TodayCard, currentTid, periodLabel, unitFor } from '../widgets.js';
 import { state, setUI, isAP, myId, me } from '../store.js';
+import { saveDept } from '../actions.js';
 import { minISO, fmt } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
 
 const firstName = (n) => (n || '').replace(/^(Mr?\.?|Mme|Mlle|M\.)\s+/i, '').split(' ').filter(Boolean).slice(-1)[0] || '';
 
 function Setup({ ctx }) {
-  const d = state.data, dept = d.dept, others = ctx.teachers.filter(x => x.id !== myId());
-  const slots = ctx.teachers.some(x => (x.slots || []).length), plan = d.assign.some(a => !a.deleted);
+  const d = state.data, dept = d.dept, ok = dept.setup || {}, others = ctx.teachers.filter(x => x.id !== myId());
+  const confirm = (key) => saveDept({ setup: { ...ok, [key]: true } });
+  const ttOk = ctx.teachers.length > 0 && ctx.teachers.every(x => (x.slots || []).some(sl => +sl.h > 0));
   const steps = [
-    { done: !!(dept.name && (dept.header.region || dept.header.division)), href: '#/settings/dept', title: t('Établissement et en-tête'), sub: t('Nom, région, département : ils figurent sur la fiche d’inspection.') },
-    { done: ctx.classes.length > 0, href: '#/settings/classes', title: t('Vos classes'), sub: t('Ajoutez les classes du département avec leurs effectifs.') },
-    { done: others.length > 0 || !!state.ui.soloOk, href: '#/settings/team', title: t('Vos collègues'), sub: t('Créez leurs comptes : ils recevront un identifiant et un mot de passe. (Seul dans le département ? Passez cette étape.)'), skip: () => setUI({ soloOk: true }) },
-    { done: slots && plan, href: '#/settings/team', title: t('Emplois du temps et leçons prévues'), sub: t('Pour chaque enseignant : ses cours de la semaine et le nombre de leçons dans chaque classe.') },
-    { done: d.regul.some(r => !r.deleted && r.tag === 'start'), opt: true, href: '#/settings/regul', title: t('Reprendre les semaines passées'), sub: t('Indiquez la date jusqu’à laquelle tout était à jour : personne ne démarre « en retard ».') },
-    { done: false, opt: true, href: '#/settings/year', title: t('Calendrier de l’année'), sub: t('Vérifiez les trimestres et les vacances.') },
+    { key: 'dept', done: !!(dept.name && (dept.header.region || dept.header.division)) || ok.dept, href: '#/settings/dept', title: t('Établissement et en-tête'), sub: t('Nom, région, département : ils figurent sur la fiche d’inspection.') },
+    { key: 'classes', done: ctx.classes.length > 0 || ok.classes, href: '#/settings/classes', title: t('Vos classes'), sub: t('Ajoutez les classes du département avec leurs effectifs.') },
+    { key: 'team', done: ok.team || (others.length === 0 && !!state.ui.soloOk), href: '#/settings/team', title: t('Vos collègues'), sub: others.length ? t('{n} collègue(s) ajouté(s). Vérifiez les noms, identifiants et mots de passe, puis confirmez.', { n: others.length }) : t('Créez leurs comptes : ils recevront un identifiant et un mot de passe. (Seul dans le département ? Passez cette étape.)'), skip: others.length ? null : () => setUI({ soloOk: true }) },
+    { key: 'tt', done: ok.tt || (ttOk && d.assign.some(a => !a.deleted)), href: '#/settings/team', title: t('Emplois du temps et leçons prévues'), sub: ttOk ? t('Pour chaque enseignant : ses cours de la semaine et le nombre de leçons dans chaque classe.') : t('Il manque l’emploi du temps de : {n}.', { n: ctx.teachers.filter(x => !(x.slots || []).some(sl => +sl.h > 0)).map(x => x.short || x.name).join(', ') }) },
+    { key: 'regul', done: ok.regul || d.regul.some(r => !r.deleted && r.tag === 'start'), href: '#/settings/regul', title: t('Reprendre les semaines passées'), sub: t('Indiquez la date jusqu’à laquelle tout était à jour : personne ne démarre « en retard ». Rien à signaler ? Confirmez.') },
+    { key: 'year', done: !!ok.year, href: '#/settings/year', title: t('Calendrier de l’année'), sub: t('Vérifiez les trimestres et les vacances.') },
   ];
-  const n = steps.filter(s => s.done).length; if (steps.filter(s => !s.opt).every(s => s.done)) return null;
-  return html`<div class="card"><div class="card-h"><h3>${t('Pour bien démarrer')}</h3><${Chip} tone="info">${n} / ${steps.length}<//></div><div class="bar" style="margin-bottom:6px"><i style=${{ width: n / steps.length * 100 + '%' }}></i></div>
-    ${steps.map((s, i) => html`<a class=${'step ' + (s.done ? 'done' : '')} href=${s.href}><span class="n">${s.done ? '✓' : i + 1}</span><div class="grow"><b>${s.title}</b><span>${s.sub}</span></div>
-      ${s.skip && !s.done ? html`<button class="btn soft sm" onClick=${(e) => { e.preventDefault(); s.skip(); }}>${t('Passer')}</button>` : html`<${Icon} n="right" size="18" />`}</a>`)}</div>`;
+  const n = steps.filter(s => s.done).length; if (n === steps.length || ok.hide) return null;
+  return html`<div class="card"><div class="card-h"><h3>${t('Pour bien démarrer')}</h3><div class="row"><${Chip} tone="info">${n} / ${steps.length}<//><button class="btn soft sm" onClick=${() => confirm('hide')}>${t('Masquer')}</button></div></div><div class="bar" style="margin-bottom:6px"><i style=${{ width: n / steps.length * 100 + '%' }}></i></div>
+    ${steps.map((s, i) => html`<div class=${'step ' + (s.done ? 'done' : '')}><a class="row grow" href=${s.href} style="text-decoration:none;color:inherit;gap:12px;flex-wrap:nowrap"><span class="n">${s.done ? '✓' : i + 1}</span><div class="grow"><b>${s.title}</b><span>${s.sub}</span></div></a>
+      ${s.done ? null : html`<div class="row" style="gap:6px;flex:none"><button class="btn sm" onClick=${() => confirm(s.key)}>${t('C’est bon')}</button>${s.skip ? html`<button class="btn soft sm" onClick=${s.skip}>${t('Passer')}</button>` : null}</div>`}</div>`)}</div>`;
 }
 
 function Alerts({ S }) {
@@ -61,7 +63,7 @@ function Team({ ctx, p }) {
   const rows = ctx.teachers.map(tc => ({ tc, S: stats(ctx, tc.id, p.ps, p.pe), st: todayState(ctx, tc) }));
   if (!rows.length) return null;
   return html`<div class="card"><div class="card-h"><h3>${t('Mon équipe')}</h3></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Enseignant')}</th><th>${t('Heures')}</th><th>%</th><th>${t('Leçons')}</th><th>${t('État')}</th><th>${t('Aujourd’hui')}</th><th></th></tr></thead><tbody>
-    ${rows.map(({ tc, S, st }) => { const w = whatsapp(tc, ctx); return html`<tr><td>${tc.name}</td><td>${num1(S.hours)} / ${num1(S.due)}</td><td><${Chip} tone=${S.due && S.rate < THRESHOLDS.hours ? 'bad' : 'ok'}>${num1(S.rate)} %<//></td><td>${S.lessonsDone} / ${num1(S.lessonsPlanned)}</td><td>${statusChip(overall(S))}</td>
+    ${rows.map(({ tc, S, st }) => { const w = whatsapp(tc, ctx), nt = noTimetable(ctx, tc.id).length > 0; return html`<tr><td>${tc.name}</td><td>${nt ? num1(S.hours) + ' h' : num1(S.hours) + ' / ' + num1(S.due)}</td><td>${nt ? html`<${Chip} tone="warn">${t('emploi du temps ?')}<//>` : html`<${Chip} tone=${S.due && S.rate < THRESHOLDS.hours ? 'bad' : 'ok'}>${num1(S.rate)} %<//>`}</td><td>${S.lessonsDone} / ${num1(S.lessonsPlanned)}</td><td>${nt ? null : statusChip(overall(S))}</td>
       <td><${Chip} tone=${st[0]}>${st[1]}<//></td><td style="display:flex;gap:6px;justify-content:flex-end">${st[0] === 'bad' && w ? html`<a class="btn sm" style="background:#25D366" href=${w} target="_blank" rel="noreferrer">${t('Rappeler')}</a>` : null}<button class="btn soft sm" onClick=${() => setUI({ scope: tc.id === myId() ? 'me' : tc.id })}>${t('Voir')}</button></td></tr>`; })}</tbody></table></div></div>`;
 }
 function DeptClasses({ ctx }) {
@@ -78,25 +80,28 @@ export function Home() {
   const p = state.ui.period && state.ui.period.ps ? state.ui.period : periodOf(ctx, (state.ui.period && state.ui.period.kind) || 'term');
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, minISO(ctx.today, ctx.ye));
   const who = tid ? (ctx.teacher(tid) || {}).name : t('Département {d}', { d: state.data.dept.discipline || '' });
-  const st = overall(S);
+  const noTT = noTimetable(ctx, tid), unreliable = noTT.length > 0 && S.hours > 0;
+  const st = unreliable ? 'none' : overall(S);
   const data = series(ctx, tid, p.ps, p.pe, unitFor(p));
   const rows = tid ? classProgress(ctx, tid) : [];
   const worst = rows.filter(r => r.status === 'late' || r.status === 'slight').sort((a, b) => b.lag - a.lag)[0];
   const lag = S.lessonsPlanned - S.lessonsDone;
-  const lateTeachers = !tid ? ctx.teachers.filter(x => overall(stats(ctx, x.id, p.ps, p.pe)) === 'late').length : 0;
+  const lateTeachers = !tid ? ctx.teachers.filter(x => !noTimetable(ctx, x.id).length && overall(stats(ctx, x.id, p.ps, p.pe)) === 'late').length : 0;
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
     <${ScopeBar} ctx=${ctx} />
     <div class="hero stack" style="gap:10px"><div><p class="sub">${fmt(ctx.today, lang, { weekday: true })}</p><h1>${t('Bonjour')}${me() && firstName(me().name) ? ', ' + firstName(me().name) : ''} 👋</h1><p class="sub">${who} · ${state.data.dept.name}</p></div>
-      ${S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${S.due ? num1(S.rate) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('couverture horaire')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
+      ${unreliable ? html`<div><div style="font-size:44px;font-weight:800;line-height:1">${num1(S.hours)} h</div><div class="sub">${t('heures faites')} · ${periodLabel(p, ctx)}</div></div>
+        <a class="notice" href=${ap ? '#/settings/team' : '#/home'}><${Icon} n="alert" size="18" /><span>${ap ? t('Emploi du temps manquant : {n}. Sans lui, les heures dues et les pourcentages ne peuvent pas être calculés.', { n: noTT.map(x => x.short || x.name).join(', ') }) : t('Votre emploi du temps n’est pas encore renseigné : demandez à votre animateur pédagogique de l’ajouter.')}</span></a>`
+      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${S.due ? num1(S.rate) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('couverture horaire')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
       <${Bar} value=${S.rate} /><div class="sub">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })}${S.dueFull > S.due ? ' · ' + t('{f} h prévues sur toute la période', { f: num1(S.dueFull) }) : ''}</div>`
         : html`<p style="font-size:15px;max-width:34em">${ap && !tid ? t('Bienvenue dans votre département. Suivez les étapes ci-dessous : dès que les emplois du temps et les premières saisies seront là, vos statistiques apparaîtront ici.') : t('Vos statistiques apparaîtront ici dès que votre emploi du temps sera renseigné et que vous aurez saisi vos premiers cours.')}</p>`}</div>
     ${ap && empty ? html`<${Setup} ctx=${ctx} />` : ap && scope === 'dept' ? html`<${Setup} ctx=${ctx} />` : null}
     ${tid && tid === myId() ? html`<${TodayCard} ctx=${ctx} tid=${tid} />` : null}
     <div class="card"><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
-    <${Alerts} S=${S} />
+    <${Alerts} S=${unreliable ? { ...S, alerts: S.alerts.filter(a => a.kind !== 'hours') } : S} />
     <div class="kpis">
-      <div class=${'kpi ' + (S.due && S.rate < THRESHOLDS.hours ? 'bad' : '')}><span class="l">${t('Heures faites')}</span><span class="v">${num1(S.hours)}<small> / ${num1(S.due)} h</small></span><${Bar} value=${S.rate} tone=${S.due && S.rate < THRESHOLDS.hours ? 'bad' : ''} /><span class="s">${S.gap >= 0 ? t('+{n} h par rapport aux heures dues', { n: num1(S.gap) }) : t('{n} h par rapport aux heures dues', { n: num1(S.gap) })}</span></div>
+      <div class=${'kpi ' + (!unreliable && S.due && S.rate < THRESHOLDS.hours ? 'bad' : '')}><span class="l">${t('Heures faites')}</span><span class="v">${num1(S.hours)}<small>${unreliable ? ' h' : ' / ' + num1(S.due) + ' h'}</small></span><${Bar} value=${unreliable ? 0 : S.rate} tone=${!unreliable && S.due && S.rate < THRESHOLDS.hours ? 'bad' : ''} /><span class="s">${S.gap >= 0 ? t('+{n} h par rapport aux heures dues', { n: num1(S.gap) }) : t('{n} h par rapport aux heures dues', { n: num1(S.gap) })}</span></div>
       <div class=${'kpi ' + (S.lessonsPlanned && S.rateL < THRESHOLDS.lessons ? 'bad' : '')}><span class="l">${t('Leçons')}</span><span class="v">${S.lessonsDone}<small> / ${num1(S.lessonsPlanned)}</small></span><${Bar} value=${S.rateL} tone=${S.lessonsPlanned && S.rateL < THRESHOLDS.lessons ? 'bad' : ''} /><span class="s">${S.planned ? (lag > 1 ? t('Retard de {n} leçon(s)', { n: num1(lag) }) : lag <= -1.5 ? t('Avance de {n} leçon(s)', { n: num1(-lag) }) : t('Au rythme prévu')) : t('Aucun plan de leçons défini')}</span></div>
       <div class="kpi"><span class="l">${t('Sur l’année')}</span><span class="v">${num1(Y.rateYH)}<small> %</small></span><${Bar} value=${Y.rateYH} /><span class="s">${t('{h} h sur {p} h prévues', { h: num1(Y.hours), p: num1(Y.planYear.hours) })}</span></div>
       <div class="kpi"><span class="l">${tid ? t('Mon état') : t('État du département')}</span><span class="v" style="font-size:22px;padding-top:4px">${statusChip(st)}</span><span class="s">${tid ? (worst ? t('Le plus en retard : {c} ({n} leçon(s))', { c: worst.name, n: num1(worst.lag) }) : t('Aucun retard marquant')) : (lateTeachers ? t('{n} collègue(s) en retard', { n: lateTeachers }) : t('Aucun collègue en retard'))}</span></div>

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
+import { followUp, noTimetable, makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
 import { newDept } from '../site/js/defaults.js';
 
 const S = (d, c, h, extra = {}) => ({ d, c, h, ...extra });
@@ -122,4 +122,19 @@ test('créneau à dates précises (samedis réellement tenus : 19/09 et 03/10) :
   assert.equal(dueRange(c, 'K', '2026-09-12', '2026-09-12').due, 0);
   assert.equal(todaySlots(c, 'K', '2026-09-19').rows.length, 1);
   assert.equal(todaySlots(c, 'K', '2026-09-26').rows.length, 0);
+});
+
+test('fiche d’inspection et fiche pédagogique lisent les mêmes saisies : une saisie change les deux', () => {
+  const st = mk({ assign: [{ id: 'K:LSA', teacherId: 'K', classId: 'LSA', th: 10, pr: 0, hours: 40 }] });
+  const before = makeCtx(st, '2026-10-13'), h0 = stats(before, null, ...P1).hours, f0 = followUp(before, ...P1).total.hours;
+  st.entries = [E('e1', 'K', '2026-09-14')];
+  const after = makeCtx(st, '2026-10-13');
+  assert.equal(stats(after, null, ...P1).hours - h0, 2); assert.equal(followUp(after, ...P1).total.hours - f0, 2);
+  assert.equal(followUp(after, ...P1).total.th, stats(after, null, ...P1).lessonsDone, 'mêmes leçons faites');
+});
+
+test('emploi du temps manquant détecté (pas de pourcentage trompeur)', () => {
+  const st = mk(); st.teachers[1].slots = [];
+  const c = makeCtx(st, '2026-10-13');
+  assert.deepEqual(noTimetable(c, null).map(x => x.id), ['N']); assert.equal(noTimetable(c, 'K').length, 0);
 });

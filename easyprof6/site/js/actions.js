@@ -1,7 +1,7 @@
 // Actions sur les données : chaque modification est datée (u) ; l'enregistrement le plus récent gagne à la synchronisation.
 import { state, update, myId, nextU, observe } from './store.js';
 import { scheduleSync } from './sync.js';
-import { minutesBetween, slotHours, endFor, normTime } from './dates.js';
+import { minutesBetween, slotHours, endFor, normTime, fixSlot } from './dates.js';
 import { isLessonType } from './consts.js';
 import { mergeMeta } from './shared/merge.js';
 
@@ -63,11 +63,7 @@ export function applyTiming(patch) {
   const old = state.data.dept, dept = stamp({ ...old, ...patch });
   const teachers = state.data.teachers.map(tc => {
     if (!(tc.slots || []).some(s => s.st)) return tc;
-    const slots = tc.slots.map(s => {
-      if (!s.st) return s;
-      const st = normTime(s.st), en = normTime(s.en) || endFor(st, s.h, old.breaks, old.period), h = slotHours(st, en, dept.breaks, dept.period);
-      return h > 0 ? { ...s, st, en, h } : s;
-    });
+    const slots = tc.slots.map(s => (s.st ? fixSlot({ ...s, en: normTime(s.en) || endFor(normTime(s.st), s.h, old.breaks, old.period) }, dept.breaks, dept.period) : s));
     return stamp({ ...tc, slots });
   });
   setData({ dept, teachers });

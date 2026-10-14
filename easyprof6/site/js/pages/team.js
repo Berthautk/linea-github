@@ -9,7 +9,7 @@ import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept, saveClass
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
 import { WaButtons } from '../whatsapp.js';
-import { dayName, fmt, slotHours, endFor, normTime } from '../dates.js';
+import { dayName, fmt, slotHours, endFor, normTime, fixSlot } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, phone, fresh = true }) {
@@ -89,9 +89,9 @@ function Slots({ tc, ctx }) {
   const total = slots.reduce((s, x) => s + (+x.h || 0), 0);
   const breaks = ctx.dept.breaks, P = ctx.dept.period || 60;
   const endOf = (s) => normTime(s.en) || (s.st ? endFor(s.st, s.h, breaks, P) : '');
-  useEffect(() => { if (slots.some(s => (s.st && normTime(s.st) !== s.st) || (s.en && normTime(s.en) !== s.en))) saveTeacher(tc.id, { slots: slots.map(s => ({ ...s, ...(s.st ? { st: normTime(s.st) } : {}), ...(s.en ? { en: normTime(s.en) } : {}) })) }); });
+  useEffect(() => { const fixed = slots.map(s => fixSlot(s, breaks, P)); if (JSON.stringify(fixed) !== JSON.stringify(slots)) saveTeacher(tc.id, { slots: fixed }); });
   // heure de début ou de fin modifiée : la durée est recalculée (pauses déduites) ; durée modifiée : l'heure de fin suit
-  const setTimes = (i, s, patch) => { const n = { ...s, ...patch }, h = n.st && n.en ? slotHours(n.st, n.en, breaks, P) : 0; set(i, { ...patch, ...(h > 0 ? { h } : {}) }); };
+  const setTimes = (i, s, patch) => { const n = { ...s, ...patch }; set(i, n.st && n.en ? { ...patch, ...fixSlot(n, breaks, P) } : patch); };
   const setDur = (i, s, h) => set(i, { h, ...(s.st ? { en: endFor(s.st, h, breaks, P) } : {}) });
   return html`<div class="card"><div class="card-h"><h3>${t('Emploi du temps de la semaine')}</h3><${Chip} tone="info">${num1(total)} h / ${t('semaine')}<//></div>
     ${!ctx.classes.length ? html`<div class="notice"><${Icon} n="alert" size="18" /><span class="grow">${t('Créez d’abord les classes de ce département : sans elles, on ne peut pas choisir la classe d’un cours.')}</span><a class="btn sm" href="#/settings/classes">${t('Créer les classes')}</a></div>

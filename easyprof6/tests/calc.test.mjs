@@ -271,3 +271,13 @@ test('applyTiming : les durées stockées sont recalculées (heures de début/fi
   act.applyTiming({ period: 50, breaks: [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }] });
   const sl = store.state.data.teachers[0].slots; assert.deepEqual(sl.map(s => s.h), [1, 2]); assert.equal(sl[1].st, '13:20'); assert.equal(store.state.data.dept.period, 50);
 });
+
+test('fixSlot : 7:30→9:20 en périodes de 50 min = 2 périodes, fin ramenée à 9:10 ; stable ; 60 min inchangé', async () => {
+  const { fixSlot } = await import('../site/js/dates.js');
+  const B = [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }];
+  const a = fixSlot({ st: '07:30', en: '09:20', h: 2.25 }, B, 50); assert.equal(a.h, 2); assert.equal(a.en, '09:10');
+  assert.deepEqual(fixSlot(a, B, 50), a, 'idempotent');
+  const b = fixSlot({ st: '13:20', en: '15:00', h: 2 }, B, 50); assert.equal(b.h, 2); assert.equal(b.en, '15:00');
+  const c = fixSlot({ st: '07:30', en: '09:30', h: 2 }, undefined, 60); assert.equal(c.h, 2); assert.equal(c.en, '09:30');
+  assert.equal(fixSlot({ st: '07:30', h: 1.5 }, undefined, 60).en, '09:00');
+});

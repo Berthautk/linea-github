@@ -46,7 +46,8 @@ const brk = (breaks) => (breaks || DEFAULT_BREAKS).map(b => [timeToMin(b.f), tim
 export function slotHours(st, en, breaks, period = 60) {
   const a = timeToMin(st), b = timeToMin(en); if (isNaN(a) || isNaN(b) || b <= a) return 0;
   let m = b - a; for (const [f, t] of brk(breaks)) m -= Math.max(0, Math.min(b, t) - Math.max(a, f));
-  return Math.max(0, Math.round(m / period * 4) / 4);
+  const q = period === 60 ? 4 : 2;   // 60 min : au quart d'heure ; périodes plus courtes : à la demi-période près
+  return Math.max(0, Math.round(m / period * q) / q);
 }
 /** Heure de fin d'un cours qui commence à `st` et dure `h` heures de cours (pauses non comptées). */
 export function endFor(st, h, breaks, period = 60) {
@@ -60,4 +61,13 @@ export function creditMinutes(st, en, breaks, period = 60) {
   const a = timeToMin(st), b = timeToMin(en); if (isNaN(a) || isNaN(b) || b <= a) return 0;
   let m = b - a; for (const [f, t] of brk(breaks)) m -= Math.max(0, Math.min(b, t) - Math.max(a, f));
   return Math.max(0, Math.round(Math.max(0, m) * 60 / (period || 60)));
+}
+
+/** Cours de la semaine remis en ordre : heures lues en 24 h, durée recalculée, et, pour des périodes de moins de 60 min, heure de fin ramenée sur la grille des périodes (7:30 + 2 périodes de 50 min = 9:10). */
+export function fixSlot(s, breaks, period = 60) {
+  if (!s || !s.st) return s;
+  const st = normTime(s.st); let en = normTime(s.en) || endFor(st, s.h, breaks, period), h = slotHours(st, en, breaks, period);
+  if (!(h > 0)) return s;
+  if (period !== 60) en = endFor(st, h, breaks, period);
+  return { ...s, st, en, h };
 }

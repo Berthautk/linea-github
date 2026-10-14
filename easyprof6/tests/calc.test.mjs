@@ -214,3 +214,14 @@ test('à compléter : cours prévus non saisis depuis la rentrée', () => {
   const R = gapReport(makeCtx(st, '2026-09-15'), null);
   assert.ok(R.missing.length > 3 && R.hours > 5, 'beaucoup de cours manquants'); assert.ok(!R.missing.some(m => m.iso === '2026-09-07' && m.row.c === 'F3A'), 'ce qui est saisi n’est plus listé');
 });
+
+test('nouveaux motifs : journée de l’enseignant, établissement fermé, examens… retirent les heures dues ; transport, congé, maladie les laissent dues', async () => {
+  const { REASONS, reasonOf } = await import('../site/js/consts.js');
+  for (const id of ['holiday', 'teacherday', 'pedagogic', 'school', 'council', 'exam', 'closure', 'national', 'classaway']) assert.equal(reasonOf(id).out, true, id);
+  for (const id of ['sick', 'leave', 'personal', 'mission', 'transport', 'unknown', 'other']) assert.equal(reasonOf(id).out, false, id);
+  assert.equal(REASONS[REASONS.length - 1].id, 'other', '« autre » reste le motif de repli');
+  assert.ok(REASONS.every(r => r.fr && r.en && r.icon), 'chaque motif a son texte français et anglais');
+  const st = mk(); st.teachers = [{ id: 'K', name: 'Kamdem', short: 'K', slots: [S(1, 'F3A', 2, { st: '07:30' })] }];
+  st.entries = [{ id: 'a', teacherId: 'K', type: 'absence', date: '2026-10-05', reason: 'teacherday', minutes: 0 }];
+  const d = dueRange(makeCtx(st, '2026-10-13'), 'K', '2026-10-05', '2026-10-05'); assert.equal(d.due, 0); assert.equal(d.excused, 2);
+});

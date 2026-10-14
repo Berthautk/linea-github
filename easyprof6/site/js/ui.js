@@ -3,6 +3,7 @@ import { html, useEffect, useState } from './vendor/preact-htm.js';
 import { Icon } from './icons.js';
 import { t } from './i18n.js';
 import { state, update } from './store.js';
+import { REASONS } from './consts.js';
 
 export const Chip = ({ tone = '', style, children }) => html`<span class=${'chip ' + tone} style=${style}>${children}</span>`;
 // Champ : le libellé enveloppe la zone de saisie (accessible, et un appui sur le libellé active le champ). `group` pour les boutons à choix.
@@ -60,3 +61,11 @@ export function useLocal(key, init) {
 }
 export const copyText = async (text) => { try { await navigator.clipboard.writeText(text); return true; } catch { return false; } };
 export const num1 = (x) => (Math.round(x * 10) / 10).toString().replace('.', ',');
+
+/** Liste de motifs, en deux groupes : ce qui n'est pas la faute de l'enseignant (heures retirées des heures dues) et les absences (heures non faites). `only` : ne garder qu'un groupe. */
+export function ReasonSelect({ value, onChange, only }) {
+  const out = (state.data && state.data.dept && state.data.dept.dueOut) || {}, isOut = (r) => (out[r.id] != null ? !!out[r.id] : r.out);
+  const opt = (r) => html`<option value=${r.id}>${r.icon} ${t(r.fr)}</option>`;
+  const a = REASONS.filter(isOut), b = REASONS.filter(r => !isOut(r));
+  return html`<select class="input" value=${value} onChange=${onChange}>${only === 'out' ? a.map(opt) : only === 'absent' ? b.map(opt) : html`<optgroup label=${t('Pas la faute de l’enseignant (heures retirées des heures dues)')}>${a.map(opt)}</optgroup><optgroup label=${t('Absence de l’enseignant (heures non faites)')}>${b.map(opt)}</optgroup>`}</select>`;
+}

@@ -1,5 +1,5 @@
 // Fichier généré par tools/gen-sw.mjs : ne pas modifier à la main.
-const VERSION = '0aa34bb449';
+const VERSION = '1c8764bb3e';
 const CACHE = 'ep6-' + VERSION;
 const ASSETS = [
  "/",

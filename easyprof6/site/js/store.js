@@ -38,6 +38,9 @@ function loadUser(username) {
   skew = +state.sync.skew || 0;
   observe([state.data.dept, ...state.data.teachers, ...state.data.classes, ...state.data.assign, ...state.data.regul, ...state.data.entries]);
 }
+/** Garde la session (jeton compris) sur l'appareil : un jeton renouvelé ou remplacé après un changement de mot de passe doit survivre à un rechargement. */
+export const persistSession = () => { if (state.session) ls.set(K.session, state.session); };
+export function setToken(token) { if (!state.session || !token) return; update(s => { s.session = { ...s.session, token }; }); persistSession(); }
 export function setLanguage(l) { state.lang = l; setLang(l); ls.set(K.lang, l); update(() => { }); }
 export function startSession(session, meta) {
   ls.set(K.session, session);

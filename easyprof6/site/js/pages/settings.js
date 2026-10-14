@@ -4,7 +4,7 @@ import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Field, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
-import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU } from '../store.js';
+import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken } from '../store.js';
 import { saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
 import { makeCtx, catchUp } from '../calc.js';
 import * as D from '../dates.js';
@@ -45,7 +45,7 @@ function RecoveryCard() {
 
 function Profile() {
   const m = me(), [pw, setPw] = useState({ old: '', password: '' }), [msg, setMsg] = useState(null);
-  const change = async (e) => { e.preventDefault(); setMsg(null); try { await api('/me/password', pw, state.session.token); setMsg({ ok: t('Mot de passe modifié.') }); setPw({ old: '', password: '' }); } catch (x) { setMsg({ err: x.message }); } };
+  const change = async (e) => { e.preventDefault(); setMsg(null); try { const r = await api('/me/password', pw, state.session.token); setToken(r.token); setMsg({ ok: t('Mot de passe modifié.') }); setPw({ old: '', password: '' }); } catch (x) { setMsg({ err: x.message }); } };
   const inst = window.__epInstall;
   return html`<div class="page"><${Back} title=${t('Mon profil')} />
     <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><input class="input" value=${m ? m.name : ''} onChange=${(e) => e.target.value.trim() && saveTeacher(myId(), { name: e.target.value.trim() })} /><//>
@@ -56,6 +56,8 @@ function Profile() {
       <${Field} label=${t('Nouveau mot de passe')} hint=${t('Au moins 6 caractères.')}><input class="input" type="password" autocomplete="new-password" value=${pw.password} onInput=${(e) => setPw({ ...pw, password: e.target.value })} required /><//></div>
       ${msg && msg.ok ? html`<div class="ok">${msg.ok}</div>` : null}${msg && msg.err ? html`<div class="err">${msg.err}</div>` : null}<button class="btn" style="align-self:flex-start">${t('Changer le mot de passe')}</button></form>
     ${isAP() ? html`<${RecoveryCard} />` : null}
+    <div class="card stack"><h3>${t('Synchronisation')}</h3><p class="sub">${state.sync.last ? t('Dernière synchronisation : {h} (il y a {m} min).', { h: new Date(state.sync.last).toLocaleTimeString(state.lang === 'en' ? 'en-GB' : 'fr-FR', { hour: '2-digit', minute: '2-digit' }), m: Math.max(0, Math.round((Date.now() - state.sync.last) / 60000)) }) : t('Pas encore synchronisé sur cet appareil.')} ${t('Vos saisies partent toutes seules dès qu’il y a du réseau ; celles de vos collègues arrivent à l’ouverture de l’application, puis toutes les 3 minutes.')}</p>
+      <button class="btn soft" style="align-self:flex-start" onClick=${() => { syncNow(); setToast(t('Synchronisation lancée.')); }}><${Icon} n="refresh" />${t('Synchroniser maintenant')}</button></div>
     <div class="card stack"><h3>${t('Cet appareil')}</h3>${inst ? html`<button class="btn accent" onClick=${async () => { inst.prompt(); await inst.userChoice; window.__epInstall = null; update(() => { }); }}><${Icon} n="download" />${t('Installer Rekort sur ce téléphone')}</button>` : html`<p class="sub">${t('Pour installer l’application : menu du navigateur › « Ajouter à l’écran d’accueil » ou « Installer l’application ».')}</p>`}
       <button class="btn soft" onClick=${() => logout()}><${Icon} n="logout" />${t('Se déconnecter')}</button>
       <button class="btn danger" onClick=${() => confirmDialog({ title: t('Effacer les données de cet appareil ?'), message: t('Vos données restent enregistrées sur le serveur et reviendront à la prochaine connexion. Les saisies pas encore synchronisées seraient perdues.'), confirm: t('Effacer et se déconnecter'), danger: true, onConfirm: () => logout({ wipe: true }) })}>${t('Se déconnecter et effacer cet appareil')}</button></div></div>`;

@@ -170,3 +170,46 @@ test('transfert du rôle d’animateur : l’autre devient animateur, l’ancien
   const rc = await call('/me/recovery', { password: 'astha1' }, la.token); assert.equal(rc.status, 200); assert.equal(rc.recovery.length, 14);
   assert.equal((await call('/recover', { username: 'astha', code: rc.recovery, password: 'neuf123' })).status, 200, 'le nouveau code fonctionne');
 });
+
+test('sécurité : verrouillage fiable même avec des requêtes simultanées, aussi sur les routes à mot de passe', async () => {
+  fresh(); const ap = await newDept();
+  const rs = await Promise.all(Array.from({ length: 30 }, () => call('/login', { username: 'kamdem', password: 'faux-faux' })));
+  assert.ok(rs.filter(r => r.status === 429).length >= 15, 'la majorité des tentatives simultanées est bloquée (' + rs.filter(r => r.status === 429).length + ')');
+  assert.equal((await call('/login', { username: 'kamdem', password: 'secret1' })).status, 429, 'même le bon mot de passe est refusé pendant le verrouillage');
+  fresh(); const ap2 = await newDept(); let last;
+  for (let i = 0; i < 12; i++) last = await call('/me/recovery', { password: 'mauvais' }, ap2.token);
+  assert.equal(last.status, 429, 'deviner le mot de passe via /me/recovery est limité aussi');
+  for (let i = 0; i < 12; i++) last = await call('/recover', { username: 'kamdem', code: 'AAAA-BBBB-CCCC', password: 'neuf123' });
+  assert.equal(last.status, 429, 'et via /recover');
+});
+
+test('sécurité : changement de mot de passe, réinitialisation, récupération et renommage annulent les anciens jetons', async () => {
+  fresh(); const ap = await newDept();
+  const a = await call('/team/add', { name: 'Mme ASTHA Noura', password: 'astha1' }, ap.token), la = await call('/login', { username: 'astha', password: 'astha1' });
+  assert.equal((await call('/me', {}, la.token)).status, 200);
+  const rs = await call('/team/reset', { teacherId: a.teacher.id, password: 'astha2' }, ap.token); assert.equal(rs.status, 200);
+  assert.equal((await call('/me', {}, la.token)).status, 401, 'après réinitialisation, l’ancien jeton ne marche plus');
+  const lb = await call('/login', { username: 'astha', password: 'astha2' }); assert.equal((await call('/me', {}, lb.token)).status, 200);
+  const cp = await call('/me/password', { old: 'astha2', password: 'astha3' }, lb.token); assert.equal(cp.status, 200); assert.ok(cp.token);
+  assert.equal((await call('/me', {}, lb.token)).status, 401, 'l’ancien jeton est annulé après changement de mot de passe');
+  assert.equal((await call('/me', {}, cp.token)).status, 200, 'le nouveau jeton, renvoyé par le serveur, fonctionne');
+  const rn = await call('/team/rename', { teacherId: a.teacher.id, username: 'noura' }, ap.token); assert.equal(rn.status, 200);
+  assert.equal((await call('/me', {}, cp.token)).status, 401, 'l’ancien identifiant ne donne plus accès');
+  const again = await call('/team/add', { name: 'Autre ASTHA', username: 'astha', password: 'autre1' }, ap.token); assert.equal(again.status, 200, 'l’identifiant libéré peut être réutilisé');
+  assert.equal((await call('/me', {}, cp.token)).status, 401, 'un ancien jeton ne prend pas le compte du nouvel « astha »');
+});
+
+test('sécurité : un enseignant ne peut pas bloquer les modifications de l’animateur avec une date démesurée ; corps mal formés sans erreur 500 ; /recover ne révèle rien', async () => {
+  fresh(); const ap = await newDept();
+  const a = await call('/team/add', { name: 'Mme ASTHA Noura', password: 'astha1' }, ap.token), la = await call('/login', { username: 'astha', password: 'astha1' });
+  const far = Date.now() + 9e12;
+  await call('/sync', { push: { meta: { teachers: [{ id: a.teacher.id, name: 'Alice', phone: '1', u: far }] } } }, la.token);
+  const s = await call('/sync', { have: {}, push: { meta: { ...ap.meta, teachers: [...ap.meta.teachers, { ...a.teacher, name: 'Alice AP', slots: [{ d: 1, c: 'c1', h: 2 }], u: Date.now() + 100 }] } } }, ap.token);
+  const t = s.meta.teachers.find(x => x.id === a.teacher.id); assert.equal(t.slots.length, 1, 'l’animateur peut toujours modifier l’emploi du temps'); assert.ok(t.u < Date.now() + 4e5, 'date plafonnée');
+  for (const body of [{ push: { e: { [a.teacher.id]: null } } }, { push: { meta: { teachers: 5, classes: 'x' } } }, { push: { e: 'x' } }, { push: { meta: { teachers: [{ id: a.teacher.id, slots: [null, 3] }] } } }]) {
+    const r = await call('/sync', body, la.token); assert.ok(r.status < 500, 'pas d’erreur 500 pour ' + JSON.stringify(body).slice(0, 50));
+    const r2 = await call('/sync', body, ap.token); assert.ok(r2.status < 500);
+  }
+  const r1 = await call('/recover', { username: 'inconnu', code: 'AAAA-BBBB-CCCC', password: 'neuf123' }), r2 = await call('/recover', { username: 'astha', code: 'AAAA-BBBB-CCCC', password: 'neuf123' }), r3 = await call('/recover', { username: 'kamdem', code: 'AAAA-BBBB-CCCC', password: 'neuf123' });
+  assert.deepEqual([r1.status, r2.status], [r3.status, r3.status], 'même réponse pour un inconnu, un enseignant et un animateur');
+});

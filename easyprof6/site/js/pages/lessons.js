@@ -10,13 +10,13 @@ import { deleteEntry, restoreEntry, saveEntry } from '../actions.js';
 import { currentTid, ScopeBar } from '../widgets.js';
 import { TYPES, REASONS, typeOf, reasonOf } from '../consts.js';
 import { fmt, mondayOf, addDays } from '../dates.js';
-import { Field as F2, Seg } from '../ui.js';
+import { Field as F2, Seg, ReasonSelect } from '../ui.js';
 import { Gaps } from './gaps.js';
 
 function AbsenceEdit({ e, onDone }) {
   const [f, setF] = useState({ reason: e.reason || 'other', date: e.date, note: e.note || '' });
   return html`<${Modal} title=${t('Modifier le jour sans cours')} onClose=${closeModal}>
-    <${Field} label=${t('Motif')}><select class="input" value=${f.reason} onChange=${(x) => setF({ ...f, reason: x.target.value })}>${REASONS.map(r => html`<option value=${r.id}>${r.icon} ${t(r.fr)}</option>`)}</select><//>
+    <${Field} label=${t('Motif')}><${ReasonSelect} value=${f.reason} onChange=${(x) => setF({ ...f, reason: x.target.value })} /><//>
     <${Field} label=${t('Date')}><input class="input" type="date" value=${f.date} onInput=${(x) => setF({ ...f, date: x.target.value })} /><//>
     <${Field} label=${t('Précision')}><input class="input" value=${f.note} onInput=${(x) => setF({ ...f, note: x.target.value })} /><//>
     <button class="btn block" onClick=${() => { saveEntry({ ...e, ...f }); closeModal(); setToast(t('Enregistré.')); }}>${t('Enregistrer')}</button><//>`;

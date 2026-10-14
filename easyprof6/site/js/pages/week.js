@@ -4,7 +4,7 @@
 import { html, useState } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
-import { Chip, Empty, Field, Modal, Seg, openModal, closeModal, num1 } from '../ui.js';
+import { Chip, Empty, Field, Modal, Seg, ReasonSelect, openModal, closeModal, num1 } from '../ui.js';
 import { EntryForm } from './entry.js';
 import { makeCtx, stats, todaySlots, nextNumber } from '../calc.js';
 import { state, setUI, isAP, myId, setToast } from '../store.js';
@@ -15,7 +15,6 @@ import { addDays, mondayOf, fmt, timeToMin, minToTime, endFor } from '../dates.j
 
 const NOTE = 'Saisi par l’animateur pédagogique';
 const LATE = [10, 15, 20, 30, 45, 60];
-const ABSENT_WHY = REASONS.filter(r => !r.out);
 
 /** Enregistre un cours comme fait : retard éventuel, nombre de leçons, numéro de la première leçon. */
 export function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'lesson', title = '' } = {}) {
@@ -53,7 +52,7 @@ function Round({ ctx, tid, iso, row }) {
   return html`<${Modal} title=${cname} onClose=${closeModal}>
     <p class="sub" style="text-transform:capitalize">${fmt(iso, lang, { weekday: true, noYear: true })} · ${row.st ? row.st + ' → ' + (row.en || endFor(row.st, row.h, ctx.dept.breaks)) + ' · ' : ''}${row.h} h</p>
     <${Seg} full options=${[{ id: 'present', label: t('Présent') }, { id: 'late', label: t('En retard') }, { id: 'absent', label: t('Absent') }]} value=${st} onChange=${setSt} />
-    ${st === 'absent' ? html`<${Field} label=${t('Motif')}><select class="input" value=${why} onChange=${(e) => setWhy(e.target.value)}>${ABSENT_WHY.map(r => html`<option value=${r.id}>${r.icon} ${t(r.fr)}</option>`)}</select><//>`
+    ${st === 'absent' ? html`<${Field} label=${t('Motif')}><${ReasonSelect} value=${why} onChange=${(e) => setWhy(e.target.value)} /><//>`
       : html`${st === 'late' ? html`<${Field} label=${t('Minutes de retard')}><div class="row" style="flex-wrap:wrap;gap:8px">${LATE.filter(m => m < row.h * 60).map(m => html`<button class=${'btn sm ' + (late === m ? '' : 'soft')} onClick=${() => setLate(m)}>${m}</button>`)}<input class="input" type="number" min="0" inputmode="numeric" style="width:90px" value=${late || ''} onInput=${(e) => setLate(+e.target.value || 0)} /></div><//>` : null}
         <${Field} label=${t('Type de séance')}><select class="input" value=${type} onChange=${(e) => setType(e.target.value)}>${TYPES.map(x => html`<option value=${x.id}>${x.icon} ${t(x.fr)}</option>`)}</select><//>
         ${lesson ? html`<div class="grid2"><${Field} label=${t('Leçons faites')}><div class="row" style="gap:8px">${[1, 2, 3].map(x => html`<button class=${'btn sm ' + (k === x ? '' : 'soft')} onClick=${() => setK(x)}>${x}</button>`)}</div><//>

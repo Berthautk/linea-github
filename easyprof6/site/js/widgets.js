@@ -2,7 +2,7 @@
 import { html } from './vendor/preact-htm.js';
 import { t, getLang } from './i18n.js';
 import { Icon } from './icons.js';
-import { Seg, Field, Chip, openModal, closeModal, Modal } from './ui.js';
+import { Seg, Field, Chip, ReasonSelect, openModal, closeModal, Modal } from './ui.js';
 import { periodOf, shiftPeriod, todaySlots, nextNumber } from './calc.js';
 import { fmt, dayName, dow, addDays, monthName, minToTime, timeToMin } from './dates.js';
 import { state, setUI, isAP, myId, setToast, getScope, setScope } from './store.js';
@@ -75,7 +75,7 @@ function AbsenceSheet({ ctx, tid, preset }) {
   const go = () => { const n = declareAbsence({ teacherId: tid, from: f.from, to: f.to, reason: f.reason, note: f.note }); closeModal(); setToast(n ? t('{n} jour(s) sans cours enregistré(s).', { n }) : t('Déjà déclaré pour ces dates.')); };
   return html`<${Modal} title=${t('Pas de cours')} onClose=${closeModal}>
     <p class="sub">${t('Un jour déclaré n’est plus compté comme « saisie manquante » et aucun rappel n’est envoyé. Jour férié et activités scolaires ne comptent pas comme absence ; maladie, empêchement et mission comptent comme heures non faites.')}</p>
-    <${Field} label=${t('Motif')}><select class="input" value=${f.reason} onChange=${(e) => set('reason', e.target.value)}>${REASONS.map(r => html`<option value=${r.id}>${r.icon} ${t(r.fr)}</option>`)}</select><//>
+    <${Field} label=${t('Motif')}><${ReasonSelect} value=${f.reason} onChange=${(e) => set('reason', e.target.value)} /><//>
     <div class="grid2"><${Field} label=${t('Du')}><input class="input" type="date" value=${f.from} onInput=${(e) => set('from', e.target.value)} /><//><${Field} label=${t('Au')}><input class="input" type="date" min=${f.from} value=${f.to} onInput=${(e) => set('to', e.target.value)} /><//></div>
     <${Field} label=${t('Précision (facultatif)')}><input class="input" value=${f.note} onInput=${(e) => set('note', e.target.value)} /><//>
     <button class="btn block" onClick=${go}>${t('Enregistrer')}</button><//>`;

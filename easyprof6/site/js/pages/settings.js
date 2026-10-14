@@ -118,13 +118,15 @@ function Year() {
 
 function ClassEdit({ cls }) {
   const [f, setF] = useState({ name: cls ? cls.name : '', level: cls ? cls.level : '', cycle: cls ? cls.cycle : '1er', total: cls ? cls.effectif.total || '' : '', girls: cls ? cls.effectif.girls || '' : '', boys: cls ? cls.effectif.boys || '' : '' });
-  const go = (e) => { e.preventDefault(); saveClass({ id: cls && cls.id, name: f.name.trim(), level: f.level.trim(), cycle: f.cycle, effectif: { total: +f.total || (+f.girls || 0) + (+f.boys || 0), girls: +f.girls || 0, boys: +f.boys || 0 } }); closeModal(); setToast(t('Classe enregistrée.')); };
+  const save = () => saveClass({ id: cls && cls.id, name: f.name.trim(), level: f.level.trim(), cycle: f.cycle, effectif: { total: +f.total || (+f.girls || 0) + (+f.boys || 0), girls: +f.girls || 0, boys: +f.boys || 0 } });
+  const go = (e) => { e.preventDefault(); save(); closeModal(); setToast(t('Classe enregistrée.')); };
+  const again = () => { if (!f.name.trim()) return; save(); setToast(t('« {n} » enregistrée. Vous pouvez en ajouter une autre.', { n: f.name.trim() })); setF({ name: '', level: f.level, cycle: f.cycle, total: '', girls: '', boys: '' }); };
   return html`<${Modal} title=${cls ? t('Modifier la classe') : t('Nouvelle classe')} onClose=${closeModal}><form class="stack" onSubmit=${go}>
     <${Field} label=${t('Nom de la classe')}><input class="input" value=${f.name} onInput=${(e) => setF({ ...f, name: e.target.value })} placeholder=${t('Form 3 A  ou  3e A')} required /><//>
     <${Field} label=${t('Niveau')}><input class="input" value=${f.level} onInput=${(e) => setF({ ...f, level: e.target.value })} placeholder=${t('Form 3 / 3e / Lower Sixth…')} /><//>
     <${Field} group label=${t('Cycle')}><${Seg} full options=${[{ id: '1er', label: t('1er cycle') }, { id: '2nd', label: t('2nd cycle') }]} value=${f.cycle} onChange=${(v) => setF({ ...f, cycle: v })} /><//>
     <div class="grid3"><${Field} label=${t('Effectif')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.total} onInput=${(e) => setF({ ...f, total: e.target.value })} /><//><${Field} label=${t('Filles')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.girls} onInput=${(e) => setF({ ...f, girls: e.target.value })} /><//><${Field} label=${t('Garçons')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.boys} onInput=${(e) => setF({ ...f, boys: e.target.value })} /><//></div>
-    <button class="btn block">${t('Enregistrer')}</button></form><//>`;
+    <button class="btn block">${t('Enregistrer')}</button>${cls ? null : html`<button type="button" class="btn soft block" disabled=${!f.name.trim()} onClick=${again}>${t('Enregistrer et ajouter une autre classe')}</button>`}</form><//>`;
 }
 const USUAL = {
   anglophone: [['Form 1 A', 'Form 1', '1er'], ['Form 1 B', 'Form 1', '1er'], ['Form 2 A', 'Form 2', '1er'], ['Form 2 B', 'Form 2', '1er'], ['Form 3 A', 'Form 3', '1er'], ['Form 3 B', 'Form 3', '1er'], ['Form 4 Arts', 'Form 4', '1er'], ['Form 4 Science', 'Form 4', '1er'], ['Form 5 Arts', 'Form 5', '1er'], ['Form 5 Science', 'Form 5', '1er'], ['Lower Sixth Arts', 'Lower Sixth', '2nd'], ['Upper Sixth Arts', 'Upper Sixth', '2nd']],
@@ -136,10 +138,14 @@ function Classes() {
   const addUsual = () => { missing.forEach(([name, level, cycle]) => saveClass({ name, level, cycle, effectif: { total: 0, girls: 0, boys: 0 } })); setToast(t('{n} classe(s) ajoutée(s). Indiquez leurs effectifs.', { n: missing.length })); };
   return html`<div class="page"><${Back} title=${t('Classes')}><button class="btn" onClick=${() => openModal(() => html`<${ClassEdit} />`)}><${Icon} n="plus" />${t('Nouvelle classe')}</button><//>
     <p class="sub">${t('Le nombre de leçons prévues se règle ensuite pour chaque collègue, dans Équipe.')}</p>
-    ${missing.length ? html`<button class="btn soft" style="align-self:flex-start" onClick=${addUsual}><${Icon} n="plus" />${t('Ajouter les classes habituelles')}</button>` : null}
+    ${missing.length && !ctx.classes.length ? html`<button class="btn soft" style="align-self:flex-start" onClick=${addUsual}><${Icon} n="plus" />${t('Ajouter les classes habituelles')}</button>`
+      : missing.length ? html`<button class="btn ghost sm" style="align-self:flex-start" onClick=${() => confirmDialog({ title: t('Ajouter {n} classes habituelles ?', { n: missing.length }), message: missing.map(m => m[0]).join(', ') + '. ' + t('Si vous avez renommé des classes, elles seront ajoutées en plus.'), confirm: t('Ajouter'), onConfirm: addUsual })}>${t('Ajouter des classes habituelles…')}</button>` : null}
     ${!ctx.classes.length ? html`<div class="card"><${Empty} icon="🏫" title=${t('Aucune classe')} text=${t('Ajoutez les classes où le département enseigne.')} /></div>` : html`<div class="card"><div class="list">${ctx.classes.map(c => html`<div class="item"><div class="dot">📘</div><div class="grow"><b>${c.name}</b><span>${c.cycle === '2nd' ? t('2nd cycle') : t('1er cycle')} · ${(c.effectif || {}).total || 0} ${t('élèves')}</span></div>
       <button class="icon-btn" onClick=${() => openModal(() => html`<${ClassEdit} cls=${c} />`)} aria-label=${t('Modifier')}><${Icon} n="edit" /></button>
-      <button class="icon-btn" onClick=${() => confirmDialog({ title: t('Supprimer la classe {c} ?', { c: c.name }), message: t('Les saisies déjà faites dans cette classe restent dans l’historique.'), confirm: t('Supprimer'), danger: true, onConfirm: () => deleteClass(c.id) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}</div></div>`}</div>`;
+      <button class="icon-btn" onClick=${() => confirmDialog({ title: t('Supprimer la classe {c} ?', { c: c.name }), message: t('Les saisies déjà faites dans cette classe restent dans l’historique.'), confirm: t('Supprimer'), danger: true, onConfirm: () => deleteClass(c.id) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}</div></div>`}
+    ${ctx.classes.length ? html`<div class="card stack"><p class="sub">${t('Chaque classe est enregistrée dès que vous touchez « Enregistrer » dans sa fenêtre. Quand la liste est complète, confirmez ci-dessous.')}</p>
+      ${(ctx.dept.setup || {}).classes ? html`<${Chip} tone="ok">✓ ${t('Classes confirmées')}<//>` : null}
+      <button class="btn" style="align-self:flex-start" onClick=${() => { saveDept({ setup: { ...(ctx.dept.setup || {}), classes: true } }); setToast(t('Classes confirmées : {n}.', { n: ctx.classes.length })); location.hash = '#/settings'; }}><${Icon} n="check" />${t('Confirmer mes {n} classes', { n: ctx.classes.length })}</button></div>` : null}</div>`;
 }
 
 function CatchUp({ ctx }) {

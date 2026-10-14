@@ -24,7 +24,7 @@ await step('A. Inscription et configuration par l’animateur', async () => {
     await apPage.getByRole('button', { name: /nouvelle classe/i }).click();
     await apPage.getByLabel(/nom de la classe/i).fill(name); await apPage.getByLabel(/^effectif/i).fill('50');
     if (cycle === '2nd') await apPage.getByRole('button', { name: '2nd cycle' }).click();
-    await apPage.getByRole('button', { name: 'Enregistrer' }).click(); await apPage.waitForTimeout(300);
+    await apPage.getByRole('button', { name: 'Enregistrer', exact: true }).click(); await apPage.waitForTimeout(300);
   }
   ok((await apPage.innerText('body')).includes('Form 3 A') && (await apPage.innerText('body')).includes('Lower Sixth Arts'), 'A3 deux classes créées');
   await go(apPage, url, '#/settings/team');
@@ -124,7 +124,7 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
   await apPage.getByRole('button', { name: 'Présent' }).first().click(); await apPage.waitForTimeout(400);
   ok(/2 h faites sur/.test(await hrs()), 'E6 « Présent » enregistre le cours au nom du collègue (' + h0 + ' → ' + (await hrs()) + ')');
   await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300);
-  await apPage.getByRole('button', { name: 'Détails…' }).first().click(); await apPage.getByRole('button', { name: 'En retard' }).click(); await apPage.getByRole('button', { name: '30', exact: true }).click(); await apPage.getByRole('button', { name: 'Enregistrer' }).click(); await apPage.waitForTimeout(400);
+  await apPage.getByRole('button', { name: 'Détails…' }).first().click(); await apPage.getByRole('button', { name: 'En retard' }).click(); await apPage.getByRole('button', { name: '30', exact: true }).click(); await apPage.getByRole('button', { name: 'Enregistrer', exact: true }).click(); await apPage.waitForTimeout(400);
   ok(/1,5 h faites sur/.test(await hrs()), 'E7 « En retard » de 30 min : 1,5 h comptées');
   // en-tête libre et mode d'emploi
   await go(apPage, url, '#/settings/dept'); await apPage.locator('textarea').first().fill('REPUBLIQUE DU CAMEROUN\nPaix-Travail-Patrie\n**********\nTEXTE DE TEST'); await apPage.locator('textarea').first().blur(); await apPage.waitForTimeout(300);

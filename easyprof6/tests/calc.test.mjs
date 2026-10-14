@@ -258,3 +258,16 @@ test('périodes de 50 min : 7:30 → 9:10 = 2 h de cours ; la fin se calcule ave
   assert.equal(creditMinutes('07:30', '09:10', B, 50), 120); assert.equal(creditMinutes('07:30', '09:30', B, 60), 120, '60 min : inchangé');
   assert.equal(slotHours('07:30', '09:30', undefined, 60), 2); assert.equal(endFor('07:30', 2), '09:30');
 });
+
+test('« 01:20 » sans PM veut dire 13:20 ; changer la durée de période recalcule les cours de la semaine', async () => {
+  const { normTime, timeToMin, slotHours } = await import('../site/js/dates.js');
+  assert.equal(normTime('01:20'), '13:20'); assert.equal(normTime('07:30'), '07:30'); assert.equal(normTime('12:45'), '12:45'); assert.equal(timeToMin('03:00'), 15 * 60);
+  const B = [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }];
+  assert.equal(slotHours('01:20', '03:00', B, 50), 2); assert.equal(slotHours('09:10', '10:00', B, 50), 1); assert.equal(slotHours('10:15', '11:55', B, 50), 2);
+});
+test('applyTiming : les durées stockées sont recalculées (heures de début/fin conservées)', async () => {
+  const store = await import('../site/js/store.js'), act = await import('../site/js/actions.js');
+  store.update(s => { s.data = { ...s.data, dept: { id: 'd', period: 60, breaks: [{ f: '10:30', t: '10:45' }] }, teachers: [{ id: 't', slots: [{ d: 4, c: 'c', st: '09:10', en: '10:00', h: 0.75 }, { d: 4, c: 'c', st: '01:20', en: '03:00', h: 1.75 }] }] }; });
+  act.applyTiming({ period: 50, breaks: [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }] });
+  const sl = store.state.data.teachers[0].slots; assert.deepEqual(sl.map(s => s.h), [1, 2]); assert.equal(sl[1].st, '13:20'); assert.equal(store.state.data.dept.period, 50);
+});

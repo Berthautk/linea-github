@@ -1,7 +1,7 @@
 // Actions sur les données : chaque modification est datée (u) ; l'enregistrement le plus récent gagne à la synchronisation.
 import { state, update, myId, nextU, observe } from './store.js';
 import { scheduleSync } from './sync.js';
-import { minutesBetween } from './dates.js';
+import { minutesBetween, slotHours, endFor, normTime } from './dates.js';
 import { isLessonType } from './consts.js';
 import { mergeMeta } from './shared/merge.js';
 
@@ -56,4 +56,19 @@ export const deleteRegul = (id) => setData({ regul: upsert(state.data.regul, { i
 export function replaceMeta(meta) {
   observe([meta.dept, ...(meta.teachers || []), ...(meta.classes || []), ...(meta.assign || []), ...(meta.regul || [])]);
   update(s => { const m = mergeMeta(s.data, meta); s.data = { ...s.data, ...m }; s.sync.metaRev = meta.rev; });
+}
+
+/** Change la durée de l'heure de cours ou les pauses : la durée créditée de chaque cours de la semaine est recalculée à partir de ses heures de début et de fin. */
+export function applyTiming(patch) {
+  const old = state.data.dept, dept = stamp({ ...old, ...patch });
+  const teachers = state.data.teachers.map(tc => {
+    if (!(tc.slots || []).some(s => s.st)) return tc;
+    const slots = tc.slots.map(s => {
+      if (!s.st) return s;
+      const st = normTime(s.st), en = normTime(s.en) || endFor(st, s.h, old.breaks, old.period), h = slotHours(st, en, dept.breaks, dept.period);
+      return h > 0 ? { ...s, st, en, h } : s;
+    });
+    return stamp({ ...tc, slots });
+  });
+  setData({ dept, teachers });
 }

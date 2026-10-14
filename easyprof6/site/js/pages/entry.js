@@ -7,7 +7,7 @@ import { TYPES, isLessonType } from '../consts.js';
 import { nextNumber, todaySlots, checkEntry } from '../calc.js';
 import { dayName, fmt } from '../dates.js';
 import { getLang } from '../i18n.js';
-import { timeToMin, minToTime, creditMinutes } from '../dates.js';
+import { timeToMin, minToTime, creditMinutes, normTime } from '../dates.js';
 import { saveEntry } from '../actions.js';
 
 const DURATIONS = [[60, '1 h'], [90, '1 h 30'], [120, '2 h'], [150, '2 h 30'], [180, '3 h']];
@@ -52,7 +52,7 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
     <div class="field"><label>${t('Type de séance')}</label><div class="seg" style="flex-wrap:wrap">${TYPES.map(x => html`<button type="button" class=${f.type === x.id ? 'on' : ''} onClick=${() => set('type', x.id)}>${x.icon} ${t(x.fr)}</button>`)}</div></div>
     <${Field} label=${t('Classe')}><select class="input" value=${f.classId} onChange=${(e) => set('classId', e.target.value)} required>${classOpts.length ? null : html`<option value="">${t('— aucune classe —')}</option>`}${classOpts.map(id => html`<option value=${id}>${(ctx.cls(id) || {}).name || id}</option>`)}</select><//>
     <div class="times"><${Field} class="wide" label=${t('Date')}><input class="input" type="date" value=${f.date} max=${editing ? '' : ctx.today} onInput=${(e) => set('date', e.target.value)} required /><//>
-      <${Field} label=${t('Début')}><input class="input" type="time" value=${f.start} onInput=${(e) => set('start', e.target.value)} required /><//><${Field} label=${t('Fin')}><input class="input" type="time" value=${f.end} onInput=${(e) => set('end', e.target.value)} required /><//></div>
+      <${Field} label=${t('Début')}><input class="input" type="time" value=${f.start} onInput=${(e) => set('start', normTime(e.target.value))} required /><//><${Field} label=${t('Fin')}><input class="input" type="time" value=${f.end} onInput=${(e) => set('end', normTime(e.target.value))} required /><//></div>
     <div class="row" style="gap:6px"><span class="lab">${t('Durée')} :</span>${DURATIONS.map(d => html`<button type="button" class=${'btn sm ' + (mins === d[0] ? '' : 'soft')} onClick=${() => setDur(d[0])}>${d[1]}</button>`)}<${Chip} tone=${mins > 0 ? 'info' : 'bad'}>${mins > 0 ? Math.floor(mins / 60) + ' h' + (mins % 60 ? ' ' + (mins % 60) : '') : t('invalide')}<//></div>
     ${lesson ? html`<${Field} label=${f.type === 'practical' ? t('N° du TP') : t('N° de la leçon')} hint=${f.nAuto ? t('Numéro suivant proposé automatiquement. Une même leçon faite en deux séances garde le même numéro.') : ''}>
       <div class="row" style="flex-wrap:nowrap"><input class="input" type="number" min="1" inputmode="numeric" value=${n} onInput=${(e) => setF(o => ({ ...o, n: e.target.value, nAuto: false }))} style="max-width:120px" />${f.nAuto ? html`<${Chip} tone="ok">${t('automatique')}<//>` : html`<button type="button" class="btn soft sm" onClick=${() => set('nAuto', true)}>${t('Remettre auto')}</button>`}</div><//>` : null}

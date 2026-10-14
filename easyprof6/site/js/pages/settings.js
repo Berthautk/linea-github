@@ -5,7 +5,7 @@ import { Icon } from '../icons.js';
 import { Field, PasswordInput, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
 import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
-import { saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
+import { applyTiming, saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
 import { makeCtx, catchUp } from '../calc.js';
 import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
@@ -90,12 +90,12 @@ function Dept() {
       <label class="opt"><input type="checkbox" checked=${showArms(h)} onChange=${(e) => seth('arms', e.target.checked ? '' : '0')} /><span>${t('Afficher les armoiries du Cameroun au centre')}</span></label>
       <div class="row"><button class="btn soft sm" onClick=${() => set({ header: { ...h, fr: '', en: '' } })}>${t('Rétablir le texte automatique')}</button></div></div>
     <div class="card stack"><h3>${t('Durée d’une heure de cours')}</h3><p class="sub">${t('Dans certains établissements, une heure de cours dure 50 minutes (de 7 h 30 à 8 h 20, puis de 8 h 20 à 9 h 10…). Choisissez la durée : chaque période compte alors pour 1 h dans les heures dues et faites. Les heures de fin se calculent à partir de cette durée.')}</p>
-      <${Field} label=${t('Une heure de cours dure')}><select class="input" value=${d.period || 60} onChange=${(e) => set({ period: +e.target.value })}>${[60, 55, 50, 45, 40].map(m => html`<option value=${m}>${m} min</option>`)}</select><//>
-      <div class="row"><button class="btn soft sm" onClick=${() => set({ period: 50, breaks: [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }] })}>${t('Modèle DGCAST : 50 min, pauses 10:00 et 12:45')}</button></div></div>
+      <${Field} label=${t('Une heure de cours dure')}><select class="input" value=${d.period || 60} onChange=${(e) => applyTiming({ period: +e.target.value })}>${[60, 55, 50, 45, 40].map(m => html`<option value=${m}>${m} min</option>`)}</select><//>
+      <div class="row"><button class="btn soft sm" onClick=${() => applyTiming({ period: 50, breaks: [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }] })}>${t('Modèle DGCAST : 50 min, pauses 10:00 et 12:45')}</button></div></div>
     <div class="card stack"><h3>${t('Pauses de la journée')}</h3><p class="sub">${t('Un cours qui commence avant une pause et finit après ne la compte pas dans sa durée. Exemple : de 9 h 30 à 11 h 45 avec une pause de 10 h 30 à 10 h 45 = 2 h.')}</p>
-      ${(d.breaks || DEFAULT_BREAKS).map((b, i, all) => html`<div class="row" style="gap:8px"><input class="input" type="time" value=${b.f} onChange=${(e) => set({ breaks: all.map((x, j) => (j === i ? { ...x, f: e.target.value } : x)) })} /><span>→</span><input class="input" type="time" value=${b.t} onChange=${(e) => set({ breaks: all.map((x, j) => (j === i ? { ...x, t: e.target.value } : x)) })} />
-        <button class="icon-btn" onClick=${() => set({ breaks: all.filter((_, j) => j !== i) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}
-      <div class="row"><button class="btn soft sm" onClick=${() => set({ breaks: [...(d.breaks || DEFAULT_BREAKS), { f: '10:00', t: '10:15' }] })}><${Icon} n="plus" />${t('Ajouter une pause')}</button></div></div></div>`;
+      ${(d.breaks || DEFAULT_BREAKS).map((b, i, all) => html`<div class="row" style="gap:8px"><input class="input" type="time" value=${b.f} onChange=${(e) => applyTiming({ breaks: all.map((x, j) => (j === i ? { ...x, f: e.target.value } : x)) })} /><span>→</span><input class="input" type="time" value=${b.t} onChange=${(e) => applyTiming({ breaks: all.map((x, j) => (j === i ? { ...x, t: e.target.value } : x)) })} />
+        <button class="icon-btn" onClick=${() => applyTiming({ breaks: all.filter((_, j) => j !== i) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}
+      <div class="row"><button class="btn soft sm" onClick=${() => applyTiming({ breaks: [...(d.breaks || DEFAULT_BREAKS), { f: '10:00', t: '10:15' }] })}><${Icon} n="plus" />${t('Ajouter une pause')}</button></div></div></div>`;
 }
 
 function Year() {

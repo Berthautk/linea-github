@@ -1,5 +1,5 @@
 // Équipe : comptes des collègues, emplois du temps, leçons prévues dans chaque classe (animateur pédagogique).
-import { html, useState } from '../vendor/preact-htm.js';
+import { html, useState, useEffect } from '../vendor/preact-htm.js';
 import { t } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Field, Chip, Empty, PasswordInput, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
@@ -9,7 +9,7 @@ import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept, saveClass
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
 import { WaButtons } from '../whatsapp.js';
-import { dayName, fmt, slotHours, endFor } from '../dates.js';
+import { dayName, fmt, slotHours, endFor, normTime } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, phone, fresh = true }) {
@@ -88,7 +88,8 @@ function Slots({ tc, ctx }) {
   const del = (i) => saveTeacher(tc.id, { slots: slots.filter((_, j) => j !== i) });
   const total = slots.reduce((s, x) => s + (+x.h || 0), 0);
   const breaks = ctx.dept.breaks, P = ctx.dept.period || 60;
-  const endOf = (s) => s.en || (s.st ? endFor(s.st, s.h, breaks, P) : '');
+  const endOf = (s) => normTime(s.en) || (s.st ? endFor(s.st, s.h, breaks, P) : '');
+  useEffect(() => { if (slots.some(s => (s.st && normTime(s.st) !== s.st) || (s.en && normTime(s.en) !== s.en))) saveTeacher(tc.id, { slots: slots.map(s => ({ ...s, ...(s.st ? { st: normTime(s.st) } : {}), ...(s.en ? { en: normTime(s.en) } : {}) })) }); });
   // heure de début ou de fin modifiée : la durée est recalculée (pauses déduites) ; durée modifiée : l'heure de fin suit
   const setTimes = (i, s, patch) => { const n = { ...s, ...patch }, h = n.st && n.en ? slotHours(n.st, n.en, breaks, P) : 0; set(i, { ...patch, ...(h > 0 ? { h } : {}) }); };
   const setDur = (i, s, h) => set(i, { h, ...(s.st ? { en: endFor(s.st, h, breaks, P) } : {}) });
@@ -100,8 +101,8 @@ function Slots({ tc, ctx }) {
         <select class="input" value=${s.d} onChange=${(e) => set(i, { d: +e.target.value })} aria-label=${t('Jour')}>${DAYS.map(d => html`<option value=${d}>${dayName(d % 7, lang)}</option>`)}</select>
         <button class="icon-btn" onClick=${() => del(i)} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button>
         <select class="input full" value=${s.c} onChange=${(e) => set(i, { c: e.target.value })} aria-label=${t('Classe')}>${s.c ? null : html`<option value="">${t('Choisir la classe…')}</option>`}${ctx.classes.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select></div>
-      <div class="g3"><${Field} label=${t('De (heure de début)')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => setTimes(i, s, { st: e.target.value, ...(s.st && e.target.value ? { en: endFor(e.target.value, s.h, breaks, P) } : {}) })} /><//>
-        <${Field} label=${t('À (heure de fin)')}><input class="input" type="time" value=${endOf(s)} onChange=${(e) => setTimes(i, s, { en: e.target.value })} /><//>
+      <div class="g3"><${Field} label=${t('De (heure de début)')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => setTimes(i, s, { st: normTime(e.target.value), ...(s.st && e.target.value ? { en: endFor(normTime(e.target.value), s.h, breaks, P) } : {}) })} /><//>
+        <${Field} label=${t('À (heure de fin)')}><input class="input" type="time" value=${endOf(s)} onChange=${(e) => setTimes(i, s, { en: normTime(e.target.value) })} /><//>
         <${Field} label=${t('Durée (h)')}><input class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => setDur(i, s, +e.target.value || 0)} /><//></div>
       <${Field} label=${t('Valable')}><select class="input" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
       <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div></details>`)}</div>

@@ -33,7 +33,9 @@ export function fmt(iso, lang = 'fr', opts = {}) {
   const base = opts.noYear ? (lang === 'en' ? `${mn} ${d}` : `${day} ${mn}`) : (lang === 'en' ? `${mn} ${d}, ${y}` : `${day} ${mn} ${y}`);
   return opts.weekday ? dayName(dow(iso), lang, opts.short) + ' ' + base : base;
 }
-export const timeToMin = (t) => { const [h, m] = String(t || '').split(':').map(Number); return Number.isFinite(h) && Number.isFinite(m) ? h * 60 + m : NaN; };
+/** Une journée d'école n'a pas de cours entre 1 h et 5 h 59 du matin : « 01:20 » tapé sans « PM » veut dire 13:20. */
+export const normTime = (v) => { const m = /^(\d{1,2}):(\d{2})$/.exec(String(v || '')); return m && +m[1] >= 1 && +m[1] <= 5 ? pad(+m[1] + 12) + ':' + m[2] : v; };
+export const timeToMin = (t) => { const [h, m] = String(normTime(t) || '').split(':').map(Number); return Number.isFinite(h) && Number.isFinite(m) ? h * 60 + m : NaN; };
 export const minToTime = (n) => pad(Math.floor(n / 60) % 24) + ':' + pad(n % 60);
 export function minutesBetween(a, b) { const x = timeToMin(a), y = timeToMin(b); if (isNaN(x) || isNaN(y)) return 0; const d = y - x; return d <= 0 ? 0 : d; }
 

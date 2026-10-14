@@ -4,7 +4,7 @@ import { Icon } from './icons.js';
 import { t } from './i18n.js';
 import { state, update } from './store.js';
 
-export const Chip = ({ tone = '', children }) => html`<span class=${'chip ' + tone}>${children}</span>`;
+export const Chip = ({ tone = '', style, children }) => html`<span class=${'chip ' + tone} style=${style}>${children}</span>`;
 // Champ : le libellé enveloppe la zone de saisie (accessible, et un appui sur le libellé active le champ). `group` pour les boutons à choix.
 export const Field = ({ label, hint, children, class: c, group }) => group
   ? html`<div class=${'field ' + (c || '')} role="group" aria-label=${label}><span class="lab">${label}</span>${children}${hint ? html`<span class="hint">${hint}</span>` : null}</div>`

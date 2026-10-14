@@ -16,4 +16,4 @@ function Reminder({ ctx, tc }) {
     <${WaButtons} phone=${tc.phone} text=${text} onSent=${() => setTimeout(closeModal, 300)} /><//>`;
 }
 
-export function openReminder(ctx, tc) { openModal(() => html`<${Reminder} ctx=${ctx} tc=${tc} />`); }
+export function openReminder(ctx, tc) { openModal(() => html`<${Reminder} key=${tc.id} ctx=${ctx} tc=${tc} />`); }

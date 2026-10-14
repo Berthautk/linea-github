@@ -77,11 +77,11 @@ await step('B. Le collègue se connecte et saisit', async () => {
 await step('C. Synchronisation vers l’animateur', async () => {
   await apPage.locator('.sync').first().click(); await apPage.waitForTimeout(1200);
   await go(apPage, url, '#/home');
-  const team = await apPage.locator('.tbl').first().innerText();
+  const team = await apPage.locator('.tbl', { hasText: 'Enseignant' }).first().innerText();
   ok(/ASTHA/.test(team), 'C1 l’animateur voit son collègue dans l’équipe');
   await tp.locator('.sync').first().click(); await tp.waitForTimeout(800);
   await apPage.locator('.sync').first().click(); await apPage.waitForTimeout(1200);
-  const row = (await apPage.locator('.tbl').first().innerText()).split('\n').filter(l => /ASTHA/.test(l)).join(' ');
+  const row = (await apPage.locator('.tbl', { hasText: 'Enseignant' }).first().innerText()).split('\n').filter(l => /ASTHA/.test(l)).join(' ');
   ok(/2/.test(row), 'C2 les 2 h saisies par le collègue sont arrivées chez l’animateur : ' + row.replace(/\s+/g, ' '));
 });
 
@@ -125,6 +125,10 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
   // en-tête libre et mode d'emploi
   await go(apPage, url, '#/settings/dept'); await apPage.locator('textarea').first().fill('REPUBLIQUE DU CAMEROUN\nPaix-Travail-Patrie\n**********\nTEXTE DE TEST'); await apPage.locator('textarea').first().blur(); await apPage.waitForTimeout(300);
   await go(apPage, url, '#/report'); ok(/TEXTE DE TEST/.test(await apPage.locator('.paper').first().innerText()), 'E8 le texte d’en-tête écrit par l’animateur est imprimé sur la fiche');
+  await go(apPage, url, '#/lessons'); await apPage.getByRole('button', { name: 'À compléter' }).click(); await apPage.waitForTimeout(400);
+  ok(/saisie\(s\) à vérifier/.test(await apPage.innerText('.page')), 'E8b l’historique « À compléter » liste les manques et les saisies à vérifier');
+  await go(apPage, url, '#/home'); const home = await apPage.innerText('.page');
+  ok(/Objectifs depuis la rentrée/.test(home) && /Objectifs par trimestre/.test(home) && /Activité des collègues/.test(home), 'E8c le tableau de bord montre les objectifs cumulés, par trimestre, et l’activité des collègues');
   await go(apPage, url, '#/settings/guide'); ok(/Une fois, au départ/.test(await apPage.innerText('.page')), 'E9 le mode d’emploi est accessible');
 });
 

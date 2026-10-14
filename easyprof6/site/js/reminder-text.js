@@ -24,6 +24,17 @@ export function silence(ctx, tc) {
   return { last, days, level: days == null || days >= 14 ? 3 : days >= 4 ? 2 : 1 };
 }
 
+/** Les classes de CE collègue (affectations, emploi du temps, saisies) avec, pour chacune, sa dernière saisie. */
+export function classLines(ctx, tc, lang) {
+  const en = lang === 'en', ids = new Set([...ctx.assign.filter(a => a.teacherId === tc.id).map(a => a.classId), ...(tc.slots || []).map(sl => sl.c), ...(ctx.byTeacher[tc.id] || []).filter(e => e.classId && e.type !== 'absence').map(e => e.classId)]);
+  return [...ids].filter(id => ctx.cls(id)).sort((a, b) => (ctx.cls(a).name < ctx.cls(b).name ? -1 : 1)).slice(0, 12).map(id => {
+    const es = (ctx.byTeacher[tc.id] || []).filter(e => e.classId === id && e.type !== 'absence').sort((a, b) => (a.date < b.date ? -1 : 1)), last = es[es.length - 1], name = ctx.cls(id).name;
+    if (!last) return `• ${name} : ${en ? 'nothing recorded yet' : 'rien saisi depuis la rentrée'}`;
+    const n = es.map(e => e.n).filter(x => x != null).sort((a, b) => a - b).pop();
+    return `• ${name} : ${en ? 'last entry on ' : 'dernière saisie le '}${fmt(last.date, lang, { noYear: true })}${n != null ? (en ? ` (lesson ${n})` : ` (leçon ${n})`) : ''}`;
+  });
+}
+
 export function reminderText(ctx, tc, lang) {
   const en = lang === 'en', { days, level } = silence(ctx, tc), S = stats(ctx, tc.id, ctx.ys, ctx.today), miss = Math.max(0, S.due - S.hours);
   const weeks = days == null ? 0 : Math.floor(days / 7);
@@ -31,7 +42,8 @@ export function reminderText(ctx, tc, lang) {
     : days < 7 ? (en ? `${days} day${days > 1 ? 's' : ''}` : `${days} jour${days > 1 ? 's' : ''}`)
       : (en ? `${weeks} week${weeks > 1 ? 's' : ''}` : `${weeks} semaine${weeks > 1 ? 's' : ''}`);
   const lines = missedSlots(ctx, tc).slice(-6).map(m => `• ${dayName(dow(m.iso), lang, true)} ${fmt(m.iso, lang, { noYear: true })} : ${m.rows.map(r => (ctx.cls(r.c) || {}).name || r.c).join(', ')}`);
-  const list = lines.length ? (en ? '\nLessons not recorded:\n' : '\nCours non enregistrés :\n') + lines.join('\n') + '\n' : '';
+  const cl = classLines(ctx, tc, lang), mine = cl.length ? (en ? '\nYour classes:\n' : '\nVos classes :\n') + cl.join('\n') + '\n' : '';
+  const list = mine + (lines.length ? (en ? '\nLessons not recorded:\n' : '\nCours non enregistrés :\n') + lines.join('\n') + '\n' : '');
   const hours = miss >= 1 ? (en ? ` About ${num1(miss)} h are missing compared with your timetable.` : ` Il manque environ ${num1(miss)} h par rapport à votre emploi du temps.`) : '';
   const hi = (en ? 'Hello ' : 'Bonjour ') + surname(tc) + ',', link = '\n' + (typeof location !== 'undefined' ? location.origin : '');
   if (level === 1) return en ? `${hi} a quick reminder: please record today’s lessons in Rekort. Thank you!${list}${link}` : `${hi} petit rappel : merci d’enregistrer vos cours du jour sur Rekort. Merci !${list}${link}`;

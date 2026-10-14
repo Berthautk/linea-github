@@ -1,5 +1,5 @@
 // Fichier généré par tools/gen-sw.mjs : ne pas modifier à la main.
-const VERSION = '38d414231b';
+const VERSION = '1c9a687abe';
 const CACHE = 'ep6-' + VERSION;
 const ASSETS = [
  "/",
@@ -30,6 +30,7 @@ const ASSETS = [
  "/js/letterhead.js",
  "/js/main.js",
  "/js/pages/entry.js",
+ "/js/pages/gaps.js",
  "/js/pages/guide.js",
  "/js/pages/home.js",
  "/js/pages/lessons.js",

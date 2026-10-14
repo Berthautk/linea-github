@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { slotHours, endFor } from '../site/js/dates.js';
 import { reminderText, silence } from '../site/js/reminder-text.js';
-import { checkEntry } from '../site/js/calc.js';
+import { checkEntry, cumulative, byTerm, activity, gapReport, progressAt } from '../site/js/calc.js';
 import { followUp, noTimetable, makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
 import { newDept } from '../site/js/defaults.js';
 
@@ -177,4 +177,40 @@ test('rappel WhatsApp : le message change avec la durée du silence et liste les
   assert.equal(silence(c1, c1.teacher('K')).level, 1); assert.equal(silence(c2, c2.teacher('K')).level, 2); assert.equal(silence(c3, c3.teacher('K')).level, 3);
   assert.match(k(c1), /petit rappel/); assert.match(k(c2), /depuis 1 semaine/); assert.match(k(c3), /voilà 3 semaines/); assert.match(k(c0), /aucun cours enregistré/);
   assert.match(k(c2), /Form|F3A/, 'liste les cours oubliés'); assert.match(reminderText(c3, c3.teacher('K'), 'en'), /3 weeks/);
+});
+
+test('rappel : la liste des classes est celle du collègue concerné, avec sa dernière saisie', () => {
+  const st = mk(); st.assign = [{ id: 'N:F5SC', teacherId: 'N', classId: 'F5SC', th: 10, pr: 0, hours: 20 }, { id: 'A:F1A', teacherId: 'A', classId: 'F1A', th: 10, pr: 0, hours: 20 }];
+  st.entries = [{ id: 'x', teacherId: 'N', type: 'lesson', classId: 'F5SC', date: '2026-10-05', start: '07:30', end: '09:30', minutes: 120, n: 4 }];
+  st.teachers = st.teachers.map(t => ({ ...t, slots: [] }));
+  const c = makeCtx(st, '2026-10-20'), n = reminderText(c, c.teacher('N'), 'fr'), a = reminderText(c, c.teacher('A'), 'fr');
+  assert.match(n, /F5SC : dernière saisie le 5 octobre \(leçon 4\)/); assert.doesNotMatch(n, /F1A/);
+  assert.match(a, /F1A : rien saisi depuis la rentrée/); assert.doesNotMatch(a, /F5SC/);
+});
+
+test('objectifs cumulés : la cible grandit semaine après semaine, le réalisé s’arrête à aujourd’hui, par classe ou pour tout le département', () => {
+  const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 30, pr: 0, hours: 60 }, { id: 'K:LSA', teacherId: 'K', classId: 'LSA', th: 60, pr: 0, hours: 120 }] });
+  st.entries = [E('a', 'K', '2026-09-14', { classId: 'F3A', n: 1 }), E('b', 'K', '2026-09-21', { classId: 'F3A', n: 2 })];
+  const c = makeCtx(st, '2026-09-28'), rows = cumulative(c, 'K', null);
+  assert.ok(rows.length > 30 && rows[0].k === 1, 'une ligne par semaine de l’année');
+  for (let i = 1; i < rows.length; i++) assert.ok(rows[i].goalL >= rows[i - 1].goalL - 1e-9, 'la cible ne baisse jamais');
+  assert.ok(rows.find(r => r.future).doneL === null && rows.filter(r => !r.future).every(r => r.doneL != null), 'réalisé seulement jusqu’à aujourd’hui');
+  assert.ok(Math.abs(rows[rows.length - 1].goalL - 90) < 0.6, 'fin d’année : toute la programmation (30 + 60 leçons)');
+  const f3 = cumulative(c, 'K', 'F3A'); assert.equal(f3.filter(r => !r.future).pop().doneL, 2); assert.ok(f3[f3.length - 1].goalL <= 30.6);
+  const t1 = byTerm(c, 'K', null); assert.equal(t1.length, 3); assert.ok(t1[0].goalL > 0 && t1[0].doneL === 2 && t1[2].future);
+  assert.equal(progressAt(c, 'K', null, '2026-09-28').doneL, 2);
+});
+
+test('activité des collègues : semaines actives, classes saisies, régularité', () => {
+  const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 30, pr: 0, hours: 60 }, { id: 'K:LSA', teacherId: 'K', classId: 'LSA', th: 60, pr: 0, hours: 120 }] });
+  st.entries = [E('a', 'K', '2026-09-08', { classId: 'F3A', n: 1 }), E('b', 'K', '2026-09-15', { classId: 'F3A', n: 2 }), E('c', 'K', '2026-09-22', { classId: 'F3A', n: 3 })];
+  const c = makeCtx(st, '2026-09-25'), a = activity(c, 'K');
+  assert.equal(a.active, 3); assert.equal(a.weeks, 3); assert.equal(a.level, 'regular'); assert.equal(a.filled, 1, 'LSA jamais saisie'); assert.ok(a.classes >= 2);
+  assert.equal(activity(c, 'N').level, 'low'); assert.equal(activity(c, 'N').last, '');
+});
+
+test('à compléter : cours prévus non saisis depuis la rentrée', () => {
+  const st = mk(); st.teachers = st.teachers.slice(0, 1); st.entries = [E('a', 'K', '2026-09-07', { classId: 'F3A' })];
+  const R = gapReport(makeCtx(st, '2026-09-15'), null);
+  assert.ok(R.missing.length > 3 && R.hours > 5, 'beaucoup de cours manquants'); assert.ok(!R.missing.some(m => m.iso === '2026-09-07' && m.row.c === 'F3A'), 'ce qui est saisi n’est plus listé');
 });

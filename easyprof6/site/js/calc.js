@@ -270,6 +270,71 @@ export function checkEntry(ctx, tid, cand) {
   return out;
 }
 
+/** Ce qui manque (cours prévus ni saisis ni excusés, depuis la rentrée) et ce qui est à vérifier (saisies hors emploi du temps, doublons). `tid` null = tout le département. */
+export function gapReport(ctx, tid) {
+  const ids = tid ? [tid] : ctx.teachers.map(x => x.id), from = ctx.ys, to = minISO(ctx.today, ctx.ye), missing = [], flagged = [], noTT = [];
+  for (const id of ids) {
+    const tc = ctx.teacher(id); if (!tc) continue;
+    if (!(tc.slots || []).some(sl => +sl.h > 0)) { noTT.push(tc); continue; }
+    for (const iso of eachDay(from, to)) {
+      if (dow(iso) === 0) continue;
+      const td = todaySlots(ctx, id, iso); if (!td.teaching || td.reason) continue;
+      for (const row of td.rows) if (!row.done && !row.absent) missing.push({ iso, tid: id, row });
+    }
+  }
+  for (const id of ids) for (const e of ctx.byTeacher[id] || []) {
+    if (e.type === 'absence' || !e.date || e.date < from || e.date > to) continue;
+    const kinds = checkEntry(ctx, id, e).map(k => k.kind); if (kinds.length) flagged.push({ e, kinds });
+  }
+  missing.sort((a, b) => (a.iso < b.iso ? 1 : a.iso > b.iso ? -1 : a.row.st < b.row.st ? -1 : 1));
+  flagged.sort((a, b) => (a.e.date < b.e.date ? 1 : -1));
+  return { missing, flagged, noTT, hours: r1(missing.reduce((s, m) => s + m.row.h, 0)) };
+}
+
+/* ---------- objectifs cumulés : où en est-on, par rapport à la cible, à une date donnée ---------- */
+/** Objectif et réalisé cumulés depuis la rentrée jusqu'à `cut`, en leçons et en heures. `tid` null = département ; `classId` facultatif. */
+export function progressAt(ctx, tid, classId, cut) {
+  const ids = tid ? [tid] : ctx.teachers.map(x => x.id), c = minISO(cut, ctx.ye), out = { goalL: 0, doneL: 0, goalH: 0, doneH: 0 };
+  for (const id of ids) {
+    const due = dueRange(ctx, id, ctx.ys, c), done = doneRange(ctx, id, ctx.ys, c);
+    for (const a of ctx.assign.filter(x => x.teacherId === id && (!classId || x.classId === classId))) out.goalL += expectedLessons(ctx, a, ctx.ys, c, due);
+    if (classId) { const b = done.byClass[classId]; if (b) { out.doneL += b.theory.size + b.practical.size; out.doneH += b.hours; } out.goalH += due.byClass[classId] || 0; }
+    else { out.doneL += done.lessons.size; out.doneH += done.hours; out.goalH += due.due; }
+    for (const r of ctx.regul) if (r.teacherId === id && (!classId || r.classId === classId)) { const sh = regulShare(r, ctx.ys, c); out.doneL += (+r.lessons || 0) * sh; out.doneH += (+r.h || 0) * sh; }
+  }
+  return { goalL: r1(out.goalL), doneL: r1(out.doneL), goalH: r1(out.goalH), doneH: r1(out.doneH) };
+}
+
+/** Une ligne par semaine de l'année : l'objectif cumulé reste affiché jusqu'en fin d'année, le réalisé s'arrête à aujourd'hui. */
+export function cumulative(ctx, tid, classId) {
+  const rows = []; let k = 0;
+  for (let w = mondayOf(ctx.ys); w <= ctx.ye; w = addDays(w, 7)) {
+    const end = minISO(addDays(w, 5), ctx.ye), future = w > ctx.today; k++;
+    const p = progressAt(ctx, tid, classId, end), n = future ? null : progressAt(ctx, tid, classId, minISO(end, ctx.today));
+    rows.push({ k, ps: w, pe: end, future, goalL: p.goalL, goalH: p.goalH, doneL: n ? n.doneL : null, doneH: n ? n.doneH : null });
+  }
+  return rows;
+}
+
+/** Même chose à la fin de chaque trimestre. */
+export function byTerm(ctx, tid, classId) {
+  return ctx.terms.map(tm => { const g = progressAt(ctx, tid, classId, tm.end), n = progressAt(ctx, tid, classId, minISO(tm.end, ctx.today)), future = tm.start > ctx.today;
+    return { id: tm.id, name: tm.name, end: tm.end, future, goalL: g.goalL, goalH: g.goalH, doneL: future ? null : n.doneL, doneH: future ? null : n.doneH }; });
+}
+
+/** Activité d'un collègue dans l'application : semaines où il a saisi, classes saisies, dernière saisie. */
+export function activity(ctx, tid) {
+  const tc = ctx.teacher(tid), es = (ctx.byTeacher[tid] || []).filter(e => e.type !== 'absence' && e.date <= ctx.today);
+  const hasTT = tc && (tc.slots || []).some(sl => +sl.h > 0), weeks = new Set(), active = new Set(es.map(e => mondayOf(e.date)));
+  for (let w = mondayOf(ctx.ys); w <= ctx.today; w = addDays(w, 7)) {
+    if (!hasTT || dueRange(ctx, tid, maxISO(w, ctx.ys), minISO(addDays(w, 5), ctx.today)).due > 0) weeks.add(w);
+  }
+  const done = [...weeks].filter(w => active.has(w)).length, classes = new Set([...ctx.assign.filter(a => a.teacherId === tid).map(a => a.classId), ...((tc && tc.slots) || []).map(sl => sl.c)]);
+  const filled = [...classes].filter(c => es.some(e => e.classId === c)).length, last = es.map(e => e.date).sort().pop() || '';
+  const rate = weeks.size ? done / weeks.size : 0;
+  return { weeks: weeks.size, active: done, classes: classes.size, filled, last, since: last ? diffDays(last, ctx.today) : null, lessons: es.filter(e => e.n != null).length, level: !weeks.size ? 'none' : rate >= 0.8 ? 'regular' : rate >= 0.4 ? 'irregular' : 'low', rate: Math.round(rate * 100) };
+}
+
 export function nextNumber(ctx, tid, classId, type) {
   let max = 0;
   for (const e of ctx.byTeacher[tid] || []) if (e.classId === classId && e.type === type && e.n != null && e.n > max) max = e.n;

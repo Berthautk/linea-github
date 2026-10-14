@@ -18,7 +18,7 @@ const LATE = [10, 15, 20, 30, 45, 60];
 const ABSENT_WHY = REASONS.filter(r => !r.out);
 
 /** Enregistre un cours comme fait : retard éventuel, nombre de leçons, numéro de la première leçon. */
-function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'lesson', title = '' } = {}) {
+export function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'lesson', title = '' } = {}) {
   const brk = ctx.dept.breaks, st = row.st || '07:30', total = Math.round(row.h * 60) - late;
   if (total <= 0) { setToast(t('Le retard dépasse la durée du cours.'), 'bad'); return []; }
   const k = isLessonType(type) ? Math.max(1, lessons) : 1, per = Math.floor(total / k), ids = [];
@@ -26,7 +26,7 @@ function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'lesson',
   const from = late ? endFor(st, late / 60, brk) : st;                                  // heure d'arrivée
   for (let i = 0; i < k; i++) {
     const a = i === 0 ? from : endFor(from, (per * i) / 60, brk), b = i === k - 1 ? (row.en || endFor(st, row.h, brk)) : endFor(from, (per * (i + 1)) / 60, brk);
-    ids.push(saveEntry({ teacherId: tid, classId: row.c, type, date: iso, start: a, end: b, minutes: i === k - 1 ? total - per * (k - 1) : per, n: first != null ? first + i : null, title, note: NOTE }).id);
+    ids.push(saveEntry({ teacherId: tid, classId: row.c, type, date: iso, start: a, end: b, minutes: i === k - 1 ? total - per * (k - 1) : per, n: first != null ? first + i : null, title, note: tid === myId() ? '' : NOTE }).id);
   }
   const cname = (ctx.cls(row.c) || {}).name || row.c;
   setToast(k > 1 ? t('{c} · {k} leçons enregistrées', { c: cname, k }) : first != null ? t('{c} · leçon {n} enregistrée', { c: cname, n: first }) : t('{c} · séance enregistrée', { c: cname }), '', { label: t('Annuler'), run: () => ids.forEach(deleteEntry) });
@@ -34,11 +34,12 @@ function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'lesson',
 }
 
 /** Absent à ce cours (heure de début et de fin comprises). */
-function absent(ctx, tid, iso, row, reason = 'unknown') {
-  const rec = saveEntry({ teacherId: tid, classId: row.c, type: 'absence', date: iso, start: row.st || '', end: row.en || '', minutes: 0, reason, note: NOTE });
+export function absent(ctx, tid, iso, row, reason = 'unknown') {
+  const rec = saveEntry({ teacherId: tid, classId: row.c, type: 'absence', date: iso, start: row.st || '', end: row.en || '', minutes: 0, reason, note: tid === myId() ? '' : NOTE });
   setToast(t('{c} · absence enregistrée', { c: (ctx.cls(row.c) || {}).name || row.c }), '', { label: t('Annuler'), run: () => deleteEntry(rec.id) });
 }
 
+export function openRound(ctx, tid, iso, row) { openModal(() => html`<${Round} ctx=${ctx} tid=${tid} iso=${iso} row=${row} />`); }
 function Round({ ctx, tid, iso, row }) {
   const lang = getLang(), cname = (ctx.cls(row.c) || {}).name || row.c;
   const [st, setSt] = useState('present'), [late, setLate] = useState(0), [k, setK] = useState(1), [type, setType] = useState('lesson'), [title, setTitle] = useState('');

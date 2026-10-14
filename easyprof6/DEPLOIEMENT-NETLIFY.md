@@ -42,3 +42,13 @@ Rien à faire : chaque personne qui crée un compte obtient **son propre départ
 - **« Pas de connexion à Internet »** à la première connexion : normal hors réseau ; la première connexion et la création d'un compte exigent Internet.
 - **Session expirée** : le bandeau orange propose « Se reconnecter » ; vos données ne sont pas perdues.
 - **Mot de passe oublié** : l'animateur utilise son code de récupération ; un collègue demande à son animateur de réinitialiser son mot de passe (Réglages › Équipe).
+
+## Changer de compte Netlify (crédits épuisés) sans perdre les données
+
+Les comptes et les saisies sont stockés chez Netlify (Blobs) : un nouveau site Netlify démarre **vide**. Marche à suivre :
+
+1. **Avant tout**, sur le téléphone de l'animateur (qui a toutes les données synchronisées) : Réglages › Sauvegarde et import › « Exporter » → garder le fichier `rekort-….json` (données réelles : ne jamais le publier).
+2. Sur le nouveau compte Netlify : Add new site › Import from Git › ce dépôt, branche `ccr-3666762a-uo25fr` (voir plus haut). Choisir un nom de site libre (ex. `rekort-gbhs`).
+3. Ouvrir la nouvelle adresse, « Créer mon département », avec l'identifiant de l'animateur. Noter le code de récupération.
+4. Réglages › Sauvegarde et import › Importer : choisir le fichier de l'étape 1. Rekort recrée les comptes des collègues (même identifiant, **nouveau mot de passe**), remet classes, emplois du temps et saisies, puis affiche la liste des accès à envoyer par WhatsApp.
+5. Les collègues utilisent la nouvelle adresse (ouvrir, « Ajouter à l'écran d'accueil »).

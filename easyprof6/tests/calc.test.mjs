@@ -232,3 +232,11 @@ test('rappel : « depuis 2 semaines / 1 mois / 2 mois »', async () => {
   const tc = (d) => { const c = makeCtx(st, d); return reminderText(c, c.teacher('K'), 'fr'); };
   assert.match(tc('2026-09-22'), /2 semaines/); assert.match(tc('2026-10-10'), /1 mois/); assert.match(tc('2026-11-08'), /2 mois/);
 });
+
+test('reprise d’une sauvegarde : identifiants de collègues remplacés, saisies de collègues retirés écartées', async () => {
+  const { remapBackup } = await import('../site/js/import-old.js');
+  const n = { dept: { id: 'x', name: 'D' }, classes: [{ id: 'c1' }, { id: 'c2', deleted: true }], assign: [{ id: 'A:c1', teacherId: 'A', classId: 'c1', th: 5 }, { id: 'Z:c1', teacherId: 'Z', classId: 'c1' }], regul: [], entries: [{ id: 'e1', teacherId: 'A' }, { id: 'e2', teacherId: 'Z' }] };
+  const R = remapBackup(n, { A: 'NEW' }, 99);
+  assert.equal(R.classes.length, 1); assert.deepEqual(R.assign.map(a => [a.id, a.teacherId]), [['NEW:c1', 'NEW']]);
+  assert.equal(R.entries.length, 1); assert.equal(R.entries[0].teacherId, 'NEW'); assert.equal(R.dropped, 1); assert.ok(R.entries.every(e => e.u === 99));
+});

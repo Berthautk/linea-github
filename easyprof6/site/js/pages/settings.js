@@ -15,7 +15,7 @@ import { REASONS } from '../consts.js';
 import { fmt, todayISO, DEFAULT_BREAKS } from '../dates.js';
 import { letterText, defaultLetter, showArms } from '../letterhead.js';
 import { exportCSV } from '../exports.js';
-import { isOldBackup, isNewBackup, summarize, convert, surname } from '../import-old.js';
+import { isOldBackup, isNewBackup, summarize, convert, surname, remapBackup } from '../import-old.js';
 import { syncNow } from '../sync.js';
 
 const Back = ({ title, children }) => html`<div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${title}</h1></div>${children}</div>`;
@@ -208,6 +208,39 @@ function ImportOld({ json, onDone }) {
     ${err ? html`<div class="err">${err}</div>` : null}<button class="btn block" disabled=${busy} onClick=${run}>${busy ? t('Import en cours…') : t('Importer')}</button><//>`;
 }
 
+/** Reprise d'une sauvegarde Rekort complète sur un nouveau serveur : recrée les comptes des collègues (nouveaux mots de passe), puis remet classes, emplois du temps et saisies. */
+function RestoreFull({ json, onDone }) {
+  const n = json.data, [busy, setBusy] = useState(false), [err, setErr] = useState(''), [creds, setCreds] = useState(null);
+  const others = (n.teachers || []).filter(x => !x.deleted && x.username !== state.session.username && x.role !== 'ap');
+  const go = async () => {
+    setBusy(true); setErr('');
+    try {
+      const idMap = {}, out = [], apOld = (n.teachers || []).find(x => !x.deleted && (x.username === state.session.username || x.role === 'ap'));
+      if (apOld) idMap[apOld.id] = myId();
+      for (const o of others) {
+        let r; try { r = await api('/team/add', { name: o.name, short: o.short, phone: o.phone, username: o.username }, state.session.token); }
+        catch (x) { if (x.code === 'username_taken' || /utilisé/.test(x.message || '')) r = await api('/team/add', { name: o.name, short: o.short, phone: o.phone }, state.session.token); else throw x; }
+        idMap[o.id] = r.teacher.id; replaceMeta(r.meta); out.push({ name: o.name, username: r.username, password: r.password, phone: o.phone });
+      }
+      const R = remapBackup(n, idMap, nextU());
+      const slots = (old) => ((n.teachers || []).find(x => x.id === old) || {}).slots || [];
+      update(s => {
+        const teachers = s.data.teachers.map(tc => { const old = Object.keys(idMap).find(k => idMap[k] === tc.id); return old ? { ...tc, slots: slots(old), phone: tc.phone || ((n.teachers.find(x => x.id === old) || {}).phone || ''), u: nextU() } : tc; });
+        const ids = new Set(R.entries.map(x => x.id));
+        s.data = { ...s.data, dept: R.dept ? { ...R.dept, id: s.data.dept.id } : s.data.dept, teachers, classes: R.classes, assign: R.assign, regul: R.regul, entries: [...s.data.entries.filter(x => !ids.has(x.id)), ...R.entries] };
+      });
+      syncNow(); setCreds({ out, entries: R.entries.length, dropped: R.dropped });
+    } catch (x) { setErr(x.message || String(x)); } setBusy(false);
+  };
+  if (creds) return html`<${Modal} title=${t('Reprise terminée')} onClose=${() => { closeModal(); onDone(); }}>
+    <p>${t('{e} saisies, {c} classes et {k} collègues repris.', { e: creds.entries, c: n.classes.filter(c => !c.deleted).length, k: creds.out.length })}${creds.dropped ? ' ' + t('{d} saisies de collègues retirés n’ont pas été reprises.', { d: creds.dropped }) : ''}</p>
+    <p class="sub">${t('Chaque collègue a un nouveau mot de passe. Envoyez-lui son accès (avec la nouvelle adresse) :')}</p>
+    <div class="list">${creds.out.map(c => html`<div class="item"><div class="grow"><b>${c.name}</b><span>${c.username} · ${c.password}</span></div><button class="btn sm" onClick=${() => showCredentials(c)}>${t('Envoyer')}</button></div>`)}</div><//>`;
+  return html`<${Modal} title=${t('Reprendre cette sauvegarde')} onClose=${closeModal}>
+    <p>${t('Ce fichier contient {c} classes, {k} collègues et {e} saisies. Rekort va recréer les comptes des collègues (leur identifiant reste le même, leur mot de passe change), puis remettre classes, emplois du temps et saisies.', { c: (n.classes || []).filter(c => !c.deleted).length, k: others.length, e: (n.entries || []).length })}</p>
+    ${err ? html`<div class="err" role="alert">${err}</div>` : null}<button class="btn block" disabled=${busy} onClick=${go}>${busy ? t('Reprise en cours…') : t('Reprendre')}</button><//>`;
+}
+
 function Data() {
   const [msg, setMsg] = useState('');
   const exportJSON = () => {
@@ -226,6 +259,7 @@ function Data() {
     r.onload = () => {
       let j; try { j = JSON.parse(r.result); } catch { return setMsg(t('Ce fichier n’est pas une sauvegarde valide.')); }
       if (isOldBackup(j)) { if (!isAP()) return setMsg(t('Seul l’animateur pédagogique peut importer l’ancienne sauvegarde.')); openModal(() => html`<${ImportOld} json=${j} onDone=${() => setMsg(t('Import terminé.'))} />`); }
+      else if (isNewBackup(j) && isAP() && (j.data.teachers || []).length > 1 && (j.data.classes || []).length) openModal(() => html`<${RestoreFull} json=${j} onDone=${() => setMsg(t('Import terminé.'))} />`);
       else if (isNewBackup(j)) { const n = j.data; update(s => { const now = nextU(), ids = new Set(n.entries.map(x => x.id)); s.data = { ...s.data, entries: [...s.data.entries.filter(x => !ids.has(x.id)), ...n.entries.map(x => ({ ...x, u: now }))] }; }); syncNow(); setMsg(t('{n} saisies restaurées.', { n: n.entries.length })); }
       else setMsg(t('Format de sauvegarde non reconnu.'));
     };

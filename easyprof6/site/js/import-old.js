@@ -47,3 +47,17 @@ export function convert(j, idFor, now = Date.now()) {
   }
   return { dept, classes, assign, slots, entries };
 }
+
+/** Sauvegarde Rekort complète → données du nouveau serveur : les anciens identifiants de collègues sont remplacés par les nouveaux (idMap : ancien → nouveau). */
+export function remapBackup(n, idMap, now) {
+  const mapT = (x) => idMap[x.teacherId], keep = (x) => idMap[x.teacherId] != null;
+  const stamp = (x, extra) => ({ ...x, ...extra, u: now });
+  return {
+    dept: n.dept ? stamp(n.dept) : null,
+    classes: (n.classes || []).filter(c => !c.deleted).map(c => stamp(c)),
+    assign: (n.assign || []).filter(a => !a.deleted && keep(a)).map(a => stamp(a, { teacherId: mapT(a), id: mapT(a) + ':' + a.classId })),
+    regul: (n.regul || []).filter(r => !r.deleted && keep(r)).map(r => stamp(r, { teacherId: mapT(r) })),
+    entries: (n.entries || []).filter(keep).map(e => stamp(e, { teacherId: mapT(e) })),
+    dropped: (n.entries || []).filter(e => !keep(e)).length,
+  };
+}

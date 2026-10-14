@@ -9,9 +9,12 @@ import { saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, 
 import { makeCtx, catchUp } from '../calc.js';
 import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
+import { Guide } from './guide.js';
 import { defaultTerms, defaultCalendar } from '../defaults.js';
 import { REASONS } from '../consts.js';
 import { fmt, todayISO } from '../dates.js';
+import { letterText, defaultLetter, showArms } from '../letterhead.js';
+import { exportCSV } from '../exports.js';
 import { isOldBackup, isNewBackup, summarize, convert, surname } from '../import-old.js';
 import { syncNow } from '../sync.js';
 
@@ -19,11 +22,12 @@ const Back = ({ title, children }) => html`<div class="page-h"><div class="row">
 
 function Menu() {
   const ap = isAP(), items = [
+    ['#/settings/guide', 'info', t('Mode d’emploi'), t('Comment utiliser Rekort, pas à pas')],
     ['#/settings/profile', 'user', t('Mon profil'), t('Nom, téléphone, mot de passe, langue')],
-    ...(ap ? [['#/settings/dept', 'school', t('Établissement et en-tête'), t('Nom, région, département, discipline')],
-      ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Trimestres, vacances, dernier jour de cours')],
+    ...(ap ? [['#/settings/dept', 'school', t('Établissement et en-tête'), t('Nom de l’école, texte imprimé en haut des fiches (français / anglais)')],
+      ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Dates des trimestres, vacances, jours sans cours')],
       ['#/settings/classes', 'book', t('Classes'), t('Les classes et leurs effectifs')],
-      ['#/settings/team', 'users', t('Équipe'), t('Collègues, emplois du temps, leçons prévues')],
+      ['#/settings/team', 'users', t('Collègues et emplois du temps'), t('Créer les comptes, choisir mots de passe, cours de la semaine, leçons prévues')],
       ['#/settings/regul', 'clock', t('Heures hors application'), t('Compter des heures faites avant Rekort')]] : []),
     ['#/settings/data', 'download', t('Sauvegarde et import'), ap ? t('Exporter, importer l’ancienne version') : t('Exporter vos données')],
   ];
@@ -55,9 +59,13 @@ function Dept() {
     <div class="grid2"><${Field} label=${t('Discipline')}><input class="input" value=${d.discipline} onChange=${(e) => set({ discipline: e.target.value.trim() })} /><//><${Field} label=${t('Abréviation')}><input class="input" value=${d.abbr} maxlength="8" onChange=${(e) => set({ abbr: e.target.value.trim().toUpperCase() })} /><//></div>
     <${Field} group label=${t('Système')}><${Seg} options=${[{ id: 'anglophone', label: t('Anglophone') }, { id: 'francophone', label: t('Francophone') }]} value=${d.system} onChange=${(v) => set({ system: v })} /><//>
     <div class="grid2"><${Field} label=${t('Année scolaire')}><input class="input" value=${d.year} placeholder="2026/2027" onChange=${(e) => set({ year: e.target.value.trim() })} /><//><${Field} label=${t('Durée d’une leçon (heures)')} hint=${t('Sert à estimer les leçons quand aucun plan n’est défini.')}><input class="input" type="number" step="0.5" min="0.5" value=${d.lh} onChange=${(e) => set({ lh: +e.target.value || 2 })} /><//></div></div>
-    <div class="card stack"><h3>${t('En-tête de la fiche d’inspection')}</h3><p class="sub">${t('Le texte « République du Cameroun / Ministère des Enseignements Secondaires » est automatique. Complétez ces champs :')}</p>
+    <div class="card stack"><h3>${t('En-tête de la fiche d’inspection')}</h3><p class="sub">${t('C’est le texte imprimé en haut des fiches : le français à gauche, l’anglais à droite, les armoiries au centre. Remplissez la région et le département : le texte est écrit pour vous. Vous pouvez aussi le modifier librement ci-dessous.')}</p>
       <div class="grid2"><${Field} label=${t('Région')}><input class="input" value=${h.region || ''} placeholder=${t('Nord')} onChange=${(e) => seth('region', e.target.value.trim())} /><//><${Field} label=${t('Département (division)')}><input class="input" value=${h.division || ''} placeholder=${t('Bénoué')} onChange=${(e) => seth('division', e.target.value.trim())} /><//></div>
-      <${Field} label=${t('Contact (facultatif)')} hint=${t('Ex. : BP 548 Garoua · Tél : 22 15 68 07 · dresnord@gmail.com')}><input class="input" value=${h.contact || ''} onChange=${(e) => seth('contact', e.target.value.trim())} /><//></div></div>`;
+      <${Field} label=${t('Contact (facultatif)')} hint=${t('Ex. : BP 548 Garoua · Tél : 22 15 68 07 · dresnord@gmail.com')}><input class="input" value=${h.contact || ''} onChange=${(e) => seth('contact', e.target.value.trim())} /><//>
+      <${Field} label=${t('Texte à gauche (français)')} hint=${t('Une ligne par ligne imprimée ; la première est en gras.')}><textarea class="input" rows="6" value=${letterText(h, 'fr')} onChange=${(e) => seth('fr', e.target.value.trim() === defaultLetter(h, 'fr') ? '' : e.target.value.trim())}></textarea><//>
+      <${Field} label=${t('Texte à droite (anglais)')}><textarea class="input" rows="6" value=${letterText(h, 'en')} onChange=${(e) => seth('en', e.target.value.trim() === defaultLetter(h, 'en') ? '' : e.target.value.trim())}></textarea><//>
+      <label class="opt"><input type="checkbox" checked=${showArms(h)} onChange=${(e) => seth('arms', e.target.checked ? '' : '0')} /><span>${t('Afficher les armoiries du Cameroun au centre')}</span></label>
+      <div class="row"><button class="btn soft sm" onClick=${() => set({ header: { ...h, fr: '', en: '' } })}>${t('Rétablir le texte automatique')}</button></div></div></div>`;
 }
 
 function Year() {
@@ -88,10 +96,17 @@ function ClassEdit({ cls }) {
     <div class="grid3"><${Field} label=${t('Effectif')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.total} onInput=${(e) => setF({ ...f, total: e.target.value })} /><//><${Field} label=${t('Filles')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.girls} onInput=${(e) => setF({ ...f, girls: e.target.value })} /><//><${Field} label=${t('Garçons')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.boys} onInput=${(e) => setF({ ...f, boys: e.target.value })} /><//></div>
     <button class="btn block">${t('Enregistrer')}</button></form><//>`;
 }
+const USUAL = {
+  anglophone: [['Form 1 A', 'Form 1', '1er'], ['Form 1 B', 'Form 1', '1er'], ['Form 2 A', 'Form 2', '1er'], ['Form 2 B', 'Form 2', '1er'], ['Form 3 A', 'Form 3', '1er'], ['Form 3 B', 'Form 3', '1er'], ['Form 4 Arts', 'Form 4', '1er'], ['Form 4 Science', 'Form 4', '1er'], ['Form 5 Arts', 'Form 5', '1er'], ['Form 5 Science', 'Form 5', '1er'], ['Lower Sixth Arts', 'Lower Sixth', '2nd'], ['Upper Sixth Arts', 'Upper Sixth', '2nd']],
+  francophone: [['6e A', '6e', '1er'], ['5e A', '5e', '1er'], ['4e A', '4e', '1er'], ['3e A', '3e', '1er'], ['2nde A', '2nde', '2nd'], ['1ère A', '1ère', '2nd'], ['Tle A', 'Tle', '2nd']],
+};
 function Classes() {
   const ctx = makeCtx(state.data);
+  const missing = (USUAL[state.data.dept.system] || USUAL.anglophone).filter(([n]) => !ctx.classes.some(c => c.name.toLowerCase() === n.toLowerCase()));
+  const addUsual = () => { missing.forEach(([name, level, cycle]) => saveClass({ name, level, cycle, effectif: { total: 0, girls: 0, boys: 0 } })); setToast(t('{n} classe(s) ajoutée(s). Indiquez leurs effectifs.', { n: missing.length })); };
   return html`<div class="page"><${Back} title=${t('Classes')}><button class="btn" onClick=${() => openModal(() => html`<${ClassEdit} />`)}><${Icon} n="plus" />${t('Nouvelle classe')}</button><//>
     <p class="sub">${t('Le nombre de leçons prévues se règle ensuite pour chaque collègue, dans Équipe.')}</p>
+    ${missing.length ? html`<button class="btn soft" style="align-self:flex-start" onClick=${addUsual}><${Icon} n="plus" />${t('Ajouter les classes habituelles')}</button>` : null}
     ${!ctx.classes.length ? html`<div class="card"><${Empty} icon="🏫" title=${t('Aucune classe')} text=${t('Ajoutez les classes où le département enseigne.')} /></div>` : html`<div class="card"><div class="list">${ctx.classes.map(c => html`<div class="item"><div class="dot">📘</div><div class="grow"><b>${c.name}</b><span>${c.cycle === '2nd' ? t('2nd cycle') : t('1er cycle')} · ${(c.effectif || {}).total || 0} ${t('élèves')}</span></div>
       <button class="icon-btn" onClick=${() => openModal(() => html`<${ClassEdit} cls=${c} />`)} aria-label=${t('Modifier')}><${Icon} n="edit" /></button>
       <button class="icon-btn" onClick=${() => confirmDialog({ title: t('Supprimer la classe {c} ?', { c: c.name }), message: t('Les saisies déjà faites dans cette classe restent dans l’historique.'), confirm: t('Supprimer'), danger: true, onConfirm: () => deleteClass(c.id) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}</div></div>`}</div>`;
@@ -173,6 +188,11 @@ function Data() {
     const blob = new Blob([JSON.stringify({ format: 'rekort', version: 1, exported: new Date().toISOString(), data: mine }, null, 1)], { type: 'application/json' });
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `rekort-${(d.dept.abbr || 'dept').toLowerCase()}-${todayISO()}.json`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   };
+  const exportRows = () => {
+    const d = state.data, c = makeCtx(d), rows = [['Enseignant', 'Classe', 'Date', 'Début', 'Fin', 'Minutes', 'Type', 'Leçon n°', 'Titre', 'Digitalisée', 'Évalués', 'Moyenne ≥ 10', 'Motif', 'Note']];
+    for (const e of c.entries.slice().sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))) rows.push([(c.teacher(e.teacherId) || {}).name, (c.cls(e.classId) || {}).name, e.date, e.start, e.end, e.minutes, e.type, e.n, e.title, e.digital ? 'oui' : '', e.eval ? e.eval.evaluated : '', e.eval ? e.eval.passed : '', e.reason, e.note]);
+    exportCSV(rows, 'rekort-saisies-' + todayISO());
+  };
   const pick = (e) => {
     const file = e.target.files[0]; e.target.value = ''; if (!file) return;
     const r = new FileReader();
@@ -186,6 +206,7 @@ function Data() {
   };
   return html`<div class="page"><${Back} title=${t('Sauvegarde et import')} />
     <div class="card stack"><h3>${t('Exporter')}</h3><p class="sub">${t('Télécharge un fichier avec vos données : une copie de sécurité à garder.')}</p><button class="btn" style="align-self:flex-start" onClick=${exportJSON}><${Icon} n="download" />${t('Télécharger la sauvegarde')}</button></div>
+    ${isAP() ? html`<div class="card stack"><h3>${t('Toutes les saisies (Excel)')}</h3><p class="sub">${t('Un tableau avec chaque séance : enseignant, classe, date, heures, leçon. S’ouvre dans Excel.')}</p><button class="btn soft" style="align-self:flex-start" onClick=${exportRows}><${Icon} n="download" />${t('Télécharger en CSV')}</button></div>` : null}
     <div class="card stack"><h3>${t('Importer')}</h3><p class="sub">${isAP() ? t('Choisissez le fichier de sauvegarde de l’ancienne version d’EasyProf (Profil › sauvegarde) pour reprendre vos classes, collègues et saisies, ou une sauvegarde Rekort.') : t('Choisissez une sauvegarde Rekort pour restaurer vos saisies.')}</p>
       <label class="btn soft" style="align-self:flex-start;cursor:pointer"><${Icon} n="upload" />${t('Choisir un fichier')}<input type="file" accept=".json,application/json" onChange=${pick} style="display:none" /></label>${msg ? html`<div class="ok">${msg}</div>` : null}</div></div>`;
 }
@@ -195,7 +216,7 @@ export function Settings({ route }) {
   if (!isAP() && ['dept', 'year', 'classes', 'team', 'regul'].includes(a)) return html`<${Menu} />`;
   switch (a) {
     case 'profile': return html`<${Profile} />`; case 'dept': return html`<${Dept} />`; case 'year': return html`<${Year} />`; case 'classes': return html`<${Classes} />`;
-    case 'team': return b ? html`<${TeacherDetail} id=${b} />` : html`<${Team} />`; case 'regul': return html`<${Regul} />`; case 'data': return html`<${Data} />`;
+    case 'team': return b ? html`<${TeacherDetail} id=${b} />` : html`<${Team} />`; case 'regul': return html`<${Regul} />`; case 'guide': return html`<${Guide} />`; case 'data': return html`<${Data} />`;
     default: return html`<${Menu} />`;
   }
 }

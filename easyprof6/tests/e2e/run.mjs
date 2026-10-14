@@ -36,12 +36,12 @@ await step('A. Inscription et configuration par l’animateur', async () => {
   teacher = { username, password };
   await apPage.getByRole('button', { name: /fermer/i }).click();
   await apPage.locator('a.item', { hasText: 'ASTHA' }).click(); await apPage.waitForTimeout(400);
-  await apPage.getByRole('button', { name: /ajouter un créneau/i }).click();
+  await apPage.getByRole('button', { name: /ajouter un cours/i }).click();
   await apPage.locator('.card.flat select').nth(1).selectOption({ label: 'Form 3 A' });
   await apPage.locator('select:has(option[value=""])').filter({ hasText: 'Ajouter une classe' }).last().selectOption({ label: 'Form 3 A' }); await apPage.getByRole('button', { name: /^Ajouter$/ }).click(); await apPage.waitForTimeout(300);
   await apPage.locator('table.tbl input[type=number]').first().fill('10'); await apPage.locator('table.tbl input[type=number]').first().blur(); await apPage.waitForTimeout(250);
   await go(apPage, url, '#/settings/team'); await apPage.locator('a.item', { hasText: 'KAMDEM' }).click(); await apPage.waitForTimeout(400);
-  await apPage.getByRole('button', { name: /ajouter un créneau/i }).click();
+  await apPage.getByRole('button', { name: /ajouter un cours/i }).click();
   await apPage.locator('.card.flat select').nth(1).selectOption({ label: 'Lower Sixth Arts' });
   await apPage.locator('select:has(option[value=""])').filter({ hasText: 'Ajouter une classe' }).last().selectOption({ label: 'Lower Sixth Arts' }); await apPage.getByRole('button', { name: /^Ajouter$/ }).click(); await apPage.waitForTimeout(300);
   await apPage.locator('table.tbl input[type=number]').first().fill('20'); await apPage.locator('table.tbl input[type=number]').first().blur(); await apPage.waitForTimeout(250);
@@ -109,6 +109,23 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
   await apPage.getByRole('button', { name: /censorat/i }).click(); await apPage.waitForTimeout(300);
   const fp = await apPage.innerText('body'); ok(/FICHE PÉDAGOGIQUE DE SUIVI/i.test(fp) && /TOTAL GÉNÉRAL/.test(fp) && (await apPage.locator('.paper img').count()) === 1, 'E4 fiche pédagogique de suivi (censorat) : armoiries et total général');
   await apPage.screenshot({ path: shots + '/e_recap.png', fullPage: true });
+  // l'animateur contrôle la semaine d'un collègue : retirer, puis cocher « Présent » à sa place
+  await go(apPage, url, '#/week'); await apPage.waitForSelector('.wk');
+  await apPage.locator('select').first().selectOption({ label: 'Mme ASTHA Noura' }); await apPage.waitForTimeout(300);
+  const wk = await apPage.innerText('.page');
+  ok(/Contrôle de la semaine/.test(wk) && /Form 3 A/.test(wk), 'E5 contrôle de la semaine : le cours du collègue est affiché');
+  const hrs = async () => (await apPage.locator('.chip.info').innerText());
+  const h0 = await hrs();
+  if (await apPage.getByRole('button', { name: 'Retirer' }).count()) { await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300); }
+  await apPage.getByRole('button', { name: 'Présent' }).first().click(); await apPage.waitForTimeout(400);
+  ok(/2 h faites sur/.test(await hrs()), 'E6 « Présent » enregistre le cours au nom du collègue (' + h0 + ' → ' + (await hrs()) + ')');
+  await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300);
+  await apPage.getByRole('button', { name: 'En retard' }).first().click(); await apPage.getByRole('button', { name: '30 min' }).click(); await apPage.waitForTimeout(400);
+  ok(/1,5 h faites sur/.test(await hrs()), 'E7 « En retard » de 30 min : 1,5 h comptées');
+  // en-tête libre et mode d'emploi
+  await go(apPage, url, '#/settings/dept'); await apPage.locator('textarea').first().fill('REPUBLIQUE DU CAMEROUN\nPaix-Travail-Patrie\n**********\nTEXTE DE TEST'); await apPage.locator('textarea').first().blur(); await apPage.waitForTimeout(300);
+  await go(apPage, url, '#/report'); ok(/TEXTE DE TEST/.test(await apPage.locator('.paper').first().innerText()), 'E8 le texte d’en-tête écrit par l’animateur est imprimé sur la fiche');
+  await go(apPage, url, '#/settings/guide'); ok(/Une fois, au départ/.test(await apPage.innerText('.page')), 'E9 le mode d’emploi est accessible');
 });
 
 await step('F. Mot de passe oublié (animateur)', async () => {

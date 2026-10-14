@@ -59,7 +59,7 @@ function cleanRegul(r) {
 }
 function cleanDept(d, id) {
   if (!d || typeof d !== 'object') return null;
-  const hdr = {}; for (const [k, v] of Object.entries(d.header || {}).slice(0, 40)) hdr[str(k, 40)] = str(v, 200);
+  const hdr = {}; for (const [k, v] of Object.entries(d.header || {}).slice(0, 40)) hdr[str(k, 40)] = str(v, 700);
   const terms = Array.isArray(d.terms) ? d.terms.slice(0, 4).map(t => ({ id: str(t.id, 4), name: str(t.name, 40), start: str(t.start, 10), end: str(t.end, 10), last: str(t.last, 10) })) : [];
   const cal = Array.isArray(d.calendar) ? d.calendar.slice(0, 200).map(c => ({ f: str(c.f, 10), t: str(c.t, 10), n: str(c.n, 80) })) : [];
   return {

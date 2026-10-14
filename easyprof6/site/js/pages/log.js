@@ -4,7 +4,7 @@ import { Empty, Chip, num1 } from '../ui.js';
 import { Icon } from '../icons.js';
 import { EntryForm } from './entry.js';
 import { makeCtx } from '../calc.js';
-import { state, myId, setToast } from '../store.js';
+import { state, myId, setToast, isAP } from '../store.js';
 import { deleteEntry } from '../actions.js';
 import { openAbsence } from '../widgets.js';
 import { typeOf, reasonOf } from '../consts.js';
@@ -23,7 +23,7 @@ export function Log() {
     const c = (ctx.cls(rec.classId) || {}).name || '';
     setToast(info.editing ? t('Séance modifiée.') : (info.wasN != null ? t('{c} · leçon {n} enregistrée', { c, n: info.wasN }) : t('{c} · séance enregistrée', { c })), '', info.editing ? null : { label: t('Annuler'), run: () => deleteEntry(rec.id) });
   };
-  return html`<div class="page"><div class="page-h"><h1>${t('Saisir un cours')}</h1><button class="btn ghost sm" onClick=${() => openAbsence(ctx, tid)}>${t('Pas de cours')}</button></div>
+  return html`<div class="page"><div class="page-h"><h1>${t('Saisir un cours')}</h1><div class="row">${isAP() ? html`<a class="btn soft sm" href="#/week">${t('Contrôler un collègue')}</a>` : null}<button class="btn ghost sm" onClick=${() => openAbsence(ctx, tid)}>${t('Pas de cours')}</button></div></div>
     ${!ctx.classes.length ? html`<div class="card"><${Empty} icon="🏫" title=${t('Aucune classe pour le moment')} text=${t('L’animateur pédagogique doit d’abord créer les classes du département.')}><a class="btn sm" href="#/settings/classes">${t('Ouvrir les classes')}</a><//></div>` : null}
     <div class="card"><${EntryForm} ctx=${ctx} tid=${tid} onSaved=${done} /></div>
     <div class="card"><div class="card-h"><h3>${t('Dernières saisies')}</h3><a class="btn soft sm" href="#/lessons">${t('Tout voir et modifier')}</a></div><${RecentList} ctx=${ctx} tid=${tid} /></div></div>`;

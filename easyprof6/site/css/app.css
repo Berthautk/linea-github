@@ -242,3 +242,12 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .notice { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 12px; background: rgba(233, 162, 59, .22); color: inherit; text-decoration: none; font-size: 13px; }
 .notice svg { flex: none; margin-top: 1px; }
 .slot-row { display: grid; grid-template-columns: 1fr 84px auto; gap: 8px; align-items: center; } .slot-row .full { grid-column: 1 / -1; }
+
+.slot-row.two { grid-template-columns: 1fr auto; } .g3 { display: grid; grid-template-columns: 1fr 1fr 82px; gap: 8px; }
+
+.wk { padding: 10px 0; border-bottom: 1px dashed var(--line); display: flex; flex-direction: column; gap: 8px; } .wk:last-child { border-bottom: 0; }
+.wk-main { display: flex; gap: 12px; align-items: center; } .wk-main b { display: block; } .wk-main span { font-size: 12.5px; color: var(--muted); }
+.wk-act { display: flex; flex-wrap: wrap; gap: 6px; padding-left: 52px; }
+.guide { margin: 0; padding-left: 22px; display: grid; gap: 10px; font-size: 14.5px; line-height: 1.5; } .guide li::marker { font-weight: 800; color: var(--teal-d); }
+.cap::first-letter { text-transform: uppercase; }
+.slot { padding: 12px; } .slot > summary { cursor: pointer; font-size: 14px; list-style: none; } .slot > summary::-webkit-details-marker { display: none; } .slot > summary::after { content: '▾'; float: right; color: var(--muted); } .slot[open] > summary::after { content: '▴'; }

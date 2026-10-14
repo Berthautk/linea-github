@@ -18,11 +18,18 @@ export function summarize(j) {
     classes: (j.classes || []).length, entries: (j.entries || []).length, year: (j.establishment || {}).schoolYear || '' };
 }
 
+/** Reprend l'en-tête officiel de l'ancienne version (pays, devise, région, délégation, adresse), ligne par ligne. */
+function side(h, L) {
+  const sep = '**********', parts = [h['country' + L], h['motto' + L], sep, h['region' + L], sep, h['delegation' + L], sep, ...String(h['address' + L] || '').split('\n')].map(x => String(x || '').trim());
+  if (!parts[0]) return '';
+  return parts.filter((x, i) => x && !(x === sep && (i === parts.length - 1))).join('\n');
+}
+
 /** Construit les nouvelles données ; `idFor(oldTeacherId)` donne l'identifiant du collègue dans la nouvelle application. */
 export function convert(j, idFor, now = Date.now()) {
   const est = j.establishment || {}, hdr = est.header || {};
   const m = /\bDU\s+(.+)$/i.exec(hdr.regionFR || '') || /^(.*?)\s+REGION$/i.exec(hdr.regionEN || '');
-  const dept = { name: est.name || '', discipline: j.discipline || '', abbr: j.disciplineAbbr || '', system: est.system === 'francophone' ? 'francophone' : 'anglophone', header: { region: m ? cap(m[1].trim()) : '', division: est.division ? cap(est.division) : '', email: hdr.emailFR || '', address: '' } };
+  const dept = { name: est.name || '', discipline: j.discipline || '', abbr: j.disciplineAbbr || '', system: est.system === 'francophone' ? 'francophone' : 'anglophone', header: { region: m ? cap(m[1].trim()) : '', division: est.division ? cap(est.division) : '', email: hdr.emailFR || '', address: '', fr: side(hdr, 'FR'), en: side(hdr, 'EN') } };
   const classes = [], assign = [];
   for (const c of j.classes || []) {
     classes.push({ id: c.id, name: c.name, level: c.level || '', cycle: c.cycle === '2nd' ? '2nd' : '1er', effectif: { total: +(c.enrollment || {}).total || 0, girls: +(c.enrollment || {}).girls || 0, boys: +(c.enrollment || {}).boys || 0 }, u: now });

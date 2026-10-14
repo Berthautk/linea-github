@@ -8,6 +8,8 @@ import { PeriodBar, ScopeBar, currentTid, periodLabel } from '../widgets.js';
 import { state, setUI, isAP, myId } from '../store.js';
 import { fmt, minISO } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
+import { letterText, showArms } from '../letterhead.js';
+import { exportWord } from '../exports.js';
 
 const up = (s) => String(s || '').toUpperCase();
 function factorTexts(ctx, S) {
@@ -34,10 +36,14 @@ function actionTexts(S) {
   out.push(t('Saisie régulière de tous les enseignants dans Rekort ; contrôle par l’animateur pédagogique chaque vendredi.'));
   return out.join('\n');
 }
+function LetterSide({ text }) {
+  const lines = text.split('\n');
+  return html`<div><b>${lines[0]}</b>${lines.slice(1).map(l => html`<br />${l}`)}</div>`;
+}
 function Letterhead({ d, hd }) {
-  return html`<div class="hd"><div><b>RÉPUBLIQUE DU CAMEROUN</b><br />Paix – Travail – Patrie<br />MINISTÈRE DES ENSEIGNEMENTS SECONDAIRES<br />${hd.region ? 'DÉLÉGATION RÉGIONALE ' + up(hd.region) : ''}<br />${hd.division ? 'DÉLÉGATION DÉPARTEMENTALE ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div>
-      <div style="align-self:center"><img src="/icons/armoiries.png" alt="" style="width:74px;height:auto;display:block;margin:0 auto 4px" /><div style="font-weight:800;font-size:10px">${up(d.name)}</div></div>
-      <div><b>REPUBLIC OF CAMEROON</b><br />Peace – Work – Fatherland<br />MINISTRY OF SECONDARY EDUCATION<br />${hd.region ? 'REGIONAL DELEGATION FOR ' + up(hd.region) : ''}<br />${hd.division ? 'DIVISIONAL DELEGATION FOR ' + up(hd.division) : ''}${hd.contact ? html`<br />${hd.contact}` : ''}</div></div>`;
+  return html`<div class="hd"><${LetterSide} text=${letterText(hd, 'fr')} />
+      <div style="align-self:center">${showArms(hd) ? html`<img src="/icons/armoiries.png" alt="" style="width:74px;height:auto;display:block;margin:0 auto 4px" />` : null}<div style="font-weight:800;font-size:10px">${up(d.name)}</div></div>
+      <${LetterSide} text=${letterText(hd, 'en')} /></div>`;
 }
 
 const sg = (n) => html`<span class=${n < 0 ? 'neg' : n > 0 ? 'pos' : ''}>${(n > 0 ? '+' : '') + num1(n)}</span>`;
@@ -93,7 +99,7 @@ export function Report() {
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, p.pe);
   const who = tid ? (ctx.teacher(tid) || {}).name : '';
   const facts = edit.ft != null ? edit.ft : factorTexts(ctx, S), acts = edit.ac != null ? edit.ac : actionTexts(S);
-  return html`<div class="page"><div class="page-h noprint"><h1>${t('Fiche d’inspection')}</h1><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer / PDF')}</button></div>
+  return html`<div class="page"><div class="page-h noprint"><h1>${t('Fiche d’inspection')}</h1><div class="row"><button class="btn soft" onClick=${() => exportWord(document.querySelector('.paper'), 'rekort-' + (tab === 'sheet' ? 'fiche-inspection' : 'fiche-pedagogique') + '-' + ctx.today)}><${Icon} n="download" />${t('Word')}</button><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer / PDF')}</button></div></div>
     <div class="noprint stack"><${ScopeBar} ctx=${ctx} /><${Seg} options=${[{ id: 'sheet', label: t('Fiche de l’inspection') }, ...(ap ? [{ id: 'recap', label: t('Fiche pédagogique (censorat)') }] : [])]} value=${tab} onChange=${setTab} />
       <div class="card"><div class="card-h"><h3>${t('Période demandée par l’inspecteur')}</h3></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => { setUI({ rperiod: np }); setEdit({ ft: null, ac: null }); }} />
         <div class="row" style="margin-top:10px"><button class="btn soft sm" onClick=${() => setUI({ rperiod: { kind: 'custom', ps: ctx.ys, pe: minISO(ctx.today, ctx.ye) } })}>${t('De la rentrée à aujourd’hui')}</button></div></div>

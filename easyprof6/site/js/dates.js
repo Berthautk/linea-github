@@ -29,10 +29,9 @@ export function fmt(iso, lang = 'fr', opts = {}) {
   if (!iso || iso.length < 10) return '…';
   const [y, m, d] = iso.split('-').map(Number);
   const mn = monthName(m - 1, lang);
-  const base = lang === 'en' ? `${mn} ${d}, ${y}` : `${d === 1 ? '1er' : d} ${mn} ${y}`;
-  if (opts.noYear) return lang === 'en' ? `${mn} ${d}` : `${d === 1 ? '1er' : d} ${mn}`;
-  if (opts.weekday) return dayName(dow(iso), lang, opts.short) + ' ' + base;
-  return base;
+  const day = d === 1 && lang !== 'en' ? '1er' : d;
+  const base = opts.noYear ? (lang === 'en' ? `${mn} ${d}` : `${day} ${mn}`) : (lang === 'en' ? `${mn} ${d}, ${y}` : `${day} ${mn} ${y}`);
+  return opts.weekday ? dayName(dow(iso), lang, opts.short) + ' ' + base : base;
 }
 export const timeToMin = (t) => { const [h, m] = String(t || '').split(':').map(Number); return Number.isFinite(h) && Number.isFinite(m) ? h * 60 + m : NaN; };
 export const minToTime = (n) => pad(Math.floor(n / 60) % 24) + ':' + pad(n % 60);

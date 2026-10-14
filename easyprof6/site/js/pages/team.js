@@ -4,11 +4,11 @@ import { t } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Field, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
-import { state, myId, setToast } from '../store.js';
+import { state, myId, setToast, setUI } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept } from '../actions.js';
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
-import { dayName, fmt } from '../dates.js';
+import { dayName, fmt, timeToMin, minToTime } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, fresh = true }) {
@@ -42,7 +42,7 @@ export function Team() {
   return html`<div class="page"><div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${t('Équipe')}</h1></div><button class="btn" onClick=${() => openModal(() => html`<${AddTeacher} />`)}><${Icon} n="plus" />${t('Ajouter un collègue')}</button></div>
     <p class="sub">${t('Chaque collègue reçoit un identifiant et un mot de passe. Il retrouve ensuite ses classes, son emploi du temps et son avancement sur son téléphone.')}</p>
     <div class="card"><div class="list">${ctx.teachers.map(tc => { const n = ctx.assign.filter(a => a.teacherId === tc.id).length, sl = (tc.slots || []).length;
-      return html`<a class="item" href=${'#/settings/team/' + tc.id} style="text-decoration:none;color:inherit"><div class="dot">${tc.role === 'ap' ? '⭐' : '🧑‍🏫'}</div><div class="grow"><b>${tc.name}${tc.id === myId() ? ' (' + t('vous') + ')' : ''}</b><span>${tc.username} · ${sl} ${t('créneau(x)')} · ${n} ${t('classe(s)')}</span></div>
+      return html`<a class="item" href=${'#/settings/team/' + tc.id} style="text-decoration:none;color:inherit"><div class="dot">${tc.role === 'ap' ? '⭐' : '🧑‍🏫'}</div><div class="grow"><b>${tc.name}${tc.id === myId() ? ' (' + t('vous') + ')' : ''}</b><span>${tc.username} · ${sl} ${t('cours')} · ${n} ${t('classe(s)')}</span></div>
         ${!sl || !n ? html`<${Chip} tone="warn">${t('à compléter')}<//>` : html`<${Chip} tone="ok">${t('prêt')}<//>`}<${Icon} n="right" size="18" /></a>`; })}</div></div>
     <div class="card row"><div class="grow"><b>${t('Tout est correct ?')}</b><p class="sub">${t('Quand les noms, identifiants, emplois du temps et leçons prévues sont bons, confirmez : l’étape disparaît de « Pour bien démarrer ».')}</p></div>
       ${(ctx.dept.setup || {}).team ? html`<${Chip} tone="ok">✓ ${t('Confirmé')}<//>` : html`<button class="btn" onClick=${() => { saveDept({ setup: { ...(ctx.dept.setup || {}), team: true, tt: true } }); setToast(t('Équipe confirmée.')); }}>${t('Tout est correct')}</button>`}</div></div>`;
@@ -60,22 +60,25 @@ function OnlyDates({ dates, onChange }) {
 function Slots({ tc, ctx }) {
   const lang = getLang(), slots = tc.slots || [];
   const set = (i, patch) => saveTeacher(tc.id, { slots: slots.map((s, j) => (j === i ? { ...s, ...patch } : s)) });
-  const add = () => saveTeacher(tc.id, { slots: [...slots, { d: 1, c: (ctx.classes[0] || {}).id || '', h: 2, tm: '', st: '' }] });
+  const add = () => { setUI({ slotOpen: slots.length }); saveTeacher(tc.id, { slots: [...slots, { d: 1, c: (ctx.classes[0] || {}).id || '', h: 2, tm: '', st: '' }] }); };
   const del = (i) => saveTeacher(tc.id, { slots: slots.filter((_, j) => j !== i) });
   const total = slots.reduce((s, x) => s + (+x.h || 0), 0);
+  const endOf = (s) => (s.st ? minToTime(timeToMin(s.st) + Math.round((+s.h || 0) * 60)) : '');
+  const setEnd = (i, s, v) => { if (!s.st || !v) return; const m = timeToMin(v) - timeToMin(s.st); if (m > 0) set(i, { h: Math.round(m / 15) / 4 }); };
   return html`<div class="card"><div class="card-h"><h3>${t('Emploi du temps de la semaine')}</h3><${Chip} tone="info">${num1(total)} h / ${t('semaine')}<//></div>
     ${!ctx.classes.length ? html`<p class="sub">${t('Créez d’abord les classes.')}</p>` : null}
-    <div class="stack" style="gap:10px">${slots.map((s, i) => html`<div class="card flat stack" style="padding:12px;gap:10px">
-      <div class="slot-row">
+    <div class="stack" style="gap:10px">${slots.map((s, i) => html`<details class="card flat slot" open=${slots.length <= 2 || i === state.ui.slotOpen}><summary><b>${dayName(s.d % 7, lang)}</b> · ${(ctx.cls(s.c) || {}).name || '?'} · ${s.st ? s.st + ' → ' + endOf(s) + ' · ' : ''}${s.h} h${s.only && s.only.length ? ' · ' + t('dates précises') : ''}</summary><div class="stack" style="gap:10px;padding-top:10px">
+      <div class="slot-row two">
         <select class="input" value=${s.d} onChange=${(e) => set(i, { d: +e.target.value })} aria-label=${t('Jour')}>${DAYS.map(d => html`<option value=${d}>${dayName(d % 7, lang)}</option>`)}</select>
-        <div class="row" style="gap:6px;flex-wrap:nowrap"><input class="input" type="number" step="0.5" min="0" max="12" value=${s.h} onChange=${(e) => set(i, { h: +e.target.value || 0 })} aria-label=${t('Heures')} /><span class="sub">h</span></div>
         <button class="icon-btn" onClick=${() => del(i)} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button>
         <select class="input full" value=${s.c} onChange=${(e) => set(i, { c: e.target.value })} aria-label=${t('Classe')}>${ctx.classes.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select></div>
-      <div class="grid2"><${Field} label=${t('Heure de début')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => set(i, { st: e.target.value })} /><//>
-        <${Field} label=${t('Valable')}><select class="input" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//></div>
-      <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div>`)}</div>
-    <div class="row" style="margin-top:12px"><button class="btn soft" onClick=${add}><${Icon} n="plus" />${t('Ajouter un créneau')}</button></div>
-    <p class="hint" style="margin-top:8px">${t('Un créneau = un jour, une classe, un nombre d’heures. Pour un cours de 2 h le lundi puis 3 h le mardi dans la même classe, ajoutez deux créneaux. Un créneau « valable le 1er trimestre » sert par exemple aux samedis de rattrapage de début d’année.')}</p></div>`;
+      <div class="g3"><${Field} label=${t('De (heure de début)')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => set(i, { st: e.target.value })} /><//>
+        <${Field} label=${t('À (heure de fin)')}><input class="input" type="time" value=${endOf(s)} onChange=${(e) => setEnd(i, s, e.target.value)} /><//>
+        <${Field} label=${t('Durée (h)')}><input class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => set(i, { h: +e.target.value || 0 })} /><//></div>
+      <${Field} label=${t('Valable')}><select class="input" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
+      <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div></details>`)}</div>
+    <div class="row" style="margin-top:12px"><button class="btn soft" onClick=${add}><${Icon} n="plus" />${t('Ajouter un cours')}</button></div>
+    <p class="hint" style="margin-top:8px">${t('Un cours de la semaine = un jour, une classe, une heure de début et de fin. Pour une classe vue le lundi puis le mardi, ajoutez deux cours. Pour un cours qui n’a lieu que certains jours précis (par exemple deux samedis), indiquez ces dates : les autres semaines ne comptent pas.')}</p></div>`;
 }
 
 function Plan({ tc, ctx }) {

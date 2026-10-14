@@ -15,7 +15,7 @@ export async function exportWord(el, name, landscape = true) {
     table{border-collapse:collapse;width:100%} th,td{border:1px solid #000;padding:2pt 3pt;text-align:center;vertical-align:middle;font-size:8pt} th{background:#F3ECDD}
     td.l{text-align:left} h2{text-align:center;font-size:13pt;text-transform:uppercase;margin:8pt 0 2pt}
     .hd{width:100%;text-align:center;font-size:8pt} .sig div{display:inline-block;width:30%;border:1px dashed #666;min-height:60pt;vertical-align:top;margin-right:2%}`;
-  const html = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>${name}</title><style>${css}</style></head><body><div class="Section1">${clone.innerHTML}</div></body></html>`;
+  const html = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>${String(name).replace(/[<>&"]/g, '')}</title><style>${css}</style></head><body><div class="Section1">${clone.innerHTML}</div></body></html>`;
   download(new Blob(['﻿', html], { type: 'application/msword' }), name + '.doc');
 }
 

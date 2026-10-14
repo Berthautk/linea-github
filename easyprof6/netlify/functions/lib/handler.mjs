@@ -7,7 +7,7 @@ import { mergeById, mergeMeta, prune, sameJSON } from '../../../site/js/shared/m
 const MAX = { body: 2_000_000, teachers: 60, classes: 200, assign: 600, regul: 3000, entries: 20000, str: 400 };
 const ENTRY_TYPES = ['lesson', 'practical', 'orientation', 'revision', 'assessment', 'absence'];
 
-const json = (status, obj) => new Response(JSON.stringify({ now: now(), ...obj }), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
+const json = (status, obj) => new Response(JSON.stringify({ now: now(), ...obj }), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' } });
 const fail = (status, error, message) => json(status, { error, message });
 
 const users = () => kv('users');
@@ -95,10 +95,17 @@ async function readBody(req) {
 }
 
 /* ---------- routes ---------- */
-async function signup(b) {
+const WEAK = new Set(['123456', '1234567', '12345678', '123456789', 'password', 'motdepasse', 'azerty', 'azerty123', 'qwerty', 'qwerty123', '000000', '111111', 'abcdef', 'abc123', 'rekort', 'rekort123']);
+/** Mot de passe trop évident : très courant, un seul caractère répété, ou identique à l'identifiant. */
+export function weakPassword(p, username = '') { const x = String(p || '').toLowerCase(); return WEAK.has(x) || /^(.)\1+$/.test(x) || x === String(username).toLowerCase(); }
+const SIGNUP = { perIp: 5, ipMs: 3600e3, perDay: 300, dayMs: 864e5 };
+async function signup(b, ip = 'local') {
+  const need = process.env.REKORT_SIGNUP_CODE;   // facultatif : si défini sur Netlify, seul qui connaît ce code peut créer un département
+  if (need && String(b.signupCode || '').trim() !== need) return fail(403, 'signup_code', 'Code d’inscription incorrect.');
+  if (await tooMany('signup', ip, SIGNUP.perIp, SIGNUP.ipMs) || await tooMany('signup', 'all', SIGNUP.perDay, SIGNUP.dayMs)) return LOCKED();
   const username = normUser(b.username);
   if (!validUser(username)) return fail(400, 'bad_username', 'Identifiant : 3 à 24 caractères (lettres, chiffres, point, tiret).');
-  if (!validPassword(b.password)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.');
+  if (!validPassword(b.password) || weakPassword(b.password, username)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères, pas trop évident (ni 123456, ni votre identifiant).');
   const name = str(b.name, 80).trim();
   if (!name) return fail(400, 'bad_name', 'Indiquez votre nom.');
   if (await users().get('u:' + username)) return fail(409, 'username_taken', 'Cet identifiant est déjà utilisé.');
@@ -116,14 +123,22 @@ async function signup(b) {
 
 const LOCK = { max: 8, ms: 10 * 60 * 1000 };
 /** Chaque tentative écrit d'abord sa marque (clé unique), puis on compte les marques récentes : des requêtes simultanées ne passent plus entre les mailles. */
-async function tooMany(scope, id) {
+async function tooMany(scope, id, max = LOCK.max, ms = LOCK.ms) {
   const prefix = `f:${scope}:${id}/`, store = users();
   await store.set(prefix + now() + '-' + rand(3), { t: now() });
-  const cut = now() - LOCK.ms; let n = 0;
+  const cut = now() - ms; let n = 0;
   for (const k of await store.list(prefix)) { if (+k.slice(prefix.length).split('-')[0] >= cut) n++; else await store.delete(k); }
-  return n > LOCK.max;
+  return n > max;
 }
 async function clearTries(scope, id) { const store = users(); for (const k of await store.list(`f:${scope}:${id}/`)) await store.delete(k); }
+/** Adresse du visiteur telle que Netlify la donne (en-tête posé par leur serveur, pas par le navigateur). */
+const clientIp = (req) => String(req.headers.get('x-nf-client-connection-ip') || String(req.headers.get('x-forwarded-for') || '').split(',')[0] || 'local').trim().slice(0, 64);
+/** Connexion : une limite par couple (identifiant, adresse) pour qu'un inconnu ne puisse pas bloquer un collègue depuis l'extérieur, et une limite plus large par identifiant pour freiner les attaques réparties. */
+async function loginLocked(username, ip) {
+  const a = await tooMany('login', username + '|' + ip), b = await tooMany('loginu', username, 40);
+  return a || b;
+}
+async function clearLogin(username) { const store = users(); for (const k of await store.list(`f:login:${username}|`)) await store.delete(k); await clearTries('loginu', username); }
 const LOCKED = () => fail(429, 'locked', 'Trop de tentatives. Réessayez dans quelques minutes.');
 /** Vérifie le mot de passe de l'utilisateur connecté, avec le même verrouillage que la connexion. Renvoie une réponse d'erreur, ou null si tout va bien. */
 async function checkOwnPassword(user, pw) {
@@ -131,14 +146,14 @@ async function checkOwnPassword(user, pw) {
   if (!(await verifyPassword(String(pw || ''), user))) return fail(403, 'bad_credentials', 'Mot de passe incorrect.');
   await clearTries('pw', user.username); return null;
 }
-async function login(b) {
+async function login(b, ip = 'local') {
   const username = normUser(b.username);
   const u = username ? await users().get('u:' + username) : null;
   if (!u) { await hashPassword('x'); return fail(401, 'bad_credentials', 'Identifiant ou mot de passe incorrect.'); }
-  if (u.disabled) return fail(403, 'account_disabled', "Ce compte a été désactivé par l'animateur pédagogique.");
-  if (await tooMany('login', username)) return LOCKED();
+  if (await loginLocked(username, ip)) return LOCKED();
   if (!(await verifyPassword(String(b.password || ''), u))) return fail(401, 'bad_credentials', 'Identifiant ou mot de passe incorrect.');
-  await clearTries('login', username);
+  if (u.disabled) return fail(403, 'account_disabled', "Ce compte a été désactivé par l'animateur pédagogique.");   // révélé seulement à qui connaît le mot de passe
+  await clearLogin(username);
   return json(200, { ok: true, token: await tokenFor(u), session: session(u), now: now() });
 }
 
@@ -207,7 +222,7 @@ async function sync(req, ctx, b) {
     if (rev > 0 && (known == null || rev > known || pushed)) { const d = await data().get(`${deptId}/e/${tid}`); if (d) out[tid] = d; }
   }
   const res = { ok: true, now: now(), e: out };
-  if (metaChanged || have.meta == null || meta.rev > have.meta) res.meta = role === 'ap' ? meta : { ...meta, teachers: (meta.teachers || []).map(({ username, ...rest }) => rest) };   // identifiants de connexion cachés aux enseignants
+  if (metaChanged || have.meta == null || meta.rev > have.meta) res.meta = role === 'ap' ? meta : { ...meta, teachers: (meta.teachers || []).map(({ username, phone, ...rest }) => (rest.id === me ? { ...rest, phone } : rest)) };   // identifiants de connexion cachés aux enseignants
   res.session = session(ctx.user);   // le rôle peut changer (transfert de l'animation pédagogique)
   if (ctx.exp - now() < 30 * 864e5) res.token = await tokenFor(ctx.user);
   return json(200, res);
@@ -227,7 +242,7 @@ async function teamAdd(ctx, b) {
   if (b.username && (await users().get('u:' + username))) return fail(409, 'username_taken', 'Cet identifiant est déjà utilisé.');
   for (let i = 2; await users().get('u:' + username); i++) username = base.slice(0, 20) + i;
   const password = b.password ? String(b.password) : randomCode(6);
-  if (!validPassword(password)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.');
+  if (!validPassword(password) || weakPassword(password, username)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères, pas trop évident (ni 123456, ni l’identifiant).');
   const tid = 't' + rand(4), t = now();
   await users().set('u:' + username, { username, uid: rand(6), deptId, role: 'teacher', teacherId: tid, ...(await hashPassword(password)), created: t });
   const teacher = { id: tid, name, short: str(b.short, 20).toUpperCase() || shortName(name), username, role: 'teacher', phone: str(b.phone, 30), slots: [], u: t };
@@ -245,9 +260,9 @@ async function teamReset(ctx, b) {
   if (!t) return fail(404, 'not_found', 'Collègue introuvable.');
   const u = await users().get('u:' + t.username); if (!u) return fail(404, 'not_found', 'Compte introuvable.');
   let password = randomCode(6);
-  if (b.password != null && b.password !== '') { password = String(b.password); if (!validPassword(password)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.'); }
+  if (b.password != null && b.password !== '') { password = String(b.password); if (!validPassword(password) || weakPassword(password, t.username)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères, pas trop évident (ni 123456, ni l’identifiant).'); }
   Object.assign(u, await hashPassword(password)); delete u.disabled; u.ver = (u.ver || 0) + 1;
-  await users().set('u:' + t.username, u); await clearTries('login', t.username);
+  await users().set('u:' + t.username, u); await clearLogin(t.username);
   return json(200, { ok: true, username: t.username, password });
 }
 /** L'animateur change l'identifiant d'un collègue (le mot de passe est conservé). */
@@ -303,7 +318,7 @@ async function newRecovery(ctx, b) {
   return json(200, { ok: true, recovery: code });
 }
 async function changePassword(ctx, b) {
-  if (!validPassword(b.password)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.');
+  if (!validPassword(b.password) || weakPassword(b.password, ctx.user.username)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères, pas trop évident (ni 123456, ni l’identifiant).');
   if (await tooMany('pw', ctx.user.username)) return LOCKED();
   if (!(await verifyPassword(String(b.old || ''), ctx.user))) return fail(403, 'bad_credentials', 'Ancien mot de passe incorrect.');
   await clearTries('pw', ctx.user.username);
@@ -311,14 +326,14 @@ async function changePassword(ctx, b) {
   await users().set('u:' + ctx.user.username, ctx.user);
   return json(200, { ok: true, token: await tokenFor(ctx.user) });
 }
-async function recover(b) {
+async function recover(b, ip = 'local') {
   const username = normUser(b.username), u = username ? await users().get('u:' + username) : null;
   const bad = () => fail(403, 'bad_code', 'Identifiant ou code de récupération incorrect.');   // même réponse dans tous les cas : on ne révèle pas quels identifiants existent
-  if (!u || u.role !== 'ap' || !validPassword(b.password)) { await hashPassword('x'); return validPassword(b.password) ? bad() : fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.'); }
-  if (await tooMany('recover', username)) return LOCKED();
+  if (!u || u.role !== 'ap' || !validPassword(b.password) || weakPassword(b.password, username)) { await hashPassword('x'); return validPassword(b.password) && !weakPassword(b.password, username) ? bad() : fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.'); }
+  if (await tooMany('recover', username + '|' + ip) || await tooMany('recoveru', username, 40)) return LOCKED();
   const d = await depts().get('d:' + u.deptId);
   if (!d || !(await verifyPassword(String(b.code || '').toUpperCase().replace(/[^A-Z0-9]/g, ''), d.recovery))) return bad();
-  await clearTries('recover', username); await clearTries('login', username);
+  await clearTries('recover', username); await clearLogin(username);
   Object.assign(u, await hashPassword(b.password)); delete u.disabled; u.ver = (u.ver || 0) + 1; await users().set('u:' + username, u);
   const code = recoveryCode(); d.recovery = await hashPassword(code.replace(/-/g, '')); await depts().set('d:' + u.deptId, d);
   return json(200, { ok: true, recovery: code });
@@ -330,10 +345,16 @@ export async function handle(req) {
     const path = url.pathname.replace(/^\/(\.netlify\/functions\/api|api)/, '').replace(/\/+$/, '') || '/';
     if (path === '/ping') return json(200, { ok: true, time: now() });
     if (req.method !== 'POST') return fail(405, 'method', 'Méthode non autorisée.');
-    const body = await readBody(req);
-    if (path === '/signup') return await signup(body);
-    if (path === '/login') return await login(body);
-    if (path === '/recover') return await recover(body);
+    const origin = req.headers.get('origin');   // un autre site web ne peut pas appeler l'API avec le navigateur de nos utilisateurs
+    let oh = ''; try { oh = origin && origin !== 'null' ? new URL(origin).host : ''; } catch { return fail(403, 'origin', 'Origine non autorisée.'); }
+    if (origin && origin !== 'null' && ![url.host, req.headers.get('host')].includes(oh)) return fail(403, 'origin', 'Origine non autorisée.');
+    if (origin === 'null') return fail(403, 'origin', 'Origine non autorisée.');
+    if (!/^application\/json/i.test(req.headers.get('content-type') || '')) return fail(415, 'content_type', 'Type de contenu non pris en charge.');
+    if (+(req.headers.get('content-length') || 0) > MAX.body) return fail(413, 'too_large', 'Requête invalide.');
+    const body = await readBody(req), ip = clientIp(req);
+    if (path === '/signup') return await signup(body, ip);
+    if (path === '/login') return await login(body, ip);
+    if (path === '/recover') return await recover(body, ip);
     const ctx = await auth(req);
     if (!ctx) return fail(401, 'unauthorized', 'Session expirée : reconnectez-vous.');
     switch (path) {

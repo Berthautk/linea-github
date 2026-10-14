@@ -235,3 +235,86 @@ test('le serveur garde les leçons et heures de théorie / TP du programme', asy
   const r = await call('/sync', { have: {}, push: { meta } }, ap.token); assert.equal(r.status, 200, JSON.stringify(r).slice(0, 200));
   const a = ((r.meta || {}).assign || []).find(x => x.classId === 'c9'); assert.ok(a, 'affectation présente'); assert.deepEqual([a.th, a.pr, a.hth, a.hpr, a.hours], [42, 4, 60, 6, 66]);
 });
+
+/* ---------- sécurité : ce qu'un attaquant essaierait ---------- */
+async function callH(path, body, token, extra = {}, raw) {
+  const headers = { 'content-type': 'application/json', ...extra }; if (token) headers.authorization = 'Bearer ' + token;
+  const res = await handle(new Request('http://x/api' + path, { method: 'POST', headers, body: raw != null ? raw : JSON.stringify(body || {}) }));
+  return { status: res.status, ...(await res.json()) };
+}
+
+test('sécurité : un autre site web ne peut pas appeler l’API (origine), ni envoyer autre chose que du JSON', async () => {
+  fresh(); await newDept('securite1');
+  assert.equal((await callH('/login', { username: 'securite1', password: 'secret1' }, null, { origin: 'http://x' })).status, 200, 'même origine : accepté');
+  assert.equal((await callH('/login', { username: 'securite1', password: 'secret1' }, null, { origin: 'https://evil.example' })).status, 403);
+  assert.equal((await callH('/login', { username: 'securite1', password: 'secret1' }, null, { origin: 'null' })).status, 403);
+  assert.equal((await callH('/login', null, null, { 'content-type': 'text/plain' }, '{"username":"securite1","password":"secret1"}')).status, 415);
+});
+
+test('sécurité : mots de passe évidents refusés partout', async () => {
+  fresh();
+  for (const pw of ['123456', 'password', 'aaaaaa', 'pirate']) assert.equal((await call('/signup', { username: pw === 'pirate' ? 'pirate' : 'faible1', password: pw, name: 'X', dept: dept() })).status, 400, pw);
+  const ap = await newDept('kamdem2');
+  assert.equal((await call('/me/password', { old: 'secret1', password: 'kamdem2' }, ap.token)).status, 400, 'identique à l’identifiant');
+  const a = await call('/team/add', { name: 'Mme TSOGO Sylviane' }, ap.token);
+  assert.equal((await call('/team/reset', { teacherId: a.teacher.id, password: '123456' }, ap.token)).status, 400);
+});
+
+test('sécurité : inscription limitée par adresse et par jour, code d’inscription facultatif', async () => {
+  fresh(); const ip = { 'x-nf-client-connection-ip': '10.0.0.1' };
+  for (let i = 0; i < 5; i++) assert.equal((await callH('/signup', { username: 'spam' + i + 'abc', password: 'secret1', name: 'Spam', dept: dept() }, null, ip)).status, 200, 'inscription ' + i);
+  assert.equal((await callH('/signup', { username: 'spam9abc', password: 'secret1', name: 'Spam', dept: dept() }, null, ip)).status, 429, 'la 6e depuis la même adresse est refusée');
+  assert.equal((await callH('/signup', { username: 'autre1', password: 'secret1', name: 'Autre', dept: dept() }, null, { 'x-nf-client-connection-ip': '10.0.0.2' })).status, 200, 'une autre adresse passe');
+  process.env.REKORT_SIGNUP_CODE = 'ecole2026';
+  try {
+    const ip3 = { 'x-nf-client-connection-ip': '10.0.0.3' };
+    assert.equal((await callH('/signup', { username: 'code1abc', password: 'secret1', name: 'C', dept: dept() }, null, ip3)).status, 403);
+    assert.equal((await callH('/signup', { username: 'code1abc', password: 'secret1', name: 'C', dept: dept(), signupCode: 'ecole2026' }, null, ip3)).status, 200);
+  } finally { delete process.env.REKORT_SIGNUP_CODE; }
+});
+
+test('sécurité : un inconnu ne peut pas bloquer la connexion d’un collègue ; les essais sont comptés par adresse', async () => {
+  fresh(); await newDept('victime1');
+  const evil = { 'x-nf-client-connection-ip': '6.6.6.6' }, ok = { 'x-nf-client-connection-ip': '7.7.7.7' };
+  let last; for (let i = 0; i < 12; i++) last = await callH('/login', { username: 'victime1', password: 'faux' + i + 'xx' }, null, evil);
+  assert.equal(last.status, 429, 'l’attaquant est bloqué');
+  assert.equal((await callH('/login', { username: 'victime1', password: 'secret1' }, null, ok)).status, 200, 'le vrai propriétaire, depuis une autre adresse, se connecte');
+});
+
+test('sécurité : le compte désactivé n’est révélé qu’avec le bon mot de passe ; les numéros de téléphone ne sont pas diffusés aux collègues', async () => {
+  fresh(); const ap = await newDept('chef1');
+  const a = await call('/team/add', { name: 'Mme ASTHA Noura', phone: '655000111' }, ap.token), b = await call('/team/add', { name: 'Mr NEBA Paul', phone: '677000222' }, ap.token);
+  const loginA = await call('/login', { username: a.username, password: a.password });
+  const s = await call('/sync', { have: {} }, loginA.token);
+  const tA = s.meta.teachers.find(t => t.id === a.teacher.id), tB = s.meta.teachers.find(t => t.id === b.teacher.id), tAP = s.meta.teachers.find(t => t.role === 'ap');
+  assert.equal(tA.phone, '655000111', 'son propre numéro reste visible'); assert.equal(tB.phone, undefined); assert.equal(tAP.phone, undefined); assert.equal(tB.username, undefined);
+  await call('/team/remove', { teacherId: b.teacher.id }, ap.token);
+  assert.equal((await call('/login', { username: b.username, password: 'mauvais1' })).status, 401, 'mauvais mot de passe : réponse banale');
+  assert.equal((await call('/login', { username: b.username, password: b.password })).status, 403, 'bon mot de passe : on apprend que le compte est désactivé');
+});
+
+test('sécurité : un enseignant ne peut ni se donner le rôle d’animateur, ni écrire chez un autre, ni polluer les objets (proto)', async () => {
+  fresh(); const ap = await newDept('chef2');
+  const a = await call('/team/add', { name: 'Mme ASTHA Noura' }, ap.token), b = await call('/team/add', { name: 'Mr NEBA Paul' }, ap.token);
+  const T = (await call('/login', { username: a.username, password: a.password })).token;
+  const evil = '{"have":{},"push":{"__proto__":{"role":"ap","polluted":1},"meta":{"__proto__":{"role":"ap"},"teachers":[{"id":"' + a.teacher.id + '","role":"ap","name":"X","u":9999999999999,"__proto__":{"role":"ap"}}],"classes":[{"id":"cx","name":"hack","u":9999999999999}],"dept":{"name":"HACK","u":9999999999999}},"e":{"' + b.teacher.id + '":{"entries":[{"id":"e-evil","type":"lesson","date":"2026-10-05","u":1}]},"' + a.teacher.id + '":{"entries":[{"id":"e-mine","type":"lesson","date":"2026-10-05","teacherId":"' + b.teacher.id + '","u":1}]}}}}';
+  const r = await callH('/sync', null, T, {}, evil);
+  assert.equal(r.status, 200); assert.equal({}.polluted, undefined); assert.equal({}.role, undefined);
+  const sApi = await call('/sync', { have: {} }, ap.token);
+  const me = sApi.meta.teachers.find(t => t.id === a.teacher.id);
+  assert.equal(me.role, 'teacher', 'le rôle n’a pas changé'); assert.ok(!sApi.meta.classes.some(c => c.id === 'cx'), 'un enseignant ne crée pas de classe'); assert.notEqual(sApi.meta.dept.name, 'HACK');
+  assert.equal((sApi.e[b.teacher.id] || { entries: [] }).entries.length, 0, 'rien écrit chez le collègue');
+  const mine = (sApi.e[a.teacher.id] || { entries: [] }).entries.find(e => e.id === 'e-mine'); assert.equal(mine.teacherId, a.teacher.id, 'la saisie est rattachée à son auteur, pas à la victime désignée');
+  for (const p of ['/team/add', '/team/reset', '/team/remove', '/team/rename', '/team/transfer', '/me/recovery']) assert.equal((await call(p, { name: 'x', teacherId: b.teacher.id }, T)).status === 403 || (await call(p, { name: 'x', teacherId: b.teacher.id }, T)).status === 400, true, p + ' refusé à un enseignant');
+});
+
+test('sécurité : jetons falsifiés, expirés ou d’un autre département refusés', async () => {
+  fresh(); const ap = await newDept('chef3'), other = await newDept('chef4');
+  const [body, sig] = ap.token.split('.');
+  const forged = Buffer.from(JSON.stringify({ ...JSON.parse(Buffer.from(body, 'base64url').toString()), u: 'chef4' })).toString('base64url') + '.' + sig;
+  assert.equal((await call('/me', {}, forged)).status, 401, 'signature invalide');
+  assert.equal((await call('/me', {}, body + '.')).status, 401); assert.equal((await call('/me', {}, 'a.b.c')).status, 401); assert.equal((await call('/me', {}, '')).status, 401);
+  const noneAlg = Buffer.from(JSON.stringify({ u: 'chef3', d: 'x', exp: Date.now() + 1e9 })).toString('base64url') + '.';
+  assert.equal((await call('/me', {}, noneAlg)).status, 401);
+  assert.equal((await call('/me', {}, other.token)).status, 200, 'son propre jeton passe');
+});

@@ -63,7 +63,7 @@ function Signup({ go }) {
     setBusy(true);
     try {
       const dept = newDept({ name: f.school, discipline: f.discipline, abbr: f.abbr || f.discipline.slice(0, 4).toUpperCase(), system: f.system, region: f.region, division: f.division });
-      const r = await api('/signup', { username: f.username, password: f.password, name: f.name, phone: f.phone, dept });
+      const r = await api('/signup', { username: f.username, password: f.password, name: f.name, phone: f.phone, signupCode: f.signupCode || '', dept });
       update(s => { s.recovery = r.recovery; });
       startSession({ ...r.session, token: r.token }, r.meta);
       setToast(t('Bienvenue ! Votre département est créé.'));
@@ -76,12 +76,13 @@ function Signup({ go }) {
       <p class="sub">${t('Vous serez l’animateur pédagogique : vous gérez le département, vos collègues et vos propres cours.')}</p>
       <${Field} label=${t('Votre nom complet')}><input class="input" autocomplete="name" value=${f.name} onInput=${(e) => onName(e.target.value)} placeholder=${t('Mr. KAMDEM Emmanuel')} required /><//>
       <${Field} label=${t('Identifiant de connexion')} hint=${t('Sans espace. Vous l’utiliserez pour vous reconnecter.')}><input class="input" autocapitalize="none" autocorrect="off" value=${f.username} onInput=${(e) => setF(o => ({ ...o, username: e.target.value.toLowerCase(), touched: true }))} required /><//>
-      <${Field} label=${t('Mot de passe')} hint=${t('Au moins 6 caractères.')}><${PasswordInput} class="input" autocomplete="new-password" value=${f.password} onInput=${(e) => set('password', e.target.value)} required /><//>
+      <${Field} label=${t('Mot de passe')} hint=${t('Au moins 6 caractères, pas trop évident.')}><${PasswordInput} class="input" autocomplete="new-password" value=${f.password} onInput=${(e) => set('password', e.target.value)} required /><//>
       <${Field} label=${t('Téléphone WhatsApp (facultatif)')}><input class="input" inputmode="tel" value=${f.phone} onInput=${(e) => set('phone', e.target.value)} placeholder="+237…" /><//>` : html`
       <${Field} label=${t('Établissement')}><input class="input" value=${f.school} onInput=${(e) => set('school', e.target.value)} placeholder=${t('Ex. GBHS GAROUA')} required /><//>
       <${Field} label=${t('Discipline du département')}><input class="input" list="disc" value=${f.discipline} onInput=${(e) => onDisc(e.target.value)} placeholder=${t('Ex. Géographie')} required /><datalist id="disc">${DISCIPLINES.map(d => html`<option value=${d[0]} />`)}</datalist><//>
       <${Field} group label=${t('Système')}><${Seg} full options=${[{ id: 'anglophone', label: t('Anglophone') }, { id: 'francophone', label: t('Francophone') }]} value=${f.system} onChange=${(v) => set('system', v)} /><//>
       <div class="grid2"><${Field} label=${t('Région')}><input class="input" value=${f.region} onInput=${(e) => set('region', e.target.value)} placeholder=${t('Nord')} /><//><${Field} label=${t('Département (division)')}><input class="input" value=${f.division} onInput=${(e) => set('division', e.target.value)} placeholder=${t('Bénoué')} /><//></div>
+      <${Field} label=${t('Code d’inscription (seulement si on vous en a donné un)')}><input class="input" autocapitalize="none" autocomplete="off" value=${f.signupCode || ''} onInput=${(e) => set('signupCode', e.target.value)} /><//>
       <p class="hint">${t('Vous pourrez tout modifier plus tard dans Réglages.')}</p>`}
     ${err ? html`<div class="err" role="alert">${err}</div>` : null}
     <div class="row">${step === 2 ? html`<button type="button" class="btn soft" onClick=${() => setStep(1)}>${t('Retour')}</button>` : null}<button class="btn grow" disabled=${busy}>${step === 1 ? t('Continuer') : busy ? t('Création…') : t('Créer mon département')}</button></div>

@@ -669,6 +669,8 @@ export const EN = {
   "Remplir": "Fill",
   "{n} programmes repris : à vérifier.": "{n} syllabuses applied: please check.",
   "Remplir les programmes d’après le niveau ({n} classes)": "Fill the syllabuses from the level ({n} classes)",
+  "Code d’inscription (seulement si on vous en a donné un)": "Sign-up code (only if you were given one)",
+  "Au moins 6 caractères, pas trop évident.": "At least 6 characters, not too obvious.",
 "Ronde en classe": "Class round",
   "Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.": "A colleague has not entered? Do the round: pick them and tick what the students tell you.",
   "Choisissez le collègue dont les élèves vous parlent, puis cochez ce qu’ils vous disent. Tout est enregistré à son nom, et ses statistiques se mettent à jour tout de suite.": "Pick the colleague the students are talking about, then tick what they tell you. Everything is recorded in their name and their statistics update right away.",

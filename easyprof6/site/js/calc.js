@@ -1,6 +1,6 @@
 // Moteur de calcul Rekort : heures dues / faites, leçons attendues (rythme), retards, périodes, fiche d'inspection.
 // Fonctions pures : aucune dépendance à l'écran. `state` = { dept, teachers, classes, assign, regul, entries }.
-import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO, endFor } from './dates.js';
+import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO, endFor, timeToMin } from './dates.js';
 import { reasonOf, isLessonType, THRESHOLDS } from './consts.js';
 
 export const r1 = (x) => Math.round(x * 10) / 10;
@@ -251,6 +251,25 @@ export function todaySlots(ctx, tid, iso = ctx.today) {
   rows.sort((a, b) => (a.st < b.st ? -1 : a.st > b.st ? 1 : 0));
   return { rows, teaching: true, off: false, reason, entries: mine, hours: Object.values(byClass).reduce((a, b) => a + b, 0) };
 }
+/** Deux séances d'une même classe se chevauchent-elles (même jour) ? */
+export const overlaps = (a, b) => { const a1 = timeToMin(a.start), a2 = timeToMin(a.end), b1 = timeToMin(b.start), b2 = timeToMin(b.end); return !(isNaN(a1) || isNaN(a2) || isNaN(b1) || isNaN(b2)) && a1 < b2 && b1 < a2; };
+/** Séances déjà saisies par ce collègue, ce jour, dans cette classe, qui chevauchent `cand` (doublons probables). */
+export function duplicates(ctx, tid, cand) {
+  return (ctx.byTeacher[tid] || []).filter(e => e.type !== 'absence' && e.id !== cand.id && e.date === cand.date && e.classId === cand.classId && overlaps(e, cand));
+}
+/** Remarques sur une séance en cours de saisie : classe ou jour absent de l'emploi du temps, doublon. Rien de bloquant. */
+export function checkEntry(ctx, tid, cand) {
+  const out = [], tc = ctx.teacher(tid);
+  if (cand.classId && cand.date && tc && (tc.slots || []).length) {
+    const td = todaySlots(ctx, tid, cand.date);
+    if (!td.teaching) out.push({ kind: 'noday' });
+    else if (!td.rows.some(r => r.c === cand.classId)) out.push({ kind: 'noslot', rows: td.rows });
+  }
+  const dup = cand.classId && cand.date ? duplicates(ctx, tid, cand) : [];
+  if (dup.length) out.push({ kind: 'dup', entry: dup[0] });
+  return out;
+}
+
 export function nextNumber(ctx, tid, classId, type) {
   let max = 0;
   for (const e of ctx.byTeacher[tid] || []) if (e.classId === classId && e.type === type && e.n != null && e.n > max) max = e.n;

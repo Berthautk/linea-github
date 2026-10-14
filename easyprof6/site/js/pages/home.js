@@ -8,6 +8,7 @@ import { makeCtx, stats, overall, noTimetable, dueRange, periodOf, classProgress
 import { PeriodBar, ScopeBar, TodayCard, currentTid, periodLabel, unitFor } from '../widgets.js';
 import { state, setUI, isAP, myId, me } from '../store.js';
 import { saveDept } from '../actions.js';
+import { openReminder } from '../reminder.js';
 import { minISO, fmt, addDays } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
 
@@ -48,10 +49,6 @@ function Classes({ rows, ctx, tid }) {
       <div class="sub">${r.plan.total ? t('{d} leçon(s) faite(s) sur {p} prévues · attendu à ce jour : {e}', { d: r.done, p: r.plan.total, e: num1(r.expected) }) + (r.lag > 1 ? ' · ' + t('retard de {n}', { n: num1(r.lag) }) : r.lag <= -1.5 ? ' · ' + t('avance de {n}', { n: num1(-r.lag) }) : '') : t('{d} leçon(s) saisie(s) · pas de plan défini', { d: r.done })} · ${num1(r.hours)} h</div></div>`)}</div></div>`;
 }
 
-function whatsapp(tc, ctx) {
-  const digits = String(tc.phone || '').replace(/[^0-9]/g, ''); if (!digits) return null;
-  return 'https://wa.me/' + digits + '?text=' + encodeURIComponent(t('Bonjour {n}, petit rappel : merci d’enregistrer votre cours du jour sur Rekort.', { n: tc.name }));
-}
 function todayState(ctx, tc) {
   const td = todaySlots(ctx, tc.id);
   if (td.reason) return ['warn', reasonOf(td.reason).icon + ' ' + t('pas de cours')];
@@ -65,15 +62,15 @@ function Inactive({ ctx }) {
     && dueRange(ctx, tc.id, from, ctx.today).due > 0 && !(ctx.byTeacher[tc.id] || []).some(e => e.date >= from && e.date <= ctx.today));
   if (!list.length) return null;
   return html`<div class="card"><div class="card-h"><h3>${t('Rien saisi depuis 7 jours')}</h3><${Chip} tone="warn">${list.length}<//></div>
-    <div class="list">${list.map(tc => { const w = whatsapp(tc, ctx); return html`<div class="item"><div class="dot warn">⏰</div><div class="grow"><b>${tc.name}</b><span>${t('Des cours étaient prévus, mais rien n’est enregistré.')}</span></div>
-      ${w ? html`<a class="btn sm" style="background:#25D366" href=${w} target="_blank" rel="noreferrer">${t('Rappeler')}</a>` : null}<a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a></div>`; })}</div></div>`;
+    <div class="list">${list.map(tc => { return html`<div class="item"><div class="dot warn">⏰</div><div class="grow"><b>${tc.name}</b><span>${t('Des cours étaient prévus, mais rien n’est enregistré.')}</span></div>
+      <button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button><a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a></div>`; })}</div></div>`;
 }
 function Team({ ctx, p }) {
   const rows = ctx.teachers.map(tc => ({ tc, S: stats(ctx, tc.id, p.ps, p.pe), st: todayState(ctx, tc) }));
   if (!rows.length) return null;
   return html`<div class="card"><div class="card-h"><h3>${t('Mon équipe')}</h3></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Enseignant')}</th><th>${t('Heures')}</th><th>%</th><th>${t('Leçons')}</th><th>${t('État')}</th><th>${t('Aujourd’hui')}</th><th></th></tr></thead><tbody>
-    ${rows.map(({ tc, S, st }) => { const w = whatsapp(tc, ctx), nt = noTimetable(ctx, tc.id).length > 0; return html`<tr><td>${tc.name}</td><td>${nt ? num1(S.hours) + ' h' : num1(S.hours) + ' / ' + num1(S.due)}</td><td>${nt ? html`<${Chip} tone="warn">${t('emploi du temps ?')}<//>` : html`<${Chip} tone=${S.due && S.rate < THRESHOLDS.hours ? 'bad' : 'ok'}>${num1(S.rate)} %<//>`}</td><td>${S.lessonsDone} / ${num1(S.lessonsPlanned)}</td><td>${nt ? null : statusChip(overall(S))}</td>
-      <td><${Chip} tone=${st[0]}>${st[1]}<//></td><td style="display:flex;gap:6px;justify-content:flex-end">${st[0] === 'bad' && w ? html`<a class="btn sm" style="background:#25D366" href=${w} target="_blank" rel="noreferrer">${t('Rappeler')}</a>` : null}${tc.id !== myId() ? html`<a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a>` : null}<button class="btn soft sm" onClick=${() => setUI({ scope: tc.id === myId() ? 'me' : tc.id })}>${t('Voir')}</button></td></tr>`; })}</tbody></table></div></div>`;
+    ${rows.map(({ tc, S, st }) => { const nt = noTimetable(ctx, tc.id).length > 0; return html`<tr><td>${tc.name}</td><td>${nt ? num1(S.hours) + ' h' : num1(S.hours) + ' / ' + num1(S.due)}</td><td>${nt ? html`<${Chip} tone="warn">${t('emploi du temps ?')}<//>` : html`<${Chip} tone=${S.due && S.rate < THRESHOLDS.hours ? 'bad' : 'ok'}>${num1(S.rate)} %<//>`}</td><td>${S.lessonsDone} / ${num1(S.lessonsPlanned)}</td><td>${nt ? null : statusChip(overall(S))}</td>
+      <td><${Chip} tone=${st[0]}>${st[1]}<//></td><td style="display:flex;gap:6px;justify-content:flex-end">${st[0] === 'bad' ? html`<button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button>` : null}${tc.id !== myId() ? html`<a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a>` : null}<button class="btn soft sm" onClick=${() => setUI({ scope: tc.id === myId() ? 'me' : tc.id })}>${t('Voir')}</button></td></tr>`; })}</tbody></table></div></div>`;
 }
 function DeptClasses({ ctx }) {
   const by = {};
@@ -101,6 +98,7 @@ export function Home() {
     <${ScopeBar} ctx=${ctx} />
     <div class="hero stack" style="gap:10px"><div><p class="sub">${fmt(ctx.today, lang, { weekday: true })}</p><h1>${t('Bonjour')}${me() && firstName(me().name) ? ', ' + firstName(me().name) : ''} 👋</h1><p class="sub">${who} · ${state.data.dept.name}</p></div>
       ${unreliable ? html`<div><div style="font-size:44px;font-weight:800;line-height:1">${num1(S.hours)} h</div><div class="sub">${t('heures faites')} · ${periodLabel(p, ctx)}</div></div>
+        ${ap ? html`<div class="row" style="gap:8px;flex-wrap:wrap"><a class="btn sm" href="#/settings/team">${t('Saisir les emplois du temps')}</a><a class="btn soft sm" href="#/settings/data">${t('J’ai un fichier : l’importer')}</a></div>` : null}
         <a class="notice" href=${ap ? '#/settings/team' : '#/home'}><${Icon} n="alert" size="18" /><span>${ap ? t('Emploi du temps manquant : {n}. Sans lui, les heures dues et les pourcentages ne peuvent pas être calculés.', { n: noTT.map(x => x.short || x.name).join(', ') }) : t('Votre emploi du temps n’est pas encore renseigné : demandez à votre animateur pédagogique de l’ajouter.')}</span></a>`
       : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${S.due ? num1(S.rate) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('couverture horaire')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
       <${Bar} value=${S.rate} /><div class="sub">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })}${S.dueFull > S.due ? ' · ' + t('{f} h prévues sur toute la période', { f: num1(S.dueFull) }) : ''}</div>`

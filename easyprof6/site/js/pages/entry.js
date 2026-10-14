@@ -4,7 +4,9 @@ import { t } from '../i18n.js';
 import { Field, Chip, num1 } from '../ui.js';
 import { Icon } from '../icons.js';
 import { TYPES, isLessonType } from '../consts.js';
-import { nextNumber, todaySlots } from '../calc.js';
+import { nextNumber, todaySlots, checkEntry } from '../calc.js';
+import { dayName, fmt } from '../dates.js';
+import { getLang } from '../i18n.js';
 import { timeToMin, minToTime, minutesBetween } from '../dates.js';
 import { saveEntry } from '../actions.js';
 
@@ -29,6 +31,13 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
   const mins = minutesBetween(f.start, f.end);
   const setDur = (m) => set('end', minToTime(timeToMin(f.start) + m));
   const classOpts = [...mine, ...ctx.classes.map(c => c.id).filter(id => !mine.includes(id))];
+  const cname = (id) => (ctx.cls(id) || {}).name || id;
+  const warns = checkEntry(ctx, tid, { id: f.id, classId: f.classId, date: f.date, start: f.start, end: f.end }).map(w => {
+    const lang = getLang(), day = f.date ? dayName(new Date(f.date + 'T00:00:00Z').getUTCDay(), lang) : '';
+    if (w.kind === 'noday') return t('Le {d} n’est pas un jour de cours (dimanche, jour férié ou vacances). Vérifiez la date.', { d: fmt(f.date, lang) });
+    if (w.kind === 'noslot') return t('{c} n’est pas dans l’emploi du temps du {j}', { c: cname(f.classId), j: day }) + (w.rows.length ? ' (' + w.rows.map(r => cname(r.c) + (r.st ? ' ' + r.st : '')).join(', ') + '). ' : '. ') + t('Vérifiez la classe et la date, ou continuez s’il s’agit d’un cours exceptionnel.');
+    return t('Déjà saisi : {c} le {d} de {a} à {b}. Est-ce un doublon ?', { c: cname(f.classId), d: fmt(f.date, lang), a: w.entry.start, b: w.entry.end });
+  });
   const submit = (e) => {
     e.preventDefault(); setErr('');
     if (!f.classId) return setErr(t('Choisissez la classe. Si la liste est vide, l’animateur doit d’abord créer les classes.'));
@@ -51,7 +60,8 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
     ${lesson ? html`<label class="opt"><input type="checkbox" checked=${f.digital} onChange=${(e) => set('digital', e.target.checked)} /><span>${t('Leçon digitalisée (projecteur, diaporama…)')}</span></label>` : null}
     ${f.type === 'assessment' || lesson ? html`<label class="opt"><input type="checkbox" checked=${f.evalOn} onChange=${(e) => set('evalOn', e.target.checked)} /><span>${t('Il y a eu une évaluation (ajouter les résultats)')}</span></label>` : null}
     ${f.evalOn ? html`<div class="grid2"><${Field} label=${t('Élèves évalués')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.evaluated} onInput=${(e) => set('evaluated', e.target.value)} /><//><${Field} label=${t('Ayant la moyenne')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.passed} onInput=${(e) => set('passed', e.target.value)} /><//></div>` : null}
+    ${warns.map(w => html`<div class="notice" role="status"><${Icon} n="alert" size="18" /><span>${w}</span></div>`)}
     ${err ? html`<div class="err" role="alert">${err}</div>` : null}
-    <button class="btn block" style="min-height:50px;font-size:16px"><${Icon} n="check" />${submitLabel || (editing ? t('Enregistrer les modifications') : t('Enregistrer la séance'))}</button>
+    <button class="btn block" style="min-height:50px;font-size:16px"><${Icon} n="check" />${warns.length && !submitLabel ? t('Enregistrer quand même') : submitLabel || (editing ? t('Enregistrer les modifications') : t('Enregistrer la séance'))}</button>
   </form>`;
 }

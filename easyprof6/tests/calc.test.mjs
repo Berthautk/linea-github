@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { slotHours, endFor } from '../site/js/dates.js';
+import { reminderText, silence } from '../site/js/reminder-text.js';
+import { checkEntry } from '../site/js/calc.js';
 import { followUp, noTimetable, makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
 import { newDept } from '../site/js/defaults.js';
 
@@ -155,4 +157,24 @@ test('absence à un cours précis : seul ce cours est compté absent ; un motif 
   assert.equal(rows[0].en, '09:30', 'heure de fin déduite');
   st.entries[0].reason = 'holiday'; const d2 = dueRange(makeCtx(st, '2026-10-13'), 'K', '2026-10-12', '2026-10-12');
   assert.equal(d2.due, 2); assert.equal(d2.excused, 2);
+});
+
+test('saisie contrôlée : classe absente de l’emploi du temps, jour sans cours, doublon', () => {
+  const st = mk(); st.teachers = [{ id: 'K', name: 'Kamdem', short: 'KAMDEM', slots: [S(1, 'F3A', 2, { st: '07:30' })] }];
+  st.entries = [{ id: 'e1', teacherId: 'K', type: 'lesson', classId: 'F3A', date: '2026-10-12', start: '07:30', end: '09:30', minutes: 120, n: 1 }];
+  const c = makeCtx(st, '2026-10-13'), ck = (o) => checkEntry(c, 'K', { id: 'new', ...o }).map(x => x.kind);
+  assert.deepEqual(ck({ classId: 'F3A', date: '2026-10-12', start: '10:00', end: '11:00' }), [], 'bonne classe, bon jour, pas de chevauchement');
+  assert.deepEqual(ck({ classId: 'LSA', date: '2026-10-12', start: '10:00', end: '11:00' }), ['noslot'], 'LSA n’a pas cours le lundi');
+  assert.deepEqual(ck({ classId: 'F3A', date: '2026-10-11', start: '07:30', end: '09:30' }), ['noday'], 'dimanche');
+  assert.deepEqual(ck({ classId: 'F3A', date: '2026-10-12', start: '08:00', end: '09:00' }), ['dup'], 'chevauche la séance déjà saisie');
+});
+
+test('rappel WhatsApp : le message change avec la durée du silence et liste les cours oubliés', () => {
+  const st = mk(); st.teachers = [{ id: 'K', name: 'Mr. KAMDEM Emmanuel', short: 'KAMDEM', slots: [S(1, 'F3A', 2, { st: '07:30' })] }];
+  const at = (day, last) => { const s2 = { ...st, entries: last ? [{ id: 'x', teacherId: 'K', type: 'lesson', classId: 'F3A', date: last, start: '07:30', end: '09:30', minutes: 120, n: 1 }] : [] }; return makeCtx(s2, day); };
+  const k = (ctx) => reminderText(ctx, ctx.teacher('K'), 'fr');
+  const c1 = at('2026-10-13', '2026-10-12'), c2 = at('2026-10-20', '2026-10-12'), c3 = at('2026-11-02', '2026-10-12'), c0 = at('2026-10-20', '');
+  assert.equal(silence(c1, c1.teacher('K')).level, 1); assert.equal(silence(c2, c2.teacher('K')).level, 2); assert.equal(silence(c3, c3.teacher('K')).level, 3);
+  assert.match(k(c1), /petit rappel/); assert.match(k(c2), /depuis 1 semaine/); assert.match(k(c3), /voilà 3 semaines/); assert.match(k(c0), /aucun cours enregistré/);
+  assert.match(k(c2), /Form|F3A/, 'liste les cours oubliés'); assert.match(reminderText(c3, c3.teacher('K'), 'en'), /3 weeks/);
 });

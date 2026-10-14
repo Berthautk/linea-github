@@ -87,7 +87,7 @@ await step('C. Synchronisation vers l’animateur', async () => {
 
 await step('D. Hors ligne puis synchronisation', async () => {
   await tp.context().setOffline(true);
-  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /enregistrer la séance/i }).click(); await tp.waitForTimeout(500);
+  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /enregistrer (la séance|quand même)/i }).click(); await tp.waitForTimeout(500);
   ok(/leçon 2 enregistrée/.test(await tx(tp, '.toast')), 'D1 saisie possible sans Internet (leçon 2)');
   await tp.locator('.sync').first().click(); await tp.waitForTimeout(900);
   ok(/Hors ligne/.test(await tp.locator('.sync').first().getAttribute('title') + (await tp.locator('.sync .t').first().innerText())), 'D2 l’état « Hors ligne » est signalé');

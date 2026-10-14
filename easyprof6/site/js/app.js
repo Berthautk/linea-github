@@ -24,7 +24,7 @@ export function App() {
   const route = useRoute();
   if (!state.session) return html`<${AuthScreen} />`;
   const page = route.split('/')[1] || 'home';
-  const items = [['home', 'home', t('Accueil')], ['lessons', 'list', t('Cours')], ['log', 'plus', t('Saisir')], ['report', 'file', t('Fiche')], ['settings', 'gear', t('Réglages')]];
+  const items = [['home', 'home', t('Accueil')], ['lessons', 'list', t('Historique')], ['log', 'plus', t('Saisir')], ['report', 'file', t('Fiche')], ['settings', 'gear', t('Réglages')]];
   const m = me(), init = ((m && m.name) || state.session.username).replace(/^(Mr?\.?|Mme|Mlle)\s+/i, '').trim().slice(0, 1).toUpperCase();
   const body = page === 'week' ? html`<${Week} />` : page === 'log' ? html`<${Log} />` : page === 'lessons' ? html`<${Lessons} />` : page === 'report' ? html`<${Report} />` : page === 'settings' ? html`<${Settings} route=${route} />` : html`<${Home} />`;
   return html`<div class="shell">

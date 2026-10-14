@@ -40,7 +40,8 @@ export function Lessons() {
   for (const e of shown) { const w = mondayOf(e.date); let g = groups[groups.length - 1]; if (!g || g.w !== w) { g = { w, list: [] }; groups.push(g); } g.list.push(e); }
   const set = (k, v) => setF(o => ({ ...o, [k]: v, limit: 60 }));
   const canEdit = (e) => ap || e.teacherId === myId();
-  return html`<div class="page"><div class="page-h"><h1>${tid && tid !== myId() ? t('Cours de {n}', { n: (ctx.teacher(tid) || {}).name }) : tid ? t('Mes cours') : t('Cours du département')}</h1><span class="sub">${rows.length} ${t('séance(s)')} · ${num1(hours)} h</span></div>
+  return html`<div class="page"><div class="page-h"><h1>${tid && tid !== myId() ? t('Historique de {n}', { n: (ctx.teacher(tid) || {}).name }) : tid ? t('Mon historique') : t('Historique du département')}</h1><span class="sub">${rows.length} ${t('séance(s)')} · ${num1(hours)} h</span></div>
+    <p class="sub">${t('Toutes les séances déjà enregistrées : retrouvez-les, modifiez-les ou supprimez-les. Pour en ajouter une nouvelle, utilisez « Saisir ».')}</p>
     <${ScopeBar} ctx=${ctx} />
     <div class="card"><div class="grid3"><${Field} label=${t('Classe')}><select class="input" value=${F.cls} onChange=${(e) => set('cls', e.target.value)}><option value="">${t('Toutes')}</option>${ctx.classes.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select><//>
       <${Field} label=${t('Type')}><select class="input" value=${F.type} onChange=${(e) => set('type', e.target.value)}><option value="">${t('Tous')}</option>${TYPES.map(x => html`<option value=${x.id}>${x.icon} ${t(x.fr)}</option>`)}<option value="absence">${t('Pas de cours')}</option></select><//>

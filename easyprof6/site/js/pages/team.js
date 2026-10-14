@@ -8,23 +8,23 @@ import { state, myId, setToast, setUI } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept } from '../actions.js';
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
+import { WaButtons } from '../whatsapp.js';
 import { dayName, fmt, slotHours, endFor } from '../dates.js';
 import { getLang } from '../i18n.js';
 
-export function showCredentials({ name, username, password, fresh = true }) {
+export function showCredentials({ name, username, password, phone, fresh = true }) {
   const text = t('Rekort : bonjour {n}, voici votre accès.\nAdresse : {u}\nIdentifiant : {i}\nMot de passe : {p}\nVous pourrez changer le mot de passe dans Réglages › Mon profil.', { n: name, u: location.origin, i: username, p: password });
   openModal(() => html`<${Modal} title=${fresh ? t('Compte créé') : t('Nouveau mot de passe')} onClose=${closeModal}>
     <p>${t('Donnez ces informations à {n}. Le mot de passe ne sera plus affiché ensuite.', { n: name })}</p>
     <div class="card flat stack" style="gap:6px"><div class="row"><span class="lab">${t('Adresse')}</span><b>${location.origin}</b></div><div class="row"><span class="lab">${t('Identifiant')}</span><b>${username}</b></div><div class="row"><span class="lab">${t('Mot de passe')}</span><span class="code" style="padding:6px 14px;font-size:20px">${password}</span></div></div>
-    <div class="row"><button class="btn soft grow" onClick=${async () => setToast((await copyText(text)) ? t('Copié') : t('Copie impossible'))}><${Icon} n="copy" />${t('Copier le message')}</button>
-    <a class="btn grow" style="background:#25D366" target="_blank" rel="noreferrer" href=${'https://wa.me/?text=' + encodeURIComponent(text)}><${Icon} n="whatsapp" />${t('Envoyer par WhatsApp')}</a></div><//>`);
+    <${WaButtons} phone=${phone} text=${text} /><//>`);
 }
 
 function AddTeacher() {
   const [f, setF] = useState({ name: '', phone: '', username: '', password: '' }), [err, setErr] = useState(''), [busy, setBusy] = useState(false);
   const go = async (e) => {
     e.preventDefault(); setBusy(true); setErr('');
-    try { const r = await api('/team/add', f, state.session.token); replaceMeta(r.meta); closeModal(); showCredentials({ name: r.teacher.name, username: r.username, password: r.password }); syncNow(); }
+    try { const r = await api('/team/add', f, state.session.token); replaceMeta(r.meta); closeModal(); showCredentials({ name: r.teacher.name, username: r.username, password: r.password, phone: f.phone }); syncNow(); }
     catch (x) { setErr(x.offline ? t('Pas de connexion à Internet. La création d’un compte en a besoin.') : x.message); }
     setBusy(false);
   };
@@ -41,6 +41,7 @@ export function Team() {
   const ctx = makeCtx(state.data);
   return html`<div class="page"><div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${t('Équipe')}</h1></div><button class="btn" onClick=${() => openModal(() => html`<${AddTeacher} />`)}><${Icon} n="plus" />${t('Ajouter un collègue')}</button></div>
     <p class="sub">${t('Chaque collègue reçoit un identifiant et un mot de passe. Il retrouve ensuite ses classes, son emploi du temps et son avancement sur son téléphone.')}</p>
+    <a class="notice" href="#/settings/data" style="text-decoration:none"><${Icon} n="upload" size="18" /><span>${t('Vous avez un fichier de sauvegarde (avec les emplois du temps) ? Importez-le : Réglages › Sauvegarde et import.')}</span></a>
     <div class="card"><div class="list">${ctx.teachers.map(tc => { const n = ctx.assign.filter(a => a.teacherId === tc.id).length, sl = (tc.slots || []).length;
       return html`<a class="item" href=${'#/settings/team/' + tc.id} style="text-decoration:none;color:inherit"><div class="dot">${tc.role === 'ap' ? '⭐' : '🧑‍🏫'}</div><div class="grow"><b>${tc.name}${tc.id === myId() ? ' (' + t('vous') + ')' : ''}</b><span>${tc.username} · ${sl} ${t('cours')} · ${n} ${t('classe(s)')}</span></div>
         ${!sl || !n ? html`<${Chip} tone="warn">${t('à compléter')}<//>` : html`<${Chip} tone="ok">${t('prêt')}<//>`}<${Icon} n="right" size="18" /></a>`; })}</div></div>
@@ -100,7 +101,7 @@ function SetPassword({ tc }) {
   const [pw, setPw] = useState(''), [err, setErr] = useState(''), [busy, setBusy] = useState(false);
   const go = async (e) => {
     e.preventDefault(); setBusy(true); setErr('');
-    try { const r = await api('/team/reset', { teacherId: tc.id, password: pw.trim() }, state.session.token); closeModal(); showCredentials({ name: tc.name, username: r.username, password: r.password, fresh: false }); }
+    try { const r = await api('/team/reset', { teacherId: tc.id, password: pw.trim() }, state.session.token); closeModal(); showCredentials({ name: tc.name, username: r.username, password: r.password, phone: tc.phone, fresh: false }); }
     catch (x) { setErr(x.message); } setBusy(false);
   };
   return html`<${Modal} title=${t('Mot de passe de {n}', { n: tc.name })} onClose=${closeModal}><form class="stack" onSubmit=${go}>

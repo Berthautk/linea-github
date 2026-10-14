@@ -32,9 +32,9 @@ const AP = [
 ];
 const TEACHER = [
   { h: ['Chaque jour', 'Every day'], steps: [
-    ['Sur l’Accueil, appuyez sur « Fait » à côté de votre cours du jour. Si la séance a duré moins longtemps, utilisez « Saisir autrement ».', 'On Home, tap “Done” next to your lesson of the day. If the session was shorter, use “Log differently”.'],
+    ['« Saisir » sert à enregistrer un cours ; « Historique » sert à retrouver, corriger ou supprimer ce qui est déjà enregistré. Le plus rapide : sur l’Accueil, appuyez sur « Fait » à côté de votre cours du jour. Si la séance a duré moins longtemps, utilisez « Saisir autrement ».', '“Log” is for recording a lesson; “History” is for finding, correcting or deleting what is already recorded. Fastest: on Home, tap “Done” next to your lesson of the day. If the session was shorter, use “Log differently”.'],
     ['Pas de cours aujourd’hui ? « Pas de cours », avec le motif : vous ne recevrez plus de rappel.', 'No lesson today? “No lesson”, with the reason: you will not get a reminder.'],
-    ['Une saisie fausse ? Onglet « Cours » : modifier ou supprimer.', 'A wrong entry? “Lessons” tab: edit or delete.'],
+    ['Une saisie fausse ? Onglet « Historique » : modifier ou supprimer.', 'A wrong entry? “History” tab: edit or delete.'],
   ] },
   { h: ['Voir où vous en êtes', 'See where you stand'], steps: [
     ['Accueil : vos heures et vos leçons faites, et le retard ou l’avance dans chaque classe, par semaine, mois, trimestre ou année.', 'Home: your hours and lessons done, and how late or ahead you are in each class, by week, month, term or year.'],

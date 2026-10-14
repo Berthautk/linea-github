@@ -9,7 +9,7 @@ import { PeriodBar, ScopeBar, TodayCard, currentTid, periodLabel, unitFor } from
 import { state, setUI, isAP, myId, me, getScope, setScope } from '../store.js';
 import { saveDept } from '../actions.js';
 import { openReminder } from '../reminder.js';
-import { minISO, fmt, addDays } from '../dates.js';
+import { minISO, fmt, addDays, dow } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
 
 const firstName = (n) => (n || '').replace(/^(Mr?\.?|Mme|Mlle|M\.)\s+/i, '').split(' ').filter(Boolean).slice(-1)[0] || '';
@@ -81,7 +81,7 @@ function Goals({ ctx, tid }) {
 /** Qui remplit l'application, et à quel rythme. */
 function Activity({ ctx }) {
   const rows = ctx.teachers.map(tc => ({ tc, A: activity(ctx, tc.id) })); if (!rows.length) return null;
-  const lab = { regular: t('Régulier'), irregular: t('Irrégulier'), low: t('Peu actif'), none: '—' }, tone = { regular: 'ok', irregular: 'warn', low: 'bad', none: '' };
+  const lab = { regular: t('Régulier'), irregular: t('Irrégulier'), low: t('Peu actif'), inactive: t('Inactif'), none: '—' }, tone = { regular: 'ok', irregular: 'warn', low: 'bad', inactive: 'bad', none: '' };
   return html`<div class="card"><div class="card-h"><h3>${t('Activité des collègues')}</h3><span class="sub">${t('Depuis la rentrée')}</span></div>
     <div class="list">${rows.map(({ tc, A }) => html`<div class="item" style="align-items:flex-start"><div class="grow"><b>${tc.name}</b>
       <div class="bar" style="margin:6px 0 4px"><i style=${{ width: A.rate + '%' }}></i></div>
@@ -125,6 +125,12 @@ function DeptClasses({ ctx }) {
         <div class="sub">${t('{d} leçon(s) faite(s) · {e} attendues à ce jour · {p} prévues dans l’année · {h} h', { d: x.done, e: num1(x.expected), p: x.plan, h: num1(x.hours) })}</div></div>`; })}</div></div>`;
 }
 
+function FridayRound({ ctx }) {
+  const ics = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Rekort//FR', 'BEGIN:VEVENT', 'UID:rekort-ronde-vendredi@rekort', 'DTSTAMP:20261001T000000Z', 'DTSTART:20261002T070000', 'DTEND:20261002T073000', 'RRULE:FREQ=WEEKLY;BYDAY=FR', 'SUMMARY:Rekort : ronde en classe', 'DESCRIPTION:Contrôler la présence et les leçons de chaque collègue dans Rekort.', 'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Ronde en classe', 'TRIGGER:PT0S', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n'));
+  return html`<div class="card row" style="gap:14px;border-color:var(--teal)"><div class="dot ok" style="font-size:20px">🗓️</div><div class="grow"><b>${t('C’est vendredi : ronde en classe')}</b><p class="sub">${t('Passez dans les classes, puis ouvrez chaque collègue et cochez, jour par jour : présent, absent, retard (minutes), leçons. Cela met à jour tout de suite l’accueil et les deux fiches.')}</p>
+    <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:6px"><a class="btn sm" href="#/week">${t('Commencer la ronde')}</a><a class="btn soft sm" href=${ics} download="rekort-ronde-vendredi.ics">${t('Rappel chaque vendredi dans mon téléphone')}</a></div></div></div>`;
+}
+
 export function Home() {
   const ctx = makeCtx(state.data), lang = getLang(), ap = isAP();
   const tid = currentTid(), scope = getScope();
@@ -145,17 +151,19 @@ export function Home() {
       ${unreliable ? html`<div><div style="font-size:44px;font-weight:800;line-height:1">${num1(S.hours)} h</div><div class="sub">${t('heures faites')} · ${periodLabel(p, ctx)}</div></div>
         ${ap ? html`<div class="row" style="gap:8px;flex-wrap:wrap"><a class="btn sm" href="#/settings/team">${t('Saisir les emplois du temps')}</a><a class="btn soft sm" href="#/settings/data">${t('J’ai un fichier : l’importer')}</a></div>` : null}
         <a class="notice" href=${ap ? '#/settings/team' : '#/home'}><${Icon} n="alert" size="18" /><span>${ap ? t('Emploi du temps manquant : {n}. Sans lui, les heures dues et les pourcentages ne peuvent pas être calculés.', { n: noTT.map(x => x.short || x.name).join(', ') }) : t('Votre emploi du temps n’est pas encore renseigné : demandez à votre animateur pédagogique de l’ajouter.')}</span></a>`
-      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${S.due ? num1(S.rate) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('couverture horaire')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
-      <${Bar} value=${S.rate} /><div class="sub">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })}${S.dueFull > S.due ? ' · ' + t('{f} h prévues sur toute la période', { f: num1(S.dueFull) }) : ''}</div>`
+      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${S.due ? num1(S.rate) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('heures faites ÷ heures dues à ce jour')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
+      <${Bar} value=${S.rate} /><div class="sub">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })} (${t('rythme : 80 % minimum')})</div>
+        ${S.dueFull > S.due ? html`<div class="sub">${t('Sur toute la période : {h} h faites sur {f} h prévues = {r} %', { h: num1(S.hours), f: num1(S.dueFull), r: num1(pct(S.hours, S.dueFull)) })}</div>` : null}`
         : html`<p style="font-size:15px;max-width:34em">${ap && !tid ? t('Bienvenue dans votre département. Suivez les étapes ci-dessous : dès que les emplois du temps et les premières saisies seront là, vos statistiques apparaîtront ici.') : t('Vos statistiques apparaîtront ici dès que votre emploi du temps sera renseigné et que vous aurez saisi vos premiers cours.')}</p>`}</div>
     ${ap && empty ? html`<${Setup} ctx=${ctx} />` : ap && scope === 'dept' ? html`<${Setup} ctx=${ctx} />` : null}
+    ${ap && ctx.teachers.length > 1 && dow(ctx.today) === 5 ? html`<${FridayRound} ctx=${ctx} />` : null}
     ${tid && tid === myId() ? html`<${TodayCard} ctx=${ctx} tid=${tid} />` : null}
     <div class="card"><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
     <${Alerts} S=${unreliable ? { ...S, alerts: S.alerts.filter(a => a.kind !== 'hours') } : S} />
     <div class="kpis">
       <div class=${'kpi ' + (!unreliable && S.due && S.rate < THRESHOLDS.hours ? 'bad' : '')}><span class="l">${t('Heures faites')}</span><span class="v">${num1(S.hours)}<small>${unreliable ? ' h' : ' / ' + num1(S.due) + ' h'}</small></span><${Bar} value=${unreliable ? 0 : S.rate} tone=${!unreliable && S.due && S.rate < THRESHOLDS.hours ? 'bad' : ''} /><span class="s">${S.gap >= 0 ? t('+{n} h par rapport aux heures dues', { n: num1(S.gap) }) : t('{n} h par rapport aux heures dues', { n: num1(S.gap) })}</span></div>
       <div class=${'kpi ' + (S.lessonsPlanned && S.rateL < THRESHOLDS.lessons ? 'bad' : '')}><span class="l">${t('Leçons')}</span><span class="v">${S.lessonsDone}<small> / ${num1(S.lessonsPlanned)}</small></span><${Bar} value=${S.rateL} tone=${S.lessonsPlanned && S.rateL < THRESHOLDS.lessons ? 'bad' : ''} /><span class="s">${S.planned ? (lag > 1 ? t('Retard de {n} leçon(s)', { n: num1(lag) }) : lag <= -1.5 ? t('Avance de {n} leçon(s)', { n: num1(-lag) }) : t('Au rythme prévu')) : t('Aucun plan de leçons défini')}</span></div>
-      <div class="kpi"><span class="l">${t('Sur l’année')}</span><span class="v">${num1(Y.rateYH)}<small> %</small></span><${Bar} value=${Y.rateYH} /><span class="s">${t('{h} h sur {p} h prévues', { h: num1(Y.hours), p: num1(Y.planYear.hours) })}</span></div>
+      <div class="kpi"><span class="l">${t('Sur l’année')}</span><span class="v">${num1(Y.rateYL)}<small> % ${t('des leçons')}</small></span><${Bar} value=${Y.rateYL} /><span class="s">${t('{d} leçons sur {p} prévues dans l’année', { d: Y.lessonsDone, p: Math.round(Y.planYear.lessons) })} · ${t('heures : {h} h sur {ph} h ({r} %)', { h: num1(Y.hours), ph: num1(Y.planYear.hours), r: num1(Y.rateYH) })}</span></div>
       <div class="kpi"><span class="l">${tid ? t('Mon état') : t('État du département')}</span><span class="v" style="font-size:22px;padding-top:4px">${statusChip(st)}</span><span class="s">${tid ? (worst ? t('Le plus en retard : {c} ({n} leçon(s))', { c: worst.name, n: num1(worst.lag) }) : t('Aucun retard marquant')) : (lateTeachers ? t('{n} collègue(s) en retard', { n: lateTeachers }) : t('Aucun collègue en retard'))}</span></div>
     </div>
     ${data.length > 1 && data.some(d => d.due || d.done) ? html`<div class="card"><div class="card-h"><h3>${unitFor(p) === 'day' ? t('Heures par jour') : unitFor(p) === 'month' ? t('Heures par mois') : t('Heures par semaine')}</h3><div class="legend"><span><i style="background:var(--sand);border:1.5px solid var(--line)"></i>${t('dues')}</span><span><i style="background:var(--teal)"></i>${t('faites')}</span></div></div><${BarChart} data=${data} unit=${unitFor(p)} /></div>` : null}

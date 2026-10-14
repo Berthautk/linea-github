@@ -332,7 +332,7 @@ export function activity(ctx, tid) {
   const done = [...weeks].filter(w => active.has(w)).length, classes = new Set([...ctx.assign.filter(a => a.teacherId === tid).map(a => a.classId), ...((tc && tc.slots) || []).map(sl => sl.c)]);
   const filled = [...classes].filter(c => es.some(e => e.classId === c)).length, last = es.map(e => e.date).sort().pop() || '';
   const rate = weeks.size ? done / weeks.size : 0;
-  return { weeks: weeks.size, active: done, classes: classes.size, filled, last, since: last ? diffDays(last, ctx.today) : null, lessons: es.filter(e => e.n != null).length, level: !weeks.size ? 'none' : rate >= 0.8 ? 'regular' : rate >= 0.4 ? 'irregular' : 'low', rate: Math.round(rate * 100) };
+  return { weeks: weeks.size, active: done, classes: classes.size, filled, last, since: last ? diffDays(last, ctx.today) : null, lessons: es.filter(e => e.n != null).length, level: !weeks.size ? 'none' : (!last || diffDays(last, ctx.today) >= 14) ? 'inactive' : rate >= 0.8 ? 'regular' : rate >= 0.4 ? 'irregular' : 'low', rate: Math.round(rate * 100) };
 }
 
 export function nextNumber(ctx, tid, classId, type) {

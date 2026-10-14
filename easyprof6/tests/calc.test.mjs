@@ -206,7 +206,7 @@ test('activité des collègues : semaines actives, classes saisies, régularité
   st.entries = [E('a', 'K', '2026-09-08', { classId: 'F3A', n: 1 }), E('b', 'K', '2026-09-15', { classId: 'F3A', n: 2 }), E('c', 'K', '2026-09-22', { classId: 'F3A', n: 3 })];
   const c = makeCtx(st, '2026-09-25'), a = activity(c, 'K');
   assert.equal(a.active, 3); assert.equal(a.weeks, 3); assert.equal(a.level, 'regular'); assert.equal(a.filled, 1, 'LSA jamais saisie'); assert.ok(a.classes >= 2);
-  assert.equal(activity(c, 'N').level, 'low'); assert.equal(activity(c, 'N').last, '');
+  assert.equal(activity(c, 'N').level, 'inactive'); assert.equal(activity(c, 'N').last, '');
 });
 
 test('à compléter : cours prévus non saisis depuis la rentrée', () => {
@@ -224,4 +224,11 @@ test('nouveaux motifs : journée de l’enseignant, établissement fermé, exame
   const st = mk(); st.teachers = [{ id: 'K', name: 'Kamdem', short: 'K', slots: [S(1, 'F3A', 2, { st: '07:30' })] }];
   st.entries = [{ id: 'a', teacherId: 'K', type: 'absence', date: '2026-10-05', reason: 'teacherday', minutes: 0 }];
   const d = dueRange(makeCtx(st, '2026-10-13'), 'K', '2026-10-05', '2026-10-05'); assert.equal(d.due, 0); assert.equal(d.excused, 2);
+});
+
+test('rappel : « depuis 2 semaines / 1 mois / 2 mois »', async () => {
+  const { reminderText } = await import('../site/js/reminder-text.js');
+  const st = mk(); st.entries = [E('a', 'K', '2026-09-08', { classId: 'F3A', n: 1 })];
+  const tc = (d) => { const c = makeCtx(st, d); return reminderText(c, c.teacher('K'), 'fr'); };
+  assert.match(tc('2026-09-22'), /2 semaines/); assert.match(tc('2026-10-10'), /1 mois/); assert.match(tc('2026-11-08'), /2 mois/);
 });

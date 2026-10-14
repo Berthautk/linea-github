@@ -40,7 +40,8 @@ export function reminderText(ctx, tc, lang) {
   const weeks = days == null ? 0 : Math.floor(days / 7);
   const ago = days == null ? (en ? 'the start of the year' : 'le début de l’année')
     : days < 7 ? (en ? `${days} day${days > 1 ? 's' : ''}` : `${days} jour${days > 1 ? 's' : ''}`)
-      : (en ? `${weeks} week${weeks > 1 ? 's' : ''}` : `${weeks} semaine${weeks > 1 ? 's' : ''}`);
+      : days < 28 ? (en ? `${weeks} week${weeks > 1 ? 's' : ''}` : `${weeks} semaine${weeks > 1 ? 's' : ''}`)
+        : (() => { const m = Math.max(1, Math.round(days / 30)); return en ? `${m} month${m > 1 ? 's' : ''}` : `${m} mois`; })();
   const lines = missedSlots(ctx, tc).slice(-6).map(m => `• ${dayName(dow(m.iso), lang, true)} ${fmt(m.iso, lang, { noYear: true })} : ${m.rows.map(r => (ctx.cls(r.c) || {}).name || r.c).join(', ')}`);
   const cl = classLines(ctx, tc, lang), mine = cl.length ? (en ? '\nYour classes:\n' : '\nVos classes :\n') + cl.join('\n') + '\n' : '';
   const list = mine + (lines.length ? (en ? '\nLessons not recorded:\n' : '\nCours non enregistrés :\n') + lines.join('\n') + '\n' : '');

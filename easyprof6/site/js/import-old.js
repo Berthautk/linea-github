@@ -38,7 +38,7 @@ export function convert(j, idFor, now = Date.now()) {
     ids.forEach((tid, i) => assign.push({ id: tid + ':' + c.id, teacherId: tid, classId: c.id, th: Math.floor(th / n) + (i === 0 ? th % n : 0), pr: Math.floor(pr / n) + (i === 0 ? pr % n : 0), hours: Math.floor(hours / n) + (i === 0 ? hours % n : 0), u: now }));
   }
   const slots = {}; const tt = ((j.reportObservations || {}).__inspection || {}).tt || {};
-  for (const [oid, list] of Object.entries(tt)) { const nid = idFor(oid); if (nid) slots[nid] = list.map(s => ({ d: +s.d, c: s.c, h: +s.h, tm: s.tm || '', st: s.st || '', only: Array.isArray(s.only) ? s.only : [] })); }
+  for (const [oid, list] of Object.entries(tt)) { const nid = idFor(oid); if (nid) slots[nid] = list.map(s => ({ d: +s.d, c: s.c, h: +s.h, tm: s.tm || '', st: s.st || '', en: s.en || '', only: Array.isArray(s.only) ? s.only : [] })); }
   const entries = [];
   for (const e of j.entries || []) {
     const tid = idFor(e.teacherId); if (!tid) continue;

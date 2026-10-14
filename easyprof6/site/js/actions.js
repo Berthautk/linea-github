@@ -25,7 +25,7 @@ export function deleteEntry(id) {
 }
 export function restoreEntry(e) { update(s => { s.data = { ...s.data, entries: upsert(s.data.entries, stamp(e)) }; }); changed(); }
 export function declareAbsence({ teacherId, from, to, reason, note }) {
-  const made = []; const have = new Set(state.data.entries.filter(e => !e.deleted && e.type === 'absence' && e.teacherId === teacherId).map(e => e.date));
+  const made = []; const have = new Set(state.data.entries.filter(e => !e.deleted && e.type === 'absence' && !e.classId && e.teacherId === teacherId).map(e => e.date));
   for (let d = from, k = 0; d <= (to || from) && k < 62; d = nextDay(d), k++) {
     if (new Date(d + 'T00:00:00Z').getUTCDay() === 0 || have.has(d)) continue;
     made.push(stamp({ id: uid(), teacherId, type: 'absence', classId: '', date: d, start: '', end: '', minutes: 0, n: null, title: '', digital: false, eval: null, reason, note: note || '', term: termOf(d) }));

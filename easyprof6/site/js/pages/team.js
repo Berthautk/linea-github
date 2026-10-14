@@ -8,7 +8,7 @@ import { state, myId, setToast, setUI } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept } from '../actions.js';
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
-import { dayName, fmt, timeToMin, minToTime } from '../dates.js';
+import { dayName, fmt, slotHours, endFor } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, fresh = true }) {
@@ -63,8 +63,11 @@ function Slots({ tc, ctx }) {
   const add = () => { setUI({ slotOpen: slots.length }); saveTeacher(tc.id, { slots: [...slots, { d: 1, c: (ctx.classes[0] || {}).id || '', h: 2, tm: '', st: '' }] }); };
   const del = (i) => saveTeacher(tc.id, { slots: slots.filter((_, j) => j !== i) });
   const total = slots.reduce((s, x) => s + (+x.h || 0), 0);
-  const endOf = (s) => (s.st ? minToTime(timeToMin(s.st) + Math.round((+s.h || 0) * 60)) : '');
-  const setEnd = (i, s, v) => { if (!s.st || !v) return; const m = timeToMin(v) - timeToMin(s.st); if (m > 0) set(i, { h: Math.round(m / 15) / 4 }); };
+  const breaks = ctx.dept.breaks;
+  const endOf = (s) => s.en || (s.st ? endFor(s.st, s.h, breaks) : '');
+  // heure de début ou de fin modifiée : la durée est recalculée (pauses déduites) ; durée modifiée : l'heure de fin suit
+  const setTimes = (i, s, patch) => { const n = { ...s, ...patch }, h = n.st && n.en ? slotHours(n.st, n.en, breaks) : 0; set(i, { ...patch, ...(h > 0 ? { h } : {}) }); };
+  const setDur = (i, s, h) => set(i, { h, ...(s.st ? { en: endFor(s.st, h, breaks) } : {}) });
   return html`<div class="card"><div class="card-h"><h3>${t('Emploi du temps de la semaine')}</h3><${Chip} tone="info">${num1(total)} h / ${t('semaine')}<//></div>
     ${!ctx.classes.length ? html`<p class="sub">${t('Créez d’abord les classes.')}</p>` : null}
     <div class="stack" style="gap:10px">${slots.map((s, i) => html`<details class="card flat slot" open=${slots.length <= 2 || i === state.ui.slotOpen}><summary><b>${dayName(s.d % 7, lang)}</b> · ${(ctx.cls(s.c) || {}).name || '?'} · ${s.st ? s.st + ' → ' + endOf(s) + ' · ' : ''}${s.h} h${s.only && s.only.length ? ' · ' + t('dates précises') : ''}</summary><div class="stack" style="gap:10px;padding-top:10px">
@@ -72,9 +75,9 @@ function Slots({ tc, ctx }) {
         <select class="input" value=${s.d} onChange=${(e) => set(i, { d: +e.target.value })} aria-label=${t('Jour')}>${DAYS.map(d => html`<option value=${d}>${dayName(d % 7, lang)}</option>`)}</select>
         <button class="icon-btn" onClick=${() => del(i)} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button>
         <select class="input full" value=${s.c} onChange=${(e) => set(i, { c: e.target.value })} aria-label=${t('Classe')}>${ctx.classes.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select></div>
-      <div class="g3"><${Field} label=${t('De (heure de début)')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => set(i, { st: e.target.value })} /><//>
-        <${Field} label=${t('À (heure de fin)')}><input class="input" type="time" value=${endOf(s)} onChange=${(e) => setEnd(i, s, e.target.value)} /><//>
-        <${Field} label=${t('Durée (h)')}><input class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => set(i, { h: +e.target.value || 0 })} /><//></div>
+      <div class="g3"><${Field} label=${t('De (heure de début)')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => setTimes(i, s, { st: e.target.value, ...(s.st && e.target.value ? { en: endFor(e.target.value, s.h, breaks) } : {}) })} /><//>
+        <${Field} label=${t('À (heure de fin)')}><input class="input" type="time" value=${endOf(s)} onChange=${(e) => setTimes(i, s, { en: e.target.value })} /><//>
+        <${Field} label=${t('Durée (h)')}><input class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => setDur(i, s, +e.target.value || 0)} /><//></div>
       <${Field} label=${t('Valable')}><select class="input" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
       <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div></details>`)}</div>
     <div class="row" style="margin-top:12px"><button class="btn soft" onClick=${add}><${Icon} n="plus" />${t('Ajouter un cours')}</button></div>

@@ -1,6 +1,6 @@
 // Moteur de calcul Rekort : heures dues / faites, leçons attendues (rythme), retards, périodes, fiche d'inspection.
 // Fonctions pures : aucune dépendance à l'écran. `state` = { dept, teachers, classes, assign, regul, entries }.
-import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO } from './dates.js';
+import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO, endFor } from './dates.js';
 import { reasonOf, isLessonType, THRESHOLDS } from './consts.js';
 
 export const r1 = (x) => Math.round(x * 10) / 10;
@@ -17,15 +17,18 @@ export function makeCtx(state, today = todayISO()) {
   const assign = (state.assign || []).filter(a => !a.deleted);
   const regul = (state.regul || []).filter(r => !r.deleted);
   const entries = (state.entries || []).filter(e => !e.deleted);
-  const byTeacher = {}, abs = {};
+  const byTeacher = {}, abs = {}, absSlot = {};
   for (const e of entries) {
     (byTeacher[e.teacherId] = byTeacher[e.teacherId] || []).push(e);
-    if (e.type === 'absence' && e.date) (abs[e.teacherId] = abs[e.teacherId] || {})[e.date] = e.reason || 'other';
+    if (e.type === 'absence' && e.date) {
+      if (e.classId) (absSlot[e.teacherId] = absSlot[e.teacherId] || {})[e.date + '|' + e.classId] = e.reason || 'unknown';   // absent à un cours précis
+      else (abs[e.teacherId] = abs[e.teacherId] || {})[e.date] = e.reason || 'other';   // jour entier
+    }
   }
   const ys = terms.length ? terms[0].start : today;
   const ye = terms.length ? terms[terms.length - 1].last : today;
   const ctx = {
-    dept, terms, off, teachers, classes, assign, regul, entries, byTeacher, abs, today, ys, ye, lh: +dept.lh || 2,
+    dept, terms, off, teachers, classes, assign, regul, entries, byTeacher, abs, absSlot, today, ys, ye, lh: +dept.lh || 2,
     teacher: (id) => teachers.find(t => t.id === id),
     cls: (id) => classes.find(c => c.id === id),
     termOf: (iso) => (terms.find(t => iso >= t.start && iso <= t.end) || {}).id || '',
@@ -63,7 +66,13 @@ export function dueRange(ctx, tid, ps, pe) {
     const reason = (ctx.abs[tid] || {})[iso];
     if (reason && ctx.reasonOut(reason)) { out.excused += total; out.declared.push({ date: iso, reason, h: total, out: true }); continue; }
     out.due += total; for (const c in byClass) out.byClass[c] = (out.byClass[c] || 0) + byClass[c];
-    if (reason) { out.absent += total; out.declared.push({ date: iso, reason, h: total, out: false }); }
+    if (reason) { out.absent += total; out.declared.push({ date: iso, reason, h: total, out: false }); continue; }
+    const sa = ctx.absSlot[tid];
+    if (sa) for (const c in byClass) {
+      const r = sa[iso + '|' + c]; if (!r) continue;
+      if (ctx.reasonOut(r)) { out.excused += byClass[c]; out.due -= byClass[c]; out.byClass[c] -= byClass[c]; out.declared.push({ date: iso, reason: r, h: byClass[c], out: true }); }
+      else { out.absent += byClass[c]; out.declared.push({ date: iso, reason: r, h: byClass[c], out: false }); }
+    }
   }
   return out;
 }
@@ -236,9 +245,10 @@ export function todaySlots(ctx, tid, iso = ctx.today) {
   if (!ctx.isTeaching(iso)) return { rows, teaching: false, off: ctx.off.has(iso), reason, entries: mine };
   for (const s of (t && t.slots) || []) {
     if (+s.d !== dow(iso) || (s.tm && ctx.termOf(iso) && s.tm !== ctx.termOf(iso)) || (s.only && s.only.length && !s.only.includes(iso))) continue;
-    const done = mine.some(e => e.classId === s.c);
-    rows.push({ c: s.c, h: +s.h || 0, st: s.st || '', done });
+    const done = mine.some(e => e.classId === s.c), sa = (ctx.absSlot[tid] || {})[iso + '|' + s.c];
+    rows.push({ c: s.c, h: +s.h || 0, st: s.st || '', en: s.en || (s.st ? endFor(s.st, s.h, ctx.dept.breaks) : ''), done, absent: done ? '' : sa || '' });
   }
+  rows.sort((a, b) => (a.st < b.st ? -1 : a.st > b.st ? 1 : 0));
   return { rows, teaching: true, off: false, reason, entries: mine, hours: Object.values(byClass).reduce((a, b) => a + b, 0) };
 }
 export function nextNumber(ctx, tid, classId, type) {

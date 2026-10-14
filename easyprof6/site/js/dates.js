@@ -36,3 +36,19 @@ export function fmt(iso, lang = 'fr', opts = {}) {
 export const timeToMin = (t) => { const [h, m] = String(t || '').split(':').map(Number); return Number.isFinite(h) && Number.isFinite(m) ? h * 60 + m : NaN; };
 export const minToTime = (n) => pad(Math.floor(n / 60) % 24) + ':' + pad(n % 60);
 export function minutesBetween(a, b) { const x = timeToMin(a), y = timeToMin(b); if (isNaN(x) || isNaN(y)) return 0; const d = y - x; return d <= 0 ? 0 : d; }
+
+/* ---------- pauses de la journée : un cours qui chevauche une pause ne la compte pas dans sa durée ---------- */
+export const DEFAULT_BREAKS = [{ f: '10:30', t: '10:45' }, { f: '12:45', t: '13:15' }];
+const brk = (breaks) => (breaks || DEFAULT_BREAKS).map(b => [timeToMin(b.f), timeToMin(b.t)]).filter(([a, b]) => b > a).sort((x, y) => x[0] - y[0]);
+/** Durée en heures entre deux heures, pauses déduites (arrondie au quart d'heure). */
+export function slotHours(st, en, breaks) {
+  const a = timeToMin(st), b = timeToMin(en); if (isNaN(a) || isNaN(b) || b <= a) return 0;
+  let m = b - a; for (const [f, t] of brk(breaks)) m -= Math.max(0, Math.min(b, t) - Math.max(a, f));
+  return Math.max(0, Math.round(m / 15) / 4);
+}
+/** Heure de fin d'un cours qui commence à `st` et dure `h` heures de cours (pauses non comptées). */
+export function endFor(st, h, breaks) {
+  let cur = timeToMin(st), left = Math.round((+h || 0) * 60); if (isNaN(cur)) return '';
+  for (const [f, t] of brk(breaks)) { if (cur >= t) continue; if (cur >= f) { cur = t; continue; } if (left <= f - cur) return minToTime(cur + left); left -= f - cur; cur = t; }
+  return minToTime(cur + left);
+}

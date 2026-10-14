@@ -15,6 +15,7 @@ export const REASONS = [
   { id: 'sick', fr: 'Maladie', en: 'Sick leave', icon: '🤒', out: false },
   { id: 'personal', fr: 'Empêchement personnel', en: 'Personal impediment', icon: '🧳', out: false },
   { id: 'mission', fr: 'Mission / formation / réunion', en: 'Mission / training / meeting', icon: '📋', out: false },
+  { id: 'unknown', fr: 'Absent, motif inconnu', en: 'Absent, reason unknown', icon: '❔', out: false },
   { id: 'other', fr: 'Autre motif', en: 'Other reason', icon: '✏️', out: false },
 ];
 export const reasonOf = (id) => REASONS.find(r => r.id === id) || REASONS[REASONS.length - 1];

@@ -12,7 +12,7 @@ import { Team, TeacherDetail, showCredentials } from './team.js';
 import { Guide } from './guide.js';
 import { defaultTerms, defaultCalendar } from '../defaults.js';
 import { REASONS } from '../consts.js';
-import { fmt, todayISO } from '../dates.js';
+import { fmt, todayISO, DEFAULT_BREAKS } from '../dates.js';
 import { letterText, defaultLetter, showArms } from '../letterhead.js';
 import { exportCSV } from '../exports.js';
 import { isOldBackup, isNewBackup, summarize, convert, surname } from '../import-old.js';
@@ -65,7 +65,11 @@ function Dept() {
       <${Field} label=${t('Texte à gauche (français)')} hint=${t('Une ligne par ligne imprimée ; la première est en gras.')}><textarea class="input" rows="6" value=${letterText(h, 'fr')} onChange=${(e) => seth('fr', e.target.value.trim() === defaultLetter(h, 'fr') ? '' : e.target.value.trim())}></textarea><//>
       <${Field} label=${t('Texte à droite (anglais)')}><textarea class="input" rows="6" value=${letterText(h, 'en')} onChange=${(e) => seth('en', e.target.value.trim() === defaultLetter(h, 'en') ? '' : e.target.value.trim())}></textarea><//>
       <label class="opt"><input type="checkbox" checked=${showArms(h)} onChange=${(e) => seth('arms', e.target.checked ? '' : '0')} /><span>${t('Afficher les armoiries du Cameroun au centre')}</span></label>
-      <div class="row"><button class="btn soft sm" onClick=${() => set({ header: { ...h, fr: '', en: '' } })}>${t('Rétablir le texte automatique')}</button></div></div></div>`;
+      <div class="row"><button class="btn soft sm" onClick=${() => set({ header: { ...h, fr: '', en: '' } })}>${t('Rétablir le texte automatique')}</button></div></div>
+    <div class="card stack"><h3>${t('Pauses de la journée')}</h3><p class="sub">${t('Un cours qui commence avant une pause et finit après ne la compte pas dans sa durée. Exemple : de 9 h 30 à 11 h 45 avec une pause de 10 h 30 à 10 h 45 = 2 h.')}</p>
+      ${(d.breaks || DEFAULT_BREAKS).map((b, i, all) => html`<div class="row" style="gap:8px"><input class="input" type="time" value=${b.f} onChange=${(e) => set({ breaks: all.map((x, j) => (j === i ? { ...x, f: e.target.value } : x)) })} /><span>→</span><input class="input" type="time" value=${b.t} onChange=${(e) => set({ breaks: all.map((x, j) => (j === i ? { ...x, t: e.target.value } : x)) })} />
+        <button class="icon-btn" onClick=${() => set({ breaks: all.filter((_, j) => j !== i) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}
+      <div class="row"><button class="btn soft sm" onClick=${() => set({ breaks: [...(d.breaks || DEFAULT_BREAKS), { f: '10:00', t: '10:15' }] })}><${Icon} n="plus" />${t('Ajouter une pause')}</button></div></div></div>`;
 }
 
 function Year() {

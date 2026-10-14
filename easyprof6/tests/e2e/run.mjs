@@ -111,16 +111,16 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
   await apPage.screenshot({ path: shots + '/e_recap.png', fullPage: true });
   // l'animateur contrôle la semaine d'un collègue : retirer, puis cocher « Présent » à sa place
   await go(apPage, url, '#/week'); await apPage.waitForSelector('.wk');
-  await apPage.locator('select').first().selectOption({ label: 'Mme ASTHA Noura' }); await apPage.waitForTimeout(300);
+  await apPage.getByRole('button', { name: 'ASTHA' }).click(); await apPage.waitForTimeout(300);
   const wk = await apPage.innerText('.page');
-  ok(/Contrôle de la semaine/.test(wk) && /Form 3 A/.test(wk), 'E5 contrôle de la semaine : le cours du collègue est affiché');
+  ok(/Ronde en classe/.test(wk) && /Form 3 A/.test(wk), 'E5 contrôle de la semaine : le cours du collègue est affiché');
   const hrs = async () => (await apPage.locator('.chip.info').innerText());
   const h0 = await hrs();
   if (await apPage.getByRole('button', { name: 'Retirer' }).count()) { await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300); }
   await apPage.getByRole('button', { name: 'Présent' }).first().click(); await apPage.waitForTimeout(400);
   ok(/2 h faites sur/.test(await hrs()), 'E6 « Présent » enregistre le cours au nom du collègue (' + h0 + ' → ' + (await hrs()) + ')');
   await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300);
-  await apPage.getByRole('button', { name: 'En retard' }).first().click(); await apPage.getByRole('button', { name: '30 min' }).click(); await apPage.waitForTimeout(400);
+  await apPage.getByRole('button', { name: 'Détails…' }).first().click(); await apPage.getByRole('button', { name: 'En retard' }).click(); await apPage.getByRole('button', { name: '30', exact: true }).click(); await apPage.getByRole('button', { name: 'Enregistrer' }).click(); await apPage.waitForTimeout(400);
   ok(/1,5 h faites sur/.test(await hrs()), 'E7 « En retard » de 30 min : 1,5 h comptées');
   // en-tête libre et mode d'emploi
   await go(apPage, url, '#/settings/dept'); await apPage.locator('textarea').first().fill('REPUBLIQUE DU CAMEROUN\nPaix-Travail-Patrie\n**********\nTEXTE DE TEST'); await apPage.locator('textarea').first().blur(); await apPage.waitForTimeout(300);

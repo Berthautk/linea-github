@@ -251,3 +251,4 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .guide { margin: 0; padding-left: 22px; display: grid; gap: 10px; font-size: 14.5px; line-height: 1.5; } .guide li::marker { font-weight: 800; color: var(--teal-d); }
 .cap::first-letter { text-transform: uppercase; }
 .slot { padding: 12px; } .slot > summary { cursor: pointer; font-size: 14px; list-style: none; } .slot > summary::-webkit-details-marker { display: none; } .slot > summary::after { content: '▾'; float: right; color: var(--muted); } .slot[open] > summary::after { content: '▴'; }
+.wk-main { width: 100%; background: none; border: 0; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; } .wk-main:disabled { cursor: default; opacity: 1; }

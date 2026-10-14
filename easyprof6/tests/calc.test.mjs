@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { slotHours, endFor } from '../site/js/dates.js';
 import { followUp, noTimetable, makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
 import { newDept } from '../site/js/defaults.js';
 
@@ -137,4 +138,21 @@ test('emploi du temps manquant détecté (pas de pourcentage trompeur)', () => {
   const st = mk(); st.teachers[1].slots = [];
   const c = makeCtx(st, '2026-10-13');
   assert.deepEqual(noTimetable(c, null).map(x => x.id), ['N']); assert.equal(noTimetable(c, 'K').length, 0);
+});
+
+test('heures de début et de fin : la durée ne compte pas les pauses (10:30-10:45 et 12:45-13:15)', () => {
+  assert.equal(slotHours('07:30', '09:30'), 2); assert.equal(slotHours('09:30', '11:45'), 2, 'pause de 15 min déduite');
+  assert.equal(slotHours('11:45', '15:15'), 3, 'pause de 30 min déduite'); assert.equal(slotHours('07:30', '11:45'), 4);
+  assert.equal(endFor('09:30', 2), '11:45'); assert.equal(endFor('11:45', 3), '15:15'); assert.equal(endFor('07:30', 3), '10:30');
+});
+
+test('absence à un cours précis : seul ce cours est compté absent ; un motif « hors faute » le retire des heures dues', () => {
+  const st = mk(); st.teachers = [{ id: 'K', name: 'Kamdem', short: 'KAMDEM', slots: [S(1, 'F3A', 2, { st: '07:30' }), S(1, 'LSA', 2, { st: '09:30' })] }];
+  st.entries = [{ id: 'a1', teacherId: 'K', type: 'absence', classId: 'F3A', date: '2026-10-12', reason: 'unknown', minutes: 0 }];
+  const c = makeCtx(st, '2026-10-13'), d = dueRange(c, 'K', '2026-10-12', '2026-10-12');
+  assert.equal(d.due, 4); assert.equal(d.absent, 2, 'seul le cours F3A est absent');
+  const rows = todaySlots(c, 'K', '2026-10-12').rows; assert.equal(rows.find(r => r.c === 'F3A').absent, 'unknown'); assert.equal(rows.find(r => r.c === 'LSA').absent, '');
+  assert.equal(rows[0].en, '09:30', 'heure de fin déduite');
+  st.entries[0].reason = 'holiday'; const d2 = dueRange(makeCtx(st, '2026-10-13'), 'K', '2026-10-12', '2026-10-12');
+  assert.equal(d2.due, 2); assert.equal(d2.excused, 2);
 });

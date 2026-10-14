@@ -5,7 +5,7 @@ import { Icon } from '../icons.js';
 import { Field, PasswordInput, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
 import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
-import { applyTiming, saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
+import { applyTiming, saveAssign, removeAssign, saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
 import { makeCtx, catchUp } from '../calc.js';
 import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
@@ -21,17 +21,25 @@ import { syncNow } from '../sync.js';
 const Back = ({ title, children }) => html`<div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${title}</h1></div>${children}</div>`;
 
 function Menu() {
-  const ap = isAP(), items = [
-    ['#/settings/guide', 'info', t('Mode d’emploi'), t('Comment utiliser Rekort, pas à pas')],
-    ['#/settings/profile', 'user', t('Mon profil'), t('Nom, téléphone, mot de passe, langue')],
-    ...(ap ? [['#/settings/dept', 'school', t('Établissement et en-tête'), t('Nom de l’école, texte imprimé en haut des fiches (français / anglais)')],
-      ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Dates des trimestres, vacances, jours sans cours')],
-      ['#/settings/classes', 'book', t('Classes'), t('Les classes et leurs effectifs')],
-      ['#/settings/team', 'users', t('Collègues et emplois du temps'), t('Créer les comptes, choisir mots de passe, cours de la semaine, leçons prévues')],
-      ['#/settings/regul', 'clock', t('Heures hors application'), t('Compter des heures faites avant Rekort')]] : []),
-    ['#/settings/data', 'download', t('Sauvegarde et import'), ap ? t('Exporter, importer l’ancienne version') : t('Exporter vos données')],
+  const ap = isAP(), groups = [
+    [t('Mon compte'), [
+      ['#/settings/profile', 'user', t('Mon profil'), t('Nom, téléphone, identifiant, mot de passe, langue')],
+      ['#/settings/guide', 'info', t('Mode d’emploi'), t('Comment utiliser Rekort, pas à pas')]]],
+    ...(ap ? [
+      [t('Établissement et fiches'), [
+        ['#/settings/dept', 'school', t('En-tête, durée des cours et pauses'), t('Nom de l’école, texte imprimé en haut des fiches, durée d’une heure de cours, pauses')],
+        ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Dates des trimestres, vacances, jours sans cours')]]],
+      [t('Classes et programme'), [
+        ['#/settings/classes', 'book', t('Classes et leçons prévues'), t('Les classes, leurs effectifs, et pour chacune le nombre de leçons et d’heures prévues pour l’année')]]],
+      [t('Équipe'), [
+        ['#/settings/team', 'users', t('Collègues et emplois du temps'), t('Créer les comptes, mots de passe, cours de la semaine de chaque collègue')]]],
+      [t('Données'), [
+        ['#/settings/regul', 'clock', t('Heures hors application'), t('Compter des heures faites avant Rekort')],
+        ['#/settings/data', 'download', t('Sauvegarde et import'), t('Exporter, importer une sauvegarde ou l’ancienne version')]]]]
+    : [[t('Données'), [['#/settings/data', 'download', t('Sauvegarde et import'), t('Exporter vos données')]]]]),
   ];
-  return html`<div class="page"><div class="page-h"><h1>${t('Réglages')}</h1></div><div class="card"><div class="list">${items.map(([href, ic, title, sub]) => html`<a class="item" href=${href} style="text-decoration:none;color:inherit"><div class="dot"><${Icon} n=${ic} /></div><div class="grow"><b>${title}</b><span>${sub}</span></div><${Icon} n="right" size="18" /></a>`)}</div></div>
+  return html`<div class="page"><div class="page-h"><h1>${t('Réglages')}</h1></div>
+    ${groups.map(([title, items]) => html`<h3 class="grp" style="margin:14px 4px 6px">${title}</h3><div class="card"><div class="list">${items.map(([href, ic, title, sub]) => html`<a class="item" href=${href} style="text-decoration:none;color:inherit"><div class="dot"><${Icon} n=${ic} /></div><div class="grow"><b>${title}</b><span>${sub}</span></div><${Icon} n="right" size="18" /></a>`)}</div></div>`)}
     <p class="sub" style="text-align:center">Rekort · ${t('Département')} ${state.data.dept.name}</p></div>`;
 }
 
@@ -132,17 +140,29 @@ const USUAL = {
   anglophone: [['Form 1 A', 'Form 1', '1er'], ['Form 1 B', 'Form 1', '1er'], ['Form 2 A', 'Form 2', '1er'], ['Form 2 B', 'Form 2', '1er'], ['Form 3 A', 'Form 3', '1er'], ['Form 3 B', 'Form 3', '1er'], ['Form 4 Arts', 'Form 4', '1er'], ['Form 4 Science', 'Form 4', '1er'], ['Form 5 Arts', 'Form 5', '1er'], ['Form 5 Science', 'Form 5', '1er'], ['Lower Sixth Arts', 'Lower Sixth', '2nd'], ['Upper Sixth Arts', 'Upper Sixth', '2nd']],
   francophone: [['6e A', '6e', '1er'], ['5e A', '5e', '1er'], ['4e A', '4e', '1er'], ['3e A', '3e', '1er'], ['2nde A', '2nde', '2nd'], ['1ère A', '1ère', '2nd'], ['Tle A', 'Tle', '2nd']],
 };
+/** Programme de l'année d'une classe : pour chaque enseignant de la classe, leçons (théorie, TP) et heures prévues. Alimente la fiche pédagogique. */
+function ClassProgram({ c, ctx }) {
+  const mine = ctx.assign.filter(a => a.classId === c.id), free = ctx.teachers.filter(x => !mine.some(a => a.teacherId === x.id)), [add, setAdd] = useState('');
+  const upd = (a, k, v) => saveAssign({ teacherId: a.teacherId, classId: c.id, th: a.th, pr: a.pr, hours: a.hours, [k]: v });
+  const num = (a, k, label) => html`<${Field} label=${label}><input class="input" type="number" min="0" inputmode="numeric" value=${a[k] || ''} onChange=${(e) => upd(a, k, +e.target.value || 0)} /><//>`;
+  return html`<div class="stack" style="gap:8px;border-top:1px dashed var(--line);padding-top:10px"><b style="font-size:14px">${t('Programme de l’année')}</b>
+    ${mine.length ? null : html`<p class="sub">${t('Aucun enseignant n’est encore rattaché à cette classe : ajoutez-le ci-dessous, puis indiquez ses leçons et heures prévues.')}</p>`}
+    ${mine.map(a => html`<div class="card flat stack" style="gap:6px"><div class="row" style="flex-wrap:nowrap"><b class="grow">${(ctx.teacher(a.teacherId) || {}).name || '?'}</b><button class="icon-btn" onClick=${() => removeAssign(a.teacherId, c.id)} aria-label=${t('Retirer')}><${Icon} n="trash" /></button></div>
+      <div class="g3">${num(a, 'th', t('Leçons de théorie'))}${num(a, 'pr', t('Leçons de TP'))}${num(a, 'hours', t('Heures prévues'))}</div></div>`)}
+    ${free.length ? html`<div class="row"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter un enseignant à cette classe…')}</option>${free.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: add, classId: c.id, th: 0, pr: 0, hours: 0 }); setAdd(''); }}>${t('Ajouter')}</button></div>` : null}</div>`;
+}
 function Classes() {
   const ctx = makeCtx(state.data);
   const missing = (USUAL[state.data.dept.system] || USUAL.anglophone).filter(([n]) => !ctx.classes.some(c => c.name.toLowerCase() === n.toLowerCase()));
   const addUsual = () => { missing.forEach(([name, level, cycle]) => saveClass({ name, level, cycle, effectif: { total: 0, girls: 0, boys: 0 } })); setToast(t('{n} classe(s) ajoutée(s). Indiquez leurs effectifs.', { n: missing.length })); };
   return html`<div class="page"><${Back} title=${t('Classes')}><button class="btn" onClick=${() => openModal(() => html`<${ClassEdit} />`)}><${Icon} n="plus" />${t('Nouvelle classe')}</button><//>
-    <p class="sub">${t('Le nombre de leçons prévues se règle ensuite pour chaque collègue, dans Équipe.')}</p>
+    <p class="sub">${t('Tout ce qui concerne une classe est ici : son effectif, et, pour chaque enseignant qui y intervient, le nombre de leçons et d’heures prévues pour l’année. Ces chiffres alimentent la fiche pédagogique et les taux de couverture.')}</p>
     ${missing.length && !ctx.classes.length ? html`<button class="btn soft" style="align-self:flex-start" onClick=${addUsual}><${Icon} n="plus" />${t('Ajouter les classes habituelles')}</button>`
       : missing.length ? html`<button class="btn ghost sm" style="align-self:flex-start" onClick=${() => confirmDialog({ title: t('Ajouter {n} classes habituelles ?', { n: missing.length }), message: missing.map(m => m[0]).join(', ') + '. ' + t('Si vous avez renommé des classes, elles seront ajoutées en plus.'), confirm: t('Ajouter'), onConfirm: addUsual })}>${t('Ajouter des classes habituelles…')}</button>` : null}
-    ${!ctx.classes.length ? html`<div class="card"><${Empty} icon="🏫" title=${t('Aucune classe')} text=${t('Ajoutez les classes où le département enseigne.')} /></div>` : html`<div class="card"><div class="list">${ctx.classes.map(c => html`<div class="item"><div class="dot">📘</div><div class="grow"><b>${c.name}</b><span>${c.cycle === '2nd' ? t('2nd cycle') : t('1er cycle')} · ${(c.effectif || {}).total || 0} ${t('élèves')}</span></div>
+    ${!ctx.classes.length ? html`<div class="card"><${Empty} icon="🏫" title=${t('Aucune classe')} text=${t('Ajoutez les classes où le département enseigne.')} /></div>` : ctx.classes.map(c => html`<div class="card stack" style="gap:10px"><div class="row" style="flex-wrap:nowrap"><div class="dot">📘</div><div class="grow"><b>${c.name}</b><span class="sub" style="display:block">${c.cycle === '2nd' ? t('2nd cycle') : t('1er cycle')} · ${(c.effectif || {}).total || 0} ${t('élèves')}</span></div>
       <button class="icon-btn" onClick=${() => openModal(() => html`<${ClassEdit} cls=${c} />`)} aria-label=${t('Modifier')}><${Icon} n="edit" /></button>
-      <button class="icon-btn" onClick=${() => confirmDialog({ title: t('Supprimer la classe {c} ?', { c: c.name }), message: t('Les saisies déjà faites dans cette classe restent dans l’historique.'), confirm: t('Supprimer'), danger: true, onConfirm: () => deleteClass(c.id) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}</div></div>`}
+      <button class="icon-btn" onClick=${() => confirmDialog({ title: t('Supprimer la classe {c} ?', { c: c.name }), message: t('Les saisies déjà faites dans cette classe restent dans l’historique.'), confirm: t('Supprimer'), danger: true, onConfirm: () => deleteClass(c.id) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>
+      <${ClassProgram} c=${c} ctx=${ctx} /></div>`)}
     ${ctx.classes.length ? html`<div class="card stack"><p class="sub">${t('Chaque classe est enregistrée dès que vous touchez « Enregistrer » dans sa fenêtre. Quand la liste est complète, confirmez ci-dessous.')}</p>
       ${(ctx.dept.setup || {}).classes ? html`<${Chip} tone="ok">✓ ${t('Classes confirmées')}<//>` : null}
       <button class="btn" style="align-self:flex-start" onClick=${() => { saveDept({ setup: { ...(ctx.dept.setup || {}), classes: true } }); setToast(t('Classes confirmées : {n}.', { n: ctx.classes.length })); location.hash = '#/settings'; }}><${Icon} n="check" />${t('Confirmer mes {n} classes', { n: ctx.classes.length })}</button></div>` : null}</div>`;

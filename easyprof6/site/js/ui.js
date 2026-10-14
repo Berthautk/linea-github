@@ -1,8 +1,8 @@
 // Composants d'interface réutilisables.
-import { html, useEffect, useState } from './vendor/preact-htm.js';
+import { html, useEffect, useRef, useState } from './vendor/preact-htm.js';
 import { Icon } from './icons.js';
 import { t } from './i18n.js';
-import { state, update } from './store.js';
+import { state, update, setToast } from './store.js';
 import { REASONS } from './consts.js';
 
 export const Chip = ({ tone = '', style, children }) => html`<span class=${'chip ' + tone} style=${style}>${children}</span>`;
@@ -75,4 +75,18 @@ export function PasswordInput(props) {
   const [show, setShow] = useState(false);
   return html`<div style="position:relative"><input ...${props} type=${show ? 'text' : 'password'} style="padding-right:48px" />
     <button type="button" class="icon-btn" style="position:absolute;right:4px;top:50%;transform:translateY(-50%)" aria-label=${show ? t('Cacher le mot de passe') : t('Voir le mot de passe')} onClick=${() => setShow(!show)}><${Icon} n=${show ? 'eyeoff' : 'eye'} /></button></div>`;
+}
+
+/** Champ (texte, nombre, zone de texte) qui garde ce qu'on tape tant qu'on y est et n'enregistre qu'en le quittant : une synchronisation ou un rafraîchissement ne l'efface plus. `onChange` reçoit {target:{value}}. */
+export function DraftInput({ value, onChange, tag = 'input', quiet, ...rest }) {
+  const str = (x) => (x == null ? '' : String(x)), [v, setV] = useState(str(value)), foc = useRef(false);
+  useEffect(() => { if (!foc.current) setV(str(value)); }, [value]);
+  const commit = (e) => { foc.current = false; const cur = e.target.value; if (cur !== str(value)) { onChange({ target: { value: cur } }); if (!quiet) setToast(t('Enregistré ✓')); } };
+  return html`<${tag} ...${rest} value=${v} onFocus=${() => { foc.current = true; }} onInput=${(e) => setV(e.target.value)} onBlur=${commit} onKeyDown=${(e) => { if (e.key === 'Enter' && tag === 'input') e.target.blur(); }} />`;
+}
+
+/** Bas de page d'un écran de réglages : valide ce qui est en cours de saisie, confirme que tout est enregistré et revient en arrière. */
+export function SaveBar({ to = '#/settings', label }) {
+  const go = () => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); setTimeout(() => { setToast(t('Tout est enregistré ✓')); location.hash = to; }, 120); };
+  return html`<div class="card stack" style="gap:8px"><p class="sub">${t('Tout ce que vous saisissez est gardé dès que vous quittez le champ. Touchez le bouton quand vous avez terminé.')}</p><button class="btn block" onClick=${go}><${Icon} n="check" />${label || t('Enregistrer et terminer')}</button></div>`;
 }

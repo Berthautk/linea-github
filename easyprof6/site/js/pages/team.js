@@ -2,7 +2,7 @@
 import { html, useState, useEffect } from '../vendor/preact-htm.js';
 import { t } from '../i18n.js';
 import { Icon } from '../icons.js';
-import { Field, Chip, Empty, PasswordInput, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
+import { Field, Chip, Empty, PasswordInput, DraftInput, SaveBar, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
 import { state, myId, setToast, setUI, refreshSession } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept, saveClass, uid } from '../actions.js';
@@ -103,9 +103,10 @@ function Slots({ tc, ctx }) {
         <select class="input full" value=${s.c} onChange=${(e) => set(i, { c: e.target.value })} aria-label=${t('Classe')}>${s.c ? null : html`<option value="">${t('Choisir la classe…')}</option>`}${ctx.classes.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select></div>
       <div class="g3"><${Field} label=${t('De (heure de début)')}><input class="input" type="time" value=${s.st || ''} onChange=${(e) => setTimes(i, s, { st: normTime(e.target.value), ...(s.st && e.target.value ? { en: endFor(normTime(e.target.value), s.h, breaks, P) } : {}) })} /><//>
         <${Field} label=${t('À (heure de fin)')}><input class="input" type="time" value=${endOf(s)} onChange=${(e) => setTimes(i, s, { en: normTime(e.target.value) })} /><//>
-        <${Field} label=${t('Durée (h)')}><input class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => setDur(i, s, +e.target.value || 0)} /><//></div>
+        <${Field} label=${t('Durée (h)')}><${DraftInput} class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => setDur(i, s, +e.target.value || 0)} /><//></div>
       <${Field} label=${t('Valable')}><select class="input" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
-      <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div></details>`)}</div>
+      <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} />
+      <button class="btn soft block" onClick=${() => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); setTimeout(() => { setToast(t('Cours enregistré ✓')); setUI({ slotOpen: i + 1 < slots.length ? i + 1 : -1 }); }, 120); }}><${Icon} n="check" />${i + 1 < slots.length ? t('Enregistrer et passer au cours suivant') : t('Enregistrer ce cours')}</button></div></details>`)}</div>
     ${ctx.classes.length ? html`<details style="margin-top:10px"><summary><b>${t('Une classe manque dans la liste ? La créer ici')}</b></summary><${QuickClass} onAdded=${(id) => saveTeacher(tc.id, { slots: slots.map(x => (x.c ? x : { ...x, c: id })) })} /></details>` : null}
     <div class="row" style="margin-top:12px"><button class="btn soft" disabled=${!ctx.classes.length} onClick=${add}><${Icon} n="plus" />${t('Ajouter un cours')}</button></div>
     <p class="hint" style="margin-top:8px">${t('Un cours de la semaine = un jour, une classe, une heure de début et de fin. Pour une classe vue le lundi puis le mardi, ajoutez deux cours. Pour un cours qui n’a lieu que certains jours précis (par exemple deux samedis), indiquez ces dates : les autres semaines ne comptent pas.')}</p></div>`;
@@ -114,13 +115,13 @@ function Slots({ tc, ctx }) {
 function Plan({ tc, ctx }) {
   const mine = ctx.assign.filter(a => a.teacherId === tc.id), free = ctx.classes.filter(c => !mine.some(a => a.classId === c.id));
   const [add, setAdd] = useState('');
-  const upd = (a, k, v) => saveAssign({ teacherId: tc.id, classId: a.classId, th: a.th, pr: a.pr, hours: a.hours, [k]: v });
+  const upd = (a, k, v) => saveAssign({ teacherId: tc.id, classId: a.classId, th: a.th, pr: a.pr, hth: a.hth, hpr: a.hpr, hours: a.hours, [k]: v, ...(k === 'hth' || k === 'hpr' ? { hours: 0 } : {}) });
   const tot = mine.reduce((s, a) => s + (+a.th || 0) + (+a.pr || 0), 0);
   return html`<div class="card"><div class="card-h"><h3>${t('Classes et leçons prévues')}</h3><${Chip} tone="info">${tot} ${t('leçons dans l’année')}<//></div>
     <p class="sub" style="margin-bottom:10px">${t('Indiquez, pour chaque classe de ce collègue, le nombre de leçons à faire dans l’année (programme). Rekort en déduit où il devrait en être chaque semaine et signale les retards.')}</p><p class="hint" style="margin-bottom:10px">${t('Vous pouvez aussi régler ces chiffres classe par classe dans Réglages › Classes et leçons prévues.')}</p>
-    ${mine.length ? html`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Classe')}</th><th>${t('Leçons de théorie')}</th><th>${t('TP')}</th><th>${t('Heures prévues (facultatif)')}</th><th></th></tr></thead><tbody>
-      ${mine.map(a => html`<tr><td>${(ctx.cls(a.classId) || {}).name || a.classId}</td>${['th', 'pr', 'hours'].map(k => html`<td><input class="input" type="number" min="0" inputmode="numeric" style="width:92px;min-height:40px" value=${a[k] || ''} onChange=${(e) => upd(a, k, +e.target.value || 0)} /></td>`)}<td><button class="icon-btn" onClick=${() => removeAssign(tc.id, a.classId)} aria-label=${t('Retirer')}><${Icon} n="x" /></button></td></tr>`)}</tbody></table></div>` : html`<${Empty} icon="📚" title=${t('Aucune classe pour ce collègue')} text=${t('Ajoutez ses classes ci-dessous.')} />`}
-    ${free.length ? html`<div class="row" style="margin-top:12px"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter une classe…')}</option>${free.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: tc.id, classId: add, th: 0, pr: 0, hours: 0 }); setAdd(''); }}><${Icon} n="plus" />${t('Ajouter')}</button></div>` : (!ctx.classes.length ? html`<p class="sub">${t('Créez d’abord les classes.')}</p>` : null)}</div>`;
+    ${mine.length ? html`<div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Classe')}</th><th>${t('Leçons de théorie')}</th><th>${t('Leçons de TP')}</th><th>${t('Heures de théorie')}</th><th>${t('Heures de TP')}</th><th></th></tr></thead><tbody>
+      ${mine.map(a => html`<tr><td>${(ctx.cls(a.classId) || {}).name || a.classId}</td>${['th', 'pr', 'hth', 'hpr'].map(k => html`<td><${DraftInput} class="input" type="number" min="0" inputmode="numeric" style="width:84px;min-height:40px" value=${a[k] || ''} onChange=${(e) => upd(a, k, +e.target.value || 0)} /></td>`)}<td><button class="icon-btn" onClick=${() => removeAssign(tc.id, a.classId)} aria-label=${t('Retirer')}><${Icon} n="x" /></button></td></tr>`)}</tbody></table></div>` : html`<${Empty} icon="📚" title=${t('Aucune classe pour ce collègue')} text=${t('Ajoutez ses classes ci-dessous.')} />`}
+    ${free.length ? html`<div class="row" style="margin-top:12px"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter une classe…')}</option>${free.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: tc.id, classId: add }); setAdd(''); }}><${Icon} n="plus" />${t('Ajouter')}</button></div>` : (!ctx.classes.length ? html`<p class="sub">${t('Créez d’abord les classes.')}</p>` : null)}</div>`;
 }
 
 function SetPassword({ tc }) {
@@ -154,9 +155,9 @@ export function TeacherDetail({ id }) {
   const remove = () => confirmDialog({ title: t('Retirer {n} ?', { n: tc.name }), message: t('Son compte sera désactivé. Ses saisies restent dans les statistiques du département.'), confirm: t('Retirer'), danger: true,
     onConfirm: async () => { try { const r = await api('/team/remove', { teacherId: id }, state.session.token); replaceMeta(r.meta); location.hash = '#/settings/team'; syncNow(); } catch (x) { setToast(x.message, 'bad'); } } });
   return html`<div class="page"><div class="page-h"><div class="row"><a class="icon-btn" href="#/settings/team" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${tc.name}</h1></div></div>
-    <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><input class="input" value=${tc.name} onChange=${(e) => e.target.value.trim() && saveTeacher(id, { name: e.target.value.trim() })} /><//>
-      <${Field} label=${t('Téléphone WhatsApp')}><input class="input" inputmode="tel" value=${tc.phone || ''} onChange=${(e) => saveTeacher(id, { phone: e.target.value.trim() })} /><//></div>
+    <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><${DraftInput} class="input" value=${tc.name} onChange=${(e) => e.target.value.trim() && saveTeacher(id, { name: e.target.value.trim() })} /><//>
+      <${Field} label=${t('Téléphone WhatsApp')}><${DraftInput} class="input" inputmode="tel" value=${tc.phone || ''} onChange=${(e) => saveTeacher(id, { phone: e.target.value.trim() })} /><//></div>
       ${tc.id !== myId() ? html`<${Username} tc=${tc} />` : html`<div class="row"><span class="lab">${t('Identifiant')}</span><b>${tc.username}</b></div>`}
       ${tc.id !== myId() ? html`<div class="row"><button class="btn soft" onClick=${reset}><${Icon} n="lock" />${t('Définir le mot de passe')}</button><button class="btn danger" onClick=${remove}><${Icon} n="trash" />${t('Retirer du département')}</button></div>` : html`<p class="hint">${t('C’est votre compte : changez votre mot de passe dans Réglages › Mon profil.')}</p>`}</div>
-    <${Slots} tc=${tc} ctx=${ctx} /><${Plan} tc=${tc} ctx=${ctx} /></div>`;
+    <${Slots} tc=${tc} ctx=${ctx} /><${Plan} tc=${tc} ctx=${ctx} /><${SaveBar} to="#/settings/team" label=${t('Enregistrer et revenir aux collègues')} /></div>`;
 }

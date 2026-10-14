@@ -2,13 +2,14 @@
 import { html, useState } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
-import { Field, PasswordInput, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
+import { Field, PasswordInput, DraftInput, SaveBar, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
-import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
+import { state, update, setUI, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
 import { applyTiming, saveAssign, removeAssign, saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
 import { makeCtx, catchUp } from '../calc.js';
 import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
+import { ProgramFields, officialFor, isEmptyProgram, totalHours } from './program.js';
 import { Guide } from './guide.js';
 import { defaultTerms, defaultCalendar } from '../defaults.js';
 import { REASONS } from '../consts.js';
@@ -67,8 +68,8 @@ function Profile() {
   const change = async (e) => { e.preventDefault(); setMsg(null); try { const r = await api('/me/password', pw, state.session.token); setToken(r.token); setMsg({ ok: t('Mot de passe modifié.') }); setPw({ old: '', password: '' }); } catch (x) { setMsg({ err: x.message }); } };
   const inst = window.__epInstall;
   return html`<div class="page"><${Back} title=${t('Mon profil')} />
-    <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><input class="input" value=${m ? m.name : ''} onChange=${(e) => e.target.value.trim() && saveTeacher(myId(), { name: e.target.value.trim() })} /><//>
-      <${Field} label=${t('Téléphone WhatsApp')}><input class="input" inputmode="tel" value=${m ? m.phone || '' : ''} onChange=${(e) => saveTeacher(myId(), { phone: e.target.value.trim() })} /><//></div>
+    <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><${DraftInput} class="input" value=${m ? m.name : ''} onChange=${(e) => e.target.value.trim() && saveTeacher(myId(), { name: e.target.value.trim() })} /><//>
+      <${Field} label=${t('Téléphone WhatsApp')}><${DraftInput} class="input" inputmode="tel" value=${m ? m.phone || '' : ''} onChange=${(e) => saveTeacher(myId(), { phone: e.target.value.trim() })} /><//></div>
       ${isAP() ? html`<${OwnUsername} />` : html`<div class="row"><span class="lab">${t('Identifiant')}</span><b>${state.session.username}</b></div>`}
       <div class="row"><${Chip} tone="info">${isAP() ? t('Animateur pédagogique') : t('Enseignant')}<//></div>
       <div class="row"><span class="lab">${t('Langue')}</span><${Seg} options=${[{ id: 'fr', label: 'Français' }, { id: 'en', label: 'English' }]} value=${state.lang} onChange=${setLanguage} /></div></div>
@@ -80,21 +81,22 @@ function Profile() {
       <button class="btn soft" style="align-self:flex-start" onClick=${() => { syncNow(); setToast(t('Synchronisation lancée.')); }}><${Icon} n="refresh" />${t('Synchroniser maintenant')}</button></div>
     <div class="card stack"><h3>${t('Cet appareil')}</h3>${inst ? html`<button class="btn accent" onClick=${async () => { inst.prompt(); await inst.userChoice; window.__epInstall = null; update(() => { }); }}><${Icon} n="download" />${t('Installer Rekort sur ce téléphone')}</button>` : html`<p class="sub">${t('Pour installer l’application : menu du navigateur › « Ajouter à l’écran d’accueil » ou « Installer l’application ».')}</p>`}
       <button class="btn soft" onClick=${() => logout()}><${Icon} n="logout" />${t('Se déconnecter')}</button>
-      <button class="btn danger" onClick=${() => confirmDialog({ title: t('Effacer les données de cet appareil ?'), message: t('Vos données restent enregistrées sur le serveur et reviendront à la prochaine connexion. Les saisies pas encore synchronisées seraient perdues.'), confirm: t('Effacer et se déconnecter'), danger: true, onConfirm: () => logout({ wipe: true }) })}>${t('Se déconnecter et effacer cet appareil')}</button></div></div>`;
+      <button class="btn danger" onClick=${() => confirmDialog({ title: t('Effacer les données de cet appareil ?'), message: t('Vos données restent enregistrées sur le serveur et reviendront à la prochaine connexion. Les saisies pas encore synchronisées seraient perdues.'), confirm: t('Effacer et se déconnecter'), danger: true, onConfirm: () => logout({ wipe: true }) })}>${t('Se déconnecter et effacer cet appareil')}</button></div>
+    <${SaveBar} label=${t('Enregistrer et revenir aux réglages')} /></div>`;
 }
 
 function Dept() {
   const d = state.data.dept, h = d.header || {}, set = (patch) => { saveDept(patch); setToast(t('Enregistré.')); }, seth = (k, v) => set({ header: { ...h, [k]: v } });
   return html`<div class="page"><${Back} title=${t('Établissement et en-tête')} /><div class="card stack">
-    <${Field} label=${t('Établissement')}><input class="input" value=${d.name} onChange=${(e) => set({ name: e.target.value.trim() })} /><//>
-    <div class="grid2"><${Field} label=${t('Discipline')}><input class="input" value=${d.discipline} onChange=${(e) => set({ discipline: e.target.value.trim() })} /><//><${Field} label=${t('Abréviation')}><input class="input" value=${d.abbr} maxlength="8" onChange=${(e) => set({ abbr: e.target.value.trim().toUpperCase() })} /><//></div>
+    <${Field} label=${t('Établissement')}><${DraftInput} class="input" value=${d.name} onChange=${(e) => set({ name: e.target.value.trim() })} /><//>
+    <div class="grid2"><${Field} label=${t('Discipline')}><${DraftInput} class="input" value=${d.discipline} onChange=${(e) => set({ discipline: e.target.value.trim() })} /><//><${Field} label=${t('Abréviation')}><${DraftInput} class="input" value=${d.abbr} maxlength="8" onChange=${(e) => set({ abbr: e.target.value.trim().toUpperCase() })} /><//></div>
     <${Field} group label=${t('Système')}><${Seg} options=${[{ id: 'anglophone', label: t('Anglophone') }, { id: 'francophone', label: t('Francophone') }]} value=${d.system} onChange=${(v) => set({ system: v })} /><//>
-    <div class="grid2"><${Field} label=${t('Année scolaire')}><input class="input" value=${d.year} placeholder="2026/2027" onChange=${(e) => set({ year: e.target.value.trim() })} /><//><${Field} label=${t('Durée d’une leçon (heures)')} hint=${t('Sert à estimer les leçons quand aucun plan n’est défini.')}><input class="input" type="number" step="0.5" min="0.5" value=${d.lh} onChange=${(e) => set({ lh: +e.target.value || 2 })} /><//></div></div>
+    <div class="grid2"><${Field} label=${t('Année scolaire')}><${DraftInput} class="input" value=${d.year} placeholder="2026/2027" onChange=${(e) => set({ year: e.target.value.trim() })} /><//><${Field} label=${t('Durée d’une leçon (heures)')} hint=${t('Sert à estimer les leçons quand aucun plan n’est défini.')}><${DraftInput} class="input" type="number" step="0.5" min="0.5" value=${d.lh} onChange=${(e) => set({ lh: +e.target.value || 2 })} /><//></div></div>
     <div class="card stack"><h3>${t('En-tête de la fiche d’inspection')}</h3><p class="sub">${t('C’est le texte imprimé en haut des fiches : le français à gauche, l’anglais à droite, les armoiries au centre. Remplissez la région et le département : le texte est écrit pour vous. Vous pouvez aussi le modifier librement ci-dessous.')}</p>
-      <div class="grid2"><${Field} label=${t('Région')}><input class="input" value=${h.region || ''} placeholder=${t('Nord')} onChange=${(e) => seth('region', e.target.value.trim())} /><//><${Field} label=${t('Département (division)')}><input class="input" value=${h.division || ''} placeholder=${t('Bénoué')} onChange=${(e) => seth('division', e.target.value.trim())} /><//></div>
-      <${Field} label=${t('Contact (facultatif)')} hint=${t('Ex. : BP 548 Garoua · Tél : 22 15 68 07 · dresnord@gmail.com')}><input class="input" value=${h.contact || ''} onChange=${(e) => seth('contact', e.target.value.trim())} /><//>
-      <${Field} label=${t('Texte à gauche (français)')} hint=${t('Une ligne par ligne imprimée ; la première est en gras.')}><textarea class="input" rows="6" value=${letterText(h, 'fr')} onChange=${(e) => seth('fr', e.target.value.trim() === defaultLetter(h, 'fr') ? '' : e.target.value.trim())}></textarea><//>
-      <${Field} label=${t('Texte à droite (anglais)')}><textarea class="input" rows="6" value=${letterText(h, 'en')} onChange=${(e) => seth('en', e.target.value.trim() === defaultLetter(h, 'en') ? '' : e.target.value.trim())}></textarea><//>
+      <div class="grid2"><${Field} label=${t('Région')}><${DraftInput} class="input" value=${h.region || ''} placeholder=${t('Nord')} onChange=${(e) => seth('region', e.target.value.trim())} /><//><${Field} label=${t('Département (division)')}><${DraftInput} class="input" value=${h.division || ''} placeholder=${t('Bénoué')} onChange=${(e) => seth('division', e.target.value.trim())} /><//></div>
+      <${Field} label=${t('Contact (facultatif)')} hint=${t('Ex. : BP 548 Garoua · Tél : 22 15 68 07 · dresnord@gmail.com')}><${DraftInput} class="input" value=${h.contact || ''} onChange=${(e) => seth('contact', e.target.value.trim())} /><//>
+      <${Field} label=${t('Texte à gauche (français)')} hint=${t('Une ligne par ligne imprimée ; la première est en gras.')}><${DraftInput} tag="textarea" class="input" rows="6" value=${letterText(h, 'fr')} onChange=${(e) => seth('fr', e.target.value.trim() === defaultLetter(h, 'fr') ? '' : e.target.value.trim())} /><//>
+      <${Field} label=${t('Texte à droite (anglais)')}><${DraftInput} tag="textarea" class="input" rows="6" value=${letterText(h, 'en')} onChange=${(e) => seth('en', e.target.value.trim() === defaultLetter(h, 'en') ? '' : e.target.value.trim())} /><//>
       <label class="opt"><input type="checkbox" checked=${showArms(h)} onChange=${(e) => seth('arms', e.target.checked ? '' : '0')} /><span>${t('Afficher les armoiries du Cameroun au centre')}</span></label>
       <div class="row"><button class="btn soft sm" onClick=${() => set({ header: { ...h, fr: '', en: '' } })}>${t('Rétablir le texte automatique')}</button></div></div>
     <div class="card stack"><h3>${t('Durée d’une heure de cours')}</h3><p class="sub">${t('Dans certains établissements, une heure de cours dure 50 minutes (de 7 h 30 à 8 h 20, puis de 8 h 20 à 9 h 10…). Choisissez la durée : chaque période compte alors pour 1 h dans les heures dues et faites. Les heures de fin se calculent à partir de cette durée.')}</p>
@@ -103,7 +105,8 @@ function Dept() {
     <div class="card stack"><h3>${t('Pauses de la journée')}</h3><p class="sub">${t('Un cours qui commence avant une pause et finit après ne la compte pas dans sa durée. Exemple : de 9 h 30 à 11 h 45 avec une pause de 10 h 30 à 10 h 45 = 2 h.')}</p>
       ${(d.breaks || DEFAULT_BREAKS).map((b, i, all) => html`<div class="row" style="gap:8px"><input class="input" type="time" value=${b.f} onChange=${(e) => applyTiming({ breaks: all.map((x, j) => (j === i ? { ...x, f: e.target.value } : x)) })} /><span>→</span><input class="input" type="time" value=${b.t} onChange=${(e) => applyTiming({ breaks: all.map((x, j) => (j === i ? { ...x, t: e.target.value } : x)) })} />
         <button class="icon-btn" onClick=${() => applyTiming({ breaks: all.filter((_, j) => j !== i) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}
-      <div class="row"><button class="btn soft sm" onClick=${() => applyTiming({ breaks: [...(d.breaks || DEFAULT_BREAKS), { f: '10:00', t: '10:15' }] })}><${Icon} n="plus" />${t('Ajouter une pause')}</button></div></div></div>`;
+      <div class="row"><button class="btn soft sm" onClick=${() => applyTiming({ breaks: [...(d.breaks || DEFAULT_BREAKS), { f: '10:00', t: '10:15' }] })}><${Icon} n="plus" />${t('Ajouter une pause')}</button></div></div>
+    <${SaveBar} label=${t('Enregistrer et revenir aux réglages')} /></div>`;
 }
 
 function Year() {
@@ -121,7 +124,8 @@ function Year() {
         <button class="btn soft" style="align-self:flex-start" disabled=${!c.f} onClick=${() => { saveDept({ calendar: [...cal, { f: c.f, t: c.t || c.f, n: c.n }].sort((a, b) => (a.f < b.f ? -1 : 1)) }); setC({ f: '', t: '', n: '' }); }}><${Icon} n="plus" />${t('Ajouter')}</button></div>
       <p class="hint" style="margin-top:8px">${t('Ces jours sont retirés des heures dues de tous les enseignants et ne déclenchent aucun rappel.')}</p></div>
     <div class="card"><div class="card-h"><h3>${t('Comment compter les jours sans cours déclarés ?')}</h3></div><div class="list">${REASONS.map(r => { const out = ctx.reasonOut(r.id); return html`<div class="item"><div class="dot">${r.icon}</div><div class="grow"><b>${t(r.fr)}</b></div><${Seg} options=${[{ id: 'out', label: t('Non dû') }, { id: 'abs', label: t('Absence') }]} value=${out ? 'out' : 'abs'} onChange=${(v) => saveDept({ dueOut: { ...(d.dueOut || {}), [r.id]: v === 'out' } })} /></div>`; })}</div>
-      <p class="hint" style="margin-top:8px">${t('« Non dû » : ces heures sont retirées des heures dues (pas de faute de l’enseignant). « Absence » : elles restent dues mais ne sont pas faites.')}</p></div></div>`;
+      <p class="hint" style="margin-top:8px">${t('« Non dû » : ces heures sont retirées des heures dues (pas de faute de l’enseignant). « Absence » : elles restent dues mais ne sont pas faites.')}</p></div>
+    <${SaveBar} label=${t('Enregistrer et revenir aux réglages')} /></div>`;
 }
 
 function ClassEdit({ cls }) {
@@ -140,16 +144,20 @@ const USUAL = {
   anglophone: [['Form 1 A', 'Form 1', '1er'], ['Form 1 B', 'Form 1', '1er'], ['Form 2 A', 'Form 2', '1er'], ['Form 2 B', 'Form 2', '1er'], ['Form 3 A', 'Form 3', '1er'], ['Form 3 B', 'Form 3', '1er'], ['Form 4 Arts', 'Form 4', '1er'], ['Form 4 Science', 'Form 4', '1er'], ['Form 5 Arts', 'Form 5', '1er'], ['Form 5 Science', 'Form 5', '1er'], ['Lower Sixth Arts', 'Lower Sixth', '2nd'], ['Upper Sixth Arts', 'Upper Sixth', '2nd']],
   francophone: [['6e A', '6e', '1er'], ['5e A', '5e', '1er'], ['4e A', '4e', '1er'], ['3e A', '3e', '1er'], ['2nde A', '2nde', '2nd'], ['1ère A', '1ère', '2nd'], ['Tle A', 'Tle', '2nd']],
 };
-/** Programme de l'année d'une classe : pour chaque enseignant de la classe, leçons (théorie, TP) et heures prévues. Alimente la fiche pédagogique. */
-function ClassProgram({ c, ctx }) {
-  const mine = ctx.assign.filter(a => a.classId === c.id), free = ctx.teachers.filter(x => !mine.some(a => a.teacherId === x.id)), [add, setAdd] = useState('');
-  const upd = (a, k, v) => saveAssign({ teacherId: a.teacherId, classId: c.id, th: a.th, pr: a.pr, hours: a.hours, [k]: v });
-  const num = (a, k, label) => html`<${Field} label=${label}><input class="input" type="number" min="0" inputmode="numeric" value=${a[k] || ''} onChange=${(e) => upd(a, k, +e.target.value || 0)} /><//>`;
-  return html`<div class="stack" style="gap:8px;border-top:1px dashed var(--line);padding-top:10px"><b style="font-size:14px">${t('Programme de l’année')}</b>
-    ${mine.length ? null : html`<p class="sub">${t('Aucun enseignant n’est encore rattaché à cette classe : ajoutez-le ci-dessous, puis indiquez ses leçons et heures prévues.')}</p>`}
-    ${mine.map(a => html`<div class="card flat stack" style="gap:6px"><div class="row" style="flex-wrap:nowrap"><b class="grow">${(ctx.teacher(a.teacherId) || {}).name || '?'}</b><button class="icon-btn" onClick=${() => removeAssign(a.teacherId, c.id)} aria-label=${t('Retirer')}><${Icon} n="trash" /></button></div>
-      <div class="g3">${num(a, 'th', t('Leçons de théorie'))}${num(a, 'pr', t('Leçons de TP'))}${num(a, 'hours', t('Heures prévues'))}</div></div>`)}
-    ${free.length ? html`<div class="row"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter un enseignant à cette classe…')}</option>${free.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: add, classId: c.id, th: 0, pr: 0, hours: 0 }); setAdd(''); }}>${t('Ajouter')}</button></div>` : null}</div>`;
+/** Enseignants concernés par une classe : ceux qui y sont rattachés ; dans un département à un seul enseignant, c'est lui d'office. */
+const progRows = (ctx, c) => { const mine = ctx.assign.filter(a => a.classId === c.id); return ctx.teachers.length === 1 && !mine.length ? [{ teacherId: ctx.teachers[0].id, classId: c.id, th: 0, pr: 0, hth: 0, hpr: 0, hours: 0 }] : mine; };
+
+/** Programme de l'année d'une classe : pour chaque enseignant, leçons et heures prévues (théorie / TP). Alimente la fiche pédagogique. */
+function ClassProgram({ c, ctx, next }) {
+  const rows = progRows(ctx, c), free = ctx.teachers.filter(x => !rows.some(a => a.teacherId === x.id)), [add, setAdd] = useState(''), off = officialFor(c);
+  const fill = (a) => saveAssign({ teacherId: a.teacherId, classId: c.id, ...off });
+  return html`<div class="stack" style="gap:10px;border-top:1px dashed var(--line);padding-top:10px">
+    ${rows.length ? null : html`<p class="sub">${t('Aucun enseignant n’est encore rattaché à cette classe : ajoutez-le ci-dessous, puis indiquez ses leçons et heures prévues.')}</p>`}
+    ${rows.map(a => html`<div class="card flat stack" style="gap:8px"><div class="row" style="flex-wrap:nowrap"><b class="grow">${(ctx.teacher(a.teacherId) || {}).name || '?'}</b>${ctx.teachers.length > 1 ? html`<button class="icon-btn" onClick=${() => removeAssign(a.teacherId, c.id)} aria-label=${t('Retirer')}><${Icon} n="trash" /></button>` : null}</div>
+      <${ProgramFields} a=${a} teacherId=${a.teacherId} classId=${c.id} />
+      ${off && isEmptyProgram(a) ? html`<button class="btn soft sm" style="align-self:flex-start" onClick=${() => { fill(a); setToast(t('Programme du niveau repris : à vérifier.')); }}>${t('Remplir avec le programme du niveau ({l} leçons, {h} h)', { l: off.th + off.pr, h: off.hth + off.hpr })}</button>` : null}</div>`)}
+    ${free.length ? html`<div class="row"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter un enseignant à cette classe…')}</option>${free.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: add, classId: c.id }); setAdd(''); }}>${t('Ajouter')}</button></div>` : null}
+    <button class="btn" onClick=${() => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); setTimeout(() => { setToast(t('« {n} » enregistrée ✓', { n: c.name })); setUI({ cprog: next ? next.id : '' }); if (!next) window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }, 120); }}><${Icon} n="check" />${next ? t('Enregistrer et passer à {n}', { n: next.name }) : t('Enregistrer')}</button></div>`;
 }
 function Classes() {
   const ctx = makeCtx(state.data);
@@ -157,12 +165,14 @@ function Classes() {
   const addUsual = () => { missing.forEach(([name, level, cycle]) => saveClass({ name, level, cycle, effectif: { total: 0, girls: 0, boys: 0 } })); setToast(t('{n} classe(s) ajoutée(s). Indiquez leurs effectifs.', { n: missing.length })); };
   return html`<div class="page"><${Back} title=${t('Classes')}><button class="btn" onClick=${() => openModal(() => html`<${ClassEdit} />`)}><${Icon} n="plus" />${t('Nouvelle classe')}</button><//>
     <p class="sub">${t('Tout ce qui concerne une classe est ici : son effectif, et, pour chaque enseignant qui y intervient, le nombre de leçons et d’heures prévues pour l’année. Ces chiffres alimentent la fiche pédagogique et les taux de couverture.')}</p>
+    ${(() => { const fillable = ctx.classes.flatMap(c => progRows(ctx, c).filter(a => isEmptyProgram(a) && officialFor(c)).map(a => [c, a])); return fillable.length ? html`<button class="btn soft" style="align-self:flex-start" onClick=${() => confirmDialog({ title: t('Remplir {n} programmes d’après le niveau ?', { n: fillable.length }), message: t('Les leçons et heures du programme officiel de chaque niveau (Form 1 à Upper Sixth, d’après votre ancienne sauvegarde) seront reprises pour les classes encore vides. Vérifiez-les ensuite, une classe après l’autre.'), confirm: t('Remplir'), onConfirm: () => { fillable.forEach(([c, a]) => saveAssign({ teacherId: a.teacherId, classId: c.id, ...officialFor(c) })); setToast(t('{n} programmes repris : à vérifier.', { n: fillable.length })); } })}><${Icon} n="check" />${t('Remplir les programmes d’après le niveau ({n} classes)', { n: fillable.length })}</button>` : null; })()}
     ${missing.length && !ctx.classes.length ? html`<button class="btn soft" style="align-self:flex-start" onClick=${addUsual}><${Icon} n="plus" />${t('Ajouter les classes habituelles')}</button>`
       : missing.length ? html`<button class="btn ghost sm" style="align-self:flex-start" onClick=${() => confirmDialog({ title: t('Ajouter {n} classes habituelles ?', { n: missing.length }), message: missing.map(m => m[0]).join(', ') + '. ' + t('Si vous avez renommé des classes, elles seront ajoutées en plus.'), confirm: t('Ajouter'), onConfirm: addUsual })}>${t('Ajouter des classes habituelles…')}</button>` : null}
     ${!ctx.classes.length ? html`<div class="card"><${Empty} icon="🏫" title=${t('Aucune classe')} text=${t('Ajoutez les classes où le département enseigne.')} /></div>` : ctx.classes.map(c => html`<div class="card stack" style="gap:10px"><div class="row" style="flex-wrap:nowrap"><div class="dot">📘</div><div class="grow"><b>${c.name}</b><span class="sub" style="display:block">${c.cycle === '2nd' ? t('2nd cycle') : t('1er cycle')} · ${(c.effectif || {}).total || 0} ${t('élèves')}</span></div>
       <button class="icon-btn" onClick=${() => openModal(() => html`<${ClassEdit} cls=${c} />`)} aria-label=${t('Modifier')}><${Icon} n="edit" /></button>
       <button class="icon-btn" onClick=${() => confirmDialog({ title: t('Supprimer la classe {c} ?', { c: c.name }), message: t('Les saisies déjà faites dans cette classe restent dans l’historique.'), confirm: t('Supprimer'), danger: true, onConfirm: () => deleteClass(c.id) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>
-      <${ClassProgram} c=${c} ctx=${ctx} /></div>`)}
+      <details open=${state.ui.cprog === c.id} onToggle=${(e) => { if (e.target.open && state.ui.cprog !== c.id) setUI({ cprog: c.id }); else if (!e.target.open && state.ui.cprog === c.id) setUI({ cprog: '' }); }}><summary><b>${t('Programme de l’année')}</b> ${progRows(ctx, c).some(a => !isEmptyProgram(a)) ? html`<${Chip} tone="ok">✓ ${progRows(ctx, c).reduce((s, a) => s + (+a.th || 0) + (+a.pr || 0), 0)} ${t('leçons')} · ${progRows(ctx, c).reduce((s, a) => s + totalHours(a), 0)} h<//>` : html`<${Chip} tone="warn">${t('à compléter')}<//>`}</summary>
+        <${ClassProgram} c=${c} ctx=${ctx} next=${ctx.classes[ctx.classes.findIndex(x => x.id === c.id) + 1]} /></details></div>`)}
     ${ctx.classes.length ? html`<div class="card stack"><p class="sub">${t('Chaque classe est enregistrée dès que vous touchez « Enregistrer » dans sa fenêtre. Quand la liste est complète, confirmez ci-dessous.')}</p>
       ${(ctx.dept.setup || {}).classes ? html`<${Chip} tone="ok">✓ ${t('Classes confirmées')}<//>` : null}
       <button class="btn" style="align-self:flex-start" onClick=${() => { saveDept({ setup: { ...(ctx.dept.setup || {}), classes: true } }); setToast(t('Classes confirmées : {n}.', { n: ctx.classes.length })); location.hash = '#/settings'; }}><${Icon} n="check" />${t('Confirmer mes {n} classes', { n: ctx.classes.length })}</button></div>` : null}</div>`;

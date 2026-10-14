@@ -244,7 +244,8 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .notice svg { flex: none; margin-top: 1px; }
 .slot-row { display: grid; grid-template-columns: 1fr 84px auto; gap: 8px; align-items: center; } .slot-row .full { grid-column: 1 / -1; }
 
-.slot-row.two { grid-template-columns: 1fr auto; } .g3 { display: grid; grid-template-columns: 1fr 1fr 82px; gap: 8px; }
+.slot-row.two { grid-template-columns: 1fr auto; } .g2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 82px; gap: 8px; }
 
 .wk { padding: 10px 0; border-bottom: 1px dashed var(--line); display: flex; flex-direction: column; gap: 8px; } .wk:last-child { border-bottom: 0; }
 .wk-main { display: flex; gap: 12px; align-items: center; } .wk-main b { display: block; } .wk-main span { font-size: 12.5px; color: var(--muted); }

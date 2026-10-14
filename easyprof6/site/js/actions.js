@@ -40,7 +40,11 @@ const setData = (patch) => { update(s => { s.data = { ...s.data, ...patch }; });
 export const saveDept = (patch) => setData({ dept: stamp({ ...state.data.dept, ...patch }) });
 export const saveClass = (c) => setData({ classes: upsert(state.data.classes, stamp({ id: c.id || uid(), name: c.name, level: c.level || '', cycle: c.cycle || '1er', effectif: c.effectif || { total: 0, girls: 0, boys: 0 } })) });
 export const deleteClass = (id) => setData({ classes: upsert(state.data.classes, { id, deleted: true, u: nextU() }), assign: state.data.assign.map(a => (a.classId === id ? { id: a.id, deleted: true, u: nextU() } : a)) });
-export const saveAssign = ({ teacherId, classId, th, pr, hours }) => setData({ assign: upsert(state.data.assign, stamp({ id: teacherId + ':' + classId, teacherId, classId, th: +th || 0, pr: +pr || 0, hours: +hours || 0 })) });
+/** Programme de l'année d'un enseignant dans une classe : leçons (théorie, TP) et heures (théorie, TP). `hours` = total des heures. */
+export const saveAssign = ({ teacherId, classId, th, pr, hth, hpr, hours }) => {
+  const a = { th: +th || 0, pr: +pr || 0, hth: +hth || 0, hpr: +hpr || 0 }, tot = a.hth + a.hpr;
+  setData({ assign: upsert(state.data.assign, stamp({ id: teacherId + ':' + classId, teacherId, classId, ...a, hours: tot || +hours || 0 })) });
+};
 export const removeAssign = (teacherId, classId) => setData({ assign: upsert(state.data.assign, { id: teacherId + ':' + classId, deleted: true, u: nextU() }) });
 export const saveTeacher = (id, patch) => setData({ teachers: state.data.teachers.map(t => (t.id === id ? stamp({ ...t, ...patch }) : t)) });
 export const saveRegul = (r) => setData({ regul: upsert(state.data.regul, stamp({ id: r.id || uid(), teacherId: r.teacherId, classId: r.classId || '', d: r.d, d2: r.d2 || '', h: +r.h || 0, lessons: +r.lessons || 0, note: r.note || '', tag: r.tag || '' })) });

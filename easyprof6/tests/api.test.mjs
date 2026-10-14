@@ -228,3 +228,10 @@ test('la durée de l’heure de cours (50 min) est conservée par le serveur', a
   assert.equal(r.status, 200); assert.equal(r.meta.dept.period, 50);
   const r2 = await call('/signup', { username: 'dgcast2', password: 'secret1', name: 'Mr X', dept: { ...dept(), period: 12 } }); assert.equal(r2.meta.dept.period, 60, 'valeur absurde → 60');
 });
+
+test('le serveur garde les leçons et heures de théorie / TP du programme', async () => {
+  fresh(); const ap = await newDept('prog1'); const tid = ap.session.teacherId;
+  const meta = { dept: ap.meta.dept, classes: [{ id: 'c9', name: 'Geo 3G', cycle: '1er', effectif: { total: 40, girls: 20, boys: 20 }, u: Date.now() }], assign: [{ id: tid + ':c9', teacherId: tid, classId: 'c9', th: 42, pr: 4, hth: 60, hpr: 6, hours: 66, u: Date.now() }], teachers: ap.meta.teachers, regul: [] };
+  const r = await call('/sync', { have: {}, push: { meta } }, ap.token); assert.equal(r.status, 200, JSON.stringify(r).slice(0, 200));
+  const a = ((r.meta || {}).assign || []).find(x => x.classId === 'c9'); assert.ok(a, 'affectation présente'); assert.deepEqual([a.th, a.pr, a.hth, a.hpr, a.hours], [42, 4, 60, 6, 66]);
+});

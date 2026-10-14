@@ -281,3 +281,16 @@ test('fixSlot : 7:30→9:20 en périodes de 50 min = 2 périodes, fin ramenée �
   const c = fixSlot({ st: '07:30', en: '09:30', h: 2 }, undefined, 60); assert.equal(c.h, 2); assert.equal(c.en, '09:30');
   assert.equal(fixSlot({ st: '07:30', h: 1.5 }, undefined, 60).en, '09:00');
 });
+
+test('programme : niveau d’une classe d’après son nom, programme officiel, saveAssign (heures = théorie + TP)', async () => {
+  const { levelOf, officialFor, isEmptyProgram, totalHours } = await import('../site/js/pages/program.js');
+  assert.equal(levelOf({ name: 'Form 3 G' }), 'form 3'); assert.equal(levelOf({ name: 'Geo 2B' }), 'form 2'); assert.equal(levelOf({ name: 'Geo 1A' }), 'form 1');
+  assert.equal(levelOf({ name: 'Lower Sixth Arts' }), 'lower sixth'); assert.equal(levelOf({ name: 'Upper Sixth Arts' }), 'upper sixth'); assert.equal(levelOf({ name: 'Autre' }), '');
+  assert.deepEqual(officialFor({ name: 'Form 4 G' }), { th: 46, pr: 12, hth: 79, hpr: 21 }); assert.equal(officialFor({ name: 'Autre' }), null);
+  assert.ok(isEmptyProgram({ th: 0, pr: 0 })); assert.ok(!isEmptyProgram({ pr: 3 })); assert.equal(totalHours({ hth: 39, hpr: 27 }), 66); assert.equal(totalHours({ hours: 50 }), 50);
+  const store = await import('../site/js/store.js'), act = await import('../site/js/actions.js');
+  store.update(s => { s.data = { ...s.data, assign: [] }; });
+  act.saveAssign({ teacherId: 't', classId: 'c', th: 13, pr: 9, hth: 39, hpr: 27 });
+  const a = store.state.data.assign[0]; assert.equal(a.hours, 66); assert.equal(a.th, 13); assert.equal(a.hpr, 27);
+  act.saveAssign({ teacherId: 't', classId: 'c', th: 13, pr: 9, hth: 0, hpr: 0, hours: 50 }); assert.equal(store.state.data.assign[0].hours, 50);
+});

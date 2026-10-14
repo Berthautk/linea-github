@@ -4,7 +4,7 @@ import { t } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Field, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
-import { state, myId, setToast, setUI } from '../store.js';
+import { state, myId, setToast, setUI, refreshSession } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept } from '../actions.js';
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
@@ -13,7 +13,7 @@ import { dayName, fmt, slotHours, endFor } from '../dates.js';
 import { getLang } from '../i18n.js';
 
 export function showCredentials({ name, username, password, phone, fresh = true }) {
-  const text = t('Rekort : bonjour {n}, voici votre accès.\nAdresse : {u}\nIdentifiant : {i}\nMot de passe : {p}\nVous pourrez changer le mot de passe dans Réglages › Mon profil.', { n: name, u: location.origin, i: username, p: password });
+  const text = t('Rekort : bonjour {n}, voici votre accès.\nAdresse : {u}\nIdentifiant : {i}\nMot de passe : {p}\nPour installer : ouvrez l’adresse dans Chrome, menu ⋮ › Ajouter à l’écran d’accueil. Vous pouvez désinstaller l’ancienne application EasyProf.\nVous pourrez changer le mot de passe dans Réglages › Mon profil.', { n: name, u: location.origin, i: username, p: password });
   openModal(() => html`<${Modal} title=${fresh ? t('Compte créé') : t('Nouveau mot de passe')} onClose=${closeModal}>
     <p>${t('Donnez ces informations à {n}. Le mot de passe ne sera plus affiché ensuite.', { n: name })}</p>
     <div class="card flat stack" style="gap:6px"><div class="row"><span class="lab">${t('Adresse')}</span><b>${location.origin}</b></div><div class="row"><span class="lab">${t('Identifiant')}</span><b>${username}</b></div><div class="row"><span class="lab">${t('Mot de passe')}</span><span class="code" style="padding:6px 14px;font-size:20px">${password}</span></div></div>
@@ -37,6 +37,21 @@ function AddTeacher() {
     ${err ? html`<div class="err" role="alert">${err}</div>` : null}<button class="btn block" disabled=${busy}>${busy ? t('Création…') : t('Créer le compte')}</button></form><//>`;
 }
 
+function Transfer({ ctx }) {
+  const others = ctx.teachers.filter(x => x.id !== myId()), [to, setTo] = useState(''), [pw, setPw] = useState(''), [err, setErr] = useState(''), [busy, setBusy] = useState(false);
+  const target = ctx.teacher(to);
+  const go = async (e) => {
+    e.preventDefault(); setBusy(true); setErr('');
+    try { const r = await api('/team/transfer', { teacherId: to, password: pw }, state.session.token); replaceMeta(r.meta); refreshSession(r.session); closeModal(); location.hash = '#/home'; setToast(t('Vous n’êtes plus animateur pédagogique : {n} l’est maintenant.', { n: target.name })); syncNow(); }
+    catch (x) { setErr(x.message); } setBusy(false);
+  };
+  return html`<${Modal} title=${t('Passer la main')} onClose=${closeModal}><form class="stack" onSubmit=${go}>
+    <${Field} label=${t('Nouvel animateur pédagogique')}><select class="input" value=${to} onChange=${(e) => setTo(e.target.value)} required><option value="">${t('Choisir un collègue…')}</option>${others.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
+    <p class="sub">${t('Vous deviendrez enseignant : vous garderez la saisie de vos cours, mais vous ne pourrez plus modifier le département. Le collègue choisi devient animateur : il crée les comptes, les emplois du temps et contrôle les autres. L’ancien code de récupération ne fonctionne plus : le nouvel animateur doit en créer un (Réglages › Mon profil).')}</p>
+    <${Field} label=${t('Votre mot de passe (pour confirmer)')}><input class="input" type="password" autocomplete="current-password" value=${pw} onInput=${(e) => setPw(e.target.value)} required /><//>
+    ${err ? html`<div class="err" role="alert">${err}</div>` : null}<button class="btn block danger" disabled=${busy || !to}>${t('Transférer le rôle')}</button></form><//>`;
+}
+
 export function Team() {
   const ctx = makeCtx(state.data);
   return html`<div class="page"><div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${t('Équipe')}</h1></div><button class="btn" onClick=${() => openModal(() => html`<${AddTeacher} />`)}><${Icon} n="plus" />${t('Ajouter un collègue')}</button></div>
@@ -45,6 +60,7 @@ export function Team() {
     <div class="card"><div class="list">${ctx.teachers.map(tc => { const n = ctx.assign.filter(a => a.teacherId === tc.id).length, sl = (tc.slots || []).length;
       return html`<a class="item" href=${'#/settings/team/' + tc.id} style="text-decoration:none;color:inherit"><div class="dot">${tc.role === 'ap' ? '⭐' : '🧑‍🏫'}</div><div class="grow"><b>${tc.name}${tc.id === myId() ? ' (' + t('vous') + ')' : ''}</b><span>${tc.username} · ${sl} ${t('cours')} · ${n} ${t('classe(s)')}</span></div>
         ${!sl || !n ? html`<${Chip} tone="warn">${t('à compléter')}<//>` : html`<${Chip} tone="ok">${t('prêt')}<//>`}<${Icon} n="right" size="18" /></a>`; })}</div></div>
+    ${ctx.teachers.length > 1 ? html`<div class="card row"><div class="grow"><b>${t('Passer la main')}</b><p class="sub">${t('Vous n’êtes plus animateur pédagogique ? Transférez le rôle à un collègue : votre espace d’animateur se désactive, le sien s’active.')}</p></div><button class="btn soft" onClick=${() => openModal(() => html`<${Transfer} ctx=${ctx} />`)}>${t('Transférer…')}</button></div>` : null}
     <div class="card row"><div class="grow"><b>${t('Tout est correct ?')}</b><p class="sub">${t('Quand les noms, identifiants, emplois du temps et leçons prévues sont bons, confirmez : l’étape disparaît de « Pour bien démarrer ».')}</p></div>
       ${(ctx.dept.setup || {}).team ? html`<${Chip} tone="ok">✓ ${t('Confirmé')}<//>` : html`<button class="btn" onClick=${() => { saveDept({ setup: { ...(ctx.dept.setup || {}), team: true, tt: true } }); setToast(t('Équipe confirmée.')); }}>${t('Tout est correct')}</button>`}</div></div>`;
 }

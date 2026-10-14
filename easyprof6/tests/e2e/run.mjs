@@ -58,7 +58,11 @@ await step('B. Le collègue se connecte et saisit', async () => {
   await tp.waitForSelector('text=Aujourd’hui'); await tp.waitForTimeout(600);
   const body = await tp.innerText('body');
   ok(/Bonjour, Noura/.test(body) && /Form 3 A/.test(body), 'B1 connexion : le collègue retrouve son prénom et sa classe du jour (reçus par synchronisation)');
-  ok(!/Mon équipe/.test(body) && !(await tp.locator('text=Département').count()), 'B2 le collègue ne voit pas la vue « département »');
+  ok(!/Pour bien démarrer|Ronde en classe|Rappeler/.test(body) && !!(await tp.getByRole('button', { name: 'Département', exact: true }).count()), 'B2 le collègue n’a aucun outil d’animateur, mais peut regarder le département');
+  await tp.getByRole('button', { name: 'Département', exact: true }).click(); await tp.waitForTimeout(400);
+  const dview = await tp.innerText('.page');
+  ok(/Résultats par collègue/.test(dview) && !(await tp.getByRole('button', { name: 'Rappeler' }).count()) && !(await tp.getByRole('link', { name: 'Contrôler' }).count()), 'B2b le collègue voit les résultats de tous, sans pouvoir rappeler ni contrôler');
+  await tp.getByRole('button', { name: 'Moi', exact: true }).click(); await tp.waitForTimeout(300);
   await tp.getByRole('button', { name: 'Fait' }).click(); await tp.waitForTimeout(500);
   ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'B3 saisie en un geste : « Fait » → leçon 1 enregistrée');
   const k = await tp.locator('.kpis').innerText();
@@ -77,12 +81,12 @@ await step('B. Le collègue se connecte et saisit', async () => {
 await step('C. Synchronisation vers l’animateur', async () => {
   await apPage.locator('.sync').first().click(); await apPage.waitForTimeout(1200);
   await go(apPage, url, '#/home');
-  const team = await apPage.locator('.tbl', { hasText: 'Enseignant' }).first().innerText();
+  const team = await apPage.locator('.item', { hasText: 'Résultats par collègue' }).first().innerText().catch(async () => (await apPage.locator('.card', { hasText: 'Résultats par collègue' }).first().innerText()));
   ok(/ASTHA/.test(team), 'C1 l’animateur voit son collègue dans l’équipe');
   await tp.locator('.sync').first().click(); await tp.waitForTimeout(800);
   await apPage.locator('.sync').first().click(); await apPage.waitForTimeout(1200);
-  const row = (await apPage.locator('.tbl', { hasText: 'Enseignant' }).first().innerText()).split('\n').filter(l => /ASTHA/.test(l)).join(' ');
-  ok(/2/.test(row), 'C2 les 2 h saisies par le collègue sont arrivées chez l’animateur : ' + row.replace(/\s+/g, ' '));
+  const row = (await apPage.locator('.card', { hasText: 'Résultats par collègue' }).first().innerText());
+  ok(/ASTHA[\s\S]*?Heures\s*:\s*2\s+sur/.test(row), 'C2 les 2 h saisies par le collègue sont arrivées chez l’animateur : ' + row.replace(/\s+/g, ' '));
 });
 
 await step('D. Hors ligne puis synchronisation', async () => {
@@ -144,6 +148,14 @@ await step('F. Mot de passe oublié (animateur)', async () => {
   await p.page.waitForSelector('.shell'); await p.page.evaluate(() => { location.hash = '#/home'; }); await p.page.waitForSelector('.hero');
   const body = await p.page.innerText('body');
   ok(/LYCÉE DE TEST/.test(body) && !/GBHS/.test(body), 'F1 récupération du mot de passe par code ; ce département est isolé du premier (aucune donnée de GBHS)');
+});
+
+await step('I. Transfert du rôle d’animateur', async () => {
+  await go(apPage, url, '#/settings/team'); await apPage.getByRole('button', { name: 'Transférer…' }).click();
+  await apPage.locator('.sheet select').selectOption({ label: 'Mme ASTHA Noura' }); await apPage.locator('.sheet input[type=password]').fill('secret1'); await apPage.getByRole('button', { name: 'Transférer le rôle' }).click(); await apPage.waitForTimeout(1200);
+  await go(apPage, url, '#/settings'); ok(!/Collègues et emplois du temps/.test(await apPage.innerText('.page')), 'I1 l’ancien animateur n’a plus les réglages d’animateur');
+  await tp.locator('.sync').first().click(); await tp.waitForTimeout(1200); await go(tp, url, '#/settings');
+  ok(/Collègues et emplois du temps/.test(await tp.innerText('.page')), 'I2 le nouvel animateur reçoit les réglages d’animateur automatiquement');
 });
 
 await step('G. Application installable hors ligne (service worker)', async () => {

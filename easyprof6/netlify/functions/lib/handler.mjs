@@ -185,7 +185,7 @@ async function sync(req, ctx, b) {
       await data().set(`${deptId}/r/${tid}`, { rev });
     }
   }
-  const wanted = role === 'ap' ? [...knownTeacher] : [me];
+  const wanted = [...knownTeacher];   // tout le monde peut LIRE les saisies du département ; seul le propriétaire (ou l'animateur) peut les modifier
   for (const tid of wanted) {
     const rev = await entryRev(deptId, tid);
     const known = (have.e || {})[tid];
@@ -193,7 +193,8 @@ async function sync(req, ctx, b) {
     if (rev > 0 && (known == null || rev > known || pushed)) { const d = await data().get(`${deptId}/e/${tid}`); if (d) out[tid] = d; }
   }
   const res = { ok: true, now: now(), e: out };
-  if (metaChanged || have.meta == null || meta.rev > have.meta) res.meta = role === 'ap' ? meta : { ...meta, teachers: meta.teachers };
+  if (metaChanged || have.meta == null || meta.rev > have.meta) res.meta = role === 'ap' ? meta : { ...meta, teachers: (meta.teachers || []).map(({ username, ...rest }) => rest) };   // identifiants de connexion cachés aux enseignants
+  res.session = session(ctx.user);   // le rôle peut changer (transfert de l'animation pédagogique)
   if (ctx.exp - now() < 30 * 864e5) res.token = await signToken({ u: ctx.u, d: deptId });
   return json(200, res);
 }
@@ -255,6 +256,30 @@ async function teamRemove(ctx, b) {
   await saveMeta(ctx.d, meta);
   return json(200, { ok: true, meta });
 }
+/** L'animateur passe la main à un collègue : l'autre devient animateur, lui devient enseignant. Le code de récupération est invalidé (le nouvel animateur en crée un). */
+async function teamTransfer(ctx, b) {
+  const bad = needAP(ctx); if (bad) return bad;
+  if (!(await verifyPassword(String(b.password || ''), ctx.user))) return fail(403, 'bad_credentials', 'Mot de passe incorrect.');
+  const meta = await loadMeta(ctx.d), t = (meta.teachers || []).find(x => x.id === b.teacherId && !x.deleted);
+  if (!t) return fail(404, 'not_found', 'Collègue introuvable.');
+  if (t.id === ctx.user.teacherId) return fail(400, 'self', 'Choisissez un autre collègue.');
+  const target = await users().get('u:' + t.username); if (!target || target.disabled) return fail(404, 'not_found', 'Compte introuvable.');
+  target.role = 'ap'; ctx.user.role = 'teacher';
+  await users().set('u:' + target.username, target); await users().set('u:' + ctx.user.username, ctx.user);
+  const d = (await depts().get('d:' + ctx.d)) || { id: ctx.d };
+  d.ap = target.username; d.recovery = await hashPassword(randomCode(24)); await depts().set('d:' + ctx.d, d);
+  meta.teachers = meta.teachers.map(x => (x.id === t.id ? { ...x, role: 'ap', u: now() } : x.id === ctx.user.teacherId ? { ...x, role: 'teacher', u: now() } : x)); meta.rev = (meta.rev || 0) + 1;
+  await saveMeta(ctx.d, meta);
+  return json(200, { ok: true, meta: { ...meta, teachers: meta.teachers.map(({ username, ...rest }) => rest) }, session: session(ctx.user) });
+}
+/** Nouveau code de récupération (animateur, avec son mot de passe). */
+async function newRecovery(ctx, b) {
+  const bad = needAP(ctx); if (bad) return bad;
+  if (!(await verifyPassword(String(b.password || ''), ctx.user))) return fail(403, 'bad_credentials', 'Mot de passe incorrect.');
+  const d = (await depts().get('d:' + ctx.d)) || { id: ctx.d }, code = recoveryCode();
+  d.recovery = await hashPassword(code.replace(/-/g, '')); await depts().set('d:' + ctx.d, d);
+  return json(200, { ok: true, recovery: code });
+}
 async function changePassword(ctx, b) {
   if (!validPassword(b.password)) return fail(400, 'bad_password', 'Mot de passe : au moins 6 caractères.');
   if (!(await verifyPassword(String(b.old || ''), ctx.user))) return fail(403, 'bad_credentials', 'Ancien mot de passe incorrect.');
@@ -294,6 +319,8 @@ export async function handle(req) {
       case '/team/reset': return await teamReset(ctx, body);
       case '/team/remove': return await teamRemove(ctx, body);
       case '/team/rename': return await teamRename(ctx, body);
+      case '/team/transfer': return await teamTransfer(ctx, body);
+      case '/me/recovery': return await newRecovery(ctx, body);
       case '/me/password': return await changePassword(ctx, body);
       case '/me': return json(200, { ok: true, session: session(ctx.user) });
       default: return fail(404, 'not_found', 'Route inconnue.');

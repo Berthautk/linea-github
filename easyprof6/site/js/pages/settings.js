@@ -35,6 +35,14 @@ function Menu() {
     <p class="sub" style="text-align:center">Rekort · ${t('Département')} ${state.data.dept.name}</p></div>`;
 }
 
+function RecoveryCard() {
+  const [pw, setPw] = useState(''), [err, setErr] = useState('');
+  const go = async (e) => { e.preventDefault(); setErr(''); try { const r = await api('/me/recovery', { password: pw }, state.session.token); setPw(''); update(s => { s.recovery = r.recovery; }); } catch (x) { setErr(x.message); } };
+  return html`<form class="card stack" onSubmit=${go}><h3>${t('Code de récupération')}</h3><p class="sub">${t('Il permet de retrouver votre accès si vous oubliez votre mot de passe. Il s’affiche une seule fois : notez-le. Créer un nouveau code annule l’ancien.')}</p>
+    <${Field} label=${t('Votre mot de passe')}><input class="input" type="password" autocomplete="current-password" value=${pw} onInput=${(e) => setPw(e.target.value)} required /><//>
+    ${err ? html`<div class="err">${err}</div>` : null}<button class="btn soft" style="align-self:flex-start">${t('Créer un nouveau code')}</button></form>`;
+}
+
 function Profile() {
   const m = me(), [pw, setPw] = useState({ old: '', password: '' }), [msg, setMsg] = useState(null);
   const change = async (e) => { e.preventDefault(); setMsg(null); try { await api('/me/password', pw, state.session.token); setMsg({ ok: t('Mot de passe modifié.') }); setPw({ old: '', password: '' }); } catch (x) { setMsg({ err: x.message }); } };
@@ -47,6 +55,7 @@ function Profile() {
     <form class="card stack" onSubmit=${change}><h3>${t('Changer mon mot de passe')}</h3><div class="grid2"><${Field} label=${t('Mot de passe actuel')}><input class="input" type="password" autocomplete="current-password" value=${pw.old} onInput=${(e) => setPw({ ...pw, old: e.target.value })} required /><//>
       <${Field} label=${t('Nouveau mot de passe')} hint=${t('Au moins 6 caractères.')}><input class="input" type="password" autocomplete="new-password" value=${pw.password} onInput=${(e) => setPw({ ...pw, password: e.target.value })} required /><//></div>
       ${msg && msg.ok ? html`<div class="ok">${msg.ok}</div>` : null}${msg && msg.err ? html`<div class="err">${msg.err}</div>` : null}<button class="btn" style="align-self:flex-start">${t('Changer le mot de passe')}</button></form>
+    ${isAP() ? html`<${RecoveryCard} />` : null}
     <div class="card stack"><h3>${t('Cet appareil')}</h3>${inst ? html`<button class="btn accent" onClick=${async () => { inst.prompt(); await inst.userChoice; window.__epInstall = null; update(() => { }); }}><${Icon} n="download" />${t('Installer Rekort sur ce téléphone')}</button>` : html`<p class="sub">${t('Pour installer l’application : menu du navigateur › « Ajouter à l’écran d’accueil » ou « Installer l’application ».')}</p>`}
       <button class="btn soft" onClick=${() => logout()}><${Icon} n="logout" />${t('Se déconnecter')}</button>
       <button class="btn danger" onClick=${() => confirmDialog({ title: t('Effacer les données de cet appareil ?'), message: t('Vos données restent enregistrées sur le serveur et reviendront à la prochaine connexion. Les saisies pas encore synchronisées seraient perdues.'), confirm: t('Effacer et se déconnecter'), danger: true, onConfirm: () => logout({ wipe: true }) })}>${t('Se déconnecter et effacer cet appareil')}</button></div></div>`;

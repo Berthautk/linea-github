@@ -50,10 +50,20 @@ export function metaToData(meta) { return { dept: meta.dept, teachers: meta.teac
 export function logout({ wipe } = {}) {
   const u = state.session && state.session.username;
   ls.del(K.session); if (wipe && u) ls.del(K.data(u));
-  update(s => { s.session = null; s.data = emptyData(); s.sync = emptySync(); s.ui.scope = 'dept'; });
+  update(s => { s.session = null; s.data = emptyData(); s.sync = emptySync(); s.ui.scope = 'dept'; s.ui.scopeT = 'me'; });
 }
 export function setToast(msg, kind, action) { update(s => { s.toast = msg ? { msg, kind, action, id: Date.now() } : null; }); if (msg) { const id = state.toast.id; setTimeout(() => { if (state.toast && state.toast.id === id) update(s => { s.toast = null; }); }, action ? 6000 : 3200); } }
 export const setUI = (patch) => update(s => { s.ui = { ...s.ui, ...patch }; });
+/** Qui regarde-t-on ? L'animateur choisit librement ; l'enseignant regarde par défaut ses propres données (le reste est en lecture seule). */
+export const getScope = () => (state.session && state.session.role === 'ap' ? state.ui.scope : state.ui.scopeT || 'me');
+export const setScope = (v) => setUI(state.session && state.session.role === 'ap' ? { scope: v } : { scopeT: v });
+/** Le rôle a changé sur le serveur (transfert de l'animation pédagogique) : on met la session à jour. */
+export function refreshSession(sess) {
+  if (!state.session || !sess || !sess.role || sess.role === state.session.role) return false;
+  const ns = { ...state.session, role: sess.role }; ls.set(K.session, ns);
+  update(s => { s.session = ns; s.ui = { ...s.ui, scope: sess.role === 'ap' ? 'dept' : s.ui.scope, scopeT: 'me' }; });
+  return true;
+}
 
 /* ---------- raccourcis ---------- */
 // Horodatage strictement croissant : deux modifications ne portent jamais la même date (la règle « le plus récent gagne » reste fiable).

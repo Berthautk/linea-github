@@ -1,5 +1,5 @@
 // Synchronisation : on envoie ce qui a changé depuis le dernier envoi, on reçoit ce que les autres ont changé (le plus récent gagne).
-import { state, update, observe } from './store.js';
+import { state, update, observe, refreshSession, setToast } from './store.js';
 import { api } from './api.js';
 import { mergeById, mergeMeta } from './shared/merge.js';
 
@@ -34,6 +34,7 @@ export async function syncNow() {
     if (Object.keys(byT).length) push.e = Object.fromEntries(Object.entries(byT).map(([k, list]) => [k, { entries: list }]));
     const res = await api('/sync', { have: { meta: sync.metaRev, e: sync.eRev }, push }, sess.token);
     update(s => applyResult(s, res, startedAt - 1));
+    if (refreshSession(res.session)) setToast(res.session.role === 'ap' ? 'Vous êtes maintenant animateur pédagogique. Pensez à créer votre code de récupération : Réglages › Mon profil.' : 'Vous n’êtes plus animateur pédagogique : vous gardez la saisie de vos propres cours.');
   } catch (e) {
     update(s => { s.sync.status = e.status === 401 ? 'auth' : e.offline ? 'offline' : 'error'; s.sync.error = e.message; });
   } finally { busy = false; if (again) { again = false; scheduleSync(300); } }

@@ -6,7 +6,7 @@ import { Bar, Chip, Empty, Seg, Field, statusChip, num1 } from '../ui.js';
 import { BarChart, ProgressChart, TermChart } from '../charts.js';
 import { makeCtx, stats, overall, noTimetable, dueRange, cumulative, byTerm, activity, lagStatus, pct, periodOf, classProgress, series, todaySlots, factors } from '../calc.js';
 import { PeriodBar, ScopeBar, TodayCard, currentTid, periodLabel, unitFor } from '../widgets.js';
-import { state, setUI, isAP, myId, me } from '../store.js';
+import { state, setUI, isAP, myId, me, getScope, setScope } from '../store.js';
 import { saveDept } from '../actions.js';
 import { openReminder } from '../reminder.js';
 import { minISO, fmt, addDays } from '../dates.js';
@@ -86,7 +86,7 @@ function Activity({ ctx }) {
     <div class="list">${rows.map(({ tc, A }) => html`<div class="item" style="align-items:flex-start"><div class="grow"><b>${tc.name}</b>
       <div class="bar" style="margin:6px 0 4px"><i style=${{ width: A.rate + '%' }}></i></div>
       <span>${t('{a} semaine(s) active(s) sur {w}', { a: A.active, w: A.weeks })} · ${t('{f} classe(s) saisie(s) sur {c}', { f: A.filled, c: A.classes })} · ${A.last ? (A.since === 0 ? t('a saisi aujourd’hui') : t('dernière saisie il y a {n} jour(s)', { n: A.since })) : t('aucune saisie')}</span></div>
-      <div class="stack" style="gap:6px;align-items:flex-end"><${Chip} tone=${tone[A.level]}>${lab[A.level]}<//>${tc.id !== myId() && A.level !== 'regular' ? html`<button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button>` : null}</div></div>`)}</div></div>`;
+      <div class="stack" style="gap:6px;align-items:flex-end"><${Chip} tone=${tone[A.level]}>${lab[A.level]}<//>${isAP() && tc.id !== myId() && A.level !== 'regular' ? html`<button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button>` : null}</div></div>`)}</div></div>`;
 }
 
 /** Collègues qui devaient faire cours ces 7 derniers jours mais n'ont rien saisi ni déclaré. */
@@ -99,23 +99,35 @@ function Inactive({ ctx }) {
       <button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button><a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a></div>`; })}</div></div>`;
 }
 function Team({ ctx, p }) {
+  const ap0 = isAP();
   const rows = ctx.teachers.map(tc => ({ tc, S: stats(ctx, tc.id, p.ps, p.pe), st: todayState(ctx, tc) }));
   if (!rows.length) return null;
-  return html`<div class="card"><div class="card-h"><h3>${t('Mon équipe')}</h3></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Enseignant')}</th><th>${t('Heures')}</th><th>%</th><th>${t('Leçons')}</th><th>${t('État')}</th><th>${t('Aujourd’hui')}</th><th></th></tr></thead><tbody>
-    ${rows.map(({ tc, S, st }) => { const nt = noTimetable(ctx, tc.id).length > 0; return html`<tr><td>${tc.name}</td><td>${nt ? num1(S.hours) + ' h' : num1(S.hours) + ' / ' + num1(S.due)}</td><td>${nt ? html`<${Chip} tone="warn">${t('emploi du temps ?')}<//>` : html`<${Chip} tone=${S.due && S.rate < THRESHOLDS.hours ? 'bad' : 'ok'}>${num1(S.rate)} %<//>`}</td><td>${S.lessonsDone} / ${num1(S.lessonsPlanned)}</td><td>${nt ? null : statusChip(overall(S))}</td>
-      <td><${Chip} tone=${st[0]}>${st[1]}<//></td><td style="display:flex;gap:6px;justify-content:flex-end">${st[0] === 'bad' ? html`<button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button>` : null}${tc.id !== myId() ? html`<a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a>` : null}<button class="btn soft sm" onClick=${() => setUI({ scope: tc.id === myId() ? 'me' : tc.id })}>${t('Voir')}</button></td></tr>`; })}</tbody></table></div></div>`;
+  return html`<div class="card"><div class="card-h"><h3>${t('Résultats par collègue')}</h3><span class="sub">${periodLabel(p, ctx)}</span></div>
+    <p class="sub" style="margin-bottom:6px">${t('Heures : faites sur dues d’après l’emploi du temps. Leçons : faites sur attendues d’après le plan de l’année.')}</p>
+    <div class="list">${rows.map(({ tc, S, st }) => { const nt = noTimetable(ctx, tc.id).length > 0;
+      return html`<div class="item" style="align-items:flex-start"><div class="grow"><b>${tc.name}</b>
+        <div class="sub">${t('Heures')} : ${nt ? html`${num1(S.hours)} h <${Chip} tone="warn">${t('emploi du temps ?')}<//>` : html`${num1(S.hours)} ${t('sur')} ${num1(S.due)} (<em style=${{ fontStyle: 'normal', fontWeight: 800, color: S.due && S.rate < THRESHOLDS.hours ? 'var(--coral)' : 'inherit' }}>${num1(S.rate)} %</em>)`}</div>
+        <div class="sub">${t('Leçons')} : ${S.lessonsDone} ${t('sur')} ${num1(S.lessonsPlanned)}</div>
+        <div class="row" style="margin-top:6px;gap:6px"><${Chip} tone=${st[0]}>${st[1]}<//>${nt ? null : statusChip(overall(S))}</div></div>
+        <div class="stack" style="gap:6px;align-items:flex-end">${ap0 && tc.id !== myId() && st[0] === 'bad' ? html`<button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button>` : null}
+          ${ap0 && tc.id !== myId() ? html`<a class="btn soft sm" href="#/week" onClick=${() => setUI({ wtid: tc.id })}>${t('Contrôler')}</a>` : null}
+          <button class="btn soft sm" onClick=${() => setScope(tc.id === myId() ? 'me' : tc.id)}>${t('Voir')}</button></div></div>`; })}</div></div>`;
 }
 function DeptClasses({ ctx }) {
   const by = {};
   for (const tc of ctx.teachers) for (const r of classProgress(ctx, tc.id)) { const x = (by[r.classId] = by[r.classId] || { name: r.name, plan: 0, done: 0, expected: 0, hours: 0 }); x.plan += r.plan.total; x.done += r.done; x.expected += r.expected; x.hours += r.hours; }
   const rows = Object.values(by).filter(x => x.plan || x.done).sort((a, b) => (a.name < b.name ? -1 : 1)); if (!rows.length) return null;
-  return html`<div class="card"><div class="card-h"><h3>${t('Les classes du département')}</h3><span class="sub">${t('Depuis la rentrée')}</span></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>${t('Classe')}</th><th>${t('Faites')}</th><th>${t('Attendues')}</th><th>${t('Prévues')}</th><th>${t('Heures')}</th><th>${t('État')}</th></tr></thead><tbody>
-    ${rows.map(x => html`<tr><td>${x.name}</td><td>${x.done}</td><td>${num1(x.expected)}</td><td>${x.plan}</td><td>${num1(x.hours)}</td><td>${statusChip(x.plan ? (x.expected - x.done <= -1.5 ? 'ahead' : x.expected - x.done <= 1 ? 'ok' : x.expected - x.done <= 3 ? 'slight' : 'late') : 'none')}</td></tr>`)}</tbody></table></div></div>`;
+  return html`<div class="card"><div class="card-h"><h3>${t('Avancement par classe')}</h3><span class="sub">${t('Depuis la rentrée')}</span></div>
+    <p class="sub" style="margin-bottom:6px">${t('La barre montre les leçons faites sur celles prévues pour l’année ; le petit trait montre où l’on devrait en être aujourd’hui.')}</p>
+    <div class="stack" style="gap:14px">${rows.map(x => { const lag = x.expected - x.done, st = x.plan ? lagStatus(lag) : 'none';
+      return html`<div class="stack" style="gap:6px"><div class="row"><b class="grow">${x.name}</b>${statusChip(st)}</div>
+        <${Bar} value=${x.plan ? pct(x.done, x.plan) : 0} expected=${x.plan ? pct(x.expected, x.plan) : null} tone=${st === 'late' ? 'bad' : st === 'slight' ? 'warn' : ''} />
+        <div class="sub">${t('{d} leçon(s) faite(s) · {e} attendues à ce jour · {p} prévues dans l’année · {h} h', { d: x.done, e: num1(x.expected), p: x.plan, h: num1(x.hours) })}</div></div>`; })}</div></div>`;
 }
 
 export function Home() {
   const ctx = makeCtx(state.data), lang = getLang(), ap = isAP();
-  const tid = currentTid(), scope = ap ? state.ui.scope : 'me';
+  const tid = currentTid(), scope = getScope();
   const p = state.ui.period && state.ui.period.ps ? state.ui.period : periodOf(ctx, (state.ui.period && state.ui.period.kind) || 'term');
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, minISO(ctx.today, ctx.ye));
   const who = tid ? (ctx.teacher(tid) || {}).name : t('Département {d}', { d: state.data.dept.discipline || '' });
@@ -148,6 +160,6 @@ export function Home() {
     </div>
     ${data.length > 1 && data.some(d => d.due || d.done) ? html`<div class="card"><div class="card-h"><h3>${unitFor(p) === 'day' ? t('Heures par jour') : unitFor(p) === 'month' ? t('Heures par mois') : t('Heures par semaine')}</h3><div class="legend"><span><i style="background:var(--sand);border:1.5px solid var(--line)"></i>${t('dues')}</span><span><i style="background:var(--teal)"></i>${t('faites')}</span></div></div><${BarChart} data=${data} unit=${unitFor(p)} /></div>` : null}
     <${Goals} ctx=${ctx} tid=${tid} />
-    ${tid ? html`<${Classes} rows=${rows} ctx=${ctx} tid=${tid} />` : html`${ap && ctx.teachers.length > 1 ? html`<a class="card row" href="#/week" style="text-decoration:none;color:inherit;gap:14px"><div class="dot ok" style="font-size:20px">✅</div><div class="grow"><b>${t('Ronde en classe')}</b><p class="sub">${t('Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.')}</p></div><${Icon} n="right" size="18" /></a>` : null}<${Activity} ctx=${ctx} /><${Inactive} ctx=${ctx} /><${Team} ctx=${ctx} p=${p} /><${DeptClasses} ctx=${ctx} />`}
+    ${tid ? html`<${Classes} rows=${rows} ctx=${ctx} tid=${tid} />` : html`${ap && ctx.teachers.length > 1 ? html`<a class="card row" href="#/week" style="text-decoration:none;color:inherit;gap:14px"><div class="dot ok" style="font-size:20px">✅</div><div class="grow"><b>${t('Ronde en classe')}</b><p class="sub">${t('Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.')}</p></div><${Icon} n="right" size="18" /></a>` : null}<${Activity} ctx=${ctx} />${ap ? html`<${Inactive} ctx=${ctx} />` : null}<${Team} ctx=${ctx} p=${p} /><${DeptClasses} ctx=${ctx} />`}
   </div>`;
 }

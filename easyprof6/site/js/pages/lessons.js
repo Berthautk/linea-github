@@ -5,7 +5,7 @@ import { Empty, Chip, Field, Modal, openModal, closeModal, confirmDialog, num1 }
 import { Icon } from '../icons.js';
 import { EntryForm } from './entry.js';
 import { makeCtx } from '../calc.js';
-import { state, myId, isAP, setToast } from '../store.js';
+import { state, myId, isAP, setToast, getScope } from '../store.js';
 import { deleteEntry, restoreEntry, saveEntry } from '../actions.js';
 import { currentTid, ScopeBar } from '../widgets.js';
 import { TYPES, REASONS, typeOf, reasonOf } from '../consts.js';
@@ -31,7 +31,7 @@ export function askDelete(e) {
 }
 
 export function Lessons() {
-  const ctx = makeCtx(state.data), lang = getLang(), ap = isAP(), scope = ap ? state.ui.scope : 'me', tid = currentTid();
+  const ctx = makeCtx(state.data), lang = getLang(), ap = isAP(), scope = getScope(), tid = currentTid();
   const [F, setF] = useState({ cls: '', type: '', who: '', from: '', to: '', limit: 60 }), [view, setView] = useState('done');
   let rows = ctx.entries.filter(e => (tid ? e.teacherId === tid : !F.who || e.teacherId === F.who));
   rows = rows.filter(e => (!F.cls || e.classId === F.cls) && (!F.type || e.type === F.type) && (!F.from || e.date >= F.from) && (!F.to || e.date <= F.to))

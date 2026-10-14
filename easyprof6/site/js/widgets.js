@@ -5,7 +5,7 @@ import { Icon } from './icons.js';
 import { Seg, Field, Chip, openModal, closeModal, Modal } from './ui.js';
 import { periodOf, shiftPeriod, todaySlots, nextNumber } from './calc.js';
 import { fmt, dayName, dow, addDays, monthName, minToTime, timeToMin } from './dates.js';
-import { state, setUI, isAP, myId, setToast } from './store.js';
+import { state, setUI, isAP, myId, setToast, getScope, setScope } from './store.js';
 import { saveEntry, deleteEntry, restoreEntry } from './actions.js';
 import { reasonOf } from './consts.js';
 
@@ -32,15 +32,14 @@ export function PeriodBar({ ctx, period, onChange, compact }) {
 }
 
 /* qui regarde-t-on ? (animateur : département, moi, ou un collègue) */
-export function currentTid() { if (!isAP()) return myId(); const s = state.ui.scope; return s === 'dept' ? null : s === 'me' ? myId() : s; }
+export function currentTid() { const s = getScope(); return s === 'dept' ? null : s === 'me' ? myId() : s; }
 export function ScopeBar({ ctx }) {
-  if (!isAP()) return null;
-  const s = state.ui.scope, other = s !== 'dept' && s !== 'me';
+  const s = getScope(), other = s !== 'dept' && s !== 'me';
   const opts = [{ id: 'dept', label: t('Département') }, { id: 'me', label: t('Moi') }];
   const t2 = other ? ctx.teacher(s) : null;
-  return html`<div class="row noprint"><${Seg} options=${opts} value=${other ? '' : s} onChange=${(v) => setUI({ scope: v })} />
-    ${t2 ? html`<${Chip} tone="info">${t2.name}<//><button class="btn soft sm" onClick=${() => setUI({ scope: 'dept' })}>${t('Retour au département')}</button>` : null}
-    ${ctx.teachers.length > 2 && !other ? html`<select class="input" style="width:auto;min-height:40px" value="" onChange=${(e) => e.target.value && setUI({ scope: e.target.value })}><option value="">${t('Voir un collègue…')}</option>${ctx.teachers.filter(x => x.id !== myId()).map(x => html`<option value=${x.id}>${x.name}</option>`)}</select>` : null}</div>`;
+  return html`<div class="row noprint"><${Seg} options=${opts} value=${other ? '' : s} onChange=${(v) => setScope(v)} />
+    ${t2 ? html`<${Chip} tone="info">${t2.name}<//><button class="btn soft sm" onClick=${() => setScope('dept')}>${t('Retour au département')}</button>` : null}
+    ${ctx.teachers.length > 2 && !other ? html`<select class="input" style="width:auto;min-height:40px" value="" onChange=${(e) => e.target.value && setScope(e.target.value)}><option value="">${t('Voir un collègue…')}</option>${ctx.teachers.filter(x => x.id !== myId()).map(x => html`<option value=${x.id}>${x.name}</option>`)}</select>` : null}</div>`;
 }
 
 /* aujourd'hui : un cours du jour se saisit en un geste */

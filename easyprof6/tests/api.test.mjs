@@ -69,13 +69,13 @@ test('synchronisation : droits par rôle, fusion, suppression propagée, isolati
   assert.equal(s.meta.dept.name, 'LYCÉE X'); assert.equal(s.meta.classes.length, 1);
   assert.equal(s.meta.teachers.find(t => t.id === t1.teacher.id).phone, '699');
   assert.notEqual(s.meta.teachers.find(t => t.id === t2.teacher.id).name, 'Vol');
-  // entrées : chacun écrit chez soi ; l'AP voit tout ; un enseignant ne voit pas les autres
+  // entrées : chacun écrit chez soi ; l'AP voit tout ; un enseignant lit les autres sans pouvoir les modifier
   const e1 = entry('e1', { u: 1000 }), e2 = entry('e2', { u: 1000, teacherId: 'AUTRE' });
   s = await call('/sync', { have: {}, push: { e: { [t1.teacher.id]: { entries: [e1, e2] }, [t2.teacher.id]: { entries: [entry('evol')] } } } }, T1.token);
   assert.deepEqual(Object.keys(s.e), [t1.teacher.id]);
   assert.ok(s.e[t1.teacher.id].entries.every(e => e.teacherId === t1.teacher.id), 'teacherId forcé');
   s = await call('/sync', { have: {}, push: { e: { [t2.teacher.id]: { entries: [entry('f1')] } } } }, T2.token);
-  assert.deepEqual(Object.keys(s.e), [t2.teacher.id]);
+  assert.deepEqual(Object.keys(s.e).sort(), [t1.teacher.id, t2.teacher.id].sort(), 'un enseignant LIT les saisies des autres (lecture seule)');
   s = await call('/sync', { have: {} }, ap.token);
   assert.equal(s.e[t1.teacher.id].entries.length, 2); assert.equal(s.e[t2.teacher.id].entries.length, 1);
   // à jour : rien à renvoyer ; puis modification plus récente + suppression
@@ -138,4 +138,35 @@ test('équipe : identifiant = nom de famille, changement d’identifiant et mot 
   assert.equal((await call('/team/rename', { teacherId: other.teacher.id, username: 'x' }, ap.token)).status, 400);
   const t = await call('/login', { username: 'sylviane', password: 'tsogo26' });
   assert.equal((await call('/team/rename', { teacherId: other.teacher.id, username: 'zzz' }, t.token)).status, 403, 'réservé à l’animateur');
+});
+
+test('lecture pour tous, écriture pour le propriétaire : un collègue voit les saisies des autres sans pouvoir les modifier ; identifiants cachés', async () => {
+  fresh(); const ap = await newDept();
+  const a = await call('/team/add', { name: 'Mme ASTHA Noura', password: 'astha1' }, ap.token), b = await call('/team/add', { name: 'Mr. TSOGO Paul', password: 'tsogo1' }, ap.token);
+  const la = await call('/login', { username: 'astha', password: 'astha1' }), lb = await call('/login', { username: 'tsogo', password: 'tsogo1' });
+  const e1 = entry('e-astha', { classId: 'c1', n: 1 });
+  assert.equal((await call('/sync', { push: { e: { [a.teacher.id]: { entries: [e1] } } } }, la.token)).status, 200);
+  const r = await call('/sync', { have: {}, push: {} }, lb.token);
+  assert.ok(r.e[a.teacher.id] && r.e[a.teacher.id].entries.some(x => x.id === 'e-astha'), 'TSOGO lit la saisie d’ASTHA');
+  assert.ok(r.meta.teachers.every(t => t.username === undefined), 'identifiants de connexion cachés aux enseignants');
+  const hijack = await call('/sync', { push: { e: { [a.teacher.id]: { entries: [{ ...e1, title: 'piraté', u: Date.now() + 10 }] } } } }, lb.token);
+  assert.equal(hijack.status, 200);
+  const again = await call('/sync', { have: {}, push: {} }, la.token);
+  assert.equal(again.e[a.teacher.id].entries.find(x => x.id === 'e-astha').title, 'x', 'TSOGO ne peut pas modifier la saisie d’ASTHA');
+  const apView = await call('/sync', { have: {}, push: {} }, ap.token); assert.ok(apView.meta.teachers.some(t => t.username === 'astha'), 'l’animateur voit les identifiants');
+});
+
+test('transfert du rôle d’animateur : l’autre devient animateur, l’ancien devient enseignant, le code de récupération est invalidé', async () => {
+  fresh(); const ap = await newDept(); const a = await call('/team/add', { name: 'Mme ASTHA Noura', password: 'astha1' }, ap.token);
+  assert.equal((await call('/team/transfer', { teacherId: a.teacher.id, password: 'faux' }, ap.token)).status, 403, 'mot de passe exigé');
+  const la = await call('/login', { username: 'astha', password: 'astha1' });
+  assert.equal((await call('/team/transfer', { teacherId: a.teacher.id, password: 'astha1' }, la.token)).status, 403, 'un enseignant ne peut pas transférer');
+  const tr = await call('/team/transfer', { teacherId: a.teacher.id, password: 'secret1' }, ap.token);
+  assert.equal(tr.status, 200); assert.equal(tr.session.role, 'teacher');
+  assert.equal((await call('/team/add', { name: 'Intrus' }, ap.token)).status, 403, 'l’ancien animateur n’a plus la main');
+  const ok = await call('/team/add', { name: 'Mr NOUVEAU Paul' }, la.token); assert.equal(ok.status, 200, 'le nouvel animateur crée un compte');
+  const s = await call('/sync', { have: {}, push: {} }, la.token); assert.equal(s.session.role, 'ap');
+  assert.equal((await call('/recover', { username: 'astha', code: ap.recovery, password: 'pirate1' })).status, 403, 'l’ancien code est invalidé');
+  const rc = await call('/me/recovery', { password: 'astha1' }, la.token); assert.equal(rc.status, 200); assert.equal(rc.recovery.length, 14);
+  assert.equal((await call('/recover', { username: 'astha', code: rc.recovery, password: 'neuf123' })).status, 200, 'le nouveau code fonctionne');
 });

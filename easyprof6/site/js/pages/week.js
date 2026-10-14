@@ -18,13 +18,13 @@ const LATE = [10, 15, 20, 30, 45, 60];
 
 /** Enregistre un cours comme fait : retard éventuel, nombre de leçons, numéro de la première leçon. */
 export function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'lesson', title = '' } = {}) {
-  const brk = ctx.dept.breaks, st = row.st || '07:30', total = Math.round(row.h * 60) - late;
+  const brk = ctx.dept.breaks, P = ctx.dept.period || 60, st = row.st || '07:30', total = Math.round(row.h * 60 - late * 60 / P);
   if (total <= 0) { setToast(t('Le retard dépasse la durée du cours.'), 'bad'); return []; }
   const k = isLessonType(type) ? Math.max(1, lessons) : 1, per = Math.floor(total / k), ids = [];
   const first = isLessonType(type) ? (n != null && n !== '' ? +n : nextNumber(ctx, tid, row.c, type)) : null;
-  const from = late ? endFor(st, late / 60, brk) : st;                                  // heure d'arrivée
+  const from = late ? endFor(st, late / P, brk, P) : st;                                  // heure d'arrivée
   for (let i = 0; i < k; i++) {
-    const a = i === 0 ? from : endFor(from, (per * i) / 60, brk), b = i === k - 1 ? (row.en || endFor(st, row.h, brk)) : endFor(from, (per * (i + 1)) / 60, brk);
+    const a = i === 0 ? from : endFor(from, (per * i) / 60, brk, P), b = i === k - 1 ? (row.en || endFor(st, row.h, brk, P)) : endFor(from, (per * (i + 1)) / 60, brk, P);
     ids.push(saveEntry({ teacherId: tid, classId: row.c, type, date: iso, start: a, end: b, minutes: i === k - 1 ? total - per * (k - 1) : per, n: first != null ? first + i : null, title, note: tid === myId() ? '' : NOTE }).id);
   }
   const cname = (ctx.cls(row.c) || {}).name || row.c;
@@ -50,7 +50,7 @@ function Round({ ctx, tid, iso, row }) {
     record(ctx, tid, iso, row, { late: st === 'late' ? late : 0, lessons: k, n: lesson ? n : null, type, title: title.trim() });
   };
   return html`<${Modal} title=${cname} onClose=${closeModal}>
-    <p class="sub" style="text-transform:capitalize">${fmt(iso, lang, { weekday: true, noYear: true })} · ${row.st ? row.st + ' → ' + (row.en || endFor(row.st, row.h, ctx.dept.breaks)) + ' · ' : ''}${row.h} h</p>
+    <p class="sub" style="text-transform:capitalize">${fmt(iso, lang, { weekday: true, noYear: true })} · ${row.st ? row.st + ' → ' + (row.en || endFor(row.st, row.h, ctx.dept.breaks, ctx.dept.period)) + ' · ' : ''}${row.h} h</p>
     <${Seg} full options=${[{ id: 'present', label: t('Présent') }, { id: 'late', label: t('En retard') }, { id: 'absent', label: t('Absent') }]} value=${st} onChange=${setSt} />
     ${st === 'absent' ? html`<${Field} label=${t('Motif')}><${ReasonSelect} value=${why} onChange=${(e) => setWhy(e.target.value)} /><//>`
       : html`${st === 'late' ? html`<${Field} label=${t('Minutes de retard')}><div class="row" style="flex-wrap:wrap;gap:8px">${LATE.filter(m => m < row.h * 60).map(m => html`<button class=${'btn sm ' + (late === m ? '' : 'soft')} onClick=${() => setLate(m)}>${m}</button>`)}<input class="input" type="number" min="0" inputmode="numeric" style="width:90px" value=${late || ''} onInput=${(e) => setLate(+e.target.value || 0)} /></div><//>` : null}

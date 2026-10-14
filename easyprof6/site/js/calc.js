@@ -246,7 +246,7 @@ export function todaySlots(ctx, tid, iso = ctx.today) {
   for (const s of (t && t.slots) || []) {
     if (+s.d !== dow(iso) || (s.tm && ctx.termOf(iso) && s.tm !== ctx.termOf(iso)) || (s.only && s.only.length && !s.only.includes(iso))) continue;
     const done = mine.some(e => e.classId === s.c), sa = (ctx.absSlot[tid] || {})[iso + '|' + s.c];
-    rows.push({ c: s.c, h: +s.h || 0, st: s.st || '', en: s.en || (s.st ? endFor(s.st, s.h, ctx.dept.breaks) : ''), done, absent: done ? '' : sa || '' });
+    rows.push({ c: s.c, h: +s.h || 0, st: s.st || '', en: s.en || (s.st ? endFor(s.st, s.h, ctx.dept.breaks, ctx.dept.period) : ''), done, absent: done ? '' : sa || '' });
   }
   rows.sort((a, b) => (a.st < b.st ? -1 : a.st > b.st ? 1 : 0));
   return { rows, teaching: true, off: false, reason, entries: mine, hours: Object.values(byClass).reduce((a, b) => a + b, 0) };

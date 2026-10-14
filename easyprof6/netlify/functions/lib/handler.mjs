@@ -66,7 +66,7 @@ function cleanDept(d, id) {
   const cal = Array.isArray(d.calendar) ? d.calendar.slice(0, 200).map(c => ({ f: str(c.f, 10), t: str(c.t, 10), n: str(c.n, 80) })) : [];
   return {
     id, u: cu(d.u), name: str(d.name, 120), discipline: str(d.discipline, 80), abbr: str(d.abbr, 8), system: d.system === 'francophone' ? 'francophone' : 'anglophone',
-    year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), header: hdr, ...(Array.isArray(d.breaks) ? { breaks: d.breaks.slice(0, 6).map(b => ({ f: str(b && b.f, 5), t: str(b && b.t, 5) })).filter(b => /^\d{2}:\d{2}$/.test(b.f) && /^\d{2}:\d{2}$/.test(b.t)) } : {}), setup: Object.fromEntries(Object.entries(d.setup || {}).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])), terms, calendar: cal,
+    year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), period: [40, 45, 50, 55, 60].includes(+d.period) ? +d.period : 60, header: hdr, ...(Array.isArray(d.breaks) ? { breaks: d.breaks.slice(0, 6).map(b => ({ f: str(b && b.f, 5), t: str(b && b.t, 5) })).filter(b => /^\d{2}:\d{2}$/.test(b.f) && /^\d{2}:\d{2}$/.test(b.t)) } : {}), setup: Object.fromEntries(Object.entries(d.setup || {}).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])), terms, calendar: cal,
     dueOut: d.dueOut && typeof d.dueOut === 'object' ? Object.fromEntries(Object.entries(d.dueOut).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])) : {},
   };
 }

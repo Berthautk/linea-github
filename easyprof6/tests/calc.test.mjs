@@ -249,3 +249,12 @@ test('changement de serveur : seules mes propres saisies sont gardées et rattac
   assert.deepEqual(r.data.entries.map(e => [e.id, e.teacherId]), [['1', 'tNEW']]);
   assert.equal(foreignData(saved, { username: 'astha', deptId: 'dOLD', teacherId: 'tA' }), null);
 });
+
+test('périodes de 50 min : 7:30 → 9:10 = 2 h de cours ; la fin se calcule avec la durée de période ; pauses déduites', async () => {
+  const { slotHours, endFor, creditMinutes } = await import('../site/js/dates.js');
+  const B = [{ f: '10:00', t: '10:15' }, { f: '12:45', t: '13:20' }];
+  assert.equal(slotHours('07:30', '09:10', B, 50), 2); assert.equal(slotHours('09:10', '11:05', B, 50), 2, 'une pause au milieu n’est pas comptée');
+  assert.equal(endFor('07:30', 2, B, 50), '09:10'); assert.equal(endFor('09:10', 2, B, 50), '11:05');
+  assert.equal(creditMinutes('07:30', '09:10', B, 50), 120); assert.equal(creditMinutes('07:30', '09:30', B, 60), 120, '60 min : inchangé');
+  assert.equal(slotHours('07:30', '09:30', undefined, 60), 2); assert.equal(endFor('07:30', 2), '09:30');
+});

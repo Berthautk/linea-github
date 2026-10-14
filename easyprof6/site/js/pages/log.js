@@ -20,7 +20,7 @@ export function RecentList({ ctx, tid, limit = 6 }) {
 
 export function Log() {
   const ctx = makeCtx(state.data), tid = myId(), [pre, setPre] = useState(null);
-  const fill = (row, iso) => { setPre({ classId: row.c, date: iso, start: row.st || '07:30', end: row.en || endFor(row.st || '07:30', row.h, ctx.dept.breaks) }); setTimeout(() => { const el = document.getElementById('entry-form'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60); };
+  const fill = (row, iso) => { setPre({ classId: row.c, date: iso, start: row.st || '07:30', end: row.en || endFor(row.st || '07:30', row.h, ctx.dept.breaks, ctx.dept.period) }); setTimeout(() => { const el = document.getElementById('entry-form'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60); };
   const done = (rec, info) => {
     setPre(null);
     const c = (ctx.cls(rec.classId) || {}).name || '';

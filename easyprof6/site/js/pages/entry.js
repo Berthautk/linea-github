@@ -7,7 +7,7 @@ import { TYPES, isLessonType } from '../consts.js';
 import { nextNumber, todaySlots, checkEntry } from '../calc.js';
 import { dayName, fmt } from '../dates.js';
 import { getLang } from '../i18n.js';
-import { timeToMin, minToTime, minutesBetween } from '../dates.js';
+import { timeToMin, minToTime, creditMinutes } from '../dates.js';
 import { saveEntry } from '../actions.js';
 
 const DURATIONS = [[60, '1 h'], [90, '1 h 30'], [120, '2 h'], [150, '2 h 30'], [180, '3 h']];
@@ -28,7 +28,7 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
   const lesson = isLessonType(f.type);
   const auto = lesson ? nextNumber(ctx, tid, f.classId, f.type) : null;
   const n = f.nAuto ? auto : f.n;
-  const mins = minutesBetween(f.start, f.end);
+  const mins = creditMinutes(f.start, f.end, ctx.dept.breaks, ctx.dept.period);
   const setDur = (m) => set('end', minToTime(timeToMin(f.start) + m));
   const classOpts = [...mine, ...ctx.classes.map(c => c.id).filter(id => !mine.includes(id))];
   const cname = (id) => (ctx.cls(id) || {}).name || id;

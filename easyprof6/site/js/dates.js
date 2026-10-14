@@ -41,14 +41,21 @@ export function minutesBetween(a, b) { const x = timeToMin(a), y = timeToMin(b);
 export const DEFAULT_BREAKS = [{ f: '10:30', t: '10:45' }, { f: '12:45', t: '13:15' }];
 const brk = (breaks) => (breaks || DEFAULT_BREAKS).map(b => [timeToMin(b.f), timeToMin(b.t)]).filter(([a, b]) => b > a).sort((x, y) => x[0] - y[0]);
 /** Durée en heures entre deux heures, pauses déduites (arrondie au quart d'heure). */
-export function slotHours(st, en, breaks) {
+export function slotHours(st, en, breaks, period = 60) {
   const a = timeToMin(st), b = timeToMin(en); if (isNaN(a) || isNaN(b) || b <= a) return 0;
   let m = b - a; for (const [f, t] of brk(breaks)) m -= Math.max(0, Math.min(b, t) - Math.max(a, f));
-  return Math.max(0, Math.round(m / 15) / 4);
+  return Math.max(0, Math.round(m / period * 4) / 4);
 }
 /** Heure de fin d'un cours qui commence à `st` et dure `h` heures de cours (pauses non comptées). */
-export function endFor(st, h, breaks) {
-  let cur = timeToMin(st), left = Math.round((+h || 0) * 60); if (isNaN(cur)) return '';
+export function endFor(st, h, breaks, period = 60) {
+  let cur = timeToMin(st), left = Math.round((+h || 0) * period); if (isNaN(cur)) return '';
   for (const [f, t] of brk(breaks)) { if (cur >= t) continue; if (cur >= f) { cur = t; continue; } if (left <= f - cur) return minToTime(cur + left); left -= f - cur; cur = t; }
   return minToTime(cur + left);
+}
+
+/** Durée créditée (en minutes de cours) entre deux heures : pauses déduites, ramenée à l'heure de cours de l'établissement (`period` minutes, 60 par défaut). */
+export function creditMinutes(st, en, breaks, period = 60) {
+  const a = timeToMin(st), b = timeToMin(en); if (isNaN(a) || isNaN(b) || b <= a) return 0;
+  let m = b - a; for (const [f, t] of brk(breaks)) m -= Math.max(0, Math.min(b, t) - Math.max(a, f));
+  return Math.max(0, Math.round(Math.max(0, m) * 60 / (period || 60)));
 }

@@ -222,3 +222,9 @@ test('l’animateur change son propre identifiant : nouveau jeton valable, ancie
   assert.equal((await call('/login', { username: '0903', password: 'secret1' })).status, 401);
   assert.equal((await call('/login', { username: 'kamdem', password: 'secret1' })).status, 200);
 });
+
+test('la durée de l’heure de cours (50 min) est conservée par le serveur', async () => {
+  fresh(); const r = await call('/signup', { username: 'dgcast1', password: 'secret1', name: 'Mr KAMDEM', dept: { ...dept(), period: 50 } });
+  assert.equal(r.status, 200); assert.equal(r.meta.dept.period, 50);
+  const r2 = await call('/signup', { username: 'dgcast2', password: 'secret1', name: 'Mr X', dept: { ...dept(), period: 12 } }); assert.equal(r2.meta.dept.period, 60, 'valeur absurde → 60');
+});

@@ -5,7 +5,7 @@ import { Icon } from '../icons.js';
 import { Field, Chip, Empty, PasswordInput, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
 import { state, myId, setToast, setUI, refreshSession } from '../store.js';
-import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept } from '../actions.js';
+import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept, saveClass, uid } from '../actions.js';
 import { makeCtx } from '../calc.js';
 import { syncNow } from '../sync.js';
 import { WaButtons } from '../whatsapp.js';
@@ -74,6 +74,13 @@ function OnlyDates({ dates, onChange }) {
     <input class="input" type="date" style="width:150px" value=${v} onInput=${(e) => setV(e.target.value)} /><button class="btn soft sm" type="button" disabled=${!v} onClick=${add}>${t('Ajouter la date')}</button></div></div>`;
 }
 
+/** Création rapide d'une classe, sans quitter l'emploi du temps. */
+function QuickClass({ onAdded, many }) {
+  const [name, setName] = useState('');
+  const add = () => { const n = name.trim(); if (!n) return; const id = uid(); saveClass({ id, name: n }); setName(''); onAdded && onAdded(id); setToast(t('Classe « {n} » créée.', { n })); };
+  return html`<div class="row" style="gap:8px;margin:8px 0"><input class="input grow" placeholder=${many ? t('Nom de la classe, par exemple Geo 3G') : t('Autre classe…')} value=${name} onInput=${(e) => setName(e.target.value)} onKeyDown=${(e) => e.key === 'Enter' && add()} /><button class="btn" disabled=${!name.trim()} onClick=${add}><${Icon} n="plus" />${t('Ajouter')}</button></div>`;
+}
+
 function Slots({ tc, ctx }) {
   const lang = getLang(), slots = tc.slots || [];
   const set = (i, patch) => saveTeacher(tc.id, { slots: slots.map((s, j) => (j === i ? { ...s, ...patch } : s)) });
@@ -86,7 +93,8 @@ function Slots({ tc, ctx }) {
   const setTimes = (i, s, patch) => { const n = { ...s, ...patch }, h = n.st && n.en ? slotHours(n.st, n.en, breaks, P) : 0; set(i, { ...patch, ...(h > 0 ? { h } : {}) }); };
   const setDur = (i, s, h) => set(i, { h, ...(s.st ? { en: endFor(s.st, h, breaks, P) } : {}) });
   return html`<div class="card"><div class="card-h"><h3>${t('Emploi du temps de la semaine')}</h3><${Chip} tone="info">${num1(total)} h / ${t('semaine')}<//></div>
-    ${!ctx.classes.length ? html`<div class="notice"><${Icon} n="alert" size="18" /><span class="grow">${t('Créez d’abord les classes de ce département : sans elles, on ne peut pas choisir la classe d’un cours.')}</span><a class="btn sm" href="#/settings/classes">${t('Créer les classes')}</a></div>` : null}
+    ${!ctx.classes.length ? html`<div class="notice"><${Icon} n="alert" size="18" /><span class="grow">${t('Créez d’abord les classes de ce département : sans elles, on ne peut pas choisir la classe d’un cours.')}</span><a class="btn sm" href="#/settings/classes">${t('Créer les classes')}</a></div>
+    <${QuickClass} many=${true} onAdded=${(id) => saveTeacher(tc.id, { slots: slots.map(x => (x.c ? x : { ...x, c: id })) })} />` : null}
     <div class="stack" style="gap:10px">${slots.map((s, i) => html`<details class="card flat slot" open=${slots.length <= 2 || i === state.ui.slotOpen}><summary><b>${dayName(s.d % 7, lang)}</b> · ${(ctx.cls(s.c) || {}).name || '?'} · ${s.st ? s.st + ' → ' + endOf(s) + ' · ' : ''}${s.h} h${s.only && s.only.length ? ' · ' + t('dates précises') : ''}</summary><div class="stack" style="gap:10px;padding-top:10px">
       <div class="slot-row two">
         <select class="input" value=${s.d} onChange=${(e) => set(i, { d: +e.target.value })} aria-label=${t('Jour')}>${DAYS.map(d => html`<option value=${d}>${dayName(d % 7, lang)}</option>`)}</select>
@@ -97,6 +105,7 @@ function Slots({ tc, ctx }) {
         <${Field} label=${t('Durée (h)')}><input class="input" type="number" step="0.5" min="0" max="12" inputmode="decimal" value=${s.h} onChange=${(e) => setDur(i, s, +e.target.value || 0)} /><//></div>
       <${Field} label=${t('Valable')}><select class="input" value=${s.tm || ''} onChange=${(e) => set(i, { tm: e.target.value })}><option value="">${t('toute l’année')}</option>${ctx.terms.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
       <${OnlyDates} dates=${s.only || []} onChange=${(only) => set(i, { only })} /></div></details>`)}</div>
+    ${ctx.classes.length ? html`<details style="margin-top:10px"><summary><b>${t('Une classe manque dans la liste ? La créer ici')}</b></summary><${QuickClass} onAdded=${(id) => saveTeacher(tc.id, { slots: slots.map(x => (x.c ? x : { ...x, c: id })) })} /></details>` : null}
     <div class="row" style="margin-top:12px"><button class="btn soft" disabled=${!ctx.classes.length} onClick=${add}><${Icon} n="plus" />${t('Ajouter un cours')}</button></div>
     <p class="hint" style="margin-top:8px">${t('Un cours de la semaine = un jour, une classe, une heure de début et de fin. Pour une classe vue le lundi puis le mardi, ajoutez deux cours. Pour un cours qui n’a lieu que certains jours précis (par exemple deux samedis), indiquez ces dates : les autres semaines ne comptent pas.')}</p></div>`;
 }

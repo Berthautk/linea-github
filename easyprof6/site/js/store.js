@@ -31,8 +31,15 @@ export function init() {
   const s = ls.get(K.session, null);
   if (s && s.username) { state.session = s; loadUser(s.username); }
 }
-function loadUser(username) {
-  const saved = ls.get(K.data(username), null);
+/** Données gardées sur l'appareil pour un identifiant. Si elles viennent d'un autre serveur (autre département : changement d'hébergeur), on n'en garde que mes propres saisies, rattachées à mon nouveau compte ; le reste revient du serveur. */
+export function foreignData(saved, session) {
+  const d = saved && saved.data, old = d && d.dept && d.dept.id;
+  if (!old || !session || !session.deptId || old === session.deptId) return null;
+  const tc = (d.teachers || []).find(x => x.username === session.username);
+  return { data: { ...emptyData(), entries: tc ? (d.entries || []).filter(e => e.teacherId === tc.id).map(e => ({ ...e, teacherId: session.teacherId })) : [] }, sync: null };
+}
+function loadUser(username, session) {
+  let saved = ls.get(K.data(username), null); saved = foreignData(saved, session || state.session) || saved;
   state.data = saved && saved.data ? { ...emptyData(), ...saved.data } : emptyData();
   state.sync = saved && saved.sync ? { ...emptySync(), ...saved.sync } : emptySync();
   skew = +state.sync.skew || 0;
@@ -50,7 +57,7 @@ export function setLanguage(l) { state.lang = l; setLang(l); ls.set(K.lang, l); 
 export function startSession(session, meta) {
   ls.set(K.session, session);
   update(s => {
-    s.session = session; loadUser(session.username);
+    s.session = session; loadUser(session.username, session);
     if (meta) { s.data = { ...s.data, ...metaToData(meta) }; s.sync.metaRev = meta.rev; }
   });
 }

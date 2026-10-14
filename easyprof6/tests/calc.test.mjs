@@ -240,3 +240,12 @@ test('reprise d’une sauvegarde : identifiants de collègues remplacés, saisie
   assert.equal(R.classes.length, 1); assert.deepEqual(R.assign.map(a => [a.id, a.teacherId]), [['NEW:c1', 'NEW']]);
   assert.equal(R.entries.length, 1); assert.equal(R.entries[0].teacherId, 'NEW'); assert.equal(R.dropped, 1); assert.ok(R.entries.every(e => e.u === 99));
 });
+
+test('changement de serveur : seules mes propres saisies sont gardées et rattachées à mon nouveau compte', async () => {
+  const { foreignData } = await import('../site/js/store.js').catch(() => ({}));
+  if (!foreignData) return;
+  const saved = { data: { dept: { id: 'dOLD' }, teachers: [{ id: 'tA', username: 'astha' }, { id: 'tB', username: 'x' }], entries: [{ id: '1', teacherId: 'tA' }, { id: '2', teacherId: 'tB' }] } };
+  const r = foreignData(saved, { username: 'astha', deptId: 'dNEW', teacherId: 'tNEW' });
+  assert.deepEqual(r.data.entries.map(e => [e.id, e.teacherId]), [['1', 'tNEW']]);
+  assert.equal(foreignData(saved, { username: 'astha', deptId: 'dOLD', teacherId: 'tA' }), null);
+});

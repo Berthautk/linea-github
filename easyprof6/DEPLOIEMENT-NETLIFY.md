@@ -43,12 +43,13 @@ Rien à faire : chaque personne qui crée un compte obtient **son propre départ
 - **Session expirée** : le bandeau orange propose « Se reconnecter » ; vos données ne sont pas perdues.
 - **Mot de passe oublié** : l'animateur utilise son code de récupération ; un collègue demande à son animateur de réinitialiser son mot de passe (Réglages › Équipe).
 
-## Changer de compte Netlify (crédits épuisés) sans perdre les données
+## Changer de compte Netlify en gardant l'adresse `rekort.netlify.app`
 
-Les comptes et les saisies sont stockés chez Netlify (Blobs) : un nouveau site Netlify démarre **vide**. Marche à suivre :
+Un nom Netlify est unique au monde : tant que l'ancien site le porte, le nouveau ne peut pas le prendre. Les comptes et saisies sont chez Netlify (Blobs) : un nouveau site démarre **vide**.
 
-1. **Avant tout**, sur le téléphone de l'animateur (qui a toutes les données synchronisées) : Réglages › Sauvegarde et import › « Exporter » → garder le fichier `rekort-….json` (données réelles : ne jamais le publier).
-2. Sur le nouveau compte Netlify : Add new site › Import from Git › ce dépôt, branche `ccr-3666762a-uo25fr` (voir plus haut). Choisir un nom de site libre (ex. `rekort-gbhs`).
-3. Ouvrir la nouvelle adresse, « Créer mon département », avec l'identifiant de l'animateur. Noter le code de récupération.
-4. Réglages › Sauvegarde et import › Importer : choisir le fichier de l'étape 1. Rekort recrée les comptes des collègues (même identifiant, **nouveau mot de passe**), remet classes, emplois du temps et saisies, puis affiche la liste des accès à envoyer par WhatsApp.
-5. Les collègues utilisent la nouvelle adresse (ouvrir, « Ajouter à l'écran d'accueil »).
+1. **Sauvegarder** (téléphone de l'animateur, qui a tout synchronisé) : Réglages › Sauvegarde et import › Exporter. Garder le fichier `rekort-….json` (données réelles : ne jamais le publier).
+2. **Libérer le nom** sur l'ANCIEN compte : Site configuration › General › Site details › *Change site name* → `rekort-ancien`. (Ne pas supprimer l'ancien site tant que tout n'est pas vérifié.)
+3. Sur le NOUVEAU compte : Add new site › Import from Git › ce dépôt, branche `ccr-3666762a-uo25fr`. Au moment du nom (ou ensuite dans *Change site name*) : `rekort`. Si Netlify dit que le nom est pris, attendre quelques minutes après l'étape 2 et réessayer.
+4. Ouvrir https://rekort.netlify.app → « Créer mon département » avec l'identifiant de l'animateur (noter le code de récupération).
+5. Réglages › Sauvegarde et import › Importer › le fichier › « Reprendre » : comptes des collègues recréés (même identifiant, **nouveau mot de passe**), classes, emplois du temps, saisies. La liste des accès s'affiche avec un bouton WhatsApp par collègue.
+6. Les collègues rouvrent la même adresse et se connectent avec le nouveau mot de passe. Leur téléphone garde l'adresse : ils n'ont rien à réinstaller. Leurs propres saisies non encore synchronisées sont conservées et renvoyées ; le reste revient du serveur.

@@ -2,7 +2,7 @@
 import { html, useState } from '../vendor/preact-htm.js';
 import { t } from '../i18n.js';
 import { Icon } from '../icons.js';
-import { Field, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
+import { Field, Chip, Empty, PasswordInput, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
 import { state, myId, setToast, setUI, refreshSession } from '../store.js';
 import { replaceMeta, saveTeacher, saveAssign, removeAssign, saveDept } from '../actions.js';
@@ -48,7 +48,7 @@ function Transfer({ ctx }) {
   return html`<${Modal} title=${t('Passer la main')} onClose=${closeModal}><form class="stack" onSubmit=${go}>
     <${Field} label=${t('Nouvel animateur pédagogique')}><select class="input" value=${to} onChange=${(e) => setTo(e.target.value)} required><option value="">${t('Choisir un collègue…')}</option>${others.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><//>
     <p class="sub">${t('Vous deviendrez enseignant : vous garderez la saisie de vos cours, mais vous ne pourrez plus modifier le département. Le collègue choisi devient animateur : il crée les comptes, les emplois du temps et contrôle les autres. L’ancien code de récupération ne fonctionne plus : le nouvel animateur doit en créer un (Réglages › Mon profil).')}</p>
-    <${Field} label=${t('Votre mot de passe (pour confirmer)')}><input class="input" type="password" autocomplete="current-password" value=${pw} onInput=${(e) => setPw(e.target.value)} required /><//>
+    <${Field} label=${t('Votre mot de passe (pour confirmer)')}><${PasswordInput} class="input" autocomplete="current-password" value=${pw} onInput=${(e) => setPw(e.target.value)} required /><//>
     ${err ? html`<div class="err" role="alert">${err}</div>` : null}<button class="btn block danger" disabled=${busy || !to}>${t('Transférer le rôle')}</button></form><//>`;
 }
 

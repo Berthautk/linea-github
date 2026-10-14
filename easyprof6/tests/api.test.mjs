@@ -213,3 +213,12 @@ test('sécurité : un enseignant ne peut pas bloquer les modifications de l’an
   const r1 = await call('/recover', { username: 'inconnu', code: 'AAAA-BBBB-CCCC', password: 'neuf123' }), r2 = await call('/recover', { username: 'astha', code: 'AAAA-BBBB-CCCC', password: 'neuf123' }), r3 = await call('/recover', { username: 'kamdem', code: 'AAAA-BBBB-CCCC', password: 'neuf123' });
   assert.deepEqual([r1.status, r2.status], [r3.status, r3.status], 'même réponse pour un inconnu, un enseignant et un animateur');
 });
+
+test('l’animateur change son propre identifiant : nouveau jeton valable, ancien identifiant libéré', async () => {
+  fresh(); const ap = await newDept('0903');
+  const n = await call('/team/rename', { teacherId: ap.session.teacherId, username: 'kamdem' }, ap.token);
+  assert.equal(n.status, 200); assert.equal(n.session.username, 'kamdem'); assert.ok(n.token);
+  assert.equal((await call('/me', null, n.token)).status, 200, 'le nouveau jeton fonctionne');
+  assert.equal((await call('/login', { username: '0903', password: 'secret1' })).status, 401);
+  assert.equal((await call('/login', { username: 'kamdem', password: 'secret1' })).status, 200);
+});

@@ -57,16 +57,15 @@ function todayState(ctx, tc) {
   return ['bad', '⏰ ' + t('en attente')];
 }
 /** Objectifs cumulés depuis la rentrée : la cible (contour) et le réalisé (plein), semaine par semaine, puis à la fin de chaque trimestre. */
-function Goals({ ctx, tid }) {
+function Goals({ ctx, tid, p }) {
   const mode = state.ui.dmode || 'L', cid = state.ui.dclass || '', lang = getLang(), unit = mode === 'L' ? t('leçons') : 'h';
   const opts = ctx.classes.filter(c => ctx.assign.some(a => (!tid || a.teacherId === tid) && a.classId === c.id));
   const all = cumulative(ctx, tid, cid || null), terms = byTerm(ctx, tid, cid || null), past = all.filter(r => !r.future), cur = past[past.length - 1];
-  const span = state.ui.dspan || 'term', tm = ctx.terms.find(x => x.end >= ctx.today) || ctx.terms[ctx.terms.length - 1], rows = span === 'term' && tm ? all.filter(r => r.ps <= tm.end) : all;
+  const span = p.kind === 'year' ? 'year' : 'term', tm = (p.term && ctx.terms.find(x => x.id === p.term)) || ctx.terms.find(x => x.end >= ctx.today) || ctx.terms[ctx.terms.length - 1], rows = span === 'term' && tm ? all.filter(r => r.ps <= tm.end) : all;
   const g = (r) => (mode === 'L' ? r.goalL : r.goalH), d = (r) => (mode === 'L' ? r.doneL : r.doneH);
   if (!ctx.assign.some(a => !tid || a.teacherId === tid) && mode === 'L') return null;
   const ratio = cur && g(cur) ? Math.round(d(cur) / g(cur) * 100) : 0, tone = !cur || !g(cur) ? '' : ratio >= 90 ? 'ok' : ratio >= 70 ? 'warn' : 'bad';
-  return html`<div class="card"><div class="card-h"><h3>${t('Objectifs depuis la rentrée')}</h3><${Seg} options=${[{ id: 'L', label: t('Leçons') }, { id: 'H', label: t('Heures') }]} value=${mode} onChange=${(v) => setUI({ dmode: v })} /></div>
-    <${Seg} full options=${[{ id: 'term', label: t('Jusqu’à la fin du trimestre') }, { id: 'year', label: t('Toute l’année') }]} value=${span} onChange=${(v) => setUI({ dspan: v })} />
+  return html`<div class="card"><div class="card-h"><h3>${t('Objectifs depuis la rentrée')}</h3></div>
     ${opts.length > 1 ? html`<${Field} label=${t('Classe')}><select class="input" value=${cid} onChange=${(e) => setUI({ dclass: e.target.value })}><option value="">${t('Toutes les classes')}</option>${opts.map(c => html`<option value=${c.id}>${c.name}</option>`)}</select><//>` : null}
     ${cur ? html`<div class="row" style="flex-wrap:wrap;gap:8px;margin:10px 0 4px"><${Chip} tone=${tone} style="white-space:normal;line-height:1.35">${t('Après {k} semaine(s) : objectif {g} {u} · fait {d} ({p} %)', { k: cur.k, g: num1(g(cur)), u: unit, d: num1(d(cur)), p: ratio })}<//></div>` : null}
     <${ProgressChart} rows=${rows} mode=${mode} />
@@ -137,6 +136,7 @@ export function Home() {
   const p = state.ui.period && state.ui.period.ps ? state.ui.period : periodOf(ctx, (state.ui.period && state.ui.period.kind) || 'term');
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, minISO(ctx.today, ctx.ye));
   const who = tid ? (ctx.teacher(tid) || {}).name : t('Département {d}', { d: state.data.dept.discipline || '' });
+  const mode = state.ui.dmode || 'L', denL = p.kind === 'year' && S.planYear.lessons ? S.planYear.lessons : S.lessonsFull;
   const den = p.kind === 'year' && S.planYear.hours ? S.planYear.hours : S.dueFull;
   const noTT = noTimetable(ctx, tid), unreliable = noTT.length > 0 && S.hours > 0;
   const st = unreliable ? 'none' : overall(S);
@@ -148,14 +148,15 @@ export function Home() {
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
     <${ScopeBar} ctx=${ctx} />
-    <div class="card"><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
+    <div class="card stack" style="gap:10px"><${Seg} full options=${[{ id: 'L', label: t('Leçons') }, { id: 'H', label: t('Heures') }]} value=${mode} onChange=${(v) => setUI({ dmode: v })} /><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
     <div class="hero stack" style="gap:10px"><div><p class="sub">${fmt(ctx.today, lang, { weekday: true })}</p><h1>${t('Bonjour')}${me() && firstName(me().name) ? ', ' + firstName(me().name) : ''} 👋</h1><p class="sub">${who} · ${state.data.dept.name}</p></div>
       ${unreliable ? html`<div><div style="font-size:44px;font-weight:800;line-height:1">${num1(S.hours)} h</div><div class="sub">${t('heures faites')} · ${periodLabel(p, ctx)}</div></div>
         ${ap ? html`<div class="row" style="gap:8px;flex-wrap:wrap"><a class="btn sm" href="#/settings/team">${t('Saisir les emplois du temps')}</a><a class="btn soft sm" href="#/settings/data">${t('J’ai un fichier : l’importer')}</a></div>` : null}
         <a class="notice" href=${ap ? '#/settings/team' : '#/home'}><${Icon} n="alert" size="18" /><span>${ap ? t('Emploi du temps manquant : {n}. Sans lui, les heures dues et les pourcentages ne peuvent pas être calculés.', { n: noTT.map(x => x.short || x.name).join(', ') }) : t('Votre emploi du temps n’est pas encore renseigné : demandez à votre animateur pédagogique de l’ajouter.')}</span></a>`
-      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${den ? num1(pct(S.hours, den)) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('des heures prévues sont faites')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
-      <${Bar} value=${den ? pct(S.hours, den) : 0} /><div class="sub">${t('{h} h faites sur {f} h prévues sur cette période', { h: num1(S.hours), f: num1(den) })}</div>
-      ${S.due ? html`<div class="sub" style="color:#fff"><b>${t('Rythme à ce jour : {r} %', { r: num1(S.rate) })}</b> · ${t('{h} h faites sur {d} h qui devaient l’être déjà (minimum {m} %)', { h: num1(S.hours), d: num1(S.due), m: THRESHOLDS.hours })}</div>` : null}`
+      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${mode === 'L' ? (denL ? num1(pct(S.lessonsDone, denL)) + ' %' : S.lessonsDone) : den ? num1(pct(S.hours, den)) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${mode === 'L' ? t('des leçons prévues sont faites') : t('des heures prévues sont faites')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
+      <${Bar} value=${mode === 'L' ? (denL ? pct(S.lessonsDone, denL) : 0) : den ? pct(S.hours, den) : 0} /><div class="sub">${mode === 'L' ? t('{h} leçons faites sur {f} prévues sur cette période', { h: S.lessonsDone, f: num1(denL) }) : t('{h} h faites sur {f} h prévues sur cette période', { h: num1(S.hours), f: num1(den) })}</div>
+      ${mode === 'L' ? (S.lessonsPlanned ? html`<div class="sub" style="color:#fff"><b>${t('Rythme à ce jour : {r} %', { r: num1(S.rateL) })}</b> · ${t('{h} leçons faites sur {d} qui devaient l’être déjà (minimum {m} %)', { h: S.lessonsDone, d: num1(S.lessonsPlanned), m: THRESHOLDS.lessons })}</div>` : null)
+        : S.due ? html`<div class="sub" style="color:#fff"><b>${t('Rythme à ce jour : {r} %', { r: num1(S.rate) })}</b> · ${t('{h} h faites sur {d} h qui devaient l’être déjà (minimum {m} %)', { h: num1(S.hours), d: num1(S.due), m: THRESHOLDS.hours })}</div>` : null}`
         : html`<p style="font-size:15px;max-width:34em">${ap && !tid ? t('Bienvenue dans votre département. Suivez les étapes ci-dessous : dès que les emplois du temps et les premières saisies seront là, vos statistiques apparaîtront ici.') : t('Vos statistiques apparaîtront ici dès que votre emploi du temps sera renseigné et que vous aurez saisi vos premiers cours.')}</p>`}</div>
     ${ap && empty ? html`<${Setup} ctx=${ctx} />` : ap && scope === 'dept' ? html`<${Setup} ctx=${ctx} />` : null}
     ${ap && ctx.teachers.length > 1 && dow(ctx.today) === 5 ? html`<${FridayRound} ctx=${ctx} />` : null}
@@ -168,7 +169,7 @@ export function Home() {
       <div class="kpi"><span class="l">${tid ? t('Mon état') : t('État du département')}</span><span class="v" style="font-size:22px;padding-top:4px">${statusChip(st)}</span><span class="s">${tid ? (worst ? t('Le plus en retard : {c} ({n} leçon(s))', { c: worst.name, n: num1(worst.lag) }) : t('Aucun retard marquant')) : (lateTeachers ? t('{n} collègue(s) en retard', { n: lateTeachers }) : t('Aucun collègue en retard'))}</span></div>
     </div>
     ${data.length > 1 && data.some(d => d.due || d.done) ? html`<div class="card"><div class="card-h"><h3>${unitFor(p) === 'day' ? t('Heures par jour') : unitFor(p) === 'month' ? t('Heures par mois') : t('Heures par semaine')}</h3><div class="legend"><span><i style="background:var(--sand);border:1.5px solid var(--line)"></i>${t('dues')}</span><span><i style="background:var(--teal)"></i>${t('faites')}</span></div></div><${BarChart} data=${data} unit=${unitFor(p)} /></div>` : null}
-    <${Goals} ctx=${ctx} tid=${tid} />
+    <${Goals} ctx=${ctx} tid=${tid} p=${p} />
     ${tid ? html`<${Classes} rows=${rows} ctx=${ctx} tid=${tid} />` : html`${ap && ctx.teachers.length > 1 ? html`<a class="card row" href="#/week" style="text-decoration:none;color:inherit;gap:14px"><div class="dot ok" style="font-size:20px">✅</div><div class="grow"><b>${t('Ronde en classe')}</b><p class="sub">${t('Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.')}</p></div><${Icon} n="right" size="18" /></a>` : null}<${Activity} ctx=${ctx} />${ap ? html`<${Inactive} ctx=${ctx} />` : null}<${Team} ctx=${ctx} p=${p} /><${DeptClasses} ctx=${ctx} />`}
   </div>`;
 }

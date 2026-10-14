@@ -69,3 +69,10 @@ export function ReasonSelect({ value, onChange, only }) {
   const a = REASONS.filter(isOut), b = REASONS.filter(r => !isOut(r));
   return html`<select class="input" value=${value} onChange=${onChange}>${only === 'out' ? a.map(opt) : only === 'absent' ? b.map(opt) : html`<optgroup label=${t('Pas la faute de l’enseignant (heures retirées des heures dues)')}>${a.map(opt)}</optgroup><optgroup label=${t('Absence de l’enseignant (heures non faites)')}>${b.map(opt)}</optgroup>`}</select>`;
 }
+
+/** Champ de mot de passe avec un œil pour voir ou cacher ce qu'on tape. */
+export function PasswordInput(props) {
+  const [show, setShow] = useState(false);
+  return html`<div style="position:relative"><input ...${props} type=${show ? 'text' : 'password'} style="padding-right:48px" />
+    <button type="button" class="icon-btn" style="position:absolute;right:4px;top:50%;transform:translateY(-50%)" aria-label=${show ? t('Cacher le mot de passe') : t('Voir le mot de passe')} onClick=${() => setShow(!show)}><${Icon} n=${show ? 'eyeoff' : 'eye'} /></button></div>`;
+}

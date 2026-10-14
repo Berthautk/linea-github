@@ -2,9 +2,9 @@
 import { html, useState } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
-import { Field, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
+import { Field, PasswordInput, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
-import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken } from '../store.js';
+import { state, update, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
 import { saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
 import { makeCtx, catchUp } from '../calc.js';
 import * as D from '../dates.js';
@@ -39,8 +39,19 @@ function RecoveryCard() {
   const [pw, setPw] = useState(''), [err, setErr] = useState('');
   const go = async (e) => { e.preventDefault(); setErr(''); try { const r = await api('/me/recovery', { password: pw }, state.session.token); setPw(''); update(s => { s.recovery = r.recovery; }); } catch (x) { setErr(x.message); } };
   return html`<form class="card stack" onSubmit=${go}><h3>${t('Code de récupération')}</h3><p class="sub">${t('Il permet de retrouver votre accès si vous oubliez votre mot de passe. Il s’affiche une seule fois : notez-le. Créer un nouveau code annule l’ancien.')}</p>
-    <${Field} label=${t('Votre mot de passe')}><input class="input" type="password" autocomplete="current-password" value=${pw} onInput=${(e) => setPw(e.target.value)} required /><//>
+    <${Field} label=${t('Votre mot de passe')}><${PasswordInput} class="input" autocomplete="current-password" value=${pw} onInput=${(e) => setPw(e.target.value)} required /><//>
     ${err ? html`<div class="err">${err}</div>` : null}<button class="btn soft" style="align-self:flex-start">${t('Créer un nouveau code')}</button></form>`;
+}
+
+function OwnUsername() {
+  const [v, setV] = useState(state.session.username), [busy, setBusy] = useState(false);
+  const save = async () => {
+    const u = v.trim().toLowerCase(); if (!u || u === state.session.username) return setV(state.session.username);
+    setBusy(true);
+    try { const r = await api('/team/rename', { teacherId: myId(), username: u }, state.session.token); renameSelf(r.username, r.token); replaceMeta(r.meta); setToast(t('Identifiant modifié.')); }
+    catch (x) { setToast(x.message, 'bad'); setV(state.session.username); } setBusy(false);
+  };
+  return html`<${Field} label=${t('Identifiant')} hint=${t('Ce que vous tapez pour vous connecter (3 à 24 caractères). Après modification, utilisez le nouveau.')}><input class="input" value=${v} disabled=${busy} autocapitalize="none" autocomplete="off" onInput=${(e) => setV(e.target.value)} onChange=${save} /><//>`;
 }
 
 function Profile() {
@@ -50,10 +61,11 @@ function Profile() {
   return html`<div class="page"><${Back} title=${t('Mon profil')} />
     <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><input class="input" value=${m ? m.name : ''} onChange=${(e) => e.target.value.trim() && saveTeacher(myId(), { name: e.target.value.trim() })} /><//>
       <${Field} label=${t('Téléphone WhatsApp')}><input class="input" inputmode="tel" value=${m ? m.phone || '' : ''} onChange=${(e) => saveTeacher(myId(), { phone: e.target.value.trim() })} /><//></div>
-      <div class="row"><span class="lab">${t('Identifiant')}</span><b>${state.session.username}</b><${Chip} tone="info">${isAP() ? t('Animateur pédagogique') : t('Enseignant')}<//></div>
+      ${isAP() ? html`<${OwnUsername} />` : html`<div class="row"><span class="lab">${t('Identifiant')}</span><b>${state.session.username}</b></div>`}
+      <div class="row"><${Chip} tone="info">${isAP() ? t('Animateur pédagogique') : t('Enseignant')}<//></div>
       <div class="row"><span class="lab">${t('Langue')}</span><${Seg} options=${[{ id: 'fr', label: 'Français' }, { id: 'en', label: 'English' }]} value=${state.lang} onChange=${setLanguage} /></div></div>
-    <form class="card stack" onSubmit=${change}><h3>${t('Changer mon mot de passe')}</h3><div class="grid2"><${Field} label=${t('Mot de passe actuel')}><input class="input" type="password" autocomplete="current-password" value=${pw.old} onInput=${(e) => setPw({ ...pw, old: e.target.value })} required /><//>
-      <${Field} label=${t('Nouveau mot de passe')} hint=${t('Au moins 6 caractères.')}><input class="input" type="password" autocomplete="new-password" value=${pw.password} onInput=${(e) => setPw({ ...pw, password: e.target.value })} required /><//></div>
+    <form class="card stack" onSubmit=${change}><h3>${t('Changer mon mot de passe')}</h3><div class="grid2"><${Field} label=${t('Mot de passe actuel')}><${PasswordInput} class="input" autocomplete="current-password" value=${pw.old} onInput=${(e) => setPw({ ...pw, old: e.target.value })} required /><//>
+      <${Field} label=${t('Nouveau mot de passe')} hint=${t('Au moins 6 caractères.')}><${PasswordInput} class="input" autocomplete="new-password" value=${pw.password} onInput=${(e) => setPw({ ...pw, password: e.target.value })} required /><//></div>
       ${msg && msg.ok ? html`<div class="ok">${msg.ok}</div>` : null}${msg && msg.err ? html`<div class="err">${msg.err}</div>` : null}<button class="btn" style="align-self:flex-start">${t('Changer le mot de passe')}</button></form>
     ${isAP() ? html`<${RecoveryCard} />` : null}
     <div class="card stack"><h3>${t('Synchronisation')}</h3><p class="sub">${state.sync.last ? t('Dernière synchronisation : {h} (il y a {m} min).', { h: new Date(state.sync.last).toLocaleTimeString(state.lang === 'en' ? 'en-GB' : 'fr-FR', { hour: '2-digit', minute: '2-digit' }), m: Math.max(0, Math.round((Date.now() - state.sync.last) / 60000)) }) : t('Pas encore synchronisé sur cet appareil.')} ${t('Vos saisies partent toutes seules dès qu’il y a du réseau ; celles de vos collègues arrivent à l’ouverture de l’application, puis toutes les 3 minutes.')}</p>

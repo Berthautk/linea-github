@@ -138,7 +138,7 @@ export function classProgress(ctx, tid, asOf = ctx.today) {
 
 /* ---------- statistiques d'une période ---------- */
 function emptyStats(ps, pe, cut) {
-  return { ps, pe, cut, dueFull: 0, due: 0, excused: 0, absent: 0, closed: 0, hours: 0, regul: 0, lessonsDone: 0, regulL: 0, theory: 0, practical: 0, lessonsPlanned: 0, planned: false, revisionH: 0, orientationH: 0, assessH: 0,
+  return { ps, pe, cut, dueFull: 0, due: 0, excused: 0, absent: 0, closed: 0, hours: 0, regul: 0, lessonsDone: 0, regulL: 0, theory: 0, practical: 0, lessonsPlanned: 0, lessonsFull: 0, planned: false, revisionH: 0, orientationH: 0, assessH: 0,
     digital: 0, evaluated: 0, passed: 0, entries: 0, planYear: { hours: 0, lessons: 0 }, declared: [] };
 }
 function teacherStats(ctx, tid, ps, pe) {
@@ -152,14 +152,14 @@ function teacherStats(ctx, tid, ps, pe) {
   S.regulL = regulL; S.lessonsDone = done.lessons.size + regulL; S.theory = done.theory.size; S.practical = done.practical.size;
   S.revisionH = done.revisionH; S.orientationH = done.orientationH; S.assessH = done.assessH; S.digital = done.digital; S.evaluated = done.evaluated; S.passed = done.passed;
   const mine = ctx.assign.filter(a => a.teacherId === tid);
-  if (mine.length) { S.planned = true; for (const a of mine) S.lessonsPlanned += expectedLessons(ctx, a, ps, cut, now); }
-  else S.lessonsPlanned = now.due / ctx.lh;
+  if (mine.length) { S.planned = true; for (const a of mine) { S.lessonsPlanned += expectedLessons(ctx, a, ps, cut, now); S.lessonsFull += expectedLessons(ctx, a, ps, pe, full); } }
+  else { S.lessonsPlanned = now.due / ctx.lh; S.lessonsFull = full.due / ctx.lh; }
   const yd = yearDue(ctx, tid);
   S.planYear.hours = mine.reduce((s, a) => s + (+a.hours || 0), 0) || yd.due;
   S.planYear.lessons = mine.reduce((s, a) => s + (+a.th || 0) + (+a.pr || 0), 0) || yd.due / ctx.lh;
   return S;
 }
-const SUM = ['dueFull', 'due', 'excused', 'absent', 'closed', 'hours', 'regul', 'regulL', 'lessonsDone', 'theory', 'practical', 'lessonsPlanned', 'revisionH', 'orientationH', 'assessH', 'digital', 'evaluated', 'passed', 'entries'];
+const SUM = ['dueFull', 'due', 'excused', 'absent', 'closed', 'hours', 'regul', 'regulL', 'lessonsDone', 'theory', 'practical', 'lessonsPlanned', 'lessonsFull', 'revisionH', 'orientationH', 'assessH', 'digital', 'evaluated', 'passed', 'entries'];
 
 /** Statistiques sur [ps,pe] pour un enseignant (tid) ou pour tout le département (tid = null). */
 export function stats(ctx, tid, ps, pe) {
@@ -173,7 +173,7 @@ export function stats(ctx, tid, ps, pe) {
       S.planned = S.planned || x.planned; S.planYear.hours += x.planYear.hours; S.planYear.lessons += x.planYear.lessons; S.declared = S.declared.concat(x.declared.map(d => ({ ...d, teacherId: t.id })));
     }
   }
-  for (const k of ['hours', 'due', 'dueFull', 'lessonsPlanned', 'lessonsDone', 'excused', 'absent', 'closed', 'revisionH', 'orientationH', 'assessH', 'regul', 'regulL']) S[k] = r1(S[k]);
+  for (const k of ['hours', 'due', 'dueFull', 'lessonsPlanned', 'lessonsFull', 'lessonsDone', 'excused', 'absent', 'closed', 'revisionH', 'orientationH', 'assessH', 'regul', 'regulL']) S[k] = r1(S[k]);
   S.gap = r1(S.hours - S.due); S.rate = pct(S.hours, S.due);
   S.lessonGap = r1(S.lessonsDone - S.lessonsPlanned); S.rateL = pct(S.lessonsDone, S.lessonsPlanned);
   S.rateYH = pct(S.hours, S.planYear.hours); S.rateYL = pct(S.lessonsDone, S.planYear.lessons);

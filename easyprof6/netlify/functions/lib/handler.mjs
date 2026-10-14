@@ -259,9 +259,11 @@ async function teamRename(ctx, b) {
   if (username === t.username) return json(200, { ok: true, username, meta });
   if (await users().get('u:' + username)) return fail(409, 'username_taken', 'Cet identifiant est déjà utilisé.');
   const u = await users().get('u:' + t.username); if (!u) return fail(404, 'not_found', 'Compte introuvable.');
-  await users().set('u:' + username, { ...u, username, ver: (u.ver || 0) + 1 }); await users().delete('u:' + t.username);
+  const nu = { ...u, username, ver: (u.ver || 0) + 1 };
+  await users().set('u:' + username, nu); await users().delete('u:' + t.username);
   meta.teachers = meta.teachers.map(x => x.id === t.id ? { ...x, username, u: now() } : x); meta.rev = (meta.rev || 0) + 1;
   await saveMeta(ctx.d, meta);
+  if (t.id === ctx.user.teacherId) return json(200, { ok: true, username, meta, token: await tokenFor(nu), session: session(nu) });
   return json(200, { ok: true, username, meta });
 }
 async function teamRemove(ctx, b) {

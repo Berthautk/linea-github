@@ -2,7 +2,7 @@
 import { html, useState } from './vendor/preact-htm.js';
 import { t, getLang } from './i18n.js';
 import { api } from './api.js';
-import { Field, Seg, copyText, Modal } from './ui.js';
+import { Field, Seg, copyText, Modal, PasswordInput } from './ui.js';
 import { Icon } from './icons.js';
 import { startSession, setLanguage, state, update, setToast } from './store.js';
 import { newDept } from './defaults.js';
@@ -38,7 +38,7 @@ function Login({ go }) {
   return html`<form class="card stack" onSubmit=${submit}>
     <h2>${t('Se connecter')}</h2>
     <${Field} label=${t('Identifiant')}><input class="input" autocomplete="username" autocapitalize="none" autocorrect="off" value=${u} onInput=${(e) => setU(e.target.value)} required /><//>
-    <${Field} label=${t('Mot de passe')}><input class="input" type="password" autocomplete="current-password" value=${p} onInput=${(e) => setP(e.target.value)} required /><//>
+    <${Field} label=${t('Mot de passe')}><${PasswordInput} class="input" autocomplete="current-password" value=${p} onInput=${(e) => setP(e.target.value)} required /><//>
     ${err ? html`<div class="err" role="alert">${err}</div>` : null}
     <button class="btn block" disabled=${busy}>${busy ? t('Connexion…') : t('Se connecter')}</button>
     <p class="hint">${t('Vous avez reçu un identifiant et un mot de passe de votre animateur pédagogique ? Saisissez-les ici.')}</p>
@@ -76,7 +76,7 @@ function Signup({ go }) {
       <p class="sub">${t('Vous serez l’animateur pédagogique : vous gérez le département, vos collègues et vos propres cours.')}</p>
       <${Field} label=${t('Votre nom complet')}><input class="input" autocomplete="name" value=${f.name} onInput=${(e) => onName(e.target.value)} placeholder=${t('Mr. KAMDEM Emmanuel')} required /><//>
       <${Field} label=${t('Identifiant de connexion')} hint=${t('Sans espace. Vous l’utiliserez pour vous reconnecter.')}><input class="input" autocapitalize="none" autocorrect="off" value=${f.username} onInput=${(e) => setF(o => ({ ...o, username: e.target.value.toLowerCase(), touched: true }))} required /><//>
-      <${Field} label=${t('Mot de passe')} hint=${t('Au moins 6 caractères.')}><input class="input" type="password" autocomplete="new-password" value=${f.password} onInput=${(e) => set('password', e.target.value)} required /><//>
+      <${Field} label=${t('Mot de passe')} hint=${t('Au moins 6 caractères.')}><${PasswordInput} class="input" autocomplete="new-password" value=${f.password} onInput=${(e) => set('password', e.target.value)} required /><//>
       <${Field} label=${t('Téléphone WhatsApp (facultatif)')}><input class="input" inputmode="tel" value=${f.phone} onInput=${(e) => set('phone', e.target.value)} placeholder="+237…" /><//>` : html`
       <${Field} label=${t('Établissement')}><input class="input" value=${f.school} onInput=${(e) => set('school', e.target.value)} placeholder=${t('Ex. GBHS GAROUA')} required /><//>
       <${Field} label=${t('Discipline du département')}><input class="input" list="disc" value=${f.discipline} onInput=${(e) => onDisc(e.target.value)} placeholder=${t('Ex. Géographie')} required /><datalist id="disc">${DISCIPLINES.map(d => html`<option value=${d[0]} />`)}</datalist><//>
@@ -102,7 +102,7 @@ function Recover({ go }) {
     <p class="sub">${t('Réservé à l’animateur pédagogique : utilisez le code de récupération reçu à l’inscription. Un collègue doit demander à son animateur de réinitialiser son mot de passe.')}</p>
     <${Field} label=${t('Identifiant')}><input class="input" autocapitalize="none" value=${f.username} onInput=${(e) => setF({ ...f, username: e.target.value })} required /><//>
     <${Field} label=${t('Code de récupération')}><input class="input" autocapitalize="characters" value=${f.code} onInput=${(e) => setF({ ...f, code: e.target.value })} placeholder="XXXX-XXXX-XXXX" required /><//>
-    <${Field} label=${t('Nouveau mot de passe')}><input class="input" type="password" autocomplete="new-password" value=${f.password} onInput=${(e) => setF({ ...f, password: e.target.value })} required /><//>
+    <${Field} label=${t('Nouveau mot de passe')}><${PasswordInput} class="input" autocomplete="new-password" value=${f.password} onInput=${(e) => setF({ ...f, password: e.target.value })} required /><//>
     ${err ? html`<div class="err" role="alert">${err}</div>` : null}
     <button class="btn block" disabled=${busy}>${t('Changer le mot de passe')}</button><button type="button" class="btn soft sm" style="align-self:center" onClick=${() => go('login')}>${t('Retour')}</button></form>`;
 }

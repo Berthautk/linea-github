@@ -40,6 +40,11 @@ function loadUser(username) {
 }
 /** Garde la session (jeton compris) sur l'appareil : un jeton renouvelé ou remplacé après un changement de mot de passe doit survivre à un rechargement. */
 export const persistSession = () => { if (state.session) ls.set(K.session, state.session); };
+/** Mon identifiant a changé : le serveur renvoie un nouveau jeton ; on déplace aussi la copie locale des données. */
+export function renameSelf(username, token) {
+  if (!state.session) return; const old = state.session.username;
+  update(s => { s.session = { ...s.session, username, token }; }); persistSession(); flush(); if (old !== username) ls.del(K.data(old));
+}
 export function setToken(token) { if (!state.session || !token) return; update(s => { s.session = { ...s.session, token }; }); persistSession(); }
 export function setLanguage(l) { state.lang = l; setLang(l); ls.set(K.lang, l); update(() => { }); }
 export function startSession(session, meta) {

@@ -137,6 +137,7 @@ export function Home() {
   const p = state.ui.period && state.ui.period.ps ? state.ui.period : periodOf(ctx, (state.ui.period && state.ui.period.kind) || 'term');
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, minISO(ctx.today, ctx.ye));
   const who = tid ? (ctx.teacher(tid) || {}).name : t('Département {d}', { d: state.data.dept.discipline || '' });
+  const den = p.kind === 'year' && S.planYear.hours ? S.planYear.hours : S.dueFull;
   const noTT = noTimetable(ctx, tid), unreliable = noTT.length > 0 && S.hours > 0;
   const st = unreliable ? 'none' : overall(S);
   const data = series(ctx, tid, p.ps, p.pe, unitFor(p));
@@ -147,18 +148,18 @@ export function Home() {
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
     <${ScopeBar} ctx=${ctx} />
+    <div class="card"><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
     <div class="hero stack" style="gap:10px"><div><p class="sub">${fmt(ctx.today, lang, { weekday: true })}</p><h1>${t('Bonjour')}${me() && firstName(me().name) ? ', ' + firstName(me().name) : ''} 👋</h1><p class="sub">${who} · ${state.data.dept.name}</p></div>
       ${unreliable ? html`<div><div style="font-size:44px;font-weight:800;line-height:1">${num1(S.hours)} h</div><div class="sub">${t('heures faites')} · ${periodLabel(p, ctx)}</div></div>
         ${ap ? html`<div class="row" style="gap:8px;flex-wrap:wrap"><a class="btn sm" href="#/settings/team">${t('Saisir les emplois du temps')}</a><a class="btn soft sm" href="#/settings/data">${t('J’ai un fichier : l’importer')}</a></div>` : null}
         <a class="notice" href=${ap ? '#/settings/team' : '#/home'}><${Icon} n="alert" size="18" /><span>${ap ? t('Emploi du temps manquant : {n}. Sans lui, les heures dues et les pourcentages ne peuvent pas être calculés.', { n: noTT.map(x => x.short || x.name).join(', ') }) : t('Votre emploi du temps n’est pas encore renseigné : demandez à votre animateur pédagogique de l’ajouter.')}</span></a>`
-      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${S.due ? num1(S.rate) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('heures faites ÷ heures dues à ce jour')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
-      <${Bar} value=${S.rate} /><div class="sub">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })} (${t('rythme : 80 % minimum')})</div>
-        ${S.dueFull > S.due ? html`<div class="sub">${t('Sur toute la période : {h} h faites sur {f} h prévues = {r} %', { h: num1(S.hours), f: num1(S.dueFull), r: num1(pct(S.hours, S.dueFull)) })}</div>` : null}`
+      : S.due || S.hours ? html`<div class="row" style="align-items:flex-end;gap:18px"><div><div style="font-size:44px;font-weight:800;line-height:1">${den ? num1(pct(S.hours, den)) + ' %' : num1(S.hours) + ' h'}</div><div class="sub">${t('des heures prévues sont faites')} · ${periodLabel(p, ctx)}</div></div><div class="grow"></div>${st !== 'none' ? statusChip(st) : null}</div>
+      <${Bar} value=${den ? pct(S.hours, den) : 0} /><div class="sub">${t('{h} h faites sur {f} h prévues sur cette période', { h: num1(S.hours), f: num1(den) })}</div>
+      ${S.due ? html`<div class="sub" style="color:#fff"><b>${t('Rythme à ce jour : {r} %', { r: num1(S.rate) })}</b> · ${t('{h} h faites sur {d} h qui devaient l’être déjà (minimum {m} %)', { h: num1(S.hours), d: num1(S.due), m: THRESHOLDS.hours })}</div>` : null}`
         : html`<p style="font-size:15px;max-width:34em">${ap && !tid ? t('Bienvenue dans votre département. Suivez les étapes ci-dessous : dès que les emplois du temps et les premières saisies seront là, vos statistiques apparaîtront ici.') : t('Vos statistiques apparaîtront ici dès que votre emploi du temps sera renseigné et que vous aurez saisi vos premiers cours.')}</p>`}</div>
     ${ap && empty ? html`<${Setup} ctx=${ctx} />` : ap && scope === 'dept' ? html`<${Setup} ctx=${ctx} />` : null}
     ${ap && ctx.teachers.length > 1 && dow(ctx.today) === 5 ? html`<${FridayRound} ctx=${ctx} />` : null}
     ${tid && tid === myId() ? html`<${TodayCard} ctx=${ctx} tid=${tid} />` : null}
-    <div class="card"><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
     <${Alerts} S=${unreliable ? { ...S, alerts: S.alerts.filter(a => a.kind !== 'hours') } : S} />
     <div class="kpis">
       <div class=${'kpi ' + (!unreliable && S.due && S.rate < THRESHOLDS.hours ? 'bad' : '')}><span class="l">${t('Heures faites')}</span><span class="v">${num1(S.hours)}<small>${unreliable ? ' h' : ' / ' + num1(S.due) + ' h'}</small></span><${Bar} value=${unreliable ? 0 : S.rate} tone=${!unreliable && S.due && S.rate < THRESHOLDS.hours ? 'bad' : ''} /><span class="s">${S.gap >= 0 ? t('+{n} h par rapport aux heures dues', { n: num1(S.gap) }) : t('{n} h par rapport aux heures dues', { n: num1(S.gap) })}</span></div>

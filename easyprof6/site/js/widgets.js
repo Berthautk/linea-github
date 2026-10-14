@@ -27,7 +27,8 @@ export function PeriodBar({ ctx, period, onChange, compact }) {
     <${Seg} options=${opts} value=${period.kind} onChange=${pick} />
     ${period.kind === 'custom'
       ? html`<div class="row"><${Field} label=${t('Du')} class="grow"><input class="input" type="date" value=${period.ps} onInput=${(e) => e.target.value && onChange({ ...period, ps: e.target.value })} /><//><${Field} label=${t('Au')} class="grow"><input class="input" type="date" value=${period.pe} min=${period.ps} onInput=${(e) => e.target.value && onChange({ ...period, pe: e.target.value })} /><//></div>`
-      : html`<div class="row" style="flex-wrap:nowrap"><button class="icon-btn" onClick=${() => move(-1)} disabled=${period.kind === 'year'} aria-label=${t('Précédent')}><${Icon} n="left" /></button><b class="grow" style="text-align:center;font-size:${compact ? 14 : 15}px">${periodLabel(period, ctx)}</b><button class="icon-btn" onClick=${() => move(1)} disabled=${period.kind === 'year'} aria-label=${t('Suivant')}><${Icon} n="right" /></button></div>`}
+      : period.kind === 'year' ? html`<div style="text-align:center"><b style="font-size:${compact ? 14 : 15}px">${periodLabel(period, ctx)}</b></div>`
+      : html`<div class="row" style="flex-wrap:nowrap"><button class="icon-btn" onClick=${() => move(-1)} aria-label=${t('Précédent')}><${Icon} n="left" /></button><b class="grow" style="text-align:center;font-size:${compact ? 14 : 15}px">${periodLabel(period, ctx)}</b><button class="icon-btn" onClick=${() => move(1)} aria-label=${t('Suivant')}><${Icon} n="right" /></button></div>`}
   </div>`;
 }
 

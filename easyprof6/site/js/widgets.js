@@ -3,7 +3,7 @@ import { html } from './vendor/preact-htm.js';
 import { t, getLang } from './i18n.js';
 import { Icon } from './icons.js';
 import { Seg, Field, Chip, ReasonSelect, openModal, closeModal, Modal } from './ui.js';
-import { periodOf, shiftPeriod, todaySlots, nextNumber } from './calc.js';
+import { periodOf, shiftPeriod, todaySlots, nextNumber, dataForYear, yearsOf } from './calc.js';
 import { fmt, dayName, dow, addDays, monthName, minToTime, timeToMin } from './dates.js';
 import { state, setUI, isAP, myId, setToast, getScope, setScope } from './store.js';
 import { saveEntry, deleteEntry, restoreEntry } from './actions.js';
@@ -24,7 +24,7 @@ export function PeriodBar({ ctx, period, onChange, compact }) {
   const pick = (k) => onChange(k === 'custom' ? { kind: 'custom', ps: period.ps, pe: period.pe } : periodOf(ctx, k, k === 'term' || k === 'week' || k === 'month' ? (period.kind === 'custom' || period.kind === 'year' ? ctx.today : period.ps) : ctx.today));
   const move = (d) => onChange(shiftPeriod(ctx, period, d));
   return html`<div class="stack" style="gap:10px">
-    <${Seg} options=${opts} value=${period.kind} onChange=${pick} />
+    <div class="scope-big sm"><${Seg} full options=${opts} value=${period.kind} onChange=${pick} /></div>
     ${period.kind === 'custom'
       ? html`<div class="row"><${Field} label=${t('Du')} class="grow"><input class="input" type="date" value=${period.ps} onInput=${(e) => e.target.value && onChange({ ...period, ps: e.target.value })} /><//><${Field} label=${t('Au')} class="grow"><input class="input" type="date" value=${period.pe} min=${period.ps} onInput=${(e) => e.target.value && onChange({ ...period, pe: e.target.value })} /><//></div>`
       : period.kind === 'year' ? html`<div style="text-align:center"><b style="font-size:${compact ? 14 : 15}px">${periodLabel(period, ctx)}</b></div>`
@@ -36,9 +36,9 @@ export function PeriodBar({ ctx, period, onChange, compact }) {
 export function currentTid() { const s = getScope(); return s === 'dept' ? null : s === 'me' ? myId() : s; }
 export function ScopeBar({ ctx }) {
   const s = getScope(), other = s !== 'dept' && s !== 'me';
-  const opts = [{ id: 'dept', label: t('Département') }, { id: 'me', label: t('Moi') }];
+  const opts = [{ id: 'dept', label: '🏫 ' + t('Département') }, { id: 'me', label: '👤 ' + t('Moi') }];
   const t2 = other ? ctx.teacher(s) : null;
-  return html`<div class="row noprint"><${Seg} options=${opts} value=${other ? '' : s} onChange=${(v) => setScope(v)} />
+  return html`<div class="stack noprint" style="gap:8px"><div class="scope-big"><${Seg} full options=${opts} value=${other ? '' : s} onChange=${(v) => setScope(v)} /></div>
     ${t2 ? html`<${Chip} tone="info">${t2.name}<//><button class="btn soft sm" onClick=${() => setScope('dept')}>${t('Retour au département')}</button>` : null}
     ${ctx.teachers.length > 2 && !other ? html`<select class="input" style="width:auto;min-height:40px" value="" onChange=${(e) => e.target.value && setScope(e.target.value)}><option value="">${t('Voir un collègue…')}</option>${ctx.teachers.filter(x => x.id !== myId()).map(x => html`<option value=${x.id}>${x.name}</option>`)}</select>` : null}</div>`;
 }
@@ -80,4 +80,15 @@ function AbsenceSheet({ ctx, tid, preset }) {
     <div class="grid2"><${Field} label=${t('Du')}><input class="input" type="date" value=${f.from} onInput=${(e) => set('from', e.target.value)} /><//><${Field} label=${t('Au')}><input class="input" type="date" min=${f.from} value=${f.to} onInput=${(e) => set('to', e.target.value)} /><//></div>
     <${Field} label=${t('Précision (facultatif)')}><input class="input" value=${f.note} onInput=${(e) => set('note', e.target.value)} /><//>
     <button class="btn block" onClick=${go}>${t('Enregistrer')}</button><//>`;
+}
+
+/* ---------- années scolaires ---------- */
+/** Les données de l'année choisie (année en cours par défaut). */
+export const viewData = () => dataForYear(state.data, state.ui.year);
+/** Choix de l'année affichée, en grand ; n'apparaît que lorsqu'au moins une année a été archivée. */
+export function YearBar() {
+  const ys = yearsOf(state.data); if (ys.length < 2) return null;
+  const cur = state.ui.year && ys.includes(state.ui.year) ? state.ui.year : ys[0];
+  return html`<div class="noprint stack" style="gap:6px"><div class="scope-big sm"><${Seg} full options=${ys.slice().reverse().map((y, i, a) => ({ id: y, label: '📅 ' + y + (y === ys[0] ? ' · ' + t('en cours') : '') }))} value=${cur} onChange=${(v) => setUI({ year: v === ys[0] ? '' : v, period: null, rperiod: null })} /></div>
+    ${cur !== ys[0] ? html`<div class="notice"><span>${t('Vous regardez l’année {y} (archivée). Les saisies se font toujours dans l’année en cours.', { y: cur })}</span></div>` : null}</div>`;
 }

@@ -318,3 +318,11 @@ test('sécurité : jetons falsifiés, expirés ou d’un autre département refu
   assert.equal((await call('/me', {}, noneAlg)).status, 401);
   assert.equal((await call('/me', {}, other.token)).status, 200, 'son propre jeton passe');
 });
+
+test('les années archivées sont gardées par le serveur (nettoyées)', async () => {
+  fresh(); const ap = await newDept('annees1'), tid = ap.session.teacherId;
+  const years = [{ year: '2026/2027', closed: 1, period: 50, terms: [{ id: 'T1', name: 'T1', start: '2026-09-07', end: '2026-11-27' }], calendar: [], slots: { [tid]: [{ d: 1, c: 'c1', h: 2, st: '07:30', en: '09:10' }] }, assign: [{ id: tid + ':c1', teacherId: tid, classId: 'c1', th: 13, pr: 9, hth: 39, hpr: 27, hours: 66 }], evil: '<script>' }];
+  const r = await call('/sync', { have: {}, push: { meta: { ...ap.meta, dept: { ...ap.meta.dept, year: '2027/2028', years, u: Date.now() + 1000 } } } }, ap.token);
+  const y = r.meta.dept.years[0];
+  assert.equal(r.meta.dept.year, '2027/2028'); assert.equal(y.year, '2026/2027'); assert.equal(y.period, 50); assert.equal(y.slots[tid][0].h, 2); assert.equal(y.assign[0].hours, 66); assert.equal(y.evil, undefined);
+});

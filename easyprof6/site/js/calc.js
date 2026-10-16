@@ -420,3 +420,30 @@ export function catchUp(ctx, date) {
   }
   return out;
 }
+
+/* ---------- plusieurs années ---------- */
+/** Photo de l'année en cours (configuration seulement : les saisies restent, datées, et servent à toutes les années). */
+export function yearSnapshot(data) {
+  const d = data.dept || {}, slots = {};
+  for (const t of data.teachers || []) if (!t.deleted) slots[t.id] = t.slots || [];
+  return { year: d.year || '', closed: Date.now(), lh: d.lh, period: d.period || 60, terms: d.terms || [], calendar: d.calendar || [], breaks: d.breaks, slots, assign: (data.assign || []).filter(a => !a.deleted).map(({ u, ...a }) => a) };
+}
+/** Années disponibles, de la plus récente à la plus ancienne. */
+export function yearsOf(data) { const d = data.dept || {}; return [d.year || '', ...(d.years || []).map(y => y.year)].filter((y, i, a) => y && a.indexOf(y) === i); }
+/** Les données vues comme dans l'année demandée : sa configuration archivée, toutes les saisies. */
+export function dataForYear(data, year) {
+  const d = data.dept || {}, snap = year && year !== d.year && (d.years || []).find(y => y.year === year);
+  if (!snap) return data;
+  return { ...data, dept: { ...d, year: snap.year, lh: snap.lh || d.lh, period: snap.period || 60, terms: snap.terms, calendar: snap.calendar, ...(snap.breaks ? { breaks: snap.breaks } : {}) },
+    teachers: (data.teachers || []).map(t => ({ ...t, slots: (snap.slots || {})[t.id] || [] })), assign: snap.assign || [] };
+}
+/** Comparaison année par année : taux de couverture horaire et des leçons, par trimestre et sur l'année (période entière ; pour l'année en cours, à ce jour). */
+export function compareYears(data, tid, today) {
+  return yearsOf(data).map(year => {
+    const ctx = makeCtx(dataForYear(data, year), today), rows = ctx.terms.map(tm => ({ id: tm.id, name: tm.name, ps: tm.start, pe: tm.end })).concat(ctx.terms.length ? [{ id: 'Y', name: 'Année', ps: ctx.ys, pe: ctx.ye }] : []);
+    return { year, cells: rows.map(r => {
+      const S = stats(ctx, tid, r.ps, r.pe), started = r.ps <= today;
+      return { id: r.id, name: r.name, started, hours: S.hours, dueH: S.dueFull, rateH: started ? pct(S.hours, r.pe < today ? S.dueFull : S.due) : null, lessons: S.lessonsDone, dueL: S.lessonsFull, rateL: started ? pct(S.lessonsDone, r.pe < today ? S.lessonsFull : S.lessonsPlanned) : null };
+    }) };
+  });
+}

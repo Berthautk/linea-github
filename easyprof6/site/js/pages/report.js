@@ -1,10 +1,10 @@
 // Fiche de l'inspection nationale (colonnes officielles) et récapitulatif par classe, sur les dates choisies.
-import { html, useState } from '../vendor/preact-htm.js';
+import { html, useState, useEffect } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Seg, Chip, num1 } from '../ui.js';
 import { makeCtx, stats, factors, followUp, periodOf } from '../calc.js';
-import { PeriodBar, ScopeBar, currentTid, periodLabel } from '../widgets.js';
+import { PeriodBar, ScopeBar, currentTid, periodLabel , viewData, YearBar } from '../widgets.js';
 import { state, setUI, isAP, myId } from '../store.js';
 import { fmt, minISO } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
@@ -92,19 +92,28 @@ function Follow({ ctx, p }) {
     <div class="sig"><div>${t('Animateur pédagogique')}<br /><b>${((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div></div>`;
 }
 
+/** Aperçu : la fiche (format A4) est réduite pour tenir dans la largeur du téléphone, sans toucher à l'impression. */
+function fitPaper() {
+  const box = document.querySelector('.paper-fit'), paper = box && box.querySelector('.paper'); if (!paper) return;
+  paper.style.zoom = ''; const w = paper.scrollWidth, avail = box.clientWidth;
+  if (w > avail + 2) paper.style.zoom = String(Math.max(0.3, avail / w));
+}
 export function Report() {
-  const ctx = makeCtx(state.data), ap = isAP(), tid = currentTid();
+  useEffect(() => { fitPaper(); const f = () => fitPaper(); addEventListener('resize', f); return () => removeEventListener('resize', f); });
+  const ctx = makeCtx(viewData()), ap = isAP(), tid = currentTid();
   const [tab, setTab] = useState('sheet'), [edit, setEdit] = useState({ ft: null, ac: null });
   const p = state.ui.rperiod && state.ui.rperiod.ps ? state.ui.rperiod : { kind: 'custom', ps: ctx.ys, pe: minISO(ctx.today, ctx.ye) };
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, p.pe);
   const who = tid ? (ctx.teacher(tid) || {}).name : '';
   const facts = edit.ft != null ? edit.ft : factorTexts(ctx, S), acts = edit.ac != null ? edit.ac : actionTexts(S);
-  return html`<div class="page"><div class="page-h noprint"><h1>${t('Fiche d’inspection')}</h1><div class="row"><button class="btn soft" onClick=${() => exportWord(document.querySelector('.paper'), 'rekort-' + (tab === 'sheet' ? 'fiche-inspection' : 'fiche-pedagogique') + '-' + ctx.today)}><${Icon} n="download" />${t('Word')}</button><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer / PDF')}</button></div></div>
-    <div class="noprint stack"><${ScopeBar} ctx=${ctx} />${ap && !ctx.assign.some(x => (+x.th || 0) + (+x.pr || 0) > 0) ? html`<a class="notice" href="#/settings/classes"><${Icon} n="alert" size="18" /><span>${t('Les leçons et heures prévues pour l’année ne sont pas encore renseignées : la colonne « prévues » de la fiche affiche 0. Touchez ici pour les saisir, classe par classe.')}</span></a>` : null}<${Seg} options=${[{ id: 'sheet', label: t('Fiche de l’inspection') }, ...(ap ? [{ id: 'recap', label: t('Fiche pédagogique (censorat)') }] : [])]} value=${tab} onChange=${setTab} />
+  return html`<div class="page"><div class="page-h noprint"><h1>${tab === 'sheet' ? t('Fiche d’inspection') : t('Fiche pédagogique')}</h1></div>
+    <div class="export-bar noprint"><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer / PDF')}</button><button class="btn" onClick=${() => exportWord(document.querySelector('.paper'), 'rekort-' + (tab === 'sheet' ? 'fiche-inspection' : 'fiche-pedagogique') + '-' + ctx.today)}><${Icon} n="download" />${t('Word')}</button></div>
+    <div class="noprint stack"><${YearBar} /><${ScopeBar} ctx=${ctx} />${ap && !ctx.assign.some(x => (+x.th || 0) + (+x.pr || 0) > 0) ? html`<a class="notice" href="#/settings/classes"><${Icon} n="alert" size="18" /><span>${t('Les leçons et heures prévues pour l’année ne sont pas encore renseignées : la colonne « prévues » de la fiche affiche 0. Touchez ici pour les saisir, classe par classe.')}</span></a>` : null}<div class="scope-big sm"><${Seg} full options=${[{ id: 'sheet', label: '📋 ' + t('Inspection') }, ...(ap ? [{ id: 'recap', label: '🏫 ' + t('Censorat') }] : [])]} value=${tab} onChange=${setTab} /></div>
       <div class="card"><div class="card-h"><h3>${t('Période demandée par l’inspecteur')}</h3></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => { setUI({ rperiod: np }); setEdit({ ft: null, ac: null }); }} />
         <div class="row" style="margin-top:10px"><button class="btn soft sm" onClick=${() => setUI({ rperiod: { kind: 'custom', ps: ctx.ys, pe: minISO(ctx.today, ctx.ye) } })}>${t('De la rentrée à aujourd’hui')}</button></div></div>
       ${S.alerts.length ? html`<div class="err">${S.alerts.map(a => a.kind === 'hours' ? t('Couverture horaire sous 80 % : mesures correctives obligatoires.') : a.kind === 'lessons' ? t('Couverture du programme sous 70 % : plan de remédiation.') : t('Taux de réussite sous 40 %.')).join(' ')}</div>` : null}
       ${tab === 'sheet' ? html`<div class="card"><div class="card-h"><h3>${t('Commentaires de la fiche')}</h3><button class="btn soft sm" onClick=${() => setEdit({ ft: null, ac: null })}><${Icon} n="refresh" />${t('Régénérer')}</button></div>
         <div class="grid2"><div class="field"><label>${t('Facteurs d’écart')}</label><textarea class="input" rows="5" value=${facts} onInput=${(e) => setEdit({ ...edit, ft: e.target.value })}></textarea></div><div class="field"><label>${t('Actions correctives')}</label><textarea class="input" rows="5" value=${acts} onInput=${(e) => setEdit({ ...edit, ac: e.target.value })}></textarea></div></div><p class="hint" style="margin-top:8px">${t('Texte proposé automatiquement ; vous pouvez le modifier avant d’imprimer.')}</p></div>` : null}</div>
-    ${tab === 'sheet' ? html`<${Sheet} ctx=${ctx} tid=${tid} S=${S} Y=${Y} p=${p} who=${who} facts=${facts} acts=${acts} />` : html`<${Follow} ctx=${ctx} p=${p} />`}</div>`;
+    <p class="sub noprint" style="text-align:center">${t('Aperçu de la fiche, réduit à la largeur de l’écran (l’impression et Word gardent la taille réelle).')}</p>
+    <div class="paper-fit">${tab === 'sheet' ? html`<${Sheet} ctx=${ctx} tid=${tid} S=${S} Y=${Y} p=${p} who=${who} facts=${facts} acts=${acts} />` : html`<${Follow} ctx=${ctx} p=${p} />`}</div></div>`;
 }

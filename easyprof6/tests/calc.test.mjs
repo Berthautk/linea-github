@@ -294,3 +294,20 @@ test('programme : niveau d’une classe d’après son nom, programme officiel, 
   const a = store.state.data.assign[0]; assert.equal(a.hours, 66); assert.equal(a.th, 13); assert.equal(a.hpr, 27);
   act.saveAssign({ teacherId: 't', classId: 'c', th: 13, pr: 9, hth: 0, hpr: 0, hours: 50 }); assert.equal(store.state.data.assign[0].hours, 50);
 });
+
+test('plusieurs années : archive, vue d’une année passée, comparaison', async () => {
+  const { yearSnapshot, dataForYear, yearsOf, compareYears } = await import('../site/js/calc.js');
+  const st = mk(); st.dept.year = '2026/2027';
+  st.entries = [E('a', 'K', '2026-09-07', { classId: 'F3A', n: 1 })];
+  const snap = yearSnapshot(st);
+  assert.equal(snap.year, '2026/2027'); assert.ok(snap.slots.K.length > 0, 'emplois du temps archivés');
+  const next = { ...st, dept: { ...st.dept, year: '2027/2028', years: [snap], terms: st.dept.terms.map(x => ({ ...x, start: (+x.start.slice(0, 4) + 1) + x.start.slice(4), end: (+x.end.slice(0, 4) + 1) + x.end.slice(4) })), calendar: [] }, teachers: st.teachers.map(t => ({ ...t, slots: [] })) };
+  assert.deepEqual(yearsOf(next), ['2027/2028', '2026/2027']);
+  const old = dataForYear(next, '2026/2027');
+  assert.equal(old.dept.terms[0].start, st.dept.terms[0].start, 'trimestres de l’année archivée'); assert.ok(old.teachers[0].slots.length > 0, 'son emploi du temps');
+  assert.equal(dataForYear(next, ''), next, 'année en cours : données telles quelles');
+  const cmp = compareYears(next, 'K', '2027-10-01');
+  assert.equal(cmp.length, 2); const y1 = cmp.find(r => r.year === '2026/2027');
+  assert.ok(y1.cells.find(c => c.id === 'Y').rateH > 0, 'l’ancienne année garde ses heures faites');
+  assert.ok(y1.cells.find(c => c.id === 'Y').dueH > 0, 'et ses heures dues');
+});

@@ -6,7 +6,7 @@ import { Field, PasswordInput, DraftInput, SaveBar, askLogout, isInstalled, Seg,
 import { api } from '../api.js';
 import { state, update, setUI, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
 import { applyTiming, saveAssign, removeAssign, saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
-import { makeCtx, catchUp } from '../calc.js';
+import { makeCtx, catchUp, yearSnapshot } from '../calc.js';
 import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
 import { ProgramFields, officialFor, isEmptyProgram, totalHours } from './program.js';
@@ -111,6 +111,19 @@ function Dept() {
     <${SaveBar} label=${t('Enregistrer et revenir aux réglages')} /></div>`;
 }
 
+const nextYearName = (y) => { const m = /(\d{4})\D+(\d{4})/.exec(y || ''); return m ? (+m[1] + 1) + '/' + (+m[2] + 1) : ''; };
+const plus1 = (iso) => (iso ? (+iso.slice(0, 4) + 1) + iso.slice(4) : iso);
+/** Fin d'année : l'année en cours est archivée (sa configuration), puis on passe à la suivante. Aucune saisie n'est effacée. */
+function NewYear() {
+  const d = state.data.dept, next = nextYearName(d.year), done = (d.years || []).map(y => y.year);
+  if (!next) return null;
+  const go = () => confirmDialog({ title: t('Commencer l’année {y} ?', { y: next }), message: t('L’année {a} est archivée : ses trimestres, son calendrier, les emplois du temps et le programme de chaque classe sont gardés, et toutes les saisies restent. Vous pourrez la rouvrir et la comparer à la nouvelle année. Les dates de la nouvelle année sont reprises un an plus tard : vérifiez-les ensuite.', { a: d.year }), confirm: t('Commencer {y}', { y: next }),
+    onConfirm: () => { saveDept({ years: [yearSnapshot(state.data), ...(d.years || []).filter(y => y.year !== d.year)], year: next, terms: (d.terms || []).map(x => ({ ...x, start: plus1(x.start), end: plus1(x.end) })), calendar: [], setup: { ...(d.setup || {}), year: false } }); setToast(t('Bienvenue en {y} ! L’année {a} est archivée.', { y: next, a: d.year })); } });
+  return html`<div class="card stack"><h3>📅 ${t('Fin d’année scolaire')}</h3>
+    <p class="sub">${t('À la rentrée suivante, commencez une nouvelle année : rien n’est perdu. Chaque année reste consultable (Accueil et Fiche : choix de l’année en haut) et vous pourrez comparer les années trimestre par trimestre.')}</p>
+    ${done.length ? html`<p class="sub">${t('Années archivées')} : <b>${done.join(', ')}</b></p>` : null}
+    <button class="btn soft" style="align-self:flex-start" onClick=${go}><${Icon} n="calendar" />${t('Clôturer {a} et commencer {y}', { a: d.year, y: next })}</button></div>`;
+}
 function Year() {
   const ctx = makeCtx(state.data), d = state.data.dept, lang = getLang();
   const setTerm = (id, patch) => { saveDept({ terms: d.terms.map(x => (x.id === id ? { ...x, ...patch } : x)) }); };
@@ -127,6 +140,7 @@ function Year() {
       <p class="hint" style="margin-top:8px">${t('Ces jours sont retirés des heures dues de tous les enseignants et ne déclenchent aucun rappel.')}</p></div>
     <div class="card"><div class="card-h"><h3>${t('Comment compter les jours sans cours déclarés ?')}</h3></div><div class="list">${REASONS.map(r => { const out = ctx.reasonOut(r.id); return html`<div class="item"><div class="dot">${r.icon}</div><div class="grow"><b>${t(r.fr)}</b></div><${Seg} options=${[{ id: 'out', label: t('Non dû') }, { id: 'abs', label: t('Absence') }]} value=${out ? 'out' : 'abs'} onChange=${(v) => saveDept({ dueOut: { ...(d.dueOut || {}), [r.id]: v === 'out' } })} /></div>`; })}</div>
       <p class="hint" style="margin-top:8px">${t('« Non dû » : ces heures sont retirées des heures dues (pas de faute de l’enseignant). « Absence » : elles restent dues mais ne sont pas faites.')}</p></div>
+    <${NewYear} />
     <${SaveBar} label=${t('Enregistrer et revenir aux réglages')} /></div>`;
 }
 

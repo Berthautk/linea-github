@@ -270,3 +270,15 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .who-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 10px 4px 4px; border-top: 1px dashed var(--line); margin-top: 4px; }
 .who-h:first-child { border-top: 0; margin-top: 0; }
 .who-h b { color: var(--teal-d); } .who-h span { font-size: 12.5px; color: var(--muted); }
+
+/* Mêmes grands sélecteurs partout (département / moi, périodes, années, fiches) */
+.scope-big.sm .seg button { font-size: 14px; padding: 11px 6px; }
+.scope-big .seg { width: 100%; }
+.tocheck { border: 2px solid var(--teal); }
+.fri-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.fri-actions .btn { white-space: normal; text-align: center; line-height: 1.25; }
+
+.export-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.export-bar .btn { min-height: 54px; font-size: 16px; font-weight: 800; }
+.paper-fit { width: 100%; overflow-x: auto; }
+@media print { .paper-fit .paper { zoom: 1 !important; } }

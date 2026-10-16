@@ -58,11 +58,11 @@ await step('B. Le collègue se connecte et saisit', async () => {
   await tp.waitForSelector('text=Aujourd’hui'); await tp.waitForTimeout(600);
   const body = await tp.innerText('body');
   ok(/Bonjour, Noura/.test(body) && /Form 3 A/.test(body), 'B1 connexion : le collègue retrouve son prénom et sa classe du jour (reçus par synchronisation)');
-  ok(!/Pour bien démarrer|Ronde en classe|Rappeler/.test(body) && !!(await tp.getByRole('button', { name: 'Département', exact: true }).count()), 'B2 le collègue n’a aucun outil d’animateur, mais peut regarder le département');
-  await tp.getByRole('button', { name: 'Département', exact: true }).click(); await tp.waitForTimeout(400);
+  ok(!/Pour bien démarrer|Ronde en classe|Rappeler/.test(body) && !!(await tp.getByRole('button', { name: /Département$/ }).count()), 'B2 le collègue n’a aucun outil d’animateur, mais peut regarder le département');
+  await tp.getByRole('button', { name: /Département$/ }).click(); await tp.waitForTimeout(400);
   const dview = await tp.innerText('.page');
   ok(/Résultats par collègue/.test(dview) && !(await tp.getByRole('button', { name: 'Rappeler' }).count()) && !(await tp.getByRole('link', { name: 'Contrôler' }).count()), 'B2b le collègue voit les résultats de tous, sans pouvoir rappeler ni contrôler');
-  await tp.getByRole('button', { name: 'Moi', exact: true }).click(); await tp.waitForTimeout(300);
+  await tp.getByRole('button', { name: /Moi$/ }).click(); await tp.waitForTimeout(300);
   await tp.locator('.card', { hasText: 'Aujourd’hui' }).getByRole('button', { name: 'Fait' }).click(); await tp.waitForTimeout(500);
   ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'B3 saisie en un geste : « Fait » → leçon 1 enregistrée');
   const k = await tp.locator('.kpis').innerText();

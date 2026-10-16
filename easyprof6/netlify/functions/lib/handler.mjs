@@ -59,6 +59,18 @@ function cleanRegul(r) {
   if (r.deleted) return { id: r.id, u: cu(r.u), deleted: true };
   return { id: r.id, u: cu(r.u), teacherId: str(r.teacherId, 40), classId: str(r.classId, 40), d: str(r.d, 10), d2: str(r.d2, 10), h: Math.min(500, Math.max(-500, num(r.h))), lessons: Math.min(2000, Math.max(-2000, num(r.lessons))), note: str(r.note, 200), tag: str(r.tag, 12) };
 }
+/** Années archivées : la configuration de chaque année passée (trimestres, calendrier, emplois du temps, programme) pour la revoir et comparer. */
+function cleanYears(ys) {
+  if (!Array.isArray(ys)) return [];
+  return ys.slice(0, 30).filter(y => y && typeof y === 'object' && typeof y.year === 'string').map(y => ({
+    year: str(y.year, 12), closed: num(y.closed), lh: Math.min(6, Math.max(0.5, num(y.lh, 2))), period: [40, 45, 50, 55, 60].includes(+y.period) ? +y.period : 60,
+    terms: Array.isArray(y.terms) ? y.terms.slice(0, 4).map(t => ({ id: str(t.id, 4), name: str(t.name, 40), start: str(t.start, 10), end: str(t.end, 10) })) : [],
+    calendar: Array.isArray(y.calendar) ? y.calendar.slice(0, 200).map(c => ({ f: str(c.f, 10), t: str(c.t, 10), n: str(c.n, 80) })) : [],
+    breaks: Array.isArray(y.breaks) ? y.breaks.slice(0, 6).map(b => ({ f: str(b && b.f, 5), t: str(b && b.t, 5) })) : undefined,
+    slots: y.slots && typeof y.slots === 'object' ? Object.fromEntries(Object.entries(y.slots).slice(0, MAX.teachers).map(([k, v]) => [str(k, 40), cleanSlots(v)])) : {},
+    assign: Array.isArray(y.assign) ? y.assign.slice(0, MAX.assign).map(cleanAssign).filter(a => a && !a.deleted) : [],
+  }));
+}
 function cleanDept(d, id) {
   if (!d || typeof d !== 'object') return null;
   const hdr = {}; for (const [k, v] of Object.entries(d.header || {}).slice(0, 40)) hdr[str(k, 40)] = str(v, 700);
@@ -66,7 +78,7 @@ function cleanDept(d, id) {
   const cal = Array.isArray(d.calendar) ? d.calendar.slice(0, 200).map(c => ({ f: str(c.f, 10), t: str(c.t, 10), n: str(c.n, 80) })) : [];
   return {
     id, u: cu(d.u), name: str(d.name, 120), discipline: str(d.discipline, 80), abbr: str(d.abbr, 8), system: d.system === 'francophone' ? 'francophone' : 'anglophone',
-    year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), period: [40, 45, 50, 55, 60].includes(+d.period) ? +d.period : 60, header: hdr, ...(Array.isArray(d.breaks) ? { breaks: d.breaks.slice(0, 6).map(b => ({ f: str(b && b.f, 5), t: str(b && b.t, 5) })).filter(b => /^\d{2}:\d{2}$/.test(b.f) && /^\d{2}:\d{2}$/.test(b.t)) } : {}), setup: Object.fromEntries(Object.entries(d.setup || {}).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])), terms, calendar: cal,
+    years: cleanYears(d.years), year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), period: [40, 45, 50, 55, 60].includes(+d.period) ? +d.period : 60, header: hdr, ...(Array.isArray(d.breaks) ? { breaks: d.breaks.slice(0, 6).map(b => ({ f: str(b && b.f, 5), t: str(b && b.t, 5) })).filter(b => /^\d{2}:\d{2}$/.test(b.f) && /^\d{2}:\d{2}$/.test(b.t)) } : {}), setup: Object.fromEntries(Object.entries(d.setup || {}).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])), terms, calendar: cal,
     dueOut: d.dueOut && typeof d.dueOut === 'object' ? Object.fromEntries(Object.entries(d.dueOut).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])) : {},
   };
 }

@@ -167,29 +167,37 @@ const F3 = () => { qn = 0; return [
 ]; };
 
 // ============================== FORM FOUR ==============================
-// follows, question by question, the paper set for Form 4 (Mr TABIT's version): 10 MCQ, structural question on a climate table, competence on soil erosion
+// Part 1: questions from the Form 3 syllabus taught by Mr KAMDEM (lessons 1 to 30) that the Form 4 paper (Mr TABIT's version) actually touches.
+// Part 2: the questions of the Form 4 syllabus (Mr TABIT), each followed by its answer.
 const F4 = () => { qn = 0; return [
-  SEC('PART A: MULTIPLE CHOICE QUESTIONS 1 TO 10 (what each question asks)'),
-  ...QA('MCQ 1: Soil, its composition and its profile.', '**Soil** is the loose top layer of the Earth’s surface in which plants grow. It is formed by physical, chemical and biological processes and is made of **mineral particles** (about 45 %), **organic matter** or humus (about 5 %), and **water and air** (about half). Profile: topsoil (A), subsoil (B), regolith (C), bedrock (R).'),
-  ...QA('MCQ 2: Soil erosion and accelerated erosion; causes and consequences.', 'Soil erosion is the removal of the topsoil by water, wind or people. **Accelerated erosion** is erosion made very fast by human activities (deforestation, overgrazing, bush fires, ploughing down slopes); **normal (geologic) erosion** is slow and natural. Forms: sheet, rill, gully, wind. Consequences: loss of fertility, falling harvests, gullies, rivers and dams filled with mud.'),
-  ...QA('MCQ 3: Soil conservation methods.', '**Terracing**: flat steps cut into a steep slope. **Contour ploughing**: ploughing along the contours. **Strip cultivation**: strips of crops across the slope. **Windbreaks**: rows of trees against wind. Also: stone lines, cover crops, mulching, crop rotation, manure, controlled grazing, stopping bush fires.'),
-  ...QA('MCQ 4, 5 and 6: The ecosystem, producers and energy flow.', '**Ecosystem**: a natural area where living (biotic) and non-living (abiotic) components interact. Components: abiotic factors, **producers** (green plants that make their own food from solar energy: autotrophs), consumers (herbivores, carnivores), decomposers (fungi and bacteria). Energy: only about **10 %** passes from one trophic level to the next; the rest is lost as heat. Example of a food chain: grass → zebra → lion.'),
-  ...QA('MCQ 7: Features of hot deserts. Which are depositional?', 'Hot deserts: less than 250 mm of rain, very hot days and cold nights. **Depositional** (wind deposits sand): **barchans** (crescent-shaped dunes) and seif (long) dunes. **Erosional** (wind wears rock): **inselbergs**, rock pedestals, yardangs, zeugen.'),
-  ...QA('MCQ 8: Solving water scarcity in hot deserts.', 'Build **water reservoirs** and dams, dig wells and boreholes, bring water by pipes or canals from rivers, irrigate oasis farms, harvest rainwater, use drip irrigation. (Wearing long sleeves or drilling for oil does not give water.)'),
-  ...QA('MCQ 9 and 10: Cameroon, relief and location.', 'Relief units: Western Highlands (Mount Cameroon, 4,095 m), Adamawa Plateau, Mandara Mountains, South Cameroon Plateau; lowlands: Coastal lowlands, Benue lowland, Chad Plain. Location: between about **2° N and 13° N** and **8° E and 16° E**, in Central Africa, on the Gulf of Guinea (about 475,000 km²).'),
-  QUIZ([['Soil components (4)', 'Minerals, humus, water, air'], ['Energy passed to the next trophic level', 'About 10 %'], ['Crescent-shaped desert dune', 'Barchan'], ['Latitudes of Cameroon', '2° N to 13° N']]),
-  SEC('PART B: STRUCTURAL QUESTION (CLIMATE TABLE OF A STATION IN AFRICA)'),
-  ...QA('How do you calculate the annual range of temperature, find the wettest month and name the biome?', 'Annual range = highest − lowest monthly temperature (show: 33 − 26 = 7 gives the method). Wettest month = month with the highest rainfall. Total rainfall = sum of the 12 months. **Biome**: look at the rainfall and the seasons, then give two reasons.'),
-  ...QA('Which biome? Compare the three biomes of the course.', '**Equatorial**: 2–3 °C range, rain in every month (1,500–2,500 mm). **Savanna (tropical wet and dry)**: hot all year (about 25 to 33 °C), one rainy season and a long dry season, 750–1,500 mm. **Hot desert**: below 250 mm, very large daily and annual ranges. Always give two reasons: temperature and rainfall (total and seasons).'),
+  SEC('PART 1: MR KAMDEM’S LESSONS (FORM 3 SYLLABUS, UP TO LESSON 30): QUESTIONS TO ASK THE STUDENTS'),
+  P('These are the parts of the Form 4 paper that come from your lessons: soil formation (MCQ 1), terraces and cover against soil loss (MCQ 3, Task 3), barchans (MCQ 7) and water in the hot desert (MCQ 8).', { italics: true, after: 20 }),
+  SEC('A. WEATHERING AND SOIL (LESSONS 15 TO 17 AND FURTHER STUDY 2)'),
+  ...QA('Which three kinds of processes break rocks down to form soil?', '**Physical** (mechanical), **chemical** and **biological** processes (roots, burrowing animals, lichens and bacteria).'),
+  ...QA('Give one example of physical weathering and one of chemical weathering.', 'Physical: frost shattering or thermal shattering (exfoliation). Chemical: carbonation, oxidation, hydrolysis, solution or hydration.'),
+  ...QA('What is soil and what is it made of?', 'The loose top layer of the land where plants grow. It is made of **mineral particles** (weathered rock), **organic matter** (humus), **water and air**.'),
+  ...QA('How does weathering harm the soil and the land on slopes?', 'Heavy rain washes the plant food out of the soil (**leaching**), so it loses its fertility; weathered material slides down slopes (**mass movement**) and destroys farms, roads and houses.'),
+  ...QA('Name two measures that protect the soil on a slope.', '**Plant cover** (trees and grass hold the soil) and **terraces** (flat steps that slow down running water).'),
+  SEC('B. HOT DESERTS (LESSONS 27 TO 29)'),
+  ...QA('What is a hot desert? How much rain does it receive a year?', 'A hot region with less than **250 mm** of rain per year (a semi-arid region has 250 to 500 mm).'),
+  ...QA('Name three dry regions of Africa.', 'The Sahara, the Namib, the Kalahari, the Sahel (which includes the Far North of Cameroon), parts of the Horn of Africa.'),
+  ...QA('What are the three processes of wind erosion?', '**Deflation** (the wind removes loose sand and dust), **abrasion** (sand thrown by the wind wears rocks) and **attrition** (sand grains hit one another and become smaller).'),
+  ...QA('Name three erosional features of the wind.', '**Inselbergs**, **rock pedestals**, **yardangs**, zeugen, deflation hollows.'),
+  ...QA('Why does the wind drop its sand? Name the features it forms.', 'The wind slows down, meets an obstacle, or the sand is wet. Features: **sand dunes**, sand sheets, ripples, loess.'),
+  ...QA('Name the two types of sand dunes. Which one is crescent-shaped?', '**Barchans** (crescent-shaped, horns pointing downwind) and **seif dunes** (long, straight ridges parallel to the wind). The crescent-shaped one is the **barchan**.'),
+  ...QA('What is the main problem of people in the hot desert and how do they solve it?', 'The problem is the **lack of water** (less than 250 mm of rain; wells dry up). Solutions: dig wells and boreholes, **store water**, irrigate crops with river water (Nile), farm at oases; plant trees (Great Green Wall) against the spreading desert.'),
+  new Paragraph({ pageBreakBefore: true, spacing: { after: 0 }, children: [] }),
+  SEC('PART 2: MR TABIT’S LESSONS (FORM 4 SYLLABUS): QUESTIONS AND ANSWERS, IF TIME ALLOWS'),
+  ...QA('What is soil erosion? What is accelerated erosion?', 'Soil erosion is the removal of the topsoil by water, wind or people. **Accelerated erosion** is erosion made very fast by human activities; **normal (geologic) erosion** is slow and natural.'),
+  ...QA('Name human activities that cause soil erosion.', 'Deforestation, overgrazing, bush fires, ploughing up and down slopes, over-cultivation on steep slopes.'),
+  ...QA('Name methods of soil conservation.', '**Terracing**, contour ploughing, **strip cultivation** (strips of crops across the slope), **windbreaks**, cover crops, mulching, crop rotation, manure.'),
+  ...QA('What is an ecosystem? Which organisms make their own food? How much energy passes to the next level?', 'A natural area where living and non-living components interact. **Producers** (green plants) make their own food from solar energy. Only about **10 %** of the energy passes to the next trophic level.'),
+  ...QA('Where is Cameroon located and what are its relief units?', 'Between **2° N and 13° N** and 8° E and 16° E. Highlands: Western Highlands, Adamawa Plateau, Mandara Mountains, South Cameroon Plateau. Lowlands: Coastal lowlands, Benue lowland, Chad Plain.'),
+  ...QA('From a climate table, how do you find the annual range of temperature and the wettest month?', 'Range = highest − lowest monthly temperature. Wettest month = the month with the highest rainfall. Total rainfall = sum of the 12 months.'),
   P('**Practice:** study the climate data of a station W in Africa (approximate values).', { before: 30, after: 10 }),
   CLIM([25, 27, 29, 29, 27, 25, 24, 24, 24, 25, 26, 25], [0, 2, 15, 60, 140, 170, 200, 230, 180, 70, 5, 0]),
-  ...QA('Station W: calculate the annual range of temperature, name the wettest month and the biome with two reasons.', 'Range = 29 − 24 = **5 °C**. Wettest month: **August** (230 mm). Biome: **savanna (tropical wet and dry)**: hot all year (24 to 29 °C) with a small range, and one long rainy season (May to October) followed by a long dry season, with about 1,070 mm of rain.'),
-  ...QA('Savanna: adaptation of the vegetation to the dry season.', 'The **baobab** stores water in its trunk; many trees shed their leaves; roots are deep and the bark is thick against fires; grasses dry up and grow again with the first rains. Location: about 5° to 15° N and S, including northern Cameroon; soils: red ferruginous.'),
-  SEC('PART C: SECTION B, COMPETENCE (A FARMER WHOSE FARM IS LOSING SOIL)'),
-  ...QA('Situation: a poor widow farms a hill slope; after two years her yields drop and the soil is carried away by wind and heavy rain. What is the problem?', 'The farm is losing its soil through **soil erosion** (by wind and water), so the yields fall and the soil loses its fertility.'),
-  ...QA('Task 2: state two causes of the problem.', 'Farming on a steep slope without protection (ploughing up and down); clearing the plant cover (deforestation, bush fires); heavy rain and strong winds on bare soil; over-cultivation without rest for the soil.'),
-  ...QA('Task 3: as a geographer, suggest two measures.', '**Terracing** or **contour ploughing** across the slope; planting trees, **windbreaks** and cover crops; mulching; crop rotation and manure to keep the soil fertile.'),
-  TIP('Answer **every** question, write in complete words, show the working for the range of temperature, and keep two marks for **presentation** (clean, neat and correct spelling).'),
+  ...QA('Station W: calculate the annual range, name the wettest month and the biome, with two reasons.', 'Range = 29 − 24 = **5 °C**. Wettest month: **August** (230 mm). Biome: **savanna (tropical wet and dry)**: hot all year with a small range, one long rainy season (May to October) and a long dry season, about 1,070 mm of rain.'),
+  ...QA('Competence: a widow’s farm on a steep hill slope loses soil to wind and rain and her yields fall. State the problem, two causes and two measures.', '**Problem**: soil erosion. **Causes**: farming a steep slope without protection; clearing the plant cover; heavy rain and strong winds. **Measures**: terracing or contour ploughing; windbreaks, cover crops and mulching.'),
 ]; };
 
 (async () => {
@@ -198,5 +206,5 @@ const F4 = () => { qn = 0; return [
   await build('DGCAST_F2T_Revision_Seq1_2026-2027.docx', 'FORM TWO TECHNICAL', 'Lesson 1: The equatorial region; Lesson 2: The tropical grassland region (climate, vegetation and soils)', F2T());
   await build('DGCAST_F3_Revision_Seq1_2026-2027.docx', 'FORM THREE', 'Our Planet; Universe and Moon; Latitudes and Longitudes; Great Circles and IDL; Locate a Place on a Map', F3());
   S = 21; const f4 = F4();
-  await build('DGCAST_F4_Revision_Seq1_2026-2027.docx', 'FORM FOUR', 'the Form 4 paper question by question: soils and erosion, ecosystems, hot deserts, Cameroon, climate table and competence', f4);
+  await build('DGCAST_F4_Revision_Seq1_2026-2027.docx', 'FORM FOUR', 'Part 1: Form 3 syllabus (Mr Kamdem, up to lesson 30); Part 2: Form 4 syllabus (Mr Tabit)', f4);
 })();

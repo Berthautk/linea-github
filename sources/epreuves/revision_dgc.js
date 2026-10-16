@@ -167,8 +167,8 @@ const F3 = () => { qn = 0; return [
 ]; };
 
 // ============================== FORM FOUR ==============================
-// follows the paper actually set for Form 4: soils, erosion and conservation, ecosystems, biomes (savanna, hot desert), Cameroon (location and relief)
-const F4 = () => { qn = 0; return [
+// Mr TABIT's part (Form 4 syllabus), follows the paper he set: soils, erosion and conservation, ecosystems, biomes (savanna, hot desert), Cameroon (location and relief)
+const F4_TABIT = () => { qn = 0; return [
   SEC('A. THE SOIL: MEANING, COMPONENTS AND PROFILE'),
   ...QA('Define soil. What is it made of?', '**Soil** is the loose top layer of the Earth’s surface in which plants grow. It is formed by physical, chemical and biological processes and is made of **mineral particles** (about 45 %), **organic matter** or humus (about 5 %), and **water and air** (about half of the soil).'),
   ...QA('Name the horizons of a simple soil profile.', '**Topsoil (A)**: dark, rich in humus, most roots; **subsoil (B)**: little humus, minerals washed down from the topsoil; **regolith (C)**: weathered and broken rock; **bedrock (R)**: solid rock at the bottom. A deep soil rich in humus and minerals is fertile.'),
@@ -181,27 +181,44 @@ const F4 = () => { qn = 0; return [
   ...QA('How does energy flow in an ecosystem?', 'Energy comes from the Sun and is captured by producers, then passes to herbivores and carnivores. Only about **10 %** of the energy passes from one trophic level to the next; the rest is lost as heat. Example of a food chain: grass → zebra → lion; many chains linked make a food web.'),
   SEC('D. CLIMATE DATA, SAVANNA AND HOT DESERT BIOMES'),
   ...QA('How do you work from a climate table?', 'Annual range of temperature = highest − lowest monthly temperature. Total rainfall = sum of the 12 monthly figures. The wettest month has the highest rainfall. Then compare with the biomes: rainforest (rain all year, range 2–3 °C), savanna (one wet and one dry season, 750–1,500 mm), hot desert (below 250 mm).'),
-  P('**Practice:** study the climate data of a station W in Africa (approximate values).', { before: 30, after: 10 }),
-  CLIM([25, 27, 29, 29, 27, 25, 24, 24, 24, 25, 26, 25], [0, 2, 15, 60, 140, 170, 200, 230, 180, 70, 5, 0]),
-  ...QA('Calculate the annual range of temperature of station W, name its wettest month and name its biome with two reasons.', 'Range = 29 − 24 = **5 °C**. Wettest month: **August** (230 mm). Biome: **tropical wet and dry (savanna)**: hot all year (24 to 29 °C), one long rainy season (May to October) and a long dry season, with a total rainfall of about 1,070 mm.'),
+  ...QA('Station W (24–29 °C; one rainy season May to October; about 1,070 mm; wettest month August): name its biome with two reasons.', '**Tropical wet and dry (savanna)**: hot all year with a small range (5 °C), one long rainy season and a long dry season, rainfall of about 1,000 mm.'),
   ...QA('Describe the savanna (location, vegetation, soils) and how its vegetation adapts to the dry season.', 'Between about 5° and 15° N and S, including northern Cameroon; tall grass with scattered trees; red ferruginous soils. Adaptations: the **baobab** stores water in its trunk; many trees shed their leaves; deep roots and thick bark against fire; grasses dry up and grow again with the first rains.'),
   ...QA('Describe the hot desert biome. Name its depositional features and ways to solve water scarcity.', 'Less than 250 mm of rain, very hot days and cold nights, sandy and stony soils, xerophytes (cacti, acacia). Wind deposition forms dunes: **barchans** (crescent-shaped) and seif; inselbergs, rock pedestals and yardangs are erosional features. Water scarcity: build **water reservoirs**, dig wells and boreholes, irrigate oasis farms.'),
   SEC('E. CAMEROON: SITUATION AND RELIEF'),
   ...QA('Where is Cameroon located?', 'Between about **2° N and 13° N** and **8° E and 16° E**; in Central Africa, on the Gulf of Guinea. It covers about 475,000 km², is triangular in shape and has about 400 km of Atlantic coast.'),
   ...QA('Name the relief units of Cameroon.', 'Highlands: Western Highlands (Mount Cameroon, 4,095 m, the highest point), Adamawa Plateau (1,000–1,500 m), Mandara Mountains, South Cameroon Plateau. Lowlands: Coastal lowlands (Douala, Kribi), Benue lowland (Garoua), Chad Plain.'),
-  QUIZ([['Energy passed to the next trophic level', 'About 10 %'], ['Organisms that make their own food', 'Producers'], ['Crescent-shaped desert dune', 'Barchan'], ['Cutting a slope into flat steps', 'Terracing']]),
-  SEC('F. PRACTICE OF COMPETENCE'),
-  BOXED('Situation', 'A widow farms a steep hill slope. After two years her yields fall because wind and heavy rain carry away the soil. She asks what is happening and what she should do.'),
-  ...QA('What is the problem raised in the situation?', 'Her farm is losing soil through **soil erosion** (by rain and wind), so her yields are falling.'),
-  ...QA('State two causes and propose two measures.', 'Causes: farming on a steep slope without protection; clearing the plant cover; heavy rain and strong winds; ploughing up and down the slope. Measures: terracing and contour ploughing; planting trees, windbreaks and cover crops; mulching and crop rotation.'),
-  TIP('Questions begin with the verbs **State**, **Name**, **Identify**, **Calculate**. Show your working for calculations and give a short reason for each answer.'),
+  ...QA('Competence: a widow’s farm on a steep hill slope loses soil to wind and rain and her yields fall. State the problem, two causes and two measures.', '**Problem**: soil erosion by rain and wind, so yields fall. **Causes**: farming a steep slope without protection; clearing the plant cover; ploughing up and down the slope. **Measures**: terracing and contour ploughing; planting trees, windbreaks and cover crops; mulching.'),
 ]; };
+
+
+// Mr KAMDEM's part: physical geography of the Form 3 syllabus, taught in Form 4 (lessons 1 to 25), made for a 50-minute session
+const F4_KAMDEM = () => { qn = 0; return [
+  SEC('PART 1: PHYSICAL GEOGRAPHY (Mr KAMDEM) – FORM 3 SYLLABUS, LESSONS 1 TO 25 – FOR THE 50-MINUTE SESSION'),
+  ...QA('Time and the movements of the Earth: how many degrees make one hour? Give the effects of rotation and revolution.', '360° in 24 hours: **15° = 1 hour, 1° = 4 minutes**; places in the east are ahead. Example: 12:00 at Garoua (13° E) is 13:20 at 33° E (20° × 4 = 80 min). **Rotation** (west to east, 24 h): day and night, time differences, deflection of winds and tides. **Revolution** (365¼ days): seasons, varying day length, leap year.'),
+  SEC('A. STRUCTURE OF THE EARTH, ROCKS AND PLATES (LESSONS 7 TO 10)'),
+  ...QA('Name the layers of the Earth and the three types of rocks.', '**Crust** (solid, thin), **mantle** (very hot rock), **outer core** (liquid iron and nickel), **inner core** (solid iron and nickel). Rocks: **igneous** (magma cools: granite, basalt), **sedimentary** (layers of sediments: sandstone, limestone), **metamorphic** (changed by heat and pressure: marble, slate).'),
+  ...QA('Continental drift and plate tectonics: author, evidence and plate margins.', 'Wegener (1912): one super-continent, **Pangaea**. Evidence: jigsaw fit of the coasts, same fossils, same rocks and mountains, ice marks in hot lands. Plate margins: **constructive** (plates move apart: ridges, rift valleys), **destructive** (plates move together: fold mountains, trenches, volcanoes), **conservative** (plates slide past: faults).'),
+  SEC('B. VOLCANOES AND EARTHQUAKES (LESSONS 11 TO 13)'),
+  ...QA('Volcanoes: types, parts, benefits and hazards.', 'Active (Mount Cameroon), dormant, extinct (Manengouba). Parts: magma chamber, vent, cone, crater. Benefits: fertile soils, geothermal energy, tourism. Hazards: lava, ash, poisonous gases (Lake Nyos, 1986), lahars. Measures: monitoring, evacuation, land-use planning.'),
+  ...QA('Earthquakes: focus, epicentre, causes, effects and measures.', 'The **focus** is where the earthquake starts; the **epicentre** is the point on the surface above it. Cause: mainly plate movements along faults. Measured with a seismograph (Richter scale). Effects: loss of life, destroyed buildings, fires, tsunamis. Measures: strong buildings, warning, drills.'),
+  SEC('C. WEATHERING (LESSONS 14 TO 17)'),
+  ...QA('Define weathering. Distinguish physical from chemical weathering and name their processes.', '**Weathering** is the breaking down of rocks in their place. **Physical**: rocks break without change of minerals: thermal shattering, **frost shattering**, wetting and drying, pressure release. **Chemical**: minerals are changed by water and air: solution, carbonation, hydrolysis, oxidation, hydration.'),
+  SEC('D. RIVERS (LESSONS 18 TO 22)'),
+  ...QA('Describe the three courses of a river and their landforms.', '**Upper**: steep, vertical erosion; V-shaped valley, interlocking spurs, waterfall, gorge. **Middle**: gentle slope, lateral erosion; **meanders** (river cliff on the outside, slip-off slope on the inside). **Lower**: almost flat, deposition; floodplain, levees, ox-bow lake, delta. Erosion: hydraulic action, abrasion, attrition, solution.'),
+  ...QA('Man and the floodplain: importance, problems and solutions.', 'Importance: fertile alluvium, water, fishing, energy (Lagdo Dam), transport. Problems: floods, diseases, displacement. Solutions: dykes, dams, warnings, building on higher ground.'),
+  SEC('E. WAVE ACTION (LESSONS 23 TO 25)'),
+  ...QA('Waves: types, erosional and depositional features.', '**Constructive** waves (gentle, strong swash) build beaches; **destructive** waves (high, strong backwash) erode. Erosion: capes and bays, cliff and wave-cut platform, then cave → arch → stack → stump. Deposition: **longshore drift** moves sand along the coast and forms a beach, a **spit** (strip of sand joined to the land at one end), a bar and a tombolo.'),
+  QUIZ([['15° of longitude =', '1 hour'], ['Liquid layer of the Earth', 'Outer core'], ['Plates move apart at …', 'Constructive margins'], ['Strip of sand joined to the land at one end', 'Spit']]),
+]; };
+
+const F4 = () => [...F4_KAMDEM(), new Paragraph({ pageBreakBefore: true, spacing: { after: 0 }, children: [] }),
+  SEC('PART 2: FORM 4 SYLLABUS (Mr TABIT) – FOLLOWS, IF TIME ALLOWS'), ...F4_TABIT()];
 
 (async () => {
   await build('DGCAST_F1_Revision_Seq1_2026-2027.docx', 'FORM ONE', 'Lesson 1 (Geography), Lesson 2 (Our Planet, the Earth), PW1 and PW2, Lesson 3 (The Earth: a planet moving in space)', F1());
   await build('DGCAST_F2_Revision_Seq1_2026-2027.docx', 'FORM TWO', 'Lesson 1 (Rapid growth), PW1 (Demographic indices), Lesson 2 (Uneven distribution), PW2 (Densities), Lesson 3 (Man in the equatorial zone)', F2());
   await build('DGCAST_F2T_Revision_Seq1_2026-2027.docx', 'FORM TWO TECHNICAL', 'Lesson 1: The equatorial region; Lesson 2: The tropical grassland region (climate, vegetation and soils)', F2T());
   await build('DGCAST_F3_Revision_Seq1_2026-2027.docx', 'FORM THREE', 'Our Planet; Universe and Moon; Latitudes and Longitudes; Great Circles and IDL; Locate a Place on a Map', F3());
-  S = 21; const f4 = F4();
-  await build('DGCAST_F4_Revision_Seq1_2026-2027.docx', 'FORM FOUR', 'Soils, erosion and conservation; ecosystems; savanna and hot desert biomes; situation and relief of Cameroon', f4);
+  S = 19; const f4 = F4();
+  await build('DGCAST_F4_Revision_Seq1_2026-2027.docx', 'FORM FOUR', 'Part 1: physical geography (Form 3 syllabus, lessons 1 to 25); Part 2: soils, ecosystems, biomes, Cameroon (Mr Tabit)', f4);
 })();

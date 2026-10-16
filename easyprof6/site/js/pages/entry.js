@@ -9,6 +9,7 @@ import { dayName, fmt } from '../dates.js';
 import { getLang } from '../i18n.js';
 import { timeToMin, minToTime, creditMinutes, normTime } from '../dates.js';
 import { saveEntry } from '../actions.js';
+import { infoOf } from './program.js';
 
 const DURATIONS = [[60, '1 h'], [90, '1 h 30'], [120, '2 h'], [150, '2 h 30'], [180, '3 h']];
 
@@ -44,7 +45,7 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
     if (mins <= 0) return setErr(t('L’heure de fin doit être après l’heure de début.'));
     if (lesson && !(+n > 0)) return setErr(t('Indiquez le numéro de la leçon.'));
     if (f.evalOn && +f.passed > +f.evaluated) return setErr(t('Le nombre d’élèves ayant la moyenne dépasse le nombre d’élèves évalués.'));
-    const rec = saveEntry({ id: f.id, teacherId: tid, type: f.type, classId: f.classId, date: f.date, start: f.start, end: f.end, minutes: mins, n: lesson ? +n : null, title: f.title, digital: lesson && f.digital, present: f.present === '' || f.present == null ? null : +f.present, eval: f.evalOn ? { evaluated: +f.evaluated || 0, passed: +f.passed || 0 } : null });
+    const rec = saveEntry({ id: f.id, teacherId: tid, type: f.type, classId: f.classId, date: f.date, start: f.start, end: f.end, minutes: mins, n: lesson ? +n : null, title: f.title || (lesson ? infoOf(ctx, tid, f.classId, f.type, +n) : ''), digital: lesson && f.digital, present: f.present === '' || f.present == null ? null : +f.present, eval: f.evalOn ? { evaluated: +f.evaluated || 0, passed: +f.passed || 0 } : null });
     onSaved && onSaved(rec, { editing, wasN: lesson ? +n : null });
     if (!editing) setF(o => ({ ...o, title: '', nAuto: true, n: '', start: o.end, end: minToTime(timeToMin(o.end) + mins), digital: false, present: '', evalOn: false, evaluated: '', passed: '' }));
   };
@@ -56,7 +57,7 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
     <div class="row" style="gap:6px"><span class="lab">${t('Durée')} :</span>${DURATIONS.map(d => html`<button type="button" class=${'btn sm ' + (mins === d[0] ? '' : 'soft')} onClick=${() => setDur(d[0])}>${d[1]}</button>`)}<${Chip} tone=${mins > 0 ? 'info' : 'bad'}>${mins > 0 ? Math.floor(mins / 60) + ' h' + (mins % 60 ? ' ' + (mins % 60) : '') : t('invalide')}<//></div>
     ${lesson ? html`<${Field} label=${f.type === 'practical' ? t('N° du TP') : t('N° de la leçon')} hint=${f.nAuto ? t('Numéro suivant proposé automatiquement. Une même leçon faite en deux séances garde le même numéro.') : ''}>
       <div class="row" style="flex-wrap:nowrap"><input class="input" type="number" min="1" inputmode="numeric" value=${n} onInput=${(e) => setF(o => ({ ...o, n: e.target.value, nAuto: false }))} style="max-width:120px" />${f.nAuto ? html`<${Chip} tone="ok">${t('automatique')}<//>` : html`<button type="button" class="btn soft sm" onClick=${() => set('nAuto', true)}>${t('Remettre auto')}</button>`}</div><//>` : null}
-    <${Field} label=${t('Titre ou chapitre (facultatif)')}><input class="input" value=${f.title} onInput=${(e) => set('title', e.target.value)} placeholder=${f.type === 'orientation' ? t('Présentation, règles de classe…') : t('Ex. Les plaques tectoniques')} /><//>
+    <${Field} label=${t('Titre ou chapitre (facultatif)')}><input class="input" value=${f.title} onInput=${(e) => set('title', e.target.value)} placeholder=${(lesson && infoOf(ctx, tid, f.classId, f.type, +n)) || (f.type === 'orientation' ? t('Présentation, règles de classe…') : t('Ex. Les plaques tectoniques'))} /><//>
     ${lesson ? html`<label class="opt"><input type="checkbox" checked=${f.digital} onChange=${(e) => set('digital', e.target.checked)} /><span>${t('Leçon digitalisée (projecteur, diaporama…)')}</span></label>` : null}
     ${f.type !== 'absence' ? html`<${Field} label=${t('Élèves présents (facultatif)')} hint=${t('Sert au taux d’assiduité de la classe (seuil 75 %).')}><input class="input" type="number" min="0" inputmode="numeric" value=${f.present == null ? '' : f.present} onInput=${(e) => set('present', e.target.value)} /><//>` : null}
     ${f.type === 'assessment' || lesson ? html`<label class="opt"><input type="checkbox" checked=${f.evalOn} onChange=${(e) => set('evalOn', e.target.checked)} /><span>${t('Il y a eu une évaluation (ajouter les résultats)')}</span></label>` : null}

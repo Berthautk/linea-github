@@ -6,6 +6,7 @@ import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Chip, Empty, Field, Modal, Seg, ReasonSelect, openModal, closeModal, num1 } from '../ui.js';
 import { EntryForm } from './entry.js';
+import { infoOf } from './program.js';
 import { makeCtx, stats, todaySlots, nextNumber } from '../calc.js';
 import { state, setUI, isAP, myId, setToast } from '../store.js';
 import { saveEntry, deleteEntry } from '../actions.js';
@@ -25,7 +26,7 @@ export function record(ctx, tid, iso, row, { late = 0, lessons = 1, n, type = 'l
   const from = late ? endFor(st, late / P, brk, P) : st;                                  // heure d'arrivée
   for (let i = 0; i < k; i++) {
     const a = i === 0 ? from : endFor(from, (per * i) / 60, brk, P), b = i === k - 1 ? (row.en || endFor(st, row.h, brk, P)) : endFor(from, (per * (i + 1)) / 60, brk, P);
-    ids.push(saveEntry({ teacherId: tid, classId: row.c, type, date: iso, start: a, end: b, minutes: i === k - 1 ? total - per * (k - 1) : per, n: first != null ? first + i : null, title, note: tid === myId() ? '' : NOTE }).id);
+    ids.push(saveEntry({ teacherId: tid, classId: row.c, type, date: iso, start: a, end: b, minutes: i === k - 1 ? total - per * (k - 1) : per, n: first != null ? first + i : null, title: title || (first != null ? infoOf(ctx, tid, row.c, type, first + i) : ''), note: tid === myId() ? '' : NOTE }).id);
   }
   const cname = (ctx.cls(row.c) || {}).name || row.c;
   setToast(k > 1 ? t('{c} · {k} leçons enregistrées', { c: cname, k }) : first != null ? t('{c} · leçon {n} enregistrée', { c: cname, n: first }) : t('{c} · séance enregistrée', { c: cname }), '', { label: t('Annuler'), run: () => ids.forEach(deleteEntry) });
@@ -46,7 +47,7 @@ function DonePick({ ctx, tid, iso, row }) {
   const go = () => { record(ctx, tid, iso, row, { type, n: numbered && n !== '' ? +n : null }); closeModal(); };
   return html`<${Modal} title=${t('Qu’avez-vous fait ?')} onClose=${closeModal}><p class="sub cap">${cname} · ${fmt(iso, lang, { weekday: true, noYear: true })}${row.st ? ' · ' + row.st + ' → ' + row.en : ''}</p>
     <div class="pick-types">${DONE_TYPES.map(id => { const ty = TYPES.find(x => x.id === id); return html`<button type="button" class=${'btn ' + (type === id ? '' : 'soft')} onClick=${() => { setType(id); setN(''); }}>${ty.icon} ${t(ty.fr)}</button>`; })}</div>
-    ${numbered ? html`<${Field} label=${t('Numéro (facultatif)')} hint=${t('Laissez vide pour prendre le suivant : {n}.', { n: auto })}><input class="input" type="number" min="1" inputmode="numeric" placeholder=${String(auto)} value=${n} onInput=${(e) => setN(e.target.value)} /><//>` : null}
+    ${numbered ? html`<${Field} label=${t('Numéro (facultatif)')} hint=${t('Laissez vide pour prendre le suivant : {n}.', { n: auto })}><input class="input" type="number" min="1" inputmode="numeric" placeholder=${String(auto)} value=${n} onInput=${(e) => setN(e.target.value)} /><//>${infoOf(ctx, tid, row.c, type, n !== '' ? +n : auto) ? html`<p class="hint"><b>${infoOf(ctx, tid, row.c, type, n !== '' ? +n : auto)}</b></p>` : null}` : null}
     <p class="hint">${type === 'lesson' ? t('Compté dans les leçons (couverture du programme).') : type === 'practical' ? t('Compté dans les travaux pratiques, pas dans les leçons.') : type === 'further' ? t('Compté à part (further study / travail guidé), pas dans les leçons.') : t('Compté dans les heures faites, sans numéro de leçon.')}</p>
     <button class="btn block" onClick=${go}><${Icon} n="check" />${t('Enregistrer')}</button><//>`;
 }
@@ -71,7 +72,7 @@ function Round({ ctx, tid, iso, row }) {
         <${Field} label=${t('Type de séance')}><select class="input" value=${type} onChange=${(e) => setType(e.target.value)}>${TYPES.map(x => html`<option value=${x.id}>${x.icon} ${t(x.fr)}</option>`)}</select><//>
         ${lesson ? html`<div class="grid2"><${Field} label=${t('Leçons faites')}><div class="row" style="gap:8px">${[1, 2, 3].map(x => html`<button class=${'btn sm ' + (k === x ? '' : 'soft')} onClick=${() => setK(x)}>${x}</button>`)}</div><//>
           <${Field} label=${k > 1 ? t('N° de la première leçon') : t('N° de la leçon')}><input class="input" type="number" min="1" inputmode="numeric" value=${n} onInput=${(e) => setN(e.target.value)} /><//></div>` : null}
-        <${Field} label=${t('Titre de la leçon (facultatif)')}><input class="input" value=${title} onInput=${(e) => setTitle(e.target.value)} /><//>
+        <${Field} label=${t('Titre de la leçon (facultatif)')}><input class="input" placeholder=${lesson || type === 'practical' || type === 'further' ? infoOf(ctx, tid, row.c, type, +n || nextNumber(ctx, tid, row.c, type)) : ''} value=${title} onInput=${(e) => setTitle(e.target.value)} /><//>
         <div class="sub">${t('Sera compté : {h} h', { h: num1(left / 60) })}</div>`}
     <button class="btn block" onClick=${save}>${t('Enregistrer')}</button><//>`;
 }

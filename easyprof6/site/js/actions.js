@@ -41,9 +41,10 @@ export const saveDept = (patch) => setData({ dept: stamp({ ...state.data.dept, .
 export const saveClass = (c) => setData({ classes: upsert(state.data.classes, stamp({ id: c.id || uid(), name: c.name, level: c.level || '', cycle: c.cycle || '1er', effectif: c.effectif || { total: 0, girls: 0, boys: 0 } })) });
 export const deleteClass = (id) => setData({ classes: upsert(state.data.classes, { id, deleted: true, u: nextU() }), assign: state.data.assign.map(a => (a.classId === id ? { id: a.id, deleted: true, u: nextU() } : a)) });
 /** Programme de l'année d'un enseignant dans une classe : leçons (théorie, TP) et heures (théorie, TP). `hours` = total des heures. */
-export const saveAssign = ({ teacherId, classId, th, pr, fs, hth, hpr, hours, n0 }) => {
+export const saveAssign = ({ teacherId, classId, th, pr, fs, hth, hpr, hours, n0, sbs }) => {
   const a = { th: +th || 0, pr: +pr || 0, fs: +fs || 0, hth: +hth || 0, hpr: +hpr || 0, n0: +n0 || 0 }, tot = a.hth + a.hpr;
-  setData({ assign: upsert(state.data.assign, stamp({ id: teacherId + ':' + classId, teacherId, classId, ...a, hours: tot || +hours || 0 })) });
+  const old = state.data.assign.find(x => x.id === teacherId + ':' + classId);   // les sous-branches (Sixth) se conservent si l'appelant n'en parle pas
+  setData({ assign: upsert(state.data.assign, stamp({ id: teacherId + ':' + classId, teacherId, classId, ...a, sbs: sbs != null ? String(sbs) : (old && !old.deleted && old.sbs) || '', hours: tot || +hours || 0 })) });
 };
 export const removeAssign = (teacherId, classId) => setData({ assign: upsert(state.data.assign, { id: teacherId + ':' + classId, deleted: true, u: nextU() }) });
 export const saveTeacher = (id, patch) => setData({ teachers: state.data.teachers.map(t => (t.id === id ? stamp({ ...t, ...patch }) : t)) });

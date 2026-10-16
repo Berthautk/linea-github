@@ -342,3 +342,41 @@ test('fiche pédagogique : heures de théorie / TP du programme, TP et further s
   const R = followUp(makeCtx(st, '2026-10-14'), '2026-09-07', '2026-10-14'), r = R.rows ? R.rows[0] : R.total;
   const tot = R.total; assert.equal(tot.planTh, 42); assert.equal(tot.planPr, 2); assert.equal(tot.pr, 2, 'TP sans numéro comptés aussi'); assert.equal(tot.objTh, 60); assert.equal(tot.objPr, 6); assert.equal(tot.objH, 66);
 });
+
+test('Sixth Form : catalogue des sous-branches (totaux, TP, further study), titres des leçons, ordre d’enseignement', async () => {
+  const { BRANCHES } = await import('../site/js/syllabus.js');
+  const { sumBranches, lessonInfo, infoText, sbsOf } = await import('../site/js/pages/program.js');
+  const sum = (ids) => sumBranches(ids);
+  assert.deepEqual(sum(['met', 'clim', 'hydro', 'geomo', 'bio']), { th: 78, pr: 4, fs: 5 }, 'Lower Sixth : 18+3+13+16+28 leçons');
+  assert.deepEqual(sum(['pop', 'set', 'eco']), { th: 70, pr: 11, fs: 0 }, 'Upper Sixth : 18+22+30 = 70 leçons, comme la fiche nationale');
+  assert.equal(sum(['env']).th, 14); assert.equal(sum(['cam']).th, 0, 'Cameroun = further study, pas des leçons'); assert.equal(sum(['cam']).fs, 15); assert.equal(sum(['prac']).th, 0);
+  assert.equal(BRANCHES.find(b => b.id === 'eco').items.l.some(([n]) => n === 12), false, 'la leçon 12 n’existe pas en Economic Geography (31 numéros, 30 leçons)');
+  assert.equal(sumBranches(['met', 'clim'], 10).th, 21 - 9, 'reprise à la leçon 10 : il en reste 12');
+  // Kamdem, Lower Sixth : Meteorology puis Population → n° 1-18 = Meteorology, n° 19-36 = Population
+  const a = { sbs: 'met,pop,zzz' }; assert.deepEqual(sbsOf(a), ['met', 'pop']);
+  assert.match(infoText(lessonInfo(a, 'lesson', 3)), /^Meteorology · Solar Radiation/);
+  assert.match(infoText(lessonInfo(a, 'lesson', 19)), /^Population Geography · Sources of Population Data/);
+  assert.equal(lessonInfo(a, 'lesson', 37), null); assert.equal(lessonInfo({}, 'lesson', 1), null);
+  assert.match(infoText(lessonInfo({ sbs: 'cam' }, 'further', 2)), /Climate of Cameroon/);
+});
+
+test('Sixth Form : deux enseignants dans la même classe, chacun compte ses propres leçons', async () => {
+  const { sumBranches } = await import('../site/js/pages/program.js');
+  const kam = sumBranches(['met', 'pop']), neb = sumBranches(['set', 'clim', 'hydro']);
+  const st = mk({ assign: [{ id: 'K:LSA', teacherId: 'K', classId: 'LSA', ...kam, hours: 0 }, { id: 'N:LSA', teacherId: 'N', classId: 'LSA', ...neb, hours: 0 }],
+    entries: [E('a', 'K', '2026-09-08', { n: 1 }), E('b', 'K', '2026-09-15', { n: 2 }), E('c', 'N', '2026-09-10', { n: 1 })] });
+  const c = makeCtx(st, '2026-10-13');
+  const k = classProgress(c, 'K').find(r => r.classId === 'LSA'), n = classProgress(c, 'N').find(r => r.classId === 'LSA');
+  assert.equal(k.plan.total, 36); assert.equal(k.done, 2); assert.equal(n.plan.total, 38); assert.equal(n.done, 1);
+});
+
+test('Form 3 repris en Form 4 à partir de la leçon 24 : 19 leçons, numérotées 24 à 42, à côté de la Human Geography de l’autre enseignant', () => {
+  const st = mk({ assign: [{ id: 'K:F4AR', teacherId: 'K', classId: 'F4AR', th: 19, pr: 2, fs: 2, n0: 24, hours: 0 }, { id: 'A:F4AR', teacherId: 'A', classId: 'F4AR', th: 46, hours: 0 }], entries: [] });
+  let c = makeCtx(st, '2026-10-13');
+  assert.equal(nextNumber(c, 'K', 'F4AR', 'lesson'), 24); assert.equal(nextNumber(c, 'A', 'F4AR', 'lesson'), 1);
+  st.entries = [E('x', 'K', '2026-09-08', { classId: 'F4AR', n: 24 }), E('y', 'A', '2026-09-09', { classId: 'F4AR', n: 1 }), E('z', 'A', '2026-09-16', { classId: 'F4AR', n: 2 })];
+  c = makeCtx(st, '2026-10-13');
+  assert.equal(nextNumber(c, 'K', 'F4AR', 'lesson'), 25);
+  const rk = classProgress(c, 'K').find(r => r.classId === 'F4AR'), ra = classProgress(c, 'A').find(r => r.classId === 'F4AR');
+  assert.equal(rk.done, 1); assert.equal(rk.plan.total, 19); assert.equal(ra.done, 2); assert.equal(ra.plan.total, 46, 'chaque enseignant a son propre programme dans la même classe');
+});

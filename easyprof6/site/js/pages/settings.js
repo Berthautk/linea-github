@@ -9,7 +9,7 @@ import { applyTiming, saveAssign, removeAssign, saveDept, saveClass, deleteClass
 import { makeCtx, catchUp, yearSnapshot } from '../calc.js';
 import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
-import { ProgramFields, officialFor, isEmptyProgram, totalHours } from './program.js';
+import { ProgramFields, officialFor, isEmptyProgram, totalHours, levelOf, isSixth } from './program.js';
 import { Guide } from './guide.js';
 import { ReminderSetup } from '../reminders.js';
 import { defaultTerms, defaultCalendar } from '../defaults.js';
@@ -179,8 +179,8 @@ function ClassProgram({ c, ctx, next }) {
   return html`<div class="stack" style="gap:10px;border-top:1px dashed var(--line);padding-top:10px">
     ${rows.length ? null : html`<p class="sub">${t('Aucun enseignant n’est encore rattaché à cette classe : ajoutez-le ci-dessous, puis indiquez ses leçons et heures prévues.')}</p>`}
     ${rows.map(a => html`<div class="card flat stack" style="gap:8px"><div class="row" style="flex-wrap:nowrap"><b class="grow">${(ctx.teacher(a.teacherId) || {}).name || '?'}</b>${ctx.teachers.length > 1 ? html`<button class="icon-btn" onClick=${() => removeAssign(a.teacherId, c.id)} aria-label=${t('Retirer')}><${Icon} n="trash" /></button>` : null}</div>
-      <${ProgramFields} a=${a} teacherId=${a.teacherId} classId=${c.id} />
-      ${off && isEmptyProgram(a) ? html`<button class="btn soft sm" style="align-self:flex-start" onClick=${() => { fill(a); setToast(t('Programme du niveau repris : à vérifier.')); }}>${t('Remplir avec le programme du niveau ({l} leçons, {p} TP, {h} h)', { l: off.th, p: off.pr + ' TP + ' + off.fs + ' further study', h: off.hth + off.hpr })}</button>` : null}</div>`)}
+      <${ProgramFields} a=${a} teacherId=${a.teacherId} classId=${c.id} level=${levelOf(c)} />
+      ${off && !isSixth(levelOf(c)) && isEmptyProgram(a) ? html`<button class="btn soft sm" style="align-self:flex-start" onClick=${() => { fill(a); setToast(t('Programme du niveau repris : à vérifier.')); }}>${t('Remplir avec le programme du niveau ({l} leçons, {p} TP, {h} h)', { l: off.th, p: off.pr + ' TP + ' + off.fs + ' further study', h: off.hth + off.hpr })}</button>` : null}</div>`)}
     ${free.length ? html`<div class="row"><select class="input grow" value=${add} onChange=${(e) => setAdd(e.target.value)}><option value="">${t('Ajouter un enseignant à cette classe…')}</option>${free.map(x => html`<option value=${x.id}>${x.name}</option>`)}</select><button class="btn" disabled=${!add} onClick=${() => { saveAssign({ teacherId: add, classId: c.id }); setAdd(''); }}>${t('Ajouter')}</button></div>` : null}
     <button class="btn" onClick=${() => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); setTimeout(() => { setToast(t('« {n} » enregistrée ✓', { n: c.name })); setUI({ cprog: next ? next.id : '' }); if (!next) window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }, 120); }}><${Icon} n="check" />${next ? t('Enregistrer et passer à {n}', { n: next.name }) : t('Enregistrer')}</button></div>`;
 }

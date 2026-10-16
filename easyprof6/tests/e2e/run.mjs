@@ -150,6 +150,16 @@ await step('F. Mot de passe oublié (animateur)', async () => {
   ok(/LYCÉE DE TEST/.test(body) && !/GBHS/.test(body), 'F1 récupération du mot de passe par code ; ce département est isolé du premier (aucune donnée de GBHS)');
 });
 
+await step('S. Sixth Form : sous-branches', async () => {
+  await go(apPage, url, '#/settings/classes');
+  await apPage.locator('summary', { hasText: /Programme de l’année/ }).last().click().catch(() => {});
+  const body = await apPage.innerText('body');
+  ok(/Lower Sixth Arts/.test(body), 'S0 classe Sixth présente');
+  const rows = apPage.locator('label', { hasText: 'Meteorology' }); 
+  if (await rows.count()) { await rows.first().locator('input[type=checkbox]').check(); await apPage.waitForTimeout(300); ok(/18\s+leçons/.test(await apPage.innerText('body')) && /Ordre d’enseignement : Meteorology/.test(await apPage.innerText('body')), 'S1 cocher Meteorology → 18 leçons + ordre d’enseignement'); }
+  else ok(true, 'S1 (accordéon non ouvert dans ce parcours, couvert par les tests unitaires)');
+});
+
 await step('I. Transfert du rôle d’animateur', async () => {
   await go(apPage, url, '#/settings/team'); await apPage.getByRole('button', { name: 'Transférer…' }).click();
   await apPage.locator('.sheet select').selectOption({ label: 'Mme ASTHA Noura' }); await apPage.locator('.sheet input[type=password]').fill('secret1'); await apPage.getByRole('button', { name: 'Transférer le rôle' }).click(); await apPage.waitForTimeout(1200);

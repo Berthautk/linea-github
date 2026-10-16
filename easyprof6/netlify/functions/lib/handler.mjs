@@ -53,7 +53,7 @@ function cleanClass(c) {
 function cleanAssign(a) {
   if (!a || typeof a.id !== 'string' || a.id.length > 90) return null;
   if (a.deleted) return { id: a.id, u: cu(a.u), deleted: true };
-  return { id: a.id, u: cu(a.u), teacherId: str(a.teacherId, 40), classId: str(a.classId, 40), th: Math.max(0, num(a.th)), pr: Math.max(0, num(a.pr)), fs: Math.max(0, num(a.fs)), hth: Math.max(0, num(a.hth)), hpr: Math.max(0, num(a.hpr)), n0: Math.min(999, Math.max(0, num(a.n0))), hours: Math.max(0, num(a.hours)) };
+  return { id: a.id, u: cu(a.u), teacherId: str(a.teacherId, 40), classId: str(a.classId, 40), th: Math.max(0, num(a.th)), pr: Math.max(0, num(a.pr)), fs: Math.max(0, num(a.fs)), hth: Math.max(0, num(a.hth)), hpr: Math.max(0, num(a.hpr)), n0: Math.min(999, Math.max(0, num(a.n0))), sbs: /^[a-z]+(,[a-z]+){0,15}$/.test(a.sbs || '') ? a.sbs : '', hours: Math.max(0, num(a.hours)) };
 }
 function cleanRegul(r) {
   if (!r || typeof r.id !== 'string' || r.id.length > 40) return null;

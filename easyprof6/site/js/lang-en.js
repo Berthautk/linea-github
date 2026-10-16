@@ -931,4 +931,13 @@ export const EN = {
   "Pas encore synchronisé sur cet appareil.": "Not synced yet on this device.",
   "Vos saisies partent toutes seules dès qu’il y a du réseau ; celles de vos collègues arrivent à l’ouverture de l’application, puis toutes les 3 minutes.": "Your entries are sent by themselves as soon as there is a signal; your colleagues’ arrive when you open the app, then every 3 minutes.",
   "Synchronisation lancée.": "Sync started.",
+  "Sous-branches enseignées dans cette classe": "Sub-branches taught in this class",
+  "Cochez, dans l’ordre où l’enseignant les fait, uniquement ce qui lui reste à enseigner à cette classe (une sous-branche déjà terminée se compte dans « Heures hors application »). Les leçons, TP et further study se calculent tout seuls.": "Tick, in the order the teacher teaches them, only what is still left to teach in this class (a sub-branch already finished is counted under “Hours outside the app”). Lessons, practicals and further study add up by themselves.",
+  "hors total officiel": "outside the official total",
+  "non compté dans le programme": "not counted in the programme",
+  "Monter": "Move up",
+  "Descendre": "Move down",
+  "Ordre d’enseignement : {l}. La leçon n° 1 de cet enseignant est la première leçon de la première sous-branche, et ainsi de suite.": "Teaching order: {l}. This teacher’s lesson no. 1 is the first lesson of the first sub-branch, and so on.",
+  "Cet enseignant continue le programme de {l} à partir de la leçon n°": "This teacher continues the {l} programme from lesson no.",
+  "Exemple : la physical geography de Form 3 reprise en Form 4 à partir de la leçon 24 → il reste 19 leçons, numérotées 24 à 42.": "Example: Form 3 physical geography continued in Form 4 from lesson 24 → 19 lessons left, numbered 24 to 42.",
 };

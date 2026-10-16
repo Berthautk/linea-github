@@ -311,3 +311,11 @@ test('plusieurs années : archive, vue d’une année passée, comparaison', asy
   assert.ok(y1.cells.find(c => c.id === 'Y').rateH > 0, 'l’ancienne année garde ses heures faites');
   assert.ok(y1.cells.find(c => c.id === 'Y').dueH > 0, 'et ses heures dues');
 });
+
+test('rappels : un rendez-vous hebdomadaire avec alarme par jour de cours, jusqu’à la fin de l’année', async () => {
+  const { remindersIcs, teachingDays } = await import('../site/js/reminders.js');
+  const c = makeCtx(mk(), '2026-10-14'), days = teachingDays(c, 'K');
+  assert.ok(days.length >= 1);
+  const ics = remindersIcs(c, 'K', '18:30');
+  assert.equal((ics.match(/BEGIN:VEVENT/g) || []).length, days.length); assert.match(ics, /RRULE:FREQ=WEEKLY;BYDAY=(MO|TU|WE|TH|FR|SA);UNTIL=\d{8}T235959Z/); assert.match(ics, /BEGIN:VALARM/); assert.match(ics, /T183000/);
+});

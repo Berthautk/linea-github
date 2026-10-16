@@ -11,6 +11,7 @@ import * as D from '../dates.js';
 import { Team, TeacherDetail, showCredentials } from './team.js';
 import { ProgramFields, officialFor, isEmptyProgram, totalHours } from './program.js';
 import { Guide } from './guide.js';
+import { ReminderSetup } from '../reminders.js';
 import { defaultTerms, defaultCalendar } from '../defaults.js';
 import { REASONS } from '../consts.js';
 import { fmt, todayISO, DEFAULT_BREAKS } from '../dates.js';
@@ -29,7 +30,8 @@ function Menu() {
     ...(ap ? [
       [t('Établissement et fiches'), [
         ['#/settings/dept', 'school', t('En-tête, durée des cours et pauses'), t('Nom de l’école, texte imprimé en haut des fiches, durée d’une heure de cours, pauses')],
-        ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Dates des trimestres, vacances, jours sans cours')]]],
+        ['#/settings/year', 'calendar', t('Année scolaire et calendrier'), t('Dates des trimestres, vacances, jours sans cours')],
+        ['#/settings/newyear', 'calendar', t('Fin d’année scolaire'), t('Passer à l’année suivante sans rien perdre : l’année finie est archivée et reste consultable, pour comparer les années')]]],
       [t('Classes et programme'), [
         ['#/settings/classes', 'book', t('Classes et leçons prévues'), t('Les classes, leurs effectifs, et pour chacune le nombre de leçons et d’heures prévues pour l’année')]]],
       [t('Équipe'), [
@@ -79,6 +81,7 @@ function Profile() {
     ${isAP() ? html`<${RecoveryCard} />` : null}
     <div class="card stack"><h3>${t('Synchronisation')}</h3><p class="sub">${state.sync.last ? t('Dernière synchronisation : {h} (il y a {m} min).', { h: new Date(state.sync.last).toLocaleTimeString(state.lang === 'en' ? 'en-GB' : 'fr-FR', { hour: '2-digit', minute: '2-digit' }), m: Math.max(0, Math.round((Date.now() - state.sync.last) / 60000)) }) : t('Pas encore synchronisé sur cet appareil.')} ${t('Vos saisies partent toutes seules dès qu’il y a du réseau ; celles de vos collègues arrivent à l’ouverture de l’application, puis toutes les 3 minutes.')}</p>
       <button class="btn soft" style="align-self:flex-start" onClick=${() => { syncNow(); setToast(t('Synchronisation lancée.')); }}><${Icon} n="refresh" />${t('Synchroniser maintenant')}</button></div>
+    <div class="card stack"><h3>⏰ ${t('Rappels dans mon téléphone')}</h3><${ReminderSetup} ctx=${makeCtx(state.data)} tid=${myId()} /></div>
     <div class="card stack"><h3>${t('Cet appareil')}</h3>${isInstalled() ? html`<button class="btn accent" disabled><${Icon} n="check" />${t('Rekort est installé sur cet appareil')}</button>
         <button class="btn soft" onClick=${() => openModal(() => html`<${Modal} title=${t('Désinstaller Rekort')} onClose=${closeModal}><p>${t('Une application web ne peut pas se désinstaller elle-même : c’est le téléphone qui le fait, en deux gestes.')}</p><ol class="guide"><li>${t('Fermez Rekort, puis appuyez longuement sur son icône sur l’écran d’accueil.')}</li><li>${t('Choisissez « Désinstaller » (ou « Supprimer », « Retirer de l’écran d’accueil »).')}</li></ol><p class="sub">${t('Vos données restent sur le serveur : en réinstallant et en vous reconnectant, vous les retrouvez.')}</p><button class="btn block" onClick=${closeModal}>${t('J’ai compris')}</button><//>`)}><${Icon} n="trash" />${t('Désinstaller…')}</button>`
       : inst ? html`<button class="btn accent" onClick=${() => confirmDialog({ title: t('Installer Rekort ?'), message: t('Rekort sera ajouté à l’écran d’accueil de cet appareil, comme une application, et s’ouvrira même sans Internet.'), confirm: t('Installer'), onConfirm: async () => { inst.prompt(); await inst.userChoice; window.__epInstall = null; update(() => { }); } })}><${Icon} n="download" />${t('Installer Rekort sur ce téléphone')}</button>` : html`<p class="sub">${t('Pour installer l’application : menu du navigateur › « Ajouter à l’écran d’accueil » ou « Installer l’application ».')}</p>`}
@@ -115,14 +118,20 @@ const nextYearName = (y) => { const m = /(\d{4})\D+(\d{4})/.exec(y || ''); retur
 const plus1 = (iso) => (iso ? (+iso.slice(0, 4) + 1) + iso.slice(4) : iso);
 /** Fin d'année : l'année en cours est archivée (sa configuration), puis on passe à la suivante. Aucune saisie n'est effacée. */
 function NewYear() {
-  const d = state.data.dept, next = nextYearName(d.year), done = (d.years || []).map(y => y.year);
-  if (!next) return null;
-  const go = () => confirmDialog({ title: t('Commencer l’année {y} ?', { y: next }), message: t('L’année {a} est archivée : ses trimestres, son calendrier, les emplois du temps et le programme de chaque classe sont gardés, et toutes les saisies restent. Vous pourrez la rouvrir et la comparer à la nouvelle année. Les dates de la nouvelle année sont reprises un an plus tard : vérifiez-les ensuite.', { a: d.year }), confirm: t('Commencer {y}', { y: next }),
-    onConfirm: () => { saveDept({ years: [yearSnapshot(state.data), ...(d.years || []).filter(y => y.year !== d.year)], year: next, terms: (d.terms || []).map(x => ({ ...x, start: plus1(x.start), end: plus1(x.end) })), calendar: [], setup: { ...(d.setup || {}), year: false } }); setToast(t('Bienvenue en {y} ! L’année {a} est archivée.', { y: next, a: d.year })); } });
-  return html`<div class="card stack"><h3>📅 ${t('Fin d’année scolaire')}</h3>
-    <p class="sub">${t('À la rentrée suivante, commencez une nouvelle année : rien n’est perdu. Chaque année reste consultable (Accueil et Fiche : choix de l’année en haut) et vous pourrez comparer les années trimestre par trimestre.')}</p>
-    ${done.length ? html`<p class="sub">${t('Années archivées')} : <b>${done.join(', ')}</b></p>` : null}
-    <button class="btn soft" style="align-self:flex-start" onClick=${go}><${Icon} n="calendar" />${t('Clôturer {a} et commencer {y}', { a: d.year, y: next })}</button></div>`;
+  const d = state.data.dept, next = nextYearName(d.year), years = d.years || [], prev = years[0], lang = getLang();
+  const end = (d.terms || []).map(x => x.end).filter(Boolean).sort().pop() || '', today = D.todayISO(), early = end && today < end;
+  const go = () => confirmDialog({ title: t('Passer à l’année {y} ?', { y: next }),
+    message: (early ? '⚠ ' + t('Le calendrier indique que l’année {a} n’est pas terminée (dernier trimestre jusqu’au {d}). ', { a: d.year, d: fmt(end, lang) }) : '') + t('L’année {a} sera archivée : ses trimestres, son calendrier, les emplois du temps et le programme de chaque classe sont gardés, et toutes les saisies restent. Vous pourrez revenir en arrière. Les dates de la nouvelle année sont reprises un an plus tard : vérifiez-les ensuite.', { a: d.year }),
+    confirm: early ? t('Oui, passer quand même') : t('Passer à {y}', { y: next }), danger: !!early,
+    onConfirm: () => { saveDept({ years: [yearSnapshot(state.data), ...years.filter(y => y.year !== d.year)], year: next, terms: (d.terms || []).map(x => ({ ...x, start: plus1(x.start), end: plus1(x.end) })), calendar: [], setup: { ...(d.setup || {}), year: false } }); setUI({ year: '' }); setToast(t('Bienvenue en {y} ! L’année {a} est archivée.', { y: next, a: d.year })); } });
+  const back = () => confirmDialog({ title: t('Revenir à l’année {y} ?', { y: prev.year }), message: t('L’année {a} redevient l’année en cours, avec ses trimestres et son calendrier. Les saisies ne sont pas touchées.', { a: prev.year }), confirm: t('Revenir à {y}', { y: prev.year }),
+    onConfirm: () => { saveDept({ year: prev.year, terms: prev.terms, calendar: prev.calendar, ...(prev.period ? { period: prev.period } : {}), years: years.slice(1) }); setUI({ year: '' }); setToast(t('Retour à l’année {y}.', { y: prev.year })); } });
+  return html`<div class="page"><${Back} title=${t('Fin d’année scolaire')} />
+    <div class="card stack"><p>${t('Année en cours')} : <b>${d.year || '—'}</b>${end ? html` · <span class="sub">${t('dernier trimestre jusqu’au {d}', { d: fmt(end, lang) })}</span>` : null}</p>
+      <p class="sub">${t('À la rentrée suivante, passez à la nouvelle année : rien n’est perdu. Chaque année reste consultable (Accueil et Fiche : choix de l’année en haut) et vous pouvez comparer les années trimestre par trimestre.')}</p>
+      ${early ? html`<div class="notice"><span>${t('Le calendrier indique que l’année n’est pas encore finie : attendez la fin du dernier trimestre, sauf si vous êtes sûr.')}</span></div>` : null}
+      ${next ? html`<button class="btn block" onClick=${go}><${Icon} n="calendar" />${t('Passer à {y}', { y: next })}</button>` : null}
+      ${prev ? html`<p class="sub">${t('Années archivées')} : <b>${years.map(y => y.year).join(', ')}</b></p><button class="btn soft block" onClick=${back}>${t('Revenir à {y}', { y: prev.year })}</button>` : null}</div></div>`;
 }
 function Year() {
   const ctx = makeCtx(state.data), d = state.data.dept, lang = getLang();
@@ -140,7 +149,6 @@ function Year() {
       <p class="hint" style="margin-top:8px">${t('Ces jours sont retirés des heures dues de tous les enseignants et ne déclenchent aucun rappel.')}</p></div>
     <div class="card"><div class="card-h"><h3>${t('Comment compter les jours sans cours déclarés ?')}</h3></div><div class="list">${REASONS.map(r => { const out = ctx.reasonOut(r.id); return html`<div class="item"><div class="dot">${r.icon}</div><div class="grow"><b>${t(r.fr)}</b></div><${Seg} options=${[{ id: 'out', label: t('Non dû') }, { id: 'abs', label: t('Absence') }]} value=${out ? 'out' : 'abs'} onChange=${(v) => saveDept({ dueOut: { ...(d.dueOut || {}), [r.id]: v === 'out' } })} /></div>`; })}</div>
       <p class="hint" style="margin-top:8px">${t('« Non dû » : ces heures sont retirées des heures dues (pas de faute de l’enseignant). « Absence » : elles restent dues mais ne sont pas faites.')}</p></div>
-    <${NewYear} />
     <${SaveBar} label=${t('Enregistrer et revenir aux réglages')} /></div>`;
 }
 
@@ -329,9 +337,9 @@ function Data() {
 
 export function Settings({ route }) {
   const [, , a, b] = route.split('/'); // /settings/<a>/<b>
-  if (!isAP() && ['dept', 'year', 'classes', 'team', 'regul'].includes(a)) return html`<${Menu} />`;
+  if (!isAP() && ['dept', 'year', 'newyear', 'classes', 'team', 'regul'].includes(a)) return html`<${Menu} />`;
   switch (a) {
-    case 'profile': return html`<${Profile} />`; case 'dept': return html`<${Dept} />`; case 'year': return html`<${Year} />`; case 'classes': return html`<${Classes} />`;
+    case 'profile': return html`<${Profile} />`; case 'dept': return html`<${Dept} />`; case 'year': return html`<${Year} />`; case 'newyear': return html`<${NewYear} />`; case 'classes': return html`<${Classes} />`;
     case 'team': return b ? html`<${TeacherDetail} id=${b} />` : html`<${Team} />`; case 'regul': return html`<${Regul} />`; case 'guide': return html`<${Guide} />`; case 'data': return html`<${Data} />`;
     default: return html`<${Menu} />`;
   }

@@ -6,8 +6,31 @@ function download(blob, name) {
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
 }
 
+/** Word ne comprend ni flexbox ni grid : les blocs posés côte à côte deviennent un tableau sans bordure, et la mise en forme calculée (alignement, gras, taille, majuscules) est recopiée sur chaque élément. */
+function wordify(orig, clone) {
+  const cs = getComputedStyle(orig), st = clone.style;
+  if (cs.display !== 'none') {
+    st.textAlign = cs.textAlign; if (+cs.fontWeight >= 600) st.fontWeight = 'bold';
+    const px = parseFloat(cs.fontSize); if (px) st.fontSize = Math.max(6, Math.round(px * 0.75 * 10) / 10) + 'pt';
+    if (cs.textTransform !== 'none') st.textTransform = cs.textTransform;
+    if (cs.whiteSpace.startsWith('pre')) st.whiteSpace = cs.whiteSpace;
+  }
+  const oc = [...orig.children], cc = [...clone.children];
+  oc.forEach((o, i) => cc[i] && wordify(o, cc[i]));
+  if (/flex|grid/.test(cs.display) && oc.length > 1 && !/^(TABLE|TBODY|THEAD|TR|TD|TH)$/.test(orig.tagName) && cs.flexDirection !== 'column') {
+    const doc = clone.ownerDocument, tb = doc.createElement('table'), tr = doc.createElement('tr');
+    tb.setAttribute('width', '100%'); tb.style.cssText = 'border-collapse:collapse;width:100%;border:none';
+    for (const k of [...clone.childNodes]) {
+      if (k.nodeType === 3 && !k.textContent.trim()) continue;
+      const td = doc.createElement('td'); td.style.cssText = 'border:none;vertical-align:top;padding:2pt 4pt;width:' + Math.floor(100 / oc.length) + '%;text-align:' + (k.style ? k.style.textAlign || 'left' : 'left'); td.appendChild(k); tr.appendChild(td);
+    }
+    tb.appendChild(tr); clone.replaceChildren(tb);
+  }
+}
 export async function exportWord(el, name, landscape = true) {
   const clone = el.cloneNode(true);
+  clone.style.zoom = ''; clone.style.transform = '';
+  wordify(el, clone);
   for (const img of clone.querySelectorAll('img')) img.setAttribute('src', await dataUri(img.getAttribute('src')));
   for (const n of clone.querySelectorAll('.noprint')) n.remove();
   const size = landscape ? 'size:841.9pt 595.3pt;mso-page-orientation:landscape;margin:36pt' : 'size:595.3pt 841.9pt;margin:42pt';

@@ -282,3 +282,7 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .export-bar .btn { min-height: 54px; font-size: 16px; font-weight: 800; }
 .paper-fit { width: 100%; overflow-x: auto; }
 @media print { .paper-fit .paper { zoom: 1 !important; } }
+
+/* Boutons : le texte va à la ligne au lieu de déborder (téléphone, tablette, ordinateur) */
+.btn { max-width: 100%; white-space: normal; text-align: center; line-height: 1.25; }
+.btn.block { width: 100%; }

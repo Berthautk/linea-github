@@ -1,5 +1,6 @@
 // Accueil : le tableau de bord (département pour l'animateur, ou « mes données »).
-import { html } from '../vendor/preact-htm.js';
+import { html, useState } from '../vendor/preact-htm.js';
+import { ReminderSetup } from '../reminders.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Bar, Chip, Empty, Seg, Field, statusChip, num1 } from '../ui.js';
@@ -157,6 +158,17 @@ function Compare({ tid }) {
     <p class="hint" style="margin-top:6px">${t('Heures faites sur heures dues (emploi du temps de l’année) ; leçons faites sur leçons prévues (programme de l’année). Pour l’année en cours, les trimestres pas encore finis sont comptés à ce jour.')}</p></div>`;
 }
 
+/** Une seule fois : proposer les rappels du soir dans le calendrier du téléphone. */
+const ASK = 'ep6:remind-asked';
+function RemindInvite({ ctx }) {
+  const [hide, setHide] = useState(() => { try { return !!localStorage.getItem(ASK); } catch { return true; } });
+  const me = myId(), tc = ctx.teacher(me);
+  if (hide || !tc || !(tc.slots || []).some(sl => +sl.h > 0)) return null;
+  const done = () => { try { localStorage.setItem(ASK, '1'); } catch { } setHide(true); };
+  return html`<div class="card stack" style="border:2px solid var(--apricot)"><div class="card-h"><h3>⏰ ${t('Un rappel le soir de vos jours de cours ?')}</h3><button class="btn ghost sm" onClick=${done}>${t('Plus tard')}</button></div>
+    <${ReminderSetup} ctx=${ctx} tid=${me} onDone=${done} /></div>`;
+}
+
 export function Home() {
   const ctx = makeCtx(viewData()), live = makeCtx(state.data), past = !!state.ui.year, lang = getLang(), ap = isAP();
   const tid = currentTid(), scope = getScope();
@@ -174,7 +186,7 @@ export function Home() {
   const lateTeachers = !tid ? ctx.teachers.filter(x => !noTimetable(ctx, x.id).length && overall(stats(ctx, x.id, p.ps, p.pe)) === 'late').length : 0;
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
-    ${past ? null : html`<${ToCheck} ctx=${live} />`}
+    ${past ? null : html`<${ToCheck} ctx=${live} /><${RemindInvite} ctx=${live} />`}
     <${YearBar} />
     <${ScopeBar} ctx=${ctx} />
     <div class="card stack" style="gap:10px"><div class="scope-big sm"><${Seg} full options=${[{ id: 'L', label: '📖 ' + t('Leçons') }, { id: 'H', label: '⏱️ ' + t('Heures') }]} value=${mode} onChange=${(v) => setUI({ dmode: v })} /></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>

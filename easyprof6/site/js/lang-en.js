@@ -709,6 +709,8 @@ export const EN = {
   "Heures faites sur heures dues (emploi du temps de l’année) ; leçons faites sur leçons prévues (programme de l’année). Pour l’année en cours, les trimestres pas encore finis sont comptés à ce jour.": "Hours done out of hours due (that year’s timetable); lessons done out of lessons planned (that year’s syllabus). For the current year, terms not yet finished are counted to date.",
   "Inspection": "Inspection",
   "Censorat": "VP office",
+  "Imprimer PDF": "Print PDF",
+  "Imprimer Word": "Print Word",
 "Ronde en classe": "Class round",
   "Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.": "A colleague has not entered? Do the round: pick them and tick what the students tell you.",
   "Choisissez le collègue dont les élèves vous parlent, puis cochez ce qu’ils vous disent. Tout est enregistré à son nom, et ses statistiques se mettent à jour tout de suite.": "Pick the colleague the students are talking about, then tick what they tell you. Everything is recorded in their name and their statistics update right away.",

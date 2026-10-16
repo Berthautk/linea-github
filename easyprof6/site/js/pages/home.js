@@ -12,7 +12,7 @@ import { PeriodBar, ScopeBar, TodayCard, currentTid, periodLabel, unitFor, viewD
 import { state, setUI, isAP, myId, me, getScope, setScope } from '../store.js';
 import { saveDept } from '../actions.js';
 import { openReminder } from '../reminder.js';
-import { record, absent, openRound } from './week.js';
+import { record, absent, openRound, askDone } from './week.js';
 import { minISO, fmt, addDays, dow } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
 
@@ -158,7 +158,7 @@ function ToCheck({ ctx }) {
   return html`<div class="card tocheck"><div class="card-h"><h3>✅ ${t('À cocher : vos cours de ces derniers jours')}</h3><${Chip} tone="warn">${list.length}<//></div>
     <p class="sub" style="margin-bottom:6px">${t('Pour chaque cours : « Fait » s’il a eu lieu, « Absent » sinon. C’est enregistré tout de suite, dans la bonne semaine.')}</p>
     <div class="list">${list.slice(0, 6).map(m => html`<div class="item" style="flex-wrap:wrap"><div class="grow"><b>${cname(m.row.c)}</b><span class="cap">${fmt(m.iso, lang, { weekday: true, noYear: true })}${m.row.st ? ' · ' + m.row.st + ' → ' + m.row.en : ''} · ${m.row.h} h</span></div>
-      <div class="wk-act"><button class="btn sm" onClick=${() => record(ctx, me, m.iso, m.row)}><${Icon} n="check" />${t('Fait')}</button><button class="btn soft sm" onClick=${() => absent(ctx, me, m.iso, m.row)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${() => openRound(ctx, me, m.iso, m.row)}>${t('Détails…')}</button></div></div>`)}</div>
+      <div class="wk-act"><button class="btn sm" onClick=${() => askDone(ctx, me, m.iso, m.row)}><${Icon} n="check" />${t('Fait')}</button><button class="btn soft sm" onClick=${() => absent(ctx, me, m.iso, m.row)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${() => openRound(ctx, me, m.iso, m.row)}>${t('Détails…')}</button></div></div>`)}</div>
     ${list.length > 6 ? html`<a class="btn soft sm" style="margin-top:8px" href="#/lessons">${t('Voir les {n} autres dans Historique › À compléter', { n: list.length - 6 })}</a>` : null}</div>`;
 }
 

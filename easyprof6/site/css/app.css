@@ -300,3 +300,7 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .tocheck .wk-act { width: 100%; display: flex; gap: 8px; flex-wrap: wrap; }
 .scope-big .seg { flex-wrap: wrap; }
 .scope-big .seg button { min-width: 40%; }
+
+.pick-types { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; }
+.pick-types .btn { min-height: 50px; font-size: 15px; }
+.tabs-bright .seg button.on { background: var(--apricot); color: #3b2a06; }

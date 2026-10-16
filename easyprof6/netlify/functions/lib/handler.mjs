@@ -5,7 +5,7 @@ import { hashPassword, verifyPassword, signToken, verifyToken, normUser, validUs
 import { mergeById, mergeMeta, prune, sameJSON } from '../../../site/js/shared/merge.js';
 
 const MAX = { body: 2_000_000, teachers: 60, classes: 200, assign: 600, regul: 3000, entries: 20000, str: 400 };
-const ENTRY_TYPES = ['lesson', 'practical', 'orientation', 'revision', 'assessment', 'absence'];
+const ENTRY_TYPES = ['lesson', 'practical', 'further', 'orientation', 'revision', 'assessment', 'absence'];
 
 const json = (status, obj) => new Response(JSON.stringify({ now: now(), ...obj }), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' } });
 const fail = (status, error, message) => json(status, { error, message });

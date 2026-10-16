@@ -91,13 +91,14 @@ function regulShare(r, ps, pe) {
 
 /* ---------- ce que l'enseignant a saisi ---------- */
 export function doneRange(ctx, tid, ps, pe) {
-  const out = { hours: 0, lessons: new Set(), theory: new Set(), practical: new Set(), revisionH: 0, orientationH: 0, assessH: 0, digital: 0, evaluated: 0, passed: 0, byClass: {}, count: 0 };
+  const out = { hours: 0, lessons: new Set(), theory: new Set(), practical: new Set(), further: new Set(), revisionH: 0, orientationH: 0, assessH: 0, digital: 0, evaluated: 0, passed: 0, byClass: {}, count: 0 };
   for (const e of ctx.byTeacher[tid] || []) {
     if (e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
     const h = (+e.minutes || 0) / 60; out.hours += h; out.count++;
     if (e.classId) { const b = (out.byClass[e.classId] = out.byClass[e.classId] || { hours: 0, theory: new Set(), practical: new Set() }); b.hours += h; if (e.type === 'lesson' && e.n != null) b.theory.add(e.n); if (e.type === 'practical' && e.n != null) b.practical.add(e.n); }
     if (e.type === 'lesson' && e.n != null) { out.lessons.add(e.classId + '|L|' + e.n); out.theory.add(e.classId + '|' + e.n); }
-    else if (e.type === 'practical' && e.n != null) { out.lessons.add(e.classId + '|P|' + e.n); out.practical.add(e.classId + '|' + e.n); }
+    else if (e.type === 'practical') out.practical.add(e.classId + '|' + (e.n != null ? e.n : e.id));   // TP : comptés à part, jamais dans les leçons
+    else if (e.type === 'further') out.further.add(e.classId + '|' + (e.n != null ? e.n : e.id));       // further study / travail guidé : à part aussi
     else if (e.type === 'revision') out.revisionH += h;
     else if (e.type === 'orientation') out.orientationH += h;
     else if (e.type === 'assessment') out.assessH += h;
@@ -110,7 +111,7 @@ export function doneRange(ctx, tid, ps, pe) {
 /* ---------- rythme des leçons ---------- */
 /** Leçons attendues pour une affectation (enseignant × classe) sur [ps,pe], proportionnellement aux heures de cours de la période. */
 function expectedLessons(ctx, a, ps, pe, dueCache) {
-  const total = (+a.th || 0) + (+a.pr || 0); if (!total) return 0;
+  const total = +a.th || 0; if (!total) return 0;   // le rythme des leçons ne compte que les leçons (théorie)
   const yr = yearDue(ctx, a.teacherId).byClass[a.classId] || 0; if (!yr) return 0;
   const part = (dueCache || dueRange(ctx, a.teacherId, ps, pe)).byClass[a.classId] || 0;
   return total * part / yr;
@@ -128,7 +129,7 @@ export function classProgress(ctx, tid, asOf = ctx.today) {
     const cls = ctx.cls(cid); const d = done.byClass[cid] || { hours: 0, theory: new Set(), practical: new Set() };
     const exp = expectedLessons(ctx, a, ctx.ys, cut, due);
     let rl = 0, rh = 0; for (const r of ctx.regul) if (r.teacherId === tid && r.classId === cid) { const sh = regulShare(r, ctx.ys, cut); rl += (+r.lessons || 0) * sh; rh += (+r.h || 0) * sh; }
-    const doneL = d.theory.size + d.practical.size + rl, total = (+a.th || 0) + (+a.pr || 0);
+    const doneL = d.theory.size + rl, total = +a.th || 0;
     const lag = r1(exp - doneL);
     rows.push({ classId: cid, name: cls ? cls.name : cid, plan: { th: +a.th || 0, pr: +a.pr || 0, hours: +a.hours || 0, total }, doneTh: d.theory.size, doneTP: d.practical.size, done: doneL,
       expected: r1(exp), lag, status: total ? lagStatus(lag) : 'none', hours: r1(d.hours + rh), hoursDue: r1(due.byClass[cid] || 0), progress: total ? pct(doneL, total) : 0, expectedPct: total ? pct(exp, total) : 0 });
@@ -156,10 +157,11 @@ function teacherStats(ctx, tid, ps, pe) {
   else { S.lessonsPlanned = now.due / ctx.lh; S.lessonsFull = full.due / ctx.lh; }
   const yd = yearDue(ctx, tid);
   S.planYear.hours = mine.reduce((s, a) => s + (+a.hours || 0), 0) || yd.due;
-  S.planYear.lessons = mine.reduce((s, a) => s + (+a.th || 0) + (+a.pr || 0), 0) || yd.due / ctx.lh;
+  S.planYear.lessons = mine.reduce((s, a) => s + (+a.th || 0), 0) || yd.due / ctx.lh;
+  S.practicalPlanned = mine.reduce((s, a) => s + (+a.pr || 0), 0); S.further = done.further.size;
   return S;
 }
-const SUM = ['dueFull', 'due', 'excused', 'absent', 'closed', 'hours', 'regul', 'regulL', 'lessonsDone', 'theory', 'practical', 'lessonsPlanned', 'lessonsFull', 'revisionH', 'orientationH', 'assessH', 'digital', 'evaluated', 'passed', 'entries'];
+const SUM = ['dueFull', 'due', 'excused', 'absent', 'closed', 'hours', 'regul', 'regulL', 'lessonsDone', 'theory', 'practical', 'practicalPlanned', 'further', 'lessonsPlanned', 'lessonsFull', 'revisionH', 'orientationH', 'assessH', 'digital', 'evaluated', 'passed', 'entries'];
 
 /** Statistiques sur [ps,pe] pour un enseignant (tid) ou pour tout le département (tid = null). */
 export function stats(ctx, tid, ps, pe) {
@@ -298,7 +300,7 @@ export function progressAt(ctx, tid, classId, cut) {
   for (const id of ids) {
     const due = dueRange(ctx, id, ctx.ys, c), done = doneRange(ctx, id, ctx.ys, c);
     for (const a of ctx.assign.filter(x => x.teacherId === id && (!classId || x.classId === classId))) out.goalL += expectedLessons(ctx, a, ctx.ys, c, due);
-    if (classId) { const b = done.byClass[classId]; if (b) { out.doneL += b.theory.size + b.practical.size; out.doneH += b.hours; } out.goalH += due.byClass[classId] || 0; }
+    if (classId) { const b = done.byClass[classId]; if (b) { out.doneL += b.theory.size; out.doneH += b.hours; } out.goalH += due.byClass[classId] || 0; }
     else { out.doneL += done.lessons.size; out.doneH += done.hours; out.goalH += due.due; }
     for (const r of ctx.regul) if (r.teacherId === id && (!classId || r.classId === classId)) { const sh = regulShare(r, ctx.ys, c); out.doneL += (+r.lessons || 0) * sh; out.doneH += (+r.h || 0) * sh; }
   }
@@ -416,7 +418,7 @@ export function catchUp(ctx, date) {
       const a = mine.find(x => x.classId === cid), d = done.byClass[cid] || { hours: 0, theory: new Set(), practical: new Set() };
       const h = Math.max(0, (due.byClass[cid] || 0) - d.hours);
       const exp = a ? expectedLessons(ctx, a, ctx.ys, cut, due) : 0;
-      const l = Math.max(0, Math.round(exp) - d.theory.size - d.practical.size);
+      const l = Math.max(0, Math.round(exp) - d.theory.size);
       if (h > 0.05 || l > 0) out.push({ teacherId: t.id, classId: cid, h: r1(h), lessons: l });
     }
   }

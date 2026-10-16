@@ -47,7 +47,8 @@ export function ScopeBar({ ctx }) {
 export function TodayCard({ ctx, tid }) {
   const lang = getLang(), td = todaySlots(ctx, tid), iso = ctx.today;
   const cname = (id) => (ctx.cls(id) || {}).name || id;
-  const quick = (row) => {
+  const quick = (row) => import('./pages/week.js').then(m => m.askDone(ctx, tid, iso, row));
+  const quickLesson = (row) => {
     const start = row.st || '07:30', end = minToTime(timeToMin(start) + Math.round(row.h * 60)), n = nextNumber(ctx, tid, row.c, 'lesson');
     const rec = saveEntry({ teacherId: tid, classId: row.c, type: 'lesson', date: iso, start, end, n });
     setToast(t('{c} · leçon {n} enregistrée', { c: cname(row.c), n }), '', { label: t('Annuler'), run: () => deleteEntry(rec.id) });

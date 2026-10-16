@@ -38,6 +38,20 @@ export function absent(ctx, tid, iso, row, reason = 'unknown') {
   setToast(t('{c} · absence enregistrée', { c: (ctx.cls(row.c) || {}).name || row.c }), '', { label: t('Annuler'), run: () => deleteEntry(rec.id) });
 }
 
+/** « Fait » / « Présent » : on demande ce qui a été fait (leçon, TP, further study…) et, si on veut, son numéro. */
+const DONE_TYPES = ['lesson', 'practical', 'further', 'revision', 'assessment'];
+function DonePick({ ctx, tid, iso, row }) {
+  const cname = (ctx.cls(row.c) || {}).name || row.c, lang = getLang();
+  const [type, setType] = useState('lesson'), numbered = isLessonType(type), auto = numbered ? nextNumber(ctx, tid, row.c, type) : null, [n, setN] = useState('');
+  const go = () => { record(ctx, tid, iso, row, { type, n: numbered && n !== '' ? +n : null }); closeModal(); };
+  return html`<${Modal} title=${t('Qu’avez-vous fait ?')} onClose=${closeModal}><p class="sub cap">${cname} · ${fmt(iso, lang, { weekday: true, noYear: true })}${row.st ? ' · ' + row.st + ' → ' + row.en : ''}</p>
+    <div class="pick-types">${DONE_TYPES.map(id => { const ty = TYPES.find(x => x.id === id); return html`<button type="button" class=${'btn ' + (type === id ? '' : 'soft')} onClick=${() => { setType(id); setN(''); }}>${ty.icon} ${t(ty.fr)}</button>`; })}</div>
+    ${numbered ? html`<${Field} label=${t('Numéro (facultatif)')} hint=${t('Laissez vide pour prendre le suivant : {n}.', { n: auto })}><input class="input" type="number" min="1" inputmode="numeric" placeholder=${String(auto)} value=${n} onInput=${(e) => setN(e.target.value)} /><//>` : null}
+    <p class="hint">${type === 'lesson' ? t('Compté dans les leçons (couverture du programme).') : type === 'practical' ? t('Compté dans les travaux pratiques, pas dans les leçons.') : type === 'further' ? t('Compté à part (further study / travail guidé), pas dans les leçons.') : t('Compté dans les heures faites, sans numéro de leçon.')}</p>
+    <button class="btn block" onClick=${go}><${Icon} n="check" />${t('Enregistrer')}</button><//>`;
+}
+export function askDone(ctx, tid, iso, row) { openModal(() => html`<${DonePick} ctx=${ctx} tid=${tid} iso=${iso} row=${row} />`); }
+
 export function openRound(ctx, tid, iso, row) { openModal(() => html`<${Round} ctx=${ctx} tid=${tid} iso=${iso} row=${row} />`); }
 function Round({ ctx, tid, iso, row }) {
   const lang = getLang(), cname = (ctx.cls(row.c) || {}).name || row.c;
@@ -82,7 +96,7 @@ function Day({ ctx, tid, iso, future }) {
         <span>${time ? time + ' · ' : ''}${r.h} h${r.done ? ' · ' + t('fait : {h} h', { h: num1(hrs) }) + (es.some(e => e.n != null) ? ' · ' + t('leçon') + ' ' + es.map(e => e.n).filter(n => n != null).join(', ') : '') : r.absent ? ' · ' + t('absent') + ' (' + t(reasonOf(r.absent).fr).toLowerCase() + ')' : ''}</span></div></button>
         ${locked ? null : r.done ? html`<div class="wk-act"><button class="btn ghost sm" onClick=${() => { const old = es.slice(); es.forEach(e => deleteEntry(e.id)); setToast(t('Saisie retirée.'), '', { label: t('Annuler'), run: () => old.forEach(e => saveEntry({ ...e, teacherId: tid })) }); }}>${t('Retirer')}</button></div>`
           : r.absent ? html`<div class="wk-act"><button class="btn ghost sm" onClick=${() => { const a = absEntry(r.c); if (a) deleteEntry(a.id); }}>${t('Retirer')}</button></div>`
-            : html`<div class="wk-act"><button class="btn sm" onClick=${() => record(ctx, tid, iso, r)}><${Icon} n="check" />${t('Présent')}</button><button class="btn soft sm" onClick=${() => absent(ctx, tid, iso, r)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${open}>${t('Détails…')}</button></div>`}</div>`;
+            : html`<div class="wk-act"><button class="btn sm" onClick=${() => askDone(ctx, tid, iso, r)}><${Icon} n="check" />${t('Présent')}</button><button class="btn soft sm" onClick=${() => absent(ctx, tid, iso, r)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${open}>${t('Détails…')}</button></div>`}</div>`;
     })}
     ${td.entries.filter(e => !td.rows.some(r => r.c === e.classId)).map(e => html`<div class="wk"><div class="wk-main"><div class="dot ok">✓</div><div class="grow"><b>${cname(e.classId)}</b><span>${t('hors emploi du temps')} · ${num1((+e.minutes || 0) / 60)} h${e.n != null ? ' · ' + t('leçon') + ' ' + e.n : ''}</span></div></div>
       ${future ? null : html`<div class="wk-act"><button class="btn ghost sm" onClick=${() => deleteEntry(e.id)}>${t('Retirer')}</button></div>`}</div>`)}</div>

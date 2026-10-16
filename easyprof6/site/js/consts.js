@@ -3,6 +3,7 @@
 export const TYPES = [
   { id: 'lesson', fr: 'Leçon', en: 'Lesson', icon: '📖', lesson: true },
   { id: 'practical', fr: 'Travaux pratiques', en: 'Practical work', icon: '🧭', lesson: true },
+  { id: 'further', fr: 'Further study / travail guidé', en: 'Further study / guided work', icon: '🔎', lesson: true },
   { id: 'orientation', fr: 'Première rencontre / orientation', en: 'First meeting / orientation', icon: '🤝' },
   { id: 'revision', fr: 'Révision', en: 'Revision', icon: '🔁' },
   { id: 'assessment', fr: 'Évaluation / devoir', en: 'Assessment / test', icon: '📝' },

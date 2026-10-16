@@ -7,7 +7,7 @@ import { gapReport } from '../calc.js';
 import { state, myId, setToast } from '../store.js';
 import { saveDept } from '../actions.js';
 import { REASONS, reasonOf } from '../consts.js';
-import { record, absent, openRound } from './week.js';
+import { record, absent, openRound, askDone } from './week.js';
 import { openEdit, askDelete } from './lessons.js';
 import { mondayOf, addDays, fmt } from '../dates.js';
 
@@ -40,6 +40,6 @@ export function Gaps({ ctx, tid }) {
     ${byWeek.slice(0, weeks).map(g => html`<div class="card"><div class="card-h"><h3>${t('Semaine du {a} au {b}', { a: fmt(g.w, lang, { noYear: true }), b: fmt(addDays(g.w, 5), lang) })}</h3><${Chip} tone="bad">${g.list.length}<//></div>
       <div class="list">${g.list.map((m, i) => html`${i === 0 || g.list[i - 1].iso !== m.iso ? html`<div class="row" style="padding:8px 0 0"><b class="grow cap">${fmt(m.iso, lang, { weekday: true, noYear: true })}</b>${state.session.role === 'ap' ? html`<button class="btn ghost sm" onClick=${() => openModal(() => html`<${DayOff} ctx=${ctx} iso=${m.iso} />`)}>${t('Aucun cours ce jour-là')}</button>` : null}</div>` : null}<div class="wk"><div class="wk-main"><div class="dot">📖</div><div class="grow"><b>${cname(m.row.c)}</b>
         <span>${m.row.st ? m.row.st + ' → ' + m.row.en + ' · ' : ''}${m.row.h} h${!tid ? ' · ' + (ctx.teacher(m.tid) || {}).short : ''}</span></div></div>
-        ${m.tid === me || state.session.role === 'ap' ? html`<div class="wk-act"><button class="btn sm" onClick=${() => record(ctx, m.tid, m.iso, m.row)}><${Icon} n="check" />${t('Présent')}</button><button class="btn soft sm" onClick=${() => absent(ctx, m.tid, m.iso, m.row)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${() => openRound(ctx, m.tid, m.iso, m.row)}>${t('Détails…')}</button></div>` : null}</div>`)}</div></div>`)}
+        ${m.tid === me || state.session.role === 'ap' ? html`<div class="wk-act"><button class="btn sm" onClick=${() => askDone(ctx, m.tid, m.iso, m.row)}><${Icon} n="check" />${t('Présent')}</button><button class="btn soft sm" onClick=${() => absent(ctx, m.tid, m.iso, m.row)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${() => openRound(ctx, m.tid, m.iso, m.row)}>${t('Détails…')}</button></div>` : null}</div>`)}</div></div>`)}
     ${byWeek.length > weeks ? html`<button class="btn soft" onClick=${() => setWeeks(weeks + 6)}>${t('Afficher les semaines plus anciennes')} (${byWeek.length - weeks})</button>` : null}</div>`;
 }

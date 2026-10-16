@@ -63,7 +63,7 @@ await step('B. Le collègue se connecte et saisit', async () => {
   const dview = await tp.innerText('.page');
   ok(/Résultats par collègue/.test(dview) && !(await tp.getByRole('button', { name: 'Rappeler' }).count()) && !(await tp.getByRole('link', { name: 'Contrôler' }).count()), 'B2b le collègue voit les résultats de tous, sans pouvoir rappeler ni contrôler');
   await tp.getByRole('button', { name: /Moi$/ }).click(); await tp.waitForTimeout(300);
-  await tp.locator('.card', { hasText: 'Aujourd’hui' }).getByRole('button', { name: 'Fait' }).click(); await tp.waitForTimeout(500);
+  await tp.locator('.card', { hasText: 'Aujourd’hui' }).getByRole('button', { name: 'Fait' }).click(); await tp.locator('.sheet').getByRole('button', { name: /^Enregistrer$/ }).click(); await tp.waitForTimeout(500);
   ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'B3 saisie en un geste : « Fait » → leçon 1 enregistrée');
   const k = await tp.locator('.kpis').innerText();
   ok(/2 \/ 12 h/.test(k.replace(/\n/g, ' ')), 'B4 heures : 2 h faites sur 12 h dues depuis la rentrée (6 lundis × 2 h)');
@@ -121,7 +121,7 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
   const hrs = async () => (await apPage.locator('.chip.info').innerText());
   const h0 = await hrs();
   if (await apPage.getByRole('button', { name: 'Retirer' }).count()) { await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300); }
-  await apPage.getByRole('button', { name: 'Présent' }).first().click(); await apPage.waitForTimeout(400);
+  await apPage.getByRole('button', { name: 'Présent' }).first().click(); await apPage.locator('.sheet').getByRole('button', { name: /^Enregistrer$/ }).click(); await apPage.waitForTimeout(400);
   ok(/2 h faites sur/.test(await hrs()), 'E6 « Présent » enregistre le cours au nom du collègue (' + h0 + ' → ' + (await hrs()) + ')');
   await apPage.getByRole('button', { name: 'Retirer' }).first().click(); await apPage.waitForTimeout(300);
   await apPage.getByRole('button', { name: 'Détails…' }).first().click(); await apPage.getByRole('button', { name: 'En retard' }).click(); await apPage.getByRole('button', { name: '30', exact: true }).click(); await apPage.getByRole('button', { name: 'Enregistrer', exact: true }).click(); await apPage.waitForTimeout(400);

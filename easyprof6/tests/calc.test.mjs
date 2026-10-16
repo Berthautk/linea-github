@@ -62,7 +62,7 @@ test('heures faites = saisies ; leçons distinctes ; révision/évaluation/orien
   ], regul: [{ id: 'r1', teacherId: 'K', d: '2026-09-07', d2: '2026-10-09', h: -3 }] });
   const c = makeCtx(st, '2026-10-13'); const k = stats(c, 'K', ...P1);
   assert.equal(k.hours, (120 + 60 + 120 + 120 + 120 + 30 + 120) / 60 - 3);
-  assert.equal(k.lessonsDone, 3, 'LSA n°1, LSA n°2, USA TP n°1 ; la révision et l’évaluation ne comptent pas');
+  assert.equal(k.lessonsDone, 2, 'LSA n°1, LSA n°2 ; le TP est compté à part, la révision et l’évaluation ne comptent pas'); assert.equal(k.practical, 1, 'USA TP n°1 compté dans les TP');
   assert.equal(k.theory, 2); assert.equal(k.practical, 1); assert.equal(k.revisionH, 2); assert.equal(k.orientationH, 0.5);
   assert.equal(k.successRate, 75); assert.equal(k.regul, -3);
   assert.equal(stats(c, 'K', '2026-09-14', '2026-09-18').regul, -0.5, '−3 h étalées sur 33 jours, 5 jours dans la semaine : −0,45 arrondi à −0,5');
@@ -326,4 +326,12 @@ test('numéro de la première leçon d’une classe reprise en cours de programm
   assert.equal(nextNumber(c, 'K', 'F3A', 'lesson'), 27);
   st.entries = [E('a', 'K', '2026-10-05', { classId: 'F3A', n: 27 })];
   assert.equal(nextNumber(makeCtx(st, '2026-10-14'), 'K', 'F3A', 'lesson'), 28);
+});
+
+test('leçons, TP et further study sont séparés : seules les leçons comptent dans la couverture du programme', () => {
+  const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 42, pr: 4 }] });
+  st.entries = [E('a', 'K', '2026-09-07', { classId: 'F3A', n: 1 }), E('b', 'K', '2026-09-08', { classId: 'F3A', n: 1, type: 'practical' }), E('c', 'K', '2026-09-09', { classId: 'F3A', n: 1, type: 'further' })];
+  const S = stats(makeCtx(st, '2026-10-14'), 'K', '2026-09-07', '2026-10-14');
+  assert.equal(S.lessonsDone, 1); assert.equal(S.practical, 1); assert.equal(S.further, 1);
+  assert.equal(S.planYear.lessons, 42, '42 leçons, pas 46'); assert.equal(S.practicalPlanned, 4);
 });

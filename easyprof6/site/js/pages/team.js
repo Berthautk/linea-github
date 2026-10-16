@@ -115,7 +115,7 @@ function Slots({ tc, ctx }) {
 function Plan({ tc, ctx }) {
   const mine = ctx.assign.filter(a => a.teacherId === tc.id), free = ctx.classes.filter(c => !mine.some(a => a.classId === c.id));
   const [add, setAdd] = useState('');
-  const upd = (a, k, v) => saveAssign({ teacherId: tc.id, classId: a.classId, th: a.th, pr: a.pr, hth: a.hth, hpr: a.hpr, hours: a.hours, [k]: v, ...(k === 'hth' || k === 'hpr' ? { hours: 0 } : {}) });
+  const upd = (a, k, v) => saveAssign({ teacherId: tc.id, classId: a.classId, th: a.th, pr: a.pr, hth: a.hth, hpr: a.hpr, hours: a.hours, n0: a.n0, [k]: v, ...(k === 'hth' || k === 'hpr' ? { hours: 0 } : {}) });
   const tot = mine.reduce((s, a) => s + (+a.th || 0) + (+a.pr || 0), 0);
   return html`<div class="card"><div class="card-h"><h3>${t('Classes et leçons prévues')}</h3><${Chip} tone="info">${tot} ${t('leçons dans l’année')}<//></div>
     <p class="sub" style="margin-bottom:10px">${t('Indiquez, pour chaque classe de ce collègue, le nombre de leçons à faire dans l’année (programme). Rekort en déduit où il devrait en être chaque semaine et signale les retards.')}</p><p class="hint" style="margin-bottom:10px">${t('Vous pouvez aussi régler ces chiffres classe par classe dans Réglages › Classes et leçons prévues.')}</p>

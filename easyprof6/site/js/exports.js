@@ -46,3 +46,12 @@ const q = (v) => { const s = String(v == null ? '' : v); return /[";\n]/.test(s)
 export function exportCSV(rows, name) {
   download(new Blob(['﻿', rows.map(r => r.map(q).join(';')).join('\r\n')], { type: 'text/csv;charset=utf-8' }), name + '.csv');
 }
+
+/** Sauvegarde complète (format Rekort) : l'animateur exporte tout le département, un enseignant ses propres saisies. */
+export function downloadBackup(data, ap, myId) {
+  const mine = ap ? data : { ...data, entries: data.entries.filter(e => e.teacherId === myId) };
+  const blob = new Blob([JSON.stringify({ format: 'rekort', version: 1, exported: new Date().toISOString(), data: mine }, null, 1)], { type: 'application/json' });
+  download(blob, `rekort-${((data.dept || {}).abbr || 'dept').toLowerCase()}-${new Date().toISOString().slice(0, 10)}.json`);
+  try { localStorage.setItem('ep6:lastBackup', String(Date.now())); } catch { }
+}
+export const lastBackup = () => { try { return +localStorage.getItem('ep6:lastBackup') || 0; } catch { return 0; } };

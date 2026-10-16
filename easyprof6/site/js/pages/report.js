@@ -3,7 +3,7 @@ import { html, useState, useEffect } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Seg, Chip, num1 } from '../ui.js';
-import { makeCtx, stats, factors, followUp, periodOf } from '../calc.js';
+import { makeCtx, stats, factors, followUp, periodOf, classProgress } from '../calc.js';
 import { PeriodBar, ScopeBar, currentTid, periodLabel , viewData, YearBar } from '../widgets.js';
 import { state, setUI, isAP, myId } from '../store.js';
 import { fmt, minISO } from '../dates.js';
@@ -98,6 +98,50 @@ function fitPaper() {
   paper.style.zoom = ''; const w = paper.scrollWidth, avail = box.clientWidth;
   if (w > avail + 2) paper.style.zoom = String(Math.max(0.3, avail / w));
 }
+
+/** Évaluations et assiduité par classe sur la période : seuils de l'arrêté (réussite 40 %, assiduité 75 %). */
+function Evals({ ctx, p, tid }) {
+  const lang = getLang(), d = ctx.dept, hd = d.header || {}, P = (v) => (v == null ? '—' : num1(v) + ' %');
+  const es = ctx.entries.filter(e => e.type !== 'absence' && e.date >= p.ps && e.date <= p.pe && (!tid || e.teacherId === tid));
+  const rows = ctx.classes.map(c => {
+    const mine = es.filter(e => e.classId === c.id), evs = mine.filter(e => e.eval && +e.eval.evaluated > 0), pres = mine.filter(e => e.present != null && e.present !== '');
+    const ev = evs.reduce((s, e) => s + +e.eval.evaluated, 0), ok = evs.reduce((s, e) => s + +e.eval.passed, 0), eff = +(c.effectif || {}).total || 0;
+    const att = pres.length && eff ? pres.reduce((s, e) => s + Math.min(eff, +e.present), 0) / (pres.length * eff) * 100 : null;
+    return { c, n: evs.length, ev, ok, rate: ev ? ok / ev * 100 : null, last: evs.map(e => e.date).sort().pop(), eff, nPres: pres.length, att };
+  }).filter(r => r.n || r.nPres);
+  const bad = (v, s) => v != null && v < s;
+  return html`<div class="paper">
+    <${Letterhead} d=${d} hd=${hd} />
+    <h2>${t('Évaluations et assiduité des élèves')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) })} · ${t('Année scolaire')} ${d.year || ''}</div>
+    <table><thead><tr><th>${t('Classe')}</th><th>${t('Évaluations')}</th><th>${t('Élèves évalués')}</th><th>${t('Moyenne ≥ 10')}</th><th>${t('Taux de réussite')}</th><th>${t('Effectif')}</th><th>${t('Cours avec présences')}</th><th>${t('Taux d’assiduité')}</th></tr></thead>
+      <tbody>${rows.length ? rows.map(r => html`<tr><td style="text-align:left">${r.c.name}</td><td>${r.n}</td><td>${r.ev}</td><td>${r.ok}</td><td style=${bad(r.rate, 40) ? 'color:#C0472A;font-weight:800' : ''}>${P(r.rate)}</td><td>${r.eff || ''}</td><td>${r.nPres}</td><td style=${bad(r.att, 75) ? 'color:#C0472A;font-weight:800' : ''}>${P(r.att)}</td></tr>`)
+        : html`<tr><td colspan="8">${t('Aucune évaluation ni présence saisie sur la période. Pour les ajouter : à la saisie d’un cours, « Élèves présents » et « Il y a eu une évaluation ».')}</td></tr>`}</tbody></table>
+    <p style="font-size:9px;margin:6px 0 0">${t('Seuils de l’arrêté conjoint du 14/08/2026 : réussite sous 40 % → remédiation obligatoire ; assiduité sous 75 % → mesures à notifier. En rouge : sous le seuil.')}</p>
+    ${rows.some(r => bad(r.rate, 40) || bad(r.att, 75)) ? html`<p style="font-size:10px;margin:6px 0 0"><b>${t('Classes à suivre')} :</b> ${rows.filter(r => bad(r.rate, 40) || bad(r.att, 75)).map(r => r.c.name + (bad(r.rate, 40) ? ' (' + t('réussite') + ' ' + P(r.rate) + ')' : '') + (bad(r.att, 75) ? ' (' + t('assiduité') + ' ' + P(r.att) + ')' : '')).join(' ; ')}</p>` : null}
+    <div class="sig"><div>${t('Animateur pédagogique')}<br /><b>${((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div></div>`;
+}
+
+/** Bilan d'une page pour le censeur : situation du département, collègues, classes en retard, mesures. */
+function Bilan({ ctx, p, S, facts, acts }) {
+  const lang = getLang(), d = ctx.dept, hd = d.header || {};
+  const per = ctx.teachers.map(tc => ({ tc, S: stats(ctx, tc.id, p.ps, p.pe) }));
+  const lateCls = ctx.teachers.flatMap(tc => classProgress(ctx, tc.id, minISO(p.pe, ctx.today)).filter(r => r.status === 'late' || r.status === 'slight').map(r => ({ ...r, who: tc.short || tc.name })));
+  return html`<div class="paper">
+    <${Letterhead} d=${d} hd=${hd} />
+    <h2>${t('Bilan du département')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) })} · ${up(d.discipline)} · ${t('Année scolaire')} ${d.year || ''}</div>
+    <table><thead><tr><th>${t('Indicateur')}</th><th>${t('Fait')}</th><th>${t('Dû à ce jour')}</th><th>%</th><th>${t('Seuil')}</th></tr></thead><tbody>
+      <tr><td style="text-align:left">${t('Couverture horaire')}</td><td>${num1(S.hours)} h</td><td>${num1(S.due)} h</td><td>${num1(S.rate)} %</td><td>80 %</td></tr>
+      <tr><td style="text-align:left">${t('Couverture du programme (leçons)')}</td><td>${S.lessonsDone}</td><td>${num1(S.lessonsPlanned)}</td><td>${num1(S.rateL)} %</td><td>70 %</td></tr></tbody></table>
+    <h3 style="font-size:11px;margin:10px 0 4px">${t('Par enseignant')}</h3>
+    <table><thead><tr><th>${t('Enseignant')}</th><th>${t('Heures faites / dues')}</th><th>%</th><th>${t('Leçons faites / attendues')}</th><th>%</th></tr></thead><tbody>
+      ${per.map(({ tc, S: x }) => html`<tr><td style="text-align:left">${tc.name}</td><td>${num1(x.hours)} / ${num1(x.due)}</td><td style=${x.due && x.rate < 80 ? 'color:#C0472A;font-weight:800' : ''}>${num1(x.rate)} %</td><td>${x.lessonsDone} / ${num1(x.lessonsPlanned)}</td><td style=${x.lessonsPlanned && x.rateL < 70 ? 'color:#C0472A;font-weight:800' : ''}>${num1(x.rateL)} %</td></tr>`)}</tbody></table>
+    <h3 style="font-size:11px;margin:10px 0 4px">${t('Classes en retard sur le programme')}</h3>
+    <p style="font-size:10px;margin:0">${lateCls.length ? lateCls.map(r => r.name + ' (' + r.who + ', ' + t('{n} leçon(s) de retard', { n: num1(r.lag) }) + ')').join(' ; ') : t('Aucune.')}</p>
+    <h3 style="font-size:11px;margin:10px 0 4px">${t('Facteurs d’écart')}</h3><p style="font-size:10px;margin:0;white-space:pre-line">${facts}</p>
+    <h3 style="font-size:11px;margin:10px 0 4px">${t('Mesures proposées')}</h3><p style="font-size:10px;margin:0;white-space:pre-line">${acts}</p>
+    <div class="sig"><div>${t('Animateur pédagogique')}<br /><b>${((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div></div>`;
+}
+
 export function Report() {
   useEffect(() => { fitPaper(); const f = () => fitPaper(); addEventListener('resize', f); return () => removeEventListener('resize', f); });
   const ctx = makeCtx(viewData()), ap = isAP(), tid = currentTid();
@@ -106,14 +150,14 @@ export function Report() {
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, p.pe);
   const who = tid ? (ctx.teacher(tid) || {}).name : '';
   const facts = edit.ft != null ? edit.ft : factorTexts(ctx, S), acts = edit.ac != null ? edit.ac : actionTexts(S);
-  return html`<div class="page"><div class="page-h noprint"><h1>${tab === 'sheet' ? t('Fiche d’inspection') : t('Fiche pédagogique')}</h1></div>
-    <div class="export-bar noprint"><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer PDF')}</button><button class="btn" onClick=${() => exportWord(document.querySelector('.paper'), 'rekort-' + (tab === 'sheet' ? 'fiche-inspection' : 'fiche-pedagogique') + '-' + ctx.today)}><${Icon} n="download" />${t('Imprimer Word')}</button></div>
-    <div class="noprint stack"><${YearBar} /><${ScopeBar} ctx=${ctx} />${ap && !ctx.assign.some(x => (+x.th || 0) + (+x.pr || 0) > 0) ? html`<a class="notice" href="#/settings/classes"><${Icon} n="alert" size="18" /><span>${t('Les leçons et heures prévues pour l’année ne sont pas encore renseignées : la colonne « prévues » de la fiche affiche 0. Touchez ici pour les saisir, classe par classe.')}</span></a>` : null}<div class="scope-big sm"><${Seg} full options=${[{ id: 'sheet', label: '📋 ' + t('Inspection') }, ...(ap ? [{ id: 'recap', label: '🏫 ' + t('Censorat') }] : [])]} value=${tab} onChange=${setTab} /></div>
+  return html`<div class="page"><div class="page-h noprint"><h1>${({ sheet: t('Fiche d’inspection'), recap: t('Fiche pédagogique'), bilan: t('Bilan du département'), evals: t('Évaluations et assiduité') })[tab]}</h1></div>
+    <div class="export-bar noprint"><button class="btn accent" onClick=${() => window.print()}><${Icon} n="print" />${t('Imprimer PDF')}</button><button class="btn" onClick=${() => exportWord(document.querySelector('.paper'), 'rekort-' + ({ sheet: 'fiche-inspection', recap: 'fiche-pedagogique', bilan: 'bilan', evals: 'evaluations' }[tab] || 'fiche') + '-' + ctx.today)}><${Icon} n="download" />${t('Imprimer Word')}</button></div>
+    <div class="noprint stack"><${YearBar} /><${ScopeBar} ctx=${ctx} />${ap && !ctx.assign.some(x => (+x.th || 0) + (+x.pr || 0) > 0) ? html`<a class="notice" href="#/settings/classes"><${Icon} n="alert" size="18" /><span>${t('Les leçons et heures prévues pour l’année ne sont pas encore renseignées : la colonne « prévues » de la fiche affiche 0. Touchez ici pour les saisir, classe par classe.')}</span></a>` : null}<div class="scope-big sm"><${Seg} full options=${[{ id: 'sheet', label: '📋 ' + t('Inspection') }, ...(ap ? [{ id: 'recap', label: '🏫 ' + t('Censorat') }, { id: 'bilan', label: '📝 ' + t('Bilan') }] : []), { id: 'evals', label: '🎯 ' + t('Évaluations') }]} value=${tab} onChange=${setTab} /></div>
       <div class="card"><div class="card-h"><h3>${t('Période demandée par l’inspecteur')}</h3></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => { setUI({ rperiod: np }); setEdit({ ft: null, ac: null }); }} />
         <div class="row" style="margin-top:10px"><button class="btn soft sm" onClick=${() => setUI({ rperiod: { kind: 'custom', ps: ctx.ys, pe: minISO(ctx.today, ctx.ye) } })}>${t('De la rentrée à aujourd’hui')}</button></div></div>
       ${S.alerts.length ? html`<div class="err">${S.alerts.map(a => a.kind === 'hours' ? t('Couverture horaire sous 80 % : mesures correctives obligatoires.') : a.kind === 'lessons' ? t('Couverture du programme sous 70 % : plan de remédiation.') : t('Taux de réussite sous 40 %.')).join(' ')}</div>` : null}
       ${tab === 'sheet' ? html`<div class="card"><div class="card-h"><h3>${t('Commentaires de la fiche')}</h3><button class="btn soft sm" onClick=${() => setEdit({ ft: null, ac: null })}><${Icon} n="refresh" />${t('Régénérer')}</button></div>
         <div class="grid2"><div class="field"><label>${t('Facteurs d’écart')}</label><textarea class="input" rows="5" value=${facts} onInput=${(e) => setEdit({ ...edit, ft: e.target.value })}></textarea></div><div class="field"><label>${t('Actions correctives')}</label><textarea class="input" rows="5" value=${acts} onInput=${(e) => setEdit({ ...edit, ac: e.target.value })}></textarea></div></div><p class="hint" style="margin-top:8px">${t('Texte proposé automatiquement ; vous pouvez le modifier avant d’imprimer.')}</p></div>` : null}</div>
     <p class="sub noprint" style="text-align:center">${t('Aperçu de la fiche, réduit à la largeur de l’écran (l’impression et Word gardent la taille réelle).')}</p>
-    <div class="paper-fit">${tab === 'sheet' ? html`<${Sheet} ctx=${ctx} tid=${tid} S=${S} Y=${Y} p=${p} who=${who} facts=${facts} acts=${acts} />` : html`<${Follow} ctx=${ctx} p=${p} />`}</div></div>`;
+    <div class="paper-fit">${tab === 'sheet' ? html`<${Sheet} ctx=${ctx} tid=${tid} S=${S} Y=${Y} p=${p} who=${who} facts=${facts} acts=${acts} />` : tab === 'bilan' ? html`<${Bilan} ctx=${ctx} p=${p} S=${stats(ctx, null, p.ps, p.pe)} facts=${facts} acts=${acts} />` : tab === 'evals' ? html`<${Evals} ctx=${ctx} p=${p} tid=${tid} />` : html`<${Follow} ctx=${ctx} p=${p} />`}</div></div>`;
 }

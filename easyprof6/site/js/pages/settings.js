@@ -4,7 +4,7 @@ import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Field, PasswordInput, DraftInput, SaveBar, askLogout, isInstalled, Seg, Chip, Empty, Modal, openModal, closeModal, confirmDialog, copyText, num1 } from '../ui.js';
 import { api } from '../api.js';
-import { state, update, setUI, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
+import { state, update, setUI, getTheme, setTheme, setLanguage, setToast, logout, isAP, myId, me, flush, nextU, setToken, renameSelf } from '../store.js';
 import { applyTiming, saveAssign, removeAssign, saveDept, saveClass, deleteClass, saveTeacher, saveRegul, deleteRegul, replaceMeta, replaceStartRegul, uid } from '../actions.js';
 import { makeCtx, catchUp, yearSnapshot } from '../calc.js';
 import * as D from '../dates.js';
@@ -16,7 +16,7 @@ import { defaultTerms, defaultCalendar } from '../defaults.js';
 import { REASONS } from '../consts.js';
 import { fmt, todayISO, DEFAULT_BREAKS } from '../dates.js';
 import { letterText, defaultLetter, showArms } from '../letterhead.js';
-import { exportCSV } from '../exports.js';
+import { exportCSV, downloadBackup } from '../exports.js';
 import { isOldBackup, isNewBackup, summarize, convert, surname, remapBackup } from '../import-old.js';
 import { syncNow } from '../sync.js';
 
@@ -74,6 +74,7 @@ function Profile() {
       <${Field} label=${t('Téléphone WhatsApp')}><${DraftInput} class="input" inputmode="tel" value=${m ? m.phone || '' : ''} onChange=${(e) => saveTeacher(myId(), { phone: e.target.value.trim() })} /><//></div>
       ${isAP() ? html`<${OwnUsername} />` : html`<div class="row"><span class="lab">${t('Identifiant')}</span><b>${state.session.username}</b></div>`}
       <div class="row"><${Chip} tone="info">${isAP() ? t('Animateur pédagogique') : t('Enseignant')}<//></div>
+      <div class="row"><span class="lab">${t('Affichage')}</span><${Seg} options=${[{ id: 'auto', label: '📱 ' + t('Auto') }, { id: 'light', label: '☀️ ' + t('Clair') }, { id: 'dark', label: '🌙 ' + t('Sombre') }]} value=${getTheme()} onChange=${setTheme} /></div>
       <div class="row"><span class="lab">${t('Langue')}</span><${Seg} options=${[{ id: 'fr', label: 'Français' }, { id: 'en', label: 'English' }]} value=${state.lang} onChange=${setLanguage} /></div></div>
     <form class="card stack" onSubmit=${change}><h3>${t('Changer mon mot de passe')}</h3><div class="grid2"><${Field} label=${t('Mot de passe actuel')}><${PasswordInput} class="input" autocomplete="current-password" value=${pw.old} onInput=${(e) => setPw({ ...pw, old: e.target.value })} required /><//>
       <${Field} label=${t('Nouveau mot de passe')} hint=${t('Au moins 6 caractères.')}><${PasswordInput} class="input" autocomplete="new-password" value=${pw.password} onInput=${(e) => setPw({ ...pw, password: e.target.value })} required /><//></div>
@@ -306,11 +307,7 @@ function RestoreFull({ json, onDone }) {
 
 function Data() {
   const [msg, setMsg] = useState('');
-  const exportJSON = () => {
-    const d = state.data, mine = isAP() ? d : { ...d, entries: d.entries.filter(e => e.teacherId === myId()) };
-    const blob = new Blob([JSON.stringify({ format: 'rekort', version: 1, exported: new Date().toISOString(), data: mine }, null, 1)], { type: 'application/json' });
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `rekort-${(d.dept.abbr || 'dept').toLowerCase()}-${todayISO()}.json`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
-  };
+  const exportJSON = () => downloadBackup(state.data, isAP(), myId());
   const exportRows = () => {
     const d = state.data, c = makeCtx(d), rows = [['Enseignant', 'Classe', 'Date', 'Début', 'Fin', 'Minutes', 'Type', 'Leçon n°', 'Titre', 'Digitalisée', 'Évalués', 'Moyenne ≥ 10', 'Motif', 'Note']];
     for (const e of c.entries.slice().sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))) rows.push([(c.teacher(e.teacherId) || {}).name, (c.cls(e.classId) || {}).name, e.date, e.start, e.end, e.minutes, e.type, e.n, e.title, e.digital ? 'oui' : '', e.eval ? e.eval.evaluated : '', e.eval ? e.eval.passed : '', e.reason, e.note]);

@@ -38,6 +38,7 @@ function cleanEntry(e, tid) {
   return {
     ...out, type, classId: str(e.classId, 40), date: /^\d{4}-\d{2}-\d{2}$/.test(e.date) ? e.date : '', start: str(e.start, 5), end: str(e.end, 5),
     minutes: Math.min(1440, Math.max(0, num(e.minutes))), n: e.n == null || e.n === '' ? null : num(e.n, null), title: str(e.title, 200), digital: !!e.digital,
+    present: e.present == null || e.present === '' ? null : Math.min(500, Math.max(0, num(e.present))),
     eval: e.eval && typeof e.eval === 'object' ? { evaluated: num(e.eval.evaluated), passed: num(e.eval.passed) } : null,
     reason: str(e.reason, 20), note: str(e.note, 200), term: str(e.term, 8),
   };
@@ -52,7 +53,7 @@ function cleanClass(c) {
 function cleanAssign(a) {
   if (!a || typeof a.id !== 'string' || a.id.length > 90) return null;
   if (a.deleted) return { id: a.id, u: cu(a.u), deleted: true };
-  return { id: a.id, u: cu(a.u), teacherId: str(a.teacherId, 40), classId: str(a.classId, 40), th: Math.max(0, num(a.th)), pr: Math.max(0, num(a.pr)), hth: Math.max(0, num(a.hth)), hpr: Math.max(0, num(a.hpr)), hours: Math.max(0, num(a.hours)) };
+  return { id: a.id, u: cu(a.u), teacherId: str(a.teacherId, 40), classId: str(a.classId, 40), th: Math.max(0, num(a.th)), pr: Math.max(0, num(a.pr)), hth: Math.max(0, num(a.hth)), hpr: Math.max(0, num(a.hpr)), n0: Math.min(999, Math.max(0, num(a.n0))), hours: Math.max(0, num(a.hours)) };
 }
 function cleanRegul(r) {
   if (!r || typeof r.id !== 'string' || r.id.length > 40) return null;
@@ -234,6 +235,10 @@ async function sync(req, ctx, b) {
     if (rev > 0 && (known == null || rev > known || pushed)) { const d = await data().get(`${deptId}/e/${tid}`); if (d) out[tid] = d; }
   }
   const res = { ok: true, now: now(), e: out };
+  // « vu pour la dernière fois » : au plus une écriture par heure et par collègue ; l'animateur reçoit la liste
+  const dinfo = (await depts().get('d:' + deptId)) || { id: deptId }, seen = dinfo.seen || {};
+  if (!seen[me] || now() - seen[me] > 3600e3) { seen[me] = now(); await depts().set('d:' + deptId, { ...dinfo, seen }); }
+  if (role === 'ap') res.seen = seen;
   if (metaChanged || have.meta == null || meta.rev > have.meta) res.meta = role === 'ap' ? meta : { ...meta, teachers: (meta.teachers || []).map(({ username, phone, ...rest }) => (rest.id === me ? { ...rest, phone } : rest)) };   // identifiants de connexion cachés aux enseignants
   res.session = session(ctx.user);   // le rôle peut changer (transfert de l'animation pédagogique)
   if (ctx.exp - now() < 30 * 864e5) res.token = await tokenFor(ctx.user);

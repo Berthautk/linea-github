@@ -16,7 +16,7 @@ export function saveEntry(e) {
   const type = e.type || 'lesson';
   const rec = stamp({ id: e.id || uid(), teacherId: e.teacherId || myId(), type, classId: e.classId || '', date: e.date, start: e.start || '', end: e.end || '',
     minutes: e.minutes != null ? +e.minutes : minutesBetween(e.start, e.end), n: isLessonType(type) && e.n !== '' && e.n != null ? +e.n : null, title: (e.title || '').trim(), digital: !!e.digital,
-    eval: e.eval || null, reason: e.reason || '', note: e.note || '', term: termOf(e.date) });
+    present: e.present == null || e.present === '' ? null : +e.present, eval: e.eval || null, reason: e.reason || '', note: e.note || '', term: termOf(e.date) });
   update(s => { s.data = { ...s.data, entries: upsert(s.data.entries, rec) }; }); changed(); return rec;
 }
 export function deleteEntry(id) {
@@ -41,8 +41,8 @@ export const saveDept = (patch) => setData({ dept: stamp({ ...state.data.dept, .
 export const saveClass = (c) => setData({ classes: upsert(state.data.classes, stamp({ id: c.id || uid(), name: c.name, level: c.level || '', cycle: c.cycle || '1er', effectif: c.effectif || { total: 0, girls: 0, boys: 0 } })) });
 export const deleteClass = (id) => setData({ classes: upsert(state.data.classes, { id, deleted: true, u: nextU() }), assign: state.data.assign.map(a => (a.classId === id ? { id: a.id, deleted: true, u: nextU() } : a)) });
 /** Programme de l'année d'un enseignant dans une classe : leçons (théorie, TP) et heures (théorie, TP). `hours` = total des heures. */
-export const saveAssign = ({ teacherId, classId, th, pr, hth, hpr, hours }) => {
-  const a = { th: +th || 0, pr: +pr || 0, hth: +hth || 0, hpr: +hpr || 0 }, tot = a.hth + a.hpr;
+export const saveAssign = ({ teacherId, classId, th, pr, hth, hpr, hours, n0 }) => {
+  const a = { th: +th || 0, pr: +pr || 0, hth: +hth || 0, hpr: +hpr || 0, n0: +n0 || 0 }, tot = a.hth + a.hpr;
   setData({ assign: upsert(state.data.assign, stamp({ id: teacherId + ':' + classId, teacherId, classId, ...a, hours: tot || +hours || 0 })) });
 };
 export const removeAssign = (teacherId, classId) => setData({ assign: upsert(state.data.assign, { id: teacherId + ':' + classId, deleted: true, u: nextU() }) });

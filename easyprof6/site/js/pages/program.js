@@ -23,8 +23,9 @@ export const totalHours = (a) => (+a.hth || 0) + (+a.hpr || 0) || +a.hours || 0;
 /** Les quatre champs du programme d'une affectation : chacun s'enregistre en quittant le champ. */
 export function ProgramFields({ a, teacherId, classId, onSaved }) {
   const cur = a || { th: 0, pr: 0, hth: 0, hpr: 0, hours: 0 };
-  const upd = (k, v) => { saveAssign({ teacherId, classId, th: cur.th, pr: cur.pr, hth: cur.hth, hpr: cur.hpr, hours: cur.hours, [k]: +v || 0, ...(k === 'hth' || k === 'hpr' ? { hours: 0 } : {}) }); onSaved && onSaved(); };
+  const upd = (k, v) => { saveAssign({ teacherId, classId, th: cur.th, pr: cur.pr, hth: cur.hth, hpr: cur.hpr, hours: cur.hours, n0: cur.n0, [k]: +v || 0, ...(k === 'hth' || k === 'hpr' ? { hours: 0 } : {}) }); onSaved && onSaved(); };
   const f = (k, label) => html`<${Field} label=${label}><${DraftInput} class="input" type="number" min="0" inputmode="numeric" value=${cur[k] || ''} onChange=${(e) => upd(k, e.target.value)} /><//>`;
   return html`<div class="g2x2">${f('th', t('Leçons de théorie'))}${f('pr', t('Leçons de TP'))}${f('hth', t('Heures de théorie'))}${f('hpr', t('Heures de TP'))}</div>
-    <p class="hint">${t('Total : {l} leçons · {h} h', { l: (+cur.th || 0) + (+cur.pr || 0), h: totalHours(cur) })}</p>`;
+    <p class="hint">${t('Total : {l} leçons · {h} h', { l: (+cur.th || 0) + (+cur.pr || 0), h: totalHours(cur) })}</p>
+    <details><summary class="sub">${t('Le programme reprend en cours de route ? (numéro de la première leçon)')}</summary><div style="margin-top:6px">${f('n0', t('Première leçon de l’année (n°)'))}</div></details>`;
 }

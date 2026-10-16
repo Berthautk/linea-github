@@ -1,6 +1,8 @@
 // Accueil : le tableau de bord (département pour l'animateur, ou « mes données »).
 import { html, useState } from '../vendor/preact-htm.js';
 import { ReminderSetup } from '../reminders.js';
+import { downloadBackup, lastBackup } from '../exports.js';
+import { WaButtons } from '../whatsapp.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Bar, Chip, Empty, Seg, Field, statusChip, num1 } from '../ui.js';
@@ -79,6 +81,20 @@ function Goals({ ctx, tid, p }) {
     <div class="list" style="margin-top:6px">${terms.map(r => html`<div class="item"><div class="grow"><b>${r.name}</b><span>${t('fin le {d}', { d: fmt(r.end, lang) })}</span></div><span class="sub">${r.future ? t('à venir') + ' · ' : ''}${t('objectif {g} {u}', { g: num1(g(r)), u: unit })}${d(r) != null ? ' · ' + t('fait {d}', { d: num1(d(r)) }) + ' (' + (g(r) ? Math.round(d(r) / g(r) * 100) : 0) + ' %)' : ''}</span></div>`)}</div></div>`;
 }
 
+/** Dernière connexion d'un collègue (vue par l'animateur, d'après le serveur). */
+function seenText(id) {
+  const ts = (state.data.seen || {})[id]; if (!ts) return '📵 ' + t('jamais connecté sur ce site (vérifiez qu’il a reçu son accès)');
+  const d = Math.floor((Date.now() - ts) / 864e5); return '📶 ' + (d <= 0 ? t('connecté aujourd’hui') : t('dernière connexion il y a {n} jour(s)', { n: d }));
+}
+/** Message pour le groupe WhatsApp : qui n'a rien saisi cette semaine. */
+function GroupMessage({ ctx }) {
+  const from = addDays(ctx.today, -6), lazy = ctx.teachers.filter(tc => (tc.slots || []).some(sl => +sl.h > 0) && !(ctx.byTeacher[tc.id] || []).some(e => e.date >= from && e.date <= ctx.today));
+  const text = lazy.length ? t('Bonjour chers collègues 👋\nPetit rappel Rekort : merci d’enregistrer vos cours de la semaine (Accueil › « À cocher », ou le bouton ＋).\nPas encore de saisie cette semaine : {n}.\nCela prend quelques secondes et nos fiches (censorat, inspection) en dépendent. Merci !', { n: lazy.map(x => x.short || x.name).join(', ') }) + '\n' + location.origin
+    : t('Bonjour chers collègues 👋\nBravo : tout le monde a enregistré ses cours cette semaine sur Rekort. Merci et bonne continuation !');
+  return html`<div class="card stack"><div class="card-h"><h3>💬 ${t('Message au groupe WhatsApp')}</h3><${Chip} tone=${lazy.length ? 'warn' : 'ok'}>${lazy.length} ${t('sans saisie')}<//></div>
+    <textarea class="input" rows="6" readonly value=${text}></textarea><${WaButtons} phone="" text=${text} /></div>`;
+}
+
 /** Qui remplit l'application, et à quel rythme. */
 function Activity({ ctx }) {
   const rows = ctx.teachers.map(tc => ({ tc, A: activity(ctx, tc.id) })); if (!rows.length) return null;
@@ -86,7 +102,7 @@ function Activity({ ctx }) {
   return html`<div class="card"><div class="card-h"><h3>${t('Activité des collègues')}</h3><span class="sub">${t('Depuis la rentrée')}</span></div>
     <div class="list">${rows.map(({ tc, A }) => html`<div class="item" style="align-items:flex-start"><div class="grow"><b>${tc.name}</b>
       <div class="bar" style="margin:6px 0 4px"><i style=${{ width: A.rate + '%' }}></i></div>
-      <span>${t('{a} semaine(s) active(s) sur {w}', { a: A.active, w: A.weeks })} · ${t('{f} classe(s) saisie(s) sur {c}', { f: A.filled, c: A.classes })} · ${A.last ? (A.since === 0 ? t('a saisi aujourd’hui') : t('dernière saisie il y a {n} jour(s)', { n: A.since })) : t('aucune saisie')}</span></div>
+      ${isAP() ? html`<span class="sub" style="display:block">${seenText(tc.id)}</span>` : null}<span>${t('{a} semaine(s) active(s) sur {w}', { a: A.active, w: A.weeks })} · ${t('{f} classe(s) saisie(s) sur {c}', { f: A.filled, c: A.classes })} · ${A.last ? (A.since === 0 ? t('a saisi aujourd’hui') : t('dernière saisie il y a {n} jour(s)', { n: A.since })) : t('aucune saisie')}</span></div>
       <div class="stack" style="gap:6px;align-items:flex-end"><${Chip} tone=${tone[A.level]}>${lab[A.level]}<//>${isAP() && tc.id !== myId() && A.level !== 'regular' ? html`<button class="btn sm" style="background:#25D366" onClick=${() => openReminder(ctx, tc)}>${t('Rappeler')}</button>` : null}</div></div>`)}</div></div>`;
 }
 
@@ -158,6 +174,24 @@ function Compare({ tid }) {
     <p class="hint" style="margin-top:6px">${t('Heures faites sur heures dues (emploi du temps de l’année) ; leçons faites sur leçons prévues (programme de l’année). Pour l’année en cours, les trimestres pas encore finis sont comptés à ce jour.')}</p></div>`;
 }
 
+/** Chaque semaine (animateur) : télécharger la sauvegarde du département. */
+function BackupNag() {
+  const [, force] = useState(0);
+  if (!isAP() || Date.now() - lastBackup() < 7 * 864e5) return null;
+  return html`<div class="card stack" style="gap:10px;border:2px solid var(--teal)"><div class="row" style="gap:10px"><div class="dot">💾</div><div class="grow"><b>${t('Sauvegarde de la semaine')}</b><p class="sub">${lastBackup() ? t('Dernière sauvegarde il y a {n} jour(s).', { n: Math.floor((Date.now() - lastBackup()) / 864e5) }) : t('Aucune sauvegarde sur ce téléphone.')} ${t('Gardez une copie de toutes les données du département (dans le téléphone ou sur Google Drive).')}</p></div></div>
+    <button class="btn" onClick=${() => { downloadBackup(state.data, true, myId()); force(x => x + 1); }}><${Icon} n="download" />${t('Télécharger la sauvegarde')}</button></div>`;
+}
+/** Premier pas d'un enseignant : trois étapes, puis la carte disparaît. */
+const WELCOME = 'ep6:welcome-done';
+function Welcome({ ctx }) {
+  const [hide, setHide] = useState(() => { try { return !!localStorage.getItem(WELCOME); } catch { return true; } });
+  if (hide || isAP()) return null;
+  const tc = ctx.teacher(myId()), hasTT = tc && (tc.slots || []).some(sl => +sl.h > 0), done = () => { try { localStorage.setItem(WELCOME, '1'); } catch { } setHide(true); };
+  return html`<div class="card stack" style="border:2px solid var(--teal)"><div class="card-h"><h3>👋 ${t('Bienvenue sur Rekort : 3 étapes')}</h3><button class="btn ghost sm" onClick=${done}>${t('C’est fait')}</button></div>
+    <ol class="guide"><li>${hasTT ? t('Votre emploi du temps est prêt : vérifiez-le dans Saisir › « Ma semaine », et signalez toute erreur à votre animateur.') : t('Votre emploi du temps n’est pas encore saisi : demandez à votre animateur pédagogique de l’ajouter.')}</li>
+      <li>${t('Activez le rappel du soir (carte ⏰ ci-dessous ou Réglages › Mon profil) : votre téléphone vous rappellera de cocher vos cours.')}</li>
+      <li>${t('Chaque soir de cours : en haut de l’Accueil, touchez « Fait » ou « Absent » pour chaque cours. C’est tout !')}</li></ol></div>`;
+}
 /** Une seule fois : proposer les rappels du soir dans le calendrier du téléphone. */
 const ASK = 'ep6:remind-asked';
 function RemindInvite({ ctx }) {
@@ -186,7 +220,7 @@ export function Home() {
   const lateTeachers = !tid ? ctx.teachers.filter(x => !noTimetable(ctx, x.id).length && overall(stats(ctx, x.id, p.ps, p.pe)) === 'late').length : 0;
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
-    ${past ? null : html`<${ToCheck} ctx=${live} /><${RemindInvite} ctx=${live} />`}
+    ${past ? null : html`<${Welcome} ctx=${live} /><${ToCheck} ctx=${live} /><${BackupNag} /><${RemindInvite} ctx=${live} />`}
     <${YearBar} />
     <${ScopeBar} ctx=${ctx} />
     <div class="card stack" style="gap:10px"><div class="scope-big sm"><${Seg} full options=${[{ id: 'L', label: '📖 ' + t('Leçons') }, { id: 'H', label: '⏱️ ' + t('Heures') }]} value=${mode} onChange=${(v) => setUI({ dmode: v })} /></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
@@ -211,7 +245,7 @@ export function Home() {
     </div>
     ${data.length > 1 && data.some(d => d.due || d.done) ? html`<div class="card"><div class="card-h"><h3>${unitFor(p) === 'day' ? t('Heures par jour') : unitFor(p) === 'month' ? t('Heures par mois') : t('Heures par semaine')}</h3><div class="legend"><span><i style="background:var(--sand);border:1.5px solid var(--line)"></i>${t('dues')}</span><span><i style="background:var(--teal)"></i>${t('faites')}</span></div></div><${BarChart} data=${data} unit=${unitFor(p)} /></div>` : null}
     <${Goals} ctx=${ctx} tid=${tid} p=${p} />
-    ${tid ? html`<${Classes} rows=${rows} ctx=${ctx} tid=${tid} />` : html`${ap && ctx.teachers.length > 1 ? html`<a class="card row" href="#/week" style="text-decoration:none;color:inherit;gap:14px"><div class="dot ok" style="font-size:20px">✅</div><div class="grow"><b>${t('Ronde en classe')}</b><p class="sub">${t('Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.')}</p></div><${Icon} n="right" size="18" /></a>` : null}<${Activity} ctx=${ctx} />${ap ? html`<${Inactive} ctx=${ctx} />` : null}<${Team} ctx=${ctx} p=${p} /><${DeptClasses} ctx=${ctx} />`}
+    ${tid ? html`<${Classes} rows=${rows} ctx=${ctx} tid=${tid} />` : html`${ap && ctx.teachers.length > 1 ? html`<a class="card row" href="#/week" style="text-decoration:none;color:inherit;gap:14px"><div class="dot ok" style="font-size:20px">✅</div><div class="grow"><b>${t('Ronde en classe')}</b><p class="sub">${t('Un collègue n’a pas saisi ? Faites la ronde : choisissez-le et cochez ce que les élèves vous disent.')}</p></div><${Icon} n="right" size="18" /></a>` : null}<${Activity} ctx=${ctx} />${ap ? html`<${GroupMessage} ctx=${ctx} /><${Inactive} ctx=${ctx} />` : null}<${Team} ctx=${ctx} p=${p} /><${DeptClasses} ctx=${ctx} />`}
     <${Compare} tid=${tid} />
   </div>`;
 }

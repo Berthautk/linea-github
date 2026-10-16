@@ -8,6 +8,7 @@ export function scheduleSync(ms = 2500) { clearTimeout(timer); timer = setTimeou
 
 const metaRecords = (d) => [d.dept, ...d.teachers, ...d.classes, ...d.assign, ...d.regul];
 function applyResult(s, res, pushedAt) {
+  if (res.seen) s.data = { ...s.data, seen: res.seen };
   if (res.meta) {
     const m = mergeMeta({ dept: s.data.dept, teachers: s.data.teachers, classes: s.data.classes, assign: s.data.assign, regul: s.data.regul }, res.meta);
     s.data = { ...s.data, ...m }; s.sync.metaRev = res.meta.rev;
@@ -44,5 +45,5 @@ export function startAutoSync() {
   if (started) return; started = true;
   const kick = () => { if (state.session && !document.hidden) syncNow(); };
   document.addEventListener('visibilitychange', kick); window.addEventListener('online', kick);
-  setInterval(kick, 180000); kick();
+  setInterval(kick, 600000); kick();   // toutes les 10 min, plus une synchro à chaque saisie et à l'ouverture : moins d'appels, moins de crédits Netlify
 }

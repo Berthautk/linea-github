@@ -338,6 +338,8 @@ export function activity(ctx, tid) {
 export function nextNumber(ctx, tid, classId, type) {
   let max = 0;
   for (const e of ctx.byTeacher[tid] || []) if (e.classId === classId && e.type === type && e.n != null && e.n > max) max = e.n;
+  const a = ctx.assign.find(x => x.teacherId === tid && x.classId === classId);   // programme repris en cours d'année : on commence à la leçon indiquée
+  if (!max && a && +a.n0 > 1 && type === 'lesson') return +a.n0;
   return max + 1;
 }
 

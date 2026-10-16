@@ -326,3 +326,13 @@ test('les années archivées sont gardées par le serveur (nettoyées)', async (
   const y = r.meta.dept.years[0];
   assert.equal(r.meta.dept.year, '2027/2028'); assert.equal(y.year, '2026/2027'); assert.equal(y.period, 50); assert.equal(y.slots[tid][0].h, 2); assert.equal(y.assign[0].hours, 66); assert.equal(y.evil, undefined);
 });
+
+test('dernière connexion des collègues (pour l’animateur) et présences des élèves gardées', async () => {
+  fresh(); const ap = await newDept('vu1'); const a = await call('/team/add', { name: 'Mme ASTHA Noura' }, ap.token);
+  const T = (await call('/login', { username: a.username, password: a.password })).token;
+  const r1 = await call('/sync', { have: {}, push: { e: { [a.teacher.id]: { entries: [{ id: 'p1', type: 'lesson', classId: 'c1', date: '2026-10-05', minutes: 60, present: 42, u: Date.now() }] } } } }, T);
+  assert.equal(r1.seen, undefined, 'un enseignant ne reçoit pas la liste');
+  const r2 = await call('/sync', { have: {} }, ap.token);
+  assert.ok(r2.seen[a.teacher.id] > 0, 'l’animateur voit quand le collègue s’est connecté');
+  assert.equal(r2.e[a.teacher.id].entries[0].present, 42);
+});

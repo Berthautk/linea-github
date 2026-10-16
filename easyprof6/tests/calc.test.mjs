@@ -319,3 +319,11 @@ test('rappels : un rendez-vous hebdomadaire avec alarme par jour de cours, jusqu
   const ics = remindersIcs(c, 'K', '18:30');
   assert.equal((ics.match(/BEGIN:VEVENT/g) || []).length, days.length); assert.match(ics, /RRULE:FREQ=WEEKLY;BYDAY=(MO|TU|WE|TH|FR|SA);UNTIL=\d{8}T235959Z/); assert.match(ics, /BEGIN:VALARM/); assert.match(ics, /T183000/);
 });
+
+test('numéro de la première leçon d’une classe reprise en cours de programme', () => {
+  const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 16, pr: 0, n0: 27 }] });
+  const c = makeCtx(st, '2026-10-14');
+  assert.equal(nextNumber(c, 'K', 'F3A', 'lesson'), 27);
+  st.entries = [E('a', 'K', '2026-10-05', { classId: 'F3A', n: 27 })];
+  assert.equal(nextNumber(makeCtx(st, '2026-10-14'), 'K', 'F3A', 'lesson'), 28);
+});

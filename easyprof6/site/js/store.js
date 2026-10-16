@@ -3,7 +3,7 @@ import { useState, useEffect } from './vendor/preact-htm.js';
 import { newDept } from './defaults.js';
 import { setLang } from './i18n.js';
 
-const K = { session: 'ep6:session', lang: 'ep6:lang', ui: 'ep6:ui', data: (u) => 'ep6:data:' + u };
+const K = { session: 'ep6:session', lang: 'ep6:lang', ui: 'ep6:ui', theme: 'ep6:theme', data: (u) => 'ep6:data:' + u };
 export const emptyData = () => ({ dept: newDept(), teachers: [], classes: [], assign: [], regul: [], entries: [] });
 const emptySync = () => ({ metaRev: null, eRev: {}, pushU: 0, status: 'idle', last: 0, error: '' });
 const ls = {
@@ -53,6 +53,10 @@ export function renameSelf(username, token) {
   update(s => { s.session = { ...s.session, username, token }; }); persistSession(); flush(); if (old !== username) ls.del(K.data(old));
 }
 export function setToken(token) { if (!state.session || !token) return; update(s => { s.session = { ...s.session, token }; }); persistSession(); }
+/** Thème : 'auto' (comme le téléphone), 'light' ou 'dark'. */
+export const getTheme = () => ls.get(K.theme, 'auto');
+export function applyTheme(v = getTheme()) { const r = document.documentElement; if (v === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', v); }
+export function setTheme(v) { ls.set(K.theme, v); applyTheme(v); update(() => { }); }
 export function setLanguage(l) { state.lang = l; setLang(l); ls.set(K.lang, l); update(() => { }); }
 export function startSession(session, meta) {
   ls.set(K.session, session);

@@ -286,7 +286,7 @@ test('programme : niveau d’une classe d’après son nom, programme officiel, 
   const { levelOf, officialFor, isEmptyProgram, totalHours } = await import('../site/js/pages/program.js');
   assert.equal(levelOf({ name: 'Form 3 G' }), 'form 3'); assert.equal(levelOf({ name: 'Geo 2B' }), 'form 2'); assert.equal(levelOf({ name: 'Geo 1A' }), 'form 1');
   assert.equal(levelOf({ name: 'Lower Sixth Arts' }), 'lower sixth'); assert.equal(levelOf({ name: 'Upper Sixth Arts' }), 'upper sixth'); assert.equal(levelOf({ name: 'Autre' }), '');
-  assert.deepEqual(officialFor({ name: 'Form 4 G' }), { th: 46, pr: 12, hth: 79, hpr: 21 }); assert.equal(officialFor({ name: 'Autre' }), null);
+  assert.deepEqual(officialFor({ name: 'Form 4 G' }), { th: 46, pr: 10, fs: 2, hth: 79, hpr: 21 }); assert.equal(officialFor({ name: 'Autre' }), null);
   assert.ok(isEmptyProgram({ th: 0, pr: 0 })); assert.ok(!isEmptyProgram({ pr: 3 })); assert.equal(totalHours({ hth: 39, hpr: 27 }), 66); assert.equal(totalHours({ hours: 50 }), 50);
   const store = await import('../site/js/store.js'), act = await import('../site/js/actions.js');
   store.update(s => { s.data = { ...s.data, assign: [] }; });
@@ -334,4 +334,11 @@ test('leçons, TP et further study sont séparés : seules les leçons comptent 
   const S = stats(makeCtx(st, '2026-10-14'), 'K', '2026-09-07', '2026-10-14');
   assert.equal(S.lessonsDone, 1); assert.equal(S.practical, 1); assert.equal(S.further, 1);
   assert.equal(S.planYear.lessons, 42, '42 leçons, pas 46'); assert.equal(S.practicalPlanned, 4);
+});
+
+test('fiche pédagogique : heures de théorie / TP du programme, TP et further study à part', () => {
+  const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 42, pr: 2, fs: 2, hth: 60, hpr: 6, hours: 66 }] });
+  st.entries = [E('a', 'K', '2026-09-07', { classId: 'F3A', n: 1, type: 'practical' }), E('b', 'K', '2026-09-08', { classId: 'F3A', type: 'practical', n: null }), E('c', 'K', '2026-09-09', { classId: 'F3A', n: 1, type: 'further' })];
+  const R = followUp(makeCtx(st, '2026-10-14'), '2026-09-07', '2026-10-14'), r = R.rows ? R.rows[0] : R.total;
+  const tot = R.total; assert.equal(tot.planTh, 42); assert.equal(tot.planPr, 2); assert.equal(tot.pr, 2, 'TP sans numéro comptés aussi'); assert.equal(tot.objTh, 60); assert.equal(tot.objPr, 6); assert.equal(tot.objH, 66);
 });

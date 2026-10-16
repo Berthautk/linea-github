@@ -95,7 +95,7 @@ export function doneRange(ctx, tid, ps, pe) {
   for (const e of ctx.byTeacher[tid] || []) {
     if (e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
     const h = (+e.minutes || 0) / 60; out.hours += h; out.count++;
-    if (e.classId) { const b = (out.byClass[e.classId] = out.byClass[e.classId] || { hours: 0, theory: new Set(), practical: new Set() }); b.hours += h; if (e.type === 'lesson' && e.n != null) b.theory.add(e.n); if (e.type === 'practical' && e.n != null) b.practical.add(e.n); }
+    if (e.classId) { const b = (out.byClass[e.classId] = out.byClass[e.classId] || { hours: 0, theory: new Set(), practical: new Set() }); b.hours += h; if (e.type === 'lesson' && e.n != null) b.theory.add(e.n); if (e.type === 'practical') b.practical.add(e.n != null ? e.n : e.id); }
     if (e.type === 'lesson' && e.n != null) { out.lessons.add(e.classId + '|L|' + e.n); out.theory.add(e.classId + '|' + e.n); }
     else if (e.type === 'practical') out.practical.add(e.classId + '|' + (e.n != null ? e.n : e.id));   // TP : comptés à part, jamais dans les leçons
     else if (e.type === 'further') out.further.add(e.classId + '|' + (e.n != null ? e.n : e.id));       // further study / travail guidé : à part aussi
@@ -368,7 +368,7 @@ export function recap(ctx, ps, pe) {
       for (const e of ctx.byTeacher[t.id] || []) {
         if (e.classId !== c.id || e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
         hours += (+e.minutes || 0) / 60; if (e.digital) digital++;
-        if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical' && e.n != null) pr.add(t.id + '|' + e.n);
+        if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
       }
       hoursDue += dueRange(ctx, t.id, ps, minISO(pe, ctx.today)).byClass[c.id] || 0;
     }
@@ -390,13 +390,14 @@ export function followUp(ctx, ps, pe) {
     for (const t of ctx.teachers) for (const e of ctx.byTeacher[t.id] || []) {
       if (e.classId !== c.id || e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
       ids.add(t.id); hours += (+e.minutes || 0) / 60; if (e.digital) digital++;
-      if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical' && e.n != null) pr.add(t.id + '|' + e.n);
+      if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
       if (e.eval && +e.eval.evaluated > 0 && (!lastEval || e.date >= lastEval.date)) lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 };
     }
     for (const r of ctx.regul) if (r.classId === c.id && ids.has(r.teacherId) && r.d >= ps && r.d <= pe) hours += +r.h || 0;
     let yearDue = 0; for (const id of ids) yearDue += dueRange(ctx, id, ctx.ys, ctx.ye).byClass[c.id] || 0;
     const planTh = A.reduce((x, a) => x + (+a.th || 0), 0), planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), planH = A.reduce((x, a) => x + (+a.hours || 0), 0);
-    const objH = planH || yearDue, lessonsPlan = planTh + planPr, objTh = lessonsPlan ? objH * planTh / lessonsPlan : objH, objPr = objH - objTh;
+    const hTh = A.reduce((x, a) => x + (+a.hth || 0), 0), hPr = A.reduce((x, a) => x + (+a.hpr || 0), 0);
+    const objH = hTh + hPr || planH || yearDue, lessonsPlan = planTh + planPr, objTh = hTh + hPr ? hTh : lessonsPlan ? objH * planTh / lessonsPlan : objH, objPr = objH - objTh;
     const eff = +((c.effectif || {}).total) || 0, ev = lastEval ? lastEval.evaluated : 0, ok = lastEval ? lastEval.passed : 0;
     return { id: c.id, name: c.name, cycle: c.cycle, teachers: [...ids].map(i => (ctx.teacher(i) || {}).short || (ctx.teacher(i) || {}).name || '').filter(Boolean),
       planTh, th: th.size, planPr, pr: pr.size, digital, objH: r1(objH), objTh: Math.round(objTh), objPr: Math.round(objPr), hours: r1(hours), eff, ev, ok };

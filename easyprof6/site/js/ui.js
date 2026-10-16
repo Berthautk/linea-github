@@ -90,3 +90,9 @@ export function SaveBar({ to = '#/settings', label }) {
   const go = () => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); setTimeout(() => { setToast(t('Tout est enregistré ✓')); location.hash = to; }, 120); };
   return html`<div class="card stack" style="gap:8px"><p class="sub">${t('Tout ce que vous saisissez est gardé dès que vous quittez le champ. Touchez le bouton quand vous avez terminé.')}</p><button class="btn block" onClick=${go}><${Icon} n="check" />${label || t('Enregistrer et terminer')}</button></div>`;
 }
+
+/** Se déconnecter, toujours après confirmation (les données restent sur l'appareil et sur le serveur). */
+export function askLogout(logout) {
+  confirmDialog({ title: t('Se déconnecter ?'), message: t('Vos données restent sur cet appareil et sur le serveur : vous les retrouverez en vous reconnectant. Les saisies pas encore synchronisées seront envoyées à la prochaine connexion.'), confirm: t('Se déconnecter'), onConfirm: () => logout() });
+}
+export const isInstalled = () => { try { return matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; } catch { return false; } };

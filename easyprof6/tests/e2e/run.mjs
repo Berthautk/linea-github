@@ -63,7 +63,7 @@ await step('B. Le collègue se connecte et saisit', async () => {
   const dview = await tp.innerText('.page');
   ok(/Résultats par collègue/.test(dview) && !(await tp.getByRole('button', { name: 'Rappeler' }).count()) && !(await tp.getByRole('link', { name: 'Contrôler' }).count()), 'B2b le collègue voit les résultats de tous, sans pouvoir rappeler ni contrôler');
   await tp.getByRole('button', { name: 'Moi', exact: true }).click(); await tp.waitForTimeout(300);
-  await tp.getByRole('button', { name: 'Fait' }).click(); await tp.waitForTimeout(500);
+  await tp.locator('.card', { hasText: 'Aujourd’hui' }).getByRole('button', { name: 'Fait' }).click(); await tp.waitForTimeout(500);
   ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'B3 saisie en un geste : « Fait » → leçon 1 enregistrée');
   const k = await tp.locator('.kpis').innerText();
   ok(/2 \/ 12 h/.test(k.replace(/\n/g, ' ')), 'B4 heures : 2 h faites sur 12 h dues depuis la rentrée (6 lundis × 2 h)');
@@ -139,7 +139,7 @@ await step('E. Jour sans cours et fiche d’inspection', async () => {
 await step('F. Mot de passe oublié (animateur)', async () => {
   const p = await newPage(browser, url, {}); const code = await signup(p.page, { name: 'Mr. AUTRE Prof', username: 'autre.prof', school: 'LYCÉE DE TEST', discipline: 'Histoire' });
   await p.page.evaluate(() => { location.hash = '#/settings/profile'; }); await p.page.waitForTimeout(300);
-  await p.page.getByRole('button', { name: /^Se déconnecter$/ }).click(); await p.page.waitForSelector('.auth');
+  await p.page.locator('.page').getByRole('button', { name: /^Se déconnecter$/ }).click(); await p.page.locator('.sheet').getByRole('button', { name: /^Se déconnecter$/ }).click(); await p.page.waitForSelector('.auth');
   await p.page.getByRole('button', { name: /mot de passe oublié/i }).click();
   await p.page.getByLabel(/^identifiant/i).fill('autre.prof'); await p.page.getByLabel(/code de récupération/i).fill(code.toLowerCase()); await p.page.getByLabel(/nouveau mot de passe/i).fill('nouveau99');
   await p.page.getByRole('button', { name: /changer le mot de passe/i }).click(); await p.page.waitForSelector('text=Mot de passe modifié');

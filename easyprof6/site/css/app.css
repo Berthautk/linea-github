@@ -262,3 +262,11 @@ button.chip { border: 0; cursor: pointer; font-family: inherit; }
 .myw.ok { background: var(--leaf-l); } .myw.ok .tick { background: var(--leaf); color: #fff; }
 .myw.miss { background: var(--coral-l); } .myw.miss .tick { background: var(--coral); color: #fff; }
 .myw.abs { background: var(--apricot-l); } .myw .warn-t { color: #8A5A00 !important; font-weight: 700; }
+
+/* Historique : grand choix Département / Mon historique, et sous-titres par collègue */
+.scope-big .seg { padding: 5px; border-radius: 18px; }
+.scope-big .seg button { font-size: 16px; padding: 13px 10px; font-weight: 800; border-radius: 14px; }
+.scope-big .seg button.on { background: var(--teal); color: #fff; }
+.who-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 10px 4px 4px; border-top: 1px dashed var(--line); margin-top: 4px; }
+.who-h:first-child { border-top: 0; margin-top: 0; }
+.who-h b { color: var(--teal-d); } .who-h span { font-size: 12.5px; color: var(--muted); }

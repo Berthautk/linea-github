@@ -4,11 +4,12 @@ import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Bar, Chip, Empty, Seg, Field, statusChip, num1 } from '../ui.js';
 import { BarChart, ProgressChart, TermChart } from '../charts.js';
-import { makeCtx, stats, overall, noTimetable, dueRange, cumulative, byTerm, activity, lagStatus, pct, periodOf, classProgress, series, todaySlots, factors } from '../calc.js';
+import { makeCtx, stats, overall, noTimetable, dueRange, cumulative, byTerm, activity, lagStatus, pct, periodOf, classProgress, series, todaySlots, factors, gapReport } from '../calc.js';
 import { PeriodBar, ScopeBar, TodayCard, currentTid, periodLabel, unitFor } from '../widgets.js';
 import { state, setUI, isAP, myId, me, getScope, setScope } from '../store.js';
 import { saveDept } from '../actions.js';
 import { openReminder } from '../reminder.js';
+import { record, absent, openRound } from './week.js';
 import { minISO, fmt, addDays, dow } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
 
@@ -130,6 +131,20 @@ function FridayRound({ ctx }) {
     <div class="row" style="gap:8px;flex-wrap:wrap;margin-top:6px"><a class="btn sm" href="#/week">${t('Commencer la ronde')}</a><a class="btn soft sm" href=${ics} download="rekort-ronde-vendredi.ics">${t('Rappel chaque vendredi dans mon téléphone')}</a></div></div></div>`;
 }
 
+/** En premier sur l'accueil : mes cours de ces derniers jours pas encore cochés. Un geste par cours ; la carte disparaît quand tout est fait. */
+function ToCheck({ ctx }) {
+  const me = myId(), tc = ctx.teacher(me), lang = getLang();
+  if (!tc || !(tc.slots || []).some(sl => +sl.h > 0)) return null;
+  const from = addDays(ctx.today, -13), list = gapReport(ctx, me).missing.filter(m => m.iso >= from && m.iso < ctx.today).sort((a, b) => (a.iso < b.iso ? 1 : a.iso > b.iso ? -1 : 0));
+  if (!list.length) return null;
+  const cname = (id) => (ctx.cls(id) || {}).name || id;
+  return html`<div class="card tocheck"><div class="card-h"><h3>✅ ${t('À cocher : vos cours de ces derniers jours')}</h3><${Chip} tone="warn">${list.length}<//></div>
+    <p class="sub" style="margin-bottom:6px">${t('Pour chaque cours : « Fait » s’il a eu lieu, « Absent » sinon. C’est enregistré tout de suite, dans la bonne semaine.')}</p>
+    <div class="list">${list.slice(0, 6).map(m => html`<div class="item" style="flex-wrap:wrap"><div class="grow"><b>${cname(m.row.c)}</b><span class="cap">${fmt(m.iso, lang, { weekday: true, noYear: true })}${m.row.st ? ' · ' + m.row.st + ' → ' + m.row.en : ''} · ${m.row.h} h</span></div>
+      <div class="wk-act"><button class="btn sm" onClick=${() => record(ctx, me, m.iso, m.row)}><${Icon} n="check" />${t('Fait')}</button><button class="btn soft sm" onClick=${() => absent(ctx, me, m.iso, m.row)}>${t('Absent')}</button><button class="btn ghost sm" onClick=${() => openRound(ctx, me, m.iso, m.row)}>${t('Détails…')}</button></div></div>`)}</div>
+    ${list.length > 6 ? html`<a class="btn soft sm" style="margin-top:8px" href="#/lessons">${t('Voir les {n} autres dans Historique › À compléter', { n: list.length - 6 })}</a>` : null}</div>`;
+}
+
 export function Home() {
   const ctx = makeCtx(state.data), lang = getLang(), ap = isAP();
   const tid = currentTid(), scope = getScope();
@@ -147,6 +162,7 @@ export function Home() {
   const lateTeachers = !tid ? ctx.teachers.filter(x => !noTimetable(ctx, x.id).length && overall(stats(ctx, x.id, p.ps, p.pe)) === 'late').length : 0;
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
+    <${ToCheck} ctx=${ctx} />
     <${ScopeBar} ctx=${ctx} />
     <div class="card stack" style="gap:10px"><${Seg} full options=${[{ id: 'L', label: t('Leçons') }, { id: 'H', label: t('Heures') }]} value=${mode} onChange=${(v) => setUI({ dmode: v })} /><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>
     <div class="hero stack" style="gap:10px"><div><p class="sub">${fmt(ctx.today, lang, { weekday: true })}</p><h1>${t('Bonjour')}${me() && firstName(me().name) ? ', ' + firstName(me().name) : ''} 👋</h1><p class="sub">${who} · ${state.data.dept.name}</p></div>

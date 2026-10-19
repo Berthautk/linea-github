@@ -26,7 +26,7 @@ delete process.env.DATABASE_URL;
 const day = (n) => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
 const bourseFixture = (id, domaines, niveaux, edition, cycle) => ({
   id, organisme: "Organisme " + id, pays_accueil: ["France"], cameroun: "oui", niveaux, domaines, couverture_niveau: "complete", age_max: 35,
-  cycle, edition, lien_officiel: "https://exemple.org/" + id, sources: [{ titre: "Page officielle", url: "https://exemple.org/" + id }], status: "to_verify",
+  cycle, edition, lien_officiel: "https://exemple.org/" + id, sources: [{ titre: "Page officielle", url: "https://exemple.org/" + id }], status: "verified",
   fr: { nom: "Bourse " + id, resume: "Résumé " + id, couverture_detail: "Frais et allocation", diplome: "Licence", langue: "Français", autres: ["Nationalité camerounaise"], dossier: ["CV"], conseil: "Candidatez tôt", edition_note: "" },
   en: { nom: "Scholarship " + id, resume: "Summary " + id, couverture_detail: "Fees and stipend", diplome: "Bachelor", langue: "English", autres: ["Cameroonian nationality"], dossier: ["CV"], conseil: "Apply early", edition_note: "" },
 });
@@ -36,6 +36,8 @@ fs.writeFileSync(path.join(contentDir, "bourses.json"), JSON.stringify([
   bourseFixture("sci", ["maths", "informatique"], ["master"], { ouverture: day(-20), cloture: day(5), confirme: true }, { type: "annuelle", ouverture_mois: "août–septembre", cloture_mois: "octobre" }),
   bourseFixture("lettres", ["droit-politique", "histoire-geographie"], ["licence", "master"], { ouverture: day(-5), cloture: day(60), confirme: true }, { type: "annuelle", ouverture_mois: "septembre", cloture_mois: "décembre" }),
   bourseFixture("tous", ["tous"], ["master", "doctorat"], { ouverture: day(-100), cloture: day(-10), confirme: true }, { type: "annuelle", ouverture_mois: "janvier", cloture_mois: "mars" }),
+  { ...bourseFixture("brouillon", ["tous"], ["master"], { cloture: day(90), confirme: false }, undefined), status: "to_verify" }, // non vérifiée : cachée aux élèves
+  { ...bourseFixture("anglais", ["tous"], ["master"], { cloture: day(90), confirme: true }, undefined), langue_acces: "en" }, // réservée à la section anglophone
 ]));
 fs.writeFileSync(path.join(contentDir, "bourses-guide.json"), "[]"); // les tests ne dépendent pas du répertoire réel
 fs.writeFileSync(path.join(contentDir, "bourses-conseils.json"), JSON.stringify([
@@ -530,14 +532,16 @@ test("bourses : section réservée au concepteur tant qu'elle n'est pas ouverte,
   assert.equal((await call("POST", "/api/follow-bourse", { id: "sci" }, t)).status, 403);
   const res = await json(await call("GET", "/api/bourses?lang=fr", undefined, admin));
   assert.equal(res.status, 200);
-  assert.deepEqual(res.bourses.map((b) => [b.id, b.statut.code]), [["sci", "cloture_proche"], ["lettres", "ouverte"], ["tous", "expiree"]]);
-  assert.equal(res.bourses[0].statut.jours, 5);
-  assert.equal(res.bourses[0].nom, "Bourse sci");
-  assert.deepEqual(res.bourses[0].branches, ["sciences"]);
-  assert.deepEqual(res.bourses[1].branches, ["lettres"]);
-  assert.deepEqual(res.bourses[2].branches, ["sciences", "lettres"]);
-  assert.ok(res.bourses[2].statut.relance.mois === 1, "relance probable : janvier"); // expirée : on annonce sa relance
-  assert.deepEqual(res.bourses[0].cycle.mois.ouverture, [8, 9]);
+  assert.deepEqual(res.bourses.filter((b) => ["sci", "lettres", "tous"].includes(b.id)).map((b) => [b.id, b.statut.code]), [["sci", "cloture_proche"], ["lettres", "ouverte"], ["tous", "expiree"]]);
+  assert.ok(res.bourses.some((b) => b.id === "brouillon"), "le concepteur voit les bourses non vérifiées");
+  const by = (id) => res.bourses.find((b) => b.id === id);
+  assert.equal(by("sci").statut.jours, 5);
+  assert.equal(by("sci").nom, "Bourse sci");
+  assert.deepEqual(by("sci").branches, ["sciences"]);
+  assert.deepEqual(by("lettres").branches, ["lettres"]);
+  assert.deepEqual(by("tous").branches, ["sciences", "lettres"]);
+  assert.ok(by("tous").statut.relance.mois === 1, "relance probable : janvier"); // expirée : on annonce sa relance
+  assert.deepEqual(by("sci").cycle.mois.ouverture, [8, 9]);
   const en = await json(await call("GET", "/api/bourses?lang=en", undefined, admin));
   assert.equal(en.bourses.find((b) => b.id === "sci").nom, "Scholarship sci");
   assert.ok(!JSON.stringify(res).includes("recherche_notes"));
@@ -591,7 +595,7 @@ test("bourses : sans abonnement, liens et dossier ne sortent jamais du serveur ;
     const free = tokenOf("boursier@exemple.cm");
     const paid = tokenOf("boursier2@exemple.cm");
     const admin = tokenOf("concepteur@weldon.cm");
-    assert.equal((await call("POST", "/api/admin/grant", { email: "boursier2@exemple.cm", days: 30 }, admin)).status, 200);
+    assert.equal((await call("POST", "/api/admin/grant", { email: "boursier2@exemple.cm", days: 30, product: "bourses" }, admin)).status, 200);
     // liste : jamais de lien, ni pour un abonné (le lien se lit dans la fiche)
     const raw = await (await call("GET", "/api/bourses?lang=fr", undefined, free)).text();
     assert.ok(!raw.includes("exemple.org"), "aucun lien dans la liste d'un compte gratuit");
@@ -621,6 +625,18 @@ test("bourses : sans abonnement, liens et dossier ne sortent jamais du serveur ;
       assert.equal(g.conseil, "Candidatez tôt");
     }
     assert.equal((await call("GET", "/api/bourse?id=nexiste", undefined, free)).status, 404);
+    // un élève ne voit ni les bourses non vérifiées ni celles de l'autre section linguistique ; le concepteur voit tout
+    const ids = (await json(await call("GET", "/api/bourses?lang=fr", undefined, free))).bourses.map((b) => b.id);
+    assert.ok(!ids.includes("brouillon") && !ids.includes("anglais") && ids.includes("sci"));
+    const idsEn = (await json(await call("GET", "/api/bourses?lang=en", undefined, free))).bourses.map((b) => b.id);
+    assert.ok(idsEn.includes("anglais") && !idsEn.includes("brouillon"));
+    assert.equal((await call("GET", "/api/bourse?id=brouillon&lang=fr", undefined, free)).status, 404);
+    // l'abonnement aux concours n'ouvre pas les bourses
+    const granted = await json(await call("POST", "/api/admin/grant", { email: "boursier@exemple.cm", days: 30 }, admin));
+    assert.equal(granted.premium, true);
+    assert.equal(granted.bourses_access, false);
+    assert.equal((await json(await call("GET", "/api/bourse?id=sci&lang=fr", undefined, free))).bourse.verrou, true);
+    await call("POST", "/api/admin/grant", { email: "boursier@exemple.cm", days: 0 }, admin);
     // conseils : titres publics, texte réservé aux abonnés
     const cl = await (await call("GET", "/api/conseils", undefined, free)).text();
     assert.ok(cl.includes("Modèle de lettre") && !cl.includes("secret-modele"));

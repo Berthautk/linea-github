@@ -669,3 +669,21 @@ i.ph-bprob { background: var(--sun); }
 .search { display: flex; gap: 8px; align-items: center; }
 .search input { flex: 1; min-width: 0; padding: 10px 14px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); color: var(--ink); font: inherit; }
 .chips.wrap { flex-wrap: wrap; overflow: visible; }
+
+/* Défilement en boucle des bourses à la une (pause au toucher/survol, immobile si l'utilisateur préfère moins d'animation) */
+.marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.marquee-track { display: flex; gap: 12px; width: max-content; padding: 2px 0 10px; animation: marquee-run 90s linear infinite; }
+.marquee-track > * { width: min(78vw, 320px); flex: none; }
+.marquee:hover .marquee-track, .marquee:focus-within .marquee-track, .marquee:active .marquee-track { animation-play-state: paused; }
+@keyframes marquee-run { to { transform: translateX(calc(-50% - 6px)); } }
+@media (prefers-reduced-motion: reduce) { .marquee { overflow-x: auto; mask-image: none; -webkit-mask-image: none; } .marquee-track { animation: none; } }
+
+/* Retour tactile : on voit qu'on a appuyé, et quelle section est active */
+button:not(:disabled) { transition: transform 0.08s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease; }
+button:not(:disabled):active { transform: scale(0.96); }
+.chip[aria-pressed="true"] { background: var(--green); color: var(--green-ink); border-color: var(--green); box-shadow: 0 2px 8px rgb(8 128 79 / 35%); }
+.tile:active, .section-card:active, .bcard:active { transform: scale(0.98); }
+.tile:hover, .section-card:hover { box-shadow: 0 6px 18px rgb(8 128 79 / 18%); border-color: var(--green); }
+.bcard { transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.08s ease; }
+.bcard:hover { box-shadow: 0 6px 18px rgb(18 32 26 / 14%); border-color: var(--green); }
+.space-switch button[aria-pressed="true"], .space-switch .on { box-shadow: 0 3px 10px rgb(18 32 26 / 30%); }

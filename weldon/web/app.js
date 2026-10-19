@@ -1534,6 +1534,15 @@
       stat: (n, c) => `${n} bourses répertoriées dans ${c} pays`,
       more: (n) => `Voir ${n} bourses de plus`,
       usualClosing: "Clôture habituelle",
+      pass: {
+        title: "Pass Bourses",
+        perks: ["Ouvre TOUTES les fiches de bourses : lien officiel, pièces à fournir, étapes, conseils", "Les modèles de lettres, CV et lettres de recommandation", "Suivi de vos bourses sans limite, avec les échéances", "Les nouvelles bourses et les dates mises à jour pendant 12 mois"],
+        once: "Un seul paiement. Pas de renouvellement automatique. Distinct de l'abonnement concours.",
+      },
+      yearLabel: "Année de la date limite",
+      allYears: "Toutes années",
+      byYear: "Par année",
+      onlyIn: "Réservé aux anglophones",
       serieTitle: "Votre série du bac",
       serieSub: "Elle sert à vous montrer en premier les bourses de votre filière et de votre niveau. Gratuit.",
       serieSet: (n) => `Série ${n}`,
@@ -1674,6 +1683,15 @@
       stat: (n, c) => `${n} scholarships listed in ${c} countries`,
       more: (n) => `Show ${n} more`,
       usualClosing: "Usual closing",
+      pass: {
+        title: "Scholarships Pass",
+        perks: ["Opens EVERY scholarship file: official link, documents, steps, advice", "Templates for letters, CVs and reference letters", "Follow your scholarships without limit, with deadlines", "New scholarships and updated dates for 12 months"],
+        once: "One payment. No automatic renewal. Separate from the competitions subscription.",
+      },
+      yearLabel: "Deadline year",
+      allYears: "All years",
+      byYear: "By year",
+      onlyIn: "Anglophone section only",
       serieTitle: "Your A Level stream",
       serieSub: "It is used to show you first the scholarships for your field and level. Free.",
       serieSet: (n) => `Stream ${n}`,
@@ -1922,6 +1940,7 @@
   const fmtNum = (n) => new Intl.NumberFormat(lang() === "en" ? "en-GB" : "fr-FR").format(n);
   const fcfa = (n) => fmtNum(n) + " FCFA";
   const premium = () => Boolean(state.user?.premium);
+  const bPass = () => Boolean(state.user?.bourses_access); // Pass Bourses (distinct de l'abonnement concours)
   const hm = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? " " + String(min % 60).padStart(2, "0") : ""}` : `${min} min`);
   const clock = (ms) => {
     const s = Math.max(0, Math.round(ms / 1000));
@@ -2644,11 +2663,30 @@
         (!f.niveau || b.niveaux.includes(f.niveau)) &&
         (!f.pays || b.pays_accueil.includes(f.pays)) &&
         (!f.type || (f.type === "complete" ? b.couverture.niveau === "complete" : b.origine === f.type)) &&
-        (!f.q || searchHay(b).includes(plain(f.q)))
+        (!f.annee || (b.annees || []).includes(Number(f.annee))) &&
+        (!f.q || matchQuery(b, f.q))
     );
   }
+  // Mots voisins : « law » trouve le droit, « english » les lettres et langues, etc., dans les deux langues.
+  const SYN = [
+    ["law", "droit", "juridique", "legal", "juriste", "justice"], ["history", "histoire"], ["geography", "geographie"],
+    ["english", "anglais", "langue", "langues", "language", "languages", "lettres", "literature", "litterature"],
+    ["economics", "economie", "gestion", "management", "business", "commerce"], ["health", "sante", "medecine", "medicine", "medical"],
+    ["engineering", "ingenierie", "genie", "ingenieur"], ["computer", "informatique", "computing", "numerique"],
+    ["maths", "mathematiques", "mathematics", "statistiques"], ["education", "enseignement", "pedagogie", "teaching"],
+    ["philosophy", "philosophie", "sociologie", "sociology"], ["agriculture", "agronomie", "environnement", "environment"],
+    ["communication", "journalisme", "journalism", "media"], ["physics", "physique", "chimie", "chemistry"],
+    ["audit", "comptabilite", "accounting", "finance", "financier"], ["politics", "politique", "politiques", "diplomatie", "diplomacy"],
+  ];
+  function matchQuery(b, q) {
+    const hay = searchHay(b);
+    return plain(q).split(/\s+/).filter(Boolean).every((w) => {
+      const group = SYN.find((g) => g.some((x) => x === w || (w.length > 3 && x.startsWith(w))));
+      return hay.includes(w) || (group || []).some((x) => hay.includes(x));
+    });
+  }
   const plain = (x) => String(x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-  const searchHay = (b) => plain([b.nom, b.organisme, b.valeur, b.pays_accueil.join(" "), b.niveaux.map((x) => br().levels[x]).join(" "), b.domaines.map((d) => br().domains[d]).join(" ")].join(" "));
+  const searchHay = (b) => plain([b.nom, b.organisme, b.valeur, b.pays_accueil.join(" "), b.niveaux.map((x) => br().levels[x]).join(" "), b.domaines.map((d) => `${BR.fr.domains[d]} ${BR.en.domains[d]}`).join(" "), b.annees?.join(" ") || ""].join(" "));
   // Série du compte → branche + filières proposées ; classe d'abord les bourses de ces filières (« tous » en second).
   const serieInfo = () => SERIE_MAP[state.user?.profil?.serie] || null;
   function forSerie(list) {
@@ -2678,6 +2716,9 @@
       <div class="chips wrap" role="group" aria-label="${B.serieTitle}">${chips}</div>${detail}
       <h3 style="margin-top:12px">${B.levelTitle}</h3><div class="chips" role="group" aria-label="${B.levelTitle}">${lvl}</div></section>`;
   }
+
+  // Années de date limite à partir de l'année en cours (2026, 2027, 2028…).
+  const years = (list) => [...new Set(list.flatMap((b) => b.annees || []))].filter((y) => y >= new Date().getFullYear()).sort();
 
   function bSearchForm(q) {
     const B = br();
@@ -2710,7 +2751,7 @@
         <span class="small muted">${esc(b.organisme || "")}${where.length ? " · " + esc(where.join(", ")) : ""}</span>
         ${b.valeur ? `<span class="small bvalue">${esc(b.valeur.length > 110 ? b.valeur.slice(0, 108) + "…" : b.valeur)}</span>` : ""}
         <span class="small">${esc(statusLine(b))}</span>
-        <span class="chips-inline">${b.niveaux.map((x) => `<span class="tag tag-line">${esc(B.levels[x])}</span>`).join("")}${b.verrou && b.a_lien ? `<span class="lock-pill">${I.lock}${B.lock.pill}</span>` : ""}${!b.verrou && b.apercu_gratuit && !premium() ? `<span class="tag tag-green">${B.lock.free}</span>` : ""}</span>
+        <span class="chips-inline">${b.niveaux.map((x) => `<span class="tag tag-line">${esc(B.levels[x])}</span>`).join("")}${b.verrou && b.a_lien ? `<span class="lock-pill">${I.lock}${B.lock.pill}</span>` : ""}${!b.verrou && b.apercu_gratuit && !bPass() ? `<span class="tag tag-green">${B.lock.free}</span>` : ""}</span>
       </button>
       <button type="button" class="star ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}" aria-label="${isBFollowed(b.id) ? B.unfollow : B.follow}: ${esc(b.nom)}">${isBFollowed(b.id) ? "★" : "☆"}</button>
     </article>`;
@@ -2758,7 +2799,7 @@
   // Bandeau « abonnez-vous » : discret, jamais bloquant.
   function bUnlockBanner() {
     const B = br();
-    if (premium()) return "";
+    if (bPass()) return "";
     return `<section class="card unlock-banner"><div>${I.lock}<span><b>${B.unlockBanner}</b><span class="small muted">${B.unlockBannerSub}</span></span></div><button type="button" class="btn btn-sun" data-bunlock>${B.lock.cta}</button></section>`;
   }
 
@@ -2790,8 +2831,9 @@
       <section class="card"><h2>${B.chooseBranch}</h2><p class="muted small">${B.chooseBranchSub}</p>
         <div class="branch-pick">${branchCard("sciences")}${branchCard("lettres")}</div></section>
       ${bUnlockBanner()}
-      ${une.length ? `<section class="orient-group"><h2>${B.une}</h2><p class="small muted">${B.uneSub}</p><div class="hscroll">${une.map(cardB).join("")}</div></section>` : ""}
+      ${une.length ? `<section class="orient-group"><h2>${B.une}</h2><p class="small muted">${B.uneSub}</p><div class="marquee" aria-label="${B.une}"><div class="marquee-track">${une.map(cardB).join("")}${une.map((b) => cardB(b).replace("<article ", '<article aria-hidden="true" ')).join("")}</div></div></section>` : ""}
       <section class="orient-group"><h2>${B.byType}</h2><p class="small muted">${B.byTypeSub}</p><div class="tiles">${["complete", "gouvernementale", "universitaire", "fondation"].map(typeTile).join("")}</div></section>
+      ${years(all).length ? `<section class="orient-group"><h2>${B.byYear}</h2><div class="chips wrap" role="group">${years(all).map((y) => `<button type="button" class="chip" data-byear-go="${y}">${y} <span class="muted">${all.filter((b) => (b.annees || []).includes(y)).length}</span></button>`).join("")}</div></section>` : ""}
       <section class="orient-group"><h2>${B.byCountry}</h2><div class="chips" role="group">${countries
         .map((c) => [c, all.filter((b) => b.pays_accueil.includes(c)).length])
         .sort((a, c) => c[1] - a[1])
@@ -2815,7 +2857,7 @@
     }
     const domains = f.branche ? BRANCH_DOMAINS[f.branche] : Object.values(BRANCH_DOMAINS).flat();
     const chip = (attr, val, label, on) => `<button type="button" class="chip" data-${attr}="${esc(val)}" aria-pressed="${on}">${esc(label)}</button>`;
-    const flt = { ...f, type: state.bf.type || "", pays: state.bf.pays || "", q: state.bf.q || "" };
+    const flt = { ...f, type: state.bf.type || "", pays: state.bf.pays || "", q: state.bf.q || "", annee: state.bf.annee || "" };
     const list = filterB(state.bourses, flt);
     const active = list.filter((b) => b.statut.code !== "expiree");
     const expired = list.filter((b) => b.statut.code === "expiree");
@@ -2831,6 +2873,7 @@
       <div class="chips" role="group" aria-label="${B.cond.domains}">${chip("bdomaine", "", B.allDomains, !f.domaine)}${domains.map((d) => chip("bdomaine", d, B.domains[d], f.domaine === d)).join("")}</div>
       <div class="chips" role="group" aria-label="${B.cond.levels}">${chip("bniveau", "", B.allLevels, !f.niveau)}${["licence", "master", "doctorat", "postdoc"].map((l) => chip("bniveau", l, B.levels[l], f.niveau === l)).join("")}</div>
       <div class="chips" role="group" aria-label="${B.typeLabel}">${chip("btype", "", B.allTypes, !flt.type)}${["complete", "gouvernementale", "universitaire", "fondation"].map((k) => chip("btype", k, B.types[k], flt.type === k)).join("")}</div>
+      ${years(state.bourses).length ? `<div class="chips" role="group" aria-label="${B.yearLabel}">${chip("byear", "", B.allYears, !flt.annee)}${years(state.bourses).map((y) => chip("byear", y, String(y), String(flt.annee) === String(y))).join("")}</div>` : ""}
       <div class="chips" role="group" aria-label="${B.countryLabel}">${chip("bpays", "", B.allCountries, !flt.pays)}${countries.map((c) => chip("bpays", c, c, flt.pays === c)).join("")}</div>
       <p class="small muted">${B.results(list.length)}</p>
       ${active.length ? `<div class="results">${page(active).map(cardB).join("")}</div>` : `<div class="notice">${I.info}<span>${B.noResults}</span></div>`}
@@ -2937,7 +2980,7 @@
     const dated = ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) && b.statut.probable && !b.statut.permanente;
     return `<button type="button" class="back" data-bback>${I.back} ${B.back}</button>
       <div class="row-actions"><div style="min-width:0"><span class="eyebrow">${esc(b.organisme || "")}</span><h1>${esc(b.nom)}</h1></div>${`<button type="button" class="btn btn-ghost btn-small follow ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}">${isBFollowed(b.id) ? "★ " + B.followed : "☆ " + B.follow}</button>`}</div>
-      <div class="bstatus">${statusTag(b)}<b>${esc(statusLine(b))}</b>${dated ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}${b.origine ? `<span class="tag tag-line">${esc(B.origins[b.origine])}</span>` : ""}${!locked && b.apercu_gratuit && !premium() ? `<span class="tag tag-green">${B.lock.free}</span>` : ""}</div>
+      <div class="bstatus">${statusTag(b)}<b>${esc(statusLine(b))}</b>${dated ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}${b.origine ? `<span class="tag tag-line">${esc(B.origins[b.origine])}</span>` : ""}${!locked && b.apercu_gratuit && !bPass() ? `<span class="tag tag-green">${B.lock.free}</span>` : ""}</div>
       ${b.alerte ? `<div class="notice alert-card">${I.info}<span><b>${B.alert}.</b> ${esc(b.alerte)}</span></div>` : ""}
       <div class="fiche"><div style="display:grid;gap:16px;min-width:0">
         ${b.resume || b.resume_long ? `<article class="card"><h3>${B.sections.resume}</h3><p>${esc(locked ? b.resume : b.resume_long || b.resume)}</p></article>` : ""}
@@ -3019,7 +3062,7 @@
     }
     if (!state.conseils.length) return `<div><span class="eyebrow">${t().section}</span><h1>${B.guideTitle}</h1></div><div class="notice">${I.info}<span>${B.guideEmpty}</span></div>`;
     const cats = Object.keys(B.guideCats).filter((k) => state.conseils.some((x) => x.categorie === k));
-    const card = (a) => `<article class="card bcard"><button type="button" class="bcard-main" data-conseil="${esc(a.id)}"><span class="row-actions" style="justify-content:flex-start;gap:6px"><span class="tag ${a.gratuit ? "tag-green" : "tag-line"}">${a.gratuit ? B.guideFree : B.guideLocked}</span>${a.gratuit || premium() ? "" : `<span class="lock-pill">${I.lock}${B.lock.pill}</span>`}</span><b>${esc(a.titre)}</b><span class="small muted">${esc(a.resume || "")}</span></button></article>`;
+    const card = (a) => `<article class="card bcard"><button type="button" class="bcard-main" data-conseil="${esc(a.id)}"><span class="row-actions" style="justify-content:flex-start;gap:6px"><span class="tag ${a.gratuit ? "tag-green" : "tag-line"}">${a.gratuit ? B.guideFree : B.guideLocked}</span>${a.gratuit || bPass() ? "" : `<span class="lock-pill">${I.lock}${B.lock.pill}</span>`}</span><b>${esc(a.titre)}</b><span class="small muted">${esc(a.resume || "")}</span></button></article>`;
     return `<div class="section-head"><div><span class="eyebrow">${t().section}</span><h1>${B.guideTitle}</h1></div><p class="muted small">${B.guideSub}</p></div>
       ${bUnlockBanner()}
       ${cats.map((k) => `<section class="orient-group"><h2>${B.guideCats[k]}</h2><div class="results">${state.conseils.filter((x) => x.categorie === k).map(card).join("")}</div></section>`).join("")}
@@ -4039,10 +4082,17 @@
   }
 
   // ---------- Abonnement (Chariow) ----------
+  function openBoursesPaywall() {
+    state.plan = "bourses";
+    openPaywall();
+  }
+
   function openPaywall() {
     const L = t();
     const perk = (x) => `<li>${I.check}<span>${x}</span></li>`;
-    const plans = state.config.plans?.length ? state.config.plans : [{ id: "annual", price_xaf: state.config.price_xaf, days: 365 }];
+    const forB = state.plan === "bourses"; // Pass Bourses : un seul produit, prix à part
+    const PB = br().pass;
+    const plans = forB ? [{ id: "bourses", price_xaf: state.config.bourses_plan?.price_xaf ?? 250000, days: state.config.bourses_plan?.days ?? 365 }] : state.config.plans?.length ? state.config.plans : [{ id: "annual", price_xaf: state.config.price_xaf, days: 365 }];
     const plan = plans.find((x) => x.id === state.plan) || plans[0];
     const planName = (x) => (x.id === "monthly" ? L.planMonthly : L.planAnnual);
     const monthlyPlan = plans.find((x) => x.id === "monthly");
@@ -4064,12 +4114,12 @@
       <div class="modal-box">
         <div class="modal-head">
           <button type="button" class="modal-close" data-close aria-label="×">×</button>
-          <span class="eyebrow" style="color:inherit">${L.payTitle}</span>
+          <span class="eyebrow" style="color:inherit">${forB ? PB.title : L.payTitle}</span>
           <h2 class="price">${fmtNum(plan.price_xaf)} <small>${plan.id === "monthly" ? L.perMonthShort : L.perYearShort}</small></h2>
-          <span style="font-weight:700">${L.oneTime}</span>
+          <span style="font-weight:700">${forB ? PB.once : L.oneTime}</span>
         </div>
         <div class="modal-body">
-          <ul class="perks">${L.perks.map(perk).join("")}</ul>
+          <ul class="perks">${(forB ? PB.perks : L.perks).map(perk).join("")}</ul>
           ${NATIVE ? "" : chooser}
           ${NATIVE ? `<p>${L.nativeNoSale}</p><button type="button" class="btn btn-primary btn-block" data-sync>${L.checkPayment}</button>` : `<form class="form" id="pay-form" novalidate>
             <p class="small full">${L.payAs(esc(state.user.email))}</p>
@@ -4610,11 +4660,18 @@
       state.bf = { ...state.bf, q: "" };
       return render();
     }
+    if (d.byearGo !== undefined || d.byear !== undefined) {
+      const v = d.byearGo ?? d.byear;
+      const onFind = state.tab === "bfind";
+      state.bf = onFind ? { ...state.bf, annee: v, n: 30 } : { branche: "", annee: v };
+      state.tab = "bfind";
+      return render();
+    }
     if ("bmore" in d) {
       state.bf = { ...state.bf, n: (state.bf.n || 30) + 30 };
       return render();
     }
-    if ("bunlock" in d) return openPaywall();
+    if ("bunlock" in d) return openBoursesPaywall();
     if (d.conseil) return openConseil(d.conseil);
     if ("conseilBack" in d) {
       state.conseilId = null;
@@ -4637,7 +4694,7 @@
         render();
       } catch (e) {
         toast(e.message);
-        if (e.code === "follow_limit") openPaywall();
+        if (e.code === "follow_limit") openBoursesPaywall();
       }
       return;
     }
@@ -4742,7 +4799,10 @@
       return render();
     }
     if ("saveScore" in d) return saveSelfScore();
-    if ("pay" in d) return openPaywall();
+    if ("pay" in d) {
+      if (state.plan === "bourses") state.plan = null;
+      return openPaywall();
+    }
     if ("sync" in d) return syncPayment();
     if ("account" in d) return openAccount();
     if ("admin" in d) return openAdmin();

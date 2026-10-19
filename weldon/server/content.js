@@ -196,6 +196,10 @@ export function localizeBourse(b, lang) {
   const t = { ...(b.fr || {}), ...Object.fromEntries(Object.entries(b[lang] || {}).filter(([, v]) => v)) };
   return {
     origine: b.origine || null,
+    langue_acces: b.langue_acces || null,
+    editions: b.editions || [],
+    etapes: t.etapes || [],
+    verification: b.verification || null,
     vedette: Boolean(b.vedette),
     apercu_gratuit: Boolean(b.apercu_gratuit),
     valeur: t.valeur || "",

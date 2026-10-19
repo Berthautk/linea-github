@@ -54,6 +54,10 @@ const PRICE_XAF = Number(process.env.PRICE_XAF || 100000);
 const CHARIOW_PRODUCT_ID_MONTHLY = process.env.CHARIOW_PRODUCT_ID_MONTHLY || "";
 const ACCESS_DAYS_MONTHLY = Number(process.env.ACCESS_DAYS_MONTHLY || 30);
 const PRICE_XAF_MONTHLY = Number(process.env.PRICE_XAF_MONTHLY || 15000);
+// « Pass Bourses » : accès complet à toutes les fiches de bourses (liens, dossiers, conseils). Produit Chariow distinct des concours.
+const CHARIOW_PRODUCT_ID_BOURSES = process.env.CHARIOW_PRODUCT_ID_BOURSES || "";
+const ACCESS_DAYS_BOURSES = Number(process.env.ACCESS_DAYS_BOURSES || 365);
+const PRICE_XAF_BOURSES = Number(process.env.PRICE_XAF_BOURSES || 250000);
 // Contact : chaîne d'alertes et numéro WhatsApp du concepteur (facultatifs)
 const WHATSAPP_CHANNEL_URL = /^https:\/\//.test(process.env.WHATSAPP_CHANNEL_URL || "") ? process.env.WHATSAPP_CHANNEL_URL : "";
 const WHATSAPP_NUMBER = (process.env.WHATSAPP_NUMBER || "").replace(/\D/g, "");
@@ -134,6 +138,7 @@ function tooManyAttempts(key) {
 
 const isAdmin = (u) => u.role === "admin" || ADMIN_EMAILS.has(u.email);
 const isPremium = (u) => isAdmin(u) || (u.premium_until && Date.parse(u.premium_until) > Date.now());
+const hasBoursesPass = (u) => isAdmin(u) || Boolean(u.bourses_until && Date.parse(u.bourses_until) > Date.now());
 
 function profile(u) {
   return {
@@ -143,6 +148,8 @@ function profile(u) {
     admin: isAdmin(u),
     premium: Boolean(isPremium(u)),
     premium_until: isAdmin(u) ? null : u.premium_until || null,
+    bourses_access: Boolean(hasBoursesPass(u)),
+    bourses_until: isAdmin(u) ? null : u.bourses_until || null,
     free_id: u.free_id || null,
     profil: u.profil || null,
     suivis: u.suivis || [],
@@ -194,7 +201,9 @@ const saleIsPaid = (sale) => sale && ["completed", "settled"].includes(sale.stat
 const PLANS = [
   { id: "annual", product: CHARIOW_PRODUCT_ID, price_xaf: PRICE_XAF, days: ACCESS_DAYS },
   ...(CHARIOW_PRODUCT_ID_MONTHLY ? [{ id: "monthly", product: CHARIOW_PRODUCT_ID_MONTHLY, price_xaf: PRICE_XAF_MONTHLY, days: ACCESS_DAYS_MONTHLY }] : []),
+  ...(CHARIOW_PRODUCT_ID_BOURSES ? [{ id: "bourses", product: CHARIOW_PRODUCT_ID_BOURSES, price_xaf: PRICE_XAF_BOURSES, days: ACCESS_DAYS_BOURSES, grants: "bourses" }] : []),
 ];
+const CONCOURS_PLANS = PLANS.filter((p) => p.grants !== "bourses");
 const salePlan = (sale) => PLANS.find((p) => p.product && [sale.product?.id, sale.product?.slug].includes(p.product)) || null;
 const saleMatchesProduct = (sale) => !CHARIOW_PRODUCT_ID || Boolean(salePlan(sale));
 const saleEnd = (sale) => new Date(Date.parse(sale.completed_at || sale.created_at) + (salePlan(sale)?.days ?? ACCESS_DAYS) * DAY_MS).toISOString();
@@ -203,7 +212,9 @@ const saleEnd = (sale) => new Date(Date.parse(sale.completed_at || sale.created_
 async function applySale(user, sale) {
   const end = saleEnd(sale);
   user.sales = [...new Set([...(user.sales || []), sale.id])];
-  if (!user.premium_until || end > user.premium_until) user.premium_until = end;
+  // Le Pass Bourses n'ouvre que les bourses ; l'abonnement concours n'ouvre que les concours.
+  const field = salePlan(sale)?.grants === "bourses" ? "bourses_until" : "premium_until";
+  if (!user[field] || end > user[field]) user[field] = end;
   await store.saveUser(user);
 }
 
@@ -261,7 +272,8 @@ route("GET", "/api/config", async () => ({
   price_xaf: PRICE_XAF,
   access_days: ACCESS_DAYS,
   payment_enabled: Boolean(CHARIOW_API_KEY && CHARIOW_PRODUCT_ID),
-  plans: PLANS.map(({ id, price_xaf, days }) => ({ id, price_xaf, days })),
+  plans: CONCOURS_PLANS.map(({ id, price_xaf, days }) => ({ id, price_xaf, days })),
+  bourses_plan: { price_xaf: PRICE_XAF_BOURSES, days: ACCESS_DAYS_BOURSES, payment_enabled: Boolean(CHARIOW_API_KEY && CHARIOW_PRODUCT_ID_BOURSES) },
   bourses_public: boursesPublic(),
   whatsapp_channel: WHATSAPP_CHANNEL_URL || null,
   whatsapp_contact: WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : null,
@@ -509,7 +521,10 @@ async function boursesOverrides() {
   return boursesCache.map;
 }
 
-async function boursesLive(lang) {
+// Les élèves ne voient que les bourses vérifiées (page officielle lue) ; une bourse d'une seule langue n'est montrée qu'à cette section.
+const seenBy = (u, b, lang) => (isAdmin(u) || b.status === "verified") && (!b.langue_acces || b.langue_acces === lang);
+
+async function boursesLive(lang, u = null) {
   const over = await boursesOverrides();
   const list = content.bourses(lang).map((b) => {
     const o = over[b.id];
@@ -521,15 +536,17 @@ async function boursesLive(lang) {
       if (typeof o.vedette === "boolean") b.vedette = o.vedette;
       if (typeof o.apercu_gratuit === "boolean") b.apercu_gratuit = o.apercu_gratuit;
     }
-    return { ...b, statut: statutBourse(b) };
-  });
+    const e = b.edition || {};
+    const annees = [...new Set([...(b.editions || []).map((x) => x.annee), e.cloture?.slice(0, 4), e.ouverture?.slice(0, 4)].filter(Boolean).map(Number))].sort();
+    return { ...b, annees, statut: statutBourse(b) };
+  }).filter((b) => !u || seenBy(u, b, lang));
   return trierBourses(list);
 }
 
 // Ce que voit un compte sans abonnement : de quoi choisir (nom, pays, niveau, valeur, dates, conditions) mais ni le lien
 // officiel ni le dossier ni les conseils. Les champs sont retirés ICI, côté serveur : le navigateur ne les reçoit jamais.
-const LOCKED_B = ["lien_officiel", "dossier", "conseil", "sources", "resume_long", "ne_couvre_pas", "cout_candidature"];
-const bourseOpen = (u, b) => isPremium(u) || b.apercu_gratuit;
+const LOCKED_B = ["lien_officiel", "dossier", "etapes", "conseil", "sources", "resume_long", "ne_couvre_pas", "cout_candidature"];
+const bourseOpen = (u, b) => hasBoursesPass(u) || b.apercu_gratuit;
 function bourseView(u, b, { full }) {
   const open = bourseOpen(u, b);
   const v = { ...b, verrou: !open, a_lien: Boolean(b.lien_officiel) };
@@ -540,7 +557,7 @@ function bourseView(u, b, { full }) {
   }
   if (!full) {
     // La liste reste légère : le détail se charge à l'ouverture de la fiche.
-    for (const k of ["resume_long", "dossier", "conseil", "sources", "ne_couvre_pas", "cout_candidature", "eligibilite"]) delete v[k];
+    for (const k of ["resume_long", "dossier", "etapes", "conseil", "sources", "ne_couvre_pas", "cout_candidature", "eligibilite", "editions"]) delete v[k];
     if (!isAdmin(u)) delete v.lien_officiel; // le concepteur garde le lien en liste pour son éditeur
     v.couverture = { niveau: b.couverture.niveau };
     v.conditions = { age_max: b.conditions.age_max };
@@ -553,14 +570,14 @@ route("GET", "/api/bourses", async (req, _p, url) => {
   const u = await currentUser(req);
   if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
   const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
-  return { today: dayStr(), bourses: (await boursesLive(lang)).map((b) => bourseView(u, b, { full: false })) };
+  return { today: dayStr(), bourses: (await boursesLive(lang, u)).map((b) => bourseView(u, b, { full: false })) };
 });
 
 route("GET", "/api/bourse", async (req, _p, url) => {
   const u = await currentUser(req);
   if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
   const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
-  const b = (await boursesLive(lang)).find((x) => x.id === str(url.searchParams.get("id"), 120));
+  const b = (await boursesLive(lang, u)).find((x) => x.id === str(url.searchParams.get("id"), 120));
   if (!b) throw httpError(404, "Bourse introuvable.");
   return { bourse: bourseView(u, b, { full: true }) };
 });
@@ -577,7 +594,7 @@ route("GET", "/api/conseil", async (req, _p, url) => {
   if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
   const a = content.conseil(str(url.searchParams.get("id"), 120));
   if (!a) throw httpError(404, "Article introuvable.");
-  if (!a.gratuit && !isPremium(u)) throw httpError(402, "Cet article est réservé aux abonnés.", { code: "locked" });
+  if (!a.gratuit && !hasBoursesPass(u)) throw httpError(402, "Cet article est réservé aux abonnés du Pass Bourses.", { code: "locked" });
   return { conseil: { id: a.id, titre: a.fr.titre, sections: a.fr.sections } };
 });
 
@@ -590,8 +607,8 @@ route("POST", "/api/follow-bourse", async (req) => {
   const list = new Set(u.bourses_suivies || []);
   if (b.on === false) list.delete(id);
   else if (!list.has(id)) {
-    if (!isPremium(u) && list.size >= FREE_FOLLOWS_BOURSES) {
-      throw httpError(402, `Sans abonnement, vous pouvez suivre ${FREE_FOLLOWS_BOURSES} bourses. Abonnez-vous pour en suivre autant que vous voulez.`, { code: "follow_limit" });
+    if (!hasBoursesPass(u) && list.size >= FREE_FOLLOWS_BOURSES) {
+      throw httpError(402, `Sans le Pass Bourses, vous pouvez suivre ${FREE_FOLLOWS_BOURSES} bourses. Le Pass Bourses permet d'en suivre autant que vous voulez.`, { code: "follow_limit" });
     }
     list.add(id);
   }
@@ -612,7 +629,7 @@ route("POST", "/api/admin/bourse", async (req) => {
   const date = (v) => (v ? str(String(v), 10) : null);
   const edition = { libelle: str(e.libelle, 20) || raw.edition?.libelle || null, ouverture: date(e.ouverture), cloture: date(e.cloture), confirme: Boolean(e.confirme) };
   const lien = str(b.lien_officiel, 500);
-  const merged = { ...raw, edition: { ...raw.edition, ...edition }, lien_officiel: lien || raw.lien_officiel, status: b.verified ? "verified" : "to_verify" };
+  const merged = { ...raw, edition: { ...raw.edition, ...edition }, lien_officiel: lien || raw.lien_officiel, status: typeof b.verified === "boolean" ? (b.verified ? "verified" : "to_verify") : (await boursesOverrides())[id]?.status || raw.status || "to_verify" };
   try {
     checkBourse(merged);
   } catch (err) {
@@ -927,7 +944,7 @@ route("POST", "/api/checkout", async (req) => {
   const phone = str(b.phone, 20).replace(/\D/g, "").replace(/^237(?=\d{9}$)/, "");
   if (phone.length < 8) throw httpError(400, "Indiquez votre numéro Mobile Money.");
   const [first, ...rest] = u.name.split(/\s+/);
-  const plan = PLANS.find((x) => x.id === b.plan) || PLANS[0];
+  const plan = PLANS.find((x) => x.id === b.plan) || CONCOURS_PLANS[0];
   const data = await chariow("POST", "/checkout", {
     product_id: plan.product,
     email: u.email,
@@ -1001,7 +1018,9 @@ route("POST", "/api/admin/grant", async (req) => {
   const target = await store.getUser(str(b.email, 255).toLowerCase());
   if (!target) throw httpError(404, "Aucun compte avec cet e-mail. La personne doit d'abord créer son compte.");
   const days = Math.min(Math.max(Number(b.days) || 0, 0), 3650);
-  target.premium_until = days ? new Date(Date.now() + days * DAY_MS).toISOString() : null;
+  const until = days ? new Date(Date.now() + days * DAY_MS).toISOString() : null;
+  if (b.product === "bourses") target.bourses_until = until; // Pass Bourses offert
+  else target.premium_until = until;
   target.granted_by = admin.email;
   await store.saveUser(target);
   return profile(target);

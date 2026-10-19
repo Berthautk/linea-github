@@ -180,6 +180,17 @@ export function checkPeriodicite(id, per) {
 }
 
 // Bourse dans une langue : champs neutres + textes de la langue.
+// Les intitulés de pays varient d'une source à l'autre (« France (Sciences Po) », « Pays d'étude variable ») : on ramène à un pays, sinon « Plusieurs pays ».
+const MULTI = /plusieurs|variable|autres|partenaires|subsaharienne|instituts|europe|pays du sud|multi/i;
+export function normPays(list) {
+  const out = new Set();
+  for (const raw of list || []) {
+    const base = String(raw).replace(/\s*\(.*\)\s*$/, "").trim();
+    out.add(MULTI.test(base) ? "Plusieurs pays" : base);
+  }
+  return [...out];
+}
+
 export function localizeBourse(b, lang) {
   // Les bourses issues des guides n'ont que le français : les textes manquants en anglais retombent sur le français.
   const t = { ...(b.fr || {}), ...Object.fromEntries(Object.entries(b[lang] || {}).filter(([, v]) => v)) };
@@ -196,7 +207,7 @@ export function localizeBourse(b, lang) {
     id: b.id,
     nom: t.nom,
     organisme: b.organisme,
-    pays_accueil: b.pays_accueil || [],
+    pays_accueil: normPays(b.pays_accueil),
     cameroun: b.cameroun || "non_precise",
     niveaux: b.niveaux,
     domaines: b.domaines,

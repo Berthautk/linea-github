@@ -10462,7 +10462,7 @@
     "url": "https://vanier.gc.ca/en/home-accueil.html"
    }
   ],
-  "last_verified": null,
+  "last_verified": "2026-10-19",
   "status": "to_verify",
   "guide": {
    "source": "manuel",
@@ -10478,10 +10478,12 @@
    "eligibilite": "Étudiants canadiens et internationaux. Excellence académique, potentiel de recherche et leadership",
    "cout_candidature": "Gratuit (mais demande de doctorat préalable payante selon l'université)",
    "conseil": "Pour maximiser vos chances d'être nominé, envoyez un dossier exceptionnellement solide à votre directeur de recherche potentiel dès juin-juillet (la nomination interne se fait en septembre-octobre). Votre CV doit mettre en avant non seulement vos publications et votre projet de recherche, mais aussi votre leadership et votre engagement communautaire — les trois piliers Vanier.",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Clôture début novembre"
+   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Clôture début novembre",
+   "alerte": "Selon le site officiel, ce programme n'accepte plus de candidatures et a été remplacé par la bourse Canada Graduate Scholarships (à vérifier sur vanier.gc.ca)."
   },
   "en": {
-   "nom": "Vanier Canada Graduate Scholarships (Vanier CGS)"
+   "nom": "Vanier Canada Graduate Scholarships (Vanier CGS)",
+   "alerte": "According to the official website, this programme no longer accepts applications and has been replaced by the Canada Graduate Scholarships (check vanier.gc.ca)."
   },
   "vedette": true
  },
@@ -10506,8 +10508,10 @@
    "cloture_mois": "decembre"
   },
   "edition": {
-   "cloture": "2025-11-17",
-   "confirme": false
+   "cloture": "2026-11-06",
+   "confirme": true,
+   "libelle": "2027",
+   "ouverture": "2026-09-01"
   },
   "lien_officiel": "https://www.trudeaufoundation.ca/become-a-scholar/",
   "sources": [
@@ -10516,7 +10520,7 @@
     "url": "https://www.trudeaufoundation.ca/become-a-scholar/"
    }
   ],
-  "last_verified": null,
+  "last_verified": "2026-10-19",
   "status": "to_verify",
   "guide": {
    "source": "manuel",
@@ -10531,10 +10535,11 @@
    "ne_couvre_pas": "Frais personnels hors budget approuvé",
    "eligibilite": "Ouvert aux citoyens du monde entier. Engagement citoyen exceptionnel requis",
    "cout_candidature": "Gratuit",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Ouverture en automne, clôture en décembre"
+   "edition_note": "Concours 2027 ouvert du 1 sept au 6 nov 2026 (17h ET); Cameroun/eligibilite internationale non verifiee."
   },
   "en": {
-   "nom": "Bourse de la Fondation Pierre Elliott Trudeau"
+   "nom": "Bourse de la Fondation Pierre Elliott Trudeau",
+   "edition_note": "Concours 2027 ouvert du 1 sept au 6 nov 2026 (17h ET); Cameroun/eligibilite internationale non verifiee."
   },
   "vedette": true
  },
@@ -10558,8 +10563,9 @@
    "cloture_mois": "novembre"
   },
   "edition": {
-   "cloture": "2025-11-30",
-   "confirme": false
+   "cloture": "2026-10-09",
+   "confirme": true,
+   "libelle": "2026/27"
   },
   "lien_officiel": "https://future.utoronto.ca/pearson/about/",
   "sources": [
@@ -10568,7 +10574,7 @@
     "url": "https://future.utoronto.ca/pearson/about/"
    }
   ],
-  "last_verified": null,
+  "last_verified": "2026-10-19",
   "status": "to_verify",
   "guide": {
    "source": "manuel",
@@ -10584,10 +10590,11 @@
    "eligibilite": "Étudiants étrangers recommandés par leur lycée d'origine. Vous ne pouvez pas postuler vous-même — c'est votre lycée qui vous nomine.",
    "cout_candidature": "Frais d'admission à l'université requis",
    "conseil": "La clé est la nomination par votre lycée. Parlez à votre proviseur ou à votre conseiller pédagogique dès la Première (11ème année). Montrez-lui le site web de la bourse Pearson. Si votre lycée n'a jamais nominé d'étudiant, c'est encore possible — il suffit que le proviseur s'inscrive sur le portail de nomination.",
-   "edition_note": "Date limite indiquée dans le guide : Recommandation du lycée en novembre, demande UofT en janvier"
+   "edition_note": "Date limite de nomination par les ecoles le 9 oct 2026 (passee); candidature via nomination de l'ecole uniquement."
   },
   "en": {
-   "nom": "Lester B. Pearson International Scholarships (Toronto)"
+   "nom": "Lester B. Pearson International Scholarships (Toronto)",
+   "edition_note": "Date limite de nomination par les ecoles le 9 oct 2026 (passee); candidature via nomination de l'ecole uniquement."
   },
   "vedette": true
  },
@@ -10805,7 +10812,7 @@
     "url": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiants-etrangers-pbeee-2026-2027/"
    }
   ],
-  "last_verified": null,
+  "last_verified": "2026-10-19",
   "status": "to_verify",
   "guide": {
    "source": "manuel",
@@ -10820,12 +10827,18 @@
    "ne_couvre_pas": "Billet d'avion",
    "eligibilite": "Étudiants non canadiens présélectionnés par une université québécoise. Vous ne postulez pas directement au FRQ — c'est votre université qui vous nomine.",
    "cout_candidature": "Gratuit",
-   "edition_note": "Date limite indiquée dans le guide : Présélection universitaire (été/automne), finale en décembre"
+   "edition_note": "Edition 2026-27 close (depot FRQ le 2 dec 2025); presélection par une universite quebecoise requise; pas de quota par pays; edition 2027-28 non publiee."
   },
   "en": {
-   "nom": "PBEEE — Bourses d'excellence pour étudiants étrangers (Québec)"
+   "nom": "PBEEE — Bourses d'excellence pour étudiants étrangers (Québec)",
+   "edition_note": "Edition 2026-27 close (depot FRQ le 2 dec 2025); presélection par une universite quebecoise requise; pas de quota par pays; edition 2027-28 non publiee."
   },
-  "vedette": true
+  "vedette": true,
+  "edition": {
+   "libelle": "2026/27",
+   "cloture": "2025-12-02",
+   "confirme": true
+  }
  },
  {
   "id": "bcdi-2030-educanada",

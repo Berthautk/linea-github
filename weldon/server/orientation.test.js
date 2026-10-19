@@ -148,3 +148,13 @@ test("concours en pause : signalé, jamais exclu, classé après ceux dont la se
   // Sans date de prochaine session, rien n'est présumé
   assert.equal(evaluate({ niveau: "bepc", annee_naissance: 2002 }, { ...gp(), periodicite: { type: "pluriannuelle", intervalle_ans: 3 } }, { now: NOW }).pause, undefined);
 });
+
+test("séries anglophones LA1-LA5 et LS1-LS4 : rattachées à Arts et Science", () => {
+  const c = gp({ niveaux_min: "bac", series: ["Science", "Arts"] });
+  assert.equal(cat({ niveau: "bac", serie: "LA3", annee_naissance: 2002 }, c), "bien");
+  assert.equal(cat({ niveau: "bac", serie: "LS2", annee_naissance: 2002 }, c), "bien");
+  const sci = gp({ niveaux_min: "bac", series: ["SCIENCE"] });
+  assert.equal(cat({ niveau: "bac", serie: "LS1", annee_naissance: 2002 }, sci), "bien");
+  assert.equal(cat({ niveau: "bac", serie: "LA1", annee_naissance: 2002 }, sci), "non");
+  assert.equal(cleanProfil({ serie: "ls4" }).serie, "LS4");
+});

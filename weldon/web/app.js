@@ -690,7 +690,29 @@
 
   // ---------- Orientation : textes (la logique est côté serveur, server/orientation.js) ----------
   const LEVELS = ["bepc", "probatoire", "terminale", "bac", "bac+2", "licence", "master", "doctorat"];
-  const SERIES_BY_LANG = { fr: ["A", "C", "D", "E", "TI", "F", "G", "AUTRE"], en: ["ARTS", "SCIENCE", "TECH", "AUTRE"] };
+  const SERIES_BY_LANG = { fr: ["A", "C", "D", "E", "TI", "F", "G", "AUTRE"], en: ["ARTS", "LA1", "LA2", "LA3", "LA4", "LA5", "SCIENCE", "LS1", "LS2", "LS3", "LS4", "TECH", "AUTRE"] };
+  // Série du bac → branche et filières de bourses à proposer en premier (séries anglophones : voir la fiche des Lower Sixth).
+  const SERIE_MAP = {
+    A: ["lettres", ["lettres-langues", "histoire-geographie", "droit-politique", "philo-sociologie"]],
+    G: ["lettres", ["economie-gestion"]],
+    C: ["sciences", ["maths", "physique-chimie", "ingenierie", "informatique"]],
+    D: ["sciences", ["sante", "agronomie-environnement", "physique-chimie"]],
+    E: ["sciences", ["ingenierie", "maths"]],
+    TI: ["sciences", ["informatique", "ingenierie"]],
+    F: ["sciences", ["ingenierie"]],
+    ARTS: ["lettres", []],
+    LA1: ["lettres", ["lettres-langues", "histoire-geographie"]],
+    LA2: ["lettres", ["histoire-geographie", "economie-gestion"]],
+    LA3: ["lettres", ["economie-gestion", "lettres-langues", "histoire-geographie"]],
+    LA4: ["lettres", ["economie-gestion", "histoire-geographie"]],
+    LA5: ["lettres", ["philo-sociologie", "histoire-geographie", "lettres-langues"]],
+    SCIENCE: ["sciences", []],
+    LS1: ["sciences", ["maths", "physique-chimie", "ingenierie", "informatique"]],
+    LS2: ["sciences", ["physique-chimie", "sante"]],
+    LS3: ["sciences", ["sante", "agronomie-environnement", "physique-chimie"]],
+    LS4: ["sciences", ["agronomie-environnement", "sante"]],
+    TECH: ["sciences", ["ingenierie"]],
+  };
   const REGIONS = ["adamaoua", "centre", "est", "extreme-nord", "littoral", "nord", "nord-ouest", "ouest", "sud", "sud-ouest"];
   const INTERESTS = ["ordre", "enseignement", "sante", "administration", "finances", "technique", "nature", "ecoles"];
   const ORI = {
@@ -718,7 +740,7 @@
       series: "Série du baccalauréat",
       seriesHelp: "Pour ceux qui ont le bac ou qui le préparent.",
       seriesPh: "Choisissez votre série",
-      seriesNames: { A: "A (littéraire)", C: "C (maths et sciences physiques)", D: "D (maths et sciences de la vie)", E: "E (maths et techniques)", TI: "TI (technologies de l'information)", F: "F (techniques industrielles)", G: "G (gestion, commerce)", ARTS: "Arts", SCIENCE: "Science", TECH: "Technique", AUTRE: "Autre / je ne sais pas" },
+      seriesNames: { A: "A (littéraire)", C: "C (maths et sciences physiques)", D: "D (maths et sciences de la vie)", E: "E (maths et techniques)", TI: "TI (technologies de l'information)", F: "F (techniques industrielles)", G: "G (gestion, commerce)", ARTS: "Arts", SCIENCE: "Science", TECH: "Technique", AUTRE: "Autre / je ne sais pas", LA1: "LA1 (Français, Histoire, Littérature)", LA2: "LA2 (Histoire, Économie, Géographie)", LA3: "LA3 (Économie, Histoire, Littérature)", LA4: "LA4 (Économie, Géographie, Maths)", LA5: "LA5 (Philosophie, Histoire, Littérature)", LS1: "LS1 (Physique, Chimie, Maths)", LS2: "LS2 (Physique, Chimie, Biologie)", LS3: "LS3 (Chimie, Biologie, Maths)", LS4: "LS4 (Chimie, Biologie, Géologie)" },
       birth: "Année de naissance",
       birthHelp: "Seulement l'année : elle sert à vérifier les limites d'âge.",
       region: "Région (facultatif)",
@@ -843,7 +865,7 @@
       series: "A Level stream",
       seriesHelp: "For those who have their A Level or are preparing it.",
       seriesPh: "Choose your stream",
-      seriesNames: { A: "A (literary)", C: "C (maths and physics)", D: "D (maths and life sciences)", E: "E (maths and technology)", TI: "TI (information technology)", F: "F (industrial technology)", G: "G (management, commerce)", ARTS: "Arts", SCIENCE: "Science", TECH: "Technical", AUTRE: "Other / I don't know" },
+      seriesNames: { A: "A (literary)", C: "C (maths and physics)", D: "D (maths and life sciences)", E: "E (maths and technology)", TI: "TI (information technology)", F: "F (industrial technology)", G: "G (management, commerce)", ARTS: "Arts", SCIENCE: "Science", TECH: "Technical", AUTRE: "Other / I don't know", LA1: "LA1 (French, History, Literature)", LA2: "LA2 (History, Economics, Geography)", LA3: "LA3 (Economics, History, Literature)", LA4: "LA4 (Economics, Geography, Mathematics)", LA5: "LA5 (Philosophy, History, Literature)", LS1: "LS1 (Physics, Chemistry, Mathematics)", LS2: "LS2 (Physics, Chemistry, Biology)", LS3: "LS3 (Chemistry, Biology, Mathematics)", LS4: "LS4 (Chemistry, Biology, Geology)" },
       birth: "Year of birth",
       birthHelp: "The year only: it is used to check age limits.",
       region: "Region (optional)",
@@ -1512,6 +1534,17 @@
       stat: (n, c) => `${n} bourses répertoriées dans ${c} pays`,
       more: (n) => `Voir ${n} bourses de plus`,
       usualClosing: "Clôture habituelle",
+      serieTitle: "Votre série du bac",
+      serieSub: "Elle sert à vous montrer en premier les bourses de votre filière et de votre niveau. Gratuit.",
+      serieSet: (n) => `Série ${n}`,
+      serieChange: "Changer",
+      levelTitle: "Votre niveau actuel",
+      searchPh: "Chercher une bourse, un pays, une université…",
+      searchGo: "Chercher",
+      forYouSerie: "Pour votre série et votre niveau",
+      forYouSerieSub: "Les bourses qui correspondent à votre série (et à votre niveau si vous l'avez choisi).",
+      searchFor: (q) => `Recherche : « ${q} »`,
+      clearSearch: "Effacer la recherche",
       valueLabel: "Valeur",
       eligLabel: "Qui peut candidater",
       costLabel: "Coût de candidature",
@@ -1641,6 +1674,17 @@
       stat: (n, c) => `${n} scholarships listed in ${c} countries`,
       more: (n) => `Show ${n} more`,
       usualClosing: "Usual closing",
+      serieTitle: "Your A Level stream",
+      serieSub: "It is used to show you first the scholarships for your field and level. Free.",
+      serieSet: (n) => `Stream ${n}`,
+      serieChange: "Change",
+      levelTitle: "Your current level",
+      searchPh: "Search a scholarship, a country, a university…",
+      searchGo: "Search",
+      forYouSerie: "For your stream and level",
+      forYouSerieSub: "Scholarships that match your stream (and your level if you chose one).",
+      searchFor: (q) => `Search: “${q}”`,
+      clearSearch: "Clear search",
       valueLabel: "Value",
       eligLabel: "Who can apply",
       costLabel: "Application cost",
@@ -2599,8 +2643,45 @@
         (!f.domaine || all(b) || b.domaines.includes(f.domaine)) &&
         (!f.niveau || b.niveaux.includes(f.niveau)) &&
         (!f.pays || b.pays_accueil.includes(f.pays)) &&
-        (!f.type || (f.type === "complete" ? b.couverture.niveau === "complete" : b.origine === f.type))
+        (!f.type || (f.type === "complete" ? b.couverture.niveau === "complete" : b.origine === f.type)) &&
+        (!f.q || searchHay(b).includes(plain(f.q)))
     );
+  }
+  const plain = (x) => String(x || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  const searchHay = (b) => plain([b.nom, b.organisme, b.valeur, b.pays_accueil.join(" "), b.niveaux.map((x) => br().levels[x]).join(" "), b.domaines.map((d) => br().domains[d]).join(" ")].join(" "));
+  // Série du compte → branche + filières proposées ; classe d'abord les bourses de ces filières (« tous » en second).
+  const serieInfo = () => SERIE_MAP[state.user?.profil?.serie] || null;
+  function forSerie(list) {
+    const info = serieInfo();
+    if (!info) return [];
+    const [branche, doms] = info;
+    const niveau = bPref().niveau;
+    const score = (b) => (b.domaines.some((d) => doms.includes(d)) ? 2 : b.domaines.includes("tous") ? 1 : 0);
+    return list
+      .filter((b) => ["cloture_proche", "ouverte", "a_venir", "attendue"].includes(b.statut.code) && b.branches.includes(branche) && (!niveau || b.niveaux.includes(niveau)) && (!doms.length || score(b) > 0))
+      .sort((a, c) => score(c) - score(a));
+  }
+
+  // Choix de la série (gratuit) et du niveau, au-dessus des résultats.
+  function bSerieCard() {
+    const B = br();
+    const O = ori();
+    const cur = state.user?.profil?.serie;
+    const levels = ["licence", "master", "doctorat"];
+    const chips = SERIES_BY_LANG[lang()]
+      .filter((v) => v !== "AUTRE")
+      .map((v) => `<button type="button" class="chip" data-bserie="${v}" aria-pressed="${cur === v}" title="${esc(O.seriesNames[v] || v)}">${esc(v === "ARTS" || v === "SCIENCE" || v === "TECH" ? (O.seriesNames[v] || v) : v)}</button>`)
+      .join("");
+    const lvl = levels.map((l) => `<button type="button" class="chip" data-bniveau-pref="${l}" aria-pressed="${bPref().niveau === l}">${esc(B.levels[l])}</button>`).join("");
+    const detail = cur && O.seriesNames[cur] && /^L[AS]\d$/.test(cur) ? `<p class="small muted">${esc(O.seriesNames[cur])}</p>` : "";
+    return `<section class="card"><h2>${B.serieTitle}</h2><p class="muted small">${B.serieSub}</p>
+      <div class="chips wrap" role="group" aria-label="${B.serieTitle}">${chips}</div>${detail}
+      <h3 style="margin-top:12px">${B.levelTitle}</h3><div class="chips" role="group" aria-label="${B.levelTitle}">${lvl}</div></section>`;
+  }
+
+  function bSearchForm(q) {
+    const B = br();
+    return `<form id="bsearch-form" class="search" role="search"><input id="bq" name="q" type="search" value="${esc(q || "")}" placeholder="${esc(B.searchPh)}" aria-label="${esc(B.searchPh)}" autocomplete="off"><button type="submit" class="btn btn-primary btn-small">${B.searchGo}</button></form>`;
   }
 
   function statusLine(b) {
@@ -2687,7 +2768,7 @@
     if (!all.length) return `<div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><div class="notice">${I.info}<span>${B.empty}</span></div>`;
     const pref = bPref();
     const active = (b) => ["cloture_proche", "ouverte", "a_venir", "attendue"].includes(b.statut.code);
-    const mineList = pref.branche || pref.niveau ? filterB(all.filter(active), { branche: pref.branche, domaine: pref.domaine, niveau: pref.niveau }).slice(0, 4) : [];
+    const mineList = !serieInfo() && (pref.branche || pref.niveau) ? filterB(all.filter(active), { branche: pref.branche, domaine: pref.domaine, niveau: pref.niveau }).slice(0, 4) : [];
     const closing = all.filter((b) => b.statut.code === "cloture_proche" || (b.statut.code === "ouverte" && b.statut.jours != null && b.statut.jours <= 45)).slice(0, 6);
     const shown = new Set(closing.map((b) => b.id));
     const opened = all.filter((b) => b.statut.code === "ouverte" && !shown.has(b.id)).slice(0, 6);
@@ -2703,6 +2784,9 @@
     return `
       <div class="section-head"><div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><p class="muted small">${B.stat(all.length, countries.length)}</p></div>
       ${tickerHtml(all)}
+      ${bSearchForm("")}
+      ${bSerieCard()}
+      ${block(B.forYouSerie, B.forYouSerieSub, forSerie(all).slice(0, 6))}
       <section class="card"><h2>${B.chooseBranch}</h2><p class="muted small">${B.chooseBranchSub}</p>
         <div class="branch-pick">${branchCard("sciences")}${branchCard("lettres")}</div></section>
       ${bUnlockBanner()}
@@ -2722,6 +2806,7 @@
 
   function viewBFind() {
     const B = br();
+    if (state.bf.branche === undefined && serieInfo()) state.bf = { ...state.bf, branche: serieInfo()[0] }; // la série du compte fixe la branche
     const f = bState();
     if (f.branche === undefined) {
       const card = (k, label, sub) => `<button type="button" class="section-card" data-bbranche="${k}"><span class="section-flag">${k === "sciences" ? "Sc" : k === "lettres" ? "Ar" : "★"}</span><span><b>${esc(label)}</b><span class="small muted">${esc(sub)}</span></span>${I.chevron}</button>`;
@@ -2730,7 +2815,7 @@
     }
     const domains = f.branche ? BRANCH_DOMAINS[f.branche] : Object.values(BRANCH_DOMAINS).flat();
     const chip = (attr, val, label, on) => `<button type="button" class="chip" data-${attr}="${esc(val)}" aria-pressed="${on}">${esc(label)}</button>`;
-    const flt = { ...f, type: state.bf.type || "", pays: state.bf.pays || "" };
+    const flt = { ...f, type: state.bf.type || "", pays: state.bf.pays || "", q: state.bf.q || "" };
     const list = filterB(state.bourses, flt);
     const active = list.filter((b) => b.statut.code !== "expiree");
     const expired = list.filter((b) => b.statut.code === "expiree");
@@ -2741,6 +2826,8 @@
     return `
       <div class="row-actions"><div><span class="eyebrow">${t().section}</span><h1>${f.branche ? B.branches[f.branche] : B.allBranches}</h1></div>
         <button type="button" class="btn btn-ghost btn-small" data-bchange>${B.changeBranch}</button></div>
+      ${bSearchForm(state.bf.q)}
+      ${state.bf.q ? `<p class="small">${esc(B.searchFor(state.bf.q))} <button type="button" class="linkish" data-bclearq>${B.clearSearch}</button></p>` : ""}
       <div class="chips" role="group" aria-label="${B.cond.domains}">${chip("bdomaine", "", B.allDomains, !f.domaine)}${domains.map((d) => chip("bdomaine", d, B.domains[d], f.domaine === d)).join("")}</div>
       <div class="chips" role="group" aria-label="${B.cond.levels}">${chip("bniveau", "", B.allLevels, !f.niveau)}${["licence", "master", "doctorat", "postdoc"].map((l) => chip("bniveau", l, B.levels[l], f.niveau === l)).join("")}</div>
       <div class="chips" role="group" aria-label="${B.typeLabel}">${chip("btype", "", B.allTypes, !flt.type)}${["complete", "gouvernementale", "universitaire", "fondation"].map((k) => chip("btype", k, B.types[k], flt.type === k)).join("")}</div>
@@ -4500,6 +4587,29 @@
       state.tab = "bfind";
       return render();
     }
+    if (d.bserie !== undefined) {
+      try {
+        state.user = await api().update({ profil: { serie: state.user?.profil?.serie === d.bserie ? "" : d.bserie } });
+        const info = serieInfo();
+        if (info) state.bf = { ...state.bf, branche: info[0], domaine: "" };
+        else state.bf = {};
+        render();
+      } catch (e) {
+        toast(e.message);
+      }
+      return;
+    }
+    if (d.bniveauPref !== undefined) {
+      const next = bPref().niveau === d.bniveauPref ? "" : d.bniveauPref;
+      state.bf = { ...state.bf, niveau: next };
+      saveBPref({ niveau: next });
+      state.user = { ...state.user, bourse_profil: { ...bPref(), niveau: next } };
+      return render();
+    }
+    if ("bclearq" in d) {
+      state.bf = { ...state.bf, q: "" };
+      return render();
+    }
     if ("bmore" in d) {
       state.bf = { ...state.bf, n: (state.bf.n || 30) + 30 };
       return render();
@@ -4682,6 +4792,13 @@
     if (f.id === "ann-form") return submitAnnonce(f);
     if (f.id === "fiche-form") return submitFiche(f);
     if (f.id === "bourse-form") return submitBourse(f);
+    if (f.id === "bsearch-form") {
+      ev.preventDefault();
+      const q = String(new FormData(f).get("q") || "").trim();
+      state.bf = state.tab === "bfind" ? { ...state.bf, q, n: 30 } : { branche: "", q };
+      state.tab = "bfind";
+      return render();
+    }
     if (f.id === "bpref-form") {
       const fd = new FormData(f);
       state.bf = { branche: fd.get("branche"), domaine: fd.get("domaine"), niveau: fd.get("niveau") };

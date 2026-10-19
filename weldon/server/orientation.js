@@ -9,7 +9,9 @@ export const NIVEAUX = ["bepc", "probatoire", "terminale", "bac", "bac+2", "lice
 // « terminale » : élève en classe d'examen, bac pas encore obtenu (même rang que le probatoire).
 const RANG = { cep: 0, bepc: 1, probatoire: 2, terminale: 2, bac: 3, "bac+2": 4, licence: 5, master: 6, doctorat: 7 };
 
-export const SERIES = ["A", "C", "D", "E", "TI", "F", "G", "ARTS", "SCIENCE", "TECH", "AUTRE"];
+// Séries anglophones : LA1 à LA5 (Lower Sixth Arts) et LS1 à LS4 (Lower Sixth Science) se rattachent à ARTS et SCIENCE.
+export const SERIES = ["A", "C", "D", "E", "TI", "F", "G", "ARTS", "LA1", "LA2", "LA3", "LA4", "LA5", "SCIENCE", "LS1", "LS2", "LS3", "LS4", "TECH", "AUTRE"];
+export const canonSerie = (s) => (/^LA\d$/.test(s) ? "ARTS" : /^LS\d$/.test(s) ? "SCIENCE" : s);
 export const REGIONS = ["adamaoua", "centre", "est", "extreme-nord", "littoral", "nord", "nord-ouest", "ouest", "sud", "sud-ouest"];
 export const INTERETS = ["ordre", "enseignement", "sante", "administration", "finances", "technique", "nature", "ecoles"];
 
@@ -47,7 +49,8 @@ const serieMatch = (profileSerie, list) => list.some((s) => norm(s).startsWith(n
 //   improbable : une condition n'est pas remplie selon une source NON officielle : on ne l'exclut pas, on le dit ;
 //   possible   : un point reste à confirmer ; inconnu : conditions pas encore renseignées.
 // raison : { code, ok (true | false | null = à vérifier), weak?, ...paramètres }
-export function evaluate(profil, c, { now = new Date() } = {}) {
+export function evaluate(profil0, c, { now = new Date() } = {}) {
+  const profil = profil0.serie ? { ...profil0, serie: canonSerie(profil0.serie) } : profil0;
   const interet = interetOf(c);
   const a = c.acces;
   if (!a) return { categorie: "inconnu", raisons: [{ code: "no_data", ok: null }], interet };

@@ -666,3 +666,6 @@ i.ph-bprob { background: var(--sun); }
 .blur i:nth-child(2) { width: 85%; }
 .blur i:nth-child(3) { width: 60%; }
 .alert-card { background: var(--coral-soft); border-color: var(--coral); }
+.search { display: flex; gap: 8px; align-items: center; }
+.search input { flex: 1; min-width: 0; padding: 10px 14px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); color: var(--ink); font: inherit; }
+.chips.wrap { flex-wrap: wrap; overflow: visible; }

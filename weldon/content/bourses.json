@@ -77,7 +77,9 @@
       ],
       "conseil": "Do not apply before checking Cameroon is eligible: it was not in the list read. Also check the PhD pages on the CSC site.",
       "edition_note": "The page says '16:00 BST Tuesday 20 October' without the year (20 October 2026 is a Tuesday). Nominating bodies set their own, often earlier, dates. Cameroon is not in the 43-country list read from the page."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "fulbright",
@@ -145,7 +147,9 @@
       ],
       "conseil": "Contact EducationUSA or the U.S. Embassy in Yaoundé for dates and the file. Very few awards are given.",
       "edition_note": "The official page gives no dates; they are set by the U.S. Embassy in Cameroon. A third-party site gave 21 April 2025 for the 2026/27 cycle (unverified)."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "daad-epos",
@@ -215,7 +219,10 @@
       ],
       "conseil": "First pick a course in the 2027/28 EPOS list, then read its dates and conditions in the DAAD entry.",
       "edition_note": "The DAAD page mentions the 2027/28 course list; deadlines vary by course. One course gives 1 August to 1 October. No single official date read."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true,
+    "apercu_gratuit": true
   },
   {
     "id": "erasmus-mundus",
@@ -281,7 +288,10 @@
       ],
       "conseil": "Search the official catalogue, compare several masters and apply directly to each consortium.",
       "edition_note": "The official page says applications are usually made between October and January; each master has its own deadline."
-    }
+    },
+    "origine": "fondation",
+    "vedette": true,
+    "apercu_gratuit": true
   },
   {
     "id": "eiffel",
@@ -349,7 +359,9 @@
       ],
       "conseil": "You cannot apply alone: ask your target French institution whether it will put you forward.",
       "edition_note": "The official page only shows the 2026 session (opened 1 October 2025, received by Campus France by 8 January 2026, results from 30 March 2026). The 2027 session is not published."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "bgf-cameroun",
@@ -425,7 +437,8 @@
       ],
       "conseil": "Open your Études en France file now and check the 'Je suis boursier' page for scholarship criteria.",
       "edition_note": "Campus France Cameroon says the Études en France 2027-2028 campaign has been open since 1 October 2026; electronic file for master's before 1 February 2027 (page is ambiguous). This date is for the admission application, not a specific scholarship."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "csc-china",
@@ -493,7 +506,9 @@
       ],
       "conseil": "Watch the Chinese Embassy in Yaoundé website and campuschina.org in autumn and winter.",
       "edition_note": "No 2027/28 call found. For 2026/27 dates varied by country (February to March 2026)."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "turkiye-burslari",
@@ -566,7 +581,9 @@
       ],
       "conseil": "Prepare transcripts and diplomas in advance; selection is very competitive.",
       "edition_note": "The official page announces 2026 applications with no dates read; the 2027 calendar is not visible yet. See turkiyeburslari.gov.tr/calendar."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "stipendium-hungaricum",
@@ -649,7 +666,9 @@
       ],
       "conseil": "Contact the Cameroonian sending partner early, as its deadline may be earlier.",
       "edition_note": "The official page shows the 2026/27 call (deadline 15 January 2026, 14:00 CET). The 2027/28 call is not published; likely the same rhythm, to confirm."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "mext",
@@ -734,7 +753,9 @@
       ],
       "conseil": "Watch the Japanese Embassy in Yaoundé site from April; the window is short.",
       "edition_note": "Per the Embassy of Japan in Cameroon (23 April 2026 notice, seen via a search result), deadline 25 May 2026 at 4 pm for Cameroon, Chad and CAR. The window is closed; the next call is expected in spring 2027."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "gks",
@@ -807,7 +828,9 @@
       ],
       "conseil": "Download the 2027 guidelines from studyinkorea.go.kr and check if Cameroon is in the embassy or university track list.",
       "edition_note": "The 2027 GKS-U guidelines were posted on 9 September 2026; the schedule is in an unread PDF. A third-party notice cites 15-30 September 2026 for the embassy track (no Cameroon confirmation). For graduate programmes the announcement is usually in February."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "russie-quota",
@@ -873,7 +896,8 @@
       ],
       "conseil": "Use only the official portal and the Russian embassy or Russian House in Yaoundé.",
       "edition_note": "No dates read on the official page. Third-party sites say opening is likely in September 2026."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "amci-maroc",
@@ -937,7 +961,8 @@
       ],
       "conseil": "Ask MINESUP and the Moroccan embassy in spring.",
       "edition_note": "No official AMCI page read. A third-party site cites 5 June 2026 for Cameroon (2026/27, past)."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "iccr-itec",
@@ -1004,7 +1029,8 @@
       ],
       "conseil": "Contact the Indian Embassy in Yaoundé; ITEC also offers short training courses.",
       "edition_note": "No official page read. 2026 dates quoted by third-party sites conflict (February to April 2026)."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "italie-maeci",
@@ -1081,7 +1107,8 @@
       ],
       "conseil": "Prepare degrees and transcripts before March 2027 and watch the Italian Embassy in Yaoundé site.",
       "edition_note": "Per the Italian Embassy in Yaoundé, applications by 26 March 2026 at 14:00 (Yaoundé time). Call closed; the 2027/28 call is not published yet. No opening date read."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "mastercard-scholars",
@@ -1170,7 +1197,10 @@
       ],
       "conseil": "Pick 2 or 3 partners and apply early: late or incomplete files are not considered.",
       "edition_note": "Each partner university has its own dates: check its page."
-    }
+    },
+    "origine": "fondation",
+    "vedette": true,
+    "apercu_gratuit": true
   },
   {
     "id": "rotary-peace",
@@ -1221,7 +1251,9 @@
       "couverture_detail": "Described as fully funded (details not verified on the official page read).",
       "conseil": "Start preparing in late 2026; a Rotary district endorsement is usually requested.",
       "edition_note": "Per a search summary of the official page: 2027-28 applications closed; 2028-29 applications open online in February 2027. Exact dates not confirmed."
-    }
+    },
+    "origine": "fondation",
+    "vedette": true
   },
   {
     "id": "aga-khan-isp",
@@ -1280,7 +1312,9 @@
       ],
       "conseil": "Use the eligibility tool on the official page before preparing an application.",
       "edition_note": "The 2026-27 cycle is closed; the next one opens early 2027 (dates not published)."
-    }
+    },
+    "origine": "fondation",
+    "vedette": true
   },
   {
     "id": "jj-wbgsp",
@@ -1339,7 +1373,9 @@
       ],
       "conseil": "Check the eligible-countries list and application guidelines linked on the official page.",
       "edition_note": "The official page says the 2027 windows for developing-country nationals are announced but I could not read the dates. Third-party sites cite 27 February 2027, unconfirmed."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "gates-cambridge",
@@ -1421,7 +1457,9 @@
       ],
       "conseil": "Apply to Cambridge early: admission and scholarship are submitted together.",
       "edition_note": "Open since 11 Sept 2026. Deadline: 8 Dec 2026 or 6 Jan 2027 depending on course (see Course Directory)."
-    }
+    },
+    "origine": "fondation",
+    "vedette": true
   },
   {
     "id": "eskas-swiss",
@@ -1486,7 +1524,8 @@
       ],
       "conseil": "Contact the Swiss embassy in Yaoundé early for the Cameroon deadline and find a Swiss supervisor.",
       "edition_note": "Opened 20 Aug 2026; deadlines vary by country and are not on the page read."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "australia-awards-africa",
@@ -1542,7 +1581,9 @@
       ],
       "conseil": "Check the country list in the Africa profile when applications open.",
       "edition_note": "Official page says the 2027 intake is closed and the 2028 intake opens in February 2027."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "nl-scholarship",
@@ -1602,7 +1643,9 @@
       ],
       "conseil": "Apply first to the Dutch institution: it handles the scholarship.",
       "edition_note": "2027/28 dates not on the page read (2026/27 opened 1 Nov 2025). Deadlines set by each institution."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "clarendon",
@@ -1668,7 +1711,9 @@
       ],
       "conseil": "Aim for the earlier December deadline where one exists.",
       "edition_note": "Apply to the course by its December or January deadline; exact dates not read."
-    }
+    },
+    "origine": "universitaire",
+    "vedette": true
   },
   {
     "id": "jads-afdb",
@@ -1748,7 +1793,8 @@
       ],
       "conseil": "Apply to the partner Japanese university first; the AfDB takes no direct applications.",
       "edition_note": "Dates vary by partner university; no dated call read."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "mo-ibrahim-leadership",
@@ -1819,7 +1865,8 @@
       ],
       "conseil": "Pick a host then follow its listing: documents and dates differ.",
       "edition_note": "Official page: 2027 applications open, no closing date shown. A third-party site gives 20 Nov 2026 (unconfirmed)."
-    }
+    },
+    "origine": "fondation"
   },
   {
     "id": "alu-mastercard",
@@ -1893,7 +1940,8 @@
       ],
       "conseil": "Complete the Finances stage to be considered for aid.",
       "edition_note": "Dates not on the pages read; third-party sites conflict (1 or 30 Nov 2026)."
-    }
+    },
+    "origine": "fondation"
   },
   {
     "id": "minesup-bourses-cooperation",
@@ -1977,7 +2025,8 @@
       ],
       "conseil": "Check the MINESUP Bourses section every week. Deadlines are often short.",
       "edition_note": "Recent offers: Algeria (205 scholarships, 2026/2027, notice of 13 Aug 2026) and India via IAESTE (150 partial scholarships, 5 Jun 2026). No deadline is written on the pages."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "ares-formations-internationales",
@@ -2059,7 +2108,8 @@
       ],
       "conseil": "Prepare your file from July 2027 and read the training catalogue. Specialisation masters in heritage or management may suit humanities students.",
       "edition_note": "The 2027-2028 call is closed (deadline 18 September 2026). The next call is announced for August 2027, with no exact date."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "vlir-uos-icp",
@@ -2141,7 +2191,8 @@
       ],
       "conseil": "For humanities and law, look at the advanced masters Governance and Development, Globalisation and Development or Development Evaluation. Age is counted on 1 January.",
       "edition_note": "The 2026-2027 call is closed. The 2027-2028 call is expected to open at the end of October 2026. Deadlines will be on each programme page."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "auf-pimef",
@@ -2205,7 +2256,8 @@
       ],
       "conseil": "Check if your university is an AUF member. Follow the calls platform, because calls change often.",
       "edition_note": "The AUF platform shows a closing date of 15/03/2027 23:59 (Paris) for the professional component. Opening date and criteria not read."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "quebec-pbeee",
@@ -2287,7 +2339,9 @@
       ],
       "conseil": "Contact a professor at a Quebec university right away: preselection is on 27 October 2026. You need an admission or an admission request first.",
       "edition_note": "Launched in July 2026 (day not stated). University preselection by 27 October 2026, 4 pm. Application to FRQ on 2 December 2026, 4 pm (EST). Results in April 2027."
-    }
+    },
+    "origine": "gouvernementale",
+    "vedette": true
   },
   {
     "id": "quebec-exemption-droits",
@@ -2359,7 +2413,8 @@
       ],
       "conseil": "First ask about the Cameroon procedure. Do not send your request to the ministry: it will not be read.",
       "edition_note": "No deadline on the page. Ask your country's manager for the criteria."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "boell-etude-allemagne",
@@ -2434,7 +2489,8 @@
       ],
       "conseil": "You need German B2 already: start early. Write to the foundation to clarify the 1 March 2027 rule.",
       "edition_note": "Two rounds a year (1 March and 1 September). The fall 2026 round closed on 1 September 2026. The page also says that from 1 March 2027 only first-cycle applications will be accepted, which conflicts with the master section: check."
-    }
+    },
+    "origine": "fondation"
   },
   {
     "id": "kas-ausland",
@@ -2506,7 +2562,8 @@
       ],
       "conseil": "Write to the KAS office to ask if Cameroonians can apply. Start German lessons early.",
       "edition_note": "The page gives 15 July each year at noon (CET) for selection from Germany. No KAS office in Cameroon is named for 2026."
-    }
+    },
+    "origine": "fondation"
   },
   {
     "id": "aecid-africa-med",
@@ -2582,7 +2639,8 @@
       ],
       "conseil": "This programme targets public staff, so mostly teachers or civil servants. Watch aecid.es each summer.",
       "edition_note": "2026/27 call closed on 15 July 2026. No 2027/28 call found."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "unesco-japan-young-researchers",
@@ -2672,7 +2730,8 @@
       ],
       "conseil": "Contact the Cameroon National Commission for UNESCO months before the next cycle. Find a supervisor in Japan first.",
       "edition_note": "Deadline extended to 15 October 2026 (midnight Paris): the cycle is now closed. Results expected in December 2026. Stays run February to December 2027."
-    }
+    },
+    "origine": "gouvernementale"
   },
   {
     "id": "codesria-grants",
@@ -2735,6 +2794,7 @@
       ],
       "conseil": "Join CODESRIA alerts and prepare a research project. Early-career calls are often early in the year.",
       "edition_note": "The official portal shows no open application on 19 October 2026."
-    }
+    },
+    "origine": "fondation"
   }
 ]

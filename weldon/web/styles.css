@@ -643,3 +643,26 @@ i.ph-bopen { background: var(--green); }
 i.ph-bprob { background: var(--sun); }
 .scam h3 { display: flex; gap: 8px; align-items: center; margin: 0 0 6px; }
 .scam h3 svg { width: 20px; height: 20px; flex: none; color: var(--amber, #b7791f); }
+
+/* Bourses : à la une, types, pays, verrouillage */
+.hscroll { display: grid; grid-auto-flow: column; grid-auto-columns: min(82%, 320px); gap: 12px; overflow-x: auto; padding: 2px 2px 10px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+.hscroll > * { scroll-snap-align: start; min-width: 0; }
+.branch-pick { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.tile { position: relative; display: grid; gap: 4px; text-align: left; padding: 14px 52px 14px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); cursor: pointer; font: inherit; }
+.tile:hover { border-color: var(--green); }
+.tile b { font-family: var(--font-display); }
+.tile-n { position: absolute; top: 12px; right: 12px; min-width: 32px; text-align: center; padding: 3px 8px; border-radius: 99px; background: var(--green-soft); color: var(--green); font-weight: 800; font-size: 0.85rem; }
+.bvalue { color: var(--ink); font-weight: 600; }
+.unlock-banner { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--sun-soft); border-color: var(--sun); }
+.unlock-banner > div { display: flex; gap: 10px; align-items: flex-start; min-width: 0; flex: 1 1 220px; }
+.unlock-banner > div > span { display: grid; gap: 2px; }
+.unlock-banner svg { width: 20px; height: 20px; flex: none; margin-top: 2px; }
+.lockcard { background: var(--surface-2); border-style: dashed; }
+.lockcard h3 { display: flex; align-items: center; gap: 8px; }
+.lockcard h3 svg { width: 18px; height: 18px; }
+.blur { display: grid; gap: 8px; margin: 8px 0; filter: blur(3px); opacity: 0.6; user-select: none; }
+.blur i { display: block; height: 10px; border-radius: 6px; background: var(--muted); }
+.blur i:nth-child(2) { width: 85%; }
+.blur i:nth-child(3) { width: 60%; }
+.alert-card { background: var(--coral-soft); border-color: var(--coral); }

@@ -37,6 +37,11 @@ fs.writeFileSync(path.join(contentDir, "bourses.json"), JSON.stringify([
   bourseFixture("lettres", ["droit-politique", "histoire-geographie"], ["licence", "master"], { ouverture: day(-5), cloture: day(60), confirme: true }, { type: "annuelle", ouverture_mois: "septembre", cloture_mois: "décembre" }),
   bourseFixture("tous", ["tous"], ["master", "doctorat"], { ouverture: day(-100), cloture: day(-10), confirme: true }, { type: "annuelle", ouverture_mois: "janvier", cloture_mois: "mars" }),
 ]));
+fs.writeFileSync(path.join(contentDir, "bourses-guide.json"), "[]"); // les tests ne dépendent pas du répertoire réel
+fs.writeFileSync(path.join(contentDir, "bourses-conseils.json"), JSON.stringify([
+  { id: "libre", ordre: 1, categorie: "comprendre", gratuit: true, fr: { titre: "Article libre", resume: "Pour tous", sections: [{ h: "A", p: ["texte libre"] }] } },
+  { id: "modele", ordre: 2, categorie: "dossier", gratuit: false, fr: { titre: "Modèle de lettre", resume: "Abonnés", sections: [{ h: "B", p: ["texte réservé secret-modele"] }] } },
+]));
 process.env.WELDON_CONTENT_DIR = contentDir;
 
 const realFetch = globalThis.fetch;
@@ -573,6 +578,66 @@ test("bourses ouvertes à tous : suivi (3 gratuits), filière mémorisée", asyn
     assert.deepEqual((await json(await call("GET", "/api/me", undefined, t))).bourses_suivies, ["sci", "lettres", "tous"]);
     // 4e bourse : il n'y en a que 3 dans le contenu de test, on réutilise la limite via une 4e fiche impossible ; on vérifie le retrait et le re-suivi
     assert.deepEqual((await json(await call("POST", "/api/follow-bourse", { id: "sci", on: false }, t))).bourses_suivies, ["lettres", "tous"]);
+  } finally {
+    delete process.env.BOURSES_PUBLIC;
+  }
+});
+
+test("bourses : sans abonnement, liens et dossier ne sortent jamais du serveur ; abonné, concepteur et aperçu gratuit les voient", async () => {
+  process.env.BOURSES_PUBLIC = "1";
+  try {
+    // comptes créés par les tests précédents ; jetons signés directement (connexion et inscription sont limitées par IP)
+    const tokenOf = (email) => mod.signToken({ sub: email, v: 0, exp: Date.now() + 60000 });
+    const free = tokenOf("boursier@exemple.cm");
+    const paid = tokenOf("boursier2@exemple.cm");
+    const admin = tokenOf("concepteur@weldon.cm");
+    assert.equal((await call("POST", "/api/admin/grant", { email: "boursier2@exemple.cm", days: 30 }, admin)).status, 200);
+    // liste : jamais de lien, ni pour un abonné (le lien se lit dans la fiche)
+    const raw = await (await call("GET", "/api/bourses?lang=fr", undefined, free)).text();
+    assert.ok(!raw.includes("exemple.org"), "aucun lien dans la liste d'un compte gratuit");
+    assert.ok(!raw.includes("Candidatez tôt") && !raw.includes('"CV"'), "ni conseil ni dossier");
+    // fiche d'un compte gratuit : verrouillée, mais avec de quoi choisir
+    const fr0 = await json(await call("GET", "/api/bourse?id=sci&lang=fr", undefined, free));
+    assert.equal(fr0.status, 200, JSON.stringify(fr0));
+    const f = fr0.bourse;
+    assert.equal(f.verrou, true);
+    assert.equal(f.a_lien, true);
+    assert.equal(f.lien_officiel, null);
+    assert.deepEqual(f.dossier, []);
+    assert.equal(f.conseil, "");
+    assert.deepEqual(f.sources, []);
+    assert.deepEqual(f.conditions.autres, []);
+    assert.equal(f.couverture.detail, "");
+    assert.equal(f.nom, "Bourse sci");
+    assert.equal(f.statut.code, "cloture_proche");
+    const rawFiche = await (await call("GET", "/api/bourse?id=sci&lang=fr", undefined, free)).text();
+    assert.ok(!rawFiche.includes("exemple.org"));
+    // abonné et concepteur : tout
+    for (const tok of [paid, admin]) {
+      const g = (await json(await call("GET", "/api/bourse?id=sci&lang=fr", undefined, tok))).bourse;
+      assert.equal(g.verrou, false, tok === paid ? "abonné" : "concepteur");
+      assert.equal(g.lien_officiel, "https://exemple.org/sci");
+      assert.deepEqual(g.dossier, ["CV"]);
+      assert.equal(g.conseil, "Candidatez tôt");
+    }
+    assert.equal((await call("GET", "/api/bourse?id=nexiste", undefined, free)).status, 404);
+    // conseils : titres publics, texte réservé aux abonnés
+    const cl = await (await call("GET", "/api/conseils", undefined, free)).text();
+    assert.ok(cl.includes("Modèle de lettre") && !cl.includes("secret-modele"));
+    assert.equal((await call("GET", "/api/conseil?id=libre", undefined, free)).status, 200);
+    assert.equal((await call("GET", "/api/conseil?id=modele", undefined, free)).status, 402);
+    assert.ok((await (await call("GET", "/api/conseil?id=modele", undefined, paid)).text()).includes("secret-modele"));
+    assert.equal((await call("GET", "/api/conseil?id=inconnu", undefined, paid)).status, 404);
+    // aperçu gratuit : le concepteur ouvre une fiche à tous
+    assert.equal((await call("POST", "/api/admin/bourse", { id: "lettres", lang: "fr", edition: {}, apercu_gratuit: true }, free)).status, 403);
+    const open = await json(await call("POST", "/api/admin/bourse", { id: "lettres", lang: "fr", edition: { ouverture: day(-5), cloture: day(60), confirme: true }, apercu_gratuit: true, vedette: true }, admin));
+    assert.equal(open.status, 200);
+    const g2 = (await json(await call("GET", "/api/bourse?id=lettres&lang=fr", undefined, free))).bourse;
+    assert.equal(g2.verrou, false);
+    assert.equal(g2.lien_officiel, "https://exemple.org/lettres");
+    assert.equal(g2.vedette, true);
+    // les autres restent verrouillées
+    assert.equal((await json(await call("GET", "/api/bourse?id=tous&lang=fr", undefined, free))).bourse.verrou, true);
   } finally {
     delete process.env.BOURSES_PUBLIC;
   }

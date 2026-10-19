@@ -41,3 +41,11 @@ Une date non confirmée reste marquée « dates à confirmer ». Le concepteur m
 
 ## Ouverture au public
 La section n'est visible que pour le concepteur tant que la variable `BOURSES_PUBLIC` n'est pas à `1`.
+
+## Répertoire issu des guides du concepteur (`content/bourses-guide.json`)
+Généré par `node tools/ingest/bourses-guide.mjs <dossier des .txt> content/bourses-guide.json` à partir des guides Word (extraits en texte). 314 bourses uniques après suppression des doublons ; celles déjà relevées à la main dans `bourses.json` ne sont pas reprises. Tout est `to_verify` : les dates des guides (éditions 2024-2026) passent « expirées » d'elles-mêmes et le concepteur saisit l'édition en cours dans son espace.
+
+Champs en plus du schéma ci-dessus : `origine` (gouvernementale | universitaire | fondation), `vedette` (« À la une »), `apercu_gratuit` (fiche ouverte à tous), `edition.permanente` (candidatures ouvertes en continu), `fr.valeur`, `fr.eligibilite`, `fr.ne_couvre_pas`, `fr.cout_candidature`, `fr.resume_long`. Les textes anglais manquent : l'interface retombe sur le français.
+
+## Accès : ce qui est gratuit, ce qui est verrouillé
+Sans abonnement : nom, organisme, pays, niveau, valeur, type, éligibilité, dates et statut. Verrouillés **côté serveur** (jamais envoyés) : lien officiel, sources, documents à préparer, conseil, détail de couverture, texte long, coût de candidature. Une fiche peut être ouverte à tous (`apercu_gratuit`) depuis l'espace concepteur. `content/alertes-pays.json` : alerte affichée sur toutes les bourses d'un pays (visa étudiant britannique).

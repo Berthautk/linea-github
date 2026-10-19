@@ -19,13 +19,22 @@ export function loadContent(dir) {
   const quiz = fs.existsSync(path.join(dir, "quiz.json")) ? read("quiz.json") : [];
   checkQuiz(quiz);
   const quizById = new Map(quiz.map((q) => [q.id, q]));
-  const bourses = fs.existsSync(path.join(dir, "bourses.json")) ? read("bourses.json") : [];
+  // Deux sources : bourses.json (relevées une à une sur les pages officielles) et bourses-guide.json (guides du concepteur, à vérifier).
+  const bourses = ["bourses.json", "bourses-guide.json"].flatMap((f) => (fs.existsSync(path.join(dir, f)) ? read(f) : []));
   const ids_b = new Set();
   for (const b of bourses) {
     checkBourse(b);
     if (ids_b.has(b.id)) throw new Error(`Bourse en double : ${b.id}`);
     ids_b.add(b.id);
   }
+  // Conseils et modèles (articles) : gratuits ou réservés aux abonnés. Français uniquement pour l'instant.
+  const conseils = fs.existsSync(path.join(dir, "bourses-conseils.json")) ? read("bourses-conseils.json") : [];
+  const cids = new Set();
+  for (const a of conseils) {
+    if (!a.id || cids.has(a.id) || !a.fr?.titre || !Array.isArray(a.fr.sections)) throw new Error(`Conseil invalide ou en double : ${a.id}`);
+    cids.add(a.id);
+  }
+  const alertes = fs.existsSync(path.join(dir, "alertes-pays.json")) ? Object.fromEntries(Object.entries(read("alertes-pays.json")).filter(([k]) => !k.startsWith("_"))) : {};
   const photos = Object.fromEntries(Object.entries(read("photos.json")).filter(([k]) => !k.startsWith("_")));
 
   const ids = new Set();
@@ -47,8 +56,19 @@ export function loadContent(dir) {
     epreuve: (id) => byId.get(id) || null,
     // Banque de questions d'entraînement. Les réponses ne sortent que par la correction (/api/quiz/check).
     // Bourses d'études : texte dans la langue demandée, dates et cycle neutres. Le statut du jour est calculé par l'appelant.
-    bourses: (lang) => bourses.filter((b) => b[lang]).map((b) => localizeBourse(b, lang)),
+    bourses: (lang) =>
+      bourses
+        .filter((b) => b[lang])
+        .map((b) => {
+          const out = localizeBourse(b, lang);
+          // Alerte propre au pays d'accueil (ex. visa étudiant suspendu), en plus de celle de la fiche.
+          const al = (b.pays_accueil || []).map((p) => alertes[p]?.[lang]).filter(Boolean);
+          out.alerte = [out.alerte, ...al].filter(Boolean).join(" ");
+          return out;
+        }),
     bourse: (id) => bourses.find((b) => b.id === id) || null,
+    conseils: () => [...conseils].sort((a, b) => (a.ordre || 99) - (b.ordre || 99)),
+    conseil: (id) => conseils.find((a) => a.id === id) || null,
     quizIds: () => quiz.map((q) => q.id).sort(),
     quizThemes: () => [...new Set(quiz.map((q) => q.theme))],
     quizQuestion: (id) => quizById.get(id) || null,
@@ -161,8 +181,18 @@ export function checkPeriodicite(id, per) {
 
 // Bourse dans une langue : champs neutres + textes de la langue.
 export function localizeBourse(b, lang) {
-  const t = b[lang] || {};
+  // Les bourses issues des guides n'ont que le français : les textes manquants en anglais retombent sur le français.
+  const t = { ...(b.fr || {}), ...Object.fromEntries(Object.entries(b[lang] || {}).filter(([, v]) => v)) };
   return {
+    origine: b.origine || null,
+    vedette: Boolean(b.vedette),
+    apercu_gratuit: Boolean(b.apercu_gratuit),
+    valeur: t.valeur || "",
+    resume_long: t.resume_long || "",
+    ne_couvre_pas: t.ne_couvre_pas || "",
+    eligibilite: t.eligibilite || "",
+    cout_candidature: t.cout_candidature || "",
+    alerte: t.alerte || "",
     id: b.id,
     nom: t.nom,
     organisme: b.organisme,

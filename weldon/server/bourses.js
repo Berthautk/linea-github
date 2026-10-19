@@ -11,6 +11,7 @@ export const BRANCHES = {
 export const DOMAINES = [...BRANCHES.sciences, ...BRANCHES.lettres];
 export const NIVEAUX_BOURSE = ["licence", "master", "doctorat", "postdoc", "autre"];
 export const CYCLES = ["annuelle", "irreguliere", "unique"];
+export const ORIGINES = ["gouvernementale", "universitaire", "fondation"];
 
 const iso = (d) => d.toISOString().slice(0, 10);
 export const today = (now = new Date()) => iso(now);
@@ -29,6 +30,16 @@ export function prochaineOuverture(cycle, now = new Date()) {
   return next ? { annee: y, mois: next } : { annee: y + 1, mois: mois[0] };
 }
 
+// Mois de clôture habituel : la prochaine fois qu'il revient après aujourd'hui (repère probable, jamais une date annoncée).
+export function prochaineCloture(cycle, now = new Date()) {
+  const mois = parseMois(cycle?.cloture_mois);
+  if (!mois.length) return null;
+  const m = now.getUTCMonth() + 1;
+  const y = now.getUTCFullYear();
+  const next = mois.find((x) => x >= m);
+  return next ? { annee: y, mois: next } : { annee: y + 1, mois: mois[0] };
+}
+
 // Statut du jour :
 //  ouverte | cloture_proche (14 jours ou moins) | a_venir (ouverture datée) | expiree (clôture passée) | attendue (dates inconnues, cycle connu) | inconnue
 export function statut(b, now = new Date()) {
@@ -37,15 +48,19 @@ export function statut(b, now = new Date()) {
   const probable = !e.confirme;
   const relance = prochaineOuverture(b.cycle, now);
   if (e.cloture) {
-    if (t > e.cloture) return { code: "expiree", jours: -days(e.cloture, t), cloture: e.cloture, relance, probable };
+    if (t > e.cloture) return { code: "expiree", jours: -days(e.cloture, t), cloture: e.cloture, relance, probable, prochaine_cloture: prochaineCloture(b.cycle, now) };
     if (e.ouverture && t < e.ouverture) return { code: "a_venir", jours: days(t, e.ouverture), ouverture: e.ouverture, cloture: e.cloture, probable };
     const left = days(t, e.cloture);
     return { code: left <= 14 ? "cloture_proche" : "ouverte", jours: left, ouverture: e.ouverture || null, cloture: e.cloture, probable };
   }
   if (e.ouverture && t < e.ouverture) return { code: "a_venir", jours: days(t, e.ouverture), ouverture: e.ouverture, probable };
+  // Candidatures ouvertes en permanence (attribution à l'admission) : ouverte, sans échéance
+  if (e.permanente) return { code: "ouverte", jours: null, cloture: null, sans_cloture: true, permanente: true, probable: true };
   // Ouverte sans date de clôture publiée : on le dit, sans inventer d'échéance
   if (e.ouverture) return { code: "ouverte", jours: null, ouverture: e.ouverture, cloture: null, sans_cloture: true, probable };
   if (relance) return { code: "attendue", relance, probable: true };
+  const pc = prochaineCloture(b.cycle, now);
+  if (pc) return { code: "attendue", relance: null, prochaine_cloture: pc, probable: true };
   return { code: "inconnue", probable: true };
 }
 
@@ -63,13 +78,14 @@ export function trier(list) {
 }
 
 // Filtre : branche, filière, niveau, pays d'accueil, couverture.
-export function filtrer(list, { branche, domaine, niveau, pays, couverture } = {}) {
+export function filtrer(list, { branche, domaine, niveau, pays, couverture, origine } = {}) {
   return list.filter((b) => {
     if (branche && !branchesOf(b).includes(branche)) return false;
     if (domaine && !(b.domaines?.includes("tous") || !b.domaines?.length || b.domaines.includes(domaine))) return false;
     if (niveau && !b.niveaux?.includes(niveau)) return false;
     if (pays && !b.pays_accueil?.includes(pays)) return false;
     if (couverture && b.couverture?.niveau !== couverture) return false;
+    if (origine && b.origine !== origine) return false;
     return true;
   });
 }
@@ -80,6 +96,8 @@ export function checkBourse(b) {
     throw new Error(`Bourse ${b.id} : ${m}`);
   };
   if (!b.id || !b.fr?.nom || !b.en?.nom) bad("identifiant et noms FR/EN requis");
+  if (b.origine && !ORIGINES.includes(b.origine)) bad(`origine inconnue (${b.origine})`);
+  if (b.couverture_niveau && !["complete", "partielle", "variable"].includes(b.couverture_niveau)) bad("couverture_niveau invalide");
   if (!Array.isArray(b.niveaux) || !b.niveaux.length || !b.niveaux.every((n) => NIVEAUX_BOURSE.includes(n))) bad("niveaux invalides");
   if (!Array.isArray(b.domaines) || !b.domaines.length || !b.domaines.every((d) => d === "tous" || DOMAINES.includes(d))) bad("domaines invalides");
   if (b.cycle && !CYCLES.includes(b.cycle.type)) bad(`cycle inconnu (${b.cycle.type})`);

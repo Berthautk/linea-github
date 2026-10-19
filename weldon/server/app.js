@@ -518,17 +518,67 @@ async function boursesLive(lang) {
       if (o.lien_officiel) b.lien_officiel = o.lien_officiel;
       if (o.status) b.status = o.status;
       if (o.last_verified) b.last_verified = o.last_verified;
+      if (typeof o.vedette === "boolean") b.vedette = o.vedette;
+      if (typeof o.apercu_gratuit === "boolean") b.apercu_gratuit = o.apercu_gratuit;
     }
     return { ...b, statut: statutBourse(b) };
   });
   return trierBourses(list);
 }
 
+// Ce que voit un compte sans abonnement : de quoi choisir (nom, pays, niveau, valeur, dates, conditions) mais ni le lien
+// officiel ni le dossier ni les conseils. Les champs sont retirés ICI, côté serveur : le navigateur ne les reçoit jamais.
+const LOCKED_B = ["lien_officiel", "dossier", "conseil", "sources", "resume_long", "ne_couvre_pas", "cout_candidature"];
+const bourseOpen = (u, b) => isPremium(u) || b.apercu_gratuit;
+function bourseView(u, b, { full }) {
+  const open = bourseOpen(u, b);
+  const v = { ...b, verrou: !open, a_lien: Boolean(b.lien_officiel) };
+  if (!open) {
+    for (const k of LOCKED_B) v[k] = Array.isArray(b[k]) ? [] : k === "lien_officiel" ? null : "";
+    v.couverture = { ...b.couverture, detail: "" };
+    v.conditions = { ...b.conditions, autres: [] };
+  }
+  if (!full) {
+    // La liste reste légère : le détail se charge à l'ouverture de la fiche.
+    for (const k of ["resume_long", "dossier", "conseil", "sources", "ne_couvre_pas", "cout_candidature", "eligibilite"]) delete v[k];
+    if (!isAdmin(u)) delete v.lien_officiel; // le concepteur garde le lien en liste pour son éditeur
+    v.couverture = { niveau: b.couverture.niveau };
+    v.conditions = { age_max: b.conditions.age_max };
+    v.resume = (b.resume || "").slice(0, 200);
+  }
+  return v;
+}
+
 route("GET", "/api/bourses", async (req, _p, url) => {
   const u = await currentUser(req);
   if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
   const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
-  return { today: dayStr(), bourses: await boursesLive(lang) };
+  return { today: dayStr(), bourses: (await boursesLive(lang)).map((b) => bourseView(u, b, { full: false })) };
+});
+
+route("GET", "/api/bourse", async (req, _p, url) => {
+  const u = await currentUser(req);
+  if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
+  const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
+  const b = (await boursesLive(lang)).find((x) => x.id === str(url.searchParams.get("id"), 120));
+  if (!b) throw httpError(404, "Bourse introuvable.");
+  return { bourse: bourseView(u, b, { full: true }) };
+});
+
+// Conseils et modèles : le titre et le résumé sont publics, le texte des articles « abonnés » reste sur le serveur.
+route("GET", "/api/conseils", async (req) => {
+  const u = await currentUser(req);
+  if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
+  return { conseils: content.conseils().map((a) => ({ id: a.id, categorie: a.categorie, gratuit: Boolean(a.gratuit), branche: a.branche || null, titre: a.fr.titre, resume: a.fr.resume || "" })) };
+});
+
+route("GET", "/api/conseil", async (req, _p, url) => {
+  const u = await currentUser(req);
+  if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
+  const a = content.conseil(str(url.searchParams.get("id"), 120));
+  if (!a) throw httpError(404, "Article introuvable.");
+  if (!a.gratuit && !isPremium(u)) throw httpError(402, "Cet article est réservé aux abonnés.", { code: "locked" });
+  return { conseil: { id: a.id, titre: a.fr.titre, sections: a.fr.sections } };
 });
 
 route("POST", "/api/follow-bourse", async (req) => {
@@ -569,11 +619,13 @@ route("POST", "/api/admin/bourse", async (req) => {
     throw httpError(400, err.message);
   }
   const over = { ...((await store.getSetting("bourses")) || {}) };
-  over[id] = { edition, lien_officiel: lien || undefined, status: merged.status, last_verified: dayStr(), edited_by: admin.email };
+  over[id] = { ...(over[id] || {}), edition, lien_officiel: lien || undefined, status: merged.status, last_verified: dayStr(), edited_by: admin.email };
+  if (typeof b.vedette === "boolean") over[id].vedette = b.vedette;
+  if (typeof b.apercu_gratuit === "boolean") over[id].apercu_gratuit = b.apercu_gratuit;
   await store.setSetting("bourses", over);
   boursesCache = { at: Date.now(), map: over };
   const lang = LANGS.includes(b.lang) ? b.lang : "fr";
-  return { id, bourse: (await boursesLive(lang)).find((x) => x.id === id) };
+  return { id, bourse: bourseView(admin, (await boursesLive(lang)).find((x) => x.id === id), { full: true }) };
 });
 
 // Suivre un concours : 2 gratuitement, sans limite pour les abonnés.

@@ -509,6 +509,9 @@
     report: (b) => http("/api/report", { method: "POST", body: b }),
     annonces: () => http("/api/annonces"),
     bourses: (l) => http("/api/bourses?lang=" + l),
+    bourse: (id, l) => http("/api/bourse?id=" + encodeURIComponent(id) + "&lang=" + l),
+    conseils: (l) => http("/api/conseils?lang=" + l),
+    conseil: (id, l) => http("/api/conseil?id=" + encodeURIComponent(id) + "&lang=" + l),
     followBourse: (id, on) => http("/api/follow-bourse", { method: "POST", body: { id, on } }),
     adminSaveBourse: (b) => http("/api/admin/bourse", { method: "POST", body: b }),
     plan: () => http("/api/plan"),
@@ -583,6 +586,9 @@
       report: async () => ({ ok: true }),
       annonces: async () => [],
       bourses: async () => fail("Les bourses ne sont pas disponibles dans la démo.", "demo", 400),
+      bourse: async () => fail("Non disponible dans la démo.", "demo", 400),
+      conseils: async () => fail("Non disponible dans la démo.", "demo", 400),
+      conseil: async () => fail("Non disponible dans la démo.", "demo", 400),
       followBourse: async () => fail("Non disponible dans la démo.", "demo", 400),
       adminSaveBourse: async () => ({ ok: true }),
       plan: async () => ({ plan: null }),
@@ -665,6 +671,7 @@
     bhome: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5M22 9v6"/></svg>',
     bfind: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
     bcal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+    bguide: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 8h6M9 12h6"/></svg>',
     bfollow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>',
     quiz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.6 2.2c-.8.4-1.2 1-1.2 1.8M12 17h.01"/></svg>',
     epreuves: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>',
@@ -1457,21 +1464,23 @@
   const fi = () => FI[lang()];
 
   // ---------- Bourses d'études ----------
-  const BTABS = ["bhome", "bfind", "bcal", "bfollow"];
+  const BTABS = ["bhome", "bfind", "bguide", "bcal", "bfollow"];
   const BR = {
     fr: {
       space: { concours: "Concours", bourses: "Bourses" },
-      tabs: { bhome: "Accueil", bfind: "Trouver", bcal: "Échéances", bfollow: "Suivi" },
-      tabsLong: { bhome: "Accueil des bourses", bfind: "Trouver une bourse", bcal: "Calendrier des échéances", bfollow: "Mes bourses suivies" },
+      tabs: { bhome: "Accueil", bfind: "Explorer", bguide: "Conseils", bcal: "Échéances", bfollow: "Suivi" },
+      tabsLong: { bhome: "Accueil des bourses", bfind: "Explorer les bourses", bguide: "Conseils et modèles", bcal: "Calendrier des échéances", bfollow: "Mes bourses suivies" },
       title: "Bourses d'études",
       sub: "Trouvez une bourse selon votre filière et votre niveau, et ne ratez plus une échéance.",
       status: { cloture_proche: "Clôture proche", ouverte: "Ouverte", a_venir: "Bientôt ouverte", attendue: "Relance attendue", expiree: "Expirée", inconnue: "Dates non annoncées" },
       line: {
         cloture_proche: (d, date) => (d === 0 ? `Clôture aujourd'hui · ${date}` : `Clôture dans ${d} jour${d > 1 ? "s" : ""} · ${date}`),
         ouverte: (d, date) => (d == null ? `Ouverte depuis le ${date}. Date de clôture à vérifier sur le site officiel.` : `Clôture le ${date} (dans ${d} jours)`),
+        permanente: "Candidatures ouvertes en continu (souvent attribuée à l'admission).",
         a_venir: (d, date) => `Ouvre le ${date} (dans ${d} jours)`,
         attendue: (mois) => `Ouverture habituelle : ${mois}. Pas encore annoncée.`,
-        expiree: (date, relance) => `Expirée le ${date}.${relance ? ` Relance probable : ${relance} (à confirmer).` : ""}`,
+        habituelle: (mois) => `Clôture habituelle : ${mois}. Édition en cours non annoncée.`,
+        expiree: (date, relance, habituelle) => `Expirée le ${date}.${relance ? ` Relance probable : ${relance} (à confirmer).` : habituelle ? ` Clôture habituelle : ${habituelle} (prochaine édition à confirmer).` : ""}`,
         inconnue: "Les dates ne sont pas annoncées.",
       },
       toConfirm: "dates à confirmer",
@@ -1488,6 +1497,49 @@
       allLevels: "Tous niveaux",
       coverage: { complete: "Bourse complète", partielle: "Bourse partielle", variable: "Montant variable" },
       cameroon: { oui: "Ouverte aux Camerounais", non_precise: "Éligibilité du Cameroun à confirmer" },
+      une: "À la une",
+      uneSub: "Les programmes les plus recherchés par les étudiants africains.",
+      byType: "Par type de bourse",
+      byTypeSub: "Choisissez le type de financement qui vous convient.",
+      types: { complete: "Entièrement financées", gouvernementale: "Gouvernementales", universitaire: "Universitaires", fondation: "Fondations et organisations" },
+      typeSub: { complete: "Scolarité, vie courante, souvent le billet d'avion", gouvernementale: "Chevening, DAAD, Fulbright, Eiffel…", universitaire: "Offertes par les universités à l'admission", fondation: "Mastercard, Aga Khan, Rotary…" },
+      origins: { gouvernementale: "Gouvernementale", universitaire: "Universitaire", fondation: "Fondation / organisation" },
+      typeLabel: "Type de bourse",
+      allTypes: "Tous types",
+      byCountry: "Par pays d'accueil",
+      countryLabel: "Pays d'accueil",
+      allCountries: "Tous pays",
+      stat: (n, c) => `${n} bourses répertoriées dans ${c} pays`,
+      more: (n) => `Voir ${n} bourses de plus`,
+      usualClosing: "Clôture habituelle",
+      valueLabel: "Valeur",
+      eligLabel: "Qui peut candidater",
+      costLabel: "Coût de candidature",
+      notCovered: "Non couvert",
+      permanent: "Candidatures ouvertes en continu",
+      lock: {
+        title: "Lien officiel, dossier et conseils : réservés aux abonnés",
+        sub: "Vous voyez déjà de quoi choisir : valeur, niveau, filières, conditions et dates. L'abonnement ouvre le lien officiel, la liste des documents à préparer, les conseils et le suivi sans limite.",
+        cta: "Débloquer avec l'abonnement",
+        pill: "Abonnés",
+        linkLocked: "Lien officiel verrouillé",
+        free: "Aperçu gratuit",
+        block: "Section réservée aux abonnés",
+        honest: "Vous payez l'accès à une information classée, vérifiée et tenue à jour. Jamais une place : personne ne peut vous garantir une bourse.",
+      },
+      alert: "Alerte",
+      unlockBanner: "Voir les liens officiels et les dossiers",
+      unlockBannerSub: "Toutes les bourses sont visibles gratuitement. Les liens et les dossiers sont réservés aux abonnés.",
+      guideTitle: "Conseils et modèles",
+      guideSub: "Comprendre les bourses, préparer un dossier solide et éviter les erreurs.",
+      guideEmpty: "Les conseils arrivent bientôt.",
+      guideCats: { comprendre: "Comprendre", dossier: "Le dossier", langues: "Langues", visa: "Visa", apres: "Après la sélection", filieres: "Par filière" },
+      guideFree: "Gratuit",
+      guideLocked: "Abonnés",
+      guideLockedBody: "Cet article est réservé aux abonnés.",
+      guideBack: "Retour aux conseils",
+      adminVedette: "Mettre à la une",
+      adminPreview: "Aperçu gratuit (fiche ouverte à tous)",
       results: (n) => `${n} bourse${n > 1 ? "s" : ""}`,
       noResults: "Aucune bourse pour ce choix. Essayez « Tous niveaux » ou une autre filière.",
       expired: "Expirées : relance à surveiller",
@@ -1528,7 +1580,7 @@
       lastChecked: (d) => `Dernière vérification : ${d}`,
       unverified: "Informations à vérifier : confirmez toujours les dates et les conditions sur le site officiel.",
       scamTitle: "Éviter les arnaques",
-      scam: ["Aucune bourse sérieuse ne demande de payer pour candidater ou pour « réserver » une place.", "Candidatez uniquement depuis le site officiel de l'organisme, jamais depuis un lien reçu par message.", "Weldon n'est affilié à aucun organisme de bourses : vérifiez toujours les dates sur le site officiel."],
+      scam: ["Aucune bourse sérieuse ne demande de payer pour candidater ou pour « réserver » une place. Méfiez-vous de quiconque promet une bourse « garantie » contre de l'argent.", "Candidatez uniquement depuis le site officiel de l'organisme, jamais depuis un lien reçu par message.", "Weldon n'est affilié à aucun organisme de bourses : vérifiez toujours les dates sur le site officiel."],
       calTitle: "Calendrier des échéances",
       calSub: "Les barres montrent la période d'ouverture. Elles sont probables tant que les dates de l'édition ne sont pas confirmées.",
       calOpen: "Ouverture",
@@ -1545,17 +1597,19 @@
     },
     en: {
       space: { concours: "Competitions", bourses: "Scholarships" },
-      tabs: { bhome: "Home", bfind: "Find", bcal: "Deadlines", bfollow: "Following" },
-      tabsLong: { bhome: "Scholarships home", bfind: "Find a scholarship", bcal: "Deadline calendar", bfollow: "Scholarships I follow" },
+      tabs: { bhome: "Home", bfind: "Explore", bguide: "Advice", bcal: "Deadlines", bfollow: "Following" },
+      tabsLong: { bhome: "Scholarships home", bfind: "Explore scholarships", bguide: "Advice and templates", bcal: "Deadline calendar", bfollow: "Scholarships I follow" },
       title: "Scholarships",
       sub: "Find a scholarship for your field and level, and never miss a deadline again.",
       status: { cloture_proche: "Closing soon", ouverte: "Open", a_venir: "Opening soon", attendue: "Reopening expected", expiree: "Expired", inconnue: "Dates not announced" },
       line: {
         cloture_proche: (d, date) => (d === 0 ? `Closes today · ${date}` : `Closes in ${d} day${d > 1 ? "s" : ""} · ${date}`),
         ouverte: (d, date) => (d == null ? `Open since ${date}. Check the closing date on the official website.` : `Closes on ${date} (in ${d} days)`),
+        permanente: "Applications open all year (often awarded at admission).",
         a_venir: (d, date) => `Opens on ${date} (in ${d} days)`,
         attendue: (mois) => `Usually opens: ${mois}. Not announced yet.`,
-        expiree: (date, relance) => `Expired on ${date}.${relance ? ` Probable reopening: ${relance} (to be confirmed).` : ""}`,
+        habituelle: (mois) => `Usual closing: ${mois}. Current edition not announced.`,
+        expiree: (date, relance, habituelle) => `Expired on ${date}.${relance ? ` Probable reopening: ${relance} (to be confirmed).` : habituelle ? ` Usual closing: ${habituelle} (next edition to be confirmed).` : ""}`,
         inconnue: "Dates are not announced.",
       },
       toConfirm: "dates to be confirmed",
@@ -1572,6 +1626,49 @@
       allLevels: "All levels",
       coverage: { complete: "Full scholarship", partielle: "Partial scholarship", variable: "Amount varies" },
       cameroon: { oui: "Open to Cameroonians", non_precise: "Cameroon eligibility to be confirmed" },
+      une: "Featured",
+      uneSub: "The programmes most sought after by African students.",
+      byType: "By type of scholarship",
+      byTypeSub: "Pick the kind of funding that suits you.",
+      types: { complete: "Fully funded", gouvernementale: "Government", universitaire: "University", fondation: "Foundations and organisations" },
+      typeSub: { complete: "Tuition, living costs, often the flight", gouvernementale: "Chevening, DAAD, Fulbright, Eiffel…", universitaire: "Offered by universities at admission", fondation: "Mastercard, Aga Khan, Rotary…" },
+      origins: { gouvernementale: "Government", universitaire: "University", fondation: "Foundation / organisation" },
+      typeLabel: "Type of scholarship",
+      allTypes: "All types",
+      byCountry: "By host country",
+      countryLabel: "Host country",
+      allCountries: "All countries",
+      stat: (n, c) => `${n} scholarships listed in ${c} countries`,
+      more: (n) => `Show ${n} more`,
+      usualClosing: "Usual closing",
+      valueLabel: "Value",
+      eligLabel: "Who can apply",
+      costLabel: "Application cost",
+      notCovered: "Not covered",
+      permanent: "Applications open all year",
+      lock: {
+        title: "Official link, application file and advice: subscribers only",
+        sub: "You can already see enough to choose: value, level, subjects, requirements and dates. A subscription opens the official link, the list of documents to prepare, the advice and unlimited following.",
+        cta: "Unlock with a subscription",
+        pill: "Subscribers",
+        linkLocked: "Official link locked",
+        free: "Free preview",
+        block: "Section for subscribers",
+        honest: "You pay for access to organised, checked and up-to-date information. Never for a place: nobody can guarantee you a scholarship.",
+      },
+      alert: "Alert",
+      unlockBanner: "See official links and application files",
+      unlockBannerSub: "Every scholarship is visible for free. Links and application files are for subscribers.",
+      guideTitle: "Advice and templates",
+      guideSub: "Understand scholarships, build a strong application and avoid mistakes.",
+      guideEmpty: "Advice is coming soon.",
+      guideCats: { comprendre: "Understand", dossier: "The application", langues: "Languages", visa: "Visa", apres: "After selection", filieres: "By field" },
+      guideFree: "Free",
+      guideLocked: "Subscribers",
+      guideLockedBody: "This article is for subscribers.",
+      guideBack: "Back to advice",
+      adminVedette: "Feature on home",
+      adminPreview: "Free preview (open to everyone)",
       results: (n) => `${n} scholarship${n > 1 ? "s" : ""}`,
       noResults: "No scholarship for this choice. Try “All levels” or another subject.",
       expired: "Expired: watch for the reopening",
@@ -1612,7 +1709,7 @@
       lastChecked: (d) => `Last checked: ${d}`,
       unverified: "To be checked: always confirm dates and requirements on the official website.",
       scamTitle: "Avoiding scams",
-      scam: ["No serious scholarship asks you to pay to apply or to “reserve” a place.", "Apply only from the organisation's official website, never from a link received in a message.", "Weldon is not affiliated with any scholarship provider: always check the dates on the official website."],
+      scam: ["No serious scholarship asks you to pay to apply or to “reserve” a place. Beware of anyone promising a “guaranteed” scholarship for money.", "Apply only from the organisation's official website, never from a link received in a message.", "Weldon is not affiliated with any scholarship provider: always check the dates on the official website."],
       calTitle: "Deadline calendar",
       calSub: "Bars show the opening period. They are probable until the edition's dates are confirmed.",
       calOpen: "Open",
@@ -1681,6 +1778,8 @@
       <div class="field"><label for="bf-open">${B.opening}</label><input id="bf-open" name="ouverture" type="date" value="${esc(e.ouverture || "")}"></div>
       <div class="field"><label for="bf-close">${B.closing}</label><input id="bf-close" name="cloture" type="date" value="${esc(e.cloture || "")}"></div>
       <label class="full"><input type="checkbox" name="confirme" ${e.confirme ? "checked" : ""}> ${B.confirmed}</label>
+      <label class="full"><input type="checkbox" name="vedette" ${b?.vedette ? "checked" : ""}> ${B.adminVedette}</label>
+      <label class="full"><input type="checkbox" name="apercu_gratuit" ${b?.apercu_gratuit ? "checked" : ""}> ${B.adminPreview}</label>
       <label class="full"><input type="checkbox" name="verified" ${b?.status === "verified" ? "checked" : ""}> <b>${B.verified}</b></label>`;
   }
 
@@ -1694,6 +1793,8 @@
         edition: { libelle: fd.get("libelle"), ouverture: fd.get("ouverture"), cloture: fd.get("cloture"), confirme: fd.get("confirme") === "on" },
         lien_officiel: fd.get("lien_officiel"),
         verified: fd.get("verified") === "on",
+        vedette: fd.get("vedette") === "on",
+        apercu_gratuit: fd.get("apercu_gratuit") === "on",
       });
     } catch (e) {
       err.textContent = e.message;
@@ -2492,17 +2593,24 @@
 
   function filterB(list, f) {
     const all = (b) => b.domaines.includes("tous") || !b.domaines.length;
-    return list.filter((b) => (!f.branche || b.branches.includes(f.branche)) && (!f.domaine || all(b) || b.domaines.includes(f.domaine)) && (!f.niveau || b.niveaux.includes(f.niveau)));
+    return list.filter(
+      (b) =>
+        (!f.branche || b.branches.includes(f.branche)) &&
+        (!f.domaine || all(b) || b.domaines.includes(f.domaine)) &&
+        (!f.niveau || b.niveaux.includes(f.niveau)) &&
+        (!f.pays || b.pays_accueil.includes(f.pays)) &&
+        (!f.type || (f.type === "complete" ? b.couverture.niveau === "complete" : b.origine === f.type))
+    );
   }
 
   function statusLine(b) {
     const L = br().line;
     const s = b.statut;
     if (s.code === "cloture_proche") return L.cloture_proche(s.jours, bFmt(s.cloture));
-    if (s.code === "ouverte") return L.ouverte(s.jours, bFmt(s.cloture || s.ouverture));
+    if (s.code === "ouverte") return s.permanente ? L.permanente : L.ouverte(s.jours, bFmt(s.cloture || s.ouverture));
     if (s.code === "a_venir") return L.a_venir(s.jours, bFmt(s.ouverture));
-    if (s.code === "attendue") return L.attendue(b.cycle?.ouverture_mois || "");
-    if (s.code === "expiree") return L.expiree(bFmt(s.cloture), bRelance(s.relance));
+    if (s.code === "attendue") return s.relance ? L.attendue(b.cycle?.ouverture_mois || "") : L.habituelle(bRelance(s.prochaine_cloture));
+    if (s.code === "expiree") return L.expiree(bFmt(s.cloture), bRelance(s.relance), bRelance(s.prochaine_cloture));
     return L.inconnue;
   }
   const statusTag = (b) => {
@@ -2512,14 +2620,16 @@
 
   function cardB(b) {
     const B = br();
-    const dated = ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) && b.statut.probable;
+    const dated = ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) && b.statut.probable && !b.statut.permanente;
+    const where = b.pays_accueil.filter((x) => !(b.organisme || "").includes(x));
     return `<article class="card bcard ${b.statut.code === "expiree" ? "past" : ""}">
       <button type="button" class="bcard-main" data-open-b="${esc(b.id)}">
-        <span class="row-actions" style="justify-content:flex-start;gap:6px">${statusTag(b)}<span class="tag tag-line">${B.coverage[b.couverture.niveau]}</span>${dated ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}</span>
+        <span class="row-actions" style="justify-content:flex-start;gap:6px">${statusTag(b)}<span class="tag tag-line">${B.coverage[b.couverture.niveau]}</span>${dated ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}${b.alerte ? `<span class="tag tag-sun">${I.info} ${B.alert}</span>` : ""}</span>
         <b>${esc(b.nom)}</b>
-        <span class="small muted">${esc(b.organisme)}${b.pays_accueil.filter((x) => !b.organisme.includes(x)).length ? " · " + esc(b.pays_accueil.filter((x) => !b.organisme.includes(x)).join(", ")) : ""}</span>
+        <span class="small muted">${esc(b.organisme || "")}${where.length ? " · " + esc(where.join(", ")) : ""}</span>
+        ${b.valeur ? `<span class="small bvalue">${esc(b.valeur.length > 110 ? b.valeur.slice(0, 108) + "…" : b.valeur)}</span>` : ""}
         <span class="small">${esc(statusLine(b))}</span>
-        <span class="chips-inline">${b.niveaux.map((x) => `<span class="tag tag-line">${esc(B.levels[x])}</span>`).join("")}</span>
+        <span class="chips-inline">${b.niveaux.map((x) => `<span class="tag tag-line">${esc(B.levels[x])}</span>`).join("")}${b.verrou && b.a_lien ? `<span class="lock-pill">${I.lock}${B.lock.pill}</span>` : ""}${!b.verrou && b.apercu_gratuit && !premium() ? `<span class="tag tag-green">${B.lock.free}</span>` : ""}</span>
       </button>
       <button type="button" class="star ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}" aria-label="${isBFollowed(b.id) ? B.unfollow : B.follow}: ${esc(b.nom)}">${isBFollowed(b.id) ? "★" : "☆"}</button>
     </article>`;
@@ -2558,9 +2668,17 @@
     }
     if (state.bFicheId) return viewBFiche(state.bFicheId);
     if (state.tab === "bfind") return viewBFind();
+    if (state.tab === "bguide") return viewBGuide();
     if (state.tab === "bcal") return viewBCal();
     if (state.tab === "bfollow") return viewBFollow();
     return viewBHome();
+  }
+
+  // Bandeau « abonnez-vous » : discret, jamais bloquant.
+  function bUnlockBanner() {
+    const B = br();
+    if (premium()) return "";
+    return `<section class="card unlock-banner"><div>${I.lock}<span><b>${B.unlockBanner}</b><span class="small muted">${B.unlockBannerSub}</span></span></div><button type="button" class="btn btn-sun" data-bunlock>${B.lock.cta}</button></section>`;
   }
 
   function viewBHome() {
@@ -2573,18 +2691,32 @@
     const closing = all.filter((b) => b.statut.code === "cloture_proche" || (b.statut.code === "ouverte" && b.statut.jours != null && b.statut.jours <= 45)).slice(0, 6);
     const shown = new Set(closing.map((b) => b.id));
     const opened = all.filter((b) => b.statut.code === "ouverte" && !shown.has(b.id)).slice(0, 6);
-    const soon = all.filter((b) => b.statut.code === "a_venir" || b.statut.code === "attendue").slice(0, 4);
-    const expired = all.filter((b) => b.statut.code === "expiree").slice(0, 4);
+    const soon = all.filter((b) => b.statut.code === "a_venir").slice(0, 4);
+    const countries = [...new Set(all.flatMap((b) => b.pays_accueil))].filter((c) => c !== "Plusieurs pays");
+    const une = all.filter((b) => b.vedette).sort((a, c) => (a.statut.code === "expiree") - (c.statut.code === "expiree")).slice(0, 10);
     const block = (title, sub, list) => (list.length ? `<section class="orient-group"><h2>${title}</h2>${sub ? `<p class="small muted">${sub}</p>` : ""}<div class="results">${list.map(cardB).join("")}</div></section>` : "");
+    const branchCard = (k) => `<button type="button" class="section-card" data-bbranche="${k}"><span class="section-flag">${k === "sciences" ? "Sc" : "Ar"}</span><span><b>${esc(B.branches[k])}</b><span class="small muted">${esc(B.branchSub[k])}</span></span>${I.chevron}</button>`;
+    const typeTile = (k) => {
+      const n = filterB(all, { type: k }).length;
+      return `<button type="button" class="tile" data-btype="${k}"><b>${esc(B.types[k])}</b><span class="small muted">${esc(B.typeSub[k])}</span><span class="tile-n">${n}</span></button>`;
+    };
     return `
-      <div class="section-head"><div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><p class="muted small">${B.sub}</p></div>
+      <div class="section-head"><div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><p class="muted small">${B.stat(all.length, countries.length)}</p></div>
       ${tickerHtml(all)}
-      <section class="card orient-cta"><div><h2>${B.findCta}</h2><p class="muted">${B.chooseBranchSub}</p></div><button type="button" class="btn btn-primary" data-tab="bfind">${B.findCta}</button></section>
+      <section class="card"><h2>${B.chooseBranch}</h2><p class="muted small">${B.chooseBranchSub}</p>
+        <div class="branch-pick">${branchCard("sciences")}${branchCard("lettres")}</div></section>
+      ${bUnlockBanner()}
+      ${une.length ? `<section class="orient-group"><h2>${B.une}</h2><p class="small muted">${B.uneSub}</p><div class="hscroll">${une.map(cardB).join("")}</div></section>` : ""}
+      <section class="orient-group"><h2>${B.byType}</h2><p class="small muted">${B.byTypeSub}</p><div class="tiles">${["complete", "gouvernementale", "universitaire", "fondation"].map(typeTile).join("")}</div></section>
+      <section class="orient-group"><h2>${B.byCountry}</h2><div class="chips" role="group">${countries
+        .map((c) => [c, all.filter((b) => b.pays_accueil.includes(c)).length])
+        .sort((a, c) => c[1] - a[1])
+        .map(([c, n]) => `<button type="button" class="chip" data-bpays-go="${esc(c)}">${esc(c)} <span class="muted">${n}</span></button>`)
+        .join("")}</div></section>
       ${block(B.forYou, B.forYouSub, mineList)}
       ${block(B.closingSoon, "", closing)}
       ${block(B.opened, "", opened)}
       ${block(B.soon, "", soon)}
-      ${block(B.expired, "", expired)}
       ${bScamCard()}`;
   }
 
@@ -2598,17 +2730,26 @@
     }
     const domains = f.branche ? BRANCH_DOMAINS[f.branche] : Object.values(BRANCH_DOMAINS).flat();
     const chip = (attr, val, label, on) => `<button type="button" class="chip" data-${attr}="${esc(val)}" aria-pressed="${on}">${esc(label)}</button>`;
-    const list = filterB(state.bourses, f);
+    const flt = { ...f, type: state.bf.type || "", pays: state.bf.pays || "" };
+    const list = filterB(state.bourses, flt);
     const active = list.filter((b) => b.statut.code !== "expiree");
     const expired = list.filter((b) => b.statut.code === "expiree");
+    const limit = state.bf.n || 30;
+    const countries = [...new Set(state.bourses.flatMap((b) => b.pays_accueil))].sort((a, c) => state.bourses.filter((b) => b.pays_accueil.includes(c)).length < state.bourses.filter((b) => b.pays_accueil.includes(a)).length ? 1 : -1);
+    const page = (arr) => arr.slice(0, limit);
+    const rest = Math.max(active.length - limit, 0);
     return `
       <div class="row-actions"><div><span class="eyebrow">${t().section}</span><h1>${f.branche ? B.branches[f.branche] : B.allBranches}</h1></div>
         <button type="button" class="btn btn-ghost btn-small" data-bchange>${B.changeBranch}</button></div>
-      <div class="chips" role="group">${chip("bdomaine", "", B.allDomains, !f.domaine)}${domains.map((d) => chip("bdomaine", d, B.domains[d], f.domaine === d)).join("")}</div>
-      <div class="chips" role="group">${chip("bniveau", "", B.allLevels, !f.niveau)}${["licence", "master", "doctorat", "postdoc"].map((l) => chip("bniveau", l, B.levels[l], f.niveau === l)).join("")}</div>
+      <div class="chips" role="group" aria-label="${B.cond.domains}">${chip("bdomaine", "", B.allDomains, !f.domaine)}${domains.map((d) => chip("bdomaine", d, B.domains[d], f.domaine === d)).join("")}</div>
+      <div class="chips" role="group" aria-label="${B.cond.levels}">${chip("bniveau", "", B.allLevels, !f.niveau)}${["licence", "master", "doctorat", "postdoc"].map((l) => chip("bniveau", l, B.levels[l], f.niveau === l)).join("")}</div>
+      <div class="chips" role="group" aria-label="${B.typeLabel}">${chip("btype", "", B.allTypes, !flt.type)}${["complete", "gouvernementale", "universitaire", "fondation"].map((k) => chip("btype", k, B.types[k], flt.type === k)).join("")}</div>
+      <div class="chips" role="group" aria-label="${B.countryLabel}">${chip("bpays", "", B.allCountries, !flt.pays)}${countries.map((c) => chip("bpays", c, c, flt.pays === c)).join("")}</div>
       <p class="small muted">${B.results(list.length)}</p>
-      ${active.length ? `<div class="results">${active.map(cardB).join("")}</div>` : `<div class="notice">${I.info}<span>${B.noResults}</span></div>`}
-      ${expired.length ? `<details class="fold"><summary><b>${B.expired}</b> <span class="muted">${expired.length}</span></summary><div class="results">${expired.map(cardB).join("")}</div></details>` : ""}
+      ${active.length ? `<div class="results">${page(active).map(cardB).join("")}</div>` : `<div class="notice">${I.info}<span>${B.noResults}</span></div>`}
+      ${rest ? `<button type="button" class="btn btn-ghost" data-bmore>${B.more(rest)}</button>` : ""}
+      ${expired.length ? `<details class="fold"><summary><b>${B.expired}</b> <span class="muted">${expired.length}</span></summary><div class="results">${expired.slice(0, 60).map(cardB).join("")}</div></details>` : ""}
+      ${bUnlockBanner()}
       ${bScamCard()}`;
   }
 
@@ -2627,6 +2768,7 @@
     const o = b.cycle?.mois?.ouverture || [];
     const c = b.cycle?.mois?.cloture || [];
     if (o.length) return { months: span(o[0], (c.length ? c[c.length - 1] : o[o.length - 1])), probable: true };
+    if (c.length) return { months: [c[c.length - 1]], probable: true }; // seul le mois de clôture habituel est connu
     if (e.ouverture && e.cloture) return { months: span(Number(e.ouverture.slice(5, 7)), Number(e.cloture.slice(5, 7))), probable: true };
     return null;
   }
@@ -2636,6 +2778,8 @@
     const C = cal();
     const month = new Date().getMonth() + 1;
     const rows = state.bourses
+      .filter((b) => b.statut.code !== "expiree" || isBFollowed(b.id) || b.vedette) // 300+ lignes illisibles : l'actif, le suivi et la une
+      .slice(0, 120)
       .map((b) => ({ b, w: windowMonths(b) }))
       .filter((x) => x.w)
       .map(({ b, w }) => {
@@ -2670,43 +2814,128 @@
       ${state.config.whatsapp_channel ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_channel)}" target="_blank" rel="noopener noreferrer">${cal().whatsapp}</a>` : ""}`;
   }
 
+  // Fiche détaillée : la liste est légère, le détail (et ce qui est verrouillé) vient du serveur à l'ouverture.
+  async function loadBDetail(id) {
+    state.bDetail = state.bDetail || {};
+    if (state.bDetail[id] || state.bDetailLoading === id) return;
+    state.bDetailLoading = id;
+    try {
+      state.bDetail[id] = (await api().bourse(id, lang())).bourse;
+    } catch {
+      state.bDetail[id] = {};
+    }
+    state.bDetailLoading = null;
+    if (state.bFicheId === id) render();
+  }
+
+  function lockCard(title) {
+    const B = br();
+    return `<article class="card lockcard"><h3>${I.lock} ${esc(title)}</h3><div class="blur" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="small">${B.lock.block}</p><button type="button" class="btn btn-sun" data-bunlock>${B.lock.cta}</button></article>`;
+  }
+
   function viewBFiche(id) {
     const B = br();
-    const b = state.bourses.find((x) => x.id === id);
-    if (!b) return `<button type="button" class="back" data-bback>${I.back} ${B.back}</button>`;
+    const item = state.bourses.find((x) => x.id === id);
+    if (!item) return `<button type="button" class="back" data-bback>${I.back} ${B.back}</button>`;
+    loadBDetail(id);
+    const d = state.bDetail?.[id];
+    const b = { ...item, ...(d && d.id ? d : {}) };
+    const loaded = Boolean(d && d.id);
     const row = (k, v) => (v ? `<div><dt>${k}</dt><dd>${v}</dd></div>` : "");
-    const c = b.conditions;
-    const e = b.edition;
+    const c = b.conditions || {};
+    const e = b.edition || {};
+    const locked = b.verrou;
     const share = `https://wa.me/?text=${encodeURIComponent(B.shareText(b.nom, location.origin))}`;
+    const dated = ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) && b.statut.probable && !b.statut.permanente;
     return `<button type="button" class="back" data-bback>${I.back} ${B.back}</button>
-      <div class="row-actions"><div style="min-width:0"><span class="eyebrow">${esc(b.organisme)}</span><h1>${esc(b.nom)}</h1></div>${`<button type="button" class="btn btn-ghost btn-small follow ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}">${isBFollowed(b.id) ? "★ " + B.followed : "☆ " + B.follow}</button>`}</div>
-      <div class="bstatus">${statusTag(b)}<b>${esc(statusLine(b))}</b>${b.statut.probable && ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}</div>
+      <div class="row-actions"><div style="min-width:0"><span class="eyebrow">${esc(b.organisme || "")}</span><h1>${esc(b.nom)}</h1></div>${`<button type="button" class="btn btn-ghost btn-small follow ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}">${isBFollowed(b.id) ? "★ " + B.followed : "☆ " + B.follow}</button>`}</div>
+      <div class="bstatus">${statusTag(b)}<b>${esc(statusLine(b))}</b>${dated ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}${b.origine ? `<span class="tag tag-line">${esc(B.origins[b.origine])}</span>` : ""}${!locked && b.apercu_gratuit && !premium() ? `<span class="tag tag-green">${B.lock.free}</span>` : ""}</div>
+      ${b.alerte ? `<div class="notice alert-card">${I.info}<span><b>${B.alert}.</b> ${esc(b.alerte)}</span></div>` : ""}
       <div class="fiche"><div style="display:grid;gap:16px;min-width:0">
-        ${b.resume ? `<article class="card"><h3>${B.sections.resume}</h3><p>${esc(b.resume)}</p></article>` : ""}
-        <article class="card"><h3>${B.sections.coverage}</h3><p><span class="tag tag-green">${B.coverage[b.couverture.niveau]}</span></p>${b.couverture.detail ? `<p>${esc(b.couverture.detail)}</p>` : ""}</article>
+        ${b.resume || b.resume_long ? `<article class="card"><h3>${B.sections.resume}</h3><p>${esc(locked ? b.resume : b.resume_long || b.resume)}</p></article>` : ""}
+        <article class="card"><h3>${B.sections.coverage}</h3><p><span class="tag tag-green">${B.coverage[b.couverture.niveau]}</span></p>
+          ${b.valeur ? `<p><b>${B.valueLabel} :</b> ${esc(b.valeur)}</p>` : ""}
+          ${!locked && b.couverture.detail ? `<p>${esc(b.couverture.detail)}</p>` : ""}
+          ${!locked && b.ne_couvre_pas ? `<p class="small muted"><b>${B.notCovered} :</b> ${esc(b.ne_couvre_pas)}</p>` : ""}
+          ${!locked && b.cout_candidature ? `<p class="small muted"><b>${B.costLabel} :</b> ${esc(b.cout_candidature)}</p>` : ""}</article>
         <article class="card"><h3>${B.sections.conditions}</h3><dl class="kv">
+          ${row(B.eligLabel, esc(b.eligibilite || ""))}
           ${row(B.cond.levels, esc(b.niveaux.map((x) => B.levels[x]).join(", ")))}
-          ${row(B.cond.domains, esc((b.domaines.includes("tous") ? [B.domains.tous] : b.domaines.map((d) => B.domains[d])).join(", ")))}
+          ${row(B.cond.domains, esc((b.domaines.includes("tous") ? [B.domains.tous] : b.domaines.map((x) => B.domains[x])).join(", ")))}
           ${row(B.cond.countries, esc(b.pays_accueil.join(", ")))}
           ${row(B.cond.age, c.age_max != null ? esc(B.years(c.age_max)) : "")}
-          ${row(B.cond.diploma, esc(c.diplome))}
-          ${row(B.cond.language, esc(c.langue))}
-          ${c.autres.length ? row(B.cond.other, `<ul class="clean">${c.autres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`) : ""}
+          ${row(B.cond.diploma, esc(c.diplome || ""))}
+          ${row(B.cond.language, esc(c.langue || ""))}
+          ${(c.autres || []).length ? row(B.cond.other, `<ul class="clean">${c.autres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`) : ""}
         </dl><p class="small"><span class="tag ${b.cameroun === "oui" ? "tag-green" : "tag-sun"}">${B.cameroon[b.cameroun] || B.cameroon.non_precise}</span></p></article>
-        ${b.dossier.length ? `<article class="card"><h3>${B.sections.dossier}</h3><ul class="clean">${b.dossier.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>` : ""}
-        ${b.conseil ? `<article class="card"><h3>${B.sections.advice}</h3><p>${esc(b.conseil)}</p></article>` : ""}
+        ${loaded ? (locked ? lockCard(B.sections.dossier) : (b.dossier || []).length ? `<article class="card"><h3>${B.sections.dossier}</h3><ul class="clean">${b.dossier.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>` : "") : ""}
+        ${loaded ? (locked ? lockCard(B.sections.advice) : b.conseil ? `<article class="card"><h3>${B.sections.advice}</h3><p>${esc(b.conseil)}</p></article>` : "") : ""}
       </div>
       <aside class="card" style="min-width:0"><h3>${B.sections.dates}</h3><dl class="kv">
         ${row(B.edition, esc(e.libelle || ""))}
-        ${row(B.opening, e.ouverture ? esc(bFmt(e.ouverture)) : B.notAnnounced)}
-        ${row(B.closing, e.cloture ? esc(bFmt(e.cloture)) : B.notAnnounced)}
-        ${b.cycle?.ouverture_mois ? row(cal().probable, esc(b.cycle.ouverture_mois)) : ""}
+        ${e.permanente ? row(B.opening, B.permanent) : row(B.opening, e.ouverture ? esc(bFmt(e.ouverture)) : B.notAnnounced)}
+        ${e.permanente ? "" : row(B.closing, e.cloture ? esc(bFmt(e.cloture)) : B.notAnnounced)}
+        ${b.cycle?.ouverture_mois ? row(cal().probable, esc(b.cycle.ouverture_mois)) : b.cycle?.cloture_mois ? row(B.usualClosing, esc(b.cycle.cloture_mois)) : ""}
       </dl>${e.note ? `<p class="small">${esc(e.note)}</p>` : ""}
         <div class="notice">${I.info}<span class="small">${B.unverified}</span></div>
-        ${b.lien_officiel ? `<a class="btn btn-primary btn-block" href="${esc(b.lien_officiel)}" target="_blank" rel="noopener noreferrer">${B.official}</a>` : ""}
+        ${loaded && !locked && b.lien_officiel ? `<a class="btn btn-primary btn-block" href="${esc(b.lien_officiel)}" target="_blank" rel="noopener noreferrer">${B.official}</a>` : ""}
+        ${locked && b.a_lien ? `<button type="button" class="btn btn-sun btn-block" data-bunlock>${I.lock} ${B.lock.linkLocked}</button><p class="small muted">${B.lock.honest}</p>` : ""}
         <a class="btn btn-ghost btn-block" href="${share}" target="_blank" rel="noopener noreferrer">${B.share}</a>
-        ${b.sources.length ? `<details class="sources"><summary class="small">${B.sections.sources} (${b.sources.length})</summary><ul class="clean small">${b.sources.map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.titre || x.url)}</a>` : esc(x.titre)}</li>`).join("")}</ul></details>` : ""}
+        ${!locked && (b.sources || []).length ? `<details class="sources"><summary class="small">${B.sections.sources} (${b.sources.length})</summary><ul class="clean small">${b.sources.map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.titre || x.url)}</a>` : esc(x.titre)}</li>`).join("")}</ul></details>` : ""}
         ${b.last_verified ? `<p class="small muted">${B.lastChecked(dateFmt(b.last_verified + "T12:00:00Z"))}</p>` : ""}</aside></div>
+      ${bScamCard()}`;
+  }
+
+  // ---------- Bourses : conseils et modèles ----------
+  async function loadConseils() {
+    if (state.conseilsLoading) return;
+    state.conseilsLoading = true;
+    try {
+      state.conseils = (await api().conseils(lang())).conseils;
+    } catch {
+      state.conseils = [];
+    }
+    state.conseilsLoading = false;
+    render();
+  }
+
+  async function openConseil(id) {
+    state.conseilId = id;
+    state.conseilBody = null;
+    render();
+    window.scrollTo({ top: 0 });
+    try {
+      state.conseilBody = (await api().conseil(id, lang())).conseil;
+    } catch (err) {
+      state.conseilBody = { error: err.message };
+    }
+    render();
+  }
+
+  function viewBGuide() {
+    const B = br();
+    if (!state.conseils) {
+      loadConseils();
+      return `<div><span class="eyebrow">${t().section}</span><h1>${B.guideTitle}</h1></div><p class="muted">…</p>`;
+    }
+    if (state.conseilId) {
+      const a = state.conseils.find((x) => x.id === state.conseilId);
+      const body = state.conseilBody;
+      const sections = (body?.sections || [])
+        .map((sc) => `<article class="card">${sc.h ? `<h3>${esc(sc.h)}</h3>` : ""}${(sc.p || []).map((x) => `<p>${esc(x)}</p>`).join("")}${(sc.liste || []).length ? `<ul class="clean">${sc.liste.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</article>`)
+        .join("");
+      return `<button type="button" class="back" data-conseil-back>${I.back} ${B.guideBack}</button>
+        <div><span class="eyebrow">${esc(B.guideCats[a?.categorie] || "")}</span><h1>${esc(a?.titre || "")}</h1></div>
+        ${!body ? `<p class="muted">…</p>` : body.error || body.verrou ? lockCard(a?.titre || B.guideTitle) : sections}
+        ${bScamCard()}`;
+    }
+    if (!state.conseils.length) return `<div><span class="eyebrow">${t().section}</span><h1>${B.guideTitle}</h1></div><div class="notice">${I.info}<span>${B.guideEmpty}</span></div>`;
+    const cats = Object.keys(B.guideCats).filter((k) => state.conseils.some((x) => x.categorie === k));
+    const card = (a) => `<article class="card bcard"><button type="button" class="bcard-main" data-conseil="${esc(a.id)}"><span class="row-actions" style="justify-content:flex-start;gap:6px"><span class="tag ${a.gratuit ? "tag-green" : "tag-line"}">${a.gratuit ? B.guideFree : B.guideLocked}</span>${a.gratuit || premium() ? "" : `<span class="lock-pill">${I.lock}${B.lock.pill}</span>`}</span><b>${esc(a.titre)}</b><span class="small muted">${esc(a.resume || "")}</span></button></article>`;
+    return `<div class="section-head"><div><span class="eyebrow">${t().section}</span><h1>${B.guideTitle}</h1></div><p class="muted small">${B.guideSub}</p></div>
+      ${bUnlockBanner()}
+      ${cats.map((k) => `<section class="orient-group"><h2>${B.guideCats[k]}</h2><div class="results">${state.conseils.filter((x) => x.categorie === k).map(card).join("")}</div></section>`).join("")}
       ${bScamCard()}`;
   }
 
@@ -3807,7 +4036,7 @@
     if (!state.user) return false;
     if (document.getElementById("modal")) return true;
     if (state.play) return true;
-    if (state.space === "bourses") return Boolean(state.bFicheId) || (state.tab === "bfind" && state.bf.branche !== undefined);
+    if (state.space === "bourses") return Boolean(state.bFicheId) || (state.tab === "bguide" && Boolean(state.conseilId)) || (state.tab === "bfind" && state.bf.branche !== undefined);
     if (state.tab === "quiz") return state.qzView === "plan";
     if (state.tab === "salle" && state.exam && ["prep", "compose"].includes(state.exam.phase) && state.examDoc) return true;
     const nav = state.nav[state.tab] || {};
@@ -3848,7 +4077,10 @@
     }
     if (state.space === "bourses") {
       if (state.bFicheId) state.bFicheId = null;
-      else if (state.tab === "bfind") state.bf = {};
+      else if (state.tab === "bguide" && state.conseilId) {
+        state.conseilId = null;
+        state.conseilBody = null;
+      } else if (state.tab === "bfind") state.bf = {};
       return render();
     }
     if (state.tab === "quiz" && state.qzView === "plan") {
@@ -4244,17 +4476,43 @@
       return render();
     }
     if (d.bbranche !== undefined) {
-      state.bf = { branche: d.bbranche, domaine: "", niveau: state.bf.niveau };
+      state.bf = { ...state.bf, branche: d.bbranche, domaine: "", n: 30 };
       saveBPref({ branche: d.bbranche, domaine: "" });
+      if (state.tab !== "bfind") state.tab = "bfind";
       return render();
     }
     if (d.bdomaine !== undefined) {
-      state.bf = { ...state.bf, domaine: d.bdomaine };
+      state.bf = { ...state.bf, domaine: d.bdomaine, n: 30 };
       saveBPref({ domaine: d.bdomaine });
       return render();
     }
+    // Depuis l'accueil : un type ou un pays ouvre l'exploration sur toutes les filières, déjà filtrée.
+    if (d.btype !== undefined) {
+      const onFind = state.tab === "bfind";
+      state.bf = onFind ? { ...state.bf, type: d.btype, n: 30 } : { branche: "", type: d.btype };
+      state.tab = "bfind";
+      return render();
+    }
+    if (d.bpaysGo !== undefined || d.bpays !== undefined) {
+      const v = d.bpaysGo ?? d.bpays;
+      const onFind = state.tab === "bfind";
+      state.bf = onFind ? { ...state.bf, pays: v, n: 30 } : { branche: "", pays: v };
+      state.tab = "bfind";
+      return render();
+    }
+    if ("bmore" in d) {
+      state.bf = { ...state.bf, n: (state.bf.n || 30) + 30 };
+      return render();
+    }
+    if ("bunlock" in d) return openPaywall();
+    if (d.conseil) return openConseil(d.conseil);
+    if ("conseilBack" in d) {
+      state.conseilId = null;
+      state.conseilBody = null;
+      return render();
+    }
     if (d.bniveau !== undefined) {
-      state.bf = { ...state.bf, niveau: d.bniveau };
+      state.bf = { ...state.bf, niveau: d.bniveau, n: 30 };
       saveBPref({ niveau: d.bniveau });
       return render();
     }

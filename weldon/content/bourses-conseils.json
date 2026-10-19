@@ -1,0 +1,2360 @@
+[
+  {
+    "id": "qui-peut-postuler",
+    "ordre": 1,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Qui peut postuler à une bourse d'études ?",
+      "resume": "Bachelier, étudiant en cours de cursus, professionnel de 35 ans et plus : des bourses existent pour chaque profil, et l'autocensure élimine plus de candidats que les comités de sélection.",
+      "sections": [
+        {
+          "h": "Le vrai frein : l'autocensure",
+          "p": [
+            "Beaucoup renoncent à cause de phrases comme : « Je n'ai pas d'assez bonnes notes », « Je suis trop vieux », « Les bourses, c'est pour les fils de riches ou les génies ». Ces croyances empêchent des milliers d'étudiants talentueux d'essayer."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Un bachelier peut-il postuler ?",
+          "p": [
+            "Oui. Les bourses de Licence sont plus rares et plus compétitives que celles de Master ou de Doctorat, mais certaines comptent parmi les plus généreuses au monde."
+          ],
+          "liste": [
+            "Japon (MEXT) : finance l'intégralité d'un Bachelor (5 ans, dont 1 an de langue japonaise). Scolarité, allocation mensuelle de 117 000 à 145 000 yens (environ 450 000 à 560 000 FCFA par mois) et billet aller-retour. Limite d'âge : moins de 25 ans au 1er avril de l'année d'admission.",
+            "Turquie (Türkiye Bursları) : Bachelor complet de 4 ans dans toutes les disciplines, avec un an de langue turque. Scolarité, 800 TRY par mois, logement en résidence, assurance santé, billet aller-retour. Réservé aux moins de 21 ans.",
+            "Maroc (AMCI) : bourses complètes pour étudiants africains en Bachelor : scolarité, allocation mensuelle, cité universitaire.",
+            "Pearson (Université de Toronto) : la bourse de premier cycle la plus prestigieuse du Canada, qui couvre tous les frais, livres et résidence pendant 4 ans. Impossible de postuler directement : c'est votre lycée qui doit vous nommer. Commencez les discussions avec votre proviseur dès la classe de Première.",
+            "McGill Entrance Scholarships : 3 000 à 12 000 CAD par an, renouvelables sur 4 ans, attribués automatiquement sur le dossier d'admission.",
+            "UBC International Scholars : jusqu'à 25 000 CAD par an.",
+            "American University (AU EGLS) : une seule bourse complète par an dans le monde, soit environ 70 000 USD de scolarité plus logement et nourriture pendant 4 ans. Elle vise un bachelier qui a surmonté des obstacles significatifs et se consacre au changement social dans son pays.",
+            "Italie (DSU régionales) : pour des revenus familiaux modestes, exonération totale des frais, allocation annuelle de 2 800 à 7 200 euros, logement gratuit en résidence universitaire et repas gratuits à la cantine."
+          ]
+        },
+        {
+          "h": "Conseil",
+          "p": [
+            "Si vous êtes en Terminale ou venez d'obtenir le Bac, ne vous limitez pas aux universités de votre pays. La fenêtre de candidature est étroite : commencez 12 à 15 mois avant la rentrée visée."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Un étudiant en cours de cursus",
+          "p": [
+            "C'est le profil le mieux positionné. Règle d'or J-12 : commencez vos recherches et la préparation de vos documents 12 mois avant la fin prévue de votre cycle. Pour Chevening ou Eiffel (clôture en novembre-janvier), c'est encore plus tôt."
+          ],
+          "liste": [
+            "Licence 1 ou 2 : préparez votre passeport, améliorez votre anglais ou votre allemand, identifiez des bourses cibles, engagez-vous dans une association ou un projet communautaire.",
+            "Licence 3 : c'est maintenant. Passez votre test de langue, identifiez 3 à 5 programmes de Master à l'étranger, contactez les universités, préparez votre lettre de motivation.",
+            "Master 1 : même urgence. Identifiez un directeur de recherche si vous visez un Master Recherche ou un PhD et commencez votre projet de recherche.",
+            "Master 2 : vous visez un PhD ou un second Master de spécialisation. Contactez directement les professeurs et publiez un article si possible, même dans une revue locale."
+          ]
+        },
+        {
+          "h": "Un professionnel ou une personne en reconversion",
+          "p": [
+            "Non seulement c'est possible, mais c'est là que se trouvent les financements les plus généreux : les bailleurs préfèrent les profils qui connaissent les besoins du terrain."
+          ],
+          "liste": [
+            "Chevening (Royaume-Uni) : 2 ans d'expérience minimum (2 800 heures), Master d'un an, pas de limite d'âge.",
+            "Australia Awards : 2 à 5 ans d'expérience selon le pays, éligible jusqu'à 50 ans dans certains pays partenaires.",
+            "DAAD EPOS (Allemagne) : 2 ans minimum dans un domaine lié au développement ; dernier diplôme de moins de 6 ans, sans limite d'âge biologique.",
+            "Banque Mondiale (JJ/WBGSP) : 3 ans minimum, aucune limite d'âge.",
+            "Fondation Aga Khan : aucune limite d'âge ; 50 % de bourse et 50 % de prêt sans intérêt."
+          ]
+        },
+        {
+          "h": "La recette du profil professionnel gagnant",
+          "p": [
+            "Structure Problème, Expérience, Formation, Impact : un problème identifié (« Dans ma région, 70 % des PME n'ont pas accès au conseil juridique international »), une expérience qui prouve votre engagement, un programme précis qui comble le manque, et un plan de retour concret. À 38 ans, avec 12 ans d'expérience en santé publique, vous êtes exactement le profil que recherchent la Banque Mondiale ou Australia Awards."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Partie I, Chapitre 1 : Qui peut postuler à une bourse d'études ?, points 1 à 3"
+  },
+  {
+    "id": "age-notes-et-profil",
+    "ordre": 2,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Limites d'âge, notes exigées et profil holistique",
+      "resume": "L'âge est rarement un obstacle au niveau Master et Doctorat, et les notes ne sont qu'un critère parmi cinq ou six : un 12/20 engagé peut battre un 15/20 sans engagement.",
+      "sections": [
+        {
+          "h": "Les limites d'âge, niveau par niveau",
+          "p": [
+            "Ce qui compte vraiment est la fraîcheur du dernier diplôme et la cohérence du parcours : un candidat de 32 ans avec un Master de 2024 et 4 ans d'expérience est en position de force."
+          ],
+          "liste": [
+            "Bachelor : souvent strictes, entre 21 et 25 ans (MEXT moins de 25 ans, Türkiye Bursları moins de 21 ans ; pas de limite formelle pour Pearson, AU EGLS ou DSU Italie).",
+            "Master : Eiffel moins de 30 ans, MAECI Italie moins de 28 ans ; aucune limite pour Chevening, Fulbright, Erasmus Mundus et Manaaki.",
+            "Doctorat : limites presque inexistantes. Eiffel doctorat moins de 35 ans ; aucune limite pour Vanier, Gates Cambridge, La Caixa INPhINIT, FCT Portugal et le contrat doctoral français."
+          ]
+        },
+        {
+          "h": "Les notes : seuils réels et profil holistique",
+          "p": [
+            "Pour les bourses d'élite, une moyenne d'environ 14/20 (Mention Bien, GPA 3,5/4) est souvent le seuil d'examen du dossier : Eiffel et Ashinaga environ 14/20, Gates Cambridge First Class Honours (environ 16/20), Knight-Hennessy top 10 % de la promotion, Vanier A+ (GPA environ 3,8/4), Erasmus Mundus souvent 13-14/20.",
+            "Mais les notes ne sont qu'un critère parmi cinq ou six. Poids approximatifs : excellence académique 25-35 %, lettre de motivation 20-30 %, projet de retour 15-20 %, engagement communautaire et leadership 10-15 %, lettres de recommandation 10-15 %, expérience professionnelle 10-15 %. Un candidat à 12/20 avec un fort engagement, une expérience pertinente, un projet de retour détaillé, de bonnes recommandations et une lettre calibrée peut l'emporter sur un candidat à 15/20 sans activité extrascolaire.",
+            "Joignez toujours l'échelle de notation officielle de votre université : sans elle, un 12/20 peut être lu comme un 60 %, ce qui paraît médiocre dans un système anglo-saxon. Exemple de formulation : la mention Assez Bien (12-13,99/20) correspond aux 20-30 % supérieurs de la promotion, la mention Bien (14-15,99/20) aux 5-10 % supérieurs."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Partie I, Chapitre 1 : Qui peut postuler à une bourse d'études ?, points 4 et 5"
+  },
+  {
+    "id": "types-de-bourses",
+    "ordre": 3,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Les types de bourses : choisir le bon véhicule",
+      "resume": "Mérite, besoin financier, bourses gouvernementales, fondations, entreprises, universités : chaque type a son critère clé. Savoir lequel cible votre profil évite de gaspiller vos efforts.",
+      "sections": [
+        {
+          "h": "Les familles de bourses",
+          "p": [],
+          "liste": [
+            "Bourse de mérite (universités, États) : attirer les cerveaux les plus brillants. Critères : moyenne élevée, distinctions, publications, mais aussi trajectoire ascendante et leadership. Exemples : Eiffel, Pearson, ANU Chancellor. Mots-clés : Excellence Scholarship, Merit Scholarship, Academic Achievement Award.",
+            "Bourse de besoin financier : favoriser l'équité. Critère : revenus modestes de la famille. Exemples : DSU Italie, Harvard Need-Blind, Fondation Aga Khan. Mots-clés : Need-Based, Financial Aid, Bursary. Certaines bourses combinent mérite et besoin, et sont souvent les plus généreuses.",
+            "Bourse gouvernementale (soft power) : créer des alliances et former des leaders. Critères : potentiel de leadership et projet de retour au pays. Exemples : Chevening, Fulbright, Australia Awards, DAAD, Manaaki, Eiffel. Un étudiant formé à l'étranger devient un ambassadeur naturel du pays d'accueil, d'où leur générosité et leur compétitivité.",
+            "Bourse de fondation ou privée : soutenir une cause. Critères : engagement social, appartenance à un groupe cible, spécialisation. Exemples : MasterCard Foundation (Africains), Heinrich Böll (écologie), La Caixa (STEM), Gates Cambridge, Friedrich Ebert (934 euros par mois), KAAD, Trudeau (jusqu'à 50 000 dollars canadiens par an pour les doctorants). Les lettres de motivation y pèsent particulièrement lourd : étudiez les valeurs de la fondation.",
+            "Bourse d'entreprise : identifier les talents de demain, souvent dans un domaine lié à l'activité de l'entreprise (Google PhD Fellowship, Merck). Elle cherche des profils entrepreneuriaux : projets personnels, stages, hackathons.",
+            "Bourse universitaire : les plus nombreuses, souvent moins compétitives car le bassin de candidats est limité. Beaucoup sont attribuées automatiquement sur le dossier d'admission. Mots-clés : Entrance Scholarship, International Scholarship, Vice-Chancellor's Scholarship, Dean's Scholarship. Explorez toujours la page Scholarships ou Financial Aid de l'université."
+          ]
+        },
+        {
+          "h": "Quel véhicule pour quel profil ?",
+          "p": [
+            "Si votre dossier académique est moyen (12 à 13/20), concentrez-vous sur les bourses DSU italiennes, les fondations privées qui regardent la situation sociale et la motivation, et les bourses de soft power qui valorisent l'expérience et l'engagement. Ne perdez pas votre énergie sur les bourses purement méritocratiques exigeant 14/20, sauf profil compensatoire exceptionnel."
+          ],
+          "liste": [
+            "Notes excellentes (14+/20), peu d'expérience : bourse de mérite (Eiffel, Pearson, Gates Cambridge, Erasmus Mundus).",
+            "Notes correctes (12-13/20), fort engagement : soft power ou fondation (Chevening, Fulbright, Heinrich Böll, MasterCard Foundation).",
+            "Revenus familiaux modestes : besoin financier (DSU Italie, Need-Blind USA, Aga Khan, ARES Belgique).",
+            "Professionnel avec 2 ans d'expérience ou plus : bourse gouvernementale ou de développement (DAAD EPOS, Australia Awards, Banque Mondiale, Chevening).",
+            "Doctorant ou chercheur : Fellowship ou Assistantship (Vanier, PhD financé USA, La Caixa, FCT Portugal, contrat doctoral France).",
+            "Bachelier : bourse universitaire d'entrée (MEXT, Türkiye Bursları, Pearson, AU EGLS, Monash Leadership)."
+          ]
+        },
+        {
+          "h": "Les niveaux d'études couverts",
+          "p": [],
+          "liste": [
+            "Licence : souvent des Entrance Scholarships attribuées à l'admission et conditionnées au maintien d'un niveau. Votre dossier de lycée est déterminant.",
+            "Master / MBA : les comités regardent aussi l'expérience professionnelle, les projets de recherche et la cohérence du projet. La lettre de motivation est cruciale.",
+            "Doctorat : souvent les plus généreuses en montant annuel, avec stipend et exonération des frais. Exemples : Trudeau jusqu'à 50 000 dollars par an, Gates Cambridge de 35 000 à 66 000 livres.",
+            "Tous niveaux : de nombreuses bourses sont ouvertes à tous les cycles.",
+            "Programmes courts, stages et écoles d'été : de 2 à 3 mois, pour découvrir un pays, enrichir son CV et nouer des contacts avant un Master ou un PhD (par exemple DESY, HZB, MIT Summer Research Program)."
+          ]
+        },
+        {
+          "h": "Attention aux intitulés",
+          "p": [],
+          "liste": [
+            "Undergraduate : Licence ou Bachelor.",
+            "Postgraduate : Master ou PhD, lisez attentivement. Postgraduate Taught : Master avec cours. Postgraduate Research : Master par la recherche ou PhD.",
+            "Graduate en Amérique du Nord : tout ce qui suit la Licence."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Partie I, Chapitre 2 : Les types de bourses ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie I, Les différents types de bourses et Les niveaux d'études couverts"
+  },
+  {
+    "id": "fully-funded-et-bourses-partielles",
+    "ordre": 4,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Fully Funded, bourses partielles et vocabulaire clé",
+      "resume": "Ce que couvre réellement une bourse complète, le piège du reste à charge des bourses partielles, et les termes à connaître : stipend, tuition waiver, assistantship, need-blind.",
+      "sections": [
+        {
+          "h": "La pyramide des bourses",
+          "p": [],
+          "liste": [
+            "Sommet, les bourses Fully Funded : frais de scolarité à 100 %, billet d'avion aller-retour, assurance santé, frais de visa et allocation mensuelle (stipend) de 900 à 3 500 euros selon le pays. Exemples : Chevening, Fulbright, Australia Awards, DAAD EPOS, Erasmus Mundus, Manaaki, MasterCard Foundation, PCBF. Taux d'acceptation de 1 à 5 %, mais la majorité des candidats sont éliminés pour des erreurs administratives ou des lettres hors sujet, pas pour manque de talent.",
+            "Milieu, les bourses partielles : scolarité ou allocation de vie, rarement les deux. Exemples : NL Scholarship (5 000 euros), ANU Chancellor's (25 à 50 % des frais), Padoue Excellence (8 000 euros par an), McGill Entrance (3 000 à 12 000 CAD).",
+            "Base, les réductions de frais (Tuition Waivers) : l'université efface tout ou partie de la facture, sans versement d'argent. Exemples : exonération pour francophones à Ottawa, DSU régionales en Italie, Excellence de Barcelone (100 % d'exonération)."
+          ]
+        },
+        {
+          "h": "Ce que couvre une bourse Fully Funded",
+          "p": [
+            "Exemples de stipends : Australia Awards environ 2 500 AUD par mois (environ 980 000 FCFA, avec OSHC payée et 5 000 AUD d'installation) ; Chevening environ 1 500 livres (environ 1 170 000 FCFA) ; Fulbright 1 800 à 3 500 USD ; DAAD EPOS 992 à 1 300 euros avec cours d'allemand ; Erasmus Mundus 1 400 euros ; Manaaki 615 NZD par semaine (environ 230 000 FCFA, installation 3 000 NZD)."
+          ],
+          "liste": [
+            "Frais de scolarité : 5 000 à 85 000 euros selon le pays, payés directement à l'université.",
+            "Allocation mensuelle : 900 à 3 500 euros.",
+            "Billet d'avion aller-retour en classe économique : 600 000 à 1 200 000 FCFA.",
+            "Assurance santé : 500 à 2 000 euros par an. Frais de visa : 50 à 500 euros, remboursés ou pris en charge.",
+            "Prime d'installation unique : 500 à 3 000 euros. Cours de langue parfois inclus (DAAD, MEXT)."
+          ]
+        },
+        {
+          "h": "Le piège du reste à charge",
+          "p": [
+            "Avant d'accepter une bourse partielle, calculez : coût total annuel (scolarité, vie, logement, assurance) moins montant de la bourse. Exemple aux Pays-Bas : scolarité Master 18 000 euros, coût de la vie 13 600 euros, total 31 600 euros ; avec la NL Scholarship de 5 000 euros, le reste à charge est de 26 600 euros (environ 17 450 000 FCFA). Si vous ne pouvez pas le prouver sur un relevé bancaire, le visa est refusé. Chaque année, des étudiants africains obtiennent une bourse partielle puis réalisent trois mois plus tard qu'ils ne peuvent pas prouver les fonds restants ; les frais de tests et de dossier sont alors perdus.",
+            "La stratégie : cumuler. NL Scholarship (5 000 euros) plus Kipaji Twente (12 000 euros) donne 17 000 euros ; DSU Italie (exonération et allocation) plus MAECI (900 euros par mois) donne une couverture quasi totale. Vérifiez toujours les conditions de cumul."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Vocabulaire technique",
+          "p": [],
+          "liste": [
+            "Tuition Waiver : exonération de frais de scolarité. Peut économiser de 2 000 euros (Italie) à 85 000 USD (universités privées américaines).",
+            "Stipend : votre salaire d'étudiant versé chaque mois. Typique : Allemagne 934 à 1 300 euros, France 700 à 1 700 euros (serré à Paris), UK 1 200 à 1 500 livres (serré à Londres), USA 2 000 à 3 500 dollars, Australie environ 2 500 AUD, Nouvelle-Zélande 615 NZD par semaine, Italie 200 à 600 euros (DSU, serré sans logement gratuit).",
+            "Fellowship : bourse de prestige au mérite exceptionnel, avec volet recherche, fonds de recherche, voyages en conférences. Exemples : Gates Cambridge, Knight-Hennessy, Google PhD Fellowship.",
+            "Assistantship (TA ou RA) : en échange de 20 heures par semaine d'aide à l'enseignement ou à la recherche, l'université paie la scolarité, verse 1 500 à 3 500 USD par mois et offre souvent l'assurance santé. Environ 80 % des PhD des universités américaines de recherche sont financés ainsi. Aux USA, on ne postule pas à une bourse de PhD : on contacte un professeur qui a un projet financé et qui vous recrute comme assistant de recherche.",
+            "Grant : aide ponctuelle (voyage de recherche, conférence, matériel, terrain). Exemple : Wenner-Gren Dissertation Fieldwork Grant, 10 000 USD en anthropologie. Elle complète un financement, elle ne finance pas des études complètes.",
+            "Financial Aid et Need-Blind : l'université évalue les revenus de la famille et comble la différence. Harvard, Yale, Princeton, MIT et Amherst admettent sans regarder votre situation financière puis couvrent 100 % des besoins démontrés (taux d'admission de 3 à 5 %, mais c'est réel)."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Partie I, Chapitre 2 : Fully Funded vs Partielles, Décryptage du vocabulaire technique ; Introduction : La hiérarchie de l'offre mondiale"
+  },
+  {
+    "id": "comment-fonctionne-la-selection",
+    "ordre": 5,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Comment fonctionne la sélection",
+      "resume": "Une bourse est un investissement, pas un cadeau. Les comités cherchent un profil cohérent autour de trois piliers : parcours, projet d'études, impact futur.",
+      "sections": [
+        {
+          "h": "La bourse est un investissement",
+          "p": [
+            "Quand un gouvernement étranger investit 30 à 80 millions de FCFA dans un étudiant pendant 1 à 4 ans, il ne fait pas de la philanthropie. Il vise un triple rendement : le soft power (former les futurs cadres et décideurs qui seront les ambassadeurs naturels de sa culture et de ses méthodes), le retour économique (presque toutes les bourses Fully Funded exigent un projet de retour) et le rayonnement académique (les universités montent dans les classements en attirant des étudiants internationaux brillants).",
+            "Le comité se demande : « Si nous investissons 50 millions de FCFA dans cet étudiant, quel sera l'impact mesurable dans 5 ans ? » Vous n'êtes pas un bénéficiaire passif, mais un actif stratégique : votre lettre doit sonner comme une proposition de partenariat, pas comme une demande d'aumône."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Les trois piliers du profil",
+          "p": [],
+          "liste": [
+            "Parcours passé : une trajectoire, pas une liste d'accomplissements isolés. Comptent la progression, l'engagement au-delà du minimum académique et la résilience.",
+            "Projet d'études : pourquoi cette université, ce pays, ce programme, maintenant ? Citez un professeur, un laboratoire, un module. « Je veux étudier en France parce que c'est un beau pays avec une culture riche » a éliminé des milliers de candidats. À l'inverse : citer le laboratoire précis, le professeur et l'article lu en 2024 qui correspondent à votre projet.",
+            "Impact futur : le pilier le plus négligé et le plus important. Un plan concret, avec étapes, partenaires et calendrier. Ce qui impressionne : « J'intégrerai le Ministère de la Santé pour piloter le programme national de télémédecine, en partenariat avec l'OMS » ou « Je lancerai un cabinet de conseil en conformité OHADA pour accompagner les PME camerounaises vers le marché CEMAC ». Ce qui ne fonctionne pas : « Je souhaite mettre mes compétences au service de mon pays. »"
+          ]
+        },
+        {
+          "h": "Décrypter les codes invisibles",
+          "p": [],
+          "liste": [
+            "Potentiel de leadership : la capacité d'initier un changement ou de mobiliser, même à petite échelle. Cours de soutien gratuits dans votre quartier, adoption d'un logiciel dans votre entreprise, groupe WhatsApp de 200 étudiants pour partager des ressources : c'est du leadership. Le leadership n'est pas un titre, c'est une posture.",
+            "Contribution au développement : la capacité de votre diplôme à répondre à un besoin identifiable (technologique, sanitaire, juridique, éducatif, environnemental). Nommez le problème spécifique et montrez comment votre formation y répondra.",
+            "Engagement communautaire : du temps investi gratuitement pour les autres, avec un impact démontrable. Bon : « J'ai co-fondé l'association Code pour Tous qui a formé 150 jeunes femmes au développement web en 2024, dont 23 ont trouvé un emploi ». Insuffisant : « Je suis membre d'une association caritative ».",
+            "Excellence académique : être dans les meilleurs de sa promotion, quel que soit le chiffre absolu. Dans certaines universités africaines, 13/20 place dans le top 5 %, à condition de fournir l'échelle de notation."
+          ]
+        },
+        {
+          "h": "La géographie cachée des bourses",
+          "p": [
+            "Chaque pays finance des régions prioritaires : la France l'Afrique francophone et le Maghreb (influence francophone) ; le Royaume-Uni le Commonwealth (54 pays) ; l'Allemagne l'Afrique, l'Asie et l'Amérique latine (coopération au développement) ; les États-Unis plus de 160 pays ; l'Australie le Pacifique, l'Asie du Sud-Est et l'Afrique ; le Canada la Francophonie et le Commonwealth ; la Belgique (ARES) 31 pays d'Afrique et d'Asie ; la Nouvelle-Zélande le Pacifique, l'Afrique et l'Asie ; le Japon l'Afrique via la BAD.",
+            "Un Camerounais est éligible aux bourses françaises (francophonie), britanniques (Commonwealth), allemandes, canadiennes et européennes (Erasmus Mundus) : un avantage géopolitique rare à exploiter. Un Sénégalais est ciblé par la France, le Canada, la Belgique (ARES), le Japon (JADS via la BAD) et la Nouvelle-Zélande (Manaaki). Un Tunisien ou un Marocain peut compter sur les bourses françaises, Erasmus Mundus et les bourses espagnoles (MAEC-AECID)."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Introduction : Comment fonctionne le monde des bourses d'études"
+  },
+  {
+    "id": "mythes-sur-les-bourses",
+    "ordre": 6,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Les mythes qui empêchent de postuler",
+      "resume": "Huit idées reçues démontées : notes parfaites, pays privilégiés, deadlines passées, procédure trop compliquée, domaine sans bourse, anglais insuffisant.",
+      "sections": [
+        {
+          "h": "Mythe 1 : il faut des notes parfaites",
+          "p": [
+            "De nombreuses bourses ne fixent aucun GPA minimum. Les International Undergraduate Entrance Scholarships de Lakehead University (Canada) commencent à une moyenne de 75 %. Parmi les 450 bourses analysées, 98 prennent en compte d'autres critères que les notes : leadership, engagement communautaire, besoin financier, diversité, parcours personnel. Votre histoire compte autant que votre bulletin."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 2 : les bourses sont réservées aux étudiants de pays privilégiés",
+          "p": [
+            "C'est l'inverse. Australia Awards, Manaaki, Study in Canada Scholarships ou KAAD ciblent spécifiquement les pays en développement, l'Afrique subsaharienne, le Pacifique, l'ASEAN. Votre nationalité peut être un atout."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 3 : c'est trop tard, les deadlines sont passées",
+          "p": [
+            "Plus de 25 % des bourses analysées, soit plus de 100, n'ont aucune date limite fixe (mention « Applicants can apply anytime »). Pour les autres, les dates se renouvellent chaque année : si la deadline est passée, préparez l'édition suivante, rassemblez vos documents, rédigez votre lettre et contactez vos référents."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 4 : le processus est trop compliqué",
+          "p": [
+            "La majorité des candidatures se font en ligne. Les pièces habituelles : formulaire, relevés de notes, lettre de motivation, CV, 1 à 3 lettres de recommandation, preuve de langue (IELTS, TOEFL), parfois un projet de recherche pour un PhD. Pas de concours ni de déplacement dans la majorité des cas."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 5 : il n'y a pas de bourses pour mon domaine",
+          "p": [
+            "La majorité écrasante des bourses porte la mention « Any field of study ». Philosophie, informatique, médecine, droit, agronomie, beaux-arts ou gestion : il y en a des dizaines. Des bourses dédiées existent aussi pour la STEM, les arts visuels, l'agriculture, le business, les sciences sociales, la gouvernance et le droit."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 6 : je ne parle pas assez bien anglais",
+          "p": [
+            "Les scores IELTS requis tournent généralement autour de 6.0 à 6.5, un niveau intermédiaire-avancé atteignable en 3 à 6 mois de préparation sérieuse. Certaines bourses incluent un soutien linguistique. Et on peut étudier en français : France (Eiffel, Émile Boutmy, Paris-Saclay) ou universités canadiennes francophones (Montréal, Sherbrooke, Ottawa)."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 7 : les bourses ne couvrent qu'une petite partie des frais",
+          "p": [
+            "Certaines sont partielles (15, 25, 50 % de réduction), mais d'autres sont extraordinairement généreuses : 140 000 dollars sur 4 ans (Simon Fraser, Canada), 90 000 dollars (Université d'Ottawa), 80 000 dollars par an (Harvard Academy Scholars), 50 000 dollars par an (Trudeau), et 100 % des frais plus logement, repas et voyage (Australia Awards, Chevening, Fulbright, Gates Cambridge). Une réduction de 50 % sur 40 000 dollars, c'est 20 000 dollars que vous n'avez pas à trouver, et on peut cumuler plusieurs sources de financement."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mythe 8 : je n'ai aucune chance face aux candidats des pays riches",
+          "p": [
+            "De nombreux comités pratiquent une évaluation contextuelle : ils tiennent compte de votre pays, des ressources disponibles et des défis surmontés. Un étudiant qui a obtenu 15/20 dans une université africaine en travaillant à temps partiel est jugé différemment d'un étudiant ayant les mêmes résultats dans un environnement privilégié. Votre parcours n'est pas un handicap, c'est une force."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Et l'âge, et la licence non terminée ?",
+          "p": [
+            "Un étudiant à 12/20 avec un engagement communautaire fort peut l'emporter sur un étudiant à 16/20 sans activité extrascolaire. Un professionnel de 38 ans avec une décennie d'expérience est le profil idéal pour les bourses les plus généreuses. Et vous n'avez pas besoin de connaître quelqu'un : vous avez besoin de connaître le système."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie I, 5. Les mythes qui vous empêchent de postuler ; LE_MANUEL_DES_BOURSES_part_1.txt - Avant-propos et Chapitre 1"
+  },
+  {
+    "id": "est-ce-gratuit-de-postuler",
+    "ordre": 7,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Postuler à une bourse : est-ce vraiment gratuit ?",
+      "resume": "95 % des bourses ne facturent rien pour le dépôt, mais le dossier a des coûts incompressibles : tests, légalisations, traductions, visa. Montants en FCFA et six stratégies pour les réduire.",
+      "sections": [
+        {
+          "h": "Une gratuité partielle",
+          "p": [
+            "Les grandes bourses gouvernementales sont gratuites à postuler : Eiffel, DAAD, Australia Awards, Manaaki, Chevening, Fulbright, Erasmus Mundus, ARES, PCBF. Mais des frais d'université peuvent s'ajouter :"
+          ],
+          "liste": [
+            "États-Unis : Application Fees de 50 à 90 USD par université (environ 32 000 à 58 000 FCFA) ; 250 à 450 USD pour 5 universités.",
+            "Royaume-Uni : UCAS (Bachelor) 27 à 32,50 GBP ; admission Master 25 à 75 GBP.",
+            "France : procédure Campus France environ 75 000 FCFA (Cameroun, Sénégal).",
+            "Allemagne : uni-assist 75 euros (environ 49 200 FCFA) pour la première université, 30 euros par université supplémentaire.",
+            "Italie : 20 à 30 euros dans certaines universités. Pays-Bas : 50 à 100 euros dans certaines universités."
+          ]
+        },
+        {
+          "h": "Astuce USA : les Fee Waivers",
+          "p": [],
+          "liste": [
+            "Participez aux webinaires et salons virtuels des universités : elles distribuent souvent des codes d'annulation à la fin.",
+            "Écrivez au bureau des admissions en expliquant votre situation financière (par exemple : I am applying from Cameroon and would like to request an application fee waiver due to financial constraints). Le taux de succès est élevé.",
+            "Common App et Coalition App permettent parfois de demander une exemption automatique ; inscrivez-vous sur QuestBridge si vous êtes bachelier à revenus modestes."
+          ]
+        },
+        {
+          "h": "Tests de langue (Cameroun)",
+          "p": [],
+          "liste": [
+            "TCF Canada 180 000 FCFA (Sénégal 150 000), validité 2 ans.",
+            "TCF Tout Public 120 000 à 150 000 FCFA, 2 ans (France, Belgique).",
+            "IELTS Academic 226 000 FCFA (Sénégal 238 000), 2 ans (UK, Australie, Canada, Nouvelle-Zélande).",
+            "TOEFL iBT environ 165 000 FCFA, 2 ans (USA, Canada).",
+            "Duolingo English Test 42 000 FCFA, 2 ans (USA, Canada, certaines universités).",
+            "TestDaF environ 130 000 FCFA, validité illimitée. Goethe-Zertifikat B2 environ 150 000 FCFA, illimitée.",
+            "DELF B2 / DALF C1 : 50 000 à 80 000 FCFA, valable à vie."
+          ]
+        },
+        {
+          "h": "Documents administratifs (Cameroun)",
+          "p": [],
+          "liste": [
+            "Passeport biométrique : 110 000 à 130 000 FCFA (Sénégal 50 000), valide 5 ou 10 ans.",
+            "Légalisation MINREX : 20 000 FCFA par document, indispensable hors UE. Surlégalisation ambassade de France : 16 400 FCFA.",
+            "Traduction assermentée : 20 000 à 30 000 FCFA par page ; comptez 5 à 10 pages par dossier.",
+            "Casier judiciaire : 1 000 à 5 000 FCFA (obligatoire pour l'Espagne et l'Italie). Photos biométriques : 3 000 à 5 000 FCFA.",
+            "Visite médicale Canada : 150 000 à 300 000 FCFA (médecin agréé IRCC uniquement). Australie : 150 000 à 250 000 FCFA (médecin agréé Bupa)."
+          ]
+        },
+        {
+          "h": "Coût total estimé par pays (candidature et visa, pour un résident du Cameroun)",
+          "p": [
+            "Ces coûts sont ceux de la candidature et du visa, pas de la vie sur place. Si la bourse est Fully Funded, ces frais sont votre seul investissement ; si elle est partielle, ajoutez le reste à charge annuel."
+          ],
+          "liste": [
+            "Italie : 150 000 à 350 000 FCFA. France : 215 000 à 385 000. Allemagne : 250 000 à 430 000. Espagne : 250 000 à 450 000. Portugal : 200 000 à 400 000.",
+            "Pays-Bas : 280 000 à 480 000. Nouvelle-Zélande : 280 000 à 500 000. Canada : 450 000 à 800 000.",
+            "États-Unis : 500 000 à 850 000. Australie : 550 000 à 900 000 (visa 2 000 AUD depuis juillet 2025).",
+            "Royaume-Uni : 1 326 000 à 1 500 000 FCFA, le plus cher du monde (visa 490 GBP plus surcharge santé 776 GBP par an)."
+          ]
+        },
+        {
+          "h": "Six stratégies pour réduire la facture",
+          "p": [
+            "Épargner dans cet ordre : passeport, test de langue, légalisations, frais de visa. 30 000 FCFA par mois pendant 18 mois donnent 540 000 FCFA, de quoi postuler à la France, l'Italie et l'Allemagne en même temps."
+          ],
+          "liste": [
+            "Privilégier le Duolingo English Test si l'université l'accepte : 5 fois moins cher que l'IELTS, passé chez soi en 1 heure.",
+            "Cibler les légalisations MINREX : souvent seuls le diplôme final et le dernier relevé certifiés suffisent à l'étape de candidature. Économie de 40 000 à 80 000 FCFA.",
+            "Anticiper les tests de langue : sessions de juillet-août (basse saison) ; l'urgence peut majorer de 20 à 30 %. Résultats en septembre, avant Chevening et Eiffel.",
+            "Fee Waivers aux USA (voir plus haut).",
+            "Traductions groupées : devis global pour tout le dossier, avec souvent 10 à 15 % de réduction pour 8 à 12 pages.",
+            "Cibler 3 à 5 programmes qui acceptent les mêmes certifications : avec un seul IELTS à 226 000 FCFA, vous visez le Canada, le Royaume-Uni, l'Australie et la Nouvelle-Zélande."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Partie I, Chapitre 3 : Postuler à une bourse, est-ce vraiment gratuit ?"
+  },
+  {
+    "id": "dix-erreurs-fatales",
+    "ordre": 8,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Les 10 erreurs fatales",
+      "resume": "Ce qui envoie un dossier directement à la corbeille, quel que soit le niveau académique, avec pour chaque erreur la solution concrète.",
+      "sections": [
+        {
+          "h": "Les dix erreurs",
+          "p": [],
+          "liste": [
+            "1. L'email non professionnel (kingdu92@yahoo.fr, crazymoney237@gmail.com). Créez prenom.nom@gmail.com : gratuit, 2 minutes, et la perception de votre sérieux change.",
+            "2. Le scan smartphone : doigts sur les bords, reflets de flash, pages tordues. Utilisez un scanner de cybercafé ou, à défaut, Adobe Scan ou Microsoft Lens en mode document, près d'une fenêtre. Enregistrez en PDF haute résolution (300 DPI).",
+            "3. Oublier de certifier les copies. Passez à la mairie ou au commissariat pour le cachet « Certifié conforme à l'original » : 500 à 1 000 FCFA, 10 minutes.",
+            "4. Attendre le dernier moment pour les tests de langue : sessions complètes des mois à l'avance, résultats en 13 jours pour l'IELTS papier, pas de deuxième chance. Passez le test 4 à 6 mois avant la deadline et inscrivez-vous 3 mois avant la session.",
+            "5. Ne pas mentionner le bénévolat ni l'engagement communautaire. Pour Chevening, Fulbright, Australia Awards, MasterCard Foundation ou Manaaki, il compte autant que les notes : un candidat calculatrice (notes parfaites, zéro engagement) perd face à un candidat leader. Si vous n'avez rien, commencez maintenant : association, tutorat gratuit, atelier, nettoyage de quartier. Même 3 mois bien documentés valent mieux que rien.",
+            "6. Envoyer la même lettre à toutes les bourses. Les évaluateurs reconnaissent un copier-coller. Rédigez une lettre-souche de 800 mots puis adaptez 30 à 40 % du texte (le Pourquoi ici, l'accent leadership, impact ou échange culturel, le ton).",
+            "7. Ignorer les instructions de format : 500 mots, c'est 500 mots, pas 501 ; un PDF unique, ce n'est pas 7 fichiers ; une photo sur fond blanc, pas bleu. Relisez les consignes trois fois (nombre de mots, type et taille de fichier, nommage).",
+            "8. Ne pas relire. Faites relire par au moins 2 personnes : une qui connaît votre domaine, une méticuleuse. Outils : Grammarly (anglais), Antidote (français), LanguageTool (multilingue).",
+            "9. Soumettre à la dernière minute : les serveurs saturent dans les dernières heures. Soumettez 48 à 72 heures avant la deadline (certaines recommandations vont jusqu'à une semaine).",
+            "10. Abandonner après un refus. La majorité des boursiers actuels de Chevening, Fulbright, Australia Awards et Eiffel ont réussi à leur deuxième ou troisième tentative. Analysez le point faible, demandez un feedback si possible, améliorez (meilleur score IELTS, engagement renforcé, projet de retour plus précis) et repostulez."
+          ]
+        },
+        {
+          "h": "La statistique de la persévérance",
+          "p": [
+            "Chevening accepte environ 2,7 % des candidats. Parmi ceux qui postulent deux fois, le taux monte à environ 8 % ; à la troisième tentative, il atteint environ 15 %. Chevening reçoit environ 65 000 candidatures par an pour 1 800 places."
+          ],
+          "liste": []
+        },
+        {
+          "h": "D'autres pièges signalés",
+          "p": [],
+          "liste": [
+            "Postuler à une seule bourse : si elle est rejetée, vous n'avez rien. Diversifiez.",
+            "Ignorer les critères d'éligibilité : si une bourse exige 2 ans d'expérience et que vous en avez zéro, ne postulez pas.",
+            "Des lettres de recommandation génériques : donnez à vos recommandants de quoi écrire une lettre spécifique.",
+            "Ne pas rechercher le programme en profondeur : si vous ne pouvez nommer ni un professeur, ni un module, ni un laboratoire, vous n'avez pas assez cherché.",
+            "Un projet d'avenir vague : « Je veux contribuer au développement de mon pays » n'est pas un projet ; « Créer un laboratoire de diagnostic médical par IA à l'Université de Kinshasa, formant 50 chercheurs en 5 ans » en est un.",
+            "Négliger les bourses moins prestigieuses : les bourses partielles de 5 000 à 15 000 dollars sont moins compétitives, plus nombreuses, et elles s'accumulent."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_12.txt - Partie XVI, Chapitre H : Les 10 erreurs fatales ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI, 7. Les 10 erreurs fatales à éviter"
+  },
+  {
+    "id": "calendrier-type-des-bourses",
+    "ordre": 9,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Calendrier type des bourses et planning inversé",
+      "resume": "Les bourses suivent un cycle annuel prévisible. Repères mois par mois, règle des 12 mois et exemple de planning inversé à rebours depuis la deadline.",
+      "sections": [
+        {
+          "h": "La règle d'or",
+          "p": [
+            "Commencez vos préparations 12 mois avant la date de départ prévue. La majorité des candidats qui échouent ont commencé trop tard, pas trop mal. Ne regardez pas la date d'aujourd'hui : regardez la date de clôture et remontez le temps (backward planning)."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Le cycle annuel en grandes périodes",
+          "p": [],
+          "liste": [
+            "Septembre - Octobre : ouverture de grandes bourses (Eiffel, Vanier, Knight-Hennessy). Finaliser les tests de langue, contacter les universités.",
+            "Novembre - Janvier : clôture des grandes bourses et ouverture des bourses universitaires. Soumettre les dossiers 48 heures avant la deadline.",
+            "Février - Avril : ouverture d'Australia Awards, Manaaki NZ, MAECI Italie, ARES Belgique. Préparer la deuxième vague.",
+            "Mai - Juillet : résultats, procédures de visa, bourses DSU Italie. Lancer les démarches administratives (visa, logement).",
+            "Août : préparatifs de voyage, dernières bourses. Réserver le billet d'avion APRÈS le visa."
+          ]
+        },
+        {
+          "h": "Repères mois par mois",
+          "p": [],
+          "liste": [
+            "Janvier : ouvrent MAEC-AECID (Espagne) et La Caixa. Ferment Eiffel (début janvier), Erasmus Mundus (janvier-février), Pearson, La Caixa.",
+            "Février : ouvre Australia Awards (1er février) ; MAEC-AECID ferme mi-février.",
+            "Mars : ouvrent Manaaki NZ (1er mars), FCT Portugal, Fondation Aga Khan. Aga Khan ferme le 31 mars.",
+            "Avril : ouvrent MAECI Italie et BAD/JADS ; Manaaki ferme le 10 avril, Australia Awards le 30 avril.",
+            "Mai : ouvrent les contrats doctoraux français ; MAECI ferme fin mai ; FES (Allemagne) ferme le 31 mai.",
+            "Juin : résultats Chevening et Fulbright. Phase d'attente, préparation des visas.",
+            "Juillet : DSU Italie (toutes régions) ; KAS (Allemagne) ferme le 15 juillet.",
+            "Août : ouverture de Chevening (début août).",
+            "Septembre : ouverture ARES Belgique, DAAD EPOS (variable) ; fermeture DSU Italie (début septembre) et Heinrich Böll (1er septembre).",
+            "Octobre : Eiffel, Erasmus Mundus, Knight-Hennessy. Commencer Erasmus Mundus, finaliser Eiffel.",
+            "Novembre : ferment Chevening (début novembre), Vanier (novembre), FES (30 novembre).",
+            "Décembre : ferment Trudeau, MasterCard Sciences Po, Groningen Bleumink (1er décembre), TU Delft (1er décembre)."
+          ]
+        },
+        {
+          "h": "Exemple de calendrier inversé : Chevening, deadline du 5 novembre 2026",
+          "p": [],
+          "liste": [
+            "M-12 (novembre 2025) : identifier Chevening comme cible, vérifier l'éligibilité, commencer à réfléchir aux 4 essais.",
+            "M-9 (février 2026) : s'inscrire à l'IELTS pour une session en mai-juin, commencer la préparation linguistique.",
+            "M-7 (avril 2026) : passer l'IELTS, identifier 3 programmes de Master au UK.",
+            "M-6 (mai 2026) : résultats IELTS ; premier brouillon des 4 essais.",
+            "M-5 (juin 2026) : deuxième brouillon, solliciter 2 recommandateurs.",
+            "M-4 (juillet 2026) : troisième brouillon, relecture par 2 personnes, CV au format UK.",
+            "M-3 (août 2026) : ouverture de Chevening, création du compte, essais en version finale.",
+            "M-2 (septembre 2026) : formulaire rempli, recommandateurs relancés (ils soumettent en ligne).",
+            "M-1 (octobre 2026) : dernière relecture, vérification de chaque document.",
+            "J-3 (2 novembre 2026) : soumission. Jamais le dernier jour."
+          ]
+        },
+        {
+          "h": "Le même principe en version courte",
+          "p": [
+            "12 mois avant : identifier vos bourses cibles et commencer le test de langue. 9 mois avant : contacter vos recommandants, commencer la rédaction. 6 mois avant : finaliser les lettres, passer le test, rassembler les documents. 3 mois avant : relire, faire relire, soumettre. 1 mois avant : vérifier que tout est complet et relancer les recommandants."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_1.txt - Introduction : Le calendrier mondial des bourses ; LE_MANUEL_DES_BOURSES_part_12.txt - Annexe B : Calendrier des deadlines mois par mois, et Chapitre G : Le calendrier inversé sur 12 mois ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI : Le calendrier inversé"
+  },
+  {
+    "id": "glossaire-du-boursier",
+    "ordre": 10,
+    "categorie": "comprendre",
+    "gratuit": true,
+    "branche": null,
+    "fr": {
+      "titre": "Glossaire du boursier",
+      "resume": "Les termes qui reviennent dans les formulaires et sur les sites officiels, de l'admission conditionnelle au Zoekjaar.",
+      "sections": [
+        {
+          "h": "Argent et financement",
+          "p": [],
+          "liste": [
+            "Fully Funded : bourse tous frais payés (scolarité, vie, voyage). Stipend : allocation mensuelle de vie.",
+            "Tuition Waiver : exonération des frais de scolarité. Tuition Fees : frais de scolarité.",
+            "Fellowship : bourse de haut niveau, souvent pour la recherche ou le PhD.",
+            "Assistanat (TA/RA) : poste rémunéré d'assistant d'enseignement ou de recherche, principal mode de financement des PhD aux USA.",
+            "Need-Blind : l'université ne regarde pas vos finances pour décider de vous admettre.",
+            "Bourse d'excellence : financement fondé sur les résultats académiques. Bourse sociale : fondée sur les revenus modestes de la famille.",
+            "AVI : Attestation de Virement Irrévocable, preuve de fonds parfois demandée pour un visa.",
+            "DSU (Italie) : Diritto allo Studio Universitario, bourses régionales sur critères financiers. ISEE : calcul de la richesse familiale pour accéder au DSU.",
+            "IPREM (Espagne) : indicateur de revenu servant à calculer les moyens financiers (environ 600 euros par mois)."
+          ]
+        },
+        {
+          "h": "Dossier et admission",
+          "p": [],
+          "liste": [
+            "Admissibilité : phase où le dossier est vérifié administrativement avant l'évaluation académique.",
+            "Admission conditionnelle : acceptation sous réserve d'un document manquant (diplôme final, test de langue). On peut demander le visa avec une admission conditionnelle.",
+            "Apostille : cachet international certifiant l'origine d'un document public (Convention de La Haye), nécessaire pour l'Espagne et l'Italie ; sinon, légalisation consulaire.",
+            "Certification conforme : photocopie tamponnée par une autorité (mairie, commissariat) attestant qu'elle est identique à l'original.",
+            "Statement of Purpose (SOP) : lettre de motivation académique.",
+            "Deadline : date limite de dépôt, souvent à minuit pile (heure du pays d'accueil).",
+            "Common App : plateforme centralisée pour postuler aux universités américaines (Bachelor). Uni-assist : portail d'évaluation des diplômes étrangers en Allemagne. Universitaly : portail de pré-inscription en Italie.",
+            "Dichiarazione di Valore : déclaration de valeur de vos diplômes, délivrée par l'ambassade d'Italie."
+          ]
+        },
+        {
+          "h": "Études et diplômes",
+          "p": [],
+          "liste": [
+            "Bachelor : équivalent de la Licence (3 ou 4 ans). PhD : grade de Docteur (Bac+8). LMD : Licence-Master-Doctorat (3+2+3 ans).",
+            "ECTS : European Credit Transfer System ; 60 ECTS égalent une année universitaire.",
+            "GPA : moyenne scolaire sur 0 à 4,0. GRE : test de logique exigé pour certains Masters et PhD américains. GMAT : test d'admission en MBA.",
+            "CECRL : niveaux de langue A1 à C2 ; B2 est le seuil standard pour étudier en langue étrangère.",
+            "IELTS : test d'anglais le plus reconnu. TOEFL : test d'anglais américain. DELF / DALF : diplômes d'État de français, valables à vie. TCF Canada : test de français pour l'immigration canadienne.",
+            "Alumni : réseau des anciens étudiants ou boursiers d'une institution.",
+            "DAC List : liste OCDE des pays éligibles à l'aide au développement ; la quasi-totalité des pays africains y figurent.",
+            "CIFRE (France) : doctorat réalisé en entreprise avec un salaire de cadre (environ 2 500 à 3 000 euros par mois). Contrat doctoral : contrat de travail de 3 ans pour les doctorants en France (environ 2 300 euros brut par mois)."
+          ]
+        },
+        {
+          "h": "Visa et séjour",
+          "p": [],
+          "liste": [
+            "Campus France : agence officielle pour les études en France, passage obligatoire pour les étudiants de 90 % des pays africains.",
+            "VLS-TS (France) : Visa Long Séjour valant Titre de Séjour. CVEC : contribution vie étudiante et de campus, environ 103 euros par an. CROUS : gère résidences et cantines étudiantes. APS : autorisation provisoire de séjour de 12 mois pour chercher un emploi après un Master ou un PhD.",
+            "CAQ (Québec) : Certificat d'Acceptation du Québec, étape avant le permis d'études canadien. DLI / EED : établissement d'enseignement désigné, reconnu pour le permis d'études au Canada.",
+            "CAS (UK) : Confirmation of Acceptance for Studies, code unique délivré par l'université britannique. IHS (UK) : surcharge santé de 776 livres par an.",
+            "CoE (Australie) : Confirmation of Enrolment. OSHC : assurance santé obligatoire pour étudiants étrangers en Australie.",
+            "SEVIS (USA) : système de suivi des étudiants étrangers, frais de 350 USD.",
+            "Compte bloqué / Sperrkonto (Allemagne) : compte où l'on dépose 11 904 euros pour le visa, reversés à raison de 992 euros par mois."
+          ]
+        },
+        {
+          "h": "Après les études",
+          "p": [],
+          "liste": [
+            "Graduate Route (UK) : visa de travail post-études de 2 à 3 ans. OPT (USA) : permis de travail post-études de 12 mois (36 mois pour les STEM).",
+            "PTPD / PGWP (Canada) : permis de travail post-diplôme, jusqu'à 3 ans pour Master et PhD. Entrée Express : système de points pour l'immigration permanente au Canada.",
+            "EU Blue Card : titre de séjour pour travailleurs hautement qualifiés dans l'UE. Passeport Talent (France) : titre de séjour de 4 ans pour les diplômés trouvant un emploi à plus de 1,5 fois le SMIC.",
+            "Zoekjaar (Pays-Bas) : année de recherche, permis de travail post-études de 12 mois, activable jusqu'à 3 ans après le diplôme.",
+            "MAECI (Italie) : ministère des Affaires étrangères et de la Coopération internationale."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_12.txt - Bonus 1 : Glossaire (Les 60+ termes indispensables)"
+  },
+  {
+    "id": "pieces-universelles",
+    "ordre": 11,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Les pièces universelles du dossier",
+      "resume": "Passeport, relevés de notes, échelle de notation, copies certifiées, traductions, diplômes, photos : le socle exigé partout, avec les standards à respecter.",
+      "sections": [
+        {
+          "h": "Pourquoi c'est crucial",
+          "p": [
+            "La constitution du dossier est le goulot d'étranglement : 70 % des candidatures y sont éliminées, le plus souvent pour des raisons administratives (document illisible, traduction non conforme, pièce mineure manquante, lettre hors sujet, CV au mauvais format) et non par manque de talent."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Le passeport",
+          "p": [
+            "Il doit être valide au moins 6 mois après la date prévue de fin de vos études. Si votre passeport expire en décembre 2028 et que vous visez un Master de 2 ans commençant en septembre 2027 (fin en septembre 2029), renouvelez-le avant de postuler."
+          ],
+          "liste": [
+            "Coût du renouvellement : Cameroun 110 000 à 130 000 FCFA (biométrique, 5 ou 10 ans) ; Sénégal 50 000 FCFA ; Côte d'Ivoire 100 000 FCFA ; RDC 185 USD (environ 120 000 FCFA).",
+            "Délai : 2 à 8 semaines, beaucoup plus long dans certains pays (RDC, Guinée). Commencez au moins 3 mois avant votre première deadline.",
+            "Scan : PDF ou JPEG, 300 DPI minimum, en couleur, sans reflet ni doigts sur les bords ni zones floues. Scanner à plat de préférence ; à défaut, Adobe Scan, CamScanner ou Microsoft Lens en mode document avec un bon éclairage."
+          ]
+        },
+        {
+          "h": "Relevés de notes et échelle de notation",
+          "p": [
+            "Fournissez les relevés de chaque année depuis le Baccalauréat (Licence 1 à 3, Master 1 et 2 si applicable, attestation de résultats du Bac). Chaque relevé est un document officiel avec cachet de l'institution et signature du responsable académique.",
+            "Joignez le document officiel de votre université expliquant le barème. À défaut, demandez au secrétariat académique une lettre à en-tête : note maximale 20/20 ; 16-20 Très Bien (top 2-5 %) ; 14-15,99 Bien (top 10-15 %) ; 12-13,99 Assez Bien (top 25-40 %) ; 10-11,99 Passable ; en dessous de 10 échec ; puis la mention du pourcentage supérieur de la promotion où se place le candidat. Ce document peut transformer la perception de votre dossier."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Copies certifiées",
+          "p": [
+            "Jamais d'originaux par la poste, sauf demande explicite. Apportez l'original et la photocopie à la mairie ou au commissariat : l'agent compare, tamponne et signe « Certifié conforme à l'original ». Coût : gratuit ou 500 à 1 000 FCFA."
+          ],
+          "liste": []
+        },
+        {
+          "h": "La traduction assermentée",
+          "p": [
+            "Astuce : demandez un devis global pour l'ensemble du dossier (5 à 10 pages) ; réduction habituelle de 10 à 15 %."
+          ],
+          "liste": [
+            "Royaume-Uni, USA, Australie, Canada anglophone, Nouvelle-Zélande, Pays-Bas : anglais, traducteur assermenté, 20 000 à 30 000 FCFA par page.",
+            "Allemagne : anglais ou allemand selon le programme, 20 000 à 30 000 FCFA. Italie : italien, 20 000 à 35 000 FCFA. Espagne : espagnol, 20 000 à 30 000 FCFA. Portugal : portugais ou anglais, 20 000 à 30 000 FCFA.",
+            "France et Belgique : pas de traduction, documents en français acceptés."
+          ]
+        },
+        {
+          "h": "Diplômes et certificats de réussite",
+          "p": [
+            "Sans diplôme définitif (parchemin signé par le recteur), l'attestation de réussite est acceptée dans la quasi-totalité des cas : datée, signée par le recteur, le doyen ou le directeur des études, sur papier à en-tête, avec cachet officiel. Le relevé de notes final, plus détaillé (chaque matière, chaque note, moyenne générale), est le document le plus important de votre dossier académique."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Photos d'identité biométriques",
+          "p": [
+            "Faites-les réaliser dans un studio spécialisé (3 000 à 5 000 FCFA pour 4 à 8 photos) et demandez aussi les fichiers numériques en JPEG haute résolution, beaucoup de candidatures exigeant un upload."
+          ],
+          "liste": [
+            "France : 35 x 45 mm, fond clair (gris ou bleu), visage de 32 à 36 mm de hauteur.",
+            "Allemagne : 35 x 45 mm, fond blanc ou gris clair, expression neutre, bouche fermée.",
+            "Royaume-Uni : 35 x 45 mm, fond blanc ou crème, pas de lunettes.",
+            "USA : 51 x 51 mm (2 x 2 pouces), fond blanc : ne le confondez pas avec le format européen.",
+            "Canada : 35 x 45 mm, blanc ou gris. Australie : 35 x 45 mm, blanc, expression neutre. Japon : 35 x 45 ou 30 x 40 mm, blanc."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_10.txt - Partie XV, Chapitre A : Les pièces universelles"
+  },
+  {
+    "id": "pieces-specifiques",
+    "ordre": 12,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Les pièces spécifiques du dossier",
+      "resume": "Projet de recherche, portfolio, preuves financières, casier judiciaire, certificat médical : les documents de preuve demandés selon la bourse ou le pays.",
+      "sections": [
+        {
+          "h": "Le projet de recherche (PhD, Master Recherche)",
+          "p": [
+            "Il prouve votre capacité à conduire une recherche originale et méthodique. Longueur totale : 2 000 à 5 000 mots selon l'université. Structure type :"
+          ],
+          "liste": [
+            "1. Titre provisoire : clair, académique, 1 à 2 lignes.",
+            "2. Problématique et objectifs : la question, son importance, 2 à 3 objectifs (400 à 600 mots).",
+            "3. État de l'art : ce que disent les autres chercheurs, les lacunes, comment vous les comblez, 10 à 20 références clés (600 à 1 000 mots).",
+            "4. Méthodologie : collecte de données, approche qualitative, quantitative ou mixte, outils, terrain, population, limites (500 à 800 mots).",
+            "5. Calendrier prévisionnel : 36 mois pour un PhD, 12 à 24 mois pour un Master (tableau et 200 mots).",
+            "6. Bibliographie : 15 à 30 références au format APA, Chicago ou Harvard."
+          ]
+        },
+        {
+          "h": "Ce que l'évaluateur attend du projet",
+          "p": [
+            "Il n'a pas à être parfait (c'est un projet, pas une thèse terminée), mais il doit montrer que vous maîtrisez la littérature, posez une question pertinente et originale, savez y répondre méthodologiquement et avez un calendrier réaliste."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Le portfolio (arts, design, architecture, mode, film)",
+          "p": [
+            "C'est la pièce maîtresse, souvent plus importante que les notes. Standard : un PDF unique de 10 à 20 pages (ou lien vers Behance ou Adobe Portfolio), 8 à 15 projets montrant la diversité des compétences et le processus créatif, 1 à 3 images par projet plus 2 à 4 phrases sur l'intention, le contexte et les techniques, images en haute résolution bien cadrées. Le jury cherche originalité, maîtrise technique, cohérence esthétique et capacité à expliquer son travail. Ce n'est pas un album photo de vacances ni un collage décoratif."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Les preuves financières",
+          "p": [
+            "Certaines bourses partielles exigent la preuve que vous financerez le reste à charge."
+          ],
+          "liste": [
+            "Relevés bancaires du garant (père, mère ou garant financier) : 3 à 6 derniers mois montrant un solde suffisant, avec cachet de la banque sur chaque page.",
+            "Attestation bancaire : lettre à en-tête confirmant le solde moyen et actuel, datée de moins d'un mois.",
+            "Lettre de prise en charge : « Je, [nom], m'engage à financer les études de [nom] à hauteur de [montant] par an », signée du garant.",
+            "Lettre de bourse : si la bourse est Fully Funded, elle remplace toutes les preuves ci-dessus et doit détailler les montants exacts couverts."
+          ]
+        },
+        {
+          "h": "Le casier judiciaire",
+          "p": [
+            "Exigé par l'Espagne, l'Italie, l'Australie, le Canada et la Nouvelle-Zélande (obligatoire), parfois par les USA. Cameroun : extrait de casier judiciaire (Bulletin n°3), validité 3 mois, 1 000 FCFA, Tribunal de Première Instance. Sénégal : extrait de casier, 3 mois, 1 000 FCFA, Tribunal de Grande Instance.",
+            "Le piège de la validité : il expire en 3 à 6 mois. Attendez d'avoir reçu votre admission avant de le faire établir, sinon il sera périmé avant la fin de la procédure de visa."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Le certificat médical",
+          "p": [
+            "Exigé par l'Espagne (certificat général), le Canada et l'Australie (bilan médical complet), la Nouvelle-Zélande (bilan et radio pulmonaire), le Royaume-Uni (test de tuberculose pour certains pays). Les bilans du Canada et de l'Australie doivent être faits par des médecins agréés spécifiques, dont la liste figure sur les sites des services d'immigration."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Pièce maîtresse par pays",
+          "p": [],
+          "liste": [
+            "Canada : CAQ (Québec) et preuve de fonds de 20 635 CAD ; 4 à 8 semaines.",
+            "Allemagne : Sperrkonto (11 904 euros) ; 1 à 2 semaines via Expatrio ou Fintiba.",
+            "France : procédure Campus France et entretien ; 2 à 4 mois.",
+            "Italie : ISEE Parificato et Dichiarazione di Valore ; 3 à 6 semaines pour la DdV.",
+            "Espagne : apostille de La Haye (ou légalisation consulaire) et casier judiciaire ; 2 à 4 semaines.",
+            "Portugal : reconnaissance DGES et NIF ; 4 à 8 semaines.",
+            "Pays-Bas : procédure TEV gérée par l'université. USA : I-20, frais SEVIS de 350 USD et entretien consulaire. UK : numéro CAS et IHS payée. Australie : CoE, OSHC payée et GS Statement. Nouvelle-Zélande : bilan médical et radio pulmonaire."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_10.txt - Partie XV, Chapitre B : Les pièces spécifiques ; LE_MANUEL_DES_BOURSES_part_12.txt - Annexe E : Dossier type par pays"
+  },
+  {
+    "id": "lettre-de-motivation-methode",
+    "ordre": 13,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "La lettre de motivation : structure et pièges",
+      "resume": "Le projet de retour est le coeur de la lettre. Structure en 5 sections, six erreurs fatales et ton à adopter selon la bourse visée.",
+      "sections": [
+        {
+          "h": "Le principe fondamental : le projet de retour",
+          "p": [
+            "La lettre est la pièce la plus importante du dossier : elle donne une âme aux notes et transforme un CV en histoire. Une bourse est un investissement dans votre pays d'origine. Si vous écrivez « Je veux venir en France pour y vivre et travailler après mon diplôme », la bourse sera refusée. Dites : « Je viens acquérir telle compétence spécifique pour résoudre tel problème concret au Sénégal, au Cameroun ou en RDC. »"
+          ],
+          "liste": []
+        },
+        {
+          "h": "La structure universelle en 5 sections (sur 800 mots)",
+          "p": [
+            "La même architecture, en version paragraphes : accroche de 3 à 5 lignes, parcours de 5 à 8 lignes, programme de 5 à 8 lignes, projet d'avenir de 5 à 8 lignes, conclusion de 2 à 3 lignes."
+          ],
+          "liste": [
+            "1. L'accroche (15 %, environ 120 mots) : un événement personnel, une statistique choquante ou une anecdote qui explique votre passion. La première impression est décisive.",
+            "2. Le parcours (20 %, environ 160 mots) : vos réalisations et surtout les leçons tirées. Pas un résumé de CV, une narration.",
+            "3. Le Pourquoi ici (20 %, environ 160 mots) : pourquoi cette université, ce pays, ce programme ; citez professeurs, cours, laboratoires précis.",
+            "4. Le projet de retour (30 %, environ 240 mots) : votre plan à 2 ans et à 5 ans dans votre pays ; nommez organisations, partenaires, chiffres.",
+            "5. La conclusion (15 %, environ 120 mots) : rappel de votre adéquation avec les valeurs du bailleur, phrase finale marquante."
+          ]
+        },
+        {
+          "h": "Les 6 erreurs fatales dans une lettre",
+          "p": [],
+          "liste": [
+            "Commencer par « Depuis mon enfance, j'ai toujours rêvé de... » : le cliché numéro un, que le comité lit des centaines de fois.",
+            "Résumer le CV, que le comité a déjà : racontez ce qu'il ne dit pas (motivation profonde, doutes surmontés, vision).",
+            "Être vague sur le Pourquoi ici : « La France est un beau pays avec une culture riche » élimine ; nommer le laboratoire et son directeur retient l'intérêt.",
+            "Ne pas avoir de projet de retour, ou un projet vague. Soyez chirurgical.",
+            "Dépasser le nombre de mots : 500 mots demandés, soumettez 495 à 500, pas 501.",
+            "Ne pas faire relire : au moins 2 personnes avant de soumettre."
+          ]
+        },
+        {
+          "h": "Adapter la lettre selon la bourse",
+          "p": [],
+          "liste": [
+            "Chevening (UK) : ton professionnel et confiant ; leadership, networking et plan de carrière ; 4 essais de 500 mots ; erreur n°1 : ne pas donner d'exemples concrets de leadership.",
+            "Fulbright (USA) : personnel et narratif ; échange culturel, ambassadeur, passion intellectuelle ; 500 à 1 000 mots ; erreur n°1 : dire qu'on veut rester aux USA.",
+            "DAAD / Böll (Allemagne) : sobre et analytique ; rigueur méthodologique, engagement social, projet ancré ; 600 à 1 000 mots ; erreur n°1 : être trop lyrique, l'Allemagne valorise la rigueur.",
+            "Australia Awards : pragmatique, orienté impact ; retour au pays, impact communautaire, leadership de terrain ; 500 à 800 mots ; erreur n°1 : projet de retour vague.",
+            "Manaaki (Nouvelle-Zélande) : humble et authentique ; service communautaire, respect culturel, développement durable ; 500 à 800 mots ; erreur n°1 : arrogance ou promesses grandioses.",
+            "Eiffel / Sciences Po (France) : intellectuel et structuré ; excellence académique, projet professionnel, Pourquoi la France ; 500 à 1 000 mots ; erreur n°1 : ne pas connaître le programme en détail.",
+            "Erasmus Mundus : international et ouvert ; interculturalité ; 500 à 1 000 mots ; erreur n°1 : ne pas expliquer pourquoi plusieurs pays.",
+            "ARES (Belgique) : professionnel, développement ; 500 à 800 mots ; erreur n°1 : ne pas démontrer l'utilité concrète de la formation.",
+            "Banque Mondiale : institutionnel et chiffré ; impact mesurable, problème de développement, plan d'action ; 500 à 1 000 mots ; erreur n°1 : ne pas parler en impact quantifié."
+          ]
+        },
+        {
+          "h": "Ce qui pèse le plus selon le pays",
+          "p": [],
+          "liste": [
+            "USA : parcours personnel et diversité, profil « well-rounded » (un GPA 3,5 avec un parcours associatif riche peut battre un 3,9 sans rien d'autre).",
+            "Royaume-Uni : profondeur intellectuelle, passion authentique pour la discipline. Allemagne : engagement social ou politique (Friedrich Ebert : justice sociale ; Heinrich Böll : écologie ou démocratie).",
+            "Canada : leadership communautaire, défis surmontés. Australie : potentiel de retour et de contribution au développement. France : cohérence du projet, et pour Eiffel, relation avec l'établissement d'accueil qui dépose la candidature. Nouvelle-Zélande : alignement avec les besoins du pays d'origine."
+          ]
+        },
+        {
+          "h": "Rédiger une lettre-souche",
+          "p": [
+            "Rédigez une lettre-souche de 800 mots puis adaptez 30 à 40 % du texte pour chaque bourse (le Pourquoi ici, l'accent leadership, impact ou échange culturel, le ton). Ne jamais envoyer la même lettre partout en changeant seulement le nom de la bourse."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_10.txt - Partie XV, Chapitre C : La lettre de motivation (Statement of Purpose), points 1, 2, 3 et 5 ; LE_MANUEL_DES_BOURSES_part_12.txt - Chapitre H, erreur n°6 ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI, 1 et 2"
+  },
+  {
+    "id": "lettres-de-motivation-modeles",
+    "ordre": 14,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Six modèles de lettres de motivation, condensés",
+      "resume": "Chevening, Fulbright, DAAD / Böll, Australia Awards, Manaaki, Eiffel : ce que fait chaque lettre modèle, ses chiffres et ses formules, à adapter à votre profil.",
+      "sections": [
+        {
+          "h": "Comment lire ces modèles",
+          "p": [
+            "Chaque modèle suit la structure universelle (accroche, parcours, Pourquoi ici, projet de retour, conclusion), avec des faits chiffrés, un programme et un professeur nommés, et un plan de retour en phases. Les profils sont fictifs ; adaptez-les au vôtre."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 1 : Chevening (Royaume-Uni), essai Leadership and Influence",
+          "p": [
+            "Profil : juriste camerounais de 28 ans, 3 ans en droit des affaires, LLM visé en International Commercial Law à la LSE. Ouverture sur le leadership défini non par un titre mais par la capacité à naviguer l'incertitude juridique. Exemple : une restructuration impliquant trois investisseurs soumis au droit OHADA, français et anglais, qui menaçait 340 emplois ; création d'un groupe de travail interdisciplinaire et méthode du dénominateur juridique commun, passant les points de friction de 23 à 7, 8 collaborateurs coordonnés pendant 4 mois. Engagement : cofondation en 2023 de la Clinique Juridique de Douala, 87 micro-entreprises formalisées en 18 mois. Projet de retour : lancer à Douala le premier cabinet de conformité transfrontalière OHADA-Common Law."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 2 : Fulbright (USA)",
+          "p": [
+            "Profil : ingénieure sénégalaise, Génie Électrique, 2 ans à la SENELEC, visant Power Systems Engineering à Georgia Tech. Accroche personnelle : étudier à la lampe à pétrole à Kolda, et la phrase de sa mère, « L'électricité viendra ». Statistique : 40 % des Sénégalais ruraux sans électricité fiable. Le Pourquoi ici cite un professeur, un article IEEE de 2024 et la collaboration avec le NREL. Plan de retour en deux phases : années 1 à 2 au Ministère du Pétrole et des Énergies sur les micro-réseaux du Plan Sénégal Émergent ; années 3 à 5, une structure de conseil et de formation de 200 techniciens locaux dans 5 régions. Elle se positionne en ambassadrice de l'innovation sénégalaise."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 3 : DAAD / Heinrich Böll (Allemagne)",
+          "p": [
+            "Profil : économiste ivoirien, 2 ans en microfinance rurale, Master International and Development Economics à la HTW Berlin. Ton sobre, analytique, aligné sur les valeurs écologiques et démocratiques de la Fondation. Fait d'ouverture : une sécheresse en 2024 a réduit la production de coton de 35 % et plongé 1 200 familles dans l'endettement. Données : agriculture 46 % de l'emploi mais 5 % des investissements verts. Engagement : ONG Terre Verte Poro, 45 hectares convertis et pesticides réduits de 60 % en 18 mois. Plan : à court terme un mécanisme national d'obligations vertes pour les coopératives, à moyen terme un think tank Économie Verte CI avec la Fondation Böll."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 4 : Australia Awards (Australie)",
+          "p": [
+            "Profil : professionnelle de santé publique congolaise, 5 ans chez Médecins Sans Frontières au Nord et Sud-Kivu, Master of Public Health à Melbourne. Ouverture sur le 14 août 2023 à Beni, quand il a fallu choisir qui recevrait les 200 dernières doses de vaccin contre la rougeole alors que 600 enfants attendaient. Résultats : réponse vaccinale lors de deux flambées touchant 12 000 enfants, 3 centres de traitement du choléra, 45 agents de santé formés, mortalité infantile réduite de 18 % en 3 ans. Plan de retour en trois volets : surveillance épidémiologique en temps réel par SMS au Ministère, centre de formation de 100 cadres par an, publications internationales. La clause de retour est présentée comme une promesse."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 5 : Manaaki (Nouvelle-Zélande)",
+          "p": [
+            "Profil : agronome togolais, 4 ans à l'ITRA, Master of AgriScience à Massey University. Ton humble, respectueux de la culture Māori : ouverture sur Manaakitanga (hospitalité, soin mutuel) et Kaitiakitanga (protéger la terre pour les générations futures), mis en résonance avec la sagesse ewe. Chiffres : rendements de mil et de sorgho en baisse de 25 % en dix ans dans les Savanes ; un essai de trois ans avec Mucuna pruriens a augmenté la matière organique du sol de 40 % et les rendements de maïs de 22 %. Fiches techniques en langue Moba qui ont aidé 300 agriculteurs analphabètes. Retour : programme pilote dans 10 villages, 500 agriculteurs formés."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 6 : Eiffel / Sciences Po (France)",
+          "p": [
+            "Profil : politiste malien, Master 1 en Science Politique, observateur électoral bénévole pour la CENI, Master Politiques Publiques à Sciences Po Paris. Thèse affirmée dès l'ouverture : l'instabilité au Sahel est un défi de gouvernance, les coups d'État de 2012, 2020 et 2021 étant des symptômes. Mémoire distingué sur la décentralisation inachevée dans la région de Mopti. Pourquoi la France : séminaires et cours précis, coopération française sur la décentralisation au Sahel. Projet : intégrer le Commissariat à la Réforme Institutionnelle, concevoir un transfert effectif des compétences aux collectivités et former 50 cadres territoriaux. Conclusion : revenir reconstruire, non pour fuir."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Les points communs gagnants",
+          "p": [],
+          "liste": [
+            "Un fait concret, daté et chiffré dès les premières lignes.",
+            "Un manque de formation identifié à partir de l'expérience de terrain.",
+            "Un programme, un module et un professeur nommés avec précision.",
+            "Un projet de retour en phases, avec institutions, chiffres et échéances.",
+            "Un ton adapté au bailleur : confiant (Chevening), narratif (Fulbright), sobre (Böll), pragmatique (Australia Awards), humble (Manaaki), structuré (Eiffel)."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_10.txt - Partie XV, Chapitre C : Les 6 lettres de motivation rédigées intégralement ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI, exemples de lettres"
+  },
+  {
+    "id": "cv-par-pays",
+    "ordre": 15,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Le CV adapté à chaque pays",
+      "resume": "Il n'existe pas de CV universel : photo, date de naissance, longueur et ordre des rubriques changent selon que l'on vise les USA, le Royaume-Uni, l'Allemagne, la France ou le Canada.",
+      "sections": [
+        {
+          "h": "Les règles d'or par pays",
+          "p": [],
+          "liste": [
+            "USA : jamais de photo, de date de naissance ni de situation familiale (illégal au sens des lois anti-discrimination, le CV avec photo est écarté). Academic CV de 2 à 3 pages ; resume d'une page pour la Licence. Chronologique inversé.",
+            "Royaume-Uni : photo et date de naissance non recommandées, 2 pages maximum, commence par un Personal Profile de 3 à 4 lignes. Les références sont mentionnées (« Available upon request ») sans coordonnées.",
+            "Allemagne : Lebenslauf tabulaire de 1 à 2 pages, deux colonnes (dates à gauche, contenu à droite). Photo professionnelle en haut à droite, date et lieu de naissance, situation familiale, signé et daté.",
+            "France et Europe : 1 à 2 pages, photo recommandée en haut à gauche, date de naissance, section Objectif professionnel en tête, format Europass ou classique ; Formation puis Expérience, Compétences, Langues, Centres d'intérêt.",
+            "Canada : proche du format américain, 2 pages, accent sur le leadership communautaire et la diversité des expériences. Il est interdit de mentionner l'âge, le genre, la religion ou l'état matrimonial.",
+            "Australie : 2 à 3 pages, plus détaillé que le britannique, avec une section Key Achievements chiffrée ; les bourses de recherche exigent un CV académique avec publications et présentations."
+          ]
+        },
+        {
+          "h": "Modèle américain (Academic CV)",
+          "p": [
+            "Profil : informaticien camerounais en IA postulant à un PhD. Rubriques : Education (GPA 3,8/4,0, cours pertinents, thèse en cours), Research Experience (traduction par Transformers pour langues camerounaises, corpus de 12 000 paires de phrases, 87 % de précision), Publications and Conferences, Honors and Awards, Technical Skills, Leadership and Community Engagement (coaching de 45 jeunes femmes en Python), Languages avec scores (TOEFL 102). Verbes d'action et résultats chiffrés partout."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle britannique (UK CV)",
+          "p": [
+            "Profil : juriste sénégalaise, 3 ans d'expérience, visant un Master en droits humains. Ordre : Personal Profile, Career History (portefeuille de 15 clients, 200 contrats rédigés, accord d'investissement de 3 millions d'euros), Academic Qualifications (avec mention et rang, par exemple 42e sur 430 étudiants), Key Achievements and Volunteering (clinique juridique pour femmes entrepreneures), Professional Development (certificats CICR, UNITAR), Technical Skills, References."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle allemand (Lebenslauf)",
+          "p": [
+            "Profil : ingénieur électricien ivoirien visant le DAAD EPOS en énergies renouvelables. Rubriques en tableaux : Persönliche Daten, Bildungsweg (note finale 15,2/20 en mention Bien, équivalent Sehr Gut, mémoire noté 17/20), Berufserfahrung (maintenance de 8 postes HT/BT desservant 25 000 foyers, interruptions réduites de 22 %), Sprachen (Goethe-Zertifikat B2, IELTS 6,5), IT-Kenntnisse, Ehrenamtliches Engagement, Weiterbildung, puis lieu, date et signature scannée. Précision et exhaustivité sont les maîtres-mots."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle français / Europass",
+          "p": [
+            "Profil : économiste congolais, Licence à l'UNIKIN (mention Distinction, top 5 % de 340 étudiants), stage de 4 mois à la Banque Centrale du Congo, visant un Master Économie du développement à Bordeaux (Campus France plus Eiffel). Objectif professionnel (intégrer le PNUD), Formation, Expérience (rapports trimestriels, collecte de données avec Stata), Engagement associatif (forum de 500 participants, newsletter de 800 abonnés), Compétences techniques, Langues avec certification, Centres d'intérêt."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Principes communs",
+          "p": [],
+          "liste": [
+            "Des résultats chiffrés plutôt que des tâches.",
+            "Une section engagement communautaire visible, puisqu'elle pèse autant que les notes pour la plupart des bourses Fully Funded.",
+            "Les langues avec le score exact des certificats.",
+            "Une adresse email professionnelle (prenom.nom@gmail.com).",
+            "Un format cohérent avec le pays visé : envoyer un CV au format français à une université américaine est une erreur stratégique."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_11.txt - Partie XV, Chapitre D : Les CV par pays ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI, 3. Le CV académique : les nuances par pays"
+  },
+  {
+    "id": "lettres-de-recommandation",
+    "ordre": 16,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Les lettres de recommandation",
+      "resume": "Qui choisir, comment demander en 4 étapes, quel kit fournir, et ce que contiennent les trois lettres modèles (académique en français, académique en anglais, professionnelle).",
+      "sections": [
+        {
+          "h": "Qui choisir",
+          "p": [
+            "Beaucoup cherchent la signature la plus prestigieuse au détriment de la pertinence. Une bonne lettre vient de quelqu'un qui a réellement observé votre travail et peut citer des exemples concrets."
+          ],
+          "liste": [
+            "Professeur encadrant (directeur de mémoire) : Master Recherche, PhD, bourses académiques (Eiffel, Erasmus Mundus, Gates Cambridge). Il souligne rigueur scientifique, curiosité, autonomie, capacité d'analyse, potentiel de recherche.",
+            "Directeur de stage, patron ou superviseur : Masters professionnels, MBA, bourses de leadership (Chevening, Fulbright, Australia Awards). Esprit d'équipe, résolution de problèmes, leadership, résultats mesurables.",
+            "Mentor ou responsable associatif : bourses d'engagement (MasterCard Foundation, Heinrich Böll, Manaaki). Engagement civique, empathie, résilience, capacité à mobiliser."
+          ]
+        },
+        {
+          "h": "Demander en 4 étapes",
+          "p": [],
+          "liste": [
+            "Étape 1, l'anticipation : contactez votre recommandateur au moins 6 semaines avant la deadline. Indiquez la bourse, le Master visé, l'université, le pays, la période où vous avez travaillé avec lui, la date limite, et proposez d'envoyer CV, résumé du projet et points à illustrer.",
+            "Étape 2, le dossier de référence : ne demandez jamais d'écrire à partir de rien. Fournissez votre CV à jour, un résumé du projet d'études (1 page), le nom de la bourse et un lien, 3 à 4 qualités à illustrer avec exemples, et les instructions de soumission (lien, PDF, adresse).",
+            "Étape 3, l'ébauche : si le recommandateur manque de temps, proposez une ébauche qu'il modifiera et signera. C'est une pratique courante dans le monde académique international.",
+            "Étape 4, le suivi : relance polie 2 semaines avant la deadline avec le lien de soumission ; remerciement une fois la décision connue, même en cas de refus. C'est votre réseau de demain."
+          ]
+        },
+        {
+          "h": "Ce que contient une bonne lettre",
+          "p": [],
+          "liste": [
+            "La relation entre le recommandant et le candidat (depuis quand, dans quel contexte).",
+            "Des exemples concrets plutôt que des adjectifs vagues.",
+            "Une comparaison : « Parmi les 200 étudiants que j'ai encadrés en 15 ans, X se situe dans le top 5 % » est infiniment plus puissant que « C'est un bon étudiant ».",
+            "Un lien avec le programme visé."
+          ]
+        },
+        {
+          "h": "Modèle 1 : lettre académique en français (Eiffel)",
+          "p": [
+            "Un professeur titulaire de microéconomie recommande son ancien étudiant pour un Master en Économie du développement en France. Il le connaît depuis 3 ans (L1 à L3) et a dirigé son mémoire. Faits : major de promotion sur 280 étudiants avec 15,8/20, meilleur résultat en huit ans d'enseignement ; mémoire sur les transferts de fonds de la diaspora (350 ménages enquêtés en 6 semaines, régression quantile, Stata) noté 17/20, la plus haute note du département ; cercle de lecture fondé par lui, 25 à 30 étudiants chaque samedi. Conclusion : l'un des 2 à 3 étudiants les plus talentueux en 15 ans de carrière, soutenu sans aucune réserve."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 2 : lettre académique en anglais (Chevening / Fulbright)",
+          "p": [
+            "Un Senior Lecturer en énergies renouvelables recommande son étudiante de Master pour Fulbright (Power Systems à Georgia Tech). Faits : première de sa promotion avec un GPA équivalent à 3,9/4,0, le plus haut du département en cinq ans ; projet de licence noté 18/20 ; face à un manque d'équipement, elle a développé un modèle de simulation MATLAB remplaçant l'oscilloscope, adopté ensuite par trois autres groupes de recherche ; club Green Energy fondé avec 8 ateliers touchant plus de 300 jeunes femmes. Parmi plus de 60 étudiants encadrés, elle figure sans équivoque dans les trois premières."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Modèle 3 : lettre professionnelle en anglais (Australia Awards)",
+          "p": [
+            "Une coordinatrice régionale d'ONG recommande son subordonné, Public Health Officer pendant 4 ans en zone de conflit, pour un Master of Public Health à Melbourne. Elle explique d'abord le contexte (Nord et Sud-Kivu), puis des résultats chiffrés : couverture vaccinale de routine passée de 47 % à 72 % en 18 mois dans la zone de Beni, environ 2 300 cas de rougeole évités ; matrice de risque lors du choléra d'Uvira ayant ramené le temps de réponse de 72 à 36 heures ; maintien de 48 heures sur place lors d'une évacuation, d'où un prix décerné pour la première fois à un employé de moins de 35 ans. L'organisation s'engage à le nommer Head of Health Policy à son retour."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Particularités par pays",
+          "p": [],
+          "liste": [
+            "USA : recommandations envoyées directement par le recommandant via un portail en ligne (vous ne les voyez jamais) ; il doit écrire en anglais courant.",
+            "Royaume-Uni : plus académiques, généralement deux demandées. Allemagne : souvent deux, une académique et une liée à l'engagement social.",
+            "Australie : deux référents, un académique et un professionnel qui parle de leadership et d'engagement envers le développement du pays d'origine.",
+            "France : pour Eiffel, la recommandation du directeur de programme de l'université d'accueil est souvent la plus importante."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_11.txt - Partie XV, Chapitre E : Les lettres de recommandation ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI, 4. Les lettres de recommandation"
+  },
+  {
+    "id": "checklist-et-gestion-des-candidatures",
+    "ordre": 17,
+    "categorie": "dossier",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Checklist de dépôt et gestion de plusieurs candidatures",
+      "resume": "La checklist universelle en 5 phases, la règle du 60/30/10, la matrice de suivi et les 4 filtres pour choisir ses bourses cibles.",
+      "sections": [
+        {
+          "h": "Checklist universelle de candidature",
+          "p": [],
+          "liste": [
+            "Phase 1, documents de base : passeport valide (plus de 18 mois de validité restante), tous les relevés de notes (un PDF par cycle, 300 DPI), tous les diplômes avec attestations, échelle de notation officielle, photos biométriques (format du pays cible plus fichier numérique), adresse email professionnelle.",
+            "Phase 2, atouts compétitifs : certificat de langue de moins de 2 ans, CV au format du pays cible, lettre de motivation personnalisée pour chaque bourse, 2 à 3 lettres de recommandation (contactées 6 semaines avant), projet de recherche si PhD (2 000 à 5 000 mots), portfolio si arts, design ou architecture (PDF de 10 à 20 pages).",
+            "Phase 3, documents financiers : relevés bancaires du garant (3 à 6 mois) ou lettre officielle de bourse, attestation bancaire, lettre de prise en charge si applicable.",
+            "Phase 4, documents administratifs : traductions assermentées si pays non francophone, légalisations MINREX ou apostilles, casier judiciaire de moins de 3 mois (ne pas le demander trop tôt), certificat ou bilan médical (médecin agréé pour Canada, Australie, Nouvelle-Zélande), preuve d'admission si requise.",
+            "Phase 5, vérification finale 48 heures avant la deadline : bons formats (PDF, taille sous la limite), noms de fichiers clairs (NOM_Prenom_Releves_Licence.pdf), lettres des recommandateurs soumises en ligne, formulaire sans champ vide, relecture par 2 personnes sans faute. Soumission 48 heures avant la deadline."
+          ]
+        },
+        {
+          "h": "Après la soumission",
+          "p": [],
+          "liste": [
+            "Vérifier la confirmation de réception et conserver une copie complète du dossier.",
+            "Préparer l'entretien si le programme en comprend un (Chevening, Fulbright).",
+            "Continuer à postuler à d'autres bourses, sans mettre tous ses oeufs dans un seul panier.",
+            "En cas de refus : demander un feedback, ajuster le dossier et repostuler l'année suivante."
+          ]
+        },
+        {
+          "h": "La règle du 60/30/10",
+          "p": [
+            "Postuler à une seule bourse est risqué, en viser 50 est impossible. Répartissez environ 400 heures de travail sur 4 à 5 mois (3 à 4 heures par jour) :"
+          ],
+          "liste": [
+            "60 % (environ 240 heures) : votre bourse de rêve. Celle qui demande le plus : 4 essais Chevening, lettre Fulbright personnalisée, contact avec un professeur pour Eiffel, projet de recherche pour Erasmus Mundus.",
+            "30 % (environ 120 heures) : deux bourses secondaires réalistes (DAAD EPOS, Erasmus Mundus, ARES, bourses universitaires), avec adaptation de la lettre principale.",
+            "10 % (environ 40 heures) : une bourse de secours plus accessible (DSU Italie, fondations politiques allemandes, NL Scholarship, bourses partielles universitaires)."
+          ]
+        },
+        {
+          "h": "La matrice de suivi",
+          "p": [
+            "Tableau Excel, Google Sheets ou papier, avec les colonnes : nom de la bourse, pays, deadline (en rouge si moins de 30 jours), documents requis, document critique (le plus long à obtenir), état d'avancement (non commencé, en cours, presque prêt, soumis), contact, test de langue (score ou date prévue), résultat (en attente, présélectionné, entretien, accepté, refusé), notes.",
+            "Exemple d'un ingénieur camerounais en Master : Chevening (5 novembre 2026, 4 essais de 500 mots, soumis, IELTS 7.0) ; Eiffel via ISAE-SUPAERO (7 janvier 2027, contact université et lettre de portage) ; DAAD EPOS TH Cologne (1er octobre 2026, soumis) ; Erasmus Mundus JEMARO (15 janvier 2027, en rédaction) ; DSU Piémont avec PoliTo (5 septembre 2027, ISEE Parificato et Dichiarazione di Valore, documents au MINREX)."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Les 4 filtres pour choisir ses bourses",
+          "p": [
+            "Postulez uniquement aux bourses qui passent les 4 filtres : 3 à 5 bourses bien ciblées valent infiniment mieux que 10 mal ciblées. Une autre recommandation va jusqu'à 5 à 10 candidatures en parallèle pour ne pas dépendre d'un seul dossier."
+          ],
+          "liste": [
+            "Éligibilité (oui ou non) : nationalité, âge, niveau d'études, expérience (2 à 3 ans parfois), score de langue. Un seul critère manquant : passez à la suivante.",
+            "Adéquation (fort, moyen, faible) : votre profil correspond-il à l'ADN de la bourse ? Exemple fort : un ingénieur avec 3 ans en énergies renouvelables qui postule à DAAD EPOS en Renewable Energy Management. Exemple moyen : un économiste qui postule à Böll en reliant la microfinance verte à l'écologie. En adéquation faible, ne gaspillez pas 100 heures.",
+            "Compétitivité : élevée si le profil coche toutes les cases et appartient à une catégorie sous-représentée ; moyenne si bon profil face à une compétition féroce (Chevening : environ 65 000 candidatures pour 1 800 places) ; faible si dossier incomplet.",
+            "Logistique : pouvez-vous obtenir à temps légalisations, traductions et tests ? Avez-vous les fonds pour les frais de candidature ? Vos recommandateurs sont-ils disponibles ?"
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_12.txt - Annexe D : Checklist universelle de candidature, et Chapitre G : Gérer plusieurs candidatures ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Bonus 1 : Checklist étape par étape"
+  },
+  {
+    "id": "tests-de-langue",
+    "ordre": 18,
+    "categorie": "langues",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Les tests de langue : IELTS, TOEFL, TCF, DELF, Goethe",
+      "resume": "Un dossier excellent avec un score insuffisant est rejeté sans lecture. Comparatif des tests, scores visés par destination et plan de préparation en 4 mois.",
+      "sections": [
+        {
+          "h": "IELTS ou TOEFL",
+          "p": [],
+          "liste": [
+            "IELTS Academic : British Council, IDP, Cambridge ; papier ou ordinateur ; oral face à un examinateur (12 à 14 minutes) ; note de 0 à 9 par paliers de 0,5 ; Listening 40 min, Reading 60, Writing 60, Speaking 12 ; environ 226 000 FCFA au Cameroun et 238 000 au Sénégal ; validité 2 ans ; résultats en 13 jours (papier) ou 3 à 5 jours (ordinateur). Accepté universellement (UK, Australie, Canada, Nouvelle-Zélande, Europe, de plus en plus aux USA). Le speaking face à face est plus naturel pour les francophones.",
+            "TOEFL iBT : ETS ; ordinateur uniquement ; oral enregistré devant un micro (17 minutes) ; note de 0 à 120 ; environ 165 000 FCFA ; validité 2 ans ; résultats en 4 à 8 jours. Dominant aux USA, accepté partout. Moins cher et plus rapide, mais le speaking au micro est déstabilisant."
+          ]
+        },
+        {
+          "h": "Quel test choisir",
+          "p": [],
+          "liste": [
+            "Royaume-Uni seul : IELTS (ou UKVI IELTS si requis). USA seul : TOEFL. Australie ou Nouvelle-Zélande : IELTS.",
+            "Canada anglophone, Allemagne, Pays-Bas, Espagne : IELTS ou TOEFL.",
+            "Plusieurs pays : IELTS, le plus universellement accepté. Budget serré : Duolingo English Test, accepté par plus de 4 000 universités (USA, Canada, certaines en Europe)."
+          ]
+        },
+        {
+          "h": "Duolingo English Test, l'alternative budget",
+          "p": [],
+          "liste": [
+            "Coût : 49 USD, soit environ 32 000 FCFA, cinq fois moins que l'IELTS (le comparatif des frais cite 42 000 FCFA ailleurs).",
+            "En ligne, chez soi, avec webcam, environ 1 heure. Note de 10 à 160 (120 correspond environ à un IELTS 7.0, 110 à un IELTS 6.5). Résultats en 48 heures.",
+            "Limites : pas accepté partout. Pas valable pour l'immigration au Canada (TCF ou TEF obligatoire) ni pour la plupart des universités britanniques."
+          ]
+        },
+        {
+          "h": "Français : TCF, DELF, DALF",
+          "p": [],
+          "liste": [
+            "TCF (Tout Public ou Canada) : évaluation ponctuelle, valable 2 ans strictement, QCM plus expression écrite et orale ; environ 180 000 FCFA (TCF Canada) ou 130 000 (TCF Tout Public) au Cameroun, 150 000 et 110 000 au Sénégal. Obligatoire pour l'immigration au Canada.",
+            "DELF B2 / DALF C1 : diplômes d'État valables à vie, 4 épreuves ; 50 000 à 80 000 FCFA au Cameroun, 45 000 à 70 000 au Sénégal. Préférés pour la France et la Belgique : moins chers et permanents."
+          ]
+        },
+        {
+          "h": "Allemand : TestDaF et Goethe-Zertifikat",
+          "p": [],
+          "liste": [
+            "TestDaF : admission dans les universités allemandes en allemand ; niveau TDN 4 dans chaque section (B2-C1) ; environ 130 000 FCFA ; validité illimitée.",
+            "Goethe-Zertifikat : preuve de niveau pour les bourses (les fondations politiques exigent souvent B2) ; B2 minimum, C1 pour certains programmes ; environ 150 000 FCFA (B2) ; validité illimitée ; centres à Yaoundé, Dakar, Abidjan."
+          ]
+        },
+        {
+          "h": "Scores minimums visés",
+          "p": [],
+          "liste": [
+            "Russell Group (UK) : IELTS 7.0 (6.5 minimum partout), TOEFL 100+. Chevening : IELTS 6.5 (5.5 minimum partout mais visez 7.0), TOEFL 79+.",
+            "Australia Awards : IELTS 6.5 (6.0 minimum), TOEFL 84 à 92. Universités anglophones du Canada : IELTS 6.5 (6.0), TOEFL 88-90. Immigration Canada : TCF Canada CLB 7+.",
+            "Fulbright et Masters USA : IELTS 6.5 à 7.5, TOEFL 80 à 100. Manaaki et universités néo-zélandaises : IELTS 6.0 à 6.5, TOEFL 80-90. Pays-Bas : IELTS 6.5 (6.0), TOEFL 90+.",
+            "Allemagne en anglais : IELTS 6.0 à 6.5, TOEFL 80-90 ; en allemand : TestDaF TDN 4 ou DSH-2 ; Heinrich Böll : Goethe B2 minimum. Espagne en anglais : IELTS 6.0 à 6.5, TOEFL 80-90.",
+            "Campus France : TCF B2 ou DELF B2. ARES (Belgique) : B2 minimum, souvent pas de test formel pour les francophones."
+          ]
+        },
+        {
+          "h": "Plan de préparation en 4 mois (de B1 à IELTS 6.5-7.0)",
+          "p": [],
+          "liste": [
+            "Mois 1, immersion : téléphone en anglais, 20 minutes par jour de presse (BBC News, The Guardian, Al Jazeera English), 30 minutes de podcasts (BBC Learning English, 6 Minute English), une série en anglais avec sous-titres anglais.",
+            "Mois 2, technique d'examen : étudier le format de chaque section, faire un test blanc complet, travailler les points faibles (souvent Writing Task 2 et Speaking Part 2). Ressources : IELTS Liz et E2 Language sur YouTube, Cambridge IELTS Practice Tests.",
+            "Mois 3, pratique intensive : 2 examens blancs complets par semaine en conditions réelles, 2 essais Task 2 par semaine corrigés, entraînement au speaking enregistré. Cambridge IELTS 15-18, application IELTS Prep by British Council, Write & Improve de Cambridge.",
+            "Mois 4, révision et passage : cibler la section la plus faible (statistiquement le Writing pour les francophones), réviser l'Academic Word List (570 mots), dernier test blanc une semaine avant, s'inscrire un mois à l'avance. Quizlet pour le vocabulaire."
+          ]
+        },
+        {
+          "h": "Le timing",
+          "p": [
+            "Pour une deadline en novembre (Chevening) ou janvier (Eiffel, Erasmus Mundus), passez l'IELTS en août-septembre. Ne le passez jamais moins de 4 semaines avant la deadline. Un IELTS 7.0 ouvre les portes de toutes les bourses du monde anglophone ; un IELTS 5.5 en ferme 90 %. C'est l'investissement le plus déterminant de votre budget de candidature."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_11.txt - Partie XV, Chapitre F : Les tests de langue ; LE_MANUEL_DES_BOURSES_part_1.txt - Chapitre 3 (coûts des tests)"
+  },
+  {
+    "id": "visa-royaume-uni-cameroun-alerte",
+    "ordre": 19,
+    "categorie": "visa",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Alerte Visa Break : Royaume-Uni et Cameroun",
+      "resume": "Depuis le 26 mars 2026, le Royaume-Uni suspend les visas d'études et de travail pour le Cameroun, l'Afghanistan, le Myanmar et le Soudan. Ce que dit la mesure, son effet sur les bourses et la conduite à tenir.",
+      "sections": [
+        {
+          "h": "Information à vérifier",
+          "p": [
+            "À confirmer sur gov.uk : la situation peut avoir changé. Ce qui suit restitue la mesure telle que décrite à la date du 26 mars 2026."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Ce qui s'est passé",
+          "p": [
+            "Le 26 mars 2026, le Secrétaire d'État à l'Intérieur britannique (Home Secretary) a activé une mesure d'urgence, l'« Immigration (Student and Work Visas) (Suspension) Regulations 2026 », appelée Visa Break. Pays concernés : Cameroun, Afghanistan, Myanmar, Soudan."
+          ],
+          "liste": [
+            "Toutes les demandes de Student Visa (ex-Tier 4) et de Skilled Worker Visa des ressortissants de ces quatre pays sont suspendues depuis le 26 mars 2026.",
+            "La suspension s'applique rétroactivement aux demandes en cours à la date d'entrée en vigueur.",
+            "Les visas déjà délivrés et valides ne sont pas révoqués : les étudiants camerounais déjà au Royaume-Uni peuvent poursuivre leurs études.",
+            "Durée initiale : 18 mois révisables, prolongeables ou levables selon les statistiques.",
+            "Aucune procédure d'exemption individuelle : même un lauréat Chevening ou Gates Cambridge ne peut obtenir de dérogation."
+          ]
+        },
+        {
+          "h": "La raison officielle",
+          "p": [
+            "Selon l'analyse du Home Office : plus d'un tiers des étudiants de ces quatre nationalités utilisaient le visa d'études comme voie détournée pour demander l'asile sur le sol britannique ; le taux de non-retour dépassait 35 %, contre 3 à 5 % pour les autres nationalités ; les demandes d'asile de détenteurs de visas étudiants avaient augmenté de 280 % en 3 ans."
+          ],
+          "liste": []
+        },
+        {
+          "h": "L'impact sur les bourses",
+          "p": [
+            "Une bourse n'est pas une exemption. Un Camerounais lauréat Chevening (environ 30 000 livres), un Soudanais sélectionné par Gates Cambridge (environ 50 000 livres) ou un Camerounais choisi par le Commonwealth ne peuvent pas obtenir de visa. Les organismes (FCDO, CSC, Gates Foundation) ont été pris de court : certains proposent un report d'un an, d'autres n'ont aucune solution."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Mesures additionnelles du Royaume-Uni en 2026",
+          "p": [],
+          "liste": [
+            "Suppression de l'exemption de visa visiteur pour les ressortissants de la Dominique, du Honduras, de la Namibie, du Salvador et du Vanuatu.",
+            "ETA (Electronic Travel Authorisation) obligatoire depuis février 2026 pour les nationaux qui n'avaient pas besoin de visa de visite, coût 10 livres ; non accessible aux nationalités sous Visa Break.",
+            "DATV (Direct Airside Transit Visa) obligatoire même pour une simple escale aéroportuaire pour les pays du Visa Break. Un vol Douala, Londres-Heathrow, Toronto exige un DATV, quasiment impossible à obtenir dans le contexte actuel, ou un reroutage."
+          ]
+        },
+        {
+          "h": "Conduite à tenir pour un Camerounais (5 points)",
+          "p": [],
+          "liste": [
+            "1. Arrêt immédiat des dépenses UK : frais UCAS ou de candidature Master, IELTS spécifiquement pour le UK (il reste utile pour le Canada ou l'Australie), frais de dossier des universités britanniques, cours de préparation propres au système britannique.",
+            "2. Réorientation immédiate des candidatures : droit international vers les Pays-Bas (Leiden, La Haye) ; business et MBA vers la France (INSEAD, HEC) ou l'Espagne (IE, ESADE) ; sciences politiques vers Sciences Po Paris ; ingénierie vers l'Allemagne (TU9) ou l'Italie (Politecnico) ; santé publique vers la Belgique (ARES) ou l'Australie (Melbourne) ; IA et informatique vers le Canada (Toronto, Montréal, Waterloo). Toutes filières : France, Italie, Allemagne, Canada, où les procédures restent ouvertes.",
+            "3. Surveillance active : site du Home Office (gov.uk), annonces du Haut-Commissariat de Grande-Bretagne à Yaoundé, alertes email du FCDO. La mesure est révisable.",
+            "4. Éviter les escales UK : privilégier Paris-CDG, Istanbul, Addis-Abeba, Casablanca, Dubaï ; éviter Londres-Heathrow, Londres-Gatwick, Manchester, Edinburgh.",
+            "5. Conserver sa bourse UK : demander un report (deferral) d'un an à l'organisme. Chevening autorise généralement un report d'un cycle académique, Gates Cambridge étudie au cas par cas, le Commonwealth Scholarship Commission indique travailler à trouver des solutions. Ne renoncez pas tant que la mesure n'est pas confirmée permanente."
+          ]
+        },
+        {
+          "h": "Les autres pays francophones",
+          "p": [
+            "Sénégalais, Ivoiriens, Congolais (RDC), Togolais, Béninois, Maliens, Burkinabè, Guinéens, Gabonais, Malgaches, Tunisiens, Marocains et Algériens ne sont pas concernés à ce stade. Mais le climat se durcit : délais de traitement de 3 à 8 semaines contre 2 à 3 auparavant, preuves de fonds scrutées de plus près, refus plus fréquents pour Genuine Student non démontré, extension possible à d'autres pays (rien n'est confirmé)."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Ne jamais tout miser sur le UK",
+          "p": [
+            "Ayez toujours un plan B vers la France, l'Italie, l'Allemagne ou le Canada. Si vous postulez à Chevening, postulez simultanément à Eiffel et au DAAD. Le Royaume-Uni reste par ailleurs le dossier de visa le plus cher : visa 490 livres, IHS 776 livres par an, IELTS, soit environ 1 370 000 FCFA minimum."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Rappel",
+          "p": [
+            "À confirmer sur gov.uk : la situation peut avoir changé."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_4.txt - Partie IV : Royaume-Uni, section 1 Alerte critique : le Visa Break (urgence 2026) ; LE_MANUEL_DES_BOURSES_part_2.txt - Chapitre 4, Royaume-Uni Student Visa"
+  },
+  {
+    "id": "visa-pays-par-pays-1",
+    "ordre": 20,
+    "categorie": "visa",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Visa d'études : Canada, Allemagne, France, Italie",
+      "resume": "Coût, preuve de fonds, documents clés, délais et pièges pour quatre destinations majeures, avec l'entretien Campus France décrypté.",
+      "sections": [
+        {
+          "h": "Canada : permis d'études",
+          "p": [],
+          "liste": [
+            "Coût : 150 CAD (permis) plus 85 CAD (biométrie), soit 235 CAD (environ 105 000 FCFA). Document clé : lettre d'admission d'un établissement d'enseignement désigné (EED / DLI).",
+            "Québec : obtenir d'abord le CAQ, 122 CAD (environ 55 000 FCFA), 4 à 8 semaines, avant le permis d'études.",
+            "Preuve de fonds : 20 635 CAD (environ 9 500 000 FCFA) pour l'année en plus de la scolarité. La lettre de bourse d'une bourse Fully Funded fait office de preuve ; si la bourse est partielle, prouvez la différence sur relevé bancaire.",
+            "Bilan médical obligatoire chez un médecin agréé IRCC : 150 000 à 300 000 FCFA au Cameroun (radiographie pulmonaire, analyse de sang, examen physique).",
+            "Délai : 8 à 16 semaines. Demande en ligne sur le portail IRCC ; lettre d'introduction à présenter à la frontière.",
+            "Piège fréquent : refus pour « doutes sur l'intention de quitter le Canada ». Expliquez dans la lettre d'explication pourquoi vous rentrerez (liens familiaux, emploi prévu, projet de retour) et mentionnez la clause de retour si elle existe (PCBF, Australia Awards)."
+          ]
+        },
+        {
+          "h": "Allemagne : visa national D",
+          "p": [],
+          "liste": [
+            "Coût : 75 euros (environ 49 200 FCFA). Documents : lettre d'admission et preuve d'assurance santé.",
+            "Sans bourse complète : compte bloqué (Sperrkonto) avec 11 904 euros (environ 7 810 000 FCFA), reversés à 992 euros par mois sur place. Prestataires agréés : Expatrio et Fintiba, frais d'ouverture de 49 à 89 euros. Si la bourse couvre le stipend, la lettre de bourse remplace le Sperrkonto.",
+            "Assurance santé obligatoire dès le jour 1 : publique environ 110 euros par mois pour les moins de 30 ans (TK ou AOK) ; au-delà de 30 ans, assurance privée de 150 à 300 euros par mois.",
+            "uni-assist si exigé : 75 euros pour la première demande, 30 euros par université supplémentaire.",
+            "Délai : 6 à 12 semaines, créneaux limités aux ambassades de Yaoundé et Dakar : réservez dès l'admission.",
+            "À l'arrivée : enregistrement à la mairie (Anmeldung) dans les 14 jours, obligatoire pour ouvrir un compte et s'inscrire."
+          ]
+        },
+        {
+          "h": "France : VLS-TS Étudiant",
+          "p": [],
+          "liste": [
+            "Coût : 50 à 99 euros (environ 33 000 à 65 000 FCFA) plus procédure Campus France d'environ 75 000 FCFA au Cameroun et au Sénégal.",
+            "Étapes Campus France : 1) création du compte, 2) 3 à 7 voeux de formation, 3) paiement, 4) dépôt et vérification des documents, 5) entretien pédagogique de 20 à 30 minutes en français, 6) réponses des universités, 7) demande de visa au consulat.",
+            "Preuve de fonds : 7 380 euros (environ 4 840 000 FCFA) par an, soit 615 euros par mois. La lettre de bourse suffit pour Eiffel ou BGF.",
+            "Délai : 2 à 6 semaines après le dépôt au consulat, mais la procédure Campus France prend 2 à 4 mois : commencez en octobre pour un départ en septembre.",
+            "À l'arrivée : valider le VLS-TS en ligne sur le site de l'ANEF dans les 3 mois, faute de quoi le titre n'est pas actif."
+          ]
+        },
+        {
+          "h": "L'entretien Campus France",
+          "p": [
+            "L'agent ne teste pas votre niveau de français mais la cohérence de votre projet. Préparez : pourquoi cette université et pas une autre, que ferez-vous après le diplôme, pourquoi ne pas étudier dans votre pays, comment financerez-vous vos études. La pire réponse est hésitante et vague ; la meilleure est un discours structuré de 3 minutes qui reprend votre lettre de motivation."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Italie : visa d'études",
+          "p": [],
+          "liste": [
+            "Coût : 50 euros (environ 33 000 FCFA). Pré-inscription obligatoire sur le portail Universitaly.",
+            "Dichiarazione di Valore : délivrée par l'ambassade d'Italie, 3 à 6 semaines. C'est le document le plus long : demandez-le dès mai pour une rentrée en septembre.",
+            "Preuve de fonds : environ 6 000 euros par an. Délai : 4 à 8 semaines, rendez-vous à l'ambassade de Yaoundé.",
+            "À l'arrivée : demander le Permesso di Soggiorno dans les 8 jours, à la Poste italienne, avec le kit de demande."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 4 : Après la sélection, 1. Procédures de visa par pays"
+  },
+  {
+    "id": "visa-pays-par-pays-2",
+    "ordre": 21,
+    "categorie": "visa",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Visa d'études : USA, Australie, Nouvelle-Zélande, Pays-Bas, Espagne, Portugal",
+      "resume": "Les procédures des six autres destinations, l'entretien consulaire américain, et un tableau de synthèse comparatif de tous les visas.",
+      "sections": [
+        {
+          "h": "États-Unis : visa F-1",
+          "p": [],
+          "liste": [
+            "Coût : 185 USD (frais consulaires, environ 120 000 FCFA) plus frais SEVIS I-901 de 350 USD (environ 227 000 FCFA), à payer en ligne sur fmjfee.com avant l'entretien.",
+            "Formulaire I-20 délivré par l'université après admission et preuve de financement : sans lui, aucune demande possible.",
+            "Entretien consulaire obligatoire en personne (Yaoundé, Dakar, Abidjan, Kinshasa), 3 à 10 minutes, en anglais. Délai de 2 à 8 semaines après l'entretien.",
+            "Preuve de fonds : relevés bancaires pour la première année ; la lettre de bourse est acceptée si elle détaille les montants.",
+            "Coût total minimal : environ 575 000 FCFA avec TOEFL ou IELTS."
+          ]
+        },
+        {
+          "h": "Conseils pour l'entretien consulaire américain",
+          "p": [],
+          "liste": [
+            "Soyez bref et précis : 2 à 3 phrases maximum, pas de monologue.",
+            "Montrez vos liens avec votre pays (famille, emploi qui vous attend, projet de retour).",
+            "Connaissez votre programme : université, domaine, directeur de recherche.",
+            "Apportez tous les documents : I-20, lettre de bourse, relevés bancaires, relevés de notes, lettre d'admission.",
+            "Tenue soignée et sérieuse. Ne mentez jamais : un mensonge détecté entraîne un refus permanent."
+          ]
+        },
+        {
+          "h": "Australie : Subclass 500",
+          "p": [],
+          "liste": [
+            "Coût : 2 000 AUD (environ 800 000 FCFA), augmenté massivement en juillet 2025 : le visa étudiant le plus cher du monde.",
+            "CoE (confirmation d'inscription et paiement du premier semestre ou couverture par la bourse). OSHC obligatoire, environ 500 à 700 AUD par an (Allianz Care, Medibank, BUPA), à payer avant le départ.",
+            "Genuine Student (GS) Statement, qui remplace la GTE Letter : questionnaire en ligne qui justifie pourquoi l'Australie, ce programme, maintenant.",
+            "Preuve de fonds : 29 710 AUD (environ 11 800 000 FCFA) pour les frais de subsistance annuels ; la lettre de bourse suffit pour Australia Awards.",
+            "Bilan médical par un médecin Bupa Medical Visa Services, radiographie pulmonaire incluse. Délai : 4 à 12 semaines, entièrement en ligne via ImmiAccount."
+          ]
+        },
+        {
+          "h": "Nouvelle-Zélande : Student Visa",
+          "p": [],
+          "liste": [
+            "Coût : 375 NZD (environ 145 000 FCFA). Preuve de fonds : 20 000 NZD (environ 7 700 000 FCFA) pour la première année.",
+            "Bilan médical obligatoire pour les séjours de plus de 6 mois (radiographie pulmonaire). Assurance santé obligatoire, souvent arrangée par l'université pour les boursiers Manaaki.",
+            "Délai : 4 à 8 semaines, demande en ligne auprès d'Immigration New Zealand."
+          ]
+        },
+        {
+          "h": "Pays-Bas : procédure TEV (MVV et VVR)",
+          "p": [],
+          "liste": [
+            "Coût : 254 euros (environ 167 000 FCFA, frais IND). L'université dépose votre demande auprès de l'IND : vous ne vous rendez pas au consulat.",
+            "Preuve de fonds : 1 130,77 euros par mois, soit environ 13 600 euros par an. Assurance obligatoire (Aon Student Insurance). Délai : 4 à 8 semaines."
+          ]
+        },
+        {
+          "h": "Espagne : visa d'études type D",
+          "p": [],
+          "liste": [
+            "Coût : 80 euros (environ 52 500 FCFA). Preuve de fonds : 100 % de l'IPREM, soit environ 600 euros par mois ou 7 200 euros par an (environ 4 720 000 FCFA).",
+            "Casier judiciaire et certificat médical obligatoires. Apostille de La Haye sur tous les documents académiques.",
+            "À l'arrivée : demander la TIE (Tarjeta de Identidad de Extranjero) dans les 30 jours au commissariat. Délai : 4 à 8 semaines, rendez-vous au consulat."
+          ]
+        },
+        {
+          "h": "Portugal : visa d'études type D",
+          "p": [],
+          "liste": [
+            "Coût : 90 euros (environ 59 000 FCFA). Preuve de fonds : 820 euros par mois (salaire minimum portugais), soit 9 840 euros par an.",
+            "NIF (numéro d'identification fiscale) indispensable pour tout (loyer, téléphone, banque), obtenable via un représentant fiscal. Reconnaissance des diplômes via la DGES. Délai : 4 à 8 semaines."
+          ]
+        },
+        {
+          "h": "Synthèse comparative",
+          "p": [
+            "Pour toutes les bourses Fully Funded, la lettre officielle de bourse détaillant les montants couverts remplace la preuve de fonds personnels. Conservez plusieurs copies certifiées de cette lettre."
+          ],
+          "liste": [
+            "France : 50-99 euros plus Campus France 75 000 FCFA ; fonds 7 380 euros ; pas de visite médicale ; 2-6 semaines.",
+            "Allemagne : 75 euros ; 11 904 euros (Sperrkonto) ; pas de visite médicale ; 6-12 semaines.",
+            "Italie : 50 euros ; environ 6 000 euros ; non ; 4-8 semaines. Espagne : 80 euros ; 7 200 euros ; certificat ; 4-8 semaines. Portugal : 90 euros ; 9 840 euros ; non ; 4-8 semaines. Pays-Bas : 254 euros ; 13 600 euros ; non ; 4-8 semaines.",
+            "Canada : 235 CAD ; 20 635 CAD ; oui ; 8-16 semaines. Nouvelle-Zélande : 375 NZD ; 20 000 NZD ; oui ; 4-8 semaines. USA : 185 USD plus 350 USD SEVIS ; variable ; parfois ; 2-8 semaines.",
+            "Australie : 2 000 AUD ; 29 710 AUD ; oui ; 4-12 semaines. Royaume-Uni : 490 GBP plus 776 GBP IHS ; 9 207 à 12 006 GBP ; non ; 3-8 semaines."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 4 : Après la sélection, 1. Procédures de visa par pays et tableau de synthèse comparatif"
+  },
+  {
+    "id": "visas-post-etudes",
+    "ordre": 22,
+    "categorie": "visa",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Comparatif des visas post-études",
+      "resume": "Durée du permis de travail après le diplôme et chemin vers la résidence dans onze pays, avec le classement par attractivité globale.",
+      "sections": [
+        {
+          "h": "Par pays",
+          "p": [],
+          "liste": [
+            "Canada : 3 ans (Master et PhD depuis 2026), diplôme d'un EED ; Entrée Express avec bonus francophone de 50 points. Cinq étoiles sur cinq.",
+            "Allemagne : 18 mois de recherche d'emploi lié au diplôme ; EU Blue Card puis résidence en 21 mois. Cinq étoiles.",
+            "Pays-Bas : 12 mois (Zoekjaar), activable jusqu'à 3 ans après le diplôme ; Highly Skilled Migrant plus régime fiscal 30 %. Quatre étoiles.",
+            "France : 12 mois (APS) après Master ou PhD ; Passeport Talent de 4 ans si salaire supérieur à 1,5 fois le SMIC. Quatre étoiles.",
+            "Australie : 2 à 4 ans selon le niveau, diplôme australien et moins de 35 ans (Bachelor, Master) ; Green List avec résidence directe si métier en pénurie. Quatre étoiles.",
+            "Royaume-Uni : 2 à 3 ans (Graduate Route), diplôme UK ; Skilled Worker puis ILR après 5 ans. Visa Break pour le Cameroun. Trois étoiles.",
+            "Nouvelle-Zélande : 1 à 3 ans ; Green List avec résidence directe si métier en pénurie, bonus hors Auckland. Quatre étoiles.",
+            "Espagne : 12 mois ; conversion immédiate si emploi trouvé ; nationalité en 10 ans (2 ans pour hispanophones). Trois étoiles.",
+            "Italie : 12 mois ; conversion en permis de travail, EU Blue Card disponible. Trois étoiles.",
+            "Portugal : 12 mois ; Tech Visa accéléré ; nationalité en 5 ans (test A2 seulement). Cinq étoiles.",
+            "USA : 12 mois (OPT) ou 36 mois (STEM OPT) ; loterie H-1B puis Green Card, long et incertain. Trois étoiles.",
+            "Japon : variable ; emploi qualifié puis résidence après 5 à 10 ans. Deux étoiles."
+          ]
+        },
+        {
+          "h": "Classement par attractivité globale (études, emploi, résidence)",
+          "p": [],
+          "liste": [
+            "1. Canada : permis post-diplôme de 3 ans plus bonus francophone.",
+            "2. Portugal : nationalité européenne en 5 ans plus Tech Visa.",
+            "3. Allemagne : Blue Card en 21 mois plus scolarité gratuite.",
+            "4. Pays-Bas : Zoekjaar flexible plus régime fiscal 30 %.",
+            "5. Australie : Green List et stipend élevé, mais visa cher et clause de retour des Awards."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_12.txt - Annexe F : Comparatif des visas post-études"
+  },
+  {
+    "id": "apres-selection-billet-logement-assurance",
+    "ordre": 23,
+    "categorie": "apres",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "De la lettre d'acceptation à l'avion : billet, logement, assurance",
+      "resume": "Entre l'admission et l'embarquement, 3 à 5 mois s'écoulent. Qui paie le billet, comment trouver un logement à distance et quelle assurance santé souscrire pays par pays.",
+      "sections": [
+        {
+          "h": "Une course contre la montre",
+          "p": [
+            "Recevoir sa lettre d'attribution est un moment d'euphorie, mais c'est aussi le départ d'une course administrative : un visa refusé pour un document manquant, un logement non réservé, une assurance oubliée ne pardonnent pas. Pour toutes les bourses Fully Funded, la lettre officielle de bourse détaillant les montants remplace la preuve de fonds personnels : gardez plusieurs copies certifiées."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Le billet d'avion : qui paie ?",
+          "p": [
+            "Bourses Fully Funded (Australia Awards, Chevening, Fulbright, DAAD EPOS, Manaaki, PCBF, Erasmus Mundus) : l'organisme envoie un billet électronique ou rembourse un forfait après l'achat. N'achetez jamais votre billet avant confirmation écrite du bailleur. Pour les bourses partielles sans couverture voyage, le billet est à votre charge."
+          ],
+          "liste": [
+            "Afrique de l'Ouest et Centrale vers l'Europe : 350 000 à 600 000 FCFA l'aller simple, 500 000 à 1 000 000 FCFA l'aller-retour.",
+            "Afrique vers l'Amérique du Nord : 500 000 à 800 000 FCFA l'aller simple, 700 000 à 1 200 000 l'aller-retour.",
+            "Afrique vers l'Australie ou la Nouvelle-Zélande : 600 000 à 1 000 000 l'aller simple, 900 000 à 1 500 000 l'aller-retour. Afrique vers le Japon : 500 000 à 900 000 l'aller simple, 800 000 à 1 400 000 l'aller-retour."
+          ]
+        },
+        {
+          "h": "Règles d'or pour le billet",
+          "p": [],
+          "liste": [
+            "Ne réservez JAMAIS avant d'avoir le visa dans votre passeport : les billets non remboursables sont une perte sèche.",
+            "Réservez 3 à 4 semaines avant le départ : les prix explosent dans les 2 dernières semaines.",
+            "Comparez Google Flights, Skyscanner, Kayak et les sites directs (Turkish Airlines, Ethiopian Airlines, Royal Air Maroc, Air France offrent souvent les meilleurs tarifs depuis l'Afrique francophone).",
+            "Privilégiez un vol avec escale (Istanbul, Addis-Abeba, Casablanca) : 30 à 50 % d'économie.",
+            "Vérifiez les bagages : les low-cost européennes limitent sévèrement ; prévoyez 23 à 30 kg en soute pour l'intercontinental."
+          ]
+        },
+        {
+          "h": "Le logement, défi numéro un",
+          "p": [],
+          "liste": [
+            "France : CROUS, chambres de 9 à 20 m2 pour 150 à 450 euros par mois avant APL (boursier Eiffel prioritaire ; demande sur trouverunlogement.lescrous.fr dès l'admission, les places partent vite). Résidences privées (Estudines, Nexity Studéa, Les Belles Années) : 400 à 700 euros. APL de la CAF : 100 à 300 euros par mois, quelle que soit la nationalité, demande sur caf.fr dès l'arrivée.",
+            "Allemagne : Studentenwerk, résidences à 200-350 euros par mois, listes d'attente parfois de 6 mois (contactez-le dès l'admission, studentenwerke.de). Colocation (WG) sur wg-gesucht.de : 300-500 euros dans les grandes villes, 200-350 dans les villes moyennes.",
+            "Italie : si vous avez la bourse DSU, résidence universitaire souvent gratuite ou très réduite. Privé : immobiliare.it, idealista.it, groupes Facebook ; 250-500 euros en colocation (Milan la plus chère, Turin et Bologne plus abordables).",
+            "Canada : résidences 600-1 200 CAD par mois tout inclus ; hors campus sur kijiji.ca, padmapper.com ; colocation 500-900 CAD, studio 800-1 500 CAD.",
+            "Royaume-Uni : halls of residence 600-1 200 livres par mois à Londres, 400-700 hors Londres ; privé sur SpareRoom, Rightmove, Zoopla. Ne payez jamais d'avance sans avoir visité ou fait visiter.",
+            "États-Unis : logement sur campus quasi garanti la première année, 800-1 500 USD par mois ; hors campus sur Zillow, Apartments.com ; colocation courante.",
+            "Australie : résidences 250-450 AUD par semaine, pénurie à Sydney et Melbourne ; share house sur flatmates.com.au ou gumtree.com.au, 150-300 AUD par semaine."
+          ]
+        },
+        {
+          "h": "L'assurance santé, obligatoire pour le visa",
+          "p": [],
+          "liste": [
+            "France : Sécurité sociale étudiante, gratuite, couverture à 70 % ; les boursiers Eiffel et CROUS ont souvent une complémentaire.",
+            "Allemagne : assurance publique obligatoire dès le jour 1, environ 110 euros par mois (moins de 30 ans, TK ou AOK) ; privée de 150 à 300 euros au-delà.",
+            "Italie : SSN environ 150 euros par an ou privée 300-500 euros ; boursiers DSU et MAECI y accèdent souvent à faible coût.",
+            "Espagne : assurance privée obligatoire, 300-600 euros par an, sans délai de carence ni copaiement. Portugal : PB4 ou assurance privée couvrant au moins 30 000 euros.",
+            "Pays-Bas : assurance étudiante, environ 50-70 euros par mois (Aon Student Insurance) ; les PhD salariés ont l'assurance publique.",
+            "Canada : RAMQ au Québec pour Français et Belges (gratuite), sinon assurance universitaire environ 600-900 CAD par an.",
+            "Royaume-Uni : IHS de 776 livres par an payée avec le visa, accès au NHS. USA : assurance universitaire 1 500-3 000 USD par an, souvent incluse dans les packages de bourses.",
+            "Australie : OSHC 500-700 AUD par an, active avant le départ. Nouvelle-Zélande : 500-700 NZD par an, souvent arrangée par l'université pour Manaaki."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 4 : Après la sélection, points 2 (billet), 3 (logement) et 4 (assurance santé)"
+  },
+  {
+    "id": "apres-selection-banque-travail-choc-culturel",
+    "ordre": 24,
+    "categorie": "apres",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Compte bancaire, travail étudiant et choc culturel",
+      "resume": "Ouvrir un compte pour recevoir le stipend, travailler pendant les études selon les règles 2026, et traverser les quatre phases du choc culturel.",
+      "sections": [
+        {
+          "h": "Le compte bancaire",
+          "p": [
+            "Ouvrez-le dans les premiers jours : il sert à recevoir votre allocation mensuelle. Prévoyez l'équivalent de 500 euros (environ 330 000 FCFA) en espèces ou sur carte internationale Visa ou Mastercard pour les 15 premiers jours (transport depuis l'aéroport, nourriture, SIM, petit matériel), car l'ouverture du compte et le premier versement peuvent prendre 2 à 4 semaines. Ouvrir un compte Revolut ou Wise avant le départ permet de détenir plusieurs devises avec de bons taux."
+          ],
+          "liste": [
+            "France : BNP Paribas, Société Générale, Boursorama ; passeport, visa, attestation de domicile, certificat de scolarité ; 1-2 semaines.",
+            "Allemagne : N26 (immédiat), Deutsche Bank, Sparkasse ; passeport, Anmeldung, certificat de scolarité.",
+            "Italie : Intesa Sanpaolo, UniCredit ; passeport, Codice Fiscale, permesso di soggiorno ; 2-3 semaines.",
+            "Royaume-Uni : Monzo (immédiat), Barclays, HSBC ; passeport, BRP, lettre de l'université.",
+            "Canada : Desjardins (Québec), TD, RBC, Scotiabank ; jour même en succursale. USA : Bank of America, Chase, Wells Fargo ; passeport, I-20, SSN ou lettre de l'université ; jour même. Australie : Commonwealth Bank, ANZ, Westpac ; jour même."
+          ]
+        },
+        {
+          "h": "Travailler pendant les études (droits 2026)",
+          "p": [
+            "Le travail étudiant est un complément, pas une solution de survie : si vous devez travailler 30 heures par semaine pour manger, votre budget initial était insuffisant. Visez 10 à 15 heures maximum, avec des jobs qui enrichissent le CV (tutorat, assistant de recherche, stage)."
+          ],
+          "liste": [
+            "France : 964 heures par an, dès la première année, sans restriction de secteur ; SMIC 11,88 euros de l'heure.",
+            "Allemagne : 140 jours complets ou 280 demi-jours par an (réforme 2026) ; mini-jobs à 538 euros par mois ; 12,82 euros de l'heure.",
+            "Canada : 20 heures par semaine, temps plein pendant les vacances ; 15-17 CAD de l'heure.",
+            "USA : 20 heures par semaine, exclusivement sur le campus pour un F-1 la première année (hors campus interdit sauf CPT/OPT) ; 7,25 à 15 USD de l'heure.",
+            "Royaume-Uni : 20 heures par semaine pendant les cours ; 11,44 livres de l'heure. Australie : 48 heures par quinzaine (plafond relevé de 40 à 48 en juillet 2023) ; 24,10 AUD de l'heure.",
+            "Nouvelle-Zélande : 20 heures par semaine si le programme dépasse 14 semaines ; 23,15 NZD de l'heure.",
+            "Italie : 20 heures par semaine, marché limité, italien souvent indispensable ; environ 9 euros de l'heure. Espagne : 30 heures par semaine depuis la réforme de 2024 ; 8,87 euros de l'heure.",
+            "Pays-Bas : 16 heures par semaine, l'employeur doit obtenir un permis de travail (TWV) ; les PhD salariés ont un contrat complet ; 13-15 euros de l'heure. Portugal : 20 heures par semaine ; 5,70 euros de l'heure."
+          ]
+        },
+        {
+          "h": "Le choc culturel en quatre phases",
+          "p": [
+            "Pendant la phase de frustration : forcez-vous à sortir, rejoignez une association étudiante (africaine ou internationale), appelez votre famille sans y passer vos journées (cela entretient la nostalgie), et consultez le service d'aide psychologique de l'université, gratuit et confidentiel."
+          ],
+          "liste": [
+            "Phase 1, la lune de miel (semaines 1 à 4) : tout est nouveau et excitant, l'adrénaline masque la fatigue.",
+            "Phase 2, la frustration (mois 2 à 4) : le froid, la nourriture, l'administration lente, la solitude, les petites humiliations quotidiennes. C'est la phase la plus dangereuse : beaucoup abandonnent ou s'isolent.",
+            "Phase 3, l'ajustement (mois 5 à 8) : vous comprenez les codes locaux, avez vos habitudes et un petit groupe d'amis.",
+            "Phase 4, l'adaptation (mois 9 et plus) : vous vous sentez chez vous, ou vous avez trouvé votre équilibre entre deux mondes."
+          ]
+        },
+        {
+          "h": "S'adapter",
+          "p": [],
+          "liste": [
+            "Assistez aux événements d'orientation, conçus pour faciliter l'intégration.",
+            "Explorez votre nouveau pays pendant les week-ends et les vacances.",
+            "Ne sous-estimez pas les coûts d'installation : premier mois de loyer, équipements, vêtements d'hiver."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 4 : points 5 (compte bancaire), 6 (choc culturel) et 7 (travailler pendant les études) ; LE_GUIDE_ULTIME_DES_BOURSES_D.txt - Partie XI, 8. Après l'obtention"
+  },
+  {
+    "id": "maximiser-sa-bourse",
+    "ordre": 25,
+    "categorie": "apres",
+    "gratuit": false,
+    "branche": null,
+    "fr": {
+      "titre": "Après l'obtention : maximiser sa bourse",
+      "resume": "Réussir académiquement, construire son réseau d'alumni, gérer son stipend et préparer le retour dès le premier jour.",
+      "sections": [
+        {
+          "h": "Sur le plan académique",
+          "p": [],
+          "liste": [
+            "Maintenir la bourse : certaines (DSU Italie, fondations allemandes) sont renouvelables sous condition de crédits ECTS ; visez au-dessus du minimum.",
+            "Publier : co-publier un article avec votre encadrant, même dans une revue mineure, change votre CV et vos chances de PhD financé.",
+            "Participer à des conférences : certaines bourses (Eiffel, DAAD, Australia Awards) incluent un budget conférences.",
+            "Faire un stage de recherche ou professionnel pendant l'été. Apprendre la langue locale, même si le programme est en anglais."
+          ]
+        },
+        {
+          "h": "Sur le plan du réseau",
+          "p": [],
+          "liste": [
+            "Alumni de la bourse (Chevening, Fulbright, DAAD) : participez à tous les événements, inscrivez-vous sur la plateforme dès le jour 1, restez actif après le retour.",
+            "Camarades de promotion (15 à 100 personnes de plus de 20 pays) : créez un groupe WhatsApp ou LinkedIn et organisez des réunions régulières.",
+            "Professeurs : allez aux heures de permanence ; un professeur qui vous connaît écrit une recommandation 10 fois plus percutante.",
+            "Professionnels locaux : career fairs, chambre de commerce, meetups ; LinkedIn est l'outil numéro un. Trouvez un mentor, et aidez à votre tour les futurs candidats de votre pays."
+          ]
+        },
+        {
+          "h": "Sur le plan financier : budget type d'un stipend de 1 200 euros",
+          "p": [
+            "Les 5 règles d'or : épargner 5 à 10 % chaque mois dès le premier versement ; ne pas céder à la surconsommation quand on reçoit 1 000 à 1 500 euros alors que la famille gagne parfois 150 000 FCFA ; cuisiner (3 à 5 euros le repas contre 8 à 15 euros au restaurant, soit 150 à 300 euros d'écart par mois) ; profiter des réductions étudiantes (transport, musées, licences Microsoft et Adobe) ; ne jamais contracter de dette (pas de crédit à la consommation, de découvert ni de prêt personnel)."
+          ],
+          "liste": [
+            "Loyer (après APL ou aide au logement) 30-40 % : 360-480 euros. Nourriture 20-25 % : 240-300 euros.",
+            "Transport 5-8 % : 60-96 euros. Téléphone et Internet 2-3 % : 24-36 euros.",
+            "Loisirs, vêtements, sorties 10-15 % : 120-180 euros. Épargne 5-10 % : 60-120 euros. Imprévus 5 % : 60 euros."
+          ]
+        },
+        {
+          "h": "Préparer le retour dès le jour 1",
+          "p": [],
+          "liste": [
+            "Dès le mois 1 : inscrivez-vous sur les plateformes d'emploi de votre pays (LinkedIn, sites ministériels, ONG) et restez visible dans votre secteur.",
+            "Chaque trimestre : écrivez à votre futur employeur ou à votre réseau au pays pour maintenir le contact.",
+            "Pendant les vacances : si possible, rentrez pour un stage court ou une mission de terrain.",
+            "6 mois avant la fin : activez votre recherche d'emploi au pays et contactez les anciens boursiers déjà rentrés.",
+            "Au retour : rejoignez l'association des alumni de votre bourse dans votre pays (Chevening Alumni Cameroon, Fulbright Alumni Senegal, DAAD Alumni Côte d'Ivoire)."
+          ]
+        },
+        {
+          "h": "Deux réalités à anticiper",
+          "p": [
+            "Le retour après 1 à 4 ans à l'étranger est un choc culturel inversé : vous avez changé, votre environnement non. L'administration est lente, les réseaux informels dominent, les salaires sont bas comparés à l'Europe. C'est normal et surmontable si c'est anticipé.",
+            "Le piège du « je reste encore un peu » : beaucoup de boursiers sans clause de retour obligatoire restent un an de plus pour travailler ; un an devient deux, puis cinq, et le projet de retour s'évapore. Planifiez le retour comme vous avez planifié le départ : avec méthode, calendrier et détermination."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_12.txt - Partie XVI, Chapitre I : Après l'obtention, maximiser votre bourse"
+  },
+  {
+    "id": "filieres-maths-physique-chimie-informatique",
+    "ordre": 26,
+    "categorie": "filieres",
+    "gratuit": true,
+    "branche": "sciences",
+    "fr": {
+      "titre": "Filières : maths, physique, chimie, informatique, quantique",
+      "resume": "Où se trouvent les bourses pour les sciences fondamentales, la chimie, l'informatique et l'IA, et les sciences quantiques : pays leaders, universités et bourses clés.",
+      "sections": [
+        {
+          "h": "Comment utiliser ces fiches",
+          "p": [
+            "Le choix de la filière est le facteur le plus déterminant dans la recherche de bourses : les financeurs ciblent les domaines qui répondent aux défis mondiaux (climat, santé, intelligence artificielle, sécurité alimentaire) ou aux besoins de développement des pays du Sud (gouvernance, infrastructures, éducation).",
+            "Identifiez vos deux ou trois filières, notez les bourses dont vous remplissez les critères, puis croisez avec la destination. Ne vous enfermez pas : postulez à la fois aux bourses de filière et aux bourses généralistes en mettant en avant l'angle développement durable de votre projet."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Physique, mathématiques, sciences fondamentales",
+          "p": [
+            "Pourquoi c'est bien financé : maths et physique sont les langages de l'innovation (cryptographie, modélisation climatique, IA, physique quantique). Pays leaders : France (Paris-Saclay, n°1 mondial en maths au classement de Shanghai), Allemagne (Max Planck, DESY), USA (MIT, Caltech, Princeton), UK (Cambridge, Oxford), Suisse (ETH Zurich, CERN)."
+          ],
+          "liste": [
+            "France Excellence Eiffel : les maths sont une priorité absolue. Master 1 200 euros par mois, PhD 2 100 euros.",
+            "DAAD Research Grants : doctorats en physique théorique et expérimentale (instituts Max Planck, réseau TU9), 1 300 euros par mois.",
+            "Erasmus Mundus InterMaths : master conjoint en mathématiques interdisciplinaires (Italie, France, Espagne, Autriche), 1 400 euros par mois, voyage et installation.",
+            "AIMS (African Institute for Mathematical Sciences) : Masters intensifs de 10 mois entièrement financés dans des centres en Afrique (Cameroun, Sénégal, Rwanda, Ghana, Afrique du Sud), tremplin avant un PhD.",
+            "CERN Fellowships : 2 à 3 ans de recherche à Genève avec salaire compétitif. CERN Summer Student Programme : 8 à 13 semaines, 90 CHF par jour plus voyage.",
+            "Paris-Saclay : bourse de Master de 10 000 euros par an plus 1 000 euros d'aide au transport. Max Planck Schools : stipend doctoral d'environ 2 000 euros par mois."
+          ]
+        },
+        {
+          "h": "Chimie, biochimie, sciences des matériaux",
+          "p": [
+            "La chimie est la clé de l'industrie pharmaceutique, des matériaux avancés, des batteries et de la transition énergétique. Pays leaders : Allemagne (BASF, Bayer, Max Planck), Japon, Suisse (Novartis, ETH), France (CNRS), USA. Universités : ETH Zurich, RWTH Aachen, TU Munich, Tokyo, MIT, Cambridge, Heidelberg."
+          ],
+          "liste": [
+            "MEXT Japon : idéal pour la chimie des matériaux et la nanotechnologie ; scolarité, 143 000 à 145 000 yens par mois, vol aller-retour.",
+            "ETH Zurich Excellence Scholarships : scolarité plus stipend de 12 000 CHF par semestre.",
+            "Erasmus Mundus BIOREF : bioraffinerie et chimie verte, 1 400 euros par mois.",
+            "La Caixa INPhINIT (Espagne et Portugal) : doctorat STEM, jusqu'à 320 100 euros sur 4 ans (salaire brut d'environ 35 000 euros par an, frais de recherche, prime d'installation de 5 400 euros).",
+            "Alexander von Humboldt Foundation : post-doctorat en Allemagne, 2 670 euros par mois, voyage et cours d'allemand. DESY Summer Student : 8 semaines à Hambourg avec allocation et logement.",
+            "Merck Research Grants : 30 000 à 200 000 euros pour des projets doctoraux en chimie, biochimie et sciences de la vie."
+          ]
+        },
+        {
+          "h": "Informatique, intelligence artificielle, data science",
+          "p": [
+            "Conseil : en informatique et IA, le financement d'un PhD est presque garanti si vous trouvez le bon superviseur. Identifiez un professeur dont les travaux vous passionnent, lisez 2 ou 3 de ses articles récents et envoyez-lui un email personnalisé sur l'articulation avec votre projet : un professeur qui dit oui, c'est un financement assuré."
+          ],
+          "liste": [
+            "Google PhD Fellowship : 3 ans, scolarité plus stipend, environ 30 lauréats par an dans le monde.",
+            "MasterCard Foundation Scholars (Université de Toronto) : IA pour le développement de l'Afrique, Fully Funded avec mentorat et billet d'avion.",
+            "IMAE Waterloo : Master en recherche informatique, 2 500 CAD par trimestre (maximum 12 500 CAD), attribution automatique sur mérite.",
+            "Erasmus Mundus BDMA : Big Data Management and Analytics (ULB, UPC Barcelone, TU Berlin), 1 400 euros par mois.",
+            "Vanier Canada : PhD en informatique ou IA, 50 000 CAD par an pendant 3 ans.",
+            "Knight-Hennessy (Stanford) : financement complet de tout diplôme graduate, y compris MS ou PhD en Computer Science.",
+            "DAAD : nombreux Masters en IA en anglais (TU Munich, TU Berlin, Sarre), allocation de 992 euros par mois. Carnegie Mellon Portugal : PhD en double affiliation. Contrats doctoraux INRIA : environ 2 100 euros net par mois pendant 3 ans."
+          ]
+        },
+        {
+          "h": "Nanotechnologie, photonique, sciences quantiques",
+          "p": [
+            "Technologies de rupture du 21e siècle. Pays leaders : France (CEA, CNRS, Grenoble), Espagne (ICFO Barcelone), Suisse (ETH, EPFL), Canada (Institute for Quantum Computing, Waterloo), USA."
+          ],
+          "liste": [
+            "ICFO Research Fellowships (Barcelone) : stage de Master et PhD en photonique, 600 à 1 800 euros par mois.",
+            "Erasmus Mundus EUROPHOTONICS : master conjoint, 1 400 euros par mois.",
+            "Institute for Quantum Computing (Waterloo) : PhD financé avec stipend compétitif.",
+            "Master en nano-optique et nanophotonique à l'Université de Technologie de Troyes ; HZB Summer Student Programme (Allemagne) : sciences des matériaux et énergie solaire, allocation et logement."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 5 : Les filières, Section 1 Sciences et technologies (Filières 1, 2, 3 et 7)"
+  },
+  {
+    "id": "filieres-ingenierie-energie",
+    "ordre": 27,
+    "categorie": "filieres",
+    "gratuit": false,
+    "branche": "sciences",
+    "fr": {
+      "titre": "Filières : ingénierie, aéronautique, énergie",
+      "resume": "Bourses pour ingénieurs (civil, mécanique, électrique), l'aérospatiale et les énergies renouvelables : Allemagne, Italie, Canada, Pays-Bas, France, Nouvelle-Zélande.",
+      "sections": [
+        {
+          "h": "Ingénierie civile, mécanique, électrique, industrielle",
+          "p": [
+            "L'ingénierie est le pilier du développement des infrastructures (routes, ponts, centrales, usines, distribution d'eau) : les bailleurs financent massivement les ingénieurs des pays en développement, bâtisseurs du futur. Pays leaders : Allemagne (TU9), Canada (Waterloo, UBC, McGill), France (Polytechnique, CentraleSupélec, Mines, Arts et Métiers), Italie (Politecnico di Milano et Torino), USA (MIT, Stanford, Georgia Tech)."
+          ],
+          "liste": [
+            "DAAD EPOS : la bourse reine des ingénieurs africains (Water Engineering, Urban Management, Renewable Energy), 992 à 1 300 euros par mois plus scolarité gratuite.",
+            "Vanier CGS : doctorat en ingénierie, 50 000 CAD par an pendant 3 ans.",
+            "Politecnico di Milano Merit Awards : exonération totale (environ 3 900 euros par an) plus allocation de 5 000 euros par an pour les meilleurs profils. Politecnico di Torino : jusqu'à 8 000 euros par an plus DSU Piémont possible.",
+            "TU Delft Justus & Louise van Effen : 30 000 euros par an (scolarité plus stipend) pendant 2 ans.",
+            "Australia Awards : ingénierie des infrastructures et de l'énergie prioritaire pour l'Afrique. Erasmus Mundus JEMARO : robotique avancée, Fully Funded. Fondation ENAC : ingénierie aéronautique et industrielle à Toulouse."
+          ]
+        },
+        {
+          "h": "Ingénierie aérospatiale et aéronautique",
+          "p": [
+            "Secteur très spécialisé et bien rémunéré, concentré dans quelques pôles. Pays leaders : France (Toulouse, Airbus, ISAE-SUPAERO), USA (NASA, Boeing, SpaceX ; MIT, Caltech, Georgia Tech), Allemagne (DLR, Brême, Hambourg). Universités : ISAE-SUPAERO, MIT, Caltech, TU Delft, Cranfield, Georgia Tech, ENAC."
+          ],
+          "liste": [
+            "ISAE-SUPAERO Scholarships : de la réduction de frais à la bourse complète selon le profil.",
+            "Erasmus Mundus JEMARO : Fully Funded. France Excellence Eiffel : l'aéronautique est prioritaire dans le volet STEM, 1 200 à 2 100 euros par mois.",
+            "ISTAT Foundation Scholarships (aviation et transport aérien), avec lien à vérifier sur istat.org. DLR-DAAD Research Fellowships : doctorants en aérospatiale, propulsion, sciences de l'atmosphère. ENAC : bourses pour étudiants internationaux."
+          ]
+        },
+        {
+          "h": "Énergie et énergies renouvelables",
+          "p": [
+            "La transition énergétique est le défi numéro un du siècle. Pour un étudiant africain, cette filière est un passeport vers les financements : l'Afrique est à la fois le continent le plus touché par la précarité énergétique et le plus riche en potentiel solaire. Pays leaders : Allemagne (Energiewende), Nouvelle-Zélande (géothermie, hydraulique), Suède et Danemark (éolien), France (nucléaire, solaire), USA (Stanford, MIT)."
+          ],
+          "liste": [
+            "Manaaki NZ : énergie renouvelable explicitement prioritaire ; 615 NZD par semaine plus scolarité, vol et installation.",
+            "Heinrich Böll Foundation : transition écologique et énergies renouvelables, 934 euros par mois plus assurance.",
+            "DAAD EPOS : Renewable Energy Management, Energy Engineering, Environmental Governance, 992 à 1 300 euros par mois.",
+            "Fulbright : management de l'énergie (Stanford, MIT, UC Berkeley). Bourses AIEA Marie Sklodowska-Curie : femmes dans l'énergie nucléaire pacifique, Fully Funded.",
+            "SI Scholarships (Suède) : climat et énergie durable, Fully Funded pour un Master. Eni Scholarships (Oxford) : Master en énergie pour étudiants africains. Australia Awards : énergie et climat prioritaires."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 5 : Les filières, Section 1 Sciences et technologies (Filières 4, 5 et 6)"
+  },
+  {
+    "id": "filieres-sante",
+    "ordre": 28,
+    "categorie": "filieres",
+    "gratuit": false,
+    "branche": "sciences",
+    "fr": {
+      "titre": "Filières : médecine, santé publique, pharmacie, soins infirmiers",
+      "resume": "Les bourses santé ciblent surtout la recherche et les spécialisations : MEXT, Chevening LSHTM, ARES, Banque Mondiale, Australia Awards, Manaaki.",
+      "sections": [
+        {
+          "h": "Un secteur massivement financé",
+          "p": [
+            "Les bourses en santé sont souvent ciblées sur des problématiques régionales ou des maladies spécifiques. La santé mondiale est massivement financée par l'OMS, la Banque Mondiale et des fondations privées."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Médecine et sciences biomédicales",
+          "p": [
+            "Attention : les bourses pour le cursus médical complet (6-7 ans plus internat) sont extrêmement rares pour les étrangers, car la plupart des pays réservent les places en médecine à leurs citoyens. Les financements ciblent la recherche biomédicale (Master recherche, PhD) et les spécialisations (MPH, MSc en épidémiologie). Pays leaders : USA (Johns Hopkins, Harvard), UK (Oxford, Cambridge, Imperial), Japon, France (Inserm, Pasteur), Allemagne (Charité Berlin)."
+          ],
+          "liste": [
+            "MEXT Japon : l'une des rares bourses au monde couvrant des études de médecine complètes pour les étrangers ; scolarité, 143 000 à 145 000 yens par mois, vol.",
+            "La Caixa INPhINIT : recherche biomédicale de pointe, environ 35 000 euros par an sur 4 ans.",
+            "Wellcome Trust Fellowships (UK) : santé mondiale, maladies tropicales, génomique, parfois plus de 500 000 livres sur 5 ans.",
+            "Fulbright Visiting Scholar : médecins chercheurs, Fully Funded. Contrats doctoraux Inserm : 3 ans, environ 2 100 euros net par mois. Université de Montréal : bourses doctorales en sciences biomédicales."
+          ]
+        },
+        {
+          "h": "Santé publique, épidémiologie, santé mondiale",
+          "p": [
+            "Depuis la pandémie de COVID-19, les investissements ont explosé : les bailleurs cherchent des experts capables de concevoir des systèmes de santé résilients et de gérer des crises épidémiques. Pays leaders : UK (LSHTM), USA (Johns Hopkins, Harvard T.H. Chan), Belgique (Institut de Médecine Tropicale d'Anvers), Australie (Melbourne)."
+          ],
+          "liste": [
+            "Chevening : spécialisation Global Health à la LSHTM, Fully Funded.",
+            "ARES (Belgique) : Master de spécialisation en santé publique (ULB, Liège), en français, Fully Funded pour les ressortissants de 31 pays partenaires.",
+            "Banque Mondiale JJ/WBGSP : politiques de santé publique (Johns Hopkins, Harvard, LSHTM), pour professionnels de 3 ans d'expérience ou plus.",
+            "Australia Awards : MPH à Melbourne, Sydney ou ANU, Fully Funded.",
+            "UICC : bourses pour professionnels de santé africains dans la lutte contre le cancer. DAAD EPOS : épidémiologie et santé internationale (TU Berlin, Heidelberg), 992 euros par mois. Commonwealth Master's : santé et développement."
+          ]
+        },
+        {
+          "h": "Pharmacie et sciences pharmaceutiques",
+          "p": [
+            "Pays leaders : France (Sanofi, Servier), USA (Johns Hopkins, Duke), Allemagne (Bayer, Merck, Boehringer Ingelheim)."
+          ],
+          "liste": [
+            "France Excellence Eiffel, volet Biologie et Santé : 1 200 à 2 100 euros par mois.",
+            "Erasmus Mundus BIOPHAM : matériaux pour la pharmacie, 1 400 euros par mois.",
+            "Türkiye Bursları : pharmacie en Bachelor et Master, scolarité, 800 à 1 100 TRY par mois et logement.",
+            "ARES : contrôle de qualité des médicaments, en français. Fonds de Recherche du Québec (PBEEE) : Master 25 000 CAD par an, PhD 35 000 CAD par an."
+          ]
+        },
+        {
+          "h": "Sciences infirmières et soins de santé",
+          "p": [
+            "La pénurie mondiale d'infirmières est estimée à 5,9 millions par l'OMS ; Canada, Australie et Nouvelle-Zélande offrent des formations accélérées et des perspectives d'emploi quasi garanties. Pays leaders : Canada (Québec), USA, Australie, Nouvelle-Zélande."
+          ],
+          "liste": [
+            "Bourses Perspective Québec : vérifiez l'éligibilité internationale.",
+            "FIIC (Fondation des Infirmières et Infirmiers du Canada) : plus de 100 bourses par an.",
+            "Manaaki NZ : Master en sciences infirmières possible, Fully Funded. Australia Awards : sciences infirmières et santé communautaire prioritaires. Commonwealth Scholarships : développement des systèmes de santé."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 5 : Les filières, Section 2 Santé (Filières 8, 9, 10 et 11)"
+  },
+  {
+    "id": "filieres-environnement-agronomie",
+    "ordre": 29,
+    "categorie": "filieres",
+    "gratuit": false,
+    "branche": "sciences",
+    "fr": {
+      "titre": "Filières : environnement, agronomie, eau, catastrophes",
+      "resume": "Depuis l'Accord de Paris (2015), les financements verts ont explosé : sciences de l'environnement, agriculture, eau, gestion des catastrophes et résilience climatique.",
+      "sections": [
+        {
+          "h": "Une double opportunité pour l'Afrique",
+          "p": [
+            "Pour un étudiant africain, le secteur offre une double opportunité : l'Afrique est le continent le plus vulnérable au changement climatique et celui qui possède le plus grand potentiel de solutions fondées sur la nature."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Sciences de l'environnement, développement durable",
+          "p": [
+            "La plus financée des filières hors STEM : chaque grand programme (Chevening, Fulbright, Australia Awards, DAAD, Manaaki, Erasmus Mundus) a un volet environnement ou une préférence pour les projets de développement durable. Pays leaders : Allemagne, Suède (Stockholm Resilience Centre), Nouvelle-Zélande, France, Pays-Bas."
+          ],
+          "liste": [
+            "Heinrich Böll Foundation : la bourse verte par excellence, 934 euros par mois plus assurance.",
+            "France Excellence Eiffel, volet Transition Écologique (axe prioritaire depuis 2023) : 1 200 à 2 100 euros par mois.",
+            "SI Scholarships (Suède) : Fully Funded pour un Master (Stockholm, Lund, Uppsala, Göteborg).",
+            "Manaaki NZ : priorité explicite Climate Change and Resilience. DAAD EPOS : Environmental Governance, Natural Resource Management, Integrated Water Resources Management. Australia Awards : climat et environnement prioritaires.",
+            "Erasmus Mundus : BIOREF, WaterJPI, PLANET Europe."
+          ]
+        },
+        {
+          "h": "Agriculture, agronomie, sécurité alimentaire",
+          "p": [
+            "L'agriculture emploie 60 % de la population active en Afrique subsaharienne ; les bailleurs la jugent stratégique. Pays leaders : Nouvelle-Zélande (Massey), Australie (agriculture tropicale), Pays-Bas (Wageningen, n°1 mondial en agriculture), France (AgroParisTech, CIRAD), Allemagne (Hohenheim)."
+          ],
+          "liste": [
+            "Manaaki NZ : agriculture et sécurité alimentaire en priorité n°1 explicite ; Master à Massey ou Lincoln, Fully Funded.",
+            "Banque Mondiale JJ/WBGSP : agriculture et développement rural. Australia Awards : agronomie tropicale et sécurité alimentaire.",
+            "BAD/JADS : Master au Japon en technologies agricoles et environnementales. DAAD EPOS : Tropical Agriculture, Food Security, Agricultural Economics (Hohenheim, Göttingen, Kassel), 992 à 1 300 euros par mois.",
+            "AUF (Francophonie) : stages de recherche, 700 à 1 000 euros par mois. Wageningen Africa Scholarship Programme (lien à vérifier sur wur.nl)."
+          ]
+        },
+        {
+          "h": "Sciences de l'eau, gestion des ressources naturelles",
+          "p": [
+            "2,2 milliards de personnes n'ont pas accès à l'eau potable (OMS). Pays leaders : Pays-Bas (IHE Delft, référence mondiale), Allemagne (Water Engineering), Australie (hydrologie)."
+          ],
+          "liste": [
+            "IHE Delft : organisme de l'ONU à Delft, nombreuses bourses dont JJ/WBGSP et NFP.",
+            "DAAD EPOS : Integrated Water Resources Management et Water Engineering. Banque Mondiale JJ/WBGSP : gestion durable de l'eau, dont IHE Delft.",
+            "Australia Awards : hydrologie et environnement. ARES : gestion intégrée des ressources en eau, en français. Manaaki NZ : ressources naturelles et résilience climatique."
+          ]
+        },
+        {
+          "h": "Gestion des catastrophes, résilience climatique",
+          "p": [
+            "Inondations au Nigeria, sécheresses au Sahel, cyclones à Madagascar, érosion côtière au Sénégal : l'Afrique est en première ligne. Pays leaders : Nouvelle-Zélande (après les séismes de Christchurch), Belgique (ARES), Australie, Japon (séismes et tsunamis)."
+          ],
+          "liste": [
+            "ARES : gestion des risques et catastrophes, en français, Fully Funded pour 31 pays partenaires.",
+            "Manaaki NZ : focus explicite Disaster Management. Australia Awards : résilience climatique et gestion des catastrophes.",
+            "MEXT Japon : Disaster Risk Reduction, Fully Funded. Erasmus Mundus : plusieurs programmes liés à la résilience territoriale."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_3.txt - Partie I, Chapitre 5 : Les filières, Section 6 Environnement et territoire (Filières 28, 29, 30 et 31)"
+  },
+  {
+    "id": "filieres-droit",
+    "ordre": 30,
+    "categorie": "filieres",
+    "gratuit": true,
+    "branche": "lettres",
+    "fr": {
+      "titre": "Filières : droit international, droit des affaires, common law, droits humains",
+      "resume": "Le droit international et les droits humains dominent les offres. Bourses et universités de référence pour chaque spécialité juridique.",
+      "sections": [
+        {
+          "h": "Un secteur qui recrute des juristes",
+          "p": [
+            "Les bailleurs cherchent des juristes capables de renforcer l'État de droit, de protéger les droits fondamentaux et de faciliter les échanges commerciaux internationaux. Les LLM sont des cibles naturelles de Chevening, Fulbright, Commonwealth et Australia Awards."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Droit international et droit européen",
+          "p": [
+            "Pays leaders : Pays-Bas (La Haye, capitale mondiale du droit international : CIJ, CPI), Belgique (Bruxelles, institutions européennes), Suisse (Genève : ONU, Croix-Rouge, OMC), France (Sciences Po, Sorbonne)."
+          ],
+          "liste": [
+            "Leiden Excellence Scholarship (LExS, Pays-Bas) : 10 000 à 15 000 euros ou exonération totale ; Leiden est proche de la CIJ.",
+            "MAECI (Italie) : Masters en droit international, 900 euros par mois.",
+            "Erasmus Mundus EMLE : master conjoint Droit-Économie, Fully Funded.",
+            "Bourses du Gouvernement Suisse (ESKAS) : juristes doctorants, 1 920 CHF par mois (Genève, Zurich, Bâle).",
+            "Hague Academy of International Law : sessions d'été et d'hiver de 3 semaines, Fully Funded pour les sélectionnés. ARES : Master de spécialisation en droit international (UCLouvain, ULB), en français, Fully Funded."
+          ]
+        },
+        {
+          "h": "Droit des affaires et droit commercial",
+          "p": [
+            "Pays leaders : USA (NYU, Harvard, Columbia), UK (LSE, Oxford, Cambridge), France (Sciences Po, Paris-Panthéon-Assas)."
+          ],
+          "liste": [
+            "Chevening : très fort en droit commercial, LLM à la LSE, Oxford ou King's College, Fully Funded.",
+            "Hauser Global Scholars (NYU Law) : la plus prestigieuse du LLM aux États-Unis, scolarité complète (environ 70 000 USD) plus stipend.",
+            "Émile Boutmy (Sciences Po) : Master in Economic Law, jusqu'à 14 720 euros par an.",
+            "Berkeley Law Scholarships : LLM en droit des affaires, partielles à complètes. Université de Padoue : droit européen des affaires, 8 000 euros par an plus exonération."
+          ]
+        },
+        {
+          "h": "Common Law (LLM)",
+          "p": [
+            "Pays leaders : USA, UK, Canada, Australie."
+          ],
+          "liste": [
+            "Fulbright LLM Program : financement complet dans les meilleures law schools américaines.",
+            "Gates Cambridge : LLM ou PhD, Fully Funded, stipend de 22 050 livres par an.",
+            "Vanderbilt Law International Scholars : LLM avec bourses substantielles. Australia Awards : Master of Laws pour les pays partenaires. Commonwealth Scholarships : LLM au UK pour les pays du Commonwealth."
+          ]
+        },
+        {
+          "h": "Droits humains, droit humanitaire",
+          "p": [
+            "Pays leaders : Belgique (UCLouvain, ULB), France (Aix-en-Provence, Strasbourg, CEDH), Suisse (Genève : CICR, HCR), Suède (Raoul Wallenberg Institute)."
+          ],
+          "liste": [
+            "ARES : Master de spécialisation en droits humains, en français, Fully Funded.",
+            "Erasmus Mundus NOHA : Master en Action Humanitaire Internationale, 1 400 euros par mois.",
+            "Heinrich Böll Foundation : démocratie, droits civils et diversité, 934 euros par mois.",
+            "Raoul Wallenberg Institute (Suède) : PhD en droits de l'homme, bourse complète. Chevening : LLM en droits humains à Essex, SOAS, Edinburgh."
+          ]
+        },
+        {
+          "h": "Conseil",
+          "p": [
+            "Si vous êtes juriste, postulez aux bourses de droit (Hauser NYU, Leiden) et aux bourses généralistes (Chevening, Émile Boutmy) : multiplier les angles multiplie vos chances."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 5 : Les filières, Section 3 Droit (Filières 12, 13, 14 et 15) ; LE_MANUEL_DES_BOURSES_part_3.txt - conseil de fin de chapitre"
+  },
+  {
+    "id": "filieres-economie-gestion-finance",
+    "ordre": 31,
+    "categorie": "filieres",
+    "gratuit": false,
+    "branche": "lettres",
+    "fr": {
+      "titre": "Filières : économie, management, finance, administration publique",
+      "resume": "Ces filières exigent un projet professionnel très clair, axé sur la croissance locale ou la transformation des organisations. JJ/WBGSP, ARES, Bocconi, Knight-Hennessy, Chevening.",
+      "sections": [
+        {
+          "h": "Économie et économie du développement",
+          "p": [
+            "Pays leaders : USA (Harvard, MIT, Chicago), UK (LSE, Oxford), Belgique (ARES), France (Paris School of Economics, Toulouse School of Economics)."
+          ],
+          "liste": [
+            "JJ/WBGSP (Banque Mondiale) : référence absolue en économie du développement, Master dans l'une des 44 universités partenaires (Harvard, Columbia, IHE Delft, Tokyo), Fully Funded, 3 ans d'expérience requis.",
+            "ARES : Master en économie internationale et développement, en français, Fully Funded.",
+            "Erasmus Mundus EDAMUS : économie alimentaire et développement rural, 1 400 euros par mois.",
+            "BAD/JADS : Master au Japon en économie et développement. Knight-Hennessy : MBA ou Master en économie à Stanford. Eiffel, volet Économie-Gestion : 1 200 euros par mois."
+          ]
+        },
+        {
+          "h": "Business, management, MBA",
+          "p": [
+            "Pays leaders : USA (Harvard Business School, Wharton, Stanford GSB), France (INSEAD, HEC), Espagne (IE, ESADE, IESE), UK (LBS, Oxford Saïd, Cambridge Judge), Italie (Bocconi)."
+          ],
+          "liste": [
+            "Knight-Hennessy : financement complet du MBA à Stanford GSB, scolarité plus stipend plus voyage.",
+            "INSEAD Scholarships : plusieurs bourses pour Africains, dont Africa Leadership ; MBA d'un an.",
+            "Invest Your Talent in Italy : MBA avec stage en entreprise italienne, 1 000 euros par mois plus scolarité.",
+            "EADA (Espagne) : bourses de 25 à 40 % des frais. Bocconi Graduate Merit Awards : 100 % de la scolarité (environ 14 000 euros par an). Chevening : MBA à LBS, Oxford Saïd ou Cambridge Judge. Alberta MBA Scholarships (Canada)."
+          ]
+        },
+        {
+          "h": "Finance, banque, comptabilité",
+          "p": [
+            "Pays leaders : USA (Wall Street), UK (City de Londres), France (Paris), Allemagne (Francfort, BCE)."
+          ],
+          "liste": [
+            "AEB/CUNEF (Espagne) : 100 % des frais de scolarité en finance. Frankfurt School of Finance Merit Awards.",
+            "Bocconi : Merit Awards en Finance et Data Science, 100 % de la scolarité.",
+            "ARES : Advanced Master in Microfinance à la Solvay Brussels School, Fully Funded. Émile Boutmy (Sciences Po) : Master Finance et Stratégie, jusqu'à 14 720 euros par an."
+          ]
+        },
+        {
+          "h": "Administration publique, politiques publiques",
+          "p": [
+            "Pays leaders : Canada (ENAP Québec), USA (Harvard Kennedy School, Princeton SPIA), UK (Oxford Blavatnik), Singapour (Lee Kuan Yew School), France (Sciences Po, INSP, ex-ENA)."
+          ],
+          "liste": [
+            "ENAP (Québec) : Master en administration publique en français, jusqu'à 20 bourses par an.",
+            "Hubert H. Humphrey Fellowship (USA) : 10 mois dans une université américaine pour hauts fonctionnaires et leaders du secteur public, Fully Funded ; ce n'est pas un diplôme mais un programme de développement professionnel.",
+            "Chevening : Public Policy à Oxford, Cambridge, LSE, King's. LKYSPP (Singapour) : bourses complètes pour les Masters en Public Policy et Public Administration.",
+            "France Excellence Eiffel : sciences politiques et administration publique dans le volet Droit-Éco-Gestion. Banque Mondiale JJ/WBGSP : politiques publiques et gouvernance."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 5 : Les filières, Section 4 Économie, gestion, finance (Filières 16, 17, 18 et 19)"
+  },
+  {
+    "id": "filieres-sciences-humaines-sociales",
+    "ordre": 32,
+    "categorie": "filieres",
+    "gratuit": false,
+    "branche": "lettres",
+    "fr": {
+      "titre": "Filières : relations internationales, sociologie, psychologie, éducation, journalisme",
+      "resume": "Les sciences humaines et sociales sont moins financées que la STEM, mais souvent moins compétitives, ce qui augmente vos chances. Bourses clés par discipline.",
+      "sections": [
+        {
+          "h": "Un atout : moins de compétition",
+          "p": [
+            "Ces filières valorisent l'engagement civique, l'analyse critique de la société et la capacité à comprendre les dynamiques humaines. Les financements sont moins abondants que dans les STEM, mais ils existent et sont souvent moins compétitifs."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Relations internationales, diplomatie, sciences politiques",
+          "p": [
+            "Pays leaders : France (Sciences Po Paris, n°1 mondial en science politique selon QS), USA (Georgetown, Columbia SIPA, Harvard Kennedy), UK (LSE, Oxford, SOAS), Belgique (institutions UE et OTAN)."
+          ],
+          "liste": [
+            "Émile Boutmy (Sciences Po) : la bourse phare, jusqu'à 14 720 euros par an, Master ou Bachelor.",
+            "MasterCard Foundation Scholars (Sciences Po) : Fully Funded pour Africains subsahariens en politiques publiques, affaires internationales ou économie.",
+            "Fulbright : Relations Internationales à Georgetown, Columbia, Johns Hopkins SAIS. Chevening : LSE, Oxford, King's. Erasmus Mundus CEERES : études européennes, 1 400 euros par mois. Eiffel, volet Droit et Sciences Politiques : 1 200 à 2 100 euros par mois."
+          ]
+        },
+        {
+          "h": "Sociologie, anthropologie",
+          "p": [
+            "Pays leaders : France (EHESS, Paris-Nanterre), Allemagne (Berlin, Göttingen), UK (Oxford, Cambridge, SOAS), USA (Chicago, Columbia, Berkeley)."
+          ],
+          "liste": [
+            "Wenner-Gren Dissertation Fieldwork Grants : référence mondiale pour les doctorants en anthropologie faisant du terrain, jusqu'à 20 000 USD (le même programme est cité à 10 000 USD ailleurs).",
+            "DAAD : doctorats en sociologie urbaine, migration et transformation sociale, 1 300 euros par mois.",
+            "Fondation Aga Khan : sociologie du développement, 50 % de bourse et 50 % de prêt sans intérêt. Erasmus Mundus CREOLE : anthropologie culturelle, 1 400 euros par mois. Contrats doctoraux EHESS : environ 2 100 euros net par mois."
+          ]
+        },
+        {
+          "h": "Psychologie",
+          "p": [
+            "Pays leaders : USA (PhD en psychologie clinique très compétitifs), UK (UCL, Warwick, Edinburgh), Allemagne (psychologie organisationnelle), Canada (McGill, UBC)."
+          ],
+          "liste": [
+            "Fulbright : Master ou PhD en psychologie clinique, cognitive ou sociale, Fully Funded.",
+            "University of Warwick PhD Fellowships (UK). DAAD : psychologie du travail et des organisations, 992 à 1 300 euros par mois.",
+            "Erasmus Mundus WOP-P : psychologie du travail, des organisations et du personnel (Espagne, Italie, Portugal, Brésil), Fully Funded. PhD financés au Canada (McGill, UBC, Université de Montréal) : stipend plus scolarité."
+          ]
+        },
+        {
+          "h": "Éducation, sciences de l'éducation",
+          "p": [
+            "Pays leaders : Australie (Melbourne, Monash), UK (UCL Institute of Education, n°1 mondial), Canada (OISE Toronto), Finlande."
+          ],
+          "liste": [
+            "Australia Awards : éducation et développement des capacités prioritaires pour l'Afrique, Fully Funded.",
+            "Commonwealth Master's : éducation au UK. Erasmus Mundus GLOBED : Education Policies for Global Development, Fully Funded.",
+            "MasterCard Foundation Scholars : éducation inclusive pour Africains. AUF (Francophonie) : formations à distance diplômantes et mobilités courtes."
+          ]
+        },
+        {
+          "h": "Communication, journalisme, médias",
+          "p": [
+            "Pays leaders : USA (Columbia Journalism School, Northwestern Medill), UK (City University London, Cardiff), France (Sciences Po), Danemark."
+          ],
+          "liste": [
+            "Erasmus Mundus Mundus Journalism : master d'élite mondial en journalisme international (Danemark, Pays-Bas, Australie, Chili), Fully Funded.",
+            "Knight-Hennessy (Stanford) : MA en journalisme ou communication, Fully Funded. Chevening : journalisme d'investigation et politique médiatique (City, Cardiff, Westminster). Fulbright : Columbia, Northwestern Medill, USC Annenberg.",
+            "Invest Your Talent in Italy : médias et communication numérique, 1 000 euros par mois. OIF : mobilités de formation pour journalistes et communicants africains francophones."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_2.txt - Partie I, Chapitre 5 : Les filières, Section 5 (Filières 20, 21, 22, 23) ; LE_MANUEL_DES_BOURSES_part_3.txt - Filière 24"
+  },
+  {
+    "id": "filieres-langues-histoire-philosophie-geographie",
+    "ordre": 33,
+    "categorie": "filieres",
+    "gratuit": true,
+    "branche": "lettres",
+    "fr": {
+      "titre": "Filières : langues, lettres, histoire, philosophie, géographie",
+      "resume": "Pour les profils littéraires, des bourses ciblent directement les langues, l'histoire, la philosophie et l'aménagement du territoire : MAECI, Eiffel, DAAD, Gates Cambridge, Erasmus Mundus, DAAD EPOS.",
+      "sections": [
+        {
+          "h": "Langues, littérature, linguistique",
+          "p": [
+            "Pays leaders : France (Sorbonne, ENS), Allemagne (germanistique, cours d'été DAAD), Japon (MEXT), Italie (MAECI), UK (littérature anglaise à Oxford et Cambridge)."
+          ],
+          "liste": [
+            "MAECI (Italie) : cours de langue et culture italiennes de 3 à 9 mois, 900 euros par mois ; l'un des rares programmes qui finance directement l'apprentissage d'une langue.",
+            "France Excellence Eiffel, volet Langue française et Lettres : la promotion du français est un objectif stratégique de la France, 1 200 euros par mois.",
+            "MEXT Japon : Research Student en linguistique japonaise, Fully Funded.",
+            "DAAD, cours d'été universitaires : cours intensifs d'allemand et de germanistique, 3 à 4 semaines, 1 050 euros.",
+            "AUF (Francophonie) : mobilités de recherche en linguistique francophone et littérature comparée, 700 à 1 000 euros par mois."
+          ]
+        },
+        {
+          "h": "Histoire, philosophie",
+          "p": [
+            "Pays leaders : France (EHESS, ENS, Sorbonne, tradition des Lumières), Allemagne (Kant, Hegel, Heidegger), UK (histoire médiévale et moderne), Italie (Rome, Bologne : histoire antique et Renaissance)."
+          ],
+          "liste": [
+            "Gates Cambridge : recherche historique et philosophique de haut niveau, Fully Funded, stipend de 22 050 livres par an.",
+            "Erasmus Mundus EuroCulture : histoire et identités européennes, 1 400 euros par mois.",
+            "Contrats doctoraux EHESS et ENS : contrats de 3 ans, environ 2 100 euros par mois.",
+            "DAAD : bourses de recherche pour historiens et philosophes, 992 à 1 300 euros par mois ; l'Allemagne offre des archives et instituts exceptionnels (Max Weber Stiftung, Deutsches Historisches Institut).",
+            "Centre National du Livre (France) : recherche littéraire et philosophique. Université de Lille : Master recherche en sciences humaines avec bourses d'excellence."
+          ]
+        },
+        {
+          "h": "Géographie, aménagement du territoire, urbanisme",
+          "p": [
+            "D'ici 2050, 68 % de la population mondiale vivra en ville, et l'urbanisation est la plus rapide au monde en Afrique (Lagos, Kinshasa, Douala, Dakar). Les experts en urbanisme durable sont parmi les plus recherchés. Pays leaders : Pays-Bas (IHS Erasmus, TU Delft), Allemagne (TU Berlin, TU Dortmund), France, Italie (Politecnico di Torino, IUAV Venise)."
+          ],
+          "liste": [
+            "DAAD EPOS : Urban Management, Regional Development et Spatial Planning, 992 à 1 300 euros par mois.",
+            "Erasmus Mundus 4CITIES : études urbaines (Bruxelles, Vienne, Copenhague, Madrid), 1 400 euros par mois.",
+            "ITC Excellence Scholarship (Université de Twente) : Master en Geo-Information Science and Earth Observation, 32 370 euros (scolarité plus stipend).",
+            "Manaaki NZ : Disaster Management et aménagement résilient. Banque Mondiale JJ/WBGSP : villes résilientes et politiques urbaines. Politecnico di Torino : urbanisme et architecture durable, jusqu'à 8 000 euros par an."
+          ]
+        },
+        {
+          "h": "Par où commencer",
+          "p": [
+            "Les bourses généralistes restent vos filets de sécurité : Chevening, Fulbright, Australia Awards, DAAD, Erasmus Mundus (plus de 200 programmes toutes disciplines, 1 400 euros par mois), Manaaki, Commonwealth, Konrad Adenauer (droit, économie, sciences politiques), DSU italiennes. Mettez en avant l'angle développement de votre projet."
+          ],
+          "liste": []
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_3.txt - Partie I, Chapitre 5 : Les filières, Filières 25 (Langues), 26 (Histoire / Philosophie) et 27 (Géographie)"
+  },
+  {
+    "id": "filieres-arts-creation-et-bourses-passe-partout",
+    "ordre": 34,
+    "categorie": "filieres",
+    "gratuit": false,
+    "branche": "lettres",
+    "fr": {
+      "titre": "Filières : arts, design, architecture, musique, mode, et bourses passe-partout",
+      "resume": "Il existe des bourses pour les artistes, surtout en Europe. Plus le tableau des bourses valables pour toutes les filières.",
+      "sections": [
+        {
+          "h": "Arts et création : des financements d'excellence",
+          "p": [
+            "Souvent délaissés par les candidats qui pensent à tort qu'il n'y a pas de bourses pour les artistes, ces domaines ont des financements d'excellence, surtout en Europe : l'Italie, la France et l'Allemagne investissent massivement dans la formation artistique internationale. Rappel : le portfolio est la pièce maîtresse du dossier."
+          ],
+          "liste": []
+        },
+        {
+          "h": "Arts visuels, beaux-arts",
+          "p": [
+            "Pays leaders : Italie (Florence, Rome ; système AFAM englobant académies d'art et conservatoires), France (ENSBA, ENSAD), Allemagne (UdK Berlin, Kunstakademie Düsseldorf)."
+          ],
+          "liste": [
+            "MAECI (Italie), programmes AFAM : couvre explicitement les Accademie di Belle Arti, 900 euros par mois.",
+            "DAAD Study Visits for Artists : 992 euros par mois. Graduate Initiative ARTS (Saint-Étienne) : Masters en arts plastiques.",
+            "Fulbright Artist Program : Master en arts visuels (Yale MFA, RISD, SAIC), Fully Funded. Institut Français, Villas Résidences : résidences de 2 à 6 mois."
+          ]
+        },
+        {
+          "h": "Design (graphique, industriel, UX/UI)",
+          "p": [
+            "Pays leaders : Italie (Politecnico di Milano, top 5 mondial), Pays-Bas (Design Academy Eindhoven, TU Delft), France, Japon, UK (Royal College of Art)."
+          ],
+          "liste": [
+            "Politecnico di Milano Merit Awards : exonération (environ 3 900 euros par an) plus allocation possible de 5 000 euros, attribution automatique sur mérite.",
+            "Invest Your Talent in Italy : design industriel avec stage, 1 000 euros par mois. ARES : design d'innovation sociale, Fully Funded.",
+            "TU Delft Van Effen : 30 000 euros par an pour les designers industriels. DSU régionales : logement, cantine et allocation à Milan ou Turin."
+          ]
+        },
+        {
+          "h": "Architecture",
+          "p": [
+            "Pays leaders : Italie (Politecnico di Milano top 10, Torino, IUAV Venise), Pays-Bas (TU Delft, top 3 mondial), Allemagne (TU Munich, TU Berlin), USA (MIT, Harvard GSD), Espagne (UPC Barcelone)."
+          ],
+          "liste": [
+            "Politecnico di Milano Merit Awards plus DSU Lombardie. Politecnico di Torino : architecture durable, jusqu'à 8 000 euros par an.",
+            "TU Delft Van Effen : 30 000 euros par an. DAAD : Masters en architecture (TU9), allocation 992 euros par mois. Fulbright : M.Arch (MIT, Harvard GSD, Columbia). PBEEE Québec : Master 25 000 CAD par an."
+          ]
+        },
+        {
+          "h": "Musique et arts de la scène",
+          "p": [
+            "Pays leaders : Allemagne (Musikhochschulen de Berlin, Weimar, Munich, Cologne), Italie (conservatoires, AFAM), France (CNSMD de Paris et Lyon), Autriche (Vienne)."
+          ],
+          "liste": [
+            "DAAD, Musique et Arts de la Scène : 992 euros par mois plus scolarité gratuite dans les Musikhochschulen.",
+            "MAECI, conservatoires AFAM (Milan, Rome, Florence, Naples) : 900 euros par mois. R.J.H.F. (Canada) : 12 500 CAD pour la musique et la danse contemporaine.",
+            "Fondation Safran pour la Musique (France) : jeunes talents. Graduate Initiative ARTS : informatique musicale et création sonore."
+          ]
+        },
+        {
+          "h": "Mode et textile",
+          "p": [
+            "Le marché de la mode africaine est en pleine explosion (estimé à 2,5 milliards de dollars d'ici 2030). Pays leaders : Italie (Milan, Polimoda Florence, Istituto Marangoni), France (IFM, ESMOD), UK (Central Saint Martins, Royal College of Art), Belgique (La Cambre, Anvers)."
+          ],
+          "liste": [
+            "Polimoda (Florence) : 23 bourses d'une valeur totale de 600 000 euros par an (mérite, besoin, diversité).",
+            "IIFM Milano : bourses de 10 000 euros pour les Masters en marketing de mode. IFM (Paris) : bourses d'excellence et sociales.",
+            "Erasmus Mundus WE-TEAM : ingénierie textile, 1 400 euros par mois. ENSAD : Design Textile. DSU régionales en Italie pour les écoles publiques ou semi-publiques."
+          ]
+        },
+        {
+          "h": "Bourses passe-partout (toutes filières)",
+          "p": [
+            "Ne vous enfermez pas dans une seule filière : une ingénieure en énergie postule à la fois aux bourses STEM (DAAD EPOS, La Caixa) et aux généralistes (Chevening, Fulbright, Australia Awards)."
+          ],
+          "liste": [
+            "Chevening (UK, Master) : toutes filières, Fully Funded. Fulbright (USA, Master et PhD) : toutes sauf médecine clinique.",
+            "Australia Awards (Master et PhD) : toutes, priorités santé, climat, agriculture. Manaaki NZ : toutes, priorités climat, gouvernance, santé.",
+            "DAAD Research Grants (PhD) : 1 300 euros par mois. Erasmus Mundus : plus de 200 programmes, 1 400 euros par mois. Fondation Aga Khan : 50 % de bourse et 50 % de prêt.",
+            "PCBF (Canada) : selon les priorités du pays d'origine. Commonwealth (Master) : accent développement. MasterCard Foundation : variable selon l'université partenaire.",
+            "Friedrich Ebert (Allemagne) : 934 euros par mois. Konrad Adenauer : 992 à 1 400 euros par mois, accent droit, économie, sciences politiques. Türkiye Bursları et MEXT : toutes filières, Fully Funded. DSU régionales (Italie) : exonération, allocation et logement."
+          ]
+        }
+      ]
+    },
+    "source": "LE_MANUEL_DES_BOURSES_part_3.txt - Partie I, Chapitre 5 : Les filières, Section 7 Arts et création (Filières 32 à 36) et Tableau de synthèse : bourses passe-partout"
+  }
+]

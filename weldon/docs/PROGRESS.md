@@ -3,7 +3,7 @@
 Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel conservé.
 
 ## Décisions du concepteur (12 octobre 2026)
-- **Prix** : les deux formules, annuelle 10 000 FCFA (en place) et mensuelle 1 500 FCFA (second produit Chariow à créer).
+- **Prix** (mis à jour le 19 octobre 2026) : annuelle **100 000 FCFA**, mensuelle **15 000 FCFA** (12 mois en mensuel = 180 000 FCFA : l'annuel fait économiser 80 000 FCFA). Deux produits Chariow à créer ou modifier avec ces prix.
 - **Gratuité** : une seule épreuve gratuite par compte (pas d'essai de 7 jours).
 - **Priorité** : orientation (profil et « Quel concours pour moi ? »).
 
@@ -49,3 +49,14 @@ Nom retenu : **Weldon** (le prompt v4 dit « Revise Plus »). Design actuel cons
 - **Annuels** (sessions 2024 à 2026 confirmées) : gardiens de la paix, inspecteurs, commissaires et officiers de police, ENAM ; douanes (décrets du MINFOPRA lus pour 2024 et 2025).
 - Pas assez de sources pour : impôts, médecine, FASA, INJS, CENAJES (« non établie ») ; trésor, santé publique, IEMP (irrégulière).
 - Aucun concours n'est « en pause » aujourd'hui avec ces données. Les concepteurs peuvent corriger depuis l'éditeur de fiches.
+
+## Bourses d'études (proposition du 19 octobre 2026, en attente de validation)
+- Nouvel espace « Bourses » à côté de « Concours » (sélecteur en haut de l'écran). Visible **pour le concepteur seul** tant que `BOURSES_PUBLIC` n'est pas à `1`.
+- Parcours : Sciences ou Littérature (en anglais Science ou Arts), puis filière et niveau ; accueil avec bandeau d'alertes qui défile ; calendrier des échéances ; suivi ; fiche complète ; éditeur des dates dans l'espace concepteur.
+- Cycle de vie calculé chaque jour : clôture proche, ouverte, bientôt ouverte, relance attendue, expirée avec relance probable.
+- 38 bourses issues de recherches sur les pages officielles, toutes `to_verify`. Schéma : `content/SCHEMA-BOURSES.md`.
+- À faire après validation : intégrer le répertoire du concepteur, surveillance automatique des pages officielles des bourses (même veille que les concours), décision gratuit / abonnement.
+
+## Épreuves officielles reçues
+- 19 octobre 2026 : épreuve professionnelle du concours spécial d'élèves inspecteurs de police, DGSN, 12 février 2022 (première épreuve officielle ingérée, corrigé proposé non vérifié).
+- En attente de précision : sujet de « Culture sécuritaire » 2021/2022 (concours non identifié) ; dissertation de l'ENS de Bongor (Tchad, hors Cameroun).

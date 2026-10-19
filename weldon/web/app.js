@@ -116,6 +116,7 @@
       composeRoom: "Composer en salle d'examen",
       sourceLabel: "Source du sujet",
       toCheck: "Passages à vérifier (scan ou photo peu lisible) :",
+      toCheckAnswer: "Points du corrigé à vérifier (non confirmés par un texte officiel) :",
       scale: "Barème : comment se noter",
       gridHow: "Pour chaque critère, relisez votre copie, trouvez la phrase qui décrit le mieux ce que vous avez écrit, et donnez-vous les points indiqués.",
       ptsUnit: (n) => (n > 1 ? "pts" : "pt"),
@@ -165,7 +166,8 @@
       planAnnual: "12 mois",
       planMonthly: "1 mois",
       planMonthlyNote: "Pas de renouvellement automatique : vous repayez quand vous voulez.",
-      planSave: "Le plus avantageux",
+      planSave: (n) => `Économisez ${n}`,
+      planTotal: (n) => `Soit ${n} sur 12 mois.`,
       nativeNoSale: "Les abonnements ne sont pas vendus dans l'application. Si vous êtes déjà abonné, utilisez l'e-mail de votre compte Weldon : votre accès complet est reconnu automatiquement.",
       oneTime: "Un seul paiement. Pas de renouvellement automatique.",
       perks: [
@@ -312,6 +314,7 @@
       composeRoom: "Write it in the exam room",
       sourceLabel: "Source of the paper",
       toCheck: "Passages to check (scan or photo hard to read):",
+      toCheckAnswer: "Points of the model answer to check (not confirmed by an official text):",
       scale: "Marking guide: how to mark yourself",
       gridHow: "For each criterion, reread your script, find the line that best describes what you wrote, and give yourself the marks shown.",
       ptsUnit: (n) => (n > 1 ? "marks" : "mark"),
@@ -361,7 +364,8 @@
       planAnnual: "12 months",
       planMonthly: "1 month",
       planMonthlyNote: "No automatic renewal: you pay again whenever you wish.",
-      planSave: "Best value",
+      planSave: (n) => `Save ${n}`,
+      planTotal: (n) => `That is ${n} over 12 months.`,
       nativeNoSale: "Subscriptions are not sold in the app. If you already subscribe, use the email of your Weldon account: your full access is recognised automatically.",
       oneTime: "One payment. No automatic renewal.",
       perks: [
@@ -446,7 +450,7 @@
 
   const state = {
     demo: true,
-    config: { price_xaf: 10000, payment_enabled: false, ai_enabled: false },
+    config: { price_xaf: 100000, payment_enabled: false, ai_enabled: false },
     token: local.get("token", null),
     user: null,
     catalog: null,
@@ -460,6 +464,10 @@
     selfScores: {},
     docCache: {},
     docError: {},
+    space: local.get("space", "concours"),
+    bourses: null,
+    bf: {},
+    bFicheId: null,
     oralCache: {},
     booting: true,
   };
@@ -500,6 +508,9 @@
     grant: (b) => http("/api/admin/grant", { method: "POST", body: b }),
     report: (b) => http("/api/report", { method: "POST", body: b }),
     annonces: () => http("/api/annonces"),
+    bourses: (l) => http("/api/bourses?lang=" + l),
+    followBourse: (id, on) => http("/api/follow-bourse", { method: "POST", body: { id, on } }),
+    adminSaveBourse: (b) => http("/api/admin/bourse", { method: "POST", body: b }),
     plan: () => http("/api/plan"),
     savePlan: (b) => http("/api/plan", { method: "POST", body: b }),
     quizStats: () => http("/api/quiz/stats"),
@@ -546,7 +557,7 @@
       return profile(u);
     };
     return {
-      config: async () => ({ mode: "demo", price_xaf: 10000, payment_enabled: false, ai_enabled: false }),
+      config: async () => ({ mode: "demo", price_xaf: 100000, payment_enabled: false, ai_enabled: false }),
       async register({ email, name, password }) {
         email = String(email || "").trim().toLowerCase();
         if (!name) fail("Indiquez votre nom. · Enter your name.");
@@ -571,6 +582,9 @@
       },
       report: async () => ({ ok: true }),
       annonces: async () => [],
+      bourses: async () => fail("Les bourses ne sont pas disponibles dans la démo.", "demo", 400),
+      followBourse: async () => fail("Non disponible dans la démo.", "demo", 400),
+      adminSaveBourse: async () => ({ ok: true }),
       plan: async () => ({ plan: null }),
       savePlan: async () => fail("Le plan n'est pas disponible dans la démo.", "demo", 400),
       quizStats: async () => fail("L'entraînement n'est pas disponible dans la démo.", "demo", 400),
@@ -648,6 +662,10 @@
   // ---------- Icônes ----------
   const I = {
     concours: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>',
+    bhome: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5M22 9v6"/></svg>',
+    bfind: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
+    bcal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+    bfollow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>',
     quiz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.6 2.2c-.8.4-1.2 1-1.2 1.8M12 17h.01"/></svg>',
     epreuves: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>',
     corriges: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8.5 15l2.5 2.5 4.5-5"/></svg>',
@@ -1438,6 +1456,185 @@
   };
   const fi = () => FI[lang()];
 
+  // ---------- Bourses d'études ----------
+  const BTABS = ["bhome", "bfind", "bcal", "bfollow"];
+  const BR = {
+    fr: {
+      space: { concours: "Concours", bourses: "Bourses" },
+      tabs: { bhome: "Accueil", bfind: "Trouver", bcal: "Échéances", bfollow: "Suivi" },
+      tabsLong: { bhome: "Accueil des bourses", bfind: "Trouver une bourse", bcal: "Calendrier des échéances", bfollow: "Mes bourses suivies" },
+      title: "Bourses d'études",
+      sub: "Trouvez une bourse selon votre filière et votre niveau, et ne ratez plus une échéance.",
+      status: { cloture_proche: "Clôture proche", ouverte: "Ouverte", a_venir: "Bientôt ouverte", attendue: "Relance attendue", expiree: "Expirée", inconnue: "Dates non annoncées" },
+      line: {
+        cloture_proche: (d, date) => (d === 0 ? `Clôture aujourd'hui · ${date}` : `Clôture dans ${d} jour${d > 1 ? "s" : ""} · ${date}`),
+        ouverte: (d, date) => (d == null ? `Ouverte depuis le ${date}. Date de clôture à vérifier sur le site officiel.` : `Clôture le ${date} (dans ${d} jours)`),
+        a_venir: (d, date) => `Ouvre le ${date} (dans ${d} jours)`,
+        attendue: (mois) => `Ouverture habituelle : ${mois}. Pas encore annoncée.`,
+        expiree: (date, relance) => `Expirée le ${date}.${relance ? ` Relance probable : ${relance} (à confirmer).` : ""}`,
+        inconnue: "Les dates ne sont pas annoncées.",
+      },
+      toConfirm: "dates à confirmer",
+      verifyTag: "À vérifier",
+      branches: { sciences: "Sciences", lettres: "Littérature" },
+      branchSub: { sciences: "Maths, informatique, physique, santé, ingénierie, agronomie…", lettres: "Droit, histoire, géographie, lettres, langues, économie, éducation…" },
+      allBranches: "Toutes les filières",
+      chooseBranch: "Quelle est votre filière ?",
+      chooseBranchSub: "Choisissez Sciences ou Littérature : les bourses sont ensuite classées pour vous.",
+      changeBranch: "Changer de branche",
+      domains: { maths: "Mathématiques", informatique: "Informatique", "physique-chimie": "Physique et chimie", sante: "Santé", ingenierie: "Ingénierie", "agronomie-environnement": "Agronomie et environnement", "droit-politique": "Droit et sciences politiques", "histoire-geographie": "Histoire et géographie", "lettres-langues": "Lettres et langues", "philo-sociologie": "Philosophie et sociologie", communication: "Communication et journalisme", education: "Éducation", "economie-gestion": "Économie et gestion", tous: "Toutes filières" },
+      allDomains: "Toutes les filières",
+      levels: { licence: "Licence", master: "Master", doctorat: "Doctorat", postdoc: "Post-doctorat", autre: "Autre" },
+      allLevels: "Tous niveaux",
+      coverage: { complete: "Bourse complète", partielle: "Bourse partielle", variable: "Montant variable" },
+      cameroon: { oui: "Ouverte aux Camerounais", non_precise: "Éligibilité du Cameroun à confirmer" },
+      results: (n) => `${n} bourse${n > 1 ? "s" : ""}`,
+      noResults: "Aucune bourse pour ce choix. Essayez « Tous niveaux » ou une autre filière.",
+      expired: "Expirées : relance à surveiller",
+      closingSoon: "Clôtures à venir",
+      opened: "Ouvertes en ce moment",
+      soon: "Bientôt ouvertes",
+      forYou: "Pour vous",
+      forYouSub: "D'après la filière et le niveau que vous avez choisis.",
+      findCta: "Trouver une bourse pour moi",
+      tickerTitle: "Alertes bourses",
+      tick: {
+        cloture_proche: (n, d) => (d === 0 ? `⏰ ${n} : clôture aujourd'hui` : `⏰ ${n} : clôture dans ${d} jour${d > 1 ? "s" : ""}`),
+        ouverte: (n, date) => `🟢 ${n} : ouverte jusqu'au ${date}`,
+        a_venir: (n, d) => `🔜 ${n} : ouvre dans ${d} jours`,
+        expiree: (n, relance) => `🔁 ${n} : expirée${relance ? `, relance attendue en ${relance}` : ""}`,
+      },
+      empty: "Aucune bourse n'est encore publiée dans cette section.",
+      follow: "Suivre",
+      unfollow: "Ne plus suivre",
+      followed: "Suivie",
+      followHelp: (n) => `Sans abonnement, vous pouvez suivre ${n} bourses.`,
+      followEmpty: "Suivez une bourse avec l'étoile pour voir ici ses échéances.",
+      followTitle: "Mes bourses suivies",
+      mine: "Ma filière",
+      mineSub: "Elle sert à vous proposer les bonnes bourses dès l'accueil.",
+      saved: "Enregistré.",
+      back: "Retour aux bourses",
+      official: "Voir le site officiel",
+      share: "Partager sur WhatsApp",
+      shareText: (n, url) => `Bourse : ${n}. Plus d'infos sur Weldon : ${url}`,
+      sections: { resume: "En bref", coverage: "Ce que couvre la bourse", conditions: "Conditions", dossier: "Documents à préparer", advice: "Conseil", dates: "Dates", sources: "Sources" },
+      cond: { age: "Âge maximum", diploma: "Diplôme", language: "Langue", other: "Autres conditions", countries: "Pays d'accueil", levels: "Niveaux", domains: "Filières" },
+      years: (n) => `${n} ans`,
+      edition: "Édition",
+      opening: "Ouverture",
+      closing: "Clôture",
+      notAnnounced: "non annoncée",
+      lastChecked: (d) => `Dernière vérification : ${d}`,
+      unverified: "Informations à vérifier : confirmez toujours les dates et les conditions sur le site officiel.",
+      scamTitle: "Éviter les arnaques",
+      scam: ["Aucune bourse sérieuse ne demande de payer pour candidater ou pour « réserver » une place.", "Candidatez uniquement depuis le site officiel de l'organisme, jamais depuis un lien reçu par message.", "Weldon n'est affilié à aucun organisme de bourses : vérifiez toujours les dates sur le site officiel."],
+      calTitle: "Calendrier des échéances",
+      calSub: "Les barres montrent la période d'ouverture. Elles sont probables tant que les dates de l'édition ne sont pas confirmées.",
+      calOpen: "Ouverture",
+      calProbable: "Période probable",
+      thisMonth: "Cette période",
+      adminTitle: "Bourses : dates de l'édition en cours",
+      adminSub: "Relevez les dates sur la page officielle. « Confirmé » veut dire que vous les avez lues sur le site officiel.",
+      pick: "Bourse",
+      editionLabel: "Édition (ex. 2027/28)",
+      confirmed: "Dates confirmées sur le site officiel",
+      verified: "J'ai vérifié cette bourse sur le site officiel",
+      linkLabel: "Lien officiel",
+      save: "Enregistrer la bourse",
+    },
+    en: {
+      space: { concours: "Competitions", bourses: "Scholarships" },
+      tabs: { bhome: "Home", bfind: "Find", bcal: "Deadlines", bfollow: "Following" },
+      tabsLong: { bhome: "Scholarships home", bfind: "Find a scholarship", bcal: "Deadline calendar", bfollow: "Scholarships I follow" },
+      title: "Scholarships",
+      sub: "Find a scholarship for your field and level, and never miss a deadline again.",
+      status: { cloture_proche: "Closing soon", ouverte: "Open", a_venir: "Opening soon", attendue: "Reopening expected", expiree: "Expired", inconnue: "Dates not announced" },
+      line: {
+        cloture_proche: (d, date) => (d === 0 ? `Closes today · ${date}` : `Closes in ${d} day${d > 1 ? "s" : ""} · ${date}`),
+        ouverte: (d, date) => (d == null ? `Open since ${date}. Check the closing date on the official website.` : `Closes on ${date} (in ${d} days)`),
+        a_venir: (d, date) => `Opens on ${date} (in ${d} days)`,
+        attendue: (mois) => `Usually opens: ${mois}. Not announced yet.`,
+        expiree: (date, relance) => `Expired on ${date}.${relance ? ` Probable reopening: ${relance} (to be confirmed).` : ""}`,
+        inconnue: "Dates are not announced.",
+      },
+      toConfirm: "dates to be confirmed",
+      verifyTag: "To be checked",
+      branches: { sciences: "Science", lettres: "Arts" },
+      branchSub: { sciences: "Maths, computing, physics, health, engineering, agriculture…", lettres: "Law, history, geography, languages, economics, education…" },
+      allBranches: "All fields",
+      chooseBranch: "What is your field?",
+      chooseBranchSub: "Choose Science or Arts: scholarships are then ranked for you.",
+      changeBranch: "Change field",
+      domains: { maths: "Mathematics", informatique: "Computer science", "physique-chimie": "Physics and chemistry", sante: "Health", ingenierie: "Engineering", "agronomie-environnement": "Agriculture and environment", "droit-politique": "Law and political science", "histoire-geographie": "History and geography", "lettres-langues": "Literature and languages", "philo-sociologie": "Philosophy and sociology", communication: "Communication and journalism", education: "Education", "economie-gestion": "Economics and management", tous: "All fields" },
+      allDomains: "All subjects",
+      levels: { licence: "Bachelor's", master: "Master's", doctorat: "PhD", postdoc: "Postdoctoral", autre: "Other" },
+      allLevels: "All levels",
+      coverage: { complete: "Full scholarship", partielle: "Partial scholarship", variable: "Amount varies" },
+      cameroon: { oui: "Open to Cameroonians", non_precise: "Cameroon eligibility to be confirmed" },
+      results: (n) => `${n} scholarship${n > 1 ? "s" : ""}`,
+      noResults: "No scholarship for this choice. Try “All levels” or another subject.",
+      expired: "Expired: watch for the reopening",
+      closingSoon: "Upcoming deadlines",
+      opened: "Open now",
+      soon: "Opening soon",
+      forYou: "For you",
+      forYouSub: "Based on the field and level you chose.",
+      findCta: "Find a scholarship for me",
+      tickerTitle: "Scholarship alerts",
+      tick: {
+        cloture_proche: (n, d) => (d === 0 ? `⏰ ${n}: closes today` : `⏰ ${n}: closes in ${d} day${d > 1 ? "s" : ""}`),
+        ouverte: (n, date) => `🟢 ${n}: open until ${date}`,
+        a_venir: (n, d) => `🔜 ${n}: opens in ${d} days`,
+        expiree: (n, relance) => `🔁 ${n}: expired${relance ? `, reopening expected in ${relance}` : ""}`,
+      },
+      empty: "No scholarship is published in this section yet.",
+      follow: "Follow",
+      unfollow: "Unfollow",
+      followed: "Following",
+      followHelp: (n) => `Without a subscription you can follow ${n} scholarships.`,
+      followEmpty: "Follow a scholarship with the star to see its deadlines here.",
+      followTitle: "Scholarships I follow",
+      mine: "My field",
+      mineSub: "It is used to suggest the right scholarships on the home page.",
+      saved: "Saved.",
+      back: "Back to scholarships",
+      official: "See the official website",
+      share: "Share on WhatsApp",
+      shareText: (n, url) => `Scholarship: ${n}. More on Weldon: ${url}`,
+      sections: { resume: "In brief", coverage: "What the scholarship covers", conditions: "Requirements", dossier: "Documents to prepare", advice: "Advice", dates: "Dates", sources: "Sources" },
+      cond: { age: "Maximum age", diploma: "Diploma", language: "Language", other: "Other requirements", countries: "Host countries", levels: "Levels", domains: "Fields" },
+      years: (n) => `${n} years`,
+      edition: "Edition",
+      opening: "Opens",
+      closing: "Closes",
+      notAnnounced: "not announced",
+      lastChecked: (d) => `Last checked: ${d}`,
+      unverified: "To be checked: always confirm dates and requirements on the official website.",
+      scamTitle: "Avoiding scams",
+      scam: ["No serious scholarship asks you to pay to apply or to “reserve” a place.", "Apply only from the organisation's official website, never from a link received in a message.", "Weldon is not affiliated with any scholarship provider: always check the dates on the official website."],
+      calTitle: "Deadline calendar",
+      calSub: "Bars show the opening period. They are probable until the edition's dates are confirmed.",
+      calOpen: "Open",
+      calProbable: "Probable period",
+      thisMonth: "This period",
+      adminTitle: "Scholarships: dates of the current edition",
+      adminSub: "Copy the dates from the official page. “Confirmed” means you read them on the official website.",
+      pick: "Scholarship",
+      editionLabel: "Edition (e.g. 2027/28)",
+      confirmed: "Dates confirmed on the official website",
+      verified: "I have checked this scholarship on the official website",
+      linkLabel: "Official link",
+      save: "Save the scholarship",
+    },
+  };
+  const br = () => BR[lang()];
+  const bourseOn = () => Boolean(state.config?.bourses_public || state.user?.admin);
+  const isBFollowed = (id) => (state.user?.bourses_suivies || []).includes(id);
+  const bFmt = (iso) => dateFmt(iso + "T12:00:00Z");
+  const bMonth = (m) => cal().monthNames[m - 1];
+  const bRelance = (r) => (r ? `${bMonth(r.mois)} ${r.annee}` : "");
+
   function ficheFields(id) {
     const F = fi();
     const O = ori();
@@ -1472,6 +1669,41 @@
       <div class="field"><label for="ff-pnext">${F.perNext}</label><input id="ff-pnext" name="p_prochaine" type="number" min="1990" max="2100" value="${num(per.prochaine_probable)}"></div>
       <div class="field full"><label for="ff-pnote">${F.perNote}</label><textarea id="ff-pnote" name="p_note" rows="2" maxlength="400">${esc(per.note || "")}</textarea></div>
       <label class="full"><input type="checkbox" name="verified" ${c?.status === "verified" ? "checked" : ""}> <b>${F.verified}</b></label>`;
+  }
+
+  function bourseFields(id) {
+    const B = br();
+    const b = (state.bourses || []).find((x) => x.id === id);
+    const e = b?.edition || {};
+    return `
+      <div class="field"><label for="bf-lib">${B.editionLabel}</label><input id="bf-lib" name="libelle" maxlength="20" value="${esc(e.libelle || "")}"></div>
+      <div class="field"><label for="bf-link">${B.linkLabel}</label><input id="bf-link" name="lien_officiel" type="url" placeholder="https://" value="${esc(b?.lien_officiel || "")}"></div>
+      <div class="field"><label for="bf-open">${B.opening}</label><input id="bf-open" name="ouverture" type="date" value="${esc(e.ouverture || "")}"></div>
+      <div class="field"><label for="bf-close">${B.closing}</label><input id="bf-close" name="cloture" type="date" value="${esc(e.cloture || "")}"></div>
+      <label class="full"><input type="checkbox" name="confirme" ${e.confirme ? "checked" : ""}> ${B.confirmed}</label>
+      <label class="full"><input type="checkbox" name="verified" ${b?.status === "verified" ? "checked" : ""}> <b>${B.verified}</b></label>`;
+  }
+
+  async function submitBourse(form) {
+    const err = form.querySelector("#bourse-err");
+    const fd = new FormData(form);
+    try {
+      await api().adminSaveBourse({
+        id: fd.get("id"),
+        lang: lang(),
+        edition: { libelle: fd.get("libelle"), ouverture: fd.get("ouverture"), cloture: fd.get("cloture"), confirme: fd.get("confirme") === "on" },
+        lien_officiel: fd.get("lien_officiel"),
+        verified: fd.get("verified") === "on",
+      });
+    } catch (e) {
+      err.textContent = e.message;
+      err.hidden = false;
+      return;
+    }
+    state.bourseSel = fd.get("id");
+    state.bourses = null;
+    toast(br().saved);
+    openAdmin();
   }
 
   async function submitFiche(form) {
@@ -1630,13 +1862,24 @@
   // ---------- Coquille ----------
   function shell() {
     const L = t();
-    const nav = TABS.map(
-      (id) =>
-        `<button type="button" data-tab="${id}" ${state.tab === id ? 'aria-current="page"' : ""}>${I[id]}<span>${L.tabsLong[id]}</span>${
-          PREMIUM_TABS.has(id) && !premium() ? `<span class="lock">${I.lock}</span>` : ""
-        }</button>`
-    ).join("");
-    const tabs = TABS.map((id) => `<button type="button" data-tab="${id}" ${state.tab === id ? 'aria-current="page"' : ""}>${I[id]}<span>${L.tabs[id]}</span></button>`).join("");
+    const inB = state.space === "bourses" && bourseOn();
+    const list = inB ? BTABS : TABS;
+    const longNames = inB ? br().tabsLong : L.tabsLong;
+    const shortNames = inB ? br().tabs : L.tabs;
+    const nav = list
+      .map(
+        (id) =>
+          `<button type="button" data-tab="${id}" ${state.tab === id ? 'aria-current="page"' : ""}>${I[id]}<span>${longNames[id]}</span>${
+            !inB && PREMIUM_TABS.has(id) && !premium() ? `<span class="lock">${I.lock}</span>` : ""
+          }</button>`
+      )
+      .join("");
+    const tabs = list.map((id) => `<button type="button" data-tab="${id}" ${state.tab === id ? 'aria-current="page"' : ""}>${I[id]}<span>${shortNames[id]}</span></button>`).join("");
+    const spaces = bourseOn()
+      ? `<div class="space-switch" role="tablist" aria-label="Espace">${["concours", "bourses"]
+          .map((k) => `<button type="button" role="tab" data-space="${k}" aria-selected="${(inB ? "bourses" : "concours") === k}">${br().space[k]}</button>`)
+          .join("")}</div>`
+      : "";
     const badge = state.user.admin
       ? `<span class="tag tag-sun">${L.designer}</span>`
       : premium()
@@ -1655,9 +1898,10 @@
             ${BRAND}
             <div style="display:flex;gap:8px;align-items:center">${badge}<button type="button" class="icon-btn" data-account aria-label="${L.account}">${I.user}</button></div>
           </header>
+          ${spaces}
           <main class="view" id="view"></main>
         </div>
-        <nav class="tabbar" aria-label="Sections">${tabs}</nav>
+        <nav class="tabbar" aria-label="Sections" style="grid-template-columns:repeat(${list.length}, minmax(0, 1fr))">${tabs}</nav>
       </div>`;
   }
 
@@ -1700,6 +1944,7 @@
     if (nav.orient) return viewOrient();
     if (nav.calendrier) return viewCalendar();
     if (!state.annonces && !state.demo) loadAnnonces();
+    if (bourseOn() && !state.bourses && !state.demo) loadBourses(); // le bandeau d'alertes des bourses défile aussi sur l'accueil des concours
     const O = ori();
     return `
       <section class="hero">
@@ -1720,6 +1965,7 @@
         </div>
       </section>
       ${demoNotice()}
+      ${bourseOn() && state.bourses?.length ? tickerHtml(state.bourses) : ""}
       ${state.demo ? "" : newBanner() + remindersCard()}
       ${state.demo ? "" : `<section class="card orient-cta"><div><h2>${O.cta}</h2><p class="muted">${O.ctaSub}</p></div><button type="button" class="btn btn-primary" data-orient>${O.ctaBtn}</button></section>
         <section class="card orient-cta"><div><h2>${cal().cta}</h2><p class="muted">${cal().ctaSub}</p></div>
@@ -2209,6 +2455,261 @@
       </div>`;
   }
 
+  // ---------- Bourses : vues ----------
+  function setSpace(k) {
+    state.space = k;
+    local.set("space", k);
+    state.tab = k === "bourses" ? "bhome" : "concours";
+    state.bFicheId = null;
+    state.play = null;
+    render();
+    window.scrollTo({ top: 0 });
+  }
+
+  async function loadBourses() {
+    if (state.boursesLoading) return;
+    state.boursesLoading = true;
+    try {
+      state.bourses = (await api().bourses(lang())).bourses;
+    } catch {
+      state.bourses = [];
+    }
+    state.boursesLoading = false;
+    render();
+  }
+
+  // Branche, filière et niveau choisis : mémorisés sur le compte pour personnaliser l'accueil.
+  const BRANCH_DOMAINS = {
+    sciences: ["maths", "informatique", "physique-chimie", "sante", "ingenierie", "agronomie-environnement"],
+    lettres: ["droit-politique", "histoire-geographie", "lettres-langues", "philo-sociologie", "communication", "education", "economie-gestion"],
+  };
+  const bPref = () => state.user?.bourse_profil || {};
+  const bState = () => ({ branche: state.bf.branche, domaine: state.bf.domaine || "", niveau: state.bf.niveau || bPref().niveau || "" });
+  function saveBPref(patch) {
+    const next = { branche: patch.branche ?? bPref().branche ?? "", domaine: patch.domaine ?? bPref().domaine ?? "", niveau: patch.niveau ?? bPref().niveau ?? "" };
+    api().update({ bourse_profil: next }).then((u) => (state.user = u)).catch(() => {});
+  }
+
+  function filterB(list, f) {
+    const all = (b) => b.domaines.includes("tous") || !b.domaines.length;
+    return list.filter((b) => (!f.branche || b.branches.includes(f.branche)) && (!f.domaine || all(b) || b.domaines.includes(f.domaine)) && (!f.niveau || b.niveaux.includes(f.niveau)));
+  }
+
+  function statusLine(b) {
+    const L = br().line;
+    const s = b.statut;
+    if (s.code === "cloture_proche") return L.cloture_proche(s.jours, bFmt(s.cloture));
+    if (s.code === "ouverte") return L.ouverte(s.jours, bFmt(s.cloture || s.ouverture));
+    if (s.code === "a_venir") return L.a_venir(s.jours, bFmt(s.ouverture));
+    if (s.code === "attendue") return L.attendue(b.cycle?.ouverture_mois || "");
+    if (s.code === "expiree") return L.expiree(bFmt(s.cloture), bRelance(s.relance));
+    return L.inconnue;
+  }
+  const statusTag = (b) => {
+    const cls = { cloture_proche: "tag-sun", ouverte: "tag-green", a_venir: "tag-indigo", attendue: "tag-indigo", expiree: "tag-line", inconnue: "tag-line" }[b.statut.code];
+    return `<span class="tag ${cls}">${br().status[b.statut.code]}</span>`;
+  };
+
+  function cardB(b) {
+    const B = br();
+    const dated = ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) && b.statut.probable;
+    return `<article class="card bcard ${b.statut.code === "expiree" ? "past" : ""}">
+      <button type="button" class="bcard-main" data-open-b="${esc(b.id)}">
+        <span class="row-actions" style="justify-content:flex-start;gap:6px">${statusTag(b)}<span class="tag tag-line">${B.coverage[b.couverture.niveau]}</span>${dated ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}</span>
+        <b>${esc(b.nom)}</b>
+        <span class="small muted">${esc(b.organisme)}${b.pays_accueil.filter((x) => !b.organisme.includes(x)).length ? " · " + esc(b.pays_accueil.filter((x) => !b.organisme.includes(x)).join(", ")) : ""}</span>
+        <span class="small">${esc(statusLine(b))}</span>
+        <span class="chips-inline">${b.niveaux.map((x) => `<span class="tag tag-line">${esc(B.levels[x])}</span>`).join("")}</span>
+      </button>
+      <button type="button" class="star ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}" aria-label="${isBFollowed(b.id) ? B.unfollow : B.follow}: ${esc(b.nom)}">${isBFollowed(b.id) ? "★" : "☆"}</button>
+    </article>`;
+  }
+
+  // Bandeau d'alertes qui défile : clôtures proches, ouvertures, relances à surveiller.
+  function tickerHtml(list) {
+    const B = br();
+    const mine = new Set(state.user?.bourses_suivies || []);
+    const items = [];
+    for (const b of list) {
+      const s = b.statut;
+      let text = null;
+      if (s.code === "cloture_proche") text = B.tick.cloture_proche(b.nom, s.jours);
+      else if (s.code === "ouverte" && s.jours != null && s.jours <= 45) text = B.tick.ouverte(b.nom, bFmt(s.cloture));
+      else if (s.code === "a_venir" && s.jours <= 30) text = B.tick.a_venir(b.nom, s.jours);
+      else if (s.code === "expiree" && s.jours >= -45) text = B.tick.expiree(b.nom, bRelance(s.relance));
+      if (text) items.push({ id: b.id, text, rank: (mine.has(b.id) ? 0 : 10) + { cloture_proche: 0, ouverte: 1, a_venir: 2, expiree: 3 }[s.code] });
+    }
+    items.sort((a, c) => a.rank - c.rank);
+    if (!items.length) return "";
+    const btns = items.slice(0, 14).map((i) => `<button type="button" class="tick" data-open-b="${esc(i.id)}">${esc(i.text)}</button>`).join("");
+    return `<section class="ticker" aria-label="${B.tickerTitle}"><div class="ticker-track">${btns}</div></section>`;
+  }
+
+  function bScamCard() {
+    const B = br();
+    return `<article class="card scam"><h3>${I.info} ${B.scamTitle}</h3><ul class="clean">${B.scam.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>`;
+  }
+
+  function viewBourses() {
+    const B = br();
+    if (!state.bourses) {
+      loadBourses();
+      return `<div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><p class="muted">…</p>`;
+    }
+    if (state.bFicheId) return viewBFiche(state.bFicheId);
+    if (state.tab === "bfind") return viewBFind();
+    if (state.tab === "bcal") return viewBCal();
+    if (state.tab === "bfollow") return viewBFollow();
+    return viewBHome();
+  }
+
+  function viewBHome() {
+    const B = br();
+    const all = state.bourses;
+    if (!all.length) return `<div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><div class="notice">${I.info}<span>${B.empty}</span></div>`;
+    const pref = bPref();
+    const active = (b) => ["cloture_proche", "ouverte", "a_venir", "attendue"].includes(b.statut.code);
+    const mineList = pref.branche || pref.niveau ? filterB(all.filter(active), { branche: pref.branche, domaine: pref.domaine, niveau: pref.niveau }).slice(0, 4) : [];
+    const closing = all.filter((b) => b.statut.code === "cloture_proche" || (b.statut.code === "ouverte" && b.statut.jours != null && b.statut.jours <= 45)).slice(0, 6);
+    const shown = new Set(closing.map((b) => b.id));
+    const opened = all.filter((b) => b.statut.code === "ouverte" && !shown.has(b.id)).slice(0, 6);
+    const soon = all.filter((b) => b.statut.code === "a_venir" || b.statut.code === "attendue").slice(0, 4);
+    const expired = all.filter((b) => b.statut.code === "expiree").slice(0, 4);
+    const block = (title, sub, list) => (list.length ? `<section class="orient-group"><h2>${title}</h2>${sub ? `<p class="small muted">${sub}</p>` : ""}<div class="results">${list.map(cardB).join("")}</div></section>` : "");
+    return `
+      <div class="section-head"><div><span class="eyebrow">${t().section}</span><h1>${B.title}</h1></div><p class="muted small">${B.sub}</p></div>
+      ${tickerHtml(all)}
+      <section class="card orient-cta"><div><h2>${B.findCta}</h2><p class="muted">${B.chooseBranchSub}</p></div><button type="button" class="btn btn-primary" data-tab="bfind">${B.findCta}</button></section>
+      ${block(B.forYou, B.forYouSub, mineList)}
+      ${block(B.closingSoon, "", closing)}
+      ${block(B.opened, "", opened)}
+      ${block(B.soon, "", soon)}
+      ${block(B.expired, "", expired)}
+      ${bScamCard()}`;
+  }
+
+  function viewBFind() {
+    const B = br();
+    const f = bState();
+    if (f.branche === undefined) {
+      const card = (k, label, sub) => `<button type="button" class="section-card" data-bbranche="${k}"><span class="section-flag">${k === "sciences" ? "Sc" : k === "lettres" ? "Ar" : "★"}</span><span><b>${esc(label)}</b><span class="small muted">${esc(sub)}</span></span>${I.chevron}</button>`;
+      return `<div><span class="eyebrow">${t().section}</span><h1>${B.chooseBranch}</h1></div><p class="muted">${B.chooseBranchSub}</p>
+        <div style="display:grid;gap:12px;max-width:560px">${card("sciences", B.branches.sciences, B.branchSub.sciences)}${card("lettres", B.branches.lettres, B.branchSub.lettres)}${card("", B.allBranches, "")}</div>${bScamCard()}`;
+    }
+    const domains = f.branche ? BRANCH_DOMAINS[f.branche] : Object.values(BRANCH_DOMAINS).flat();
+    const chip = (attr, val, label, on) => `<button type="button" class="chip" data-${attr}="${esc(val)}" aria-pressed="${on}">${esc(label)}</button>`;
+    const list = filterB(state.bourses, f);
+    const active = list.filter((b) => b.statut.code !== "expiree");
+    const expired = list.filter((b) => b.statut.code === "expiree");
+    return `
+      <div class="row-actions"><div><span class="eyebrow">${t().section}</span><h1>${f.branche ? B.branches[f.branche] : B.allBranches}</h1></div>
+        <button type="button" class="btn btn-ghost btn-small" data-bchange>${B.changeBranch}</button></div>
+      <div class="chips" role="group">${chip("bdomaine", "", B.allDomains, !f.domaine)}${domains.map((d) => chip("bdomaine", d, B.domains[d], f.domaine === d)).join("")}</div>
+      <div class="chips" role="group">${chip("bniveau", "", B.allLevels, !f.niveau)}${["licence", "master", "doctorat", "postdoc"].map((l) => chip("bniveau", l, B.levels[l], f.niveau === l)).join("")}</div>
+      <p class="small muted">${B.results(list.length)}</p>
+      ${active.length ? `<div class="results">${active.map(cardB).join("")}</div>` : `<div class="notice">${I.info}<span>${B.noResults}</span></div>`}
+      ${expired.length ? `<details class="fold"><summary><b>${B.expired}</b> <span class="muted">${expired.length}</span></summary><div class="results">${expired.map(cardB).join("")}</div></details>` : ""}
+      ${bScamCard()}`;
+  }
+
+  // Mois couverts par la fenêtre d'ouverture d'une bourse (confirmée, ou probable d'après le cycle).
+  function windowMonths(b) {
+    const e = b.edition || {};
+    const span = (a, z) => {
+      const out = [];
+      for (let m = a, k = 0; k < 12; k++, m = (m % 12) + 1) {
+        out.push(m);
+        if (m === z) break;
+      }
+      return out;
+    };
+    if (b.statut.code !== "expiree" && e.ouverture && e.cloture && !b.statut.probable) return { months: span(Number(e.ouverture.slice(5, 7)), Number(e.cloture.slice(5, 7))), probable: false };
+    const o = b.cycle?.mois?.ouverture || [];
+    const c = b.cycle?.mois?.cloture || [];
+    if (o.length) return { months: span(o[0], (c.length ? c[c.length - 1] : o[o.length - 1])), probable: true };
+    if (e.ouverture && e.cloture) return { months: span(Number(e.ouverture.slice(5, 7)), Number(e.cloture.slice(5, 7))), probable: true };
+    return null;
+  }
+
+  function viewBCal() {
+    const B = br();
+    const C = cal();
+    const month = new Date().getMonth() + 1;
+    const rows = state.bourses
+      .map((b) => ({ b, w: windowMonths(b) }))
+      .filter((x) => x.w)
+      .map(({ b, w }) => {
+        const cells = C.months
+          .map((_, i) => `<td class="${i + 1 === month ? "cur" : ""}">${w.months.includes(i + 1) ? `<i class="ph ${w.probable ? "ph-bprob" : "ph-bopen"}" title="${w.probable ? B.calProbable : B.calOpen}"></i>` : ""}</td>`)
+          .join("");
+        return `<tr class="${b.statut.code === "expiree" ? "pause" : ""}"><th class="sticky"><div class="cal-name"><button type="button" class="linkish" data-open-b="${esc(b.id)}">${esc(b.nom.length > 22 ? b.nom.slice(0, 21) + "…" : b.nom)}</button>
+          <button type="button" class="star ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}" aria-label="${B.follow}: ${esc(b.nom)}">${isBFollowed(b.id) ? "★" : "☆"}</button></div></th>${cells}</tr>`;
+      })
+      .join("");
+    const now = state.bourses.filter((b) => ["cloture_proche", "ouverte"].includes(b.statut.code));
+    return `<div><span class="eyebrow">${t().section}</span><h1>${B.calTitle}</h1></div><p class="muted">${B.calSub}</p>
+      <section class="orient-group"><h2>${B.thisMonth}</h2>${now.length ? `<div class="results">${now.map(cardB).join("")}</div>` : `<p class="muted">${C.noneThisMonth}</p>`}</section>
+      <section class="orient-group"><div class="legend"><span class="legend-item"><i class="ph ph-bopen"></i>${B.calOpen}</span><span class="legend-item"><i class="ph ph-bprob"></i>${B.calProbable}</span></div>
+        <div class="table-wrap cal-wrap"><table class="cal"><thead><tr><th class="sticky">${B.title}</th>${C.months.map((m, i) => `<th class="${i + 1 === month ? "cur" : ""}">${m}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
+  }
+
+  function viewBFollow() {
+    const B = br();
+    const mine = state.bourses.filter((b) => isBFollowed(b.id));
+    const pref = bPref();
+    const opt = (v, label, cur) => `<option value="${esc(v)}" ${(cur || "") === v ? "selected" : ""}>${esc(label)}</option>`;
+    const domainList = pref.branche ? BRANCH_DOMAINS[pref.branche] : Object.values(BRANCH_DOMAINS).flat();
+    return `<div><span class="eyebrow">${t().section}</span><h1>${B.followTitle}</h1></div>
+      ${mine.length ? `<div class="results">${mine.map(cardB).join("")}</div><p class="small muted">${B.followHelp(3)}</p>` : `<div class="notice">${I.info}<span>${B.followEmpty}</span></div>`}
+      <form id="bpref-form" class="card form" novalidate>
+        <div class="full"><h2>${B.mine}</h2><p class="muted small">${B.mineSub}</p></div>
+        <div class="field"><label for="bp-b">${B.chooseBranch}</label><select id="bp-b" name="branche">${opt("", B.allBranches, pref.branche)}${opt("sciences", B.branches.sciences, pref.branche)}${opt("lettres", B.branches.lettres, pref.branche)}</select></div>
+        <div class="field"><label for="bp-d">${B.cond.domains}</label><select id="bp-d" name="domaine">${opt("", B.allDomains, pref.domaine)}${domainList.map((d) => opt(d, B.domains[d], pref.domaine)).join("")}</select></div>
+        <div class="field"><label for="bp-n">${B.cond.levels}</label><select id="bp-n" name="niveau">${opt("", B.allLevels, pref.niveau)}${["licence", "master", "doctorat", "postdoc"].map((l) => opt(l, B.levels[l], pref.niveau)).join("")}</select></div>
+        <button class="btn btn-primary full" type="submit">${B.mine}</button></form>
+      ${state.config.whatsapp_channel ? `<a class="btn btn-ghost" href="${esc(state.config.whatsapp_channel)}" target="_blank" rel="noopener noreferrer">${cal().whatsapp}</a>` : ""}`;
+  }
+
+  function viewBFiche(id) {
+    const B = br();
+    const b = state.bourses.find((x) => x.id === id);
+    if (!b) return `<button type="button" class="back" data-bback>${I.back} ${B.back}</button>`;
+    const row = (k, v) => (v ? `<div><dt>${k}</dt><dd>${v}</dd></div>` : "");
+    const c = b.conditions;
+    const e = b.edition;
+    const share = `https://wa.me/?text=${encodeURIComponent(B.shareText(b.nom, location.origin))}`;
+    return `<button type="button" class="back" data-bback>${I.back} ${B.back}</button>
+      <div class="row-actions"><div style="min-width:0"><span class="eyebrow">${esc(b.organisme)}</span><h1>${esc(b.nom)}</h1></div>${`<button type="button" class="btn btn-ghost btn-small follow ${isBFollowed(b.id) ? "on" : ""}" data-follow-b="${esc(b.id)}" aria-pressed="${isBFollowed(b.id)}">${isBFollowed(b.id) ? "★ " + B.followed : "☆ " + B.follow}</button>`}</div>
+      <div class="bstatus">${statusTag(b)}<b>${esc(statusLine(b))}</b>${b.statut.probable && ["cloture_proche", "ouverte", "a_venir"].includes(b.statut.code) ? `<span class="tag tag-line">${B.toConfirm}</span>` : ""}</div>
+      <div class="fiche"><div style="display:grid;gap:16px;min-width:0">
+        ${b.resume ? `<article class="card"><h3>${B.sections.resume}</h3><p>${esc(b.resume)}</p></article>` : ""}
+        <article class="card"><h3>${B.sections.coverage}</h3><p><span class="tag tag-green">${B.coverage[b.couverture.niveau]}</span></p>${b.couverture.detail ? `<p>${esc(b.couverture.detail)}</p>` : ""}</article>
+        <article class="card"><h3>${B.sections.conditions}</h3><dl class="kv">
+          ${row(B.cond.levels, esc(b.niveaux.map((x) => B.levels[x]).join(", ")))}
+          ${row(B.cond.domains, esc((b.domaines.includes("tous") ? [B.domains.tous] : b.domaines.map((d) => B.domains[d])).join(", ")))}
+          ${row(B.cond.countries, esc(b.pays_accueil.join(", ")))}
+          ${row(B.cond.age, c.age_max != null ? esc(B.years(c.age_max)) : "")}
+          ${row(B.cond.diploma, esc(c.diplome))}
+          ${row(B.cond.language, esc(c.langue))}
+          ${c.autres.length ? row(B.cond.other, `<ul class="clean">${c.autres.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`) : ""}
+        </dl><p class="small"><span class="tag ${b.cameroun === "oui" ? "tag-green" : "tag-sun"}">${B.cameroon[b.cameroun] || B.cameroon.non_precise}</span></p></article>
+        ${b.dossier.length ? `<article class="card"><h3>${B.sections.dossier}</h3><ul class="clean">${b.dossier.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></article>` : ""}
+        ${b.conseil ? `<article class="card"><h3>${B.sections.advice}</h3><p>${esc(b.conseil)}</p></article>` : ""}
+      </div>
+      <aside class="card" style="min-width:0"><h3>${B.sections.dates}</h3><dl class="kv">
+        ${row(B.edition, esc(e.libelle || ""))}
+        ${row(B.opening, e.ouverture ? esc(bFmt(e.ouverture)) : B.notAnnounced)}
+        ${row(B.closing, e.cloture ? esc(bFmt(e.cloture)) : B.notAnnounced)}
+        ${b.cycle?.ouverture_mois ? row(cal().probable, esc(b.cycle.ouverture_mois)) : ""}
+      </dl>${e.note ? `<p class="small">${esc(e.note)}</p>` : ""}
+        <div class="notice">${I.info}<span class="small">${B.unverified}</span></div>
+        ${b.lien_officiel ? `<a class="btn btn-primary btn-block" href="${esc(b.lien_officiel)}" target="_blank" rel="noopener noreferrer">${B.official}</a>` : ""}
+        <a class="btn btn-ghost btn-block" href="${share}" target="_blank" rel="noopener noreferrer">${B.share}</a>
+        ${b.sources.length ? `<details class="sources"><summary class="small">${B.sections.sources} (${b.sources.length})</summary><ul class="clean small">${b.sources.map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.titre || x.url)}</a>` : esc(x.titre)}</li>`).join("")}</ul></details>` : ""}
+        ${b.last_verified ? `<p class="small muted">${B.lastChecked(dateFmt(b.last_verified + "T12:00:00Z"))}</p>` : ""}</aside></div>
+      ${bScamCard()}`;
+  }
+
   // ---------- Entraînement ----------
   const themeName = (k) => qz().themes[k] || k;
   const dayUTC = (offset = 0) => new Date(Date.now() + offset * 86400000).toISOString().slice(0, 10);
@@ -2623,6 +3124,7 @@
       </div>
       ${meta.source || doc.source ? `<p class="small muted">${esc(t().sourceLabel)} : ${esc(doc.source || meta.source)}</p>` : ""}
       ${doc.a_verifier?.length ? `<div class="notice">${I.info}<span class="small"><b>${esc(t().toCheck)}</b> ${doc.a_verifier.map(esc).join(" · ")}</span></div>` : ""}
+      ${isCorrige && doc.corrige_a_verifier?.length ? `<div class="notice">${I.info}<span class="small"><b>${esc(t().toCheckAnswer)}</b><br>${doc.corrige_a_verifier.map((x) => "• " + esc(x)).join("<br>")}</span></div>` : ""}
       ${protectedPaper(isCorrige ? doc.corrige : doc.sujet, isCorrige ? "" : "ruled")}
       ${isCorrige && gridItems(doc).length ? `<article class="card protected"><h3>${L.scale}</h3><p class="small muted">${L.gridHow}</p><div class="score-grid">${gridHtml(doc, null)}</div></article>` : ""}
       <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -2837,7 +3339,7 @@
         !ex.revealed
           ? ""
           : corr
-          ? protectedPaper(corr.corrige)
+          ? (corr.corrige_a_verifier?.length ? `<div class="notice">${I.info}<span class="small"><b>${esc(t().toCheckAnswer)}</b><br>${corr.corrige_a_verifier.map((x) => "• " + esc(x)).join("<br>")}</span></div>` : "") + protectedPaper(corr.corrige)
           : corrErr
             ? `<article class="card"><p>${esc(L.corrFailed)}</p><p class="small muted">${esc(corrErr)}</p><button type="button" class="btn btn-primary" data-reload-corr="${ex.id}">${L.tryAgain}</button></article>`
             : `<p class="muted">${L.corrLoading}</p>`
@@ -3046,6 +3548,7 @@
     modal(`<h2>${L.admin}</h2><p class="muted">…</p>`, true);
     try {
       const [users, reports, papers, annonces] = await Promise.all([api().adminUsers(), api().adminReports(), api().adminEpreuves(), api().adminAnnonces()]);
+      if (!state.bourses && !state.demo) state.bourses = await api().bourses(lang()).then((r) => r.bourses, () => []);
       state.adminAnn = annonces;
       const C = cal();
       const concoursOpts = (cur) => `<option value="">${C.noConcours}</option>${state.catalog.concours.map((c) => `<option value="${esc(c.id)}" ${c.id === cur ? "selected" : ""}>${esc(c.sigle)} · ${esc(c.nom.slice(0, 40))}</option>`).join("")}`;
@@ -3095,6 +3598,13 @@
           <p class="err full" id="grant-err" hidden></p>
           <button type="submit" class="btn btn-primary full">${L.grant}</button>
         </form>
+        ${(state.bourses || []).length ? `<h3>${br().adminTitle}</h3><p class="small muted">${br().adminSub}</p>
+        <form id="bourse-form" class="form" novalidate>
+          <div class="field full"><label for="bourse-select">${br().pick}</label><select id="bourse-select" name="id">${state.bourses.map((b) => `<option value="${esc(b.id)}" ${b.id === (state.bourseSel || state.bourses[0].id) ? "selected" : ""}>${esc(b.nom.slice(0, 50))}${b.status === "verified" ? " ✓" : ""}</option>`).join("")}</select></div>
+          <div id="bourse-fields" class="form full" style="grid-template-columns:1fr 1fr">${bourseFields(state.bourseSel || state.bourses[0].id)}</div>
+          <p class="err full" id="bourse-err" hidden></p>
+          <button type="submit" class="btn btn-primary full">${br().save}</button>
+        </form>` : ""}
         <h3>${fi().title}</h3><p class="small muted">${fi().sub}</p>
         <form id="fiche-form" class="form" novalidate>
           <div class="field full"><label for="fiche-select">${fi().pick}</label><select id="fiche-select" name="concours">${state.catalog.concours.map((c) => `<option value="${esc(c.id)}" ${c.id === (state.ficheSel || "gardiens-paix") ? "selected" : ""}>${esc(c.sigle)} · ${esc(c.nom.slice(0, 50))}${c.status === "verified" ? " ✓" : ""}</option>`).join("")}</select></div>
@@ -3219,11 +3729,14 @@
     const plans = state.config.plans?.length ? state.config.plans : [{ id: "annual", price_xaf: state.config.price_xaf, days: 365 }];
     const plan = plans.find((x) => x.id === state.plan) || plans[0];
     const planName = (x) => (x.id === "monthly" ? L.planMonthly : L.planAnnual);
+    const monthlyPlan = plans.find((x) => x.id === "monthly");
+    const annualPlan = plans.find((x) => x.id === "annual");
+    const saving = monthlyPlan && annualPlan ? monthlyPlan.price_xaf * 12 - annualPlan.price_xaf : 0; // ce que l'annuel fait économiser
     const chooser =
       plans.length > 1
         ? `<div class="plans" role="group">${plans
-            .map((x) => `<button type="button" class="plan" data-plan="${x.id}" aria-pressed="${x.id === plan.id}"><b>${planName(x)}</b><span>${fmtNum(x.price_xaf)} FCFA</span>${x.id === "annual" ? `<small>${L.planSave}</small>` : ""}</button>`)
-            .join("")}</div>${plan.id === "monthly" ? `<p class="small muted">${L.planMonthlyNote}</p>` : ""}`
+            .map((x) => `<button type="button" class="plan" data-plan="${x.id}" aria-pressed="${x.id === plan.id}"><b>${planName(x)}</b><span>${fmtNum(x.price_xaf)} FCFA</span>${x.id === "annual" && saving > 0 ? `<small>${L.planSave(fcfa(saving))}</small>` : ""}</button>`)
+            .join("")}</div>${plan.id === "monthly" ? `<p class="small muted">${L.planMonthlyNote} ${monthlyPlan ? L.planTotal(fcfa(monthlyPlan.price_xaf * 12)) : ""}</p>` : ""}`
         : "";
     closeModal();
     const m = document.createElement("div");
@@ -3294,6 +3807,7 @@
     if (!state.user) return false;
     if (document.getElementById("modal")) return true;
     if (state.play) return true;
+    if (state.space === "bourses") return Boolean(state.bFicheId) || (state.tab === "bfind" && state.bf.branche !== undefined);
     if (state.tab === "quiz") return state.qzView === "plan";
     if (state.tab === "salle" && state.exam && ["prep", "compose"].includes(state.exam.phase) && state.examDoc) return true;
     const nav = state.nav[state.tab] || {};
@@ -3331,6 +3845,11 @@
     if (state.tab === "salle" && state.exam && ["prep", "compose"].includes(state.exam.phase) && state.examDoc) {
       toast(rev().backExam);
       return render(); // l'entrée d'historique est remise : on ne sort pas de la salle par mégarde
+    }
+    if (state.space === "bourses") {
+      if (state.bFicheId) state.bFicheId = null;
+      else if (state.tab === "bfind") state.bf = {};
+      return render();
     }
     if (state.tab === "quiz" && state.qzView === "plan") {
       if (state.planEdit && state.plan?.plan && !state.plan.expired) state.planEdit = false;
@@ -3505,6 +4024,12 @@
     document.documentElement.lang = lang();
     root.innerHTML = shell() + `<div class="shield-screen" aria-hidden="true"><div>${LOGO}<h2>${t().shieldTitle}</h2><p>${t().shieldText}</p></div></div>`;
     const v = document.getElementById("view");
+    if (state.space === "bourses" && !bourseOn()) setSpace("concours");
+    if (state.space === "bourses" && bourseOn()) {
+      v.innerHTML = viewBourses();
+      syncHistory();
+      return;
+    }
     const tab = state.tab;
     if (tab === "concours") v.innerHTML = viewConcours();
     else if (tab === "quiz") v.innerHTML = viewQuiz();
@@ -3560,6 +4085,11 @@
   }
 
   document.addEventListener("change", (ev) => {
+    if (ev.target.id === "bourse-select") {
+      state.bourseSel = ev.target.value;
+      document.getElementById("bourse-fields").innerHTML = bourseFields(ev.target.value);
+      return;
+    }
     if (ev.target.id !== "fiche-select") return;
     state.ficheSel = ev.target.value;
     document.getElementById("fiche-fields").innerHTML = ficheFields(ev.target.value);
@@ -3594,6 +4124,7 @@
       return render();
     }
     if (d.tab) {
+      state.bFicheId = null;
       if (d.tab === "quiz") {
         state.qzView = null;
         state.play = state.play?.finished ? null : state.play;
@@ -3702,6 +4233,46 @@
       return render();
     }
     if (d.reportQ) return openReport("quiz:" + d.reportQ, "autre");
+    if (d.space) return setSpace(d.space);
+    if (d.openB) {
+      state.bFicheId = d.openB;
+      render();
+      return window.scrollTo({ top: 0 });
+    }
+    if ("bback" in d) {
+      state.bFicheId = null;
+      return render();
+    }
+    if (d.bbranche !== undefined) {
+      state.bf = { branche: d.bbranche, domaine: "", niveau: state.bf.niveau };
+      saveBPref({ branche: d.bbranche, domaine: "" });
+      return render();
+    }
+    if (d.bdomaine !== undefined) {
+      state.bf = { ...state.bf, domaine: d.bdomaine };
+      saveBPref({ domaine: d.bdomaine });
+      return render();
+    }
+    if (d.bniveau !== undefined) {
+      state.bf = { ...state.bf, niveau: d.bniveau };
+      saveBPref({ niveau: d.bniveau });
+      return render();
+    }
+    if ("bchange" in d) {
+      state.bf = {};
+      return render();
+    }
+    if (d.followB) {
+      const id = d.followB;
+      try {
+        state.user = await api().followBourse(id, !isBFollowed(id));
+        render();
+      } catch (e) {
+        toast(e.message);
+        if (e.code === "follow_limit") openPaywall();
+      }
+      return;
+    }
     if ("calendar" in d) return go("concours", { calendrier: true });
     if (d.openCal) return go("concours", { concours: d.openCal, from: "cal" });
     if (d.follow) {
@@ -3852,6 +4423,18 @@
     if (f.id === "delete-form") return submitDelete(f);
     if (f.id === "ann-form") return submitAnnonce(f);
     if (f.id === "fiche-form") return submitFiche(f);
+    if (f.id === "bourse-form") return submitBourse(f);
+    if (f.id === "bpref-form") {
+      const fd = new FormData(f);
+      state.bf = { branche: fd.get("branche"), domaine: fd.get("domaine"), niveau: fd.get("niveau") };
+      try {
+        state.user = await api().update({ bourse_profil: { branche: fd.get("branche"), domaine: fd.get("domaine"), niveau: fd.get("niveau") } });
+        toast(br().saved);
+      } catch (e) {
+        toast(e.message);
+      }
+      return render();
+    }
     if (f.id === "grant-form") return submitGrant(f);
     if (f.id === "auth-form") {
       const err = f.querySelector("#auth-err");

@@ -621,3 +621,25 @@ i.ph-epreuves { background: var(--green); }
 .pause-alts { display: grid; gap: 6px; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--sun-soft); }
 .pause-alts p { margin: 0; }
 table.cal tr.pause th.sticky, table.cal tr.pause td { opacity: 0.55; }
+
+/* ---------- Bourses d'études ---------- */
+.space-switch { display: flex; gap: 6px; padding: 4px; width: min(360px, 100%); margin: 0 auto 14px max(0px, calc((100% - 980px) / 2)); border-radius: 999px; background: var(--surface); border: 1.5px solid var(--line); }
+.space-switch button { flex: 1; border: 0; background: none; padding: 9px 14px; border-radius: 999px; font-weight: 800; color: var(--muted); cursor: pointer; }
+.space-switch button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.ticker { overflow: hidden; border-radius: var(--radius-sm); background: var(--sun-soft); border: 1.5px solid var(--sun); }
+.ticker-track { display: inline-block; white-space: nowrap; padding-left: 100%; animation: ticker 45s linear infinite; }
+.ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
+.tick { border: 0; background: none; padding: 10px 22px; font-weight: 700; color: var(--ink); cursor: pointer; font-size: 0.95rem; }
+.tick:hover { text-decoration: underline; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; padding-left: 0; white-space: normal; display: flex; flex-wrap: wrap; } }
+.bcard { position: relative; padding: 0; gap: 0; }
+.bcard-main { display: grid; gap: 6px; text-align: left; border: 0; background: none; padding: 16px 48px 16px 16px; cursor: pointer; color: var(--ink); width: 100%; }
+.bcard .star { position: absolute; top: 8px; right: 8px; font-size: 1.4rem; padding: 6px 8px; }
+.bcard.past { opacity: 0.8; }
+.chips-inline { display: flex; gap: 6px; flex-wrap: wrap; }
+.bstatus { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+i.ph-bopen { background: var(--green); }
+i.ph-bprob { background: var(--sun); }
+.scam h3 { display: flex; gap: 8px; align-items: center; margin: 0 0 6px; }
+.scam h3 svg { width: 20px; height: 20px; flex: none; color: var(--amber, #b7791f); }

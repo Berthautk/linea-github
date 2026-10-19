@@ -3,7 +3,8 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { moisOf, PERIODICITES } from "./calendar.js";
+import { moisOf, PERIODICITES, parseMois } from "./calendar.js";
+import { checkBourse, branchesOf } from "./bourses.js";
 
 export const LANGS = ["fr", "en"];
 
@@ -18,6 +19,13 @@ export function loadContent(dir) {
   const quiz = fs.existsSync(path.join(dir, "quiz.json")) ? read("quiz.json") : [];
   checkQuiz(quiz);
   const quizById = new Map(quiz.map((q) => [q.id, q]));
+  const bourses = fs.existsSync(path.join(dir, "bourses.json")) ? read("bourses.json") : [];
+  const ids_b = new Set();
+  for (const b of bourses) {
+    checkBourse(b);
+    if (ids_b.has(b.id)) throw new Error(`Bourse en double : ${b.id}`);
+    ids_b.add(b.id);
+  }
   const photos = Object.fromEntries(Object.entries(read("photos.json")).filter(([k]) => !k.startsWith("_")));
 
   const ids = new Set();
@@ -27,6 +35,7 @@ export function loadContent(dir) {
     if (!LANGS.includes(e.lang)) throw new Error(`Langue inconnue pour ${e.id} : ${e.lang}`);
     if (!concours.some((c) => c.id === e.concours)) throw new Error(`Concours inconnu pour ${e.id} : ${e.concours}`);
     checkOfficiel(e);
+    if (e.corrige_a_verifier != null && !(Array.isArray(e.corrige_a_verifier) && e.corrige_a_verifier.every((x) => typeof x === "string"))) throw new Error(`Épreuve ${e.id} : corrige_a_verifier : liste de textes attendue`);
   }
   for (const c of concours) {
     checkAcces(c);
@@ -37,6 +46,9 @@ export function loadContent(dir) {
   return {
     epreuve: (id) => byId.get(id) || null,
     // Banque de questions d'entraînement. Les réponses ne sortent que par la correction (/api/quiz/check).
+    // Bourses d'études : texte dans la langue demandée, dates et cycle neutres. Le statut du jour est calculé par l'appelant.
+    bourses: (lang) => bourses.filter((b) => b[lang]).map((b) => localizeBourse(b, lang)),
+    bourse: (id) => bourses.find((b) => b.id === id) || null,
     quizIds: () => quiz.map((q) => q.id).sort(),
     quizThemes: () => [...new Set(quiz.map((q) => q.theme))],
     quizQuestion: (id) => quizById.get(id) || null,
@@ -145,6 +157,32 @@ export function checkPeriodicite(id, per) {
   for (const k of ["derniere_session", "prochaine_probable"]) if (per[k] != null && !year(per[k])) bad(`${k} invalide`);
   if (per.prochaine_probable && per.derniere_session && per.prochaine_probable <= per.derniere_session) bad("la prochaine session doit suivre la dernière");
   if (per.confiance != null && !["officiel", "secondaire", "deduit", "non_trouve"].includes(per.confiance)) bad(`confiance inconnue (${per.confiance})`);
+}
+
+// Bourse dans une langue : champs neutres + textes de la langue.
+export function localizeBourse(b, lang) {
+  const t = b[lang] || {};
+  return {
+    id: b.id,
+    nom: t.nom,
+    organisme: b.organisme,
+    pays_accueil: b.pays_accueil || [],
+    cameroun: b.cameroun || "non_precise",
+    niveaux: b.niveaux,
+    domaines: b.domaines,
+    branches: branchesOf(b),
+    couverture: { niveau: b.couverture_niveau || "variable", detail: t.couverture_detail || "" },
+    conditions: { age_max: b.age_max ?? null, diplome: t.diplome || "", langue: t.langue || "", autres: t.autres || [] },
+    cycle: b.cycle ? { ...b.cycle, mois: { ouverture: parseMois(b.cycle.ouverture_mois), cloture: parseMois(b.cycle.cloture_mois) } } : null,
+    edition: { ...(b.edition || {}), note: t.edition_note || "" },
+    resume: t.resume || "",
+    dossier: t.dossier || [],
+    conseil: t.conseil || "",
+    lien_officiel: b.lien_officiel || null,
+    sources: b.sources || [],
+    last_verified: b.last_verified || null,
+    status: b.status || "to_verify",
+  };
 }
 
 // Fiche publique d'un concours dans une langue : textes de la langue + conditions d'accès structurées.

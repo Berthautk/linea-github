@@ -26,7 +26,7 @@ Les épreuves sont classées par **école** (regroupées par ministère : DGSN, 
 4. **Préparer l'oral** : déroulement, questions fréquentes du jury, conseils. Le déroulement est visible gratuitement, le reste est flouté.
 5. **Salle d'examen** : choix du concours puis de l'épreuve, 2 minutes de préparation (cahier, stylo, calme), sujet affiché avec le chronomètre officiel (ex. 2 h 30), bouton « J'ai terminé », temps enregistré, puis **auto-correction** : le corrigé s'affiche, l'élève se note ligne par ligne avec le barème et l'application calcule la note sur 20. Les notes sont gardées dans « Mes compositions ».
 
-Abonnement : **10 000 FCFA pour 12 mois**, payé une fois via Chariow (Mobile Money MTN / Orange ou carte).
+Abonnement : **100 000 FCFA pour 12 mois** ou **15 000 FCFA par mois** (12 mois en mensuel = 180 000 FCFA : l'annuel fait économiser 80 000 FCFA), payé via Chariow (Mobile Money MTN / Orange ou carte). Chaque formule est un produit Chariow : le prix affiché par Weldon (`PRICE_XAF`, `PRICE_XAF_MONTHLY`) doit être le même que celui du produit.
 
 ## Lancer en local
 
@@ -46,7 +46,7 @@ Chariow fournit une API REST (`https://api.chariow.com/v1`, clé `sk_live_…` e
 
 ### À faire dans le tableau de bord Chariow (app.chariow.com)
 
-1. **Créer le produit** : un produit de type « Fichier téléchargeable » nommé **« Weldon – Accès complet 1 an »**, prix 10 000 FCFA (joindre un petit PDF de bienvenue), puis le **publier**. L'API ne voit que les produits publiés.
+1. **Créer le produit** : un produit de type « Fichier téléchargeable » nommé **« Weldon – Accès complet 1 an »**, prix 100 000 FCFA (joindre un petit PDF de bienvenue), puis le **publier**. Pour la formule mensuelle, créer un second produit « Weldon – Accès 1 mois » à 15 000 FCFA et renseigner son identifiant dans `CHARIOW_PRODUCT_ID_MONTHLY`. L'API ne voit que les produits publiés.
 2. **Créer une clé API** : **Settings → API Keys → Create API Key**. La clé (`sk_live_…`) ne s'affiche qu'une fois : la copier tout de suite dans `server/.env` → `CHARIOW_API_KEY`. Ne jamais la mettre dans le code de l'application web.
 3. **Vérifier la connexion** : `cd weldon/server && npm run check-chariow`. Le script affiche le nom de la boutique et la liste des produits publiés avec leur identifiant `prd_…`. Copier celui de Weldon → `CHARIOW_PRODUCT_ID`.
 4. **Créer le Pulse** (une fois l'application en ligne en HTTPS) : **Automation → Pulses → Add Pulse**, URL `https://<votre-domaine>/api/webhooks/chariow`, événement `successful.sale`. Ouvrir le Pulse, onglet **Overview → Signing secret**, copier le secret `whsec_…` → `CHARIOW_PULSE_SECRET`.

@@ -12,6 +12,7 @@ import { loadContent, checkAccesValues, checkPeriodicite, LANGS } from "./conten
 import { moisOf, enPause } from "./calendar.js";
 import { orient, cleanProfil, targetYear } from "./orientation.js";
 import { buildPlan, subjectThemes, HOURS } from "./plan.js";
+import { statut as statutBourse, trier as trierBourses, checkBourse, BRANCHES, DOMAINES, NIVEAUX_BOURSE } from "./bourses.js";
 import { dayStr, pickDaily, pickSeries, pickBlanc, emptyQuiz, recordAnswer, dueIds, streak } from "./quiz.js";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -48,16 +49,20 @@ const CHARIOW_PRODUCT_ID = process.env.CHARIOW_PRODUCT_ID || "";
 const CHARIOW_PULSE_SECRET = process.env.CHARIOW_PULSE_SECRET || "";
 const TOKEN_SECRET = process.env.TOKEN_SECRET || "";
 const ACCESS_DAYS = Number(process.env.ACCESS_DAYS || 365);
-const PRICE_XAF = Number(process.env.PRICE_XAF || 10000);
+const PRICE_XAF = Number(process.env.PRICE_XAF || 100000);
 // Formule mensuelle : active seulement quand son produit Chariow est configuré.
 const CHARIOW_PRODUCT_ID_MONTHLY = process.env.CHARIOW_PRODUCT_ID_MONTHLY || "";
 const ACCESS_DAYS_MONTHLY = Number(process.env.ACCESS_DAYS_MONTHLY || 30);
-const PRICE_XAF_MONTHLY = Number(process.env.PRICE_XAF_MONTHLY || 1500);
+const PRICE_XAF_MONTHLY = Number(process.env.PRICE_XAF_MONTHLY || 15000);
 // Contact : chaîne d'alertes et numéro WhatsApp du concepteur (facultatifs)
 const WHATSAPP_CHANNEL_URL = /^https:\/\//.test(process.env.WHATSAPP_CHANNEL_URL || "") ? process.env.WHATSAPP_CHANNEL_URL : "";
 const WHATSAPP_NUMBER = (process.env.WHATSAPP_NUMBER || "").replace(/\D/g, "");
 const SESSION_DAYS = 30;
 const FREE_FOLLOWS = 2; // concours suivis sans abonnement
+const FREE_FOLLOWS_BOURSES = 3; // bourses suivies sans abonnement
+// Section Bourses : visible par le concepteur seul tant que BOURSES_PUBLIC n'est pas activé.
+// Lu à chaque requête : on peut ouvrir la section sans redéployer le code (variable Netlify) et les tests peuvent la basculer.
+const boursesPublic = () => ["1", "true", "oui"].includes(String(process.env.BOURSES_PUBLIC || "").toLowerCase());
 const VEILLE_TOKEN = process.env.VEILLE_TOKEN || "";
 // Concepteur de Weldon : accès complet sans payer. ADMIN_EMAILS (Render) peut en ajouter d'autres.
 const ADMIN_EMAILS = new Set(
@@ -69,7 +74,7 @@ const ADMIN_EMAILS = new Set(
 );
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-const content = loadContent(locate("content"));
+const content = loadContent(process.env.WELDON_CONTENT_DIR || locate("content"));
 const DATABASE_URL = process.env.DATABASE_URL || process.env.NETLIFY_DATABASE_URL || "";
 const store = await createStore({
   databaseUrl: DATABASE_URL,
@@ -141,6 +146,8 @@ function profile(u) {
     free_id: u.free_id || null,
     profil: u.profil || null,
     suivis: u.suivis || [],
+    bourses_suivies: u.bourses_suivies || [],
+    bourse_profil: u.bourse_profil || null,
   };
 }
 
@@ -255,6 +262,7 @@ route("GET", "/api/config", async () => ({
   access_days: ACCESS_DAYS,
   payment_enabled: Boolean(CHARIOW_API_KEY && CHARIOW_PRODUCT_ID),
   plans: PLANS.map(({ id, price_xaf, days }) => ({ id, price_xaf, days })),
+  bourses_public: boursesPublic(),
   whatsapp_channel: WHATSAPP_CHANNEL_URL || null,
   whatsapp_contact: WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : null,
   accounts_persistent: store.kind === "postgres",
@@ -307,6 +315,16 @@ route("POST", "/api/me", async (req) => {
   const b = await readJson(req);
   if (LANGS.includes(b.lang)) u.lang = b.lang;
   if (str(b.name, 80)) u.name = str(b.name, 80);
+  if (b.bourse_profil && typeof b.bourse_profil === "object") {
+    const p = b.bourse_profil;
+    const branche = p.branche === "" || p.branche == null ? null : p.branche;
+    const domaine = p.domaine === "" || p.domaine == null ? null : p.domaine;
+    const niveau = p.niveau === "" || p.niveau == null ? null : p.niveau;
+    if (branche && !Object.keys(BRANCHES).includes(branche)) throw httpError(400, "Branche inconnue.");
+    if (domaine && !DOMAINES.includes(domaine)) throw httpError(400, "Filière inconnue.");
+    if (niveau && !NIVEAUX_BOURSE.includes(niveau)) throw httpError(400, "Niveau inconnu.");
+    u.bourse_profil = { branche, domaine, niveau };
+  }
   if (b.profil && typeof b.profil === "object") {
     try {
       u.profil = { ...(u.profil || {}), ...cleanProfil(b.profil) };
@@ -478,6 +496,84 @@ route("POST", "/api/plan", async (req) => {
   u.plan = { concours, date, hours, created: new Date().toISOString() };
   await store.saveUser(u);
   return planView(u);
+});
+
+// ---------- Bourses d'études ----------
+const boursesAllowed = (u) => boursesPublic() || isAdmin(u);
+
+// Corrections du concepteur (dates de l'édition en cours, lien, vérification) : elles priment sur content/bourses.json.
+let boursesCache = { at: 0, map: {} };
+async function boursesOverrides() {
+  if (Date.now() - boursesCache.at < 15000) return boursesCache.map;
+  boursesCache = { at: Date.now(), map: (await store.getSetting("bourses")) || {} };
+  return boursesCache.map;
+}
+
+async function boursesLive(lang) {
+  const over = await boursesOverrides();
+  const list = content.bourses(lang).map((b) => {
+    const o = over[b.id];
+    if (o) {
+      if (o.edition) b.edition = { ...b.edition, ...o.edition };
+      if (o.lien_officiel) b.lien_officiel = o.lien_officiel;
+      if (o.status) b.status = o.status;
+      if (o.last_verified) b.last_verified = o.last_verified;
+    }
+    return { ...b, statut: statutBourse(b) };
+  });
+  return trierBourses(list);
+}
+
+route("GET", "/api/bourses", async (req, _p, url) => {
+  const u = await currentUser(req);
+  if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
+  const lang = LANGS.includes(url.searchParams.get("lang")) ? url.searchParams.get("lang") : u.lang || "fr";
+  return { today: dayStr(), bourses: await boursesLive(lang) };
+});
+
+route("POST", "/api/follow-bourse", async (req) => {
+  const u = await currentUser(req);
+  if (!boursesAllowed(u)) throw httpError(403, "Cette section n'est pas encore ouverte.");
+  const b = await readJson(req);
+  const id = str(b.id, 120);
+  if (!content.bourse(id)) throw httpError(404, "Bourse introuvable.");
+  const list = new Set(u.bourses_suivies || []);
+  if (b.on === false) list.delete(id);
+  else if (!list.has(id)) {
+    if (!isPremium(u) && list.size >= FREE_FOLLOWS_BOURSES) {
+      throw httpError(402, `Sans abonnement, vous pouvez suivre ${FREE_FOLLOWS_BOURSES} bourses. Abonnez-vous pour en suivre autant que vous voulez.`, { code: "follow_limit" });
+    }
+    list.add(id);
+  }
+  u.bourses_suivies = [...list];
+  await store.saveUser(u);
+  return profile(u);
+});
+
+// Le concepteur met à jour l'édition en cours d'une bourse : dates relevées sur la page officielle.
+route("POST", "/api/admin/bourse", async (req) => {
+  const admin = await currentUser(req);
+  if (!isAdmin(admin)) throw httpError(403, "Réservé au concepteur.");
+  const b = await readJson(req);
+  const id = str(b.id, 120);
+  const raw = content.bourse(id);
+  if (!raw) throw httpError(404, "Bourse introuvable.");
+  const e = b.edition && typeof b.edition === "object" ? b.edition : {};
+  const date = (v) => (v ? str(String(v), 10) : null);
+  const edition = { libelle: str(e.libelle, 20) || raw.edition?.libelle || null, ouverture: date(e.ouverture), cloture: date(e.cloture), confirme: Boolean(e.confirme) };
+  const lien = str(b.lien_officiel, 500);
+  const merged = { ...raw, edition: { ...raw.edition, ...edition }, lien_officiel: lien || raw.lien_officiel, status: b.verified ? "verified" : "to_verify" };
+  try {
+    checkBourse(merged);
+  } catch (err) {
+    throw httpError(400, err.message);
+  }
+  const over = { ...((await store.getSetting("bourses")) || {}) };
+  over[id] = { edition, lien_officiel: lien || undefined, status: merged.status, last_verified: dayStr(), edited_by: admin.email };
+  await store.setSetting("bourses", over);
+  boursesCache = { at: Date.now(), map: over };
+  const lang = LANGS.includes(b.lang) ? b.lang : "fr";
+  return { id, bourse: (await boursesLive(lang)).find((x) => x.id === id) };
 });
 
 // Suivre un concours : 2 gratuitement, sans limite pour les abonnés.

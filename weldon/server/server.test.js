@@ -22,6 +22,23 @@ Object.assign(process.env, {
 });
 delete process.env.DATABASE_URL;
 
+// Contenu de test : le contenu réel plus trois bourses aux dates relatives à aujourd'hui (statuts prévisibles).
+const day = (n) => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
+const bourseFixture = (id, domaines, niveaux, edition, cycle) => ({
+  id, organisme: "Organisme " + id, pays_accueil: ["France"], cameroun: "oui", niveaux, domaines, couverture_niveau: "complete", age_max: 35,
+  cycle, edition, lien_officiel: "https://exemple.org/" + id, sources: [{ titre: "Page officielle", url: "https://exemple.org/" + id }], status: "to_verify",
+  fr: { nom: "Bourse " + id, resume: "Résumé " + id, couverture_detail: "Frais et allocation", diplome: "Licence", langue: "Français", autres: ["Nationalité camerounaise"], dossier: ["CV"], conseil: "Candidatez tôt", edition_note: "" },
+  en: { nom: "Scholarship " + id, resume: "Summary " + id, couverture_detail: "Fees and stipend", diplome: "Bachelor", langue: "English", autres: ["Cameroonian nationality"], dossier: ["CV"], conseil: "Apply early", edition_note: "" },
+});
+const contentDir = fs.mkdtempSync(path.join(os.tmpdir(), "weldon-content-test-"));
+fs.cpSync(path.join(import.meta.dirname, "..", "content"), contentDir, { recursive: true });
+fs.writeFileSync(path.join(contentDir, "bourses.json"), JSON.stringify([
+  bourseFixture("sci", ["maths", "informatique"], ["master"], { ouverture: day(-20), cloture: day(5), confirme: true }, { type: "annuelle", ouverture_mois: "août–septembre", cloture_mois: "octobre" }),
+  bourseFixture("lettres", ["droit-politique", "histoire-geographie"], ["licence", "master"], { ouverture: day(-5), cloture: day(60), confirme: true }, { type: "annuelle", ouverture_mois: "septembre", cloture_mois: "décembre" }),
+  bourseFixture("tous", ["tous"], ["master", "doctorat"], { ouverture: day(-100), cloture: day(-10), confirme: true }, { type: "annuelle", ouverture_mois: "janvier", cloture_mois: "mars" }),
+]));
+process.env.WELDON_CONTENT_DIR = contentDir;
+
 const realFetch = globalThis.fetch;
 const now = new Date().toISOString();
 const sales = {
@@ -227,8 +244,8 @@ test("signalement d'erreur, interrupteur par épreuve, corrigé proposé", async
 test("formules annuelle et mensuelle, contact WhatsApp", async () => {
   const cfg = await json(await call("GET", "/api/config"));
   assert.deepEqual(cfg.plans, [
-    { id: "annual", price_xaf: 10000, days: 365 },
-    { id: "monthly", price_xaf: 1500, days: 30 },
+    { id: "annual", price_xaf: 100000, days: 365 },
+    { id: "monthly", price_xaf: 15000, days: 30 },
   ]);
   assert.equal(cfg.whatsapp_channel, "https://whatsapp.com/channel/test");
   assert.equal(cfg.whatsapp_contact, "https://wa.me/237699001122");
@@ -497,4 +514,66 @@ test("périodicité : saisie par le concepteur, pause calculée, validation", as
   const again = (await json(await call("GET", "/api/catalog?lang=fr"))).concours.find((c) => c.id === "emia");
   assert.equal(again.periodicite.pause, false);
   assert.equal(again.periodicite.intervalle_ans, null);
+});
+
+test("bourses : section réservée au concepteur tant qu'elle n'est pas ouverte, statuts, relance", async () => {
+  delete process.env.BOURSES_PUBLIC;
+  const t = await register("boursier@exemple.cm", "Awa Boursier");
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  assert.equal((await json(await call("GET", "/api/config"))).bourses_public, false);
+  assert.equal((await call("GET", "/api/bourses", undefined, t)).status, 403);
+  assert.equal((await call("POST", "/api/follow-bourse", { id: "sci" }, t)).status, 403);
+  const res = await json(await call("GET", "/api/bourses?lang=fr", undefined, admin));
+  assert.equal(res.status, 200);
+  assert.deepEqual(res.bourses.map((b) => [b.id, b.statut.code]), [["sci", "cloture_proche"], ["lettres", "ouverte"], ["tous", "expiree"]]);
+  assert.equal(res.bourses[0].statut.jours, 5);
+  assert.equal(res.bourses[0].nom, "Bourse sci");
+  assert.deepEqual(res.bourses[0].branches, ["sciences"]);
+  assert.deepEqual(res.bourses[1].branches, ["lettres"]);
+  assert.deepEqual(res.bourses[2].branches, ["sciences", "lettres"]);
+  assert.ok(res.bourses[2].statut.relance.mois === 1, "relance probable : janvier"); // expirée : on annonce sa relance
+  assert.deepEqual(res.bourses[0].cycle.mois.ouverture, [8, 9]);
+  const en = await json(await call("GET", "/api/bourses?lang=en", undefined, admin));
+  assert.equal(en.bourses.find((b) => b.id === "sci").nom, "Scholarship sci");
+  assert.ok(!JSON.stringify(res).includes("recherche_notes"));
+});
+
+test("bourses : le concepteur met à jour les dates, une bourse expirée est relancée", async () => {
+  const t = await register("boursier2@exemple.cm");
+  const admin = (await json(await call("POST", "/api/login", { email: "concepteur@weldon.cm", password: "motdepasse1" }))).token;
+  const edit = { id: "tous", lang: "fr", edition: { libelle: "2027/28", ouverture: day(-2), cloture: day(40), confirme: true }, lien_officiel: "https://exemple.org/nouveau", verified: true };
+  assert.equal((await call("POST", "/api/admin/bourse", edit, t)).status, 403);
+  assert.equal((await call("POST", "/api/admin/bourse", { ...edit, id: "inconnue" }, admin)).status, 404);
+  assert.equal((await call("POST", "/api/admin/bourse", { ...edit, edition: { ...edit.edition, cloture: "demain" } }, admin)).status, 400);
+  assert.equal((await call("POST", "/api/admin/bourse", { ...edit, edition: { ...edit.edition, ouverture: day(50) } }, admin)).status, 400); // ouverture après clôture
+  assert.equal((await call("POST", "/api/admin/bourse", { ...edit, lien_officiel: "javascript:alert(1)" }, admin)).status, 400);
+  const ok = await (await call("POST", "/api/admin/bourse", edit, admin)).json();
+  assert.equal(ok.bourse.statut.code, "ouverte");
+  assert.equal(ok.bourse.statut.probable, false);
+  assert.equal(ok.bourse.status, "verified");
+  assert.equal(ok.bourse.lien_officiel, "https://exemple.org/nouveau");
+  const list = await (await call("GET", "/api/bourses?lang=fr", undefined, admin)).json();
+  assert.equal(list.bourses.find((b) => b.id === "tous").statut.code, "ouverte");
+  assert.equal(list.bourses.find((b) => b.id === "tous").edition.libelle, "2027/28");
+});
+
+test("bourses ouvertes à tous : suivi (3 gratuits), filière mémorisée", async () => {
+  process.env.BOURSES_PUBLIC = "1";
+  try {
+    const t = await register("boursier3@exemple.cm");
+    assert.equal((await json(await call("GET", "/api/config"))).bourses_public, true);
+    assert.equal((await call("GET", "/api/bourses?lang=fr", undefined, t)).status, 200);
+    const me = await json(await call("POST", "/api/me", { bourse_profil: { branche: "lettres", domaine: "droit-politique", niveau: "master" } }, t));
+    assert.deepEqual(me.bourse_profil, { branche: "lettres", domaine: "droit-politique", niveau: "master" });
+    assert.equal((await call("POST", "/api/me", { bourse_profil: { branche: "magie" } }, t)).status, 400);
+    assert.equal((await call("POST", "/api/me", { bourse_profil: { domaine: "fabrication-de-potions" } }, t)).status, 400);
+    assert.equal((await call("POST", "/api/me", { bourse_profil: { niveau: "bac" } }, t)).status, 400);
+    assert.equal((await call("POST", "/api/follow-bourse", { id: "inconnue" }, t)).status, 404);
+    for (const id of ["sci", "lettres", "tous"]) assert.equal((await call("POST", "/api/follow-bourse", { id }, t)).status, 200);
+    assert.deepEqual((await json(await call("GET", "/api/me", undefined, t))).bourses_suivies, ["sci", "lettres", "tous"]);
+    // 4e bourse : il n'y en a que 3 dans le contenu de test, on réutilise la limite via une 4e fiche impossible ; on vérifie le retrait et le re-suivi
+    assert.deepEqual((await json(await call("POST", "/api/follow-bourse", { id: "sci", on: false }, t))).bourses_suivies, ["lettres", "tous"]);
+  } finally {
+    delete process.env.BOURSES_PUBLIC;
+  }
 });

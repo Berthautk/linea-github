@@ -1,0 +1,2740 @@
+[
+  {
+    "id": "commonwealth",
+    "organisme": "Commonwealth Scholarship Commission (CSC), Royaume-Uni",
+    "pays_accueil": [
+      "Royaume-Uni"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "cloture_mois": "octobre"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "cloture": "2026-10-20",
+      "confirme": false
+    },
+    "lien_officiel": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+    "sources": [
+      {
+        "titre": "CSC - Commonwealth Master's Scholarships",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"
+      },
+      {
+        "titre": "CSC - Find a scholarship",
+        "url": "https://cscuk.fcdo.gov.uk/scholarships-filter-search/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Two reads of the official page: Cameroon absent from a 43-country list (includes Gabon, Togo). But Cameroon is a Commonwealth member and appears in the CSC 'find a scholarship' dropdown, so PhD/other routes may exist (not verified). Hence non_precise. Year of the 20 October deadline inferred.",
+    "fr": {
+      "nom": "Bourses du Commonwealth (master)",
+      "resume": "Bourse britannique pour un master au Royaume-Uni, réservée aux pays du Commonwealth en développement listés et passant par une nomination nationale.",
+      "couverture_detail": "Frais de scolarité, billet d'avion aller-retour approuvé, allocation mensuelle (1 712 £, 2 000 £ à Londres) et aide de voyage d'études.",
+      "diplome": "Licence avec mention 2:1 minimum, ou 2:2 plus un diplôme de troisième cycle pertinent.",
+      "langue": "Non précisée sur la page lue.",
+      "autres": [
+        "Citoyen ou résident permanent d'un pays éligible",
+        "Ne pas pouvoir financer ses études au Royaume-Uni sans la bourse",
+        "Ne pas avoir déjà fait un master au Royaume-Uni",
+        "Passer d'abord par un organisme de nomination national, puis déposer sur le système CSC"
+      ],
+      "dossier": [
+        "Copie du passeport ou de la carte d'identité",
+        "Relevés de notes complets de l'enseignement supérieur",
+        "Deux références signées en PDF ou plus",
+        "Trois choix d'universités et de cours classés"
+      ],
+      "conseil": "Ne candidate pas sans vérifier que le Cameroun est éligible : il n'était pas dans la liste lue. Vérifie aussi les pages doctorat sur le site CSC.",
+      "edition_note": "La page indique « 16h00 BST mardi 20 octobre » sans l'année (le 20 octobre 2026 est un mardi). Les organismes de nomination fixent leurs propres dates, souvent plus tôt. Le Cameroun ne figure pas dans la liste de 43 pays lue sur la page."
+    },
+    "en": {
+      "nom": "Commonwealth Master's Scholarships",
+      "resume": "UK scholarship for a master's in the UK, for listed developing Commonwealth countries, through national nomination.",
+      "couverture_detail": "Full tuition fees, approved return airfare, monthly stipend (£1,712, £2,000 in London) and a study travel grant.",
+      "diplome": "First degree of at least 2:1, or a 2:2 plus a relevant postgraduate qualification.",
+      "langue": "Not stated on the page read.",
+      "autres": [
+        "Citizen or permanent resident of an eligible country",
+        "Unable to afford UK study without the award",
+        "No previous master's study in the UK",
+        "Apply first to a national nominating body, then on the CSC system"
+      ],
+      "dossier": [
+        "Passport or national ID copy",
+        "Full higher-education transcripts",
+        "Two or more signed PDF references",
+        "Three ranked university and course choices"
+      ],
+      "conseil": "Do not apply before checking Cameroon is eligible: it was not in the list read. Also check the PhD pages on the CSC site.",
+      "edition_note": "The page says '16:00 BST Tuesday 20 October' without the year (20 October 2026 is a Tuesday). Nominating bodies set their own, often earlier, dates. Cameroon is not in the 43-country list read from the page."
+    }
+  },
+  {
+    "id": "fulbright",
+    "organisme": "Département d'État des États-Unis / Ambassade des États-Unis au Cameroun",
+    "pays_accueil": [
+      "États-Unis"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master",
+      "doctorat",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2028/29",
+      "confirme": false
+    },
+    "lien_officiel": "https://foreign.fulbrightonline.org/about/foreign-student-program",
+    "sources": [
+      {
+        "titre": "Fulbright Foreign Student Program",
+        "url": "https://foreign.fulbrightonline.org/about/foreign-student-program"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Cameroon listed on official country dropdown (eligible). Edition label is a guess at the next cycle; no dates found. Third-party sources say ~3-5 awards per year.",
+    "fr": {
+      "nom": "Programme Fulbright pour étudiants étrangers",
+      "resume": "Bourse américaine pour études de master ou projets pour jeunes professionnels, avec candidature via l'ambassade des États-Unis au Cameroun.",
+      "couverture_detail": "Non précisée sur la page officielle ; dépend du pays et du mode de placement (IIE ou auto-placement). À confirmer auprès du bureau Fulbright au Cameroun.",
+      "diplome": "Étudiants de master, jeunes professionnels et artistes ; détails fixés par le bureau du Cameroun.",
+      "langue": "Non précisée sur la page lue.",
+      "autres": [
+        "Ne pas être citoyen américain",
+        "Ne pas vivre ni étudier aux États-Unis actuellement (source tierce)",
+        "Le Cameroun n'a pas de programme FLTA"
+      ],
+      "dossier": [
+        "À confirmer auprès du bureau Fulbright / ambassade des États-Unis à Yaoundé"
+      ],
+      "conseil": "Contacte EducationUSA ou l'ambassade des États-Unis à Yaoundé pour les dates et le dossier. Le nombre de bourses est très faible.",
+      "edition_note": "La page officielle ne donne pas de date ; les dates sont fixées par l'ambassade des États-Unis au Cameroun. Un site tiers indique une clôture au 21 avril 2025 pour le cycle 2026/27 (non vérifié)."
+    },
+    "en": {
+      "nom": "Fulbright Foreign Student Program",
+      "resume": "US scholarship for graduate study for young professionals, applied for through the U.S. Embassy in Cameroon.",
+      "couverture_detail": "Not specified on the official page; depends on country and placement mode (IIE or self-placement). Confirm with the Fulbright office in Cameroon.",
+      "diplome": "Graduate students, young professionals and artists; details set by the Cameroon office.",
+      "langue": "Not stated on the page read.",
+      "autres": [
+        "Not a U.S. citizen",
+        "Not currently living or studying in the U.S. (third-party source)",
+        "Cameroon has no FLTA programme"
+      ],
+      "dossier": [
+        "Confirm with the Fulbright office / U.S. Embassy in Yaoundé"
+      ],
+      "conseil": "Contact EducationUSA or the U.S. Embassy in Yaoundé for dates and the file. Very few awards are given.",
+      "edition_note": "The official page gives no dates; they are set by the U.S. Embassy in Cameroon. A third-party site gave 21 April 2025 for the 2026/27 cycle (unverified)."
+    }
+  },
+  {
+    "id": "daad-epos",
+    "organisme": "DAAD (Service allemand d'échanges universitaires), financé par le BMZ",
+    "pays_accueil": [
+      "Allemagne"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/",
+    "sources": [
+      {
+        "titre": "DAAD - EPOS",
+        "url": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/"
+      },
+      {
+        "titre": "DAAD - DAC country list (PDF)",
+        "url": "https://static.daad.de/media/daad_de/pdfs_nicht_barrierefrei/in-deutschland-studieren-forschen-lehren/dac_laenderliste_epos.pdf"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Many daad.de pages returned 503. Cameroon on the DAAD developing-countries list is from search-result snippets citing DAAD PDFs (2022/2023 lists), not read directly. Other DAAD programmes (e.g. study scholarships for graduates) not covered. Coverage amounts, 2-year experience and age/degree-date rules come from third-party or older brochures.",
+    "fr": {
+      "nom": "DAAD - Master en développement (EPOS)",
+      "resume": "Bourse DAAD pour un master lié au développement dans une université allemande, pour professionnels de pays en développement.",
+      "couverture_detail": "Bourse individuelle pour un master lié au développement. Montants non lus sur la page officielle (sources tierces : environ 992 € par mois).",
+      "diplome": "Licence ; au moins 2 ans d'expérience professionnelle après le premier diplôme (sources tierces, à vérifier).",
+      "langue": "Variable selon le cours (anglais ou allemand).",
+      "autres": [
+        "Venir d'un pays de la liste des pays en développement du DAAD",
+        "Candidature souvent déposée directement auprès de l'université du cours"
+      ],
+      "dossier": [
+        "À voir dans l'appel du cours choisi (diplômes, preuves d'expérience, lettre de motivation)",
+        "Les candidats camerounais doivent parfois faire certifier leurs documents (source tierce)"
+      ],
+      "conseil": "Choisis d'abord un cours de la liste EPOS 2027/28, puis lis ses dates et conditions sur la fiche DAAD.",
+      "edition_note": "La page DAAD mentionne la liste des cours 2027/28 ; les dates limites varient selon chaque cours. Un cours cité donne le 1er août au 1er octobre. Aucune date unique officielle lue."
+    },
+    "en": {
+      "nom": "DAAD Development-Related Postgraduate Courses (EPOS)",
+      "resume": "DAAD scholarship for a development-related master's at a German university, for professionals from developing countries.",
+      "couverture_detail": "Individual scholarship for a development-related master's. Amounts not read on the official page (third-party: about EUR 992 per month).",
+      "diplome": "Bachelor's degree; at least 2 years of work experience after the first degree (third-party, to verify).",
+      "langue": "Varies by course (English or German).",
+      "autres": [
+        "Come from a country on the DAAD developing-countries list",
+        "Application is often sent directly to the course's university"
+      ],
+      "dossier": [
+        "See the call of the chosen course (degrees, work proof, motivation letter)",
+        "Cameroonian applicants may need certified documents (third-party)"
+      ],
+      "conseil": "First pick a course in the 2027/28 EPOS list, then read its dates and conditions in the DAAD entry.",
+      "edition_note": "The DAAD page mentions the 2027/28 course list; deadlines vary by course. One course gives 1 August to 1 October. No single official date read."
+    }
+  },
+  {
+    "id": "erasmus-mundus",
+    "organisme": "Union européenne (Erasmus+) et consortiums d'universités",
+    "pays_accueil": [
+      "Europe (plusieurs pays)"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "octobre",
+      "cloture_mois": "janvier"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+    "sources": [
+      {
+        "titre": "Erasmus+ - Erasmus Mundus Joint Masters",
+        "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Page says students from all over the world are welcome; no nationality list read. Some masters may have partner-country scholarship rules; check each. Third-party sites mention 31 January 2027 as common deadline (unverified).",
+    "fr": {
+      "nom": "Masters conjoints Erasmus Mundus",
+      "resume": "Masters européens suivis dans plusieurs pays, avec des bourses complètes pour les meilleurs dossiers.",
+      "couverture_detail": "Certains masters offrent une bourse complète aux mieux classés : frais de participation, contribution au voyage, au visa et à une allocation de vie.",
+      "diplome": "Licence ou dernière année de licence (diplôme avant le début du master).",
+      "langue": "Variable selon chaque master.",
+      "autres": [
+        "Ouvert aux étudiants du monde entier",
+        "Chaque master fixe ses conditions et ses dates"
+      ],
+      "dossier": [
+        "Voir la page de chaque master (diplôme, relevés, CV, lettre de motivation, langue)"
+      ],
+      "conseil": "Cherche dans le catalogue officiel, compare plusieurs masters et candidate directement à chaque consortium.",
+      "edition_note": "La page officielle indique que les candidatures se font en général entre octobre et janvier ; chaque master a sa propre date limite."
+    },
+    "en": {
+      "nom": "Erasmus Mundus Joint Masters",
+      "resume": "European master's taught in several countries, with full scholarships for top applications.",
+      "couverture_detail": "Some masters offer full scholarships to top-ranked students: participation costs, plus a contribution to travel, visa and living allowance.",
+      "diplome": "Bachelor's degree or final year of bachelor's (degree before the master starts).",
+      "langue": "Varies by master.",
+      "autres": [
+        "Open to students worldwide",
+        "Each master sets its own conditions and dates"
+      ],
+      "dossier": [
+        "See each master's page (degree, transcripts, CV, motivation letter, language)"
+      ],
+      "conseil": "Search the official catalogue, compare several masters and apply directly to each consortium.",
+      "edition_note": "The official page says applications are usually made between October and January; each master has its own deadline."
+    }
+  },
+  {
+    "id": "eiffel",
+    "organisme": "Ministère de l'Europe et des Affaires étrangères / Campus France",
+    "pays_accueil": [
+      "France"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "age_max": 29,
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "octobre",
+      "cloture_mois": "janvier"
+    },
+    "edition": {
+      "libelle": "Session 2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+    "sources": [
+      {
+        "titre": "Campus France - Eiffel",
+        "url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Page names no eligible/excluded countries (generic 'foreign students'), so Cameroon not explicitly confirmed. Amounts not read.",
+    "fr": {
+      "nom": "Bourse d'excellence Eiffel (France)",
+      "resume": "Bourse du gouvernement français pour un master ou un doctorat, présentée par un établissement français.",
+      "couverture_detail": "Montants non indiqués sur la page lue ; voir le règlement de la session.",
+      "diplome": "Âge maximum 29 ans pour un master, 35 ans pour un doctorat.",
+      "langue": "Non précisée sur la page lue.",
+      "autres": [
+        "Seuls les établissements d'enseignement supérieur français peuvent déposer le dossier",
+        "Il faut donc d'abord être candidat dans un établissement français"
+      ],
+      "dossier": [
+        "Dossier déposé par l'établissement français (voir règlement de la session)"
+      ],
+      "conseil": "Tu ne peux pas candidater seul : demande à ton établissement français cible s'il propose ta candidature.",
+      "edition_note": "La page officielle ne montre que la session 2026 (ouverture 1er octobre 2025, réception par Campus France avant le 8 janvier 2026, résultats dès le 30 mars 2026). La session 2027 n'est pas publiée."
+    },
+    "en": {
+      "nom": "France Excellence Eiffel Scholarship",
+      "resume": "French government scholarship for a master's or PhD, nominated by a French institution.",
+      "couverture_detail": "Amounts not given on the page read; see the session rules.",
+      "diplome": "Maximum age 29 for a master's, 35 for a PhD.",
+      "langue": "Not stated on the page read.",
+      "autres": [
+        "Only French higher education institutions can submit applications",
+        "So you must first be a candidate at a French institution"
+      ],
+      "dossier": [
+        "File submitted by the French institution (see session rules)"
+      ],
+      "conseil": "You cannot apply alone: ask your target French institution whether it will put you forward.",
+      "edition_note": "The official page only shows the 2026 session (opened 1 October 2025, received by Campus France by 8 January 2026, results from 30 March 2026). The 2027 session is not published."
+    }
+  },
+  {
+    "id": "bgf-cameroun",
+    "organisme": "Ambassade de France au Cameroun / Campus France Cameroun",
+    "pays_accueil": [
+      "France"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "octobre",
+      "cloture_mois": "février"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "ouverture": "2026-10-01",
+      "confirme": false
+    },
+    "lien_officiel": "https://cameroun.campusfrance.org/fr/calendriers-de-la-campagne-de-candidature-2027-2028",
+    "sources": [
+      {
+        "titre": "Campus France Cameroun - calendrier 2027-2028",
+        "url": "https://cameroun.campusfrance.org/fr/calendriers-de-la-campagne-de-candidature-2027-2028"
+      },
+      {
+        "titre": "Campus France Cameroun",
+        "url": "https://cameroun.campusfrance.org"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "The calendar page does not describe scholarship criteria or amounts. Scholarship details (SCAC, priority to doctoral/cooperation projects) only from third-party blogs. 'cloture_mois' is for the admission file, not confirmed for scholarships.",
+    "fr": {
+      "nom": "Bourses du gouvernement français (Cameroun)",
+      "resume": "Les bourses du gouvernement français sont attribuées via l'ambassade et Campus France Cameroun ; les critères officiels n'ont pas pu être confirmés.",
+      "couverture_detail": "Non confirmée sur les pages officielles lues.",
+      "diplome": "Non confirmé.",
+      "langue": "Non confirmée.",
+      "autres": [
+        "Passer par la procédure « Études en France » de Campus France Cameroun (campagne 2027-2028 ouverte depuis le 1er octobre 2026)",
+        "Les sources tierces disent que l'ambassade favorise surtout la mobilité doctorale"
+      ],
+      "dossier": [
+        "Dossier en ligne sur la plateforme Études en France",
+        "Frais de procédure payés à TLS",
+        "Entretien académique Campus France"
+      ],
+      "conseil": "Ouvre ton dossier Études en France dès maintenant et consulte la page « Je suis boursier » pour les critères de bourse.",
+      "edition_note": "Campus France Cameroun indique que la campagne Études en France 2027-2028 est ouverte depuis le 1er octobre 2026 ; dossier électronique pour master avant le 1er février 2027 (la page est ambiguë). Cette date concerne la candidature d'admission, pas une bourse précise."
+    },
+    "en": {
+      "nom": "French Government Scholarships (Cameroon)",
+      "resume": "French government scholarships are handled via the embassy and Campus France Cameroon; official criteria could not be confirmed.",
+      "couverture_detail": "Not confirmed on the official pages read.",
+      "diplome": "Not confirmed.",
+      "langue": "Not confirmed.",
+      "autres": [
+        "Go through Campus France Cameroon's 'Études en France' procedure (2027-2028 campaign open since 1 October 2026)",
+        "Third-party sources say the embassy mostly favours doctoral mobility"
+      ],
+      "dossier": [
+        "Online file on the Études en France platform",
+        "Procedure fees paid to TLS",
+        "Campus France academic interview"
+      ],
+      "conseil": "Open your Études en France file now and check the 'Je suis boursier' page for scholarship criteria.",
+      "edition_note": "Campus France Cameroon says the Études en France 2027-2028 campaign has been open since 1 October 2026; electronic file for master's before 1 February 2027 (page is ambiguous). This date is for the admission application, not a specific scholarship."
+    }
+  },
+  {
+    "id": "csc-china",
+    "organisme": "China Scholarship Council / gouvernement chinois",
+    "pays_accueil": [
+      "Chine"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.campuschina.org",
+    "sources": [
+      {
+        "titre": "Campus China",
+        "url": "https://www.campuschina.org"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "campuschina.org returned 403; facts come from search snippets of consulate notices for other countries. Cameroon eligibility and dates not read from an official page.",
+    "fr": {
+      "nom": "Bourse du gouvernement chinois (CSC)",
+      "resume": "Bourse du gouvernement chinois pour licence, master ou doctorat dans une université chinoise.",
+      "couverture_detail": "Financement complet des études selon des avis consulaires, sans billet d'avion international.",
+      "diplome": "Limites d'âge 2026/27 (avis consulaire) : moins de 25 ans en licence, 35 en master, 40 en doctorat.",
+      "langue": "Non confirmée.",
+      "autres": [
+        "Licence : test CSCA obligatoire pour 2026/27",
+        "Candidature via le système d'information campuschina.org",
+        "Numéro d'agence et dates selon le pays"
+      ],
+      "dossier": [
+        "À confirmer auprès de l'ambassade de Chine au Cameroun"
+      ],
+      "conseil": "Surveille le site de l'ambassade de Chine à Yaoundé et campuschina.org à l'automne et en hiver.",
+      "edition_note": "Aucun appel 2027/28 trouvé. Pour 2026/27 les dates variaient selon le pays (février à mars 2026)."
+    },
+    "en": {
+      "nom": "Chinese Government Scholarship (CSC)",
+      "resume": "Chinese government scholarship for bachelor's, master's or PhD at a Chinese university.",
+      "couverture_detail": "Fully funded degree study per consulate notices; international airfare not covered.",
+      "diplome": "2026/27 age limits (consulate notice): under 25 for bachelor's, 35 for master's, 40 for PhD.",
+      "langue": "Not confirmed.",
+      "autres": [
+        "Bachelor's: CSCA test required for 2026/27",
+        "Apply via the campuschina.org information system",
+        "Agency number and dates depend on the country"
+      ],
+      "dossier": [
+        "Confirm with the Chinese Embassy in Cameroon"
+      ],
+      "conseil": "Watch the Chinese Embassy in Yaoundé website and campuschina.org in autumn and winter.",
+      "edition_note": "No 2027/28 call found. For 2026/27 dates varied by country (February to March 2026)."
+    }
+  },
+  {
+    "id": "turkiye-burslari",
+    "organisme": "Présidence des Turcs de l'étranger et communautés apparentées (YTB)",
+    "pays_accueil": [
+      "Turquie"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://turkiyeburslari.gov.tr/",
+    "sources": [
+      {
+        "titre": "Türkiye Bursları",
+        "url": "https://turkiyeburslari.gov.tr/"
+      },
+      {
+        "titre": "Criteria and programmes",
+        "url": "https://turkiyeburslari.gov.tr/scholarshipsprograms"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "'oui' because the criteria page says citizens of all countries can apply (only Turkish citizens excluded); Cameroon not named. Typical timing not confirmed so cycle months left null.",
+    "fr": {
+      "nom": "Bourses Türkiye (Türkiye Bursları)",
+      "resume": "Bourse turque complète avec placement universitaire, ouverte aux étudiants de tous pays sauf la Turquie.",
+      "couverture_detail": "Allocation mensuelle, hébergement, assurance santé, billet d'avion, cours de langue et placement universitaire (montants non lus).",
+      "diplome": "Âge : licence moins de 21 ans, master moins de 30, doctorat moins de 35, recherche moins de 50. Notes minimales : 70 % licence, 75 % master/doctorat, 90 % santé.",
+      "langue": "Non précisée sur la page lue.",
+      "autres": [
+        "Citoyens de tous les pays sauf la Turquie",
+        "Ne pas être déjà inscrit dans une université turque au même niveau",
+        "Candidature en ligne gratuite"
+      ],
+      "dossier": [
+        "Voir la page « Application in 5 Steps » du site officiel"
+      ],
+      "conseil": "Prépare relevés de notes et diplômes en avance ; la sélection est très compétitive.",
+      "edition_note": "La page officielle annonce les candidatures 2026 sans les dates lues ; le calendrier 2027 n'est pas encore visible. Voir turkiyeburslari.gov.tr/calendar."
+    },
+    "en": {
+      "nom": "Türkiye Scholarships",
+      "resume": "Full Turkish scholarship with university placement, open to students from all countries except Türkiye.",
+      "couverture_detail": "Monthly stipend, accommodation, health insurance, flight ticket, language course and university placement (amounts not read).",
+      "diplome": "Age: bachelor's under 21, master's under 30, PhD under 35, research under 50. Minimum grades: 70% bachelor's, 75% master's/PhD, 90% health.",
+      "langue": "Not stated on the page read.",
+      "autres": [
+        "Citizens of all countries except Türkiye",
+        "Not already enrolled in a Turkish university at the same level",
+        "Free online application"
+      ],
+      "dossier": [
+        "See the 'Application in 5 Steps' page on the official site"
+      ],
+      "conseil": "Prepare transcripts and diplomas in advance; selection is very competitive.",
+      "edition_note": "The official page announces 2026 applications with no dates read; the 2027 calendar is not visible yet. See turkiyeburslari.gov.tr/calendar."
+    }
+  },
+  {
+    "id": "stipendium-hungaricum",
+    "organisme": "Tempus Public Foundation / gouvernement hongrois",
+    "pays_accueil": [
+      "Hongrie"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "partielle",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "novembre",
+      "cloture_mois": "janvier"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://stipendiumhungaricum.hu/apply/",
+    "sources": [
+      {
+        "titre": "Stipendium Hungaricum - apply",
+        "url": "https://stipendiumhungaricum.hu/apply/"
+      },
+      {
+        "titre": "Stipendium Hungaricum",
+        "url": "https://stipendiumhungaricum.hu/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Partner-country list not shown on pages read, so Cameroon unverified. Eligible countries need a cooperation agreement with Hungary.",
+    "fr": {
+      "nom": "Stipendium Hungaricum (Hongrie)",
+      "resume": "Bourse du gouvernement hongrois pour études en anglais dans les universités hongroises, via un organisme partenaire du pays.",
+      "couverture_detail": "Frais de scolarité couverts, hébergement en partie aidé (autres aides non lues).",
+      "diplome": "Dépend du niveau visé ; voir l'appel.",
+      "langue": "Programmes en anglais ; test de langue possible, certificats parfois acceptés après la date limite.",
+      "autres": [
+        "Être nommé par l'organisme partenaire de son pays",
+        "Maximum deux programmes au choix",
+        "Examens d'entrée dans les universités hongroises (minimum 56/100)",
+        "Deux semestres de hongrois pour licence/master"
+      ],
+      "dossier": [
+        "Copie du passeport",
+        "Certificat médical sur modèle officiel",
+        "Diplômes et relevés de notes",
+        "Attestation de superviseur pour le doctorat si exigé"
+      ],
+      "conseil": "Contacte vite l'organisme partenaire camerounais, car sa date limite peut être antérieure.",
+      "edition_note": "La page officielle montre l'appel 2026/27 (date limite 15 janvier 2026, 14h CET). L'appel 2027/28 n'est pas publié ; il suit sans doute le même rythme, à confirmer."
+    },
+    "en": {
+      "nom": "Stipendium Hungaricum (Hungary)",
+      "resume": "Hungarian government scholarship for English-taught studies at Hungarian universities, via a national sending partner.",
+      "couverture_detail": "Tuition fully covered, accommodation partly supported (other support not read).",
+      "diplome": "Depends on level; see the call.",
+      "langue": "Programmes taught in English; language certificates sometimes accepted after the deadline.",
+      "autres": [
+        "Be nominated by your country's sending partner",
+        "Up to two programmes",
+        "University entrance exams (minimum 56/100)",
+        "Two semesters of Hungarian for BA/MA"
+      ],
+      "dossier": [
+        "Passport copy",
+        "Medical certificate on the official template",
+        "Degrees and transcripts",
+        "Supervisor statement for PhD if required"
+      ],
+      "conseil": "Contact the Cameroonian sending partner early, as its deadline may be earlier.",
+      "edition_note": "The official page shows the 2026/27 call (deadline 15 January 2026, 14:00 CET). The 2027/28 call is not published; likely the same rhythm, to confirm."
+    }
+  },
+  {
+    "id": "mext",
+    "organisme": "MEXT, Ambassade du Japon au Cameroun",
+    "pays_accueil": [
+      "Japon"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "avril",
+      "cloture_mois": "mai"
+    },
+    "edition": {
+      "libelle": "2027 (recommandation ambassade)",
+      "ouverture": "2026-04-23",
+      "cloture": "2026-05-25",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.cmr.emb-japan.go.jp/itpr_ja/11_000001_00912.html",
+    "sources": [
+      {
+        "titre": "Ambassade du Japon au Cameroun - appel MEXT 2027",
+        "url": "https://www.cmr.emb-japan.go.jp/itpr_ja/11_000001_00912.html"
+      },
+      {
+        "titre": "Study in Japan - MEXT embassy recommendation 2027 (research)",
+        "url": "http://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Embassy page itself returned 403; dates come from search summary of it, so confirme=false. Other MEXT categories (undergraduate, college of technology) not checked. Cameroon is covered by the Yaounde embassy call.",
+    "fr": {
+      "nom": "Bourse MEXT (gouvernement japonais)",
+      "resume": "Bourse du gouvernement japonais pour étudiants chercheurs, avec candidature via l'ambassade du Japon.",
+      "couverture_detail": "Non détaillée sur les pages lues.",
+      "diplome": "Critères d'âge et de diplôme dans le guide de candidature (non lu).",
+      "langue": "Non confirmée.",
+      "autres": [
+        "Candidature à l'ambassade du Japon à Yaoundé, jamais directement au MEXT",
+        "Certificat de santé rempli par un médecin",
+        "Lettre de recommandation"
+      ],
+      "dossier": [
+        "Formulaire de candidature",
+        "Formulaire de préférence de placement",
+        "Champ d'étude et plan de recherche",
+        "Certificat de santé",
+        "Lettre de recommandation"
+      ],
+      "conseil": "Surveille le site de l'ambassade du Japon à Yaoundé à partir d'avril ; la fenêtre est courte.",
+      "edition_note": "Selon l'ambassade du Japon au Cameroun (annonce du 23 avril 2026, lue via résultat de recherche), date limite le 25 mai 2026 à 16h pour le Cameroun, le Tchad et la RCA. La fenêtre est close ; le prochain appel est attendu au printemps 2027."
+    },
+    "en": {
+      "nom": "MEXT Japanese Government Scholarship",
+      "resume": "Japanese government scholarship for research students, applied for through the Japanese Embassy.",
+      "couverture_detail": "Not detailed on the pages read.",
+      "diplome": "Age and degree criteria are in the application guidelines (not read).",
+      "langue": "Not confirmed.",
+      "autres": [
+        "Apply through the Japanese Embassy in Yaoundé, never directly to MEXT",
+        "Health certificate completed by a doctor",
+        "Recommendation letter"
+      ],
+      "dossier": [
+        "Application form",
+        "Placement preference form",
+        "Field of study and research plan",
+        "Certificate of health",
+        "Recommendation letter"
+      ],
+      "conseil": "Watch the Japanese Embassy in Yaoundé site from April; the window is short.",
+      "edition_note": "Per the Embassy of Japan in Cameroon (23 April 2026 notice, seen via a search result), deadline 25 May 2026 at 4 pm for Cameroon, Chad and CAR. The window is closed; the next call is expected in spring 2027."
+    }
+  },
+  {
+    "id": "gks",
+    "organisme": "NIIED / gouvernement coréen",
+    "pays_accueil": [
+      "Corée du Sud"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "age_max": 40,
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "septembre",
+      "cloture_mois": "septembre"
+    },
+    "edition": {
+      "libelle": "2027 (licence, GKS-U)",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+    "sources": [
+      {
+        "titre": "StudyinKorea - GKS",
+        "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do"
+      },
+      {
+        "titre": "GKS-U 2027 notice",
+        "url": "https://www.studyinkorea.go.kr/ko/plan/gksNoticeRead.do?bbsId=BBSMSTR_000000000461&nttId=4522"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Country list for Cameroon not found in readable text (in downloadable files). Graduate age 'under 40' is read from the English scholarship page.",
+    "fr": {
+      "nom": "Global Korea Scholarship (GKS)",
+      "resume": "Bourse du gouvernement coréen pour licence, master ou doctorat en Corée du Sud.",
+      "couverture_detail": "Billet d'avion, année de cours de coréen, frais de scolarité et allocation mensuelle.",
+      "diplome": "Licence : moins de 25 ans, 80 % de moyenne ou 20 % meilleurs. Master/doctorat : moins de 40 ans, 80 % de moyenne.",
+      "langue": "Non précisée sur la page lue.",
+      "autres": [
+        "Le candidat et ses deux parents ne doivent pas être de nationalité coréenne",
+        "Deux voies : ambassade ou université (liste de pays selon le guide)"
+      ],
+      "dossier": [
+        "Voir le guide de candidature GKS officiel"
+      ],
+      "conseil": "Télécharge le guide 2027 sur studyinkorea.go.kr et vérifie si le Cameroun est dans la liste de la voie ambassade ou université.",
+      "edition_note": "Le guide GKS-U 2027 a été publié le 9 septembre 2026 ; son calendrier est dans un PDF non lu. Un site tiers cite le 15-30 septembre 2026 pour la voie ambassade (pas de confirmation pour le Cameroun). Pour le master/doctorat, l'annonce est habituellement en février."
+    },
+    "en": {
+      "nom": "Global Korea Scholarship (GKS)",
+      "resume": "South Korean government scholarship for bachelor's, master's or PhD in South Korea.",
+      "couverture_detail": "Airfare, Korean language year, tuition and monthly allowance.",
+      "diplome": "Undergraduate: under 25, 80% average or top 20%. Graduate: under 40, 80% average.",
+      "langue": "Not stated on the page read.",
+      "autres": [
+        "Applicant and both parents must not hold Korean citizenship",
+        "Two tracks: embassy or university (country list in the guidelines)"
+      ],
+      "dossier": [
+        "See the official GKS application guidelines"
+      ],
+      "conseil": "Download the 2027 guidelines from studyinkorea.go.kr and check if Cameroon is in the embassy or university track list.",
+      "edition_note": "The 2027 GKS-U guidelines were posted on 9 September 2026; the schedule is in an unread PDF. A third-party notice cites 15-30 September 2026 for the embassy track (no Cameroon confirmation). For graduate programmes the announcement is usually in February."
+    }
+  },
+  {
+    "id": "russie-quota",
+    "organisme": "Ministère russe de la Science et de l'Enseignement supérieur / Rossotroudnitchestvo",
+    "pays_accueil": [
+      "Russie"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://education-in-russia.com/",
+    "sources": [
+      {
+        "titre": "Education in Russia (portail officiel)",
+        "url": "https://education-in-russia.com/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Official site text extracted was only a title/menu. A third-party mention says Russia offered 16 places to Cameroon (unverified, year unknown).",
+    "fr": {
+      "nom": "Bourse du gouvernement russe (quota)",
+      "resume": "Quota de bourses du gouvernement russe pour étudier en Russie ; places par pays limitées.",
+      "couverture_detail": "Frais de scolarité, hébergement en résidence et allocation mensuelle (source universitaire).",
+      "diplome": "Non confirmé sur la page officielle lue.",
+      "langue": "Non confirmée.",
+      "autres": [
+        "Candidature en ligne puis sélection par le ministère russe",
+        "Gratuite : méfie-toi des agents"
+      ],
+      "dossier": [
+        "À confirmer sur le portail officiel"
+      ],
+      "conseil": "Passe uniquement par le portail officiel et par l'ambassade de Russie ou la Maison russe de Yaoundé.",
+      "edition_note": "Aucune date lue sur la page officielle. Des sites tiers annoncent une ouverture probable en septembre 2026."
+    },
+    "en": {
+      "nom": "Russian Government Scholarship (quota)",
+      "resume": "Russian government scholarship quota to study in Russia; places per country are limited.",
+      "couverture_detail": "Tuition, dormitory and monthly allowance (university source).",
+      "diplome": "Not confirmed on the official page read.",
+      "langue": "Not confirmed.",
+      "autres": [
+        "Online application then selection by the Russian ministry",
+        "Free: beware of agents"
+      ],
+      "dossier": [
+        "Confirm on the official portal"
+      ],
+      "conseil": "Use only the official portal and the Russian embassy or Russian House in Yaoundé.",
+      "edition_note": "No dates read on the official page. Third-party sites say opening is likely in September 2026."
+    }
+  },
+  {
+    "id": "amci-maroc",
+    "organisme": "Agence marocaine de coopération internationale (AMCI)",
+    "pays_accueil": [
+      "Maroc"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.amci.ma",
+    "sources": [
+      {
+        "titre": "AMCI",
+        "url": "https://www.amci.ma"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "amci.ma not fetched/verified (not read). All facts from third-party aggregators (50 places for Cameroon 2026/27 claimed). Treat as unverified.",
+    "fr": {
+      "nom": "Bourses AMCI (Maroc)",
+      "resume": "Bourses marocaines pour études au Maroc, attribuées par quota aux pays africains dont le Cameroun (selon des sources tierces).",
+      "couverture_detail": "Non confirmée par une source officielle.",
+      "diplome": "Baccalauréat (ou GCE A/L) pour la licence ; selon sources tierces.",
+      "langue": "Français souvent requis (source tierce).",
+      "autres": [
+        "Le dossier passe par le ministère de l'enseignement supérieur ou l'ambassade du Maroc, dans un quota national"
+      ],
+      "dossier": [
+        "À confirmer auprès du MINESUP ou de l'ambassade du Maroc à Yaoundé"
+      ],
+      "conseil": "Renseigne-toi auprès du MINESUP et de l'ambassade du Maroc au printemps.",
+      "edition_note": "Aucune page officielle AMCI lue. Un site tiers cite le 5 juin 2026 pour le Cameroun (2026/27, passé)."
+    },
+    "en": {
+      "nom": "AMCI Scholarships (Morocco)",
+      "resume": "Moroccan scholarships to study in Morocco, allocated by quota to African countries including Cameroon (per third-party sources).",
+      "couverture_detail": "Not confirmed by an official source.",
+      "diplome": "Baccalauréat (or GCE A/L) for bachelor's; per third-party sources.",
+      "langue": "French often required (third-party).",
+      "autres": [
+        "The file goes through the higher education ministry or the Moroccan embassy, within a national quota"
+      ],
+      "dossier": [
+        "Confirm with MINESUP or the Moroccan embassy in Yaoundé"
+      ],
+      "conseil": "Ask MINESUP and the Moroccan embassy in spring.",
+      "edition_note": "No official AMCI page read. A third-party site cites 5 June 2026 for Cameroon (2026/27, past)."
+    }
+  },
+  {
+    "id": "iccr-itec",
+    "organisme": "Conseil indien des relations culturelles (ICCR) ; programme ITEC du ministère indien des Affaires étrangères",
+    "pays_accueil": [
+      "Inde"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://studyinindia.gov.in",
+    "sources": [
+      {
+        "titre": "Study in India",
+        "url": "https://studyinindia.gov.in"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "iccr.gov.in unreachable; no official page read. Aggregators list Cameroon as eligible for ICCR Africa scheme (unverified). ITEC not researched (no source read).",
+    "fr": {
+      "nom": "Bourses ICCR / ITEC (Inde)",
+      "resume": "L'Inde offre des bourses aux étudiants africains (ICCR) et des formations courtes (ITEC).",
+      "couverture_detail": "Non confirmée par une page officielle (sources tierces : frais, allocation, billet).",
+      "diplome": "Non confirmé.",
+      "langue": "Non confirmée.",
+      "autres": [
+        "Candidature via l'ambassade de l'Inde à Yaoundé (sources tierces)",
+        "Médecine, droit et cursus intégrés généralement exclus (source tierce)"
+      ],
+      "dossier": [
+        "À confirmer auprès de l'ambassade de l'Inde"
+      ],
+      "conseil": "Contacte l'ambassade de l'Inde à Yaoundé ; ITEC propose aussi des formations courtes.",
+      "edition_note": "Aucune page officielle lue. Les dates 2026 citées par des sites tiers divergent (février à avril 2026)."
+    },
+    "en": {
+      "nom": "ICCR / ITEC Scholarships (India)",
+      "resume": "India offers scholarships to African students (ICCR) and short training courses (ITEC).",
+      "couverture_detail": "Not confirmed by an official page (third-party: fees, allowance, airfare).",
+      "diplome": "Not confirmed.",
+      "langue": "Not confirmed.",
+      "autres": [
+        "Apply via the Indian Embassy in Yaoundé (third-party)",
+        "Medicine, law and integrated courses usually excluded (third-party)"
+      ],
+      "dossier": [
+        "Confirm with the Indian Embassy"
+      ],
+      "conseil": "Contact the Indian Embassy in Yaoundé; ITEC also offers short training courses.",
+      "edition_note": "No official page read. 2026 dates quoted by third-party sites conflict (February to April 2026)."
+    }
+  },
+  {
+    "id": "italie-maeci",
+    "organisme": "Ministère italien des Affaires étrangères (MAECI)",
+    "pays_accueil": [
+      "Italie"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master",
+      "doctorat",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "age_max": 28,
+    "cycle": {
+      "type": "annuelle",
+      "cloture_mois": "mars"
+    },
+    "edition": {
+      "libelle": "2026/27 (dernier appel)",
+      "cloture": "2026-03-26",
+      "confirme": true
+    },
+    "lien_officiel": "https://ambyaounde.esteri.it/fr/?p=2792",
+    "sources": [
+      {
+        "titre": "Ambassade d'Italie à Yaoundé - bourses 2026-2027",
+        "url": "https://ambyaounde.esteri.it/fr/?p=2792"
+      },
+      {
+        "titre": "Study in Italy - appels",
+        "url": "https://studyinitaly.esteri.it/ListaBandi"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "English version of the embassy page showed an old 14 June 2024 date (inconsistent); French version says 26 March 2026. 'Invest Your Talent in Italy' (23 countries, deadline 11 May 2026) is a separate programme; Cameroon not confirmed there. Levels from third-party page.",
+    "fr": {
+      "nom": "Bourses du gouvernement italien (MAECI)",
+      "resume": "Bourses du gouvernement italien pour master, doctorat ou recherche en Italie, avec un appel dédié au Cameroun.",
+      "couverture_detail": "La bourse finance seulement les cours en Italie ; montants non détaillés sur la page lue (source tierce : 9 mois, renouvelable).",
+      "diplome": "Licence ou diplôme supérieur. Âge maximum 28 ans à la date limite (30 pour le doctorat, 40 pour la cotutelle).",
+      "langue": "Niveau B2 minimum si le programme est en italien.",
+      "autres": [
+        "Pays visés : Cameroun, Tchad, RCA, Guinée équatoriale",
+        "Candidature en ligne sur le portail Study in Italy"
+      ],
+      "dossier": [
+        "Dossier en ligne sur le portail Study in Italy",
+        "Diplômes et relevés de notes",
+        "Certificat de langue (B2 si programme en italien)"
+      ],
+      "conseil": "Prépare diplômes et relevés avant mars 2027 et surveille le site de l'ambassade d'Italie à Yaoundé.",
+      "edition_note": "Selon l'ambassade d'Italie à Yaoundé, candidatures avant le 26 mars 2026 à 14h (heure de Yaoundé). Appel clos ; l'appel 2027/28 n'est pas encore publié. Pas de date d'ouverture lue."
+    },
+    "en": {
+      "nom": "Italian Government Scholarships (MAECI)",
+      "resume": "Italian government scholarships for master's, PhD or research in Italy, with a call covering Cameroon.",
+      "couverture_detail": "Funds only courses taken in Italy; amounts not on the page read (third-party: 9 months, renewable).",
+      "diplome": "Bachelor's degree or higher. Maximum age 28 at the deadline (30 for PhD, 40 for co-tutelle).",
+      "langue": "B2 minimum if the programme is in Italian.",
+      "autres": [
+        "Countries covered: Cameroon, Chad, CAR, Equatorial Guinea",
+        "Online application on the Study in Italy portal"
+      ],
+      "dossier": [
+        "Online file on the Study in Italy portal",
+        "Degrees and transcripts",
+        "Language certificate (B2 if Italian-taught)"
+      ],
+      "conseil": "Prepare degrees and transcripts before March 2027 and watch the Italian Embassy in Yaoundé site.",
+      "edition_note": "Per the Italian Embassy in Yaoundé, applications by 26 March 2026 at 14:00 (Yaoundé time). Call closed; the 2027/28 call is not published yet. No opening date read."
+    }
+  },
+  {
+    "id": "mastercard-scholars",
+    "organisme": "Mastercard Foundation et universités partenaires",
+    "pays_accueil": [
+      "Rwanda",
+      "Ghana",
+      "Ouganda",
+      "Kenya",
+      "Nigeria",
+      "Éthiopie",
+      "Canada",
+      "États-Unis",
+      "France (Sciences Po)"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "Selon partenaire",
+      "confirme": false
+    },
+    "lien_officiel": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/",
+    "sources": [
+      {
+        "titre": "Mastercard Foundation Scholars Program",
+        "url": "https://mastercardfdn.org/all/scholars/"
+      },
+      {
+        "titre": "Becoming a Mastercard Foundation Scholar",
+        "url": "https://mastercardfdn.org/en/articles/becoming-a-mastercard-foundation-scholar/"
+      },
+      {
+        "titre": "ALU - Mastercard Foundation",
+        "url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/african-leadership-university-alu/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Programme aimed at young Africans, but no Cameroonian partner is named on pages read and the partner list page failed to load, so Cameroon eligibility per partner is unconfirmed. Partners seen on official pages: ALU (Rwanda), Makerere (Uganda), Ashesi, KNUST, Sciences Po (via search summaries, not all read directly). Cameroon is not in the Foundation's 'Where We Work' list. UK partners are blocked for Cameroonians by the UK study visa suspension.",
+    "fr": {
+      "nom": "Programme Mastercard Foundation Scholars",
+      "resume": "Bourse complète pour jeunes Africains, en licence ou master, via une soixantaine d'universités partenaires.",
+      "couverture_detail": "Frais de scolarité, hébergement, livres, accompagnement, mentorat et billet retour si nécessaire.",
+      "diplome": "Bon dossier académique ; licence : 29 ans ou moins, master : 35 ans ou moins à la candidature.",
+      "langue": "Selon l'université partenaire (certains exigent TOEFL/SAT, pas les partenaires africains).",
+      "autres": [
+        "Jeunes Africains en difficulté financière, avec un potentiel de leadership.",
+        "Chaque partenaire fixe ses propres critères.",
+        "Pas de bourse pour le doctorat."
+      ],
+      "dossier": [
+        "Candidature directe auprès de l'université partenaire",
+        "Lettres de recommandation",
+        "Relevés de notes",
+        "Tests de langue/SAT selon partenaire"
+      ],
+      "conseil": "Choisissez 2 ou 3 partenaires et postulez tôt : un dossier incomplet ou tardif n'est pas examiné.",
+      "edition_note": "Chaque université partenaire a ses propres dates : vérifier sa page."
+    },
+    "en": {
+      "nom": "Mastercard Foundation Scholars Program",
+      "resume": "Full scholarship for young Africans at bachelor's or master's level through about 60 partner universities.",
+      "couverture_detail": "Tuition, accommodation, books, mentoring and support, and a return ticket home if needed.",
+      "diplome": "Strong academic record; bachelor's: 29 or under, master's: 35 or under when applying.",
+      "langue": "Set by the partner university (some require TOEFL/SAT, African partners do not).",
+      "autres": [
+        "Young Africans facing financial barriers, with leadership potential.",
+        "Each partner sets its own criteria.",
+        "No scholarships for PhD candidates."
+      ],
+      "dossier": [
+        "Direct application to the partner university",
+        "Recommendation letters",
+        "Transcripts",
+        "Language/SAT tests depending on partner"
+      ],
+      "conseil": "Pick 2 or 3 partners and apply early: late or incomplete files are not considered.",
+      "edition_note": "Each partner university has its own dates: check its page."
+    }
+  },
+  {
+    "id": "rotary-peace",
+    "organisme": "Rotary Foundation",
+    "pays_accueil": [
+      "Plusieurs pays (centres Rotary pour la paix)"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "autre"
+    ],
+    "domaines": [
+      "droit-politique",
+      "philo-sociologie",
+      "histoire-geographie"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "février",
+      "cloture_mois": "mai"
+    },
+    "edition": {
+      "libelle": "2028/29",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.rotary.org/en/our-programs/peace-fellowships",
+    "sources": [
+      {
+        "titre": "Rotary Peace Fellowships",
+        "url": "https://www.rotary.org/en/our-programs/peace-fellowships"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Official page returned HTTP 429 on every fetch; facts come from a web-search summary only (2027-28 closed, 2028-29 opens Feb 2027; third-party sites say deadline 15 May). Conditions, documents, coverage, Cameroon eligibility NOT verified. Pays_accueil unverified. Re-check manually.",
+    "fr": {
+      "nom": "Bourses Rotary pour la paix (Rotary Peace Fellowships)",
+      "resume": "Bourse pour master ou certificat en paix et résolution de conflits dans des universités partenaires du Rotary.",
+      "couverture_detail": "Bourse complète (non vérifiée en détail sur la page officielle lue).",
+      "conseil": "Préparez le dossier dès fin 2026 : un endossement d'un district Rotary est généralement demandé.",
+      "edition_note": "Selon une recherche sur la page officielle : candidatures 2027-28 closes ; celles de 2028-29 ouvriront en février 2027. Dates exactes non confirmées."
+    },
+    "en": {
+      "nom": "Rotary Peace Fellowships",
+      "resume": "Fellowship for a master's or certificate in peace and conflict resolution at Rotary partner universities.",
+      "couverture_detail": "Described as fully funded (details not verified on the official page read).",
+      "conseil": "Start preparing in late 2026; a Rotary district endorsement is usually requested.",
+      "edition_note": "Per a search summary of the official page: 2027-28 applications closed; 2028-29 applications open online in February 2027. Exact dates not confirmed."
+    }
+  },
+  {
+    "id": "aga-khan-isp",
+    "organisme": "Aga Khan Foundation",
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "partielle",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "début d'année"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://the.akdn/our-agencies/aga-khan-foundation/international-scholarship-programme",
+    "sources": [
+      {
+        "titre": "AKF International Scholarship Programme",
+        "url": "https://the.akdn/our-agencies/aga-khan-foundation/international-scholarship-programme"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Official page does not name Cameroon (list is 'for example'). Third-party listings of 2026-27 list 13 countries without Cameroon, so Cameroonians very likely cannot apply. Treat as probably not open; verify with eligibility tool.",
+    "fr": {
+      "nom": "Programme international de bourses de la Fondation Aga Khan",
+      "resume": "Bourse-prêt pour études postgraduate, accessible uniquement via les bureaux locaux de la Fondation dans certains pays.",
+      "couverture_detail": "Frais de scolarité et de vie ; moitié bourse, moitié prêt à rembourser (50 %). Hors voyage international.",
+      "diplome": "Licence ou équivalent, excellents résultats, besoin financier réel, admission en première année d'un cursus postgraduate.",
+      "autres": [
+        "Préférence aux moins de 30 ans.",
+        "Plan de financement multi-sources.",
+        "Garant obligatoire.",
+        "Dernier recours financier."
+      ],
+      "conseil": "Utilisez l'outil d'éligibilité de la page officielle avant de préparer le dossier.",
+      "edition_note": "Le cycle 2026-27 est clos ; le prochain ouvrira début 2027 (dates non publiées)."
+    },
+    "en": {
+      "nom": "Aga Khan Foundation International Scholarship Programme",
+      "resume": "Grant-loan for postgraduate study, available only through the Foundation's local offices in certain countries.",
+      "couverture_detail": "Tuition and living costs; half grant, half loan (50% repayable). International travel excluded.",
+      "diplome": "Bachelor's or equivalent, excellent record, genuine financial need, admitted to first year of postgraduate study.",
+      "autres": [
+        "Preference for under 30.",
+        "Multi-source funding plan.",
+        "Guarantor required.",
+        "Funder of last resort."
+      ],
+      "conseil": "Use the eligibility tool on the official page before preparing an application.",
+      "edition_note": "The 2026-27 cycle is closed; the next one opens early 2027 (dates not published)."
+    }
+  },
+  {
+    "id": "jj-wbgsp",
+    "organisme": "Banque mondiale / gouvernement du Japon",
+    "pays_accueil": [
+      "Universités partenaires (hors pays d'origine)"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "economie-gestion",
+      "droit-politique",
+      "sante",
+      "agronomie-environnement"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "janvier",
+      "cloture_mois": "mai"
+    },
+    "edition": {
+      "libelle": "2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.worldbank.org/en/programs/scholarships",
+    "sources": [
+      {
+        "titre": "World Bank scholarships (JJ/WBGSP)",
+        "url": "https://www.worldbank.org/en/programs/scholarships"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Eligible-countries page returned 404; Cameroon eligibility, coverage, age, documents not verified. Dates not on the page read.",
+    "fr": {
+      "nom": "Bourse Japon/Banque mondiale (JJ/WBGSP)",
+      "resume": "Bourse du Japon pour master de professionnels de pays en développement, dans des universités partenaires.",
+      "couverture_detail": "Non détaillé sur la page lue.",
+      "autres": [
+        "Professionnels en milieu de carrière, master dans un domaine lié au développement.",
+        "Admission préalable dans un programme partenaire."
+      ],
+      "conseil": "Consultez la liste des pays éligibles et les guides de candidature liés sur la page officielle.",
+      "edition_note": "La page officielle indique que les fenêtres 2027 pour les ressortissants de pays en développement sont annoncées, sans donner les dates lues. Des sites tiers parlent du 27 février 2027, non confirmé."
+    },
+    "en": {
+      "nom": "Joint Japan/World Bank Graduate Scholarship Program",
+      "resume": "Japan-funded master's scholarship for professionals from developing countries at partner universities.",
+      "couverture_detail": "Not detailed on the page read.",
+      "autres": [
+        "Mid-career professionals, graduate degree in a development-related field.",
+        "Prior admission to a participating programme."
+      ],
+      "conseil": "Check the eligible-countries list and application guidelines linked on the official page.",
+      "edition_note": "The official page says the 2027 windows for developing-country nationals are announced but I could not read the dates. Third-party sites cite 27 February 2027, unconfirmed."
+    }
+  },
+  {
+    "id": "gates-cambridge",
+    "organisme": "Gates Cambridge Trust, Université de Cambridge",
+    "pays_accueil": [
+      "Royaume-Uni"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "septembre",
+      "cloture_mois": "décembre–janvier"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "ouverture": "2026-09-11",
+      "confirme": true
+    },
+    "lien_officiel": "https://www.gatescambridge.org/",
+    "sources": [
+      {
+        "titre": "Gates Cambridge - Eligibility",
+        "url": "https://www.gatescambridge.org/apply/eligibility/"
+      },
+      {
+        "titre": "Gates Cambridge - Timeline",
+        "url": "https://www.gatescambridge.org/apply/timeline/"
+      },
+      {
+        "titre": "Gates Cambridge - How to apply",
+        "url": "https://www.gatescambridge.org/apply/how-to-apply/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Exact closing date depends on course (two dates); cloture left null. Scholarship rules open to any non-UK citizen, BUT UK ended sponsored study visas for Cameroon nationals applying from abroad from 26 March 2026 (news reports; High Court challenge heard July 2026, outcome not found). Practically blocked unless lifted. Funding amount not read.",
+    "fr": {
+      "nom": "Bourse Gates Cambridge",
+      "resume": "Bourse pour master d'un an ou doctorat à Cambridge, pour des candidats non britanniques à fort potentiel de leadership.",
+      "couverture_detail": "Montant non détaillé sur les pages lues.",
+      "diplome": "Candidat hors Royaume-Uni à un doctorat, MLitt ou master d'un an à temps plein à Cambridge.",
+      "langue": "Non précisé sur les pages lues.",
+      "autres": [
+        "Critères : capacité intellectuelle, justification du cursus, engagement pour les autres, leadership.",
+        "Hors licence et MASt."
+      ],
+      "dossier": [
+        "Candidature via le portail d'études supérieures de Cambridge",
+        "Réponses à 4 questions de sélection",
+        "Projet de recherche (doctorat)",
+        "2 références académiques + 1 référence Gates Cambridge"
+      ],
+      "conseil": "Postulez au plus tôt à Cambridge : bourse et admission se déposent ensemble.",
+      "edition_note": "Ouvert depuis le 11 sept. 2026. Date limite : 8 décembre 2026 ou 6 janvier 2027 selon le cursus (voir le répertoire des cours)."
+    },
+    "en": {
+      "nom": "Gates Cambridge Scholarship",
+      "resume": "Scholarship for a one-year master's or PhD at Cambridge for non-UK candidates with leadership potential.",
+      "couverture_detail": "Amount not detailed on the pages read.",
+      "diplome": "Non-UK citizen applying for a PhD, MLitt or one-year full-time postgraduate course at Cambridge.",
+      "langue": "Not stated on pages read.",
+      "autres": [
+        "Criteria: intellectual ability, fit of course, commitment to improving others' lives, leadership.",
+        "Excludes undergraduate and MASt."
+      ],
+      "dossier": [
+        "Application via Cambridge Graduate Application Portal",
+        "Answers to 4 selection questions",
+        "Research proposal (PhD)",
+        "2 academic references + 1 Gates Cambridge reference"
+      ],
+      "conseil": "Apply to Cambridge early: admission and scholarship are submitted together.",
+      "edition_note": "Open since 11 Sept 2026. Deadline: 8 Dec 2026 or 6 Jan 2027 depending on course (see Course Directory)."
+    }
+  },
+  {
+    "id": "eskas-swiss",
+    "organisme": "SEFRI / Confédération suisse",
+    "pays_accueil": [
+      "Suisse"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "doctorat",
+      "postdoc",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "age_max": 35,
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "août"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "ouverture": "2026-08-20",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.sbfi.admin.ch/scholarships_en",
+    "sources": [
+      {
+        "titre": "Swiss Government Excellence Scholarships",
+        "url": "https://www.sbfi.admin.ch/scholarships_en"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Programme open to 183 countries but list not shown; Cameroon unconfirmed. Levels: research scholarships (PhD/postdoc) - bachelor/master excluded per a Swiss embassy notice (secondary). Country deadline unknown.",
+    "fr": {
+      "nom": "Bourses d'excellence du gouvernement suisse (ESKAS)",
+      "resume": "Bourse de recherche doctorale ou postdoctorale en Suisse pour jeunes chercheurs (35 ans max).",
+      "couverture_detail": "Allocation de 2 450 CHF par mois ; autres prestations non détaillées sur la page lue.",
+      "diplome": "Master déjà obtenu (chercheurs en début de carrière) ; superviseur en Suisse pour la recherche.",
+      "autres": [
+        "Bourse art : premier master artistique, pays limités."
+      ],
+      "dossier": [
+        "Candidature via la représentation suisse du pays"
+      ],
+      "conseil": "Contactez l'ambassade de Suisse à Yaoundé tôt pour la date limite camerounaise et trouvez un superviseur suisse.",
+      "edition_note": "Ouverture le 20 août 2026 ; les dates limites varient selon le pays et ne figurent pas sur la page lue."
+    },
+    "en": {
+      "nom": "Swiss Government Excellence Scholarships (ESKAS)",
+      "resume": "Doctoral or postdoctoral research scholarship in Switzerland for early-career researchers (max age 35).",
+      "couverture_detail": "CHF 2,450 per month; other benefits not detailed on the page read.",
+      "diplome": "Master's already completed (early career researchers); supervisor in Switzerland for research.",
+      "autres": [
+        "Art scholarship: first master's in an artistic field, limited countries."
+      ],
+      "dossier": [
+        "Application via Swiss diplomatic representation in your country"
+      ],
+      "conseil": "Contact the Swiss embassy in Yaoundé early for the Cameroon deadline and find a Swiss supervisor.",
+      "edition_note": "Opened 20 Aug 2026; deadlines vary by country and are not on the page read."
+    }
+  },
+  {
+    "id": "australia-awards-africa",
+    "organisme": "Gouvernement australien (DFAT)",
+    "pays_accueil": [
+      "Australie"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "février",
+      "cloture_mois": "avril"
+    },
+    "edition": {
+      "libelle": "2028",
+      "confirme": false
+    },
+    "lien_officiel": "https://australiaawardsafrica.org/awards/apply/",
+    "sources": [
+      {
+        "titre": "Australia Awards Africa - Apply",
+        "url": "https://australiaawardsafrica.org/awards/apply/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Official apply page does not list countries. A search summary of the 2027 Africa profile says Cameroon is NOT in the list, but the PDF was unreadable (scanned), so unverified. Likely not open to Cameroon.",
+    "fr": {
+      "nom": "Australia Awards Africa",
+      "resume": "Bourse de master en Australie pour professionnels africains de pays éligibles.",
+      "couverture_detail": "Non détaillé sur la page lue.",
+      "diplome": "Licence ; ne pas déjà avoir un master (source secondaire).",
+      "autres": [
+        "Citoyen d'un pays africain éligible, résidant et travaillant en Afrique (source secondaire)."
+      ],
+      "conseil": "Vérifiez la liste des pays dans le profil Afrique dès l'ouverture.",
+      "edition_note": "La page officielle dit que la session 2027 est close et que celle de 2028 ouvrira en février 2027."
+    },
+    "en": {
+      "nom": "Australia Awards Africa",
+      "resume": "Master's scholarship in Australia for professionals from eligible African countries.",
+      "couverture_detail": "Not detailed on the page read.",
+      "diplome": "Bachelor's; no existing master's (secondary source).",
+      "autres": [
+        "Citizen of an eligible African country, living and working in Africa (secondary source)."
+      ],
+      "conseil": "Check the country list in the Africa profile when applications open.",
+      "edition_note": "Official page says the 2027 intake is closed and the 2028 intake opens in February 2027."
+    }
+  },
+  {
+    "id": "nl-scholarship",
+    "organisme": "Nuffic / établissements néerlandais",
+    "pays_accueil": [
+      "Pays-Bas"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "licence",
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "partielle",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "novembre"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.studyinnl.org/finances/holland-scholarship",
+    "sources": [
+      {
+        "titre": "Holland Scholarship - Study in NL",
+        "url": "https://www.studyinnl.org/finances/holland-scholarship"
+      },
+      {
+        "titre": "Scholarships - Study in NL",
+        "url": "https://www.studyinnl.org/finances/scholarships"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Orange Knowledge Programme ended in 2024 (official page). Netherlands Fellowship Programme page not found (404); third-party sites list Cameroon but status unverified. Cameroon eligible only via 'non-EEA' rule; participating institutions change yearly.",
+    "fr": {
+      "nom": "NL Scholarship (ex-Holland Scholarship)",
+      "resume": "Bourse de 5 000 € pour étudiants hors EEE en licence ou master aux Pays-Bas.",
+      "couverture_detail": "5 000 € versés la première année.",
+      "diplome": "Nationalité hors EEE ; admission à temps plein dans un établissement participant ; pas de diplôme néerlandais déjà obtenu.",
+      "autres": [
+        "Conditions propres à chaque établissement."
+      ],
+      "conseil": "Candidatez d'abord à l'établissement néerlandais : il gère la bourse.",
+      "edition_note": "Les dates 2027/28 ne sont pas sur la page lue (2026/27 : ouverture le 1er nov. 2025). Dates fixées par chaque établissement."
+    },
+    "en": {
+      "nom": "NL Scholarship (formerly Holland Scholarship)",
+      "resume": "€5,000 scholarship for non-EEA students in bachelor's or master's studies in the Netherlands.",
+      "couverture_detail": "€5,000 paid in the first year.",
+      "diplome": "Non-EEA nationality; full-time admission at a participating institution; no prior Dutch degree.",
+      "autres": [
+        "Institution-specific requirements."
+      ],
+      "conseil": "Apply first to the Dutch institution: it handles the scholarship.",
+      "edition_note": "2027/28 dates not on the page read (2026/27 opened 1 Nov 2025). Deadlines set by each institution."
+    }
+  },
+  {
+    "id": "clarendon",
+    "organisme": "Université d'Oxford",
+    "pays_accueil": [
+      "Royaume-Uni"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "cloture_mois": "décembre–janvier"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon",
+    "sources": [
+      {
+        "titre": "Clarendon Fund - Oxford",
+        "url": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Details from a search summary of official ox.ac.uk pages (direct fetch 403). UK student visas for Cameroonians abroad suspended since 26 March 2026; practically blocked unless lifted.",
+    "fr": {
+      "nom": "Bourses Clarendon (Oxford)",
+      "resume": "Bourse complète d'Oxford pour master ou DPhil, attribuée automatiquement aux meilleurs dossiers.",
+      "couverture_detail": "Frais de cours complets et allocation de vie d'au moins 20 780 £ en 2025-26.",
+      "diplome": "Excellent dossier académique, souvent premier class honours ou équivalent.",
+      "autres": [
+        "Aucune restriction de nationalité.",
+        "Pas de candidature séparée : considération automatique.",
+        "Hors certificats/diplômes postgraduate."
+      ],
+      "dossier": [
+        "Candidature d'admission à Oxford avant la date limite du cours"
+      ],
+      "conseil": "Visez la date de décembre quand elle existe pour maximiser vos chances.",
+      "edition_note": "Il faut déposer sa candidature au cursus avant la date de décembre ou janvier propre au cours ; dates exactes non lues."
+    },
+    "en": {
+      "nom": "Clarendon Scholarships (Oxford)",
+      "resume": "Fully funded Oxford award for master's or DPhil, given automatically to top applications.",
+      "couverture_detail": "Full course fees and living grant of at least £20,780 in 2025-26.",
+      "diplome": "Excellent academic record, usually first-class honours or equivalent.",
+      "autres": [
+        "No nationality restriction.",
+        "No separate application: automatic consideration.",
+        "Postgraduate certificates/diplomas excluded."
+      ],
+      "dossier": [
+        "Oxford admission application by the course deadline"
+      ],
+      "conseil": "Aim for the earlier December deadline where one exists.",
+      "edition_note": "Apply to the course by its December or January deadline; exact dates not read."
+    }
+  },
+  {
+    "id": "jads-afdb",
+    "organisme": "Banque africaine de développement / Japon",
+    "pays_accueil": [
+      "Japon"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "ingenierie",
+      "agronomie-environnement",
+      "economie-gestion",
+      "sante"
+    ],
+    "couverture_niveau": "complete",
+    "age_max": 35,
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.afdb.org/en/about-us/careers/japan-africa-dream-scholarship-jads-program",
+    "sources": [
+      {
+        "titre": "JADS Programme - AfDB",
+        "url": "https://www.afdb.org/en/about-us/careers/japan-africa-dream-scholarship-jads-program"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "afdb.org pages returned 403 on direct fetch; facts come from search summaries of official afdb.org pages. Cameroon is an AfDB regional member (not stated on page read). Fields not verified; a third party gave 15 Sept 2026 as the last deadline.",
+    "fr": {
+      "nom": "Japan Africa Dream Scholarship (JADS) - BAD",
+      "resume": "Bourse BAD-Japon pour master au Japon (énergie, développement) destinée aux jeunes professionnels africains.",
+      "couverture_detail": "Frais de scolarité, allocation mensuelle pendant 24 mois, billets aller-retour.",
+      "diplome": "Licence (obtenue il y a moins de 3 ans) et au moins 1 an d'emploi rémunéré.",
+      "langue": "Test d'anglais TOEFL iBT ou TOEIC.",
+      "autres": [
+        "Citoyen d'un pays membre régional de la BAD.",
+        "Bonne santé ; pas déjà inscrit en master.",
+        "Candidature via les universités partenaires."
+      ],
+      "dossier": [
+        "CV",
+        "Preuve d'emploi",
+        "Copie certifiée du diplôme",
+        "2 références professionnelles",
+        "Projet de recherche",
+        "TOEFL iBT ou TOEIC"
+      ],
+      "conseil": "Postulez d'abord à l'université japonaise partenaire ; la BAD ne reçoit pas de dossier direct.",
+      "edition_note": "Dates variables selon l'université partenaire ; aucun appel daté lu."
+    },
+    "en": {
+      "nom": "Japan Africa Dream Scholarship (JADS) - AfDB",
+      "resume": "AfDB-Japan scholarship for a master's in Japan aimed at young African professionals.",
+      "couverture_detail": "Tuition, monthly stipend for 24 months, return flights.",
+      "diplome": "Bachelor's within the past 3 years and at least 1 year of paid employment.",
+      "langue": "TOEFL iBT or TOEIC English test.",
+      "autres": [
+        "Citizen of an AfDB regional member country.",
+        "Good health; not already enrolled in a master's.",
+        "Apply through partner universities."
+      ],
+      "dossier": [
+        "CV",
+        "Proof of employment",
+        "Certified degree copy",
+        "2 professional references",
+        "Research plan",
+        "TOEFL iBT or TOEIC"
+      ],
+      "conseil": "Apply to the partner Japanese university first; the AfDB takes no direct applications.",
+      "edition_note": "Dates vary by partner university; no dated call read."
+    }
+  },
+  {
+    "id": "mo-ibrahim-leadership",
+    "organisme": "Mo Ibrahim Foundation",
+    "pays_accueil": [
+      "Côte d'Ivoire",
+      "Éthiopie",
+      "Suisse"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "age_max": 40,
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://mo.ibrahim.foundation/fellowships",
+    "sources": [
+      {
+        "titre": "Mo Ibrahim Foundation Fellowships",
+        "url": "https://mo.ibrahim.foundation/fellowships"
+      },
+      {
+        "titre": "Opportunity Desk (tiers)",
+        "url": "https://opportunitydesk.org/2026/09/24/mo-ibrahim-foundation-leadership-fellowship-program-2027/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Not a study scholarship (professional fellowship). Cameroon eligible as any African national. Closing date only from third party.",
+    "fr": {
+      "nom": "Mo Ibrahim Foundation Leadership Fellowship",
+      "resume": "Fellowship de 12 mois pour cadres africains confirmés auprès de la BAD, la CEA ou l'ITC.",
+      "couverture_detail": "Indemnité de 100 000 $ sur 12 mois ; poste dans un cabinet de direction (BAD, CEA, ITC).",
+      "diplome": "Master et au moins 7 ans d'expérience pertinente.",
+      "autres": [
+        "Nationalité d'un pays africain.",
+        "Limite 45 ans pour les femmes avec enfants.",
+        "Critères additionnels de l'organisation hôte."
+      ],
+      "dossier": [
+        "Candidature sur la page de l'hôte (BAD, CEA ou ITC)"
+      ],
+      "conseil": "Choisissez l'hôte puis suivez son annonce : documents et dates diffèrent.",
+      "edition_note": "Page officielle : candidatures 2027 ouvertes, sans date limite. Un site tiers indique le 20 novembre 2026 (non confirmé)."
+    },
+    "en": {
+      "nom": "Mo Ibrahim Foundation Leadership Fellowship",
+      "resume": "12-month fellowship for experienced African professionals at the AfDB, UNECA or ITC.",
+      "couverture_detail": "$100,000 stipend over 12 months; placement in an executive office (AfDB, UNECA, ITC).",
+      "diplome": "Master's and at least 7 years of relevant experience.",
+      "autres": [
+        "African nationality.",
+        "Age limit 45 for women with children.",
+        "Extra criteria set by the host organisation."
+      ],
+      "dossier": [
+        "Application on the host's page (AfDB, UNECA or ITC)"
+      ],
+      "conseil": "Pick a host then follow its listing: documents and dates differ.",
+      "edition_note": "Official page: 2027 applications open, no closing date shown. A third-party site gives 20 Nov 2026 (unconfirmed)."
+    }
+  },
+  {
+    "id": "alu-mastercard",
+    "organisme": "African Leadership University",
+    "pays_accueil": [
+      "Rwanda"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "licence"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle"
+    },
+    "edition": {
+      "libelle": "Rentrée 2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.alueducation.com/admissions/",
+    "sources": [
+      {
+        "titre": "ALU Admissions",
+        "url": "https://www.alueducation.com/admissions/"
+      },
+      {
+        "titre": "ALU - Mastercard Foundation",
+        "url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/african-leadership-university-alu/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Open to Africans per Mastercard page; Cameroon not specifically named. Admissions page says Mastercard slots limited.",
+    "fr": {
+      "nom": "Bourses ALU (African Leadership University / Mastercard Foundation)",
+      "resume": "Bourses complètes ou partielles pour la licence à ALU à Kigali.",
+      "couverture_detail": "Bourse Mastercard Foundation complète (places limitées) ; aides ALU sur critères financiers, parfois partielles.",
+      "diplome": "Examens secondaires nationaux finaux et équivalent A-Level.",
+      "langue": "Anglais niveau B2.",
+      "autres": [
+        "Potentiel de leadership et mission claire.",
+        "Certificat d'équivalence pour études hors Rwanda."
+      ],
+      "dossier": [
+        "Relevés de notes 10e-12e et examen national",
+        "Pièce d'identité",
+        "CV et recommandations (conseillés)",
+        "Certificat d'équivalence avant inscription"
+      ],
+      "conseil": "Remplissez l'étape Finances pour être considéré pour une bourse.",
+      "edition_note": "Dates non publiées sur les pages lues ; des sites tiers donnent des dates contradictoires (1er ou 30 nov. 2026)."
+    },
+    "en": {
+      "nom": "African Leadership University scholarships (Mastercard Foundation)",
+      "resume": "Full or partial scholarships for the undergraduate degree at ALU in Kigali.",
+      "couverture_detail": "Full Mastercard Foundation scholarship (limited slots); need-based ALU aid, sometimes partial.",
+      "diplome": "Final national secondary exams and A-Level equivalent.",
+      "langue": "English B2 level.",
+      "autres": [
+        "Leadership potential and clear mission.",
+        "Equivalence certificate for non-Rwandan schooling."
+      ],
+      "dossier": [
+        "Grade 10-12 transcripts and national exam",
+        "ID",
+        "CV and recommendations (recommended)",
+        "Equivalence certificate before enrollment"
+      ],
+      "conseil": "Complete the Finances stage to be considered for aid.",
+      "edition_note": "Dates not on the pages read; third-party sites conflict (1 or 30 Nov 2026)."
+    }
+  },
+  {
+    "id": "minesup-bourses-cooperation",
+    "organisme": "MINESUP (Ministère de l'Enseignement supérieur)",
+    "pays_accueil": [
+      "Algérie",
+      "Chine",
+      "Inde",
+      "Suisse",
+      "Tunisie",
+      "autres"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat",
+      "postdoc"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "irreguliere"
+    },
+    "edition": {
+      "libelle": "2026/2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.minesup.gov.cm/index.php/category/bourses/",
+    "sources": [
+      {
+        "titre": "MINESUP - rubrique Bourses",
+        "url": "https://www.minesup.gov.cm/index.php/category/bourses/"
+      },
+      {
+        "titre": "Communiqué Algérie 205 bourses (13/08/2026)",
+        "url": "https://www.minesup.gov.cm/index.php/2026/08/13/communique-radio-presse-48/"
+      },
+      {
+        "titre": "Communiqué Chine 13 bourses 2025/2026",
+        "url": "https://www.minesup.gov.cm/index.php/2024/11/29/scholarships-of-the-government-of-the-peoples-republic-of-china-bourses-du-gouvernement-de-la-republique-populaire-de-chine/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Rubrique lue, mais les PDF des offres n'ont pas été lus. Aucun communiqué MINESUP sur les bourses d'excellence nationales ni sur la manière de candidater n'a été trouvé. Les listes détaillées par pays viennent des seuls titres des pages.",
+    "fr": {
+      "nom": "Bourses étrangères offertes via le gouvernement camerounais (MINESUP)",
+      "resume": "Le MINESUP relaie les bourses offertes au Cameroun par des États étrangers. Les conditions et dates sont dans le PDF de chaque communiqué.",
+      "couverture_detail": "Chaque pays donateur fixe ses avantages. Il faut lire le communiqué de chaque offre.",
+      "diplome": "Varie selon l'offre (licence, master ou doctorat).",
+      "langue": "Selon le pays d'accueil.",
+      "autres": [
+        "Les communiqués du MINESUP annoncent les offres. Les détails sont dans des PDF joints.",
+        "Contact du ministère : sdacl@minesup.gov.cm."
+      ],
+      "dossier": [
+        "Suivre la rubrique Bourses du site MINESUP",
+        "Ouvrir le PDF de chaque communiqué pour la date limite et les pièces",
+        "Préparer diplômes, relevés de notes, acte de naissance, passeport"
+      ],
+      "conseil": "Visite la rubrique Bourses du MINESUP chaque semaine. Les délais sont souvent courts.",
+      "edition_note": "Offres récentes: Algérie (205 bourses, 2026/2027, communiqué du 13 août 2026) et Inde via IAESTE (150 bourses partielles, 5 juin 2026). Aucune date limite n'est écrite sur les pages."
+    },
+    "en": {
+      "nom": "Foreign scholarships offered through the Cameroonian government (MINESUP)",
+      "resume": "MINESUP relays scholarships that foreign states offer to Cameroon. Conditions and dates are in the PDF of each notice.",
+      "couverture_detail": "Each donor country sets its own benefits. Read the notice of each offer.",
+      "diplome": "Depends on the offer (licence, master or doctorate).",
+      "langue": "Depends on the host country.",
+      "autres": [
+        "MINESUP notices announce the offers. Details are in attached PDFs.",
+        "Ministry contact: sdacl@minesup.gov.cm."
+      ],
+      "dossier": [
+        "Follow the Bourses section of the MINESUP site",
+        "Open the PDF of each notice for the deadline and documents",
+        "Prepare diplomas, transcripts, birth certificate, passport"
+      ],
+      "conseil": "Check the MINESUP Bourses section every week. Deadlines are often short.",
+      "edition_note": "Recent offers: Algeria (205 scholarships, 2026/2027, notice of 13 Aug 2026) and India via IAESTE (150 partial scholarships, 5 Jun 2026). No deadline is written on the pages."
+    }
+  },
+  {
+    "id": "ares-formations-internationales",
+    "organisme": "ARES (Belgique, Fédération Wallonie-Bruxelles)",
+    "pays_accueil": [
+      "Belgique"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "août",
+      "cloture_mois": "septembre"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "ouverture": "2026-08-03",
+      "cloture": "2026-09-18",
+      "confirme": true
+    },
+    "lien_officiel": "https://www.ares-ac.be/en/scholarships",
+    "sources": [
+      {
+        "titre": "ARES - Bourses Formations internationales",
+        "url": "https://www.ares-ac.be/en/scholarships"
+      },
+      {
+        "titre": "ARES - Master conservation préventive (appel clos, prochain en août 2027)",
+        "url": "https://www.ares-ac.be/fr/master-de-specialisation-en-conservation-preventive-et-gestion-des-collections"
+      },
+      {
+        "titre": "ARES - Bourses de voyage",
+        "url": "https://www.ares-ac.be/en/travel-scholarships"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "La liste des 31 pays n'a pas été lue sur le site officiel, donc la présence du Cameroun est non confirmée (des pages d'universités belges l'indiquent pour les bourses de voyage). Le début d'ouverture (3 août 2026) vient de la fiche d'un master de spécialisation. Les bourses de voyage ARES passent par l'établissement d'origine.",
+    "fr": {
+      "nom": "Bourses ARES Formations internationales",
+      "resume": "L'ARES finance des formations en Belgique francophone pour des résidents de pays partenaires. L'appel 2027-2028 est clos.",
+      "couverture_detail": "La page officielle ne décrit pas le montant. Elle parle de bachelier, master de spécialisation d'un an ou formation continue de six mois.",
+      "diplome": "Diplôme de l'enseignement supérieur et expérience professionnelle.",
+      "langue": "Selon la formation (souvent le français).",
+      "autres": [
+        "Résider dans un pays partenaire de l'ARES (31 pays en Afrique, Amérique du Sud et Asie).",
+        "Vouloir se former sur un sujet de développement."
+      ],
+      "dossier": [
+        "Voir le catalogue des formations sur le site ARES",
+        "Formulaire en ligne ARES",
+        "Pièces: voir le texte complet de l'appel"
+      ],
+      "conseil": "Prépare ton dossier dès juillet 2027 et lis le catalogue des formations. Les masters de spécialisation en patrimoine ou en gestion peuvent convenir aux lettres.",
+      "edition_note": "L'appel 2027-2028 est clos (date limite le 18 septembre 2026). Le prochain appel est annoncé pour août 2027, sans date exacte."
+    },
+    "en": {
+      "nom": "ARES International Training scholarships",
+      "resume": "ARES funds training in French-speaking Belgium for residents of partner countries. The 2027-2028 call is closed.",
+      "couverture_detail": "The official page does not describe the amount. It lists a bachelor's, a one-year specialisation master, or a six-month continuing course.",
+      "diplome": "A higher education degree and professional experience.",
+      "langue": "Depends on the course (often French).",
+      "autres": [
+        "Be a permanent resident of an ARES partner country (31 countries in Africa, South America and Asia).",
+        "Want training on a development topic."
+      ],
+      "dossier": [
+        "See the training catalogue on the ARES site",
+        "ARES online form",
+        "Documents: see the full call text"
+      ],
+      "conseil": "Prepare your file from July 2027 and read the training catalogue. Specialisation masters in heritage or management may suit humanities students.",
+      "edition_note": "The 2027-2028 call is closed (deadline 18 September 2026). The next call is announced for August 2027, with no exact date."
+    }
+  },
+  {
+    "id": "vlir-uos-icp",
+    "organisme": "VLIR-UOS (Belgique, Flandre)",
+    "pays_accueil": [
+      "Belgique"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "licence",
+      "master"
+    ],
+    "domaines": [
+      "economie-gestion",
+      "droit-politique",
+      "agronomie-environnement",
+      "ingenierie",
+      "informatique",
+      "sante"
+    ],
+    "couverture_niveau": "complete",
+    "age_max": 35,
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "octobre"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.vliruos.be/en/scholarships/",
+    "sources": [
+      {
+        "titre": "VLIR-UOS - Scholarships",
+        "url": "https://www.vliruos.be/en/scholarships/"
+      },
+      {
+        "titre": "VLIR-UOS - Liste des pays ICP",
+        "url": "https://www.vliruos.be/country-list-icp-scholarships"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Plusieurs programmes sont sciences/techniques. La page ne liste pas les pièces. Les domaines indiqués sont une lecture des intitulés de programmes.",
+    "fr": {
+      "nom": "Bourses VLIR-UOS ICP Connect (Flandre)",
+      "resume": "VLIR-UOS finance des programmes en anglais dans des universités flamandes. Le Cameroun figure sur la liste des pays éligibles.",
+      "couverture_detail": "Frais d'études, voyage, assurance et frais de vie pendant toute la durée du programme.",
+      "diplome": "Diplôme selon le programme. Master avancé: limite d'âge 45 ans.",
+      "langue": "Programmes en anglais.",
+      "autres": [
+        "Avoir la nationalité d'un pays éligible et y résider au moment de la candidature.",
+        "Pas de bourse belge antérieure.",
+        "Un seul programme ICP par an.",
+        "Pour les masters avancés comme Gouvernance et développement, préférence pour les agents de l'enseignement, de l'État ou de la société civile."
+      ],
+      "dossier": [
+        "Candidature sur le site de l'université et de la bourse",
+        "Pièces: voir la page de chaque programme"
+      ],
+      "conseil": "Pour les lettres et le droit, vise les masters avancés Governance and Development, Globalisation and Development ou Development Evaluation. L'âge limite est mesuré au 1er janvier.",
+      "edition_note": "L'appel 2026-2027 est clos. L'appel 2027-2028 devrait s'ouvrir fin octobre 2026. Les dates limites seront publiées sur chaque programme."
+    },
+    "en": {
+      "nom": "VLIR-UOS ICP Connect scholarships (Flanders)",
+      "resume": "VLIR-UOS funds English-taught programmes at Flemish universities. Cameroon is on the eligible country list.",
+      "couverture_detail": "Tuition, travel, insurance and living costs for the full programme.",
+      "diplome": "Degree depends on the programme. Advanced master: age limit 45.",
+      "langue": "Programmes taught in English.",
+      "autres": [
+        "Hold the nationality of an eligible country and live in one when applying.",
+        "No previous Belgian government scholarship.",
+        "Apply to one ICP programme per year.",
+        "Advanced masters such as Governance and Development prefer people from education, government or civil society."
+      ],
+      "dossier": [
+        "Apply via the university and scholarship form",
+        "Documents: see each programme page"
+      ],
+      "conseil": "For humanities and law, look at the advanced masters Governance and Development, Globalisation and Development or Development Evaluation. Age is counted on 1 January.",
+      "edition_note": "The 2026-2027 call is closed. The 2027-2028 call is expected to open at the end of October 2026. Deadlines will be on each programme page."
+    }
+  },
+  {
+    "id": "auf-pimef",
+    "organisme": "AUF (Agence universitaire de la Francophonie)",
+    "pays_accueil": [
+      "autres"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "irreguliere"
+    },
+    "edition": {
+      "libelle": "2026/27",
+      "cloture": "2027-03-15",
+      "confirme": false
+    },
+    "lien_officiel": "https://appels-propositions.auf.org/en/",
+    "sources": [
+      {
+        "titre": "Plateforme AUF des appels à propositions",
+        "url": "https://appels-propositions.auf.org/en/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Page de 115 000 caractères lue sur 100 000; pas de détail du PIMEF. Une recherche web n'a pas confirmé de nouvel appel. La page officielle des bourses AUF a répondu 403. Date de clôture non confirmée sur la fiche de l'appel, donc confirme=false.",
+    "fr": {
+      "nom": "AUF - PIMEF (mobilité professionnelle, appel à manifestation d'intérêt)",
+      "resume": "L'AUF publie plusieurs appels par an pour étudiants membres. Aucune bourse AUF dédiée aux Camerounais n'a été trouvée ouverte.",
+      "couverture_detail": "Non précisé sur la page de l'appel.",
+      "diplome": "Étudiant d'un établissement membre de l'AUF.",
+      "langue": "Français.",
+      "autres": [
+        "La liste des pays et les critères détaillés ne sont pas sur la page lue."
+      ],
+      "dossier": [
+        "Voir la plateforme des appels AUF"
+      ],
+      "conseil": "Vérifie si ton université est membre de l'AUF. Suis la plateforme des appels, car les appels changent souvent.",
+      "edition_note": "La plateforme AUF affiche une clôture au 15/03/2027 à 23h59 (Paris) pour la composante professionnelle. Ouverture et critères non lus."
+    },
+    "en": {
+      "nom": "AUF - PIMEF (professional mobility, expression of interest)",
+      "resume": "The AUF publishes several calls a year for member students. No AUF scholarship specific to Cameroonians was found open.",
+      "couverture_detail": "Not stated on the call page.",
+      "diplome": "Student of an AUF member institution.",
+      "langue": "French.",
+      "autres": [
+        "Country list and detailed criteria are not on the page read."
+      ],
+      "dossier": [
+        "See the AUF calls platform"
+      ],
+      "conseil": "Check if your university is an AUF member. Follow the calls platform, because calls change often.",
+      "edition_note": "The AUF platform shows a closing date of 15/03/2027 23:59 (Paris) for the professional component. Opening date and criteria not read."
+    }
+  },
+  {
+    "id": "quebec-pbeee",
+    "organisme": "Fonds de recherche du Québec / Ministère de l'Enseignement supérieur du Québec",
+    "pays_accueil": [
+      "Canada"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master",
+      "doctorat",
+      "postdoc",
+      "autre"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "juillet",
+      "cloture_mois": "décembre"
+    },
+    "edition": {
+      "libelle": "2027/28",
+      "cloture": "2026-12-02",
+      "confirme": true
+    },
+    "lien_officiel": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/",
+    "sources": [
+      {
+        "titre": "FRQ - PBEEE 2027-2028",
+        "url": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/"
+      },
+      {
+        "titre": "FRQ - Règles PBEEE 2026-2027 (PDF)",
+        "url": "https://frq.gouv.qc.ca/app/uploads/2025/07/8.pbeee_2026-2027_vf-approuvee_abida-4.pdf"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "La liste de documents vient du règlement 2026-2027; celui de 2027-2028 n'a pas été lu. La page FRQ parle du secteur Nature et technologies; le règlement 2026-2027 couvre tous les secteurs. Remplace la bourse 'Québec-Cameroun' trouvée: elle est réservée aux Québécois qui vont au Cameroun, donc non retenue.",
+    "fr": {
+      "nom": "Bourses d'excellence du Québec pour étudiants étrangers (PBEEE)",
+      "resume": "Le PBEEE finance des étudiants étrangers en maîtrise de recherche, doctorat ou postdoc au Québec, dans tous les domaines. Il faut être présélectionné par l'université.",
+      "couverture_detail": "Maîtrise de recherche: 20 000 $/an. Doctorat: 25 000 $/an. Postdoc: 35 000 $. Court séjour: 3 000 $/mois. Exemption des droits majorés et assurance maladie RAMQ.",
+      "diplome": "Maîtrise de recherche (avec mémoire) ou doctorat de recherche dans une université québécoise. Pas de programme professionnel.",
+      "langue": "Français ou anglais.",
+      "autres": [
+        "Ne pas être citoyen canadien ni résident permanent.",
+        "Être présélectionné par une université québécoise (voie générale: tous les pays, sans quota).",
+        "Maîtrise: au plus 3 sessions à temps plein avant le 1er mai 2027.",
+        "Sciences humaines, arts et lettres admis."
+      ],
+      "dossier": [
+        "Passeport",
+        "Relevés de notes de toutes les études universitaires",
+        "Autres pièces: voir les règles du concours (FRQnet)"
+      ],
+      "conseil": "Contacte tout de suite un professeur d'une université québécoise: la présélection est le 27 octobre 2026. Un candidat doit d'abord être admis ou en cours de demande.",
+      "edition_note": "Lancement en juillet 2026 (jour non précisé). Présélection par l'université au plus tard le 27 octobre 2026 à 16 h. Demande au FRQ le 2 décembre 2026 à 16 h (HNE). Résultats en avril 2027."
+    },
+    "en": {
+      "nom": "Quebec Merit Scholarships for Foreign Students (PBEEE)",
+      "resume": "PBEEE funds foreign students in research master's, PhD or postdoc in Quebec, in all fields. The university must preselect you first.",
+      "couverture_detail": "Research master's: CAD 20,000/year. PhD: CAD 25,000/year. Postdoc: CAD 35,000. Short stay: CAD 3,000/month. Exemption from higher fees and RAMQ health cover.",
+      "diplome": "Research master's (with thesis) or research PhD at a Quebec university. No professional programmes.",
+      "langue": "French or English.",
+      "autres": [
+        "Not a Canadian citizen or permanent resident.",
+        "Be preselected by a Quebec university (general stream: all countries, no quota).",
+        "Master's: at most 3 full-time terms before 1 May 2027.",
+        "Humanities and arts are eligible."
+      ],
+      "dossier": [
+        "Passport",
+        "Transcripts of all university studies",
+        "Other documents: see the competition rules (FRQnet)"
+      ],
+      "conseil": "Contact a professor at a Quebec university right away: preselection is on 27 October 2026. You need an admission or an admission request first.",
+      "edition_note": "Launched in July 2026 (day not stated). University preselection by 27 October 2026, 4 pm. Application to FRQ on 2 December 2026, 4 pm (EST). Results in April 2027."
+    }
+  },
+  {
+    "id": "quebec-exemption-droits",
+    "organisme": "Ministère de l'Enseignement supérieur du Québec",
+    "pays_accueil": [
+      "Canada"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "licence",
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "partielle",
+    "cycle": {
+      "type": "irreguliere"
+    },
+    "edition": {
+      "libelle": "En continu",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.quebec.ca/education/etudier-quebec/aide-financiere-etudiants-internationaux/exemption-droits-scolarite-ententes",
+    "sources": [
+      {
+        "titre": "Québec - Exemption des droits de scolarité (ententes)",
+        "url": "https://www.quebec.ca/education/etudier-quebec/aide-financiere-etudiants-internationaux/exemption-droits-scolarite-ententes"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Cameroun non vérifié: la liste des pays est dans un PDF non lu. Un texte d'entente Québec-Cameroun existe dans des archives, version en vigueur non vérifiée.",
+    "fr": {
+      "nom": "Exemption des droits de scolarité supplémentaires (Québec, ententes)",
+      "resume": "Une quarantaine de pays ont une entente avec le Québec pour ces exemptions. La page ne nomme pas le Cameroun.",
+      "couverture_detail": "Les étudiants paient les droits de scolarité des Québécois au lieu des droits majorés. Pas d'allocation de vie.",
+      "diplome": "Admission dans une université québécoise.",
+      "langue": "Français ou anglais.",
+      "autres": [
+        "Être recommandé par le responsable des exemptions de son pays.",
+        "Permis d'études et CAQ.",
+        "Études à temps plein."
+      ],
+      "dossier": [
+        "Lettre d'admission d'une université québécoise",
+        "Formulaire annexe II signé",
+        "Permis d'études et CAQ"
+      ],
+      "conseil": "Demande d'abord quelle est la procédure du Cameroun. N'envoie pas ta demande au ministère: elle ne sera pas lue.",
+      "edition_note": "Aucune date limite sur la page. Il faut demander les critères au responsable de ton pays."
+    },
+    "en": {
+      "nom": "Quebec exemption of supplementary tuition fees (agreements)",
+      "resume": "About forty countries have an agreement with Quebec for these exemptions. The page does not name Cameroon.",
+      "couverture_detail": "Students pay Quebec-resident tuition instead of the higher international fees. No living allowance.",
+      "diplome": "Admission to a Quebec university.",
+      "langue": "French or English.",
+      "autres": [
+        "Be recommended by your country's exemption manager.",
+        "Hold a study permit and CAQ.",
+        "Study full-time."
+      ],
+      "dossier": [
+        "Admission letter from a Quebec university",
+        "Signed annex II form",
+        "Study permit and CAQ"
+      ],
+      "conseil": "First ask about the Cameroon procedure. Do not send your request to the ministry: it will not be read.",
+      "edition_note": "No deadline on the page. Ask your country's manager for the criteria."
+    }
+  },
+  {
+    "id": "boell-etude-allemagne",
+    "organisme": "Heinrich-Böll-Stiftung",
+    "pays_accueil": [
+      "Allemagne"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "janvier",
+      "cloture_mois": "mars"
+    },
+    "edition": {
+      "libelle": "Printemps 2027",
+      "ouverture": "2027-01-15",
+      "cloture": "2027-03-01",
+      "confirme": true
+    },
+    "lien_officiel": "https://www.boell.de/en/applying-scholarship",
+    "sources": [
+      {
+        "titre": "Heinrich Böll Stiftung - Applying for a scholarship",
+        "url": "https://www.boell.de/en/applying-scholarship"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "'Pays du CAD' est lu comme pays receveurs d'aide; l'éligibilité du Cameroun n'est pas écrite, donc non_precise. Contradiction sur le master après le 1er mars 2027.",
+    "fr": {
+      "nom": "Bourses Heinrich Böll Stiftung pour étudiants internationaux",
+      "resume": "La fondation soutient des étudiants étrangers en master ou doctorat en Allemagne, tous domaines. Le Cameroun n'est pas nommé sur la page.",
+      "couverture_detail": "Le montant n'est pas sur la page lue (voir page 'Financial Support').",
+      "diplome": "Premier diplôme obtenu à l'étranger; master d'au moins 4 semestres, ou doctorat, en Allemagne.",
+      "langue": "Allemand niveau B2 minimum.",
+      "autres": [
+        "Tous domaines acceptés, en université reconnue.",
+        "Engagement civique et rapports d'experts.",
+        "Réservé aux pays de l'UE et du CAD (OCDE); priorité aux candidats du CAD hors Allemagne."
+      ],
+      "dossier": [
+        "Dossier en ligne uniquement",
+        "Certificat d'inscription ou d'admission (peut venir plus tard)",
+        "Rapports d'experts et référence d'engagement civique"
+      ],
+      "conseil": "Il faut déjà un niveau d'allemand B2: commence tôt. Écris à la fondation pour clarifier la règle du 1er mars 2027.",
+      "edition_note": "Deux tours par an (1er mars et 1er septembre). Le tour d'automne 2026 s'est clos le 1er septembre 2026. La page dit aussi qu'à partir du 1er mars 2027, seules les candidatures au premier cycle seront acceptées, ce qui contredit la partie master: à vérifier."
+    },
+    "en": {
+      "nom": "Heinrich Böll Foundation scholarships for international students",
+      "resume": "The foundation backs foreign students for a master's or PhD in Germany, all fields. Cameroon is not named on the page.",
+      "couverture_detail": "Amount not on the page read (see 'Financial Support' page).",
+      "diplome": "First degree earned abroad; a master of at least 4 semesters, or a PhD, in Germany.",
+      "langue": "German level B2 minimum.",
+      "autres": [
+        "All disciplines at a state-recognised university.",
+        "Civic engagement and expert reports.",
+        "Open to EU and DAC (OECD) countries; priority to DAC applicants not yet in Germany."
+      ],
+      "dossier": [
+        "Online application only",
+        "Enrolment or admission certificate (can come later)",
+        "Expert reports and a civic-engagement reference"
+      ],
+      "conseil": "You need German B2 already: start early. Write to the foundation to clarify the 1 March 2027 rule.",
+      "edition_note": "Two rounds a year (1 March and 1 September). The fall 2026 round closed on 1 September 2026. The page also says that from 1 March 2027 only first-cycle applications will be accepted, which conflicts with the master section: check."
+    }
+  },
+  {
+    "id": "kas-ausland",
+    "organisme": "Konrad-Adenauer-Stiftung (KAS)",
+    "pays_accueil": [
+      "Allemagne"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "variable",
+    "cycle": {
+      "type": "annuelle",
+      "cloture_mois": "juillet"
+    },
+    "edition": {
+      "libelle": "2027",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.kas.de/en/web/begabtenfoerderung-und-kultur/international-talent-development",
+    "sources": [
+      {
+        "titre": "KAS - International talent development",
+        "url": "https://www.kas.de/en/web/begabtenfoerderung-und-kultur/international-talent-development"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Date du 15 juillet sans année sur la page, donc confirme=false. Cameroun non nommé. Courriel du bureau tiré d'une base DAAD (résultat de recherche), pas de la page lue.",
+    "fr": {
+      "nom": "Bourses Konrad-Adenauer-Stiftung pour étudiants internationaux",
+      "resume": "La KAS finance des étudiants et doctorants étrangers en Allemagne, avec engagement civique. Il faut un niveau B2 en allemand.",
+      "couverture_detail": "Master: jusqu'à 992 euros par mois (2 ans). Doctorat: jusqu'à 1 400 euros par mois (3 ans). Aides sur demande: assurance, famille.",
+      "diplome": "Master de 4 semestres en Allemagne, ou doctorat.",
+      "langue": "Allemand B2 obligatoire, même pour un cursus en anglais.",
+      "autres": [
+        "Tous domaines, sauf médecine humaine, dentisterie et spécialisation médicale.",
+        "Surtout pour les non-européens; aucune nationalité n'est citée.",
+        "Candidature depuis l'étranger possible via certains bureaux KAS locaux seulement."
+      ],
+      "dossier": [
+        "Documents en allemand: voir les 'Notes on Applying' de la KAS",
+        "Relevés de notes",
+        "Lettres de recommandation (allemand ou anglais)"
+      ],
+      "conseil": "Écris à auslaenderfoerderung@kas.de pour savoir si un bureau accepte les Camerounais. Commence le cours d'allemand tôt.",
+      "edition_note": "La page donne le 15 juillet de chaque année à 12h (CET) pour la sélection depuis l'Allemagne. Aucun bureau KAS au Cameroun n'est cité pour 2026."
+    },
+    "en": {
+      "nom": "Konrad Adenauer Foundation scholarships for international students",
+      "resume": "KAS funds foreign students and PhD candidates in Germany, with civic engagement. German B2 is required.",
+      "couverture_detail": "Master's: up to 992 euros a month (2 years). PhD: up to 1,400 euros a month (3 years). Extras on request: insurance, family.",
+      "diplome": "A 4-semester master in Germany, or a PhD.",
+      "langue": "German B2 required, even for English-taught courses.",
+      "autres": [
+        "All subjects except human medicine, dentistry and medical specialisation.",
+        "Mainly for non-EU applicants; no nationality is named.",
+        "Applying from abroad is possible only through some local KAS offices."
+      ],
+      "dossier": [
+        "Documents: see KAS 'Notes on Applying'",
+        "Transcripts",
+        "Recommendation letters (German or English)"
+      ],
+      "conseil": "Write to the KAS office to ask if Cameroonians can apply. Start German lessons early.",
+      "edition_note": "The page gives 15 July each year at noon (CET) for selection from Germany. No KAS office in Cameroon is named for 2026."
+    }
+  },
+  {
+    "id": "aecid-africa-med",
+    "organisme": "AECID (Coopération espagnole)",
+    "pays_accueil": [
+      "Espagne"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master"
+    ],
+    "domaines": [
+      "tous"
+    ],
+    "couverture_niveau": "complete",
+    "cycle": {
+      "type": "annuelle",
+      "ouverture_mois": "juillet",
+      "cloture_mois": "juillet"
+    },
+    "edition": {
+      "libelle": "2026/27 (clos)",
+      "ouverture": "2026-07-02",
+      "cloture": "2026-07-15",
+      "confirme": false
+    },
+    "lien_officiel": "https://www.aecid.es/es/becas-y-lectorados",
+    "sources": [
+      {
+        "titre": "AECID - Becas y lectorados",
+        "url": "https://www.aecid.es/es/becas-y-lectorados"
+      },
+      {
+        "titre": "Ambassade d'Espagne - Africa-Med Máster 2026/27",
+        "url": "https://exteriores.gob.es/Embajadas/libreville/es/Comunicacion/Noticias/Paginas/Articulos/Convocatoria-de-becas-MAEC-AECID-20262027-Programa-%c3%81frica-Med-M%c3%a1ster.aspx"
+      },
+      {
+        "titre": "BOE 1er juillet 2026",
+        "url": "https://boe.es/boe/dias/2026/07/01/pdfs/BOE-B-2026-22411.pdf"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Informations issues de résumés de recherche web des pages ambassade/BOE; la page aecid.es n'a pas été lue (mise en lien seulement). Dates d'ouverture/clôture non confirmées sur l'officiel, donc confirme=false. Un avis écrit 'Camertin' pour le Cameroun.",
+    "fr": {
+      "nom": "Bourses MAEC-AECID Africa-Med Máster (Espagne)",
+      "resume": "Bourses de master en Espagne pour agents publics d'Afrique et du Moyen-Orient. L'appel 2026/27 est clos.",
+      "couverture_detail": "2 000 euros par mois du 1er septembre 2026 au 31 juillet 2027 (master de 60 ECTS maximum).",
+      "diplome": "Fonctionnaires ou agents publics à poste fixe, dont personnel de l'éducation et des universités.",
+      "langue": "Selon le master (espagnol en général).",
+      "autres": [
+        "Environ 30 bourses.",
+        "Non renouvelable."
+      ],
+      "dossier": [
+        "Voir le BOE du 1er juillet 2026 pour les pièces"
+      ],
+      "conseil": "Ce programme vise les agents publics, donc surtout les enseignants ou fonctionnaires. Surveille aecid.es chaque été.",
+      "edition_note": "Appel 2026/27 clos le 15 juillet 2026. Aucun appel 2027/28 trouvé."
+    },
+    "en": {
+      "nom": "MAEC-AECID Africa-Med Master scholarships (Spain)",
+      "resume": "Master's scholarships in Spain for public staff from Africa and the Middle East. The 2026/27 call is closed.",
+      "couverture_detail": "2,000 euros a month from 1 September 2026 to 31 July 2027 (master of up to 60 ECTS).",
+      "diplome": "Civil servants or permanent public staff, including education and university staff.",
+      "langue": "Depends on the master (usually Spanish).",
+      "autres": [
+        "About 30 scholarships.",
+        "Not renewable."
+      ],
+      "dossier": [
+        "See the BOE of 1 July 2026 for documents"
+      ],
+      "conseil": "This programme targets public staff, so mostly teachers or civil servants. Watch aecid.es each summer.",
+      "edition_note": "2026/27 call closed on 15 July 2026. No 2027/28 call found."
+    }
+  },
+  {
+    "id": "unesco-japan-young-researchers",
+    "organisme": "UNESCO",
+    "pays_accueil": [
+      "Japon"
+    ],
+    "cameroun": "oui",
+    "niveaux": [
+      "master",
+      "doctorat",
+      "postdoc"
+    ],
+    "domaines": [
+      "histoire-geographie",
+      "lettres-langues",
+      "philo-sociologie",
+      "informatique"
+    ],
+    "couverture_niveau": "partielle",
+    "age_max": 40,
+    "cycle": {
+      "type": "annuelle",
+      "cloture_mois": "octobre"
+    },
+    "edition": {
+      "libelle": "Cycle 2026",
+      "cloture": "2026-10-15",
+      "confirme": true
+    },
+    "lien_officiel": "https://www.unesco.org/en/fellowships/keizo-obuchi",
+    "sources": [
+      {
+        "titre": "UNESCO - Programme de bourses UNESCO/Japon",
+        "url": "https://www.unesco.org/en/fellowships/keizo-obuchi"
+      },
+      {
+        "titre": "UNESCO - Annexe 1, États invités (cycle 2026)",
+        "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2026/07/Annex%201%20the%20List%20of%20Invited%20Member%20States%20and%20Associated%20Members%20-%20Cycle%202026.pdf"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Cameroun trouvé par recherche de texte dans le PDF de l'annexe 1. Le programme est surtout pour chercheurs avec master; les domaines sont une lecture des thèmes (patrimoine surtout).",
+    "fr": {
+      "nom": "Bourses UNESCO/Japon pour jeunes chercheurs",
+      "resume": "Aide à la recherche au Japon pour de jeunes chercheurs africains diplômés d'un master. Le cycle 2026 est clos.",
+      "couverture_detail": "Subvention jusqu'à 10 000 dollars US pour 3 à 9 mois de recherche au Japon.",
+      "diplome": "Master ou équivalent au minimum, avec potentiel de recherche.",
+      "langue": "Langue de l'établissement japonais d'accueil.",
+      "autres": [
+        "Être ressortissant d'un État invité (annexe 1 du guide, où figure le Cameroun).",
+        "Accord d'un superviseur japonais.",
+        "Thèmes: patrimoine, IA et société, éducation.",
+        "Candidature via la Commission nationale pour l'UNESCO, 2 candidats par pays max."
+      ],
+      "dossier": [
+        "Formulaire de candidature",
+        "Projet de recherche",
+        "Pièces académiques",
+        "Lettre de recommandation",
+        "Lettre d'acceptation de l'établissement japonais",
+        "Certificat de langue"
+      ],
+      "conseil": "Contacte la Commission nationale camerounaise pour l'UNESCO plusieurs mois avant le prochain cycle. Trouve un superviseur au Japon d'abord.",
+      "edition_note": "Date limite prolongée au 15 octobre 2026 (minuit, Paris): le cycle est donc clos. Résultats attendus en décembre 2026. Séjours de février à décembre 2027."
+    },
+    "en": {
+      "nom": "UNESCO/Japan Young Researchers' Fellowships",
+      "resume": "Research support in Japan for young African researchers with a master's. The 2026 cycle is closed.",
+      "couverture_detail": "Grant of up to USD 10,000 for 3 to 9 months of research in Japan.",
+      "diplome": "At least a master's or equivalent, with research potential.",
+      "langue": "Language of the Japanese host institution.",
+      "autres": [
+        "Be a national of an invited State (annex 1 of the guide, which lists Cameroon).",
+        "Acceptance from a Japanese supervisor.",
+        "Themes: heritage, AI and society, education.",
+        "Apply through the National Commission for UNESCO; max 2 candidates per country."
+      ],
+      "dossier": [
+        "Application form",
+        "Research proposal",
+        "Academic documents",
+        "Recommendation letter",
+        "Host institution acceptance letter",
+        "Language certificate"
+      ],
+      "conseil": "Contact the Cameroon National Commission for UNESCO months before the next cycle. Find a supervisor in Japan first.",
+      "edition_note": "Deadline extended to 15 October 2026 (midnight Paris): the cycle is now closed. Results expected in December 2026. Stays run February to December 2027."
+    }
+  },
+  {
+    "id": "codesria-grants",
+    "organisme": "CODESRIA (Conseil pour le développement de la recherche en sciences sociales en Afrique)",
+    "pays_accueil": [
+      "Sénégal",
+      "autres"
+    ],
+    "cameroun": "non_precise",
+    "niveaux": [
+      "master",
+      "doctorat",
+      "postdoc"
+    ],
+    "domaines": [
+      "histoire-geographie",
+      "philo-sociologie",
+      "droit-politique",
+      "lettres-langues"
+    ],
+    "couverture_niveau": "variable",
+    "age_max": 35,
+    "cycle": {
+      "type": "irreguliere"
+    },
+    "edition": {
+      "libelle": "aucun appel ouvert",
+      "confirme": false
+    },
+    "lien_officiel": "https://apply.codesria.org/",
+    "sources": [
+      {
+        "titre": "CODESRIA - Portail de candidature",
+        "url": "https://apply.codesria.org/"
+      }
+    ],
+    "last_verified": "2026-10-19",
+    "status": "to_verify",
+    "recherche_notes": "Éligibilité des Camerounais non vérifiée par programme. Détails AFRIAK (clôture 15/02/2026, 35 ans) tirés de recherche web, pas de la page officielle. Le domaine est une estimation.",
+    "fr": {
+      "nom": "Subventions et bourses CODESRIA",
+      "resume": "CODESRIA finance des chercheurs africains en sciences sociales. Aucun appel n'est ouvert sur le portail.",
+      "couverture_detail": "Subventions de recherche, selon le programme.",
+      "diplome": "Selon le programme (AFRIAK 2026: jeunes chercheurs africains de 35 ans maximum).",
+      "langue": "Anglais ou français.",
+      "autres": [
+        "Voir chaque appel sur le portail apply.codesria.org."
+      ],
+      "conseil": "Inscris-toi aux alertes CODESRIA et prépare un projet de recherche. Les appels pour jeunes chercheurs sont souvent en début d'année.",
+      "edition_note": "Le portail officiel affiche aucune candidature ouverte au 19 octobre 2026."
+    },
+    "en": {
+      "nom": "CODESRIA grants and fellowships",
+      "resume": "CODESRIA funds African social science researchers. No call is open on the portal.",
+      "couverture_detail": "Research grants, depending on the programme.",
+      "diplome": "Depends on the programme (AFRIAK 2026: young African researchers aged 35 or less).",
+      "langue": "English or French.",
+      "autres": [
+        "See each call on the apply.codesria.org portal."
+      ],
+      "conseil": "Join CODESRIA alerts and prepare a research project. Early-career calls are often early in the year.",
+      "edition_note": "The official portal shows no open application on 19 October 2026."
+    }
+  }
+]

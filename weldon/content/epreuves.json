@@ -404,5 +404,138 @@
     "grille": [
       "dissertation"
     ]
+  },
+  {
+    "id": "pol-2022-professionnelle-fr",
+    "concours": "police-inspecteurs",
+    "lang": "fr",
+    "annee": 2022,
+    "matiere": "Épreuve professionnelle",
+    "duree": 120,
+    "source": "Concours spécial pour le recrutement des élèves inspecteurs de police, 12 février 2022, Délégation Générale à la Sûreté Nationale",
+    "source_doc": "Photographie de l'épreuve fournie par le concepteur (octobre 2026)",
+    "rights": "officiel_public",
+    "a_verifier": [
+      "Quelques mots sont cachés par le pli de la feuille dans le cas pratique (début de certains paragraphes et de la consigne « Rédigez un rapport… »).",
+      "La ponctuation de la question 1 n'est pas lisible sur la photo."
+    ],
+    "sujet": "CONCOURS SPÉCIAL POUR LE RECRUTEMENT DES ÉLÈVES INSPECTEURS DE POLICE\nÉPREUVE PROFESSIONNELLE\n12 février 2022\nDurée : 02 h\n\nI- CAS PRATIQUE (10 points)\n\nVous êtes Inspecteur de Police, Chef de brigade « A », en service au Commissariat de Sécurité Publique du 2è Arrondissement de la ville de Douala.\n\nDe service 18H-06H et après avoir procédé à la répartition du service, vous avez conduit une patrouille pédestre constituée de six hommes. A 22 heures, vous avez reçu un appel faisant état d'un cambriolage dans un magasin à quelques mètres de votre position. Rendus sur les lieux, vous avez réussi à interpeller les malfrats en pleine action.\n\nSur le chemin de retour à la base, vous avez trouvé un cas d'accident de la circulation routière avec des blessés et des dégâts matériels devant une boîte de nuit où la circulation est permanente.\n\nTravail à faire :\nRédigez un rapport de fin de service que vous adressez au Commissaire, Chef d'unité en indiquant :\n- la nature du cambriolage ;\n- les actes que vous avez posés relativement :\n   o aux malfrats du magasin ;\n   o aux accidentés de la circulation ;\n   o à la gestion de la circulation sur le lieu de l'accident.\n\nII- CONNAISSANCES PROFESSIONNELLES (10 points)\n\nBien vouloir apporter des réponses aux questions suivantes :\n1)- Qu'est-ce qu'une brigade et en quoi se résument les missions de son chef ?\n2)- Quels sont les différents modes d'ouverture d'une enquête ?\n3)- En quoi consiste la confrontation lors d'une enquête judiciaire ?\n4)- Quelle est la différence entre une note de renseignement et une note d'information ?\n5)- Pourquoi dit-on que le renseignement est une denrée périssable ?\n6)- Citez en les spécifiant, les différents types de passeports et les autorités chargées de leur délivrance.\n7)- Quelles différences faites-vous entre un laissez-passer et un sauf-conduit ?\n8)- Citez cinq qualités d'un bon fonctionnaire de la Sûreté Nationale.\n9)- Qu'entendez-vous par la formule « Le fonctionnaire de la Sûreté Nationale est soumis à l'obligation de réserve et au secret professionnel » ?\n10)- Citez trois activités proscrites au fonctionnaire de la Sûreté Nationale.\n\nBonne chance !",
+    "grille": [
+      {
+        "titre": "Cas pratique : rapport de fin de service",
+        "criteres": [
+          {
+            "label": "Forme du rapport (en-tête, objet, destinataire, formule finale, signature)",
+            "pts": 2,
+            "niveaux": [
+              "2 pts : les éléments d'un rapport administratif sont tous présents et dans l'ordre.",
+              "1 pt : un ou deux éléments manquent (objet, formule finale ou signature).",
+              "0 : absent ou hors sujet."
+            ]
+          },
+          {
+            "label": "Nature du cambriolage (qualification, lieu, heure)",
+            "pts": 2,
+            "niveaux": [
+              "2 pts : l'infraction est correctement qualifiée (vol avec effraction, flagrant délit) avec le lieu et l'heure.",
+              "1 pt : faits décrits sans qualification, ou lieu et heure oubliés.",
+              "0 : absent ou hors sujet."
+            ]
+          },
+          {
+            "label": "Actes posés envers les malfrats",
+            "pts": 2,
+            "niveaux": [
+              "2 pts : sécurisation, interpellation, fouille, saisie des objets, présentation à l'OPJ, respect des droits et de la dignité.",
+              "1 pt : deux ou trois actes seulement.",
+              "0 : absent ou hors sujet."
+            ]
+          },
+          {
+            "label": "Actes posés envers les accidentés",
+            "pts": 2,
+            "niveaux": [
+              "2 pts : alerte des secours (pompiers, ambulance), premiers secours, évacuation, relevé des identités et des témoins.",
+              "1 pt : un ou deux actes seulement.",
+              "0 : absent ou hors sujet."
+            ]
+          },
+          {
+            "label": "Gestion de la circulation sur les lieux de l'accident",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : balisage, déviation, passage pour les secours, constat avant enlèvement des véhicules.",
+              "0,5 pt : une seule mesure citée.",
+              "0 : absent ou hors sujet."
+            ]
+          },
+          {
+            "label": "Clarté, ordre et langue du rapport",
+            "pts": 1,
+            "niveaux": [
+              "1 pt : rapport structuré, phrases correctes, moins de 5 fautes par page.",
+              "0,5 pt : plan confus ou nombreuses fautes.",
+              "0 : absent ou hors sujet."
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Connaissances professionnelles",
+        "aide": "questions",
+        "criteres": [
+          {
+            "label": "Question 1 – la brigade et les missions de son chef",
+            "pts": 1
+          },
+          {
+            "label": "Question 2 – modes d'ouverture d'une enquête",
+            "pts": 1
+          },
+          {
+            "label": "Question 3 – la confrontation",
+            "pts": 1
+          },
+          {
+            "label": "Question 4 – note de renseignement et note d'information",
+            "pts": 1
+          },
+          {
+            "label": "Question 5 – renseignement, denrée périssable",
+            "pts": 1
+          },
+          {
+            "label": "Question 6 – types de passeports et autorités",
+            "pts": 1
+          },
+          {
+            "label": "Question 7 – laissez-passer et sauf-conduit",
+            "pts": 1
+          },
+          {
+            "label": "Question 8 – cinq qualités du fonctionnaire de la Sûreté Nationale",
+            "pts": 1
+          },
+          {
+            "label": "Question 9 – obligation de réserve et secret professionnel",
+            "pts": 1
+          },
+          {
+            "label": "Question 10 – trois activités proscrites",
+            "pts": 1
+          }
+        ]
+      }
+    ],
+    "corrige": "REPUBLIQUE DU CAMEROUN – Paix – Travail – Patrie\nPRESIDENCE DE LA REPUBLIQUE\nDELEGATION GENERALE A LA SURETE NATIONALE\nCOMMISSARIAT DE SECURITE PUBLIQUE DU 2e ARRONDISSEMENT DE DOUALA\n\nDouala, le X…\n\nRAPPORT DE FIN DE SERVICE\n(service du X… de 18H à 06H)\n\nObjet : Compte rendu du service de nuit – interpellation d'auteurs d'un cambriolage et constat d'un accident de la circulation.\n\nA Monsieur le Commissaire, Chef d'unité.\n\nJ'ai l'honneur de vous rendre compte du déroulement du service que j'ai assuré en qualité de Chef de brigade « A », de 18H à 06H.\n\nAprès la répartition du service, j'ai conduit une patrouille pédestre composée de six hommes. A 22 heures, la permanence m'a transmis un appel signalant un cambriolage dans un magasin situé à quelques mètres de ma position.\n\n1. Nature du cambriolage\nIl s'agit d'un vol avec effraction (cambriolage) commis de nuit, à X…, dans un magasin de commerce, par plusieurs individus. Les auteurs ont été surpris en pleine action : l'infraction est donc un crime ou délit flagrant au sens du Code de procédure pénale, ce qui autorise une enquête de flagrance.\n\n2. Actes posés à l'égard des malfrats\nArrivés sur les lieux, nous avons sécurisé le magasin et encerclé les individus. Ils ont été interpellés sans incident, menottés, fouillés par palpation de sécurité et séparés pour éviter toute concertation. Les objets dérobés et les outils d'effraction ont été saisis et placés sous scellés. Le périmètre a été protégé afin de préserver les traces et indices. Le propriétaire ou le gardien du magasin a été identifié pour un recueil de plainte. Les mis en cause ont été conduits au Commissariat, où ils ont été présentés à l'Officier de Police Judiciaire de permanence, pour la suite de la procédure : avis au Procureur de la République, éventuelle garde à vue, procès-verbal d'interpellation et auditions. Ils ont été informés des faits qui leur sont reprochés et traités dans le respect de leur dignité.\n\n3. Actes posés à l'égard des accidentés de la circulation\nAu retour, devant une boîte de nuit, j'ai constaté un accident de la circulation avec blessés et dégâts matériels. J'ai immédiatement alerté la permanence et demandé le renfort des sapeurs-pompiers (118) et d'une ambulance. En attendant, les blessés ont reçu les premiers secours par mes hommes : mise en sécurité, rassurance, arrêt des hémorragies visibles, sans déplacer inutilement les blessés graves. Ils ont ensuite été évacués vers la formation sanitaire la plus proche. Les identités des victimes et des conducteurs, ainsi que les références des véhicules, ont été relevées. Des témoins ont été identifiés.\n\n4. Gestion de la circulation sur le lieu de l'accident\nLe site de l'accident a été balisé et la circulation déviée par mes éléments équipés de lampes et de gilets réfléchissants, afin d'éviter un sur-accident et de maintenir un passage pour les secours. Les curieux ont été écartés. Les constatations (position des véhicules, traces de freinage, croquis, photographies) ont été faites avant l'enlèvement des véhicules, qui ont ensuite été dégagés pour rétablir la fluidité. Un procès-verbal de constat d'accident a été établi et transmis au service compétent.\n\nRien d'autre à signaler. Les mis en cause, les pièces à conviction et le procès-verbal sont remis à l'OPJ de permanence.\n\nJe vous prie d'agréer, Monsieur le Commissaire, l'expression de mon profond respect.\n\nL'Inspecteur de Police,\nChef de brigade « A »\n(Nom, prénom, signature)\n\nPARTIE II – CONNAISSANCES PROFESSIONNELLES\n\nQuestion 1 (1 pt) : Qu'est-ce qu'une brigade et en quoi se résument les missions de son chef ?\nRéponse : La brigade est la cellule de base d'un commissariat : un groupe de fonctionnaires de police placé sous l'autorité d'un chef de brigade, affecté à un service (de jour ou de nuit) ou à une mission déterminée. Le chef de brigade répartit le service, commande et contrôle ses hommes, assure la sécurité publique et le maintien de l'ordre dans sa zone, prend les premières mesures en cas d'infraction ou d'accident, rend compte par écrit au chef d'unité et lui rend compte de tout fait important.\nPoints : 0,5 pt pour la définition ; 0,5 pt pour les missions (commandement, exécution du service, compte rendu).\n\nQuestion 2 (1 pt) : Quels sont les différents modes d'ouverture d'une enquête ?\nRéponse : Le Code de procédure pénale distingue l'enquête de flagrance, ouverte lorsque le crime ou délit est en train de se commettre ou vient de l'être, l'enquête préliminaire, menée par l'OPJ hors flagrance, d'office, sur instruction du Procureur de la République ou sur plainte ou dénonciation, et l'enquête sur commission rogatoire du juge d'instruction (information judiciaire).\nPoints : 0,5 pt pour la flagrance ; 0,5 pt pour la préliminaire (et le mode d'ouverture : d'office, plainte, instructions du parquet).\n\nQuestion 3 (1 pt) : En quoi consiste la confrontation lors d'une enquête judiciaire ?\nRéponse : La confrontation consiste à mettre en présence deux ou plusieurs personnes (suspects, victime, témoins) dont les déclarations sont contradictoires, afin qu'elles s'expliquent face à face. L'OPJ les entend simultanément, consigne les réponses de chacun dans un procès-verbal signé, ce qui permet de départager les versions et d'établir la vérité.\nPoints : 0,5 pt pour la définition ; 0,5 pt pour le but et la consignation au procès-verbal.\n\nQuestion 4 (1 pt) : Quelle est la différence entre une note de renseignement et une note d'information ?\nRéponse : La note de renseignement rapporte un renseignement brut ou recoupé, recueilli par une source, sur un fait, une personne ou un groupe, avec l'indication de la source et un degré de fiabilité ; elle est destinée à l'analyse. La note d'information, elle, est un document de synthèse qui porte à la connaissance de l'autorité un fait ou une situation, avec éventuellement une appréciation, pour lui permettre de décider.\nPoints : 0,5 pt pour chaque note correctement caractérisée.\n\nQuestion 5 (1 pt) : Pourquoi dit-on que le renseignement est une denrée périssable ?\nRéponse : Parce que sa valeur dépend du temps : un renseignement transmis tardivement perd son utilité, la situation ayant évolué, les personnes s'étant déplacées ou les plans ayant changé. Il doit donc être recueilli, traité, exploité et transmis rapidement, faute de quoi il est périmé comme un produit frais.\nPoints : 1 pt pour l'idée de perte de valeur avec le temps et la nécessité de rapidité.\n\nQuestion 6 (1 pt) : Citez en les spécifiant les différents types de passeports et les autorités chargées de leur délivrance.\nRéponse : Il existe trois types : le passeport ordinaire, délivré à tout citoyen camerounais par la Délégation Générale à la Sûreté Nationale (police des frontières), ou à l'étranger par les missions diplomatiques et consulaires ; le passeport de service, destiné aux agents publics en mission officielle ; le passeport diplomatique, destiné aux hauts responsables de l'Etat et diplomates. Les passeports de service et diplomatique sont délivrés selon une procédure spéciale par les autorités compétentes, la Sûreté Nationale agissant en lien avec le Ministère des Relations Extérieures.\nPoints : 0,5 pt pour les trois types ; 0,5 pt pour les autorités.\n\nQuestion 7 (1 pt) : Quelles différences faites-vous entre un laissez-passer et un sauf-conduit ?\nRéponse : Le laissez-passer est un document de voyage provisoire, délivré par une mission diplomatique ou consulaire à un national dépourvu de passeport (perdu, expiré) pour rentrer dans son pays, de validité très courte. Le sauf-conduit est un document délivré par l'autorité (police) qui autorise une personne à circuler librement et en sécurité sur un territoire ou à franchir un point donné, sans valoir passeport.\nPoints : 0,5 pt pour chaque document correctement défini et son autorité.\n\nQuestion 8 (1 pt) : Citez cinq qualités d'un bon fonctionnaire de la Sûreté Nationale.\nRéponse : Le fonctionnaire de la Sûreté Nationale doit être : 1) intègre et probe ; 2) loyal et discipliné ; 3) courageux ; 4) discret ; 5) impartial, courtois et respectueux des droits de l'homme (on accepte aussi disponibilité, esprit d'initiative, ponctualité, sens du devoir, maîtrise de soi).\nPoints : 0,2 pt par qualité pertinente, jusqu'à 1 pt.\n\nQuestion 9 (1 pt) : Qu'entendez-vous par la formule « Le fonctionnaire de la Sûreté Nationale est soumis à l'obligation de réserve et au secret professionnel » ?\nRéponse : L'obligation de réserve impose au fonctionnaire de s'abstenir, en service comme hors service, de toute parole, geste ou manifestation susceptible de porter atteinte à l'ordre public, à l'autorité ou à l'image de la police, notamment en public ou dans la presse. Le secret professionnel lui interdit de divulguer les informations, dossiers et faits connus dans l'exercice de ses fonctions, sous peine de sanctions disciplinaires et pénales.\nPoints : 0,5 pt pour l'obligation de réserve ; 0,5 pt pour le secret professionnel.\n\nQuestion 10 (1 pt) : Citez trois activités proscrites au fonctionnaire de la Sûreté Nationale.\nRéponse : Sont interdits : 1) l'exercice du droit de grève, incompatible avec la qualité de fonctionnaire de la Sûreté Nationale ; 2) l'adhésion à des groupements ou activités à caractère politique ou syndical ; 3) l'exercice d'une activité privée lucrative ou toute manifestation de nature à troubler l'ordre public.\nPoints : 0,33 pt par activité exacte, jusqu'à 1 pt.\n",
+    "corrige_source": "propose",
+    "verifie": "non_verifie",
+    "corrige_a_verifier": [
+      "Les articles de loi et les décrets ne sont pas cités : le statut des fonctionnaires de la Sûreté Nationale et le Code de procédure pénale n'ont pas été relus dans leur texte officiel.",
+      "Autorités qui délivrent les passeports de service et diplomatique : à confirmer par un texte officiel.",
+      "Définitions du laissez-passer et du sauf-conduit : à confirmer par un texte officiel.",
+      "Activités proscrites (grève, groupements politiques ou syndicaux, activité privée lucrative) : à confirmer dans le statut de la Sûreté Nationale.",
+      "Procédure d'accident de la route : bonnes pratiques générales de la police, pas un texte camerounais précis."
+    ]
   }
 ]

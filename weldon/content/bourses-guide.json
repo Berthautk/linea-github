@@ -5,7 +5,7 @@
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -16,35 +16,117 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "janvier"
+   "ouverture_mois": "octobre",
+   "cloture_mois": "decembre"
   },
   "edition": {
-   "cloture": "2026-01-31",
-   "confirme": false
+   "libelle": "Rentree automne 2027",
+   "ouverture": "2026-10-01",
+   "cloture": "2026-12-15",
+   "confirme": true
   },
-  "lien_officiel": "https://www.sfu.ca/dean-gradstudies/awards/entrance-scholarships.html",
+  "lien_officiel": "https://www.sfu.ca/students/financial-aid/entrance/highschool/uses.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.sfu.ca/dean-gradstudies/awards/entrance-scholarships.html"
+    "titre": "SFU Financial Aid - USES",
+    "url": "https://www.sfu.ca/students/financial-aid/entrance/highschool/uses.html"
+   },
+   {
+    "titre": "SFU Undergraduate Admission - USES",
+    "url": "https://www.sfu.ca/students/admission/fees-scholarships/uses.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 janvier 2026"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Undergraduate Scholars Entrance Scholarships (USES) — Simon Fraser University",
-   "resume": "C'est l'une des bourses les plus généreuses du Canada au niveau Licence. La fourchette exceptionnelle — pouvant atteindre $140 000 sur quatre ans — en fait un programme véritablement transformateur. SFU est régulièrement classée parmi les meilleures…",
+   "nom": "Undergraduate Scholars Entrance Scholarships (USES) - Simon Fraser University",
+   "resume": "Bourse d'entree de SFU pour les eleves de fin de lycee, canadiens ou internationaux, admis en licence a la rentree d'automne. Les etudiants internationaux sont consideres pour l'International Undergraduate Scholars Entrance Scholarship.",
    "resume_long": "C'est l'une des bourses les plus généreuses du Canada au niveau Licence. La fourchette exceptionnelle — pouvant atteindre $140 000 sur quatre ans — en fait un programme véritablement transformateur. SFU est régulièrement classée parmi les meilleures universités canadiennes, et cette bourse reflète son ambition d'attirer les talents les plus prometteurs au monde, quel que soit leur contexte financier.",
-   "valeur": "$20 000 à $140 000 (sur la durée du programme)",
-   "eligibilite": "Étudiants internationaux et domestiques",
-   "edition_note": "Date limite indiquée dans le guide : 31 janvier 2026"
+   "valeur": "140 000 $ CAD pour les etudiants internationaux, verses en 8 x 17 500 $.",
+   "eligibilite": "Etudiants internationaux et canadiens admis pour la session d'automne : candidater a SFU pour l'automne, etre en derniere annee de lycee (ou diplome l'annee precedente sans cours post-secondaires), moyenne minimale de 90 % ou 31 points IB (hors bonus) dans les cours requis pour le programme principal, excellence academique et extrascolaire.",
+   "edition_note": "Edition rentree automne 2027 : demandes du 1er octobre au 15 decembre 2026 ; documents complementaires avant le 31 janvier 2027 ; laureats annonces de mi-mars a mai 2027. Date de l'edition suivante non annoncee.",
+   "couverture_detail": "8 versements de 17 500 $ ; dans des cas limites, une allocation de vie supplementaire de 8 000 $ par session peut etre offerte aux etudiants au besoin financier demontre ; priorite d'acces a la residence et a l'inscription aux cours.",
+   "ne_couvre_pas": "Ne couvre pas l'integralite des couts d'etudes et de vie ; les frais de la demande d'admission a SFU restent a la charge du candidat.",
+   "diplome": "Diplome de fin d'etudes secondaires (lycee) ; admission a un programme de licence de SFU.",
+   "langue": "Etudes en anglais (aucun test de langue detaille sur la page de la bourse).",
+   "conseil": "Preparer l'essai et prevenir les references avant d'ouvrir la demande, et deposer bien avant la date limite. La moyenne de 90 % est une condition minimale, pas une garantie.",
+   "autres": [
+    "Candidature au concours unique : une seule demande pour toutes les bourses USES.",
+    "Les candidats dont le programme principal n'est pas admissible ne sont pas consideres."
+   ],
+   "dossier": [
+    "Demande d'admission a SFU (numero etudiant SFU necessaire pour acceder a la demande de bourse)",
+    "Formulaire de candidature USES en ligne",
+    "Liste de jusqu'a 5 activites extrascolaires et realisations",
+    "Essai de 500 mots",
+    "Deux references (une academique, une sur l'engagement communautaire), qui remplissent un formulaire en ligne",
+    "Elements de la liste « To Do » de l'admission SFU completes",
+    "Description optionnelle de la situation financiere"
+   ],
+   "etapes": [
+    "Candidater d'abord a l'admission SFU pour l'automne 2027 et obtenir le numero etudiant.",
+    "Remplir la demande USES en ligne (ouverte du 1er octobre au 15 decembre 2026, 23 h 59 heure du Pacifique).",
+    "Prevenir les deux references, qui recoivent un lien par courriel.",
+    "Completer references et elements de la liste d'admission avant le 31 janvier 2027.",
+    "Resultats annonces de mi-mars a mai 2027."
+   ]
   },
   "en": {
-   "nom": "Undergraduate Scholars Entrance Scholarships (USES) — Simon Fraser University"
+   "nom": "Undergraduate Scholars Entrance Scholarships (USES) - Simon Fraser University",
+   "resume": "SFU entrance scholarship for Canadian and international high school applicants admitted to an undergraduate degree for the fall term. International students are considered for the International Undergraduate Scholars Entrance Scholarship.",
+   "valeur": "CAD 140,000 for international students, paid as 8 x CAD 17,500.",
+   "couverture_detail": "8 payments of CAD 17,500; in limited cases an additional CAD 8,000 per term living allowance may be offered to students with demonstrated financial need; residence offer priority and course enrolment priority.",
+   "ne_couvre_pas": "Does not cover the full cost of study and living; the SFU admission application fees remain the applicant's responsibility.",
+   "eligibilite": "International and domestic students admitted for the fall term: applying to SFU for fall, graduating from high school in the year of admission (or the previous year with no post-secondary courses), minimum average of 90% or 31 IB points (excluding bonus) in courses required for the primary program, excellence in academic and extracurricular activities.",
+   "diplome": "High school graduation diploma; admission to an SFU undergraduate program.",
+   "langue": "Studies in English (no language test detailed on the scholarship page).",
+   "conseil": "Prepare the essay and warn your referees before opening the application, and submit well before the deadline. The 90% average is a minimum requirement, not a guarantee.",
+   "edition_note": "Fall 2027 intake: applications October 1 to December 15, 2026; supporting documents by January 31, 2027; winners announced mid-March to May 2027. Next edition dates not announced.",
+   "autres": [
+    "Single competition: one application covers all USES awards.",
+    "Applicants not eligible for admission to their primary program are not considered."
+   ],
+   "dossier": [
+    "SFU admission application (SFU student number needed to access the scholarship application)",
+    "Online USES application form",
+    "List of up to 5 extracurricular activities and achievements",
+    "500-word essay",
+    "Two references (one academic, one community involvement) who complete an online form",
+    "Items on the SFU admission To-Do List completed",
+    "Optional description of financial circumstances"
+   ],
+   "etapes": [
+    "Apply to SFU for fall 2027 admission first and get the student number.",
+    "Complete the online USES application (open October 1 to December 15, 2026, 11:59pm Pacific).",
+    "Alert your two referees, who receive an email link.",
+    "Complete references and admission To-Do items by January 31, 2027.",
+    "Winners announced mid-March to May 2027."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Rentree automne 2027",
+    "ouverture": "2026-10-01",
+    "cloture": "2026-12-15",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.sfu.ca/students/financial-aid/entrance/highschool/uses.html",
+    "https://www.sfu.ca/students/admission/fees-scholarships/uses.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -53,7 +135,7 @@
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -66,29 +148,91 @@
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.kings.uwo.ca/future-students/international/international-scholarships-awards/",
+  "lien_officiel": "https://kings.uwo.ca/admissions-finance/finances/scholarships-entrance/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.kings.uwo.ca/future-students/international/international-scholarships-awards/"
+    "titre": "King's University College - Scholarships (Entrance)",
+    "url": "https://kings.uwo.ca/admissions-finance/finances/scholarships-entrance/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "King's International Excellence Award — King's University College at Western University",
-   "resume": "Avec $56 000 sur quatre ans, c'est l'une des bourses les plus généreuses du réseau Western University. King's University College est reconnu pour ses classes à taille humaine et son encadrement personnalisé. La bourse est attribuée automatiquement aux…",
+   "nom": "International High School Entrance Scholarships - King's University College at Western University",
+   "resume": "Le nom « King's International Excellence Award » n'existe pas sur le site officiel ; le programme equivalent est la bourse d'entree pour candidats internationaux sortant du lycee, attribuee automatiquement selon la moyenne finale. King's offre aussi la President's Regis Entrance Scholarship (5 000 $, 4 laureats) et une International Scholars' Grant pouvant atteindre 42 000 $ sur quatre ans selon les resultats en cours d'etudes.",
    "resume_long": "Avec $56 000 sur quatre ans, c'est l'une des bourses les plus généreuses du réseau Western University. King's University College est reconnu pour ses classes à taille humaine et son encadrement personnalisé. La bourse est attribuée automatiquement aux candidats admissibles en fonction de leur dossier académique — aucune candidature séparée n'est requise. Un avantage considérable pour les étudiants qui souhaitent maximiser leurs chances sans multiplier les dossiers.",
-   "valeur": "$56 000 CAD ($14 000/an pendant 4 ans)",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "3 500 $ (moyenne 85-89,9 %), 4 000 $ (90-94,9 %) ou 5 000 $ CAD (95 % et plus), selon la moyenne finale du lycee.",
+   "eligibilite": "Candidats internationaux de premier cycle sortant du lycee, qui remplissent les criteres d'admission publies et restent inscrits a 4 cours (4.0 credits). Aucune restriction de nationalite indiquee. Les candidats scolarises a domicile ne sont pas eligibles.",
+   "edition_note": "Montants en vigueur pour 2026-2027 ; aucune date de bourse, car attribution automatique a l'admission.",
+   "couverture_detail": "Montant credite sur les frais de scolarite apres confirmation des conditions, debut novembre. President's Regis (internationaux aux meilleures moyennes, 4 bourses) : 5 000 $ la premiere annee, renouvelable a 4 000 $ les annees 2 a 4 avec 85 % de moyenne minimale. International Scholars' Grant : jusqu'a 42 000 $ sur quatre ans selon les resultats academiques a King's.",
+   "ne_couvre_pas": "Ne couvre qu'une partie des frais de scolarite internationaux ; ni logement ni frais de vie ; aucun remboursement en cas de retrait.",
+   "diplome": "Diplome de fin d'etudes secondaires avec moyenne finale d'au moins 85 % pour la bourse automatique.",
+   "langue": "Etudes en anglais ; criteres d'admission a verifier aupres de King's.",
+   "conseil": "Verifier aupres du service des admissions de King's les pieces d'admission et les echeances, car la bourse en depend entierement ; ne pas compter sur le montant de 56 000 $ avance par certains guides, absent de la page officielle.",
+   "autres": [
+    "Aucune demande de bourse separee : la bourse se base sur la moyenne finale calculee pour l'admission."
+   ],
+   "dossier": [
+    "Aucun dossier de bourse separe ; seule la demande d'admission a King's est necessaire (pieces demandees par l'admission)"
+   ],
+   "etapes": [
+    "Deposer la demande d'admission a King's.",
+    "Atteindre la moyenne finale requise et satisfaire les criteres d'admission.",
+    "Rester inscrit a 4 cours ; la bourse est creditee apres verification debut novembre."
+   ]
   },
   "en": {
-   "nom": "King's International Excellence Award — King's University College at Western University"
+   "nom": "International High School Entrance Scholarships - King's University College at Western University",
+   "resume": "The name 'King's International Excellence Award' does not exist on the official site; the equivalent programme is the entrance scholarship for international high school applicants, awarded automatically on the final average. King's also offers the President's Regis Entrance Scholarship (CAD 5,000, 4 awards) and an International Scholars' Grant of up to CAD 42,000 over four years based on results while studying.",
+   "valeur": "CAD 3,500 (85-89.9% average), CAD 4,000 (90-94.9%) or CAD 5,000 (95%+), based on the final high school average.",
+   "couverture_detail": "Amount credited to tuition fees once conditions are confirmed in early November. President's Regis (international students with the highest averages, 4 awards): CAD 5,000 in year 1, renewable at CAD 4,000 in years 2 to 4 with an 85% minimum average. International Scholars' Grant: up to CAD 42,000 over four years based on academic results at King's.",
+   "ne_couvre_pas": "Covers only part of international tuition; no housing or living costs; no refund if the student withdraws.",
+   "eligibilite": "International undergraduate applicants coming from high school who meet the published admission criteria and remain registered in 4.0 credits. No nationality restriction stated. Home-schooled applicants are not eligible.",
+   "diplome": "High school diploma with a final average of at least 85% for the automatic scholarship.",
+   "langue": "Studies in English; check admission criteria with King's.",
+   "conseil": "Check admission documents and deadlines with King's admissions office, as the scholarship depends entirely on admission; do not rely on the CAD 56,000 figure given by some guides, absent from the official page.",
+   "edition_note": "Amounts in force for 2026-2027; no scholarship dates since it is awarded automatically at admission.",
+   "autres": [
+    "No separate scholarship application: it is based on the final average calculated for admission."
+   ],
+   "dossier": [
+    "No separate scholarship file; only the King's admission application is needed (documents required by admissions)"
+   ],
+   "etapes": [
+    "Submit the King's admission application.",
+    "Reach the required final average and meet admission criteria.",
+    "Stay registered in 4 courses; the scholarship is credited after verification in early November."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2026/27 : montants en vigueur, attribution automatique a l'admission",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://kings.uwo.ca/admissions-finance/finances/scholarships-entrance/",
+    "https://kings.uwo.ca/campus-life/international/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -137,6 +281,10 @@
   },
   "en": {
    "nom": "International Prestigious Scholarships and Awards — Trent University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Contenu du formulaire de candidature aux Prestigious Scholarships (pieces, essai, references) non publie sur les pages officielles lues : liste des documents impossible a confirmer. Niveaux, couverture, eligibilite, Cameroun (etudiants internationaux) et dates lus."
   }
  },
  {
@@ -145,7 +293,7 @@
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -161,26 +309,89 @@
   "lien_officiel": "https://www.uoguelph.ca/registrar/studentfinance/scholarships/entrance",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "University of Guelph - Scholarships & Bursaries (Entrance)",
     "url": "https://www.uoguelph.ca/registrar/studentfinance/scholarships/entrance"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence (attribuée automatiquement à l'admission)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Undergraduate Entrance Scholarships — University of Guelph",
-   "resume": "L'University of Guelph est l'une des universités les plus respectées au Canada pour les sciences, l'agriculture, les sciences vétérinaires et les arts. Ces bourses d'entrée sont attribuées automatiquement sur la base du dossier d'admission — pas de formulaire…",
+   "nom": "International Undergraduate Entrance Scholarships - University of Guelph",
+   "resume": "Bourses d'entree attribuees automatiquement par l'University of Guelph aux etudiants payant des frais internationaux qui entrent pour la premiere fois en etudes superieures a la session d'automne. Aucune candidature separee : l'offre se fonde sur le dossier d'admission.",
    "resume_long": "L'University of Guelph est l'une des universités les plus respectées au Canada pour les sciences, l'agriculture, les sciences vétérinaires et les arts. Ces bourses d'entrée sont attribuées automatiquement sur la base du dossier d'admission — pas de formulaire supplémentaire à remplir. Si votre dossier académique est solide, vous êtes automatiquement considéré. Une raison de plus de soigner votre demande d'admission.",
-   "valeur": "Jusqu'à $21 500 sur la durée des études",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence (attribuée automatiquement à l'admission)"
+   "valeur": "Bourses renouvelables d'une valeur totale de 32 000 a 37 500 $ CAD sur quatre ans (selon la page officielle).",
+   "eligibilite": "Etudiants payant les frais internationaux, sans etudes post-secondaires anterieures, entrant en premiere session d'un programme de licence en automne ; montant selon la moyenne d'admission calculee par Admission Services (aussi pour les cursus non canadiens). Inscription a plein temps aux sessions d'automne et d'hiver de l'annee 1. Aucune restriction de nationalite.",
+   "edition_note": "Montants affiches pour l'automne 2026 ; aucune date de bourse, attribution automatique. Montants de l'automne 2027 non encore publies.",
+   "couverture_detail": "Automne 2026 : President's International Entrance Scholarship (unique, annee 1) de 7 500 $ (moyenne 95 % et plus), 6 500 $ (90-94,9 %), 5 500 $ (85-89,9 %) ou 2 000 $ (70-84,9 %) ; University International Scholarship de 5 000 $ par an (20 000 $ sur 4 ans) ou Dean's International Scholarship de 2 500 $ par an (10 000 $ sur 4 ans), renouvelables aux annees 2 a 4 avec 80 % de moyenne, etudes a plein temps et frais internationaux payes. Versement en deux parts, automne et hiver.",
+   "ne_couvre_pas": "Ne couvre qu'une partie des frais de scolarite internationaux ; ni logement ni frais de vie.",
+   "diplome": "Diplome de fin d'etudes secondaires ; moyenne d'admission d'au moins 70 % pour la President's International Entrance Scholarship.",
+   "langue": "Etudes en anglais ; conditions d'admission sur le site d'Admission Services.",
+   "conseil": "Comme tout depend de la moyenne d'admission, deposer un dossier d'admission complet et tot ; verifier sur la page officielle les montants de la rentree 2027, les chiffres affiches etant ceux de l'automne 2026.",
+   "autres": [
+    "Les etudiants internationaux peuvent aussi examiner la Dr. Franco J. Vaccarino President's Scholarship, la plus haute bourse d'entree pour internationaux, qui a sa propre candidature."
+   ],
+   "dossier": [
+    "Demande d'admission a l'University of Guelph complete",
+    "Pieces justificatives du cursus exigees par Admission Services (aucun dossier de bourse separe)"
+   ],
+   "etapes": [
+    "Deposer la demande d'admission et s'assurer que toutes les pieces sont recues par Admission Services.",
+    "L'universite evalue l'admissibilite a la bourse en meme temps que l'admission.",
+    "Les laureats sont informes avec l'offre d'admission ; la bourse est creditee en deux versements."
+   ]
   },
   "en": {
-   "nom": "International Undergraduate Entrance Scholarships — University of Guelph"
+   "nom": "International Undergraduate Entrance Scholarships - University of Guelph",
+   "resume": "Entrance scholarships awarded automatically by the University of Guelph to students paying international fees who enter post-secondary studies for the first time in the fall semester. No separate application: offers are based on the admission file.",
+   "valeur": "Renewable scholarships totalling CAD 32,000 to 37,500 over four years (per the official page).",
+   "couverture_detail": "Fall 2026: President's International Entrance Scholarship (one-time, year 1) of CAD 7,500 (95%+), 6,500 (90-94.9%), 5,500 (85-89.9%) or 2,000 (70-84.9%); University International Scholarship of CAD 5,000 per year (20,000 over 4 years) or Dean's International Scholarship of CAD 2,500 per year (10,000 over 4 years), renewable in years 2 to 4 with an 80% average, full-time studies and international fees paid. Paid in two parts, fall and winter.",
+   "ne_couvre_pas": "Covers only part of international tuition; no housing or living costs.",
+   "eligibilite": "Students paying international fees, with no previous post-secondary studies, entering the first semester of a degree program in the fall; amount based on the admission average calculated by Admission Services (also for non-Canadian curricula). Full-time registration in fall and winter of year 1. No nationality restriction.",
+   "diplome": "High school diploma; admission average of at least 70% for the President's International Entrance Scholarship.",
+   "langue": "Studies in English; admission requirements on the Admission Services website.",
+   "conseil": "Since everything depends on the admission average, submit a complete admission file early; check the official page for fall 2027 amounts, as the figures shown are for fall 2026.",
+   "edition_note": "Amounts shown for fall 2026; no scholarship dates, awarded automatically. Fall 2027 amounts not yet published.",
+   "autres": [
+    "International students can also look at the Dr. Franco J. Vaccarino President's Scholarship, the top entrance scholarship for international students, which has its own application."
+   ],
+   "dossier": [
+    "Complete University of Guelph admission application",
+    "Curriculum-specific supporting documents required by Admission Services (no separate scholarship file)"
+   ],
+   "etapes": [
+    "Submit the admission application and make sure all documents are received by Admission Services.",
+    "The university assesses scholarship eligibility along with admission.",
+    "Recipients are informed with the admission offer; the scholarship is credited in two payments."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Rentree automne 2026 : montants publies, attribution automatique avec l'offre d'admission",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.uoguelph.ca/registrar/studentfinance/scholarships/entrance"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -559,11 +770,11 @@
  },
  {
   "id": "international-entrance-scholarship-university-of-victoria",
-  "organisme": "University of Victoria",
+  "organisme": "University of Victoria (UVic)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -574,7 +785,8 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "mars"
+   "ouverture_mois": "",
+   "cloture_mois": ""
   },
   "edition": {
    "permanente": true,
@@ -583,26 +795,88 @@
   "lien_officiel": "https://www.uvic.ca/registrar/safa/entrance-scholarships/international/index.php",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "UVic Student Awards & Financial Aid - Entrance scholarships for international students",
     "url": "https://www.uvic.ca/registrar/safa/entrance-scholarships/international/index.php"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence (aucune candidature requise — automatique)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Entrance Scholarship — University of Victoria",
-   "resume": "L'University of Victoria, située sur l'île de Vancouver en Colombie-Britannique, est réputée pour ses programmes coopératifs (alternance études-stages) et sa recherche de pointe. Cette bourse est attribuée automatiquement aux étudiants internationaux admis,…",
+   "nom": "International Entrance Scholarship - University of Victoria",
+   "resume": "Bourse d'entree automatique de l'University of Victoria pour les etudiants internationaux admis en premiere annee de licence avec une moyenne d'admission competitive (A- ou equivalent). Aucune candidature separee : les candidats eligibles sont transmis au service des bourses par l'admission.",
    "resume_long": "L'University of Victoria, située sur l'île de Vancouver en Colombie-Britannique, est réputée pour ses programmes coopératifs (alternance études-stages) et sa recherche de pointe. Cette bourse est attribuée automatiquement aux étudiants internationaux admis, sans aucune démarche supplémentaire de votre part. C'est le type de bourse qu'il serait dommage de manquer simplement parce que vous ne saviez pas qu'elle existait.",
-   "valeur": "$5 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence (aucune candidature requise — automatique)"
+   "valeur": "15 000 $ CAD, versement unique (montant 2027-2028).",
+   "eligibilite": "Etudiant international admis en premiere annee de licence a UVic, avec les exigences academiques et de langue anglaise remplies, eleve de secondaire en cours ou diplome depuis moins de deux ans sans etudes post-secondaires, admis avec une moyenne competitive, payant les frais internationaux. Inscription a plein temps (12 unites) en session d'hiver pour recevoir la bourse. Aucune restriction de nationalite.",
+   "edition_note": "Montants publies pour 2027-2028, sans date de candidature separee.",
+   "couverture_detail": "Montant applique aux frais de scolarite et frais de la session d'hiver (septembre a avril) ; le solde eventuel est verse a l'etudiant.",
+   "ne_couvre_pas": "Bourse unique, non renouvelable ; ne couvre pas l'integralite des frais internationaux ni les frais de vie.",
+   "diplome": "Diplome de fin d'etudes secondaires (en cours ou obtenu depuis moins de deux ans).",
+   "langue": "Preuve de maitrise de l'anglais exigee pour l'admission.",
+   "conseil": "Envoyer rapidement le releve de notes : sans lui l'etudiant international n'est pas evalue. Verifier aupres de UVic les exigences d'admission et d'anglais.",
+   "autres": [
+    "Le candidat doit etre admis a UVic avant d'etre considere.",
+    "Un report de la bourse d'un an est possible avec l'accord de l'admission."
+   ],
+   "dossier": [
+    "Demande d'admission a UVic",
+    "Releve de notes intermediaire (eleve en cours de secondaire) ou final (diplome depuis moins de deux ans) envoye a Undergraduate Admissions"
+   ],
+   "etapes": [
+    "Etre admis a UVic en licence.",
+    "Envoyer a Undergraduate Admissions le releve de notes intermediaire ou final.",
+    "L'admission transmet automatiquement les candidats eligibles au service des bourses.",
+    "S'inscrire a plein temps pour recevoir la bourse."
+   ]
   },
   "en": {
-   "nom": "International Entrance Scholarship — University of Victoria"
+   "nom": "International Entrance Scholarship - University of Victoria",
+   "resume": "Automatic UVic entrance scholarship for international students admitted to the first year of an undergraduate degree with a competitive admission average (A- or equivalent). No separate application: eligible candidates are referred to the awards office by admissions.",
+   "valeur": "CAD 15,000, one-time (2027-2028 amount).",
+   "couverture_detail": "Amount applied to winter session (September to April) tuition and fees; any balance is paid to the student.",
+   "ne_couvre_pas": "One-time, non-renewable; does not cover the full international fees or living costs.",
+   "eligibilite": "International student admitted to first year of an undergraduate degree at UVic, meeting academic and English proficiency requirements, current secondary student or graduate within two years with no post-secondary studies, admitted with a competitive average, assessed international fees. Full-time registration (12 units) in the winter session to receive the scholarship. No nationality restriction.",
+   "diplome": "Secondary school diploma (current or obtained within the last two years).",
+   "langue": "Proof of English proficiency required for admission.",
+   "conseil": "Send the transcript quickly: without it an international student is not assessed. Check UVic's admission and English requirements.",
+   "edition_note": "Amounts published for 2027-2028, with no separate application date.",
+   "autres": [
+    "The candidate must be admitted to UVic before being considered.",
+    "A one-year deferral of the scholarship is possible with admissions approval."
+   ],
+   "dossier": [
+    "UVic admission application",
+    "Interim transcript (current secondary student) or final transcript (graduate within two years) sent to Undergraduate Admissions"
+   ],
+   "etapes": [
+    "Be admitted to a UVic undergraduate degree.",
+    "Send the interim or final transcript to Undergraduate Admissions.",
+    "Admissions automatically refers eligible candidates to the awards office.",
+    "Register full-time to receive the scholarship."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28 : montants publies, attribution automatique apres admission",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.uvic.ca/registrar/safa/entrance-scholarships/international/index.php"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -611,11 +885,9 @@
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
+   "licence"
   ],
   "domaines": [
    "tous"
@@ -626,38 +898,94 @@
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.guelphhumber.ca/future-students/scholarships-financial-aid",
+  "lien_officiel": "https://www.guelphhumber.ca/current-students/student-financial-services/vice-provost-international-student-entrance-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.guelphhumber.ca/future-students/scholarships-financial-aid"
+    "titre": "University of Guelph-Humber - Vice-Provost International Student Entrance Scholarship",
+    "url": "https://www.guelphhumber.ca/current-students/student-financial-services/vice-provost-international-student-entrance-scholarship"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Vice Provost International Student Entrance Scholarship — University of Guelph-Humber",
-   "resume": "L'University of Guelph-Humber combine les forces de deux institutions — l'University of Guelph et le Humber College — pour offrir des programmes qui mêlent théorie universitaire et compétences professionnelles appliquées. La bourse de $16 000 sur quatre ans…",
+   "nom": "Vice-Provost International Student Entrance Scholarship - University of Guelph-Humber",
+   "resume": "Bourse d'entree attribuee automatiquement aux etudiants payant les frais internationaux qui entrent pour la premiere fois en etudes superieures a Guelph-Humber. Aucune candidature separee : elle est evaluee avec le dossier d'admission.",
    "resume_long": "L'University of Guelph-Humber combine les forces de deux institutions — l'University of Guelph et le Humber College — pour offrir des programmes qui mêlent théorie universitaire et compétences professionnelles appliquées. La bourse de $16 000 sur quatre ans est un appui financier significatif, et le format unique de l'université (vous obtenez à la fois un diplôme universitaire et un diplôme professionnel) est particulièrement attractif pour les étudiants orientés vers l'emploi.",
-   "valeur": "$16 000 ($4 000/an pendant 4 ans)",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Jusqu'a 16 000 $ CAD par laureat (4 000 $ par an pendant 4 ans).",
+   "eligibilite": "Etudiant international entrant pour la premiere fois en etudes post-secondaires, en premiere session d'un programme de licence, moyenne d'admission d'au moins 70 %, inscription a plein temps aux deux premieres sessions et frais internationaux payes. Renouvellement : plein temps et moyenne d'au moins 80 % l'annee precedente. Aucune restriction de nationalite.",
+   "edition_note": "Aucune date de bourse : attribution automatique avec l'offre d'admission.",
+   "couverture_detail": "Montant credite sur le compte etudiant en deux versements egaux (automne et hiver), renouvelable trois ans apres l'annee d'admission avec 80 % de moyenne.",
+   "ne_couvre_pas": "Ne couvre qu'une partie des frais internationaux ; ni logement ni frais de vie ; aucun versement en session d'ete.",
+   "diplome": "Diplome de fin d'etudes secondaires, moyenne d'admission d'au moins 70 %.",
+   "langue": "Etudes en anglais ; exigences d'admission sur la page des etudiants internationaux.",
+   "conseil": "Tout se joue sur le dossier d'admission : le completer tot. Ne pas differer l'admission en comptant sur la bourse, car elle ne se reporte pas.",
+   "autres": [
+    "La bourse ne peut pas etre reportee : un report d'admission entraine un nouvel examen l'annee suivante selon les fonds disponibles."
+   ],
+   "dossier": [
+    "Demande d'admission a Guelph-Humber complete",
+    "Pieces justificatives du cursus exigees par Admission Services (aucun dossier de bourse separe)"
+   ],
+   "etapes": [
+    "Deposer la demande d'admission et veiller a ce que toutes les pieces parviennent a Admission Services.",
+    "L'universite examine l'admissibilite a la bourse avec l'admission.",
+    "Le laureat est informe avec l'offre d'admission ; la bourse est creditee automatiquement en deux versements."
+   ]
   },
   "en": {
-   "nom": "Vice Provost International Student Entrance Scholarship — University of Guelph-Humber"
+   "nom": "Vice-Provost International Student Entrance Scholarship - University of Guelph-Humber",
+   "resume": "Entrance scholarship awarded automatically to students paying international fees who enter post-secondary studies for the first time at Guelph-Humber. No separate application: it is assessed with the admission file.",
+   "valeur": "Up to CAD 16,000 per recipient (CAD 4,000 per year for 4 years).",
+   "couverture_detail": "Credited to the student account in two equal payments (fall and winter), renewable for three years after the admission year with an 80% average.",
+   "ne_couvre_pas": "Covers only part of international fees; no housing or living costs; no payment in the summer semester.",
+   "eligibilite": "International student entering post-secondary studies for the first time, in the first semester of a bachelor's program, admission average of at least 70%, full-time registration in the first two semesters and international fees paid. Renewal: full-time and at least 80% average the previous year. No nationality restriction.",
+   "diplome": "High school diploma, admission average of at least 70%.",
+   "langue": "Studies in English; admission requirements on the international students page.",
+   "conseil": "Everything depends on the admission file: complete it early. Do not defer admission counting on the scholarship, as it cannot be deferred.",
+   "edition_note": "No scholarship dates: awarded automatically with the admission offer.",
+   "autres": [
+    "The scholarship cannot be deferred: a deferred admission is reconsidered the following year depending on funds available."
+   ],
+   "dossier": [
+    "Complete Guelph-Humber admission application",
+    "Curriculum-specific supporting documents required by Admission Services (no separate scholarship file)"
+   ],
+   "etapes": [
+    "Submit the admission application and make sure all documents reach Admission Services.",
+    "The university assesses scholarship eligibility with admission.",
+    "The recipient is informed with the admission offer; the scholarship is credited automatically in two payments."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "editions": [],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.guelphhumber.ca/current-students/student-financial-services/vice-provost-international-student-entrance-scholarship",
+    "https://www.guelphhumber.ca/future-students/scholarships-financial-aid"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "international-student-leadership-award-isla-toronto-metropolitan-unive",
-  "organisme": "Toronto Metropolitan University (anciennement Ryerson University)",
+  "organisme": "Toronto Metropolitan University (TMU)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -668,35 +996,111 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": "novembre",
+   "cloture_mois": "février"
   },
   "edition": {
-   "cloture": "2025-07-15",
-   "confirme": false
+   "libelle": "ISLA Automne 2027",
+   "ouverture": "2026-11-02",
+   "cloture": "2027-02-16",
+   "confirme": true
   },
-  "lien_officiel": "https://www.torontomu.ca/admissions/scholarships-awards/international-student-leadership-award/",
+  "lien_officiel": "https://www.torontomu.ca/international/admissions/paying-for-your-education/scholarships-awards/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.torontomu.ca/admissions/scholarships-awards/international-student-leadership-award/"
+    "titre": "TMU Global - Scholarships and Awards",
+    "url": "https://www.torontomu.ca/international/admissions/paying-for-your-education/scholarships-awards/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 juillet 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Student Leadership Award (ISLA) — Toronto Metropolitan University",
-   "resume": "Toronto Metropolitan University, située au cœur de Toronto, est connue pour ses programmes orientés vers l'industrie et l'entrepreneuriat. L'ISLA cible spécifiquement les étudiants qui démontrent un leadership actif dans leur communauté. Si vous avez fondé une…",
+   "nom": "International Student Leadership Award (ISLA) - Toronto Metropolitan University",
+   "resume": "L'ISLA est une bourse d'entrée de 10 000 CAD offerte par TMU aux étudiants internationaux qui commencent un premier cycle à temps plein et qui se distinguent par leurs résultats, leur bénévolat et leur leadership. Elle est non renouvelable.",
    "resume_long": "Toronto Metropolitan University, située au cœur de Toronto, est connue pour ses programmes orientés vers l'industrie et l'entrepreneuriat. L'ISLA cible spécifiquement les étudiants qui démontrent un leadership actif dans leur communauté. Si vous avez fondé une association, organisé des événements, mené des projets communautaires ou exercé un rôle de leadership étudiant, cette bourse est faite pour vous.",
-   "valeur": "$10 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 15 juillet 2025 (vérifier pour l'édition suivante)"
+   "valeur": "10 000 CAD en une fois (jusqu'à 53 lauréats pour l'automne 2027, jusqu'à 20 pour l'hiver)",
+   "eligibilite": "Étudiant international tenu de payer les frais de scolarité internationaux, qui commence sa première année d'un baccalauréat à temps plein (4 ans ou 5 ans avec stage) à TMU, pour la première fois dans un établissement postsecondaire. Moyenne d'admission finale d'au moins 86 % (ou A, ou équivalent). Une année de césure au maximum est acceptée. Le site ne fixe pas de restriction de nationalité.",
+   "edition_note": "Automne 2027 : candidature du 2 novembre 2026 au 16 février 2027 (date limite générale des bourses prestigieuses de septembre). Hiver 2027 : date limite passée (14 septembre 2026).",
+   "couverture_detail": "Montant forfaitaire de 10 000 CAD, bourse d'entrée uniquement, non renouvelable.",
+   "ne_couvre_pas": "Ne couvre pas l'ensemble des frais de scolarité internationaux, le logement ni la vie courante.",
+   "diplome": "Diplôme de fin d'études secondaires (moyenne finale d'au moins 86 % ou équivalent)",
+   "langue": "Études en anglais (TMU)",
+   "conseil": "Appuyez la déclaration personnelle sur des actions de leadership et de bénévolat concrètes, et déposez votre candidature d'admission tôt. Le détail des pièces peut changer : vérifiez dans AwardSpring.",
+   "autres": [
+    "Candidature via AwardSpring pour l'automne 2027 (ouverte du 2 novembre 2026 au 16 février 2027, selon la page des bourses prestigieuses)",
+    "Pour l'hiver 2027, formulaire Google séparé, clos le 14 septembre 2026"
+   ],
+   "dossier": [
+    "Formulaire de candidature en ligne (AwardSpring)",
+    "Déclaration personnelle (personal statement)",
+    "Moyenne finale d'admission (relevés de notes)",
+    "Numéro d'étudiant TMU pour activer AwardSpring (la candidature peut se faire avant l'offre d'admission)"
+   ],
+   "etapes": [
+    "Demander l'admission à TMU en premier cycle",
+    "Activer son compte AwardSpring avec le numéro d'étudiant TMU",
+    "Remplir le formulaire ISLA et joindre la déclaration personnelle avant la date limite",
+    "Attendre la décision de TMU"
+   ]
   },
   "en": {
-   "nom": "International Student Leadership Award (ISLA) — Toronto Metropolitan University"
+   "nom": "International Student Leadership Award (ISLA) - Toronto Metropolitan University",
+   "resume": "ISLA is a CAD 10,000 entrance award from TMU for international students starting a full-time undergraduate degree who show strong grades, volunteering and leadership. It is non-renewable.",
+   "valeur": "CAD 10,000 one-time (up to 53 recipients for fall 2027, up to 20 for winter)",
+   "couverture_detail": "Flat CAD 10,000 amount, entrance-only, non-renewable.",
+   "ne_couvre_pas": "Does not cover the full international tuition, housing or living costs.",
+   "eligibilite": "International student required to pay international tuition fees, starting the first year of a full-time bachelor's degree (4-year or 5-year co-op) at TMU and enrolling in post-secondary education for the first time. Final admission average of at least 86% (or A, or equivalent). A gap year of at most one academic year is allowed. The page sets no nationality restriction.",
+   "diplome": "Secondary school diploma (final average of at least 86% or equivalent)",
+   "langue": "Studies in English (TMU)",
+   "conseil": "Base your personal statement on concrete leadership and volunteering actions, and submit your admission application early. Required items may change: check AwardSpring.",
+   "edition_note": "Fall 2027: apply from 2 November 2026 to 16 February 2027 (general deadline of the September prestigious scholarships). Winter 2027: deadline passed (14 September 2026).",
+   "autres": [
+    "Fall 2027 applications through AwardSpring (open 2 November 2026 to 16 February 2027, per the prestigious scholarships section)",
+    "Winter 2027 uses a separate Google form, closed on 14 September 2026"
+   ],
+   "dossier": [
+    "Online application form (AwardSpring)",
+    "Personal statement",
+    "Final admission average (transcripts)",
+    "TMU student number to activate AwardSpring (you may apply before receiving an admission offer)"
+   ],
+   "etapes": [
+    "Apply for undergraduate admission to TMU",
+    "Activate your AwardSpring account with your TMU student number",
+    "Complete the ISLA form and attach the personal statement before the deadline",
+    "Wait for TMU's decision"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "ISLA Hiver 2027 (janvier 2027)",
+    "ouverture": null,
+    "cloture": "2026-09-14",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "ISLA Automne 2027",
+    "ouverture": "2026-11-02",
+    "cloture": "2027-02-16",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.torontomu.ca/international/admissions/paying-for-your-education/scholarships-awards/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -1499,6 +1903,10 @@
   },
   "en": {
    "nom": "Faculty of Mathematics Entrance Scholarship for Black International Students — University of Waterloo"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Liste des documents de candidature non publiée sur les pages officielles (candidature via le portail du candidat) et date limite 2027 non confirmée : la page Mathématiques indique le 15 avril 2026 (édition passée), la page générale indique « 15 avril » sans année. Lien du guide mort (404), pages équivalentes lues."
   }
  },
  {
@@ -1507,7 +1915,7 @@
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -1518,35 +1926,101 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": "",
+   "cloture_mois": "mars"
   },
   "edition": {
-   "cloture": "2025-07-15",
-   "confirme": false
+   "libelle": "Entrée automne 2027",
+   "cloture": "2027-03-01",
+   "confirme": true
   },
-  "lien_officiel": "https://umanitoba.ca/financial-aid-and-awards/international-student-entrance-scholarships",
+  "lien_officiel": "https://umanitoba.ca/financial-aid-and-awards/international",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://umanitoba.ca/financial-aid-and-awards/international-student-entrance-scholarships"
+    "titre": "UM - International student awards",
+    "url": "https://umanitoba.ca/financial-aid-and-awards/international"
+   },
+   {
+    "titre": "UM - International brochure (Sept 2027 intake)",
+    "url": "https://umanitoba.ca/sites/default/files/2021-08/00826-internationalbrochure2022-10x7_final.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 juillet 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Undergraduate Student Entrance Scholarships — University of Manitoba",
-   "resume": "L'University of Manitoba est la plus ancienne et la plus grande université de la province du Manitoba. Ses bourses d'entrée de $1 000 à $3 000 sont un bon point de départ, et l'université offre de nombreuses autres possibilités de financement une fois inscrit.…",
+   "nom": "International Undergraduate Student Entrance Scholarship (International General Entrance Scholarship) - University of Manitoba",
+   "resume": "Bourse d'entrée automatique de l'University of Manitoba pour les étudiants internationaux ayant au moins 85 % de moyenne au secondaire. Aucune candidature séparée : il suffit de déposer sa demande d'admission avant le 1er mars.",
    "resume_long": "L'University of Manitoba est la plus ancienne et la plus grande université de la province du Manitoba. Ses bourses d'entrée de $1 000 à $3 000 sont un bon point de départ, et l'université offre de nombreuses autres possibilités de financement une fois inscrit. Winnipeg, la ville où se situe le campus, offre un coût de la vie très bas par rapport aux grandes métropoles canadiennes — un avantage financier non négligeable.",
-   "valeur": "$1 000 à $3 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 15 juillet 2025 (vérifier pour l'édition suivante)"
+   "valeur": "1 000 à 3 000 CAD selon la moyenne (85 % : 1 000 ; 90 % : 2 000 ; 95 % : 3 000, barème de 2024-2025, montants fixés chaque année)",
+   "eligibilite": "Étudiant international (titulaire d'un permis d'études valide), qui paie les frais internationaux, ayant demandé l'admission avant le 1er mars, avec au moins 85 % de moyenne sur cinq cours de niveau supérieur de la liste approuvée (équivalent accepté pour l'étranger), et inscrit à temps plein (24 crédits minimum, automne et hiver). Tous pays admis.",
+   "edition_note": "Admission déposée avant le 1er mars 2027 pour l'entrée de septembre 2027. Le barème détaillé affiché sur la page est celui de 2024-2025.",
+   "couverture_detail": "Montant unique selon la moyenne ; 1 000 à 3 000 CAD d'après la brochure pour l'entrée de septembre 2027.",
+   "ne_couvre_pas": "Ne couvre pas la scolarité internationale ni la vie courante. Non cumulable avec la bourse d'entrée IB ni avec une autre bourse du programme d'entrée UM.",
+   "diplome": "Diplôme de fin d'études secondaires (moyenne d'au moins 85 %)",
+   "langue": "Études en anglais",
+   "conseil": "Montant modeste : combinez-la avec d'autres financements. Déposez l'admission tôt, car les pièces d'immigration (permis d'études) comptent aussi.",
+   "autres": [
+    "Une autre bourse, l'International Excellence Entrance Scholarship (10 000 à 25 000 CAD), exige une candidature séparée avant le 1er décembre 2026"
+   ],
+   "dossier": [
+    "Demande d'admission en premier cycle à l'University of Manitoba",
+    "Relevés de notes du secondaire (aucun essai, lettre ou formulaire de bourse séparé)"
+   ],
+   "etapes": [
+    "Déposer la demande d'admission avant le 1er mars 2027",
+    "Fournir les relevés de notes",
+    "Être considéré automatiquement pour la bourse"
+   ]
   },
   "en": {
-   "nom": "International Undergraduate Student Entrance Scholarships — University of Manitoba"
+   "nom": "International Undergraduate Student Entrance Scholarship (International General Entrance Scholarship) - University of Manitoba",
+   "resume": "Automatic entrance scholarship from the University of Manitoba for international students with at least 85% in high school. No separate application: just submit your admission application by March 1.",
+   "valeur": "CAD 1,000 to 3,000 by average (85%: 1,000; 90%: 2,000; 95%: 3,000, 2024-2025 scale, amounts set each year)",
+   "couverture_detail": "One-time amount by average; CAD 1,000 to 3,000 per the brochure for the September 2027 intake.",
+   "ne_couvre_pas": "Does not cover international tuition or living costs. Cannot be held with the IB entrance scholarship or other UM entrance awards.",
+   "eligibilite": "International student (valid study permit) paying international fees, who applied for admission by March 1, with at least 85% in five approved senior-level courses (comparable standing accepted from abroad), enrolled full-time (minimum 24 credit hours, fall and winter). All countries eligible.",
+   "diplome": "Secondary school diploma (average of at least 85%)",
+   "langue": "Studies in English",
+   "conseil": "The amount is modest: combine it with other funding. Apply early, as the study permit also matters.",
+   "edition_note": "Admission application by 1 March 2027 for September 2027 entry. The detailed scale on the web page is the 2024-2025 one.",
+   "autres": [
+    "A different award, the International Excellence Entrance Scholarship (CAD 10,000 to 25,000), needs a separate application by 1 December 2026"
+   ],
+   "dossier": [
+    "Undergraduate admission application to the University of Manitoba",
+    "High school transcripts (no separate essay, reference or scholarship form)"
+   ],
+   "etapes": [
+    "Submit the admission application by 1 March 2027",
+    "Provide transcripts",
+    "Be considered automatically for the scholarship"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Entrée automne 2027",
+    "ouverture": null,
+    "cloture": "2027-03-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://umanitoba.ca/financial-aid-and-awards/international",
+    "https://umanitoba.ca/sites/default/files/2021-08/00826-internationalbrochure2022-10x7_final.pdf",
+    "https://umanitoba.ca/financial-aid-and-awards/entrance-awards"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -1597,6 +2071,10 @@
   },
   "en": {
    "nom": "President's Scholarship for World Leaders — University of Winnipeg"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site uwinnipeg.ca inaccessible (403 sur toutes les pages de la bourse, y compris via curl et WebFetch) ; seul un formulaire officiel de 2021-2022 a pu être lu : conditions, montants et dates de l'édition actuelle non confirmés."
   }
  },
  {
@@ -1645,6 +2123,10 @@
   },
   "en": {
    "nom": "International Community Achievement Awards — University of British Columbia"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Réservé aux étudiants internationaux déjà inscrits à UBC (pas une bourse d'entrée) ; seule l'édition 2025-2026 (clôture 3 octobre 2025) a pu être lue, édition 2026-2027 non confirmée ; page students.ubc.ca inaccessible (403) ; Cameroun non cité (étudiants internationaux)."
   }
  },
  {
@@ -1693,17 +2175,23 @@
   },
   "en": {
    "nom": "Alberta School of Business MBA Scholarships"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle muette sur la nationalité (Cameroun non admis explicitement), aucune date ni montant par profil publiés ; la bourse suit l'admission au MBA ; page lue uniquement via un outil de résumé car le site renvoie 403."
   }
  },
  {
   "id": "the-p-e-o-international-peace-scholarship-ips",
-  "organisme": "P.E.O. Sisterhood",
+  "organisme": "P.E.O. International (P.E.O. Sisterhood)",
   "pays_accueil": [
+   "États-Unis",
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "master"
+   "master",
+   "doctorat"
   ],
   "domaines": [
    "tous"
@@ -1712,35 +2200,127 @@
   "origine": "fondation",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "decembre"
+   "ouverture_mois": "septembre",
+   "cloture_mois": "décembre"
   },
   "edition": {
-   "cloture": "2025-12-15",
-   "confirme": false
+   "libelle": "2027/28 (formulaire d'éligibilité)",
+   "ouverture": "2026-09-15",
+   "cloture": "2026-12-15",
+   "confirme": true
   },
-  "lien_officiel": "https://www.peointernational.org/ips-eligibility-requirements",
+  "lien_officiel": "https://www.peointernational.org/educational-support/international-peace-scholarship-fund/eligibility-and-application-process/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.peointernational.org/ips-eligibility-requirements"
+    "titre": "IPS - Eligibility and Application Process",
+    "url": "https://www.peointernational.org/educational-support/international-peace-scholarship-fund/eligibility-and-application-process/"
+   },
+   {
+    "titre": "IPS Application Calendar 2027-2028",
+    "url": "https://www.peointernational.org/resource/ips-application-calendar/"
+   },
+   {
+    "titre": "IPS Policies and Procedures",
+    "url": "https://www.peointernational.org/wp-content/uploads/2023/11/IPSPoliciesandProcedures_10.2024.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 décembre 2025"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "The P.E.O. International Peace Scholarship (IPS)",
-   "resume": "L'International Peace Scholarship est exclusivement destinée aux femmes. Fondée en 1949, elle a financé des milliers de femmes du monde entier dans leur quête d'un diplôme supérieur. Le processus de candidature évalue non seulement l'excellence académique,…",
+   "nom": "P.E.O. International Peace Scholarship (IPS)",
+   "resume": "Bourse de jusqu'à 12 500 USD par an pour des femmes de l'extérieur des États-Unis et du Canada qui font des études supérieures dans une université accréditée de ces deux pays. Elle est fondée sur les besoins et ne couvre pas tous les frais.",
    "resume_long": "L'International Peace Scholarship est exclusivement destinée aux femmes. Fondée en 1949, elle a financé des milliers de femmes du monde entier dans leur quête d'un diplôme supérieur. Le processus de candidature évalue non seulement l'excellence académique, mais aussi l'engagement à utiliser son éducation pour améliorer la vie dans son pays d'origine. Une bourse chargée de sens et d'histoire.",
-   "valeur": "Jusqu'à $12 500 USD",
-   "eligibilite": "Femmes internationales inscrites en Master dans une université canadienne ou américaine",
-   "edition_note": "Date limite indiquée dans le guide : 15 décembre 2025"
+   "valeur": "Jusqu'à 12 500 USD pour un an (selon les besoins ; payée en dollars canadiens au Canada)",
+   "eligibilite": "Femme de l'extérieur des États-Unis et du Canada (les citoyennes et résidentes permanentes de ces pays sont exclues), admise en études supérieures à temps plein dans une université accréditée aux États-Unis ou au Canada, avec une année complète de cours restante, qui s'engage à rentrer dans son pays après ses études. Les doctorantes qui n'ont plus que la thèse à rédiger ne sont pas éligibles pour une première bourse. Le Cameroun est admis (aucune restriction de nationalité hors États-Unis et Canada).",
+   "edition_note": "Édition 2027-2028 : formulaire d'éligibilité du 15 septembre au 15 décembre 2026 ; dossier complet le 1er février 2027 ou le 15 mars 2027.",
+   "couverture_detail": "Subvention (grant-in-aid) en deux versements pour la scolarité et les frais de vie, un an d'études (août à juin ou août à août) ; une seule reconduction possible, soit deux ans au maximum.",
+   "ne_couvre_pas": "Ne couvre pas tous les frais ; ne peut pas servir aux voyages (billet d'avion, conférences), aux dettes passées, ni aux cours en ligne, stages ou formation pratique sans cours.",
+   "diplome": "Licence (ou équivalent) donnant accès à des études supérieures, avec lettre d'admission",
+   "langue": "Études en anglais (ou programme de l'université choisie)",
+   "conseil": "Demandez l'admission en études supérieures avant ces dates, car la lettre d'admission est obligatoire. Prévoyez d'autres sources de financement : la bourse ne couvre qu'une partie des frais.",
+   "autres": [
+    "Réservée aux femmes",
+    "Les montants dépendent des besoins : présenter les autres ressources financières",
+    "Preuve d'arrivée aux États-Unis ou au Canada exigée avant le 15 septembre, sinon la bourse est retirée"
+   ],
+   "dossier": [
+    "Formulaire d'éligibilité IPS (en ligne, entre le 15 septembre et le 15 décembre)",
+    "Copie de la confirmation d'admission précisant le programme d'études supérieures",
+    "Budget des dépenses estimées et des ressources financières prévues",
+    "Formulaire de voyage garantissant le billet aller-retour",
+    "Document signé promettant de rentrer dans son pays après les études",
+    "Relevé de notes le plus récent d'un établissement américain ou canadien, le cas échéant"
+   ],
+   "etapes": [
+    "Lire le document IPS Policies, Prerequisites and Procedures",
+    "Soumettre le formulaire d'éligibilité en ligne entre le 15 septembre et le 15 décembre 2026",
+    "Soumettre le dossier complet avant le 1er février 2027 (déjà inscrite dans le programme) ou le 15 mars 2027 (pas encore inscrite)",
+    "Résultats en mai 2027 ; accepter la bourse avant le 1er juin 2027"
+   ]
   },
   "en": {
-   "nom": "The P.E.O. International Peace Scholarship (IPS)"
+   "nom": "P.E.O. International Peace Scholarship (IPS)",
+   "resume": "Scholarship of up to USD 12,500 per year for women from outside the United States and Canada pursuing graduate study at an accredited university in those two countries. It is need-based and does not cover all costs.",
+   "valeur": "Up to USD 12,500 for one year (need-based; paid in Canadian dollars in Canada)",
+   "couverture_detail": "Grant-in-aid paid in two instalments for tuition and living costs, for one year of study (August to June or August to August); one renewal possible, two years maximum.",
+   "ne_couvre_pas": "Does not cover all expenses; cannot be used for travel (flights, conferences), past debts, or online courses, internships and practical training without coursework.",
+   "eligibilite": "Woman from outside the United States and Canada (citizens and permanent residents of those countries are excluded), admitted to full-time graduate study at an accredited US or Canadian university, with a full year of coursework remaining, who intends to return home after her studies. Doctoral students with only a dissertation left are not eligible for a first award. Cameroon is eligible (no nationality restriction other than US and Canada).",
+   "diplome": "Bachelor's degree (or equivalent) giving access to graduate study, with an admission letter",
+   "langue": "Studies in English (or the language of the chosen university's program)",
+   "conseil": "Apply for graduate admission before these dates, since the admission letter is mandatory. Plan other funding sources: the award covers only part of the costs.",
+   "edition_note": "2027-2028 term: eligibility form from 15 September to 15 December 2026; full application on 1 February 2027 or 15 March 2027.",
+   "autres": [
+    "Women only",
+    "Amounts depend on need: other financial resources must be shown",
+    "Proof of arrival in the US or Canada required by 15 September, otherwise the award is withdrawn"
+   ],
+   "dossier": [
+    "IPS eligibility form (online, between 15 September and 15 December)",
+    "Copy of the confirmation of admission naming the graduate program",
+    "Budget of estimated expenses and anticipated financial resources",
+    "Travel form guaranteeing round-trip travel",
+    "Signed document promising to return to her home country after the degree",
+    "Most recent transcript from a US or Canadian institution, if applicable"
+   ],
+   "etapes": [
+    "Read the IPS Policies, Prerequisites and Procedures document",
+    "Submit the online eligibility form between 15 September and 15 December 2026",
+    "Submit the full application by 1 February 2027 (already enrolled in the program) or 15 March 2027 (not yet enrolled)",
+    "Results in May 2027; accept the award by 1 June 2027"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2027/28 (formulaire d'éligibilité)",
+    "ouverture": "2026-09-15",
+    "cloture": "2026-12-15",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "2027/28 (dossier complet : 1er février si déjà inscrite, 15 mars sinon)",
+    "ouverture": null,
+    "cloture": "2027-03-15",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.peointernational.org/educational-support/international-peace-scholarship-fund/eligibility-and-application-process/",
+    "https://www.peointernational.org/resource/ips-application-calendar/",
+    "https://www.peointernational.org/wp-content/uploads/2023/11/IPSPoliciesandProcedures_10.2024.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -1789,15 +2369,19 @@
   },
   "en": {
    "nom": "Dalhousie 1-Year Masters Scholarship — Dalhousie University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue mais sans date limite ni liste de documents (nomination par les facultés, mention de contacter le programme après le 15 octobre 2025, édition 2026-27 non confirmée) ; Cameroun non cité (étudiants internationaux)."
   }
  },
  {
   "id": "merit-scholarship-program-for-foreign-students-pbeee-bishop-s-universi",
-  "organisme": "Bishop's University (administré par le FRQNT du Québec)",
+  "organisme": "Fonds de recherche du Québec (FRQ), programme PBEEE, avec présélection par les universités québécoises dont Bishop's University",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat",
@@ -1810,35 +2394,108 @@
   "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": "juillet",
+   "cloture_mois": "décembre"
   },
   "edition": {
-   "cloture": "2025-07-31",
-   "confirme": false
+   "libelle": "2027/28",
+   "cloture": "2026-12-02",
+   "confirme": true
   },
-  "lien_officiel": "https://frq.gouv.qc.ca/en/program/merit-scholarship-program-for-foreign-studentspbeee/",
+  "lien_officiel": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://frq.gouv.qc.ca/en/program/merit-scholarship-program-for-foreign-studentspbeee/"
+    "titre": "FRQ - PBEEE 2027-2028",
+    "url": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 juillet 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Merit Scholarship Program for Foreign Students (PBEEE) — Bishop's University",
-   "resume": "Le PBEEE est un programme du gouvernement du Québec administré par les Fonds de recherche du Québec. $20 000 par an pour un Master de recherche, c'est un financement substantiel, d'autant que le Québec offre aux étudiants internationaux des frais de scolarité…",
+   "nom": "Bourses d'excellence pour étudiantes et étudiants étrangers (PBEEE) — FRQ, Québec",
+   "resume": "Programme du gouvernement du Québec géré par le Fonds de recherche du Québec (FRQ) pour attirer des étudiants et chercheurs étrangers dans les universités québécoises. Seules les personnes présélectionnées par une université québécoise (par exemple Bishop's University) peuvent déposer une demande au FRQ.",
    "resume_long": "Le PBEEE est un programme du gouvernement du Québec administré par les Fonds de recherche du Québec. $20 000 par an pour un Master de recherche, c'est un financement substantiel, d'autant que le Québec offre aux étudiants internationaux des frais de scolarité réduits. Le programme est disponible dans de nombreuses universités québécoises — Bishop's, mais aussi Laval, Montréal, Sherbrooke, McGill et d'autres.",
-   "valeur": "$20 000/an pour les Masters (jusqu'à 2 ans)",
-   "eligibilite": "Étudiants internationaux (hors France et Belgique pour certains programmes)",
-   "edition_note": "Date limite indiquée dans le guide : 31 juillet 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Master de recherche : 20 000 $ CA par an (max. 6 versements) ; doctorat : 25 000 $ par an ; postdoc : 35 000 $ ; court séjour : 3 000 $ par mois (4 mois max.)",
+   "eligibilite": "Ouvert à toute personne sans citoyenneté canadienne ni résidence permanente (et sans demande de résidence permanente en cours), donc aux Camerounais. Il faut être présélectionné par une université québécoise ou le Réseau des CCTT, ne jamais avoir reçu une bourse PBEEE du ministère, et pour la maîtrise être inscrit depuis au plus 3 sessions à temps plein avant le 1er mai 2027 ou commencer entre le 1er mai 2027 et le 15 janvier 2028.",
+   "edition_note": "Édition 2027-2028 : présélection par les universités au 27 octobre 2026, dépôt au FRQ le 2 décembre 2026, résultats en avril 2027. Les dates 2028 ne sont pas encore annoncées.",
+   "couverture_detail": "Bourse annuelle selon le volet, plus exemption des droits de scolarité majorés pour étudiants étrangers et couverture d'assurance maladie de la RAMQ pendant la période de financement.",
+   "ne_couvre_pas": "Les programmes de maîtrise ou de doctorat professionnels et les cotutelles ne sont pas admissibles ; pas de financement hors de la période de bourse.",
+   "diplome": "Admission ou inscription à une maîtrise ou un doctorat en recherche (mémoire ou thèse) dans une université québécoise ; postdoc : doctorat obtenu depuis 2 ans au plus.",
+   "langue": "Formulaire et documents en français ou en anglais ; la langue des études dépend du programme choisi à l'université.",
+   "conseil": "Ne comptez pas déposer seul : sans présélection par l'université, aucune demande n'est recevable. Adressez-vous à l'université québécoise (Bishop's ou une autre) dès que possible, car les dates internes de présélection sont souvent antérieures au 27 octobre.",
+   "autres": [
+    "Le quota est de 16 candidatures par université pour le volet « tous pays » : la présélection par l'université est la vraie étape sélective.",
+    "Le site de Bishop's University n'a pas été lu : ses dates internes de présélection sont à demander à l'université.",
+    "Les volets Brésil, Chine, Inde, Israël et Wallonie sont réservés à ces pays."
+   ],
+   "dossier": [
+    "Passeport valide (page d'identification) ou document officiel prouvant la citoyenneté",
+    "Relevés de notes de toutes les années universitaires, avec document expliquant le système de notation pour les études hors Amérique du Nord",
+    "Le cas échéant : attestation du registraire (sessions à temps partiel ou sans inscription) et attestation de suspension d'inscription",
+    "Postdoc : copie du diplôme de doctorat ou attestation de dépôt de thèse, et lettre d'acceptation du superviseur",
+    "Court séjour : lettre d'acceptation du superviseur"
+   ],
+   "etapes": [
+    "Contacter le bureau des études supérieures de l'université québécoise visée et demander sa procédure de présélection pour le PBEEE",
+    "Être présélectionné : l'université transmet les candidatures au FRQ au plus tard le 27 octobre 2026 à 16 h",
+    "Créer un compte FRQnet et remplir le formulaire demandé par le FRQ avec les pièces jointes",
+    "Transmettre la demande au plus tard le 2 décembre 2026 à 16 h (heure de l'Est) ; résultats en avril 2027"
+   ]
   },
   "en": {
-   "nom": "Merit Scholarship Program for Foreign Students (PBEEE) — Bishop's University"
+   "nom": "Merit Scholarships for Foreign Students (PBEEE) — FRQ, Quebec",
+   "resume": "Quebec government program managed by the Fonds de recherche du Québec (FRQ) to attract foreign students and researchers to Quebec universities. Only candidates preselected by a Quebec university (for example Bishop's University) may apply to the FRQ.",
+   "valeur": "Research master's: CAD 20,000 per year (max. 6 payments); doctorate: CAD 25,000 per year; postdoc: CAD 35,000; short stay: CAD 3,000 per month (up to 4 months)",
+   "couverture_detail": "Annual award depending on the stream, plus exemption from the higher tuition fees for foreign students and RAMQ health insurance coverage during the funding period.",
+   "ne_couvre_pas": "Professional master's or doctoral programs and joint supervision (cotutelle) programs are not eligible; no funding outside the award period.",
+   "eligibilite": "Open to anyone who is not a Canadian citizen or permanent resident (and has no pending permanent residence application), so open to Cameroonians. Candidates must be preselected by a Quebec university or the CCTT network, must never have received a PBEEE award from the ministry, and for the master's must have been enrolled for at most 3 full-time terms before 1 May 2027 or start between 1 May 2027 and 15 January 2028.",
+   "diplome": "Admission or enrolment in a research master's or doctorate (thesis-based) at a Quebec university; postdoc: doctorate obtained within the last 2 years.",
+   "langue": "Form and documents in French or English; the language of study depends on the program chosen at the university.",
+   "conseil": "Do not plan to apply alone: without preselection by the university, no application is admissible. Contact the Quebec university (Bishop's or another) as soon as possible, since internal preselection dates are often earlier than 27 October.",
+   "edition_note": "2027-2028 edition: university preselection by 27 October 2026, FRQ submission on 2 December 2026, results in April 2027. 2028 dates are not yet announced.",
+   "autres": [
+    "Each university may recommend at most 16 candidates for the all-countries stream: the university preselection is the real selective step.",
+    "Bishop's University's own site was not read: ask the university for its internal preselection dates.",
+    "The Brazil, China, India, Israel and Wallonia streams are reserved for those countries."
+   ],
+   "dossier": [
+    "Valid passport (identification page) or official document proving citizenship",
+    "Transcripts for all university years, with a document explaining the grading system for studies outside North America",
+    "If applicable: registrar's certificate (part-time or non-enrolled terms) and certificate of enrolment suspension",
+    "Postdoc: copy of the doctoral diploma or thesis submission certificate, and supervisor's acceptance letter",
+    "Short stay: supervisor's acceptance letter"
+   ],
+   "etapes": [
+    "Contact the graduate studies office of the Quebec university concerned and ask for its PBEEE preselection procedure",
+    "Get preselected: the university submits candidates to the FRQ by 27 October 2026 at 4 p.m.",
+    "Create an FRQnet account and fill in the form requested by the FRQ with the attachments",
+    "Submit the application by 2 December 2026 at 4 p.m. (Eastern time); results in April 2027"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2026-12-02",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/",
+    "https://frq.gouv.qc.ca/app/uploads/2026/07/pbeee_2027-2028_instructions_preselection.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -2440,11 +3097,11 @@
  },
  {
   "id": "ontario-graduate-scholarship-ogs-university-of-toronto",
-  "organisme": "University of Toronto (et autres universités ontariennes)",
+  "organisme": "University of Toronto, School of Graduate Studies (avec le gouvernement de l'Ontario)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
@@ -2452,40 +3109,116 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
-  "origine": "universitaire",
+  "couverture_niveau": "partielle",
+  "origine": "gouvernementale",
   "lien_officiel": "https://www.sgs.utoronto.ca/awards/ontario-graduate-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "U of T SGS - Ontario Graduate Scholarship",
     "url": "https://www.sgs.utoronto.ca/awards/ontario-graduate-scholarship/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Variable selon les départements"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
    "nom": "Ontario Graduate Scholarship (OGS) — University of Toronto",
-   "resume": "L'Ontario Graduate Scholarship est financée conjointement par le gouvernement de l'Ontario et les universités participantes. À l'University of Toronto, cette bourse est accessible aux étudiants internationaux dans certains départements. Vérifiez directement…",
+   "resume": "Bourse au mérite financée conjointement par la province de l'Ontario et l'University of Toronto pour des étudiants de maîtrise et de doctorat à temps plein. Les étudiants internationaux titulaires d'un permis d'études ne peuvent y prétendre que pour un nombre limité de bourses.",
    "resume_long": "L'Ontario Graduate Scholarship est financée conjointement par le gouvernement de l'Ontario et les universités participantes. À l'University of Toronto, cette bourse est accessible aux étudiants internationaux dans certains départements. Vérifiez directement avec votre programme de destination, car les critères d'éligibilité et les deadlines varient selon les facultés.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants domestiques et internationaux (selon les universités)",
-   "edition_note": "Date limite indiquée dans le guide : Variable selon les départements"
+   "valeur": "5 000 $ CA par session : 10 000 $ pour deux sessions consécutives, 15 000 $ pour trois",
+   "eligibilite": "Les citoyens canadiens, résidents permanents et personnes protégées sont admissibles ; les étudiants internationaux avec un permis d'études valide à la date limite internationale de l'unité sont admissibles pour un nombre limité de bourses (aucune nationalité exclue, donc le Cameroun est admis). Il faut être inscrit ou prévoir de s'inscrire à temps plein en 2027-2028 et avoir au moins A- (ou équivalent) dans chacune des deux dernières années complétées, sauf exception de l'unité.",
+   "edition_note": "Concours pour 2027-2028 : les dates limites sont fixées par chaque unité et ne figurent pas sur la page principale ; aucune date confirmée ici.",
+   "couverture_detail": "Montant forfaitaire de 5 000 $ par session, pour un an (2 ou 3 sessions consécutives) ; la durée et la valeur exactes figurent dans la lettre d'offre de l'unité d'études supérieures.",
+   "ne_couvre_pas": "Ne couvre pas à elle seule les frais de scolarité internationaux ni la vie courante ; non cumulable avec une bourse CRSH, CRSNG, IRSC, QEII-GSST ou une autre OGS la même année.",
+   "diplome": "Licence (ou maîtrise pour le doctorat) avec une moyenne d'au moins A- ; admission à un programme d'études supérieures à temps plein de l'University of Toronto.",
+   "langue": "Programmes de l'University of Toronto, en anglais.",
+   "conseil": "Contactez l'unité d'études supérieures visée avant d'avoir un permis d'études : seul un nombre limité de bourses sont réservées aux internationaux et c'est l'unité qui choisit les dossiers transmis. Une séance d'information est prévue le 12 novembre 2026 (MS Teams).",
+   "autres": [
+    "Chaque unité d'études supérieures fixe ses propres critères supplémentaires, ses dates limites et décide quels programmes sont admissibles.",
+    "Un permis d'études valide est exigé pour les candidats internationaux : il faut donc déjà être admis à l'université.",
+    "Maximum de 2 ans d'OGS à la maîtrise et 4 ans au doctorat (6 ans à vie)."
+   ],
+   "dossier": [
+    "Formulaire de candidature OGS en ligne",
+    "Relevés de notes de tous les établissements post-secondaires (les relevés non officiels ou émis par l'étudiant sont acceptés)",
+    "Récompenses antérieures, publications, communications et expérience de recherche",
+    "Plan d'études (1 page) et page de références (1 page)",
+    "Deux lettres de référence académiques envoyées en ligne par les répondants"
+   ],
+   "etapes": [
+    "Être admis ou candidat à un programme d'études supérieures de l'University of Toronto et contacter son unité d'études supérieures",
+    "Remplir la candidature OGS en ligne en suivant les instructions OGS",
+    "Transmettre le dossier à chaque unité visée avant sa date limite interne (les dates sont dans le tableur « Student deadlines » de la page)",
+    "Résultats généralement publiés à la mi-juillet"
+   ]
   },
   "en": {
-   "nom": "Ontario Graduate Scholarship (OGS) — University of Toronto"
+   "nom": "Ontario Graduate Scholarship (OGS) — University of Toronto",
+   "resume": "Merit scholarship jointly funded by the Province of Ontario and the University of Toronto for full-time master's and doctoral students. International students holding a study permit can only compete for a limited number of awards.",
+   "valeur": "CAD 5,000 per session: CAD 10,000 for two consecutive sessions, CAD 15,000 for three",
+   "couverture_detail": "Flat CAD 5,000 per session, for one year (2 or 3 consecutive sessions); exact value and duration are stated in the graduate unit's offer letter.",
+   "ne_couvre_pas": "Does not cover international tuition or living costs by itself; cannot be held with a SSHRC, NSERC, CIHR, QEII-GSST or another OGS award in the same year.",
+   "eligibilite": "Canadian citizens, permanent residents and protected persons are eligible; international students with a study permit valid on the unit's international deadline are eligible for a limited number of awards (no nationality excluded, so Cameroon is admitted). Applicants must be registered or intend to register full-time in 2027-2028 and have at least A- (or equivalent) in each of the last two completed years, unless the unit makes an exception.",
+   "diplome": "Bachelor's (or master's for the doctorate) with an average of at least A-; admission to a full-time graduate program at the University of Toronto.",
+   "langue": "University of Toronto programs, taught in English.",
+   "conseil": "Contact the graduate unit well before you hold a study permit: only a limited number of awards are open to international students and the unit selects which files go forward. An information session is scheduled for 12 November 2026 (MS Teams).",
+   "edition_note": "2027-2028 competition: deadlines are set by each unit and are not on the main page; no date confirmed here.",
+   "autres": [
+    "Each graduate unit sets its own extra criteria and deadlines and decides which programs are eligible.",
+    "International applicants need a valid study permit: you must already be admitted to the university.",
+    "Maximum 2 years of OGS at master's level and 4 years at doctoral level (6 years lifetime)."
+   ],
+   "dossier": [
+    "Online OGS application form",
+    "Transcripts from all post-secondary institutions (unofficial and student-issued transcripts accepted)",
+    "Previous awards, publications, conference presentations and research experience",
+    "Plan of study (1 page) and references page (1 page)",
+    "Two academic references submitted online by the referees"
+   ],
+   "etapes": [
+    "Be admitted to, or apply to, a University of Toronto graduate program and contact your graduate unit",
+    "Complete the online OGS application following the OGS instructions",
+    "Submit the file to each unit you are applying to before its internal deadline (dates are in the 'Student deadlines' spreadsheet on the page)",
+    "Results are typically released in mid-July"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "edition": {},
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.sgs.utoronto.ca/awards/ontario-graduate-scholarship/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "merit-scholarship-concordia-university",
-  "organisme": "Concordia University",
+  "organisme": "Concordia University, School of Graduate Studies",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
@@ -2493,44 +3226,105 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "edition": {
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.concordia.ca/sgs/funding/scholarships.html",
+  "lien_officiel": "https://www.concordia.ca/gradstudies/funding/entrance-awards/merit-scholarship.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.concordia.ca/sgs/funding/scholarships.html"
+    "titre": "Concordia SGS - Merit Scholarship",
+    "url": "https://www.concordia.ca/gradstudies/funding/entrance-awards/merit-scholarship.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence (selon les admissions)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Merit Scholarship — Concordia University",
-   "resume": "Concordia University, située à Montréal, est reconnue pour ses programmes en arts, en technologie, en business et en sciences sociales. Ses bourses au mérite pour les étudiants de recherche sont attribuées lors de l'admission au programme. Montréal est…",
+   "nom": "Merit Scholarship — Concordia University (School of Graduate Studies)",
+   "resume": "Bourse d'entrée au mérite de Concordia (Montréal) attribuée sur l'excellence académique et le potentiel de recherche aux étudiants de maîtrise de recherche et de doctorat. La candidature à l'admission vaut candidature à la bourse.",
    "resume_long": "Concordia University, située à Montréal, est reconnue pour ses programmes en arts, en technologie, en business et en sciences sociales. Ses bourses au mérite pour les étudiants de recherche sont attribuées lors de l'admission au programme. Montréal est systématiquement classée parmi les meilleures villes étudiantes au monde, avec un coût de la vie très compétitif par rapport à Toronto ou Vancouver.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence (selon les admissions)"
+   "valeur": "5 000 $ à 10 000 $ CA pour une année universitaire",
+   "eligibilite": "Citoyenneté non restreinte (le Cameroun est donc admis). Il faut être admis ou inscrit dans un programme de recherche des cycles supérieurs à Concordia : dans les deux premières années pour la maîtrise, dans les quatre premières pour le doctorat. Ce sont les programmes qui choisissent les lauréats.",
+   "edition_note": "Aucune date propre à la bourse : la date limite est celle d'admission de chaque programme, non fixée sur la page.",
+   "couverture_detail": "Montant versé sur le compte étudiant après confirmation de l'inscription à temps plein, appliqué d'abord aux frais de scolarité ; le solde éventuel peut être remboursé par chèque.",
+   "ne_couvre_pas": "Ne couvre pas à elle seule les frais de scolarité internationaux ni le coût de la vie ; une seule année par attribution.",
+   "diplome": "Admission à une maîtrise de recherche (avec mémoire) ou à un doctorat à Concordia.",
+   "langue": "Programmes de Concordia, généralement en anglais ; vérifier la langue de chaque programme et les tests de langue exigés pour l'admission.",
+   "conseil": "Déposez votre admission le plus tôt possible : la bourse est intégrée à l'admission et attribuée par les programmes selon leurs propres échéanciers. Contactez le programme visé pour connaître ses dates et le nombre de bourses.",
+   "autres": [
+    "Les maîtrises professionnelles ou sans mémoire ne sont pas visées : la page indique « Master's research and Doctorate programs »."
+   ],
+   "dossier": [
+    "Dossier de demande d'admission à Concordia (il sert aussi de candidature à la bourse ; aucun formulaire séparé n'est indiqué sur la page)"
+   ],
+   "etapes": [
+    "Choisir un programme de recherche (maîtrise avec mémoire ou doctorat) à Concordia",
+    "Déposer sa demande d'admission tôt, avant la date limite d'admission du programme",
+    "Le programme sélectionne les lauréats ; les étudiants déjà inscrits contactent leur directeur de programme"
+   ]
   },
   "en": {
-   "nom": "Merit Scholarship — Concordia University"
+   "nom": "Merit Scholarship — Concordia University (School of Graduate Studies)",
+   "resume": "Concordia (Montréal) entrance merit scholarship awarded for academic excellence and research potential to research master's and doctoral students. The admission application serves as the scholarship application.",
+   "valeur": "CAD 5,000 to 10,000 for one academic year",
+   "couverture_detail": "Paid to the student account once full-time registration is confirmed, applied first to tuition and fees; any remaining credit can be refunded by cheque.",
+   "ne_couvre_pas": "Does not cover international tuition or living costs by itself; one year per award.",
+   "eligibilite": "Citizenship unrestricted (so Cameroon is admitted). You must be admitted to or registered in a graduate research-based program at Concordia: within the first two years for the master's, within the first four years for the doctorate. Programs select the recipients.",
+   "diplome": "Admission to a research master's (thesis) or doctorate at Concordia.",
+   "langue": "Concordia programs, generally taught in English; check each program's language and the language tests required for admission.",
+   "conseil": "Apply for admission as early as possible: the scholarship is built into admission and awarded by programs on their own timelines. Contact the target program for its dates and number of awards.",
+   "edition_note": "No scholarship-specific date: the deadline is each program's admission deadline, not fixed on the page.",
+   "autres": [
+    "Professional or non-thesis master's programs are not covered: the page says 'Master's research and Doctorate programs'."
+   ],
+   "dossier": [
+    "Concordia admission application (it also serves as the scholarship application; no separate form is listed on the page)"
+   ],
+   "etapes": [
+    "Choose a research program (thesis master's or doctorate) at Concordia",
+    "Submit the admission application early, before the program's admission deadline",
+    "The program selects recipients; current students contact their program director"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.concordia.ca/gradstudies/funding/entrance-awards/merit-scholarship.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "graduate-fellowship-university-of-manitoba",
-  "organisme": "University of Manitoba",
+  "organisme": "University of Manitoba, Faculty of Graduate and Postdoctoral Studies",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
@@ -2538,35 +3332,101 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "edition": {
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://umanitoba.ca/graduate-studies/funding-and-awards",
+  "lien_officiel": "https://umanitoba.ca/graduate-studies/funding-awards/university-manitoba-graduate-fellowship-umgf",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "University of Manitoba - UMGF",
+    "url": "https://umanitoba.ca/graduate-studies/funding-awards/university-manitoba-graduate-fellowship-umgf"
+   },
+   {
+    "titre": "University of Manitoba - Funding and awards",
     "url": "https://umanitoba.ca/graduate-studies/funding-and-awards"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Graduate Fellowship — University of Manitoba",
-   "resume": "L'University of Manitoba Graduate Fellowship (UMGF) est la principale bourse interne pour les étudiants des cycles supérieurs. Le montant varie selon le programme et le niveau d'études. L'University of Manitoba offre un environnement de recherche solide,…",
+   "nom": "University of Manitoba Graduate Fellowship (UMGF)",
+   "resume": "Bourse d'excellence de l'University of Manitoba pour les étudiants à temps plein en maîtrise et en doctorat. Les étudiants doivent être recommandés par leur département à la Faculté des études supérieures.",
    "resume_long": "L'University of Manitoba Graduate Fellowship (UMGF) est la principale bourse interne pour les étudiants des cycles supérieurs. Le montant varie selon le programme et le niveau d'études. L'University of Manitoba offre un environnement de recherche solide, notamment en ingénierie, en sciences de la santé et en études arctiques.",
-   "valeur": "Variable — UMGF (University of Manitoba Graduate Fellowship)",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Maîtrise : 20 000 $ CA par an (12 ou 24 mois) ; doctorat : 25 000 $ par an (12 à 48 mois)",
+   "eligibilite": "Tous les étudiants, quelle que soit leur citoyenneté, peuvent être recommandés (le Cameroun est donc admis). Il faut une moyenne d'admission d'au moins 3,0 (certains départements exigent plus), être admis à un programme à temps plein admissible au financement des trois organismes fédéraux, et être recommandé par son département.",
+   "edition_note": "Aucune date centrale : chaque département fixe sa date limite ; les dates 2027-2028 ne sont pas publiées sur la page centrale.",
+   "couverture_detail": "Montant annuel de 20 000 $ (maîtrise, jusqu'à 40 000 $ au total) ou 25 000 $ (doctorat, jusqu'à 100 000 $ au total) ; le département fixe la valeur et la durée.",
+   "ne_couvre_pas": "Total limité à 4 ans de UMGF par étudiant ; non éligible après 12 mois de maîtrise ou 36 mois de doctorat déjà effectués.",
+   "diplome": "Admission à une maîtrise ou un doctorat de recherche à l'University of Manitoba.",
+   "langue": "Programmes de l'University of Manitoba, en anglais.",
+   "conseil": "Écrivez au département dès votre candidature d'admission : c'est lui qui décide, et ses dates limites diffèrent (par exemple février à mai selon les unités pour l'édition 2026-2027).",
+   "autres": [
+    "Il n'y a pas de candidature centrale : la page indique de contacter son département, qui choisit les étudiants recommandés."
+   ],
+   "dossier": [
+    "Dossier de candidature de votre département (les documents et la date limite sont fixés par chaque département ; en général formulaire, relevés de notes et références)"
+   ],
+   "etapes": [
+    "Être admis dans un programme d'études supérieures de l'University of Manitoba",
+    "Contacter le département pour connaître sa procédure et sa date limite",
+    "Le département recommande les étudiants à la Faculté des études supérieures et postdoctorales"
+   ]
   },
   "en": {
-   "nom": "Graduate Fellowship — University of Manitoba"
+   "nom": "University of Manitoba Graduate Fellowship (UMGF)",
+   "resume": "Excellence fellowship of the University of Manitoba for full-time master's and PhD students. Students must be recommended by their department to the Faculty of Graduate and Postdoctoral Studies.",
+   "valeur": "Master's: CAD 20,000 per year (12 or 24 months); doctorate: CAD 25,000 per year (12 to 48 months)",
+   "couverture_detail": "Annual amount of CAD 20,000 (master's, up to 40,000 in total) or CAD 25,000 (doctorate, up to 100,000 in total); the department sets value and duration.",
+   "ne_couvre_pas": "Total limited to 4 years of UMGF per student; not eligible after 12 months of master's or 37 months of doctoral study already completed.",
+   "eligibilite": "All students regardless of citizenship may be recommended (so Cameroon is admitted). A minimum admission GPA of 3.0 is required (some departments ask for more), admission to a full-time program eligible for Tri-Agency funding, and a department recommendation.",
+   "diplome": "Admission to a research master's or doctorate at the University of Manitoba.",
+   "langue": "University of Manitoba programs, taught in English.",
+   "conseil": "Write to the department as soon as you apply for admission: it decides, and its deadlines differ (for example February to May depending on the unit for the 2026-2027 edition).",
+   "edition_note": "No central date: each department sets its own deadline; 2027-2028 dates are not published on the central page.",
+   "autres": [
+    "There is no central application: the page says to contact your department, which chooses the students it recommends."
+   ],
+   "dossier": [
+    "Your department's application package (documents and deadline are set by each department; usually a form, transcripts and references)"
+   ],
+   "etapes": [
+    "Be admitted to a graduate program at the University of Manitoba",
+    "Contact the department for its procedure and deadline",
+    "The department recommends students to the Faculty of Graduate and Postdoctoral Studies"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://umanitoba.ca/graduate-studies/funding-awards/university-manitoba-graduate-fellowship-umgf",
+    "https://umanitoba.ca/graduate-studies/funding-and-awards"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -3025,48 +3885,6 @@
   }
  },
  {
-  "id": "canada-asean-scholarships-and-educational-exchanges-for-development-se",
-  "organisme": "Gouvernement du Canada (via EduCanada)",
-  "pays_accueil": [
-   "Canada"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "gouvernementale",
-  "lien_officiel": "https://www.educanada.ca/scholarships-bourses/non_can/seed-sead.aspx?lang=eng",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.educanada.ca/scholarships-bourses/non_can/seed-sead.aspx?lang=eng"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Variable — consulter le site officiel"
-  },
-  "fr": {
-   "nom": "Canada-ASEAN Scholarships and Educational Exchanges for Development (SEED)",
-   "resume": "Le programme SEED renforce les liens éducatifs entre le Canada et l'Asie du Sud-Est. Il offre aux étudiants des pays de l'ASEAN (Brunei, Cambodge, Indonésie, Laos, Malaisie, Myanmar, Philippines, Singapour, Thaïlande, Vietnam) un séjour d'un trimestre dans une…",
-   "resume_long": "Le programme SEED renforce les liens éducatifs entre le Canada et l'Asie du Sud-Est. Il offre aux étudiants des pays de l'ASEAN (Brunei, Cambodge, Indonésie, Laos, Malaisie, Myanmar, Philippines, Singapour, Thaïlande, Vietnam) un séjour d'un trimestre dans une université canadienne. C'est une opportunité de découvrir le Canada tout en enrichissant son parcours académique.",
-   "valeur": "$10 200 pour un trimestre académique",
-   "eligibilite": "Étudiants des pays de l'ASEAN",
-   "edition_note": "Date limite indiquée dans le guide : Variable — consulter le site officiel"
-  },
-  "en": {
-   "nom": "Canada-ASEAN Scholarships and Educational Exchanges for Development (SEED)"
-  }
- },
- {
   "id": "arts-and-science-global-scholarship-university-of-toronto",
   "organisme": "University of Toronto — Faculty of Arts & Science",
   "pays_accueil": [
@@ -3110,15 +3928,19 @@
   },
   "en": {
    "nom": "Arts & Science Global Scholarship — University of Toronto"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "La page détaillée de la Faculty of Arts & Science (artsci.utoronto.ca) est bloquée par un contrôle anti-robot ; la page officielle future.utoronto.ca confirme seulement le principe (considération automatique à l'admission, scolarité internationale couverte 4 ans) mais pas le niveau d'études, les conditions de renouvellement ni les dates. Le lien du guide renvoie une erreur 404."
   }
  },
  {
   "id": "flight-ps752-commemorative-scholarship-program-educanada",
-  "organisme": "Gouvernement du Canada (via EduCanada)",
+  "organisme": "Affaires mondiales Canada (Global Affairs Canada)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master",
@@ -3127,89 +3949,112 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "mai",
    "cloture_mois": "juin"
   },
   "edition": {
-   "cloture": "2025-06-15",
-   "confirme": false
+   "libelle": "2026/27",
+   "cloture": "2026-06-09",
+   "confirme": true
   },
-  "lien_officiel": "https://www.educanada.ca/scholarships-bourses/can/ps752.aspx?lang=eng",
+  "lien_officiel": "https://www.international.gc.ca/world-monde/issues_development-enjeux_developpement/response_conflict-reponse_conflits/crisis-crises/flight-vol-ps752-scholarship.aspx?lang=eng",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.educanada.ca/scholarships-bourses/can/ps752.aspx?lang=eng"
+    "titre": "Global Affairs Canada - Flight PS752 Commemorative Scholarship Program",
+    "url": "https://www.international.gc.ca/world-monde/issues_development-enjeux_developpement/response_conflict-reponse_conflits/crisis-crises/flight-vol-ps752-scholarship.aspx?lang=eng"
+   },
+   {
+    "titre": "EduCanada - Now accepting applications (12 mai 2026)",
+    "url": "https://www.educanada.ca/scholarships-bourses/news-nouvelles/2026/2026-05-12.aspx?lang=eng"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 juin 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Flight PS752 Commemorative Scholarship Program — EduCanada",
-   "resume": "Ce programme commémoratif a été créé en mémoire des victimes du vol PS752. Il finance des étudiants qui incarnent les valeurs de l'éducation, de la paix et de la coopération internationale. C'est une bourse chargée de sens, qui honore la mémoire des disparus…",
+   "nom": "Flight PS752 Commemorative Scholarship Program (Affaires mondiales Canada)",
+   "resume": "Programme commémoratif du gouvernement du Canada qui offre 176 bourses d'un an sur cinq ans, à partir de 2023-2024, à des étudiants canadiens et internationaux de collèges et universités canadiens. Environ 70 % des bourses vont à des étudiants internationaux.",
    "resume_long": "Ce programme commémoratif a été créé en mémoire des victimes du vol PS752. Il finance des étudiants qui incarnent les valeurs de l'éducation, de la paix et de la coopération internationale. C'est une bourse chargée de sens, qui honore la mémoire des disparus en investissant dans l'avenir des prochaines générations.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants inscrits dans un établissement canadien",
-   "edition_note": "Date limite indiquée dans le guide : 15 juin 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Environ 25 000 $ CA en moyenne pour une année scolaire, renouvelable une fois si les conditions sont remplies",
+   "eligibilite": "Étudiant inscrit à temps plein dans un établissement post-secondaire canadien, ayant terminé au moins une année complète de son programme et en ayant encore au moins une à faire. Les candidats internationaux doivent détenir un permis d'études valide (aucune nationalité exclue, donc le Cameroun est admis). Les titulaires d'une autre bourse financée par le gouvernement du Canada sont exclus. Le domaine d'études doit correspondre aux parcours des victimes ou porter sur la prévention des catastrophes aériennes.",
+   "edition_note": "Édition 2026-2027 : date limite 9 juin 2026 (passée). Prochaine édition non annoncée ; le programme court sur 5 ans à partir de 2023-2024.",
+   "couverture_detail": "Frais de visa ou de permis, voyage vers et dans le Canada, assurance santé, frais de scolarité, logement, nourriture, transport local, livres et fournitures. Versement de 50 % en septembre et 50 % en janvier.",
+   "ne_couvre_pas": "Ordinateurs et autres équipements ; la bourse ne peut pas être reportée.",
+   "diplome": "Être déjà inscrit à un diplôme ou une licence, une maîtrise ou un doctorat dans un établissement canadien.",
+   "langue": "Dossier en anglais ou en français (traduction officielle des autres langues).",
+   "conseil": "Le concours 2026-2027 est clos depuis le 9 juin 2026 et aucune édition suivante n'est annoncée sur la page officielle. Surveillez cette page, mais ne comptez pas dessus : le programme n'est accessible qu'aux étudiants déjà inscrits au Canada.",
+   "autres": [
+    "Il faut déjà étudier au Canada : ce n'est pas une bourse d'entrée pour un étudiant encore au Cameroun.",
+    "Les membres de la famille d'une victime reçoivent des points supplémentaires ; sélection sur le mérite académique, la lettre de motivation et le lien familial."
+   ],
+   "dossier": [
+    "Passeport et permis d'études valide (candidats internationaux)",
+    "Déclaration signée de lien familial avec une victime, le cas échéant",
+    "Relevé de notes officiel récent",
+    "Lettre de motivation de 500 mots maximum",
+    "Traduction officielle des documents qui ne sont ni en anglais ni en français"
+   ],
+   "etapes": [
+    "Vérifier le statut du programme sur la page officielle d'Affaires mondiales Canada",
+    "Lors d'un appel ouvert, remplir la candidature en ligne et joindre les documents",
+    "Résultats communiqués environ en septembre"
+   ]
   },
   "en": {
-   "nom": "Flight PS752 Commemorative Scholarship Program — EduCanada"
-  }
- },
- {
-  "id": "full-scholarships-for-aspiring-community-leaders-saint-mary-s-universi",
-  "organisme": "Saint Mary's University (Halifax, Nouvelle-Écosse)",
-  "pays_accueil": [
-   "Canada"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "juin"
+   "nom": "Flight PS752 Commemorative Scholarship Program (Global Affairs Canada)",
+   "resume": "Government of Canada commemorative program offering 176 one-year scholarships over five years, starting in 2023-2024, to Canadian and international students in Canadian colleges and universities. About 70% of awards go to international students.",
+   "valeur": "About CAD 25,000 on average for one school year, renewable once if conditions are met",
+   "couverture_detail": "Visa or permit fees, travel to and within Canada, health insurance, tuition, accommodation, food, local transport, books and supplies. Paid 50% in September and 50% in January.",
+   "ne_couvre_pas": "Computers and other equipment; the scholarship cannot be deferred.",
+   "eligibilite": "Student enrolled full-time at a Canadian post-secondary institution, having completed at least one full academic year and having at least one year remaining. International applicants must hold a valid study permit (no nationality excluded, so Cameroon is admitted). Holders of another Government of Canada-funded scholarship are excluded. The field of study must align with the victims' backgrounds or focus on air disaster prevention.",
+   "diplome": "Must already be enrolled in a diploma, bachelor's, master's or doctoral program at a Canadian institution.",
+   "langue": "Application in English or French (official translation for other languages).",
+   "conseil": "The 2026-2027 competition closed on 9 June 2026 and no later edition is announced on the official page. Watch that page, but do not count on it: the program is only open to students already enrolled in Canada.",
+   "edition_note": "2026-2027 edition: deadline 9 June 2026 (passed). Next edition not announced; the program runs 5 years from 2023-2024.",
+   "autres": [
+    "You must already be studying in Canada: this is not an entry scholarship for a student still in Cameroon.",
+    "Family members of a victim get extra points; selection is based on academic merit, motivation letter and family relationship."
+   ],
+   "dossier": [
+    "Passport and valid study permit (international applicants)",
+    "Signed statement of family relationship with a victim, if applicable",
+    "Recent official transcript",
+    "Letter of motivation, maximum 500 words",
+    "Official translation of documents not in English or French"
+   ],
+   "etapes": [
+    "Check the program status on the official Global Affairs Canada page",
+    "When a call is open, complete the online application and upload the documents",
+    "Results are announced around September"
+   ]
   },
-  "edition": {
-   "cloture": "2025-06-30",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.smu.ca/future-students/international-scholarships.html",
-  "sources": [
+  "editions": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.smu.ca/future-students/international-scholarships.html"
+    "annee": 2026,
+    "libelle": "2026/27",
+    "ouverture": null,
+    "cloture": "2026-06-09",
+    "confirme": true
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Ouverture des candidatures en juin 2025 pour l'admission été/automne 2026"
-  },
-  "fr": {
-   "nom": "Full Scholarships for Aspiring Community Leaders — Saint Mary's University",
-   "resume": "Saint Mary's University offre des bourses complètes aux étudiants internationaux qui démontrent un engagement exceptionnel envers leur communauté. Située à Halifax, l'université offre un cadre accueillant et multiculturel. Le terme « Aspiring Community Leaders…",
-   "resume_long": "Saint Mary's University offre des bourses complètes aux étudiants internationaux qui démontrent un engagement exceptionnel envers leur communauté. Située à Halifax, l'université offre un cadre accueillant et multiculturel. Le terme « Aspiring Community Leaders » est clé : votre impact communautaire est le critère central de sélection.",
-   "valeur": "Frais de scolarité + avantages supplémentaires",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Ouverture des candidatures en juin 2025 pour l'admission été/automne 2026"
-  },
-  "en": {
-   "nom": "Full Scholarships for Aspiring Community Leaders — Saint Mary's University"
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.international.gc.ca/world-monde/issues_development-enjeux_developpement/response_conflict-reponse_conflits/crisis-crises/flight-vol-ps752-scholarship.aspx?lang=eng",
+    "https://www.educanada.ca/scholarships-bourses/news-nouvelles/2026/2026-05-12.aspx?lang=eng"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -3260,54 +4105,10 @@
   },
   "en": {
    "nom": "Scholarships for International Students — Fleming College"
-  }
- },
- {
-  "id": "canada-graduate-research-scholarship-masters-program-cgs-m",
-  "organisme": "Gouvernement du Canada (via SSHRC, NSERC ou CIHR)",
-  "pays_accueil": [
-   "Canada"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "master"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "gouvernementale",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "decembre"
   },
-  "edition": {
-   "cloture": "2025-12-01",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSM-BESCM_eng.asp",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSM-BESCM_eng.asp"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er décembre 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "Canada Graduate Research Scholarship — Masters Program (CGS-M)",
-   "resume": "Le CGS-M est le pendant Master du CGS-D (bourse n°48). Financé par le gouvernement fédéral canadien, il soutient les étudiants de Master dans toutes les disciplines. Comme pour le CGS-D, le programme est administré par trois organismes selon le domaine de…",
-   "resume_long": "Le CGS-M est le pendant Master du CGS-D (bourse n°48). Financé par le gouvernement fédéral canadien, il soutient les étudiants de Master dans toutes les disciplines. Comme pour le CGS-D, le programme est administré par trois organismes selon le domaine de recherche. L'éligibilité des étudiants internationaux varie — vérifiez auprès de votre université.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants inscrits dans une université canadienne",
-   "edition_note": "Date limite indiquée dans le guide : 1er décembre 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "Canada Graduate Research Scholarship — Masters Program (CGS-M)"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue mais sans liste de documents, sans éligibilité détaillée (renvoi par courriel) et sans date limite ; ancien barème régional (Afrique 1 250 $) en commentaire non actif"
   }
  },
  {
@@ -3357,6 +4158,10 @@
   },
   "en": {
    "nom": "MIRA Graduate Scholarship — McMaster University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle (research.mcmaster.ca) datée du cycle 2022/23 ; éligibilité des étudiants internationaux et dates actuelles non confirmées ; page gs.mcmaster.ca ne mentionne pas la bourse"
   }
  },
  {
@@ -3407,6 +4212,10 @@
   },
   "en": {
    "nom": "Mackenzie King Scholarships — University of Alberta"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue mais nationalité non précisée (réservé aux diplômés d'universités canadiennes), montants « récents » sans date, documents non listés"
   }
  },
  {
@@ -3449,54 +4258,115 @@
   },
   "en": {
    "nom": "SPECEF Scholarships — SPE Canadian Educational Foundation"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Liste des documents non publiée sur la page officielle (formulaire en ligne) ; autres points confirmés"
   }
  },
  {
   "id": "esl-bursary-for-international-students-cgps-university-of-saskatchewan",
-  "organisme": "University of Saskatchewan",
+  "organisme": "University of Saskatchewan (College of Graduate and Postdoctoral Studies)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "autre"
+   "master",
+   "doctorat"
   ],
   "domaines": [
    "lettres-langues"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": null,
    "cloture_mois": "aout"
   },
   "edition": {
-   "cloture": "2025-08-01",
+   "libelle": "automne 2027",
+   "cloture": "2027-08-01",
    "confirme": false
   },
-  "lien_officiel": "https://admissions.usask.ca/money/scholarships.php",
+  "lien_officiel": "https://students.usask.ca/money/awards/graduate-awards.php?award=ND5021G",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://admissions.usask.ca/money/scholarships.php"
+    "titre": "ESL Bursary (USask student services)",
+    "url": "https://students.usask.ca/money/awards/graduate-awards.php?award=ND5021G"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er août 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "ESL Bursary for International Students (CGPS) — University of Saskatchewan",
-   "resume": "Cette bourse unique cible les étudiants internationaux qui ont besoin de renforcer leur anglais avant d'entamer un programme académique complet. L'University of Saskatchewan offre un environnement accueillant dans la province de la Saskatchewan, avec un coût…",
+   "nom": "Bourse ESL pour étudiants internationaux (CGPS) - University of Saskatchewan",
+   "resume": "Bourse destinée aux étudiants internationaux déjà inscrits à temps plein en master ou doctorat à l'University of Saskatchewan, pour suivre un cours d'anglais académique au Language Centre. Ce n'est pas une bourse d'admission.",
    "resume_long": "Cette bourse unique cible les étudiants internationaux qui ont besoin de renforcer leur anglais avant d'entamer un programme académique complet. L'University of Saskatchewan offre un environnement accueillant dans la province de la Saskatchewan, avec un coût de la vie parmi les plus bas au Canada. Si votre niveau d'anglais est un frein, cette bourse peut être le premier pas vers votre parcours canadien.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 1er août 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Variable selon les cours, nombre limité",
+   "eligibilite": "Étudiant international inscrit à temps plein, en règle, en programme de grade à USask ; niveau d'anglais minimal déjà atteint et non dispensé ; recommandation du superviseur ou du Graduate Chair ; pas d'admission conditionnelle linguistique ni EAP 40/50/60. Aucune nationalité précisée : tous les étudiants internationaux. Priorité aux doctorants.",
+   "edition_note": "Date limite de la session d'automne : 1er août à 16 h 30 CST (année non indiquée sur la page) ; une session d'hiver existe aussi (2 décembre en 2024). Édition 2027 supposée, non confirmée.",
+   "couverture_detail": "Prise en charge d'un cours d'anglais académique (rédaction avancée, rédaction de recherche, expression orale avancée) pour une session.",
+   "ne_couvre_pas": "Droits de scolarité du programme, vie courante. Frais administratifs non remboursables de 31 $ à payer au Language Centre.",
+   "diplome": "Admission en master ou doctorat à USask.",
+   "langue": "Anglais.",
+   "conseil": "Réservé aux étudiants déjà admis à USask ; inutile pour obtenir l'admission. Écrire à gradstudies.awards@usask.ca.",
+   "autres": [],
+   "dossier": [
+    "Formulaire de candidature en ligne",
+    "Formulaire de recommandation du superviseur ou Graduate Chair"
+   ],
+   "etapes": [
+    "Remplir le formulaire en ligne de la session visée",
+    "Faire remplir le formulaire de recommandation par le superviseur",
+    "Payer les 31 $ de frais si la bourse est accordée"
+   ]
   },
   "en": {
-   "nom": "ESL Bursary for International Students (CGPS) — University of Saskatchewan"
+   "nom": "ESL Bursary for International Students (CGPS) - University of Saskatchewan",
+   "resume": "Bursary for international students already enrolled full-time in a master's or PhD at the University of Saskatchewan, to take an academic English course at the Language Centre. It is not an admission scholarship.",
+   "valeur": "Varies with the classes; limited number",
+   "couverture_detail": "Covers an academic English course (advanced writing, graduate writing, advanced speaking) for one term.",
+   "ne_couvre_pas": "Program tuition, living costs. Non-refundable CAD 31 administration fee payable to the Language Centre.",
+   "eligibilite": "Full-time international student in good standing in a degree program at USask; minimum English proficiency met and not waived; supervisor or Graduate Chair recommendation; not conditionally admitted for language and no EAP 40/50/60. No nationality specified: all international students. Priority to PhD students.",
+   "diplome": "Admission to a USask master's or PhD.",
+   "langue": "English.",
+   "conseil": "Only for students already admitted at USask; it does not help with admission. Email gradstudies.awards@usask.ca.",
+   "edition_note": "Fall term deadline: August 1, 4:30 pm CST (year not stated on page); a winter term also exists (December 2 in 2024). 2027 edition assumed, not confirmed.",
+   "autres": [],
+   "dossier": [
+    "Online application form",
+    "Supervisor or Graduate Chair recommendation form"
+   ],
+   "etapes": [
+    "Complete the online form for the target term",
+    "Have the supervisor complete the recommendation form",
+    "Pay the CAD 31 fee if awarded"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "automne 2027",
+    "ouverture": null,
+    "cloture": "2027-08-01",
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://students.usask.ca/money/awards/graduate-awards.php?award=ND5021G"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -3541,6 +4411,10 @@
   },
   "en": {
    "nom": "International Student Scholarships — University of Pittsburgh at Bradford"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue mais ni date limite, ni liste de documents propre à la bourse, ni mention explicite du Cameroun ; montants différents entre pages (12 722 $ et 12 234 $) ; pays d'accueil corrigé : États-Unis"
   }
  },
  {
@@ -3591,6 +4465,10 @@
   },
   "en": {
    "nom": "International Students Scholarships — Auburn University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Fiche incohérente (Auburn vs UConn) ; aucune bourse internationale distincte identifiée sur le site officiel d'Auburn (bourses de mérite d'admission, montants et critères pour internationaux non publiés)"
   }
  },
  {
@@ -3599,7 +4477,7 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -3610,35 +4488,102 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "decembre"
+   "ouverture_mois": "",
+   "cloture_mois": ""
   },
   "edition": {
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.sydney.edu.au/scholarships/domestic/academic-excellence.html",
+  "lien_officiel": "https://www.sydney.edu.au/scholarships/e/sydney-international-undergraduate-academic-excellence-scholarship.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.sydney.edu.au/scholarships/domestic/academic-excellence.html"
+    "titre": "Sydney International Undergraduate Academic Excellence Scholarship",
+    "url": "https://www.sydney.edu.au/scholarships/e/sydney-international-undergraduate-academic-excellence-scholarship.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence (attribuée automatiquement à l'admission)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Sydney International Undergraduate Academic Excellence Scholarship — University of Sydney",
-   "resume": "C'est l'une des bourses de Licence les plus généreuses au monde. L'University of Sydney — la plus ancienne université d'Australie — offre une couverture totale des frais de scolarité, qui dépassent $50 000 AUD par an pour les étudiants internationaux. La…",
+   "nom": "Sydney International Undergraduate Academic Excellence Scholarship",
+   "resume": "Bourse de l'University of Sydney pour des étudiants internationaux excellents entrant en licence, couvrant l'intégralité des frais de scolarité. Environ 20 bourses sont attribuées par an dans le monde, selon le mérite académique et la diversité des nationalités et des filières.",
    "resume_long": "C'est l'une des bourses de Licence les plus généreuses au monde. L'University of Sydney — la plus ancienne université d'Australie — offre une couverture totale des frais de scolarité, qui dépassent $50 000 AUD par an pour les étudiants internationaux. La bourse est attribuée automatiquement sur la base de l'excellence du dossier d'admission. Aucune candidature séparée n'est requise — votre demande d'admission est votre candidature.",
-   "valeur": "100% des frais de scolarité + Student Services and Amenities Fee",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence (attribuée automatiquement à l'admission)"
+   "valeur": "100 % des frais de scolarité et du SSAF pendant la durée officielle du diplôme (4 ans maximum)",
+   "eligibilite": "Étudiant international (au sens du Higher Education Support Act 2003 : ni citoyen, ni résident permanent, ni double national australien) ayant postulé à une licence éligible de l'université, études secondaires terminées, aucune étude supérieure antérieure, inscription à temps plein. Aucune nationalité n'est exclue ; la sélection tient compte de la diversité des nationalités.",
+   "edition_note": "La page indique que les candidatures pour le semestre 1 de 2027 sont closes et qu'elles sont ouvertes pour le semestre 2 de 2027 ; aucune date limite n'est publiée (« N/A »).",
+   "couverture_detail": "Frais de scolarité à 100 % et Student Services and Amenities Fee (SSAF) pour la durée à temps plein du premier diplôme de licence (honours intégré inclus), 4 ans maximum.",
+   "ne_couvre_pas": "Assurance santé OSHC, frais de vie, logement, manuels, billets d'avion et frais liés à l'âge (moins de 18 ans).",
+   "diplome": "Études secondaires terminées (ou programme de fondation reconnu) ; aucune étude supérieure antérieure.",
+   "langue": "Études en anglais ; les exigences linguistiques sont celles de l'admission à l'université.",
+   "conseil": "Peu de places dans le monde (environ 20) : candidatez avec un dossier académique très solide et un choix de filière clair. Vérifiez auprès des conseillers régionaux de l'université que vos diplômes camerounais sont reconnus.",
+   "autres": [
+    "Maintien d'une moyenne semestrielle (SAM) d'au moins 65 et achèvement du diplôme dans la durée officielle.",
+    "Pas de report ni de suspension de la bourse ; non cumulable avec une autre bourse de première année (sauf Sydney International Student Award).",
+    "Exclus : diplômes combinés avec composante de master, doubles diplômes avec Sciences Po, diplômes incluant le Bachelor of Advanced Studies.",
+    "Bourse soumise à la disponibilité des fonds ; informations susceptibles de changer sans préavis."
+   ],
+   "dossier": [
+    "Demande d'admission en licence à l'University of Sydney (avec relevés de notes et diplôme de fin d'études secondaires)",
+    "Formulaire de candidature en ligne à la bourse"
+   ],
+   "etapes": [
+    "Postuler à une licence éligible de l'University of Sydney.",
+    "Remplir le formulaire de candidature en ligne à la bourse depuis la page officielle.",
+    "Attendre la réponse (délai indicatif de 5 semaines ; seuls les candidats retenus sont contactés).",
+    "Accepter l'offre d'admission inconditionnelle et l'offre de bourse avant la date limite."
+   ]
   },
   "en": {
-   "nom": "Sydney International Undergraduate Academic Excellence Scholarship — University of Sydney"
+   "nom": "Sydney International Undergraduate Academic Excellence Scholarship",
+   "resume": "University of Sydney scholarship for outstanding international students entering an undergraduate degree, covering full tuition fees. About 20 awards are made worldwide each year, based on academic merit and diversity of nationality and degree.",
+   "valeur": "100% of tuition fees and SSAF for the published full-time length of the degree (4 years maximum)",
+   "couverture_detail": "100% tuition fees and Student Services and Amenities Fee (SSAF) for the full-time length of a single undergraduate degree (embedded honours included), up to 4 years.",
+   "ne_couvre_pas": "OSHC health cover, living costs, accommodation, textbooks, flights and costs linked to being under 18.",
+   "eligibilite": "International student (as defined in the Higher Education Support Act 2003: not an Australian citizen, permanent resident or dual national) who has applied for an eligible undergraduate degree, has completed secondary school, has no previous tertiary study and enrols full-time. No nationality is excluded; selection considers diversity of nationality.",
+   "diplome": "Completed secondary school (or recognised foundation program); no previous tertiary study.",
+   "langue": "Studies in English; language requirements are those of university admission.",
+   "conseil": "Very few places worldwide (about 20): apply with a very strong academic record and a clear choice of degree. Check with the university's regional experts that your Cameroonian qualifications are recognised.",
+   "edition_note": "The page states that applications for Semester 1, 2027 are closed and that applications are welcome for Semester 2, 2027; no deadline is published (\"N/A\").",
+   "autres": [
+    "Minimum Semester Average Mark (SAM) of 65 and completion within the published full-time duration.",
+    "No deferral or suspension; cannot be combined with another commencing scholarship (except the Sydney International Student Award).",
+    "Excluded: combined degrees with a postgraduate component, dual degrees with Sciences Po, degrees including the Bachelor of Advanced Studies.",
+    "Subject to availability of funds; information may change without notice."
+   ],
+   "dossier": [
+    "Undergraduate admission application to the University of Sydney (with transcripts and secondary school certificate)",
+    "Online scholarship application form"
+   ],
+   "etapes": [
+    "Apply for an eligible undergraduate degree at the University of Sydney.",
+    "Complete the online scholarship application form from the official page.",
+    "Wait for the outcome (indicative 5 weeks; only successful applicants are contacted).",
+    "Accept the unconditional admission offer and the scholarship offer by the deadline."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Semestre 2, 2027",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.sydney.edu.au/scholarships/e/sydney-international-undergraduate-academic-excellence-scholarship.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -3683,6 +4628,10 @@
   },
   "en": {
    "nom": "Melbourne International Undergraduate Scholarship — University of Melbourne"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (protection Cloudflare, erreur 403 sur scholarships.unimelb.edu.au et study.unimelb.edu.au, y compris via curl). Piste non officielle : remise de 25 % réservée aux citoyens de pays à PIB/habitant <= 10 000 USD, sans candidature séparée ; non confirmé."
   }
  },
  {
@@ -3727,6 +4676,10 @@
   },
   "en": {
    "nom": "QUT Excellence Scholarship (Academic) — Queensland University of Technology"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (403 Cloudflare, y compris via curl). Piste non officielle : bourse fondée sur l'ATAR (>= 98) et le programme australien de Year 12, probablement inaccessible aux Camerounais ; non confirmé."
   }
  },
  {
@@ -3735,7 +4688,7 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -3748,29 +4701,100 @@
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.westernsydney.edu.au/international/home/apply/scholarships",
+  "lien_officiel": "https://www.westernsydney.edu.au/international/applying/fees-and-costs/scholarships/academic-excellence-undergraduate-scholarships",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.westernsydney.edu.au/international/home/apply/scholarships"
+    "titre": "Vice-Chancellor's Academic Excellence Undergraduate Scholarships (UG International Merit Based Scholarship)",
+    "url": "https://www.westernsydney.edu.au/international/applying/fees-and-costs/scholarships/academic-excellence-undergraduate-scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Vice-Chancellor's Academic Excellence Undergraduate Scholarships — Western Sydney University",
-   "resume": "Une réduction de 50% sur les frais de scolarité internationaux — qui peuvent dépasser $30 000 AUD par an — représente une économie de plus de $15 000 par an. Western Sydney University est la plus grande université de la région de Sydney Ouest, avec des campus…",
+   "nom": "Vice-Chancellor's Academic Excellence Undergraduate Scholarships",
+   "resume": "Réduction de 50 % des frais de scolarité de Western Sydney University pour les nouveaux étudiants internationaux de licence ayant un excellent niveau académique. Aucune candidature séparée : l'éligibilité est évaluée avec la demande d'admission.",
    "resume_long": "Une réduction de 50% sur les frais de scolarité internationaux — qui peuvent dépasser $30 000 AUD par an — représente une économie de plus de $15 000 par an. Western Sydney University est la plus grande université de la région de Sydney Ouest, avec des campus modernes et une forte orientation vers l'innovation. La bourse est renouvelable chaque session sous condition de maintien des résultats académiques.",
-   "valeur": "50% des frais de scolarité par session",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "50 % des frais de scolarité par session, 3 ans maximum",
+   "eligibilite": "Nouvel étudiant international (ni citoyen australien ou néo-zélandais, ni résident permanent d'Australie) commençant un programme de licence en 2027, avec offre d'admission, ATAR 90 ou équivalent dans un cycle secondaire supérieur terminé, et acceptation de l'offre dans les délais. Le Cameroun n'est pas exclu (tous les étudiants internationaux sont éligibles).",
+   "edition_note": "Édition pour les étudiants commençant en 2027 ; la page ne publie pas de date limite précise (sélection deux fois par an, ouverte jusqu'à épuisement des places).",
+   "couverture_detail": "Remise de 50 % des frais de scolarité par session à temps plein pour la durée du diplôme, dans la limite de trois ans.",
+   "ne_couvre_pas": "Frais de vie, logement, transport, assurance santé OSHC et autres frais d'études.",
+   "diplome": "Études secondaires supérieures terminées, niveau minimum ATAR 90 ou équivalent.",
+   "langue": "Études en anglais ; conditions d'admission de l'université.",
+   "conseil": "Les places sont limitées et attribuées jusqu'à épuisement : déposez votre demande d'admission tôt et acceptez l'offre rapidement. Faites évaluer l'équivalence de votre baccalauréat par l'université.",
+   "autres": [
+    "Exclus : International College / The College, étudiants d'échange, programmes du campus Sydney City, Bachelor of Clinical Science (Medicine)/Doctor of Medicine, Nursing, Physiotherapy.",
+    "Non cumulable avec une autre bourse couvrant les frais de scolarité.",
+    "Nombre de bourses limité par session ; la bourse s'arrête si le statut de visa change vers citoyen/résident."
+   ],
+   "dossier": [
+    "Demande d'admission à Western Sydney University (aucune demande de bourse séparée)",
+    "Relevés de notes et diplôme de fin d'études secondaires (équivalent ATAR 90)",
+    "Déclaration de motivation (uniquement si présélectionné)"
+   ],
+   "etapes": [
+    "Postuler à une licence éligible de Western Sydney University.",
+    "Attendre l'évaluation automatique (présélection deux fois par an).",
+    "Si présélectionné, fournir la déclaration de soutien demandée.",
+    "Accepter l'offre d'admission dès réception, la bourse figure dans la lettre d'offre."
+   ]
   },
   "en": {
-   "nom": "Vice-Chancellor's Academic Excellence Undergraduate Scholarships — Western Sydney University"
+   "nom": "Vice-Chancellor's Academic Excellence Undergraduate Scholarships",
+   "resume": "50% tuition fee reduction at Western Sydney University for new international undergraduate students with excellent academic results. No separate application: eligibility is assessed with the admission application.",
+   "valeur": "50% of tuition fees per session, 3 years maximum",
+   "couverture_detail": "50% of tuition fees per session of full-time enrolment for the duration of the degree, up to a maximum of three years.",
+   "ne_couvre_pas": "Living costs, accommodation, transport, OSHC health cover and other study-related costs.",
+   "eligibilite": "New international student (not an Australian or New Zealand citizen or Australian permanent resident) starting an undergraduate program in 2027, with an offer of admission, ATAR 90 or equivalent in completed higher secondary study, and acceptance of the offer by the deadline. Cameroon is not excluded (all international students are eligible).",
+   "diplome": "Completed higher secondary study, minimum ATAR 90 or equivalent.",
+   "langue": "Studies in English; university admission requirements apply.",
+   "conseil": "Places are limited and awarded until filled: submit your admission application early and accept the offer quickly. Have the university assess the equivalence of your Cameroonian qualification.",
+   "edition_note": "Edition for students commencing in 2027; the page gives no precise deadline (shortlisting twice a year, open until places are filled).",
+   "autres": [
+    "Excluded: International College / The College pathways, exchange students, Sydney City campus programs, Bachelor of Clinical Science (Medicine)/Doctor of Medicine, Nursing, Physiotherapy.",
+    "Cannot be combined with another scholarship covering tuition fees.",
+    "Limited places per session; the scholarship ends if visa status changes to citizen/permanent resident."
+   ],
+   "dossier": [
+    "Application for admission to Western Sydney University (no separate scholarship application)",
+    "Transcripts and secondary school certificate (ATAR 90 equivalent)",
+    "Statement of support (only if shortlisted)"
+   ],
+   "etapes": [
+    "Apply for an eligible undergraduate program at Western Sydney University.",
+    "Wait for the automatic assessment (shortlisting twice a year).",
+    "If shortlisted, provide the requested statement of support.",
+    "Accept the admission offer as soon as you receive it; the scholarship appears in the offer letter."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": ""
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Rentrée 2027",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.westernsydney.edu.au/international/applying/fees-and-costs/scholarships/academic-excellence-undergraduate-scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -3820,6 +4844,10 @@
   },
   "en": {
    "nom": "Vice-Chancellor's International Scholarship — Griffith University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (403 Cloudflare, y compris via curl et WebFetch). Pistes non officielles à confirmer : 50 % des frais, clôture 28 novembre 2026 (T1 2027) et 10 avril 2027 (T2 2027), GPA 6.0/7 exigé."
   }
  },
  {
@@ -3864,6 +4892,10 @@
   },
   "en": {
    "nom": "Academic Excellence Scholarships — University of Newcastle"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (403 Cloudflare). Fiche du guide inexacte : l'Academic Excellence Scholarship (10 000 USD) concerne les étudiants déjà inscrits (années 2 à 4), pas les nouveaux. Équivalents possibles non lus : International Excellence Scholarship (UNI_053, 20 %) ou Vice-Chancellor's International Academic Merit Scholarship (UNI_059, 30 %)."
   }
  },
  {
@@ -3872,11 +4904,10 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
-   "master",
-   "doctorat"
+   "master"
   ],
   "domaines": [
    "tous"
@@ -3885,35 +4916,105 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": "",
+   "cloture_mois": ""
   },
   "edition": {
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.uwa.edu.au/study/fees-and-scholarships/scholarships",
+  "lien_officiel": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.uwa.edu.au/study/fees-and-scholarships/scholarships"
+    "titre": "UWA Global Excellence Scholarship",
+    "url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship"
+   },
+   {
+    "titre": "UWA International Student Award (liste de pays sans le Cameroun)",
+    "url": "https://www.uwa.edu.au/study/Scholarship-Listing/uwa-international-student-award-f221201"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Student Award — University of Western Australia",
-   "resume": "UWA est un membre du Group of Eight et l'une des universités les plus prestigieuses d'Australie. Située à Perth, elle offre un cadre de vie exceptionnel sur les rives de la Swan River. L'International Student Award de $20 000 est une reconnaissance…",
+   "nom": "Global Excellence Scholarship (UWA)",
+   "resume": "Remise de 10 % ou 20 % sur les frais de scolarité de l'University of Western Australia pour les étudiants internationaux de tous pays, selon le niveau académique, pour toute la durée normale du cursus. Attribuée automatiquement à l'admission, sans candidature séparée.",
    "resume_long": "UWA est un membre du Group of Eight et l'une des universités les plus prestigieuses d'Australie. Située à Perth, elle offre un cadre de vie exceptionnel sur les rives de la Swan River. L'International Student Award de $20 000 est une reconnaissance significative qui peut couvrir près de la moitié des frais de scolarité annuels. Perth, bien que plus isolée que Sydney ou Melbourne, offre un coût de la vie modéré et un marché de l'emploi dynamique dans les secteurs minier, énergétique et technologique.",
-   "valeur": "Jusqu'à $20 000 AUD",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "10 % (ATAR 85 ou équivalent) ou 20 % (ATAR 90 ou équivalent) de réduction annuelle sur les frais de scolarité",
+   "eligibilite": "Étudiants de tous pays (Cameroun inclus) ayant reçu une offre pour un cours de licence ou de master éligible en 2027, avec le niveau académique minimal (équivalent ATAR 85 en licence ; WAM 65 en master).",
+   "edition_note": "Édition pour l'entrée 2027 ; aucune date limite propre à la bourse n'est publiée (évaluation automatique avec la demande d'admission).",
+   "couverture_detail": "Remise annuelle sur les frais de scolarité pour la durée normale à temps plein du cursus indiquée dans la lettre d'offre ; 10 % si ATAR équivalent >= 85, 20 % si >= 90 (licence) ; en master, 10 % si moyenne UWA (WAM) >= 65 et 20 % si >= 75.",
+   "ne_couvre_pas": "Le reste des frais de scolarité, frais de vie, logement et autres coûts.",
+   "diplome": "Licence : diplôme secondaire équivalent à un ATAR d'au moins 85 ; master : niveau équivalent à un WAM d'au moins 65.",
+   "langue": "Études en anglais ; conditions d'admission de l'université.",
+   "conseil": "La bourse n'est évaluée qu'avec les relevés finaux : transmettez-les dès que possible pour éviter une offre sans bourse. Elle ne se cumule pas avec une autre remise de frais de l'UWA.",
+   "autres": [
+    "Exclus : Assured Pathway to Medicine/Dental Medicine, Juris Doctor, Doctor of Medicine, Doctor of Dental Medicine, Doctor of Optometry, micro-certifications.",
+    "Maintien de critères académiques pour la poursuite de la bourse (conditions générales, clause 13).",
+    "Remarque : l'UWA International Student Award de la fiche initiale est réservée à une liste de pays qui n'inclut pas le Cameroun."
+   ],
+   "dossier": [
+    "Demande d'admission à l'UWA pour un cours éligible (aucune demande de bourse séparée)",
+    "Relevés de notes finaux (nécessaires à l'évaluation de la bourse)"
+   ],
+   "etapes": [
+    "Postuler à un cours éligible de l'UWA.",
+    "Fournir vos relevés de notes finaux ; l'évaluation est automatique.",
+    "Consulter la lettre d'offre qui indique si la bourse est attribuée.",
+    "Accepter l'offre ; la remise est appliquée automatiquement à chaque semestre."
+   ]
   },
   "en": {
-   "nom": "International Student Award — University of Western Australia"
+   "nom": "Global Excellence Scholarship (UWA)",
+   "resume": "10% or 20% tuition fee discount at the University of Western Australia for international students from all countries, depending on academic level, for the normal duration of the course. Awarded automatically at admission, with no separate application.",
+   "valeur": "10% (ATAR 85 or equivalent) or 20% (ATAR 90 or equivalent) annual tuition fee discount",
+   "couverture_detail": "Annual tuition fee discount for the normal full-time duration of the course stated in the letter of offer; 10% if equivalent ATAR >= 85, 20% if >= 90 (undergraduate); for postgraduate, 10% with UWA WAM >= 65 and 20% with WAM >= 75.",
+   "ne_couvre_pas": "The remaining tuition fees, living costs, accommodation and other costs.",
+   "eligibilite": "Students from all countries (Cameroon included) who have received an offer for an eligible undergraduate or postgraduate course in 2027, meeting the minimum academic level (equivalent ATAR 85 for undergraduate; WAM 65 for postgraduate).",
+   "diplome": "Undergraduate: secondary qualification equivalent to an ATAR of at least 85; postgraduate: level equivalent to a WAM of at least 65.",
+   "langue": "Studies in English; university admission requirements apply.",
+   "conseil": "The scholarship is only assessed with final transcripts: send them as soon as possible to avoid an offer without scholarship. It cannot be combined with another UWA fee reduction.",
+   "edition_note": "Edition for 2027 entry; no scholarship-specific deadline is published (automatic assessment with the admission application).",
+   "autres": [
+    "Excluded: Assured Pathway to Medicine/Dental Medicine, Juris Doctor, Doctor of Medicine, Doctor of Dental Medicine, Doctor of Optometry, micro-credentials.",
+    "Continuation criteria apply (terms and conditions, clause 13).",
+    "Note: the UWA International Student Award in the original entry is limited to a list of countries that does not include Cameroon."
+   ],
+   "dossier": [
+    "Application for admission to UWA for an eligible course (no separate scholarship application)",
+    "Final academic transcripts (needed to assess the scholarship)"
+   ],
+   "etapes": [
+    "Apply for an eligible UWA course.",
+    "Submit your final transcripts; the assessment is automatic.",
+    "Check your offer letter to see whether the scholarship is awarded.",
+    "Accept the offer; the discount is applied automatically each semester."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Rentrée 2027",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
+    "https://www.uwa.edu.au/study/Scholarship-Listing/uwa-international-student-award-f221201"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -3959,6 +5060,10 @@
   },
   "en": {
    "nom": "International Scholarship Plus Early Acceptance Scholarship Package — University of Tasmania"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (403 Cloudflare, y compris le PDF des conditions). Pistes non officielles : le package 25 % + Early Acceptance décrit dans la fiche semble remplacé par la Tasmanian International Merit Scholarship (30 %) ; non confirmé."
   }
  },
  {
@@ -4004,15 +5109,19 @@
   },
   "en": {
    "nom": "International Excellence Scholarship — James Cook University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel jcu.edu.au inaccessible (403 Cloudflare, WebFetch et curl) : page non lue ; nationalité, documents et dates non confirmés"
   }
  },
  {
   "id": "global-citizens-international-scholarship-university-of-adelaide",
-  "organisme": "University of Adelaide",
+  "organisme": "Adelaide University",
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
@@ -4026,40 +5135,113 @@
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.adelaide.edu.au/scholarships/international",
+  "lien_officiel": "https://adelaide.edu.au/study/scholarships/int/adelaide-emerging-leaders-award-25/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.adelaide.edu.au/scholarships/international"
+    "titre": "Adelaide Emerging Leaders Award (25%)",
+    "url": "https://adelaide.edu.au/study/scholarships/int/adelaide-emerging-leaders-award-25/"
+   },
+   {
+    "titre": "International students scholarships",
+    "url": "https://adelaide.edu.au/study/scholarships/international-students-scholarships/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Global Citizens International Scholarship — University of Adelaide",
-   "resume": "L'University of Adelaide est un membre du Group of Eight. Sa bourse Global Citizens offre entre 15% et 30% de réduction selon le profil académique du candidat. Adelaide est souvent décrite comme la ville la plus abordable d'Australie parmi les grandes…",
+   "nom": "Adelaide Emerging Leaders Award (25%) - Adelaide University",
+   "resume": "La University of Adelaide a fusionné avec UniSA en 2026 pour former Adelaide University ; la bourse « Global Citizens » ne figure plus sur sa liste officielle. Le programme équivalent est l'Emerging Leaders Award, une réduction de 25 % des frais de scolarité accordée automatiquement aux étudiants internationaux ayant une moyenne « distinction ».",
    "resume_long": "L'University of Adelaide est un membre du Group of Eight. Sa bourse Global Citizens offre entre 15% et 30% de réduction selon le profil académique du candidat. Adelaide est souvent décrite comme la ville la plus abordable d'Australie parmi les grandes capitales d'État, avec un excellent réseau de transports, une scène gastronomique réputée et une communauté internationale accueillante.",
-   "valeur": "15% à 30% des frais de scolarité",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Réduction de 25 % des frais de scolarité pour la durée standard du programme",
+   "eligibilite": "Étudiant international candidat à un bachelor (72 unités minimum) ou à un master (48 unités minimum) CRICOS ; pas d'exonération de frais d'un sponsor égale ou supérieure ; pas de bénéficiaire Australia Awards. Nationalité : tous les étudiants internationaux (donc Cameroun admis).",
+   "edition_note": "Aucune date limite ni rentrée n'est publiée sur la page de la bourse ; l'attribution se fait à l'admission. Le nom « Global Citizens » est ancien (University of Adelaide, avant fusion).",
+   "couverture_detail": "Réduction de 25 % sur les frais de scolarité d'un bachelor ou d'un master coursework, appliquée sur l'offre d'admission, tant que le GPA de programme reste au moins 5,0/7,0.",
+   "ne_couvre_pas": "Frais de vie, logement, visa, assurance santé ; non cumulable avec une exonération de frais financée par un sponsor ni avec une bourse Australia Awards.",
+   "diplome": "Bachelor : ATAR 90 (SSCE australien), IB 33, GCE A-levels 12 ou ATAR 95 équivalent pour les autres certificats secondaires. Postgraduate ou transfert : GPA 5,5/7 (ou comparable) d'un diplôme supérieur.",
+   "langue": "Les cours sont en anglais ; les exigences de langue d'admission du programme s'appliquent (voir la page de l'université).",
+   "conseil": "Faites traduire et comparer vos résultats du baccalauréat/GCE aux seuils d'entrée avant de postuler, et contactez l'université (+61 8 7420 5115) pour confirmer l'équivalence de votre certificat et les dates de rentrée 2027.",
+   "autres": [
+    "Programmes exclus : médecine, dentaire, vétérinaire, kinésithérapie, ergothérapie, sage-femme, orthophonie, podologie, plusieurs MBA et masters de psychologie (liste sur la page officielle)",
+    "Autres bourses internationales de la même université : Academic Excellence (50 %, avec formulaire), Merit (15 %), Sibling (10 %), Global Alumni (10 %), Partner (10 %)",
+    "L'université n'indique pas de date limite sur cette page"
+   ],
+   "dossier": [
+    "Dossier de candidature d'admission à Adelaide University (par vous ou un agent)",
+    "Relevés de notes / diplôme d'accès (ATAR, IB, A-levels ou GPA)"
+   ],
+   "etapes": [
+    "Choisir un bachelor ou un master éligible",
+    "Déposer la candidature d'admission (aucune demande de bourse séparée)",
+    "La bourse est évaluée automatiquement et figure sur l'offre d'admission"
+   ]
   },
   "en": {
-   "nom": "Global Citizens International Scholarship — University of Adelaide"
+   "nom": "Adelaide Emerging Leaders Award (25%) - Adelaide University",
+   "resume": "The University of Adelaide merged with UniSA in 2026 to form Adelaide University, and the 'Global Citizens' scholarship is no longer on its official list. The equivalent is the Emerging Leaders Award, a 25% tuition fee reduction granted automatically to international students with a distinction average.",
+   "valeur": "25% tuition fee reduction for the standard program length",
+   "couverture_detail": "25% off tuition for a bachelor's or coursework master's, applied on the offer of admission, as long as the program GPA stays at 5.0/7.0 or above.",
+   "ne_couvre_pas": "Living costs, housing, visa, health cover; cannot be combined with a sponsor tuition waiver or an Australia Awards scholarship.",
+   "eligibilite": "International student applying to a CRICOS bachelor's (minimum 72 units) or master's (minimum 48 units); no sponsor tuition waiver equal or greater; not an Australia Awards recipient. Nationality: all international students (so Cameroon is eligible).",
+   "diplome": "Bachelor's: ATAR 90 (Australian SSCE), IB 33, GCE A-levels 12 or ATAR 95 equivalent for other secondary certificates. Postgraduate or transfer: GPA 5.5/7 (or comparable) from a higher education award.",
+   "langue": "Teaching is in English; the program's admission language requirements apply (see the university page).",
+   "conseil": "Have your baccalaureate/GCE results compared with the entry thresholds before applying, and contact the university (+61 8 7420 5115) to confirm equivalence of your certificate and the 2027 intake dates.",
+   "edition_note": "No closing date or intake is published on the scholarship page; the award is made at admission. The 'Global Citizens' name is the former one (University of Adelaide, before the merger).",
+   "autres": [
+    "Excluded programs: medicine, dentistry, veterinary, physiotherapy, occupational therapy, midwifery, speech pathology, podiatry, several MBAs and psychology masters (list on the official page)",
+    "Other international scholarships at the same university: Academic Excellence (50%, application form), Merit (15%), Sibling (10%), Global Alumni (10%), Partner (10%)",
+    "The university states no closing date on this page"
+   ],
+   "dossier": [
+    "Admission application to Adelaide University (by you or an agent)",
+    "Transcripts / entry qualification (ATAR, IB, A-levels or GPA)"
+   ],
+   "etapes": [
+    "Choose an eligible bachelor's or master's program",
+    "Submit the admission application (no separate scholarship application)",
+    "The scholarship is assessed automatically and shown on the offer of admission"
+   ]
+  },
+  "cycle": {
+   "type": "irreguliere",
+   "ouverture_mois": null,
+   "cloture_mois": null
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Admissions 2027",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://adelaide.edu.au/study/scholarships/int/adelaide-emerging-leaders-award-25/",
+    "https://adelaide.edu.au/study/scholarships/international-students-scholarships/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "international-high-school-scholarships-flinders-university",
-  "organisme": "Flinders University (Adelaide)",
+  "organisme": "Flinders University",
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "licence"
+   "licence",
+   "master"
   ],
   "domaines": [
    "tous"
@@ -4070,29 +5252,105 @@
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.flinders.edu.au/international/apply/scholarships",
+  "lien_officiel": "https://www.flinders.edu.au/international/apply/scholarships/academic",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "International Academic Scholarships - Flinders University",
+    "url": "https://www.flinders.edu.au/international/apply/scholarships/academic"
+   },
+   {
+    "titre": "International Scholarships - Flinders University",
     "url": "https://www.flinders.edu.au/international/apply/scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International High School Scholarships — Flinders University",
-   "resume": "Flinders University cible les élèves qui sortent directement du lycée et qui souhaitent entamer leur Licence en Australie. La réduction de 30% est significative et reflète l'engagement de Flinders envers l'accessibilité. L'université est reconnue pour ses…",
+   "nom": "Global / Global Excellence Scholarship - Flinders University (ex-« International High School Scholarship »)",
+   "resume": "La page officielle de Flinders ne liste plus de « International High School Scholarship » ; les bourses académiques internationales actuelles sont la Global Scholarship (25 %), la Global Excellence Scholarship (30 %) et la Vice-Chancellor Excellence Scholarship (50 %). Elles sont accordées sur la base des résultats scolaires ou universitaires lors de la candidature.",
    "resume_long": "Flinders University cible les élèves qui sortent directement du lycée et qui souhaitent entamer leur Licence en Australie. La réduction de 30% est significative et reflète l'engagement de Flinders envers l'accessibilité. L'université est reconnue pour ses programmes en médecine, en sciences infirmières, en éducation et en sciences sociales.",
-   "valeur": "Jusqu'à 30% de réduction sur les frais de scolarité",
-   "eligibilite": "Étudiants internationaux issus du secondaire",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Réduction de 25 % à 30 % (Global / Global Excellence) ou 50 % (VC Excellence) des frais de scolarité pour la durée du cours",
+   "eligibilite": "Étudiants internationaux (Australiens, Néo-Zélandais et résidents permanents exclus) qui débutent un cours éligible. La Kickstart (20 %) est ouverte aux étudiants internationaux de toute nationalité, donc le Cameroun est admis. La VC Excellence exige une vidéo de présentation pour les candidats présélectionnés et l'engagement dans le programme d'ambassadeurs.",
+   "edition_note": "Page mise à jour le 7 octobre 2026 pour les entrées 2027 et au-delà. Seule la date limite de la bourse VC pour le semestre 1 2027 est mentionnée, « à confirmer » ; aucune date limite n'est publiée pour Global et Kickstart.",
+   "couverture_detail": "Réduction de 25 % (ATAR ou équivalent 70-79,95, au moins 5 points au-dessus du minimum du cours), de 30 % (ATAR ou équivalent 80+) ou de 50 % (ATAR 95+ ou GPA 6,5+, sélection compétitive) sur les frais de scolarité.",
+   "ne_couvre_pas": "Frais de vie, logement, visa, assurance ; cours exclus : Doctor of Medicine, Bachelor of Clinical Science/Doctor of Medicine, Nursing (Graduate Entry), Master of Psychology (Clinical), Physiotherapy, masters par la recherche, PhD, certificats et diplômes de graduate.",
+   "diplome": "Fin d'études secondaires avec un équivalent ATAR de 70 ou plus, ou GPA équivalent Flinders de 5,5 ou plus (entrée en postgraduate ou transfert) ; ATAR 95 / GPA 6,5 pour la bourse VC.",
+   "langue": "Cours en anglais ; les critères d'admission du cours s'appliquent.",
+   "conseil": "Ne vous fiez pas à l'ancien nom « High School Scholarship » : demandez à Flinders quel niveau (25 %, 30 % ou 50 %) correspond à l'équivalence de votre baccalauréat ou GCE avant de déposer votre dossier.",
+   "autres": [
+    "Flinders n'offre pas de pré-évaluation de l'éligibilité",
+    "Autre bourse : Kickstart (20 % pour tout nouvel étudiant international en cours coursework)",
+    "Un candidat ne peut pas cumuler sans vérifier les conditions : consulter les termes PDF de chaque bourse"
+   ],
+   "dossier": [
+    "Candidature d'admission à Flinders (aucun formulaire séparé pour Global et Kickstart)",
+    "Résultats du secondaire ou du supérieur permettant le calcul de l'ATAR/GPA équivalent",
+    "Pour la bourse VC seulement : formulaire de candidature VC en ligne (indiqué dans l'offre) et vidéo si présélectionné"
+   ],
+   "etapes": [
+    "Lire les termes de la bourse visée",
+    "Vérifier que vous remplissez les critères d'entrée du cours",
+    "Déposer la candidature d'admission sur la page « How to apply » de Flinders",
+    "Éligibilité évaluée pendant l'admission et indiquée dans la lettre d'offre ; pour la bourse VC, remplir le formulaire avant la date limite"
+   ]
   },
   "en": {
-   "nom": "International High School Scholarships — Flinders University"
+   "nom": "Global / Global Excellence Scholarship - Flinders University (formerly 'International High School Scholarship')",
+   "resume": "Flinders' official page no longer lists an 'International High School Scholarship'; its current international academic scholarships are the Global Scholarship (25%), the Global Excellence Scholarship (30%) and the Vice-Chancellor Excellence Scholarship (50%). They are awarded on school or university results at application.",
+   "valeur": "25% to 30% (Global / Global Excellence) or 50% (VC Excellence) tuition fee reduction for the length of the course",
+   "couverture_detail": "Tuition reduction of 25% (ATAR or equivalent 70-79.95, at least 5 points above the course minimum), 30% (ATAR or equivalent 80+) or 50% (ATAR 95+ or GPA 6.5+, competitive selection).",
+   "ne_couvre_pas": "Living costs, housing, visa, insurance; excluded courses: Doctor of Medicine, Bachelor of Clinical Science/Doctor of Medicine, Nursing (Graduate Entry), Master of Psychology (Clinical), Physiotherapy, research masters, PhD, graduate certificates and diplomas.",
+   "eligibilite": "International students (Australian and New Zealand citizens and permanent residents excluded) starting an eligible course. The Kickstart scholarship (20%) is open to international applicants of any nationality, so Cameroon is eligible. The VC Excellence requires a video from shortlisted applicants and joining the ambassador program.",
+   "diplome": "Secondary school completion with an ATAR equivalent of 70 or more, or a Flinders-equivalent GPA of 5.5 or more (postgraduate entry or transfer); ATAR 95 / GPA 6.5 for the VC scholarship.",
+   "langue": "Courses are taught in English; the course admission criteria apply.",
+   "conseil": "Do not rely on the old 'High School Scholarship' name: ask Flinders which tier (25%, 30% or 50%) your baccalaureate or GCE equivalence gives before you apply.",
+   "edition_note": "Page updated 7 October 2026 for 2027 entry and beyond. Only the VC scholarship's Semester 1 2027 closing date is mentioned, 'to be confirmed'; no closing date is published for Global and Kickstart.",
+   "autres": [
+    "Flinders offers no pre-assessment of eligibility",
+    "Other award: Kickstart (20% for any new international coursework student)",
+    "Check each scholarship's PDF terms for stacking rules"
+   ],
+   "dossier": [
+    "Admission application to Flinders (no separate form for Global and Kickstart)",
+    "Secondary or tertiary results used to compute the equivalent ATAR/GPA",
+    "VC scholarship only: online VC application form (advised in the offer) and a video if shortlisted"
+   ],
+   "etapes": [
+    "Read the terms of the target scholarship",
+    "Check you meet the course entry criteria",
+    "Submit the admission application via Flinders' 'How to apply' page",
+    "Eligibility is assessed during admission and stated in the offer letter; for the VC scholarship, complete the form before the deadline"
+   ]
+  },
+  "cycle": {
+   "type": "irreguliere",
+   "ouverture_mois": null,
+   "cloture_mois": null
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Semestre 1 2027 (bourse VC : date limite à confirmer)",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.flinders.edu.au/international/apply/scholarships",
+    "https://www.flinders.edu.au/international/apply/scholarships/academic"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -4141,6 +5399,10 @@
   },
   "en": {
    "nom": "Creating Opportunity Fund Scholarship — Australian Catholic University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel acu.edu.au inaccessible (403 Cloudflare) : page non lue. Indice de recherche : bourse de 4 000 AUD pour étudiants nationaux et internationaux sous conditions de visa, candidatures du 10 sept 2026 au 1er mars 2027, non confirmé"
   }
  },
  {
@@ -4189,6 +5451,10 @@
   },
   "en": {
    "nom": "International Undergraduate Scholarship — Edith Cowan University (ECU)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel ecu.edu.au inaccessible (403 Cloudflare) : page non lue. Indice de recherche : la bourse 2026 était limitée à certains pays et close le 8 août 2026 ; programme à confirmer"
   }
  },
  {
@@ -4197,7 +5463,117 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
+  "niveaux": [
+   "licence"
+  ],
+  "domaines": [
+   "tous"
+  ],
+  "couverture_niveau": "partielle",
+  "origine": "universitaire",
+  "cycle": {
+   "type": "irreguliere",
+   "ouverture_mois": null,
+   "cloture_mois": null
+  },
+  "edition": {
+   "libelle": "Entrée 2027 et suivantes (offres dès le 12 juin 2026)",
+   "ouverture": "2026-06-12",
+   "confirme": true
+  },
+  "lien_officiel": "https://www.uow.edu.au/study/scholarships/international/university-excellence-scholarships/",
+  "sources": [
+   {
+    "titre": "University Excellence Scholarships - UOW",
+    "url": "https://www.uow.edu.au/study/scholarships/international/university-excellence-scholarships/"
+   }
+  ],
+  "last_verified": "2026-10-20",
+  "status": "verified",
+  "fr": {
+   "nom": "University Excellence Scholarship - University of Wollongong",
+   "resume": "Réduction de 30 % des frais de scolarité pour les étudiants internationaux ayant d'excellents résultats, accordée automatiquement à l'admission dans un bachelor de l'UOW. Aucune demande séparée n'est requise.",
+   "resume_long": "L'University of Wollongong est régulièrement classée parmi les 200 meilleures universités au monde. Située à seulement une heure au sud de Sydney, elle offre un cadre de vie côtier idyllique. La réduction de 30% sur les frais de scolarité est l'une des plus généreuses de la catégorie « bourses partielles » en Australie.",
+   "valeur": "30 % de réduction des frais de scolarité pour la durée minimale du cours",
+   "eligibilite": "Étudiants internationaux uniquement (donc Cameroun admis), aux résultats exceptionnels dans un secondaire équivalent à l'ATAR, un programme Foundation, un diplôme ou un bachelor approuvés par l'UOW, admis dans un bachelor de l'UOW sur un campus australien.",
+   "edition_note": "Offres émises à partir du 12 juin 2026 pour les étudiants débutant en 2027 et après ; la page mentionne aussi « 2026 » dans un critère, incohérence à clarifier avec l'UOW. Aucune date limite publiée.",
+   "couverture_detail": "Réduction de 30 % des frais de scolarité d'un bachelor à plein temps sur un campus australien, pour la durée minimale du cours, si le WAM cumulé reste d'au moins 50.",
+   "ne_couvre_pas": "Frais de vie, logement, visa, assurance ; non cumulable avec une autre bourse, un sponsor, une bourse partielle ou une remise pour le même cours (sauf bourses d'allocation). Cours exclus : Psychologie, Éducation (primaire, secondaire, petite enfance), Exercise Science, Nutrition et diététique, Nutrition Science, Psychological Science, Social Work et leurs doubles diplômes.",
+   "diplome": "Certificat de fin d'études secondaires équivalent à l'ATAR, ou Foundation / diplôme / bachelor approuvé pour l'entrée en bachelor UOW ; la page ne définit pas de seuil minimal.",
+   "langue": "Cours en anglais ; critères de langue d'admission de l'UOW applicables.",
+   "conseil": "La page ne donne pas de seuil de notes : demandez à l'UOW à partir de quel résultat votre baccalauréat ou GCE est jugé « exceptionnel » avant de vous engager.",
+   "autres": [
+    "Nombre de bourses illimité",
+    "Les conditions détaillées sont dans un PDF « Terms and Conditions » de l'UOW"
+   ],
+   "dossier": [
+    "Candidature d'admission à un bachelor de l'UOW (aucune demande de bourse séparée)",
+    "Résultats scolaires ou universitaires d'accès"
+   ],
+   "etapes": [
+    "Choisir un bachelor éligible à l'UOW",
+    "Déposer la candidature d'admission",
+    "La bourse est considérée automatiquement et indiquée dans l'offre"
+   ]
+  },
+  "en": {
+   "nom": "University Excellence Scholarship - University of Wollongong",
+   "resume": "A 30% tuition fee reduction for international students with outstanding results, awarded automatically on admission to a UOW bachelor's degree. No separate application is needed.",
+   "valeur": "30% tuition fee reduction for the minimum duration of the course",
+   "couverture_detail": "30% off tuition for a full-time bachelor's at an Australian campus for the minimum course duration, provided the cumulative WAM stays at 50 or above.",
+   "ne_couvre_pas": "Living costs, housing, visa, insurance; cannot be combined with another scholarship, sponsorship, bursary or discount for the same course (except stipends). Excluded courses: Psychology, Education (primary, secondary, early years), Exercise Science, Nutrition and Dietetics, Nutrition Science, Psychological Science, Social Work and their double degrees.",
+   "eligibilite": "International students only (so Cameroon is eligible) with outstanding results in an ATAR-equivalent secondary qualification, a Foundation program, a diploma or a bachelor's approved by UOW, admitted to a UOW bachelor's at an Australian campus.",
+   "diplome": "ATAR-equivalent senior secondary certificate, or a UOW-approved Foundation / diploma / bachelor's for entry to a UOW bachelor's; the page sets no minimum score.",
+   "langue": "Courses are taught in English; UOW admission language requirements apply.",
+   "conseil": "The page gives no score threshold: ask UOW what result in your baccalaureate or GCE counts as 'outstanding' before committing.",
+   "edition_note": "Offers are issued from 12 June 2026 for students starting in 2027 and beyond; the page also mentions '2026' in one criterion, an inconsistency to clarify with UOW. No closing date is published.",
+   "autres": [
+    "Unlimited number of scholarships",
+    "Detailed conditions are in a UOW 'Terms and Conditions' PDF"
+   ],
+   "dossier": [
+    "Admission application to a UOW bachelor's degree (no separate scholarship application)",
+    "Entry results (school or university)"
+   ],
+   "etapes": [
+    "Choose an eligible UOW bachelor's degree",
+    "Submit the admission application",
+    "The scholarship is considered automatically and shown in the offer"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Entrée 2027 et suivantes (offres dès le 12 juin 2026)",
+    "ouverture": "2026-06-12",
+    "cloture": null,
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.uow.edu.au/study/scholarships/international/university-excellence-scholarships/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
+ },
+ {
+  "id": "foundation-academic-scholarships-rmit-university",
+  "organisme": "RMIT University",
+  "pays_accueil": [
+   "Australie"
+  ],
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -4208,134 +5584,109 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "aout"
+   "ouverture_mois": null,
+   "cloture_mois": "janvier et juillet"
   },
   "edition": {
-   "cloture": "2025-08-20",
-   "confirme": false
+   "libelle": "Semestre 1 2027",
+   "cloture": "2027-01-28",
+   "confirme": true
   },
-  "lien_officiel": "https://www.uow.edu.au/study/fees-scholarships/scholarships/",
+  "lien_officiel": "https://www.rmit.edu.au/scholarships/international-scholarships/foundation-academic-scholarships",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.uow.edu.au/study/fees-scholarships/scholarships/"
+    "titre": "Foundation Academic Scholarships - RMIT",
+    "url": "https://www.rmit.edu.au/scholarships/international-scholarships/foundation-academic-scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "20 août 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "University Excellence Scholarships — University of Wollongong",
-   "resume": "L'University of Wollongong est régulièrement classée parmi les 200 meilleures universités au monde. Située à seulement une heure au sud de Sydney, elle offre un cadre de vie côtier idyllique. La réduction de 30% sur les frais de scolarité est l'une des plus…",
-   "resume_long": "L'University of Wollongong est régulièrement classée parmi les 200 meilleures universités au monde. Située à seulement une heure au sud de Sydney, elle offre un cadre de vie côtier idyllique. La réduction de 30% sur les frais de scolarité est l'une des plus généreuses de la catégorie « bourses partielles » en Australie.",
-   "valeur": "30% de réduction sur les frais de scolarité",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 20 août 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "University Excellence Scholarships — University of Wollongong"
-  }
- },
- {
-  "id": "international-welcome-scholarship-murdoch-university",
-  "organisme": "Murdoch University (Perth)",
-  "pays_accueil": [
-   "Australie"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "aout"
-  },
-  "edition": {
-   "cloture": "2025-08-30",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.murdoch.edu.au/study/fees-and-scholarships/scholarships-and-bursaries",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.murdoch.edu.au/study/fees-and-scholarships/scholarships-and-bursaries"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "30 août 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "International Welcome Scholarship — Murdoch University",
-   "resume": "Murdoch University est une université de Perth qui se distingue par ses programmes en sciences vétérinaires, en agriculture, en IT et en sciences de la santé. L'International Welcome Scholarship de 20% est un geste d'accueil concret qui réduit…",
-   "resume_long": "Murdoch University est une université de Perth qui se distingue par ses programmes en sciences vétérinaires, en agriculture, en IT et en sciences de la santé. L'International Welcome Scholarship de 20% est un geste d'accueil concret qui réduit significativement le coût de la première année d'études.",
-   "valeur": "20% de réduction sur les frais de scolarité",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 30 août 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "International Welcome Scholarship — Murdoch University"
-  }
- },
- {
-  "id": "foundation-academic-scholarships-rmit-university",
-  "organisme": "RMIT University (Melbourne)",
-  "pays_accueil": [
-   "Australie"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "mai"
-  },
-  "edition": {
-   "cloture": "2025-05-31",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.rmit.edu.au/students/careers-opportunities/scholarships",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.rmit.edu.au/students/careers-opportunities/scholarships"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 mai 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "Foundation Academic Scholarships — RMIT University",
-   "resume": "RMIT est une université de Melbourne renommée pour ses programmes en design, en architecture, en ingénierie et en technologie. Son campus principal se situe au cœur du centre-ville de Melbourne. La bourse de $5 000 est un complément utile qui, combiné avec le…",
+   "nom": "Foundation Academic Scholarships - RMIT University",
+   "resume": "Bourse unique de 5 000 AUD pour de futurs étudiants internationaux de haut niveau qui commencent un programme Foundation Studies à RMIT (année préparatoire à un bachelor) ; ce n'est pas une bourse de licence, de master ou de doctorat. 40 bourses sont prévues pour 2027, sur la base du mérite académique.",
    "resume_long": "RMIT est une université de Melbourne renommée pour ses programmes en design, en architecture, en ingénierie et en technologie. Son campus principal se situe au cœur du centre-ville de Melbourne. La bourse de $5 000 est un complément utile qui, combiné avec le coût de la vie à Melbourne (inférieur à Sydney), permet une expérience étudiante confortable.",
-   "valeur": "$5 000 AUD",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 mai 2025 (vérifier pour l'édition suivante)"
+   "valeur": "5 000 AUD versés une fois, déduits des frais de scolarité",
+   "eligibilite": "Étudiant international titulaire (ou futur demandeur) d'un visa étudiant, avec une offre complète ou conditionnelle pour le Foundation Studies de RMIT (semestre 1 ou 2 2027, toute filière) ; sans autre bourse externe ou sponsor couvrant les frais. Nationalité : tous les étudiants internationaux (Cameroun admis).",
+   "edition_note": "Dates limites 2027 : 28 janvier 2027 (semestre 1) et 14 juillet 2027 (semestre 2). Pas de date d'ouverture publiée.",
+   "couverture_detail": "5 000 AUD versés sur le compte universitaire après la date de recensement du premier semestre ; ne couvre que les frais de scolarité du programme de l'offre initiale.",
+   "ne_couvre_pas": "Frais de vie, logement, visa, assurance ; non remboursable, non reportable à une autre année ou rentrée.",
+   "diplome": "Offre d'admission (complète ou conditionnelle) en Foundation Studies ; sélection sur le mérite académique.",
+   "langue": "Cours en anglais ; un parcours ELICOS préalable est accepté.",
+   "conseil": "Avant de payer des frais, vérifiez que le Foundation Studies vous donne bien accès au bachelor visé et à un visa ; 5 000 AUD ne couvrent qu'une part des frais de scolarité.",
+   "autres": [
+    "40 bourses pour 2027, attribuées au fur et à mesure jusqu'à épuisement",
+    "Seuls les candidats retenus sont notifiés",
+    "Le programme Foundation Studies prépare à l'entrée en bachelor ; il ne s'agit pas d'un diplôme de licence"
+   ],
+   "dossier": [
+    "Candidature d'admission à RMIT en Foundation Studies",
+    "Lettre d'offre (complète ou conditionnelle)",
+    "Autres pièces : voir les termes et conditions des bourses internationales de RMIT"
+   ],
+   "etapes": [
+    "Choisir un programme Foundation Studies éligible",
+    "Déposer la candidature d'admission à RMIT avant la date limite",
+    "En cas de succès, la bourse figure sur la lettre d'offre"
+   ]
   },
   "en": {
-   "nom": "Foundation Academic Scholarships — RMIT University"
+   "nom": "Foundation Academic Scholarships - RMIT University",
+   "resume": "A one-off AUD 5,000 scholarship for high-achieving future international students starting a Foundation Studies program at RMIT (a pre-bachelor preparatory year); it is not a bachelor's, master's or doctoral scholarship. 40 scholarships are planned for 2027, awarded on academic merit.",
+   "valeur": "AUD 5,000 paid once toward tuition fees",
+   "couverture_detail": "AUD 5,000 paid to the student account after the first census date; covers tuition only for the program on the initial offer.",
+   "ne_couvre_pas": "Living costs, housing, visa, insurance; non-refundable and cannot be deferred to another year or intake.",
+   "eligibilite": "International student holding (or planning to apply for) a student visa, with a full or conditional offer for RMIT Foundation Studies (Semester 1 or 2 2027, any stream); no other external scholarship or sponsor covering tuition. Nationality: all international students (Cameroon eligible).",
+   "diplome": "Full or conditional admission offer to Foundation Studies; selection on academic merit.",
+   "langue": "Courses are taught in English; a prior ELICOS pathway is accepted.",
+   "conseil": "Before paying any fees, check that Foundation Studies gives access to your target bachelor's and a visa; AUD 5,000 covers only part of the tuition.",
+   "edition_note": "2027 closing dates: 28 January 2027 (Semester 1) and 14 July 2027 (Semester 2). No opening date published.",
+   "autres": [
+    "40 scholarships for 2027, awarded on a rolling basis until filled",
+    "Only successful applicants are notified",
+    "Foundation Studies prepares for bachelor's entry; it is not a bachelor's degree"
+   ],
+   "dossier": [
+    "Admission application to RMIT Foundation Studies",
+    "Offer letter (full or conditional)",
+    "Other items: see RMIT's international scholarships terms and conditions"
+   ],
+   "etapes": [
+    "Choose an eligible Foundation Studies program",
+    "Submit the RMIT admission application before the closing date",
+    "If successful, the scholarship is stated in the offer letter"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Semestre 1 2027",
+    "ouverture": null,
+    "cloture": "2027-01-28",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Semestre 2 2027",
+    "ouverture": null,
+    "cloture": "2027-07-14",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "http://www.rmit.edu.au/scholarships",
+    "https://www.rmit.edu.au/scholarships/international-scholarships/foundation-academic-scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -17911,6 +19262,10 @@
   },
   "en": {
    "nom": "Bourses de l'Université de Barcelone (UB Excellence)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel de l'Universite de Barcelone (ub.edu / web.ub.edu) inaccessible (blocage Cloudflare 403) ; aucune bourse « UB Excellence » d'exoneration totale pour etudiants non-UE retrouvee sur les pages UB lisibles (portail des aides ub.edu/beques : aucune bourse d'excellence pour non-UE). Fiche du guide probablement inexacte."
   }
  },
  {
@@ -17960,6 +19315,10 @@
   },
   "en": {
    "nom": "Bourses ICFO Research Fellowships (Photonique)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Programme du guide (bourses de 600 a 1 800 EUR/mois, appels avril et octobre) non confirme. Equivalent reel : ICFO PhD Fellowships (doctorat, entierement financees). Eligibilite (Cameroun admis : aucune restriction de nationalite) lue, mais aucun appel doctorant ouvert aujourd'hui (« No calls available for PhD students »), pas de dates et liste exacte des documents d'un appel non publiee."
   }
  },
  {

@@ -30,7 +30,7 @@ Un seul fichier `resultat-NN.json` (NN = numéro du fichier reçu), tableau JSON
  "organisme": "...",
  "pays_accueil": ["un pays par élément, en français (Canada, Royaume-Uni, France…) ; « Plusieurs pays » si multi-pays"],
  "cameroun": "oui" | "non_precise",          // « oui » seulement si le Cameroun est admis, lu sur la page officielle
- "langue_acces": "fr" | "en" | null,          // fr = réservé aux francophones / études en français ; en = réservé aux anglophones / études en anglais ; null = les deux
+ "langue_acces": null,                          // laisse null (le concepteur le règle lui-même) ; enseigner en anglais ou en français ne réserve pas la bourse à une section
  "niveaux": ["licence" | "master" | "doctorat" | "postdoc"],
  "domaines": ["tous"] ou parmi : "maths","informatique","physique-chimie","sante","ingenierie","agronomie-environnement","droit-politique","histoire-geographie","lettres-langues","philo-sociologie","communication","education","economie-gestion",
  "couverture_niveau": "complete" | "partielle" | "variable",     // complete = frais de scolarité + vie courante couverts

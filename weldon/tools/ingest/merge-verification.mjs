@@ -46,7 +46,8 @@ for (const f of outs) {
       fr: { ...b.fr, ...Object.fromEntries(TXT.map((t) => [t, o.fr[t]]).filter(([, v]) => v)), autres: o.fr.autres || [], dossier: o.fr.dossier || [], etapes: o.fr.etapes || [] },
       en: { ...Object.fromEntries(TXT.map((t) => [t, o.en[t]]).filter(([, v]) => v)), autres: o.en.autres || [], dossier: o.en.dossier || [], etapes: o.en.etapes || [] },
     };
-    if (o.langue_acces === "fr" || o.langue_acces === "en") next.langue_acces = o.langue_acces; else delete next.langue_acces;
+    // « langue_acces » n'est posé que par le concepteur : enseigner en anglais ne réserve pas une bourse aux anglophones.
+    delete next.langue_acces;
     delete next.verification_echec; delete next.guide; // les notes du guide ne sont plus la source
     if (next.edition.ouverture && next.edition.cloture && next.edition.ouverture > next.edition.cloture) delete next.edition.ouverture;
     try { checkBourse(next); } catch (e) { b.verification_echec = { date: today, motif: "format : " + e.message }; stats.rejetee++; log.push("format " + o.id + " " + e.message); continue; }

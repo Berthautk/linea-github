@@ -11033,11 +11033,11 @@
  },
  {
   "id": "dr-franco-j-vaccarino-president-s-scholarship-guelph",
-  "organisme": "Université de Guelph (Ontario)",
+  "organisme": "Université de Guelph",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -11048,38 +11048,103 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "janvier"
+   "ouverture_mois": "decembre",
+   "cloture_mois": "mars"
   },
   "edition": {
-   "cloture": "2026-01-23",
-   "confirme": false
+   "libelle": "Rentrée automne 2027",
+   "ouverture": "2026-12-01",
+   "cloture": "2027-03-08",
+   "confirme": true
   },
   "lien_officiel": "https://www.uoguelph.ca/registrar/finances-fees/vaccarino",
   "sources": [
    {
-    "titre": "Manuel des bourses",
+    "titre": "Dr. Franco J. Vaccarino President's Scholarship",
     "url": "https://www.uoguelph.ca/registrar/finances-fees/vaccarino"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — 25 janvier"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Dr. Franco J. Vaccarino President's Scholarship (Guelph)",
-   "resume": "La plus haute distinction pour un étudiant international à l'Université de Guelph. Elle inclut un mentorat personnalisé par un professeur de renom et un poste de recherche rémunéré chaque été. Guelph est particulièrement forte en sciences agricoles,…",
+   "nom": "Dr. Franco J. Vaccarino President's Scholarship (Université de Guelph)",
+   "resume": "Bourse d'entrée de l'Université de Guelph pour deux étudiants internationaux (visa) débutant un premier cycle, pour la rentrée d'automne 2027. Elle associe une aide financière, un mentorat par un professeur et un poste d'assistant de recherche d'été.",
    "resume_long": "La plus haute distinction pour un étudiant international à l'Université de Guelph. Elle inclut un mentorat personnalisé par un professeur de renom et un poste de recherche rémunéré chaque été. Guelph est particulièrement forte en sciences agricoles, vétérinaires et environnementales — top 5 au Canada dans ces domaines.",
-   "valeur": "42 500 CAD au total (8 250 CAD/an sur 4 ans + 9 500 CAD pour assistanat de recherche d'été)",
-   "couverture_detail": "Allocation annuelle + emploi de recherche estival rémunéré",
-   "ne_couvre_pas": "Frais de scolarité complets (environ 30 000-45 000 CAD/an) — cette bourse est un complément significatif",
-   "eligibilite": "Moyenne ≥ 90 %, leadership communautaire fort",
+   "valeur": "42 500 CAD, plus un poste d'assistant de recherche d'été, un mentorat et une place garantie en résidence en première année",
+   "couverture_detail": "Valeur totale de 42 500 CAD, assistanat de recherche d'été rémunéré, mentorat par un professeur de renom, résidence au choix en première année (dépôt à payer dans les délais).",
+   "ne_couvre_pas": "La page ne précise pas de prise en charge complète des frais de scolarité ; le reste des frais reste à la charge de l'étudiant.",
+   "eligibilite": "Étudiant international (visa) ; citoyens canadiens et résidents permanents exclus ; avoir déposé une demande d'admission et disposer d'un numéro d'étudiant de Guelph ; entrer en première session d'un programme de premier cycle ; n'avoir jamais fréquenté d'établissement postsecondaire ; moyenne d'admission équivalente à au moins 90,0 % (cursus canadien) ; contributions de leadership importantes dans l'école et la communauté.",
    "cout_candidature": "Demande séparée requise après l'admission",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — 25 janvier"
+   "edition_note": "Seule l'édition rentrée automne 2027 est annoncée : candidature le 8 mars 2027, lettres le 15 mars 2027.",
+   "diplome": "Diplôme de fin d'études secondaires donnant accès à l'admission en premier cycle (moyenne équivalente à 90 %)",
+   "langue": "Non précisée sur la page de la bourse (voir les exigences d'admission de l'université)",
+   "conseil": "Demandez tôt les lettres de recommandation à vos référents et vérifiez avec l'université comment votre moyenne est convertie en équivalent canadien.",
+   "autres": [
+    "Deux bourses attribuées pour la rentrée d'automne 2027",
+    "Aucun pays n'est exclu parmi les étudiants internationaux ; seuls les Canadiens et résidents permanents sont exclus"
+   ],
+   "dossier": [
+    "Demande d'admission à l'Université de Guelph et numéro d'étudiant",
+    "Formulaire de candidature à la bourse (ouverture au plus tard le 1er décembre 2026)",
+    "Lettres de recommandation (à remettre avant le 15 mars 2027, 16 h HE)"
+   ],
+   "etapes": [
+    "Déposer la demande d'admission et obtenir le numéro d'étudiant",
+    "Remplir la candidature à la bourse en ligne avant le 8 mars 2027, 16 h (heure de l'Est)",
+    "Faire parvenir les lettres de recommandation avant le 15 mars 2027, 16 h",
+    "Si non éligible, voir la President's Scholarship ou la Lincoln Alexander Chancellor's Scholarship"
+   ]
   },
   "en": {
-   "nom": "Dr. Franco J. Vaccarino President's Scholarship (Guelph)"
+   "nom": "Dr. Franco J. Vaccarino President's Scholarship (University of Guelph)",
+   "resume": "University of Guelph entrance award for two international (visa) students starting an undergraduate degree in Fall 2027. It combines financial support, mentorship by a professor and a summer research assistantship.",
+   "valeur": "CAD 42,500, plus a summer research assistantship, mentorship and guaranteed first-year residence",
+   "couverture_detail": "Total value of CAD 42,500, paid summer research assistantship, mentorship by a leading professor, first-choice residence in first year (deposit must be paid by its deadline).",
+   "ne_couvre_pas": "The page does not state full tuition coverage; remaining costs are the student's responsibility.",
+   "eligibilite": "International (visa) student; Canadian citizens and permanent residents are not eligible; applied for admission with a valid U of G student ID; entering first semester of an undergraduate program; no previous post-secondary attendance; admission average equivalent to at least 90.0% (Canadian curriculum); significant leadership contributions to school and community.",
+   "diplome": "Secondary school diploma giving access to undergraduate admission (average equivalent to 90%)",
+   "langue": "Not stated on the scholarship page (see the university's admission requirements)",
+   "conseil": "Ask your referees early and check with the university how your grades convert to the Canadian equivalent.",
+   "edition_note": "Only the Fall 2027 intake is announced: application March 8, 2027, reference letters March 15, 2027.",
+   "autres": [
+    "Two awards for Fall 2027 entry",
+    "No country is excluded among international students; only Canadians and permanent residents are excluded"
+   ],
+   "dossier": [
+    "Application for admission to the University of Guelph and student ID number",
+    "Scholarship application form (opens by December 1, 2026)",
+    "Reference letters (due March 15, 2027, 4:00 p.m. EDT)"
+   ],
+   "etapes": [
+    "Apply for admission and obtain your student ID",
+    "Complete the online scholarship application by March 8, 2027, 4:00 p.m. EST",
+    "Have reference letters submitted by March 15, 2027, 4:00 p.m.",
+    "If not eligible, see the President's Scholarship or the Lincoln Alexander Chancellor's Scholarship"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Rentrée automne 2027",
+    "ouverture": "2026-12-01",
+    "cloture": "2027-03-08",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-20",
+   "pages_lues": [
+    "https://www.uoguelph.ca/registrar/finances-fees/vaccarino"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -11181,6 +11246,10 @@
   },
   "en": {
    "nom": "University of Melbourne Graduate Research Scholarship (MGRS)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (403 sur scholarships.unimelb.edu.au et study.unimelb.edu.au) ; nationalité, dates et dossier non lus sur la page officielle"
   }
  },
  {
@@ -11229,6 +11298,10 @@
   },
   "en": {
    "nom": "Research Training Program (RTP) — Bourse nationale"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle du gouvernement australien inaccessible (403) ; programme géré université par université, pas de page unique de candidature ; voir l'entrée University of Sydney USydIS pour une mise en oeuvre vérifiée"
   }
  },
  {
@@ -11282,6 +11355,10 @@
   },
   "en": {
    "nom": "ANU Chancellor's International Scholarship"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page ANU lue mais : indiquée « currently unavailable » (période de candidature fermée) ; listes de pays par catégorie dans un document non lu, Cameroun non confirmé ; dates absentes ; le guide indique domaine santé alors que la bourse couvre presque toutes filières"
   }
  },
  {
@@ -11331,6 +11408,10 @@
   },
   "en": {
    "nom": "Monash International Leadership Scholarship"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel Monash inaccessible (403) ; seule une recherche web indique bourse de licence (4 par an, frais de scolarité seulement, considération automatique) sans page lue ; Cameroun et dates non confirmés"
   }
  },
  {
@@ -11378,6 +11459,10 @@
   },
   "en": {
    "nom": "Melbourne Chancellor's Scholarship (Bachelor)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel inaccessible (403) ; informations contradictoires dans les extraits de recherche (étudiants nationaux vs internationaux, seuil ATAR 99,90) ; Cameroun et dates non confirmés"
   }
  },
  {
@@ -11386,7 +11471,7 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
@@ -11396,32 +11481,126 @@
   ],
   "couverture_niveau": "complete",
   "origine": "universitaire",
-  "lien_officiel": "https://www.sydney.edu.au/scholarships/international/postgraduate-research.html",
+  "lien_officiel": "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://www.sydney.edu.au/scholarships/international/postgraduate-research.html"
+    "titre": "RTP and USydIS scholarships (international)",
+    "url": "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html"
+   },
+   {
+    "titre": "General international research scholarships",
+    "url": "https://www.sydney.edu.au/scholarships/international/postgraduate-research/general.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Plusieurs rounds — vérifiez sur le site"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "University of Sydney International Research Scholarship (USydIS)",
-   "resume": "L'Université de Sydney est la plus ancienne d'Australie (fondée en 1850) et l'une des plus prestigieuses. Elle offre un nombre significatif de bourses de recherche internationales chaque année, avec un processus de sélection basé sur le mérite académique et la…",
+   "nom": "University of Sydney International Stipend Scholarship (USydIS)",
+   "resume": "Bourse compétitive de l'Université de Sydney pour les étudiants internationaux en recherche (HDR), avec allocation de vie et exonération de scolarité. La sélection tient compte du mérite académique, de l'expérience de recherche et de l'encadrement.",
    "resume_long": "L'Université de Sydney est la plus ancienne d'Australie (fondée en 1850) et l'une des plus prestigieuses. Elle offre un nombre significatif de bourses de recherche internationales chaque année, avec un processus de sélection basé sur le mérite académique et la qualité du projet de recherche.",
-   "valeur": "Exonération totale des frais + stipend de ~37 000 AUD/an",
-   "couverture_detail": "Scolarité + allocation de vie + OSHC",
-   "ne_couvre_pas": "Billet d'avion (sauf supplément spécifique)",
-   "eligibilite": "Excellence académique + projet de recherche de qualité + superviseur accepté",
+   "valeur": "Allocation de 42 754 AUD/an (2026) puis 44 293 AUD/an (2027), plus allocation de réinstallation et de thèse, et 100 % de la scolarité jusqu'à 14 périodes de recherche",
+   "couverture_detail": "Allocation annuelle, allocation de réinstallation et de thèse, exonération des frais de scolarité (University of Sydney Tuition Fee Scholarship, attribuée automatiquement) et assurance santé OSHC.",
+   "ne_couvre_pas": "Le billet d'avion n'est pas mentionné comme pris en charge.",
+   "eligibilite": "Étudiant international qui commence ou poursuit un diplôme de recherche (HDR) ; la page n'impose aucune restriction de nationalité ; préférence possible pour le doctorat, pour les candidats sans bourse gouvernementale ou universitaire antérieure au même niveau.",
    "cout_candidature": "Gratuit",
-   "edition_note": "Date limite indiquée dans le guide : Plusieurs rounds — vérifiez sur le site"
+   "edition_note": "Clôtures annoncées : 11 septembre 2026 (passée) et 18 décembre 2026 pour 2027 ; 10 septembre 2027 pour 2028 ; décembre 2027 estimée non confirmée.",
+   "diplome": "Diplôme donnant accès à un programme de recherche à Sydney (admission HDR requise)",
+   "langue": "Études en anglais (exigences linguistiques de l'admission HDR non détaillées sur la page lue)",
+   "conseil": "Contactez un superviseur avant de candidater et préparez la preuve d'expérience de recherche : c'est un critère de sélection.",
+   "autres": [
+    "Un maximum de 14 périodes de recherche pour le doctorat",
+    "La bourse est compétitive ; l'exonération de scolarité est automatique avec l'allocation"
+   ],
+   "dossier": [
+    "Demande d'admission HDR via Sydney Courses avec ses pièces",
+    "Formulaire de candidature à la bourse (formulaire RTP)",
+    "Guide du processus de sélection des bourses HDR",
+    "Modèle de preuve d'expérience de recherche et son annexe",
+    "Conditions générales de la bourse (PDF)"
+   ],
+   "etapes": [
+    "Candidater à l'admission HDR sur Sydney Courses avant la date limite internationale",
+    "Soumettre le formulaire de candidature à la bourse avant la date limite",
+    "Pour les étudiants déjà inscrits : confirmer l'inscription HDR puis soumettre le formulaire"
+   ]
   },
   "en": {
-   "nom": "University of Sydney International Research Scholarship (USydIS)"
+   "nom": "University of Sydney International Stipend Scholarship (USydIS)",
+   "resume": "Competitive University of Sydney scholarship for international higher-degree-by-research students, with a living stipend and tuition waiver. Selection considers academic merit, research experience and supervision arrangements.",
+   "valeur": "Stipend of AUD 42,754/year (2026) then AUD 44,293/year (2027), plus relocation and thesis allowance, and 100% tuition for up to 14 research periods",
+   "couverture_detail": "Annual stipend, relocation and thesis allowance, tuition waiver (University of Sydney Tuition Fee Scholarship, awarded automatically) and OSHC health cover.",
+   "ne_couvre_pas": "Airfare is not stated as covered.",
+   "eligibilite": "International student commencing or enrolled in a higher degree by research (HDR); the page sets no nationality restriction; preference may go to PhD applicants without a prior Australian Government or University scholarship at the same level.",
+   "diplome": "Degree giving access to a research program at Sydney (HDR admission required)",
+   "langue": "Studies in English (language requirements of HDR admission not detailed on the page read)",
+   "conseil": "Contact a supervisor before applying and prepare the research experience evidence: it is a selection criterion.",
+   "edition_note": "Announced closing dates: September 11, 2026 (passed) and December 18, 2026 for 2027; September 10, 2027 for 2028; December 2027 estimated, unconfirmed.",
+   "autres": [
+    "Up to 14 research periods for a doctorate",
+    "The scholarship is competitive; the tuition waiver is automatic with the stipend"
+   ],
+   "dossier": [
+    "HDR admission application via Sydney Courses with supporting documents",
+    "Scholarship application form (RTP form)",
+    "HDR scholarship selection process guide",
+    "Research experience evidence template and appendix",
+    "Scholarship terms and conditions (PDF)"
+   ],
+   "etapes": [
+    "Apply for HDR admission on Sydney Courses by the international deadline",
+    "Submit the scholarship application form by the deadline",
+    "Currently enrolled students: confirm HDR enrolment then submit the form"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": null,
+   "cloture_mois": "septembre et décembre"
+  },
+  "edition": {
+   "libelle": "Périodes de recherche 3-4, 2027",
+   "cloture": "2026-12-18",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Périodes de recherche 1-2, 2027",
+    "ouverture": null,
+    "cloture": "2026-09-11",
+    "confirme": true
+   },
+   {
+    "annee": 2026,
+    "libelle": "Périodes de recherche 3-4, 2027",
+    "ouverture": null,
+    "cloture": "2026-12-18",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Périodes de recherche 1-2, 2028",
+    "ouverture": null,
+    "cloture": "2027-09-10",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-20",
+   "pages_lues": [
+    "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html",
+    "https://www.sydney.edu.au/scholarships/international/postgraduate-research/general.html",
+    "https://www.sydney.edu.au/scholarships/international/postgraduate-research.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -11475,6 +11654,10 @@
   },
   "en": {
    "nom": "Destination Australia Scholarships"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle du ministère inaccessible (403) ; recherche web : dernière ronde documentée 2024 (Round 5), existence d'une édition 2027 non confirmée ; Cameroun et dates non lus"
   }
  },
  {
@@ -11518,6 +11701,10 @@
   },
   "en": {
    "nom": "Dean's Women in Business MBA Scholarship (Melbourne Business School)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle mbs.edu inaccessible (403). La recherche indique seulement un Dean's Scholarship for Women and Management (Senior Executive MBA, statut Closed), sans confirmation du Cameroun ni des dates ; nom et conditions non confirmés."
   }
  },
  {
@@ -11622,6 +11809,10 @@
   },
   "en": {
    "nom": "Think Big Scholarships (University of Bristol)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page de la fiche en 404. Page officielle bristol.ac.uk/international/fees-finance/scholarships/ lue : cycle 2026 clos (10 avril 2026), aucune date 2027 publiée, éligibilité = statut de frais « overseas » sur programme éligible (Cameroun non cité), liste de documents non fournie."
   }
  },
  {
@@ -11677,11 +11868,11 @@
  },
  {
   "id": "university-of-glasgow-excellence-scholarships",
-  "organisme": "University of Glasgow (Écosse)",
+  "organisme": "University of Glasgow",
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -11690,32 +11881,107 @@
   ],
   "couverture_niveau": "partielle",
   "origine": "universitaire",
-  "lien_officiel": "https://www.gla.ac.uk/scholarships/",
+  "lien_officiel": "https://www.gla.ac.uk/scholarships/universityofglasgowafricanexcellenceaward",
   "sources": [
    {
-    "titre": "Manuel des bourses",
+    "titre": "University of Glasgow African Excellence Award",
+    "url": "https://www.gla.ac.uk/scholarships/universityofglasgowafricanexcellenceaward"
+   },
+   {
+    "titre": "Scholarships Glasgow",
     "url": "https://www.gla.ac.uk/scholarships/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Variable par programme"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "University of Glasgow Excellence Scholarships",
-   "resume": "Glasgow est l'une des plus anciennes universités au monde (fondée en 1451) et l'une des plus prestigieuses d'Écosse. L'Écosse offre un avantage de coût : le coût de la vie est 20-30 % inférieur à Londres. Glasgow est aussi une ville dynamique, multiculturelle…",
+   "nom": "University of Glasgow African Excellence Award",
+   "resume": "Bourse de l'Université de Glasgow pour des candidats domiciliés en Afrique et titulaires d'un passeport d'un pays éligible, dont le Cameroun. Elle finance 75 % des frais de scolarité d'un master taught d'un an (jusqu'à 16 bourses pour 2027/28).",
    "resume_long": "Glasgow est l'une des plus anciennes universités au monde (fondée en 1451) et l'une des plus prestigieuses d'Écosse. L'Écosse offre un avantage de coût : le coût de la vie est 20-30 % inférieur à Londres. Glasgow est aussi une ville dynamique, multiculturelle et accueillante.",
-   "valeur": "5 000 à 10 000 £ de réduction sur les frais de scolarité",
-   "couverture_detail": "Réduction directe sur les frais",
-   "ne_couvre_pas": "Allocation de vie, logement",
-   "eligibilite": "Étudiants internationaux avec des résultats de premier cycle exceptionnels",
+   "valeur": "75 % de réduction sur les frais de scolarité (ex. environ 26 111 £ pour un frais moyen de 34 815 £ en Sciences et Ingénierie)",
+   "couverture_detail": "Réduction de 75 % des frais de scolarité du master taught d'un an, selon les frais de votre lettre d'offre.",
+   "ne_couvre_pas": "Frais de vie, voyage, visa ; les 25 % restants des frais. Non cumulable avec d'autres bourses ou réductions de l'université ni avec un financement externe (sauf réduction Alumni).",
+   "eligibilite": "Niveau académique équivalent à une first class honours britannique ; statut de frais international ; domicile en Afrique et passeport d'un pays éligible (Cameroun inclus) ; plan de carrière ou de développement clair ; respect des exigences de fonds de subsistance UKVI ; offre pour un master taught d'un an en septembre 2027 (nécessaire pour être convoqué à l'entretien, pas pour postuler).",
    "cout_candidature": "Gratuit — considération automatique",
-   "edition_note": "Date limite indiquée dans le guide : Variable par programme"
+   "edition_note": "Date limite de l'édition 2027/28 : 31 mars 2027 ; date d'ouverture non indiquée. Entretiens : réponse avant le 7 mai 2027.",
+   "diplome": "Licence avec résultats équivalents à une first class honours britannique",
+   "langue": "Études en anglais",
+   "conseil": "Postulez au master tôt pour avoir l'offre avant l'entretien. La page ne détaille pas d'autres pièces : contactez student.recruitment@glasgow.ac.uk en cas de doute.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Les diplômes et certificats postgraduate ne sont pas éligibles"
+   ],
+   "dossier": [
+    "Formulaire de candidature en ligne comprenant le plan de carrière ou de développement",
+    "Offre d'admission à un master éligible (requise pour l'entretien)"
+   ],
+   "etapes": [
+    "Vérifier que votre programme figure sur la liste des masters éligibles",
+    "Postuler au master à Glasgow et obtenir une offre",
+    "Remplir le formulaire de bourse avant le 31 mars 2027, 23h59 (heure UK)",
+    "Les candidats présélectionnés sont contactés avant le 7 mai 2027 pour un entretien"
+   ]
   },
   "en": {
-   "nom": "University of Glasgow Excellence Scholarships"
+   "nom": "University of Glasgow African Excellence Award",
+   "resume": "University of Glasgow award for applicants domiciled in Africa holding a passport from an eligible country, including Cameroon. It funds 75% of tuition for a one-year taught Masters (up to 16 awards for 2027/28).",
+   "valeur": "75% tuition fee waiver (e.g. about £26,111 for an average fee of £34,815 in Science and Engineering)",
+   "couverture_detail": "75% reduction of the one-year taught Masters tuition, based on the fee in your offer letter.",
+   "ne_couvre_pas": "Living costs, travel, visa; the remaining 25% of fees. Cannot be combined with other University discounts or scholarships or external sponsorship (except Alumni Discount).",
+   "eligibilite": "Academic excellence equivalent to a UK first class honours; international fee status; domiciled in Africa with a passport from an eligible country (Cameroon included); clear career or development plan; meeting UKVI living-cost requirements; offer for a one-year taught Masters starting September 2027 (needed for interview, not to apply).",
+   "diplome": "Bachelor's degree with results equivalent to UK first class honours",
+   "langue": "Teaching in English",
+   "conseil": "Apply for the Masters early so you hold an offer by the interview stage. The page lists no other documents: email student.recruitment@glasgow.ac.uk if unsure.",
+   "edition_note": "2027/28 deadline: 31 March 2027; opening date not stated. Interview invitations by 7 May 2027.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Postgraduate diplomas and certificates are not eligible"
+   ],
+   "dossier": [
+    "Online application form including the career or development plan",
+    "Offer of admission to an eligible Masters (required for interview)"
+   ],
+   "etapes": [
+    "Check your programme is on the eligible Masters list",
+    "Apply to the Masters at Glasgow and obtain an offer",
+    "Submit the scholarship form by 31 March 2027, 23:59 UK time",
+    "Shortlisted applicants are contacted by 7 May 2027 for interview"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "",
+   "cloture_mois": "mars"
+  },
+  "edition": {
+   "libelle": "2027/28",
+   "cloture": "2027-03-31",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2027-03-31",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.gla.ac.uk/scholarships/universityofglasgowafricanexcellenceaward",
+    "https://www.gla.ac.uk/scholarships/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -11762,60 +12028,152 @@
   },
   "en": {
    "nom": "Women in STEM Scholarship (University of Bradford)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle illisible (404 puis page vide). Selon les résultats de recherche, programme British Council réservé aux femmes de pays listés (Kazakhstan, Ouzbékistan, Turquie, Azerbaïdjan, Balkans) : Cameroun absent ; bourse close. Suppression à envisager."
   }
  },
  {
   "id": "knight-hennessy-scholars-stanford",
-  "organisme": "Université de Stanford",
+  "organisme": "Université de Stanford (Knight-Hennessy Scholars)",
   "pays_accueil": [
    "États-Unis"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
   ],
   "domaines": [
-   "economie-gestion"
+   "tous"
   ],
   "couverture_niveau": "complete",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "été",
    "cloture_mois": "octobre"
   },
   "edition": {
-   "cloture": "2025-10-08",
-   "confirme": false
+   "libelle": "Cohorte 2027",
+   "cloture": "2026-10-06",
+   "confirme": true
   },
-  "lien_officiel": "https://knight-hennessy.stanford.edu/",
+  "lien_officiel": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/your-applications",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://knight-hennessy.stanford.edu/"
+    "titre": "KHS - Application deadlines",
+    "url": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines"
+   },
+   {
+    "titre": "KHS - Your applications",
+    "url": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/your-applications"
+   },
+   {
+    "titre": "KHS - Eligibility",
+    "url": "https://knight-hennessy.stanford.edu/admission/before-you-apply/eligibility"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Clôture en octobre"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
    "nom": "Knight-Hennessy Scholars (Stanford)",
-   "resume": "Knight-Hennessy est le programme de bourses le plus richement doté au monde (dotation de 750 millions de dollars). Il vise à former une communauté mondiale de leaders multidisciplinaires — des personnes qui veulent résoudre les problèmes les plus complexes du…",
+   "resume": "Programme de bourses de l'Université de Stanford pour des études supérieures à temps plein dans n'importe quel programme de Stanford. Il finance jusqu'à trois ans de scolarité, une allocation et un voyage annuel.",
    "resume_long": "Knight-Hennessy est le programme de bourses le plus richement doté au monde (dotation de 750 millions de dollars). Il vise à former une communauté mondiale de leaders multidisciplinaires — des personnes qui veulent résoudre les problèmes les plus complexes du monde en croisant les disciplines.",
-   "valeur": "Full Funding — estimé à 180 000+ USD sur la durée du programme",
-   "couverture_detail": "Frais de scolarité à Stanford (100 %), allocation de vie généreuse, billet d'avion AR, fonds de recherche et de voyage, programme de leadership et de mentorat personnalisé, retraites et séminaires",
-   "ne_couvre_pas": "Frais d'admission au programme d'études choisi à Stanford (candidature payante ~125 USD)",
-   "eligibilite": "Ouvert à toutes les nationalités. Diplôme de licence/Bachelor obtenu depuis moins de 7 ans. Pas de limite d'âge. Pas d'exigence d'expérience professionnelle (mais fortement recommandée).",
+   "valeur": "Scolarité (jusqu'à 3 ans) + allocation de vie + un voyage annuel aller-retour (montants non indiqués sur le site)",
+   "couverture_detail": "Bourse couvrant jusqu'à trois ans de frais de scolarité selon la durée du diplôme, allocation pour les frais de vie et d'études, allocation pour un voyage annuel vers et depuis Stanford.",
+   "ne_couvre_pas": "Les éventuels frais de dossier du programme Stanford visé (non couverts, pas de dispense par KHS).",
+   "eligibilite": "Citoyens et résidents de tous pays. Premier diplôme de licence (ou équivalent) obtenu en janvier 2020 ou après (ou à obtenir avant septembre 2027 pour la cohorte 2027). Pas de limite d'âge. Il faut aussi candidater et être admis dans un programme de master/doctorat à temps plein de Stanford.",
    "cout_candidature": "Gratuit pour Knight-Hennessy, mais payant pour l'admission au programme Stanford choisi",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Clôture en octobre"
+   "edition_note": "Date limite KHS cohorte 2027 : 6 octobre 2026 (13 h, heure du Pacifique), passée. La cohorte 2028 ouvre à l'été 2027, date limite non annoncée.",
+   "diplome": "Licence ou équivalent obtenue après janvier 2020",
+   "langue": "Dossier en anglais ; tests de langue selon le programme Stanford visé",
+   "conseil": "Très sélectif : prépare en parallèle le dossier du programme Stanford, dont les délais varient. La cohorte 2027 est close ; surveille l'ouverture de la cohorte 2028 à l'été 2027.",
+   "autres": [
+    "Pas de frais de candidature KHS ; le programme Stanford peut en demander",
+    "Offre non reportable"
+   ],
+   "dossier": [
+    "Formulaire de candidature en ligne",
+    "CV",
+    "Relevés de notes et résultats de tests",
+    "Lettres de recommandation",
+    "Réponses courtes et essai",
+    "Déclaration vidéo (sur invitation, après dépôt)"
+   ],
+   "etapes": [
+    "Créer la candidature KHS et celle du programme Stanford",
+    "Saisir tôt les recommandants",
+    "Remplir et soumettre chaque candidature avant sa date limite",
+    "Déposer la candidature au programme Stanford au plus tard le 1er décembre 2026 (ou plus tôt selon le programme)"
+   ]
   },
   "en": {
-   "nom": "Knight-Hennessy Scholars (Stanford)"
+   "nom": "Knight-Hennessy Scholars (Stanford)",
+   "resume": "Stanford University scholarship program for full-time graduate study in any Stanford graduate program. It funds up to three years of tuition, a stipend and an annual trip.",
+   "valeur": "Tuition (up to 3 years) + living stipend + one annual round trip (amounts not stated on the site)",
+   "couverture_detail": "Fellowship covering up to three years of tuition depending on degree length, a stipend for living and academic expenses, and a stipend for one annual trip to and from Stanford.",
+   "ne_couvre_pas": "Any application fee of the chosen Stanford program (KHS cannot grant waivers).",
+   "eligibilite": "Citizens and residents of all countries. First bachelor's degree (or equivalent) earned January 2020 or later (or to be earned by September 2027 for the 2027 cohort). No age limit. You must also apply and be admitted to a full-time Stanford graduate program.",
+   "diplome": "Bachelor's degree or equivalent earned after January 2020",
+   "langue": "Application in English; language tests depend on the Stanford program",
+   "conseil": "Highly selective: prepare the Stanford program application in parallel, as its deadlines vary. The 2027 cohort is closed; watch for the 2028 cohort opening in summer 2027.",
+   "edition_note": "KHS 2027 cohort deadline: October 6, 2026, 1:00 pm Pacific Time, now passed. The 2028 cohort opens in summer 2027; deadline not yet announced.",
+   "autres": [
+    "No KHS application fee; the Stanford program may charge one",
+    "Offers cannot be deferred"
+   ],
+   "dossier": [
+    "Online application form",
+    "Resume",
+    "Transcripts and test scores",
+    "Recommendation letters",
+    "Short answers and essay",
+    "Video statement (by invitation, after applying)"
+   ],
+   "etapes": [
+    "Create the KHS application and the Stanford program application",
+    "Enter recommenders early",
+    "Complete and submit each application by its deadline",
+    "Submit the Stanford program application by December 1, 2026 at the latest (or earlier depending on the program)"
+   ]
   },
-  "vedette": true
+  "vedette": true,
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Cohorte 2027",
+    "ouverture": null,
+    "cloture": "2026-10-06",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Cohorte 2028",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://knight-hennessy.stanford.edu/",
+    "https://knight-hennessy.stanford.edu/admission/before-you-apply/eligibility",
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines",
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/your-applications"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
  },
  {
   "id": "american-university-emerging-global-leader-au-egls",
@@ -11862,61 +12220,10 @@
   },
   "en": {
    "nom": "American University Emerging Global Leader (AU EGLS)"
-  }
- },
- {
-  "id": "mit-msrp-mit-summer-research-program",
-  "organisme": "Massachusetts Institute of Technology",
-  "pays_accueil": [
-   "États-Unis"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "doctorat"
-  ],
-  "domaines": [
-   "maths",
-   "informatique",
-   "ingenierie",
-   "physique-chimie"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "janvier"
   },
-  "edition": {
-   "cloture": "2026-01-20",
-   "confirme": false
-  },
-  "lien_officiel": "https://oge.mit.edu/msrp/",
-  "sources": [
-   {
-    "titre": "Manuel des bourses",
-    "url": "https://oge.mit.edu/msrp/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Janvier pour l'été suivant"
-  },
-  "fr": {
-   "nom": "MIT MSRP (MIT Summer Research Program)",
-   "resume": "Ce n'est pas une bourse classique mais un tremplin stratégique vers un PhD au MIT ou dans une autre université de recherche. Pendant 10 semaines, vous travaillez dans un laboratoire du MIT sous la supervision d'un professeur. À la fin, vous avez :",
-   "resume_long": "Ce n'est pas une bourse classique mais un tremplin stratégique vers un PhD au MIT ou dans une autre université de recherche. Pendant 10 semaines, vous travaillez dans un laboratoire du MIT sous la supervision d'un professeur. À la fin, vous avez :",
-   "valeur": "Stage de recherche rémunéré de 10 semaines au MIT",
-   "couverture_detail": "Allocation de recherche (~5 000-6 000 USD pour l'été), logement au MIT, certains frais de voyage",
-   "ne_couvre_pas": "Billet d'avion international (dans certains cas)",
-   "eligibilite": "Conditions",
-   "cout_candidature": "Gratuit",
-   "edition_note": "Date limite indiquée dans le guide : Janvier pour l'été suivant"
-  },
-  "en": {
-   "nom": "MIT MSRP (MIT Summer Research Program)"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles american.edu inaccessibles (503) ; seul un résumé de recherche indique que le programme s'adresse aux futurs étudiants de licence (premier cycle) hors États-Unis, cycle 2026 clos, sans liste de pays ni confirmation du Cameroun."
   }
  },
  {
@@ -12024,6 +12331,10 @@
   },
   "en": {
    "nom": "Friedrich Ebert Stiftung (FES)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue : programme pour étudiants déjà inscrits dans une université allemande et résidant en Allemagne, candidature en allemand avec preuve de langue allemande ; Cameroun non cité ; montants officiels différents de la fiche (992 € / 1 500 €) ; documents et dates précises non listés. Non accessible depuis le Cameroun."
   }
  },
  {
@@ -12069,6 +12380,10 @@
   },
   "en": {
    "nom": "Rosa Luxemburg Stiftung"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue : bourses pour étudiants étrangers déjà présents en Allemagne (master, doctorat), allemand B2 requis ; Cameroun non cité, montants et liste de documents non indiqués (détails en allemand seulement) ; date limite 1er octobre."
   }
  },
  {

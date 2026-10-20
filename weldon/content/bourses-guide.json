@@ -10939,6 +10939,10 @@
     "dates",
     "lien"
    ]
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "pages officielles lues partiellement : éligibilité des internationaux non confirmée en entier"
   }
  },
  {
@@ -11069,6 +11073,10 @@
     "dates",
     "lien"
    ]
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "pages officielles lues partiellement : éligibilité des internationaux non confirmée en entier"
   }
  },
  {
@@ -11250,6 +11258,10 @@
   },
   "en": {
    "nom": "Nanook Pledge Scholarship — University of Alaska"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site uaf.edu inaccessible (HTTP 503 via WebFetch, erreur de certificat TLS via curl) : aucune page officielle lue. Les résumés de recherche indiquent une bourse au mérite automatique pour les admis non-résidents (montants discordants selon les pages, 1 000 à 12 000 USD/an) mais rien n'a pu être confirmé ; les montants vont aussi changer avec le tarif résident pour tous à partir de l'automne 2027 (Alaska Unlocked)."
   }
  },
  {

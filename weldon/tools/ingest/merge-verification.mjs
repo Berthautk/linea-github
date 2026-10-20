@@ -8,16 +8,24 @@ const today = new Date().toISOString().slice(0, 10);
 const files = { cur: JSON.parse(fs.readFileSync(C + "bourses.json", "utf8")), guide: JSON.parse(fs.readFileSync(C + "bourses-guide.json", "utf8")) };
 const done = JSON.parse(fs.existsSync(V + "done.json") ? fs.readFileSync(V + "done.json", "utf8") : "[]");
 const find = (id) => { for (const k of Object.keys(files)) { const b = files[k].find((x) => x.id === id); if (b) return [k, b]; } return [null, null]; };
+const STOP = new Set("scholarship scholarships bourse bourses fully funded university universite of the de la du des et and for programme program award awards les le en pour fellowship fellowships foundation fondation".split(" "));
+const toks = (n) => new Set(String(n || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !STOP.has(w)));
+const jacc = (a, b) => { const [x, y] = [toks(a), toks(b)]; if (!x.size || !y.size) return 0; const i = [...x].filter((w) => y.has(w)).length; return i / (x.size + y.size - i); };
 const stats = { verifiee: 0, non: 0, supprimee: 0, rejetee: 0, absente: 0 };
 const log = [];
 const TXT = ["nom", "resume", "valeur", "couverture_detail", "ne_couvre_pas", "eligibilite", "diplome", "langue", "conseil", "edition_note"];
 const best = (eds) => { const f = (eds || []).filter((e) => e && (e.cloture || e.ouverture)); const up = f.filter((e) => (e.cloture || e.ouverture) >= today).sort((a, b) => (a.cloture || a.ouverture).localeCompare(b.cloture || b.ouverture)); return up[0] || f.sort((a, b) => (b.cloture || b.ouverture).localeCompare(a.cloture || a.ouverture))[0] || null; };
-const outs = fs.readdirSync(V).filter((f) => /^(out|resultat)-\d+\.json$/.test(f)).sort();
+const outs = fs.readdirSync(V).filter((f) => /^(out|resultat)-(D-)?\d+\.json$/.test(f)).sort();
 for (const f of outs) {
   let arr; try { arr = JSON.parse(fs.readFileSync(V + f, "utf8")); } catch (e) { log.push(`ILLISIBLE ${f}`); continue; }
   for (const o of arr) {
     let [k, b] = find(o.id);
     // Nouvelle bourse trouvée par la recherche : créée seulement si elle est vérifiée ; tout le reste passe par le même contrôle.
+    // Doublon d'une bourse déjà au catalogue (mêmes mots-clés du nom, même pays) : ignorée.
+    if (!b && o.nouvelle && o.verifiee) {
+      const twin = [...files.cur, ...files.guide].find((x) => x.id !== o.id && jacc(x.fr?.nom, o.fr?.nom) >= 0.7 && (x.pays_accueil?.[0] || "") === (o.pays_accueil?.[0] || ""));
+      if (twin) { stats.doublon = (stats.doublon || 0) + 1; log.push(`doublon ${o.id} ~ ${twin.id}`); continue; }
+    }
     if (!b && o.nouvelle && o.verifiee && !o.supprimer) { b = { id: o.id, status: "to_verify", niveaux: o.niveaux, domaines: o.domaines?.length ? o.domaines : ["tous"], fr: { nom: o.fr?.nom }, en: { nom: o.en?.nom } }; files.cur.push(b); k = "cur"; stats.nouvelle = (stats.nouvelle || 0) + 1; }
     if (!b) { stats.absente++; continue; }
     done.includes(o.id) || done.push(o.id);

@@ -13083,7 +13083,7 @@
   "pays_accueil": [
    "Allemagne"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
@@ -13095,35 +13095,110 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "aout"
+   "ouverture_mois": null,
+   "cloture_mois": "février et août"
   },
   "edition": {
-   "cloture": "2026-08-02",
+   "libelle": "Semestre d'été 2027",
+   "cloture": "2027-02-02",
    "confirme": false
   },
   "lien_officiel": "https://www.ue-germany.com/scholarships",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "UE Germany - Scholarships",
     "url": "https://www.ue-germany.com/scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "2 août 2026"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Cultural Diversity Scholarship — University of Europe for Applied Sciences",
-   "resume": "L'University of Europe for Applied Sciences est une université privée avec des campus à Berlin, Hambourg, Iserlohn et Potsdam. Contrairement aux universités publiques, les universités privées allemandes facturent des frais de scolarité — mais cette bourse de…",
+   "nom": "Cultural Diversity Scholarship - University of Europe for Applied Sciences",
+   "resume": "Bourse de l'université privée UE (campus en Allemagne) : 5 bourses par semestre pour des étudiants issus de divers horizons culturels. Elle est ouverte à tous les candidats, pour tous les programmes de l'UE.",
    "resume_long": "L'University of Europe for Applied Sciences est une université privée avec des campus à Berlin, Hambourg, Iserlohn et Potsdam. Contrairement aux universités publiques, les universités privées allemandes facturent des frais de scolarité — mais cette bourse de 50% les rend nettement plus abordables. L'UE est reconnue pour ses programmes en business, en design, en médias et en sport management. La Cultural Diversity Scholarship valorise la diversité culturelle du campus.",
-   "valeur": "50% des frais de scolarité",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 2 août 2026"
+   "valeur": "50 % des frais de scolarité de la première année",
+   "eligibilite": "Ouverte à tous les candidats à tous les programmes de l'UE (la page ne cite aucune restriction de nationalité). Le niveau (licence ou master) n'est pas détaillé par la page.",
+   "edition_note": "La page indique 2 février (semestre d'été) et 2 août (semestre d'hiver) de l'année en cours, sans publier de dates millésimées : dates 2027 déduites de cette règle, à reconfirmer.",
+   "couverture_detail": "Réduction de 50 % sur la première année d'études.",
+   "ne_couvre_pas": "Frais de vie, logement, visa, billet d'avion ; les années suivantes.",
+   "diplome": "Diplôme requis par le programme de l'UE visé (non précisé pour la bourse).",
+   "langue": "Selon le programme choisi.",
+   "conseil": "Soyez concret dans la lettre : parcours, contexte culturel et ce que vous apporterez au campus. Calculez le coût total des études (frais restants, vie, visa) avant de vous engager.",
+   "autres": [
+    "UE est une université privée : les frais de scolarité sont payants, la bourse n'en couvre que la moitié la première année.",
+    "La candidature doit être déposée avant la signature du contrat d'études.",
+    "Environ 5 bourses par semestre seulement."
+   ],
+   "dossier": [
+    "Formulaire de candidature aux bourses UE (à télécharger sur la page des bourses)",
+    "Lettre de motivation racontant votre parcours et la diversité que vous apportez",
+    "Pièces complémentaires éventuelles demandées par le conseiller (non détaillées sur la page)"
+   ],
+   "etapes": [
+    "Déposer d'abord (ou simultanément) une candidature à un programme de l'UE",
+    "Télécharger et remplir le formulaire de candidature aux bourses UE",
+    "L'envoyer à votre conseiller académique ou, sans conseiller, à student.advice@ue-germany.com (candidats hors UE)",
+    "Soumettre avant de signer le contrat d'études"
+   ]
   },
   "en": {
-   "nom": "Cultural Diversity Scholarship — University of Europe for Applied Sciences"
+   "nom": "Cultural Diversity Scholarship - University of Europe for Applied Sciences",
+   "resume": "Scholarship of the private university UE (campuses in Germany): 5 awards per semester for students from diverse cultural backgrounds. It is open to all applicants for all UE programmes.",
+   "valeur": "50% of first-year tuition fees",
+   "couverture_detail": "50% reduction on the first year of study.",
+   "ne_couvre_pas": "Living costs, accommodation, visa, flights; later years.",
+   "eligibilite": "Open to all applicants for all UE programmes (the page names no nationality restriction). The page does not detail the level (bachelor or master).",
+   "diplome": "Qualification required by the chosen UE programme (not specified for the scholarship).",
+   "langue": "Depends on the chosen programme.",
+   "conseil": "Be specific in the letter: background, cultural context and what you will bring to campus. Work out the total cost of studies (remaining fees, living, visa) before committing.",
+   "edition_note": "The page states 2 February (summer semester) and 2 August (winter semester) of the current year without dated editions: 2027 dates are inferred from this rule and should be reconfirmed.",
+   "autres": [
+    "UE is a private university: tuition is charged and the scholarship covers only half in the first year.",
+    "The application must be submitted before signing the study agreement.",
+    "Only about 5 awards per semester."
+   ],
+   "dossier": [
+    "UE scholarship application form (downloadable from the scholarships page)",
+    "Motivation letter describing your life story and the diversity you bring",
+    "Possible additional evidence requested by the advisor (not detailed on the page)"
+   ],
+   "etapes": [
+    "Apply to a UE programme first (or at the same time)",
+    "Download and complete the UE scholarship application form",
+    "Send it to your academic advisor or, without one, to student.advice@ue-germany.com (non-EU applicants)",
+    "Submit before signing the study agreement"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Semestre d'été 2027",
+    "ouverture": null,
+    "cloture": "2027-02-02",
+    "confirme": false
+   },
+   {
+    "annee": 2027,
+    "libelle": "Semestre d'hiver 2027/28",
+    "ouverture": null,
+    "cloture": "2027-08-02",
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.ue-germany.com/scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -13174,6 +13249,10 @@
   },
   "en": {
    "nom": "Germany Scholarship — University of Hamburg"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Le Deutschlandstipendium de l'Université de Hambourg est réservé aux étudiants déjà inscrits à l'université (appel d'octobre à novembre) ; un élève au Cameroun ne peut pas candidater. Cameroun non mentionné."
   }
  },
  {
@@ -13222,6 +13301,10 @@
   },
   "en": {
    "nom": "Master Plus Scholarship — RWTH Aachen University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Programme « Master Plus » introuvable sous ce nom sur les pages officielles RWTH ; les bourses équivalentes de l'International Office (achèvement d'études, engagement) sont réservées aux étudiants déjà inscrits ; pages officielles de la fiche en 404."
   }
  },
  {
@@ -13271,6 +13354,10 @@
   },
   "en": {
    "nom": "Graduation Scholarship for International Students — TU Darmstadt"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Studienabschluss-Stipendium réservé aux étudiants internationaux déjà immatriculés à la TU Darmstadt, avec mémoire déclaré ou à déclarer sous 6 mois (résultats de recherche sur les pages TU, page détaillée non lue) ; inaccessible depuis le Cameroun."
   }
  },
  {
@@ -13279,48 +13366,135 @@
   "pays_accueil": [
    "Allemagne"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
-   "master",
-   "doctorat"
+   "master"
   ],
   "domaines": [
-   "tous"
+   "maths",
+   "informatique",
+   "physique-chimie",
+   "ingenierie"
   ],
   "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "mai",
    "cloture_mois": "juillet"
   },
   "edition": {
    "cloture": "2025-07-15",
    "confirme": false
   },
-  "lien_officiel": "https://www.uni-heidelberg.de/en/study/financial-support/scholarships",
+  "lien_officiel": "https://www.uni-heidelberg.de/en/friends-supporters/hans-peter-wild-talent-scholarships/application",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.uni-heidelberg.de/en/study/financial-support/scholarships"
+    "titre": "Hans-Peter Wild Talent Scholarships - Application",
+    "url": "https://uni-heidelberg.de/en/friends-supporters/hans-peter-wild-talent-scholarships/application?menu=2"
+   },
+   {
+    "titre": "The Scholarship Programme",
+    "url": "https://www.uni-heidelberg.de/en/the-scholarship-programme"
+   },
+   {
+    "titre": "Hans-Peter Wild Talent Scholarships",
+    "url": "https://www.uni-heidelberg.de/en/hpw_scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 juillet 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "The Hans Peter Wild Talent Scholarships — Heidelberg University",
-   "resume": "L'Universität Heidelberg est la plus ancienne université d'Allemagne, fondée en 1386. C'est un membre de l'Initiative d'Excellence et l'une des universités les plus prestigieuses du pays. Heidelberg est une ville universitaire pittoresque sur les rives du…",
+   "nom": "Hans-Peter Wild Talent Scholarships - Université de Heidelberg",
+   "resume": "Bourse de l'Université de Heidelberg pour étudiants talentueux en filières MINT (maths, informatique, sciences naturelles, technique), d'Allemagne et de l'étranger, dès le premier semestre. Elle verse 1 000 euros par mois.",
    "resume_long": "L'Universität Heidelberg est la plus ancienne université d'Allemagne, fondée en 1386. C'est un membre de l'Initiative d'Excellence et l'une des universités les plus prestigieuses du pays. Heidelberg est une ville universitaire pittoresque sur les rives du Neckar, avec un charme historique unique. La bourse de €1 000 est une aide ponctuelle, mais étudier à Heidelberg — sans frais de scolarité — est en soi un privilège.",
-   "valeur": "€1 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 15 juillet 2025 (vérifier pour l'édition suivante)"
+   "valeur": "1 000 euros par mois (financement initial de deux semestres, jusqu'à la fin des études dans le cas idéal)",
+   "eligibilite": "Candidats à un premier semestre de licence ou de master dans une filière MINT (au moins 50 % du cursus en MINT) à Heidelberg, d'Allemagne et de l'étranger, n'ayant pas déjà terminé d'études à Heidelberg. On peut candidater avant d'avoir reçu l'admission.",
+   "edition_note": "Période de candidature habituelle : 15 mai au 31 juillet. Le portail de l'édition 2026/27 est fermé ; les dates exactes de 2027 ne sont pas encore annoncées.",
+   "couverture_detail": "1 000 euros par mois, attribués une fois par an à la rentrée d'hiver ; candidature initialement pour deux semestres.",
+   "ne_couvre_pas": "Pas de prise en charge directe du visa ni du voyage ; le financement exige l'inscription effective à Heidelberg.",
+   "diplome": "Licence : diplôme d'accès à l'université ; Master : premier diplôme universitaire.",
+   "langue": "Selon le programme d'études visé (allemand ou anglais).",
+   "conseil": "Préparez tôt les lettres de recommandation, les traductions officielles et la conversion de notes. Déposez en parallèle votre dossier d'admission, sans lequel la bourse ne peut pas être versée.",
+   "autres": [
+    "La candidature à la bourse et la candidature à l'admission sont deux démarches séparées : l'inscription à Heidelberg est une condition du financement.",
+    "Les bourses ne concernent pas le doctorat."
+   ],
+   "dossier": [
+    "Lettre de motivation (dans le formulaire en ligne)",
+    "CV sous forme de tableau",
+    "Au moins deux lettres de recommandation de professionnels du domaine MINT (enseignants, chargés de cours, chefs de groupe de recherche...)",
+    "Licence : diplôme d'accès à l'université ; Master : premier diplôme universitaire avec note finale (ou attestation de résultats à date si indisponible)",
+    "Justificatifs d'activités MINT si vous voulez qu'ils comptent (prix, expérience, publications, conférences, programmes pour lycéens...)",
+    "Lettre d'admission (si disponible)",
+    "Conversion de la note en note allemande équivalente (formule bavaroise modifiée) avec conversion officielle",
+    "Traductions officielles en anglais ou allemand des pièces rédigées dans une autre langue"
+   ],
+   "etapes": [
+    "Créer un compte sur le portail de candidature en ligne pendant la période d'ouverture",
+    "Remplir le formulaire et téléverser les pièces",
+    "Candidater séparément à l'admission à l'Université de Heidelberg",
+    "Soumettre le dossier complet avant le 31 juillet"
+   ]
   },
   "en": {
-   "nom": "The Hans Peter Wild Talent Scholarships — Heidelberg University"
+   "nom": "Hans-Peter Wild Talent Scholarships - Heidelberg University",
+   "resume": "Heidelberg University scholarship for talented students in MINT subjects (mathematics, informatics, natural sciences, technology), from Germany and abroad, from the very first semester. It pays 1,000 euros per month.",
+   "valeur": "1,000 euros per month (initial funding of two semesters, ideally until the end of studies)",
+   "couverture_detail": "1,000 euros per month, awarded once a year at the start of the winter semester; the application is initially for two semesters.",
+   "ne_couvre_pas": "No direct coverage of visa or travel; funding requires actual enrolment at Heidelberg.",
+   "eligibilite": "Applicants for a first semester of a bachelor's or master's programme in a MINT subject (at least 50% MINT) at Heidelberg, from Germany and abroad, who have not already completed studies at Heidelberg. You may apply before receiving an admission offer.",
+   "diplome": "Bachelor: university-entrance qualification; Master: first university degree.",
+   "langue": "Depends on the chosen study programme (German or English).",
+   "conseil": "Prepare recommendation letters, official translations and grade conversion early. Submit your admission application in parallel; without it the scholarship cannot be paid.",
+   "edition_note": "Usual application window: 15 May to 31 July. The 2026/27 portal is closed; exact 2027 dates have not yet been announced.",
+   "autres": [
+    "Applying for the scholarship and applying for admission are two separate processes: enrolment at Heidelberg is a condition of funding.",
+    "The scholarships do not cover doctoral studies."
+   ],
+   "dossier": [
+    "Statement of motivation (in the online form)",
+    "Tabular CV",
+    "At least two recommendation letters from MINT professionals (teachers, lecturers, research group leaders...)",
+    "Bachelor: university-entrance qualification; Master: first university degree with final grade (or current transcript if unavailable)",
+    "Evidence of MINT-related activities if you want them considered (prizes, publications, conferences, pupils' programmes...)",
+    "Admission letter (if available)",
+    "Conversion of grades to the German equivalent (modified Bavarian formula) with official conversion",
+    "Official translations into English or German of documents in other languages"
+   ],
+   "etapes": [
+    "Register in the online application portal during the application period",
+    "Complete the online form and upload the documents",
+    "Also apply separately for admission to Heidelberg University (required for funding)",
+    "Submit before 31 July"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://uni-heidelberg.de/en/friends-supporters/hans-peter-wild-talent-scholarships/application?menu=2",
+    "https://www.uni-heidelberg.de/en/the-scholarship-programme",
+    "https://www.uni-heidelberg.de/en/hpw_scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -13371,49 +13545,10 @@
   },
   "en": {
    "nom": "Grants for More Equal Opportunities — Berlin University of the Arts"
-  }
- },
- {
-  "id": "desy-summer-student-programme-for-international-students-fully-funded",
-  "organisme": "DESY (Deutsches Elektronen-Synchrotron)",
-  "pays_accueil": [
-   "Allemagne"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master"
-  ],
-  "domaines": [
-   "informatique",
-   "physique-chimie",
-   "ingenierie"
-  ],
-  "couverture_niveau": "complete",
-  "origine": "fondation",
-  "lien_officiel": "https://summerstudents.desy.de/",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://summerstudents.desy.de/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Consulter le site officiel"
   },
-  "fr": {
-   "nom": "DESY Summer Student Programme for International Students (Fully Funded)",
-   "resume": "DESY est l'un des plus grands centres de recherche en physique des particules et en accélérateurs au monde, situé à Hambourg. Le Summer Student Programme offre aux étudiants de Licence et de Master une immersion de plusieurs semaines dans un laboratoire de…",
-   "resume_long": "DESY est l'un des plus grands centres de recherche en physique des particules et en accélérateurs au monde, situé à Hambourg. Le Summer Student Programme offre aux étudiants de Licence et de Master une immersion de plusieurs semaines dans un laboratoire de recherche de pointe. Le programme est entièrement financé — allocation de vie, et parfois voyage. Pour les étudiants en physique ou en ingénierie, travailler à DESY est une expérience qui transforme un CV.",
-   "valeur": "Entièrement financée — Allocation pour les frais de vie",
-   "eligibilite": "Étudiants internationaux en sciences",
-   "edition_note": "Date limite indiquée dans le guide : Consulter le site officiel"
-  },
-  "en": {
-   "nom": "DESY Summer Student Programme for International Students (Fully Funded)"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Programme réel (STIBET I, UdK) mais destiné aux étudiants internationaux déjà inscrits à l'UdK avec situations particulières (réfugiés, handicap, charges familiales) ; non accessible depuis le Cameroun. Page officielle de la fiche en 404, détails non lus."
   }
  },
  {
@@ -13455,56 +13590,10 @@
   },
   "en": {
    "nom": "HZB International Summer Student Programme (Fully Funded)"
-  }
- },
- {
-  "id": "summer-student-program-2026-hzdr-helmholtz-zentrum-dresden-rossendorf",
-  "organisme": "HZDR",
-  "pays_accueil": [
-   "Allemagne"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "physique-chimie"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "fondation",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "fevrier"
   },
-  "edition": {
-   "cloture": "2026-02-22",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.hzdr.de/db/Cms?pOid=60710&pNid=0",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.hzdr.de/db/Cms?pOid=60710&pNid=0"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "22 février 2026"
-  },
-  "fr": {
-   "nom": "Summer Student Program 2026 — HZDR (Helmholtz-Zentrum Dresden-Rossendorf)",
-   "resume": "Le HZDR à Dresde offre un programme estival qui combine recherche et vie dans l'une des villes les plus belles d'Allemagne. Logement et repas gratuits éliminent les deux plus grands postes de dépenses d'un étudiant. Dresde est une ville abordable avec un…",
-   "resume_long": "Le HZDR à Dresde offre un programme estival qui combine recherche et vie dans l'une des villes les plus belles d'Allemagne. Logement et repas gratuits éliminent les deux plus grands postes de dépenses d'un étudiant. Dresde est une ville abordable avec un patrimoine architectural spectaculaire.",
-   "valeur": "Logement et repas gratuits",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 22 février 2026"
-  },
-  "en": {
-   "nom": "Summer Student Program 2026 — HZDR (Helmholtz-Zentrum Dresden-Rossendorf)"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle HZB inaccessible (404 sur les URL testées) ; programme de stage d'été (contrat de 8 semaines) plutôt que bourse d'études ; Cameroun non confirmé."
   }
  },
  {
@@ -13547,56 +13636,10 @@
   },
   "en": {
    "nom": "Merck Innovation Summer Camp for International Students (Fully Funded)"
-  }
- },
- {
-  "id": "internships-at-max-planck-institutes-in-computer-science",
-  "organisme": "Max Planck Society",
-  "pays_accueil": [
-   "Allemagne"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "informatique"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "novembre"
   },
-  "edition": {
-   "cloture": "2025-11-01",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.cis.mpg.de/internships/",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.cis.mpg.de/internships/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er novembre 2025"
-  },
-  "fr": {
-   "nom": "Internships at Max Planck Institutes in Computer Science",
-   "resume": "La Max Planck Society est le réseau d'instituts de recherche fondamentale le plus prestigieux d'Allemagne — et l'un des plus respectés au monde. Ses instituts en informatique (Max Planck Institute for Informatics, Max Planck Institute for Software Systems,…",
-   "resume_long": "La Max Planck Society est le réseau d'instituts de recherche fondamentale le plus prestigieux d'Allemagne — et l'un des plus respectés au monde. Ses instituts en informatique (Max Planck Institute for Informatics, Max Planck Institute for Software Systems, etc.) offrent des stages de recherche pour les étudiants internationaux à tous les niveaux. Un stage Max Planck est une distinction exceptionnelle sur un CV académique.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 1er novembre 2025"
-  },
-  "en": {
-   "nom": "Internships at Max Planck Institutes in Computer Science"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel Merck inaccessible (403 Access Denied, aussi via curl) ; aucune page officielle lue. D'après des agrégateurs seulement, il s'agit de l'Innovation Cup (camp-concours pour doctorants/postdocs en sciences de la vie), pas d'une bourse d'études."
   }
  },
  {
@@ -13605,7 +13648,7 @@
   "pays_accueil": [
    "Allemagne"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
@@ -13616,80 +13659,260 @@
   "couverture_niveau": "complete",
   "origine": "gouvernementale",
   "edition": {
-   "permanente": true,
-   "confirme": false
+   "libelle": "Cours d'été 2027 (juin-septembre 2027)",
+   "ouverture": "2026-09-01",
+   "cloture": "2026-10-30",
+   "confirme": true
   },
-  "lien_officiel": "https://www.daad.de/en/study-and-research-in-germany/scholarships/university-summer-courses/",
+  "lien_officiel": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50035295",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/university-summer-courses/"
+    "titre": "DAAD - University Summer Courses in Germany (base de bourses)",
+    "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50035295"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "University Summer Courses Offered in Germany for Foreign Students and Graduates (DAAD Fully Funded)",
-   "resume": "Les cours d'été universitaires financés par le DAAD sont une excellente porte d'entrée vers l'Allemagne. Ils combinent l'apprentissage de la langue allemande avec des cours académiques et une immersion culturelle. Le programme est entièrement financé — une…",
+   "nom": "University Summer Courses in Germany for Foreign Students and Graduates (DAAD)",
+   "resume": "Bourse du DAAD pour suivre un cours d'allemand intensif de quatre semaines dans une université allemande entre juin et septembre. Elle s'adresse aux étudiants et diplômés de toutes disciplines inscrits dans une université d'un pays partenaire, dont le Cameroun.",
    "resume_long": "Les cours d'été universitaires financés par le DAAD sont une excellente porte d'entrée vers l'Allemagne. Ils combinent l'apprentissage de la langue allemande avec des cours académiques et une immersion culturelle. Le programme est entièrement financé — une opportunité idéale pour découvrir l'Allemagne avant de s'engager dans un programme long.",
-   "valeur": "Entièrement financée — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux et diplômés",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Cours, logement, 475 EUR de forfait unique, indemnité de voyage selon le pays et assurances",
+   "eligibilite": "Étudiants et diplômés de toutes disciplines, 18 ans minimum au début du cours, inscrits dans une université du Cameroun (le Cameroun figure dans la liste des pays) au moment de la candidature et pendant toute la bourse. Étudiants de licence : au moins 2 années d'études achevées au début de la bourse. Non inscrit en parallèle dans une université allemande. Bourse attribuable une seule fois.",
+   "edition_note": "Candidatures chaque année du 1er septembre au 30 octobre (23 h 59, heure d'Europe centrale) ; édition en cours : jusqu'au 30 octobre 2026 pour des cours en 2027. Prochaine fenêtre attendue du 1er septembre au 30 octobre 2027 (règle annuelle de la page, édition pas encore annoncée).",
+   "couverture_detail": "Frais du cours de langue, hébergement en chambre individuelle fourni par l'organisateur, forfait unique de 475 EUR, indemnité de voyage propre au pays, assurance santé, accident et responsabilité civile. Le forfait et l'indemnité de voyage sont versés en espèces sur place.",
+   "ne_couvre_pas": "Non précisé au-delà de la liste ci-dessus ; forfait et indemnité de voyage versés seulement sur place.",
+   "diplome": "Étudiant de licence (2 ans d'études minimum) ou de master, ou diplômé d'un premier diplôme.",
+   "langue": "Niveau d'allemand à prouver à la candidature (onSET-Deutsch, TestDaF, Goethe, DSD, DSH, telc ou ÖSD ; certificat de moins d'un an, ou de moins de 2 ans à partir du niveau B2). Cours donnés uniquement en allemand.",
+   "conseil": "Préparez dès maintenant un certificat d'allemand valide : sans lui, le dossier est irrecevable. Ne postulez pas le dernier jour.",
+   "autres": [
+    "Présence obligatoire sur place, aucune participation à distance.",
+    "Les étudiants en dernière année de licence doivent joindre une attestation de leur intention de poursuivre en master.",
+    "Candidater avec le pays « Cameroun » dans le portail du DAAD."
+   ],
+   "dossier": [
+    "Formulaire de candidature en ligne",
+    "CV tabulaire (en allemand)",
+    "Lettre de motivation (en allemand)",
+    "Relevés de toutes les notes des deux dernières années, en original et avec traduction allemande ou anglaise (sinon relevés du cursus en cours et diplôme de fin d'études secondaires)",
+    "Pour les diplômés : dernier diplôme avec notes",
+    "Certificats de langue allemande",
+    "Autres documents utiles (stages, emplois)",
+    "Pour les étudiants en dernière année : attestation d'intention de poursuivre des études"
+   ],
+   "etapes": [
+    "Créer un compte sur le portail du DAAD et choisir statut et pays (Cameroun).",
+    "Remplir le formulaire en ligne et indiquer trois cours souhaités dans trois lieux différents.",
+    "Téléverser tous les documents en pdf avant la date limite.",
+    "Examen par un comité de sélection (résultats académiques et lettre de motivation)."
+   ]
   },
   "en": {
-   "nom": "University Summer Courses Offered in Germany for Foreign Students and Graduates (DAAD Fully Funded)"
+   "nom": "University Summer Courses in Germany for Foreign Students and Graduates (DAAD)",
+   "resume": "DAAD scholarship to attend an intensive four-week German course at a German university between June and September. It is open to students and graduates of all subjects enrolled at a university in a partner country, including Cameroon.",
+   "valeur": "Course, accommodation, one-time EUR 475 allowance, country-specific travel allowance and insurance",
+   "couverture_detail": "Language course fees, single-room accommodation provided by the course provider, one-time allowance of EUR 475, country-specific travel allowance, health, accident and liability insurance. The allowance and travel allowance are paid in cash on site.",
+   "ne_couvre_pas": "Nothing else specified; allowance and travel allowance are paid only on site.",
+   "eligibilite": "Students and graduates of any subject, at least 18 at the start of the course, enrolled at a university in Cameroon (Cameroon is in the country list) at the time of application and throughout the scholarship. Undergraduates: at least 2 completed academic years by the start. Not simultaneously enrolled at a German university. Funding can be received only once.",
+   "diplome": "Undergraduate (minimum 2 years of study) or master's student, or holder of a first degree.",
+   "langue": "German proficiency proven at application (onSET-Deutsch, TestDaF, Goethe, DSD, DSH, telc or OeSD; certificate under one year old, or under two years from level B2). Courses are taught in German only.",
+   "conseil": "Get a valid German certificate ready now: without it the application cannot be considered. Do not apply on the last day.",
+   "edition_note": "Applications every year from 1 September to 30 October (23:59 Central European Time); current round: until 30 October 2026 for courses in 2027. Next window expected 1 September to 30 October 2027 (annual rule on the page, edition not yet announced).",
+   "autres": [
+    "On-site attendance is mandatory, no remote participation.",
+    "Final-year undergraduates must attach a statement of intent to pursue postgraduate studies.",
+    "Apply with 'Cameroon' selected as country in the DAAD portal."
+   ],
+   "dossier": [
+    "Online application form",
+    "Tabular CV (in German)",
+    "Letter of motivation (in German)",
+    "Transcripts of all exams of the last two years, original plus German or English translation (otherwise current-study records and school-leaving certificate)",
+    "For graduates: last degree certificate with grades",
+    "German language certificates",
+    "Other relevant documents (internships, employment)",
+    "For final-year students: statement of intent to continue studies"
+   ],
+   "etapes": [
+    "Register in the DAAD portal and select status and country (Cameroon).",
+    "Fill in the online form and name three courses at three different locations.",
+    "Upload all documents as pdf before the deadline.",
+    "A selection committee reviews applications (academic record and motivation letter)."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "septembre",
+   "cloture_mois": "octobre"
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Cours d'été 2027 (juin-septembre 2027)",
+    "ouverture": "2026-09-01",
+    "cloture": "2026-10-30",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Cours d'été 2028",
+    "ouverture": "2027-09-01",
+    "cloture": "2027-10-30",
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50035295"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "the-elsa-neumann-scholarship-free-university-of-berlin",
-  "organisme": "Land de Berlin",
+  "organisme": "Land de Berlin (Elsa-Neumann-Stipendium, NaFöG)",
   "pays_accueil": [
    "Allemagne"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "doctorat"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
+  "couverture_niveau": "complete",
+  "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "avril"
+   "ouverture_mois": null,
+   "cloture_mois": "novembre"
   },
   "edition": {
-   "cloture": "2025-04-30",
-   "confirme": false
+   "libelle": "Début de la bourse au plus tôt le 1er avril 2027",
+   "cloture": "2026-11-11",
+   "confirme": true
   },
-  "lien_officiel": "https://www.fu-berlin.de/en/sites/promovieren/finanzierung/stipendien/elsa-neumann/index.html",
+  "lien_officiel": "https://www.fu-berlin.de/sites/drs/funding/nafoeg/index.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.fu-berlin.de/en/sites/promovieren/finanzierung/stipendien/elsa-neumann/index.html"
+    "titre": "Elsa-Neumann-Stipendium - Dahlem Research School (FU Berlin)",
+    "url": "https://www.fu-berlin.de/sites/drs/funding/nafoeg/index.html"
+   },
+   {
+    "titre": "Informationsblatt (PDF)",
+    "url": "https://www.fu-berlin.de/sites/drs/resources/documents/20240904-Informationsblatt-DE.pdf"
+   },
+   {
+    "titre": "Bewerbungsverfahren",
+    "url": "https://www.fu-berlin.de/sites/drs/funding/nafoeg/about-application.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Avril 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "The Elsa Neumann Scholarship — Free University of Berlin",
-   "resume": "La bourse Elsa Neumann est financée par le Land de Berlin — elle est ouverte aux doctorants de toutes les universités berlinoises. €1 350 par mois pendant trois ans représente un total de plus de €48 000 — un financement doctoral parmi les plus généreux…",
+   "nom": "Elsa-Neumann-Stipendium du Land de Berlin (bourse de doctorat, NaFöG)",
+   "resume": "Bourse de doctorat du Land de Berlin pour des doctorants des quatre universités berlinoises (FU, HU, TU, UdK), jusqu'à 36 mois, ou 12 mois pour finir une thèse très avancée. La nationalité n'est pas un critère.",
    "resume_long": "La bourse Elsa Neumann est financée par le Land de Berlin — elle est ouverte aux doctorants de toutes les universités berlinoises. €1 350 par mois pendant trois ans représente un total de plus de €48 000 — un financement doctoral parmi les plus généreux d'Allemagne. Berlin est l'une des capitales les plus dynamiques et les plus abordables d'Europe, avec un écosystème de startups, de recherche et de culture qui attire des talents du monde entier.",
-   "valeur": "€1 350/mois pendant 36 mois + avantages supplémentaires",
-   "eligibilite": "Étudiants domestiques et internationaux inscrits en doctorat à Berlin",
-   "edition_note": "Date limite indiquée dans le guide : Avril 2025 (vérifier pour l'édition suivante)"
+   "valeur": "1 350 EUR par mois + 100 EUR de forfait de frais, jusqu'à 3 ans",
+   "eligibilite": "Doctorants (ou futurs doctorants) d'une université berlinoise, avec des résultats « bien au-dessus de la moyenne » au diplôme (note nettement supérieure à la moyenne de la promotion), projet de recherche apportant une contribution importante, supervision scientifique à Berlin. La nationalité n'est pas déterminante.",
+   "edition_note": "Prochaine date limite : 11 novembre 2026, 12 h (midi), début de la bourse au plus tôt le 1er avril 2027. Les tours ont lieu au printemps et à l'automne (fiche d'information).",
+   "couverture_detail": "Bourse mensuelle de 1 350 EUR plus forfait de 100 EUR par mois, supplément familial (102,26 EUR pour un enfant, 51,13 EUR par enfant supplémentaire), aides ponctuelles de voyage de recherche, possible complément DAAD pour un séjour à l'étranger de plus de 30 jours.",
+   "ne_couvre_pas": "Pas de frais de voyage garantis (aide limitée, 30 jours max à l'étranger) ; cumul avec un emploi limité (4 h/semaine d'enseignement, 10 h pour les autres activités).",
+   "diplome": "Diplôme de master (ou équivalent) avec reconnaissance de l'aptitude au doctorat pour un diplôme étranger.",
+   "langue": "Non fixée sur les pages lues ; dépend de l'admission au doctorat et de la thèse.",
+   "conseil": "Il faut un directeur de thèse berlinois et une admission au doctorat avant de postuler : prenez contact avec lui très tôt. Soyez réaliste sur la note exigée (nettement au-dessus de la moyenne).",
+   "autres": [
+    "Admission au doctorat à une université de Berlin au moins demandée au moment de la candidature, admission définitive avant le début de la bourse.",
+    "Pas de bourse si le même projet est déjà financé par des fonds publics, y compris un emploi de chercheur à temps partiel.",
+    "Après un refus, une seule nouvelle candidature est possible.",
+    "Il y a deux tours par an (printemps et automne) ; ne pas confondre avec la bourse artistique de même nom."
+   ],
+   "dossier": [
+    "Formulaire de candidature (en ligne, imprimé, signé, scanné)",
+    "CV tabulaire avec début du doctorat et publications",
+    "Diplômes et relevés de notes (master avec note finale et notes détaillées)",
+    "Preuve que la note est nettement supérieure à la moyenne de la promotion ou échange avec le bureau des examens",
+    "Admission officielle au doctorat dans une université de Berlin (ou preuve de la demande)",
+    "Exposé du projet de thèse (12 pages max.) avec plan de travail",
+    "Lettre de recommandation de la direction de thèse (via lien du portail)",
+    "Selon le cas : certificats complémentaires, langues, accords éthiques"
+   ],
+   "etapes": [
+    "Remplir le formulaire en ligne puis l'enregistrer en pdf.",
+    "S'inscrire sur la plateforme DRS (nouveau compte dédié) et saisir les données de la direction de thèse.",
+    "Demander la lettre de recommandation, puis téléverser tous les documents en pdf.",
+    "Cliquer sur « submit » avant la date limite ; la direction de thèse dépose son avis dans les deux semaines suivantes."
+   ]
   },
   "en": {
-   "nom": "The Elsa Neumann Scholarship — Free University of Berlin"
+   "nom": "Elsa Neumann Scholarship of the State of Berlin (doctoral scholarship, NaFöG)",
+   "resume": "Doctoral scholarship of the State of Berlin for doctoral candidates at the four Berlin universities (FU, HU, TU, UdK), up to 36 months, or 12 months to finish a far-advanced thesis. Nationality is not a criterion.",
+   "valeur": "EUR 1,350 per month + EUR 100 expenses allowance, up to 3 years",
+   "couverture_detail": "Monthly stipend of EUR 1,350 plus EUR 100 monthly allowance, family supplement (EUR 102.26 for one child, EUR 51.13 per additional child), occasional research-travel grants, possible DAAD top-up for stays abroad over 30 days.",
+   "ne_couvre_pas": "No guaranteed travel costs (limited grants, 30 days abroad at most); outside work limited (4 h/week teaching, 10 h/week other activities).",
+   "eligibilite": "Doctoral candidates (or prospective candidates) at a Berlin university, with results 'far above average' at graduation (grade clearly above the cohort average), a research project expected to make an important contribution, and academic supervision in Berlin. Nationality is not decisive.",
+   "diplome": "Master's degree (or equivalent), with recognition as doctoral entry qualification for a foreign degree.",
+   "langue": "Not set on the pages read; depends on doctoral admission and the thesis.",
+   "conseil": "You need a Berlin supervisor and doctoral admission before applying: contact them early. Be realistic about the required grade (clearly above average).",
+   "edition_note": "Next deadline: 11 November 2026, 12:00 noon, scholarship start 1 April 2027 at the earliest. Rounds are held in spring and autumn (information sheet).",
+   "autres": [
+    "Admission to a doctorate at a Berlin university must at least be requested when applying; final admission before the scholarship starts.",
+    "No scholarship if the same project is already publicly funded, including a part-time research job.",
+    "After a rejection, only one new application is possible.",
+    "There are two rounds a year (spring and autumn); do not confuse with the artistic scholarship of the same name."
+   ],
+   "dossier": [
+    "Application form (online, printed, signed, scanned)",
+    "Tabular CV with doctorate start date and publications",
+    "Degree certificates and transcripts (master's with final and individual grades)",
+    "Proof that the grade is clearly above the cohort average, or correspondence with the exams office",
+    "Official admission to doctoral studies at a Berlin university (or proof of request)",
+    "Thesis proposal (max. 12 pages) with work plan",
+    "Recommendation statement from the supervisor (via portal link)",
+    "As applicable: further certificates, language skills, ethics approvals"
+   ],
+   "etapes": [
+    "Fill in the online form and save it as pdf.",
+    "Register on the DRS platform (new dedicated account) and enter supervisor details.",
+    "Request the recommendation letter, then upload all documents as pdf.",
+    "Click 'submit' before the deadline; the supervisor uploads the statement within two weeks."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Début de la bourse au plus tôt le 1er avril 2027",
+    "ouverture": null,
+    "cloture": "2026-11-11",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.fu-berlin.de/sites/drs/funding/nafoeg/index.html",
+    "https://www.fu-berlin.de/sites/drs/resources/documents/20240904-Informationsblatt-DE.pdf",
+    "https://www.fu-berlin.de/sites/drs/funding/nafoeg/about-application.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -13738,6 +13961,10 @@
   },
   "en": {
    "nom": "Doctoral Scholarships — University of Hohenheim"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Fiche générique : l'université n'a pas de « Doctoral Scholarships » propre, seulement une liste de financeurs externes. Programme équivalent lu : State Graduate Support (LGFG) de Hohenheim, mais la page ne mentionne aucune condition de nationalité (Cameroun non confirmé), et la date 2026 est passée."
   }
  },
  {
@@ -13788,56 +14015,10 @@
   },
   "en": {
    "nom": "STIBET Scholarship for Finishing a University Degree — Ulm University"
-  }
- },
- {
-  "id": "masters-scholarship-for-an-exchange-semester-tum-seed-center",
-  "organisme": "TUM SEED Center (Technical University of Munich)",
-  "pays_accueil": [
-   "Allemagne"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "master"
-  ],
-  "domaines": [
-   "ingenierie",
-   "agronomie-environnement",
-   "economie-gestion"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "mars"
   },
-  "edition": {
-   "cloture": "2025-03-15",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.seed.tum.de/",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.seed.tum.de/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 mars 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "Masters Scholarship for an Exchange Semester — TUM SEED Center",
-   "resume": "Le TUM SEED Center est le centre de développement durable de TUM. Cette bourse finance un semestre d'échange à TUM pour les étudiants de Master spécialisés en développement durable, en énergie ou en environnement. C'est une opportunité de courte durée mais à…",
-   "resume_long": "Le TUM SEED Center est le centre de développement durable de TUM. Cette bourse finance un semestre d'échange à TUM pour les étudiants de Master spécialisés en développement durable, en énergie ou en environnement. C'est une opportunité de courte durée mais à fort impact : un semestre à TUM enrichit considérablement un parcours académique.",
-   "valeur": "Stipend mensuel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 15 mars 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "Masters Scholarship for an Exchange Semester — TUM SEED Center"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "réservée aux étudiants déjà inscrits à Ulm : inaccessible depuis le Cameroun"
   }
  },
  {
@@ -13886,6 +14067,10 @@
   },
   "en": {
    "nom": "Fully Funded NHR PhD Scholarship in High Performance Computing"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle NHR Graduate School lue : le programme passe en « 2.0 » (« next phase will launch soon »), aucun appel ouvert, aucune date ni critère de nationalité publiés ; le PDF des lignes directrices 2026 renvoie 404. Cameroun non confirmé."
   }
  },
  {
@@ -13894,105 +14079,255 @@
   "pays_accueil": [
    "Nouvelle-Zélande"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
+   "master"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": null,
    "cloture_mois": "octobre"
   },
   "edition": {
-   "cloture": "2025-10-23",
-   "confirme": false
+   "libelle": "Entrée Semestre 1 / Trimestre 2 2027",
+   "cloture": "2026-11-04",
+   "confirme": true
   },
-  "lien_officiel": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship.html",
+  "lien_officiel": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-international-student-excellence-scholarship-844-all.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship.html"
+    "titre": "University of Auckland International Student Excellence Scholarship",
+    "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-international-student-excellence-scholarship-844-all.html"
+   },
+   {
+    "titre": "Règlement (PDF officiel)",
+    "url": "https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-international-student-excellence-scholarship.pdf"
+   },
+   {
+    "titre": "Postgraduate scholarships for international students",
+    "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/postgraduate-scholarships-for-international-students.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er avril 2025 / 23 octobre 2025 (selon l'admission)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "ASEAN High Achievers Scholarship — University of Auckland",
-   "resume": "L'University of Auckland cible activement les étudiants de l'ASEAN avec cette bourse d'excellence. Auckland est la ville la plus cosmopolite de Nouvelle-Zélande, avec une communauté asiatique importante qui facilite l'intégration des étudiants de la région.",
+   "nom": "International Student Excellence Scholarship - University of Auckland (remplace l'ASEAN High Achievers Scholarship)",
+   "resume": "La bourse « ASEAN High Achievers » n'apparaît plus dans la liste officielle et était de toute façon réservée aux pays ASEAN (Cameroun exclu). L'équivalent ouvert aux Camerounais est l'International Student Excellence Scholarship : une réduction de frais de scolarité pour les nouveaux étudiants internationaux de master.",
    "resume_long": "L'University of Auckland cible activement les étudiants de l'ASEAN avec cette bourse d'excellence. Auckland est la ville la plus cosmopolite de Nouvelle-Zélande, avec une communauté asiatique importante qui facilite l'intégration des étudiants de la région.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants des pays de l'ASEAN",
-   "edition_note": "Date limite indiquée dans le guide : 1er avril 2025 / 23 octobre 2025 (selon l'admission)"
+   "valeur": "25 % d'une année de frais de scolarité (jusqu'aux deux premiers semestres)",
+   "eligibilite": "Étudiant international (nationalité non limitée) ayant reçu une offre d'admission conditionnelle ou inconditionnelle dans un master éligible de l'université, avec un GPE d'admission d'au moins 7,0. Pas de candidature : l'université invite les étudiants éligibles à remplir un formulaire complémentaire.",
+   "edition_note": "Session en cours : offre avant le 20/10/2026, formulaire avant le 4/11/2026 (entrée S1/T2 2027). Prochaine session non encore annoncée sur la page officielle.",
+   "couverture_detail": "Crédit de frais de scolarité de 25 % pour une année d'équivalent temps plein du master, nombre de bourses variable.",
+   "ne_couvre_pas": "Frais de vie, billet d'avion, visa ; pas de couverture complète.",
+   "diplome": "Diplôme donnant accès au master ; GPE d'admission calculé à partir des relevés de notes (minimum 7,0).",
+   "langue": "Études en anglais (exigences linguistiques d'admission de l'université).",
+   "conseil": "Postulez tôt à l'admission : c'est la date de l'offre qui rend éligible, pas un dossier de bourse séparé. Prévoyez un financement complémentaire car la bourse ne couvre que 25 % des frais.",
+   "autres": [
+    "Exclus : déjà inscrit à l'université, ayant fait des études supérieures en Nouvelle-Zélande (hors échange), études à distance, et la plupart des programmes de la Graduate School of Management (sauf Applied Finance, Business Analytics, Professional Accounting).",
+    "Pour l'entrée 2027, l'offre d'admission devait être émise avant le 20 octobre 2026 : le cycle en cours est donc pratiquement clos ; la bourse est attribuée deux fois par an."
+   ],
+   "dossier": [
+    "Offre d'admission en master (candidature d'admission à l'université)",
+    "Relevés de notes complets (servent à calculer le GPE)",
+    "Formulaire complémentaire en ligne (sur invitation)"
+   ],
+   "etapes": [
+    "Candidater à un master éligible de l'University of Auckland et obtenir une offre.",
+    "Avoir une offre émise avant la date limite de la session (20 octobre 2026 pour l'entrée 2027).",
+    "Recevoir l'invitation de l'office des bourses (21 octobre 2026) et remplir le formulaire complémentaire avant le 4 novembre 2026."
+   ]
   },
   "en": {
-   "nom": "ASEAN High Achievers Scholarship — University of Auckland"
+   "nom": "International Student Excellence Scholarship - University of Auckland (replaces the ASEAN High Achievers Scholarship)",
+   "resume": "The 'ASEAN High Achievers' award no longer appears in the official list and was limited to ASEAN countries (Cameroon excluded). The equivalent open to Cameroonians is the International Student Excellence Scholarship, a tuition reduction for new international master's students.",
+   "valeur": "25% of one year of tuition fees (first two semesters)",
+   "couverture_detail": "25% tuition fee credit for one year of full-time-equivalent master's study; number of awards varies.",
+   "ne_couvre_pas": "Living costs, flights, visa; not a full scholarship.",
+   "eligibilite": "International student (no nationality restriction) holding a conditional or unconditional offer for an eligible master's programme, with an Admissions GPE of at least 7.0. No application: eligible students are invited to complete a supplementary form.",
+   "diplome": "Degree giving access to the master's; Admissions GPE computed from transcripts (minimum 7.0).",
+   "langue": "Studies in English (university admission language requirements).",
+   "conseil": "Apply for admission early: the offer date makes you eligible, not a separate scholarship file. Plan other funding since only 25% of fees is covered.",
+   "edition_note": "Current round: offer before 20/10/2026, form by 4/11/2026 (Semester One/Quarter Two 2027 entry). Next round not yet announced on the official page.",
+   "autres": [
+    "Not eligible: already started at the university, previous tertiary study in New Zealand (excluding exchange), distance study, and most Graduate School of Management programmes (except Applied Finance, Business Analytics, Professional Accounting).",
+    "For 2027 entry the offer had to be issued before 20 October 2026, so the current round is practically closed; awarded twice a year."
+   ],
+   "dossier": [
+    "Offer of admission to a master's programme (university admission application)",
+    "Complete academic transcripts (used to calculate the GPE)",
+    "Online supplementary form (by invitation)"
+   ],
+   "etapes": [
+    "Apply to an eligible University of Auckland master's and obtain an offer.",
+    "Hold an offer issued before the round deadline (20 October 2026 for 2027 entry).",
+    "Receive the Scholarships Office invitation (21 October 2026) and submit the supplementary form by 4 November 2026."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Entrée Semestre 1 / Trimestre 2 2027",
+    "ouverture": null,
+    "cloture": "2026-11-04",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-international-student-excellence-scholarship-844-all.html",
+    "https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-international-student-excellence-scholarship.pdf",
+    "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/postgraduate-scholarships-for-international-students.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "hinrich-foundation-global-trade-leader-scholarship-university-of-auckl",
-  "organisme": "University of Auckland / Hinrich Foundation",
+  "organisme": "University of Auckland / Hinrich Foundation / Li Ka Shing Foundation",
   "pays_accueil": [
    "Nouvelle-Zélande"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
    "economie-gestion"
   ],
-  "couverture_niveau": "variable",
-  "origine": "universitaire",
+  "couverture_niveau": "partielle",
+  "origine": "fondation",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "mai"
+   "ouverture_mois": "aout",
+   "cloture_mois": "septembre"
   },
   "edition": {
-   "cloture": "2025-05-29",
+   "libelle": "2027",
+   "cloture": "2027-09-03",
    "confirme": false
   },
-  "lien_officiel": "https://www.hinrichfoundation.com/education/global-trade-leader-scholarship/",
+  "lien_officiel": "https://auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/hinrich-foundation-global-trade-leader-scholarship-1031-bus.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.hinrichfoundation.com/education/global-trade-leader-scholarship/"
+    "titre": "Hinrich Foundation Global Trade Leader Scholarship (page officielle)",
+    "url": "https://auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/hinrich-foundation-global-trade-leader-scholarship-1031-bus.html"
+   },
+   {
+    "titre": "Règlement officiel (PDF)",
+    "url": "https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/hinrich-foundation-global-trade-leader-scholarship.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 janvier 2025 / 29 mai 2025 (selon l'admission)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Hinrich Foundation Global Trade Leader Scholarship — University of Auckland",
-   "resume": "La Hinrich Foundation est une organisation philanthropique qui promeut le commerce international durable. Cette bourse combine financement, formation en commerce international et mentorat par des professionnels du secteur. Pour les étudiants qui se destinent à…",
+   "nom": "Hinrich Foundation Global Trade Leader Scholarship - University of Auckland",
+   "resume": "Bourse pour étudiants internationaux inscrits au Master of International Business de l'University of Auckland, financée par la Hinrich Foundation et la Li Ka Shing Foundation. Jusqu'à deux bourses par an.",
    "resume_long": "La Hinrich Foundation est une organisation philanthropique qui promeut le commerce international durable. Cette bourse combine financement, formation en commerce international et mentorat par des professionnels du secteur. Pour les étudiants qui se destinent à une carrière dans le commerce international, c'est une opportunité unique qui va au-delà du simple financement.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 janvier 2025 / 29 mai 2025 (selon l'admission)"
+   "valeur": "Jusqu'à 30 000 NZD par lauréat, versés par trimestre",
+   "eligibilite": "Étudiant international, inscrit ou en cours d'inscription à temps plein au Master of International Business, avec au moins 5 ans d'expérience professionnelle à temps plein et un GPA/GPE d'au moins 7,00 dans le dernier programme qualifiant. Sélection sur le mérite académique, un essai de motivation et un entretien.",
+   "edition_note": "Édition 2026 : 13 août au 3 septembre 2026 (close). Le règlement fixe la clôture au 3 septembre chaque année ; dates 2027 non encore publiées.",
+   "couverture_detail": "Aide aux études versée en tranches à chaque trimestre pendant la durée du programme, à condition d'être inscrit à temps plein.",
+   "ne_couvre_pas": "Non précisé ; la bourse est plafonnée à 30 000 NZD et ne garantit pas la couverture totale des frais.",
+   "diplome": "Diplôme donnant accès au master (GPA/GPE d'au moins 7,00).",
+   "langue": "Études en anglais.",
+   "conseil": "La condition de 5 ans d'expérience à temps plein est stricte ; vérifiez-la avant de postuler. Les candidatures s'ouvrent environ six semaines avant la clôture.",
+   "autres": [
+    "Le Conseil de l'université peut ne pas attribuer la bourse si aucun candidat ne convient.",
+    "Peut être cumulée avec d'autres bourses si leur règlement l'autorise et avec l'accord de l'université."
+   ],
+   "dossier": [
+    "Candidature auprès du Scholarships Office de l'université",
+    "Essai sur la motivation à travailler dans le commerce international et l'apport du MIntBus",
+    "Justificatifs du GPA/GPE et de 5 ans d'expérience professionnelle (liste détaillée non publiée sur la page)"
+   ],
+   "etapes": [
+    "Obtenir (ou demander) l'admission au Master of International Business.",
+    "Déposer la candidature auprès du Scholarships Office avant le 3 septembre.",
+    "Sélection par un comité ; entretien possible avec la fondation et le doyen.",
+    "Attribution par le Conseil de l'université sur recommandation de la Hinrich Foundation."
+   ]
   },
   "en": {
-   "nom": "Hinrich Foundation Global Trade Leader Scholarship — University of Auckland"
+   "nom": "Hinrich Foundation Global Trade Leader Scholarship - University of Auckland",
+   "resume": "Scholarship for international students enrolled in the University of Auckland Master of International Business, funded by the Hinrich Foundation and the Li Ka Shing Foundation. Up to two awards a year.",
+   "valeur": "Up to NZ$30,000 per recipient, paid by quarter",
+   "couverture_detail": "Study support paid in instalments each quarter over the programme, provided the recipient is enrolled full-time.",
+   "ne_couvre_pas": "Not specified; capped at NZ$30,000 and does not guarantee full cost coverage.",
+   "eligibilite": "International student, enrolled or enrolling full-time in the Master of International Business, with at least 5 years of full-time work experience and a GPA/GPE of at least 7.00 in the most recent qualifying programme. Selection on academic merit, a motivation essay and an interview.",
+   "diplome": "Degree giving access to the master's (GPA/GPE of at least 7.00).",
+   "langue": "Studies in English.",
+   "conseil": "The 5-year full-time work experience requirement is strict; check it before applying. Applications open about six weeks before closing.",
+   "edition_note": "2026 round: 13 August to 3 September 2026 (closed). The regulations set the closing date at 3 September each year; 2027 dates not yet published.",
+   "autres": [
+    "The University Council may decline to award if no suitable candidate.",
+    "May be held with other awards if their rules permit and the university approves."
+   ],
+   "dossier": [
+    "Application to the university Scholarships Office",
+    "Essay on motivation for working in trade and how the MIntBus helps",
+    "Evidence of GPA/GPE and 5 years of work experience (detailed list not published on the page)"
+   ],
+   "etapes": [
+    "Obtain (or apply for) admission to the Master of International Business.",
+    "Apply to the Scholarships Office before 3 September.",
+    "Selection committee review; possible interview with the foundation and the Dean.",
+    "Award by the University Council on the Hinrich Foundation's recommendation."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2026",
+    "ouverture": "2026-08-13",
+    "cloture": "2026-09-03",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "2027",
+    "ouverture": null,
+    "cloture": "2027-09-03",
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/hinrich-foundation-global-trade-leader-scholarship-1031-bus.html",
+    "https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/hinrich-foundation-global-trade-leader-scholarship.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "auckland-law-school-postgraduate-award-university-of-auckland",
-  "organisme": "University of Auckland — Faculty of Law",
+  "organisme": "University of Auckland - Faculty of Law",
   "pays_accueil": [
    "Nouvelle-Zélande"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -14003,35 +14338,112 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juin"
+   "ouverture_mois": "janvier",
+   "cloture_mois": "mars"
   },
   "edition": {
-   "cloture": "2025-06-26",
-   "confirme": false
+   "libelle": "Semestre 2 2026",
+   "ouverture": "2026-06-18",
+   "cloture": "2026-07-09",
+   "confirme": true
   },
-  "lien_officiel": "https://www.auckland.ac.nz/en/law/study-with-us/scholarships-and-awards.html",
+  "lien_officiel": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/auckland-law-school-postgraduate-award-1193-law.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.auckland.ac.nz/en/law/study-with-us/scholarships-and-awards.html"
+    "titre": "Auckland Law School Postgraduate Award (page officielle)",
+    "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/auckland-law-school-postgraduate-award-1193-law.html"
+   },
+   {
+    "titre": "Règlement officiel (PDF)",
+    "url": "https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/auckland-law-school-postgraduate-award.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "30 janvier 2025 / 26 juin 2025 (selon le semestre)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Auckland Law School Postgraduate Award — University of Auckland",
-   "resume": "La Faculty of Law de l'University of Auckland est la meilleure du pays et l'une des plus respectées de l'Asie-Pacifique. Les bourses postgraduate de NZ$10 000 ciblent les étudiants de Master en droit qui démontrent une excellence académique.",
+   "nom": "Auckland Law School Postgraduate Award - University of Auckland",
+   "resume": "Prix de la faculté de droit pour les étudiants de master en droit (MIP, LLM, MLS, MTaxS) qui commencent leur premier semestre. Ouvert aux étudiants nationaux et internationaux ; jusqu'à deux prix par an.",
    "resume_long": "La Faculty of Law de l'University of Auckland est la meilleure du pays et l'une des plus respectées de l'Asie-Pacifique. Les bourses postgraduate de NZ$10 000 ciblent les étudiants de Master en droit qui démontrent une excellence académique.",
-   "valeur": "Jusqu'à NZ$10 000 chacune",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 30 janvier 2025 / 26 juin 2025 (selon le semestre)"
+   "valeur": "Jusqu'à 10 000 NZD par prix, pour un an",
+   "eligibilite": "Étudiant national ou international inscrit ou en cours d'inscription à son premier semestre d'un Master of Intellectual Property, LLM, Master of Legal Studies ou Master of Taxation Studies. Sélection sur le mérite académique et une déclaration personnelle (aspirations d'études et de carrière).",
+   "edition_note": "Éditions 2026 closes (S1 : 5 mars 2026 ; S2 : 9 juillet 2026). Dates 2027 non encore publiées sur la page officielle.",
+   "couverture_detail": "Aide aux études versée en deux tranches (semestres 1 et 2), proratisée pour les étudiants à temps partiel.",
+   "ne_couvre_pas": "Ne couvre pas l'intégralité des frais ni les frais de vie.",
+   "diplome": "Diplôme donnant accès au master de droit visé.",
+   "langue": "Études en anglais.",
+   "conseil": "Les candidatures s'ouvrent environ six semaines avant la clôture ; préparez l'admission avant. Le montant est modeste par rapport aux frais d'un LLM.",
+   "autres": [
+    "Un semestre d'avance est parfois accepté (proratisé) ; les étudiants en prolongation ne sont pas éligibles.",
+    "Cumulable avec d'autres bourses si leur règlement l'autorise et avec l'accord de l'université."
+   ],
+   "dossier": [
+    "Candidature auprès du Scholarships Office",
+    "Déclaration personnelle (parcours, aspirations d'études et de carrière)",
+    "Relevés de notes (mérite académique) - liste détaillée non publiée sur la page"
+   ],
+   "etapes": [
+    "Obtenir ou demander l'admission à l'un des quatre masters de droit.",
+    "Déposer la candidature auprès du Scholarships Office avant la date limite du semestre visé.",
+    "Évaluation par un comité de la faculté de droit ; attribution par le Conseil de l'université."
+   ]
   },
   "en": {
-   "nom": "Auckland Law School Postgraduate Award — University of Auckland"
+   "nom": "Auckland Law School Postgraduate Award - University of Auckland",
+   "resume": "Faculty of Law award for master's law students (MIP, LLM, MLS, MTaxS) starting their first semester. Open to domestic and international students; up to two awards a year.",
+   "valeur": "Up to NZ$10,000 per award, for one year",
+   "couverture_detail": "Study support paid in two instalments (Semester One and Two), pro-rated for part-time students.",
+   "ne_couvre_pas": "Does not cover full fees or living costs.",
+   "eligibilite": "Domestic or international student enrolled or enrolling in their first semester of a Master of Intellectual Property, LLM, Master of Legal Studies or Master of Taxation Studies. Selection on academic merit and a personal statement (study and career aspirations).",
+   "diplome": "Degree giving access to the targeted law master's.",
+   "langue": "Studies in English.",
+   "conseil": "Applications open about six weeks before closing; have your admission in hand first. The amount is modest compared with LLM fees.",
+   "edition_note": "2026 rounds closed (S1: 5 March 2026; S2: 9 July 2026). 2027 dates not yet published on the official page.",
+   "autres": [
+    "Students one semester in may be considered (pro-rated); students in an extension are not eligible.",
+    "May be held with other awards if their rules permit and the university approves."
+   ],
+   "dossier": [
+    "Application to the Scholarships Office",
+    "Personal statement (study and career aspirations)",
+    "Academic transcripts (academic merit) - detailed list not published on the page"
+   ],
+   "etapes": [
+    "Obtain or apply for admission to one of the four law master's.",
+    "Apply to the Scholarships Office before the closing date for the chosen semester.",
+    "Faculty of Law selection committee review; award by the University Council."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Semestre 1 2026",
+    "ouverture": "2026-01-22",
+    "cloture": "2026-03-05",
+    "confirme": true
+   },
+   {
+    "annee": 2026,
+    "libelle": "Semestre 2 2026",
+    "ouverture": "2026-06-18",
+    "cloture": "2026-07-09",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/auckland-law-school-postgraduate-award-1193-law.html",
+    "https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/auckland-law-school-postgraduate-award.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -14040,7 +14452,7 @@
   "pays_accueil": [
    "Nouvelle-Zélande"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -14051,35 +14463,115 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": "novembre et avril",
+   "cloture_mois": "février et juillet"
   },
   "edition": {
-   "cloture": "2025-07-15",
-   "confirme": false
+   "libelle": "Tour de février 2027 (Semestre 1)",
+   "ouverture": "2026-11-15",
+   "cloture": "2027-02-15",
+   "confirme": true
   },
-  "lien_officiel": "https://www.massey.ac.nz/study/fees-and-scholarships/scholarships-and-awards/",
+  "lien_officiel": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-masters-research-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.massey.ac.nz/study/fees-and-scholarships/scholarships-and-awards/"
+    "titre": "Massey University Master's Research Scholarship - Semester One",
+    "url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-masters-research-scholarship/"
+   },
+   {
+    "titre": "Semester Two",
+    "url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-masters-research-scholarship-semester-two/"
+   },
+   {
+    "titre": "Règlement officiel (PDF)",
+    "url": "https://www.massey.ac.nz/documents/2331/2026_Reg189_190_1081.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 juillet 2025 (vérifier — plusieurs rounds par an)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Masters Research Scholarship — Massey University",
-   "resume": "NZ$15 000 pour un Master Research est un financement substantiel. Massey offre cette bourse plusieurs fois par an avec différentes deadlines, ce qui vous donne plusieurs opportunités de candidature. L'université est particulièrement forte en sciences de…",
+   "nom": "Massey University Master's Research Scholarship",
+   "resume": "Bourse de Massey University pour la partie recherche (thèse) d'un master, ouverte aux étudiants nationaux et internationaux. Deux tours de sélection par an.",
    "resume_long": "NZ$15 000 pour un Master Research est un financement substantiel. Massey offre cette bourse plusieurs fois par an avec différentes deadlines, ce qui vous donne plusieurs opportunités de candidature. L'université est particulièrement forte en sciences de l'agriculture, en technologie alimentaire et en design — des domaines où elle est classée dans le top 100 mondial.",
-   "valeur": "NZ$15 000",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 15 juillet 2025 (vérifier — plusieurs rounds par an)"
+   "valeur": "15 000 NZD (thèse de 120 crédits) ou 10 000 NZD (thèse de 90 crédits), pour un an",
+   "eligibilite": "Étudiants nationaux et internationaux inscrits ou éligibles à l'inscription, à temps plein ou partiel, dans la partie recherche (90 ou 120 crédits) d'un master de Massey University l'année de la bourse. Sélection sur le mérite académique (GPA), l'évaluation du superviseur et l'adéquation du projet avec la stratégie de l'université.",
+   "edition_note": "Tour février 2027 : ouverture 15/11/2026, clôture 15/02/2027. Tour juillet 2027 : 15/04/2027 au 15/07/2027. Les pages affichent « Closed » avant l'ouverture.",
+   "couverture_detail": "Versement en quatre tranches égales (avril, juin, août, octobre) ; au prorata pour les temps partiels. Montant ajustable par le comité.",
+   "ne_couvre_pas": "Pas de prise en charge complète des frais de scolarité ni de vie ; cumul avec d'autres bourses limité à 25 000 NZD par an.",
+   "diplome": "Diplôme donnant accès à un master de recherche (niveau honours ou équivalent / partie cours du master).",
+   "langue": "Études en anglais.",
+   "conseil": "Contactez tôt un superviseur de Massey : sans lui, impossible de fournir la déclaration exigée. Ne comptez pas sur cette bourse seule pour financer le séjour.",
+   "autres": [
+    "La recherche doit commencer au plus tard le 1er mai (tour de février) ou le 1er septembre (tour de juillet).",
+    "Le comité peut ne pas attribuer la bourse ; nombre de bourses variable selon les fonds."
+   ],
+   "dossier": [
+    "Déclaration du superviseur principal sur la qualité et la capacité du chercheur (1 page maximum)",
+    "Projet de recherche montrant l'alignement avec la stratégie du collège et de l'université (1 page maximum)"
+   ],
+   "etapes": [
+    "Être admis (ou éligible) au master de recherche de Massey et avoir un superviseur.",
+    "Déposer la candidature en ligne avec les deux documents avant la clôture du tour visé.",
+    "Évaluation par le comité des bourses de l'université."
+   ]
   },
   "en": {
-   "nom": "Masters Research Scholarship — Massey University"
+   "nom": "Massey University Master's Research Scholarship",
+   "resume": "Massey University scholarship for the research (thesis) component of a master's, open to domestic and international students. Two selection rounds a year.",
+   "valeur": "NZ$15,000 (120-credit thesis) or NZ$10,000 (90-credit thesis), for one year",
+   "couverture_detail": "Paid in four equal instalments (April, June, August, October); pro-rated for part-time. Amount may be adjusted by the committee.",
+   "ne_couvre_pas": "Not full tuition or living costs; combined awards capped at NZ$25,000 per year.",
+   "eligibilite": "Domestic and international students enrolled or eligible to enrol, full- or part-time, in the research component (90 or 120 credits) of a Massey master's in the year of the award. Selection on academic merit (GPA), supervisor's assessment and alignment with university strategy.",
+   "diplome": "Degree giving access to a research master's (honours level or equivalent / course component).",
+   "langue": "Studies in English.",
+   "conseil": "Contact a Massey supervisor early: without one you cannot provide the required statement. Do not rely on this award alone to fund your stay.",
+   "edition_note": "February 2027 round: opens 15/11/2026, closes 15/02/2027. July 2027 round: 15/04/2027 to 15/07/2027. Pages show 'Closed' before opening.",
+   "autres": [
+    "Research must start by 1 May (February round) or 1 September (July round).",
+    "The committee may decline to award; number of awards depends on funding."
+   ],
+   "dossier": [
+    "Statement from the primary supervisor on the researcher's quality and capability (max 1 page)",
+    "Research proposal showing alignment with College and University strategy (max 1 page)"
+   ],
+   "etapes": [
+    "Be admitted to (or eligible for) the Massey research master's and have a supervisor.",
+    "Submit the application online with both documents before the round closes.",
+    "Review by the University Scholarships Committee."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Tour de février 2027 (Semestre 1)",
+    "ouverture": "2026-11-15",
+    "cloture": "2027-02-15",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Tour de juillet 2027 (Semestre 2)",
+    "ouverture": "2027-04-15",
+    "cloture": "2027-07-15",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-masters-research-scholarship/",
+    "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-masters-research-scholarship-semester-two/",
+    "https://www.massey.ac.nz/documents/2331/2026_Reg189_190_1081.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -14128,6 +14620,10 @@
   },
   "en": {
    "nom": "Global Scholarships — University of Otago"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages Otago détaillées (otago.ac.nz) bloquées (403/Cloudflare) : liste des passeports éligibles et dates non lues. La page AskOtago lue indique seulement « passeport d'un pays spécifié » ; d'après la recherche, la liste (13 pays asiatiques) ne contient pas le Cameroun."
   }
  },
  {
@@ -14172,56 +14668,10 @@
   },
   "en": {
    "nom": "International Masters Research Scholarship — University of Otago"
-  }
- },
- {
-  "id": "southeast-asia-high-achievers-scholarship-university-of-canterbury",
-  "organisme": "University of Canterbury (Christchurch)",
-  "pays_accueil": [
-   "Nouvelle-Zélande"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "novembre"
   },
-  "edition": {
-   "cloture": "2024-11-15",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.canterbury.ac.nz/study/fees-and-funding/scholarships/",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.canterbury.ac.nz/study/fees-and-funding/scholarships/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 novembre 2024 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "Southeast Asia High Achievers Scholarship — University of Canterbury",
-   "resume": "L'University of Canterbury est située à Christchurch, la plus grande ville de l'île du Sud. Reconnue pour ses programmes en ingénierie, en informatique et en sciences, elle cible activement les étudiants d'Asie du Sud-Est avec cette bourse. Christchurch offre…",
-   "resume_long": "L'University of Canterbury est située à Christchurch, la plus grande ville de l'île du Sud. Reconnue pour ses programmes en ingénierie, en informatique et en sciences, elle cible activement les étudiants d'Asie du Sud-Est avec cette bourse. Christchurch offre un coût de la vie inférieur à Auckland et un cadre naturel exceptionnel — les montagnes et les plages sont à quelques minutes du campus.",
-   "valeur": "NZ$5 000 à NZ$10 000",
-   "eligibilite": "Étudiants d'Asie du Sud-Est",
-   "edition_note": "Date limite indiquée dans le guide : 15 novembre 2024 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "Southeast Asia High Achievers Scholarship — University of Canterbury"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page détaillée de la bourse (otago.ac.nz) bloquée (403/Cloudflare) : dossier, dates de sélection et disponibilité 2027 non lus. La page AskOtago lue donne seulement le principe (un prix par division, exonération jusqu'à 35 000 NZD, sans stipend mentionné)."
   }
  },
  {
@@ -14270,6 +14720,10 @@
   },
   "en": {
    "nom": "International School Leaver Excellence Scholarship — Victoria University of Wellington"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Nationalité non précisée et surtout réservée aux élèves ayant fait les années 12 et 13 dans un lycée néo-zélandais : un élève au Cameroun ne peut pas candidater."
   }
  },
  {
@@ -14318,15 +14772,19 @@
   },
   "en": {
    "nom": "The Nusantara Scholarship — Victoria University of Wellington"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle wgtn.ac.nz inaccessible (403 « Please login »). Selon un résumé de recherche, bourse de l'ambassade d'Indonésie pour une recherche sur un sujet indonésien, mention de l'édition 2025 : non lu directement, Cameroun non confirmé."
   }
  },
  {
   "id": "doctoral-scholarship-victoria-university-of-wellington",
-  "organisme": "Victoria University of Wellington",
+  "organisme": "Victoria University of Wellington (Te Herenga Waka)",
   "pays_accueil": [
    "Nouvelle-Zélande"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "doctorat"
   ],
@@ -14337,35 +14795,146 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "novembre"
+   "ouverture_mois": null,
+   "cloture_mois": "novembre (3 sessions : mars, juillet, novembre)"
   },
   "edition": {
-   "cloture": "2025-11-01",
-   "confirme": false
+   "libelle": "Session de novembre 2026",
+   "cloture": "2026-11-01",
+   "confirme": true
   },
-  "lien_officiel": "https://www.wgtn.ac.nz/scholarships/current/doctoral-scholarship",
+  "lien_officiel": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.wgtn.ac.nz/scholarships/current/doctoral-scholarship"
+    "titre": "Wellington Doctoral Scholarship",
+    "url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarship"
+   },
+   {
+    "titre": "Doctoral how to apply (Faculty of Graduate Research)",
+    "url": "https://www.wgtn.ac.nz/fgr/apply/how"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er novembre 2025"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Doctoral Scholarship — Victoria University of Wellington",
-   "resume": "La bourse doctorale de Victoria University offre un financement complet pour les doctorants — stipend et frais de scolarité. Wellington, en tant que capitale, offre un accès unique aux institutions gouvernementales, aux organisations internationales et à…",
+   "nom": "Wellington Doctoral Scholarship (Victoria University of Wellington)",
+   "resume": "Bourse doctorale de l'université de Wellington : allocation annuelle de 32 000 NZD plus frais de scolarité (tarif national) pour un PhD, environ 110 bourses par an. Ouverte aux étudiants néo-zélandais et internationaux de toutes disciplines.",
    "resume_long": "La bourse doctorale de Victoria University offre un financement complet pour les doctorants — stipend et frais de scolarité. Wellington, en tant que capitale, offre un accès unique aux institutions gouvernementales, aux organisations internationales et à l'industrie créative — un avantage pour les doctorants en sciences sociales, en politiques publiques et en arts.",
-   "valeur": "Variable — consulter le site officiel (stipend + frais de scolarité)",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 1er novembre 2025"
+   "valeur": "32 000 NZD/an + frais de scolarité nationaux, jusqu'à 3 ans",
+   "eligibilite": "Diplômés d'une université néo-zélandaise ou étrangère souhaitant s'inscrire à plein temps en PhD à VUW (ou doctorants déjà inscrits). Première qualification doctorale uniquement. Admission au doctorat et bourse se demandent dans la même candidature.",
+   "edition_note": "Trois sessions par an : 1er mars, 1er juillet, 1er novembre (le texte officiel ne donne pas d'année ; dates reprises pour 2026-2027). Résultats environ six à huit semaines après.",
+   "couverture_detail": "Allocation de 32 000 NZD par an et frais de scolarité au tarif national, normalement pendant trois ans.",
+   "ne_couvre_pas": "Le texte ne mentionne pas de prise en charge du voyage ni du visa.",
+   "diplome": "Licence ou master, normalement avec une distinction équivalente à une First Class Honours",
+   "langue": "Études en anglais ; preuve de niveau d'anglais exigée pour les étudiants internationaux",
+   "conseil": "Demande les références tôt : une candidature incomplète à la date limite doit être redéposée à la session suivante.",
+   "autres": [
+    "Sélection compétitive sur le mérite académique, évaluée par le comité de bourses de recherche.",
+    "Inscription à plein temps exigée ; paiement seulement après inscription confirmée.",
+    "Les titulaires d'un doctorat ne sont pas éligibles.",
+    "Pas besoin d'avoir trouvé un directeur avant de candidater."
+   ],
+   "dossier": [
+    "Candidature en ligne (système Communityforce)",
+    "Expression d'intérêt (aperçu du projet, méthode, motivation)",
+    "Échantillon de 2 000 mots de rédaction académique (anglais ou te reo Māori)",
+    "Relevés de notes et diplômes (copies certifiées)",
+    "Preuve de niveau d'anglais",
+    "Traductions certifiées des documents officiels",
+    "Rapport GPA Scholaro (diplôme obtenu hors Nouvelle-Zélande, frais à payer à Scholaro)",
+    "Deux rapports de référents académiques (demandés via le système en ligne)"
+   ],
+   "etapes": [
+    "Vérifier les conditions d'admission doctorale",
+    "Créer un compte sur le système de candidature en ligne",
+    "Rédiger l'expression d'intérêt",
+    "Téléverser les documents et obtenir le rapport Scholaro",
+    "Demander deux références au moins deux semaines avant la date limite",
+    "Soumettre une candidature complète avant 16 h 30 (heure NZ) à la date limite de la session"
+   ]
   },
   "en": {
-   "nom": "Doctoral Scholarship — Victoria University of Wellington"
+   "nom": "Wellington Doctoral Scholarship (Victoria University of Wellington)",
+   "resume": "Doctoral scholarship at Victoria University of Wellington: a NZD 32,000 annual stipend plus domestic tuition fees for a PhD, about 110 awards per year. Open to New Zealand and international students in any discipline.",
+   "valeur": "NZD 32,000/year + domestic tuition fees, up to 3 years",
+   "couverture_detail": "NZD 32,000 stipend per year and tuition at the domestic rate, normally for three years.",
+   "ne_couvre_pas": "The page does not mention travel or visa costs.",
+   "eligibilite": "Graduates of a New Zealand or overseas university planning to enrol full-time in a PhD at VUW (or already started doctoral study there). First doctoral qualification only. Admission and scholarship are applied for in the same application.",
+   "diplome": "Bachelor's or Master's, normally with distinction equivalent to First Class Honours",
+   "langue": "Study in English; evidence of English proficiency required for international students",
+   "conseil": "Request references early: an application incomplete at the deadline must be resubmitted in the next round.",
+   "edition_note": "Three rounds per year: 1 March, 1 July, 1 November (the page gives no year; dates applied to 2026-2027). Results about six to eight weeks later.",
+   "autres": [
+    "Competitive, merit-based selection by the University Research Scholarships Committee.",
+    "Full-time enrolment required; no payment until enrolment is confirmed.",
+    "Holders of a doctorate are not eligible.",
+    "You do not need to find a supervisor before applying."
+   ],
+   "dossier": [
+    "Online application (Communityforce system)",
+    "Expression of interest (overview of study, method, motivation)",
+    "2,000-word academic writing sample (English or te reo Māori)",
+    "Academic transcripts and degree certificates (certified copies)",
+    "Evidence of English language proficiency",
+    "Certified translations of official documents",
+    "Scholaro GPA report (qualification not completed in New Zealand, small fee paid to Scholaro)",
+    "Two academic referee reports (requested via the online system)"
+   ],
+   "etapes": [
+    "Check doctoral entry requirements",
+    "Sign up for the online application system",
+    "Write the expression of interest",
+    "Upload documents and obtain the Scholaro report",
+    "Request two referee reports at least two weeks before the deadline",
+    "Submit a complete application by 4:30 pm NZ time on the round's closing date"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Session de novembre 2026",
+    "ouverture": null,
+    "cloture": "2026-11-01",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Session de mars 2027",
+    "ouverture": null,
+    "cloture": "2027-03-01",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Session de juillet 2027",
+    "ouverture": null,
+    "cloture": "2027-07-01",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Session de novembre 2027",
+    "ouverture": null,
+    "cloture": "2027-11-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarship",
+    "https://www.wgtn.ac.nz/fgr/apply/how",
+    "https://www.wgtn.ac.nz/scholarships/types-of-scholarships/postgraduate"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -14413,6 +14982,10 @@
   },
   "en": {
    "nom": "Research Masters Scholarship — University of Waikato"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pour les étudiants internationaux, la page officielle exige au moins 120 points déjà validés dans une université néo-zélandaise : un élève au Cameroun ne peut pas candidater. Cameroun non cité."
   }
  },
  {
@@ -14453,6 +15026,10 @@
   },
   "en": {
    "nom": "Welcome Back to Wellington Scholarship — Massey/Victoria (Wellington)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle (wgtn.ac.nz 2026-welcome-back-to-wellington) inaccessible (403). Selon un résumé de recherche, réservée aux anciens élèves de lycées de la région de Wellington ayant fini leur 1re année dans un établissement néo-zélandais ; édition 2026 close (12 janvier 2026) : non candidatable depuis le Cameroun. Aucune bourse Massey correspondante trouvée."
   }
  },
  {
@@ -14504,15 +15081,19 @@
   },
   "en": {
    "nom": "Align Farms Agriculture Scholarship — New Zealand"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle d'Align Farms lue : « domestic or international students », mais réservée aux étudiants à plein temps déjà inscrits en licence (secteur food and fibre) dans une université néo-zélandaise ; Cameroun non cité, pas de voie pour un élève au Cameroun."
   }
  },
  {
   "id": "nl-scholarship-for-students-from-non-eu-eea-countries-university-of-tw",
-  "organisme": "Gouvernement néerlandais (Nuffic) / University of Twente",
+  "organisme": "University of Twente (NL Scholarship)",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -14520,38 +15101,112 @@
    "tous"
   ],
   "couverture_niveau": "partielle",
-  "origine": "gouvernementale",
+  "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "mai"
+   "ouverture_mois": "octobre",
+   "cloture_mois": "avril"
   },
   "edition": {
-   "cloture": "2025-05-01",
-   "confirme": false
+   "libelle": "2027/28",
+   "ouverture": "2026-10-15",
+   "cloture": "2027-04-01",
+   "confirme": true
   },
-  "lien_officiel": "https://www.utwente.nl/en/education/scholarship-finder/",
+  "lien_officiel": "https://www.utwente.nl/en/education/scholarship-finder/nl-scholarship-university-of-twente/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "NL Scholarship, University of Twente",
+    "url": "https://www.utwente.nl/en/education/scholarship-finder/nl-scholarship-university-of-twente/"
+   },
+   {
+    "titre": "Scholarship finder",
     "url": "https://www.utwente.nl/en/education/scholarship-finder/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er mai 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "NL Scholarship for Students from Non-EU/EEA Countries — University of Twente",
-   "resume": "Le NL Scholarship est le programme national du gouvernement néerlandais pour attirer les étudiants internationaux. Administré par Nuffic et distribué par les universités participantes, il offre €5 000 — un montant qui peut couvrir plusieurs mois de frais de…",
+   "nom": "NL Scholarship, University of Twente",
+   "resume": "Bourse de 5 000 € pour la première année d'un master à l'University of Twente, destinée aux excellents étudiants hors UE/EEE. Le Cameroun figure dans la liste des pays éligibles.",
    "resume_long": "Le NL Scholarship est le programme national du gouvernement néerlandais pour attirer les étudiants internationaux. Administré par Nuffic et distribué par les universités participantes, il offre €5 000 — un montant qui peut couvrir plusieurs mois de frais de vie aux Pays-Bas. À l'University of Twente, le NL Scholarship est combinable avec d'autres bourses de l'université, ce qui peut constituer un package financier significatif.",
-   "valeur": "€5 000",
-   "eligibilite": "Étudiants internationaux hors UE/EEE",
-   "edition_note": "Date limite indiquée dans le guide : 1er mai 2025 (vérifier pour l'édition suivante)"
+   "valeur": "5 000 € (première année uniquement)",
+   "eligibilite": "Étudiant hors UE/EEE (Cameroun inclus dans la liste), admis ou pré-admis à un master éligible débutant en 2027/28, sans diplôme complet ni études complètes préalables aux Pays-Bas, non éligible à une aide néerlandaise, payant les frais de scolarité non-UE. Sélection : CGPA de 7,5/10 (top 5 à 10 % de la promotion).",
+   "edition_note": "Édition 2027/28 : formulaire ouvert du 15 octobre 2026 au 1er avril 2027 à 16 h CET ; résultats début mai 2027. Pas d'autres années annoncées.",
+   "couverture_detail": "5 000 € en compensation des frais liés aux études, la première année seulement.",
+   "ne_couvre_pas": "Les frais de scolarité ne sont pas payés directement ; ce n'est pas une bourse complète.",
+   "diplome": "Licence avec CGPA de 7,5/10",
+   "langue": "IELTS académique 6,5 (oral 6,0) ou TOEFL iBT 90 (oral 20)",
+   "conseil": "Le formulaire n'est ouvert qu'après la candidature au master ; la page ne détaille pas les pièces : écris à sgw-scholarships-ces@utwente.nl pour confirmer.",
+   "autres": [
+    "Candidater d'abord à un master (29 masters listés).",
+    "Respecter les conditions de visa néerlandaises."
+   ],
+   "dossier": [
+    "Candidature au master (admission ou pré-admission)",
+    "Numéro d'étudiant",
+    "Formulaire en ligne NL Scholarship",
+    "Preuve d'anglais (IELTS ou TOEFL)",
+    "Relevés de notes (la page ne liste pas d'autres pièces)"
+   ],
+   "etapes": [
+    "Candidater à un master éligible",
+    "Remplir le formulaire NL Scholarship avec son numéro d'étudiant",
+    "Attendre les résultats (première semaine de mai 2027)"
+   ]
   },
   "en": {
-   "nom": "NL Scholarship for Students from Non-EU/EEA Countries — University of Twente"
+   "nom": "NL Scholarship, University of Twente",
+   "resume": "A EUR 5,000 scholarship for the first year of a master's at the University of Twente, for excellent non-EU/EEA students. Cameroon is on the list of eligible countries.",
+   "valeur": "EUR 5,000 (first year only)",
+   "couverture_detail": "EUR 5,000 as compensation for study-related costs, first year only.",
+   "ne_couvre_pas": "Tuition is not paid directly; not a full scholarship.",
+   "eligibilite": "Non-EU/EEA student (Cameroon is on the list), admitted or provisionally admitted to a qualifying master's starting 2027/28, no previous full degree or study in the Netherlands, not eligible for a Dutch grant, paying the non-EU tuition fee. Selection: CGPA 7.5/10 (top 5 to 10% of the class).",
+   "diplome": "Bachelor's degree with CGPA 7.5/10",
+   "langue": "Academic IELTS 6.5 (speaking 6.0) or TOEFL iBT 90 (speaking 20)",
+   "conseil": "The form opens only after the master application; the page does not detail documents: email sgw-scholarships-ces@utwente.nl to confirm.",
+   "edition_note": "2027/28 round: form open 15 October 2026 to 1 April 2027, 4 pm CET; results early May 2027. No other years announced.",
+   "autres": [
+    "Apply for a master's first (29 programmes listed).",
+    "Meet Dutch visa conditions."
+   ],
+   "dossier": [
+    "Master's application (admission or provisional admission)",
+    "Student number",
+    "NL Scholarship online form",
+    "English proof (IELTS or TOEFL)",
+    "Transcripts (the page lists no other documents)"
+   ],
+   "etapes": [
+    "Apply for a qualifying master's",
+    "Fill in the NL Scholarship form with your student number",
+    "Wait for results (first week of May 2027)"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": "2026-10-15",
+    "cloture": "2027-04-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.utwente.nl/en/education/scholarship-finder/nl-scholarship-university-of-twente/",
+    "https://www.utwente.nl/en/education/scholarship-finder/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -14560,7 +15215,7 @@
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -14571,234 +15226,374 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": null,
    "cloture_mois": "janvier"
   },
   "edition": {
-   "cloture": "2025-01-31",
-   "confirme": false
+   "libelle": "2027/28",
+   "cloture": "2027-01-31",
+   "confirme": true
   },
-  "lien_officiel": "https://www.ru.nl/en/education/scholarships/nl-scholarship",
+  "lien_officiel": "https://www.ru.nl/en/education/scholarships/nl-scholarship-for-prospective-students",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.ru.nl/en/education/scholarships/nl-scholarship"
+    "titre": "NL Scholarship (for prospective students), Radboud University",
+    "url": "https://www.ru.nl/en/education/scholarships/nl-scholarship-for-prospective-students"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 janvier 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "NL Scholarship for Prospective Students — Radboud University",
-   "resume": "Le NL Scholarship à Radboud University est une excellente option pour les étudiants qui ciblent cette université reconnue pour ses programmes en sciences, en arts et en sciences sociales. Nimègue est la plus ancienne ville des Pays-Bas, offrant un cadre…",
+   "nom": "NL Scholarship (for prospective students), Radboud University",
+   "resume": "Bourse de 5 000 € versée une seule fois, la première année d'un master en anglais à Radboud, pour les titulaires d'un passeport hors UE/EEE. Environ 26 bourses pour 2027-2028, toujours combinée à une candidature au Radboud Scholarship Programme.",
    "resume_long": "Le NL Scholarship à Radboud University est une excellente option pour les étudiants qui ciblent cette université reconnue pour ses programmes en sciences, en arts et en sciences sociales. Nimègue est la plus ancienne ville des Pays-Bas, offrant un cadre historique charmant avec un coût de la vie nettement inférieur à celui d'Amsterdam.",
-   "valeur": "€5 000",
-   "eligibilite": "Étudiants internationaux hors UE/EEE",
-   "edition_note": "Date limite indiquée dans le guide : 31 janvier 2025 (vérifier pour l'édition suivante)"
+   "valeur": "5 000 € (une fois, première année)",
+   "eligibilite": "Passeport hors UE/EEE (Cameroun inclus), licence obtenue hors Pays-Bas sans études néerlandaises antérieures, admission complète à un master en anglais (hors Erasmus Mundus et diplômes conjoints), niveau d'anglais requis, études à plein temps, conditions de visa. Candidature obligatoire aussi au Radboud Scholarship Programme.",
+   "edition_note": "Dossier à soumettre avant le 31 janvier 2027 (23 h 59 CET) et complet avant le 14 février 2027 ; décision mi-avril 2027. Ouverture non indiquée.",
+   "couverture_detail": "5 000 € en première année, cofinancés par le ministère néerlandais de l'Éducation et Radboud.",
+   "ne_couvre_pas": "Ce n'est pas une bourse complète : frais de vie et d'études non couverts.",
+   "diplome": "Licence obtenue hors des Pays-Bas",
+   "langue": "Niveau d'anglais requis par le master visé",
+   "conseil": "Dossier incomplet au 14 février = non étudié ; envoie tôt la preuve d'anglais.",
+   "autres": [
+    "La NL Scholarship n'est jamais attribuée seule : elle accompagne le Radboud Scholarship Programme.",
+    "La page contient des références incohérentes à l'année de rentrée (2026 et 2027) : confirmer auprès de scholarships@ru.nl."
+   ],
+   "dossier": [
+    "Candidature au master dans OSIRIS (avec case NL Scholarship cochée)",
+    "Candidature au Radboud Scholarship Programme",
+    "Frais de dossier",
+    "Preuve de niveau d'anglais",
+    "Lettre de motivation",
+    "Relevés de notes et autres pièces demandées par Student Admissions"
+   ],
+   "etapes": [
+    "Candidater au master dans OSIRIS en indiquant la NL Scholarship avant le 31 janvier 2027",
+    "Compléter le dossier avant le 14 février 2027",
+    "Candidater au Radboud Scholarship Programme",
+    "Décision à la mi-avril 2027"
+   ]
   },
   "en": {
-   "nom": "NL Scholarship for Prospective Students — Radboud University"
-  }
- },
- {
-  "id": "mena-scholarship-programme-msp-short-courses-netherlands",
-  "organisme": "Gouvernement néerlandais (Nuffic)",
-  "pays_accueil": [
-   "Pays-Bas"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "gouvernementale",
-  "edition": {
-   "permanente": true,
-   "confirme": false
+   "nom": "NL Scholarship (for prospective students), Radboud University",
+   "resume": "A one-time EUR 5,000 scholarship for the first year of an English-taught master's at Radboud, for holders of a non-EU/EEA passport. About 26 awards for 2027-2028, always combined with an application to the Radboud Scholarship Programme.",
+   "valeur": "EUR 5,000 (one-time, first year)",
+   "couverture_detail": "EUR 5,000 in the first year, co-financed by the Dutch Ministry of Education and Radboud.",
+   "ne_couvre_pas": "Not a full scholarship: living and study costs are not covered.",
+   "eligibilite": "Non-EU/EEA passport (Cameroon included), bachelor's degree from outside the Netherlands with no prior Dutch education, full admission to an English-taught master's (not Erasmus Mundus or joint degrees), English proficiency, full-time study, visa conditions. Must also apply for the Radboud Scholarship Programme.",
+   "diplome": "Bachelor's degree obtained outside the Netherlands",
+   "langue": "English proficiency required by the chosen master's",
+   "conseil": "An incomplete file on 14 February is not considered; send proof of English early.",
+   "edition_note": "Submit by 31 January 2027 (23:59 CET) and complete by 14 February 2027; decision mid-April 2027. Opening not stated.",
+   "autres": [
+    "The NL Scholarship is never awarded alone: it accompanies the Radboud Scholarship Programme.",
+    "The page has inconsistent references to the intake year (2026 and 2027): confirm with scholarships@ru.nl."
+   ],
+   "dossier": [
+    "Master's application in OSIRIS (NL Scholarship box ticked)",
+    "Radboud Scholarship Programme application",
+    "Handling fee",
+    "Proof of English proficiency",
+    "Motivation letter",
+    "Transcripts and other documents requested by Student Admissions"
+   ],
+   "etapes": [
+    "Apply for the master in OSIRIS, indicating the NL Scholarship, by 31 January 2027",
+    "Complete the file by 14 February 2027",
+    "Apply for the Radboud Scholarship Programme",
+    "Decision mid-April 2027"
+   ]
   },
-  "lien_officiel": "https://www.nuffic.nl/en/subjects/mena-scholarship-programme",
-  "sources": [
+  "editions": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.nuffic.nl/en/subjects/mena-scholarship-programme"
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2027-01-31",
+    "confirme": true
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence (selon les programmes disponibles)"
-  },
-  "fr": {
-   "nom": "MENA Scholarship Programme (MSP) Short Courses — Netherlands",
-   "resume": "Le programme MENA cible les professionnels de la région Moyen-Orient et Afrique du Nord — Maroc, Tunisie, Algérie, Égypte, Jordanie, Liban, Libye, Irak et autres. Il finance des formations courtes aux Pays-Bas dans des domaines liés au développement. Pour les…",
-   "resume_long": "Le programme MENA cible les professionnels de la région Moyen-Orient et Afrique du Nord — Maroc, Tunisie, Algérie, Égypte, Jordanie, Liban, Libye, Irak et autres. Il finance des formations courtes aux Pays-Bas dans des domaines liés au développement. Pour les professionnels en activité qui souhaitent se perfectionner sans quitter leur emploi pour une longue durée, c'est une option idéale.",
-   "valeur": "Variable — couvre les frais de formation, de voyage et de séjour",
-   "eligibilite": "Professionnels des pays du Moyen-Orient et d'Afrique du Nord (MENA)",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence (selon les programmes disponibles)"
-  },
-  "en": {
-   "nom": "MENA Scholarship Programme (MSP) Short Courses — Netherlands"
-  }
- },
- {
-  "id": "kipaji-scholarship-university-of-twente",
-  "organisme": "University of Twente",
-  "pays_accueil": [
-   "Pays-Bas"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "master"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "mai"
-  },
-  "edition": {
-   "cloture": "2026-05-01",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.utwente.nl/en/education/scholarship-finder/kipaji-scholarship/",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.utwente.nl/en/education/scholarship-finder/kipaji-scholarship/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er février 2026 / 1er mai 2026"
-  },
-  "fr": {
-   "nom": "Kipaji Scholarship — University of Twente",
-   "resume": "« Kipaji » signifie « talent » en swahili. Cette bourse cible spécifiquement les étudiants talentueux des pays en développement (liste DAC de l'OCDE). €12 000 couvre plus de la moitié des frais de scolarité d'un Master à Twente. Deux deadlines par an offrent…",
-   "resume_long": "« Kipaji » signifie « talent » en swahili. Cette bourse cible spécifiquement les étudiants talentueux des pays en développement (liste DAC de l'OCDE). €12 000 couvre plus de la moitié des frais de scolarité d'un Master à Twente. Deux deadlines par an offrent une flexibilité appréciable. Si vous êtes un étudiant africain, asiatique ou latino-américain issu d'un pays à revenu faible ou intermédiaire, cette bourse est conçue pour vous.",
-   "valeur": "Jusqu'à €12 000",
-   "eligibilite": "Étudiants internationaux des pays DAC (pays en développement selon l'OCDE)",
-   "edition_note": "Date limite indiquée dans le guide : 1er février 2026 / 1er mai 2026"
-  },
-  "en": {
-   "nom": "Kipaji Scholarship — University of Twente"
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.ru.nl/en/education/scholarships/nl-scholarship"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "global-studies-scholarship-maastricht-university",
-  "organisme": "Maastricht University",
+  "organisme": "Maastricht University (UM NL Global Studies Scholarship)",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "partielle",
+  "couverture_niveau": "complete",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "octobre",
    "cloture_mois": "fevrier"
   },
   "edition": {
-   "cloture": "2026-02-01",
-   "confirme": false
+   "libelle": "2027/28",
+   "ouverture": "2026-10-01",
+   "cloture": "2027-02-01",
+   "confirme": true
   },
-  "lien_officiel": "https://www.maastrichtuniversity.nl/support/your-studies-begin/scholarships",
+  "lien_officiel": "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/um-global-studies-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.maastrichtuniversity.nl/support/your-studies-begin/scholarships"
+    "titre": "UM NL Global Studies Scholarship",
+    "url": "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/um-global-studies-scholarship"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er février 2026"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Global Studies Scholarship — Maastricht University",
-   "resume": "La Global Studies Scholarship cible les étudiants de Licence qui s'inscrivent dans les programmes internationaux de Maastricht. €15 925 par an est un montant qui couvre l'essentiel des frais de vie dans cette ville abordable.",
+   "nom": "UM NL Global Studies Scholarship - Maastricht University",
+   "resume": "Bourse complète pour un étudiant par an admis (au moins conditionnellement) en licence Global Studies à Maastricht, pour les ressortissants de pays éligibles à l'aide publique au développement de l'OCDE. Elle s'adresse à des candidats très performants, avec un besoin financier démontré.",
    "resume_long": "La Global Studies Scholarship cible les étudiants de Licence qui s'inscrivent dans les programmes internationaux de Maastricht. €15 925 par an est un montant qui couvre l'essentiel des frais de vie dans cette ville abordable.",
-   "valeur": "€15 925/an",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 1er février 2026"
+   "valeur": "Frais de scolarité, assurance, visa et frais d'entrée pris en charge + 20 150 EUR/an pour la vie courante (1 550 EUR/mois), 36 mois",
+   "eligibilite": "Nationalité d'un pays éligible à l'aide publique au développement de l'OCDE (hors Suriname) et conditions d'obtention du visa et du permis de séjour néerlandais ; pas de double nationalité UE/EEE, suisse ou surinamaise ; ne pas être titulaire d'un diplôme de l'enseignement supérieur ; avoir 35 ans maximum au 1er septembre 2027 ; avoir déposé un dossier complet de candidature à la licence Global Studies 2027-28 avant le 10 décembre 2026 ; besoin financier démontré.",
+   "edition_note": "Édition 2027-28 : candidatures du 1er octobre 2026 au 1er février 2027 (23h59 CET) ; dossier d'admission complet avant le 10 décembre 2026. Une seule bourse par an.",
+   "couverture_detail": "Frais de scolarité, assurance santé et responsabilité civile, frais de visa, formation pré-académique, programme ISAP (premier bloc), allocation de 20 150 EUR par an (montant 2027-28, susceptible de changer) ; une chambre est attribuée jusqu'au 16 juillet 2028 (obligatoire). Durée : 36 mois.",
+   "ne_couvre_pas": "Billets d'avion, frais de ménage du logement (environ 75 EUR), frais de dossier éventuels du programme, logement des 2e et 3e années.",
+   "diplome": "Baccalauréat ou équivalent répondant aux conditions d'admission de la licence Global Studies ; résultats scolaires bons à excellents.",
+   "langue": "Programme enseigné en anglais ; les conditions de langue sont celles de l'admission à la licence.",
+   "conseil": "Préparez la candidature Studielink tôt : la date du 10 décembre 2026 est plus proche que celle de la bourse. Soignez la déclaration de besoin financier et choisissez un référent qui répondra vite.",
+   "autres": [
+    "Une seule candidature possible ; aucun document ne peut être ajouté ou remplacé après l'envoi.",
+    "Il faut d'abord candidater via Studielink pour obtenir le numéro d'étudiant UM.",
+    "La liste OCDE des pays éligibles à l'aide publique au développement inclut le Cameroun ; le site UM ne cite pas le Cameroun nommément.",
+    "Acceptation de la bourse = acceptation de la chambre attribuée ; engagement à devenir ambassadeur Global Studies/UM."
+   ],
+   "dossier": [
+    "Candidature à la licence Global Studies via Studielink (complète avant le 10 décembre 2026)",
+    "CV à jour (2 pages A4 maximum)",
+    "Lettre de motivation (modèle UM)",
+    "Preuve d'excellence académique (derniers relevés de notes)",
+    "Déclaration personnelle sur le besoin financier",
+    "Lettre de recommandation (professeur, enseignant, directeur, conseiller ou employeur ; pas un proche ; datée après le 1er février 2025)",
+    "Coordonnées professionnelles du référent"
+   ],
+   "etapes": [
+    "Candidater à la licence Global Studies via Studielink avant le 10 décembre 2026 pour obtenir le numéro d'étudiant.",
+    "Remplir le formulaire de bourse (compte UM) et téléverser les documents entre le 1er octobre 2026 et le 1er février 2027 à 23h59 CET.",
+    "Examen des dossiers, présélection de 5 candidats en mars 2027, puis entretien en ligne avec le comité."
+   ]
   },
   "en": {
-   "nom": "Global Studies Scholarship — Maastricht University"
+   "nom": "UM NL Global Studies Scholarship - Maastricht University",
+   "resume": "Full scholarship for one student per year (conditionally) admitted to the Global Studies bachelor at Maastricht, for nationals of countries eligible for OECD official development assistance. It targets top-performing candidates with demonstrated financial need.",
+   "valeur": "Tuition, insurance, visa and entry costs covered + EUR 20,150/year living allowance (EUR 1,550/month), 36 months",
+   "couverture_detail": "Tuition fees, health and liability insurance, visa costs, pre-academic training, ISAP programme (first block), living allowance of EUR 20,150 per year (2027-28 amount, subject to change); a room is allocated until 16 July 2028 (mandatory). Duration: 36 months.",
+   "ne_couvre_pas": "Flights, housing cleaning fee (about EUR 75), any programme handling fee, housing in years 2 and 3.",
+   "eligibilite": "Nationality of a country eligible for OECD official development assistance (excluding Suriname) and meeting Dutch visa and residence permit requirements; no dual EU/EEA, Swiss or Surinamese nationality; no higher-education degree; not older than 35 on 1 September 2027; complete application to the Global Studies bachelor 2027-28 submitted before 10 December 2026; demonstrated financial need.",
+   "diplome": "Secondary school diploma or equivalent meeting the admission requirements of the Global Studies bachelor; good to excellent results.",
+   "langue": "Taught in English; language requirements are those of the bachelor admission.",
+   "conseil": "Prepare the Studielink application early: the 10 December 2026 date comes before the scholarship deadline. Write the financial-need statement carefully and choose a referee who will respond quickly.",
+   "edition_note": "2027-28 edition: applications from 1 October 2026 to 1 February 2027 (23:59 CET); complete admission file before 10 December 2026. One scholarship per year.",
+   "autres": [
+    "Only one application allowed; no document can be added or replaced after submission.",
+    "You must first apply via Studielink to get your UM student number.",
+    "The OECD list of countries eligible for official development assistance includes Cameroon; the UM page does not name Cameroon explicitly.",
+    "Accepting the scholarship means accepting the allocated room; commitment to act as a Global Studies/UM ambassador."
+   ],
+   "dossier": [
+    "Application to the Global Studies bachelor via Studielink (complete before 10 December 2026)",
+    "Up-to-date CV (max. 2 A4 pages)",
+    "Motivation letter (UM template)",
+    "Proof of academic excellence (latest transcripts)",
+    "Personal statement of financial need",
+    "Reference letter (professor, teacher, principal, counsellor or employer; not a relative; dated after 1 February 2025)",
+    "Work contact details of the referee"
+   ],
+   "etapes": [
+    "Apply to the Global Studies bachelor via Studielink before 10 December 2026 to get a student number.",
+    "Fill in the scholarship form (UM account) and upload documents between 1 October 2026 and 1 February 2027, 23:59 CET.",
+    "Completeness check, top-5 shortlist in March 2027, then online interview with the committee."
+   ]
+  },
+  "age_max": 35,
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": "2026-10-01",
+    "cloture": "2027-02-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/um-global-studies-scholarship"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "eur-excellence-scholarship-erasmus-university-rotterdam",
-  "organisme": "Erasmus University Rotterdam (EUR)",
+  "organisme": "Erasmus University Rotterdam - Erasmus School of Economics (Erasmus Trustfonds)",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
-   "tous"
+   "economie-gestion",
+   "maths"
   ],
-  "couverture_niveau": "variable",
-  "origine": "gouvernementale",
+  "couverture_niveau": "complete",
+  "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "mai"
+   "ouverture_mois": "decembre",
+   "cloture_mois": "janvier"
   },
   "edition": {
-   "cloture": "2025-05-31",
-   "confirme": false
+   "libelle": "2027/28",
+   "ouverture": "2026-12-01",
+   "cloture": "2027-01-31",
+   "confirme": true
   },
-  "lien_officiel": "https://www.eur.nl/en/education/practical-matters/financial-matters/scholarships-grants",
+  "lien_officiel": "https://www.eur.nl/en/ese/education/master/fees-and-scholarships/scholarships-and-grants/erasmus-trustfonds-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.eur.nl/en/education/practical-matters/financial-matters/scholarships-grants"
+    "titre": "Erasmus Trustfonds Scholarship 2027-2028 (ESE)",
+    "url": "https://www.eur.nl/en/ese/education/master/fees-and-scholarships/scholarships-and-grants/erasmus-trustfonds-scholarship"
+   },
+   {
+    "titre": "EUR - Scholarships & grants for students coming to Rotterdam",
+    "url": "https://www.eur.nl/en/education/practical-matters/scholarships-grants/students-coming-rotterdam"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 mai 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "EUR Excellence Scholarship — Erasmus University Rotterdam",
-   "resume": "Erasmus University Rotterdam est l'une des meilleures universités d'Europe pour l'économie, le business et la santé publique. Nommée en l'honneur d'Érasme de Rotterdam — l'un des plus grands humanistes de l'histoire — elle incarne l'ouverture intellectuelle.…",
+   "nom": "Erasmus Trustfonds Scholarship (Erasmus School of Economics) - Erasmus University Rotterdam",
+   "resume": "Il n'existe pas de bourse centrale nommée « EUR Excellence Scholarship » sur le site officiel ; le programme équivalent d'EUR pour les masters internationaux est l'Erasmus Trustfonds Scholarship, géré par chaque faculté. Cette fiche porte sur la version de l'Erasmus School of Economics (édition 2027-28), ouverte aux étudiants EEE et hors EEE.",
    "resume_long": "Erasmus University Rotterdam est l'une des meilleures universités d'Europe pour l'économie, le business et la santé publique. Nommée en l'honneur d'Érasme de Rotterdam — l'un des plus grands humanistes de l'histoire — elle incarne l'ouverture intellectuelle. Rotterdam est la deuxième ville des Pays-Bas, connue pour son architecture audacieuse, son port (le plus grand d'Europe) et son dynamisme économique.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 mai 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Jusqu'à 17 500 EUR pour une année (frais de scolarité partiellement pris en charge + 1 200 EUR/mois)",
+   "eligibilite": "Étudiants de master à temps plein, en première année, avec d'excellents résultats, EEE et hors EEE ; jamais inscrit en master complet dans un établissement néerlandais ; moyenne finale de licence d'au moins 7,5/10 (échelle néerlandaise) ; pas ouvert aux étudiants ESE actuels en master.",
+   "edition_note": "Édition 2027-28 : candidature du 1er décembre 2026 au 31 janvier 2027 (23h59) ; résultat d'ici le 13 mars 2027. Les dates des autres facultés ne sont pas les mêmes.",
+   "couverture_detail": "Maximum 17 500 EUR : exonération de 2 695 EUR de frais de scolarité et, pour les étudiants hors EEE, prise en charge par l'école du solde (18 305 EUR) ; allocation de vie de 1 200 EUR/mois (14 400 EUR/an) ; allocation personnelle unique de 249 EUR ; frais d'immigration de 228 EUR pris en charge le cas échéant. Une seule année, une seule fois.",
+   "ne_couvre_pas": "Seules les allocations de vie et personnelle sont versées sur le compte ; la bourse ne se cumule pas avec une autre bourse. Billets d'avion non mentionnés comme couverts. La page annonce une mise à jour de la section montants en novembre 2026.",
+   "diplome": "Licence (bachelor) avec moyenne finale d'au moins 7,5 sur 10, dans un des trois masters concernés.",
+   "langue": "Aucune exigence de langue indiquée sur la page de la bourse ; voir les conditions d'admission du master.",
+   "conseil": "Faites certifier relevés et attestation de moyenne très tôt : tampon humide et signature sont exigés, les captures d'écran sont refusées. Vérifiez la page avant de candidater, car elle porte la mention « Application closed » alors que le texte décrit la fenêtre du 1er décembre 2026.",
+   "autres": [
+    "Masters concernés : Accounting, Auditing and Control ; Econometrics and Management Science ; Economics and Business.",
+    "La page ne cite pas le Cameroun ; elle admet les étudiants « EEA and non-EEA countries ».",
+    "Les autres facultés d'EUR ont leurs propres versions de l'Erasmus Trustfonds Scholarship, avec d'autres conditions (par exemple Erasmus MC : masters de recherche).",
+    "Une offre d'admission n'est pas requise pour candidater, mais seuls les candidats admis sont considérés ; inscription avant le 1er septembre.",
+    "Démarche d'immigration à envoyer en mai au plus tard (limite 10 juillet)."
+   ],
+   "dossier": [
+    "Inscription dans Studielink",
+    "Lettre de motivation (2 pages A4 maximum)",
+    "Déclaration financière sur votre situation et vos besoins (1 page A4 maximum)",
+    "Plan budgétaire (modèle de l'école)",
+    "Relevé de notes le plus récent, copie certifiée (tampon humide et signature)",
+    "Attestation de moyenne (GPA) certifiée, modèle de l'école ou attestation de l'université d'origine"
+   ],
+   "etapes": [
+    "S'inscrire dans Studielink pour le master concerné.",
+    "Déposer les documents dans le portail de candidature EUR (Osiris Student) entre le 1er décembre 2026 et le 31 janvier 2027 à 23h59.",
+    "Réponse par e-mail d'ici le 13 mars 2027 ; en cas d'attribution, lancer la procédure d'immigration avant mai."
+   ]
   },
   "en": {
-   "nom": "EUR Excellence Scholarship — Erasmus University Rotterdam"
+   "nom": "Erasmus Trustfonds Scholarship (Erasmus School of Economics) - Erasmus University Rotterdam",
+   "resume": "The official site has no central scholarship called \"EUR Excellence Scholarship\"; EUR's equivalent for international master's students is the Erasmus Trustfonds Scholarship, run by each faculty. This sheet covers the Erasmus School of Economics version (2027-28 edition), open to EEA and non-EEA students.",
+   "valeur": "Up to EUR 17,500 for one year (partial tuition coverage + EUR 1,200/month)",
+   "couverture_detail": "Maximum EUR 17,500: EUR 2,695 tuition waiver and, for non-EEA students, the school pays the balance (EUR 18,305); living allowance EUR 1,200/month (EUR 14,400/year); one-off personal allowance EUR 249; EUR 228 immigration fee waived where applicable. One year only, once only.",
+   "ne_couvre_pas": "Only the living and personal allowances are paid to your bank account; cannot be combined with another scholarship. Flights are not listed as covered. The page says the amounts section will be updated in November 2026.",
+   "eligibilite": "Full-time first-year master students with excellent results, EEA and non-EEA; never enrolled as a full-degree master student at a Dutch institution; average final bachelor result of at least 7.5/10 (Dutch scale); not open to current ESE master students.",
+   "diplome": "Bachelor degree with an average final result of at least 7.5 out of 10, for one of the three eligible master programmes.",
+   "langue": "No language requirement is stated on the scholarship page; see the master's admission requirements.",
+   "conseil": "Get transcripts and the GPA statement certified early: wet stamp and signature are required and screenshots are refused. Re-check the page before applying, as it carries an \"Application closed\" heading while the text describes the window opening 1 December 2026.",
+   "edition_note": "2027-28 edition: apply from 1 December 2026 to 31 January 2027 (23:59); result by 13 March 2027. Other faculties have different dates.",
+   "autres": [
+    "Eligible masters: Accounting, Auditing and Control; Econometrics and Management Science; Economics and Business.",
+    "The page does not name Cameroon; it admits students from \"EEA and non-EEA countries\".",
+    "Other EUR faculties run their own Erasmus Trustfonds Scholarship with different terms (e.g. Erasmus MC: research masters).",
+    "An admission offer is not required to apply, but only admitted applicants are considered; enrol by 1 September.",
+    "Immigration application to be sent by May at the latest (deadline 10 July)."
+   ],
+   "dossier": [
+    "Studielink registration",
+    "Motivation letter (max. 2 A4 pages)",
+    "Financial statement on your situation and need (max. 1 A4 page)",
+    "Budget plan (school template)",
+    "Most recent transcript, certified copy (wet stamp and signature)",
+    "Certified GPA statement (school template or home-university statement)"
+   ],
+   "etapes": [
+    "Register in Studielink for the master programme.",
+    "Upload documents in the EUR Application Portal (Osiris Student) between 1 December 2026 and 31 January 2027, 23:59.",
+    "Outcome by e-mail by 13 March 2027; if awarded, start the immigration procedure before May."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": "2026-12-01",
+    "cloture": "2027-01-31",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.eur.nl/en/ese/education/master/fees-and-scholarships/scholarships-and-grants/erasmus-trustfonds-scholarship",
+    "https://www.eur.nl/en/education/practical-matters/scholarships-grants",
+    "https://www.eur.nl/en/education/practical-matters/scholarships-grants/students-coming-rotterdam"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "iss-scholarship-fund-for-excellent-students-erasmus-university-rotterd",
-  "organisme": "Erasmus University Rotterdam — International Institute of Social Studies (ISS)",
+  "organisme": "International Institute of Social Studies (ISS), Erasmus University Rotterdam",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -14807,39 +15602,102 @@
    "philo-sociologie",
    "economie-gestion"
   ],
-  "couverture_niveau": "variable",
-  "origine": "gouvernementale",
+  "couverture_niveau": "partielle",
+  "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juin"
+   "ouverture_mois": null,
+   "cloture_mois": null
   },
   "edition": {
    "cloture": "2025-06-15",
    "confirme": false
   },
-  "lien_officiel": "https://www.iss.nl/en/education/financial-matters/iss-scholarships",
+  "lien_officiel": "https://www.iss.nl/en/funding-scholarships/iss-scholarships",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.iss.nl/en/education/financial-matters/iss-scholarships"
+    "titre": "ISS Scholarships",
+    "url": "https://www.iss.nl/en/funding-scholarships/iss-scholarships"
+   },
+   {
+    "titre": "ISS - Funding & scholarships",
+    "url": "https://www.iss.nl/en/funding-scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "15 juin 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "ISS Scholarship Fund for Excellent Students — Erasmus University Rotterdam",
-   "resume": "L'ISS est un institut de renommée mondiale pour les études du développement et les sciences sociales. Basé à La Haye — la ville de la Cour Internationale de Justice et de nombreuses organisations internationales — il offre un cadre unique pour les étudiants…",
+   "nom": "ISS Scholarship Fund for Excellent Students - ISS, Erasmus University Rotterdam",
+   "resume": "Bourse partielle de l'ISS (La Haye) égale à 40 % des frais de scolarité, pour des étudiants admis en master ayant d'excellents résultats en sciences sociales et un besoin financier. Les demandes se font par e-mail à l'office d'admission, au fil de l'eau, selon le budget disponible.",
    "resume_long": "L'ISS est un institut de renommée mondiale pour les études du développement et les sciences sociales. Basé à La Haye — la ville de la Cour Internationale de Justice et de nombreuses organisations internationales — il offre un cadre unique pour les étudiants intéressés par la justice sociale, la gouvernance et le développement international.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 15 juin 2025 (vérifier pour l'édition suivante)"
+   "valeur": "40 % des frais de scolarité",
+   "eligibilite": "Étudiants internationaux et néerlandais/UE/EEE admis à l'ISS ; licence en sciences sociales avec mention (upper second ou first class) et forte motivation, ou licence de sciences sociales avec mention first class pour les jeunes diplômés ; moyens financiers insuffisants.",
+   "edition_note": "Pas de date limite publiée pour 2027-28 : candidatures au fil de l'eau, décisions entre janvier et juillet 2027 ; confirmer auprès de admission@iss.nl.",
+   "couverture_detail": "Réduction de 40 % des frais de scolarité du master ISS. Cumulable avec la réduction Early Bird de 10 % selon ISS.",
+   "ne_couvre_pas": "Frais de vie, assurance santé et le reste des frais de scolarité : le candidat doit prouver qu'il peut les financer. Non disponible pour un doctorat à l'ISS.",
+   "diplome": "Licence en sciences sociales (upper second ou first class) ; lettre d'admission de l'ISS exigée.",
+   "langue": "Aucune exigence de langue indiquée sur la page de la bourse ; voir les conditions d'admission du master ISS.",
+   "conseil": "Candidatez très tôt : l'aide est attribuée selon le budget disponible. Une bourse de 40 % laisse un solde important à financer, avec preuves bancaires à l'appui.",
+   "autres": [
+    "La page est ouverte aux étudiants internationaux sans liste de pays ; le Cameroun n'est pas cité nommément.",
+    "Expérience professionnelle non nécessaire.",
+    "Décisions au fil de l'eau ; attributions entre janvier et juillet pour la rentrée de septembre, selon le budget.",
+    "Le Hardship Fund de l'ISS (jusqu'à 30 %) suit la même procédure."
+   ],
+   "dossier": [
+    "Lettre d'admission de l'ISS",
+    "Déclaration de motivation d'une page expliquant pourquoi vous devez bénéficier du fonds",
+    "Informations financières détaillées avec relevés bancaires (preuve de pouvoir payer le solde des frais de scolarité, les frais de vie et l'assurance santé)"
+   ],
+   "etapes": [
+    "Obtenir l'admission au master de l'ISS.",
+    "Envoyer la déclaration de motivation et les documents financiers à admission@iss.nl le plus tôt possible.",
+    "Décision au fil de l'eau, communiquée par le bureau des étudiants de l'ISS."
+   ]
   },
   "en": {
-   "nom": "ISS Scholarship Fund for Excellent Students — Erasmus University Rotterdam"
+   "nom": "ISS Scholarship Fund for Excellent Students - ISS, Erasmus University Rotterdam",
+   "resume": "Partial ISS (The Hague) scholarship worth 40% of tuition for admitted master students with excellent social-science results and financial need. Requests are sent by e-mail to the admission office on a rolling basis, depending on available budget.",
+   "valeur": "40% of the tuition fee",
+   "couverture_detail": "40% reduction of the ISS master's tuition fee. According to ISS it can be combined with the 10% Early Bird Discount.",
+   "ne_couvre_pas": "Living costs, health insurance and the rest of the tuition: applicants must show they can fund them. Not available for a PhD at ISS.",
+   "eligibilite": "International and Dutch/EU/EEA students admitted to ISS; social-sciences degree with upper second or first class honours and strong motivation, or first-class social-sciences degree for recent graduates; insufficient own financial means.",
+   "diplome": "Social-sciences degree (upper second or first class); ISS admission letter required.",
+   "langue": "No language requirement stated on the scholarship page; see ISS master admission requirements.",
+   "conseil": "Apply very early: support depends on available budget. A 40% award leaves a large balance to finance, backed by bank evidence.",
+   "edition_note": "No published deadline for 2027-28: rolling applications, decisions between January and July 2027; confirm with admission@iss.nl.",
+   "autres": [
+    "The page is open to international students with no country list; Cameroon is not named explicitly.",
+    "Work experience not necessary.",
+    "Rolling decisions; awards between January and July for a September start, depending on budget.",
+    "The ISS Hardship Fund (up to 30%) follows the same procedure."
+   ],
+   "dossier": [
+    "ISS letter of admission",
+    "One-page motivation statement explaining why you should benefit from the fund",
+    "Detailed financial information with bank statements (proof you can cover the remaining tuition, living expenses and health insurance)"
+   ],
+   "etapes": [
+    "Obtain admission to the ISS master.",
+    "E-mail the motivation statement and financial documents to admission@iss.nl as early as possible.",
+    "Rolling decision, communicated by the ISS student office."
+   ]
+  },
+  "editions": [],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.iss.nl/en/funding-scholarships/iss-scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -14888,57 +15746,124 @@
   },
   "en": {
    "nom": "Merit Scholarship (AMS) — University of Amsterdam"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Programme décentralisé : montant, documents et dates varient selon la faculté (Droit : montant 2027-28 « à annoncer », date limite 15 janvier sans année ; Sciences sociales : 15 février 2027 ; Finance : 15 janvier, montant non publié). Pas de fiche unique complète et vérifiable ; le Cameroun n'est pas cité, seulement « passeport hors UE/EEE »."
   }
  },
  {
   "id": "law-economics-and-governance-international-talent-scholarship-utrecht-",
-  "organisme": "Utrecht University",
+  "organisme": "Utrecht University (Faculty of Law, Economics and Governance)",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
+   "master"
   ],
   "domaines": [
    "droit-politique",
    "economie-gestion"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "novembre",
    "cloture_mois": "fevrier"
   },
   "edition": {
-   "cloture": "2026-02-01",
-   "confirme": false
+   "libelle": "2027/28",
+   "ouverture": "2026-11-01",
+   "cloture": "2027-01-31",
+   "confirme": true
   },
-  "lien_officiel": "https://www.uu.nl/en/education/scholarships",
+  "lien_officiel": "https://www.uu.nl/en/masters/general-information/application-and-admission/scholarships-and-grants/law-economics-and-governance-international-talent-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.uu.nl/en/education/scholarships"
+    "titre": "LEG International Talent Scholarship (LEGITS)",
+    "url": "https://www.uu.nl/en/masters/general-information/application-and-admission/scholarships-and-grants/law-economics-and-governance-international-talent-scholarship"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er février 2026 (23:59 CET)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Law, Economics and Governance International Talent Scholarship — Utrecht University",
-   "resume": "Utrecht University est la meilleure université des Pays-Bas selon plusieurs classements. Cette bourse cible spécifiquement les étudiants en droit, économie et gouvernance — trois domaines dans lesquels Utrecht excelle. Utrecht est une ville étudiante par…",
+   "nom": "Law, Economics and Governance International Talent Scholarship (LEGITS) - Utrecht University",
+   "resume": "Bourse de la faculté de droit, économie et gouvernance d'Utrecht pour des candidats aux masters en anglais des écoles de droit et d'économie, ouverte aux étudiants UE/EEE et hors UE/EEE. Environ quatre bourses sont attribuées par an.",
    "resume_long": "Utrecht University est la meilleure université des Pays-Bas selon plusieurs classements. Cette bourse cible spécifiquement les étudiants en droit, économie et gouvernance — trois domaines dans lesquels Utrecht excelle. Utrecht est une ville étudiante par excellence, avec un centre-ville médiéval charmant et une vie culturelle animée.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 1er février 2026 (23:59 CET)"
+   "valeur": "Frais de scolarité (tarif institutionnel pour les étudiants hors UE/EEE), renouvelable une 2e année",
+   "eligibilite": "Étudiants UE/EEE et hors UE/EEE ; diplôme secondaire et licence non néerlandais ; première année de master aux Pays-Bas ; admission dans un master éligible débutant le 1er septembre 2027. Tout critère manquant rend la candidature irrecevable.",
+   "edition_note": "Édition 2027-28 : ouverture le 1er novembre 2026, clôture « avant le 1er février » 2027 à 23h59 CET (date enregistrée : 31 janvier 2027 par prudence) ; résultat vers mi-avril.",
+   "couverture_detail": "Frais de scolarité uniquement : tarif légal pour les étudiants UE/EEE, tarif institutionnel pour les hors UE/EEE. Renouvelable pour la 2e année d'un master de deux ans si les progrès sont satisfaisants.",
+   "ne_couvre_pas": "Frais de vie, logement, assurance, visa, voyage (la page indique que seuls les frais de scolarité sont couverts).",
+   "diplome": "Licence obtenue hors des Pays-Bas.",
+   "langue": "Masters enseignés en anglais ; pas de test de langue spécifique à la bourse sur la page.",
+   "conseil": "Déposez tôt : les envois de dernière semaine ne sont plus modifiables. Peu de bourses (environ quatre) : préparez aussi un plan de financement des frais de vie.",
+   "autres": [
+    "Le Cameroun n'est pas cité ; la page ouvre la bourse aux candidats hors UE/EEE sans liste de pays.",
+    "Résultat annoncé après admission (conditionnelle ou non) au master.",
+    "Les envois entre le 26 janvier et le 1er février ne peuvent plus être modifiés."
+   ],
+   "dossier": [
+    "Candidature au master dans Osiris Online Application (relevés de notes, parcours, réalisations, lettre de motivation)",
+    "Déclaration personnelle LEGITS (modèle PDF) téléversée dans le portail, avec réponses aux questions associées"
+   ],
+   "etapes": [
+    "Déposer la candidature au master dans Osiris Online Application.",
+    "Ouvrir l'élément LEGITS lié au programme dans Osiris.",
+    "Téléverser la déclaration personnelle, répondre aux questions et soumettre avant le 1er février 2027 à 23h59 CET."
+   ]
   },
   "en": {
-   "nom": "Law, Economics and Governance International Talent Scholarship — Utrecht University"
+   "nom": "Law, Economics and Governance International Talent Scholarship (LEGITS) - Utrecht University",
+   "resume": "Scholarship from Utrecht's Faculty of Law, Economics and Governance for applicants to English-taught master's programmes in the Schools of Law and Economics, open to EU/EEA and non-EU/EEA students. About four awards are made each year.",
+   "valeur": "Tuition fee (institutional fee for non-EU/EEA students), renewable for a second year",
+   "couverture_detail": "Tuition only: statutory fee for EU/EEA students, institutional fee for non-EU/EEA students. Renewable for the second year of a two-year master's with satisfactory progress.",
+   "ne_couvre_pas": "Living costs, housing, insurance, visa, travel (the page states tuition only).",
+   "eligibilite": "EU/EEA and non-EU/EEA students; non-Dutch secondary qualification and bachelor's degree; first master's in the Netherlands; admission to an eligible master's starting 1 September 2027. Failing any criterion makes the application ineligible.",
+   "diplome": "Bachelor's degree obtained outside the Netherlands.",
+   "langue": "Master's taught in English; no separate language test for the scholarship stated on the page.",
+   "conseil": "Submit early: last-week submissions cannot be edited. With only about four awards, also plan how to fund living costs.",
+   "edition_note": "2027-28 edition: opens 1 November 2026, closes \"before February 1st\" 2027 at 23:59 CET (recorded as 31 January 2027 to be safe); result around mid-April.",
+   "autres": [
+    "Cameroon is not named; the page opens the scholarship to non-EU/EEA applicants with no country list.",
+    "Outcome announced after (un)conditional admission to the master's.",
+    "Submissions between 26 January and 1 February cannot be updated afterwards."
+   ],
+   "dossier": [
+    "Master's application in Osiris Online Application (transcripts, background, achievements, motivation letter)",
+    "LEGITS personal statement (PDF template) uploaded in the portal, with related questions answered"
+   ],
+   "etapes": [
+    "Submit the master's application in Osiris Online Application.",
+    "Open the LEGITS item linked to the programme in Osiris.",
+    "Upload the personal statement, answer the questions and submit before 1 February 2027, 23:59 CET."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": "2026-11-01",
+    "cloture": "2027-01-31",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.uu.nl/en/masters/general-information/application-and-admission/scholarships-and-grants/law-economics-and-governance-international-talent-scholarship"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -14947,7 +15872,7 @@
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
@@ -14955,39 +15880,111 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "octobre"
+   "ouverture_mois": "avril",
+   "cloture_mois": "mai"
   },
   "edition": {
-   "cloture": "2025-10-01",
+   "libelle": "Rentrée de septembre 2027 (année non indiquée sur la page)",
+   "cloture": "2027-05-01",
    "confirme": false
   },
-  "lien_officiel": "https://www.hanuniversity.com/en/study-at-han/finance-your-studies/scholarships/",
+  "lien_officiel": "https://www.hanuniversity.com/en/study-and-living/scholarships/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.hanuniversity.com/en/study-at-han/finance-your-studies/scholarships/"
+    "titre": "HAN - Scholarships for international students",
+    "url": "https://www.hanuniversity.com/en/study-and-living/scholarships/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er octobre 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "HAN Scholarships for International Students — HAN University of Applied Sciences",
-   "resume": "HAN est l'une des plus grandes universités de sciences appliquées des Pays-Bas. Ses programmes sont orientés vers la pratique professionnelle, avec des stages intégrés et des projets avec des entreprises partenaires. Les bourses varient selon le programme et…",
+   "nom": "HAN NL Scholarship - HAN University of Applied Sciences",
+   "resume": "Bourse partielle de HAN pour les étudiants hors UE/EEE admis en licence ou master à temps plein enseigné en anglais. HAN invite les candidats admis à postuler, avec une lettre de motivation, une vidéo et un CV.",
    "resume_long": "HAN est l'une des plus grandes universités de sciences appliquées des Pays-Bas. Ses programmes sont orientés vers la pratique professionnelle, avec des stages intégrés et des projets avec des entreprises partenaires. Les bourses varient selon le programme et le profil du candidat.",
-   "valeur": "Variable — HAN Holland Scholarship et autres programmes",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 1er octobre 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Licence : jusqu'à 12 500 EUR (2 500 EUR par semestre la 1re année, puis 2 500 EUR/an) ; master : jusqu'à 5 000 EUR (2 500 EUR par semestre)",
+   "eligibilite": "Nationalité hors UE/EEE (Suriname exclu) ; payer les frais de scolarité institutionnels ; aucun diplôme ni inscription antérieurs dans un établissement supérieur néerlandais ; admission dans un programme HAN à temps plein enseigné en anglais ; pas de double nationalité UE/EEE.",
+   "edition_note": "La page donne les dates sans année : 1er mai (rentrée de septembre) et 19 octobre (rentrée de février), résultats 1er juin et 3 novembre. L'année 2027 est une déduction, à confirmer avec HAN.",
+   "couverture_detail": "Licence : 2 500 EUR par semestre en 1re année, puis 2 500 EUR par an pendant 3 ans si 45 crédits sont obtenus chaque année (maximum 12 500 EUR). Master : 2 500 EUR par semestre (maximum 5 000 EUR). Bourse d'excellence (Honors) : 7 500 EUR en licence, 2 500 EUR en master, sans candidature, sélection par le programme.",
+   "ne_couvre_pas": "Ne finance pas l'ensemble des coûts : HAN estime le besoin à environ 25 000 EUR par année universitaire, frais de scolarité compris. Versement sur un compte bancaire néerlandais.",
+   "diplome": "Condition d'admission du programme HAN choisi.",
+   "langue": "Anglais : IELTS 6,5 minimum, TOEFL iBT 90 (score ancien) ou Cambridge CAE/CPE.",
+   "conseil": "Candidatez à l'admission tôt, car l'invitation à la bourse n'arrive qu'après acceptation. Prévoyez un financement complémentaire : la bourse couvre une petite part du coût total.",
+   "autres": [
+    "Le Cameroun n'est pas cité nommément ; il est couvert par « nationalité hors UE/EEE ».",
+    "Les bourses HAN ne se cumulent pas entre elles mais se cumulent avec une bourse extérieure.",
+    "Plus de candidats que de bourses : l'éligibilité ne garantit pas l'attribution.",
+    "Les dates sont données sans année sur la page ; vérifier l'année auprès de HAN."
+   ],
+   "dossier": [
+    "Lettre de motivation",
+    "Vidéo de 3 minutes maximum",
+    "CV",
+    "Dernier relevé de notes",
+    "Preuve du niveau d'anglais (IELTS, TOEFL ou Cambridge)"
+   ],
+   "etapes": [
+    "Candidater au programme HAN et être accepté ; HAN envoie par e-mail une invitation à postuler (le 1er avril pour septembre, le 1er octobre pour février).",
+    "Préparer les documents et soumettre via le lien de l'invitation avant le 1er mai 12h00 CEST (rentrée de septembre) ou le 19 octobre 12h00 CEST (février).",
+    "Résultat avant le 1er juin (septembre) ou le 3 novembre (février) ; accepter par écrit à la date indiquée."
+   ]
   },
   "en": {
-   "nom": "HAN Scholarships for International Students — HAN University of Applied Sciences"
+   "nom": "HAN NL Scholarship - HAN University of Applied Sciences",
+   "resume": "Partial HAN scholarship for non-EU/EEA students admitted to a full-time English-taught bachelor's or master's. HAN invites admitted candidates to apply with a motivation letter, video and CV.",
+   "valeur": "Bachelor: up to EUR 12,500 (EUR 2,500 per semester in year 1, then EUR 2,500/year); master: up to EUR 5,000 (EUR 2,500 per semester)",
+   "couverture_detail": "Bachelor: EUR 2,500 per semester in year 1, then EUR 2,500 per year for 3 years if 45 credits are earned each year (maximum EUR 12,500). Master: EUR 2,500 per semester (maximum EUR 5,000). Honors Scholarship: EUR 7,500 (bachelor), EUR 2,500 (master), no application, selected by the programme.",
+   "ne_couvre_pas": "Not full funding: HAN estimates about EUR 25,000 per academic year including tuition. Paid to a Dutch bank account.",
+   "eligibilite": "Non-EU/EEA nationality (Suriname excluded); pay the institutional tuition fee; no previous Dutch degree or enrolment at a Dutch higher-education institution; accepted into a full-time English-taught HAN programme; no dual EU/EEA nationality.",
+   "diplome": "Admission requirements of the chosen HAN programme.",
+   "langue": "English: IELTS 6.5+, TOEFL iBT 90 (old score) or Cambridge CAE/CPE.",
+   "conseil": "Apply for admission early, as the scholarship invitation only comes after acceptance. Plan extra funding: the scholarship covers a small part of total costs.",
+   "edition_note": "The page gives dates without a year: 1 May (September start) and 19 October (February start), results 1 June and 3 November. The year 2027 is inferred; confirm with HAN.",
+   "autres": [
+    "Cameroon is not named; it is covered by \"nationality outside the EU/EEA\".",
+    "HAN scholarships cannot be combined with each other but can be combined with an outside scholarship.",
+    "More applicants than scholarships: meeting the criteria does not guarantee an award.",
+    "The page gives dates without years; check the year with HAN."
+   ],
+   "dossier": [
+    "Motivation letter",
+    "Video of up to 3 minutes",
+    "CV",
+    "Most recent transcript",
+    "Proof of English level (IELTS, TOEFL or Cambridge)"
+   ],
+   "etapes": [
+    "Apply to the HAN programme and get accepted; HAN e-mails an invitation to apply (1 April for September, 1 October for February).",
+    "Prepare documents and submit via the invitation link by 1 May 12:00 CEST (September start) or 19 October 12:00 CEST (February start).",
+    "Result before 1 June (September) or 3 November (February); accept in writing by the stated date."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Rentrée de septembre 2027 (année non indiquée sur la page)",
+    "ouverture": null,
+    "cloture": "2027-05-01",
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.hanuniversity.com/en/study-and-living/scholarships/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -15036,6 +16033,10 @@
   },
   "en": {
    "nom": "IIAS Asia in the World Fellowship — Netherlands (Fully Funded)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Conditions officielles (PDF 2026) lues : aucune mention de nationalité (Cameroun non précisé), aucune date limite lisible ; page web du programme bloquée (403). Réservé aux titulaires d'un doctorat (cat. A, financée : 1 250 EUR/mois, 1 200 EUR de logement, aide au voyage)."
   }
  },
  {
@@ -15077,15 +16078,19 @@
   },
   "en": {
    "nom": "NL Zuyd Excellence Scholarship (NL-ZES) — Zuyd University of Applied Sciences"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site zuyd.nl inaccessible (403 sur toutes les pages, WebFetch et curl) : aucune page officielle lue."
   }
  },
  {
   "id": "nl-scholarship-for-international-students-university-of-groningen",
-  "organisme": "University of Groningen",
+  "organisme": "University of Groningen (cofinancée par le ministère néerlandais de l'Éducation)",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -15096,35 +16101,108 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": null,
    "cloture_mois": "fevrier"
   },
   "edition": {
-   "cloture": "2026-02-01",
-   "confirme": false
+   "libelle": "2027/28",
+   "cloture": "2027-02-01",
+   "confirme": true
   },
-  "lien_officiel": "https://www.rug.nl/education/scholarships/",
+  "lien_officiel": "https://www.rug.nl/education/master/international-students/financial-matters/holland-scholarship/?lang=en",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.rug.nl/education/scholarships/"
+    "titre": "University of Groningen - NL Scholarship",
+    "url": "https://www.rug.nl/education/master/international-students/financial-matters/holland-scholarship/?lang=en"
+   },
+   {
+    "titre": "University of Groningen - NL Scholarship (selection criteria)",
+    "url": "https://www.rug.nl/education/scholarships/nl-scholarship?lang=en"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er février 2026 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "NL Scholarship for International Students — University of Groningen",
-   "resume": "L'University of Groningen est l'une des universités les plus anciennes et les plus respectées des Pays-Bas, fondée en 1614. Elle est classée dans le top 100 mondial et est reconnue pour ses programmes en sciences, en ingénierie, en droit et en arts. Groningen…",
+   "nom": "NL Scholarship - University of Groningen",
+   "resume": "Bourse unique de 5 000 EUR de l'Université de Groningen (cofinancée par l'État néerlandais) pour des étudiants hors EEE admis en master. Elle contribue aux frais de vie de la première année et ne couvre pas les frais de scolarité.",
    "resume_long": "L'University of Groningen est l'une des universités les plus anciennes et les plus respectées des Pays-Bas, fondée en 1614. Elle est classée dans le top 100 mondial et est reconnue pour ses programmes en sciences, en ingénierie, en droit et en arts. Groningen est la « ville étudiante » par excellence des Pays-Bas — un quart de sa population est étudiant, ce qui crée une atmosphère unique et dynamique.",
-   "valeur": "€5 000",
-   "eligibilite": "Étudiants internationaux hors UE/EEE",
-   "edition_note": "Date limite indiquée dans le guide : 1er février 2026 (vérifier pour l'édition suivante)"
+   "valeur": "5 000 EUR, versés en plusieurs fois après l'arrivée aux Pays-Bas (première année)",
+   "eligibilite": "Ne pas avoir la nationalité d'un pays de l'EEE (Suisse et Suriname exclus) et ne pas relever du tarif UE/EEE ; licence obtenue hors des Pays-Bas ; excellents résultats en licence ; lettre d'admission de l'Université de Groningen pour un master éligible ; éligibilité au visa étudiant néerlandais ; ne pas avoir déjà reçu la NL Scholarship. Le Cameroun, hors EEE, est concerné.",
+   "edition_note": "Date limite pour 2027/28 : 1er février 2027 (23h59 CET), lue sur la page officielle.",
+   "couverture_detail": "Contribution de 5 000 EUR aux frais de vie la première année ; attribuée une seule fois dans la vie, pour une année.",
+   "ne_couvre_pas": "Frais de scolarité et coût complet de la vie aux Pays-Bas.",
+   "diplome": "Licence (bachelor) obtenue hors des Pays-Bas, avec d'excellents résultats",
+   "langue": "Selon le master choisi (anglais le plus souvent) ; critères du programme.",
+   "conseil": "Déposez votre candidature au master tôt : la bourse n'est demandée qu'après l'admission, et un dossier incomplet est écarté. Prévoyez un budget complémentaire, car 5 000 EUR ne couvrent ni les frais de scolarité ni la vie sur place.",
+   "autres": [
+    "Il faut d'abord recevoir une offre d'admission (même conditionnelle) avant de candidater à la bourse.",
+    "Résultats annoncés vers le 15 mars.",
+    "Seuls les masters de la liste officielle sont concernés."
+   ],
+   "dossier": [
+    "Formulaire de candidature en ligne",
+    "Lettre de motivation (objectifs académiques et intérêt d'étudier aux Pays-Bas)",
+    "Relevé de notes de tous les cours de licence à ce jour",
+    "Lettre d'admission (éventuellement conditionnelle) à un master éligible"
+   ],
+   "etapes": [
+    "Postuler à un master éligible de l'Université de Groningen et obtenir une lettre d'admission",
+    "Remplir le formulaire NL Scholarship et téléverser les trois documents avant le 1er février 2027 (23h59 CET)",
+    "Attendre les résultats (vers le 15 mars)"
+   ]
   },
   "en": {
-   "nom": "NL Scholarship for International Students — University of Groningen"
+   "nom": "NL Scholarship - University of Groningen",
+   "resume": "One-time EUR 5,000 grant from the University of Groningen (co-funded by the Dutch government) for non-EEA students admitted to a master's. It contributes to first-year living costs and does not cover tuition.",
+   "valeur": "EUR 5,000, paid in instalments after arrival in the Netherlands (first year)",
+   "couverture_detail": "EUR 5,000 contribution to living costs in the first year; awarded once in a lifetime, for one year.",
+   "ne_couvre_pas": "Tuition fees and the full cost of living in the Netherlands.",
+   "eligibilite": "Not hold the nationality of an EEA country (Switzerland and Suriname excluded) nor qualify for the EU/EEA fee; bachelor's obtained outside the Netherlands; excellent bachelor's results; admission offer from the University of Groningen to an eligible master's; eligible for a Dutch student visa; no previous NL Scholarship. Cameroon, outside the EEA, is covered.",
+   "diplome": "Bachelor's degree obtained outside the Netherlands, with excellent results",
+   "langue": "Depends on the chosen master's (mostly English); programme criteria apply.",
+   "conseil": "Apply to the master's early: the scholarship is requested only after admission and incomplete applications are rejected. Plan extra funding, as EUR 5,000 covers neither tuition nor full living costs.",
+   "edition_note": "Deadline for 2027/28: 1 February 2027 (23:59 CET), read on the official page.",
+   "autres": [
+    "You must first receive an admission offer (conditional is accepted) before applying for the scholarship.",
+    "Results announced around 15 March.",
+    "Only master's programmes on the official list qualify."
+   ],
+   "dossier": [
+    "Online application form",
+    "Motivation letter (academic goals and why study in the Netherlands)",
+    "Transcript of records of all undergraduate courses so far",
+    "(Conditional) admission letter to an eligible master's"
+   ],
+   "etapes": [
+    "Apply to an eligible University of Groningen master's and obtain an admission letter",
+    "Complete the NL Scholarship form and upload the three documents by 1 February 2027 (23:59 CET)",
+    "Wait for results (around 15 March)"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2027-02-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.rug.nl/education/master/international-students/financial-matters/holland-scholarship/?lang=en",
+    "https://www.rug.nl/education/scholarships/nl-scholarship?lang=en"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -15133,46 +16211,129 @@
   "pays_accueil": [
    "France"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": null,
    "cloture_mois": "mars"
   },
   "edition": {
+   "libelle": "2026/27",
    "cloture": "2026-03-31",
-   "confirme": false
+   "confirme": true
   },
-  "lien_officiel": "https://www.universite-paris-saclay.fr/en/admission/scholarships-and-financial-aid/international-masters-scholarship-programme",
+  "lien_officiel": "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/international-masters-scholarships-program",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.universite-paris-saclay.fr/en/admission/scholarships-and-financial-aid/international-masters-scholarship-programme"
+    "titre": "Université Paris-Saclay - International Master's Scholarships Program",
+    "url": "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/international-masters-scholarships-program"
+   },
+   {
+    "titre": "Règlement du programme 2026-2027 (PDF)",
+    "url": "https://www.universite-paris-saclay.fr/sites/default/files/2026-01/regulations_of_the_international_masters_scholarship_program_universite_paris-saclay.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 mars 2026"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Masters Scholarship Program — Université Paris-Saclay",
-   "resume": "Paris-Saclay est classée parmi les 15 meilleures universités au monde en mathématiques et en physique. Son programme de bourses internationales pour les Masters couvre une partie significative des frais de vie. Le campus de Saclay, au sud de Paris, rassemble…",
+   "nom": "International Master's Scholarships Program - Université Paris-Saclay",
+   "resume": "Bourse de mérite de 10 000 EUR par an pour des étudiants de nationalité étrangère admis dans un master de l'Université Paris-Saclay (M1 ou M2). Le M1 est renouvelé automatiquement en M2 si les crédits sont validés.",
    "resume_long": "Paris-Saclay est classée parmi les 15 meilleures universités au monde en mathématiques et en physique. Son programme de bourses internationales pour les Masters couvre une partie significative des frais de vie. Le campus de Saclay, au sud de Paris, rassemble certaines des meilleures grandes écoles françaises (Polytechnique, CentraleSupélec, ENS Paris-Saclay) et des laboratoires de recherche de pointe.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 mars 2026"
+   "valeur": "10 000 EUR par an (versés de septembre à juin) + forfait voyage/visa jusqu'à 900 EUR par an",
+   "eligibilite": "Nationalité étrangère (le Cameroun est donc concerné) ; admission dans un master éligible ; première inscription dans l'enseignement supérieur français ; moins de 30 ans l'année de candidature ; pas d'autre financement supérieur à 600 EUR/mois ; non cumulable avec Eiffel, Europa ou Erasmus Mundus.",
+   "edition_note": "Session 2026/27 : sélection par les responsables de master au 25 mars 2026, dépôt de la bourse au 31 mars 2026, résultats mi-mai. Dates 2027 non annoncées sur la page officielle.",
+   "couverture_detail": "Allocation mensuelle de 10 000 EUR par an, forfait annuel jusqu'à 900 EUR pour voyage et visa (selon le pays d'origine), aide aux démarches et à la recherche de logement. Versements après l'arrivée en France et l'inscription.",
+   "ne_couvre_pas": "Frais d'inscription et de scolarité ; logement non garanti.",
+   "diplome": "Diplôme donnant accès au M1 ou M2 choisi (admission au master requise)",
+   "langue": "Selon le master choisi (anglais ou français).",
+   "conseil": "La sélection passe d'abord par le responsable du master : déposez votre candidature au master très tôt, bien avant la date limite de bourse. Gardez un plan de financement pour les frais d'inscription.",
+   "autres": [
+    "Tous les masters sont éligibles sauf ceux en apprentissage.",
+    "La bourse est de 2 ans pour un M1 si les crédits sont validés, 1 an pour un M2.",
+    "Les dates de la session 2027 ne sont pas encore publiées sur la page officielle."
+   ],
+   "dossier": [
+    "Candidature et admission à un master de Paris-Saclay avant la date limite du programme",
+    "Formulaire de candidature en ligne à la bourse (lien envoyé par email aux candidats sélectionnés)",
+    "Lettre de motivation / projet personnel (projet doctoral pour les M2)",
+    "Deux référents pour les recommandations (le cas échéant)"
+   ],
+   "etapes": [
+    "Candidater à un master éligible de Paris-Saclay avant la date limite du programme de bourse",
+    "Être sélectionné par les responsables de master (email avec lien du formulaire)",
+    "Remplir le formulaire de bourse et faire envoyer les recommandations avant la date limite",
+    "Décision du jury (résultats mi-mai pour la session 2026)"
+   ]
   },
   "en": {
-   "nom": "International Masters Scholarship Program — Université Paris-Saclay"
+   "nom": "International Master's Scholarships Program - Université Paris-Saclay",
+   "resume": "Merit scholarship of EUR 10,000 per year for foreign-national students admitted to a Paris-Saclay master's (M1 or M2). An M1 award renews automatically for M2 if credits are completed.",
+   "valeur": "EUR 10,000 per year (paid September to June) + travel/visa flat fee up to EUR 900 per year",
+   "couverture_detail": "Living grant of EUR 10,000 per year, yearly flat fee up to EUR 900 for travel and visa (depends on country of origin), help with administrative steps and housing search. Paid only after arrival in France and registration.",
+   "ne_couvre_pas": "Registration and tuition fees; housing is not guaranteed.",
+   "eligibilite": "Foreign nationality (so Cameroon is covered); admission to an eligible master's; first-time enrolment in French higher education; under 30 during the year of application; no other funding above EUR 600/month; cannot be combined with Eiffel, Europa or Erasmus Mundus.",
+   "diplome": "Degree giving access to the chosen M1 or M2 (master's admission required)",
+   "langue": "Depends on the chosen master's (English or French).",
+   "conseil": "Selection starts with the course coordinator: apply to the master's very early, well before the scholarship deadline. Keep a funding plan for registration fees.",
+   "edition_note": "2026/27 session: selection by course coordinators on 25 March 2026, scholarship deadline 31 March 2026, results mid-May. 2027 dates not announced on the official page.",
+   "autres": [
+    "All master's programmes are eligible except apprenticeship tracks.",
+    "Two years for an M1 laureate who completes credits, one year for an M2.",
+    "2027 session dates are not yet published on the official page."
+   ],
+   "dossier": [
+    "Application and admission to a Paris-Saclay master's before the programme deadline",
+    "Online scholarship application form (link emailed to selected candidates)",
+    "Statement of purpose / personal project (PhD project for M2)",
+    "Two referees for recommendations (where applicable)"
+   ],
+   "etapes": [
+    "Apply to an eligible Paris-Saclay master's before the scholarship programme deadline",
+    "Be selected by the course coordinators (email with form link)",
+    "Complete the scholarship form and have recommendations sent before the deadline",
+    "Jury decision (results mid-May for the 2026 session)"
+   ]
+  },
+  "age_max": 29,
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2026/27",
+    "ouverture": null,
+    "cloture": "2026-03-31",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/international-masters-scholarships-program",
+    "https://www.universite-paris-saclay.fr/sites/default/files/2026-01/regulations_of_the_international_masters_scholarship_program_universite_paris-saclay.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -15219,6 +16380,10 @@
   },
   "en": {
    "nom": "The Erasmus Programme in Europe — University of Rennes"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site univ-rennes.fr inaccessible (403). Erasmus+ à Rennes est une mobilité sur nomination par l'université d'origine partenaire : un élève au Cameroun ne peut pas candidater directement ; Cameroun non précisé."
   }
  },
  {
@@ -15269,6 +16434,10 @@
   },
   "en": {
    "nom": "AID Mobility Top-Up Scheme — University of Bordeaux"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Programme introuvable sous ce nom sur le site officiel (la page indiquée est en erreur 404 ; aucune page officielle lue ne mentionne « AID Mobility »). Les aides pour étrangers à Bordeaux passent par Eiffel et les Graduate Programs, non lues en détail."
   }
  },
  {
@@ -15313,6 +16482,10 @@
   },
   "en": {
    "nom": "Tiger Master Excellence Scholarships — Aix-Marseille University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue, mais nationalité non explicitée (« profils d'excellence du monde entier » ; l'exclusion des Français est seulement sur une page de faculté), pas de date limite générale (calendrier propre à chaque master) et pas de liste de documents commune : dossier = candidature au master choisi."
   }
  },
  {
@@ -15353,6 +16526,10 @@
   },
   "en": {
    "nom": "IDEX Master Scholarships — Université Grenoble Alpes (UGA)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "La page officielle lue décrit l'IdEx (étudiants d'universités hors de France, sélection sur potentiel académique) mais sans montants, dates ni dossier ; la page de l'appel 2026-2027 est derrière une authentification (redirection CAS)."
   }
  },
  {

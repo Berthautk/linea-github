@@ -10665,6 +10665,10 @@
   },
   "en": {
    "nom": "Bourses d'exonération de l'Université d'Ottawa (Francophones)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages uottawa.ca inaccessibles (HTTP 402) ; impossible de lire la page officielle. Seuls des résultats de recherche indiquent une exonération partielle automatique pour programmes en français ; nationalité non confirmée."
   }
  },
  {
@@ -10712,6 +10716,10 @@
   },
   "en": {
    "nom": "UBC International Scholars (Vancouver)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue (programme 2027 : ouverture 5 oct 2026, date limite 15 nov 2026, licence uniquement, besoin financier requis) mais aucune mention de nationalité : Cameroun non confirmé. Le montant fixe 'jusqu'à 25 000 CAD' de la fiche n'est pas sur la page."
   }
  },
  {
@@ -10761,6 +10769,10 @@
   },
   "en": {
    "nom": "IMAE — International Master's Award of Excellence (Waterloo)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle IMAE introuvable (404) ; page de financement Waterloo lue : 2 500 CAD par trimestre, 5 trimestres maximum, master de recherche, nomination par les facultés, aucune nationalité précisée (Cameroun non confirmé). Informatique/maths/ingénierie et 'max 12 500 CAD' de la fiche non confirmés comme restriction."
   }
  },
  {
@@ -10805,6 +10817,10 @@
   },
   "en": {
    "nom": "Bourses d'excellence de l'ENAP (Québec)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue : bourse d'études (jusqu'à 4 500 CAD), bourse candidature remarquable (10 000 CAD, moyenne 3,7/4,3, jusqu'à 20 par an) pour la maîtrise en administration publique, sans demande ni date limite fixe ; aucune mention de nationalité (Cameroun non confirmé) et page datée automne 2025."
   }
  },
  {
@@ -10982,15 +10998,19 @@
   },
   "en": {
    "nom": "BCDI 2030 (EduCanada)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Le lien EduCanada ne mentionne pas le BCDI 2030 (page de bourses pour Canadiens). Programme géré par projets d'établissements canadiens avec cohortes partenaires (ex. Alberta/Campus Saint-Jean : réservé aux affiliés d'UM6P/USMS, Maroc) ; Cameroun non confirmé, pas de candidature individuelle ouverte lue."
   }
  },
  {
   "id": "killam-doctoral-scholarships-alberta",
-  "organisme": "Université de l'Alberta",
+  "organisme": "University of Alberta (Killam Trusts)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "doctorat"
   ],
@@ -11001,34 +11021,111 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "",
    "cloture_mois": "fevrier"
   },
-  "lien_officiel": "https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/killam-memorial.html",
+  "lien_officiel": "https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/killam-trust-scholarships.html",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/killam-memorial.html"
+    "titre": "University of Alberta - Killam Trust Scholarships",
+    "url": "https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/killam-trust-scholarships.html"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Février"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Killam Doctoral Scholarships (Alberta)",
-   "resume": "L'une des bourses doctorales les plus généreuses du Canada. L'Université de l'Alberta est dans le top 5 canadien pour la recherche (particulièrement forte en IA, ingénierie pétrolière, sciences de la santé et agriculture). Edmonton offre un coût de la vie…",
+   "nom": "Izaak Walton Killam Memorial Scholarship (doctorat, Université de l'Alberta)",
+   "resume": "Bourse doctorale de l'Université de l'Alberta accordée sur nomination du département, sans restriction de citoyenneté. Elle finance deux ans de doctorat à temps plein.",
    "resume_long": "L'une des bourses doctorales les plus généreuses du Canada. L'Université de l'Alberta est dans le top 5 canadien pour la recherche (particulièrement forte en IA, ingénierie pétrolière, sciences de la santé et agriculture). Edmonton offre un coût de la vie inférieur à Toronto ou Vancouver, ce qui rend le stipend de 45 000 CAD/an très confortable.",
-   "valeur": "45 000 CAD par an pendant 2-4 ans + supplément de recherche",
-   "couverture_detail": "Allocation de vie, frais de scolarité différentiels, fonds de recherche et de voyage",
-   "ne_couvre_pas": "Billet d'avion",
-   "eligibilite": "Étudiants canadiens et internationaux admis ou inscrits au PhD à l'Université de l'Alberta",
+   "valeur": "Jusqu'à 45 000 CAD par an pendant 2 ans, plus les frais différentiels internationaux",
+   "couverture_detail": "Allocation annuelle jusqu'à 45 000 CAD (2e année soumise à renouvellement) et frais différentiels pour étudiants internationaux ; certificat.",
+   "ne_couvre_pas": "Billet d'avion et autres frais non mentionnés sur la page.",
+   "eligibilite": "Inscrit à temps plein ou admissible au doctorat à l'Université de l'Alberta ; au moins 12 mois d'études supérieures complétés avant le début de la bourse ; au plus 48 mois de doctorat ; au moins 18 mois d'inscription restants ; excellence (environ 3,5 GPA) ; bourse obtenue une seule fois. Aucune restriction de citoyenneté, tous domaines.",
    "cout_candidature": "Gratuit (nomination par le département)",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Février"
+   "edition_note": "Date limite de nomination 2026 : 19 février 2026 (passée). Dates 2027 non encore publiées sur la page officielle consultée le 20 octobre 2026 ; le cycle est annuel avec décisions en mai-juin.",
+   "diplome": "Master ou équivalent avec au moins 12 mois d'études supérieures complétés ; première classe (environ 3,5 GPA).",
+   "langue": "Programme à l'Université de l'Alberta (anglais).",
+   "conseil": "Il faut déjà être admis ou inscrit au doctorat à l'Université de l'Alberta : contactez d'abord votre département bien avant février, car chaque département a sa date interne et un quota de nominations.",
+   "autres": [
+    "Sans candidature directe : le département nomme les candidats via le portail GSMS.",
+    "Si une bourse externe est obtenue, la bourse Killam peut devenir honorifique avec allocation réduite ou nulle."
+   ],
+   "dossier": [
+    "Formulaire de candidature Killam signé",
+    "Deux lettres de référence (directeur de thèse et référent académique extérieur) envoyées au département",
+    "Relevés de notes à jour de tous les cycles (copies officielles hors U of A, avec légende)"
+   ],
+   "etapes": [
+    "Contacter son département pour sa date limite interne et son quota",
+    "Remplir le formulaire de candidature signé",
+    "Faire déposer les deux lettres de référence au département",
+    "Fournir les relevés de notes",
+    "Le département soumet la nomination à la faculté des études supérieures via le portail GSMS"
+   ]
   },
   "en": {
-   "nom": "Killam Doctoral Scholarships (Alberta)"
+   "nom": "Izaak Walton Killam Memorial Scholarship (doctoral, University of Alberta)",
+   "resume": "Doctoral scholarship of the University of Alberta awarded on departmental nomination, with no citizenship restriction. It funds two years of full-time doctoral study.",
+   "valeur": "Up to CAD 45,000 per year for 2 years, plus the international differential fee",
+   "couverture_detail": "Annual award up to CAD 45,000 (second year subject to renewal) and international graduate differential fees; certificate.",
+   "ne_couvre_pas": "Airfare and other costs not mentioned on the page.",
+   "eligibilite": "Full-time registered in or admissible to a doctoral program at the University of Alberta; at least 12 months of graduate work completed before the award start; no more than 48 months in the doctoral program; at least 18 months of registration remaining; first-class standing (about 3.5 GPA); can be held only once. No citizenship restriction, all fields.",
+   "diplome": "Master's or equivalent with at least 12 months of graduate work completed; first-class standing (about 3.5 GPA).",
+   "langue": "Program at the University of Alberta (English).",
+   "conseil": "You must already be admitted to or registered in a doctoral program at the University of Alberta: contact your department well before February, as each department sets its own internal deadline and nomination quota.",
+   "edition_note": "2026 nomination deadline: 19 February 2026 (passed). 2027 dates not yet posted on the official page read on 20 October 2026; the cycle is annual with decisions in May to June.",
+   "autres": [
+    "No direct application: the department nominates candidates through the GSMS portal.",
+    "If an external scholarship is won, the Killam award may become honourary with reduced or zero stipend."
+   ],
+   "dossier": [
+    "Signed Killam Application Form",
+    "Two letters of reference (supervisor and an academic referee outside the supervisory relationship) sent to the department",
+    "Up-to-date transcripts of all studies (official copies for non-U of A institutions, with legend)"
+   ],
+   "etapes": [
+    "Contact your department for its internal deadline and quota",
+    "Complete the signed application form",
+    "Have the two referees submit letters to the department",
+    "Provide transcripts",
+    "The department submits the nomination to the Faculty of Graduate and Postdoctoral Studies via the GSMS Awards Portal"
+   ]
+  },
+  "edition": {
+   "libelle": "2026/27",
+   "cloture": "2026-02-19",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2026/27",
+    "ouverture": null,
+    "cloture": "2026-02-19",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/killam-trust-scholarships.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -12228,28 +12325,24 @@
  },
  {
   "id": "daad-epos-development-related-postgraduate-courses",
-  "organisme": "DAAD (Deutscher Akademischer Austauschdienst — Service Allemand d'Échanges Académiques)",
+  "organisme": "DAAD (Service allemand d'échanges académiques)",
   "pays_accueil": [
    "Allemagne"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
   ],
   "domaines": [
-   "sante",
-   "ingenierie",
-   "agronomie-environnement",
-   "droit-politique",
-   "lettres-langues",
-   "economie-gestion"
+   "tous"
   ],
   "couverture_niveau": "partielle",
   "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "octobre"
+   "ouverture_mois": "variable selon le cursus",
+   "cloture_mois": "variable selon le cursus"
   },
   "edition": {
    "permanente": true,
@@ -12258,31 +12351,112 @@
   "lien_officiel": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50076777",
   "sources": [
    {
-    "titre": "Manuel des bourses",
+    "titre": "DAAD - EPOS (base de bourses)",
     "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50076777"
+   },
+   {
+    "titre": "DAAD - EPOS, liste des dates limites 2027/28 (06/2026)",
+    "url": "https://static.daad.de/media/daad_de/pdfs_nicht_barrierefrei/in-deutschland-studieren-forschen-lehren/daad_epos_deadlines.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Variable par programme — souvent entre août et octobre pour une rentrée en octobre de l'année suivante"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "DAAD EPOS (Development-Related Postgraduate Courses)",
-   "resume": "C'est la bourse « reine » pour les professionnels africains. Les programmes EPOS sont des Masters spécialement conçus pour les cadres des pays en développement — les cours sont en anglais, les étudiants viennent de 30+ pays, et le contenu est directement…",
+   "nom": "DAAD EPOS - Cursus postgradués liés au développement",
+   "resume": "Bourses DAAD pour des diplômés de pays en développement ayant au moins deux ans d'expérience professionnelle, pour un master (exceptionnellement un doctorat) dans un cursus EPOS listé en Allemagne. On candidate directement auprès du cursus, pas auprès du DAAD.",
    "resume_long": "C'est la bourse « reine » pour les professionnels africains. Les programmes EPOS sont des Masters spécialement conçus pour les cadres des pays en développement — les cours sont en anglais, les étudiants viennent de 30+ pays, et le contenu est directement applicable aux défis du terrain.",
-   "valeur": "992 €/mois (Master) — 1 300 €/mois (PhD)",
-   "couverture_detail": "Allocation mensuelle, assurance santé et accident, frais de voyage (aller-retour forfaitaire), allocation de recherche, cours d'allemand intensif de 2-6 mois avant le début du programme (payé par le DAAD)",
-   "ne_couvre_pas": "La contribution semestrielle de l'université (~300-450 €/semestre)",
-   "eligibilite": "Professionnels avec minimum 2 ans d'expérience dans un domaine lié au développement. Ressortissants de pays en développement (DAC List). Dernier diplôme obtenu depuis moins de 6 ans.",
+   "valeur": "992 EUR/mois (master), 1 300 EUR/mois (1 400 EUR dès février 2026) pour le doctorat, assurances et voyage",
+   "couverture_detail": "Allocation mensuelle, assurance santé, accident et responsabilité civile, forfait voyage (sauf prise en charge par le pays d'origine ou un autre financeur). Selon les cas : aide au loyer et allocation pour les membres de la famille accompagnants. Durée de 12 à 42 mois selon le cursus. Cursus en allemand : cours d'allemand préparatoire de 6 mois en Allemagne.",
+   "ne_couvre_pas": "Les candidatures à des cursus hors de la liste EPOS ; les éventuels frais exigés par l'université non précisés sur la page.",
+   "eligibilite": "Diplômés d'un pays de la liste DAAD (le Cameroun y figure) avec au moins 2 ans d'expérience professionnelle après la licence, de préférence employés dans le secteur public ou une entreprise liée au développement. Licence (en principe 4 ans) avec résultats dans le tiers supérieur ; diplôme en principe de moins de 6 ans ; motivation liée au développement. Non éligible : résidence en Allemagne de plus de 15 mois à la date limite.",
    "cout_candidature": "Gratuit",
-   "edition_note": "Date limite indiquée dans le guide : Variable par programme — souvent entre août et octobre pour une rentrée en octobre de l'année suivante"
+   "edition_note": "Dates limites de la rentrée 2027/28 : propres à chaque cursus, à consulter sur leur site (liste DAAD de juin 2026). Aucune date commune annoncée.",
+   "diplome": "Licence (normalement 4 ans) dans une discipline liée au cursus",
+   "langue": "Cursus en anglais : IELTS ou TOEFL (TOEFL institutionnel refusé) ; cursus en allemand : niveau B1 à la candidature, puis DSH 2 ou TestDaF 4 avant le début",
+   "conseil": "Vérifie la date limite sur le site de chaque cursus (elles diffèrent) et prépare tôt la lettre de l'employeur et les attestations d'emploi. Une candidature envoyée au DAAD n'est pas transmise aux cursus.",
+   "autres": [
+    "Jusqu'à 3 cursus peuvent être demandés, classés par priorité dans une seule lettre de motivation",
+    "Candidatures en anglais ou en allemand uniquement"
+   ],
+   "dossier": [
+    "Liste de contrôle signée et formulaire de candidature EPOS",
+    "CV Europass chronologique inverse sans trou inexpliqué",
+    "Lettre de motivation",
+    "Lettre de recommandation de l'employeur actuel (en-tête, signature, cachet, datée)",
+    "Attestation(s) d'emploi prouvant 2 ans d'expérience (si possible garantie de réemploi)",
+    "Preuve de langue (IELTS/TOEFL ; allemand si cursus en allemand)",
+    "Copies des diplômes (traduction certifiée si ni allemand ni anglais)",
+    "Relevés de notes complets avec explication du système de notation",
+    "Documents supplémentaires selon le cursus"
+   ],
+   "etapes": [
+    "Choisir un cursus dans la liste EPOS 2027/28",
+    "Envoyer le dossier complet directement au cursus avant sa date limite",
+    "Un comité du cursus propose des candidats au DAAD",
+    "Les candidats proposés sont contactés par le DAAD pour téléverser leur dossier sur le portail DAAD",
+    "Le DAAD finalise la sélection et informe les candidats"
+   ]
   },
   "en": {
-   "nom": "DAAD EPOS (Development-Related Postgraduate Courses)"
+   "nom": "DAAD EPOS - Development-Related Postgraduate Courses",
+   "resume": "DAAD scholarships for graduates from developing countries with at least two years of professional experience, for a Master's degree (exceptionally a doctorate) in a listed EPOS course in Germany. You apply directly to the course, not to DAAD.",
+   "valeur": "EUR 992/month (Master), EUR 1,300 (EUR 1,400 from February 2026) for doctorate, insurance and travel",
+   "couverture_detail": "Monthly payment, health, accident and personal liability insurance, travel allowance (unless covered by the home country or another funder). In some cases: rent subsidy and allowance for accompanying family. Duration 12 to 42 months depending on the course. German-taught courses: 6-month preparatory German course in Germany.",
+   "ne_couvre_pas": "Courses outside the EPOS list; any university fees are not specified on the page.",
+   "eligibilite": "Graduates from a country on the DAAD list (Cameroon is included) with at least 2 years of professional experience after the Bachelor's, ideally working in the public sector or a development-related company. Bachelor's (normally 4 years) in the upper third; degree normally less than 6 years old; development-related motivation. Not eligible: living in Germany for more than 15 months at the deadline.",
+   "diplome": "Bachelor's degree (normally 4 years) in a field related to the course",
+   "langue": "English-taught courses: IELTS or TOEFL (institutional TOEFL not accepted); German-taught courses: B1 at application, then DSH 2 or TestDaF 4 before start",
+   "conseil": "Check each course's own website for its deadline (they differ) and prepare the employer letter and employment certificates early. An application sent to DAAD is not forwarded to the courses.",
+   "edition_note": "Deadlines for the 2027/28 intake are set by each course; see their websites (DAAD list of June 2026). No common date announced.",
+   "autres": [
+    "Up to 3 courses may be applied for, ranked in a single motivation letter",
+    "Applications in English or German only"
+   ],
+   "dossier": [
+    "Signed checklist and EPOS application form",
+    "Europass CV in reverse chronological order without unexplained gaps",
+    "Letter of motivation",
+    "Recommendation letter from current employer (letterhead, signature, stamp, current date)",
+    "Certificate(s) of employment showing 2 years of experience (re-employment guarantee if possible)",
+    "Language proof (IELTS/TOEFL; German if the course is in German)",
+    "Copies of degree certificates (certified translation if not German or English)",
+    "Full transcripts with explanation of the grading system",
+    "Additional documents depending on the course"
+   ],
+   "etapes": [
+    "Choose a course from the 2027/28 EPOS list",
+    "Send the complete application directly to the course before its deadline",
+    "A course selection committee suggests candidates to DAAD",
+    "Suggested candidates are contacted by DAAD to upload their application to the DAAD portal",
+    "DAAD finalises the selection and informs candidates"
+   ]
   },
-  "vedette": true
+  "vedette": true,
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Rentrée 2027/28",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50076777",
+    "https://static.daad.de/media/daad_de/pdfs_nicht_barrierefrei/in-deutschland-studieren-forschen-lehren/daad_epos_deadlines.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
  },
  {
   "id": "friedrich-ebert-stiftung-fes",
@@ -12538,61 +12712,6 @@
   "en": {
    "nom": "TU Munich Global Scholarship"
   }
- },
- {
-  "id": "manaaki-new-zealand-scholarships",
-  "organisme": "Gouvernement de Nouvelle-Zélande — Ministry of Foreign Affairs and Trade (MFAT)",
-  "pays_accueil": [
-   "Nouvelle-Zélande"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "complete",
-  "origine": "gouvernementale",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "avril"
-  },
-  "edition": {
-   "cloture": "2026-03-31",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.nzscholarships.govt.nz/",
-  "sources": [
-   {
-    "titre": "Manuel des bourses",
-    "url": "https://www.nzscholarships.govt.nz/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Ouverture le 1er mars, clôture le 10 avril (fenêtre courte de ~40 jours !)"
-  },
-  "fr": {
-   "nom": "Manaaki New Zealand Scholarships",
-   "resume": "Le mot « Manaaki » signifie soutien, hospitalité et bienveillance en te reo Māori. C'est le programme phare de la coopération internationale néo-zélandaise, destiné à former les futurs leaders des pays en développement partenaires.",
-   "resume_long": "Le mot « Manaaki » signifie soutien, hospitalité et bienveillance en te reo Māori. C'est le programme phare de la coopération internationale néo-zélandaise, destiné à former les futurs leaders des pays en développement partenaires.",
-   "valeur": "Fully Funded (couverture intégrale — l'une des bourses les plus complètes au monde)",
-   "couverture_detail": "Scolarité 100 %, allocation de 615 NZD/semaine (~237 000 FCFA/semaine soit ~1 000 000 FCFA/mois), vol AR (classe économique), prime d'installation de 3 000 NZD (~1 155 000 FCFA) à l'arrivée, assurance santé complète, aide à la recherche (pour les Masters recherche et PhD), cours de préparation (orientation académique de 2-4 semaines avant le début des cours)",
-   "ne_couvre_pas": "Les dépenses pour les membres de la famille (sauf exceptions rares pour les programmes de PhD de longue durée — dans ce cas, un supplément familial peut être accordé)",
-   "eligibilite": "Citoyens de pays partenaires en Afrique (vérifiez la liste — elle évolue chaque année, mais inclut généralement le Cameroun, le Sénégal, la Côte d'Ivoire, la RDC, le Togo, le Bénin, le Mali, le Burkina Faso, la Guinée, Madagascar, et d'autres). Résidence dans le pays de citoyenneté. Pas de limite d'âge formelle, mais les profils avec expérience professionnelle sont fortement favorisés. Clause de retour : vous devez retourner dans votre pays d'origine après les études (pas de recherche d'emploi en NZ autorisée pour les boursiers Manaaki).",
-   "cout_candidature": "Gratuit",
-   "conseil": "Manaaki est une bourse qui accorde un poids énorme au :",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Ouverture le 1er mars, clôture le 10 avril (fenêtre courte de ~40 jours !)"
-  },
-  "en": {
-   "nom": "Manaaki New Zealand Scholarships"
-  },
-  "vedette": true
  },
  {
   "id": "university-of-otago-doctoral-scholarship",
@@ -14976,45 +15095,6 @@
   }
  },
  {
-  "id": "commonwealth-scholarships-rappel-perspective-multi-pays",
-  "organisme": "Commonwealth Scholarship Commission (CSC)",
-  "pays_accueil": [
-   "Royaume-Uni"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "autre"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "complete",
-  "origine": "gouvernementale",
-  "lien_officiel": "https://cscuk.fcdo.gov.uk/scholarships/",
-  "sources": [
-   {
-    "titre": "Manuel des bourses",
-    "url": "https://cscuk.fcdo.gov.uk/scholarships/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": null
-  },
-  "fr": {
-   "nom": "Commonwealth Scholarships (rappel — perspective multi-pays)",
-   "resume": "",
-   "valeur": "Fully Funded (UK) / Variable (autres pays)",
-   "eligibilite": "Citoyens des 54 pays du Commonwealth — pour l'Afrique francophone : 🇨🇲 Cameroun, 🇷🇼 Rwanda, 🇲🇿 Mozambique, et quelques autres"
-  },
-  "en": {
-   "nom": "Commonwealth Scholarships (rappel — perspective multi-pays)"
-  },
-  "vedette": true
- },
- {
   "id": "auckland-health-leadership-international-student-scholarship",
   "organisme": "University of Auckland",
   "pays_accueil": [
@@ -15117,7 +15197,11 @@
   "en": {
    "nom": "Bourses de l'Agence Universitaire de la Francophonie (AUF)"
   },
-  "vedette": true
+  "vedette": true,
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel auf.org inaccessible (403) ; aucun appel officiel lu. La fiche (700-1000 EUR/mois, étudiants d'universités membres) n'a pas pu être confirmée."
+  }
  },
  {
   "id": "bourses-de-l-universite-de-barcelone-ub-excellence",

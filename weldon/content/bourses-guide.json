@@ -10435,113 +10435,134 @@
   }
  },
  {
-  "id": "vanier-canada-graduate-scholarships-vanier-cgs",
-  "organisme": "Gouvernement du Canada (IRSC, CRSNG, CRSH)",
-  "pays_accueil": [
-   "Canada"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "doctorat"
-  ],
-  "domaines": [
-   "physique-chimie",
-   "sante",
-   "ingenierie"
-  ],
-  "couverture_niveau": "complete",
-  "origine": "gouvernementale",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "novembre"
-  },
-  "lien_officiel": "https://vanier.gc.ca/en/home-accueil.html",
-  "sources": [
-   {
-    "titre": "Manuel des bourses",
-    "url": "https://vanier.gc.ca/en/home-accueil.html"
-   }
-  ],
-  "last_verified": "2026-10-19",
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Clôture début novembre"
-  },
-  "fr": {
-   "nom": "Vanier Canada Graduate Scholarships (Vanier CGS)",
-   "resume": "C'est la bourse de doctorat la plus prestigieuse du Canada. Elle vise à attirer les meilleurs chercheurs mondiaux dans les universités canadiennes. Vous ne pouvez pas postuler directement — vous devez être nominé par une université canadienne qui dispose d'un…",
-   "resume_long": "C'est la bourse de doctorat la plus prestigieuse du Canada. Elle vise à attirer les meilleurs chercheurs mondiaux dans les universités canadiennes. Vous ne pouvez pas postuler directement — vous devez être nominé par une université canadienne qui dispose d'un quota annuel de nominations. La démarche : contactez le directeur de recherche de votre programme doctoral et demandez-lui de porter votre candidature Vanier. Les universités les plus actives dans les nominations Vanier sont Toronto, McGill, UBC, Alberta, McMaster et Ottawa.",
-   "valeur": "50 000 CAD par an (~23 000 000 FCFA) pendant 3 ans",
-   "couverture_detail": "Allocation de vie, frais de scolarité, recherche",
-   "ne_couvre_pas": "Les frais d'admission initiaux à l'université",
-   "eligibilite": "Étudiants canadiens et internationaux. Excellence académique, potentiel de recherche et leadership",
-   "cout_candidature": "Gratuit (mais demande de doctorat préalable payante selon l'université)",
-   "conseil": "Pour maximiser vos chances d'être nominé, envoyez un dossier exceptionnellement solide à votre directeur de recherche potentiel dès juin-juillet (la nomination interne se fait en septembre-octobre). Votre CV doit mettre en avant non seulement vos publications et votre projet de recherche, mais aussi votre leadership et votre engagement communautaire — les trois piliers Vanier.",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Clôture début novembre",
-   "alerte": "Selon le site officiel, ce programme n'accepte plus de candidatures et a été remplacé par la bourse Canada Graduate Scholarships (à vérifier sur vanier.gc.ca)."
-  },
-  "en": {
-   "nom": "Vanier Canada Graduate Scholarships (Vanier CGS)",
-   "alerte": "According to the official website, this programme no longer accepts applications and has been replaced by the Canada Graduate Scholarships (check vanier.gc.ca)."
-  },
-  "vedette": true
- },
- {
   "id": "bourse-de-la-fondation-pierre-elliott-trudeau",
   "organisme": "Fondation Pierre Elliott Trudeau",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "doctorat"
   ],
   "domaines": [
-   "agronomie-environnement",
-   "droit-politique"
+   "droit-politique",
+   "histoire-geographie",
+   "lettres-langues",
+   "philo-sociologie",
+   "communication",
+   "education",
+   "economie-gestion"
   ],
   "couverture_niveau": "complete",
   "origine": "fondation",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "decembre"
+   "ouverture_mois": "septembre",
+   "cloture_mois": "novembre"
   },
   "edition": {
+   "libelle": "2027/28",
+   "ouverture": "2026-09-01",
    "cloture": "2026-11-06",
-   "confirme": true,
-   "libelle": "2027",
-   "ouverture": "2026-09-01"
+   "confirme": true
   },
-  "lien_officiel": "https://www.trudeaufoundation.ca/become-a-scholar/",
+  "lien_officiel": "https://www.trudeaufoundation.ca/become-a-scholar",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://www.trudeaufoundation.ca/become-a-scholar/"
+    "titre": "Become a Scholar - Fondation Trudeau",
+    "url": "https://www.trudeaufoundation.ca/become-a-scholar"
+   },
+   {
+    "titre": "FAQ - Fondation Trudeau",
+    "url": "https://www.trudeaufoundation.ca/faq"
    }
   ],
-  "last_verified": "2026-10-19",
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Ouverture en automne, clôture en décembre"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Bourse de la Fondation Pierre Elliott Trudeau",
-   "resume": "Plus qu'un financement, c'est un programme de transformation personnelle. La Fondation Trudeau ne cherche pas des étudiants — elle cherche des penseurs engagés dont les travaux portent sur les droits humains, la citoyenneté, la gouvernance ou l'environnement.…",
+   "nom": "Bourses de doctorat de la Fondation Pierre Elliott Trudeau",
+   "resume": "Bourse de doctorat en sciences humaines et sociales pour des étudiants déjà inscrits en première ou deuxième année de doctorat dans une université canadienne. Les étudiants internationaux inscrits au Canada peuvent postuler.",
    "resume_long": "Plus qu'un financement, c'est un programme de transformation personnelle. La Fondation Trudeau ne cherche pas des étudiants — elle cherche des penseurs engagés dont les travaux portent sur les droits humains, la citoyenneté, la gouvernance ou l'environnement. Les lauréats participent à des retraites, des séminaires et un réseau d'alumni qui compte des ministres, des ambassadeurs et des directeurs d'ONG. C'est la bourse la plus prestigieuse au Canada pour les sciences humaines et sociales.",
-   "valeur": "Jusqu'à 60 000 CAD par an (40 000 CAD allocation + 20 000 CAD recherche/voyage) pendant 3 ans = 180 000 CAD total",
-   "couverture_detail": "Allocation de vie, frais de scolarité, indemnité de recherche, voyages, conférences, retraites de leadership",
-   "ne_couvre_pas": "Frais personnels hors budget approuvé",
-   "eligibilite": "Ouvert aux citoyens du monde entier. Engagement citoyen exceptionnel requis",
+   "valeur": "Jusqu'à 50 000 CAD par an de bourse (au moins 25 000 CAD garantis par boursier) + jusqu'à 20 000 CAD par an pour recherche, réseautage et voyages, pendant 3 ans",
+   "couverture_detail": "Allocation annuelle jusqu'à 50 000 CAD pendant 3 ans et allocation annuelle jusqu'à 20 000 CAD pendant 3 ans pour la recherche, le réseautage et les déplacements.",
+   "ne_couvre_pas": "Non précisé sur les pages officielles lues.",
+   "eligibilite": "Étudiants canadiens ou internationaux inscrits dans une université canadienne, en 1re ou 2e année de doctorat au moment de la candidature, dans un domaine des sciences humaines ou sociales lié à l'un des quatre thèmes (droits et dignité humaine, citoyenneté responsable, Canada et le monde, humains et environnement naturel). Les personnes vivant ou étudiant hors du Canada ne sont pas admissibles. Aucune restriction de nationalité n'est indiquée parmi les étudiants internationaux.",
    "cout_candidature": "Gratuit",
-   "edition_note": "Concours 2027 ouvert du 1 sept au 6 nov 2026 (17h ET); Cameroun/eligibilite internationale non verifiee."
+   "edition_note": "Concours 2027 : dossiers du 1er septembre au 6 novembre 2026 (17 h HE). Dates des concours suivants non annoncées.",
+   "diplome": "Être inscrit en première ou deuxième année d'un doctorat dans une université canadienne.",
+   "langue": "Dossier en français ou en anglais (une seule langue) ; entretien en français ou en anglais selon votre choix.",
+   "conseil": "La date de vérification d'admissibilité (2 octobre 2026) est déjà passée à la date de cette vérification : contactez la Fondation sans attendre pour savoir si une demande tardive est possible, sinon visez le concours suivant (dates non annoncées). Choisissez vos trois répondants tôt.",
+   "autres": [
+    "Il faut déjà être admis et inscrit dans un doctorat au Canada : on ne peut pas postuler depuis le Cameroun avant l'admission.",
+    "Le dossier ne peut pas être soumis sans les lettres de recommandation."
+   ],
+   "dossier": [
+    "Formulaire court de vérification d'admissibilité (avant le dossier complet)",
+    "Dossier de candidature complet en ligne",
+    "Trois lettres de recommandation : directeur de thèse, un autre répondant universitaire, un répondant hors du milieu universitaire",
+    "Relevés de notes universitaires"
+   ],
+   "etapes": [
+    "Demander la vérification d'admissibilité avant le 2 octobre 2026.",
+    "Une fois l'admissibilité confirmée, remplir le dossier complet en ligne.",
+    "Faire déposer les lettres de recommandation avant le 30 octobre 2026 à 9 h (HE).",
+    "Soumettre le dossier complet avant le 6 novembre 2026 à 17 h (HE)."
+   ]
   },
   "en": {
-   "nom": "Bourse de la Fondation Pierre Elliott Trudeau",
-   "edition_note": "Concours 2027 ouvert du 1 sept au 6 nov 2026 (17h ET); Cameroun/eligibilite internationale non verifiee."
+   "nom": "Pierre Elliott Trudeau Foundation Doctoral Scholarships",
+   "resume": "Doctoral scholarship in the humanities and social sciences for students already enrolled in the first or second year of a PhD at a Canadian university. International students enrolled in Canada may apply.",
+   "valeur": "Up to CAD 50,000 per year stipend (at least CAD 25,000 per Scholar) + up to CAD 20,000 per year for research, networking and travel, for 3 years",
+   "couverture_detail": "Annual stipend of up to CAD 50,000 for 3 years and an annual allowance of up to CAD 20,000 for 3 years for research, networking and travel.",
+   "ne_couvre_pas": "Not specified on the official pages read.",
+   "eligibilite": "Canadian or international students enrolled at a Canadian university, in the first or second year of a PhD at the time of application, in a humanities or social-science field linked to one of four themes (Human Rights and Dignity, Responsible Citizenship, Canada and the World, People and their Natural Environment). People living or studying outside Canada are not eligible. No nationality restriction is stated for international students.",
+   "diplome": "Be enrolled in the first or second year of a PhD at a Canadian university.",
+   "langue": "Application in English or French (one language only); interview in English or French as you prefer.",
+   "conseil": "The eligibility verification deadline (2 October 2026) had already passed on the date of this check: contact the Foundation right away to ask whether a late request is possible, otherwise aim for the next competition (dates not announced). Line up your three referees early.",
+   "edition_note": "2027 competition: applications from 1 September to 6 November 2026 (5 p.m. ET). Dates of later competitions not announced.",
+   "autres": [
+    "You must already be admitted and enrolled in a PhD in Canada: you cannot apply from Cameroon before admission.",
+    "The application cannot be submitted without the reference letters."
+   ],
+   "dossier": [
+    "Short eligibility verification form (before the full application)",
+    "Full online application",
+    "Three reference letters: PhD supervisor, another academic referee, and a non-academic referee",
+    "University transcripts"
+   ],
+   "etapes": [
+    "Request eligibility verification by 2 October 2026.",
+    "Once eligibility is confirmed, complete the full online application.",
+    "Have referees upload letters by 30 October 2026, 9 a.m. ET.",
+    "Submit the complete application by 6 November 2026, 5 p.m. ET."
+   ]
   },
-  "vedette": true
+  "vedette": true,
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2027/28",
+    "ouverture": "2026-09-01",
+    "cloture": "2026-11-06",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.trudeaufoundation.ca/become-a-scholar",
+    "https://www.trudeaufoundation.ca/faq"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
  },
  {
   "id": "lester-b-pearson-international-scholarships-toronto",
@@ -10596,7 +10617,11 @@
    "nom": "Lester B. Pearson International Scholarships (Toronto)",
    "edition_note": "Date limite de nomination par les ecoles le 9 oct 2026 (passee); candidature via nomination de l'ecole uniquement."
   },
-  "vedette": true
+  "vedette": true,
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Liste exacte des documents du dossier non publiée sur la page officielle (lien privé envoyé après nomination) ; reste de la fiche lue et confirmé."
+  }
  },
  {
   "id": "bourses-d-exoneration-de-l-universite-d-ottawa-francophones",
@@ -10784,60 +10809,134 @@
  },
  {
   "id": "pbeee-bourses-d-excellence-pour-etudiants-etrangers-quebec",
-  "organisme": "Fonds de Recherche du Québec (FRQ)",
+  "organisme": "Fonds de recherche du Québec - Nature et technologies (FRQ)",
   "pays_accueil": [
    "Canada"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat",
    "postdoc"
   ],
   "domaines": [
-   "sante",
-   "ingenierie",
-   "lettres-langues"
+   "tous"
   ],
   "couverture_niveau": "partielle",
   "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "decembre"
+   "ouverture_mois": "juillet",
+   "cloture_mois": "décembre"
   },
-  "lien_officiel": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiants-etrangers-pbeee-2026-2027/",
+  "lien_officiel": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiants-etrangers-pbeee-2026-2027/"
+    "titre": "PBEEE 2027-2028 - FRQ",
+    "url": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/"
+   },
+   {
+    "titre": "PBEEE 2026-2027 - FRQ",
+    "url": "https://frq.gouv.qc.ca/en/program/merit-scholarship-program-for-foreign-students-pbeee-2026-2027/"
    }
   ],
-  "last_verified": "2026-10-19",
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Présélection universitaire (été/automne), finale en décembre"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "PBEEE — Bourses d'excellence pour étudiants étrangers (Québec)",
-   "resume": "Un programme hautement compétitif et extrêmement généreux. La démarche : vous devez d'abord identifier un directeur de recherche dans une université québécoise qui acceptera de porter votre candidature. C'est lui qui vous propose au concours interne de…",
+   "nom": "Bourses d'excellence pour étudiants étrangers (PBEEE) - Québec",
+   "resume": "Bourses du FRQ pour des étudiants et chercheurs non canadiens, présélectionnés par une université québécoise (maîtrise de recherche, doctorat, postdoctorat, court séjour). Ouvert à toutes les nationalités non canadiennes, tous domaines de recherche.",
    "resume_long": "Un programme hautement compétitif et extrêmement généreux. La démarche : vous devez d'abord identifier un directeur de recherche dans une université québécoise qui acceptera de porter votre candidature. C'est lui qui vous propose au concours interne de l'université, et l'université transmet ensuite les dossiers sélectionnés au FRQ. Le contact direct avec un professeur est donc indispensable.",
-   "valeur": "25 000 CAD/an (Master) / 35 000 CAD/an (PhD) / 35 000 CAD (Post-doctorat, 1 an)",
-   "couverture_detail": "Allocation de vie, exemption des frais majorés, assurance santé",
-   "ne_couvre_pas": "Billet d'avion",
-   "eligibilite": "Étudiants non canadiens présélectionnés par une université québécoise. Vous ne postulez pas directement au FRQ — c'est votre université qui vous nomine.",
+   "valeur": "Maîtrise 20 000 CAD/an (max 40 000) ; doctorat 25 000 CAD/an (max 100 000) ; postdoc 35 000 CAD pour 12 mois ; court séjour 3 000 CAD/mois (max 4 mois)",
+   "couverture_detail": "Allocation de bourse selon le volet ; exemption des droits de scolarité majorés pour étudiants étrangers et couverture RAMQ selon la page 2026-2027 du programme.",
+   "ne_couvre_pas": "Pas de cumul avec des bourses d'organismes gouvernementaux canadiens ou québécois ; maîtrise professionnelle non admissible ; cotutelle non admissible.",
+   "eligibilite": "Ne pas être citoyen canadien ni résident permanent (ni demandeur de la résidence permanente). Pas de quota par pays dans le volet général. Maîtrise : thèse/mémoire de recherche, inscrit depuis 3 sessions à temps plein au plus avant le 1er mai 2027. Postdoc : doctorat obtenu depuis 2 ans au plus, dans un autre établissement que celui du doctorat.",
    "cout_candidature": "Gratuit",
-   "edition_note": "Edition 2026-27 close (depot FRQ le 2 dec 2025); presélection par une universite quebecoise requise; pas de quota par pays; edition 2027-28 non publiee."
+   "edition_note": "Concours 2027-2028 : présélection 27 octobre 2026, dépôt FRQ 2 décembre 2026, résultats avril 2027. Édition suivante non annoncée. Le montant doctorat/maîtrise vient de la page 2027-2028 ; couverture RAMQ/droits de scolarité de la page 2026-2027.",
+   "diplome": "Maîtrise : licence ; doctorat : maîtrise (ou voie directe selon l'université) ; postdoc : doctorat.",
+   "langue": "Documents en français ou en anglais (traduction simple en français sinon).",
+   "conseil": "La présélection universitaire (27 octobre 2026) est dans une semaine à la date de cette vérification : il faut déjà être en contact avec un superviseur et l'université. Sinon, préparez le concours suivant (dates non annoncées).",
+   "autres": [
+    "On ne postule pas directement au FRQ : il faut d'abord être présélectionné par une université québécoise (ou un CCTT).",
+    "Présence physique au Québec pendant toute la durée de la bourse."
+   ],
+   "dossier": [
+    "Page d'identification d'un passeport valide (ou autre preuve de citoyenneté)",
+    "Relevés de notes de toutes les études universitaires, du plus récent au plus ancien",
+    "Selon le volet : attestation du registraire (maîtrise, doctorat)",
+    "Postdoc : diplôme de doctorat ou attestation de dépôt de thèse",
+    "Postdoc et court séjour : lettre d'acceptation du superviseur, soumise par le superviseur lui-même",
+    "Attestations d'acceptation ou de soumission des articles, le cas échéant"
+   ],
+   "etapes": [
+    "Contacter le bureau de recherche/études supérieures d'une université québécoise et obtenir sa présélection (échéance 27 octobre 2026, 16 h).",
+    "Créer un compte FRQnet.",
+    "Remplir le formulaire électronique sur invitation du FRQ et joindre les pièces.",
+    "Soumettre avant le 2 décembre 2026 à 16 h (HNE).",
+    "Résultats en avril 2027 ; répondre à l'offre dans les 30 jours."
+   ]
   },
   "en": {
-   "nom": "PBEEE — Bourses d'excellence pour étudiants étrangers (Québec)",
-   "edition_note": "Edition 2026-27 close (depot FRQ le 2 dec 2025); presélection par une universite quebecoise requise; pas de quota par pays; edition 2027-28 non publiee."
+   "nom": "Merit Scholarship Program for Foreign Students (PBEEE) - Quebec",
+   "resume": "FRQ scholarships for non-Canadian students and researchers preselected by a Quebec university (research master's, doctorate, postdoc, short stay). Open to all non-Canadian nationalities, all research fields.",
+   "valeur": "Master's CAD 20,000/yr (max 40,000); doctorate CAD 25,000/yr (max 100,000); postdoc CAD 35,000 for 12 months; short stay CAD 3,000/month (max 4 months)",
+   "couverture_detail": "Scholarship amount depending on component; exemption from higher foreign-student tuition and RAMQ health coverage per the 2026-2027 program page.",
+   "ne_couvre_pas": "No stacking with Canadian or Quebec government agency scholarships; professional master's not eligible; cotutelle not eligible.",
+   "eligibilite": "Not a Canadian citizen or permanent resident (nor applying for permanent residence). No country quota in the general stream. Master's: research thesis, enrolled at most 3 full-time terms before 1 May 2027. Postdoc: PhD obtained within 2 years, at an institution other than the PhD one.",
+   "diplome": "Master's: bachelor's degree; doctorate: master's (or direct route depending on the university); postdoc: doctorate.",
+   "langue": "Documents in French or English (simple French translation otherwise).",
+   "conseil": "University preselection (27 October 2026) is one week away on the date of this check: you need to be in touch with a supervisor and the university already. Otherwise prepare for the next competition (dates not announced).",
+   "edition_note": "2027-2028 competition: preselection 27 October 2026, FRQ deadline 2 December 2026, results April 2027. Next edition not announced. Master's/doctorate amounts come from the 2027-2028 page; RAMQ/tuition coverage from the 2026-2027 page.",
+   "autres": [
+    "You do not apply directly to FRQ: you must first be preselected by a Quebec university (or CCTT).",
+    "Physical presence in Quebec throughout the scholarship."
+   ],
+   "dossier": [
+    "Identification page of a valid passport (or other proof of citizenship)",
+    "Transcripts for all university studies, newest to oldest",
+    "Depending on component: registrar attestation (master's, doctorate)",
+    "Postdoc: doctoral diploma or proof of thesis submission",
+    "Postdoc and short stay: supervisor acceptance letter, submitted by the supervisor",
+    "Acceptance/submission notices for articles, if any"
+   ],
+   "etapes": [
+    "Contact the research/graduate office of a Quebec university and obtain preselection (deadline 27 October 2026, 4 p.m.).",
+    "Create an FRQnet account.",
+    "Complete the electronic form when invited by FRQ and attach documents.",
+    "Submit by 2 December 2026, 4 p.m. (EST).",
+    "Results in April 2027; answer the offer within 30 days."
+   ]
   },
   "vedette": true,
   "edition": {
-   "libelle": "2026/27",
-   "cloture": "2025-12-02",
+   "libelle": "2027/28",
+   "ouverture": "2026-07-01",
+   "cloture": "2026-12-02",
    "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2027/28",
+    "ouverture": "2026-07-01",
+    "cloture": "2026-12-02",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/",
+    "https://frq.gouv.qc.ca/en/program/merit-scholarship-program-for-foreign-students-pbeee-2026-2027/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -11030,62 +11129,11 @@
   "en": {
    "nom": "Programme Canadien de Bourses de la Francophonie (PCBF)"
   },
-  "vedette": true
- },
- {
-  "id": "australia-awards-scholarships-aas",
-  "organisme": "Gouvernement Australien — Department of Foreign Affairs and Trade (DFAT)",
-  "pays_accueil": [
-   "Australie"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "complete",
-  "origine": "gouvernementale",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "mai"
-  },
-  "edition": {
-   "cloture": "2026-04-30",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.dfat.gov.au/people-to-people/australia-awards/how-to-apply-for-an-australia-awards-scholarship",
-  "sources": [
-   {
-    "titre": "Manuel des bourses",
-    "url": "https://www.dfat.gov.au/people-to-people/australia-awards/how-to-apply-for-an-australia-awards-scholarship"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Ouverture le 1er février, clôture le 30 avril (ou 1er mai selon les années). La candidature se fait en ligne sur le portail OASIS."
-  },
-  "fr": {
-   "nom": "Australia Awards Scholarships (AAS)",
-   "resume": "C'est la bourse la plus complète et la plus généreuse pour l'Afrique — probablement la plus généreuse du monde toutes destinations confondues. Le stipend de ~3 500 AUD/mois est le plus élevé de toutes les grandes bourses gouvernementales (supérieur à…",
-   "resume_long": "C'est la bourse la plus complète et la plus généreuse pour l'Afrique — probablement la plus généreuse du monde toutes destinations confondues. Le stipend de ~3 500 AUD/mois est le plus élevé de toutes les grandes bourses gouvernementales (supérieur à Chevening, Fulbright ou DAAD). La prime d'installation de 5 000 AUD vous permet d'acheter vos meubles, votre literie et vos fournitures dès l'arrivée.",
-   "valeur": "Fully Funded (couverture intégrale — l'une des bourses les plus généreuses au monde)",
-   "couverture_detail": "Scolarité 100 %, vol aller-retour (classe économique), prime d'installation de 5 000 AUD (~2 000 000 FCFA) à l'arrivée, allocation de vie versée toutes les deux semaines (fortnightly stipend) d'environ 3 500 AUD/mois (~1 400 000 FCFA), assurance OSHC payée, frais académiques complémentaires (livres, matériel), aide supplémentaire pour les travaux de terrain ou de recherche",
-   "ne_couvre_pas": "Les frais de visa sont parfois avancés par l'étudiant avant remboursement. Les dépenses pour les membres de la famille (sauf exceptions rares pour les programmes de PhD de longue durée).",
-   "eligibilite": "Professionnels de 25 à 50 ans (l'âge minimum est indicatif — certains pays acceptent des candidats plus jeunes). Minimum 2 ans d'expérience professionnelle (5 ans recommandés). Résidents et citoyens de pays partenaires (la plupart des pays africains sont éligibles — vérifiez la liste sur le site). Clause de retour obligatoire : vous devez retourner dans votre pays d'origine pendant au moins 2 ans après la fin de vos études.",
-   "cout_candidature": "Gratuit",
-   "conseil": "Australia Awards est la bourse qui accorde le plus de poids au projet de retour. Votre lettre de motivation doit être un véritable plan d'affaires pour votre pays : problème identifié → compétences à acquérir → actions concrètes au retour → impact mesurable à 5 ans. Les candidats qui parlent en termes vagues (« je veux contribuer au développement ») sont systématiquement éliminés au profit de ceux qui ont un plan détaillé (« je créerai un centre de formation en télémédecine dans la province du Nord, en partenariat avec le Ministère de la Santé qui a déjà approuvé le principe »).",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Ouverture le 1er février, clôture le 30 avril (ou 1er mai selon les années). La candidature se fait en ligne sur le portail OASIS."
-  },
-  "en": {
-   "nom": "Australia Awards Scholarships (AAS)"
-  },
-  "vedette": true
+  "vedette": true,
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site du programme (boursesfrancophonie.ca, cbie.ca) inaccessible ou page introuvable (404) ; seule une page Affaires mondiales Canada datée de 2017 est lisible : pas de statut actuel, ni liste de pays, ni dates, ni documents. Cameroun non confirmé sur page officielle lue."
+  }
  },
  {
   "id": "university-of-melbourne-graduate-research-scholarship-mgrs",
@@ -11523,7 +11571,11 @@
   "en": {
    "nom": "Chevening Scholarships"
   },
-  "vedette": true
+  "vedette": true,
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Cameroun absent du sélecteur de pays de chevening.org ; la page pays Cameroun et la page d'éligibilité sont inaccessibles (404/403) ; une recherche web indique programme clos au Cameroun (visa étudiant UK suspendu depuis le 26 mars 2026). Non confirmé sur page officielle lue."
+  }
  },
  {
   "id": "think-big-scholarships-university-of-bristol",
@@ -11617,7 +11669,11 @@
   "en": {
    "nom": "Queen Elizabeth Commonwealth Scholarships (QECS)"
   },
-  "vedette": true
+  "vedette": true,
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site ACU (acu.ac.uk) bloqué (403) : aucune page officielle lue. Une recherche web suggère que les pays d'accueil sont des pays du Commonwealth à revenu faible/intermédiaire (donc pas le Royaume-Uni ni le Canada), contrairement à la fiche actuelle."
+  }
  },
  {
   "id": "university-of-glasgow-excellence-scholarships",

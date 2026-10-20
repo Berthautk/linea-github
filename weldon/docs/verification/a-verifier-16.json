@@ -1,0 +1,73 @@
+[
+ {
+  "id": "call-for-phd-studentships-foundation-for-science-and-technology-fct",
+  "nom": "Call for PhD Studentships — Foundation for Science and Technology (FCT)",
+  "organisme": "Fundação para a Ciência e a Tecnologia (FCT)",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.fct.pt/en/financiamento/programas-de-financiamento/bolsas/",
+  "cloture_connue": null
+ },
+ {
+  "id": "icfo-student-research-fellowships-program-spain-fully-funded",
+  "nom": "ICFO Student Research Fellowships Program — Spain (Fully Funded)",
+  "organisme": "ICFO — Institut de Ciències Fotòniques (Barcelone)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.icfo.eu/careers/fellowships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "eada-business-school-scholarships-for-excellence-spain",
+  "nom": "EADA Business School Scholarships for Excellence — Spain",
+  "organisme": "EADA Business School (Barcelone)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.eada.edu/en/financial-aid/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "the-maec-aecid-scholarship-royal-academy-of-spain-in-rome",
+  "nom": "The MAEC-AECID Scholarship — Royal Academy of Spain in Rome",
+  "organisme": "Ministère espagnol des Affaires étrangères (MAEC) / AECID",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.aecid.es/en/scholarships",
+  "cloture_connue": "2025-06-20"
+ },
+ {
+  "id": "padua-international-excellence-scholarship-italy-fully-funded",
+  "nom": "Padua International Excellence Scholarship — Italy (Fully Funded)",
+  "organisme": "Università degli Studi di Padova (University of Padua)",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.unipd.it/en/international-excellence-scholarship",
+  "cloture_connue": "2026-04-07"
+ }
+]

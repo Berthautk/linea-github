@@ -1,0 +1,347 @@
+[
+ {
+  "id": "excellence-scholarship-university-of-southampton",
+  "nom": "Excellence Scholarship — University of Southampton",
+  "organisme": "University of Southampton",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.southampton.ac.uk/uni-life/fees-funding/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-talent-awards-falmouth-university",
+  "nom": "International Talent Awards — Falmouth University",
+  "organisme": "Falmouth University (Cornouailles, Angleterre)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.falmouth.ac.uk/study/fees-funding/scholarships",
+  "cloture_connue": "2025-04-25"
+ },
+ {
+  "id": "international-ambassador-scholarship-university-of-west-london",
+  "nom": "International Ambassador Scholarship — University of West London",
+  "organisme": "University of West London",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.uwl.ac.uk/international/scholarships-and-funding",
+  "cloture_connue": "2025-07-31"
+ },
+ {
+  "id": "global-citizenship-scholarship-university-of-dundee",
+  "nom": "Global Citizenship Scholarship — University of Dundee",
+  "organisme": "University of Dundee (Écosse)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.dundee.ac.uk/scholarships/global-citizenship",
+  "cloture_connue": "2025-08-29"
+ },
+ {
+  "id": "global-sustainability-leaders-scholarship-university-of-reading",
+  "nom": "Global Sustainability Leaders Scholarship — University of Reading",
+  "organisme": "University of Reading",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.reading.ac.uk/ready-to-study/study/scholarships/international/",
+  "cloture_connue": "2025-09-03"
+ },
+ {
+  "id": "the-university-of-reading-excellence-scholarship",
+  "nom": "The University of Reading Excellence Scholarship",
+  "organisme": "University of Reading",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.reading.ac.uk/ready-to-study/study/scholarships/",
+  "cloture_connue": "2025-07-01"
+ },
+ {
+  "id": "aberdeen-global-scholarship-for-undergraduate-students-university-of-a",
+  "nom": "Aberdeen Global Scholarship for Undergraduate Students — University of Aberdeen",
+  "organisme": "University of Aberdeen (Écosse)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.abdn.ac.uk/study/international/scholarships-and-funding.php",
+  "cloture_connue": null
+ },
+ {
+  "id": "commonwealth-shared-scholarship-scheme-csss-king-s-college-london",
+  "nom": "Commonwealth Shared Scholarship Scheme (CSSS) — King's College London",
+  "organisme": "Commonwealth Scholarship Commission / King's College London",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.kcl.ac.uk/study/postgraduate-taught/fees-and-funding/postgraduate-taught-scholarships",
+  "cloture_connue": "2025-01-08"
+ },
+ {
+  "id": "commonwealth-shared-scholarship-royal-agricultural-university",
+  "nom": "Commonwealth Shared Scholarship — Royal Agricultural University",
+  "organisme": "Commonwealth Scholarship Commission / Royal Agricultural University",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.rau.ac.uk/study/fees-funding/scholarships/",
+  "cloture_connue": "2024-12-12"
+ },
+ {
+  "id": "international-scholarships-university-of-gloucestershire",
+  "nom": "International Scholarships — University of Gloucestershire",
+  "organisme": "University of Gloucestershire",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.glos.ac.uk/study/fees-and-finance/scholarships/international-scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "mba-scholarship-full-time-part-time-brunel-university-of-london",
+  "nom": "MBA Scholarship Full-Time/Part-Time — Brunel University of London",
+  "organisme": "Brunel University of London",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master",
+   "licence",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.brunel.ac.uk/business-school/mba/fees-and-funding",
+  "cloture_connue": "2024-11-15"
+ },
+ {
+  "id": "chevening-scholarship-additional-participating-universities",
+  "nom": "Chevening Scholarship — additional participating universities",
+  "organisme": null,
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": null,
+  "cloture_connue": null
+ },
+ {
+  "id": "harvard-lead-fellowship-fully-funded",
+  "nom": "Harvard LEAD Fellowship (Fully Funded)",
+  "organisme": "Harvard University — Center for Public Leadership",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://cpl.hks.harvard.edu/lead-fellowship",
+  "cloture_connue": "2025-11-30"
+ },
+ {
+  "id": "harvard-university-mba-scholarship",
+  "nom": "Harvard University MBA Scholarship",
+  "organisme": "Harvard Business School",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.hbs.edu/mba/financial-aid/",
+  "cloture_connue": "2027-05-31"
+ },
+ {
+  "id": "academy-scholars-program-harvard-university",
+  "nom": "Academy Scholars Program — Harvard University",
+  "organisme": "Harvard University — Weatherhead Center for International Affairs",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://wcfia.harvard.edu/academy-scholars",
+  "cloture_connue": "2025-09-19"
+ },
+ {
+  "id": "karsh-international-scholarship-program-duke-university",
+  "nom": "Karsh International Scholarship Program — Duke University",
+  "organisme": "Duke University",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://ousf.duke.edu/karsh-international-scholars/",
+  "cloture_connue": "2025-11-04"
+ },
+ {
+  "id": "thomas-j-watson-fellowship",
+  "nom": "Thomas J. Watson Fellowship",
+  "organisme": "Thomas J. Watson Foundation",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://watson.foundation/fellowships/tj",
+  "cloture_connue": "2026-09-15"
+ },
+ {
+  "id": "questbridge-national-college-match-55-top-colleges-fully-funded",
+  "nom": "QuestBridge National College Match — 55 Top Colleges (Fully Funded)",
+  "organisme": "QuestBridge",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.questbridge.org/",
+  "cloture_connue": "2025-09-30"
+ },
+ {
+  "id": "stamps-scholarship-university-of-miami",
+  "nom": "Stamps Scholarship — University of Miami",
+  "organisme": "University of Miami",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://stamps.miami.edu/",
+  "cloture_connue": "2025-11-01"
+ },
+ {
+  "id": "the-eaton-scholarship-beloit-college",
+  "nom": "The Eaton Scholarship — Beloit College",
+  "organisme": "Beloit College (Wisconsin)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.beloit.edu/admission/financial-aid/scholarships/",
+  "cloture_connue": "2025-11-01"
+ },
+ {
+  "id": "emory-university-scholar-programs-for-international-undergraduate-stud",
+  "nom": "Emory University Scholar Programs for International Undergraduate Students",
+  "organisme": "Emory University (Atlanta, Géorgie)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://apply.emory.edu/afford/scholarships-and-grants/scholar-programs.html",
+  "cloture_connue": "2025-11-15"
+ },
+ {
+  "id": "premier-scholarships-millsaps-college",
+  "nom": "Premier Scholarships — Millsaps College",
+  "organisme": "Millsaps College (Jackson, Mississippi)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.millsaps.edu/admission-aid/scholarships-and-financial-aid/",
+  "cloture_connue": "2025-12-12"
+ },
+ {
+  "id": "presidential-scholarship-clark-university",
+  "nom": "Presidential Scholarship — Clark University",
+  "organisme": "Clark University (Worcester, Massachusetts)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.clarku.edu/admission-aid/financial-aid/scholarships-and-grants/",
+  "cloture_connue": "2026-01-15"
+ },
+ {
+  "id": "global-scholar-award-marquette-university",
+  "nom": "Global Scholar Award — Marquette University",
+  "organisme": "Marquette University (Milwaukee, Wisconsin)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.marquette.edu/explore/global-scholar-award.php",
+  "cloture_connue": "2025-03-01"
+ },
+ {
+  "id": "dorrit-hoffleit-undergraduate-research-scholarship-yale-university-ful",
+  "nom": "Dorrit Hoffleit Undergraduate Research Scholarship — Yale University (Fully Funded)",
+  "organisme": "Yale University",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://astronomy.yale.edu/undergraduate-program/research-opportunities",
+  "cloture_connue": "2026-02-15"
+ }
+]

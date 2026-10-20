@@ -1,0 +1,354 @@
+[
+ {
+  "id": "study-in-canada-scholarships-sub-saharan-africa",
+  "nom": "Study in Canada Scholarships — Sub-Saharan Africa",
+  "organisme": "Gouvernement du Canada (via EduCanada)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.educanada.ca/scholarships-bourses/non_can/scholarship-bourse.aspx?lang=eng",
+  "cloture_connue": null
+ },
+ {
+  "id": "emerging-leaders-in-the-americas-program-elap",
+  "nom": "Emerging Leaders in the Americas Program (ELAP)",
+  "organisme": "Gouvernement du Canada (via EduCanada)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.educanada.ca/scholarships-bourses/non_can/elap-pfla.aspx?lang=eng",
+  "cloture_connue": "2026-03-31"
+ },
+ {
+  "id": "canada-asean-scholarships-and-educational-exchanges-for-development-se",
+  "nom": "Canada-ASEAN Scholarships and Educational Exchanges for Development (SEED)",
+  "organisme": "Gouvernement du Canada (via EduCanada)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.educanada.ca/scholarships-bourses/non_can/seed-sead.aspx?lang=eng",
+  "cloture_connue": null
+ },
+ {
+  "id": "arts-and-science-global-scholarship-university-of-toronto",
+  "nom": "Arts & Science Global Scholarship — University of Toronto",
+  "organisme": "University of Toronto — Faculty of Arts & Science",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://future.utoronto.ca/finances/scholarships/arts-science-global-scholarship/",
+  "cloture_connue": null
+ },
+ {
+  "id": "flight-ps752-commemorative-scholarship-program-educanada",
+  "nom": "Flight PS752 Commemorative Scholarship Program — EduCanada",
+  "organisme": "Gouvernement du Canada (via EduCanada)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.educanada.ca/scholarships-bourses/can/ps752.aspx?lang=eng",
+  "cloture_connue": "2025-06-15"
+ },
+ {
+  "id": "full-scholarships-for-aspiring-community-leaders-saint-mary-s-universi",
+  "nom": "Full Scholarships for Aspiring Community Leaders — Saint Mary's University",
+  "organisme": "Saint Mary's University (Halifax, Nouvelle-Écosse)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.smu.ca/future-students/international-scholarships.html",
+  "cloture_connue": "2025-06-30"
+ },
+ {
+  "id": "scholarships-for-international-students-fleming-college",
+  "nom": "Scholarships for International Students — Fleming College",
+  "organisme": "Fleming College",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://flemingcollege.ca/international/financial-aid",
+  "cloture_connue": "2026-01-31"
+ },
+ {
+  "id": "canada-graduate-research-scholarship-masters-program-cgs-m",
+  "nom": "Canada Graduate Research Scholarship — Masters Program (CGS-M)",
+  "organisme": "Gouvernement du Canada (via SSHRC, NSERC ou CIHR)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSM-BESCM_eng.asp",
+  "cloture_connue": "2025-12-01"
+ },
+ {
+  "id": "mira-graduate-scholarship-mcmaster-university",
+  "nom": "MIRA Graduate Scholarship — McMaster University",
+  "organisme": "McMaster University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://gs.mcmaster.ca/awards-and-funding/",
+  "cloture_connue": "2024-11-25"
+ },
+ {
+  "id": "mackenzie-king-scholarships-university-of-alberta",
+  "nom": "Mackenzie King Scholarships — University of Alberta",
+  "organisme": "Administrée via plusieurs universités canadiennes, dont University of Alberta",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "licence",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.mkingscholarships.ca/",
+  "cloture_connue": "2025-02-03"
+ },
+ {
+  "id": "specef-scholarships-spe-canadian-educational-foundation",
+  "nom": "SPECEF Scholarships — SPE Canadian Educational Foundation",
+  "organisme": "SPE Canadian Educational Foundation",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.specef.org/",
+  "cloture_connue": null
+ },
+ {
+  "id": "esl-bursary-for-international-students-cgps-university-of-saskatchewan",
+  "nom": "ESL Bursary for International Students (CGPS) — University of Saskatchewan",
+  "organisme": "University of Saskatchewan",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://admissions.usask.ca/money/scholarships.php",
+  "cloture_connue": "2025-08-01"
+ },
+ {
+  "id": "international-student-scholarships-university-of-pittsburgh-at-bradfor",
+  "nom": "International Student Scholarships — University of Pittsburgh at Bradford",
+  "organisme": "University of Pittsburgh at Bradford",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.upb.pitt.edu/admissions/financial-aid",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-students-scholarships-auburn-university",
+  "nom": "International Students Scholarships — Auburn University",
+  "organisme": "University of Connecticut",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://isss.uconn.edu/scholarships/",
+  "cloture_connue": "2025-03-15"
+ },
+ {
+  "id": "sydney-international-undergraduate-academic-excellence-scholarship-uni",
+  "nom": "Sydney International Undergraduate Academic Excellence Scholarship — University of Sydney",
+  "organisme": "University of Sydney",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.sydney.edu.au/scholarships/domestic/academic-excellence.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "melbourne-international-undergraduate-scholarship-university-of-melbou",
+  "nom": "Melbourne International Undergraduate Scholarship — University of Melbourne",
+  "organisme": "University of Melbourne",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://scholarships.unimelb.edu.au/awards/melbourne-international-undergraduate-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "qut-excellence-scholarship-academic-queensland-university-of-technolog",
+  "nom": "QUT Excellence Scholarship (Academic) — Queensland University of Technology",
+  "organisme": "Queensland University of Technology (QUT)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.qut.edu.au/study/fees-and-scholarships/scholarships-and-prizes/qut-excellence-scholarship-academic",
+  "cloture_connue": null
+ },
+ {
+  "id": "vice-chancellor-s-academic-excellence-undergraduate-scholarships-weste",
+  "nom": "Vice-Chancellor's Academic Excellence Undergraduate Scholarships — Western Sydney University",
+  "organisme": "Western Sydney University",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.westernsydney.edu.au/international/home/apply/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "vice-chancellor-s-international-scholarship-griffith-university",
+  "nom": "Vice-Chancellor's International Scholarship — Griffith University",
+  "organisme": "Griffith University",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.griffith.edu.au/international/scholarships-finance/scholarships",
+  "cloture_connue": "2025-04-12"
+ },
+ {
+  "id": "academic-excellence-scholarships-university-of-newcastle",
+  "nom": "Academic Excellence Scholarships — University of Newcastle",
+  "organisme": "University of Newcastle",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.newcastle.edu.au/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-student-award-university-of-western-australia",
+  "nom": "International Student Award — University of Western Australia",
+  "organisme": "University of Western Australia (UWA)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uwa.edu.au/study/fees-and-scholarships/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-scholarship-plus-early-acceptance-scholarship-package-un",
+  "nom": "International Scholarship Plus Early Acceptance Scholarship Package — University of Tasmania",
+  "organisme": "University of Tasmania (UTAS)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.utas.edu.au/international/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-excellence-scholarship-james-cook-university",
+  "nom": "International Excellence Scholarship — James Cook University",
+  "organisme": "James Cook University (JCU)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.jcu.edu.au/international-students/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "global-citizens-international-scholarship-university-of-adelaide",
+  "nom": "Global Citizens International Scholarship — University of Adelaide",
+  "organisme": "University of Adelaide",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.adelaide.edu.au/scholarships/international",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-high-school-scholarships-flinders-university",
+  "nom": "International High School Scholarships — Flinders University",
+  "organisme": "Flinders University (Adelaide)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.flinders.edu.au/international/apply/scholarships",
+  "cloture_connue": null
+ }
+]

@@ -1,0 +1,343 @@
+[
+ {
+  "id": "daad-epos-development-related-postgraduate-courses",
+  "nom": "DAAD EPOS (Development-Related Postgraduate Courses)",
+  "organisme": "DAAD (Deutscher Akademischer Austauschdienst — Service Allemand d'Échanges Académiques)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50076777",
+  "cloture_connue": null
+ },
+ {
+  "id": "manaaki-new-zealand-scholarships",
+  "nom": "Manaaki New Zealand Scholarships",
+  "organisme": "Gouvernement de Nouvelle-Zélande — Ministry of Foreign Affairs and Trade (MFAT)",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.nzscholarships.govt.nz/",
+  "cloture_connue": "2026-03-31"
+ },
+ {
+  "id": "iss-erasmus-university-development-studies-scholarship",
+  "nom": "ISS Erasmus University — Development Studies Scholarship",
+  "organisme": "Erasmus University Rotterdam — ISS (La Haye)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.iss.nl/en/education/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-emile-boutmy-sciences-po-paris",
+  "nom": "Bourses Émile Boutmy (Sciences Po Paris)",
+  "organisme": "Sciences Po Paris",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/bourse-emile-boutmy/",
+  "cloture_connue": null
+ },
+ {
+  "id": "mastercard-foundation-scholars-sciences-po-paris",
+  "nom": "MasterCard Foundation Scholars (Sciences Po Paris)",
+  "organisme": "Fondation MasterCard / Sciences Po Paris",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/mastercard-foundation-scholarship-program/",
+  "cloture_connue": null
+ },
+ {
+  "id": "erasmus-mobilite-et-echange",
+  "nom": "Erasmus+ (Mobilité et échange)",
+  "organisme": "Union Européenne — Commission Européenne",
+  "pays": [
+   "Plusieurs pays"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://erasmus-plus.ec.europa.eu/fr",
+  "cloture_connue": null
+ },
+ {
+  "id": "oif-bourses-de-la-francophonie",
+  "nom": "OIF — Bourses de la Francophonie",
+  "organisme": "OIF — Organisation Internationale de la Francophonie",
+  "pays": [
+   "Plusieurs pays"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.francophonie.org/bourses-et-stages",
+  "cloture_connue": null
+ },
+ {
+  "id": "commonwealth-scholarships-rappel-perspective-multi-pays",
+  "nom": "Commonwealth Scholarships (rappel — perspective multi-pays)",
+  "organisme": "Commonwealth Scholarship Commission (CSC)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://cscuk.fcdo.gov.uk/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-de-l-agence-universitaire-de-la-francophonie-auf",
+  "nom": "Bourses de l'Agence Universitaire de la Francophonie (AUF)",
+  "organisme": "AUF (Réseau mondial des universités francophones)",
+  "pays": [
+   "Plusieurs pays"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.auf.org/appels-a-propositions/",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-d-exoneration-de-l-universite-d-ottawa-francophones",
+  "nom": "Bourses d'exonération de l'Université d'Ottawa (Francophones)",
+  "organisme": "Université d'Ottawa",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.uottawa.ca/etudes/droits-universitaires-soutien-financier/bourses-apercu",
+  "cloture_connue": null
+ },
+ {
+  "id": "ubc-international-scholars-vancouver",
+  "nom": "UBC International Scholars (Vancouver)",
+  "organisme": "University of British Columbia (Vancouver)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+  "cloture_connue": null
+ },
+ {
+  "id": "imae-international-master-s-award-of-excellence-waterloo",
+  "nom": "IMAE — International Master's Award of Excellence (Waterloo)",
+  "organisme": "Université de Waterloo",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://uwaterloo.ca/graduate-studies-postdoctoral-affairs/awards/international-masters-award-excellence-imae",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-d-excellence-de-l-enap-quebec",
+  "nom": "Bourses d'excellence de l'ENAP (Québec)",
+  "organisme": "École Nationale d'Administration Publique (Québec)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://enap.ca/formation/programmes-etudes/bourses-aide-financiere/bourses-enap/bourses-etudiantes-etudiants-internationaux",
+  "cloture_connue": null
+ },
+ {
+  "id": "bcdi-2030-educanada",
+  "nom": "BCDI 2030 (EduCanada)",
+  "organisme": "Gouvernement du Canada (EduCanada / Affaires mondiales Canada)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.educanada.ca/scholarships-bourses/can/bcdi-2030.aspx",
+  "cloture_connue": null
+ },
+ {
+  "id": "killam-doctoral-scholarships-alberta",
+  "nom": "Killam Doctoral Scholarships (Alberta)",
+  "organisme": "Université de l'Alberta",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/killam-memorial.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "dr-franco-j-vaccarino-president-s-scholarship-guelph",
+  "nom": "Dr. Franco J. Vaccarino President's Scholarship (Guelph)",
+  "organisme": "Université de Guelph (Ontario)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uoguelph.ca/registrar/finances-fees/vaccarino",
+  "cloture_connue": "2026-01-23"
+ },
+ {
+  "id": "university-of-melbourne-graduate-research-scholarship-mgrs",
+  "nom": "University of Melbourne Graduate Research Scholarship (MGRS)",
+  "organisme": "University of Melbourne",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://scholarships.unimelb.edu.au/awards/graduate-research-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "research-training-program-rtp-bourse-nationale",
+  "nom": "Research Training Program (RTP) — Bourse nationale",
+  "organisme": "Gouvernement australien (via les universités)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://scholarships.unimelb.edu.au/",
+  "cloture_connue": null
+ },
+ {
+  "id": "anu-chancellor-s-international-scholarship",
+  "nom": "ANU Chancellor's International Scholarship",
+  "organisme": "Australian National University (Canberra)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://study.anu.edu.au/scholarships/find-scholarship/anu-chancellors-international-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "monash-international-leadership-scholarship",
+  "nom": "Monash International Leadership Scholarship",
+  "organisme": "Monash University",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-leadership-scholarship-5066",
+  "cloture_connue": null
+ },
+ {
+  "id": "melbourne-chancellor-s-scholarship-bachelor",
+  "nom": "Melbourne Chancellor's Scholarship (Bachelor)",
+  "organisme": "University of Melbourne",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://scholarships.unimelb.edu.au/awards/melbourne-chancellors-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "university-of-sydney-international-research-scholarship-usydis",
+  "nom": "University of Sydney International Research Scholarship (USydIS)",
+  "organisme": "University of Sydney",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.sydney.edu.au/scholarships/international/postgraduate-research.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "destination-australia-scholarships",
+  "nom": "Destination Australia Scholarships",
+  "organisme": "Gouvernement australien (via les universités régionales)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.education.gov.au/destination-australia",
+  "cloture_connue": "2025-02-16"
+ },
+ {
+  "id": "dean-s-women-in-business-mba-scholarship-melbourne-business-school",
+  "nom": "Dean's Women in Business MBA Scholarship (Melbourne Business School)",
+  "organisme": "Melbourne Business School (University of Melbourne)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://mbs.edu/degree-programs/mba/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "think-big-scholarships-university-of-bristol",
+  "nom": "Think Big Scholarships (University of Bristol)",
+  "organisme": "University of Bristol",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.bristol.ac.uk/students/support/finances/scholarships/postgraduate/think-big-scholarships/",
+  "cloture_connue": null
+ }
+]

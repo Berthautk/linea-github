@@ -1,0 +1,340 @@
+[
+ {
+  "id": "international-school-leaver-excellence-scholarship-victoria-university",
+  "nom": "International School Leaver Excellence Scholarship — Victoria University of Wellington",
+  "organisme": "Victoria University of Wellington",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.wgtn.ac.nz/scholarships/current/international-school-leaver-excellence-scholarship",
+  "cloture_connue": "2025-09-01"
+ },
+ {
+  "id": "the-nusantara-scholarship-victoria-university-of-wellington",
+  "nom": "The Nusantara Scholarship — Victoria University of Wellington",
+  "organisme": "Victoria University of Wellington",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.wgtn.ac.nz/scholarships/current/nusantara-scholarship",
+  "cloture_connue": "2024-11-30"
+ },
+ {
+  "id": "doctoral-scholarship-victoria-university-of-wellington",
+  "nom": "Doctoral Scholarship — Victoria University of Wellington",
+  "organisme": "Victoria University of Wellington",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.wgtn.ac.nz/scholarships/current/doctoral-scholarship",
+  "cloture_connue": "2025-11-01"
+ },
+ {
+  "id": "research-masters-scholarship-university-of-waikato",
+  "nom": "Research Masters Scholarship — University of Waikato",
+  "organisme": "University of Waikato",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.waikato.ac.nz/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "welcome-back-to-wellington-scholarship-massey-victoria-wellington",
+  "nom": "Welcome Back to Wellington Scholarship — Massey/Victoria (Wellington)",
+  "organisme": "Victoria University of Wellington / Institutions de Wellington",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.studywellington.nz/",
+  "cloture_connue": null
+ },
+ {
+  "id": "align-farms-agriculture-scholarship-new-zealand",
+  "nom": "Align Farms Agriculture Scholarship — New Zealand",
+  "organisme": "Align Farms",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.alignfarms.co.nz/",
+  "cloture_connue": "2025-10-01"
+ },
+ {
+  "id": "nl-scholarship-for-students-from-non-eu-eea-countries-university-of-tw",
+  "nom": "NL Scholarship for Students from Non-EU/EEA Countries — University of Twente",
+  "organisme": "Gouvernement néerlandais (Nuffic) / University of Twente",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.utwente.nl/en/education/scholarship-finder/",
+  "cloture_connue": "2025-05-01"
+ },
+ {
+  "id": "nl-scholarship-for-prospective-students-radboud-university",
+  "nom": "NL Scholarship for Prospective Students — Radboud University",
+  "organisme": "Radboud University (Nimègue)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.ru.nl/en/education/scholarships/nl-scholarship",
+  "cloture_connue": "2025-01-31"
+ },
+ {
+  "id": "mena-scholarship-programme-msp-short-courses-netherlands",
+  "nom": "MENA Scholarship Programme (MSP) Short Courses — Netherlands",
+  "organisme": "Gouvernement néerlandais (Nuffic)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.nuffic.nl/en/subjects/mena-scholarship-programme",
+  "cloture_connue": null
+ },
+ {
+  "id": "kipaji-scholarship-university-of-twente",
+  "nom": "Kipaji Scholarship — University of Twente",
+  "organisme": "University of Twente",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.utwente.nl/en/education/scholarship-finder/kipaji-scholarship/",
+  "cloture_connue": "2026-05-01"
+ },
+ {
+  "id": "global-studies-scholarship-maastricht-university",
+  "nom": "Global Studies Scholarship — Maastricht University",
+  "organisme": "Maastricht University",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.maastrichtuniversity.nl/support/your-studies-begin/scholarships",
+  "cloture_connue": "2026-02-01"
+ },
+ {
+  "id": "eur-excellence-scholarship-erasmus-university-rotterdam",
+  "nom": "EUR Excellence Scholarship — Erasmus University Rotterdam",
+  "organisme": "Erasmus University Rotterdam (EUR)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.eur.nl/en/education/practical-matters/financial-matters/scholarships-grants",
+  "cloture_connue": "2025-05-31"
+ },
+ {
+  "id": "iss-scholarship-fund-for-excellent-students-erasmus-university-rotterd",
+  "nom": "ISS Scholarship Fund for Excellent Students — Erasmus University Rotterdam",
+  "organisme": "Erasmus University Rotterdam — International Institute of Social Studies (ISS)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.iss.nl/en/education/financial-matters/iss-scholarships",
+  "cloture_connue": "2025-06-15"
+ },
+ {
+  "id": "merit-scholarship-ams-university-of-amsterdam",
+  "nom": "Merit Scholarship (AMS) — University of Amsterdam",
+  "organisme": "University of Amsterdam (UvA) — Amsterdam Merit Scholarships",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.uva.nl/en/education/master-s/scholarships--tuition/scholarships-and-tuition.html",
+  "cloture_connue": "2026-01-15"
+ },
+ {
+  "id": "law-economics-and-governance-international-talent-scholarship-utrecht-",
+  "nom": "Law, Economics and Governance International Talent Scholarship — Utrecht University",
+  "organisme": "Utrecht University",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uu.nl/en/education/scholarships",
+  "cloture_connue": "2026-02-01"
+ },
+ {
+  "id": "han-scholarships-for-international-students-han-university-of-applied-",
+  "nom": "HAN Scholarships for International Students — HAN University of Applied Sciences",
+  "organisme": "HAN University of Applied Sciences (Arnhem-Nimègue)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.hanuniversity.com/en/study-at-han/finance-your-studies/scholarships/",
+  "cloture_connue": "2025-10-01"
+ },
+ {
+  "id": "iias-asia-in-the-world-fellowship-netherlands-fully-funded",
+  "nom": "IIAS Asia in the World Fellowship — Netherlands (Fully Funded)",
+  "organisme": "International Institute for Asian Studies (IIAS), Leiden",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.iias.asia/fellowship-programme",
+  "cloture_connue": "2025-09-15"
+ },
+ {
+  "id": "nl-zuyd-excellence-scholarship-nl-zes-zuyd-university-of-applied-scien",
+  "nom": "NL Zuyd Excellence Scholarship (NL-ZES) — Zuyd University of Applied Sciences",
+  "organisme": "Zuyd University of Applied Sciences",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.zuyd.nl/en/programmes/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "nl-scholarship-for-international-students-university-of-groningen",
+  "nom": "NL Scholarship for International Students — University of Groningen",
+  "organisme": "University of Groningen",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.rug.nl/education/scholarships/",
+  "cloture_connue": "2026-02-01"
+ },
+ {
+  "id": "international-masters-scholarship-program-universite-paris-saclay",
+  "nom": "International Masters Scholarship Program — Université Paris-Saclay",
+  "organisme": "Université Paris-Saclay",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.universite-paris-saclay.fr/en/admission/scholarships-and-financial-aid/international-masters-scholarship-programme",
+  "cloture_connue": "2026-03-31"
+ },
+ {
+  "id": "the-erasmus-programme-in-europe-university-of-rennes",
+  "nom": "The Erasmus Programme in Europe — University of Rennes",
+  "organisme": "Université de Rennes / Programme Erasmus+",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.univ-rennes.fr/en/international-student",
+  "cloture_connue": null
+ },
+ {
+  "id": "aid-mobility-top-up-scheme-university-of-bordeaux",
+  "nom": "AID Mobility Top-Up Scheme — University of Bordeaux",
+  "organisme": "Université de Bordeaux",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.u-bordeaux.fr/en/International/Coming-to-Bordeaux/Scholarships-and-financial-aid",
+  "cloture_connue": null
+ },
+ {
+  "id": "tiger-master-excellence-scholarships-aix-marseille-university",
+  "nom": "Tiger Master Excellence Scholarships — Aix-Marseille University",
+  "organisme": "Aix-Marseille Université",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.univ-amu.fr/en/public/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "idex-master-scholarships-universite-grenoble-alpes-uga",
+  "nom": "IDEX Master Scholarships — Université Grenoble Alpes (UGA)",
+  "organisme": "Université Grenoble Alpes",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.univ-grenoble-alpes.fr/education/programs-and-admissions/scholarships-and-financial-aid/",
+  "cloture_connue": null
+ },
+ {
+  "id": "the-french-institutes-for-advanced-study-fellowship-fully-funded",
+  "nom": "The French Institutes for Advanced Study Fellowship (Fully Funded)",
+  "organisme": "Réseau français des Instituts d'Études Avancées (IEA)",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.frias.uni-freiburg.de/en/funding-programs/french-institutes-advanced-study",
+  "cloture_connue": "2025-07-16"
+ }
+]

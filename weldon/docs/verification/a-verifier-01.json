@@ -1,0 +1,370 @@
+[
+ {
+  "id": "commonwealth",
+  "nom": "Bourses du Commonwealth (master)",
+  "organisme": "Commonwealth Scholarship Commission (CSC), Royaume-Uni",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+  "cloture_connue": "2026-10-20"
+ },
+ {
+  "id": "fulbright",
+  "nom": "Programme Fulbright pour étudiants étrangers",
+  "organisme": "Département d'État des États-Unis / Ambassade des États-Unis au Cameroun",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "autre"
+  ],
+  "lien_connu": "https://foreign.fulbrightonline.org/about/foreign-student-program",
+  "cloture_connue": null
+ },
+ {
+  "id": "daad-epos",
+  "nom": "DAAD - Master en développement (EPOS)",
+  "organisme": "DAAD (Service allemand d'échanges universitaires), financé par le BMZ",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/",
+  "cloture_connue": null
+ },
+ {
+  "id": "erasmus-mundus",
+  "nom": "Masters conjoints Erasmus Mundus",
+  "organisme": "Union européenne (Erasmus+) et consortiums d'universités",
+  "pays": [
+   "Europe (plusieurs pays)"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+  "cloture_connue": null
+ },
+ {
+  "id": "eiffel",
+  "nom": "Bourse d'excellence Eiffel (France)",
+  "organisme": "Ministère de l'Europe et des Affaires étrangères / Campus France",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+  "cloture_connue": null
+ },
+ {
+  "id": "bgf-cameroun",
+  "nom": "Bourses du gouvernement français (Cameroun)",
+  "organisme": "Ambassade de France au Cameroun / Campus France Cameroun",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://cameroun.campusfrance.org/fr/calendriers-de-la-campagne-de-candidature-2027-2028",
+  "cloture_connue": null
+ },
+ {
+  "id": "csc-china",
+  "nom": "Bourse du gouvernement chinois (CSC)",
+  "organisme": "China Scholarship Council / gouvernement chinois",
+  "pays": [
+   "Chine"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.campuschina.org",
+  "cloture_connue": null
+ },
+ {
+  "id": "turkiye-burslari",
+  "nom": "Bourses Türkiye (Türkiye Bursları)",
+  "organisme": "Présidence des Turcs de l'étranger et communautés apparentées (YTB)",
+  "pays": [
+   "Turquie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat",
+   "autre"
+  ],
+  "lien_connu": "https://turkiyeburslari.gov.tr/",
+  "cloture_connue": null
+ },
+ {
+  "id": "stipendium-hungaricum",
+  "nom": "Stipendium Hungaricum (Hongrie)",
+  "organisme": "Tempus Public Foundation / gouvernement hongrois",
+  "pays": [
+   "Hongrie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat",
+   "autre"
+  ],
+  "lien_connu": "https://stipendiumhungaricum.hu/apply/",
+  "cloture_connue": null
+ },
+ {
+  "id": "mext",
+  "nom": "Bourse MEXT (gouvernement japonais)",
+  "organisme": "MEXT, Ambassade du Japon au Cameroun",
+  "pays": [
+   "Japon"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat",
+   "autre"
+  ],
+  "lien_connu": "https://www.cmr.emb-japan.go.jp/itpr_ja/11_000001_00912.html",
+  "cloture_connue": "2026-05-25"
+ },
+ {
+  "id": "gks",
+  "nom": "Global Korea Scholarship (GKS)",
+  "organisme": "NIIED / gouvernement coréen",
+  "pays": [
+   "Corée du Sud"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+  "cloture_connue": null
+ },
+ {
+  "id": "italie-maeci",
+  "nom": "Bourses du gouvernement italien (MAECI)",
+  "organisme": "Ministère italien des Affaires étrangères (MAECI)",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "autre"
+  ],
+  "lien_connu": "https://ambyaounde.esteri.it/fr/?p=2792",
+  "cloture_connue": "2026-03-26"
+ },
+ {
+  "id": "mastercard-scholars",
+  "nom": "Programme Mastercard Foundation Scholars",
+  "organisme": "Mastercard Foundation et universités partenaires",
+  "pays": [
+   "Rwanda",
+   "Ghana",
+   "Ouganda",
+   "Kenya",
+   "Nigeria",
+   "Éthiopie",
+   "Canada",
+   "États-Unis",
+   "France (Sciences Po)"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/",
+  "cloture_connue": null
+ },
+ {
+  "id": "rotary-peace",
+  "nom": "Bourses Rotary pour la paix (Rotary Peace Fellowships)",
+  "organisme": "Rotary Foundation",
+  "pays": [
+   "Plusieurs pays (centres Rotary pour la paix)"
+  ],
+  "niveaux": [
+   "master",
+   "autre"
+  ],
+  "lien_connu": "https://www.rotary.org/en/our-programs/peace-fellowships",
+  "cloture_connue": null
+ },
+ {
+  "id": "aga-khan-isp",
+  "nom": "Programme international de bourses de la Fondation Aga Khan",
+  "organisme": "Aga Khan Foundation",
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://the.akdn/our-agencies/aga-khan-foundation/international-scholarship-programme",
+  "cloture_connue": null
+ },
+ {
+  "id": "nl-scholarship",
+  "nom": "NL Scholarship (ex-Holland Scholarship)",
+  "organisme": "Nuffic / établissements néerlandais",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.studyinnl.org/finances/holland-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "clarendon",
+  "nom": "Bourses Clarendon (Oxford)",
+  "organisme": "Université d'Oxford",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon",
+  "cloture_connue": null
+ },
+ {
+  "id": "jads-afdb",
+  "nom": "Japan Africa Dream Scholarship (JADS) - BAD",
+  "organisme": "Banque africaine de développement / Japon",
+  "pays": [
+   "Japon"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.afdb.org/en/about-us/careers/japan-africa-dream-scholarship-jads-program",
+  "cloture_connue": null
+ },
+ {
+  "id": "minesup-bourses-cooperation",
+  "nom": "Bourses étrangères offertes via le gouvernement camerounais (MINESUP)",
+  "organisme": "MINESUP (Ministère de l'Enseignement supérieur)",
+  "pays": [
+   "Algérie",
+   "Chine",
+   "Inde",
+   "Suisse",
+   "Tunisie",
+   "autres"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.minesup.gov.cm/index.php/category/bourses/",
+  "cloture_connue": null
+ },
+ {
+  "id": "vlir-uos-icp",
+  "nom": "Bourses VLIR-UOS ICP Connect (Flandre)",
+  "organisme": "VLIR-UOS (Belgique, Flandre)",
+  "pays": [
+   "Belgique"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.vliruos.be/en/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "quebec-pbeee",
+  "nom": "Bourses d'excellence du Québec pour étudiants étrangers (PBEEE)",
+  "organisme": "Fonds de recherche du Québec / Ministère de l'Enseignement supérieur du Québec",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "postdoc",
+   "autre"
+  ],
+  "lien_connu": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/",
+  "cloture_connue": "2026-12-02"
+ },
+ {
+  "id": "aecid-africa-med",
+  "nom": "Bourses MAEC-AECID Africa-Med Máster (Espagne)",
+  "organisme": "AECID (Coopération espagnole)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.aecid.es/es/becas-y-lectorados",
+  "cloture_connue": "2026-07-15"
+ },
+ {
+  "id": "unesco-japan-young-researchers",
+  "nom": "Bourses UNESCO/Japon pour jeunes chercheurs",
+  "organisme": "UNESCO",
+  "pays": [
+   "Japon"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.unesco.org/en/fellowships/keizo-obuchi",
+  "cloture_connue": "2026-10-15"
+ },
+ {
+  "id": "daad-leadership-for-africa",
+  "nom": "DAAD Leadership for Africa (Afrique de l'Ouest et centrale)",
+  "organisme": "DAAD (Office allemand d'échanges universitaires)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.daad.de/en/the-daad/intersecting-dimensions-topics/sustainable-development/funding-programmes/funding-programmes-for-students-a-z/leadership-for-africa/",
+  "cloture_connue": null
+ },
+ {
+  "id": "pau-paughss",
+  "nom": "Bourses de l'Université panafricaine - Institut PAUGHSS (Gouvernance, sciences humaines et sociales)",
+  "organisme": "Union africaine - Université panafricaine (PAU)",
+  "pays": [
+   "Cameroun"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.au-pau.org/submission/",
+  "cloture_connue": null
+ }
+]

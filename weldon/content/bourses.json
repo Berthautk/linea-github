@@ -1082,7 +1082,11 @@
       "conseil": "Contact the Indian Embassy in Yaoundé; ITEC also offers short training courses.",
       "edition_note": "No official page read. 2026 dates quoted by third-party sites conflict (February to April 2026)."
     },
-    "origine": "gouvernementale"
+    "origine": "gouvernementale",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Aucune page officielle ne confirme le Cameroun, la couverture, les documents ni les dates : le portail ICCR A2A (a2ascholarships.iccr.gov.in) était en maintenance sans critères, studyinindia.gov.in ne détaille pas le programme, iccr.gov.in inaccessible. ITEC non vérifié (aucune page officielle lue)."
+    }
   },
   {
     "id": "italie-maeci",
@@ -1733,7 +1737,11 @@
       "conseil": "Contact the Swiss embassy in Yaoundé early for the Cameroon deadline and find a Swiss supervisor.",
       "edition_note": "Opened 20 Aug 2026; deadlines vary by country and are not on the page read."
     },
-    "origine": "gouvernementale"
+    "origine": "gouvernementale",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Liste des documents et date limite pour le Cameroun absentes de la page lue (informations par pays annoncées pour août 2026 mais non retrouvées) ; niveaux exacts (doctorat/postdoc) non précisés."
+    }
   },
   {
     "id": "nl-scholarship",
@@ -2184,11 +2192,11 @@
   },
   {
     "id": "ares-formations-internationales",
-    "organisme": "ARES (Belgique, Fédération Wallonie-Bruxelles)",
+    "organisme": "ARES (Académie de recherche et d'enseignement supérieur, Fédération Wallonie-Bruxelles)",
     "pays_accueil": [
       "Belgique"
     ],
-    "cameroun": "non_precise",
+    "cameroun": "oui",
     "niveaux": [
       "licence",
       "master",
@@ -2197,7 +2205,7 @@
     "domaines": [
       "tous"
     ],
-    "couverture_niveau": "complete",
+    "couverture_niveau": "variable",
     "cycle": {
       "type": "annuelle",
       "ouverture_mois": "août",
@@ -2212,62 +2220,126 @@
     "lien_officiel": "https://www.ares-ac.be/en/scholarships",
     "sources": [
       {
-        "titre": "ARES - Bourses Formations internationales",
-        "url": "https://www.ares-ac.be/en/scholarships"
+        "titre": "ARES - Bourses de formations internationales 2027-2028",
+        "url": "https://www.ares-ac.be/en/node/798"
       },
       {
-        "titre": "ARES - Master conservation préventive (appel clos, prochain en août 2027)",
-        "url": "https://www.ares-ac.be/fr/master-de-specialisation-en-conservation-preventive-et-gestion-des-collections"
+        "titre": "ARES - Document d'appel 2027-2028",
+        "url": "https://www.ares-ac.be/sites/default/files/2026-08/fi-2027-2028_document-d-appel-en-vf_2.pdf"
       },
       {
-        "titre": "ARES - Bourses de voyage",
-        "url": "https://www.ares-ac.be/en/travel-scholarships"
+        "titre": "ARES - Guide du candidat GIRAF",
+        "url": "https://www.ares-ac.be/sites/default/files/2026-07/guide-du-candidat-giraf_fi-en_27-28.pdf"
       }
     ],
     "last_verified": "2026-10-19",
-    "status": "to_verify",
+    "status": "verified",
     "recherche_notes": "La liste des 31 pays n'a pas été lue sur le site officiel, donc la présence du Cameroun est non confirmée (des pages d'universités belges l'indiquent pour les bourses de voyage). Le début d'ouverture (3 août 2026) vient de la fiche d'un master de spécialisation. Les bourses de voyage ARES passent par l'établissement d'origine.",
     "fr": {
-      "nom": "Bourses ARES Formations internationales",
-      "resume": "L'ARES finance des formations en Belgique francophone pour des résidents de pays partenaires. L'appel 2027-2028 est clos.",
-      "couverture_detail": "La page officielle ne décrit pas le montant. Elle parle de bachelier, master de spécialisation d'un an ou formation continue de six mois.",
-      "diplome": "Diplôme de l'enseignement supérieur et expérience professionnelle.",
-      "langue": "Selon la formation (souvent le français).",
+      "nom": "Bourses ARES de formations internationales",
+      "resume": "L'ARES finance des formations en Belgique francophone (bachelier ou master de spécialisation d'un an, formation continue de six mois) pour des professionnels résidant dans 32 pays partenaires, dont le Cameroun. L'appel 2027-2028 est clos.",
+      "couverture_detail": "Bachelier et master de spécialisation : billet d'avion économique (un aller-retour par année académique), allocation mensuelle de 12 mois (+ un 13e mois réduit), frais de visa jusqu'à 200 euros inclus dans l'allocation, frais de déplacement entre établissements jusqu'à 250 euros sur justificatifs, assurance payée par l'ARES. Formation continue : billet, allocation mensuelle pendant la formation, forfait de 200 euros, assurance.",
+      "diplome": "Diplôme de l'enseignement supérieur remplissant les conditions d'admission de la formation choisie.",
+      "langue": "Langue d'enseignement de la formation, à l'écrit et à l'oral. Le formulaire se remplit dans cette langue.",
       "autres": [
-        "Résider dans un pays partenaire de l'ARES (31 pays en Afrique, Amérique du Sud et Asie).",
-        "Vouloir se former sur un sujet de développement."
+        "La candidature est gratuite ; l'ARES ne demande jamais d'argent.",
+        "Priorité aux candidats venant d'institutions partenaires de l'ARES et engagés pour le développement ; parité femmes-hommes recherchée.",
+        "Un engagement de retour et de réintégration professionnelle est exigé."
       ],
       "dossier": [
-        "Voir le catalogue des formations sur le site ARES",
-        "Formulaire en ligne ARES",
-        "Pièces: voir le texte complet de l'appel"
+        "2 lettres de recommandation (académiques et/ou professionnelles)",
+        "Copies certifiées conformes des diplômes originaux",
+        "Copies certifiées conformes des relevés de notes de toutes les années",
+        "Preuve d'occupation professionnelle des 5 dernières années",
+        "Certificat de nationalité, carte d'identité nationale (carte d'électeur refusée) ou copie du passeport",
+        "Preuve de résidence (certificat de résidence, carte ou permis de résident ; à défaut, déclaration sur l'honneur signée)",
+        "Engagement de l'employeur de réemployer le candidat",
+        "Pré-projet (pour certaines formations)"
       ],
-      "conseil": "Prépare ton dossier dès juillet 2027 et lis le catalogue des formations. Les masters de spécialisation en patrimoine ou en gestion peuvent convenir aux lettres.",
-      "edition_note": "Appel 2027-28 clos le 18 sept 2026; prochain appel annonce pour aout 2027 (date non precisee)."
+      "conseil": "Cette bourse vise des professionnels déjà en poste, pas des étudiants sans expérience : il faut 2 ans d'expérience et l'engagement de ton employeur. Prépare le dossier dès l'ouverture de l'appel suivant et crée ton compte GIRAF tôt, car les créations de compte sont suspendues deux semaines avant la clôture.",
+      "edition_note": "Appel 2027-2028 ouvert le 3 août 2026 et clos le 18 septembre 2026 à 12 h (heure belge). Le prochain appel est annoncé pour août 2027, sans date précise.",
+      "valeur": "Voyage aller-retour, allocation mensuelle de séjour et assurance",
+      "ne_couvre_pas": "Les montants mensuels ne sont pas indiqués sur les pages lues.",
+      "eligibilite": "Résider de façon permanente et travailler dans l'un des 32 pays partenaires (Cameroun inclus). Avoir au moins 2 ans d'expérience professionnelle pertinente dans un de ces pays après le dernier diplôme. Diplôme obtenu depuis 20 ans maximum au début de la formation. Une seule formation par candidature. Les anciens boursiers ARES en Belgique ne sont pas éligibles.",
+      "etapes": [
+        "Créer ou réactiver un compte GIRAF (www.giraf.ares-ac.be) ; la validation par l'ARES prend de quelques heures à quelques jours.",
+        "Dans l'onglet Appels compétitifs, ouvrir le formulaire de candidature Formation internationale et le remplir (enregistrement en brouillon possible).",
+        "Joindre les pièces obligatoires puis cliquer sur Soumettre : la soumission est définitive.",
+        "Sélection par un jury académique d'octobre 2026 à mai 2027 ; résultats en juin 2027."
+      ]
     },
     "en": {
-      "nom": "ARES International Training scholarships",
-      "resume": "ARES funds training in French-speaking Belgium for residents of partner countries. The 2027-2028 call is closed.",
-      "couverture_detail": "The official page does not describe the amount. It lists a bachelor's, a one-year specialisation master, or a six-month continuing course.",
-      "diplome": "A higher education degree and professional experience.",
-      "langue": "Depends on the course (often French).",
+      "nom": "ARES International Training Scholarships",
+      "resume": "ARES funds training in French-speaking Belgium (a one-year specialised bachelor's or master's, or a six-month continuing education course) for professionals living in 32 partner countries, including Cameroon. The 2027-2028 call is closed.",
+      "valeur": "Return flight, monthly living allowance and insurance",
+      "couverture_detail": "Specialised bachelor's and master's: economy flight (one return trip per academic year), monthly allowance for 12 months (+ a reduced 13th month), visa costs up to 200 euros included in the allowance, inter-institution travel up to 250 euros on receipts, insurance paid by ARES. Continuing education: flight, monthly allowance for the course, 200 euro flat sum, insurance.",
+      "ne_couvre_pas": "Monthly amounts are not stated on the pages read.",
+      "eligibilite": "Be a permanent resident working in one of the 32 partner countries (Cameroon included). Have at least 2 years of relevant professional experience in one of them after the last degree. Degree obtained no more than 20 years before the course starts. One course per application. Former ARES grantees in Belgium are not eligible.",
+      "diplome": "Higher education degree meeting the admission requirements of the chosen course.",
+      "langue": "Language of instruction of the course, written and spoken. The form is completed in that language.",
+      "conseil": "This scholarship targets working professionals, not students without experience: you need 2 years of experience and your employer's commitment. Prepare your file as soon as the next call opens and create your GIRAF account early, as account creation is suspended two weeks before the deadline.",
+      "edition_note": "The 2027-2028 call opened 3 August 2026 and closed 18 September 2026 at 12:00 noon (Belgian time). The next call is announced for August 2027, with no exact date.",
       "autres": [
-        "Be a permanent resident of an ARES partner country (31 countries in Africa, South America and Asia).",
-        "Want training on a development topic."
+        "Applying is free; ARES never asks for money.",
+        "Priority to candidates from ARES partner institutions and committed to development; gender parity sought.",
+        "A commitment to return and reintegrate professionally is required."
       ],
       "dossier": [
-        "See the training catalogue on the ARES site",
-        "ARES online form",
-        "Documents: see the full call text"
+        "2 recommendation letters (academic and/or professional)",
+        "Certified copies of original diplomas",
+        "Certified copies of original transcripts for all years",
+        "Proof of occupation for the last 5 years",
+        "Certificate of nationality, national ID card (voter card not accepted) or passport copy",
+        "Proof of residence (residence certificate, resident card or permit; otherwise a signed declaration on honour)",
+        "Employer's commitment to re-employ the candidate",
+        "Pre-project (for some courses)"
       ],
-      "conseil": "Prepare your file from July 2027 and read the training catalogue. Specialisation masters in heritage or management may suit humanities students.",
-      "edition_note": "The 2027-2028 call is closed (deadline 18 September 2026). The next call is announced for August 2027, with no exact date."
+      "etapes": [
+        "Create or reactivate a GIRAF account (www.giraf.ares-ac.be); ARES validation takes a few hours to a few days.",
+        "In the Competitive calls tab, open the International Training application form and fill it in (draft saving possible).",
+        "Attach the mandatory documents then click Submit: submission is final.",
+        "An academic jury selects from October 2026 to May 2027; results in June 2027."
+      ]
     },
-    "origine": "gouvernementale"
+    "origine": "gouvernementale",
+    "editions": [
+      {
+        "annee": 2026,
+        "libelle": "2027/28",
+        "ouverture": "2026-08-03",
+        "cloture": "2026-09-18",
+        "confirme": true
+      },
+      {
+        "annee": 2027,
+        "libelle": "2028/29",
+        "ouverture": null,
+        "cloture": null,
+        "confirme": false
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.ares-ac.be/en/scholarships",
+        "https://www.ares-ac.be/en/node/798",
+        "https://www.ares-ac.be/sites/default/files/2026-08/fi-2027-2028_document-d-appel-en-vf_2.pdf",
+        "https://www.ares-ac.be/sites/default/files/2026-07/guide-du-candidat-giraf_fi-en_27-28.pdf"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "vlir-uos-icp",
-    "organisme": "VLIR-UOS (Belgique, Flandre)",
+    "organisme": "VLIR-UOS (Conseil interuniversitaire flamand, Belgique)",
     "pays_accueil": [
       "Belgique"
     ],
@@ -2280,15 +2352,14 @@
       "economie-gestion",
       "droit-politique",
       "agronomie-environnement",
-      "ingenierie",
-      "informatique",
-      "sante"
+      "informatique"
     ],
     "couverture_niveau": "complete",
     "age_max": 35,
     "cycle": {
       "type": "annuelle",
-      "ouverture_mois": "octobre"
+      "ouverture_mois": "octobre",
+      "cloture_mois": null
     },
     "edition": {
       "libelle": "2027/28",
@@ -2297,125 +2368,102 @@
     "lien_officiel": "https://www.vliruos.be/en/scholarships/",
     "sources": [
       {
-        "titre": "VLIR-UOS - Scholarships",
+        "titre": "VLIR-UOS - ICP Connect scholarships",
         "url": "https://www.vliruos.be/en/scholarships/"
       },
       {
-        "titre": "VLIR-UOS - Liste des pays ICP",
+        "titre": "VLIR-UOS - Liste des pays éligibles ICP",
         "url": "https://www.vliruos.be/country-list-icp-scholarships"
       }
     ],
     "last_verified": "2026-10-19",
-    "status": "to_verify",
+    "status": "verified",
     "recherche_notes": "Plusieurs programmes sont sciences/techniques. La page ne liste pas les pièces. Les domaines indiqués sont une lecture des intitulés de programmes.",
     "fr": {
-      "nom": "Bourses VLIR-UOS ICP Connect (Flandre)",
-      "resume": "VLIR-UOS finance des programmes en anglais dans des universités flamandes. Le Cameroun figure sur la liste des pays éligibles.",
-      "couverture_detail": "Frais d'études, voyage, assurance et frais de vie pendant toute la durée du programme.",
-      "diplome": "Diplôme selon le programme. Master avancé: limite d'âge 45 ans.",
-      "langue": "Programmes en anglais.",
+      "nom": "Bourses VLIR-UOS ICP Connect (Flandre, Belgique)",
+      "resume": "VLIR-UOS finance des bacheliers professionnels et des masters en anglais dans des établissements flamands. Le Cameroun figure dans la liste des pays éligibles.",
+      "couverture_detail": "La page indique que la bourse couvre les frais de scolarité, le voyage, l'assurance et les frais de vie (logement et repas), pour la durée complète du programme uniquement (pas de bourse partielle ni de prolongation). Les montants peuvent changer selon les décisions de financement du gouvernement.",
+      "diplome": "Selon le programme (voir la page de l'établissement). Offre : bacheliers professionnels (3 ans : gestion hôtelière, informatique appliquée), masters initiaux (2 ans, dont aquaculture, technologie alimentaire, gestion durable des terres) et masters avancés (1 an : évaluation et gestion du développement, mondialisation et développement, gouvernance et développement).",
+      "langue": "Programmes enseignés en anglais.",
       "autres": [
-        "Avoir la nationalité d'un pays éligible et y résider au moment de la candidature.",
-        "Pas de bourse belge antérieure.",
-        "Un seul programme ICP par an.",
-        "Pour les masters avancés comme Gouvernance et développement, préférence pour les agents de l'enseignement, de l'État ou de la société civile."
+        "Les domaines indiqués ne sont que ceux des programmes cités sur la page ; plusieurs anciens programmes sont arrêtés pour 2027-2028.",
+        "Critères de sélection : motivation, expérience professionnelle, équilibre hommes-femmes (candidatures féminines encouragées), équilibre régional, public vulnérable ; préférence à ceux qui n'ont jamais étudié dans un pays à revenu plus élevé.",
+        "Résultats notifiés par courriel au plus tard à la mi-mai."
       ],
       "dossier": [
-        "Candidature sur le site de l'université et de la bourse",
-        "Pièces: voir la page de chaque programme"
+        "Formulaire de candidature au programme et à la bourse sur le site de l'établissement flamand",
+        "Pièces : la page VLIR-UOS ne les liste pas ; elles sont fixées par chaque établissement, à lire sur la page du programme visé"
       ],
-      "conseil": "Pour les lettres et le droit, vise les masters avancés Governance and Development, Globalisation and Development ou Development Evaluation. L'âge limite est mesuré au 1er janvier.",
-      "edition_note": "L'appel 2026-2027 est clos. L'appel 2027-2028 devrait s'ouvrir fin octobre 2026. Les dates limites seront publiées sur chaque programme."
+      "conseil": "Attends l'ouverture de l'appel (prévue fin octobre 2026) et lis les dates limites propres à chaque programme, car elles diffèrent. L'âge est compté au 1er janvier.",
+      "edition_note": "L'appel 2026-2027 est clos. La page annonce l'ouverture de l'appel 2027-2028 vers la fin octobre 2026 ; aucune date limite n'est encore publiée, chaque programme fixe la sienne.",
+      "valeur": "Frais d'études, voyage, assurance et frais de vie (logement et repas) pendant tout le programme",
+      "ne_couvre_pas": "Pas de prolongation au-delà de la durée du programme ; pas de bourse partielle.",
+      "eligibilite": "Avoir la nationalité d'un pays de la liste officielle (Cameroun inclus) et y résider au moment de la candidature. Âge au 1er janvier de l'année d'entrée : 35 ans maximum pour le bachelor professionnel et le master initial (19 ans minimum pour le bachelor), 45 ans maximum pour le master avancé. Une seule candidature ICP Connect par an ; une bourse du gouvernement belge antérieure ou une autre bourse sur la même période peut disqualifier. Préférence pour les personnes de l'enseignement supérieur, de l'administration ou de la société civile.",
+      "etapes": [
+        "Vérifier que le pays, l'âge et le profil correspondent aux critères.",
+        "Choisir un programme et lire les instructions de l'établissement.",
+        "Candidater sur le site de l'établissement au programme et à la bourse (cocher la demande de bourse).",
+        "Ne candidater qu'à un seul programme ICP dans l'année."
+      ]
     },
     "en": {
-      "nom": "VLIR-UOS ICP Connect scholarships (Flanders)",
-      "resume": "VLIR-UOS funds English-taught programmes at Flemish universities. Cameroon is on the eligible country list.",
-      "couverture_detail": "Tuition, travel, insurance and living costs for the full programme.",
-      "diplome": "Degree depends on the programme. Advanced master: age limit 45.",
+      "nom": "VLIR-UOS ICP Connect scholarships (Flanders, Belgium)",
+      "resume": "VLIR-UOS funds professional bachelor's and master's programmes taught in English at Flemish institutions. Cameroon is on the eligible country list.",
+      "valeur": "Tuition, travel, insurance and living costs (board and lodging) for the full programme",
+      "couverture_detail": "The page states the scholarship covers tuition, travel, insurance and living expenses (board and lodging) for the full programme length only (no partial awards or extensions). Amounts may change with government funding decisions.",
+      "ne_couvre_pas": "No extension beyond the programme length; no partial awards.",
+      "eligibilite": "Hold the nationality of a country on the official list (Cameroon included) and reside in one when applying. Age on 1 January of the intake year: 35 maximum for professional bachelor and initial master (19 minimum for bachelor), 45 maximum for advanced master. One ICP Connect application per year; a previous Belgian government scholarship or another award for the same period can disqualify. Preference for people from higher education, government or civil society.",
+      "diplome": "Depends on the programme (see the institution's page). Offer: professional bachelors (3 years: hotel management, applied computer science), initial masters (2 years, incl. aquaculture, food technology, sustainable land management) and advanced masters (1 year: development evaluation and management, globalisation and development, governance and development).",
       "langue": "Programmes taught in English.",
+      "conseil": "Wait for the call to open (expected end of October 2026) and read each programme's own deadline, as they differ. Age is counted on 1 January.",
+      "edition_note": "The 2026-2027 call is closed. The page says the 2027-2028 call is expected to open by the end of October 2026; no deadline is published yet, each programme sets its own.",
       "autres": [
-        "Hold the nationality of an eligible country and live in one when applying.",
-        "No previous Belgian government scholarship.",
-        "Apply to one ICP programme per year.",
-        "Advanced masters such as Governance and Development prefer people from education, government or civil society."
+        "Fields listed are only those of the programmes named on the page; several older programmes are discontinued for 2027-2028.",
+        "Selection criteria: motivation, professional experience, gender balance (women encouraged), regional balance, vulnerable groups; preference for those who have not studied in a higher-income country.",
+        "Results notified by email no later than mid-May."
       ],
       "dossier": [
-        "Apply via the university and scholarship form",
-        "Documents: see each programme page"
+        "Application form for the programme and the scholarship on the Flemish institution's website",
+        "Documents: the VLIR-UOS page does not list them; each institution sets them, see the page of the programme you target"
       ],
-      "conseil": "For humanities and law, look at the advanced masters Governance and Development, Globalisation and Development or Development Evaluation. Age is counted on 1 January.",
-      "edition_note": "The 2026-2027 call is closed. The 2027-2028 call is expected to open at the end of October 2026. Deadlines will be on each programme page."
+      "etapes": [
+        "Check that your country, age and profile meet the criteria.",
+        "Choose a programme and read the institution's instructions.",
+        "Apply on the institution's website for the programme and the scholarship (tick the scholarship request).",
+        "Apply to one ICP programme only in the year."
+      ]
     },
-    "origine": "gouvernementale"
-  },
-  {
-    "id": "auf-pimef",
-    "organisme": "AUF (Agence universitaire de la Francophonie)",
-    "pays_accueil": [
-      "autres"
-    ],
-    "cameroun": "non_precise",
-    "niveaux": [
-      "master",
-      "doctorat"
-    ],
-    "domaines": [
-      "tous"
-    ],
-    "couverture_niveau": "variable",
-    "cycle": {
-      "type": "irreguliere"
-    },
-    "edition": {
-      "libelle": "2026/27",
-      "cloture": "2027-03-15",
-      "confirme": true
-    },
-    "lien_officiel": "https://appels-propositions.auf.org/en/",
-    "sources": [
+    "origine": "gouvernementale",
+    "editions": [
       {
-        "titre": "Plateforme AUF des appels à propositions",
-        "url": "https://appels-propositions.auf.org/en/"
+        "annee": 2027,
+        "libelle": "2027/28",
+        "ouverture": null,
+        "cloture": null,
+        "confirme": false
       }
     ],
-    "last_verified": "2026-10-19",
-    "status": "to_verify",
-    "recherche_notes": "Page de 115 000 caractères lue sur 100 000; pas de détail du PIMEF. Une recherche web n'a pas confirmé de nouvel appel. La page officielle des bourses AUF a répondu 403. Date de clôture non confirmée sur la fiche de l'appel, donc confirme=false.",
-    "fr": {
-      "nom": "AUF - PIMEF (mobilité professionnelle, appel à manifestation d'intérêt)",
-      "resume": "L'AUF publie plusieurs appels par an pour étudiants membres. Aucune bourse AUF dédiée aux Camerounais n'a été trouvée ouverte.",
-      "couverture_detail": "Non précisé sur la page de l'appel.",
-      "diplome": "Étudiant d'un établissement membre de l'AUF.",
-      "langue": "Français.",
-      "autres": [
-        "La liste des pays et les critères détaillés ne sont pas sur la page lue."
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.vliruos.be/en/scholarships/",
+        "https://www.vliruos.be/country-list-icp-scholarships"
       ],
-      "dossier": [
-        "Voir la plateforme des appels AUF"
-      ],
-      "conseil": "Vérifie si ton université est membre de l'AUF. Suis la plateforme des appels, car les appels changent souvent.",
-      "edition_note": "Appel a manifestation d'interet (entreprises partenaires/stages) ouvert, cloture 15 mars 2027 23h59 Paris; ce n'est pas une bourse directe pour etudiants."
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
     },
-    "en": {
-      "nom": "AUF - PIMEF (professional mobility, expression of interest)",
-      "resume": "The AUF publishes several calls a year for member students. No AUF scholarship specific to Cameroonians was found open.",
-      "couverture_detail": "Not stated on the call page.",
-      "diplome": "Student of an AUF member institution.",
-      "langue": "French.",
-      "autres": [
-        "Country list and detailed criteria are not on the page read."
-      ],
-      "dossier": [
-        "See the AUF calls platform"
-      ],
-      "conseil": "Check if your university is an AUF member. Follow the calls platform, because calls change often.",
-      "edition_note": "The AUF platform shows a closing date of 15/03/2027 23:59 (Paris) for the professional component. Opening date and criteria not read."
-    },
-    "origine": "gouvernementale"
+    "langue_acces": "en"
   },
   {
     "id": "quebec-pbeee",
-    "organisme": "Fonds de recherche du Québec / Ministère de l'Enseignement supérieur du Québec",
+    "organisme": "Fonds de recherche du Québec (FRQ), financé par le ministère de l'Enseignement supérieur du Québec",
     "pays_accueil": [
       "Canada"
     ],
@@ -2423,13 +2471,12 @@
     "niveaux": [
       "master",
       "doctorat",
-      "postdoc",
-      "autre"
+      "postdoc"
     ],
     "domaines": [
       "tous"
     ],
-    "couverture_niveau": "complete",
+    "couverture_niveau": "variable",
     "cycle": {
       "type": "annuelle",
       "ouverture_mois": "juillet",
@@ -2445,57 +2492,105 @@
       {
         "titre": "FRQ - PBEEE 2027-2028",
         "url": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/"
-      },
-      {
-        "titre": "FRQ - Règles PBEEE 2026-2027 (PDF)",
-        "url": "https://frq.gouv.qc.ca/app/uploads/2025/07/8.pbeee_2026-2027_vf-approuvee_abida-4.pdf"
       }
     ],
     "last_verified": "2026-10-19",
-    "status": "to_verify",
+    "status": "verified",
     "recherche_notes": "La liste de documents vient du règlement 2026-2027; celui de 2027-2028 n'a pas été lu. La page FRQ parle du secteur Nature et technologies; le règlement 2026-2027 couvre tous les secteurs. Remplace la bourse 'Québec-Cameroun' trouvée: elle est réservée aux Québécois qui vont au Cameroun, donc non retenue.",
     "fr": {
-      "nom": "Bourses d'excellence du Québec pour étudiants étrangers (PBEEE)",
-      "resume": "Le PBEEE finance des étudiants étrangers en maîtrise de recherche, doctorat ou postdoc au Québec, dans tous les domaines. Il faut être présélectionné par l'université.",
-      "couverture_detail": "Maîtrise de recherche: 20 000 $/an. Doctorat: 25 000 $/an. Postdoc: 35 000 $. Court séjour: 3 000 $/mois. Exemption des droits majorés et assurance maladie RAMQ.",
-      "diplome": "Maîtrise de recherche (avec mémoire) ou doctorat de recherche dans une université québécoise. Pas de programme professionnel.",
-      "langue": "Français ou anglais.",
+      "nom": "Bourses d'excellence pour étudiants étrangers (PBEEE) 2027-2028, Québec",
+      "resume": "Le FRQ finance des bourses pour des étudiants étrangers en maîtrise ou doctorat de recherche, des stages postdoctoraux et de courts séjours dans une université québécoise. Il faut d'abord être présélectionné par l'université québécoise.",
+      "couverture_detail": "Montants selon le volet (VM maîtrise, V1 doctorat, V2 postdoctorat, V3 court séjour). Les boursiers reçoivent aussi l'exemption des droits de scolarité majorés et la couverture de la RAMQ pendant le financement.",
+      "diplome": "Inscription ou admission à un programme de recherche (maîtrise, doctorat) d'une université québécoise ; doctorat pour le volet postdoctorat.",
+      "langue": "Relevés en français ou en anglais (traduction simple si autre langue).",
       "autres": [
-        "Ne pas être citoyen canadien ni résident permanent.",
-        "Être présélectionné par une université québécoise (voie générale: tous les pays, sans quota).",
-        "Maîtrise: au plus 3 sessions à temps plein avant le 1er mai 2027.",
-        "Sciences humaines, arts et lettres admis."
+        "Présélection obligatoire par une université québécoise (jusqu'à 16 candidatures par université) : date limite 27 octobre 2026, 16 h.",
+        "Il faut un compte FRQnet.",
+        "Le boursier doit résider au Québec pendant le financement et se consacrer à temps plein à son projet.",
+        "Versements seulement après réception du permis d'études (maîtrise, doctorat) ou de travail (postdoctorat).",
+        "Résultats finaux, sans procédure de révision."
       ],
       "dossier": [
-        "Passeport",
-        "Relevés de notes de toutes les études universitaires",
-        "Autres pièces: voir les règles du concours (FRQnet)"
+        "Copie de la page d'identification d'un passeport valide",
+        "Relevés de notes de toutes les années universitaires, du plus récent au plus ancien (traduction simple si ni français ni anglais)",
+        "Maîtrise/doctorat, au besoin : attestation du registraire (sessions à temps partiel ou sans inscription) ; attestation de suspension d'inscription",
+        "Postdoctorat : copie du diplôme de doctorat (ou attestation de premier dépôt de thèse, ou relevé doctoral) ; lettre d'acceptation du superviseur déposée par lui dans FRQnet",
+        "Court séjour : lettre d'acceptation du superviseur déposée dans FRQnet",
+        "Si applicable : justification d'une mesure d'exception (1 page) avec pièces"
       ],
-      "conseil": "Contacte tout de suite un professeur d'une université québécoise: la présélection est le 27 octobre 2026. Un candidat doit d'abord être admis ou en cours de demande.",
-      "edition_note": "Lancement en juillet 2026 (jour non précisé). Présélection par l'université au plus tard le 27 octobre 2026 à 16 h. Demande au FRQ le 2 décembre 2026 à 16 h (HNE). Résultats en avril 2027."
+      "conseil": "La présélection par l'université québécoise est l'étape bloquante, avec une date limite le 27 octobre 2026 : contacte tout de suite le service des études supérieures de l'université visée.",
+      "edition_note": "Concours 2027-2028 : lancé en juillet 2026, présélection des universités le 27 octobre 2026 (16 h), demande complète au FRQ le 2 décembre 2026 (16 h, heure de l'Est), résultats en avril 2027, bourses effectives entre le 1er mai 2027 et le 15 janvier 2028.",
+      "valeur": "Maîtrise 20 000 $/an (max 40 000 $) ; doctorat 25 000 $/an (max 100 000 $) ; postdoctorat 35 000 $ (12 mois) ; court séjour 3 000 $/mois (max 12 000 $)",
+      "ne_couvre_pas": "Programmes professionnels et cotutelles non admissibles ; pas de rétroactivité (sessions avant l'été 2027 non financées) ; cumul interdit avec les bourses d'autres organismes canadiens et québécois.",
+      "eligibilite": "Ni citoyen canadien ni résident permanent (et sans demande de résidence permanente au dépôt). Le volet général est ouvert à tous les pays, sans quota par pays ; le Cameroun n'est pas nommé mais aucune exclusion n'existe. Programme de recherche seulement (mémoire ou thèse). Maîtrise : au plus 3 sessions à temps plein avant le 1er mai 2027 ou début entre le 1er mai 2027 et le 15 janvier 2028. Doctorat : au plus 14 sessions. Postdoctorat : doctorat obtenu depuis 2 ans ou moins, dans un autre établissement que celui du doctorat. Ne pas avoir déjà reçu une bourse d'excellence du ministère.",
+      "etapes": [
+        "Obtenir la présélection d'une université québécoise (avant le 27 octobre 2026, 16 h) et avoir un compte FRQnet.",
+        "Le FRQ contacte les personnes présélectionnées pour remplir le formulaire FRQnet ; choisir le bon formulaire (une erreur rend non admissible).",
+        "Déposer le dossier complet avant le 2 décembre 2026, 16 h (heure de l'Est) ; aucun dossier tardif.",
+        "Avis d'admissibilité en janvier 2027 au plus tard ; résultats en avril 2027.",
+        "Accepter l'offre dans les 30 jours dans FRQnet."
+      ]
     },
     "en": {
-      "nom": "Quebec Merit Scholarships for Foreign Students (PBEEE)",
-      "resume": "PBEEE funds foreign students in research master's, PhD or postdoc in Quebec, in all fields. The university must preselect you first.",
-      "couverture_detail": "Research master's: CAD 20,000/year. PhD: CAD 25,000/year. Postdoc: CAD 35,000. Short stay: CAD 3,000/month. Exemption from higher fees and RAMQ health cover.",
-      "diplome": "Research master's (with thesis) or research PhD at a Quebec university. No professional programmes.",
-      "langue": "French or English.",
+      "nom": "Merit scholarships for foreign students (PBEEE) 2027-2028, Quebec",
+      "resume": "The FRQ funds foreign students in research master's or doctoral programmes, postdoctoral stays and short research stays at a Quebec university. You must first be pre-selected by the Quebec university.",
+      "valeur": "Master's CAD 20,000/year (max 40,000); doctorate 25,000/year (max 100,000); postdoc 35,000 (12 months); short stay 3,000/month (max 12,000)",
+      "couverture_detail": "Amounts depend on the stream (VM master's, V1 doctorate, V2 postdoc, V3 short stay). Recipients also get an exemption from the higher international tuition fees and RAMQ health coverage while funded.",
+      "ne_couvre_pas": "Professional programmes and joint supervision (cotutelle) are not eligible; not retroactive (terms before summer 2027 are not funded); cannot be combined with awards from other Canadian and Quebec bodies.",
+      "eligibilite": "Neither a Canadian citizen nor a permanent resident (and no permanent residence application at filing). The general stream is open to all countries with no country quota; Cameroon is not named but nothing excludes it. Research programmes only (thesis or dissertation). Master's: at most 3 full-time terms before 1 May 2027, or start between 1 May 2027 and 15 January 2028. Doctorate: at most 14 terms. Postdoc: doctorate obtained 2 years ago or less, at an institution other than the one that awarded it. Must not have already received a ministry excellence scholarship.",
+      "diplome": "Enrolment or admission in a research programme (master's, doctorate) at a Quebec university; a doctorate for the postdoc stream.",
+      "langue": "Transcripts in French or English (simple translation if another language).",
+      "conseil": "Pre-selection by the Quebec university is the blocking step, with a deadline on 27 October 2026: contact the graduate studies office of your target university right away.",
+      "edition_note": "2027-2028 competition: launched July 2026, university pre-selection 27 October 2026 (4 pm), full application to the FRQ 2 December 2026 (4 pm Eastern), results April 2027, awards take effect between 1 May 2027 and 15 January 2028.",
       "autres": [
-        "Not a Canadian citizen or permanent resident.",
-        "Be preselected by a Quebec university (general stream: all countries, no quota).",
-        "Master's: at most 3 full-time terms before 1 May 2027.",
-        "Humanities and arts are eligible."
+        "Mandatory pre-selection by a Quebec university (up to 16 applications per university): deadline 27 October 2026, 4 pm.",
+        "An FRQnet account is required.",
+        "Recipients must live in Quebec during funding and work full time on the project.",
+        "Payments start only after the study permit (master's, doctorate) or work permit (postdoc) is received.",
+        "Results are final, with no review procedure."
       ],
       "dossier": [
-        "Passport",
-        "Transcripts of all university studies",
-        "Other documents: see the competition rules (FRQnet)"
+        "Copy of the identification page of a valid passport",
+        "Transcripts for all university years, most recent first (simple translation if not French or English)",
+        "Master's/doctorate, if needed: registrar's statement (part-time or non-enrolled terms); statement of enrolment suspension",
+        "Postdoc: copy of the doctoral degree (or proof of first thesis submission, or doctoral transcript); supervisor's acceptance letter submitted by the supervisor in FRQnet",
+        "Short stay: supervisor's acceptance letter submitted in FRQnet",
+        "If applicable: justification for an exceptional measure (1 page) with supporting documents"
       ],
-      "conseil": "Contact a professor at a Quebec university right away: preselection is on 27 October 2026. You need an admission or an admission request first.",
-      "edition_note": "Launched in July 2026 (day not stated). University preselection by 27 October 2026, 4 pm. Application to FRQ on 2 December 2026, 4 pm (EST). Results in April 2027."
+      "etapes": [
+        "Get pre-selected by a Quebec university (before 27 October 2026, 4 pm) and have an FRQnet account.",
+        "The FRQ contacts pre-selected candidates to complete the FRQnet form; choose the right form (a mistake makes you ineligible).",
+        "Submit the complete file before 2 December 2026, 4 pm Eastern time; no late files.",
+        "Eligibility notice by January 2027 at the latest; results in April 2027.",
+        "Accept the offer within 30 days in FRQnet."
+      ]
     },
     "origine": "gouvernementale",
-    "vedette": true
+    "vedette": true,
+    "editions": [
+      {
+        "annee": 2026,
+        "libelle": "2027/28",
+        "ouverture": null,
+        "cloture": "2026-12-02",
+        "confirme": true
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiantes-etrangeres-et-etudiants-etrangers-pbeee-2027-2028/"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "quebec-exemption-droits",
@@ -2503,11 +2598,10 @@
     "pays_accueil": [
       "Canada"
     ],
-    "cameroun": "non_precise",
+    "cameroun": "oui",
     "niveaux": [
       "licence",
-      "master",
-      "doctorat"
+      "master"
     ],
     "domaines": [
       "tous"
@@ -2523,52 +2617,98 @@
     "lien_officiel": "https://www.quebec.ca/education/etudier-quebec/aide-financiere-etudiants-internationaux/exemption-droits-scolarite-ententes",
     "sources": [
       {
-        "titre": "Québec - Exemption des droits de scolarité (ententes)",
+        "titre": "Québec - Exemption des droits de scolarité supplémentaires en vertu d'ententes",
         "url": "https://www.quebec.ca/education/etudier-quebec/aide-financiere-etudiants-internationaux/exemption-droits-scolarite-ententes"
+      },
+      {
+        "titre": "Québec - Pays signataires d'une entente (tableau)",
+        "url": "https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/education/publications-adm/ES/Etudier-quebec/Pays_organisation_internationale_entente.pdf"
+      },
+      {
+        "titre": "Québec - Responsables de la gestion des exemptions par pays (août 2026)",
+        "url": "https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/education/publications-adm/ES/Etudier-quebec/Liste-responsables-gestion-exemptions.pdf"
       }
     ],
     "last_verified": "2026-10-19",
-    "status": "to_verify",
+    "status": "verified",
     "recherche_notes": "Cameroun non vérifié: la liste des pays est dans un PDF non lu. Un texte d'entente Québec-Cameroun existe dans des archives, version en vigueur non vérifiée.",
     "fr": {
-      "nom": "Exemption des droits de scolarité supplémentaires (Québec, ententes)",
-      "resume": "Une quarantaine de pays ont une entente avec le Québec pour ces exemptions. La page ne nomme pas le Cameroun.",
-      "couverture_detail": "Les étudiants paient les droits de scolarité des Québécois au lieu des droits majorés. Pas d'allocation de vie.",
-      "diplome": "Admission dans une université québécoise.",
-      "langue": "Français ou anglais.",
+      "nom": "Exemption des droits de scolarité supplémentaires du Québec (ententes internationales)",
+      "resume": "Le gouvernement du Québec exempte des droits de scolarité supplémentaires, réservés aux étudiants étrangers, des étudiants de pays signataires d'une entente, dont le Cameroun. Il s'agit d'une réduction de frais, pas d'une bourse de vie.",
+      "couverture_detail": "Exemption des droits de scolarité supplémentaires pour une durée d'au moins un an : baccalauréat 3 ans (programme de 90 crédits) ou 4 ans (120 crédits), maîtrise 2 ans, doctorat 3 ans, plus éventuellement une année préparatoire.",
+      "diplome": "Admission dans une université québécoise (lettre d'admission conditionnelle ou définitive, ou attestation d'inscription récente).",
+      "langue": "Selon le programme choisi à l'université québécoise.",
       "autres": [
-        "Être recommandé par le responsable des exemptions de son pays.",
-        "Permis d'études et CAQ.",
-        "Études à temps plein."
+        "En règle générale, une seule exemption par étudiant, sauf passage à un cycle supérieur.",
+        "Un changement de programme ou d'établissement demande l'accord préalable du responsable des exemptions et du ministère.",
+        "Une demande envoyée directement au ministère n'est pas examinée."
       ],
       "dossier": [
-        "Lettre d'admission d'une université québécoise",
-        "Formulaire annexe II signé",
-        "Permis d'études et CAQ"
+        "Lettre d'admission (conditionnelle ou définitive) d'une université québécoise, ou attestation d'inscription récente",
+        "Formulaire de demande d'exemption (annexe II) rempli et signé",
+        "Permis d'études et Certificat d'acceptation du Québec (CAQ)"
       ],
-      "conseil": "Demande d'abord quelle est la procédure du Cameroun. N'envoie pas ta demande au ministère: elle ne sera pas lue.",
-      "edition_note": "Aucune date limite sur la page. Il faut demander les critères au responsable de ton pays."
+      "conseil": "Commence par contacter le responsable des exemptions camerounais : lui seul peut te recommander, et les places sont peu nombreuses. Garde en tête que cette aide ne finance pas ta vie au Québec.",
+      "edition_note": "Aucune date limite sur la page officielle : demande les dates au responsable des exemptions du Cameroun et à ton université.",
+      "valeur": "Droits de scolarité au tarif québécois au lieu du tarif majoré pour étudiants étrangers",
+      "ne_couvre_pas": "Pas d'allocation de vie, de billet d'avion ni de frais de logement. Les droits de scolarité de base restent à payer.",
+      "eligibilite": "Être étudiant à temps plein, de façon continue aux sessions d'automne et d'hiver, dans un programme universitaire d'un établissement québécois ; détenir un permis d'études fédéral et un CAQ ; être recommandé par le responsable des exemptions de son pays. Le contingent est limité : le tableau du ministère indique 16 exemptions pour le Cameroun (8 au 1er cycle, 8 au 2e cycle, 0 au 3e cycle), ce qui laisse peu de places.",
+      "etapes": [
+        "Contacter le responsable des exemptions du Cameroun pour connaître les critères de sélection (selon la liste du ministère : ministère de l'Enseignement supérieur, Yaoundé).",
+        "Faire une demande d'admission dans une université québécoise.",
+        "Une fois admis, envoyer au responsable la lettre d'admission ou l'attestation d'inscription et l'annexe II signée.",
+        "Le responsable indique si la demande est retenue et la transmet au ministère québécois.",
+        "Le ministère confirme les exemptions à l'étudiant et à l'établissement."
+      ]
     },
     "en": {
-      "nom": "Quebec exemption of supplementary tuition fees (agreements)",
-      "resume": "About forty countries have an agreement with Quebec for these exemptions. The page does not name Cameroon.",
-      "couverture_detail": "Students pay Quebec-resident tuition instead of the higher international fees. No living allowance.",
-      "diplome": "Admission to a Quebec university.",
-      "langue": "French or English.",
+      "nom": "Quebec Exemption of Supplementary Tuition Fees (International Agreements)",
+      "resume": "The Quebec government exempts students from countries with an agreement, including Cameroon, from the supplementary tuition fees charged to foreign students. This is a fee reduction, not a living-cost scholarship.",
+      "valeur": "Tuition at the Quebec rate instead of the higher foreign-student rate",
+      "couverture_detail": "Exemption of supplementary tuition fees for at least one year: bachelor's 3 years (90-credit programme) or 4 years (120 credits), master's 2 years, doctorate 3 years, plus possibly one preparatory year.",
+      "ne_couvre_pas": "No living allowance, airfare or housing. Basic tuition fees remain payable.",
+      "eligibilite": "Be a full-time student, continuously in the fall and winter terms, in a university programme at a Quebec institution; hold a federal study permit and a CAQ; be recommended by your country's exemption manager. The quota is limited: the ministry table shows 16 exemptions for Cameroon (8 first cycle, 8 second cycle, 0 third cycle), so places are few.",
+      "diplome": "Admission to a Quebec university (conditional or final admission letter, or a recent enrolment certificate).",
+      "langue": "Depends on the programme at the Quebec university.",
+      "conseil": "Start by contacting Cameroon's exemption manager: only they can recommend you, and places are few. Keep in mind this aid does not fund your living costs in Quebec.",
+      "edition_note": "No deadline on the official page: ask Cameroon's exemption manager and your university for dates.",
       "autres": [
-        "Be recommended by your country's exemption manager.",
-        "Hold a study permit and CAQ.",
-        "Study full-time."
+        "Generally one exemption per student, unless moving to a higher cycle.",
+        "Changing programme or institution requires prior approval from the exemption manager and the ministry.",
+        "A request sent directly to the ministry is not reviewed."
       ],
       "dossier": [
-        "Admission letter from a Quebec university",
-        "Signed annex II form",
-        "Study permit and CAQ"
+        "Admission letter (conditional or final) from a Quebec university, or a recent enrolment certificate",
+        "Completed and signed exemption request form (Annex II)",
+        "Study permit and Quebec Acceptance Certificate (CAQ)"
       ],
-      "conseil": "First ask about the Cameroon procedure. Do not send your request to the ministry: it will not be read.",
-      "edition_note": "No deadline on the page. Ask your country's manager for the criteria."
+      "etapes": [
+        "Contact Cameroon's exemption manager to learn the selection criteria (per the ministry list: Ministry of Higher Education, Yaoundé).",
+        "Apply for admission to a Quebec university.",
+        "Once admitted, send the manager the admission letter or enrolment certificate and the signed Annex II.",
+        "The manager tells you whether the request is accepted and forwards it to the Quebec ministry.",
+        "The ministry confirms the exemptions to you and your institution."
+      ]
     },
-    "origine": "gouvernementale"
+    "origine": "gouvernementale",
+    "editions": [],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.quebec.ca/education/etudier-quebec/aide-financiere-etudiants-internationaux/exemption-droits-scolarite-ententes",
+        "https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/education/publications-adm/ES/Etudier-quebec/Pays_organisation_internationale_entente.pdf",
+        "https://cdn-contenu.quebec.ca/cdn-contenu/adm/min/education/publications-adm/ES/Etudier-quebec/Liste-responsables-gestion-exemptions.pdf"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "boell-etude-allemagne",
@@ -2644,7 +2784,11 @@
       "conseil": "You need German B2 already: start early. Write to the foundation to clarify the 1 March 2027 rule.",
       "edition_note": "Two rounds a year (1 March and 1 September). The fall 2026 round closed on 1 September 2026. The page also says that from 1 March 2027 only first-cycle applications will be accepted, which conflicts with the master section: check."
     },
-    "origine": "fondation"
+    "origine": "fondation",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Cameroun non nommé (la page renvoie à la liste DAC sans la reproduire) ; la page indique qu'à partir du 1er mars 2027 seules les candidatures de master en premier cycle (Erststudium) sont acceptées, ce qui rend l'accès au master incertain ; fiche d'information : les non-UE postulent parfois à des dates irrégulières."
+    }
   },
   {
     "id": "kas-ausland",
@@ -2717,7 +2861,11 @@
       "conseil": "Write to the KAS office to ask if Cameroonians can apply. Start German lessons early.",
       "edition_note": "The page gives 15 July each year at noon (CET) for selection from Germany. No KAS office in Cameroon is named for 2026."
     },
-    "origine": "fondation"
+    "origine": "fondation",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Cameroun non nommé ; la page indique que seuls certains bureaux KAS participent chaque année et la liste à jour n'a pas été lue ; liste complète des documents (Notes on Applying) non lue ; année de la date limite du 15 juillet non précisée."
+    }
   },
   {
     "id": "aecid-africa-med",
@@ -2794,11 +2942,15 @@
       "conseil": "This programme targets public staff, so mostly teachers or civil servants. Watch aecid.es each summer.",
       "edition_note": "2026/27 call closed on 15 July 2026. No 2027/28 call found."
     },
-    "origine": "gouvernementale"
+    "origine": "gouvernementale",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Programme réservé aux fonctionnaires et agents publics à poste fixe (BOE), appel 2026/27 clos le 15 juillet 2026 ; la liste des pays (Cameroun) et la liste des pièces n'ont pas pu être lues sur une page officielle (la page aecid.es ne présente pas ce programme, les pièces sont dans le texte complet de la résolution)."
+    }
   },
   {
     "id": "unesco-japan-young-researchers",
-    "organisme": "UNESCO",
+    "organisme": "UNESCO, avec le gouvernement du Japon",
     "pays_accueil": [
       "Japon"
     ],
@@ -2810,14 +2962,15 @@
     ],
     "domaines": [
       "histoire-geographie",
-      "lettres-langues",
-      "philo-sociologie",
-      "informatique"
+      "informatique",
+      "agronomie-environnement",
+      "education"
     ],
     "couverture_niveau": "partielle",
     "age_max": 40,
     "cycle": {
       "type": "annuelle",
+      "ouverture_mois": null,
       "cloture_mois": "octobre"
     },
     "edition": {
@@ -2828,64 +2981,101 @@
     "lien_officiel": "https://www.unesco.org/en/fellowships/keizo-obuchi",
     "sources": [
       {
-        "titre": "UNESCO - Programme de bourses UNESCO/Japon",
+        "titre": "UNESCO - Programme de bourses UNESCO/Japon pour jeunes chercheurs (Keizo Obuchi)",
         "url": "https://www.unesco.org/en/fellowships/keizo-obuchi"
       },
       {
-        "titre": "UNESCO - Annexe 1, États invités (cycle 2026)",
+        "titre": "UNESCO - Annexe 1, États membres invités (cycle 2026)",
         "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2026/07/Annex%201%20the%20List%20of%20Invited%20Member%20States%20and%20Associated%20Members%20-%20Cycle%202026.pdf"
       }
     ],
     "last_verified": "2026-10-19",
-    "status": "to_verify",
+    "status": "verified",
     "recherche_notes": "Cameroun trouvé par recherche de texte dans le PDF de l'annexe 1. Le programme est surtout pour chercheurs avec master; les domaines sont une lecture des thèmes (patrimoine surtout).",
     "fr": {
-      "nom": "Bourses UNESCO/Japon pour jeunes chercheurs",
-      "resume": "Aide à la recherche au Japon pour de jeunes chercheurs africains diplômés d'un master. Le cycle 2026 est clos.",
-      "couverture_detail": "Subvention jusqu'à 10 000 dollars US pour 3 à 9 mois de recherche au Japon.",
-      "diplome": "Master ou équivalent au minimum, avec potentiel de recherche.",
-      "langue": "Langue de l'établissement japonais d'accueil.",
+      "nom": "Bourses UNESCO/Japon pour jeunes chercheurs (Keizo Obuchi)",
+      "resume": "Subvention pour un séjour de recherche de 3 à 9 mois dans une université ou un centre de recherche japonais, pour de jeunes chercheurs titulaires d'au moins un master. Le cycle 2026 est clos (15 octobre 2026) ; la page ne mentionne pas encore de cycle suivant.",
+      "couverture_detail": "Somme forfaitaire jusqu'à 10 000 USD pour les frais du séjour (voyage, logement, subsistance, frais de recherche). L'assurance maladie est obligatoire, organisée par l'UNESCO, son coût est déduit de la subvention.",
+      "diplome": "Master ou équivalent au minimum, avec un fort potentiel de recherche.",
+      "langue": "Niveau suffisant en lecture et écriture dans la langue d'enseignement de l'établissement japonais d'accueil.",
       "autres": [
-        "Être ressortissant d'un État invité (annexe 1 du guide, où figure le Cameroun).",
-        "Accord d'un superviseur japonais.",
-        "Thèmes: patrimoine, IA et société, éducation.",
-        "Candidature via la Commission nationale pour l'UNESCO, 2 candidats par pays max."
+        "Seules les candidatures présentées par la Commission nationale sont acceptées par l'UNESCO.",
+        "10 bourses attribuées pour le cycle 2026."
       ],
       "dossier": [
-        "Formulaire de candidature",
-        "Projet de recherche",
+        "Formulaire de candidature (annexe 3)",
+        "Projet de recherche (annexe 4)",
         "Pièces académiques",
         "Lettre de recommandation",
-        "Lettre d'acceptation de l'établissement japonais",
-        "Certificat de langue"
+        "Lettre d'acceptation de l'établissement japonais d'accueil",
+        "Certificat de langue (annexe 5)"
       ],
-      "conseil": "Contacte la Commission nationale camerounaise pour l'UNESCO plusieurs mois avant le prochain cycle. Trouve un superviseur au Japon d'abord.",
-      "edition_note": "Cycle 2026 prolonge jusqu'au 15 oct 2026 (soumission via Commission nationale pour l'UNESCO), donc clos a ce jour; 10 bourses de 10 000 USD."
+      "conseil": "Trouve un superviseur japonais avant tout et contacte la Commission nationale camerounaise plusieurs mois avant un éventuel prochain cycle, dont les dates ne sont pas annoncées.",
+      "edition_note": "Cycle 2026 : date limite prolongée au 15 octobre 2026 à minuit (heure de Paris), donc close à ce jour. La page ne mentionne aucun cycle 2027 ni sa date.",
+      "valeur": "Forfait jusqu'à 10 000 dollars US pour le séjour de recherche",
+      "ne_couvre_pas": "Frais de scolarité, équipement (dont ordinateurs), frais de publication, la plupart des conférences.",
+      "eligibilite": "Ressortissant d'un État invité (le Cameroun figure à l'annexe 1 du cycle 2026) ; 40 ans maximum à la candidature ; master ou équivalent dans un domaine pertinent ; accord d'un superviseur d'un établissement japonais ; projet dans un des axes : conservation du patrimoine, IA pour les ressources naturelles et le climat, IA éthique, IA pour les villes et la résilience, IA et éducation. Séjour de 3 à 9 mois, de février à décembre 2027. La candidature passe obligatoirement par la Commission nationale pour l'UNESCO du pays.",
+      "etapes": [
+        "Lire le guide de candidature.",
+        "Contacter la Commission nationale camerounaise pour l'UNESCO, au moins 2 semaines avant la date limite.",
+        "Si désigné, envoyer le formulaire en ligne et les pièces à keizoobuchi.fellowships@unesco.org."
+      ]
     },
     "en": {
-      "nom": "UNESCO/Japan Young Researchers' Fellowships",
-      "resume": "Research support in Japan for young African researchers with a master's. The 2026 cycle is closed.",
-      "couverture_detail": "Grant of up to USD 10,000 for 3 to 9 months of research in Japan.",
-      "diplome": "At least a master's or equivalent, with research potential.",
-      "langue": "Language of the Japanese host institution.",
+      "nom": "UNESCO/Japan Young Researchers' Fellowships (Keizo Obuchi)",
+      "resume": "Grant for a 3 to 9 month research stay at a Japanese university or research institution, for young researchers holding at least a master's degree. The 2026 cycle is closed (15 October 2026); the page mentions no next cycle yet.",
+      "valeur": "Lump sum of up to USD 10,000 for the research stay",
+      "couverture_detail": "Lump sum up to USD 10,000 for the stay (travel, accommodation, subsistence, research costs). Medical insurance is mandatory, arranged by UNESCO, and its cost is deducted from the grant.",
+      "ne_couvre_pas": "Tuition, equipment (including computers), publication costs, most conferences.",
+      "eligibilite": "National of an invited State (Cameroon is in annex 1 of cycle 2026); no older than 40 at application; master's or equivalent in a relevant field; acceptance by a supervisor at a Japanese institution; proposal in one of the areas: heritage conservation, AI for natural resources and climate, ethical AI, AI for cities and resilience, AI and education. Stay of 3 to 9 months, February to December 2027. Applications must go through the country's National Commission for UNESCO.",
+      "diplome": "At least a master's or equivalent, with strong research potential.",
+      "langue": "Sufficient reading and writing proficiency in the language of instruction of the Japanese host institution.",
+      "conseil": "Find a Japanese supervisor first and contact the Cameroon National Commission several months before any next cycle, whose dates are not announced.",
+      "edition_note": "Cycle 2026: deadline extended to 15 October 2026, midnight Paris time, so closed as of today. The page mentions no 2027 cycle or date.",
       "autres": [
-        "Be a national of an invited State (annex 1 of the guide, which lists Cameroon).",
-        "Acceptance from a Japanese supervisor.",
-        "Themes: heritage, AI and society, education.",
-        "Apply through the National Commission for UNESCO; max 2 candidates per country."
+        "UNESCO only accepts applications nominated by the National Commission.",
+        "10 fellowships awarded for cycle 2026."
       ],
       "dossier": [
-        "Application form",
-        "Research proposal",
+        "Application form (Annex 3)",
+        "Research proposal (Annex 4)",
         "Academic documents",
         "Recommendation letter",
         "Host institution acceptance letter",
-        "Language certificate"
+        "Language certificate (Annex 5)"
       ],
-      "conseil": "Contact the Cameroon National Commission for UNESCO months before the next cycle. Find a supervisor in Japan first.",
-      "edition_note": "Deadline extended to 15 October 2026 (midnight Paris): the cycle is now closed. Results expected in December 2026. Stays run February to December 2027."
+      "etapes": [
+        "Read the Application Guide.",
+        "Contact the Cameroon National Commission for UNESCO, at least 2 weeks before the deadline.",
+        "If nominated, send the online form and documents to keizoobuchi.fellowships@unesco.org."
+      ]
     },
-    "origine": "gouvernementale"
+    "origine": "gouvernementale",
+    "editions": [
+      {
+        "annee": 2026,
+        "libelle": "Cycle 2026",
+        "ouverture": null,
+        "cloture": "2026-10-15",
+        "confirme": true
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.unesco.org/en/fellowships/keizo-obuchi",
+        "https://www.unesco.org/sites/default/files/medias/fichiers/2026/07/Annex%201%20the%20List%20of%20Invited%20Member%20States%20and%20Associated%20Members%20-%20Cycle%202026.pdf"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "codesria-grants",
@@ -2949,7 +3139,11 @@
       "conseil": "Join CODESRIA alerts and prepare a research project. Early-career calls are often early in the year.",
       "edition_note": "The official portal shows no open application on 19 October 2026."
     },
-    "origine": "fondation"
+    "origine": "fondation",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Aucun appel ouvert sur le portail officiel (« There are currently no open applications ») : programmes, critères, Cameroun et dates non lus."
+    }
   },
   {
     "id": "daad-leadership-for-africa",
@@ -3024,11 +3218,15 @@
       "edition_note": "The official page read gives no date. The 2027 call is not published: date unknown."
     },
     "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "status": "to_verify",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "La page officielle DAAD n'affiche que l'appel 2025 (2 avril au 10 juin 2025, entrée hiver 2026) ; aucune date pour une édition suivante, les pays cibles sont annoncés avant chaque appel (Cameroun non garanti pour la suite) et la liste des pièces est dans l'appel PDF, non lue."
+    }
   },
   {
     "id": "pau-paughss",
-    "organisme": "Union africaine - Université panafricaine (PAU)",
+    "organisme": "Union africaine - Université panafricaine (PAU), Institut PAUGHSS",
     "pays_accueil": [
       "Cameroun"
     ],
@@ -3050,64 +3248,116 @@
       "cloture_mois": "décembre"
     },
     "edition": {
-      "libelle": "Appel 2027-2028 attendu (l'appel 2026-2027 a clos le 15 déc. 2025)",
-      "confirme": false
+      "libelle": "2026/27",
+      "ouverture": "2025-11-15",
+      "cloture": "2025-12-15",
+      "confirme": true
     },
     "lien_officiel": "https://www.au-pau.org/submission/",
     "sources": [
       {
-        "titre": "PAU - Call for Scholarship Applications 2026-2027 (PDF)",
-        "url": "https://pau-au.africa/fileadmin/Calls_for_Scholarships/2026_call_eng.pdf"
+        "titre": "PAU - Plateforme de candidature",
+        "url": "https://www.au-pau.org/submission/"
       },
       {
-        "titre": "Union africaine - annonce de l'appel 2026-2027",
-        "url": "https://au.int/sw/announcements/20251115/pan-african-university-call-scholarships-applications-academic-year-2026-2027"
+        "titre": "PAU - Appel à bourses 2026-2027 (PDF)",
+        "url": "https://pau-au.africa/fileadmin/Calls_for_Scholarships/2026_call_eng.pdf"
       }
     ],
     "fr": {
-      "nom": "Bourses de l'Université panafricaine - Institut PAUGHSS (Gouvernance, sciences humaines et sociales)",
-      "resume": "L'Union africaine finance des bourses complètes pour des masters à l'Institut PAUGHSS (Université de Yaoundé II et Université de Buea, Cameroun) : gouvernance et intégration régionale, interprétation de conférence, traduction, langues transfrontalières et communication interculturelle.",
-      "valeur": "Bourse complète de l'Union africaine (« full scholarships »)",
-      "couverture_detail": "L'appel indique que la Commission de l'Union africaine offre des bourses complètes ; le détail (montants) n'est pas précisé dans l'appel lu.",
-      "eligibilite": "Candidats africains et de la diaspora. Master : pas plus de 25 ans (hommes) / 28 ans (femmes) ; licence avec au moins mention « second class upper » ou équivalent ; examen écrit/oral possible après présélection.",
-      "diplome": "Licence dans une filière pertinente",
-      "langue": "Interprétation/traduction : excellente maîtrise d'au moins deux langues officielles de l'UA (arabe, anglais, français, portugais, kiswahili, espagnol)",
+      "nom": "Bourses de l'Université panafricaine - PAUGHSS (gouvernance, sciences humaines et sociales)",
+      "resume": "La Commission de l'Union africaine offre des bourses complètes pour des masters à l'Institut PAUGHSS (Universités de Yaoundé II et de Buea, Cameroun) : gouvernance et intégration régionale, interprétation de conférence, traduction, langues transfrontalières et communication interculturelle. L'appel 2026-2027 est clos.",
+      "valeur": "Bourse complète de la Commission de l'Union africaine (« full scholarships »)",
+      "couverture_detail": "L'appel indique seulement que la Commission de l'Union africaine offre des bourses complètes aux candidats retenus ; le détail des éléments pris en charge et les montants ne sont pas précisés dans l'appel.",
+      "eligibilite": "Candidats africains (et de la diaspora), le Cameroun étant un pays africain. Master : 25 ans maximum pour les hommes, 28 ans pour les femmes ; licence d'une université reconnue avec au moins mention « second class upper » ou équivalent, dans un domaine pertinent. Un examen écrit ou oral est possible après présélection. Les lauréats s'engagent à travailler en Afrique après leurs études, selon la page de candidature.",
+      "diplome": "Licence dans un domaine pertinent, avec au moins la mention second class upper division ou équivalent.",
+      "langue": "Interprétation et traduction : excellente maîtrise d'au moins deux langues officielles de l'UA (arabe, anglais, français, portugais, kiswahili, espagnol).",
       "autres": [
-        "Le doctorat de l'appel 2026 ne concernait pas le PAUGHSS (eau/énergie/climat)",
-        "Dépôt en ligne sur au-pau.org"
+        "Le doctorat de l'appel 2026 ne concerne pas le PAUGHSS (eau, énergie, climat).",
+        "Candidature en ligne sur au-pau.org/submission."
       ],
       "dossier": [
-        "Certificats et relevés certifiés (université et lycée)",
-        "Passeport ou CNI, photo, CV détaillé",
-        "1 lettre de recommandation d'un ancien enseignant",
-        "Noms de 3 enseignants référents (email + WhatsApp)"
+        "Copies certifiées des certificats et relevés (université et lycée)",
+        "Passeport ou carte nationale d'identité (page d'identité)",
+        "Photo d'identité couleur 2 cm x 2 cm",
+        "CV détaillé",
+        "Lettre de recommandation d'un ancien enseignant universitaire",
+        "Noms, courriels et numéros WhatsApp de 3 enseignants référents (obligatoire)"
       ],
-      "conseil": "L'appel s'ouvre généralement mi-novembre pour un mois seulement : préparez relevés certifiés et référents dès octobre.",
-      "edition_note": "Édition 2026-2027 : appel du 15 nov. au 15 déc. 2025 (clos). L'appel 2027-2028 n'est pas encore publié ; dates non confirmées."
+      "conseil": "Les appels précédents ont duré un mois (mi-novembre à mi-décembre) : prépare dès octobre les relevés certifiés et les trois référents, mais attends l'annonce officielle de l'édition suivante.",
+      "edition_note": "Appel 2026-2027 : du 15 novembre au 15 décembre 2025 (clos, candidatures tardives refusées). Aucune date publiée pour l'appel suivant.",
+      "ne_couvre_pas": "Non précisé par l'appel.",
+      "etapes": [
+        "Lire les conditions puis s'inscrire sur la plateforme de candidature.",
+        "Confirmer l'inscription par le lien reçu par courriel et créer un mot de passe.",
+        "Remplir la page « Application », enregistrer puis cliquer sur FINISH.",
+        "Passer l'examen écrit ou oral si présélectionné."
+      ]
     },
     "en": {
       "nom": "Pan African University scholarships - PAUGHSS (Governance, Humanities and Social Sciences)",
-      "resume": "The African Union offers full scholarships for master's programmes at PAUGHSS (University of Yaoundé II and University of Buea, Cameroon): governance and regional integration, conference interpreting, translation, transborder languages and intercultural communication.",
-      "valeur": "Full African Union scholarship",
-      "couverture_detail": "The call states the African Union Commission offers full scholarships; amounts are not detailed in the call read.",
-      "eligibilite": "African and diaspora applicants. Master's: not older than 25 (men) / 28 (women); bachelor's with at least second-class upper or equivalent; written/oral exam possible after pre-selection.",
-      "diplome": "Bachelor's degree in a relevant field",
-      "langue": "Interpreting/translation: excellent command of at least two AU official languages (Arabic, English, French, Portuguese, Kiswahili, Spanish)",
+      "resume": "The African Union Commission offers full scholarships for master's programmes at the PAUGHSS Institute (Universities of Yaoundé II and Buea, Cameroon): governance and regional integration, conference interpreting, translation, transborder languages and intercultural communication. The 2026-2027 call is closed.",
+      "valeur": "Full scholarship from the African Union Commission (\"full scholarships\")",
+      "couverture_detail": "The call only states that the African Union Commission offers full scholarships to successful candidates; the items covered and amounts are not detailed in the call.",
+      "ne_couvre_pas": "Not specified by the call.",
+      "eligibilite": "African (and diaspora) applicants; Cameroon is an African country. Master's: not older than 25 (men) or 28 (women); bachelor's from a recognised university with at least second-class upper division or equivalent, in a relevant field. A written or oral exam is possible after pre-selection. Successful candidates are expected to work in Africa after graduating, per the application page.",
+      "diplome": "Bachelor's in a relevant field, at least second-class upper division or equivalent.",
+      "langue": "Interpreting and translation: excellent knowledge of at least two AU official languages (Arabic, English, French, Portuguese, Kiswahili, Spanish).",
+      "conseil": "Previous calls lasted one month (mid-November to mid-December): prepare certified transcripts and three referees from October, but wait for the official announcement of the next edition.",
+      "edition_note": "2026-2027 call: 15 November to 15 December 2025 (closed, late applications rejected). No date published for the next call.",
       "autres": [
-        "The 2026 PhD track did not cover PAUGHSS (water/energy/climate only)",
-        "Online submission at au-pau.org"
+        "The 2026 PhD track does not concern PAUGHSS (water, energy, climate).",
+        "Online application at au-pau.org/submission."
       ],
       "dossier": [
-        "Certified certificates and transcripts (university and high school)",
-        "Passport or national ID, photo, detailed CV",
-        "1 recommendation letter from a former lecturer",
-        "Names of 3 reference lecturers (email + WhatsApp)"
+        "Certified copies of certificates and transcripts (university and high school)",
+        "Passport or national ID card (personal details page)",
+        "Colour passport-size photo 2 cm x 2 cm",
+        "Detailed CV",
+        "Recommendation letter from one former university lecturer",
+        "Names, emails and WhatsApp numbers of 3 reference lecturers (mandatory)"
       ],
-      "conseil": "The call usually opens mid-November for one month only: get certified transcripts and referees ready by October.",
-      "edition_note": "2026-2027 edition: call ran 15 Nov to 15 Dec 2025 (closed). The 2027-2028 call is not yet published; dates unconfirmed."
+      "etapes": [
+        "Read the conditions then register on the application platform.",
+        "Confirm registration through the emailed link and set a password.",
+        "Fill in the \"Application\" page, save then click FINISH.",
+        "Sit the written or oral exam if pre-selected."
+      ]
     },
     "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "status": "verified",
+    "editions": [
+      {
+        "annee": 2025,
+        "libelle": "2026/27",
+        "ouverture": "2025-11-15",
+        "cloture": "2025-12-15",
+        "confirme": true
+      },
+      {
+        "annee": 2026,
+        "libelle": "2027/28",
+        "ouverture": null,
+        "cloture": null,
+        "confirme": false
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.au-pau.org/submission/",
+        "https://pau-au.africa/fileadmin/Calls_for_Scholarships/2026_call_eng.pdf"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "mandela-rhodes",
@@ -3139,60 +3389,95 @@
     "lien_officiel": "https://www.mandelarhodes.org/scholarship/apply/",
     "sources": [
       {
-        "titre": "Mandela Rhodes - Apply",
+        "titre": "Mandela Rhodes Foundation - Apply",
         "url": "https://www.mandelarhodes.org/scholarship/apply/"
-      },
-      {
-        "titre": "Mandela Rhodes - Scholarship",
-        "url": "https://www.mandelarhodes.org/scholarship/"
       }
     ],
     "fr": {
       "nom": "Bourse Mandela Rhodes",
-      "resume": "Bourse pour jeunes leaders africains finançant un Honours (1 an) ou un master (1-2 ans) dans une université sud-africaine, avec un programme de leadership obligatoire.",
-      "valeur": "Frais de scolarité et d'inscription, hébergement, repas et allocations (matériel, recherche, assurance médicale)",
-      "couverture_detail": "Scolarité et inscription, allocations pour matériel, recherche et assurance médicale, hébergement et repas, programme de développement du leadership et mentorat.",
-      "eligibilite": "Citoyen d'un pays africain ; 19 à 29 ans l'année de la candidature (moins de 30 ans à l'entrée) ; diplôme de premier cycle avec de bons résultats (plus de 70 % ou Honours « upper second ») au 1er janvier 2028. Ne finance ni licence, ni MBA, ni formation surtout en ligne.",
-      "diplome": "Licence avec bons résultats",
-      "langue": "Anglais (travail postuniversitaire)",
+      "resume": "Bourse pour de jeunes Africains finançant un Honours (1 an) ou un master (1 à 2 ans) dans un établissement sud-africain, avec un programme de leadership obligatoire.",
+      "valeur": "Frais de scolarité et d'inscription, allocations (matériel, logement, repas, assurance médicale, dépenses personnelles) et vol aller-retour en classe économique",
+      "couverture_detail": "Frais de scolarité et d'inscription versés directement à l'université ; allocations pour le matériel d'étude, le logement et les repas, l'assurance médicale et les dépenses personnelles ; subventions de recherche et de conférence sur demande ; vols en classe économique pour les boursiers internationaux au début et à la fin des études ; programme de développement du leadership.",
+      "eligibilite": "Citoyen d'un pays africain (Cameroun inclus), où que l'on vive ou étudie ; 19 à 29 ans l'année de la candidature et moins de 30 ans à l'entrée ; licence obtenue au 1er janvier 2028 avec plus de 70 % ou Honours « upper second » ; études dans un établissement sud-africain, pas dans son pays d'origine ni à distance.",
+      "diplome": "Licence avec résultats supérieurs à 70 % ou mention upper second class Honours.",
+      "langue": "Capacité à étudier au niveau postuniversitaire en anglais.",
       "autres": [
-        "Admission préalable dans l'université non exigée pour candidater, mais conseillé de postuler tôt",
-        "Vérification SAQA conseillée si vous passez les premiers tours"
+        "Preuve d'admission universitaire non exigée pour candidater, mais postuler tôt à plusieurs universités sud-africaines est conseillé.",
+        "Les lauréats doivent obtenir leur admission et un visa d'études pour janvier."
       ],
       "dossier": [
-        "3 lettres de recommandation en anglais",
-        "Certificats et relevés en anglais",
-        "Scans ID et passeport",
-        "2 courts essais (parcours personnel ; principes de la Fondation)",
-        "Nom du diplôme visé"
+        "3 lettres de recommandation en anglais, déposées par les recommandeurs sur la plateforme (sans elles, pas de soumission)",
+        "Diplômes et relevés de notes en anglais",
+        "Scans de la pièce d'identité et du passeport",
+        "2 courts essais (parcours personnel ; question sur les principes de la Fondation)",
+        "Cursus d'études envisagé"
       ],
-      "conseil": "Fenêtre de candidature de ~5 semaines : demandez vos 3 recommandations dès février.",
-      "edition_note": "Dates lues sur la page officielle : ouverture le 9 mars 2027, clôture le 14 avril 2027 à 23h59 (GMT+2). Sélection finale fin octobre 2027."
+      "conseil": "La fenêtre dure environ cinq semaines : demande tes trois recommandations dès février 2027 et prépare les relevés en anglais à l'avance.",
+      "edition_note": "Promotion 2028 : ouverture le 9 mars 2027, clôture le 14 avril 2027 à 23 h 59 (GMT+2) ; dossiers tardifs ou incomplets refusés.",
+      "ne_couvre_pas": "Frais de candidature à l'université, accréditation SAQA, frais de visa, passeport ; ni licence, ni MBA, ni cours en bloc, ni formation surtout en ligne.",
+      "etapes": [
+        "Candidater en ligne entre le 9 mars et le 14 avril 2027.",
+        "Mi-juillet 2027 : réponse pour le 2e tour ; fin juillet : 3e tour ; fin août : invitation à l'entretien final.",
+        "Octobre 2027 : entretiens finaux en Afrique du Sud.",
+        "Fin octobre 2027 : annonce des lauréats."
+      ]
     },
     "en": {
       "nom": "Mandela Rhodes Scholarship",
-      "resume": "Scholarship for young African leaders funding an Honours (1 year) or master's (1-2 years) at a South African institution, with a compulsory leadership programme.",
-      "valeur": "Tuition and registration fees, accommodation, meals and allowances (materials, research, medical aid)",
-      "couverture_detail": "Tuition and registration, allowances for study materials, research and medical aid, accommodation and meals, leadership development programme and mentorship.",
-      "eligibilite": "Citizen of an African country; aged 19 to 29 in the year of application (under 30 at start); strong undergraduate degree (above 70% or upper-second Honours) by 1 January 2028. Does not fund undergraduate study, MBAs or mostly online courses.",
-      "diplome": "Bachelor's degree with strong results",
-      "langue": "English (postgraduate work)",
+      "resume": "Scholarship for young Africans funding an Honours (1 year) or master's (1 to 2 years) at a South African institution, with a compulsory leadership programme.",
+      "valeur": "Tuition and registration fees, allowances (materials, accommodation, meals, medical aid, personal expenses) and economy return flight",
+      "couverture_detail": "Tuition and registration fees paid directly to the university; allowances for study materials, accommodation and meals, medical aid and personal expenses; research and conference grants on request; economy flights for international scholars at the start and end of studies; leadership development programme.",
+      "ne_couvre_pas": "University application fees, SAQA accreditation, visa costs, passport; no undergraduate study, MBAs, block courses or mostly online courses.",
+      "eligibilite": "Citizen of an African country (Cameroon included), wherever you live or study; aged 19 to 29 in the year of application and under 30 at start; undergraduate degree by 1 January 2028 with results above 70% or upper-second Honours; study at a South African institution, not in your home country or by distance.",
+      "diplome": "Bachelor's degree with results above 70% or upper-second-class Honours.",
+      "langue": "Ability to study at postgraduate level in English.",
+      "conseil": "The window is about five weeks: ask for your three recommendations by February 2027 and have English transcripts ready.",
+      "edition_note": "Class of 2028: opens 9 March 2027, closes 14 April 2027 at 23:59 (GMT+2); late or incomplete applications are not accepted.",
       "autres": [
-        "University admission not required to apply, but applying early is advised",
-        "SAQA verification advised if you reach later rounds"
+        "Proof of university admission is not required to apply, but applying early to several South African universities is advised.",
+        "Selected scholars must secure admission and a study visa for January."
       ],
       "dossier": [
-        "3 recommendation letters in English",
+        "3 recommendation letters in English, uploaded by your recommenders on the platform (no submission without them)",
         "Degree certificates and transcripts in English",
         "ID and passport scans",
-        "2 short essays (personal journey; Foundation principles)",
-        "Name of intended degree"
+        "2 short essays (personal journey; question on the Foundation's principles)",
+        "Proposed course of study"
       ],
-      "conseil": "The window is about 5 weeks: ask for your 3 recommendations by February.",
-      "edition_note": "Dates read on the official page: opens 9 March 2027, closes 14 April 2027 at 23:59 (GMT+2). Final selection by end of October 2027."
+      "etapes": [
+        "Apply online between 9 March and 14 April 2027.",
+        "Mid-July 2027: Round Two notice; end of July: Round Three; end of August: final interview invitation.",
+        "October 2027: final interviews in South Africa.",
+        "End of October 2027: selection announced."
+      ]
     },
     "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "status": "verified",
+    "editions": [
+      {
+        "annee": 2027,
+        "libelle": "Promotion 2028",
+        "ouverture": "2027-03-09",
+        "cloture": "2027-04-14",
+        "confirme": true
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.mandelarhodes.org/scholarship/apply/"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    },
+    "langue_acces": "en"
   },
   {
     "id": "humboldt-research-fellowship",
@@ -3711,7 +3996,11 @@
       "edition_note": "No official date for 2028 entry. A third-party source places the 2027 call on 30 March 2026 (pre-registration 31 March - 9 May 2026, closed): timing to be reconfirmed."
     },
     "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "status": "to_verify",
+    "verification_echec": {
+      "date": "2026-10-19",
+      "motif": "Les pages officielles gov.br (Itamaraty, MEC) sont bloquées par un contrôle anti-robot ; l'édit SESU n° 22/2026 (entrée 2027) n'a été lu que via une copie hébergée par l'ABMES (association, source non officielle). Aucune date pour l'édition suivante (entrée 2028)."
+    }
   },
   {
     "id": "yenching-academy",

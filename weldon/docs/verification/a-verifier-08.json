@@ -1,0 +1,347 @@
+[
+ {
+  "id": "academic-merit-based-scholarship-for-international-students-st-lawrenc",
+  "nom": "Academic Merit Based Scholarship for International Students — St. Lawrence College",
+  "organisme": "St. Lawrence College",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.stlawrencecollege.ca/international/tuition-fees-scholarships/",
+  "cloture_connue": "2025-05-01"
+ },
+ {
+  "id": "international-entrance-scholarship-university-of-regina",
+  "nom": "International Entrance Scholarship — University of Regina",
+  "organisme": "University of Regina",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uregina.ca/international/future-students/scholarships-aid.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-student-entrance-scholarship-university-of-waterloo",
+  "nom": "International Student Entrance Scholarship — University of Waterloo",
+  "organisme": "University of Waterloo",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://uwaterloo.ca/future-students/financing/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "faculty-of-mathematics-entrance-scholarship-for-black-international-st",
+  "nom": "Faculty of Mathematics Entrance Scholarship for Black International Students — University of Waterloo",
+  "organisme": "University of Waterloo — Faculté de Mathématiques",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://uwaterloo.ca/math/future-undergraduates/funding-and-scholarships",
+  "cloture_connue": "2025-04-15"
+ },
+ {
+  "id": "international-undergraduate-student-entrance-scholarships-university-o",
+  "nom": "International Undergraduate Student Entrance Scholarships — University of Manitoba",
+  "organisme": "University of Manitoba",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://umanitoba.ca/financial-aid-and-awards/international-student-entrance-scholarships",
+  "cloture_connue": "2025-07-15"
+ },
+ {
+  "id": "president-s-scholarship-for-world-leaders-university-of-winnipeg",
+  "nom": "President's Scholarship for World Leaders — University of Winnipeg",
+  "organisme": "University of Winnipeg",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uwinnipeg.ca/awards/international-student-awards.html",
+  "cloture_connue": "2026-06-01"
+ },
+ {
+  "id": "international-community-achievement-awards-university-of-british-colum",
+  "nom": "International Community Achievement Awards — University of British Columbia",
+  "organisme": "University of British Columbia (UBC)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://you.ubc.ca/financial-planning/awards-scholarships-international/",
+  "cloture_connue": "2025-10-03"
+ },
+ {
+  "id": "alberta-school-of-business-mba-scholarships",
+  "nom": "Alberta School of Business MBA Scholarships",
+  "organisme": "University of Alberta — Alberta School of Business",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.ualberta.ca/en/business/programs/mba/tuition-and-funding.html",
+  "cloture_connue": "2026-03-01"
+ },
+ {
+  "id": "the-p-e-o-international-peace-scholarship-ips",
+  "nom": "The P.E.O. International Peace Scholarship (IPS)",
+  "organisme": "P.E.O. Sisterhood",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.peointernational.org/ips-eligibility-requirements",
+  "cloture_connue": "2025-12-15"
+ },
+ {
+  "id": "dalhousie-1-year-masters-scholarship-dalhousie-university",
+  "nom": "Dalhousie 1-Year Masters Scholarship — Dalhousie University",
+  "organisme": "Dalhousie University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.dal.ca/faculty/graduate_studies/funding/scholarships-and-fellowships.html",
+  "cloture_connue": "2025-10-15"
+ },
+ {
+  "id": "merit-scholarship-program-for-foreign-students-pbeee-bishop-s-universi",
+  "nom": "Merit Scholarship Program for Foreign Students (PBEEE) — Bishop's University",
+  "organisme": "Bishop's University (administré par le FRQNT du Québec)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://frq.gouv.qc.ca/en/program/merit-scholarship-program-for-foreign-studentspbeee/",
+  "cloture_connue": "2025-07-31"
+ },
+ {
+  "id": "udem-exemption-scholarship-for-international-students-universite-de-mo",
+  "nom": "UdeM Exemption Scholarship for International Students — Université de Montréal",
+  "organisme": "Université de Montréal",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://bourses.umontreal.ca/",
+  "cloture_connue": "2026-02-01"
+ },
+ {
+  "id": "university-of-alberta-graduate-entrance-scholarship",
+  "nom": "University of Alberta Graduate Entrance Scholarship",
+  "organisme": "University of Alberta",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.ualberta.ca/en/graduate-studies/funding-and-finance/scholarships-awards-bursaries.html",
+  "cloture_connue": "2026-04-14"
+ },
+ {
+  "id": "international-tuition-awards-university-of-british-columbia",
+  "nom": "International Tuition Awards — University of British Columbia",
+  "organisme": "University of British Columbia (UBC)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.grad.ubc.ca/awards/international-tuition-award",
+  "cloture_connue": "2025-12-31"
+ },
+ {
+  "id": "graduate-fellowships-for-international-students-university-of-victoria",
+  "nom": "Graduate Fellowships for International Students — University of Victoria",
+  "organisme": "University of Victoria",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uvic.ca/graduate-studies/finances-and-awards/funding-options/index.php",
+  "cloture_connue": "2025-11-10"
+ },
+ {
+  "id": "excellence-scholarship-program-for-graduate-studies-in-research-univer",
+  "nom": "Excellence Scholarship Program for Graduate Studies in Research — Université de Sherbrooke",
+  "organisme": "Université de Sherbrooke",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.usherbrooke.ca/etudes-superieures/financement/bourses-de-lusherbrooke",
+  "cloture_connue": null
+ },
+ {
+  "id": "ontario-graduate-scholarship-ogs-university-of-toronto",
+  "nom": "Ontario Graduate Scholarship (OGS) — University of Toronto",
+  "organisme": "University of Toronto (et autres universités ontariennes)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.sgs.utoronto.ca/awards/ontario-graduate-scholarship/",
+  "cloture_connue": null
+ },
+ {
+  "id": "merit-scholarship-concordia-university",
+  "nom": "Merit Scholarship — Concordia University",
+  "organisme": "Concordia University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.concordia.ca/sgs/funding/scholarships.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "graduate-fellowship-university-of-manitoba",
+  "nom": "Graduate Fellowship — University of Manitoba",
+  "organisme": "University of Manitoba",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://umanitoba.ca/graduate-studies/funding-and-awards",
+  "cloture_connue": null
+ },
+ {
+  "id": "women-in-business-leadership-scholarships-university-of-british-columb",
+  "nom": "Women in Business Leadership Scholarships — University of British Columbia",
+  "organisme": "University of British Columbia (UBC) — Sauder School of Business",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.sauder.ubc.ca/programs/mba/financing-your-mba/scholarships",
+  "cloture_connue": "2025-06-30"
+ },
+ {
+  "id": "canada-graduate-research-scholarships-doctoral-cgs-d",
+  "nom": "Canada Graduate Research Scholarships Doctoral (CGS-D)",
+  "organisme": "Gouvernement du Canada (via SSHRC, NSERC ou CIHR)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSD-BESCD_eng.asp",
+  "cloture_connue": "2025-10-17"
+ },
+ {
+  "id": "connaught-international-scholarship-university-of-toronto",
+  "nom": "Connaught International Scholarship — University of Toronto",
+  "organisme": "University of Toronto",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.sgs.utoronto.ca/awards/connaught-international-scholarship-for-doctoral-students/",
+  "cloture_connue": null
+ },
+ {
+  "id": "google-phd-fellowship-university-of-british-columbia",
+  "nom": "Google PhD Fellowship — University of British Columbia",
+  "organisme": "University of British Columbia (UBC)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://research.google/outreach/phd-fellowship/",
+  "cloture_connue": "2025-04-07"
+ },
+ {
+  "id": "canada-graduate-scholarships-michael-smith-foreign-study-supplements-d",
+  "nom": "Canada Graduate Scholarships — Michael Smith Foreign Study Supplements — Dalhousie University",
+  "organisme": "Dalhousie University (programme national)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSForeignStudy-BESCEtudeEtranger_eng.asp",
+  "cloture_connue": "2025-10-07"
+ },
+ {
+  "id": "fgsr-ur-scholars-entrance-scholarship-university-of-regina",
+  "nom": "FGSR UR Scholars Entrance Scholarship — University of Regina",
+  "organisme": "University of Regina",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uregina.ca/gradstudies/current-students/funding/internal-funding.html",
+  "cloture_connue": "2025-06-30"
+ }
+]

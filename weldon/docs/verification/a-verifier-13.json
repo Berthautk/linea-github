@@ -1,0 +1,345 @@
+[
+ {
+  "id": "m-a-and-lila-self-leadership-academy-scholarship-illinois-institute-of",
+  "nom": "M.A. and Lila Self Leadership Academy Scholarship — Illinois Institute of Technology",
+  "organisme": "Illinois Institute of Technology (IIT), Chicago",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.iit.edu/admission/undergraduate/financial-aid/scholarships",
+  "cloture_connue": "2024-11-15"
+ },
+ {
+  "id": "nanook-pledge-scholarship-university-of-alaska",
+  "nom": "Nanook Pledge Scholarship — University of Alaska",
+  "organisme": "University of Alaska Fairbanks",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uaf.edu/finaid/scholarships/",
+  "cloture_connue": "2025-06-15"
+ },
+ {
+  "id": "the-international-flagship-scholarship-university-of-maine",
+  "nom": "The International Flagship Scholarship — University of Maine",
+  "organisme": "University of Maine",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://umaine.edu/international/prospective-students/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-academic-award-washington-state-university",
+  "nom": "International Academic Award — Washington State University",
+  "organisme": "Washington State University (WSU)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://ip.wsu.edu/future-students/financing-your-education/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "undergraduate-international-admissions-scholarships-illinois-state-uni",
+  "nom": "Undergraduate International Admissions Scholarships — Illinois State University",
+  "organisme": "Illinois State University",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://illinoisstate.edu/international/apply/funding/",
+  "cloture_connue": null
+ },
+ {
+  "id": "scholarships-for-international-students-fairleigh-dickinson-university",
+  "nom": "Scholarships for International Students — Fairleigh Dickinson University (FDU)",
+  "organisme": "Fairleigh Dickinson University (New Jersey)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.fdu.edu/admissions/international-admissions/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "ucie-graduate-merit-scholarship-wright-state-university",
+  "nom": "UCIE Graduate Merit Scholarship — Wright State University",
+  "organisme": "Wright State University (Ohio)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.wright.edu/international-education/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "east-asian-studies-program-princeton-university",
+  "nom": "East Asian Studies Program — Princeton University",
+  "organisme": "Princeton University",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://eap.princeton.edu/graduate/funding",
+  "cloture_connue": "2025-03-20"
+ },
+ {
+  "id": "imu-breakout-graduate-fellowship-program-fully-funded",
+  "nom": "IMU Breakout Graduate Fellowship Program (Fully Funded)",
+  "organisme": "International Mathematical Union (IMU)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.mathunion.org/cdc/grants/imu-breakout-graduate-fellowships",
+  "cloture_connue": null
+ },
+ {
+  "id": "research-in-industrial-projects-rips-summer-internship-fully-funded",
+  "nom": "Research in Industrial Projects (RIPS) Summer Internship (Fully Funded)",
+  "organisme": "Institute for Pure and Applied Mathematics (IPAM) — UCLA",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.ipam.ucla.edu/programs/student-research-programs/",
+  "cloture_connue": null
+ },
+ {
+  "id": "reagan-fascell-democracy-fellowship-fully-funded",
+  "nom": "Reagan Fascell Democracy Fellowship (Fully Funded)",
+  "organisme": "National Endowment for Democracy (NED)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.ned.org/fellowships/reagan-fascell-democracy-fellows-program/",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-education-scholarship-university-of-houston",
+  "nom": "International Education Scholarship — University of Houston",
+  "organisme": "University of Houston (Texas)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://uh.edu/financial/undergraduate/scholarships/",
+  "cloture_connue": "2025-03-01"
+ },
+ {
+  "id": "freshman-presidential-scholarships-texas-tech-university",
+  "nom": "Freshman Presidential Scholarships — Texas Tech University",
+  "organisme": "Texas Tech University (Lubbock, Texas)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.depts.ttu.edu/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "global-select-scholarships-wichita-state-university",
+  "nom": "Global Select Scholarships — Wichita State University",
+  "organisme": "Wichita State University (Kansas)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.wichita.edu/admissions/international/scholarships.php",
+  "cloture_connue": null
+ },
+ {
+  "id": "institutional-scholarships-texas-a-and-m-university-corpus-christi",
+  "nom": "Institutional Scholarships — Texas A&M University-Corpus Christi",
+  "organisme": "Texas A&M University-Corpus Christi",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.tamucc.edu/financial-aid/types-of-aid/scholarships/",
+  "cloture_connue": "2025-02-01"
+ },
+ {
+  "id": "uncf-health-care-scholars-united",
+  "nom": "UNCF Health Care Scholars United",
+  "organisme": "United Negro College Fund (UNCF)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://uncf.org/scholarships",
+  "cloture_connue": "2025-07-14"
+ },
+ {
+  "id": "c-farrell-fine-arts-and-research-scholarship-central-washington-univer",
+  "nom": "C. Farrell Fine Arts and Research Scholarship — Central Washington University",
+  "organisme": "Central Washington University",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.cwu.edu/financial-aid/scholarships/",
+  "cloture_connue": "2024-12-06"
+ },
+ {
+  "id": "providence-public-school-district-ppsd-scholarships-brown-university",
+  "nom": "Providence Public School District (PPSD) Scholarships — Brown University",
+  "organisme": "Brown University (Providence, Rhode Island)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.brown.edu/admission/undergraduate/explore/afford-brown",
+  "cloture_connue": "2025-04-25"
+ },
+ {
+  "id": "daad-study-scholarships-for-stem-disciplines",
+  "nom": "DAAD Study Scholarships for STEM Disciplines",
+  "organisme": "DAAD (Deutscher Akademischer Austauschdienst)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "daad-helmut-schmidt-scholarship-fully-funded",
+  "nom": "DAAD Helmut Schmidt Scholarship (Fully Funded)",
+  "organisme": "DAAD",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.daad.de/en/study-and-research-in-germany/scholarships/helmut-schmidt-programme/",
+  "cloture_connue": "2025-07-31"
+ },
+ {
+  "id": "daad-friedrich-ebert-stiftung-scholarships-for-international-students-",
+  "nom": "DAAD Friedrich Ebert Stiftung Scholarships for International Students (Fully Funded)",
+  "organisme": "DAAD / Friedrich Ebert Stiftung",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.fes.de/studienfoerderung/bewerbung",
+  "cloture_connue": "2025-10-31"
+ },
+ {
+  "id": "daad-scholarships-for-international-students-at-freie-universitat-berl",
+  "nom": "DAAD Scholarships for International Students at Freie Universität Berlin",
+  "organisme": "DAAD / Freie Universität Berlin",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.fu-berlin.de/en/studium/studienfinanzierung/scholarships/index.html",
+  "cloture_connue": "2026-01-11"
+ },
+ {
+  "id": "daad-artists-in-berlin-program-fully-funded",
+  "nom": "DAAD Artists in Berlin Program (Fully Funded)",
+  "organisme": "DAAD",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.berliner-kuenstlerprogramm.de/en",
+  "cloture_connue": null
+ },
+ {
+  "id": "daad-for-international-students-and-scholarship-for-exceptional-commit",
+  "nom": "DAAD for International Students and Scholarship for Exceptional Commitment — Göttingen University",
+  "organisme": "DAAD / Georg-August-Universität Göttingen",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uni-goettingen.de/en/scholarships+for+international+students/15286.html",
+  "cloture_connue": "2025-08-15"
+ },
+ {
+  "id": "friedrich-ebert-stiftung-scholarships-fully-funded-additional-program",
+  "nom": "Friedrich Ebert Stiftung Scholarships (Fully Funded) — additional program",
+  "organisme": "Friedrich Ebert Stiftung (FES)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.fes.de/studienfoerderung",
+  "cloture_connue": null
+ }
+]

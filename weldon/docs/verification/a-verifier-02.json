@@ -1,0 +1,358 @@
+[
+ {
+  "id": "mandela-rhodes",
+  "nom": "Bourse Mandela Rhodes",
+  "organisme": "Mandela Rhodes Foundation",
+  "pays": [
+   "Afrique du Sud"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.mandelarhodes.org/scholarship/apply/",
+  "cloture_connue": "2027-04-14"
+ },
+ {
+  "id": "pec-g-bresil",
+  "nom": "PEC-G (Brésil) - études de licence",
+  "organisme": "Gouvernement brésilien - PEC-G",
+  "pays": [
+   "Brésil"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.gov.br/mre/pt-br/assuntos/cultura-e-educacao/temas-educacionais/programas-de-estudo-para-estrangeiros/pec-g",
+  "cloture_connue": null
+ },
+ {
+  "id": "aims-master-sciences-mathematiques",
+  "nom": "AIMS Cameroun - Master en sciences mathématiques",
+  "organisme": "AIMS Cameroun (African Institute for Mathematical Sciences)",
+  "pays": [
+   "Cameroun"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://aims-cameroon.org/application/masters-in-mathematical-sciences-application/",
+  "cloture_connue": null
+ },
+ {
+  "id": "unesco-china-great-wall-fellowships",
+  "nom": "UNESCO/Chine - Great Wall Co-Sponsored Fellowships",
+  "organisme": "UNESCO / Gouvernement chinois",
+  "pays": [
+   "Chine"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.unesco.org/en/fellowships/greatwall",
+  "cloture_connue": null
+ },
+ {
+  "id": "loreal-unesco-women-in-science-ssa",
+  "nom": "L'Oréal-UNESCO Pour les Femmes et la Science - Afrique subsaharienne",
+  "organisme": "Fondation L'Oréal / UNESCO",
+  "pays": [
+   "Afrique subsaharienne"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.forwomeninscience.com/challenge/show/157",
+  "cloture_connue": null
+ },
+ {
+  "id": "pan-african-university-scholarships",
+  "nom": "Université panafricaine - Bourses de master et doctorat",
+  "organisme": "Union africaine / Université panafricaine (PAU)",
+  "pays": [
+   "Instituts de l'Université panafricaine (Afrique)"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://au.int/en/announcements/20251115/pan-african-university-call-scholarships-applications-academic-year-2026-2027",
+  "cloture_connue": null
+ },
+ {
+  "id": "daad-in-country-in-region",
+  "nom": "DAAD - In-Country/In-Region (Afrique subsaharienne)",
+  "organisme": "DAAD (Office allemand d'échanges universitaires)",
+  "pays": [
+   "Burkina Faso",
+   "Ghana",
+   "Éthiopie",
+   "Kenya",
+   "Rwanda",
+   "Tanzanie",
+   "Ouganda",
+   "Malawi"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.daad.de/incountry-inregion",
+  "cloture_connue": null
+ },
+ {
+  "id": "russie-quota",
+  "nom": "Bourse du gouvernement russe (quota)",
+  "organisme": "Ministère russe de la Science et de l'Enseignement supérieur / Rossotroudnitchestvo",
+  "pays": [
+   "Russie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://education-in-russia.com/",
+  "cloture_connue": null
+ },
+ {
+  "id": "amci-maroc",
+  "nom": "Bourses AMCI (Maroc)",
+  "organisme": "Agence marocaine de coopération internationale (AMCI)",
+  "pays": [
+   "Maroc"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.amci.ma",
+  "cloture_connue": null
+ },
+ {
+  "id": "iccr-itec",
+  "nom": "Bourses ICCR / ITEC (Inde)",
+  "organisme": "Conseil indien des relations culturelles (ICCR) ; programme ITEC du ministère indien des Affaires étrangères",
+  "pays": [
+   "Inde"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat",
+   "autre"
+  ],
+  "lien_connu": "https://studyinindia.gov.in",
+  "cloture_connue": null
+ },
+ {
+  "id": "eskas-swiss",
+  "nom": "Bourses d'excellence du gouvernement suisse (ESKAS)",
+  "organisme": "SEFRI / Confédération suisse",
+  "pays": [
+   "Suisse"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc",
+   "autre"
+  ],
+  "lien_connu": "https://www.sbfi.admin.ch/scholarships_en",
+  "cloture_connue": null
+ },
+ {
+  "id": "ares-formations-internationales",
+  "nom": "Bourses ARES Formations internationales",
+  "organisme": "ARES (Belgique, Fédération Wallonie-Bruxelles)",
+  "pays": [
+   "Belgique"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "autre"
+  ],
+  "lien_connu": "https://www.ares-ac.be/en/scholarships",
+  "cloture_connue": "2026-09-18"
+ },
+ {
+  "id": "auf-pimef",
+  "nom": "AUF - PIMEF (mobilité professionnelle, appel à manifestation d'intérêt)",
+  "organisme": "AUF (Agence universitaire de la Francophonie)",
+  "pays": [
+   "autres"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://appels-propositions.auf.org/en/",
+  "cloture_connue": "2027-03-15"
+ },
+ {
+  "id": "quebec-exemption-droits",
+  "nom": "Exemption des droits de scolarité supplémentaires (Québec, ententes)",
+  "organisme": "Ministère de l'Enseignement supérieur du Québec",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.quebec.ca/education/etudier-quebec/aide-financiere-etudiants-internationaux/exemption-droits-scolarite-ententes",
+  "cloture_connue": null
+ },
+ {
+  "id": "boell-etude-allemagne",
+  "nom": "Bourses Heinrich Böll Stiftung pour étudiants internationaux",
+  "organisme": "Heinrich-Böll-Stiftung",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.boell.de/en/applying-scholarship",
+  "cloture_connue": "2027-03-01"
+ },
+ {
+  "id": "kas-ausland",
+  "nom": "Bourses Konrad-Adenauer-Stiftung pour étudiants internationaux",
+  "organisme": "Konrad-Adenauer-Stiftung (KAS)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.kas.de/en/web/begabtenfoerderung-und-kultur/international-talent-development",
+  "cloture_connue": null
+ },
+ {
+  "id": "codesria-grants",
+  "nom": "Subventions et bourses CODESRIA",
+  "organisme": "CODESRIA (Conseil pour le développement de la recherche en sciences sociales en Afrique)",
+  "pays": [
+   "Sénégal",
+   "autres"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://apply.codesria.org/",
+  "cloture_connue": null
+ },
+ {
+  "id": "humboldt-research-fellowship",
+  "nom": "Bourse de recherche Humboldt (postdoctorat)",
+  "organisme": "Fondation Alexander von Humboldt",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "postdoc"
+  ],
+  "lien_connu": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship",
+  "cloture_connue": null
+ },
+ {
+  "id": "schwarzman-scholars",
+  "nom": "Schwarzman Scholars",
+  "organisme": "Schwarzman Scholars (Université Tsinghua)",
+  "pays": [
+   "Chine"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.schwarzmanscholars.org/admissions/",
+  "cloture_connue": null
+ },
+ {
+  "id": "lund-global-scholarship",
+  "nom": "Lund University Global Scholarship",
+  "organisme": "Université de Lund",
+  "pays": [
+   "Suède"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.lunduniversity.lu.se/study/admission-degree-studies/scholarships-and-awards/lund-university-global-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "iheid-geneva-financial-aid",
+  "nom": "Aide financière Master - Graduate Institute de Genève",
+  "organisme": "Institut de hautes études internationales et du développement (Genève)",
+  "pays": [
+   "Suisse"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.graduateinstitute.ch/fees-financial-aid",
+  "cloture_connue": null
+ },
+ {
+  "id": "leiden-lexs",
+  "nom": "Leiden University Excellence Scholarship (LExS)",
+  "organisme": "Université de Leyde",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+  "cloture_connue": null
+ },
+ {
+  "id": "france-excellence-major",
+  "nom": "Bourse France Excellence-Major (AEFE)",
+  "organisme": "AEFE / Campus France (France Excellence-Major)",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://aefe.gouv.fr/sites/default/files/2026-06/AEFE_2026_livret_accueil_FEM.pdf",
+  "cloture_connue": null
+ },
+ {
+  "id": "yenching-academy",
+  "nom": "Yenching Academy - master en études chinoises",
+  "organisme": "Académie Yenching (Université de Pékin)",
+  "pays": [
+   "Chine"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://yca.pku.edu.cn/",
+  "cloture_connue": null
+ },
+ {
+  "id": "ens-psl-selection-internationale",
+  "nom": "ENS-PSL - Sélection internationale 2027",
+  "organisme": "École normale supérieure - PSL",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://ens.psl.eu/en/node/1291/international-selection",
+  "cloture_connue": "2026-12-15"
+ }
+]

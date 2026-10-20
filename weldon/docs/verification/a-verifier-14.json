@@ -1,0 +1,350 @@
+[
+ {
+  "id": "kaad-scholarships-fully-funded",
+  "nom": "KAAD Scholarships (Fully Funded)",
+  "organisme": "Katholischer Akademischer Ausländer-Dienst (KAAD)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.kaad.de/en/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "cultural-diversity-scholarship-university-of-europe-for-applied-scienc",
+  "nom": "Cultural Diversity Scholarship — University of Europe for Applied Sciences",
+  "organisme": "University of Europe for Applied Sciences (UE)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.ue-germany.com/scholarships",
+  "cloture_connue": "2026-08-02"
+ },
+ {
+  "id": "germany-scholarship-university-of-hamburg",
+  "nom": "Germany Scholarship — University of Hamburg",
+  "organisme": "Universität Hamburg",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uni-hamburg.de/en/campuscenter/studienfinanzierung/deutschlandstipendium.html",
+  "cloture_connue": "2024-11-05"
+ },
+ {
+  "id": "master-plus-scholarship-rwth-aachen-university",
+  "nom": "Master Plus Scholarship — RWTH Aachen University",
+  "organisme": "RWTH Aachen University",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.rwth-aachen.de/cms/root/studium/Im-Studium/Stipendien-Foerderung/~bqfy/Stipendien-der-RWTH/",
+  "cloture_connue": "2025-02-02"
+ },
+ {
+  "id": "graduation-scholarship-for-international-students-tu-darmstadt",
+  "nom": "Graduation Scholarship for International Students — TU Darmstadt",
+  "organisme": "Technische Universität Darmstadt",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.tu-darmstadt.de/studieren/finanzierung/stipendien_studienfinanzierung/index.en.jsp",
+  "cloture_connue": "2025-10-15"
+ },
+ {
+  "id": "the-hans-peter-wild-talent-scholarships-heidelberg-university",
+  "nom": "The Hans Peter Wild Talent Scholarships — Heidelberg University",
+  "organisme": "Universität Heidelberg",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uni-heidelberg.de/en/study/financial-support/scholarships",
+  "cloture_connue": "2025-07-15"
+ },
+ {
+  "id": "grants-for-more-equal-opportunities-berlin-university-of-the-arts",
+  "nom": "Grants for More Equal Opportunities — Berlin University of the Arts",
+  "organisme": "Universität der Künste Berlin (UdK)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.udk-berlin.de/en/university/financial-aid/",
+  "cloture_connue": "2025-02-19"
+ },
+ {
+  "id": "desy-summer-student-programme-for-international-students-fully-funded",
+  "nom": "DESY Summer Student Programme for International Students (Fully Funded)",
+  "organisme": "DESY (Deutsches Elektronen-Synchrotron)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://summerstudents.desy.de/",
+  "cloture_connue": null
+ },
+ {
+  "id": "hzb-international-summer-student-programme-fully-funded",
+  "nom": "HZB International Summer Student Programme (Fully Funded)",
+  "organisme": "Helmholtz-Zentrum Berlin (HZB)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.helmholtz-berlin.de/career/summer-students/",
+  "cloture_connue": null
+ },
+ {
+  "id": "summer-student-program-2026-hzdr-helmholtz-zentrum-dresden-rossendorf",
+  "nom": "Summer Student Program 2026 — HZDR (Helmholtz-Zentrum Dresden-Rossendorf)",
+  "organisme": "HZDR",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.hzdr.de/db/Cms?pOid=60710&pNid=0",
+  "cloture_connue": "2026-02-22"
+ },
+ {
+  "id": "merck-innovation-summer-camp-for-international-students-fully-funded",
+  "nom": "Merck Innovation Summer Camp for International Students (Fully Funded)",
+  "organisme": "Merck KGaA",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.merckgroup.com/en/careers/students.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "internships-at-max-planck-institutes-in-computer-science",
+  "nom": "Internships at Max Planck Institutes in Computer Science",
+  "organisme": "Max Planck Society",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.cis.mpg.de/internships/",
+  "cloture_connue": "2025-11-01"
+ },
+ {
+  "id": "university-summer-courses-offered-in-germany-for-foreign-students-and-",
+  "nom": "University Summer Courses Offered in Germany for Foreign Students and Graduates (DAAD Fully Funded)",
+  "organisme": "DAAD",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.daad.de/en/study-and-research-in-germany/scholarships/university-summer-courses/",
+  "cloture_connue": null
+ },
+ {
+  "id": "the-elsa-neumann-scholarship-free-university-of-berlin",
+  "nom": "The Elsa Neumann Scholarship — Free University of Berlin",
+  "organisme": "Land de Berlin",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.fu-berlin.de/en/sites/promovieren/finanzierung/stipendien/elsa-neumann/index.html",
+  "cloture_connue": "2025-04-30"
+ },
+ {
+  "id": "doctoral-scholarships-university-of-hohenheim",
+  "nom": "Doctoral Scholarships — University of Hohenheim",
+  "organisme": "Universität Hohenheim (Stuttgart)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uni-hohenheim.de/en/scholarships",
+  "cloture_connue": "2025-07-01"
+ },
+ {
+  "id": "stibet-scholarship-for-finishing-a-university-degree-ulm-university",
+  "nom": "STIBET Scholarship for Finishing a University Degree — Ulm University",
+  "organisme": "Universität Ulm",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uni-ulm.de/en/study/financing-your-studies/scholarships/",
+  "cloture_connue": "2025-09-30"
+ },
+ {
+  "id": "masters-scholarship-for-an-exchange-semester-tum-seed-center",
+  "nom": "Masters Scholarship for an Exchange Semester — TUM SEED Center",
+  "organisme": "TUM SEED Center (Technical University of Munich)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.seed.tum.de/",
+  "cloture_connue": "2025-03-15"
+ },
+ {
+  "id": "fully-funded-nhr-phd-scholarship-in-high-performance-computing",
+  "nom": "Fully Funded NHR PhD Scholarship in High Performance Computing",
+  "organisme": "NHR (Nationales Hochleistungsrechnen)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.nhr-verein.de/en",
+  "cloture_connue": "2025-09-15"
+ },
+ {
+  "id": "asean-high-achievers-scholarship-university-of-auckland",
+  "nom": "ASEAN High Achievers Scholarship — University of Auckland",
+  "organisme": "University of Auckland",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship.html",
+  "cloture_connue": "2025-10-23"
+ },
+ {
+  "id": "hinrich-foundation-global-trade-leader-scholarship-university-of-auckl",
+  "nom": "Hinrich Foundation Global Trade Leader Scholarship — University of Auckland",
+  "organisme": "University of Auckland / Hinrich Foundation",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.hinrichfoundation.com/education/global-trade-leader-scholarship/",
+  "cloture_connue": "2025-05-29"
+ },
+ {
+  "id": "auckland-law-school-postgraduate-award-university-of-auckland",
+  "nom": "Auckland Law School Postgraduate Award — University of Auckland",
+  "organisme": "University of Auckland — Faculty of Law",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.auckland.ac.nz/en/law/study-with-us/scholarships-and-awards.html",
+  "cloture_connue": "2025-06-26"
+ },
+ {
+  "id": "masters-research-scholarship-massey-university",
+  "nom": "Masters Research Scholarship — Massey University",
+  "organisme": "Massey University",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.massey.ac.nz/study/fees-and-scholarships/scholarships-and-awards/",
+  "cloture_connue": "2025-07-15"
+ },
+ {
+  "id": "global-scholarships-university-of-otago",
+  "nom": "Global Scholarships — University of Otago",
+  "organisme": "University of Otago",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.otago.ac.nz/international/scholarships",
+  "cloture_connue": "2024-12-10"
+ },
+ {
+  "id": "international-masters-research-scholarship-university-of-otago",
+  "nom": "International Masters Research Scholarship — University of Otago",
+  "organisme": "University of Otago",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.otago.ac.nz/graduate-research/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "southeast-asia-high-achievers-scholarship-university-of-canterbury",
+  "nom": "Southeast Asia High Achievers Scholarship — University of Canterbury",
+  "organisme": "University of Canterbury (Christchurch)",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.canterbury.ac.nz/study/fees-and-funding/scholarships/",
+  "cloture_connue": "2024-11-15"
+ }
+]

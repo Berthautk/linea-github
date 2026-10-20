@@ -1,0 +1,339 @@
+[
+ {
+  "id": "camoes-bourses-de-cooperation-palop-et-timor",
+  "nom": "Camões — Bourses de coopération (PALOP et Timor)",
+  "organisme": "Instituto Camões (équivalent de Campus France pour le Portugal)",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.instituto-camoes.pt/en/",
+  "cloture_connue": null
+ },
+ {
+  "id": "porto-business-school-scholarships",
+  "nom": "Porto Business School Scholarships",
+  "organisme": "Niveau",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.pbs.up.pt/en/programmes/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "unesco-isedc-co-sponsored-fellowships",
+  "nom": "UNESCO/ISEDC Co-Sponsored Fellowships",
+  "organisme": "UNESCO / ISEDC (International Sustainable Energy Development Centre)",
+  "pays": [
+   "Plusieurs pays"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.unesco.org/en/fellowships/isedc",
+  "cloture_connue": null
+ },
+ {
+  "id": "unitar-fellowships",
+  "nom": "UNITAR Fellowships",
+  "organisme": "UNITAR — Institut des Nations Unies pour la Formation et la Recherche",
+  "pays": [
+   "Plusieurs pays"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.unitar.org/sustainable-development-goals/peace/our-portfolio/fellowship-programmes",
+  "cloture_connue": null
+ },
+ {
+  "id": "auckland-health-leadership-international-student-scholarship",
+  "nom": "Auckland Health Leadership International Student Scholarship",
+  "organisme": "University of Auckland",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/master-of-health-leadership-int-student-scholarships-887-fmhs.html",
+  "cloture_connue": "2025-10-23"
+ },
+ {
+  "id": "bourses-de-l-universite-de-barcelone-ub-excellence",
+  "nom": "Bourses de l'Université de Barcelone (UB Excellence)",
+  "organisme": "Universidad de Barcelona",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://web.ub.edu/en/web/estudis/scholarships-financial-aid",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-icfo-research-fellowships-photonique",
+  "nom": "Bourses ICFO Research Fellowships (Photonique)",
+  "organisme": "Institut des Sciences Photoniques (Barcelone)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.icfo.eu/research-training/students/",
+  "cloture_connue": null
+ },
+ {
+  "id": "university-of-aveiro-international-student-scholarships",
+  "nom": "University of Aveiro International Student Scholarships",
+  "organisme": "Universidade de Aveiro",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.ua.pt/en/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "undergraduate-scholars-entrance-scholarships-uses-simon-fraser-univers",
+  "nom": "Undergraduate Scholars Entrance Scholarships (USES) — Simon Fraser University",
+  "organisme": "Simon Fraser University (SFU)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.sfu.ca/dean-gradstudies/awards/entrance-scholarships.html",
+  "cloture_connue": "2026-01-31"
+ },
+ {
+  "id": "king-s-international-excellence-award-king-s-university-college-at-wes",
+  "nom": "King's International Excellence Award — King's University College at Western University",
+  "organisme": "King's University College at Western University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.kings.uwo.ca/future-students/international/international-scholarships-awards/",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-prestigious-scholarships-and-awards-trent-university",
+  "nom": "International Prestigious Scholarships and Awards — Trent University",
+  "organisme": "Trent University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.trentu.ca/futurestudents/international/financial-aid-scholarships",
+  "cloture_connue": "2026-04-30"
+ },
+ {
+  "id": "international-undergraduate-entrance-scholarships-university-of-guelph",
+  "nom": "International Undergraduate Entrance Scholarships — University of Guelph",
+  "organisme": "University of Guelph",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uoguelph.ca/registrar/studentfinance/scholarships/entrance",
+  "cloture_connue": null
+ },
+ {
+  "id": "scholarships-for-international-students-studying-in-english-university",
+  "nom": "Scholarships for International Students Studying in English — University of Ottawa",
+  "organisme": "University of Ottawa",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uottawa.ca/study/fees-financial-support/scholarships-awards/international-admission-scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-entrance-scholarships-york-university",
+  "nom": "International Entrance Scholarships — York University",
+  "organisme": "York University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.yorku.ca/scholarships/international/",
+  "cloture_connue": null
+ },
+ {
+  "id": "laurier-scholars-award-wilfrid-laurier-university",
+  "nom": "Laurier Scholars Award — Wilfrid Laurier University",
+  "organisme": "Wilfrid Laurier University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.wlu.ca/future-students/undergraduate/finance-your-education/scholarships-and-bursaries/laurier-scholars.html",
+  "cloture_connue": "2025-02-25"
+ },
+ {
+  "id": "csa-group-undergraduate-research-scholarship",
+  "nom": "CSA Group Undergraduate Research Scholarship",
+  "organisme": "Administrée au niveau national (Canada)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.csagroup.org/about-csa-group/scholarship-program/",
+  "cloture_connue": "2026-01-31"
+ },
+ {
+  "id": "general-international-undergraduate-scholarships-university-of-alberta",
+  "nom": "General International Undergraduate Scholarships — University of Alberta",
+  "organisme": "University of Alberta",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.ualberta.ca/en/admissions/international/tuition-and-scholarships.html",
+  "cloture_connue": "2026-01-10"
+ },
+ {
+  "id": "international-entrance-scholarship-university-of-victoria",
+  "nom": "International Entrance Scholarship — University of Victoria",
+  "organisme": "University of Victoria",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uvic.ca/registrar/safa/entrance-scholarships/international/index.php",
+  "cloture_connue": null
+ },
+ {
+  "id": "vice-provost-international-student-entrance-scholarship-university-of-",
+  "nom": "Vice Provost International Student Entrance Scholarship — University of Guelph-Humber",
+  "organisme": "University of Guelph-Humber",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.guelphhumber.ca/future-students/scholarships-financial-aid",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-student-leadership-award-isla-toronto-metropolitan-unive",
+  "nom": "International Student Leadership Award (ISLA) — Toronto Metropolitan University",
+  "organisme": "Toronto Metropolitan University (anciennement Ryerson University)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.torontomu.ca/admissions/scholarships-awards/international-student-leadership-award/",
+  "cloture_connue": "2025-07-15"
+ },
+ {
+  "id": "international-undergraduate-entrance-scholarships-lakehead-university",
+  "nom": "International Undergraduate Entrance Scholarships — Lakehead University",
+  "organisme": "Lakehead University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.lakeheadu.ca/studentcentral/financing-your-education/scholarships-bursaries-awards/international-student-entrance",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-entrance-scholarship-sheridan-college",
+  "nom": "International Entrance Scholarship — Sheridan College",
+  "organisme": "Sheridan College",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.sheridancollege.ca/admissions/financial-aid/scholarships-awards/entrance-scholarships",
+  "cloture_connue": "2025-11-15"
+ },
+ {
+  "id": "entrance-scholarships-and-awards-for-international-students-douglas-co",
+  "nom": "Entrance Scholarships and Awards for International Students — Douglas College",
+  "organisme": "Douglas College",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.douglascollege.ca/financial-aid/international-student-awards",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-undergraduate-students-scholarships-simon-fraser-univers",
+  "nom": "International Undergraduate Students Scholarships — Simon Fraser University",
+  "organisme": "Simon Fraser University (SFU)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.sfu.ca/students/financialaid/entrance.html",
+  "cloture_connue": "2025-09-12"
+ },
+ {
+  "id": "ontario-remembrance-scholarship-carleton-university",
+  "nom": "Ontario Remembrance Scholarship — Carleton University",
+  "organisme": "Carleton University",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://carleton.ca/awards/scholarships/",
+  "cloture_connue": "2025-02-01"
+ }
+]

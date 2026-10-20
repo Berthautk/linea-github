@@ -1,0 +1,329 @@
+[
+ {
+  "id": "global-partnerships-scholarship-de-montfort-university",
+  "nom": "Global Partnerships Scholarship — De Montfort University",
+  "organisme": "De Montfort University (DMU), Leicester",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.dmu.ac.uk/international/en/fees-and-funding/scholarships/index.aspx",
+  "cloture_connue": "2025-07-18"
+ },
+ {
+  "id": "international-scholarships-for-undergraduate-students-university-of-ke",
+  "nom": "International Scholarships for Undergraduate Students — University of Kent",
+  "organisme": "University of Kent",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.kent.ac.uk/scholarships/search/international-undergraduate-scholarships/",
+  "cloture_connue": "2025-03-28"
+ },
+ {
+  "id": "abertay-international-scholarship-for-undergraduate-students-abertay-u",
+  "nom": "Abertay International Scholarship for Undergraduate Students — Abertay University",
+  "organisme": "Abertay University (Dundee, Écosse)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.abertay.ac.uk/study-apply/fees-and-funding/scholarships/international-scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-undergraduate-merit-scholarship-university-of-leicester",
+  "nom": "International Undergraduate Merit Scholarship — University of Leicester",
+  "organisme": "University of Leicester",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://le.ac.uk/study/international-students/fees-and-funding/",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-excellence-award-for-undergraduate-students-university-o",
+  "nom": "International Excellence Award for Undergraduate Students — University of Surrey",
+  "organisme": "University of Surrey",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.surrey.ac.uk/fees-and-funding/scholarships/international-excellence-award-undergraduate-students",
+  "cloture_connue": "2025-07-31"
+ },
+ {
+  "id": "undergraduate-uk-international-scholarship-northumbria-university",
+  "nom": "Undergraduate UK International Scholarship — Northumbria University",
+  "organisme": "Northumbria University (Newcastle)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.northumbria.ac.uk/study-at-northumbria/fees-funding/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "vice-chancellor-undergraduate-scholarship-coventry-university",
+  "nom": "Vice Chancellor Undergraduate Scholarship — Coventry University",
+  "organisme": "Coventry University",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.coventry.ac.uk/international-students-hub/scholarships/",
+  "cloture_connue": "2025-06-30"
+ },
+ {
+  "id": "undergraduate-ellison-scholars-program-fully-funded",
+  "nom": "Undergraduate Ellison Scholars Program (Fully Funded)",
+  "organisme": "Programme multi-universités au Royaume-Uni",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://ellisonscholars.org/",
+  "cloture_connue": "2025-07-31"
+ },
+ {
+  "id": "adam-smith-business-school-global-impact-scholarship-university-of-gla",
+  "nom": "Adam Smith Business School Global Impact Scholarship — University of Glasgow",
+  "organisme": "University of Glasgow — Adam Smith Business School",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.gla.ac.uk/schools/business/study/scholarships/",
+  "cloture_connue": "2026-05-18"
+ },
+ {
+  "id": "islam-scholarship-university-of-birmingham-fully-funded",
+  "nom": "Islam Scholarship — University of Birmingham (Fully Funded)",
+  "organisme": "University of Birmingham",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.birmingham.ac.uk/postgraduate/funding/international-scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "erasmus-mundus-imfse-scholarship-university-of-edinburgh-fully-funded",
+  "nom": "Erasmus Mundus IMFSE Scholarship — University of Edinburgh (Fully Funded)",
+  "organisme": "University of Edinburgh (au sein d'un consortium européen)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://imfse.be/",
+  "cloture_connue": null
+ },
+ {
+  "id": "excellence-scholarships-loughborough-university",
+  "nom": "Excellence Scholarships — Loughborough University",
+  "organisme": "Loughborough University",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/scholarships/international/",
+  "cloture_connue": null
+ },
+ {
+  "id": "humanitarian-scholarship-university-college-london-ucl",
+  "nom": "Humanitarian Scholarship — University College London (UCL)",
+  "organisme": "UCL",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.ucl.ac.uk/scholarships/humanitarian-scholarship",
+  "cloture_connue": "2025-05-08"
+ },
+ {
+  "id": "chancellor-s-masters-scholarship-university-of-sussex",
+  "nom": "Chancellor's Masters Scholarship — University of Sussex",
+  "organisme": "University of Sussex (Brighton)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.sussex.ac.uk/study/fees-funding/scholarships-aid/",
+  "cloture_connue": "2025-08-01"
+ },
+ {
+  "id": "aziz-foundation-scholarship-university-of-sussex",
+  "nom": "Aziz Foundation Scholarship — University of Sussex",
+  "organisme": "Aziz Foundation",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://azizfoundation.org.uk/scholarship-programme/",
+  "cloture_connue": "2026-05-01"
+ },
+ {
+  "id": "commonwealth-masters-scholarships-university-of-southampton",
+  "nom": "Commonwealth Masters Scholarships — University of Southampton",
+  "organisme": "Commonwealth Scholarship Commission / University of Southampton",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.southampton.ac.uk/uni-life/fees-funding/scholarships/commonwealth-scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "adam-smith-wealth-of-nations-scholarship-university-of-glasgow",
+  "nom": "Adam Smith Wealth of Nations Scholarship — University of Glasgow",
+  "organisme": "University of Glasgow",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.gla.ac.uk/scholarships/the-adam-smith-scholarship/",
+  "cloture_connue": "2025-05-26"
+ },
+ {
+  "id": "global-excellence-scholarship-soas-university-of-london",
+  "nom": "Global Excellence Scholarship — SOAS University of London",
+  "organisme": "SOAS University of London",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.soas.ac.uk/about/studying-soas/fees-and-funding/scholarships-and-awards",
+  "cloture_connue": "2025-06-30"
+ },
+ {
+  "id": "international-postgraduate-scholarships-university-of-westminster",
+  "nom": "International Postgraduate Scholarships — University of Westminster",
+  "organisme": "University of Westminster (Londres)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.westminster.ac.uk/study/fees-and-funding/scholarships",
+  "cloture_connue": "2025-06-02"
+ },
+ {
+  "id": "international-postgraduate-7-000-scholarships-university-of-the-arts-l",
+  "nom": "International Postgraduate £7,000 Scholarships — University of the Arts London (UAL)",
+  "organisme": "University of the Arts London (UAL)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/",
+  "cloture_connue": "2025-10-31"
+ },
+ {
+  "id": "vice-chancellor-s-international-scholarship-cardiff-university",
+  "nom": "Vice-Chancellor's International Scholarship — Cardiff University",
+  "organisme": "Cardiff University (Pays de Galles)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.cardiff.ac.uk/study/postgraduate/funding/scholarships/international",
+  "cloture_connue": "2025-07-31"
+ },
+ {
+  "id": "vice-chancellor-s-future-leaders-award-university-of-surrey",
+  "nom": "Vice-Chancellor's Future Leaders Award — University of Surrey",
+  "organisme": "University of Surrey",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.surrey.ac.uk/fees-and-funding/scholarships/vice-chancellors-future-leaders-award",
+  "cloture_connue": "2025-01-10"
+ },
+ {
+  "id": "vice-chancellor-s-excellence-award-for-international-students-brunel-u",
+  "nom": "Vice-Chancellor's Excellence Award for International Students — Brunel University of London",
+  "organisme": "Brunel University of London",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.brunel.ac.uk/scholarships",
+  "cloture_connue": "2024-11-30"
+ },
+ {
+  "id": "great-scholarships-university-of-kent",
+  "nom": "GREAT Scholarships — University of Kent",
+  "organisme": "University of Kent (pour le Royaume-Uni dans son ensemble — programme gouvernemental GREAT)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://study-uk.britishcouncil.org/scholarships/great-scholarships",
+  "cloture_connue": "2025-04-25"
+ },
+ {
+  "id": "vice-chancellor-s-phd-scholarships-university-of-west-london",
+  "nom": "Vice-Chancellor's PhD Scholarships — University of West London",
+  "organisme": "University of West London (UWL)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uwl.ac.uk/research/studying-for-a-research-degree/scholarships-and-fees",
+  "cloture_connue": "2025-04-30"
+ }
+]

@@ -1,0 +1,344 @@
+[
+ {
+  "id": "creating-opportunity-fund-scholarship-australian-catholic-university",
+  "nom": "Creating Opportunity Fund Scholarship — Australian Catholic University",
+  "organisme": "Australian Catholic University (ACU)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.acu.edu.au/scholarships",
+  "cloture_connue": "2025-03-01"
+ },
+ {
+  "id": "international-undergraduate-scholarship-edith-cowan-university-ecu",
+  "nom": "International Undergraduate Scholarship — Edith Cowan University (ECU)",
+  "organisme": "Edith Cowan University",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.ecu.edu.au/scholarships/international",
+  "cloture_connue": "2025-07-03"
+ },
+ {
+  "id": "university-excellence-scholarships-university-of-wollongong",
+  "nom": "University Excellence Scholarships — University of Wollongong",
+  "organisme": "University of Wollongong (UOW)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.uow.edu.au/study/fees-scholarships/scholarships/",
+  "cloture_connue": "2025-08-20"
+ },
+ {
+  "id": "international-welcome-scholarship-murdoch-university",
+  "nom": "International Welcome Scholarship — Murdoch University",
+  "organisme": "Murdoch University (Perth)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.murdoch.edu.au/study/fees-and-scholarships/scholarships-and-bursaries",
+  "cloture_connue": "2025-08-30"
+ },
+ {
+  "id": "foundation-academic-scholarships-rmit-university",
+  "nom": "Foundation Academic Scholarships — RMIT University",
+  "organisme": "RMIT University (Melbourne)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.rmit.edu.au/students/careers-opportunities/scholarships",
+  "cloture_connue": "2025-05-31"
+ },
+ {
+  "id": "global-scholar-loyalty-grant-federation-university-australia",
+  "nom": "Global Scholar Loyalty Grant — Federation University Australia",
+  "organisme": "Federation University Australia",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://federation.edu.au/international/apply/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "the-western-australian-premier-s-wace-bursary-for-international-gradua",
+  "nom": "The Western Australian Premier's WACE Bursary for International Graduates",
+  "organisme": "Gouvernement de l'Australie-Occidentale",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.studyperth.com.au/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "incoming-study-abroad-international-travel-grant-university-of-souther",
+  "nom": "Incoming Study Abroad International Travel Grant — University of Southern Queensland",
+  "organisme": "University of Southern Queensland (UniSQ)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.unisq.edu.au/international/scholarships",
+  "cloture_connue": "2025-09-19"
+ },
+ {
+  "id": "anu-university-research-scholarships-fully-funded-australian-national-",
+  "nom": "ANU University Research Scholarships (Fully Funded) — Australian National University",
+  "organisme": "Australian National University (ANU)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.anu.edu.au/study/scholarships/find-a-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "research-training-program-scholarship-university-of-melbourne-fully-fu",
+  "nom": "Research Training Program Scholarship — University of Melbourne (Fully Funded)",
+  "organisme": "University of Melbourne",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://scholarships.unimelb.edu.au/awards/graduate-research-scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "qut-postgraduate-research-award-qutpra",
+  "nom": "QUT Postgraduate Research Award (QUTPRA)",
+  "organisme": "Queensland University of Technology (QUT)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.qut.edu.au/research/study-with-us/scholarships-and-funding",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-road-to-research-scholarship-macquarie-university",
+  "nom": "International Road to Research Scholarship — Macquarie University",
+  "organisme": "Macquarie University (Sydney)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.mq.edu.au/research/phd-and-research-degrees/scholarships",
+  "cloture_connue": "2025-04-30"
+ },
+ {
+  "id": "research-training-program-rtp-stipend-scholarship-cquniversity",
+  "nom": "Research Training Program (RTP) Stipend Scholarship — CQUniversity",
+  "organisme": "CQUniversity Australia",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.cqu.edu.au/research/research-degrees/scholarships",
+  "cloture_connue": "2026-12-31"
+ },
+ {
+  "id": "australian-government-research-training-program-scholarship-internatio",
+  "nom": "Australian Government Research Training Program Scholarship International — Flinders University",
+  "organisme": "Flinders University (Adelaide)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.flinders.edu.au/research/research-degrees/scholarships",
+  "cloture_connue": "2025-08-18"
+ },
+ {
+  "id": "john-allwright-fellowship",
+  "nom": "John Allwright Fellowship",
+  "organisme": "Australian Centre for International Agricultural Research (ACIAR)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.aciar.gov.au/project/john-allwright-fellowship",
+  "cloture_connue": "2025-04-30"
+ },
+ {
+  "id": "aciar-pacific-agriculture-scholarships-and-support-program-pass",
+  "nom": "ACIAR Pacific Agriculture Scholarships and Support Program (PASS)",
+  "organisme": "ACIAR",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.aciar.gov.au/project/pacific-agriculture-scholarships-and-support-pass-program",
+  "cloture_connue": null
+ },
+ {
+  "id": "arc-postgraduate-research-scholarship-university-of-sydney",
+  "nom": "ARC Postgraduate Research Scholarship — University of Sydney",
+  "organisme": "University of Sydney — Faculty of Science",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.sydney.edu.au/scholarships/research/faculty-scholarships.html",
+  "cloture_connue": "2025-05-25"
+ },
+ {
+  "id": "nsw-education-waratah-scholarship-university-of-new-england",
+  "nom": "NSW Education Waratah Scholarship — University of New England",
+  "organisme": "University of New England (UNE)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.une.edu.au/research/hdr/hdr-scholarships",
+  "cloture_connue": "2024-11-30"
+ },
+ {
+  "id": "science-international-scholarships-university-of-queensland",
+  "nom": "Science International Scholarships — University of Queensland",
+  "organisme": "University of Queensland (UQ)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://scholarships.uq.edu.au/",
+  "cloture_connue": "2025-01-28"
+ },
+ {
+  "id": "academic-excellence-scholarship-international-college-of-management-sy",
+  "nom": "Academic Excellence Scholarship — International College of Management, Sydney (ICMS)",
+  "organisme": "ICMS (International College of Management, Sydney)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.icms.edu.au/future-students/scholarships/",
+  "cloture_connue": "2025-11-14"
+ },
+ {
+  "id": "oxford-pershing-square-graduate-scholarships",
+  "nom": "Oxford Pershing Square Graduate Scholarships",
+  "organisme": "University of Oxford — Saïd Business School",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.sbs.ox.ac.uk/programmes/oxford-mba/fees-funding/scholarships",
+  "cloture_connue": "2026-01-07"
+ },
+ {
+  "id": "ucl-global-undergraduate-scholarship",
+  "nom": "UCL Global Undergraduate Scholarship",
+  "organisme": "University College London (UCL)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.ucl.ac.uk/scholarships/ucl-global-undergraduate-scholarship",
+  "cloture_connue": "2025-04-28"
+ },
+ {
+  "id": "warwick-undergraduate-global-excellence-scholarship",
+  "nom": "Warwick Undergraduate Global Excellence Scholarship",
+  "organisme": "University of Warwick",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://warwick.ac.uk/study/undergraduate/fees-and-funding/global-excellence/",
+  "cloture_connue": null
+ },
+ {
+  "id": "global-talent-scholarship-for-undergraduate-students-queen-mary-univer",
+  "nom": "Global Talent Scholarship for Undergraduate Students — Queen Mary University of London",
+  "organisme": "Queen Mary University of London",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.qmul.ac.uk/undergraduate/fees-and-funding/scholarships/international/",
+  "cloture_connue": null
+ },
+ {
+  "id": "international-undergraduate-achievement-scholarships-university-of-yor",
+  "nom": "International Undergraduate Achievement Scholarships — University of York",
+  "organisme": "University of York",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.york.ac.uk/study/undergraduate/fees-funding/scholarships/international-achievement/",
+  "cloture_connue": null
+ }
+]

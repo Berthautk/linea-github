@@ -1,0 +1,336 @@
+[
+ {
+  "id": "university-of-glasgow-excellence-scholarships",
+  "nom": "University of Glasgow Excellence Scholarships",
+  "organisme": "University of Glasgow (Écosse)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.gla.ac.uk/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "women-in-stem-scholarship-university-of-bradford",
+  "nom": "Women in STEM Scholarship (University of Bradford)",
+  "organisme": "University of Bradford",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.bradford.ac.uk/money/scholarships/women-in-stem/",
+  "cloture_connue": null
+ },
+ {
+  "id": "american-university-emerging-global-leader-au-egls",
+  "nom": "American University Emerging Global Leader (AU EGLS)",
+  "organisme": "American University (Washington, D.C.)",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://www.american.edu/admissions/international/egl-scholarship.cfm",
+  "cloture_connue": null
+ },
+ {
+  "id": "mit-msrp-mit-summer-research-program",
+  "nom": "MIT MSRP (MIT Summer Research Program)",
+  "organisme": "Massachusetts Institute of Technology",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "licence",
+   "doctorat"
+  ],
+  "lien_connu": "https://oge.mit.edu/msrp/",
+  "cloture_connue": "2026-01-20"
+ },
+ {
+  "id": "friedrich-ebert-stiftung-fes",
+  "nom": "Friedrich Ebert Stiftung (FES)",
+  "organisme": "Fondation Friedrich Ebert (affiliée au SPD)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.fes.de/studienfoerderung/information-in-english",
+  "cloture_connue": null
+ },
+ {
+  "id": "rosa-luxemburg-stiftung",
+  "nom": "Rosa Luxemburg Stiftung",
+  "organisme": "Fondation Rosa Luxemburg (affiliée à Die Linke)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.rosalux.de/en/foundation/studienwerk",
+  "cloture_connue": null
+ },
+ {
+  "id": "friedrich-naumann-stiftung",
+  "nom": "Friedrich Naumann Stiftung",
+  "organisme": "Fondation Friedrich Naumann (affiliée au FDP)",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.freiheit.org/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "university-of-hamburg-merit-scholarship",
+  "nom": "University of Hamburg Merit Scholarship",
+  "organisme": "Université de Hambourg",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.uni-hamburg.de/en/internationales/studierende/stipendien/leistungsstipendien.html",
+  "cloture_connue": "2026-04-15"
+ },
+ {
+  "id": "tu-munich-global-scholarship",
+  "nom": "TU Munich Global Scholarship",
+  "organisme": "Technische Universität München",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.tum.de/en/studies/fees-and-financial-aid/scholarships",
+  "cloture_connue": "2026-04-26"
+ },
+ {
+  "id": "university-of-otago-doctoral-scholarship",
+  "nom": "University of Otago Doctoral Scholarship",
+  "organisme": "University of Otago",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.otago.ac.nz/study/scholarships/database/otago014687.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "massey-university-master-s-research-scholarship",
+  "nom": "Massey University Master's Research Scholarship",
+  "organisme": "Massey University",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-masters-research-scholarship/",
+  "cloture_connue": null
+ },
+ {
+  "id": "victoria-university-of-wellington-scholarships",
+  "nom": "Victoria University of Wellington Scholarships",
+  "organisme": "Victoria University of Wellington (Te Herenga Waka)",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.wgtn.ac.nz/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "university-of-canterbury-doctoral-scholarship",
+  "nom": "University of Canterbury Doctoral Scholarship",
+  "organisme": "University of Canterbury (Christchurch)",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.canterbury.ac.nz/study/scholarships/types/uc-doctoral-scholarship",
+  "cloture_connue": null
+ },
+ {
+  "id": "university-of-waikato-international-excellence-scholarship",
+  "nom": "University of Waikato International Excellence Scholarship",
+  "organisme": "University of Waikato",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.waikato.ac.nz/study/fees-and-scholarships/scholarships/",
+  "cloture_connue": "2025-12-31"
+ },
+ {
+  "id": "lincoln-university-doctoral-scholarship",
+  "nom": "Lincoln University Doctoral Scholarship",
+  "organisme": "Lincoln University",
+  "pays": [
+   "Nouvelle-Zélande"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.lincoln.ac.nz/study/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "maastricht-university-high-potential-scholarship",
+  "nom": "Maastricht University High Potential Scholarship",
+  "organisme": "Maastricht University",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.maastrichtuniversity.nl/support/your-studies-begin/coming-um-international-student/scholarships-and-grants",
+  "cloture_connue": "2025-10-31"
+ },
+ {
+  "id": "itc-excellence-scholarship-university-of-twente",
+  "nom": "ITC Excellence Scholarship — University of Twente",
+  "organisme": "Faculty of Geo-Information Science and Earth Observation (ITC) — University of Twente",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.itc.nl/education/scholarships/itc-excellence-scholarship/",
+  "cloture_connue": "2026-02-01"
+ },
+ {
+  "id": "eric-bleumink-fund-university-of-groningen",
+  "nom": "Eric Bleumink Fund (University of Groningen)",
+  "organisme": "University of Groningen",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.rug.nl/education/scholarships/eric-bleumink-fund",
+  "cloture_connue": null
+ },
+ {
+  "id": "university-of-twente-scholarship-uts-kipaji",
+  "nom": "University of Twente Scholarship (UTS) + Kipaji",
+  "organisme": "University of Twente",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/",
+  "cloture_connue": "2026-05-01"
+ },
+ {
+  "id": "justus-and-louise-van-effen-excellence-scholarship-tu-delft",
+  "nom": "Justus & Louise van Effen Excellence Scholarship (TU Delft)",
+  "organisme": "TU Delft",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.tudelft.nl/en/education/scholarships/justus-louise-van-effen-excellence-scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "mandela-scholarship-leiden-university",
+  "nom": "Mandela Scholarship — Leiden University",
+  "organisme": "Leiden University — African Studies Centre",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.universiteitleiden.nl/en/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "utrecht-excellence-scholarships-leg",
+  "nom": "Utrecht Excellence Scholarships (LEG)",
+  "organisme": "Utrecht University",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.uu.nl/en/education/international-students/financial-matters/grants-and-scholarships/utrecht-excellence-scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-d-excellence-de-l-universite-paris-saclay",
+  "nom": "Bourses d'Excellence de l'Université Paris-Saclay",
+  "organisme": "Université Paris-Saclay",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.universite-paris-saclay.fr/admission/bourses-et-aides-financieres/bourses-internationales-de-master/",
+  "cloture_connue": null
+ },
+ {
+  "id": "isae-supaero-scholarships-toulouse",
+  "nom": "ISAE-SUPAERO Scholarships (Toulouse)",
+  "organisme": "Institut Supérieur de l'Aéronautique et de l'Espace (ISAE-SUPAERO)",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.isae-supaero.fr/en/academics/financial-aid/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "idex-bourses-d-excellence-grenoble",
+  "nom": "IDEX Bourses d'Excellence (Grenoble)",
+  "organisme": "Université Grenoble Alpes (UGA)",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.univ-grenoble-alpes.fr/education/scholarships-and-financial-aid/",
+  "cloture_connue": null
+ }
+]

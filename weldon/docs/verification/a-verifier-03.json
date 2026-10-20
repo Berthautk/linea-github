@@ -1,0 +1,341 @@
+[
+ {
+  "id": "laval-bccm-excellence",
+  "nom": "Bourses citoyennes et citoyens du monde - volet excellence (Laval)",
+  "organisme": "Université Laval",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.ulaval.ca/espace-etudiant/bourses-et-aide-financiere/bourses-detudes/bourses-citoyennes-et-citoyens-du-monde-volets-excellence-et-engagement",
+  "cloture_connue": null
+ },
+ {
+  "id": "daad-research-grants",
+  "nom": "DAAD - Research Grants (séjours de recherche en Allemagne)",
+  "organisme": "DAAD",
+  "pays": [
+   "Allemagne"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57742121",
+  "cloture_connue": "2027-02-23"
+ },
+ {
+  "id": "ictp-diploma-programme",
+  "nom": "ICTP - Diplôme postuniversitaire (Trieste)",
+  "organisme": "ICTP (Centre international de physique théorique Abdus Salam)",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme",
+  "cloture_connue": null
+ },
+ {
+  "id": "eth-excellence-scholarship-esop",
+  "nom": "ETH Zurich - Excellence Scholarship & Opportunity Programme (ESOP)",
+  "organisme": "ETH Zurich",
+  "pays": [
+   "Suisse"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+  "cloture_connue": "2026-11-30"
+ },
+ {
+  "id": "epfl-excellence-fellowships",
+  "nom": "EPFL - Excellence Fellowships de master",
+  "organisme": "EPFL",
+  "pays": [
+   "Suisse"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.epfl.ch/education/master/master-excellence-fellowships/",
+  "cloture_connue": "2026-12-15"
+ },
+ {
+  "id": "pasteur-paris-university-ppu",
+  "nom": "Pasteur-Paris University (PPU) - Programme doctoral international",
+  "organisme": "Institut Pasteur / Pasteur-Paris University",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.pasteur.fr/en/education/ppu",
+  "cloture_connue": "2026-11-16"
+ },
+ {
+  "id": "kaust-ms-phd-fellowship",
+  "nom": "KAUST - Fellowship MS / MS-PhD / PhD",
+  "organisme": "KAUST (King Abdullah University of Science and Technology)",
+  "pays": [
+   "Arabie saoudite"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines",
+  "cloture_connue": "2027-01-03"
+ },
+ {
+  "id": "paris-saclay-international-masters-scholarship",
+  "nom": "Paris-Saclay - Bourse internationale de master",
+  "organisme": "Université Paris-Saclay",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/international-masters-scholarships-program",
+  "cloture_connue": null
+ },
+ {
+  "id": "aalto-excellence-scholarship",
+  "nom": "Aalto University Excellence Scholarship",
+  "organisme": "Aalto University",
+  "pays": [
+   "Finlande"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees",
+  "cloture_connue": "2027-01-05"
+ },
+ {
+  "id": "tue-scholarship-excellence-microchip",
+  "nom": "TU/e Scholarship for Excellence - Microchip Innovation",
+  "organisme": "TU Eindhoven (TU/e)",
+  "pays": [
+   "Pays-Bas"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.tue.nl/en/education/become-a-tue-student/scholarships-and-grants/tue-scholarship-for-excellence-shaping-the-future-of-microchip-innovation",
+  "cloture_connue": "2027-01-01"
+ },
+ {
+  "id": "schlumberger-faculty-for-the-future",
+  "nom": "Schlumberger Foundation - Faculty for the Future",
+  "organisme": "Schlumberger Foundation",
+  "pays": [
+   "Pays d'accueil variable (hors pays d'origine)"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.facultyforthefuture.net/apply-now/",
+  "cloture_connue": "2026-11-07"
+ },
+ {
+  "id": "iaea-marie-sklodowska-curie-fellowship",
+  "nom": "AIEA - Bourse Marie Skłodowska-Curie",
+  "organisme": "AIEA (Agence internationale de l'énergie atomique)",
+  "pays": [
+   "Pays d'étude variable"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.iaea.org/services/key-programmes/iaea-marie-sklodowska-curie-fellowship-programme/information-for-applicants",
+  "cloture_connue": "2026-10-31"
+ },
+ {
+  "id": "koica-scholarship-ciat",
+  "nom": "KOICA Scholarship (CIAT)",
+  "organisme": "KOICA (Agence coréenne de coopération internationale)",
+  "pays": [
+   "Corée du Sud"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://overseas.mofa.go.kr/ge-en/brd/m_28696/view.do?seq=118",
+  "cloture_connue": "2026-07-10"
+ },
+ {
+  "id": "ird-arts-allocations-these",
+  "nom": "IRD - ARTS (Allocations de recherche pour une thèse au Sud)",
+  "organisme": "IRD (Institut de recherche pour le développement)",
+  "pays": [
+   "France",
+   "Pays du Sud (laboratoire partenaire)"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.ird.fr/arts",
+  "cloture_connue": null
+ },
+ {
+  "id": "isdb-merit-scholarship-high-tech",
+  "nom": "BID - Merit Scholarship Programme (haute technologie)",
+  "organisme": "Banque islamique de développement (BID)",
+  "pays": [
+   "Pays d'étude variable"
+  ],
+  "niveaux": [
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://www.isdb.org/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "jica-abe-initiative",
+  "nom": "JICA - ABE Initiative (master + stage en entreprise)",
+  "organisme": "JICA (Agence japonaise de coopération internationale)",
+  "pays": [
+   "Japon"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.jica.go.jp/english/countries/africa/internship.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "vanier-canada-graduate-scholarships-vanier-cgs",
+  "nom": "Vanier Canada Graduate Scholarships (Vanier CGS)",
+  "organisme": "Gouvernement du Canada (IRSC, CRSNG, CRSH)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://vanier.gc.ca/en/home-accueil.html",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourse-de-la-fondation-pierre-elliott-trudeau",
+  "nom": "Bourse de la Fondation Pierre Elliott Trudeau",
+  "organisme": "Fondation Pierre Elliott Trudeau",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.trudeaufoundation.ca/become-a-scholar/",
+  "cloture_connue": "2026-11-06"
+ },
+ {
+  "id": "lester-b-pearson-international-scholarships-toronto",
+  "nom": "Lester B. Pearson International Scholarships (Toronto)",
+  "organisme": "Université de Toronto",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://future.utoronto.ca/pearson/about/",
+  "cloture_connue": "2026-10-09"
+ },
+ {
+  "id": "pbeee-bourses-d-excellence-pour-etudiants-etrangers-quebec",
+  "nom": "PBEEE — Bourses d'excellence pour étudiants étrangers (Québec)",
+  "organisme": "Fonds de Recherche du Québec (FRQ)",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat",
+   "postdoc"
+  ],
+  "lien_connu": "https://frq.gouv.qc.ca/programme/bourses-dexcellence-pour-etudiants-etrangers-pbeee-2026-2027/",
+  "cloture_connue": "2025-12-02"
+ },
+ {
+  "id": "programme-canadien-de-bourses-de-la-francophonie-pcbf",
+  "nom": "Programme Canadien de Bourses de la Francophonie (PCBF)",
+  "organisme": "Niveau",
+  "pays": [
+   "Canada"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://cbie.ca/fr/notre-travail/programmes-actuels/programme-canadien-de-bourses-de-la-francophonie/",
+  "cloture_connue": null
+ },
+ {
+  "id": "australia-awards-scholarships-aas",
+  "nom": "Australia Awards Scholarships (AAS)",
+  "organisme": "Gouvernement Australien — Department of Foreign Affairs and Trade (DFAT)",
+  "pays": [
+   "Australie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.dfat.gov.au/people-to-people/australia-awards/how-to-apply-for-an-australia-awards-scholarship",
+  "cloture_connue": "2026-04-30"
+ },
+ {
+  "id": "chevening-scholarships",
+  "nom": "Chevening Scholarships",
+  "organisme": "Gouvernement Britannique — Foreign, Commonwealth & Development Office (FCDO)",
+  "pays": [
+   "Royaume-Uni"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.chevening.org/scholarship/",
+  "cloture_connue": "2025-10-07"
+ },
+ {
+  "id": "queen-elizabeth-commonwealth-scholarships-qecs",
+  "nom": "Queen Elizabeth Commonwealth Scholarships (QECS)",
+  "organisme": "Association of Commonwealth Universities (ACU)",
+  "pays": [
+   "Royaume-Uni",
+   "Plusieurs pays"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.acu.ac.uk/scholarships/queen-elizabeth-commonwealth-scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "knight-hennessy-scholars-stanford",
+  "nom": "Knight-Hennessy Scholars (Stanford)",
+  "organisme": "Université de Stanford",
+  "pays": [
+   "États-Unis"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://knight-hennessy.stanford.edu/",
+  "cloture_connue": "2025-10-08"
+ }
+]

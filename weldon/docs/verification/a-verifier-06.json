@@ -1,0 +1,341 @@
+[
+ {
+  "id": "le-contrat-doctoral-phd-salarie-a-la-francaise",
+  "nom": "Le Contrat Doctoral (PhD salarié à la française)",
+  "organisme": "État français via les Écoles Doctorales",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.enseignementsup-recherche.gouv.fr/fr/le-financement-doctoral-46472",
+  "cloture_connue": null
+ },
+ {
+  "id": "bourses-du-gouvernement-francais-bgf",
+  "nom": "Bourses du Gouvernement Français (BGF)",
+  "organisme": "Ambassades de France dans chaque pays",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": null,
+  "cloture_connue": null
+ },
+ {
+  "id": "chalhoub-group-scholarship-sciences-po",
+  "nom": "Chalhoub Group Scholarship (Sciences Po)",
+  "organisme": "Niveau",
+  "pays": [
+   "France"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/",
+  "cloture_connue": "2025-12-31"
+ },
+ {
+  "id": "maeci-bourses-du-gouvernement-italien",
+  "nom": "MAECI — Bourses du Gouvernement Italien",
+  "organisme": "Ministère des Affaires Étrangères et de la Coopération Internationale (MAECI)",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://studyinitaly.esteri.it/",
+  "cloture_connue": null
+ },
+ {
+  "id": "dsu-piemont-edisu-piemonte",
+  "nom": "DSU Piémont (EDISU Piemonte)",
+  "organisme": "Organisme régional du Piémont (EDISU)",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.edisu.piemonte.it/en",
+  "cloture_connue": null
+ },
+ {
+  "id": "dsu-toscane",
+  "nom": "DSU Toscane",
+  "organisme": "Azienda DSU Toscana",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.dsu.toscana.it/",
+  "cloture_connue": null
+ },
+ {
+  "id": "dsu-emilie-romagne-er-go",
+  "nom": "DSU Émilie-Romagne (ER.GO)",
+  "organisme": "ER.GO — Azienda Regionale per il Diritto agli Studi Superiori",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.er-go.it/",
+  "cloture_connue": null
+ },
+ {
+  "id": "dsu-lombardie",
+  "nom": "DSU Lombardie",
+  "organisme": "Système DSU de Lombardie",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "autre"
+  ],
+  "lien_connu": "https://www.dsu.lombardia.it/",
+  "cloture_connue": null
+ },
+ {
+  "id": "invest-your-talent-in-italy-iyt",
+  "nom": "Invest Your Talent in Italy (IYT)",
+  "organisme": "MAECI / Agence ICE / Uni-Italia",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://investyourtalentitaly.esteri.it/",
+  "cloture_connue": null
+ },
+ {
+  "id": "bocconi-graduate-merit-awards-milan",
+  "nom": "Bocconi Graduate Merit Awards (Milan)",
+  "organisme": "Università Bocconi (privée)",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/funding/bocconi-graduate-merit-awards-ay-2026-27",
+  "cloture_connue": null
+ },
+ {
+  "id": "padoue-international-excellence-scholarship",
+  "nom": "Padoue International Excellence Scholarship",
+  "organisme": "Università di Padova",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.unipd.it/en/scholarships-international-students",
+  "cloture_connue": null
+ },
+ {
+  "id": "politecnico-di-milano-merit-scholarships",
+  "nom": "Politecnico di Milano Merit Scholarships",
+  "organisme": "Niveau",
+  "pays": [
+   "Italie"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.polimi.it/en/services-and-opportunities/student-services/financial-support",
+  "cloture_connue": null
+ },
+ {
+  "id": "maec-aecid-programme-pour-l-afrique-et-la-mediterranee",
+  "nom": "MAEC-AECID (Programme pour l'Afrique et la Méditerranée)",
+  "organisme": "Agence Espagnole de Coopération Internationale pour le Développement (AECID) — rattachée au Ministère des Affaires Étrangères (MAEC)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.aecid.gob.es/es/becas-para-ciudadanos-de-paises-de-america-latina-africa-y-asia",
+  "cloture_connue": null
+ },
+ {
+  "id": "la-caixa-inphinit-incoming-doctorat-stem",
+  "nom": "La Caixa INPhINIT Incoming (Doctorat STEM)",
+  "organisme": "Fondation « la Caixa »",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships-incoming-call",
+  "cloture_connue": null
+ },
+ {
+  "id": "agaur-bourses-pre-doctorales-fi-catalogne",
+  "nom": "AGAUR — Bourses pré-doctorales FI (Catalogne)",
+  "organisme": "AGAUR (Agència de Gestió d'Ajuts Universitaris i de Recerca) — Gouvernement de Catalogne",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://agaur.gencat.cat/en/beques-i-ajuts/",
+  "cloture_connue": null
+ },
+ {
+  "id": "fundacion-carolina",
+  "nom": "Fundación Carolina",
+  "organisme": "Fundación Carolina (fondation du MAEC et de grandes entreprises espagnoles)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://www.fundacioncarolina.es/becas/",
+  "cloture_connue": null
+ },
+ {
+  "id": "eada-business-school-scholarships-barcelone",
+  "nom": "EADA Business School Scholarships (Barcelone)",
+  "organisme": "EADA Business School (Barcelone)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.eada.edu/en/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "aeb-cunef-scholarships-finance",
+  "nom": "AEB/CUNEF Scholarships (Finance)",
+  "organisme": "CUNEF (Centro Universitario de Estudios Financieros) — partenaire de l'AEB (Asociación Española de Banca)",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.cunef.edu/",
+  "cloture_connue": null
+ },
+ {
+  "id": "ie-university-scholarships-madrid-segovia",
+  "nom": "IE University Scholarships (Madrid/Segovia)",
+  "organisme": "IE University",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "licence",
+   "master"
+  ],
+  "lien_connu": "https://www.ie.edu/financial-aid/scholarship-list/",
+  "cloture_connue": null
+ },
+ {
+  "id": "universidad-de-navarra-programa-becas-alumni",
+  "nom": "Universidad de Navarra — Programa Becas Alumni",
+  "organisme": "Niveau",
+  "pays": [
+   "Espagne"
+  ],
+  "niveaux": [
+   "licence"
+  ],
+  "lien_connu": "https://en.unav.edu/admission-and-financial-aid/degree/scholarships-and-financial-aid",
+  "cloture_connue": null
+ },
+ {
+  "id": "fct-doctoral-scholarships-le-pilier-de-la-recherche",
+  "nom": "FCT Doctoral Scholarships (Le Pilier de la Recherche)",
+  "organisme": "FCT — Fundação para a Ciência e a Tecnologia (Fondation pour la Science et la Technologie — l'équivalent portugais de l'ANR française ou du DFG allemand)",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.fct.pt/en/concursos/concurso-bolsas-de-doutoramento-2026-linha-de-candidatura-geral",
+  "cloture_connue": null
+ },
+ {
+  "id": "carnegie-mellon-portugal-double-phd",
+  "nom": "Carnegie Mellon Portugal (Double PhD)",
+  "organisme": "Carnegie Mellon University (USA) / Universités portugaises / FCT",
+  "pays": [
+   "Portugal",
+   "États-Unis"
+  ],
+  "niveaux": [
+   "doctorat"
+  ],
+  "lien_connu": "https://www.cmuportugal.org/calls/affiliated-phd/",
+  "cloture_connue": null
+ },
+ {
+  "id": "fondation-calouste-gulbenkian",
+  "nom": "Fondation Calouste Gulbenkian",
+  "organisme": "Fundação Calouste Gulbenkian",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://gulbenkian.pt/en/scholarships/",
+  "cloture_connue": null
+ },
+ {
+  "id": "nova-sbe-santander-scholarships-lisbonne",
+  "nom": "Nova SBE Santander Scholarships (Lisbonne)",
+  "organisme": "Nova SBE (Universidade Nova de Lisboa) / Banco Santander",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "master"
+  ],
+  "lien_connu": "https://www.novasbe.unl.pt/en/programs/masters/fees-financing/scholarships",
+  "cloture_connue": null
+ },
+ {
+  "id": "universidade-do-porto-international-student-scholarships",
+  "nom": "Universidade do Porto — International Student Scholarships",
+  "organisme": "Universidade do Porto",
+  "pays": [
+   "Portugal"
+  ],
+  "niveaux": [
+   "licence",
+   "master",
+   "doctorat"
+  ],
+  "lien_connu": "https://sigarra.up.pt/up/en/WEB_BASE.GERA_PAGINA?p_pagina=bolsas-e-premios",
+  "cloture_connue": null
+ }
+]

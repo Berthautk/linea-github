@@ -5733,6 +5733,10 @@
   },
   "en": {
    "nom": "Global Scholar Loyalty Grant — Federation University Australia"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Bourse réservée aux étudiants internationaux de partenaires offshore de Federation University (ou canal Employability.Life) qui transfèrent en Australie ; seules les conditions 2025 sont publiées (PDF officiel), aucune édition 2026/2027 trouvée ; page de bourses du guide en 404. Non ouverte à une candidature directe depuis le Cameroun."
   }
  },
  {
@@ -5779,6 +5783,10 @@
   },
   "en": {
    "nom": "The Western Australian Premier's WACE Bursary for International Graduates"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Bourse réservée aux diplômés (ou élèves de terminale) du WACE dans une école offshore accréditée par la SCSA (guidelines 2025-26, sélections 30 janv. et 24 avr. 2026) ; non accessible aux candidats camerounais hors de ces écoles ; pages wa.gov.au de la bourse en 404, édition 2026-27 non lue."
   }
  },
  {
@@ -5787,7 +5795,7 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
@@ -5795,39 +5803,133 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "septembre"
+   "ouverture_mois": "",
+   "cloture_mois": "décembre, avril, juillet"
   },
   "edition": {
-   "cloture": "2025-09-19",
-   "confirme": false
+   "libelle": "Trimestre 1 2027",
+   "cloture": "2026-12-22",
+   "confirme": true
   },
-  "lien_officiel": "https://www.unisq.edu.au/international/scholarships",
+  "lien_officiel": "https://www.unisq.edu.au/scholarships/unisqi-incoming-study-abroad-international-travel-grant",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.unisq.edu.au/international/scholarships"
+    "titre": "Incoming Study Abroad International Travel Grant (2026), UniSQ",
+    "url": "https://www.unisq.edu.au/scholarships/unisqi-incoming-study-abroad-international-travel-grant"
+   },
+   {
+    "titre": "Apply to Study Abroad, UniSQ",
+    "url": "https://www.unisq.edu.au/international/partnerships/study-abroad-exchange/apply"
+   },
+   {
+    "titre": "Study Abroad fees and scholarships, UniSQ",
+    "url": "https://www.unisq.edu.au/international/partnerships/study-abroad-exchange/fees-scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "19 septembre 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Incoming Study Abroad International Travel Grant — University of Southern Queensland",
-   "resume": "UniSQ, dans le Queensland, offre des bourses de mobilité pour les étudiants internationaux en programme d'échange. C'est une aide au voyage qui facilite l'accès à l'expérience australienne pour les étudiants déjà inscrits dans une université partenaire à…",
+   "nom": "Incoming Study Abroad International Travel Grant - University of Southern Queensland",
+   "resume": "Réduction de frais de scolarité offerte par UniSQ aux étudiants internationaux inscrits au programme Study Abroad (séjour d'études sur campus, sans diplôme UniSQ). Ce n'est pas une bourse pour un diplôme complet en Australie.",
    "resume_long": "UniSQ, dans le Queensland, offre des bourses de mobilité pour les étudiants internationaux en programme d'échange. C'est une aide au voyage qui facilite l'accès à l'expérience australienne pour les étudiants déjà inscrits dans une université partenaire à l'étranger.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux en programme d'échange",
-   "edition_note": "Date limite indiquée dans le guide : 19 septembre 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Jusqu'à 2 000 AUD par trimestre, déduits des frais de scolarité",
+   "eligibilite": "Être étudiant international (aucune nationalité exigée), commencer ou poursuivre le programme Study Abroad payant d'UniSQ, étudier sur campus et suivre au moins trois unités par trimestre. Sont exclus les étudiants inscrits en cross-institutional, professional development, bachelor ou master UniSQ.",
+   "edition_note": "Les dates limites de candidature Study Abroad 2027 sont publiées (22 déc. 2026, 6 avr. 2027, 20 juil. 2027) ; la page de la bourse porte sur l'édition 2026 et ne précise pas encore les conditions 2027.",
+   "couverture_detail": "Montant maximal de 2 000 AUD par trimestre pour la durée de l'attribution, crédité sur le compte étudiant UniSQ comme réduction des frais ; l'étudiant paie le solde indiqué dans la lettre d'offre. Un seul don par trimestre, deux au maximum sur deux trimestres. Les frais Study Abroad 2026 sont de 2 495 AUD par cours.",
+   "ne_couvre_pas": "Billet d'avion, logement, assurance santé OSHC, frais de vie et frais restants de scolarité.",
+   "diplome": "Être inscrit dans une université reconnue, avec au moins des résultats moyens, et remplir les prérequis des cours choisis.",
+   "langue": "Cours en anglais. Test accepté : IELTS Academic 6.0 (5.5 par partie), PTE 50, TOEFL iBT 80 (19 par partie) ou Cambridge 169, passé depuis moins de 2 ans, ou une année d'études dans un pays anglophone.",
+   "conseil": "Il faut déjà être étudiant dans une université reconnue et payer le reste des frais ; prévoyez le budget total (visa, logement, vol). Écrivez à studyabroad@unisq.edu.au pour confirmer que la bourse est reconduite pour 2027.",
+   "autres": [
+    "Les bénéficiaires sont informés dans leur lettre d'offre Study Abroad.",
+    "Le visa étudiant et l'assurance OSHC restent obligatoires."
+   ],
+   "dossier": [
+    "Relevés de notes certifiés de l'université d'origine",
+    "Preuve de niveau d'anglais certifiée, si applicable",
+    "Copie du passeport",
+    "Formulaire de candidature en ligne (OMEGA) en indiquant Study Abroad"
+   ],
+   "etapes": [
+    "Vérifier la date limite du trimestre visé",
+    "Choisir le campus et les cours dans le Handbook UniSQ",
+    "Déposer la candidature en ligne via OMEGA avec les documents",
+    "Aucun formulaire distinct : la sélection se fait sur la candidature Study Abroad",
+    "Retourner la lettre d'acceptation et le paiement dans les délais"
+   ]
   },
   "en": {
-   "nom": "Incoming Study Abroad International Travel Grant — University of Southern Queensland"
+   "nom": "Incoming Study Abroad International Travel Grant - University of Southern Queensland",
+   "resume": "Tuition reduction offered by UniSQ to international students enrolled in its Study Abroad program (on-campus study stay, no UniSQ degree). It is not a scholarship for a full degree in Australia.",
+   "valeur": "Up to AUD 2,000 per trimester, deducted from tuition fees",
+   "couverture_detail": "Maximum AUD 2,000 per trimester for the duration of the award, credited to the UniSQ student account as a tuition reduction; the student pays the balance shown in the offer letter. One grant per trimester, two at most across two trimesters. 2026 Study Abroad fees are AUD 2,495 per course.",
+   "ne_couvre_pas": "Airfare, accommodation, OSHC health cover, living costs and remaining tuition fees.",
+   "eligibilite": "Be an international student (no nationality requirement), start or continue UniSQ's fee-paying Study Abroad program, study on campus and take at least three units per trimester. Students in cross-institutional, professional development, UniSQ bachelor or master courses are excluded.",
+   "diplome": "Be enrolled at a recognised university with at least average results, and meet the prerequisites of the chosen courses.",
+   "langue": "Courses in English. Accepted: IELTS Academic 6.0 (5.5 per band), PTE 50, TOEFL iBT 80 (19 per section) or Cambridge 169, taken within 2 years, or one year of study in an English-speaking country.",
+   "conseil": "You must already be a student at a recognised university and pay the remaining fees; budget for the full cost (visa, housing, flight). Email studyabroad@unisq.edu.au to confirm the grant continues for 2027.",
+   "edition_note": "Study Abroad application deadlines for 2027 are published (22 Dec 2026, 6 Apr 2027, 20 Jul 2027); the grant page covers the 2026 edition and does not yet state 2027 conditions.",
+   "autres": [
+    "Recipients are notified in their Study Abroad offer letter.",
+    "A student visa and OSHC cover remain compulsory."
+   ],
+   "dossier": [
+    "Certified transcripts from the home university",
+    "Certified English proficiency evidence, if applicable",
+    "Passport copy",
+    "Online application (OMEGA) selecting Study Abroad"
+   ],
+   "etapes": [
+    "Check the deadline for the intended trimester",
+    "Choose the campus and courses in the UniSQ Handbook",
+    "Submit the online application via OMEGA with the documents",
+    "No separate form: selection is based on the Study Abroad application",
+    "Return the acceptance form and payment by the due date"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Trimestre 1 2027",
+    "ouverture": null,
+    "cloture": "2026-12-22",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Trimestre 2 2027",
+    "ouverture": null,
+    "cloture": "2027-04-06",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Trimestre 3 2027",
+    "ouverture": null,
+    "cloture": "2027-07-20",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.unisq.edu.au/scholarships/unisqi-incoming-study-abroad-international-travel-grant",
+    "https://www.unisq.edu.au/international/partnerships/study-abroad-exchange/apply",
+    "https://www.unisq.edu.au/international/partnerships/study-abroad-exchange/fees-scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -5836,7 +5938,7 @@
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
@@ -5844,31 +5946,137 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "partielle",
+  "couverture_niveau": "variable",
   "origine": "universitaire",
-  "lien_officiel": "https://www.anu.edu.au/study/scholarships/find-a-scholarship",
+  "lien_officiel": "https://study.anu.edu.au/scholarships/find-scholarship/anu-university-research-scholarships",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.anu.edu.au/study/scholarships/find-a-scholarship"
+    "titre": "ANU University Research Scholarships",
+    "url": "https://study.anu.edu.au/scholarships/find-scholarship/anu-university-research-scholarships"
+   },
+   {
+    "titre": "Research Degree Scholarships, ANU",
+    "url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships"
+   },
+   {
+    "titre": "Postgraduate research - how to apply, ANU",
+    "url": "https://study.anu.edu.au/apply/postgraduate-research"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Consulter le site officiel (plusieurs rounds par an)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "ANU University Research Scholarships (Fully Funded) — Australian National University",
-   "resume": "ANU est régulièrement classée n°1 en Australie et dans le top 30 mondial. Sa bourse de recherche de plus de $39 000 par an, entièrement financée, en fait l'une des bourses doctorales les plus généreuses au monde. ANU est située à Canberra, la capitale fédérale…",
+   "nom": "ANU University Research Scholarships - Australian National University",
+   "resume": "Bourse de recherche de l'ANU pour les doctorants (PhD) et étudiants en MPhil, ouverte aux candidats nationaux et internationaux. Elle verse une allocation annuelle de 40 475 AUD (taux 2027) et des aides à l'installation.",
    "resume_long": "ANU est régulièrement classée n°1 en Australie et dans le top 30 mondial. Sa bourse de recherche de plus de $39 000 par an, entièrement financée, en fait l'une des bourses doctorales les plus généreuses au monde. ANU est située à Canberra, la capitale fédérale — un environnement calme, studieux et politiquement connecté. Pour les chercheurs en sciences politiques, en relations internationales, en sciences et en ingénierie, ANU est un choix de premier ordre.",
-   "valeur": "$39 069 AUD/an + allocations de voyage et d'installation",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Consulter le site officiel (plusieurs rounds par an)"
+   "valeur": "40 475 AUD/an (taux 2027) + aides voyage, déménagement et thèse",
+   "eligibilite": "Être étudiant national ou international, inscrit dans un programme de recherche accrédité de l'ANU, avec un premier niveau d'honneurs (H1) ou équivalent ; ne pas être doctorant industriel salarié à plein temps. Aucune nationalité n'est exclue : les candidats d'autres pays que l'Australie et la Nouvelle-Zélande sont admis comme internationaux.",
+   "edition_note": "Tour international principal : 31 août (rentrée suivante, jusqu'au 31 mars) ; tour 2 : 15 avril (rentrée jusqu'au 31 août). Le tour du 31 août 2026 est clos ; prochaine date : 15 avril 2027.",
+   "couverture_detail": "Allocation de base payée toutes les deux semaines pendant 3,5 ans (PhD) ou 1,5 an (MPhil), allocation de voyage et de déménagement vers Canberra, allocation de thèse, congés maladie, maternité et parental payés ; allocation pour enfant à charge pour les internationaux.",
+   "ne_couvre_pas": "Les frais de scolarité ne sont pas mentionnés sur la page de la bourse (une bourse distincte, l'ANU HDR Fee Merit Scholarship, existe pour les internationaux titulaires de cette bourse). La santé n'est pas mentionnée.",
+   "diplome": "Honours de première classe (H1) ou équivalent, ou master par cours / graduate diploma de niveau équivalent à l'honours de première ou upper second class.",
+   "langue": "Anglais ; la maîtrise de l'anglais est un critère de sélection et les exigences d'admission ANU doivent être remplies à l'offre.",
+   "conseil": "Contactez un superviseur avant de candidater et déposez le dossier tôt pour que les référents aient le temps de répondre. La sélection est compétitive : la bourse n'est pas acquise même avec un très bon dossier.",
+   "autres": [
+    "Pas de candidature séparée : cocher « Australia: ANU - Other Scholarship » dans la demande d'admission.",
+    "Un superviseur ANU doit soutenir la candidature.",
+    "Sélection compétitive par comité de chaque College."
+   ],
+   "dossier": [
+    "Relevés de notes et diplômes en copies couleur (traduction anglaise si besoin)",
+    "Courte proposition de recherche",
+    "Au moins deux rapports de référents (universitaires de préférence)",
+    "Accord ou soutien d'un superviseur potentiel et du College",
+    "Preuve de niveau d'anglais (à l'offre)"
+   ],
+   "etapes": [
+    "Trouver un superviseur potentiel et obtenir l'accord du College",
+    "Choisir le programme dans le catalogue Programs & Courses",
+    "Déposer la candidature d'admission en ligne et demander à être considéré pour une bourse",
+    "Indiquer les référents, qui reçoivent un formulaire par e-mail",
+    "Soumettre 2 à 3 semaines avant la date limite du tour"
+   ]
   },
   "en": {
-   "nom": "ANU University Research Scholarships (Fully Funded) — Australian National University"
+   "nom": "ANU University Research Scholarships - Australian National University",
+   "resume": "ANU research scholarship for PhD and MPhil students, open to domestic and international applicants. It pays an annual stipend of AUD 40,475 (2027 rate) plus relocation support.",
+   "valeur": "AUD 40,475 per year (2027 rate) + travel, relocation and thesis allowances",
+   "couverture_detail": "Base stipend paid fortnightly for 3.5 years (PhD) or 1.5 years (MPhil), travel and removal allowance to Canberra, thesis allowance, paid sick, maternity and parental leave; dependant child allowance for international students.",
+   "ne_couvre_pas": "Tuition fees are not mentioned on the scholarship page (a separate ANU HDR Fee Merit Scholarship exists for international holders of this award). Health cover is not mentioned.",
+   "eligibilite": "Domestic or international student enrolled in an accredited ANU research program, with First Class Honours (H1) or equivalent; not a full-time salaried Industry PhD candidate. No nationality is excluded: applicants from countries other than Australia and New Zealand are admitted as international students.",
+   "diplome": "First Class Honours (H1) or equivalent, or a coursework master's/graduate diploma at a level equivalent to first or upper second class honours.",
+   "langue": "English; English competency is a selection criterion and ANU admission requirements must be met at offer.",
+   "conseil": "Contact a supervisor before applying and submit early so referees have time to respond. Selection is competitive: the award is not guaranteed even with a strong file.",
+   "edition_note": "International main round: 31 August (start by 31 March of the next year); round 2: 15 April (start by 31 August). The 31 August 2026 round has closed; next date: 15 April 2027.",
+   "autres": [
+    "No separate application: tick 'Australia: ANU - Other Scholarship' in the admission application.",
+    "An ANU supervisor must support the application.",
+    "Competitive ranking by each College committee."
+   ],
+   "dossier": [
+    "Transcripts and graduation certificates, colour copies (English translation if needed)",
+    "Short research proposal",
+    "At least two referee reports (academic preferred)",
+    "Agreement or support from a prospective supervisor and the College",
+    "Proof of English proficiency (at offer)"
+   ],
+   "etapes": [
+    "Find a prospective supervisor and obtain College approval",
+    "Choose the program in the Programs & Courses catalogue",
+    "Submit the online admission application and ask to be considered for a scholarship",
+    "Nominate referees, who receive a form by email",
+    "Submit 2 to 3 weeks before the round deadline"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "toute l'année",
+   "cloture_mois": "août (tour international principal) et avril (tour 2)"
+  },
+  "edition": {
+   "libelle": "Tour 2, rentrée 2027",
+   "cloture": "2027-04-15",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Tour 1 international, rentrée 2027 (clos)",
+    "ouverture": null,
+    "cloture": "2026-08-31",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Tour 2, rentrée 2027",
+    "ouverture": null,
+    "cloture": "2027-04-15",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Tour 1 international, rentrée 2028",
+    "ouverture": null,
+    "cloture": "2027-08-31",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://study.anu.edu.au/scholarships/find-scholarship/anu-university-research-scholarships",
+    "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+    "https://study.anu.edu.au/apply/postgraduate-research"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -5910,6 +6118,10 @@
   },
   "en": {
    "nom": "Research Training Program Scholarship — University of Melbourne (Fully Funded)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles unimelb.edu.au (scholarships, study, gradresearch, mdhs) inaccessibles (403 / défi Cloudflare, même avec curl) : aucune page officielle lue. Le RTP est un programme du gouvernement australien destiné aux étudiants nationaux ; l'équivalent pour les internationaux semble être la Melbourne Research Scholarship / Graduate Research Scholarship (frais + allocation, étude automatique à l'admission), à vérifier sur le site officiel."
   }
  },
  {
@@ -5955,6 +6167,10 @@
   },
   "en": {
    "nom": "QUT Postgraduate Research Award (QUTPRA)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles qut.edu.au inaccessibles (403 / défi Cloudflare, même avec curl) : aucune page officielle lue. Pistes non confirmées : tour annuel unique, clôture internationale vers le 31 juillet, bourse ouverte aux internationaux (allocation + exonération des frais) ; la mention « ouvertes en permanence » du guide semble inexacte."
   }
  },
  {
@@ -6003,6 +6219,10 @@
   },
   "en": {
    "nom": "International Road to Research Scholarship — Macquarie University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles mq.edu.au inaccessibles (403 / défi Cloudflare, même avec curl) : aucune page officielle lue. Pistes non confirmées : édition rentrée 2027 ouverte du 15 juin au 31 octobre 2026, apparemment réservée à des internationaux déjà présents en Australie (onshore), ce qui exclurait une candidature depuis le Cameroun."
   }
  },
  {
@@ -6052,55 +6272,140 @@
   },
   "en": {
    "nom": "Research Training Program (RTP) Stipend Scholarship — CQUniversity"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles cqu.edu.au inaccessibles (403 / défi Cloudflare, même avec curl) : aucune page officielle lue. Pistes non confirmées : le stipend RTP serait ouvert aux candidats internationaux en doctorat/master de recherche (environ 38 000 AUD/an) mais l'exonération des frais est réservée aux Australiens/Néo-Zélandais ; dates non lues (le 31 décembre 2026 du guide n'est pas confirmé)."
   }
  },
  {
   "id": "australian-government-research-training-program-scholarship-internatio",
-  "organisme": "Flinders University (Adelaide)",
+  "organisme": "Flinders University",
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "master",
    "doctorat"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "partielle",
+  "couverture_niveau": "complete",
   "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "aout"
+   "ouverture_mois": "avril",
+   "cloture_mois": "juin"
   },
   "edition": {
-   "cloture": "2025-08-18",
-   "confirme": false
+   "libelle": "Rentrée 2027 (tour annuel HDR international 2027)",
+   "ouverture": "2026-04-30",
+   "cloture": "2026-06-18",
+   "confirme": true
   },
-  "lien_officiel": "https://www.flinders.edu.au/research/research-degrees/scholarships",
+  "lien_officiel": "https://www.flinders.edu.au/scholarships/australian-government-research-training-program-scholarship-international",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.flinders.edu.au/research/research-degrees/scholarships"
+    "titre": "AGRTPS (International) - Flinders University",
+    "url": "https://www.flinders.edu.au/scholarships/australian-government-research-training-program-scholarship-international"
+   },
+   {
+    "titre": "HDR course application dates - International (PDF)",
+    "url": "https://flinders.edu.au/content/dam/documents/study/international/hdr-application-dates-international.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "18 août 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Australian Government Research Training Program Scholarship International — Flinders University",
-   "resume": "Flinders University à Adelaide est réputée pour sa recherche en sciences de la santé, en sciences infirmières, en éducation et en technologies environnementales. Le stipend AGRTPS offre une allocation de vie confortable à Adelaide — une ville dont le coût de…",
+   "nom": "Australian Government Research Training Program Scholarship (International) - Flinders University",
+   "resume": "Bourse doctorale de Flinders University (Adelaide) destinée aux étudiants internationaux qui commencent pour la première fois un doctorat de recherche en Australie. Environ 5 bourses par an, très compétitives.",
    "resume_long": "Flinders University à Adelaide est réputée pour sa recherche en sciences de la santé, en sciences infirmières, en éducation et en technologies environnementales. Le stipend AGRTPS offre une allocation de vie confortable à Adelaide — une ville dont le coût de la vie est parmi les plus bas d'Australie. La combinaison d'un stipend généreux et d'un coût de vie modéré rend Flinders particulièrement attractive pour les chercheurs internationaux.",
-   "valeur": "Stipend au taux AGRTPS (environ $33 000 à $37 000 AUD/an)",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 18 août 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Allocation de 36 061 AUD/an (taux 2026, non imposable), prise en charge des frais de scolarité jusqu'à 4 ans et assurance santé étudiant international",
+   "eligibilite": "Être citoyen d'un pays étranger autre que la Nouvelle-Zélande (le Cameroun est donc admis), sans citoyenneté ni résidence permanente australienne. Commencer pour la première fois un doctorat de recherche à plein temps en Australie, dans un domaine de concentration de recherche de l'université. Un superviseur de Flinders ayant donné son accord est obligatoire.",
+   "edition_note": "Le tour pour la rentrée 2027 a fermé le 18 juin 2026. Les dates du prochain tour ne sont pas encore annoncées sur la page officielle ; le tour 2026 avait lieu aux mêmes mois (avril à juin), à confirmer.",
+   "couverture_detail": "Allocation de subsistance (36 061 AUD/an en 2026), compensation des frais de scolarité internationaux jusqu'à 4 ans, assurance santé pour étudiants étrangers (OSHC), allocation d'installation jusqu'à 1 485 AUD sur justificatifs. Durée : jusqu'à 3,5 ans pour un doctorat.",
+   "ne_couvre_pas": "Frais de visa et billet d'avion au-delà de l'allocation d'installation (remboursée sur reçus), frais des proches.",
+   "diplome": "Diplôme universitaire donnant accès à un doctorat de recherche (master ou équivalent), avec formation à la recherche et publications.",
+   "langue": "Anglais : preuve de niveau selon les exigences HDR de Flinders, résultat valide jusqu'au 31 mars 2027 pour le tour en cours.",
+   "conseil": "Prenez contact avec un superviseur plusieurs mois avant la date limite et préparez vos publications : sans superviseur ni publication, la candidature n'est pas retenue ou peu compétitive.",
+   "autres": [
+    "Sélection sur le mérite académique, la formation à la recherche et les publications (5 maximum, de moins de 5 ans)",
+    "Les candidats sans publication ont peu de chances d'être compétitifs",
+    "Il faut d'abord déposer une demande d'admission HDR, puis la demande de bourse"
+   ],
+   "dossier": [
+    "Accord écrit d'un superviseur de Flinders (courriel)",
+    "Jusqu'à 5 publications avec fiche de couverture (moins de 5 ans)",
+    "Relevés de notes universitaires certifiés, traduits en anglais",
+    "Projet de recherche d'environ 500 mots",
+    "Deux rapports confidentiels de référents académiques (formulaires envoyés à hdr.scholarships@flinders.edu.au)",
+    "CV avec expérience de recherche et liste de publications",
+    "Preuve de compétence en anglais"
+   ],
+   "etapes": [
+    "Contacter un chercheur de Flinders et obtenir son accord de supervision",
+    "Déposer la demande d'admission au doctorat via Studylink et noter le numéro d'étudiant",
+    "Activer le compte avec le numéro d'étudiant pour obtenir un identifiant FAN",
+    "Soumettre la demande de bourse du groupe HDR international dans le système étudiant avant la date limite"
+   ]
   },
   "en": {
-   "nom": "Australian Government Research Training Program Scholarship International — Flinders University"
+   "nom": "Australian Government Research Training Program Scholarship (International) - Flinders University",
+   "resume": "Doctoral scholarship at Flinders University (Adelaide) for international students starting a research doctorate in Australia for the first time. About 5 awards per year, highly competitive.",
+   "valeur": "Stipend of AUD 36,061 per year (2026 rate, tax free), tuition fee offset for up to 4 years and overseas student health cover",
+   "couverture_detail": "Living stipend (AUD 36,061 per year in 2026), international tuition fee offset for up to 4 years, Overseas Student Health Cover, establishment allowance of up to AUD 1,485 against receipts. Tenable for up to 3.5 years for a research doctorate.",
+   "ne_couvre_pas": "Visa fees and airfare beyond the establishment allowance (reimbursed on receipts), costs of family members.",
+   "eligibilite": "Citizen of an overseas country other than New Zealand (Cameroon is therefore eligible), without Australian citizenship or permanent residence. Must start a full-time research doctorate in Australia for the first time, in one of the university's areas of research concentration. An agreed Flinders supervisor is mandatory.",
+   "diplome": "University degree giving access to a research doctorate (master's or equivalent), with research training and publications.",
+   "langue": "English: proof of proficiency per Flinders HDR requirements, with results valid until 31 March 2027 for the current round.",
+   "conseil": "Contact a supervisor several months before the deadline and prepare your publications: without a supervisor or publications the application is not considered or is unlikely to be competitive.",
+   "edition_note": "The round for a 2027 start closed on 18 June 2026. Dates for the next round are not yet announced on the official page; the 2026 round ran in the same months (April to June), to be confirmed.",
+   "autres": [
+    "Selection on academic merit, research training and publications (maximum 5, under 5 years old)",
+    "Applicants without publications are unlikely to be competitive",
+    "A HDR admission application must be submitted first, then the scholarship application"
+   ],
+   "dossier": [
+    "Written agreement from a Flinders supervisor (email)",
+    "Up to 5 publications with coversheets (under 5 years old)",
+    "Certified university transcripts translated into English",
+    "Research proposal of about 500 words",
+    "Two confidential academic referee reports (sent to hdr.scholarships@flinders.edu.au)",
+    "CV with research experience and list of publications",
+    "Evidence of English proficiency"
+   ],
+   "etapes": [
+    "Contact a Flinders academic and obtain agreement to supervise",
+    "Submit the doctoral admission application via Studylink and note the student ID",
+    "Activate the account with the student ID to get a FAN login",
+    "Submit the international HDR scholarship group application in the student system before the closing date"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Rentrée 2027 (tour annuel HDR international 2027)",
+    "ouverture": "2026-04-30",
+    "cloture": "2026-06-18",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.flinders.edu.au/scholarships/australian-government-research-training-program-scholarship-international",
+    "https://flinders.edu.au/content/dam/documents/study/international/hdr-application-dates-international.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6151,61 +6456,19 @@
   },
   "en": {
    "nom": "John Allwright Fellowship"
-  }
- },
- {
-  "id": "aciar-pacific-agriculture-scholarships-and-support-program-pass",
-  "organisme": "ACIAR",
-  "pays_accueil": [
-   "Australie"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "agronomie-environnement",
-   "lettres-langues"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "fondation",
-  "edition": {
-   "permanente": true,
-   "confirme": false
   },
-  "lien_officiel": "https://www.aciar.gov.au/project/pacific-agriculture-scholarships-and-support-pass-program",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.aciar.gov.au/project/pacific-agriculture-scholarships-and-support-pass-program"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
-  "fr": {
-   "nom": "ACIAR Pacific Agriculture Scholarships and Support Program (PASS)",
-   "resume": "Le programme PASS cible les étudiants des îles du Pacifique qui souhaitent poursuivre des études supérieures en agriculture en Australie. C'est un programme complémentaire au John Allwright Fellowship, axé sur le renforcement des capacités agricoles de la…",
-   "resume_long": "Le programme PASS cible les étudiants des îles du Pacifique qui souhaitent poursuivre des études supérieures en agriculture en Australie. C'est un programme complémentaire au John Allwright Fellowship, axé sur le renforcement des capacités agricoles de la région Pacifique. Les candidats bénéficient d'un soutien académique et personnel tout au long de leur programme.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants des pays du Pacifique",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
-  },
-  "en": {
-   "nom": "ACIAR Pacific Agriculture Scholarships and Support Program (PASS)"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Cameroun absent de la documentation officielle lue (fiche ACIAR de décembre 2025) : bourse réservée aux scientifiques/économistes citoyens d'un pays partenaire d'ACIAR et impliqués dans un projet ACIAR ; aucune liste de pays citant le Cameroun. Page du programme inaccessible (Cloudflare), fiche PDF officielle lue."
   }
  },
  {
   "id": "arc-postgraduate-research-scholarship-university-of-sydney",
-  "organisme": "University of Sydney — Faculty of Science",
+  "organisme": "University of Sydney",
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master",
    "doctorat"
@@ -6213,39 +6476,125 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
-  "origine": "universitaire",
+  "couverture_niveau": "complete",
+  "origine": "gouvernementale",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "mai"
+   "ouverture_mois": null,
+   "cloture_mois": "septembre"
   },
   "edition": {
-   "cloture": "2025-05-25",
-   "confirme": false
+   "libelle": "Périodes de recherche 3 et 4, 2027",
+   "cloture": "2026-12-18",
+   "confirme": true
   },
-  "lien_officiel": "https://www.sydney.edu.au/scholarships/research/faculty-scholarships.html",
+  "lien_officiel": "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.sydney.edu.au/scholarships/research/faculty-scholarships.html"
+    "titre": "RTP scholarships - International, University of Sydney",
+    "url": "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html"
+   },
+   {
+    "titre": "RTP Stipend Scholarship (International) - Terms and Conditions",
+    "url": "https://www.sydney.edu.au/content/dam/corporate/documents/scholarships/rtp-scholarships-/updated-tcs---rtp-international-stipend.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "25 mai 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "ARC Postgraduate Research Scholarship — University of Sydney",
-   "resume": "L'ARC (Australian Research Council) finance cette bourse de recherche à la Faculty of Science de l'University of Sydney. C'est une bourse liée à un projet de recherche spécifique financé par l'ARC. Si votre domaine de recherche correspond à l'un des projets…",
+   "nom": "Research Training Program (RTP) Stipend and Fee Offset Scholarships (International) - University of Sydney",
+   "resume": "Aucune bourse intitulée « ARC Postgraduate Research Scholarship » n'existe à l'University of Sydney ; le programme équivalent est le Research Training Program (RTP) pour étudiants internationaux en master de recherche ou doctorat. Il comprend une allocation de subsistance et la prise en charge des frais de scolarité.",
    "resume_long": "L'ARC (Australian Research Council) finance cette bourse de recherche à la Faculty of Science de l'University of Sydney. C'est une bourse liée à un projet de recherche spécifique financé par l'ARC. Si votre domaine de recherche correspond à l'un des projets financés, cette bourse offre un encadrement de haut niveau et un financement solide dans l'une des meilleures universités de recherche au monde.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 25 mai 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Allocation de 44 293 AUD/an (taux 2027) + 100 % des frais de scolarité (jusqu'à 14 périodes de recherche) + assurance santé OSHC",
+   "eligibilite": "Être étudiant international (non citoyen/résident australien) ; s'inscrire en master de recherche ou doctorat à plein temps ; déposer une demande d'admission HDR et le formulaire de bourse avant la date limite. Sélection sur le mérite académique, l'expérience de recherche et la qualité de l'encadrement ; préférence au doctorat et aux candidats sans bourse HDR antérieure. Le Cameroun est admis comme pays hors Australie.",
+   "edition_note": "Dates limites : 11 septembre 2026 (rentrée périodes 1-2 de 2027), 18 décembre 2026 (périodes 3-4 de 2027), 10 septembre 2027 (périodes 1-2 de 2028).",
+   "couverture_detail": "Allocation (44 293 AUD/an en 2027 ; 42 754 AUD en 2026), exonération de 100 % des frais de scolarité pour jusqu'à 14 périodes de recherche, assurance OSHC, allocation de déménagement jusqu'à 1 485 AUD à l'aller et au retour, allocation de thèse (420 AUD master, 840 AUD doctorat). Durée : jusqu'à 7 périodes (master de recherche) ou 14 (doctorat).",
+   "ne_couvre_pas": "Frais des personnes à charge ; le cumul avec d'autres bourses est limité à moins de 75 % de la valeur de la bourse.",
+   "diplome": "Diplôme donnant accès à une recherche (honours ou master avec composante de recherche) ; détails d'admission selon la faculté.",
+   "langue": "Anglais : niveau exigé pour l'admission HDR de l'université.",
+   "conseil": "Contactez un superviseur de Sydney en amont et lisez le document de sélection HDR de l'université ; les publications et l'expérience de recherche pèsent dans l'évaluation.",
+   "autres": [
+    "Les lauréats de l'allocation RTP reçoivent automatiquement l'exonération des frais",
+    "Un équivalent financé par l'université (USYDIS) existe avec les mêmes montants",
+    "Candidature sans garantie : places limitées et concours"
+   ],
+   "dossier": [
+    "Demande d'admission HDR via Sydney Courses avec tous les documents d'admission",
+    "Formulaire de candidature à la bourse",
+    "Preuve d'expérience de recherche (modèle de l'université)"
+   ],
+   "etapes": [
+    "Déposer la demande d'admission HDR sur Sydney Courses avant la date limite",
+    "Remplir le formulaire de candidature à la bourse (RTP) avant la même échéance",
+    "Attendre la notification des résultats"
+   ]
   },
   "en": {
-   "nom": "ARC Postgraduate Research Scholarship — University of Sydney"
+   "nom": "Research Training Program (RTP) Stipend and Fee Offset Scholarships (International) - University of Sydney",
+   "resume": "No scholarship named \"ARC Postgraduate Research Scholarship\" exists at the University of Sydney; the equivalent is the Research Training Program (RTP) for international research master's and PhD students. It includes a living stipend and tuition fee coverage.",
+   "valeur": "Stipend of AUD 44,293 per year (2027 rate) + 100% tuition fees (up to 14 research periods) + OSHC health cover",
+   "couverture_detail": "Stipend (AUD 44,293 per year in 2027; AUD 42,754 in 2026), 100% tuition fee offset for up to 14 research periods, OSHC, relocation allowance up to AUD 1,485 each way, thesis allowance (AUD 420 master's, AUD 840 doctorate). Tenure: up to 7 research periods (research master's) or 14 (doctorate).",
+   "ne_couvre_pas": "Costs of dependants; concurrent awards are limited to under 75% of the scholarship value.",
+   "eligibilite": "International student (not an Australian citizen/resident); full-time research master's or PhD; submit an HDR admission application and the scholarship form by the deadline. Selection on academic merit, research experience and supervision quality; preference for PhD and applicants with no previous HDR scholarship. Cameroon is eligible as a country outside Australia.",
+   "diplome": "Degree giving access to research study (honours or master's with a research component); admission details depend on the faculty.",
+   "langue": "English: level required for the university's HDR admission.",
+   "conseil": "Contact a Sydney supervisor early and read the university's HDR selection document; publications and research experience weigh in the assessment.",
+   "edition_note": "Deadlines: 11 September 2026 (research periods 1-2 of 2027), 18 December 2026 (periods 3-4 of 2027), 10 September 2027 (periods 1-2 of 2028).",
+   "autres": [
+    "Holders of the RTP stipend automatically receive the fee offset",
+    "A university-funded equivalent (USYDIS) exists with the same amounts",
+    "No guarantee: limited places and competitive"
+   ],
+   "dossier": [
+    "HDR admission application via Sydney Courses with all admission documents",
+    "Scholarship application form",
+    "Evidence of research experience (university template)"
+   ],
+   "etapes": [
+    "Submit the HDR admission application on Sydney Courses before the deadline",
+    "Complete the scholarship (RTP) application form by the same deadline",
+    "Wait for the outcome notification"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Périodes de recherche 1 et 2, 2027",
+    "ouverture": null,
+    "cloture": "2026-09-11",
+    "confirme": true
+   },
+   {
+    "annee": 2026,
+    "libelle": "Périodes de recherche 3 et 4, 2027",
+    "ouverture": null,
+    "cloture": "2026-12-18",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Périodes de recherche 1 et 2, 2028",
+    "ouverture": null,
+    "cloture": "2027-09-10",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.sydney.edu.au/scholarships/australian-government-research-training-program/rtp-international.html",
+    "https://www.sydney.edu.au/content/dam/corporate/documents/scholarships/rtp-scholarships-/updated-tcs---rtp-international-stipend.pdf",
+    "https://www.sydney.edu.au/scholarships/d/faculty-of-science-research-stipend-scholarship.html"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6294,15 +6643,19 @@
   },
   "en": {
    "nom": "NSW Education Waratah Scholarship — University of New England"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "site bloqué ; réservée aux étudiants domestiques selon un texte indexé, non confirmé sur la page officielle"
   }
  },
  {
   "id": "science-international-scholarships-university-of-queensland",
-  "organisme": "University of Queensland (UQ)",
+  "organisme": "The University of Queensland (UQ)",
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
@@ -6310,87 +6663,246 @@
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "janvier"
+   "ouverture_mois": null,
+   "cloture_mois": null
   },
   "edition": {
    "cloture": "2025-01-28",
    "confirme": false
   },
-  "lien_officiel": "https://scholarships.uq.edu.au/",
+  "lien_officiel": "https://scholarships.uq.edu.au/scholarship/uq-faculty-international-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://scholarships.uq.edu.au/"
+    "titre": "UQ Faculty International Scholarship",
+    "url": "https://scholarships.uq.edu.au/scholarship/uq-faculty-international-scholarship"
+   },
+   {
+    "titre": "UQ Faculty International Scholarship - Terms and Conditions 2027 (PDF)",
+    "url": "https://scholarships.uq.edu.au/sites/default/files/2026-07/UQ_Faculty_International_Scholarship_TCs_2027.pdf"
+   },
+   {
+    "titre": "UQ International Excellence Scholarship",
+    "url": "https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "28 janvier 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Science International Scholarships — University of Queensland",
-   "resume": "UQ est un membre du Group of Eight et l'une des universités les plus réputées d'Australie. Ses bourses en sciences ciblent les étudiants internationaux qui souhaitent étudier dans la Faculty of Science — l'une des plus importantes du pays. Brisbane offre un…",
+   "nom": "UQ Faculty International Scholarship (Faculty of Science International Scholarship) - University of Queensland",
+   "resume": "La page « Science International Scholarships » du guide est archivée par UQ (candidatures closes) ; le programme équivalent actuellement ouvert est la Faculty of Science International Scholarship, volet de la UQ Faculty International Scholarship. Il s'agit d'une réduction de 10 % des frais de scolarité pour les étudiants internationaux en programme de cours.",
    "resume_long": "UQ est un membre du Group of Eight et l'une des universités les plus réputées d'Australie. Ses bourses en sciences ciblent les étudiants internationaux qui souhaitent étudier dans la Faculty of Science — l'une des plus importantes du pays. Brisbane offre un cadre de vie subtropical agréable et un coût modéré par rapport à Sydney et Melbourne.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 28 janvier 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Réduction de 10 % des frais de scolarité par semestre pendant toute la durée du programme",
+   "eligibilite": "Étudiant international (ni citoyen/résident australien ni citoyen néo-zélandais, donc le Cameroun est admis) ayant candidaté à un programme éligible à temps plein débutant en 2027, ayant rempli toutes les conditions de l'offre, le rang d'entrée et le niveau d'anglais, avec un score compétitif parmi les titulaires d'offre. Pas de bourse UQ déjà reçue ni de financement complet d'un autre organisme.",
+   "edition_note": "Pas de date limite propre à la bourse ; elle dépend des dates de candidature de UQ pour la rentrée 2027. L'ancienne page « Science International Scholarships » (5 000 AUD, un semestre) a été close le 1er juin 2026 et archivée.",
+   "couverture_detail": "Réduction de 10 % des frais de scolarité par an pendant la durée du programme (licence ou master par cours, programme de 16 unités minimum). Ne se cumule pas avec une autre bourse ou réduction de UQ (sauf UQ English Language Scholarship). L'UQ International Excellence Scholarship (25 %) est une autre option, sans candidature séparée.",
+   "ne_couvre_pas": "Frais de vie, billet d'avion, assurance santé ; programmes exclus (nursing, médecine, psychologie, kinésithérapie, etc.) ; doctorat de recherche.",
+   "diplome": "Selon le programme choisi (diplôme secondaire pour la licence, licence pour le master par cours).",
+   "langue": "Niveau d'anglais exigé par UQ pour le programme.",
+   "conseil": "La bourse ne couvre qu'une partie des frais de scolarité : prévoyez un financement complet pour les frais de vie et le reste des frais.",
+   "autres": [
+    "Aucune candidature séparée : évaluation automatique lors de la candidature au programme",
+    "Notification avec l'offre d'admission inconditionnelle ou à la levée des conditions",
+    "Les frais de scolarité (dépôt) doivent être payés pour confirmer la bourse"
+   ],
+   "dossier": [
+    "Dossier de candidature d'admission à UQ pour un programme éligible (aucun formulaire de bourse séparé)"
+   ],
+   "etapes": [
+    "Candidater à un programme de cours éligible à UQ pour 2027",
+    "Remplir toutes les conditions de l'offre d'admission",
+    "Accepter l'offre et payer le dépôt de frais de scolarité",
+    "Recevoir l'éventuelle offre de bourse avec la lettre d'offre"
+   ]
   },
   "en": {
-   "nom": "Science International Scholarships — University of Queensland"
+   "nom": "UQ Faculty International Scholarship (Faculty of Science International Scholarship) - University of Queensland",
+   "resume": "The guide's \"Science International Scholarships\" page is archived by UQ (applications closed); the equivalent currently open is the Faculty of Science International Scholarship, part of the UQ Faculty International Scholarship. It is a 10% tuition fee reduction for international coursework students.",
+   "valeur": "10% tuition fee reduction per semester for the duration of the program",
+   "couverture_detail": "10% tuition reduction per year for the length of the program (undergraduate or coursework postgraduate, minimum 16 units). Cannot be combined with another UQ scholarship or rebate (except UQ English Language Scholarship). The UQ International Excellence Scholarship (25%) is another option, with no separate application.",
+   "ne_couvre_pas": "Living costs, airfare, health cover; excluded programs (nursing, medicine, psychology, physiotherapy, etc.); research doctorates.",
+   "eligibilite": "International student (not an Australian or New Zealand citizen or Australian permanent resident, so Cameroon is eligible) who has applied for an eligible full-time program starting in 2027, met all offer conditions, entry rank and English requirements, with a competitive score among offer holders. No other UQ scholarship already held and no full scholarship from another organisation.",
+   "diplome": "Depends on the chosen program (secondary diploma for undergraduate, bachelor's for coursework master's).",
+   "langue": "English level required by UQ for the program.",
+   "conseil": "The scholarship only covers part of tuition: plan full funding for living costs and the remaining fees.",
+   "edition_note": "No scholarship-specific deadline; it depends on UQ application dates for a 2027 start. The former \"Science International Scholarships\" page (AUD 5,000, one semester) closed on 1 June 2026 and was archived.",
+   "autres": [
+    "No separate application: assessed automatically when applying to the program",
+    "Notified with the unconditional offer or once offer conditions are met",
+    "The tuition deposit must be paid to confirm the scholarship"
+   ],
+   "dossier": [
+    "UQ admission application for an eligible program (no separate scholarship form)"
+   ],
+   "etapes": [
+    "Apply to an eligible UQ coursework program for 2027",
+    "Meet all conditions of the admission offer",
+    "Accept the offer and pay the tuition deposit",
+    "Receive any scholarship offer with the offer letter"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Rentrée 2027",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://scholarships.uq.edu.au/scholarship/uq-faculty-international-scholarship",
+    "https://scholarships.uq.edu.au/sites/default/files/2026-07/UQ_Faculty_International_Scholarship_TCs_2027.pdf",
+    "https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship",
+    "https://scholarships.uq.edu.au/scholarship/science-international-scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "academic-excellence-scholarship-international-college-of-management-sy",
-  "organisme": "ICMS (International College of Management, Sydney)",
+  "organisme": "International College of Management, Sydney (ICMS)",
   "pays_accueil": [
    "Australie"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
   "domaines": [
-   "economie-gestion"
+   "economie-gestion",
+   "informatique"
   ],
   "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "novembre"
+   "ouverture_mois": null,
+   "cloture_mois": "décembre"
   },
   "edition": {
-   "cloture": "2025-11-14",
-   "confirme": false
+   "libelle": "Rentrée février 2027",
+   "cloture": "2026-12-07",
+   "confirme": true
   },
-  "lien_officiel": "https://www.icms.edu.au/future-students/scholarships/",
+  "lien_officiel": "https://www.icms.edu.au/future-students/scholarships/icms-international-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.icms.edu.au/future-students/scholarships/"
+    "titre": "ICMS International Scholarship",
+    "url": "https://www.icms.edu.au/future-students/scholarships/icms-international-scholarship/"
+   },
+   {
+    "titre": "ICMS Academic Excellence Scholarship",
+    "url": "https://www.icms.edu.au/future-students/scholarships/academic-excellence-scholarship/"
+   },
+   {
+    "titre": "ICMS International Scholarship Application May 2026 (PDF)",
+    "url": "https://www.icms.edu.au/wp-content/uploads/2026/02/ICMS-International-Scholarship-Application-New-Students-MAY-2026.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "14 novembre 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Academic Excellence Scholarship — International College of Management, Sydney (ICMS)",
-   "resume": "ICMS est un établissement spécialisé dans le management, l'hôtellerie et le tourisme, situé dans un campus spectaculaire à Manly — face à l'océan, à quelques minutes en ferry du centre de Sydney. L'Academic Excellence Scholarship offre une exonération totale…",
+   "nom": "ICMS International Scholarship (undergraduate) - International College of Management, Sydney",
+   "resume": "L'Academic Excellence Scholarship de ICMS est réservée aux étudiants déjà inscrits (cGPA de 4,5 minimum). Le programme équivalent pour les nouveaux étudiants internationaux est l'ICMS International Scholarship, jusqu'à 20 000 AUD en licence.",
    "resume_long": "ICMS est un établissement spécialisé dans le management, l'hôtellerie et le tourisme, situé dans un campus spectaculaire à Manly — face à l'océan, à quelques minutes en ferry du centre de Sydney. L'Academic Excellence Scholarship offre une exonération totale des frais de scolarité — une bourse Fully Funded pour un domaine en forte demande sur le marché mondial de l'emploi.",
-   "valeur": "Exonération totale des frais de scolarité",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 14 novembre 2025 (vérifier pour l'édition suivante)"
+   "valeur": "Jusqu'à 20 000 AUD (dispense partielle de frais de scolarité et/ou logement)",
+   "eligibilite": "Nouveaux étudiants internationaux détenteurs d'un passeport étranger (hors double nationaux australiens, résidents permanents ou temporaires ; les Néo-Zélandais sont domestiques), inscrits à temps plein (ou équivalent) en licence ICMS (business, hospitality, event, property, IT) et titulaires d'une lettre d'offre complète de ICMS. Sélection sur dossier, essai, entretien. Les étudiants en échange sont exclus.",
+   "edition_note": "Date limite lue sur la page officielle : lundi 7 décembre 2026 pour la rentrée de février 2027. Les rentrées suivantes ne sont pas encore annoncées.",
+   "couverture_detail": "Dispense de frais de scolarité et/ou crédit logement/repas jusqu'à 20 000 AUD ; bourses partielles probables si les candidatures sont nombreuses ; montant communiqué à la notification et non négociable.",
+   "ne_couvre_pas": "Solde des frais de scolarité, logement, uniformes, manuels, frais de reprise de matière ; non remboursable, non transférable, ne peut être différée.",
+   "diplome": "Conditions d'entrée ICMS (niveau académique) pour la licence visée.",
+   "langue": "Niveau d'anglais exigé pour l'admission ICMS.",
+   "conseil": "La liste des pièces provient du formulaire de la rentrée de mai 2026 : confirmez avec ICMS la liste exacte du formulaire de février 2027 avant de déposer.",
+   "autres": [
+    "L'Academic Excellence Scholarship (tuition waiver sur 2 à 4 matières) n'est ouverte qu'aux étudiants ICMS actuels ; date limite 13 novembre 2026",
+    "Une seule bourse par session ; pas de cumul avec une autre bourse ICMS"
+   ],
+   "dossier": [
+    "Formulaire de candidature",
+    "Preuve de niveau d'anglais",
+    "Preuve de niveau académique",
+    "Essai d'au moins 500 mots",
+    "Photo d'identité",
+    "Copie du passeport",
+    "Lettre d'offre complète de ICMS Admissions"
+   ],
+   "etapes": [
+    "Obtenir une lettre d'offre complète de ICMS pour la licence",
+    "Télécharger le formulaire de candidature de la rentrée visée sur la page ICMS",
+    "Envoyer le formulaire et les pièces par courriel à icmsscholarships@icms.edu.au avant la date limite",
+    "Passer l'entretien devant le comité si l'essai est retenu"
+   ]
   },
   "en": {
-   "nom": "Academic Excellence Scholarship — International College of Management, Sydney (ICMS)"
+   "nom": "ICMS International Scholarship (undergraduate) - International College of Management, Sydney",
+   "resume": "ICMS's Academic Excellence Scholarship is reserved for currently enrolled students (cGPA of 4.5 or higher). The equivalent for new international students is the ICMS International Scholarship, worth up to AUD 20,000 at undergraduate level.",
+   "valeur": "Up to AUD 20,000 (partial tuition and/or accommodation waiver)",
+   "couverture_detail": "Tuition waiver and/or accommodation and meals credit up to AUD 20,000; partial scholarships likely when applications are numerous; amount notified at selection and not negotiable.",
+   "ne_couvre_pas": "Remaining tuition, accommodation, uniforms, textbooks, subject retake fees; not refundable, not transferable, cannot be deferred.",
+   "eligibilite": "New international students holding a foreign passport (excluding dual Australian citizens, permanent or temporary residents; New Zealanders count as domestic), enrolling full time (or equivalent) in an ICMS bachelor's (business, hospitality, event, property, IT) with a full ICMS letter of offer. Selection by application, essay and interview. Study abroad students are excluded.",
+   "diplome": "ICMS entry requirements (academic level) for the chosen bachelor's.",
+   "langue": "English level required for ICMS admission.",
+   "conseil": "The document list comes from the May 2026 intake form: confirm the exact list on the February 2027 form with ICMS before applying.",
+   "edition_note": "Deadline read on the official page: Monday 7 December 2026 for the February 2027 intake. Later intakes not yet announced.",
+   "autres": [
+    "The Academic Excellence Scholarship (tuition waiver for 2 to 4 subjects) is only for current ICMS students; deadline 13 November 2026",
+    "One scholarship per study period; cannot be combined with another ICMS scholarship"
+   ],
+   "dossier": [
+    "Application form",
+    "Evidence of English proficiency",
+    "Evidence of academic proficiency",
+    "Essay of at least 500 words",
+    "Headshot photo",
+    "Copy of passport",
+    "Full letter of offer from ICMS Admissions"
+   ],
+   "etapes": [
+    "Obtain a full ICMS letter of offer for the bachelor's program",
+    "Download the application form for the target intake from the ICMS page",
+    "Email the form and documents to icmsscholarships@icms.edu.au before the deadline",
+    "Attend the panel interview if the essay is shortlisted"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Rentrée février 2027",
+    "ouverture": null,
+    "cloture": "2026-12-07",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.icms.edu.au/future-students/scholarships/icms-international-scholarship/",
+    "https://www.icms.edu.au/future-students/scholarships/academic-excellence-scholarship/",
+    "https://www.icms.edu.au/wp-content/uploads/2026/02/ICMS-International-Scholarship-Application-New-Students-MAY-2026.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6439,6 +6951,10 @@
   },
   "en": {
    "nom": "Oxford Pershing Square Graduate Scholarships"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages Saïd Business School inaccessibles (403 Cloudflare). Pages officielles Oxford lisibles (area-studies.ox.ac.uk, rees.web.ox.ac.uk) muettes sur la nationalité, les documents et les dates : Cameroun non confirmé, dates 2027 non lues sur page officielle. Il s'agit d'une bourse 1+1 MBA (master + MBA), pas d'un MBA seul."
   }
  },
  {
@@ -6487,6 +7003,10 @@
   },
   "en": {
    "nom": "UCL Global Undergraduate Scholarship"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles UCL inaccessibles (403 Cloudflare, y compris via curl) ; seuls des extraits de recherche indiquent une bourse sous conditions de ressources, clôture 27 avril 2026, éligibilité au tarif international. Non lu sur la page officielle."
   }
  },
  {
@@ -6527,6 +7047,10 @@
   },
   "en": {
    "nom": "Warwick Undergraduate Global Excellence Scholarship"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue (portail ugscholarships.warwick.ac.uk) : édition 2026/27 close le 27/02/2026, édition 2027 non annoncée ; documents/procédure de dossier non publiés sur la page lue ; la page d'information warwick.ac.uk renvoie 404."
   }
  },
  {
@@ -6571,6 +7095,10 @@
   },
   "en": {
    "nom": "Global Talent Scholarship for Undergraduate Students — Queen Mary University of London"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle introuvable/inaccessible (404 sur l'URL du guide et sur la page de la bourse) ; non lue."
   }
  },
  {
@@ -6579,46 +7107,112 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "mai"
+   "ouverture_mois": null,
+   "cloture_mois": "juillet"
   },
   "edition": {
-   "permanente": true,
-   "confirme": false
+   "libelle": "2027/28",
+   "cloture": "2027-07-01",
+   "confirme": true
   },
-  "lien_officiel": "https://www.york.ac.uk/study/undergraduate/fees-funding/scholarships/international-achievement/",
+  "lien_officiel": "https://www.york.ac.uk/study/undergraduate/fees-funding/international/scholarships/international-achievement-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.york.ac.uk/study/undergraduate/fees-funding/scholarships/international-achievement/"
+    "titre": "International Undergraduate Achievement Scholarship - University of York",
+    "url": "https://www.york.ac.uk/study/undergraduate/fees-funding/international/scholarships/international-achievement-scholarship/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Undergraduate Achievement Scholarships — University of York",
-   "resume": "L'University of York est un membre du Russell Group situé dans l'une des villes les plus pittoresques d'Angleterre. Ses bourses d'excellence internationales récompensent les étudiants qui démontrent des résultats académiques exceptionnels. York est reconnue…",
+   "nom": "International Undergraduate Achievement Scholarship",
+   "resume": "Réduction de frais de scolarité allant jusqu'à 10 000 GBP, pour la première année seulement, destinée aux meilleurs candidats internationaux en licence à l'University of York. Aucune candidature séparée : les titulaires d'une offre sont examinés automatiquement.",
    "resume_long": "L'University of York est un membre du Russell Group situé dans l'une des villes les plus pittoresques d'Angleterre. Ses bourses d'excellence internationales récompensent les étudiants qui démontrent des résultats académiques exceptionnels. York est reconnue pour ses programmes en archéologie, en psychologie, en sciences sociales et en informatique.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants internationaux (y compris EU)",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Jusqu'à 10 000 GBP de réduction de frais de scolarité (1re année uniquement)",
+   "eligibilite": "Étudiants internationaux (frais au tarif étranger) ayant une offre conditionnelle ou inconditionnelle de York au plus tard le 1er juillet 2027, pour un cursus de licence à temps plein ; notes prévues ou obtenues de ABB (A Level), IB 34 points ou équivalent. Exclus : bourse à 100 % ou financement intégral, Hull York Medical School, International Pathway College, cours à distance ou à temps partiel, Kaplan, étudiants d'échange, entrée hors 1re année.",
+   "edition_note": "Page officielle pour l'année académique 2027/28 ; l'attribution « commencera prochainement ». Offre et statut de frais requis avant le 1er juillet 2027.",
+   "couverture_detail": "Réduction (waiver) sur les frais de scolarité de la première année, cumulable avec des bourses de département ou un financement externe dans la limite de 100 % des frais.",
+   "ne_couvre_pas": "Les années suivantes, les frais de vie, le visa et le voyage.",
+   "diplome": "Équivalent de ABB aux A Levels ou 34 points IB (prévus ou obtenus)",
+   "langue": "Études en anglais",
+   "conseil": "Déposez votre candidature d'admission tôt : la bourse dépend de l'obtention de l'offre à temps et peut être retirée par l'université. Vérifiez vos notes (équivalent ABB).",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Une commission de cadres de l'université sélectionne les lauréats ; l'offre doit être acceptée via le lien du courriel avant la date indiquée, sinon elle passe à un candidat de réserve.",
+    "Un report d'admission fait perdre la bourse ; un entretien de crédibilité éventuel conditionne la bourse.",
+    "L'université peut retirer la bourse à tout moment."
+   ],
+   "dossier": [
+    "Aucun dossier de bourse séparé : dossier d'admission à York (offre conditionnelle ou inconditionnelle) et évaluation du statut de frais avant le 1er juillet 2027"
+   ],
+   "etapes": [
+    "Candidater à un cursus de licence à York et obtenir une offre avant le 1er juillet 2027",
+    "Faire évaluer le statut de frais (tarif étranger) avant cette date",
+    "Recevoir automatiquement l'examen de candidature, puis la lettre de bourse",
+    "Accepter formellement la bourse via le lien du courriel avant la date limite indiquée"
+   ]
   },
   "en": {
-   "nom": "International Undergraduate Achievement Scholarships — University of York"
+   "nom": "International Undergraduate Achievement Scholarship",
+   "resume": "A tuition fee discount of up to GBP 10,000, for the first year only, for the best international undergraduate applicants to the University of York. No separate application: offer holders are considered automatically.",
+   "valeur": "Up to GBP 10,000 tuition fee discount (first year only)",
+   "couverture_detail": "Tuition fee discount for the first year, which can be combined with departmental scholarships or external funding up to 100% of fees.",
+   "ne_couvre_pas": "Later years, living costs, visa and travel.",
+   "eligibilite": "International (overseas fee rate) students holding a conditional or unconditional York offer by 1 July 2027, for a full-time undergraduate course; predicted or achieved ABB (A Level), IB 34 points or equivalent. Excluded: 100% scholarship or full sponsorship, Hull York Medical School, International Pathway College, distance or part-time courses, Kaplan, exchange students, entry other than Year 1.",
+   "diplome": "Equivalent of ABB at A Level or IB 34 points (predicted or achieved)",
+   "langue": "Studies in English",
+   "conseil": "Submit your admission application early: the scholarship depends on getting the offer in time and can be withdrawn by the university. Check your grades against the ABB equivalent.",
+   "edition_note": "Official page covers academic year 2027/28; awarding 'will begin shortly'. Offer and fee assessment required by 1 July 2027.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "A panel of senior university staff selects awardees; the offer must be formally accepted via the email link by the stated deadline, otherwise it goes to a reserve candidate.",
+    "Deferring the place forfeits the scholarship; a credibility interview, if required, makes the award conditional.",
+    "The university may withdraw the scholarship at any time."
+   ],
+   "dossier": [
+    "No separate scholarship file: York admission application (conditional or unconditional offer) and fee status assessment before 1 July 2027"
+   ],
+   "etapes": [
+    "Apply to an undergraduate course at York and get an offer before 1 July 2027",
+    "Have your fee status assessed (overseas rate) before that date",
+    "Be considered automatically, then receive the scholarship letter",
+    "Formally accept the scholarship via the email link before the stated deadline"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2027-07-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.york.ac.uk/study/undergraduate/fees-funding/international/scholarships/international-achievement-scholarship/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6667,6 +7261,10 @@
   },
   "en": {
    "nom": "Global Partnerships Scholarship — De Montfort University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue : réservée aux étudiants issus de la liste des partenaires DMU (non publiée sur la page), Cameroun non confirmé ; édition 2026 close (31 juillet 2026), 2027 non annoncée."
   }
  },
  {
@@ -6715,6 +7313,10 @@
   },
   "en": {
    "nom": "International Scholarships for Undergraduate Students — University of Kent"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue : bourse UG de 5 000 GBP pour septembre 2027 (tous marchés), mais critères d'éligibilité et dates « à venir » ; non finalisée."
   }
  },
  {
@@ -6723,9 +7325,10 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "licence"
+   "licence",
+   "master"
   ],
   "domaines": [
    "tous"
@@ -6736,29 +7339,86 @@
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.abertay.ac.uk/study-apply/fees-and-funding/scholarships/international-scholarships/",
+  "lien_officiel": "https://www.abertay.ac.uk/study-apply/money-fees-and-funding/scholarships/abertay-international-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.abertay.ac.uk/study-apply/fees-and-funding/scholarships/international-scholarships/"
+    "titre": "Abertay International Scholarship",
+    "url": "https://www.abertay.ac.uk/study-apply/money-fees-and-funding/scholarships/abertay-international-scholarship/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Abertay International Scholarship for Undergraduate Students — Abertay University",
-   "resume": "Abertay University est une petite université écossaise avec une réputation mondiale dans un domaine inattendu : le développement de jeux vidéo. Classée parmi les 10 meilleures au monde pour les programmes en game design, elle offre également des formations en…",
+   "nom": "Abertay International Scholarship",
+   "resume": "Bourse d'au plus 3 000 GBP par an, pendant 4 ans maximum, déduite des frais de scolarité des nouveaux étudiants internationaux en licence ou master (enseigné) à Abertay University. Évaluation automatique à partir de la candidature d'admission.",
    "resume_long": "Abertay University est une petite université écossaise avec une réputation mondiale dans un domaine inattendu : le développement de jeux vidéo. Classée parmi les 10 meilleures au monde pour les programmes en game design, elle offre également des formations en cybersécurité, en sciences et en business. La bourse de £12 000 est une aide considérable, d'autant que Dundee est l'une des villes les plus abordables d'Écosse.",
-   "valeur": "Jusqu'à £12 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Jusqu'à 3 000 GBP/an, 4 ans maximum (12 000 GBP au total)",
+   "eligibilite": "Statut de frais international (Overseas) selon Abertay ; avoir rempli les conditions académiques de l'offre ; nouvel étudiant à temps plein sur campus (licence ou master enseigné) ; entrée directe en année 2 ou plus acceptée.",
+   "edition_note": "Pas d'édition datée : bourse permanente attribuée avec la candidature d'admission.",
+   "couverture_detail": "Montant déduit des frais de scolarité chaque année, pendant les études à Dundee ; cumulable avec Dean's Scholarship, Principal's Excellence Scholarship - Global et IB30+.",
+   "ne_couvre_pas": "Frais de vie, visa, voyage ; le reste des frais de scolarité.",
+   "diplome": "Conditions académiques de l'offre d'admission remplies (master : équivalent 2:1, environ 60 %)",
+   "langue": "Études en anglais",
+   "conseil": "Contactez international@abertay.ac.uk pour confirmer votre statut de frais. Le visa étudiant britannique étant suspendu pour les Camerounais, vérifiez la faisabilité avant de payer un dépôt.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Pas de formulaire séparé ; notification par courriel après l'offre d'admission.",
+    "La page ne publie pas de date limite propre à la bourse."
+   ],
+   "dossier": [
+    "Aucun dossier de bourse séparé : dossier d'admission à Abertay (évalué automatiquement)"
+   ],
+   "etapes": [
+    "Candidater à un programme à temps plein sur campus à Abertay",
+    "Obtenir l'offre et remplir ses conditions académiques",
+    "Être évalué automatiquement ; notification par courriel"
+   ]
   },
   "en": {
-   "nom": "Abertay International Scholarship for Undergraduate Students — Abertay University"
+   "nom": "Abertay International Scholarship",
+   "resume": "An award of up to GBP 3,000 per year for up to 4 years, deducted from tuition fees, for new international undergraduate or taught postgraduate students at Abertay University. Assessed automatically from the admission application.",
+   "valeur": "Up to GBP 3,000/year, maximum 4 years (GBP 12,000 total)",
+   "couverture_detail": "Amount deducted from tuition fees each year while studying in Dundee; can be combined with the Dean's Scholarship, Principal's Excellence Scholarship - Global and IB30+.",
+   "ne_couvre_pas": "Living costs, visa, travel; the rest of the tuition fees.",
+   "eligibilite": "International (Overseas) fee status as classified by Abertay; academic conditions of the offer met; new full-time on-campus student (undergraduate or taught postgraduate); direct entry to Year 2 or above accepted.",
+   "diplome": "Academic conditions of the admission offer met (postgraduate: UK 2:1 equivalent, about 60%)",
+   "langue": "Studies in English",
+   "conseil": "Email international@abertay.ac.uk to confirm your fee status. As the UK student visa is suspended for Cameroonians, check feasibility before paying any deposit.",
+   "edition_note": "No dated edition: ongoing award granted with the admission application.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "No separate form; notification by email after the offer of admission.",
+    "The page gives no scholarship-specific deadline."
+   ],
+   "dossier": [
+    "No separate scholarship file: Abertay admission application (assessed automatically)"
+   ],
+   "etapes": [
+    "Apply to a full-time on-campus programme at Abertay",
+    "Receive the offer and meet its academic conditions",
+    "Be assessed automatically; notified by email"
+   ]
+  },
+  "cycle": {
+   "type": "irreguliere",
+   "ouverture_mois": null,
+   "cloture_mois": null
+  },
+  "editions": [],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.abertay.ac.uk/study-apply/money-fees-and-funding/scholarships/abertay-international-scholarship/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6803,6 +7463,10 @@
   },
   "en": {
    "nom": "International Undergraduate Merit Scholarship — University of Leicester"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle inaccessible (403 via WebFetch et curl) ; non lue."
   }
  },
  {
@@ -6811,7 +7475,7 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence"
   ],
@@ -6822,83 +7486,109 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": "septembre",
+   "cloture_mois": "août"
   },
   "edition": {
-   "cloture": "2025-07-31",
-   "confirme": false
+   "libelle": "Entrée septembre 2027",
+   "cloture": "2027-08-24",
+   "confirme": true
   },
-  "lien_officiel": "https://www.surrey.ac.uk/fees-and-funding/scholarships/international-excellence-award-undergraduate-students",
+  "lien_officiel": "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-undergraduate",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.surrey.ac.uk/fees-and-funding/scholarships/international-excellence-award-undergraduate-students"
+    "titre": "University of Surrey - International Excellence Award (Undergraduate)",
+    "url": "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-undergraduate"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 juillet 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Excellence Award for Undergraduate Students — University of Surrey",
-   "resume": "L'University of Surrey est située à Guildford, à seulement 30 minutes de Londres. Elle est classée parmi les meilleures universités britanniques pour l'employabilité de ses diplômés, grâce à ses programmes d'alternance (Professional Training placements). La…",
+   "nom": "International Excellence Award (Undergraduate) - University of Surrey",
+   "resume": "Réduction de 5 000 £ sur les frais de scolarité de la première année d'une licence à temps plein à l'University of Surrey. Ouverte aux étudiants internationaux qui financent eux-mêmes leurs études, quelle que soit leur nationalité.",
    "resume_long": "L'University of Surrey est située à Guildford, à seulement 30 minutes de Londres. Elle est classée parmi les meilleures universités britanniques pour l'employabilité de ses diplômés, grâce à ses programmes d'alternance (Professional Training placements). La bourse de £5 000 allège le coût des études tout en vous donnant accès à un réseau d'employeurs de premier plan.",
-   "valeur": "£5 000 (exonération de frais)",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 juillet 2025 (vérifier pour l'édition suivante)"
+   "valeur": "5 000 £ de réduction sur les frais de scolarité (fee waiver)",
+   "eligibilite": "Étudiant international payant les frais internationaux, finançant lui-même ses études (ni sponsorisé, ni titulaire d'une autre bourse), « quelle que soit la nationalité ou le domicile ». Surrey doit être le choix ferme sur UCAS. Non ouverte aux étudiants du Surrey International Study Centre ni aux titulaires d'une autre bourse Surrey.",
+   "edition_note": "Seule l'entrée de septembre 2027 est publiée : candidatures closes le 24 août 2027, candidature UCAS avant le 30 juin 2027. Les éditions suivantes ne sont pas annoncées.",
+   "couverture_detail": "Réduction de 5 000 £ sur les frais de scolarité, pour la première année d'un diplôme de licence uniquement.",
+   "ne_couvre_pas": "Frais de vie, visa, voyage ; les années suivantes ; les cours à temps partiel ou à distance.",
+   "diplome": "Offre d'admission à une licence (bachelor) à temps plein, entrée en première année (niveau 4). Clearing : minimum ABB ou équivalent.",
+   "langue": "Cours en anglais ; les exigences de langue sont celles de l'offre d'admission.",
+   "conseil": "Postulez dès que vous avez une offre : les fonds sont attribués dans l'ordre d'arrivée. Cette bourse ne couvre que 5 000 £ : prévoyez le reste des frais et la preuve de fonds, et vérifiez la situation du visa pour les Camerounais.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Candidature à faire avant l'émission du CAS ; impossible après.",
+    "Bourse non reportable : en cas de report d'entrée, il faut redéposer une demande, selon disponibilité.",
+    "Dossiers examinés chaque mois, attribution dans l'ordre d'arrivée."
+   ],
+   "dossier": [
+    "Identifiant étudiant valide ou identifiant UCAS",
+    "Offre d'admission de l'université",
+    "Formulaire de candidature à la bourse",
+    "Relevés de résultats scolaires, notes prévues et lettre de motivation (personal statement) examinés par le comité"
+   ],
+   "etapes": [
+    "Déposer la candidature UCAS avant le 30 juin 2027, avec Surrey comme choix ferme.",
+    "Obtenir une offre de l'université.",
+    "Remplir le formulaire de bourse (lien « Apply now ») avant l'émission du CAS.",
+    "Postuler tôt : attribution dans l'ordre d'arrivée, examen mensuel.",
+    "Questions : international@surrey.ac.uk"
+   ]
   },
   "en": {
-   "nom": "International Excellence Award for Undergraduate Students — University of Surrey"
-  }
- },
- {
-  "id": "undergraduate-uk-international-scholarship-northumbria-university",
-  "organisme": "Northumbria University (Newcastle)",
-  "pays_accueil": [
-   "Royaume-Uni"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "mars"
+   "nom": "International Excellence Award (Undergraduate) - University of Surrey",
+   "resume": "A GBP 5,000 reduction on first-year tuition fees for a full-time bachelor's degree at the University of Surrey. Open to self-funded international fee-paying students regardless of nationality.",
+   "valeur": "GBP 5,000 tuition fee waiver",
+   "couverture_detail": "GBP 5,000 off tuition fees, for the first year of an undergraduate degree only.",
+   "ne_couvre_pas": "Living costs, visa, travel; later years; part-time or distance-learning courses.",
+   "eligibilite": "International fee-paying student who is self-funded (not sponsored and not holding another scholarship), \"regardless of nationality or domicile\". Surrey must be the firm choice on UCAS. Not open to Surrey International Study Centre students or holders of another Surrey scholarship.",
+   "diplome": "Offer for a full-time bachelor's degree at first-year entry (level 4). Clearing: minimum ABB or equivalent.",
+   "langue": "Courses taught in English; language requirements are those of the admission offer.",
+   "conseil": "Apply as soon as you hold an offer, as funds are awarded first come, first served. The award covers only GBP 5,000: plan for the remaining fees and proof of funds, and check the visa situation for Cameroonians.",
+   "edition_note": "Only September 2027 entry is published: applications close 24 August 2027, UCAS application by 30 June 2027. Later editions are not announced.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Apply before the CAS is issued; not possible afterwards.",
+    "Not deferrable: if you defer you must reapply, subject to availability.",
+    "Applications reviewed monthly, awarded first come, first served."
+   ],
+   "dossier": [
+    "Valid student ID or UCAS ID",
+    "University offer",
+    "Scholarship application form",
+    "Previous academic results, predicted grades and personal statement reviewed by the panel"
+   ],
+   "etapes": [
+    "Submit your UCAS application by 30 June 2027 with Surrey as firm choice.",
+    "Obtain an offer from the university.",
+    "Complete the scholarship form (\"Apply now\" link) before the CAS is issued.",
+    "Apply early: awards are first come, first served, reviewed monthly.",
+    "Questions: international@surrey.ac.uk"
+   ]
   },
-  "edition": {
-   "permanente": true,
-   "confirme": false
-  },
-  "lien_officiel": "https://www.northumbria.ac.uk/study-at-northumbria/fees-funding/scholarships/",
-  "sources": [
+  "editions": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.northumbria.ac.uk/study-at-northumbria/fees-funding/scholarships/"
+    "annee": 2027,
+    "libelle": "Entrée septembre 2027",
+    "ouverture": null,
+    "cloture": "2027-08-24",
+    "confirme": true
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
-  "fr": {
-   "nom": "Undergraduate UK International Scholarship — Northumbria University",
-   "resume": "Northumbria University, à Newcastle, est une université dynamique qui combine excellence académique et orientation professionnelle. Newcastle est régulièrement classée parmi les meilleures villes étudiantes du Royaume-Uni, avec un coût de la vie très abordable…",
-   "resume_long": "Northumbria University, à Newcastle, est une université dynamique qui combine excellence académique et orientation professionnelle. Newcastle est régulièrement classée parmi les meilleures villes étudiantes du Royaume-Uni, avec un coût de la vie très abordable et une vie nocturne légendaire. La bourse de £3 000 est un bon point de départ dans un environnement financièrement accessible.",
-   "valeur": "£3 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
-  },
-  "en": {
-   "nom": "Undergraduate UK International Scholarship — Northumbria University"
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-undergraduate"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6907,9 +7597,10 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "licence"
+   "licence",
+   "master"
   ],
   "domaines": [
    "tous"
@@ -6918,35 +7609,106 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juin"
+   "ouverture_mois": null,
+   "cloture_mois": null
   },
   "edition": {
    "cloture": "2025-06-30",
    "confirme": false
   },
-  "lien_officiel": "https://www.coventry.ac.uk/international-students-hub/scholarships/",
+  "lien_officiel": "https://www.coventry.ac.uk/international-students-hub/apply-for-a-scholarship/coventry-university-group-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.coventry.ac.uk/international-students-hub/scholarships/"
+    "titre": "Coventry University Group Scholarship 2026/27 and 2027/28",
+    "url": "https://www.coventry.ac.uk/international-students-hub/apply-for-a-scholarship/coventry-university-group-scholarship/"
+   },
+   {
+    "titre": "Vice-Chancellor Undergraduate Scholarship 2025/26 (ancienne bourse, entrée mai 2026)",
+    "url": "https://www.coventry.ac.uk/international-students-hub/apply-for-a-scholarship/undergraduate-vice-chancellors-scholarship/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "30 juin 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Vice Chancellor Undergraduate Scholarship — Coventry University",
-   "resume": "Coventry University a connu une ascension remarquable ces dernières années, gagnant régulièrement des places dans les classements britanniques. Elle est reconnue pour ses programmes en ingénierie automobile, en design et en santé. La bourse de £4 000 du…",
+   "nom": "Coventry University Group Scholarship (successeur de la Vice-Chancellor Undergraduate Scholarship) - Coventry University",
+   "resume": "La Vice-Chancellor Undergraduate Scholarship (entrée mai 2026 seulement) n'est plus la bourse en vigueur ; Coventry propose désormais la Coventry University Group Scholarship pour les entrées 2026/27 et 2027/28. Elle réduit de 2 000 £ par année d'études les frais des étudiants internationaux (hors UE) qui financent eux-mêmes leurs études.",
    "resume_long": "Coventry University a connu une ascension remarquable ces dernières années, gagnant régulièrement des places dans les classements britanniques. Elle est reconnue pour ses programmes en ingénierie automobile, en design et en santé. La bourse de £4 000 du Vice-Chancellor récompense les candidats internationaux avec de bons résultats académiques.",
-   "valeur": "£4 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 30 juin 2025 (vérifier pour l'édition suivante)"
+   "valeur": "2 000 £ de réduction de frais de scolarité par année complète d'études (6 000 £ pour une licence de 3 ans)",
+   "eligibilite": "Étudiants internationaux de « tous pays hors Royaume-Uni et UE », autofinancés et payant les frais internationaux, étudiant sur un campus britannique du Coventry University Group (Coventry University, Coventry University London, CU Coventry, CU London, CU Scarborough). Étudiants sponsorisés et bénéficiaires de l'EU Bursary exclus.",
+   "edition_note": "Aucune date limite de bourse publiée ; valable pour les entrées 2026/27 et 2027/28. L'ancienne Vice-Chancellor Undergraduate Scholarship (entrée mai 2026, jusqu'à 4 000 £) est remplacée.",
+   "couverture_detail": "Réduction de 2 000 £ par an sur les frais de scolarité, appliquée après l'inscription (déduite du dernier paiement de l'année ou du premier paiement si les frais sont payés d'un coup).",
+   "ne_couvre_pas": "Frais de vie, visa, voyage ; cours 100 % en ligne (Coventry University Online), Coventry University Wrocław et cours NITE.",
+   "diplome": "Admission à un programme de licence ou de master (temps plein, cours dispensés).",
+   "langue": "Cours en anglais ; exigences de langue de l'offre d'admission.",
+   "conseil": "Il n'y a pas de formulaire : tout dépend de votre admission et du paiement du dépôt dans les délais. Le montant reste modeste par rapport aux frais ; vérifiez le coût total et le visa.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Cumulable uniquement avec les Sport Scholarships (entrée 2026/27).",
+    "Attribution à la discrétion de l'université, décision finale sans appel ; l'université peut modifier ou retirer la bourse."
+   ],
+   "dossier": [
+    "Candidature à un cours de Coventry University Group et acceptation de l'offre conditionnelle",
+    "Justificatifs demandés dans la lettre d'offre, dans les délais indiqués",
+    "Dépôt CAS réglé avant la date indiquée dans la lettre d'offre"
+   ],
+   "etapes": [
+    "Candidater à un cours éligible et obtenir une offre.",
+    "Accepter l'offre et régler le dépôt CAS avant la date de la lettre d'offre.",
+    "S'inscrire : la réduction est appliquée automatiquement, sans candidature séparée."
+   ]
   },
   "en": {
-   "nom": "Vice Chancellor Undergraduate Scholarship — Coventry University"
+   "nom": "Coventry University Group Scholarship (successor of the Vice-Chancellor Undergraduate Scholarship) - Coventry University",
+   "resume": "The Vice-Chancellor Undergraduate Scholarship (May 2026 entry only) is no longer the current award; Coventry now offers the Coventry University Group Scholarship for 2026/27 and 2027/28 entries. It cuts GBP 2,000 per year of study from the fees of self-funded international (non-EU) students.",
+   "valeur": "GBP 2,000 tuition fee reduction per full year of study (GBP 6,000 for a 3-year bachelor's)",
+   "couverture_detail": "GBP 2,000 per year off tuition fees, applied after enrolment (deducted from the final payment of the year, or the first payment if fees are paid in full upfront).",
+   "ne_couvre_pas": "Living costs, visa, travel; 100% online courses (Coventry University Online), Coventry University Wroclaw and NITE courses.",
+   "eligibilite": "International students from \"all countries excluding UK and EU\", self-funded and paying international fees, studying at a UK Coventry University Group campus (Coventry University, Coventry University London, CU Coventry, CU London, CU Scarborough). Sponsored students and EU Bursary recipients excluded.",
+   "diplome": "Admission to a bachelor's or master's programme (full-time, taught).",
+   "langue": "Courses taught in English; language requirements of the admission offer.",
+   "conseil": "There is no form: everything depends on your admission and paying the deposit on time. The amount is modest compared with the fees; check total cost and visa.",
+   "edition_note": "No scholarship deadline published; valid for 2026/27 and 2027/28 entries. The former Vice-Chancellor Undergraduate Scholarship (May 2026 entry, up to GBP 4,000) is replaced.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Can be combined only with Sport Scholarships (2026/27 entry).",
+    "Awarded at the university's discretion, final decision without appeal; the university may amend or withdraw the award."
+   ],
+   "dossier": [
+    "Application to a Coventry University Group course and acceptance of the conditional offer",
+    "Proof requested in the offer letter, by the stated deadlines",
+    "CAS deposit cleared by the date in the offer letter"
+   ],
+   "etapes": [
+    "Apply to an eligible course and obtain an offer.",
+    "Accept the offer and clear the CAS deposit by the date in the offer letter.",
+    "Enrol: the reduction is applied automatically, no separate application."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Entrées 2026/27 et 2027/28 (pas de date limite publiée)",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.coventry.ac.uk/international-students-hub/apply-for-a-scholarship/coventry-university-group-scholarship/",
+    "https://www.coventry.ac.uk/international-students-hub/apply-for-a-scholarship/undergraduate-vice-chancellors-scholarship/",
+    "https://www.coventry.ac.uk/international-students-hub/apply-for-a-scholarship/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -6995,6 +7757,10 @@
   },
   "en": {
    "nom": "Undergraduate Ellison Scholars Program (Fully Funded)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles EIT lues (eit.org) : aucune règle de nationalité publiée, le Cameroun n'est ni cité ni inclus explicitement (« candidats du monde entier » seulement). Édition 2026 close le 31 juillet 2026 ; fenêtre de l'édition suivante non annoncée."
   }
  },
  {
@@ -7043,90 +7809,278 @@
   },
   "en": {
    "nom": "Adam Smith Business School Global Impact Scholarship — University of Glasgow"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle lue : Cameroun admis et fiche conforme, mais la page est incohérente (« entrée septembre 2026 » alors que la date limite affichée est le 31 mars 2027) et la candidature « ouvrira bientôt » ; l'édition 2027 n'est pas clairement confirmée. Le stipend de 15 000 £ du guide n'apparaît pas (valeur : « Full fee waiver »)."
   }
  },
  {
   "id": "islam-scholarship-university-of-birmingham-fully-funded",
-  "organisme": "University of Birmingham",
+  "organisme": "University of Birmingham (College of Arts and Law)",
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
-   "tous"
+   "lettres-langues",
+   "philo-sociologie"
   ],
-  "couverture_niveau": "complete",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "edition": {
-   "permanente": true,
-   "confirme": false
+   "libelle": "Entrée 2026 (clôturée)",
+   "cloture": "2026-03-25",
+   "confirme": true
   },
-  "lien_officiel": "https://www.birmingham.ac.uk/postgraduate/funding/international-scholarships",
+  "lien_officiel": "https://www.birmingham.ac.uk/study/scholarships-funding/islam-scholarship",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.birmingham.ac.uk/postgraduate/funding/international-scholarships"
+    "titre": "Islam Scholarship - University of Birmingham",
+    "url": "https://www.birmingham.ac.uk/study/scholarships-funding/islam-scholarship"
+   },
+   {
+    "titre": "The Islam Scholarship - University of Birmingham",
+    "url": "https://birmingham.ac.uk/funding/postgraduate/the-islam-scholarship"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Consulter le site officiel"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Islam Scholarship — University of Birmingham (Fully Funded)",
-   "resume": "L'University of Birmingham est un membre fondateur du Russell Group. Sa bourse Islam Scholarship peut couvrir jusqu'à 100% des frais de scolarité — c'est une Fully Funded pour les étudiants de Master. Birmingham est la deuxième plus grande ville du…",
+   "nom": "Islam Scholarship - University of Birmingham (MA Islamic Studies)",
+   "resume": "Bourse couvrant jusqu'à 100 % des frais de scolarité du master MA Islamic Studies à l'University of Birmingham, ouverte aux étudiants de toute nationalité. Ce n'est pas une bourse pour tous les masters : elle ne concerne que ce programme.",
    "resume_long": "L'University of Birmingham est un membre fondateur du Russell Group. Sa bourse Islam Scholarship peut couvrir jusqu'à 100% des frais de scolarité — c'est une Fully Funded pour les étudiants de Master. Birmingham est la deuxième plus grande ville du Royaume-Uni, avec un coût de la vie nettement inférieur à celui de Londres et un dynamisme culturel croissant.",
-   "valeur": "Jusqu'à 100% des frais de scolarité",
-   "eligibilite": "Étudiants internationaux méritants",
-   "edition_note": "Date limite indiquée dans le guide : Consulter le site officiel"
+   "valeur": "Jusqu'à 100 % des frais de scolarité (tarif national ou international)",
+   "eligibilite": "Étudiants nationaux et internationaux « de toute nationalité » (Cameroun admis, non cité nommément). Non ouverte aux étudiants actuels de master. Le candidat doit avoir l'intention de retourner dans son pays de résidence habituelle après ses études. Non cumulable avec une autre bourse.",
+   "edition_note": "Édition entrée 2026 : date limite 25 mars 2026 à 12 h GMT, statut « Closed ». Édition suivante non annoncée sur la page.",
+   "couverture_detail": "Jusqu'à 100 % des frais de scolarité du MA Islamic Studies (campus d'Edgbaston).",
+   "ne_couvre_pas": "Frais de vie, visa, voyage (aucune allocation mentionnée).",
+   "diplome": "Candidature au MA Islamic Studies ; diplôme exigé par le programme (le seuil exact n'est pas indiqué sur la page de la bourse).",
+   "langue": "Cours en anglais.",
+   "conseil": "Contactez calpg-research@contacts.bham.ac.uk pour connaître la date de la prochaine édition ; les références tardives ou sur un mauvais formulaire annulent la candidature.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Le financement n'est examiné qu'avec une candidature au MA Islamic Studies.",
+    "Les candidats au dossier complet sont aussi considérés pour d'autres bourses du College of Arts and Law."
+   ],
+   "dossier": [
+    "Candidature complète au MA Islamic Studies",
+    "Formulaire de candidature de financement en ligne",
+    "Deux références envoyées par les référents via le formulaire de référence en ligne"
+   ],
+   "etapes": [
+    "Déposer une candidature complète au MA Islamic Studies.",
+    "Remplir le formulaire de financement en ligne.",
+    "Faire remplir par deux référents le formulaire de référence avant la date limite.",
+    "Résultats habituellement entre début mai et fin juin."
+   ]
   },
   "en": {
-   "nom": "Islam Scholarship — University of Birmingham (Fully Funded)"
+   "nom": "Islam Scholarship - University of Birmingham (MA Islamic Studies)",
+   "resume": "Scholarship covering up to 100% of tuition fees for the MA Islamic Studies at the University of Birmingham, open to students of any nationality. It is not a general master's scholarship: it applies to this programme only.",
+   "valeur": "Up to 100% of tuition fees (Home or International rate)",
+   "couverture_detail": "Up to 100% of tuition fees for the MA Islamic Studies (Edgbaston campus).",
+   "ne_couvre_pas": "Living costs, visa, travel (no stipend mentioned).",
+   "eligibilite": "Home and Overseas students \"of any nationality\" (Cameroon admitted, not named). Not open to current Masters students. Applicants must intend to return to their country of ordinary residence after their studies. Cannot be combined with any other scholarship.",
+   "diplome": "Application to the MA Islamic Studies; degree required by the programme (exact threshold not given on the scholarship page).",
+   "langue": "Courses taught in English.",
+   "conseil": "Email calpg-research@contacts.bham.ac.uk for the next cycle's dates; late references or references on the wrong form withdraw the application.",
+   "edition_note": "2026 entry: deadline 25 March 2026 at 12:00 noon GMT, status \"Closed\". Next edition not announced on the page.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Funding is considered only alongside an application to the MA Islamic Studies.",
+    "Complete applicants are also considered for other College of Arts and Law scholarships."
+   ],
+   "dossier": [
+    "Complete application to the MA Islamic Studies",
+    "Online funding application form",
+    "Two references submitted by referees via the online funding reference form"
+   ],
+   "etapes": [
+    "Submit a complete application to the MA Islamic Studies.",
+    "Complete the online funding application form.",
+    "Have two referees submit the reference form before the deadline.",
+    "Results usually sent between early May and end of June."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": null,
+   "cloture_mois": "mars"
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Entrée 2026 (clôturée)",
+    "ouverture": null,
+    "cloture": "2026-03-25",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.birmingham.ac.uk/study/scholarships-funding/islam-scholarship",
+    "https://birmingham.ac.uk/funding/postgraduate/the-islam-scholarship"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
   "id": "erasmus-mundus-imfse-scholarship-university-of-edinburgh-fully-funded",
-  "organisme": "University of Edinburgh (au sein d'un consortium européen)",
+  "organisme": "IMFSE - International Master of Science in Fire Safety Engineering (Ghent University, coordinateur ; Lund, Edinburgh, UPC)",
   "pays_accueil": [
-   "Royaume-Uni"
+   "Plusieurs pays"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
    "ingenierie"
   ],
-  "couverture_niveau": "partielle",
+  "couverture_niveau": "variable",
   "origine": "gouvernementale",
-  "lien_officiel": "https://imfse.be/",
+  "lien_officiel": "https://imfse.be/application-overview",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://imfse.be/"
+    "titre": "IMFSE - Application overview",
+    "url": "https://imfse.be/application-overview"
+   },
+   {
+    "titre": "IMFSE - How to apply",
+    "url": "https://imfse.be/how-to-apply-overview"
+   },
+   {
+    "titre": "IMFSE - Deadlines and dates",
+    "url": "https://imfse.be/deadlines"
+   },
+   {
+    "titre": "IMFSE - Finances",
+    "url": "https://imfse.be/finances-overview"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Consulter le site officiel"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Erasmus Mundus IMFSE Scholarship — University of Edinburgh (Fully Funded)",
-   "resume": "L'International Master of Science in Fire Safety Engineering (IMFSE) est un programme Erasmus Mundus Joint Master Degree. Les étudiants étudient dans plusieurs universités européennes — dont Edinburgh, Ghent et Lund. La bourse Erasmus Mundus couvre…",
+   "nom": "IMFSE - International Master of Science in Fire Safety Engineering (Erasmus Mundus Joint Master)",
+   "resume": "Master conjoint de 2 ans en ingénierie de la sécurité incendie, coordonné par Ghent University avec Lund, Edinburgh et UPC. Des bourses (Erasmus Mundus et contributeurs de l'IMFSE) existent, mais leur nombre et leur montant ne sont pas garantis.",
    "resume_long": "L'International Master of Science in Fire Safety Engineering (IMFSE) est un programme Erasmus Mundus Joint Master Degree. Les étudiants étudient dans plusieurs universités européennes — dont Edinburgh, Ghent et Lund. La bourse Erasmus Mundus couvre l'intégralité des frais de scolarité. Edinburgh est régulièrement classée parmi les 20 meilleures universités au monde et offre un cadre de vie spectaculaire dans la capitale écossaise.",
-   "valeur": "Exonération totale des frais pour toute la durée du programme",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Consulter le site officiel"
+   "valeur": "Bourses Erasmus Mundus jusqu'à 1 400 €/mois avec frais de scolarité offerts ; bourses des contributeurs de la réduction partielle à la gratuité totale des frais",
+   "eligibilite": "« Aucune restriction de nationalité » : le Cameroun relève de la catégorie « pays partenaires ». Licence ou master d'au moins 3 ans / 180 ECTS (ingénierie, sciences des matériaux, chimie, physique, architecture, urbanisme ou domaine proche). Les bourses de contributeurs sont décidées par le comité de gestion selon le budget ; on ne peut pas y postuler séparément. Une personne ayant déjà reçu une bourse EMJM ne peut pas en recevoir une autre.",
+   "edition_note": "Candidatures 2027-2028 ouvertes ; date limite pour les bourses : avant le 1er février 2027 (candidatures autofinancées : visa avant le 1er avril, sans visa avant le 1er juin). Le formulaire ouvre toujours en octobre, un an avant la rentrée.",
+   "couverture_detail": "Bourse EMJM : jusqu'à 1 400 € par mois, frais de scolarité exonérés (dépend du soutien continu de l'EACEA). Bourses des contributeurs IMFSE : de réductions de frais à l'exonération totale. Les frais couvrent l'inscription dans toutes les universités et une assurance.",
+   "ne_couvre_pas": "Sans bourse : frais de 12 000 € par an pour les étudiants de pays partenaires (Cameroun inclus). Logement, vie quotidienne, voyage, assurance supplémentaire et frais de visa restent à la charge de l'étudiant.",
+   "diplome": "Bachelor ou master (3 ans ou 180 ECTS minimum) en ingénierie, matériaux, chimie, physique, physique appliquée, architecture, urbanisme ou domaine apparenté ; diplôme obtenu avant le début du programme.",
+   "langue": "Anglais : IELTS Academic 6,5 (6,0 par composante) ou équivalent selon les règles d'Edinburgh ; test pouvant être fourni après la date limite mais avant le début.",
+   "conseil": "Déposez avant le 1er février pour être considéré pour une bourse : après cette date, seul l'autofinancement est possible. Prévoyez un budget de secours, car l'attribution des bourses dépend du budget et n'est pas garantie.",
+   "autres": [
+    "Si une mobilité est prévue à Edinburgh : visa étudiant suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Ne pas contacter l'EACEA ni les entreprises contributrices au sujet des bourses.",
+    "L'éligibilité n'est évaluée que par le dépôt du dossier, pas par e-mail."
+   ],
+   "dossier": [
+    "Photo d'identité",
+    "Copie du passeport",
+    "CV Europass",
+    "Lettre de motivation (personal statement)",
+    "Diplôme et relevé de notes (traduction assermentée si non en anglais, néerlandais, français ou allemand ; vérification via Qualification Check de Ghent University)",
+    "Certificat d'anglais (peut suivre après la date limite, avant le début du programme)",
+    "Deux lettres de recommandation",
+    "Tout autre document utile"
+   ],
+   "etapes": [
+    "Vérifier les conditions d'admission.",
+    "Réunir les documents.",
+    "Remplir le formulaire en ligne (ouvert chaque année en octobre) avant la date limite, en cochant la demande de bourse.",
+    "Évaluation du dossier par le comité de sélection.",
+    "Entretien en ligne (février pour les candidats à bourse).",
+    "Résultats des candidats à bourse : fin mars."
+   ]
   },
   "en": {
-   "nom": "Erasmus Mundus IMFSE Scholarship — University of Edinburgh (Fully Funded)"
+   "nom": "IMFSE - International Master of Science in Fire Safety Engineering (Erasmus Mundus Joint Master)",
+   "resume": "Two-year joint master's in fire safety engineering coordinated by Ghent University with Lund, Edinburgh and UPC. Scholarships (Erasmus Mundus and IMFSE contributors) exist, but their number and amount are not guaranteed.",
+   "valeur": "Erasmus Mundus scholarships up to EUR 1,400/month with tuition waived; contributor scholarships from partial tuition reductions to full waivers",
+   "couverture_detail": "EMJM scholarship: up to EUR 1,400 per month, tuition fee waived (depends on continued EACEA support). IMFSE contributor scholarships: from tuition reductions to full tuition waivers. The tuition covers enrolment at all universities and an insurance scheme.",
+   "ne_couvre_pas": "Without a scholarship: tuition of EUR 12,000 per year for Partner Country students (Cameroon included). Accommodation, living costs, travel, additional insurance and visa costs are the student's responsibility.",
+   "eligibilite": "\"No nationality restriction\": Cameroon falls under the \"Partner Countries\" category. Bachelor's or master's degree of at least 3 years / 180 ECTS (engineering, materials science, chemistry, physics, architecture, urban planning or related). Contributor scholarships are decided by the management board according to budget; you cannot apply for them separately. Previous EMJM scholarship holders cannot receive another one.",
+   "diplome": "Bachelor's or master's (min. 3 years or 180 ECTS) in engineering, materials science, chemistry, physics, applied physics, architecture, urban planning or related field; degree obtained before the programme starts.",
+   "langue": "English: IELTS Academic 6.5 (6.0 per component) or equivalent per Edinburgh rules; test may be sent after the deadline but before the start.",
+   "conseil": "Submit before 1 February to be considered for a scholarship: after that date only self-funded applications are possible. Plan a fallback budget, as scholarships depend on budget and are not guaranteed.",
+   "edition_note": "2027-2028 applications are open; scholarship deadline: before 1 February 2027 (self-sponsored: with visa before 1 April, without visa before 1 June). The form always opens in October, a year before the start.",
+   "autres": [
+    "If a mobility period is in Edinburgh: student visa suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Do not contact EACEA or contributing companies about scholarships.",
+    "Eligibility is assessed only by submitting the application, not by email."
+   ],
+   "dossier": [
+    "Passport photo",
+    "Copy of passport",
+    "Europass CV",
+    "Personal statement",
+    "Degree and transcript of records (sworn translation unless in English, Dutch, French or German; verified via Ghent University Qualification Check)",
+    "English language certificate (may follow after the deadline, before the programme starts)",
+    "Two reference letters",
+    "Any other relevant documents"
+   ],
+   "etapes": [
+    "Check the admission requirements.",
+    "Prepare all documents.",
+    "Submit the online form (opens every October) before the deadline, ticking the scholarship request.",
+    "The selection committee evaluates the file.",
+    "Online interview (February for scholarship applicants).",
+    "Scholarship results: end of March."
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": "octobre",
+   "cloture_mois": "janvier"
+  },
+  "edition": {
+   "libelle": "2027/28",
+   "cloture": "2027-01-31",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2027-01-31",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://imfse.be/",
+    "https://imfse.be/application-overview",
+    "https://imfse.be/how-to-apply-overview",
+    "https://imfse.be/deadlines",
+    "https://imfse.be/finances-overview"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -7135,42 +8089,114 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
    "tous"
   ],
-  "couverture_niveau": "variable",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "edition": {
    "permanente": true,
    "confirme": false
   },
-  "lien_officiel": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/scholarships/international/",
+  "lien_officiel": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/masters-funding/excellence-scholarship/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/scholarships/international/"
+    "titre": "Postgraduate Excellence Scholarship - Loughborough University",
+    "url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/masters-funding/excellence-scholarship/"
+   },
+   {
+    "titre": "Masters funding - Loughborough University",
+    "url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/masters-funding/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Excellence Scholarships — Loughborough University",
-   "resume": "Loughborough est la meilleure université du Royaume-Uni pour le sport (n°1 mondiale en sciences du sport), mais elle excelle aussi en ingénierie, en design et en sciences sociales. Ses bourses d'excellence pour les Masters internationaux sont attribuées sur la…",
+   "nom": "Postgraduate Excellence Scholarship - Loughborough University",
+   "resume": "Réduction de frais de scolarité de 6 000 £ pour les étudiants internationaux titulaires d'un diplôme de premier cycle avec mention très bien (First). Attribuée automatiquement sur la base de la candidature et du résultat final, sans candidature séparée.",
    "resume_long": "Loughborough est la meilleure université du Royaume-Uni pour le sport (n°1 mondiale en sciences du sport), mais elle excelle aussi en ingénierie, en design et en sciences sociales. Ses bourses d'excellence pour les Masters internationaux sont attribuées sur la base du dossier académique. Le campus de Loughborough est l'un des plus grands et des mieux équipés du pays.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants domestiques et internationaux",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence"
+   "valeur": "Jusqu'à 6 000 £ de réduction sur les frais de scolarité (étudiants internationaux)",
+   "eligibilite": "Étudiant autofinancé, statut de frais international ou britannique, titulaire d'un diplôme de première classe (First) ou équivalent international. Aucune condition de nationalité ou de domicile publiée : le Cameroun n'est pas exclu. Non cumulable avec une autre bourse de l'université, sauf l'Alumni discount.",
+   "edition_note": "Aucune date limite de bourse publiée ; entrées janvier 2027 et septembre 2027.",
+   "couverture_detail": "6 000 £ crédités sur le compte de frais de scolarité des étudiants internationaux (3 000 £ pour les étudiants britanniques).",
+   "ne_couvre_pas": "Frais de vie, visa, voyage ; programmes de Sport, Exercise and Health Sciences, MBA.",
+   "diplome": "Diplôme de premier cycle de première classe (First Class) ou équivalent international.",
+   "langue": "Cours en anglais ; exigences de langue du programme.",
+   "conseil": "Le montant est modeste par rapport aux frais internationaux : vérifiez le coût total. Renseignez-vous auprès de l'université sur l'équivalent de votre mention dans le système camerounais.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Valable sur les campus de Loughborough et de Londres, pour les programmes MA, MSc, PG Diploma et PG Certificate (temps plein, partiel, à distance).",
+    "Entrées de janvier 2027 et septembre 2027."
+   ],
+   "dossier": [
+    "Candidature au programme de master éligible (aucune candidature séparée à la bourse)",
+    "Relevés de notes et diplôme final avec mention de première classe ou équivalent"
+   ],
+   "etapes": [
+    "Candidater à un master éligible de Loughborough pour janvier ou septembre 2027.",
+    "Aucun formulaire de bourse : vous êtes automatiquement étudié sur la base de la candidature et du résultat final.",
+    "Questions : p.g.taught@lboro.ac.uk"
+   ]
   },
   "en": {
-   "nom": "Excellence Scholarships — Loughborough University"
+   "nom": "Postgraduate Excellence Scholarship - Loughborough University",
+   "resume": "GBP 6,000 tuition fee reduction for international students holding a first-class undergraduate degree. Awarded automatically on the basis of the application and final degree result, with no separate application.",
+   "valeur": "Up to GBP 6,000 off tuition fees (international students)",
+   "couverture_detail": "GBP 6,000 credited to the tuition fee account of international students (GBP 3,000 for UK students).",
+   "ne_couvre_pas": "Living costs, visa, travel; Sport, Exercise and Health Sciences programmes, MBA.",
+   "eligibilite": "Self-funded student, international or UK fee status, holding a first-class degree or international equivalent. No nationality or domicile requirement published: Cameroon is not excluded. Cannot be combined with another university award, except the Alumni discount.",
+   "diplome": "First-class undergraduate degree or international equivalent.",
+   "langue": "Courses taught in English; programme language requirements.",
+   "conseil": "The amount is modest compared with international fees: check the total cost. Ask the university how your Cameroonian grade classification maps to a first-class equivalent.",
+   "edition_note": "No scholarship deadline published; January 2027 and September 2027 entries.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Valid at the Loughborough and London campuses, for MA, MSc, PG Diploma and PG Certificate programmes (full-time, part-time, distance learning).",
+    "January 2027 and September 2027 entries."
+   ],
+   "dossier": [
+    "Application to an eligible master's programme (no separate scholarship application)",
+    "Transcripts and final degree result showing first-class standard or equivalent"
+   ],
+   "etapes": [
+    "Apply to an eligible Loughborough master's for January or September 2027.",
+    "No scholarship form: you are automatically considered on the basis of your application and final degree result.",
+    "Questions: p.g.taught@lboro.ac.uk"
+   ]
+  },
+  "cycle": {
+   "type": "annuelle",
+   "ouverture_mois": null,
+   "cloture_mois": null
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Entrées janvier 2027 et septembre 2027 (aucune date limite publiée)",
+    "ouverture": null,
+    "cloture": null,
+    "confirme": false
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.lboro.ac.uk/study/postgraduate/fees-funding/masters-funding/excellence-scholarship/",
+    "https://www.lboro.ac.uk/study/postgraduate/fees-funding/masters-funding/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -7219,6 +8245,10 @@
   },
   "en": {
    "nom": "Humanitarian Scholarship — University College London (UCL)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel UCL inaccessible (403 sur toutes les variantes d'URL) ; conditions (personnes à risque de conflit armé ou déplacées) non lues sur la page officielle."
   }
  },
  {
@@ -7267,98 +8297,10 @@
   },
   "en": {
    "nom": "Chancellor's Masters Scholarship — University of Sussex"
-  }
- },
- {
-  "id": "aziz-foundation-scholarship-university-of-sussex",
-  "organisme": "Aziz Foundation",
-  "pays_accueil": [
-   "Royaume-Uni"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "master"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "mai"
   },
-  "edition": {
-   "cloture": "2026-05-01",
-   "confirme": false
-  },
-  "lien_officiel": "https://azizfoundation.org.uk/scholarship-programme/",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://azizfoundation.org.uk/scholarship-programme/"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "1er mai 2026"
-  },
-  "fr": {
-   "nom": "Aziz Foundation Scholarship — University of Sussex",
-   "resume": "La Aziz Foundation Scholarship est une bourse unique en son genre : elle cible spécifiquement les étudiants musulmans méritants qui font face à des obstacles financiers. L'exonération totale des frais de scolarité élimine la barrière financière et permet aux…",
-   "resume_long": "La Aziz Foundation Scholarship est une bourse unique en son genre : elle cible spécifiquement les étudiants musulmans méritants qui font face à des obstacles financiers. L'exonération totale des frais de scolarité élimine la barrière financière et permet aux bénéficiaires de se concentrer entièrement sur leurs études. La fondation offre également un programme de mentorat et de développement professionnel.",
-   "valeur": "Exonération totale des frais de scolarité",
-   "eligibilite": "Étudiants musulmans britanniques ou résidant au Royaume-Uni, méritants et défavorisés",
-   "edition_note": "Date limite indiquée dans le guide : 1er mai 2026"
-  },
-  "en": {
-   "nom": "Aziz Foundation Scholarship — University of Sussex"
-  }
- },
- {
-  "id": "commonwealth-masters-scholarships-university-of-southampton",
-  "organisme": "Commonwealth Scholarship Commission / University of Southampton",
-  "pays_accueil": [
-   "Royaume-Uni"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "master"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "complete",
-  "origine": "gouvernementale",
-  "edition": {
-   "permanente": true,
-   "confirme": false
-  },
-  "lien_officiel": "https://www.southampton.ac.uk/uni-life/fees-funding/scholarships/commonwealth-scholarships",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.southampton.ac.uk/uni-life/fees-funding/scholarships/commonwealth-scholarships"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "Candidatures ouvertes en permanence (vérifier les rounds)"
-  },
-  "fr": {
-   "nom": "Commonwealth Masters Scholarships — University of Southampton",
-   "resume": "L'University of Southampton est un membre du Russell Group reconnu pour ses programmes en ingénierie, en sciences océaniques, en informatique et en sciences de la santé. Les Commonwealth Scholarships financées ici sont parmi les plus complètes du pays,…",
-   "resume_long": "L'University of Southampton est un membre du Russell Group reconnu pour ses programmes en ingénierie, en sciences océaniques, en informatique et en sciences de la santé. Les Commonwealth Scholarships financées ici sont parmi les plus complètes du pays, couvrant non seulement les frais de scolarité mais aussi le voyage, un stipend mensuel et des allocations supplémentaires.",
-   "valeur": "Frais de scolarité + voyage aller-retour + stipend mensuel + package d'allocations",
-   "eligibilite": "Ressortissants des pays du Commonwealth",
-   "edition_note": "Date limite indiquée dans le guide : Candidatures ouvertes en permanence (vérifier les rounds)"
-  },
-  "en": {
-   "nom": "Commonwealth Masters Scholarships — University of Southampton"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Fiche corrigée : la 'Chancellor's Masters Scholarship' est réservée aux diplômés first class d'universités du Royaume-Uni/Irlande ; le vrai programme pour les étudiants internationaux est la Chancellor's International Scholarship. Édition 2026/27 close (30 avril 2026), édition 2027 non annoncée sur la page officielle, formulaire/documents non publiés."
   }
  },
  {
@@ -7407,6 +8349,10 @@
   },
   "en": {
    "nom": "Adam Smith Wealth of Nations Scholarship — University of Glasgow"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Fiche corrigée : la page 'Adam Smith Wealth of Nations Scholarship' n'existe plus (404) ; le programme équivalent est l'ASBS Global Impact Scholarship. La page est incohérente (texte 'intake September 2026' mais clôture 31 mars 2027, ouverture 'bientôt') : année d'entrée et ouverture à confirmer."
   }
  },
  {
@@ -7455,15 +8401,19 @@
   },
   "en": {
    "nom": "Global Excellence Scholarship — SOAS University of London"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Fiche corrigée : 'Global Excellence Scholarship' n'existe plus chez SOAS ; l'équivalent est la SOAS Master's Scholarship (International), 8 000 £. Édition 2026/27 close (30 juin 2026) ; édition 2027/28 non annoncée sur la page officielle."
   }
  },
  {
   "id": "international-postgraduate-scholarships-university-of-westminster",
-  "organisme": "University of Westminster (Londres)",
+  "organisme": "University of Westminster",
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -7474,35 +8424,107 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juin"
+   "ouverture_mois": null,
+   "cloture_mois": "novembre"
   },
   "edition": {
-   "cloture": "2025-06-02",
-   "confirme": false
+   "libelle": "Janvier 2027",
+   "cloture": "2026-11-30",
+   "confirme": true
   },
-  "lien_officiel": "https://www.westminster.ac.uk/study/fees-and-funding/scholarships",
+  "lien_officiel": "https://www.westminster.ac.uk/study/fees-and-funding/scholarships/international-postgraduate-excellence-award-january-2027",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.westminster.ac.uk/study/fees-and-funding/scholarships"
+    "titre": "International Postgraduate Excellence Award – January 2027",
+    "url": "https://www.westminster.ac.uk/study/fees-and-funding/scholarships/international-postgraduate-excellence-award-january-2027"
+   },
+   {
+    "titre": "Westminster International Scholarship Terms and Conditions",
+    "url": "https://www.westminster.ac.uk/sites/default/public-files/general-documents/Westminster-International-Scholarship-T%26C-2024.pdf"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "2 juin 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Postgraduate Scholarships — University of Westminster",
-   "resume": "L'University of Westminster est située au cœur de Londres, avec des campus près de Regent Street et Baker Street. Reconnue pour ses programmes en médias, communication, architecture et langues, Westminster offre un accès direct à l'un des marchés de l'emploi…",
+   "nom": "International Postgraduate Excellence Award — University of Westminster",
+   "resume": "Bourse de l'université de Westminster (Londres) pour des étudiants internationaux à haut niveau académique inscrits à un Master à temps plein. Elle réduit de 3 000 £ les frais de scolarité de la première année.",
    "resume_long": "L'University of Westminster est située au cœur de Londres, avec des campus près de Regent Street et Baker Street. Reconnue pour ses programmes en médias, communication, architecture et langues, Westminster offre un accès direct à l'un des marchés de l'emploi les plus dynamiques au monde. La bourse de £3 000 est une aide bienvenue dans le contexte du coût de la vie londonien.",
-   "valeur": "£3 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 2 juin 2025 (vérifier pour l'édition suivante)"
+   "valeur": "3 000 £ sur les frais de scolarité (5 000 £ pour le Master de 2 ans avec Integrated Professional Year Experience)",
+   "eligibilite": "Statut de frais 'overseas' (étudiants hors Royaume-Uni, dont les Camerounais) ; offre pour un Master à temps plein commençant en janvier 2027 ; équivalent d'un bon 2:1 britannique ; sélection principalement sur l'excellence académique. Exclus : cours professionnels (RIBA Part III), doctorats, cours en ligne, PG Certificate/Diploma, étudiants ayant droit à une autre remise (alumni, partenaire).",
+   "edition_note": "Édition janvier 2027 : date limite 30 novembre 2026. L'édition septembre 2026 est close ; édition septembre 2027 non annoncée.",
+   "couverture_detail": "3 000 £ versés directement à l'université pour la première année de scolarité (5 000 £ pour le Master de 2 ans avec année professionnelle intégrée).",
+   "ne_couvre_pas": "Frais de vie, voyage, visa ; l'acompte de 5 500 £ pour obtenir le CAS ; les années suivantes.",
+   "diplome": "Licence équivalente à un bon 2:1 britannique (tableau d'équivalence en PDF sur la page)",
+   "langue": "Cours en anglais",
+   "conseil": "La liste précise des pièces du formulaire n'est visible qu'après connexion au portail : se renseigner via l'équipe des bourses. 3 000 £ est une aide partielle : prévoir le reste du financement.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Bourse non reportable à une autre année ; un seul prix par étudiant.",
+    "Après sélection, l'étudiant doit justifier ses moyens de subsistance (environ 1 334 £ par mois selon l'université)."
+   ],
+   "dossier": [
+    "Offre d'admission pour un Master à temps plein commençant en janvier 2027",
+    "Candidature en ligne à la bourse via le portail de l'université",
+    "Justificatif du niveau académique équivalent à un bon 2:1"
+   ],
+   "etapes": [
+    "Obtenir une offre pour un Master éligible à temps plein (janvier 2027)",
+    "Cliquer sur 'Apply now' sur la page de la bourse et soumettre la candidature avant le 30 novembre 2026",
+    "Résultat communiqué dans les 4 semaines après la date limite"
+   ]
   },
   "en": {
-   "nom": "International Postgraduate Scholarships — University of Westminster"
+   "nom": "International Postgraduate Excellence Award — University of Westminster",
+   "resume": "University of Westminster (London) scholarship for high-achieving international students on a full-time Master's. It reduces first-year tuition fees by GBP 3,000.",
+   "valeur": "GBP 3,000 towards tuition fees (GBP 5,000 for the 2-year Master's with Integrated Professional Year Experience)",
+   "couverture_detail": "GBP 3,000 paid directly to the university for the first year of tuition (GBP 5,000 for the 2-year Master's with integrated professional year).",
+   "ne_couvre_pas": "Living costs, travel, visa; the GBP 5,500 deposit for the CAS; later years.",
+   "eligibilite": "Overseas fee status (students from outside the UK, including Cameroonians); offer for a full-time Master's starting January 2027; equivalent of a good UK 2:1; selected mainly on academic excellence. Excluded: professional courses (RIBA Part III), doctorates, online courses, PG Certificate/Diploma, students eligible for another discount (alumni, partner).",
+   "diplome": "Bachelor's degree equivalent to a good UK 2:1 (equivalency chart PDF on the page)",
+   "langue": "Courses taught in English",
+   "conseil": "The exact documents in the form are only visible after logging into the portal: ask the scholarships team. GBP 3,000 is partial support: plan the rest of your funding.",
+   "edition_note": "January 2027 edition: deadline 30 November 2026. The September 2026 edition is closed; September 2027 not announced.",
+   "autres": [
+    "Student visa: suspended for Cameroonian nationals since 26 March 2026 (gov.uk, visa brake)",
+    "Award cannot be deferred; one award per student.",
+    "Recipients must show they can cover living costs (about GBP 1,334 per month according to the university)."
+   ],
+   "dossier": [
+    "Offer for a full-time Master's starting January 2027",
+    "Online scholarship application via the university portal",
+    "Evidence of academic level equivalent to a good 2:1"
+   ],
+   "etapes": [
+    "Get an offer for an eligible full-time Master's (January 2027)",
+    "Click 'Apply now' on the scholarship page and submit before 30 November 2026",
+    "Outcome communicated within 4 weeks after the deadline"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Janvier 2027",
+    "ouverture": null,
+    "cloture": "2026-11-30",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.westminster.ac.uk/study/fees-and-funding/scholarships/international-postgraduate-excellence-award-january-2027",
+    "https://www.westminster.ac.uk/study/prospective-students/fees-and-funding/scholarships/international-postgraduate-scholarships",
+    "https://www.westminster.ac.uk/sites/default/public-files/general-documents/Westminster-International-Scholarship-T%26C-2024.pdf"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -7511,7 +8533,7 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -7523,35 +8545,103 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "octobre"
+   "ouverture_mois": "decembre",
+   "cloture_mois": "mars"
   },
   "edition": {
-   "cloture": "2025-10-31",
-   "confirme": false
+   "libelle": "2027/28 (tour 1 : 23 mars ; tour 2 : 18 mai 2027)",
+   "cloture": "2027-03-23",
+   "confirme": true
   },
-  "lien_officiel": "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/",
+  "lien_officiel": "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/ual-international-postgraduate-7,000-scholarships",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/"
+    "titre": "UAL International Postgraduate Scholarships (2027/28)",
+    "url": "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/ual-international-postgraduate-7,000-scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 octobre 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "International Postgraduate £7,000 Scholarships — University of the Arts London (UAL)",
-   "resume": "UAL est la plus grande université d'art et de design en Europe, regroupant six prestigieux collèges : Central Saint Martins, London College of Fashion, Chelsea College of Arts, Camberwell College of Arts, Wimbledon College of Arts et London College of…",
+   "nom": "UAL International Postgraduate Scholarships — University of the Arts London",
+   "resume": "Jusqu'à 288 bourses de 10 000 £ en réduction des frais de scolarité pour des étudiants internationaux inscrits à un Master taught à UAL (le montant de 7 000 £ du guide est dépassé). Le formulaire s'ouvre après l'offre, via le portail candidat.",
    "resume_long": "UAL est la plus grande université d'art et de design en Europe, regroupant six prestigieux collèges : Central Saint Martins, London College of Fashion, Chelsea College of Arts, Camberwell College of Arts, Wimbledon College of Arts et London College of Communication. Des designers comme Alexander McQueen, Stella McCartney et Jimmy Choo y ont étudié. La bourse de £7 000 rend cette institution de renom plus accessible aux talents internationaux.",
-   "valeur": "£7 000 (exonération de frais)",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 octobre 2025 (vérifier pour l'édition suivante)"
+   "valeur": "10 000 £ de réduction des frais de scolarité (jusqu'à 288 bourses pour 2027/28)",
+   "eligibilite": "Offre pour un Master taught (MA, MFA, MArch, MBA, MRes, MSc, Grad Dip) à UAL commençant en 2027/28, à temps plein ou partiel ; catégorie de frais 'Overseas' ; licence au niveau 2:1 ou équivalent ; ne pas déjà détenir un diplôme de Master taught britannique ou équivalent. Cours UAL Online exclus.",
+   "edition_note": "2027/28 : tour 1 le 23 mars 2027 (décision 21 mai) ; tour 2 le 18 mai 2027 (décision 1er juillet) ; janvier 2028 à confirmer.",
+   "couverture_detail": "Exonération de 10 000 £ créditée sur le compte de frais de l'année 1 ; le surplus est reporté sur l'année 2 pour les cours à temps partiel ou prolongés.",
+   "ne_couvre_pas": "Frais de vie, voyage, visa ; le solde des frais de scolarité.",
+   "diplome": "Licence équivalente à un 2:1 britannique (tableau d'équivalences sur la page)",
+   "langue": "Cours en anglais",
+   "conseil": "Pour le tour 2, déposer sa candidature de cours avant le 17 février 2027 afin d'avoir l'offre à temps. Un échec au tour 1 interdit de postuler au tour 2.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Une seule bourse UAL à la fois.",
+    "Les réponses doivent être rédigées par le candidat (textes générés par IA déconseillés)."
+   ],
+   "dossier": [
+    "Relevés de notes comme preuve de la qualification",
+    "Si résultats en attente : preuve de la note prévue, puis preuve de la note obtenue",
+    "Texte personnel répondant à trois questions (350 mots maximum chacune)"
+   ],
+   "etapes": [
+    "Obtenir une offre pour un Master UAL",
+    "À partir de décembre 2026, trouver le formulaire sous 'my funding' dans le portail candidat",
+    "Soumettre dans le même tour que l'offre (23 mars ou 18 mai 2027, 23h59 heure UK)",
+    "Accepter la bourse via le portail UAL si elle est attribuée"
+   ]
   },
   "en": {
-   "nom": "International Postgraduate £7,000 Scholarships — University of the Arts London (UAL)"
+   "nom": "UAL International Postgraduate Scholarships — University of the Arts London",
+   "resume": "Up to 288 scholarships of GBP 10,000 as a tuition fee reduction for international students on a UAL taught Master's (the GBP 7,000 amount in the guide is outdated). The form opens after the offer, via the applicant portal.",
+   "valeur": "GBP 10,000 tuition fee reduction (up to 288 awards for 2027/28)",
+   "couverture_detail": "GBP 10,000 waiver credited to the Year 1 fees account; any surplus goes to Year 2 for part-time or extended courses.",
+   "ne_couvre_pas": "Living costs, travel, visa; the remaining tuition fees.",
+   "eligibilite": "Offer for a UAL taught Master's (MA, MFA, MArch, MBA, MRes, MSc, Grad Dip) starting 2027/28, full or part time; Overseas fee category; Bachelor's at 2:1 level or equivalent; no UK taught postgraduate qualification already held. UAL Online courses excluded.",
+   "diplome": "Bachelor's degree equivalent to a UK 2:1 (equivalency chart on the page)",
+   "langue": "Courses taught in English",
+   "conseil": "For round 2, apply for the course by 17 February 2027 so the offer arrives in time. Unsuccessful in round 1 means you cannot apply in round 2.",
+   "edition_note": "2027/28: round 1 on 23 March 2027 (decision 21 May); round 2 on 18 May 2027 (decision 1 July); January 2028 to be confirmed.",
+   "autres": [
+    "Student visa: suspended for Cameroonian nationals since 26 March 2026 (gov.uk, visa brake)",
+    "Only one UAL award at a time.",
+    "Answers must be written by the applicant (AI-generated text discouraged)."
+   ],
+   "dossier": [
+    "Academic transcripts as proof of qualification",
+    "If results pending: evidence of predicted grade, then evidence of achieved grade",
+    "Personal statement answering three questions (max 350 words each)"
+   ],
+   "etapes": [
+    "Get an offer for a UAL Master's",
+    "From December 2026, find the form under 'my funding' in the applicant portal",
+    "Submit in the same round as the offer (23 March or 18 May 2027, 11:59pm UK time)",
+    "Accept the award via the UAL portal if successful"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28 (tour 1 : 23 mars ; tour 2 : 18 mai 2027)",
+    "ouverture": null,
+    "cloture": "2027-03-23",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.arts.ac.uk/study-at-ual/fees-and-funding/scholarships-search/ual-international-postgraduate-7,000-scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -7600,6 +8690,10 @@
   },
   "en": {
    "nom": "Vice-Chancellor's International Scholarship — Cardiff University"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site officiel Cardiff inaccessible (403 Cloudflare, y compris via curl) : impossible de lire la page officielle ; la liste de pays (Cameroun) n'a pas pu être confirmée"
   }
  },
  {
@@ -7608,7 +8702,7 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -7619,35 +8713,115 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "janvier"
+   "ouverture_mois": "",
+   "cloture_mois": "août et janvier"
   },
   "edition": {
-   "cloture": "2025-01-10",
-   "confirme": false
+   "libelle": "Entrée février 2027",
+   "cloture": "2027-01-08",
+   "confirme": true
   },
-  "lien_officiel": "https://www.surrey.ac.uk/fees-and-funding/scholarships/vice-chancellors-future-leaders-award",
+  "lien_officiel": "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-postgraduate",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.surrey.ac.uk/fees-and-funding/scholarships/vice-chancellors-future-leaders-award"
+    "titre": "International Excellence Award (postgraduate) - University of Surrey",
+    "url": "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-postgraduate"
+   },
+   {
+    "titre": "Vice-Chancellor's Future Leaders Award (postgraduate) - Cameroun absent de la liste",
+    "url": "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/vice-chancellors-future-leaders-award-postgraduate"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "10 janvier 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Vice-Chancellor's Future Leaders Award — University of Surrey",
-   "resume": "Le Future Leaders Award cible les étudiants internationaux qui démontrent un potentiel de leadership. £7 500 est un montant significatif qui peut couvrir une part importante des frais de vie pendant un Master d'un an. L'University of Surrey est reconnue pour…",
+   "nom": "International Excellence Award (master) — University of Surrey",
+   "resume": "Réduction de 5 000 £ sur les frais de scolarité pour les étudiants internationaux autofinancés admis dans un master à temps plein à Surrey. Le Vice-Chancellor's Future Leaders Award du guide exclut le Cameroun (liste de pays) ; c'est l'International Excellence Award, ouvert quelle que soit la nationalité, qui s'applique.",
    "resume_long": "Le Future Leaders Award cible les étudiants internationaux qui démontrent un potentiel de leadership. £7 500 est un montant significatif qui peut couvrir une part importante des frais de vie pendant un Master d'un an. L'University of Surrey est reconnue pour l'employabilité de ses diplômés — un atout majeur dans le contexte du Graduate Route visa.",
-   "valeur": "£7 500",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 10 janvier 2025 (vérifier pour l'édition suivante)"
+   "valeur": "5 000 £ de réduction sur les frais de scolarité (première année seulement pour un master de 2 ans)",
+   "eligibilite": "Étudiant soumis aux frais internationaux, autofinancé (ni boursier ni sponsorisé), avec une offre pour un master à temps plein. Ouvert quelle que soit la nationalité ou le domicile. Exclus : Surrey International Study Centre, temps partiel et distance, MBA, MSc AI (Conversion), Biotechnology, Food Science, Human Nutrition, Pharmaceutical Sciences ; Applied Analytical Chemistry exclu pour septembre 2027.",
+   "edition_note": "Entrée février 2027 : clôture 8 janvier 2027. Entrée septembre 2027 : clôture 20 août 2027.",
+   "couverture_detail": "Exonération de 5 000 £ sur les frais de scolarité.",
+   "ne_couvre_pas": "Frais de subsistance, visa, assurance de santé, voyage.",
+   "diplome": "Licence (ou équivalent) exigée pour l'admission au master visé.",
+   "langue": "Études en anglais ; preuve de niveau d'anglais selon le programme.",
+   "conseil": "Candidatez tôt : les attributions se font par ordre d'arrivée et la candidature doit être finalisée avant l'émission du CAS. Vérifiez que votre programme n'est pas dans la liste d'exclusions et le blocage de visa pour les Camerounais.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Non reportable en cas de report d'inscription (nouvelle candidature requise).",
+    "Non cumulable avec la remise anciens étudiants ou paiement anticipé.",
+    "Attribution par ordre d'arrivée, examen mensuel."
+   ],
+   "dossier": [
+    "Offre d'admission de l'université",
+    "Numéro d'étudiant valide (student ID)",
+    "Formulaire de candidature à la bourse"
+   ],
+   "etapes": [
+    "Obtenir une offre d'admission en master à temps plein à Surrey.",
+    "Remplir le formulaire de bourse (offre et student ID requis).",
+    "Candidater avant l'émission du CAS et avant la date limite de l'entrée visée."
+   ]
   },
   "en": {
-   "nom": "Vice-Chancellor's Future Leaders Award — University of Surrey"
+   "nom": "International Excellence Award (postgraduate) — University of Surrey",
+   "resume": "A GBP 5,000 tuition fee waiver for self-funded international students holding an offer for a full-time master's at Surrey. The guide's Vice-Chancellor's Future Leaders Award excludes Cameroon (country list); the International Excellence Award, open regardless of nationality, applies instead.",
+   "valeur": "GBP 5,000 tuition fee waiver (first year only on 2-year masters)",
+   "couverture_detail": "GBP 5,000 off tuition fees.",
+   "ne_couvre_pas": "Living costs, visa, health insurance, travel.",
+   "eligibilite": "Overseas fee-paying, self-funded student (no sponsor or other scholarship) with an offer for a full-time master's. Open regardless of nationality or domicile. Excluded: Surrey International Study Centre, part-time and distance learning, MBA, MSc AI (Conversion), Biotechnology, Food Science, Human Nutrition, Pharmaceutical Sciences; Applied Analytical Chemistry excluded for September 2027.",
+   "diplome": "Bachelor's degree (or equivalent) required for admission to the master's.",
+   "langue": "Taught in English; English proficiency proof depends on the programme.",
+   "conseil": "Apply early: awards are first come, first served and the application must be finalised before the CAS is issued. Check your course is not excluded and the visa suspension for Cameroonians.",
+   "edition_note": "February 2027 entry: closes 8 January 2027. September 2027 entry: closes 20 August 2027.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Not deferrable (reapplication needed if you defer).",
+    "Cannot be combined with the alumni or early bird discount.",
+    "Allocated first come, first served, reviewed monthly."
+   ],
+   "dossier": [
+    "University offer",
+    "Valid student ID",
+    "Scholarship application form"
+   ],
+   "etapes": [
+    "Obtain an offer for a full-time master's at Surrey.",
+    "Complete the scholarship form (offer and student ID required).",
+    "Apply before a CAS is issued and before the deadline for your intake."
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "Entrée février 2027",
+    "ouverture": null,
+    "cloture": "2027-01-08",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Entrée septembre 2027",
+    "ouverture": null,
+    "cloture": "2027-08-20",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-postgraduate",
+    "https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/vice-chancellors-future-leaders-award-postgraduate"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -7656,7 +8830,7 @@
   "pays_accueil": [
    "Royaume-Uni"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
@@ -7667,85 +8841,110 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
+   "ouverture_mois": "",
    "cloture_mois": "novembre"
   },
   "edition": {
-   "cloture": "2024-11-30",
-   "confirme": false
+   "libelle": "2026/27 (entrée janvier 2027)",
+   "cloture": "2026-11-30",
+   "confirme": true
   },
-  "lien_officiel": "https://www.brunel.ac.uk/scholarships",
+  "lien_officiel": "https://www.brunel.ac.uk/scholarships/the-vice-chancellors-excellence-award-terms-and-conditions",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
+    "titre": "Vice-Chancellor's Postgraduate International Excellence Award - Terms and conditions",
+    "url": "https://www.brunel.ac.uk/scholarships/the-vice-chancellors-excellence-award-terms-and-conditions"
+   },
+   {
+    "titre": "Brunel scholarships",
     "url": "https://www.brunel.ac.uk/scholarships"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "30 novembre 2024 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Vice-Chancellor's Excellence Award for International Students — Brunel University of London",
-   "resume": "Brunel University, à l'ouest de Londres, est reconnue pour ses programmes en ingénierie, en design, en sport et en business. Nommée en l'honneur d'Isambard Kingdom Brunel — l'un des plus grands ingénieurs de l'histoire — l'université maintient une forte…",
+   "nom": "Vice-Chancellor's Postgraduate International Excellence Award — Brunel University of London",
+   "resume": "Réduction de 6 000 £ sur les frais de scolarité pour les étudiants internationaux autofinancés en master enseigné (PGT) ou MRes à temps plein. Aucun formulaire : les candidats éligibles sont examinés automatiquement.",
    "resume_long": "Brunel University, à l'ouest de Londres, est reconnue pour ses programmes en ingénierie, en design, en sport et en business. Nommée en l'honneur d'Isambard Kingdom Brunel — l'un des plus grands ingénieurs de l'histoire — l'université maintient une forte tradition d'innovation. La réduction de £6 000 est un avantage financier appréciable.",
-   "valeur": "£6 000 (réduction de frais)",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 30 novembre 2024 (vérifier pour l'édition suivante)"
+   "valeur": "6 000 £ de réduction sur les frais de scolarité (par an, 1 an ou 2 ans pour un cursus de 2 ans)",
+   "eligibilite": "Offre pour un PGT ou MRes à temps plein débutant en septembre 2026 ou janvier 2027 ; statut de frais « overseas », autofinancé (non sponsorisé). Pas de condition de nationalité autre que le statut de frais internationaux, donc le Cameroun est admis. Exclus : PhD/MPhil, PgCert, PgDip, MSc Physician Associate, Pathway College, temps partiel, distance, en ligne.",
+   "edition_note": "Entrée septembre 2026 : date limite conseillée 31 août 2026 (passée). Entrée janvier 2027 : 30 novembre 2026. Conditions 2027/28 non publiées.",
+   "couverture_detail": "Réduction de 6 000 £ sur les frais de scolarité, ne remplace pas l'acompte de 5 000 £.",
+   "ne_couvre_pas": "Frais de subsistance, visa, assurance, acompte (à payer en plus).",
+   "diplome": "Licence britannique 2:1 minimum ou équivalent international.",
+   "langue": "Études en anglais.",
+   "conseil": "L'acompte de 5 000 £ est nécessaire pour garder la réduction : prévoyez-le. Pour l'entrée de janvier 2027, la date limite conseillée est proche ; l'édition 2027/28 n'est pas encore publiée. Vérifiez le blocage de visa pour les Camerounais.",
+   "autres": [
+    "Visa étudiant : suspendu pour les Camerounais depuis le 26 mars 2026 (gov.uk, visa brake)",
+    "Non cumulable avec d'autres bourses ou remises de l'université (sauf remise de 2 % paiement rapide et Graduate Discount).",
+    "Un report vers 2027/28 fait perdre la réduction.",
+    "Aucun recours sur les décisions d'attribution."
+   ],
+   "dossier": [
+    "Candidature à un master enseigné ou MRes à temps plein",
+    "Diplôme de licence (2:1 ou équivalent)",
+    "Paiement de l'acompte de 5 000 £ avant la date limite",
+    "Visa étudiant valide à l'inscription"
+   ],
+   "etapes": [
+    "Postuler à un PGT ou MRes à temps plein à Brunel et obtenir une offre.",
+    "Remplir les conditions de l'offre.",
+    "Payer l'acompte de 5 000 £ avant la date limite conseillée (aucun formulaire de bourse)."
+   ]
   },
   "en": {
-   "nom": "Vice-Chancellor's Excellence Award for International Students — Brunel University of London"
-  }
- },
- {
-  "id": "great-scholarships-university-of-kent",
-  "organisme": "University of Kent (pour le Royaume-Uni dans son ensemble — programme gouvernemental GREAT)",
-  "pays_accueil": [
-   "Royaume-Uni"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "gouvernementale",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "avril"
+   "nom": "Vice-Chancellor's Postgraduate International Excellence Award — Brunel University of London",
+   "resume": "A GBP 6,000 tuition fee reduction for self-funded international students on full-time taught master's (PGT) or MRes courses. No form: eligible applicants are considered automatically.",
+   "valeur": "GBP 6,000 tuition fee reduction (per year, 1 year or 2 for two-year courses)",
+   "couverture_detail": "GBP 6,000 off tuition fees; does not replace the GBP 5,000 deposit.",
+   "ne_couvre_pas": "Living costs, visa, insurance, the deposit (payable on top).",
+   "eligibilite": "Offer for a full-time PGT or MRes starting September 2026 or January 2027; overseas fee status, self-funded (not sponsored). No nationality condition beyond overseas fee status, so Cameroon is admitted. Excluded: PhD/MPhil, PgCert, PgDip, MSc Physician Associate, Pathway College, part-time, distance, online.",
+   "diplome": "UK 2:1 minimum or equivalent international degree.",
+   "langue": "Taught in English.",
+   "conseil": "The GBP 5,000 deposit is required to keep the reduction, so plan for it. For January 2027 entry the advisory deadline is close; 2027/28 terms are not yet published. Check the visa suspension for Cameroonians.",
+   "edition_note": "September 2026 entry: advisory deadline 31 August 2026 (passed). January 2027 entry: 30 November 2026. 2027/28 terms not yet published.",
+   "autres": [
+    "Student visa: suspended for Cameroonians since 26 March 2026 (gov.uk, visa brake)",
+    "Cannot be combined with other University awards (except 2% prompt payment discount and Graduate Discount).",
+    "Deferring to 2027/28 forfeits the reduction.",
+    "No appeals on allocation decisions."
+   ],
+   "dossier": [
+    "Application to a full-time taught master's or MRes",
+    "Bachelor's degree (2:1 or equivalent)",
+    "GBP 5,000 deposit paid before the deadline",
+    "Valid study visa at enrolment"
+   ],
+   "etapes": [
+    "Apply to a full-time PGT or MRes at Brunel and get an offer.",
+    "Meet the offer conditions.",
+    "Pay the GBP 5,000 deposit before the advisory deadline (no scholarship form)."
+   ]
   },
-  "edition": {
-   "cloture": "2025-04-25",
-   "confirme": false
-  },
-  "lien_officiel": "https://study-uk.britishcouncil.org/scholarships/great-scholarships",
-  "sources": [
+  "editions": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://study-uk.britishcouncil.org/scholarships/great-scholarships"
+    "annee": 2026,
+    "libelle": "2026/27 (entrée janvier 2027)",
+    "ouverture": null,
+    "cloture": "2026-11-30",
+    "confirme": true
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "25 avril 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "GREAT Scholarships — University of Kent",
-   "resume": "Les GREAT Scholarships sont un programme conjoint du British Council et des universités britanniques. Ils ciblent des étudiants de pays spécifiques — la liste change chaque année. Si votre pays figure dans la liste, c'est une opportunité supplémentaire avec un…",
-   "resume_long": "Les GREAT Scholarships sont un programme conjoint du British Council et des universités britanniques. Ils ciblent des étudiants de pays spécifiques — la liste change chaque année. Si votre pays figure dans la liste, c'est une opportunité supplémentaire avec un processus de candidature simplifié. £10 000 couvre une part significative des frais d'un Master d'un an.",
-   "valeur": "£10 000",
-   "eligibilite": "Étudiants de pays spécifiques : Chine, France, Kenya, Malaisie, Nigeria, Thaïlande, Turquie",
-   "edition_note": "Date limite indiquée dans le guide : 25 avril 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "GREAT Scholarships — University of Kent"
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.brunel.ac.uk/scholarships/the-vice-chancellors-excellence-award-terms-and-conditions",
+    "https://www.brunel.ac.uk/scholarships"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -7794,6 +8993,10 @@
   },
   "en": {
    "nom": "Vice-Chancellor's PhD Scholarships — University of West London"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Programme introuvable avec détails : la page UWL doctorat ne donne ni montant, ni éligibilité internationale, ni dates ; une page récente indique la bourse comme fermée/réservée aux étudiants britanniques"
   }
  },
  {
@@ -7840,6 +9043,10 @@
   },
   "en": {
    "nom": "Excellence Scholarship — University of Southampton"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles lues (landing, postgraduate 2027) sans critères, montant, pays ni dates ; Cameroun non confirmé pour la 75th Anniversary Global Postgraduate Excellence Scholarship"
   }
  },
  {
@@ -7890,55 +9097,10 @@
   },
   "en": {
    "nom": "International Talent Awards — Falmouth University"
-  }
- },
- {
-  "id": "international-ambassador-scholarship-university-of-west-london",
-  "organisme": "University of West London",
-  "pays_accueil": [
-   "Royaume-Uni"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master"
-  ],
-  "domaines": [
-   "tous"
-  ],
-  "couverture_niveau": "partielle",
-  "origine": "universitaire",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "juillet"
   },
-  "edition": {
-   "cloture": "2025-07-31",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.uwl.ac.uk/international/scholarships-and-funding",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.uwl.ac.uk/international/scholarships-and-funding"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "31 juillet 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "International Ambassador Scholarship — University of West London",
-   "resume": "L'International Ambassador Scholarship d'UWL est un programme qui combine financement et responsabilité. Les bénéficiaires s'engagent à représenter l'université et à partager leur expérience avec de futurs étudiants internationaux. C'est une bourse modeste en…",
-   "resume_long": "L'International Ambassador Scholarship d'UWL est un programme qui combine financement et responsabilité. Les bénéficiaires s'engagent à représenter l'université et à partager leur expérience avec de futurs étudiants internationaux. C'est une bourse modeste en montant mais enrichissante en termes d'expérience et de réseau.",
-   "valeur": "Jusqu'à £1 000",
-   "eligibilite": "Étudiants internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 31 juillet 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "International Ambassador Scholarship — University of West London"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Site Falmouth inaccessible (403 Cloudflare) ; recherche indique seulement 15 bourses de 2 000 £ (licence, septembre 2026), Cameroun et édition 2027 non confirmés"
   }
  },
  {

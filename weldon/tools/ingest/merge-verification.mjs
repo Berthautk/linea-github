@@ -16,7 +16,9 @@ const outs = fs.readdirSync(V).filter((f) => /^(out|resultat)-\d+\.json$/.test(f
 for (const f of outs) {
   let arr; try { arr = JSON.parse(fs.readFileSync(V + f, "utf8")); } catch (e) { log.push(`ILLISIBLE ${f}`); continue; }
   for (const o of arr) {
-    const [k, b] = find(o.id);
+    let [k, b] = find(o.id);
+    // Nouvelle bourse trouvée par la recherche : créée seulement si elle est vérifiée ; tout le reste passe par le même contrôle.
+    if (!b && o.nouvelle && o.verifiee && !o.supprimer) { b = { id: o.id, status: "to_verify", niveaux: o.niveaux, domaines: o.domaines?.length ? o.domaines : ["tous"], fr: { nom: o.fr?.nom }, en: { nom: o.en?.nom } }; files.cur.push(b); k = "cur"; stats.nouvelle = (stats.nouvelle || 0) + 1; }
     if (!b) { stats.absente++; continue; }
     done.includes(o.id) || done.push(o.id);
     if (o.supprimer) { files[k] = files[k].filter((x) => x.id !== o.id); stats.supprimee++; log.push(`supprimée ${o.id} : ${o.motif_non_verifiee || ""}`); continue; }

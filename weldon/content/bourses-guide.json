@@ -16534,13 +16534,12 @@
  },
  {
   "id": "the-french-institutes-for-advanced-study-fellowship-fully-funded",
-  "organisme": "Réseau français des Instituts d'Études Avancées (IEA)",
+  "organisme": "Réseau français des Instituts d'Études Avancées (FIAS - French Institutes for Advanced Study)",
   "pays_accueil": [
    "France"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
-   "doctorat",
    "postdoc"
   ],
   "domaines": [
@@ -16550,35 +16549,110 @@
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "juillet"
+   "ouverture_mois": null,
+   "cloture_mois": "juin"
   },
   "edition": {
-   "cloture": "2025-07-16",
-   "confirme": false
+   "libelle": "2027/28",
+   "cloture": "2026-06-25",
+   "confirme": true
   },
-  "lien_officiel": "https://www.frias.uni-freiburg.de/en/funding-programs/french-institutes-advanced-study",
+  "lien_officiel": "https://fias-fp.eu/",
   "sources": [
    {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.frias.uni-freiburg.de/en/funding-programs/french-institutes-advanced-study"
+    "titre": "Paris IAS - FIAS call for applications 2027-2028",
+    "url": "https://www.paris-iea.fr/en/apply/calls-for-applications/fias-call-for-applications-2027-2028"
+   },
+   {
+    "titre": "FIAS FAQ",
+    "url": "https://fias-fp.eu/fellowships/faq"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "16 juillet 2025 (vérifier pour l'édition suivante)"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "The French Institutes for Advanced Study Fellowship (Fully Funded)",
-   "resume": "Les Instituts d'Études Avancées français (IEA de Paris, Lyon, Marseille, Nantes) offrent des fellowships résidentiels pour les chercheurs internationaux en sciences humaines et sociales. C'est un programme de niveau avancé — il s'adresse aux chercheurs…",
+   "nom": "French Institutes for Advanced Study Fellowship (FIAS)",
+   "resume": "Bourses résidentielles de 10 mois dans sept Instituts d'Études Avancées français (Aix-Marseille, Cergy, Val de Loire, Lyon, Montpellier, Nantes, Paris), en sciences humaines et sociales et disciplines connexes. Réservées aux chercheurs titulaires d'un doctorat et de deux ans d'expérience de recherche.",
    "resume_long": "Les Instituts d'Études Avancées français (IEA de Paris, Lyon, Marseille, Nantes) offrent des fellowships résidentiels pour les chercheurs internationaux en sciences humaines et sociales. C'est un programme de niveau avancé — il s'adresse aux chercheurs confirmés, pas aux étudiants. Les fellows bénéficient d'un environnement intellectuel exceptionnel, d'un bureau, d'un logement et d'une allocation de vie.",
-   "valeur": "Entièrement financée — Allocation de vie nette (montant variable)",
-   "eligibilite": "Chercheurs internationaux",
-   "edition_note": "Date limite indiquée dans le guide : 16 juillet 2025 (vérifier pour l'édition suivante)"
+   "valeur": "2 200 EUR nets par mois pendant 10 mois, logement ou aide à l'installation, protection sociale, voyage",
+   "eligibilite": "Chercheurs de toutes nationalités (le Cameroun est donc admis). Doctorat plus deux ans d'expérience de recherche à temps plein après le doctorat (la thèse ne compte pas). Ne pas avoir vécu ou travaillé principalement en France plus de 12 mois dans les 3 ans précédant la date limite. Pas de limite d'âge.",
+   "edition_note": "Appel 2027/28 clos le 25 juin 2026 (18 h Paris). Résultats prévus en mars 2027. Dates du prochain appel non annoncées sur les pages consultées.",
+   "couverture_detail": "Allocation mensuelle nette de 2 200 EUR, couverture de sécurité sociale, logement ou aide à l'installation, budget de recherche et de formation, formation aux compétences, frais de voyage.",
+   "ne_couvre_pas": "Non précisé sur la page consultée.",
+   "diplome": "Doctorat (copie du diplôme avec date d'obtention)",
+   "langue": "Dossier rédigé en anglais",
+   "conseil": "Programme réservé aux chercheurs post-doctorants. Surveillez fias-fp.eu : l'appel 2027/28 est clos et le prochain n'était pas annoncé le 19 octobre 2026.",
+   "autres": [
+    "Un seul projet par candidat et par an",
+    "Ce n'est pas une bourse pour étudiants de licence ou master"
+   ],
+   "dossier": [
+    "CV détaillé avec liste de publications et contacts de trois universitaires",
+    "Projet de recherche (5 pages maximum ou 10 000 signes, bibliographie d'une page en option)",
+    "Lettres de recommandation (PDF ou adresses e-mail des référents)",
+    "Copie du diplôme de doctorat (avec traduction officielle si alphabet non latin)",
+    "Publications (toute langue avec résumé en anglais)"
+   ],
+   "etapes": [
+    "Créer un compte et remplir le formulaire en ligne sur fias-fp.eu",
+    "Téléverser le projet, le CV, le diplôme et les lettres",
+    "Soumettre avant la date limite (18 h, heure de Paris)",
+    "Évaluation par les pairs puis sélection par les conseils des instituts"
+   ]
   },
   "en": {
-   "nom": "The French Institutes for Advanced Study Fellowship (Fully Funded)"
+   "nom": "French Institutes for Advanced Study Fellowship (FIAS)",
+   "resume": "Ten-month residential fellowships at seven French Institutes for Advanced Study (Aix-Marseille, Cergy, Loire Valley, Lyon, Montpellier, Nantes, Paris) in the social sciences and humanities and related fields. Open to researchers holding a PhD plus two years of research experience.",
+   "valeur": "EUR 2,200 net per month for 10 months, accommodation or relocation support, social security, travel",
+   "couverture_detail": "Net monthly allowance of EUR 2,200, social security coverage, accommodation or relocation support, research and training budget, skills training, travel expenses.",
+   "ne_couvre_pas": "Not specified on the pages consulted.",
+   "eligibilite": "Researchers of all nationalities (Cameroon is therefore eligible). PhD plus two years of full-time post-PhD research experience (PhD time does not count). Must not have lived or worked mainly in France for more than 12 months in the 3 years before the deadline. No age limit.",
+   "diplome": "PhD (copy of diploma showing award date)",
+   "langue": "Application written in English",
+   "conseil": "This is for post-doctoral researchers only. Watch fias-fp.eu: the 2027/28 call is closed and the next one was not announced on 19 October 2026.",
+   "edition_note": "2027/28 call closed on 25 June 2026 (6 pm Paris). Results expected March 2027. Next call dates not announced on the pages consulted.",
+   "autres": [
+    "One project per applicant per year",
+    "Not a scholarship for undergraduate or master's students"
+   ],
+   "dossier": [
+    "Detailed CV with publication list and contacts of three scholars",
+    "Research proposal (max 5 pages or 10,000 signs, optional one-page bibliography)",
+    "Recommendation letters (PDF or referees' email addresses)",
+    "Copy of PhD diploma (with official translation if non-Latin script)",
+    "Publications (any language with English abstract)"
+   ],
+   "etapes": [
+    "Create an account and fill in the online form at fias-fp.eu",
+    "Upload the proposal, CV, diploma and letters",
+    "Submit before the deadline (6 pm Paris time)",
+    "Peer review followed by selection by the institutes' boards"
+   ]
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2026-06-25",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.paris-iea.fr/en/apply/calls-for-applications/fias-call-for-applications-2027-2028",
+    "https://fias-fp.eu/fellowships/faq"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
   }
  },
  {
@@ -16619,6 +16693,10 @@
   },
   "en": {
    "nom": "Call for PhD Studentships — Foundation for Science and Technology (FCT)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Page officielle FCT lue (Cameroun admis comme Etat tiers, appel 2026 clos le 31 mars 2026), mais l'avis d'appel (liste exacte des documents, montants mensuels) n'a pas pu être lu ; dates de l'appel 2027 non annoncées."
   }
  },
  {
@@ -16666,6 +16744,10 @@
   },
   "en": {
    "nom": "ICFO Student Research Fellowships Program — Spain (Fully Funded)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "appel verifie = stage remunere, pas une bourse d etudes"
   }
  },
  {
@@ -16706,56 +16788,10 @@
   },
   "en": {
    "nom": "EADA Business School Scholarships for Excellence — Spain"
-  }
- },
- {
-  "id": "the-maec-aecid-scholarship-royal-academy-of-spain-in-rome",
-  "organisme": "Ministère espagnol des Affaires étrangères (MAEC) / AECID",
-  "pays_accueil": [
-   "Espagne"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "licence",
-   "master",
-   "doctorat"
-  ],
-  "domaines": [
-   "lettres-langues"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "gouvernementale",
-  "cycle": {
-   "type": "annuelle",
-   "cloture_mois": "juin"
   },
-  "edition": {
-   "cloture": "2025-06-20",
-   "confirme": false
-  },
-  "lien_officiel": "https://www.aecid.es/en/scholarships",
-  "sources": [
-   {
-    "titre": "Guide ultime des bourses",
-    "url": "https://www.aecid.es/en/scholarships"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "guide",
-   "date_limite_texte": "20 juin 2025 (vérifier pour l'édition suivante)"
-  },
-  "fr": {
-   "nom": "The MAEC-AECID Scholarship — Royal Academy of Spain in Rome",
-   "resume": "Le programme MAEC-AECID offre des bourses de résidence à la Real Academia de España en Rome — un programme unique qui combine études, recherche et création artistique dans l'un des cadres les plus inspirants au monde.",
-   "resume_long": "Le programme MAEC-AECID offre des bourses de résidence à la Real Academia de España en Rome — un programme unique qui combine études, recherche et création artistique dans l'un des cadres les plus inspirants au monde.",
-   "valeur": "Variable — consulter le site officiel",
-   "eligibilite": "Étudiants et chercheurs",
-   "edition_note": "Date limite indiquée dans le guide : 20 juin 2025 (vérifier pour l'édition suivante)"
-  },
-  "en": {
-   "nom": "The MAEC-AECID Scholarship — Royal Academy of Spain in Rome"
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles EADA lues, mais Cameroun non cité (bourse régionale 'Africa' sans règle de nationalité détaillée) et liste des documents non publiée (formulaire PDF à demander aux admissions). Réduction de frais de scolarité (jusqu'à 35 %), pas une bourse complète."
   }
  },
  {
@@ -16805,6 +16841,10 @@
   },
   "en": {
    "nom": "Padua International Excellence Scholarship — Italy (Fully Funded)"
+  },
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pages officielles Unipd lues (non-citoyens italiens avec diplôme étranger admis, donc Cameroun inclus), mais l'avis d'appel 2027/28 de la bourse n'est pas encore publié (annoncé pour novembre 2026) et la liste des pièces d'admission n'est pas détaillée sur les pages lues."
   }
  },
  {

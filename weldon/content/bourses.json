@@ -3994,11 +3994,11 @@
   },
   {
     "id": "leiden-lexs",
-    "organisme": "Université de Leyde",
+    "organisme": "Université de Leiden",
     "pays_accueil": [
       "Pays-Bas"
     ],
-    "cameroun": "non_precise",
+    "cameroun": "oui",
     "niveaux": [
       "master"
     ],
@@ -4015,7 +4015,8 @@
     },
     "edition": {
       "libelle": "Rentrée septembre 2027",
-      "confirme": false
+      "cloture": "2026-12-01",
+      "confirme": true
     },
     "lien_officiel": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
     "sources": [
@@ -4025,45 +4026,87 @@
       }
     ],
     "fr": {
-      "nom": "Leiden University Excellence Scholarship (LExS)",
-      "resume": "Bourse d'excellence de l'Université de Leyde pour étudiants non-UE/EEE entrant en master.",
-      "valeur": "Bourse partielle (montant à vérifier sur la page officielle)",
-      "couverture_detail": "Montant non lu directement ; voir la page officielle.",
-      "eligibilite": "Passeport hors UE/EEE, non éligible au financement néerlandais des études ; lettre de motivation de 500 mots maximum en PDF ; certains masters de droit et les rentrées de février exclus.",
-      "diplome": "Licence",
-      "langue": "Anglais",
+      "nom": "Bourse d'excellence de l'Université de Leiden (LExS)",
+      "resume": "Bourse partielle pour des étudiants d'excellence hors EEE/AELE qui rejoignent un master à temps plein à Leiden en septembre. Environ 25 bourses par an pour plus de 1 000 candidats.",
+      "valeur": "Part des frais de scolarité : 10 000, 15 000, 17 500, 18 500 ou 19 000 EUR, pour la durée du programme",
+      "couverture_detail": "Cinq niveaux fixes de bourse, chacun représentant une part des frais de scolarité, valables pour la durée du master. Le niveau est final et non négociable.",
+      "eligibilite": "Passeport hors EEE/AELE et ne pas avoir droit au financement étudiant néerlandais (le Cameroun n'est pas nommé, mais relève de la règle générale hors EEE). Exclus : LLM non avancés et MSc de la faculté de droit, rentrées de février, titulaires d'un master de Leiden. Résultats parmi les 10 % meilleurs diplômés (indicatif).",
+      "diplome": "Admission à un master à temps plein de Leiden, avec d'excellents résultats antérieurs ; la preuve du classement n'est pas demandée.",
+      "langue": "Non précisée sur la page de la bourse (selon le programme choisi).",
       "autres": [
-        "La candidature ne peut plus être modifiée après envoi",
-        "Échéance variable selon les programmes (1er déc., 1er fév. ou 1er mars selon des pages de Leyde)"
+        "Une candidature de bourse distincte, avec sa propre lettre, pour chaque programme demandé.",
+        "Pas de modification possible après envoi ; candidatures tardives refusées.",
+        "Candidats avertis par e-mail avant fin mars."
       ],
       "dossier": [
-        "Lettre de motivation (500 mots max, PDF)",
-        "Admission au master"
+        "Candidature d'admission en ligne (avec frais éventuels)",
+        "Lettre de motivation (PDF, 500 mots maximum)",
+        "Conditions générales LExS, à confirmer par écrit en cas d'attribution"
       ],
-      "conseil": "Vérifiez l'échéance propre à votre master avant d'envoyer, car elle varie selon les facultés.",
-      "edition_note": "Les pages de Leyde donnent des dates différentes (1er décembre 2026 sur une page, 1er février ou 1er mars ailleurs) : aucune date confirmée."
+      "conseil": "Dépose ton admission assez tôt pour que la bourse apparaisse dans ton espace avant le 1er décembre 2026. Bourse très concurrentielle et partielle : prévois un financement complémentaire.",
+      "edition_note": "Date limite du 1er décembre 2026 pour la rentrée de septembre 2027 ; résultats avant fin mars 2027. Aucune date pour 2028 ou les années suivantes sur la page.",
+      "ne_couvre_pas": "Frais de vie ; la totalité des frais de scolarité n'est pas assurée ; frais de candidature à l'admission.",
+      "etapes": [
+        "Candidater en ligne à l'admission et payer les frais éventuels (comptez jusqu'à 3 jours ouvrés).",
+        "Dans l'écran Apply, ouvrir Scholarships et choisir LExS (affichée si tu es éligible).",
+        "Téléverser la lettre de motivation.",
+        "Soumettre avant la date limite ; le comité de faculté nomme les lauréats dans les 10 semaines."
+      ]
     },
     "en": {
       "nom": "Leiden University Excellence Scholarship (LExS)",
-      "resume": "Leiden University excellence scholarship for non-EU/EEA students entering a master's.",
-      "valeur": "Partial scholarship (amount to be checked on the official page)",
-      "couverture_detail": "Amount not read directly; see the official page.",
-      "eligibilite": "Non-EU/EEA passport, not eligible for Dutch student finance; motivation letter up to 500 words as PDF; some Law master's and February starts excluded.",
-      "diplome": "Bachelor's degree",
-      "langue": "English",
+      "resume": "Partial scholarship for excellent non-EEA/EFTA students joining a full-time Leiden master's in September. About 25 awards per year for over 1,000 applicants.",
+      "valeur": "Share of tuition fees: EUR 10,000, 15,000, 17,500, 18,500 or 19,000, for the duration of the programme",
+      "couverture_detail": "Five fixed award levels, each a share of the tuition fee, valid for the length of the master's. The level is final and non-negotiable.",
+      "ne_couvre_pas": "Living costs; full tuition is not guaranteed; the admission application fee.",
+      "eligibilite": "Non-EEA/EFTA passport and not eligible for Dutch student finance (Cameroon is not named, but falls under the general non-EEA rule). Excluded: non-advanced LLM and MSc programmes at Leiden Law School, February starts, holders of a Leiden master's. Results among the top 10% of graduates (indicative).",
+      "diplome": "Admission to a full-time Leiden master's with excellent previous results; proof of ranking is not required.",
+      "langue": "Not stated on the scholarship page (depends on the chosen programme).",
+      "conseil": "Submit your admission early enough that the scholarship appears in your portal before 1 December 2026. Very competitive and partial: plan additional funding.",
+      "edition_note": "Deadline 1 December 2026 for the September 2027 intake; results before end of March 2027. No dates for 2028 or later on the page.",
       "autres": [
-        "Application cannot be changed after submission",
-        "Deadline varies (1 Dec, 1 Feb or 1 Mar on different Leiden pages)"
+        "A separate scholarship application, with its own letter, for each programme applied to.",
+        "No edits after submission; late applications are not considered.",
+        "Applicants notified by email before the end of March."
       ],
       "dossier": [
-        "Motivation letter (500 words max, PDF)",
-        "Master's admission"
+        "Online admission application (with any fee)",
+        "Motivation letter (PDF, 500 words maximum)",
+        "LExS terms and conditions, to be confirmed in writing if awarded"
       ],
-      "conseil": "Check the deadline specific to your master's before submitting, as it varies by faculty.",
-      "edition_note": "Leiden pages give different dates (1 December 2026 on one page, 1 February or 1 March elsewhere): no date confirmed."
+      "etapes": [
+        "Apply online for admission and pay any fee (allow up to 3 working days).",
+        "On the Apply screen, open Scholarships and select LExS (shown if you are eligible).",
+        "Upload the motivation letter.",
+        "Submit before the deadline; faculty committees nominate recipients within 10 weeks."
+      ]
     },
-    "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "last_verified": "2026-10-20",
+    "status": "verified",
+    "editions": [
+      {
+        "annee": 2026,
+        "libelle": "Rentrée septembre 2027",
+        "ouverture": null,
+        "cloture": "2026-12-01",
+        "confirme": true
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "france-excellence-major",
@@ -4136,7 +4179,11 @@
       "edition_note": "No date read: the booklet describes only already-selected scholars (2026 edition)."
     },
     "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "status": "to_verify",
+    "verification_echec": {
+      "date": "2026-10-20",
+      "motif": "Dispositif réservé aux élèves de terminale non français présélectionnés par le chef d'un lycée français à l'étranger homologué (pas de candidature individuelle) ; le Cameroun n'est pas confirmé (liste des établissements de l'arrêté du 16 juin 2025 non lue) et le calendrier de la campagne 2027 n'est pas publié (seule la campagne 2026 est en ligne)."
+    }
   },
   {
     "id": "pec-g-bresil",
@@ -4221,11 +4268,11 @@
   },
   {
     "id": "yenching-academy",
-    "organisme": "Académie Yenching (Université de Pékin)",
+    "organisme": "Yenching Academy, Université de Pékin",
     "pays_accueil": [
       "Chine"
     ],
-    "cameroun": "non_precise",
+    "cameroun": "oui",
     "niveaux": [
       "master"
     ],
@@ -4233,7 +4280,8 @@
       "histoire-geographie",
       "droit-politique",
       "philo-sociologie",
-      "economie-gestion"
+      "economie-gestion",
+      "lettres-langues"
     ],
     "couverture_niveau": "complete",
     "origine": "universitaire",
@@ -4245,51 +4293,113 @@
     },
     "edition": {
       "libelle": "Promotion 2027-2028",
-      "confirme": false
+      "ouverture": "2026-09-01",
+      "cloture": "2026-11-30",
+      "confirme": true
     },
-    "lien_officiel": "https://yca.pku.edu.cn/",
+    "lien_officiel": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
     "sources": [
       {
-        "titre": "Yenching Academy - site officiel (non consulté directement)",
-        "url": "https://yca.pku.edu.cn/"
+        "titre": "Yenching Academy - Admissions",
+        "url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"
+      },
+      {
+        "titre": "Yenching Academy",
+        "url": "https://yenchingacademy.pku.edu.cn/"
       }
     ],
     "fr": {
-      "nom": "Yenching Academy - master en études chinoises",
-      "resume": "Master de deux ans en études chinoises à l'Université de Pékin, pour étudiants internationaux de toutes disciplines.",
-      "valeur": "Bourse présentée par des sites tiers comme couvrant scolarité, logement, allocation et voyage",
-      "couverture_detail": "Couverture non vérifiée sur une page officielle : à confirmer sur le site du programme.",
-      "eligibilite": "Candidature en ligne ; niveau d'anglais élevé (IELTS 7,0 selon un site tiers, non vérifié).",
-      "diplome": "Licence",
-      "langue": "Anglais",
+      "nom": "Yenching Academy (master interdisciplinaire en études chinoises, Université de Pékin)",
+      "resume": "Master interdisciplinaire d'études sur la Chine à l'Université de Pékin, ouvert aux candidats internationaux non chinois, avec bourse complète. Enseignement en anglais.",
+      "valeur": "Bourse complète : scolarité, logement, allocation mensuelle, un aller-retour, frais d'étude de terrain",
+      "couverture_detail": "Frais de scolarité, hébergement, allocation mensuelle, un voyage aller-retour et frais d'étude de terrain.",
+      "eligibilite": "Candidats internationaux : citoyenneté non chinoise avec passeport valide (aucune liste de pays ; le Cameroun n'est pas exclu). Excellent dossier académique, intérêt pour les études chinoises interdisciplinaires, réalisations extrascolaires ou de leadership. Pas d'inscription simultanée à un autre diplôme. Limite d'âge non indiquée.",
+      "diplome": "Licence en tout domaine, ou dernière année de licence avec diplôme attendu avant fin août 2027.",
+      "langue": "Anglais : IELTS Academic 7.0, TOEFL iBT 100, Cambridge 185, CET-6 600 (tests passés après le 1er septembre 2025), sauf dispense pour les anglophones natifs ou diplômés d'un cursus en anglais.",
       "autres": [
-        "Dates de clôture indiquées uniquement par des sites tiers (30 novembre 2026)"
+        "Les résultats de test doivent être envoyés directement par l'organisme (TOEFL : code C488).",
+        "Sont refusés : TOEFL MyBest Scores, TOEFL Home Edition, IELTS Indicator, IELTS Online."
       ],
       "dossier": [
-        "Dossier en ligne"
+        "Formulaire de candidature en ligne",
+        "Lettre de motivation personnelle (750 mots maximum)",
+        "Exposé d'intérêt de recherche (1 500 mots maximum)",
+        "CV",
+        "Relevés de notes officiels",
+        "Diplôme ou certificat de scolarité",
+        "Deux lettres de recommandation académiques (professeurs ou équivalent, en chinois ou anglais)",
+        "Résultat de test d'anglais, si requis"
       ],
-      "conseil": "Vérifiez les dates directement sur le site du programme avant de préparer le dossier.",
-      "edition_note": "Page officielle non consultée. Sites tiers : ouverture le 1er septembre 2026, clôture le 30 novembre 2026 : non confirmé."
+      "conseil": "Fais passer ton test d'anglais très tôt : il doit avoir été passé après le 1er septembre 2025 et envoyé directement par l'organisme. La date limite est à l'heure de Pékin (9 h).",
+      "edition_note": "Promotion 2027-2028 : ouverture le 1er septembre 2026, date limite le 30 novembre 2026, 9 h heure de Pékin. Aucune date pour les promotions suivantes. Les frais de candidature ne sont pas mentionnés sur la page lue.",
+      "ne_couvre_pas": "Non précisé sur la page.",
+      "etapes": [
+        "Créer un compte sur le portail apply.yca.pku.edu.cn.",
+        "Remplir le formulaire et téléverser les documents avant le 30 novembre 2026, 9 h (heure de Pékin).",
+        "Faire déposer les deux lettres de recommandation.",
+        "Les étudiants d'universités partenaires passent d'abord par la présélection interne de leur université."
+      ]
     },
     "en": {
-      "nom": "Yenching Academy - master's in China Studies",
-      "resume": "Two-year master's in China Studies at Peking University for international students of any discipline.",
-      "valeur": "Third-party sites describe a scholarship covering tuition, accommodation, stipend and travel",
-      "couverture_detail": "Coverage not verified on an official page: confirm on the programme site.",
-      "eligibilite": "Online application; high English level (IELTS 7.0 per a third-party site, unverified).",
-      "diplome": "Bachelor's degree",
-      "langue": "English",
+      "nom": "Yenching Academy (interdisciplinary master's in China Studies, Peking University)",
+      "resume": "Interdisciplinary master's in China Studies at Peking University, open to non-Chinese international applicants, with a full fellowship. Taught in English.",
+      "valeur": "Full fellowship: tuition, accommodation, monthly stipend, one round-trip fare, field study costs",
+      "couverture_detail": "Tuition, accommodation, monthly stipend, one round-trip travel fare and field study costs.",
+      "ne_couvre_pas": "Not specified on the page.",
+      "eligibilite": "International applicants: non-Chinese citizenship with a valid passport (no country list; Cameroon is not excluded). Outstanding academic record, interest in interdisciplinary China studies, extracurricular or leadership achievements. No concurrent enrolment in another degree. No age limit stated.",
+      "diplome": "Bachelor's degree in any field, or final year of a bachelor's with the diploma expected before the end of August 2027.",
+      "langue": "English: IELTS Academic 7.0, TOEFL iBT 100, Cambridge 185, CET-6 600 (tests taken after 1 September 2025), unless native English speaker or graduate of an English-taught degree.",
+      "conseil": "Take your English test early: it must have been taken after 1 September 2025 and sent directly by the testing body. The deadline is in Beijing time (9:00 am).",
+      "edition_note": "2027-2028 class: opens 1 September 2026, deadline 30 November 2026, 9:00 am Beijing time. No dates for later classes. No application fee is mentioned on the page read.",
       "autres": [
-        "Closing dates only from third-party sites (30 November 2026)"
+        "Test scores must be sent directly by the testing body (TOEFL: code C488).",
+        "Not accepted: TOEFL MyBest Scores, TOEFL Home Edition, IELTS Indicator, IELTS Online."
       ],
       "dossier": [
-        "Online application"
+        "Online application form",
+        "Personal statement (750 words maximum)",
+        "Statement of research interest (1,500 words maximum)",
+        "CV",
+        "Official transcripts",
+        "Diploma or certificate of enrollment",
+        "Two academic recommendation letters (professors or equivalent, in Chinese or English)",
+        "English proficiency test report, if required"
       ],
-      "conseil": "Check dates directly on the programme site before preparing your file.",
-      "edition_note": "Official page not read. Third-party sites: opens 1 September 2026, closes 30 November 2026: unconfirmed."
+      "etapes": [
+        "Create an account on the apply.yca.pku.edu.cn portal.",
+        "Fill in the form and upload the documents before 30 November 2026, 9:00 am Beijing time.",
+        "Have the two recommendation letters submitted.",
+        "Students from partner universities first go through their university's internal pre-selection."
+      ]
     },
-    "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "last_verified": "2026-10-20",
+    "status": "verified",
+    "editions": [
+      {
+        "annee": 2026,
+        "libelle": "Promotion 2027-2028",
+        "ouverture": "2026-09-01",
+        "cloture": "2026-11-30",
+        "confirme": true
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+        "https://yenchingacademy.pku.edu.cn/"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    },
+    "langue_acces": "en"
   },
   {
     "id": "ens-psl-selection-internationale",
@@ -4297,20 +4407,12 @@
     "pays_accueil": [
       "France"
     ],
-    "cameroun": "non_precise",
+    "cameroun": "oui",
     "niveaux": [
-      "licence",
       "master"
     ],
     "domaines": [
-      "droit-politique",
-      "histoire-geographie",
-      "lettres-langues",
-      "philo-sociologie",
-      "economie-gestion",
-      "maths",
-      "informatique",
-      "physique-chimie"
+      "tous"
     ],
     "couverture_niveau": "partielle",
     "origine": "universitaire",
@@ -4321,7 +4423,7 @@
       "cloture_mois": "décembre"
     },
     "edition": {
-      "libelle": "Sélection internationale 2027",
+      "libelle": "Sélection internationale session 2027",
       "ouverture": "2026-10-16",
       "cloture": "2026-12-15",
       "confirme": true
@@ -4334,45 +4436,87 @@
       }
     ],
     "fr": {
-      "nom": "ENS-PSL - Sélection internationale 2027",
-      "resume": "Concours pour étudiants d'universités étrangères souhaitant rejoindre l'ENS (Paris). Parcours Lettres et sciences humaines (histoire, droit, science politique, économie, philosophie, sociologie, géographie, littérature, linguistique...) et parcours Sciences.",
-      "valeur": "1 000 € par mois pendant 3 ans + chambre sur un campus de l'ENS",
-      "couverture_detail": "Allocation de 1 000 € par mois pendant 3 ans (versement dès octobre 2027) et chambre sur un campus de l'ENS-PSL.",
-      "eligibilite": "Lettres : au moins 3 ans d'études vers un diplôme étranger ; moins de 26 ans à l'ouverture ; pas plus de 10 mois de résidence en France ; une seule candidature possible. Sciences : au moins 1 an d'études (2 ans d'inscription).",
-      "diplome": "Études universitaires étrangères en cours (3e année acceptée)",
-      "langue": "Français (épreuve écrite en français pour le parcours Lettres)",
+      "nom": "ENS-PSL : sélection internationale (session 2027)",
+      "resume": "Concours d'admission de l'ENS-PSL pour étudiants étrangers en 3e année de licence ou entrant en master 1, sans condition de nationalité. Les admis reçoivent une bourse de 1 000 EUR et un logement sur un campus de l'ENS-PSL pendant 3 ans.",
+      "valeur": "Bourse de 1 000 EUR (périodicité non précisée) pendant 3 ans et une chambre sur un campus ENS-PSL",
+      "couverture_detail": "Bourse de 1 000 EUR pendant 3 ans et chambre sur un campus de l'ENS-PSL (la page indique « 1 000 euros » sans préciser la périodicité).",
+      "eligibilite": "Aucune restriction de nationalité (candidats « du monde entier »). Lettres : au moins 3 ans d'études vers un diplôme universitaire étranger. Sciences : au moins 1 an d'études universitaires à l'étranger. Moins de 26 ans à l'ouverture des candidatures. Ne pas avoir résidé en France plus de 10 mois (lettres) ou été inscrit plus de 6 mois (sciences) en France les deux dernières années. Les anciens candidats à la sélection internationale ne sont pas éligibles.",
+      "diplome": "3e année de licence ou entrée en master 1 dans une université étrangère.",
+      "langue": "Lettres : français recommandé (écrit et oral en français, entretien possible en anglais) ; économie, linguistique et sciences cognitives peuvent déposer lettre et projet en anglais. Sciences : oraux en français ou en anglais au choix.",
       "autres": [
-        "Pré-sélection sur dossier ; résultats des présélectionnés fin janvier 2027",
-        "Épreuves à distance ; résultats finaux à partir de mars 2027"
+        "Épreuves à distance après présélection.",
+        "Les e-mails ne sont pas acceptés comme candidature ; dossier incomplet non examiné.",
+        "Adresses @icloud.com déconseillées."
       ],
       "dossier": [
-        "Candidature via la plateforme OnePSL30",
-        "Épreuves : écrit en français, oral disciplinaire, entretien (Lettres)"
+        "Lettres : CV, lettre de motivation (1 à 3 pages, en français), projet de recherche (3 pages, bibliographie de 10 ouvrages), relevé de notes, diplôme du secondaire, 2 à 4 lettres de recommandation",
+        "Sciences : diplôme du secondaire, relevé de notes, CV, lettre de motivation (1 à 3 pages, français ou anglais), 2 à 4 lettres de recommandation en un seul PDF"
       ],
-      "conseil": "La fenêtre est ouverte maintenant : déposez avant le 15 décembre 2026, 14h (heure de Paris).",
-      "edition_note": "Dates lues sur la page officielle : du 16 octobre au 15 décembre 2026 à 14h (Paris), à reconfirmer sur la plateforme."
+      "conseil": "Prépare tes recommandations et le dossier de langue avant décembre. Écris à concours.international@ens.psl.eu pour toute question propre à ta situation au Cameroun. Concours très sélectif : prévois d'autres candidatures.",
+      "edition_note": "Session 2027 : candidatures du 16 octobre au 15 décembre 2026, 14 h heure de Paris. La page donne cette fenêtre sous l'intitulé « 2027 » : dates des épreuves et résultats début 2027. Aucune date pour 2028 ou les années suivantes.",
+      "ne_couvre_pas": "Non précisé sur la page.",
+      "etapes": [
+        "Candidater sur la plateforme OnePSL30 entre le 16 octobre et le 15 décembre 2026 (14 h, heure de Paris).",
+        "Demander les lettres de recommandation via la plateforme.",
+        "Présélection (à partir du 21 janvier 2027 en lettres, 27 janvier en sciences).",
+        "Épreuves à distance : 15-26 février 2027 (lettres), 3-19 mars 2027 (sciences).",
+        "Résultats à partir du 9 mars 2027 (lettres) ou du 26 mars 2027 (sciences)."
+      ]
     },
     "en": {
-      "nom": "ENS-PSL - International Selection 2027",
-      "resume": "Competition for students of foreign universities wishing to join the ENS (Paris). Arts & Humanities track (history, law, political studies, economics, philosophy, sociology, geography, literature, linguistics...) and Sciences track.",
-      "valeur": "EUR 1,000 per month for 3 years + room on an ENS campus",
-      "couverture_detail": "EUR 1,000 monthly for 3 years (payments from October 2027) and a room on an ENS-PSL campus.",
-      "eligibilite": "Arts & Humanities: at least 3 years of study toward a foreign degree; under 26 at opening; no more than 10 months' residence in France; only one application allowed. Sciences: at least 1 year of study (2 years enrolled).",
-      "diplome": "Ongoing foreign university studies (3rd year accepted)",
-      "langue": "French (written exam in French for Arts & Humanities)",
+      "nom": "ENS-PSL International Selection (2027 session)",
+      "resume": "ENS-PSL admission competition for international students in their 3rd bachelor's year or entering master's year 1, with no nationality condition. Admitted students receive a EUR 1,000 grant and a room on an ENS-PSL campus for 3 years.",
+      "valeur": "EUR 1,000 grant (frequency not specified) for 3 years and a room on an ENS-PSL campus",
+      "couverture_detail": "Grant of EUR 1,000 for 3 years and a room on an ENS-PSL campus (the page says \"1,000 euros\" without stating the frequency).",
+      "ne_couvre_pas": "Not specified on the page.",
+      "eligibilite": "No nationality restriction (candidates \"from all over the world\"). Arts and humanities: at least 3 years of study toward a foreign university degree. Sciences: at least 1 year of university study abroad. Under 26 on the application opening date. Not having lived in France over 10 months (humanities) or been enrolled over 6 months (sciences) in the last two years. Previous applicants to the International Selection are not eligible.",
+      "diplome": "3rd year of a bachelor's or entering master's year 1 at a foreign university.",
+      "langue": "Humanities: French recommended (written and oral in French, interview possible in English); economics, linguistics and cognitive studies may submit letter and project in English. Sciences: oral tests in French or English at the candidate's choice.",
+      "conseil": "Prepare your recommendations and language file before December. Email concours.international@ens.psl.eu for questions specific to your situation in Cameroon. Highly selective: prepare other applications too.",
+      "edition_note": "2027 session: applications from 16 October to 15 December 2026, 2:00 pm Paris time. The page gives this window under the \"2027\" heading: tests and results in early 2027. No dates for 2028 or later.",
       "autres": [
-        "File-based pre-selection; shortlist results late January 2027",
-        "Tests held remotely; final results from March 2027"
+        "Remote tests after shortlisting.",
+        "Emails are not accepted as applications; incomplete files are not considered.",
+        "@icloud.com addresses are discouraged."
       ],
       "dossier": [
-        "Application via the OnePSL30 platform",
-        "Tests: written in French, oral in discipline, interview (Arts & Humanities)"
+        "Humanities: CV, motivation letter (1 to 3 pages, in French), research project (3 pages, 10-book bibliography), transcript, high school diploma, 2 to 4 recommendation letters",
+        "Sciences: high school diploma, transcript, CV, cover letter (1 to 3 pages, French or English), 2 to 4 recommendation letters merged into one PDF"
       ],
-      "conseil": "The window is open now: submit before 15 December 2026, 14:00 Paris time.",
-      "edition_note": "Dates read on the official page: 16 October to 15 December 2026, 14:00 Paris time; reconfirm on the platform."
+      "etapes": [
+        "Apply on the OnePSL30 platform between 16 October and 15 December 2026 (2:00 pm Paris time).",
+        "Request recommendation letters through the platform.",
+        "Shortlist (from 21 January 2027 humanities, 27 January sciences).",
+        "Remote tests: 15-26 February 2027 (humanities), 3-19 March 2027 (sciences).",
+        "Results from 9 March 2027 (humanities) or 26 March 2027 (sciences)."
+      ]
     },
-    "last_verified": "2026-10-19",
-    "status": "to_verify"
+    "last_verified": "2026-10-20",
+    "status": "verified",
+    "editions": [
+      {
+        "annee": 2026,
+        "libelle": "Sélection internationale session 2027",
+        "ouverture": "2026-10-16",
+        "cloture": "2026-12-15",
+        "confirme": true
+      }
+    ],
+    "verification": {
+      "date": "2026-10-19",
+      "pages_lues": [
+        "https://ens.psl.eu/en/node/1291/international-selection"
+      ],
+      "points": [
+        "niveaux",
+        "couverture",
+        "eligibilite",
+        "cameroun",
+        "dossier",
+        "dates",
+        "lien"
+      ]
+    }
   },
   {
     "id": "laval-bccm-excellence",

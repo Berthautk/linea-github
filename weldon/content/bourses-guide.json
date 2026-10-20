@@ -13267,51 +13267,130 @@
  },
  {
   "id": "iss-erasmus-university-development-studies-scholarship",
-  "organisme": "Erasmus University Rotterdam — ISS (La Haye)",
+  "organisme": "International Institute of Social Studies (ISS), Erasmus University Rotterdam",
   "pays_accueil": [
    "Pays-Bas"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
-   "agronomie-environnement",
-   "droit-politique",
-   "economie-gestion"
+   "philo-sociologie",
+   "economie-gestion",
+   "droit-politique"
   ],
-  "couverture_niveau": "complete",
-  "origine": "gouvernementale",
+  "couverture_niveau": "partielle",
+  "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "avril"
+   "ouverture_mois": "octobre",
+   "cloture_mois": "juillet"
   },
-  "lien_officiel": "https://www.iss.nl/en/education/scholarships",
+  "lien_officiel": "https://www.iss.nl/en/funding-scholarships/iss-scholarships",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://www.iss.nl/en/education/scholarships"
+    "titre": "ISS Scholarships",
+    "url": "https://www.iss.nl/en/funding-scholarships/iss-scholarships"
+   },
+   {
+    "titre": "ISS - Funding and scholarships (base par pays, Cameroun listé)",
+    "url": "https://www.iss.nl/en/funding-scholarships"
+   },
+   {
+    "titre": "MA Development Studies - Application",
+    "url": "https://www.eur.nl/en/master/development-studies/application"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Variable — souvent avril"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "ISS Erasmus University — Development Studies Scholarship",
-   "resume": "L'ISS est l'un des centres de recherche les plus réputés au monde pour les études du développement. Basé à La Haye (siège de la CIJ, de la CPI et de dizaines d'organisations internationales), il offre un environnement unique pour les professionnels africains…",
+   "nom": "Fonds de bourses ISS (Excellent Students et Hardship) - MA Development Studies",
+   "resume": "L'ISS (Erasmus University Rotterdam, La Haye) propose deux fonds qui réduisent les frais de scolarité du MA in Development Studies pour les étudiants internationaux admis. Ce sont des réductions partielles, pas des bourses complètes.",
    "resume_long": "L'ISS est l'un des centres de recherche les plus réputés au monde pour les études du développement. Basé à La Haye (siège de la CIJ, de la CPI et de dizaines d'organisations internationales), il offre un environnement unique pour les professionnels africains qui veulent se spécialiser en politique de développement.",
-   "valeur": "Variable — de la réduction de frais à la bourse complète",
-   "couverture_detail": "Scolarité + allocation de vie (pour les bourses complètes)",
-   "eligibilite": "Professionnels des pays en développement avec 2+ ans d'expérience",
-   "edition_note": "Date limite indiquée dans le guide : Variable — souvent avril"
+   "valeur": "Réduction de 40 % (Excellent Students) ou jusqu'à 30 % (Hardship) des frais de scolarité",
+   "couverture_detail": "Excellent Students Fund : 40 % des frais de scolarité. Hardship Fund : réduction jusqu'à 30 % des frais. Aucune allocation de vie indiquée.",
+   "eligibilite": "Étudiants internationaux et néerlandais/UE/EEE admis au MA in Development Studies (lettre d'admission ISS requise). Excellent Students : diplôme en sciences sociales (upper second ou first class) ou jeune diplômé first class ; Hardship : motivation forte et moyens financiers insuffisants. Le Cameroun figure dans la base de bourses ISS par pays.",
+   "edition_note": "Date limite d'admission au MA pour 2027/28 : 1er juillet 2027 (inscription Studielink dès la première semaine d'octobre 2026). Les fonds sont attribués au fil de l'eau de janvier à juillet, sans date limite propre indiquée.",
+   "ne_couvre_pas": "Le solde des frais de scolarité, les frais de vie et l'assurance santé (à prouver par relevés bancaires). Non disponible pour le doctorat à l'ISS.",
+   "diplome": "Licence en sciences sociales (mention upper second ou first class pour le fonds Excellent Students)",
+   "langue": "Anglais ; justificatif récent de niveau d'anglais pour l'admission",
+   "conseil": "Les fonds dépendent du budget disponible : candidate tôt. Ils ne suffisent pas à financer seuls le master ; cherche un financement complémentaire (voir la base de bourses ISS par pays).",
+   "autres": [
+    "Attribution au fil de l'eau de janvier à juillet pour la rentrée de septembre",
+    "Cumulable avec l'Early Bird Discount (10 %, voir conditions)"
+   ],
+   "dossier": [
+    "Lettre d'admission de l'ISS",
+    "Lettre de motivation d'une page",
+    "Informations financières détaillées avec relevés bancaires"
+   ],
+   "etapes": [
+    "Candidater à l'admission au MA via Studielink puis le portail d'admission EUR",
+    "Obtenir la lettre d'admission de l'ISS",
+    "Envoyer la demande et les pièces par e-mail à admission@iss.nl le plus tôt possible",
+    "Décision communiquée par le bureau des admissions"
+   ]
   },
   "en": {
-   "nom": "ISS Erasmus University — Development Studies Scholarship"
+   "nom": "ISS Scholarship Funds (Excellent Students and Hardship) - MA Development Studies",
+   "resume": "ISS (Erasmus University Rotterdam, The Hague) has two funds that reduce tuition for the MA in Development Studies for admitted international students. These are partial fee reductions, not full scholarships.",
+   "valeur": "40% (Excellent Students) or up to 30% (Hardship) tuition reduction",
+   "couverture_detail": "Excellent Students Fund: 40% of tuition. Hardship Fund: fee discount of up to 30%. No living allowance mentioned.",
+   "ne_couvre_pas": "The remaining tuition, living costs and health insurance (to be proven with bank statements). Not available for PhD study at ISS.",
+   "eligibilite": "International and Dutch/EU/EEA students admitted to the MA in Development Studies (ISS admission letter required). Excellent Students: social science degree (upper second or first class) or recent first-class graduate; Hardship: strong motivation and insufficient financial means. Cameroon appears in the ISS country-based scholarship database.",
+   "diplome": "Bachelor's degree in social sciences (upper second or first class for the Excellent Students fund)",
+   "langue": "English; recent proof of English proficiency for admission",
+   "conseil": "Funds depend on available budget: apply early. They cannot finance the master alone; look for complementary funding (see the ISS country-based scholarship database).",
+   "edition_note": "MA admission deadline for 2027/28: 1 July 2027 (Studielink registration from the first week of October 2026). Funds are awarded on an ongoing basis January to July, with no separate deadline stated.",
+   "autres": [
+    "Awarded on an ongoing basis from January to July for the September intake",
+    "Can be combined with the Early Bird Discount (10%, see terms)"
+   ],
+   "dossier": [
+    "ISS admission letter",
+    "One-page motivation statement",
+    "Detailed financial information with bank statements"
+   ],
+   "etapes": [
+    "Apply for MA admission via Studielink then the EUR admission portal",
+    "Obtain the ISS admission letter",
+    "Email the request and documents to admission@iss.nl as early as possible",
+    "Decision communicated by the admission office"
+   ]
   },
-  "vedette": true
+  "vedette": true,
+  "edition": {
+   "libelle": "2027/28",
+   "cloture": "2027-07-01",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2027,
+    "libelle": "2027/28",
+    "ouverture": null,
+    "cloture": "2027-07-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.iss.nl/en/funding-scholarships/iss-scholarships",
+    "https://www.iss.nl/en/funding-scholarships",
+    "https://www.eur.nl/en/master/development-studies/application"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
  },
  {
   "id": "mandela-scholarship-leiden-university",
@@ -13410,99 +13489,283 @@
   "pays_accueil": [
    "France"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "licence",
    "master"
   ],
   "domaines": [
    "droit-politique",
-   "communication",
-   "economie-gestion"
+   "economie-gestion",
+   "philo-sociologie",
+   "histoire-geographie",
+   "communication"
   ],
-  "couverture_niveau": "complete",
+  "couverture_niveau": "partielle",
   "origine": "universitaire",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "decembre"
+   "ouverture_mois": null,
+   "cloture_mois": "novembre (Master), janvier (Bachelor)"
   },
-  "lien_officiel": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/bourse-emile-boutmy/",
+  "lien_officiel": "https://www.sciencespo.fr/students/fr/financer/bourses-aides-financieres/bourse-emile-boutmy/",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/bourse-emile-boutmy/"
+    "titre": "Sciences Po - Bourse Émile Boutmy",
+    "url": "https://www.sciencespo.fr/students/fr/financer/bourses-aides-financieres/bourse-emile-boutmy/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Master : début décembre / Bachelor : février-mars"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "Bourses Émile Boutmy (Sciences Po Paris)",
-   "resume": "Sciences Po Paris est classée n°1 mondial en science politique (QS Rankings). La bourse Émile Boutmy est le principal mécanisme de financement pour les étudiants internationaux. Vous cochez la case « Bourse Boutmy » directement dans votre formulaire…",
+   "nom": "Bourse d'excellence Émile Boutmy (Sciences Po)",
+   "resume": "Exonération de droits de scolarité pour les meilleurs étudiants internationaux non ressortissants de l'Espace économique européen, admis pour la première fois à Sciences Po en Collège universitaire (Bachelor) ou en Master. La bourse se demande dans le dossier d'admission et n'est pas automatique.",
    "resume_long": "Sciences Po Paris est classée n°1 mondial en science politique (QS Rankings). La bourse Émile Boutmy est le principal mécanisme de financement pour les étudiants internationaux. Vous cochez la case « Bourse Boutmy » directement dans votre formulaire d'admission — aucun dossier séparé n'est nécessaire.",
-   "valeur": "Jusqu'à 14 720 €/an (plusieurs niveaux : de la réduction de frais à l'exonération totale + allocation)",
-   "couverture_detail": "Frais de scolarité (partiel ou total) + parfois allocation de vie mensuelle",
-   "ne_couvre_pas": "Logement et vol (sauf si spécifiquement mentionné)",
-   "eligibilite": "Étudiants non-européens admis à Sciences Po pour la première fois",
+   "valeur": "Bachelor : exonération totale ou de 9 500 EUR ; Master : exonération de 18 500 EUR par an pendant 2 ans",
+   "couverture_detail": "Exonération des droits de scolarité : Bachelor, soit totale, soit de 9 500 EUR ; Master, 18 500 EUR pour chacune des deux années. Conservée pendant l'année à l'étranger du Collège. Cumulable avec une bourse externe (Eiffel, AEFE, BGF...).",
+   "ne_couvre_pas": "Frais de vie, logement, assurance. Non cumulable avec une autre bourse de Sciences Po ou de ses partenaires (Mastercard, CARE...). Perdue en cas de redoublement ou de report d'admission.",
+   "eligibilite": "Étudiants primo-arrivants, non ressortissants de l'EEE et relevant d'un foyer fiscal hors Europe, admis en programme diplômant au Collège universitaire ou en Master (le Cameroun est donc admis). Exclus : double nationalité dont une européenne, suisses, norvégiens, masters en 1 an, doubles diplômes (sauf exceptions), doctorat, échange, journalisme, admission via la procédure française de Master.",
    "cout_candidature": "Frais de dossier Sciences Po requis (variable)",
-   "edition_note": "Date limite indiquée dans le guide : Master : début décembre / Bachelor : février-mars"
+   "edition_note": "Master : commissions du 18 octobre (réponse avant le 20 décembre) et du 29 novembre (réponse avant le 2 mars) ; l'année n'est pas écrite sur la page, lue comme 2026. Bachelor voie internationale : 13 janvier 2027 (réponse en avril) ; Parcoursup : 1er avril 2027.",
+   "diplome": "Admission à Sciences Po (Bachelor ou Master) obligatoire ; bourse attribuée selon l'excellence du dossier",
+   "langue": "Tests de langue requis par le programme visé, si nécessaire",
+   "conseil": "Dépose un dossier d'admission complet avant la date limite : en Master, la commission du 18 octobre 2026 est passée, il reste celle du 29 novembre 2026. Prévois un financement de secours si la bourse n'est pas attribuée.",
+   "autres": [
+    "Attribution liée à la procédure d'admission ; impossible de demander la bourse en cours de scolarité",
+    "Aucune demande acceptée après la date limite ; seuls les dossiers complets sont examinés"
+   ],
+   "dossier": [
+    "Dossier de candidature Sciences Po complet (rubrique « Informations personnelles » avec la nationalité)",
+    "Rubrique « Informations financières » du dossier : demande de bourse Boutmy",
+    "Test(s) de langue requis, si nécessaire",
+    "Pour Parcoursup : formulaire en ligne de signalement à la Direction des admissions"
+   ],
+   "etapes": [
+    "Candidater à un programme de Bachelor ou de Master de Sciences Po",
+    "Remplir la rubrique « Informations financières » pour demander la bourse (ou le formulaire en ligne pour Parcoursup)",
+    "Respecter la date limite de la commission visée",
+    "Attendre la décision avec l'admission"
+   ]
   },
   "en": {
-   "nom": "Bourses Émile Boutmy (Sciences Po Paris)"
+   "nom": "Émile Boutmy Excellence Scholarship (Sciences Po)",
+   "resume": "Tuition waiver for top international students who are not nationals of the European Economic Area and are admitted for the first time to Sciences Po in the undergraduate college (Bachelor) or a Master's. It must be requested in the admission application and is not automatic.",
+   "valeur": "Bachelor: full or EUR 9,500 tuition waiver; Master: EUR 18,500 waiver per year for 2 years",
+   "couverture_detail": "Tuition waiver: Bachelor, either full or EUR 9,500; Master, EUR 18,500 for each of the two years. Kept during the college year abroad. Can be combined with an external scholarship (Eiffel, AEFE, BGF...).",
+   "ne_couvre_pas": "Living costs, housing, insurance. Cannot be combined with another Sciences Po or partner scholarship (Mastercard, CARE...). Lost in case of repeating a year or deferral.",
+   "eligibilite": "First-time students, non-EEA nationals from a non-European tax household, admitted to a degree programme in the undergraduate college or a Master's (Cameroon is therefore eligible). Excluded: dual nationality including a European one, Swiss, Norwegian, one-year Masters, dual degrees (with exceptions), doctorate, exchange, journalism, admission via the French Master's procedure.",
+   "diplome": "Admission to Sciences Po (Bachelor or Master) required; awarded on excellence of the application",
+   "langue": "Language tests required by the chosen programme, if applicable",
+   "conseil": "Submit a complete admission application before the deadline: for the Master, the 18 October 2026 committee has passed, the 29 November 2026 one remains. Plan a backup funding source in case the scholarship is not awarded.",
+   "edition_note": "Master: committees on 18 October (answer before 20 December) and 29 November (answer before 2 March); the year is not written on the page, read as 2026. Bachelor international route: 13 January 2027 (answer in April); Parcoursup: 1 April 2027.",
+   "autres": [
+    "Award is tied to the admission procedure; cannot be requested during studies",
+    "No request accepted after the deadline; only complete applications are reviewed"
+   ],
+   "dossier": [
+    "Complete Sciences Po application (with nationality in the Personal information section)",
+    "Financial information section of the application: Boutmy scholarship request",
+    "Required language test(s), if applicable",
+    "For Parcoursup: online form to notify the Admissions Directorate"
+   ],
+   "etapes": [
+    "Apply to a Sciences Po Bachelor or Master programme",
+    "Fill in the Financial information section to request the scholarship (or the online form for Parcoursup)",
+    "Meet the deadline of the targeted committee",
+    "Await the decision together with admission"
+   ]
   },
-  "vedette": true
+  "vedette": true,
+  "edition": {
+   "libelle": "Master rentrée 2027 - 2e commission",
+   "cloture": "2026-11-29",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Master rentrée 2027 - 2e commission",
+    "ouverture": null,
+    "cloture": "2026-11-29",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Bachelor voie internationale",
+    "ouverture": null,
+    "cloture": "2027-01-13",
+    "confirme": true
+   },
+   {
+    "annee": 2027,
+    "libelle": "Bachelor Parcoursup",
+    "ouverture": null,
+    "cloture": "2027-04-01",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.sciencespo.fr/students/fr/financer/bourses-aides-financieres/bourse-emile-boutmy/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
  },
  {
   "id": "mastercard-foundation-scholars-sciences-po-paris",
-  "organisme": "Fondation MasterCard / Sciences Po Paris",
+  "organisme": "Sciences Po Paris / Mastercard Foundation",
   "pays_accueil": [
    "France"
   ],
-  "cameroun": "non_precise",
+  "cameroun": "oui",
   "niveaux": [
    "master"
   ],
   "domaines": [
    "droit-politique",
-   "economie-gestion"
+   "economie-gestion",
+   "philo-sociologie",
+   "histoire-geographie",
+   "communication"
   ],
   "couverture_niveau": "complete",
   "origine": "fondation",
   "cycle": {
    "type": "annuelle",
-   "cloture_mois": "decembre"
+   "ouverture_mois": null,
+   "cloture_mois": "novembre-décembre"
   },
-  "lien_officiel": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/mastercard-foundation-scholarship-program/",
+  "lien_officiel": "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/mastercard-foundation-scholarships/graduate-study/",
   "sources": [
    {
-    "titre": "Manuel des bourses",
-    "url": "https://www.sciencespo.fr/admissions/fr/financer-etudes/bourses-aides-financieres/mastercard-foundation-scholarship-program/"
+    "titre": "Sciences Po - Mastercard Foundation Scholars, niveau Master",
+    "url": "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/mastercard-foundation-scholarships/graduate-study/"
+   },
+   {
+    "titre": "Sciences Po - Mastercard Foundation Scholars Program",
+    "url": "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/mastercard-foundation-scholarships/"
    }
   ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": "Cycle annuel — Clôture en décembre"
-  },
+  "last_verified": "2026-10-20",
+  "status": "verified",
   "fr": {
-   "nom": "MasterCard Foundation Scholars (Sciences Po Paris)",
-   "resume": "C'est la bourse la plus généreuse pour un étudiant africain souhaitant étudier à Paris. Sciences Po + MasterCard Foundation = un Master de classe mondiale dans la plus belle ville du monde, entièrement financé. Les lauréats bénéficient d'un mentorat…",
+   "nom": "Mastercard Foundation Scholars Program (Sciences Po, Master)",
+   "resume": "Bourse complète pour des citoyens d'un pays africain admis dans un master de deux ans à Sciences Po. Le programme finance scolarité et frais de vie en France et offre un accompagnement personnalisé.",
    "resume_long": "C'est la bourse la plus généreuse pour un étudiant africain souhaitant étudier à Paris. Sciences Po + MasterCard Foundation = un Master de classe mondiale dans la plus belle ville du monde, entièrement financé. Les lauréats bénéficient d'un mentorat individuel, de stages garantis et d'un programme de transition post-diplôme.",
-   "valeur": "Fully Funded (100 % des frais + vie)",
-   "couverture_detail": "Scolarité complète (~14 720 €/an), logement à Paris, allocation de vie mensuelle, vol AR, assurance, mentorat personnalisé, aide à l'insertion professionnelle post-diplôme",
-   "ne_couvre_pas": "Rien — couverture intégrale",
-   "eligibilite": "Uniquement pour les citoyens de pays d'Afrique subsaharienne. Talents académiques issus de milieux économiquement défavorisés. Engagement communautaire fort.",
+   "valeur": "Scolarité et frais de vie en France financés pendant les études à Sciences Po",
+   "couverture_detail": "Prise en charge de la totalité des frais de scolarité et des frais de vie en France pendant la durée des études ; logement réservé à Paris, accompagnement avant le départ et à l'arrivée, suivi personnalisé, aide à l'insertion professionnelle, mentorat.",
+   "ne_couvre_pas": "Les montants précis ne sont pas indiqués sur la page ; la bourse ne garantit ni l'admission ni la sélection.",
+   "eligibilite": "Citoyenneté d'un pays africain (le Cameroun est donc admis ; double nationalité incluant un pays hors Afrique exclue). Licence en cours ou obtenue dans une université de la liste officielle, ou licence plus programme passerelle/mentorat reconnu, ou licence plus statut de réfugié UNHCR. Moins de 35 ans au 1er septembre de l'année de candidature. Ne pas détenir ni préparer de master. Première candidature au programme. Exclus : étudiants actuels de Sciences Po, étudiants ou diplômés d'un établissement supérieur français. Admission obligatoire dans un master de deux ans (hors double diplôme et master d'un an).",
    "cout_candidature": "Gratuit (exonération des frais de dossier Sciences Po)",
-   "edition_note": "Date limite indiquée dans le guide : Cycle annuel — Clôture en décembre"
+   "edition_note": "Dates limites pour la rentrée de septembre 2027 : 23 novembre 2026 (décision d'admission avant le 11 février 2027) ou 14 décembre 2026 (décision avant le 1er avril 2027). La plateforme de candidature au programme était annoncée « bientôt disponible ».",
+   "diplome": "Licence (en cours ou obtenue) dans une université de la liste de référence, ou licence + programme passerelle ou statut de réfugié",
+   "langue": "Selon le master visé (tests de langue exigés par Sciences Po)",
+   "conseil": "Prépare le dossier de master complet bien avant la date limite, notamment les lettres de recommandation. Vérifie d'abord que ton université figure sur la liste de référence du programme.",
+   "autres": [
+    "Admission via la procédure internationale de Master uniquement",
+    "Niveau académique minimum exigé selon le pays de l'université d'origine (tableau Sciences Po)",
+    "Dispense des frais de candidature pour les candidats déclarés éligibles",
+    "Résultats de sélection communiqués en avril 2027"
+   ],
+   "dossier": [
+    "Pièce d'identité (passeport, carte nationale d'identité, carte UNHCR ou titre de voyage)",
+    "Diplôme de licence ou preuve d'études en cours dans une université de la liste de référence",
+    "Ou diplôme/relevé de licence + certificat de programme passerelle reconnu",
+    "Ou licence + justificatif du statut de réfugié",
+    "Dossier complet de candidature au master Sciences Po (relevés, tests de langue, lettres de recommandation envoyées depuis une adresse institutionnelle)",
+    "Dossier écrit de candidature au programme (cohérence du parcours, enjeux africains, engagement)"
+   ],
+   "etapes": [
+    "Vérifier le tableau des résultats académiques minimaux et les critères d'éligibilité",
+    "Créer la candidature au master sur la plateforme d'admission Sciences Po",
+    "Déposer la demande de vérification d'éligibilité sur la plateforme dédiée au programme (annoncée comme bientôt disponible)",
+    "Soumettre le dossier de master complet dans le délai donné par e-mail, sans frais de candidature",
+    "Entretien en ligne d'environ 25 minutes si présélectionné",
+    "Résultats en avril 2027"
+   ]
   },
   "en": {
-   "nom": "MasterCard Foundation Scholars (Sciences Po Paris)"
+   "nom": "Mastercard Foundation Scholars Program (Sciences Po, Master's)",
+   "resume": "Full scholarship for citizens of an African country admitted to a two-year Master's at Sciences Po. The program funds tuition and living costs in France and provides tailored support.",
+   "valeur": "Tuition and living costs in France funded throughout studies at Sciences Po",
+   "couverture_detail": "Full tuition and living expenses in France for the duration of studies; reserved housing in Paris, pre-departure and arrival support, personalised follow-up, career support, mentoring.",
+   "ne_couvre_pas": "Exact amounts are not stated on the page; the scholarship guarantees neither admission nor selection.",
+   "eligibilite": "Citizenship of an African country (Cameroon is therefore eligible; dual citizenship including a non-African country excluded). Bachelor's in progress or completed at a university on the official list, or Bachelor's plus a recognised bridge/mentoring programme, or Bachelor's plus UNHCR refugee status. Under 35 on 1 September of the application year. No Master's held or in progress. First application to the program. Excluded: current Sciences Po students, students or graduates of a French higher education institution. Admission to a two-year Master's required (not dual degrees or one-year Masters).",
+   "diplome": "Bachelor's (in progress or completed) at a university on the reference list, or Bachelor's + bridge programme or refugee status",
+   "langue": "Depends on the chosen Master's (language tests required by Sciences Po)",
+   "conseil": "Prepare the complete Master's application well before the deadline, especially the recommendation letters. First check that your university is on the program's reference list.",
+   "edition_note": "Deadlines for the September 2027 intake: 23 November 2026 (admission decision before 11 February 2027) or 14 December 2026 (decision before 1 April 2027). The program application platform was announced as coming soon.",
+   "autres": [
+    "International graduate admissions procedure only",
+    "Minimum academic level required by country of home university (Sciences Po table)",
+    "Application fee waiver for applicants found eligible",
+    "Selection results communicated in April 2027"
+   ],
+   "dossier": [
+    "Proof of identity (passport, national ID card, UNHCR card or travel document)",
+    "Bachelor's certificate or proof of current studies at a university on the reference list",
+    "Or Bachelor's certificate/transcript + certificate of a recognised bridge programme",
+    "Or Bachelor's + proof of refugee status",
+    "Complete Sciences Po Master's application (transcripts, language tests, recommendation letters sent from an institutional address)",
+    "Written program application (fit of path, African challenges, commitment)"
+   ],
+   "etapes": [
+    "Check the minimum academic results table and eligibility criteria",
+    "Create the Master's application on the Sciences Po admissions platform",
+    "Submit the eligibility verification request on the dedicated program platform (announced as coming soon)",
+    "Submit the complete Master's application within the deadline given by email, without application fee",
+    "Online interview of about 25 minutes if shortlisted",
+    "Results in April 2027"
+   ]
   },
-  "vedette": true
+  "vedette": true,
+  "age_max": 34,
+  "edition": {
+   "libelle": "Rentrée septembre 2027 - date 1 (décision d'admission avant le 11 février 2027)",
+   "cloture": "2026-11-23",
+   "confirme": true
+  },
+  "editions": [
+   {
+    "annee": 2026,
+    "libelle": "Rentrée septembre 2027 - date 1 (décision d'admission avant le 11 février 2027)",
+    "ouverture": null,
+    "cloture": "2026-11-23",
+    "confirme": true
+   },
+   {
+    "annee": 2026,
+    "libelle": "Rentrée septembre 2027 - date 2 (décision d'admission avant le 1er avril 2027)",
+    "ouverture": null,
+    "cloture": "2026-12-14",
+    "confirme": true
+   }
+  ],
+  "verification": {
+   "date": "2026-10-19",
+   "pages_lues": [
+    "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/mastercard-foundation-scholarships/graduate-study/",
+    "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/mastercard-foundation-scholarships/"
+   ],
+   "points": [
+    "niveaux",
+    "couverture",
+    "eligibilite",
+    "cameroun",
+    "dossier",
+    "dates",
+    "lien"
+   ]
+  }
  },
  {
   "id": "bourses-d-excellence-de-l-universite-paris-saclay",
@@ -14962,52 +15225,11 @@
   "en": {
    "nom": "Erasmus+ (Mobilité et échange)"
   },
-  "vedette": true
- },
- {
-  "id": "oif-bourses-de-la-francophonie",
-  "organisme": "OIF — Organisation Internationale de la Francophonie",
-  "pays_accueil": [
-   "Plusieurs pays"
-  ],
-  "cameroun": "non_precise",
-  "niveaux": [
-   "doctorat"
-  ],
-  "domaines": [
-   "informatique",
-   "agronomie-environnement",
-   "droit-politique",
-   "lettres-langues",
-   "education"
-  ],
-  "couverture_niveau": "variable",
-  "origine": "gouvernementale",
-  "lien_officiel": "https://www.francophonie.org/bourses-et-stages",
-  "sources": [
-   {
-    "titre": "Manuel des bourses",
-    "url": "https://www.francophonie.org/bourses-et-stages"
-   }
-  ],
-  "last_verified": null,
-  "status": "to_verify",
-  "guide": {
-   "source": "manuel",
-   "date_limite_texte": null
-  },
-  "fr": {
-   "nom": "OIF — Bourses de la Francophonie",
-   "resume": "L'OIF offre un ensemble de programmes de bourses, stages et formations pour les francophones. Les opportunités varient chaque année — consultez régulièrement le site pour les appels à candidatures.",
-   "resume_long": "L'OIF offre un ensemble de programmes de bourses, stages et formations pour les francophones. Les opportunités varient chaque année — consultez régulièrement le site pour les appels à candidatures.",
-   "valeur": "Variable — bourses de mobilité, stages et formations",
-   "couverture_detail": "Variable selon le programme — allocation, voyage, formation",
-   "eligibilite": "Ressortissants des 88 États et gouvernements membres de l'OIF (dont la quasi-totalité des pays africains francophones)"
-  },
-  "en": {
-   "nom": "OIF — Bourses de la Francophonie"
-  },
-  "vedette": true
+  "vedette": true,
+  "verification_echec": {
+   "date": "2026-10-20",
+   "motif": "Pas de candidature individuelle : « Higher education students and staff cannot apply directly for a grant ». Seule l'université d'origine (titulaire d'une charte ECHE, avec accord inter-institutionnel) dépose le projet auprès d'une agence nationale (date limite institutionnelle 19 février) et fixe elle-même sélection, documents et dates des étudiants ; aucune liste de pièces ni date étudiante officielle ne peut être confirmée. Cameroun admis (Région 9), mais sortie des étudiants de master/licence vers l'UE limitée selon les règles des régions ODA."
+  }
  },
  {
   "id": "unesco-isedc-co-sponsored-fellowships",

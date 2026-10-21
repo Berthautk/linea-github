@@ -4,7 +4,7 @@
   publish = "web"
   command = "cd server && npm ci --omit=dev && node ../tools/write-version.mjs"
   # Pas de nouveau déploiement (donc pas de crédits dépensés) quand seuls des documents ou des fichiers de vérification changent.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- netlify.toml weldon/web weldon/server weldon/content weldon/tools/write-version.mjs"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!docs' ':!android-app' ':!tools/ingest' ':!tools/veille' ../netlify.toml"
 
 [build.environment]
   NODE_VERSION = "22"

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { slotHours, endFor } from '../site/js/dates.js';
 import { reminderText, silence } from '../site/js/reminder-text.js';
-import { pct, checkEntry, cumulative, byTerm, activity, gapReport, progressAt } from '../site/js/calc.js';
+import { coverTotals, pct, checkEntry, cumulative, byTerm, activity, gapReport, progressAt } from '../site/js/calc.js';
 import { followUp, noTimetable, makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
 import { newDept } from '../site/js/defaults.js';
 
@@ -129,11 +129,11 @@ test('créneau à dates précises (samedis réellement tenus : 19/09 et 03/10) :
 
 test('fiche d’inspection et fiche pédagogique lisent les mêmes saisies : une saisie change les deux', () => {
   const st = mk({ assign: [{ id: 'K:LSA', teacherId: 'K', classId: 'LSA', th: 10, pr: 0, hours: 40 }] });
-  const before = makeCtx(st, '2026-10-13'), h0 = stats(before, null, ...P1).hours, f0 = followUp(before, ...P1).total.hours;
+  const before = makeCtx(st, '2026-10-13'), h0 = stats(before, null, ...P1).hours, f0 = followUp(before, ...P1).total.doneH;
   st.entries = [E('e1', 'K', '2026-09-14')];
   const after = makeCtx(st, '2026-10-13');
-  assert.equal(stats(after, null, ...P1).hours - h0, 2); assert.equal(followUp(after, ...P1).total.hours - f0, 2);
-  assert.equal(followUp(after, ...P1).total.th, stats(after, null, ...P1).lessonsDone, 'mêmes leçons faites');
+  assert.equal(stats(after, null, ...P1).hours - h0, 2); assert.equal(followUp(after, ...P1).total.doneH - f0, 2);
+  assert.equal(followUp(after, ...P1).total.rawL, stats(after, null, ...P1).lessonsDone, 'mêmes leçons faites');
 });
 
 test('emploi du temps manquant détecté (pas de pourcentage trompeur)', () => {
@@ -340,7 +340,7 @@ test('fiche pédagogique : heures de théorie / TP du programme, TP et further s
   const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 42, pr: 2, fs: 2, hth: 60, hpr: 6, hours: 66 }] });
   st.entries = [E('a', 'K', '2026-09-07', { classId: 'F3A', n: 1, type: 'practical' }), E('b', 'K', '2026-09-08', { classId: 'F3A', type: 'practical', n: null }), E('c', 'K', '2026-09-09', { classId: 'F3A', n: 1, type: 'further' })];
   const R = followUp(makeCtx(st, '2026-10-14'), '2026-09-07', '2026-10-14'), r = R.rows ? R.rows[0] : R.total;
-  const tot = R.total; assert.equal(tot.planTh, 42); assert.equal(tot.planPr, 2); assert.equal(tot.pr, 2, 'TP sans numéro comptés aussi'); assert.equal(tot.objTh, 60); assert.equal(tot.objPr, 6); assert.equal(tot.objH, 66);
+  const tot = R.total; assert.equal(tot.planPr, 2); assert.equal(tot.pr, 2, 'TP sans numéro comptés aussi'); assert.equal(tot.rawL, 0, 'les TP et further study ne comptent pas dans les leçons');
 });
 
 test('Sixth Form : catalogue des sous-branches (totaux, TP, further study), titres des leçons, ordre d’enseignement', async () => {
@@ -381,15 +381,19 @@ test('Form 3 repris en Form 4 à partir de la leçon 24 : 19 leçons, numéroté
   assert.equal(rk.done, 1); assert.equal(rk.plan.total, 19); assert.equal(ra.done, 2); assert.equal(ra.plan.total, 46, 'chaque enseignant a son propre programme dans la même classe');
 });
 
-test('fiche de suivi = tableau de bord : mêmes totaux (leçons, heures, régularisation sur plusieurs semaines) et taux de la période ≠ taux de l’année', () => {
+test('fiche de suivi = accueil : même calcul, jamais plus de 100 % par classe, les trimestres s’additionnent au programme de l’année', () => {
   const as = [['K', 'F3A', 42, 60], ['K', 'LSA', 77, 270], ['N', 'LSA', 77, 270], ['A', 'F1A', 13, 66], ['T', 'USA', 70, 271]].map(([teacherId, classId, th, h]) => ({ id: teacherId + ':' + classId, teacherId, classId, th, hth: h, hpr: 0, hours: h }));
-  const st = mk({ assign: as, regul: [{ id: 'r1', teacherId: 'K', classId: 'LSA', d: '2026-09-07', d2: '2026-11-27', h: 10, lessons: 3 }, { id: 'r2', teacherId: 'N', classId: '', d: '2026-09-14', d2: '2026-09-25', h: 4, lessons: 1 }],
-    entries: [E('a', 'K', '2026-09-08', { n: 1 }), E('b', 'K', '2026-09-15', { n: 2 }), E('c', 'N', '2026-09-10', { n: 1 }), E('d', 'K', '2026-10-06', { n: 1, classId: 'F3A' })] });
-  const c = makeCtx(st, '2026-10-13'), ps = '2026-09-07', pe = '2026-11-27', F = followUp(c, ps, pe), S = stats(c, null, ps, pe), Y = stats(c, null, c.ys, pe);
-  const near = (a, b, m) => assert.ok(Math.abs(a - b) < 0.06, m + ' : ' + a + ' ≠ ' + b);
-  near(F.total.hours, S.hours, 'heures faites'); near(F.total.th, S.lessonsDone, 'leçons faites'); near(F.total.objThP, S.lessonsFull, 'leçons prévues (toute la période)'); near(F.total.objHP, S.dueFull, 'heures dues (toute la période)');
-  near(F.total.rateH, pct(S.hours, S.dueFull), '% heures du trimestre = pourcentage de l’accueil'); near(F.total.rateTh, pct(S.lessonsDone, S.lessonsFull), '% leçons du trimestre = pourcentage de l’accueil');
-  near(F.total.hoursY, Y.hours, 'cumul heures'); near(F.total.thY, Y.lessonsDone, 'cumul leçons'); near(F.total.rateThY, Y.rateYL, '% leçons année');
-  assert.ok(F.total.rateTh > F.total.rateThY, 'le taux du trimestre est supérieur au taux annuel');
-  assert.ok(F.extra && F.extra.hours > 0, 'heures hors application sans classe : affichées à part, comptées dans le total');
+  const st = mk({ assign: as, regul: [{ id: 'r1', teacherId: 'A', classId: 'F1A', d: '2026-09-07', d2: '2026-10-09', h: 30, lessons: 40 }],
+    entries: [E('a', 'K', '2026-09-08', { n: 1 }), E('b', 'K', '2026-09-15', { n: 2 }), E('c', 'N', '2026-09-10', { n: 1 }), E('d', 'K', '2026-10-06', { n: 1, classId: 'F3A' }), E('e', 'A', '2026-09-08', { n: 1, classId: 'F1A' })] });
+  const c = makeCtx(st, '2026-10-13'), T = c.terms, near = (a, b, m) => assert.ok(Math.abs(a - b) < 0.06, m + ' : ' + a + ' ≠ ' + b);
+  const F1 = followUp(c, T[0].start, T[0].end), all = [...F1.g1, ...F1.g2];
+  for (const r of all) { assert.ok(r.rateL <= 100 && r.rateH <= 100, r.name + ' ≤ 100 %'); assert.ok(r.doneL <= r.planL + 1e-9 && r.doneH <= r.planH + 1e-9); }
+  const f1a = all.find(r => r.id === 'F1A'); assert.equal(f1a.doneL, f1a.planL, 'régularisation excessive : plafonnée au prévu'); assert.equal(f1a.rateL, 100); assert.ok(F1.over.some(r => r.id === 'F1A'), 'dépassement signalé à l’écran');
+  const C1 = coverTotals(c, T[0].start, T[0].end); near(F1.total.doneL, C1.doneL, 'leçons faites = accueil'); near(F1.total.planL, C1.planL, 'leçons prévues = accueil'); near(F1.total.rateH, C1.rateH, '% heures = accueil'); near(F1.total.rateL, C1.rateL, '% leçons = accueil');
+  // trimestres + année : prévu additif, exact
+  const parts = c.terms.map(tm => followUp(c, tm.start, tm.end).total), Y = followUp(c, c.ys, c.ye).total;
+  assert.equal(parts.reduce((a, x) => a + x.planL, 0), Y.planL, 'leçons prévues : somme des trimestres = année'); assert.equal(Y.planL, 13 + 42 + 77 + 77 + 70, 'prévu de l’année = programme de toutes les affectations');
+  near(parts.reduce((a, x) => a + x.planH, 0), Y.planH, 'heures prévues : somme des trimestres = année');
+  // accueil par enseignant : somme des enseignants = département
+  const byT = c.teachers.map(t => coverTotals(c, T[0].start, T[0].end, t.id)); near(byT.reduce((a, x) => a + x.doneL, 0), C1.doneL, 'enseignants → département');
 });

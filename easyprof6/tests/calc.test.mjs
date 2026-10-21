@@ -380,3 +380,16 @@ test('Form 3 repris en Form 4 à partir de la leçon 24 : 19 leçons, numéroté
   const rk = classProgress(c, 'K').find(r => r.classId === 'F4AR'), ra = classProgress(c, 'A').find(r => r.classId === 'F4AR');
   assert.equal(rk.done, 1); assert.equal(rk.plan.total, 19); assert.equal(ra.done, 2); assert.equal(ra.plan.total, 46, 'chaque enseignant a son propre programme dans la même classe');
 });
+
+test('fiche de suivi = tableau de bord : mêmes totaux (leçons, heures, régularisation sur plusieurs semaines) et taux de la période ≠ taux de l’année', () => {
+  const as = [['K', 'F3A', 42, 60], ['K', 'LSA', 77, 270], ['N', 'LSA', 77, 270], ['A', 'F1A', 13, 66], ['T', 'USA', 70, 271]].map(([teacherId, classId, th, h]) => ({ id: teacherId + ':' + classId, teacherId, classId, th, hth: h, hpr: 0, hours: h }));
+  const st = mk({ assign: as, regul: [{ id: 'r1', teacherId: 'K', classId: 'LSA', d: '2026-09-07', d2: '2026-11-27', h: 10, lessons: 3 }, { id: 'r2', teacherId: 'N', classId: '', d: '2026-09-14', d2: '2026-09-25', h: 4, lessons: 1 }],
+    entries: [E('a', 'K', '2026-09-08', { n: 1 }), E('b', 'K', '2026-09-15', { n: 2 }), E('c', 'N', '2026-09-10', { n: 1 }), E('d', 'K', '2026-10-06', { n: 1, classId: 'F3A' })] });
+  const c = makeCtx(st, '2026-10-13'), ps = '2026-09-07', pe = '2026-11-27', F = followUp(c, ps, pe), S = stats(c, null, ps, pe), Y = stats(c, null, c.ys, pe);
+  const near = (a, b, m) => assert.ok(Math.abs(a - b) < 0.06, m + ' : ' + a + ' ≠ ' + b);
+  near(F.total.hours, S.hours, 'heures faites'); near(F.total.th, S.lessonsDone, 'leçons faites'); near(F.total.objThP, S.lessonsPlanned, 'leçons prévues (période, à ce jour)'); near(F.total.objHP, S.due, 'heures dues (période, à ce jour)');
+  near(F.total.rateH, S.rate, '% heures période'); near(F.total.rateTh, S.rateL, '% leçons période');
+  near(F.total.hoursY, Y.hours, 'cumul heures'); near(F.total.thY, Y.lessonsDone, 'cumul leçons'); near(F.total.rateThY, Y.rateYL, '% leçons année');
+  assert.ok(F.total.rateTh > F.total.rateThY, 'le taux du trimestre est supérieur au taux annuel quand le trimestre est entamé');
+  assert.ok(F.extra && F.extra.hours > 0, 'heures hors application sans classe : affichées à part, comptées dans le total');
+});

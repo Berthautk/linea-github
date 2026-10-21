@@ -382,31 +382,44 @@ export function recap(ctx, ps, pe) {
   return { rows, g1, g2, t1: wrap(g1), t2: wrap(g2), total: wrap(rows) };
 }
 
-/** Fiche pédagogique de suivi (censorat / délégation) : une ligne par classe, objectifs annuels, réalisations sur la période, évaluations. */
+/** Fiche pédagogique de suivi (censorat / délégation) : une ligne par classe. MÊMES règles que le tableau de bord (stats) :
+ *  - « période » = ce qui est fait dans [ps,pe] face à ce qui était prévu pour la période, à ce jour (objectif de leçons réparti selon les heures de cours) ;
+ *  - « année » = cumul depuis la rentrée face à l'objectif de toute l'année ;
+ *  - heures hors application (régularisations) comptées au prorata comme partout ailleurs ; aucune valeur arrondie avant les totaux. */
 export function followUp(ctx, ps, pe) {
-  const rows = ctx.classes.map(c => {
-    const A = ctx.assign.filter(a => a.classId === c.id), ids = new Set(A.map(a => a.teacherId));
-    const th = new Set(), pr = new Set(); let hours = 0, digital = 0, lastEval = null;
-    for (const t of ctx.teachers) for (const e of ctx.byTeacher[t.id] || []) {
-      if (e.classId !== c.id || e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
-      ids.add(t.id); hours += (+e.minutes || 0) / 60; if (e.digital) digital++;
-      if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
-      if (e.eval && +e.eval.evaluated > 0 && (!lastEval || e.date >= lastEval.date)) lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 };
+  const cut = minISO(pe, ctx.today), known = new Set(ctx.classes.map(c => c.id)), EXTRA = '_';
+  const acc = {}, A = (id) => acc[id] || (acc[id] = { th: new Set(), thY: new Set(), pr: new Set(), prY: new Set(), hours: 0, hoursY: 0, digitalY: 0, rl: 0, rlY: 0, ids: new Set(), lastEval: null, objThP: 0, objHP: 0 });
+  for (const t of ctx.teachers) {
+    for (const e of ctx.byTeacher[t.id] || []) {
+      if (e.type === 'absence' || !e.date || e.date < ctx.ys || e.date > pe) continue;
+      const x = A(known.has(e.classId) ? e.classId : EXTRA), h = (+e.minutes || 0) / 60, inP = e.date >= ps;
+      x.hoursY += h; if (e.digital) x.digitalY++;
+      if (e.type === 'lesson' && e.n != null) { x.thY.add(t.id + '|' + e.n); if (inP) x.th.add(t.id + '|' + e.n); }
+      if (e.type === 'practical') { const k = t.id + '|' + (e.n != null ? e.n : e.id); x.prY.add(k); if (inP) x.pr.add(k); }
+      if (inP) { x.ids.add(t.id); x.hours += h; if (e.eval && +e.eval.evaluated > 0 && (!x.lastEval || e.date >= x.lastEval.date)) x.lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 }; }
     }
-    for (const r of ctx.regul) if (r.classId === c.id && ids.has(r.teacherId) && r.d >= ps && r.d <= pe) hours += +r.h || 0;
-    let yearDue = 0; for (const id of ids) yearDue += dueRange(ctx, id, ctx.ys, ctx.ye).byClass[c.id] || 0;
-    const planTh = A.reduce((x, a) => x + (+a.th || 0), 0), planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), planH = A.reduce((x, a) => x + (+a.hours || 0), 0);
-    const hTh = A.reduce((x, a) => x + (+a.hth || 0), 0), hPr = A.reduce((x, a) => x + (+a.hpr || 0), 0);
+    // objectifs de la période, à ce jour : leçons attendues (par affectation) et heures dues (par classe)
+    const now = dueRange(ctx, t.id, ps, cut);
+    for (const a of ctx.assign.filter(a => a.teacherId === t.id && known.has(a.classId))) A(a.classId).objThP += expectedLessons(ctx, a, ps, cut, now);
+    for (const [cid, h] of Object.entries(now.byClass)) A(known.has(cid) ? cid : EXTRA).objHP += h;
+  }
+  for (const r of ctx.regul) { const x = A(known.has(r.classId) ? r.classId : EXTRA), s1 = regulShare(r, ps, pe), s2 = regulShare(r, ctx.ys, pe); x.hours += (+r.h || 0) * s1; x.hoursY += (+r.h || 0) * s2; x.rl += (+r.lessons || 0) * s1; x.rlY += (+r.lessons || 0) * s2; }
+  const mkRow = (id, c) => {
+    const x = acc[id] || A(id), as = c ? ctx.assign.filter(a => a.classId === c.id) : [], ids = new Set([...as.map(a => a.teacherId), ...x.ids]);
+    let yearDue = 0; for (const tid of ids) yearDue += dueRange(ctx, tid, ctx.ys, ctx.ye).byClass[id] || 0;
+    const planTh = as.reduce((s, a) => s + (+a.th || 0), 0), planPr = as.reduce((s, a) => s + (+a.pr || 0), 0), planH = as.reduce((s, a) => s + (+a.hours || 0), 0);
+    const hTh = as.reduce((s, a) => s + (+a.hth || 0), 0), hPr = as.reduce((s, a) => s + (+a.hpr || 0), 0);
     const objH = hTh + hPr || planH || yearDue, lessonsPlan = planTh + planPr, objTh = hTh + hPr ? hTh : lessonsPlan ? objH * planTh / lessonsPlan : objH, objPr = objH - objTh;
-    const eff = +((c.effectif || {}).total) || 0, ev = lastEval ? lastEval.evaluated : 0, ok = lastEval ? lastEval.passed : 0;
-    return { id: c.id, name: c.name, cycle: c.cycle, teachers: [...ids].map(i => (ctx.teacher(i) || {}).short || (ctx.teacher(i) || {}).name || '').filter(Boolean),
-      planTh, th: th.size, planPr, pr: pr.size, digital, objH: r1(objH), objTh: Math.round(objTh), objPr: Math.round(objPr), hours: r1(hours), eff, ev, ok };
-  });
-  const fin = (r) => ({ ...r, rateTh: pct(r.th, r.planTh), ratePr: pct(r.pr, r.planPr), rateDg: pct(r.digital, r.planPr), rateH: pct(r.hours, r.objH), rateEv: pct(r.ev, r.eff), rateOk: pct(r.ok, r.ev) });
-  const sum = (list) => fin(list.reduce((a, r) => ({ planTh: a.planTh + r.planTh, th: a.th + r.th, planPr: a.planPr + r.planPr, pr: a.pr + r.pr, digital: a.digital + r.digital, objH: a.objH + r.objH,
-    objTh: a.objTh + r.objTh, objPr: a.objPr + r.objPr, hours: a.hours + r.hours, eff: a.eff + r.eff, ev: a.ev + r.ev, ok: a.ok + r.ok }), { planTh: 0, th: 0, planPr: 0, pr: 0, digital: 0, objH: 0, objTh: 0, objPr: 0, hours: 0, eff: 0, ev: 0, ok: 0 }));
-  const all = rows.map(fin), g1 = all.filter(r => r.cycle !== '2nd'), g2 = all.filter(r => r.cycle === '2nd');
-  return { g1, g2, t1: sum(g1), t2: sum(g2), total: sum(all), n: all.length };
+    const eff = c ? +((c.effectif || {}).total) || 0 : 0, ev = x.lastEval ? x.lastEval.evaluated : 0, ok = x.lastEval ? x.lastEval.passed : 0;
+    return { id, name: c ? c.name : '', cycle: c ? c.cycle : '1er', teachers: [...ids].map(i => (ctx.teacher(i) || {}).short || (ctx.teacher(i) || {}).name || '').filter(Boolean),
+      planTh, th: x.th.size + x.rl, thY: x.thY.size + x.rlY, objThP: x.objThP, planPr, pr: x.prY.size, digital: x.digitalY, objH, objTh, objPr, objHP: x.objHP, hours: x.hours, hoursY: x.hoursY, eff, ev, ok };
+  };
+  const fin = (r) => ({ ...r, rateTh: pct(r.th, r.objThP), rateThY: pct(r.thY, r.planTh), ratePr: pct(r.pr, r.planPr), rateDg: pct(r.digital, r.planPr), rateH: pct(r.hours, r.objHP), rateHY: pct(r.hoursY, r.objH), rateEv: pct(r.ev, r.eff), rateOk: pct(r.ok, r.ev) });
+  const KEYS = ['planTh', 'th', 'thY', 'objThP', 'planPr', 'pr', 'digital', 'objH', 'objTh', 'objPr', 'objHP', 'hours', 'hoursY', 'eff', 'ev', 'ok'];
+  const sum = (list) => fin(list.reduce((a, r) => { for (const k of KEYS) a[k] += r[k]; return a; }, Object.fromEntries(KEYS.map(k => [k, 0]))));
+  const all = ctx.classes.map(c => fin(mkRow(c.id, c))), g1 = all.filter(r => r.cycle !== '2nd'), g2 = all.filter(r => r.cycle === '2nd');
+  const ex = acc[EXTRA] ? fin(mkRow(EXTRA, null)) : null, extra = ex && (ex.hoursY > 0 || ex.thY > 0) ? ex : null;   // heures hors application sans classe, ou saisies d'une classe supprimée
+  return { g1, g2, t1: sum(g1), t2: sum(g2), total: sum(extra ? [...all, extra] : all), extra, n: all.length };
 }
 
 /** Outil de reprise : propose, pour chaque affectation, les heures et leçons à compter pour que tout soit « à jour » jusqu'à `date` (ce qui n'a pas déjà été saisi). */

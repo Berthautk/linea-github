@@ -940,4 +940,10 @@ export const EN = {
   "Ordre d’enseignement : {l}. La leçon n° 1 de cet enseignant est la première leçon de la première sous-branche, et ainsi de suite.": "Teaching order: {l}. This teacher’s lesson no. 1 is the first lesson of the first sub-branch, and so on.",
   "Cet enseignant continue le programme de {l} à partir de la leçon n°": "This teacher continues the {l} programme from lesson no.",
   "Exemple : la physical geography de Form 3 reprise en Form 4 à partir de la leçon 24 → il reste 19 leçons, numérotées 24 à 42.": "Example: Form 3 physical geography continued in Form 4 from lesson 24 → 19 lessons left, numbered 24 to 42.",
+  "Travaux pratiques (cumul)": "Practical work (cumulative)",
+  "Digitalisation (cumul)": "Digitalisation (cumulative)",
+  "% leçons couvertes": "% lessons covered",
+  "Année (OBJ)": "Year (TARGET)",
+  "Heures hors application sans classe": "Hours outside the app, no class",
+  "Période : ce qui est fait pendant la période face à ce qui était prévu pour cette période, à ce jour (leçons réparties selon les heures de cours, heures dues des emplois du temps). Année : cumul depuis la rentrée face à l’objectif de toute l’année (heures fixées par l’animateur pour la classe, à défaut heures des emplois du temps). Évalués et réussite : dernière évaluation saisie dans la période pour la classe.": "Period: what was done during the period against what was planned for that period, to date (lessons spread according to class hours, hours due from the timetables). Year: cumulative since the start of the year against the target for the whole year (hours set by the coordinator for the class, otherwise timetable hours). Evaluated and success: latest evaluation entered in the period for the class.",
 };

@@ -953,4 +953,10 @@ export const EN = {
   "1er trimestre": "1st term",
   "2e trimestre": "2nd term",
   "3e trimestre": "3rd term",
+  "prévues": "planned",
+  "leçons de l’année": "lessons of the year",
+  "Leçons faites / prévues": "Lessons done / planned",
+  "Prévu": "Planned",
+  "Heures faites / prévues": "Hours done / planned",
+  "Heures prévues : emplois du temps sur la période, hors jours fériés, vacances et activités scolaires. Heures faites : séances saisies dans Rekort (révisions et évaluations comptent en heures mais pas en leçons), jamais au-delà du prévu. Leçons prévues : programme de chaque classe réparti selon les heures de cours. Ces chiffres sont ceux de la fiche pédagogique de suivi. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).": "Hours planned: timetables over the period, excluding public holidays, school holidays and school activities. Hours done: sessions entered in Rekort (revision and assessments count as hours but not as lessons), never beyond what was planned. Lessons planned: each class’s programme spread according to class hours. These figures are those of the pedagogic follow-up form. Alert thresholds of the joint order of 14/08/2026: {h}% (hours), {l}% (programme).",
 };

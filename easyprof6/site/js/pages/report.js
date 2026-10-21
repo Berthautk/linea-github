@@ -3,7 +3,7 @@ import { html, useState, useEffect } from '../vendor/preact-htm.js';
 import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Seg, Chip, num1 } from '../ui.js';
-import { makeCtx, stats, factors, followUp, periodOf, classProgress } from '../calc.js';
+import { makeCtx, stats, factors, followUp, periodOf, classProgress, coverTotals, pct } from '../calc.js';
 import { PeriodBar, ScopeBar, currentTid, periodLabel , viewData, YearBar } from '../widgets.js';
 import { state, setUI, isAP, myId } from '../store.js';
 import { fmt, minISO } from '../dates.js';
@@ -52,6 +52,8 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
   const lang = getLang(), d = ctx.dept, hd = d.header || {}, same = p.ps.slice(0, 4) === p.pe.slice(0, 4);
   const teachers = tid ? ctx.teachers.filter(x => x.id === tid) : ctx.teachers;
   const wk = (x) => (x.slots || []).reduce((s, y) => s + (+y.h || 0), 0);
+  const C = coverTotals(ctx, p.ps, p.pe, tid), CY = coverTotals(ctx, ctx.ys, p.pe, tid), YP = coverTotals(ctx, ctx.ys, ctx.ye, tid);   // mêmes chiffres que la fiche pédagogique de suivi
+  const yH = pct(CY.doneH, YP.planH), yL = pct(CY.doneL, YP.planL);
   return html`<div class="paper">
     <${Letterhead} d=${d} hd=${hd} />
     <h2>${t('Fiche de l’inspection nationale')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Année scolaire')} ${d.year || ''}</div>
@@ -59,15 +61,15 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
       <tr><th>${t('Nombre d’heures dues pour la période')}</th><th>${t('Nombre d’heures faites')}</th><th>${t('Écart (+/-) par rapport à la période')}</th><th>${t('Taux de couverture par rapport à la période (%)')}</th><th>${t('Taux de couverture par rapport à l’année (%)')}</th>
       <th>${t('Nombre de leçons prévues pour la période')}</th><th>${t('Nombre de leçons faites')}</th><th>${t('Écart (+/-) par rapport à la période')}</th><th>${t('Taux de couverture par rapport à la période (%)')}</th><th>${t('Taux de couverture par rapport à l’année (%)')}</th></tr></thead>
     <tbody><tr><td style="font-size:11px">${t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) })}</td><td style="font-weight:800">${up(d.discipline)}${who ? html`<br /><span style="font-weight:600;font-size:10px">${who}</span>` : ''}</td>
-      <td>${num1(S.due)}</td><td>${num1(S.hours)}</td><td>${sg(S.gap)}</td><td>${num1(S.rate)} %</td><td>${num1(Y.rateYH)} %</td>
-      <td>${Math.round(S.lessonsPlanned)}</td><td>${S.lessonsDone}</td><td>${sg(Math.round(S.lessonGap))}</td><td>${num1(S.rateL)} %</td><td>${num1(Y.rateYL)} %</td>
+      <td>${num1(C.planH)}</td><td>${num1(C.doneH)}</td><td>${sg(C.doneH - C.planH)}</td><td>${num1(C.rateH)} %</td><td>${num1(yH)} %</td>
+      <td>${num1(C.planL)}</td><td>${num1(C.doneL)}</td><td>${sg(C.doneL - C.planL)}</td><td>${num1(C.rateL)} %</td><td>${num1(yL)} %</td>
       <td class="l">${facts}</td><td class="l">${acts}</td></tr></tbody></table>
-    <p style="font-size:10px;margin:6px 0 0"><b>${t('Situation cumulée depuis la rentrée')} (${fmt(ctx.ys, lang, { noYear: ctx.ys.slice(0, 4) === Y.pe.slice(0, 4) })} ${t('au')} ${fmt(Y.pe, lang)}) : </b>${num1(Y.hours)} h ${t('faites sur')} ${num1(Y.due)} h ${t('dues')} (${num1(Y.rate)} %) · ${t('soit')} ${num1(Y.rateYH)} % ${t('des')} ${num1(Y.planYear.hours)} h ${t('prévues sur l’année')} · ${Y.lessonsDone} / ${Math.round(Y.lessonsPlanned)} ${t('leçons')}.</p>
+    <p style="font-size:10px;margin:6px 0 0"><b>${t('Situation cumulée depuis la rentrée')} (${fmt(ctx.ys, lang, { noYear: ctx.ys.slice(0, 4) === Y.pe.slice(0, 4) })} ${t('au')} ${fmt(Y.pe, lang)}) : </b>${num1(CY.doneH)} h ${t('faites sur')} ${num1(CY.planH)} h ${t('prévues')} (${num1(CY.rateH)} %) · ${t('soit')} ${num1(yH)} % ${t('des')} ${num1(YP.planH)} h ${t('prévues sur l’année')} · ${num1(CY.doneL)} / ${num1(CY.planL)} ${t('leçons')} (${num1(CY.rateL)} %) · ${num1(yL)} % ${t('des')} ${num1(YP.planL)} ${t('leçons de l’année')}.</p>
     <div class="sig"><div>${tid ? t('Enseignant(e)') : t('Animateur pédagogique')}<br /><b>${who || ((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div>
     <div class="annex"><div style="font-weight:800;font-size:12px;margin:0 0 6px">${tid ? t('Annexe : détail de mes heures') : t('Annexe : détail par enseignant')}</div>
-      <table><thead><tr><th>${t('Enseignant')}</th><th>${t('H / semaine')}</th><th>${t('Dues')}</th><th>${t('Faites')}</th><th>${t('Écart')}</th><th>${t('Taux')}</th><th>${t('Leçons faites / attendues')}</th><th>${t('Dont révisions et évaluations (h)')}</th><th>${t('Absences déclarées (h)')}</th><th>${t('Retirées des heures dues (h)')}</th></tr></thead><tbody>
-      ${teachers.map(x => { const s = stats(ctx, x.id, p.ps, p.pe); return html`<tr><td style="text-align:left">${x.name}</td><td>${num1(wk(x))}</td><td>${num1(s.due)}</td><td><b>${num1(s.hours)}</b></td><td>${sg(s.gap)}</td><td>${num1(s.rate)} %</td><td>${s.lessonsDone} / ${num1(s.lessonsPlanned)}</td><td>${num1(s.revisionH + s.assessH)}</td><td>${num1(s.absent)}</td><td>${num1(s.excused + s.closed)}</td></tr>`; })}</tbody></table>
-      <p style="font-size:10px;margin:6px 0 0">${t('Heures dues : emplois du temps, hors jours fériés, vacances et activités scolaires, comptées jusqu’à aujourd’hui. Heures faites : séances saisies dans Rekort (révisions et évaluations comptent en heures mais pas en leçons). Leçons attendues : plan annuel de chaque classe réparti selon les heures de cours. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
+      <table><thead><tr><th>${t('Enseignant')}</th><th>${t('H / semaine')}</th><th>${t('Prévues')}</th><th>${t('Faites')}</th><th>${t('Écart')}</th><th>${t('Taux')}</th><th>${t('Leçons faites / prévues')}</th><th>${t('Dont révisions et évaluations (h)')}</th><th>${t('Absences déclarées (h)')}</th><th>${t('Retirées des heures dues (h)')}</th></tr></thead><tbody>
+      ${teachers.map(x => { const s = stats(ctx, x.id, p.ps, p.pe), c = coverTotals(ctx, p.ps, p.pe, x.id); return html`<tr><td style="text-align:left">${x.name}</td><td>${num1(wk(x))}</td><td>${num1(c.planH)}</td><td><b>${num1(c.doneH)}</b></td><td>${sg(c.doneH - c.planH)}</td><td>${num1(c.rateH)} %</td><td>${num1(c.doneL)} / ${num1(c.planL)}</td><td>${num1(s.revisionH + s.assessH)}</td><td>${num1(s.absent)}</td><td>${num1(s.excused + s.closed)}</td></tr>`; })}</tbody></table>
+      <p style="font-size:10px;margin:6px 0 0">${t('Heures prévues : emplois du temps sur la période, hors jours fériés, vacances et activités scolaires. Heures faites : séances saisies dans Rekort (révisions et évaluations comptent en heures mais pas en leçons), jamais au-delà du prévu. Leçons prévues : programme de chaque classe réparti selon les heures de cours. Ces chiffres sont ceux de la fiche pédagogique de suivi. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
 }
 
 const TERM_NAME = { T1: '1er trimestre', T2: '2e trimestre', T3: '3e trimestre' };
@@ -127,17 +129,17 @@ function Evals({ ctx, p, tid }) {
 /** Bilan d'une page pour le censeur : situation du département, collègues, classes en retard, mesures. */
 function Bilan({ ctx, p, S, facts, acts }) {
   const lang = getLang(), d = ctx.dept, hd = d.header || {};
-  const per = ctx.teachers.map(tc => ({ tc, S: stats(ctx, tc.id, p.ps, p.pe) }));
+  const per = ctx.teachers.map(tc => ({ tc, S: coverTotals(ctx, p.ps, p.pe, tc.id) })), CB = coverTotals(ctx, p.ps, p.pe), ended = p.pe <= ctx.today;
   const lateCls = ctx.teachers.flatMap(tc => classProgress(ctx, tc.id, minISO(p.pe, ctx.today)).filter(r => r.status === 'late' || r.status === 'slight').map(r => ({ ...r, who: tc.short || tc.name })));
   return html`<div class="paper">
     <${Letterhead} d=${d} hd=${hd} />
     <h2>${t('Bilan du département')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) })} · ${up(d.discipline)} · ${t('Année scolaire')} ${d.year || ''}</div>
-    <table><thead><tr><th>${t('Indicateur')}</th><th>${t('Fait')}</th><th>${t('Dû à ce jour')}</th><th>%</th><th>${t('Seuil')}</th></tr></thead><tbody>
-      <tr><td style="text-align:left">${t('Couverture horaire')}</td><td>${num1(S.hours)} h</td><td>${num1(S.due)} h</td><td>${num1(S.rate)} %</td><td>80 %</td></tr>
-      <tr><td style="text-align:left">${t('Couverture du programme (leçons)')}</td><td>${S.lessonsDone}</td><td>${num1(S.lessonsPlanned)}</td><td>${num1(S.rateL)} %</td><td>70 %</td></tr></tbody></table>
+    <table><thead><tr><th>${t('Indicateur')}</th><th>${t('Fait')}</th><th>${t('Prévu')}</th><th>%</th><th>${t('Seuil')}</th></tr></thead><tbody>
+      <tr><td style="text-align:left">${t('Couverture horaire')}</td><td>${num1(CB.doneH)} h</td><td>${num1(CB.planH)} h</td><td>${num1(CB.rateH)} %</td><td>80 %</td></tr>
+      <tr><td style="text-align:left">${t('Couverture du programme (leçons)')}</td><td>${num1(CB.doneL)}</td><td>${num1(CB.planL)}</td><td>${num1(CB.rateL)} %</td><td>70 %</td></tr></tbody></table>
     <h3 style="font-size:11px;margin:10px 0 4px">${t('Par enseignant')}</h3>
-    <table><thead><tr><th>${t('Enseignant')}</th><th>${t('Heures faites / dues')}</th><th>%</th><th>${t('Leçons faites / attendues')}</th><th>%</th></tr></thead><tbody>
-      ${per.map(({ tc, S: x }) => html`<tr><td style="text-align:left">${tc.name}</td><td>${num1(x.hours)} / ${num1(x.due)}</td><td style=${x.due && x.rate < 80 ? 'color:#C0472A;font-weight:800' : ''}>${num1(x.rate)} %</td><td>${x.lessonsDone} / ${num1(x.lessonsPlanned)}</td><td style=${x.lessonsPlanned && x.rateL < 70 ? 'color:#C0472A;font-weight:800' : ''}>${num1(x.rateL)} %</td></tr>`)}</tbody></table>
+    <table><thead><tr><th>${t('Enseignant')}</th><th>${t('Heures faites / prévues')}</th><th>%</th><th>${t('Leçons faites / prévues')}</th><th>%</th></tr></thead><tbody>
+      ${per.map(({ tc, S: x }) => html`<tr><td style="text-align:left">${tc.name}</td><td>${num1(x.doneH)} / ${num1(x.planH)}</td><td style=${ended && x.planH && x.rateH < 80 ? 'color:#C0472A;font-weight:800' : ''}>${num1(x.rateH)} %</td><td>${num1(x.doneL)} / ${num1(x.planL)}</td><td style=${ended && x.planL && x.rateL < 70 ? 'color:#C0472A;font-weight:800' : ''}>${num1(x.rateL)} %</td></tr>`)}</tbody></table>
     <h3 style="font-size:11px;margin:10px 0 4px">${t('Classes en retard sur le programme')}</h3>
     <p style="font-size:10px;margin:0">${lateCls.length ? lateCls.map(r => r.name + ' (' + r.who + ', ' + t('{n} leçon(s) de retard', { n: num1(r.lag) }) + ')').join(' ; ') : t('Aucune.')}</p>
     <h3 style="font-size:11px;margin:10px 0 4px">${t('Facteurs d’écart')}</h3><p style="font-size:10px;margin:0;white-space:pre-line">${facts}</p>

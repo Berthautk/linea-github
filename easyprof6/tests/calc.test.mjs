@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { slotHours, endFor } from '../site/js/dates.js';
 import { reminderText, silence } from '../site/js/reminder-text.js';
-import { checkEntry, cumulative, byTerm, activity, gapReport, progressAt } from '../site/js/calc.js';
+import { pct, checkEntry, cumulative, byTerm, activity, gapReport, progressAt } from '../site/js/calc.js';
 import { followUp, noTimetable, makeCtx, dueRange, stats, classProgress, periodOf, shiftPeriod, series, todaySlots, nextNumber, recap, overall, lagStatus, factors } from '../site/js/calc.js';
 import { newDept } from '../site/js/defaults.js';
 
@@ -387,9 +387,9 @@ test('fiche de suivi = tableau de bord : mêmes totaux (leçons, heures, régula
     entries: [E('a', 'K', '2026-09-08', { n: 1 }), E('b', 'K', '2026-09-15', { n: 2 }), E('c', 'N', '2026-09-10', { n: 1 }), E('d', 'K', '2026-10-06', { n: 1, classId: 'F3A' })] });
   const c = makeCtx(st, '2026-10-13'), ps = '2026-09-07', pe = '2026-11-27', F = followUp(c, ps, pe), S = stats(c, null, ps, pe), Y = stats(c, null, c.ys, pe);
   const near = (a, b, m) => assert.ok(Math.abs(a - b) < 0.06, m + ' : ' + a + ' ≠ ' + b);
-  near(F.total.hours, S.hours, 'heures faites'); near(F.total.th, S.lessonsDone, 'leçons faites'); near(F.total.objThP, S.lessonsPlanned, 'leçons prévues (période, à ce jour)'); near(F.total.objHP, S.due, 'heures dues (période, à ce jour)');
-  near(F.total.rateH, S.rate, '% heures période'); near(F.total.rateTh, S.rateL, '% leçons période');
+  near(F.total.hours, S.hours, 'heures faites'); near(F.total.th, S.lessonsDone, 'leçons faites'); near(F.total.objThP, S.lessonsFull, 'leçons prévues (toute la période)'); near(F.total.objHP, S.dueFull, 'heures dues (toute la période)');
+  near(F.total.rateH, pct(S.hours, S.dueFull), '% heures du trimestre = pourcentage de l’accueil'); near(F.total.rateTh, pct(S.lessonsDone, S.lessonsFull), '% leçons du trimestre = pourcentage de l’accueil');
   near(F.total.hoursY, Y.hours, 'cumul heures'); near(F.total.thY, Y.lessonsDone, 'cumul leçons'); near(F.total.rateThY, Y.rateYL, '% leçons année');
-  assert.ok(F.total.rateTh > F.total.rateThY, 'le taux du trimestre est supérieur au taux annuel quand le trimestre est entamé');
+  assert.ok(F.total.rateTh > F.total.rateThY, 'le taux du trimestre est supérieur au taux annuel');
   assert.ok(F.extra && F.extra.hours > 0, 'heures hors application sans classe : affichées à part, comptées dans le total');
 });

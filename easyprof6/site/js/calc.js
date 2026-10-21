@@ -383,11 +383,11 @@ export function recap(ctx, ps, pe) {
 }
 
 /** Fiche pédagogique de suivi (censorat / délégation) : une ligne par classe. MÊMES règles que le tableau de bord (stats) :
- *  - « période » = ce qui est fait dans [ps,pe] face à ce qui était prévu pour la période, à ce jour (objectif de leçons réparti selon les heures de cours) ;
+ *  - « trimestre / période » = ce qui est fait dans [ps,pe] face à ce qui est prévu pour TOUTE la période (objectif au terme du trimestre, comme le pourcentage de l'accueil) ;
  *  - « année » = cumul depuis la rentrée face à l'objectif de toute l'année ;
  *  - heures hors application (régularisations) comptées au prorata comme partout ailleurs ; aucune valeur arrondie avant les totaux. */
 export function followUp(ctx, ps, pe) {
-  const cut = minISO(pe, ctx.today), known = new Set(ctx.classes.map(c => c.id)), EXTRA = '_';
+  const known = new Set(ctx.classes.map(c => c.id)), EXTRA = '_';
   const acc = {}, A = (id) => acc[id] || (acc[id] = { th: new Set(), thY: new Set(), pr: new Set(), prY: new Set(), hours: 0, hoursY: 0, digitalY: 0, rl: 0, rlY: 0, ids: new Set(), lastEval: null, objThP: 0, objHP: 0 });
   for (const t of ctx.teachers) {
     for (const e of ctx.byTeacher[t.id] || []) {
@@ -398,10 +398,10 @@ export function followUp(ctx, ps, pe) {
       if (e.type === 'practical') { const k = t.id + '|' + (e.n != null ? e.n : e.id); x.prY.add(k); if (inP) x.pr.add(k); }
       if (inP) { x.ids.add(t.id); x.hours += h; if (e.eval && +e.eval.evaluated > 0 && (!x.lastEval || e.date >= x.lastEval.date)) x.lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 }; }
     }
-    // objectifs de la période, à ce jour : leçons attendues (par affectation) et heures dues (par classe)
-    const now = dueRange(ctx, t.id, ps, cut);
-    for (const a of ctx.assign.filter(a => a.teacherId === t.id && known.has(a.classId))) A(a.classId).objThP += expectedLessons(ctx, a, ps, cut, now);
-    for (const [cid, h] of Object.entries(now.byClass)) A(known.has(cid) ? cid : EXTRA).objHP += h;
+    // objectifs de toute la période : leçons attendues (par affectation) et heures dues (par classe)
+    const full = dueRange(ctx, t.id, ps, pe);
+    for (const a of ctx.assign.filter(a => a.teacherId === t.id && known.has(a.classId))) A(a.classId).objThP += expectedLessons(ctx, a, ps, pe, full);
+    for (const [cid, h] of Object.entries(full.byClass)) A(known.has(cid) ? cid : EXTRA).objHP += h;
   }
   for (const r of ctx.regul) { const x = A(known.has(r.classId) ? r.classId : EXTRA), s1 = regulShare(r, ps, pe), s2 = regulShare(r, ctx.ys, pe); x.hours += (+r.h || 0) * s1; x.hoursY += (+r.h || 0) * s2; x.rl += (+r.lessons || 0) * s1; x.rlY += (+r.lessons || 0) * s2; }
   const mkRow = (id, c) => {

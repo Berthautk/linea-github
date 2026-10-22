@@ -42,7 +42,7 @@ export function fmt(n: number | null | undefined): string {
   if (n === null || n === undefined || isNaN(n)) return '0';
   return Math.round(n)
     .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, '\u202F');
+    .replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
 }
 
 /**

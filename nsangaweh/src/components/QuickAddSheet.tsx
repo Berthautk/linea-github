@@ -65,7 +65,7 @@ export const QuickAddSheet: React.FC<Props> = ({
   const [amountStr, setAmountStr] = useState('');
   const [pick, setPick] = useState<{ lineId: string | null; categoryId: string } | null>(null);
   const [label, setLabel] = useState('');
-  const [showOneoff, setShowOneoff] = useState(false);
+  const [addToBudget, setAddToBudget] = useState(false);
   const [walletId, setWalletId] = useState<string>(() => localStorage.getItem('nsangaweh-last-wallet') || wallets[0]?.id || '');
   const [dateMode, setDateMode] = useState<'today' | 'yesterday' | 'custom'>('today');
   const [customDate, setCustomDate] = useState(`${currentMonth}-01`);
@@ -105,7 +105,7 @@ export const QuickAddSheet: React.FC<Props> = ({
     setVoiceText('');
     setVoice(null);
     setListening(false);
-    setShowOneoff(false);
+    setAddToBudget(false);
     setLabel('');
     const line = prefill ? calc.month.lines.find((l) => l.id === prefill.lineId) : undefined;
     if (line) {
@@ -136,7 +136,7 @@ export const QuickAddSheet: React.FC<Props> = ({
   const remainingOf = (l: MonthLine) => Math.max(0, (l.amount || 0) - (calc.byLine[l.id] || 0));
   const kindCats = sortCategories(categories.filter((c) => !c.archived && c.kind === type));
   const typeLines = lines.filter((l) => catById.get(l.categoryId)?.kind === type);
-  const envelopeCats = kindCats.filter((c) => calc.byCategory[c.id]?.mode === 'envelope');
+  const pickLines = pick ? typeLines.filter((l) => l.categoryId === pick.categoryId) : [];
   const labelMatch = !pick && label.trim() ? matchLine(label, typeLines, categories) : null;
 
   const finish = (d: QuickAddDraft) => {
@@ -146,7 +146,8 @@ export const QuickAddSheet: React.FC<Props> = ({
     onClose();
   };
 
-  const submitSaisie = (oneoffCat?: string | null) => {
+  const submitSaisie = () => {
+    const oneoffCat = addToBudget && pick && !pick.lineId && label.trim() ? pick.categoryId : undefined;
     if (smart) {
       const p = parseQuick(smartText, calc.month, categories);
       if (!p.amt) return triggerHaptic('warning');
@@ -264,7 +265,7 @@ export const QuickAddSheet: React.FC<Props> = ({
     });
   };
 
-  const typeLabel = (t: Kind) => (t === 'out' ? 'Dépense' : t === 'in' ? 'Revenu' : 'Épargne');
+  const typeLabel = (t: Kind) => (t === 'out' ? 'Sortie' : t === 'in' ? 'Entrée' : 'Épargne');
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 animate-in fade-in duration-150" role="dialog" aria-modal="true" aria-label="Noter une opération" onClick={onClose}>
@@ -282,7 +283,7 @@ export const QuickAddSheet: React.FC<Props> = ({
                     tab === m ? 'bg-[var(--color-surface)] text-[var(--color-primary)] shadow-xs' : 'text-[var(--color-text-muted)]'
                   }`}
                 >
-                  {m === 'saisie' ? 'Saisie' : m === 'sms' ? 'SMS MoMo' : 'Voix'}
+                  {m === 'saisie' ? 'Clavier' : m === 'sms' ? 'Coller un SMS' : 'Dicter'}
                 </button>
               ))}
             </div>
@@ -295,7 +296,7 @@ export const QuickAddSheet: React.FC<Props> = ({
         <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-3 flex flex-col gap-3 no-scrollbar">
           {tab === 'saisie' && (
             <>
-              <div className="grid grid-cols-3 p-1 bg-[var(--color-surface-subtle)] rounded-xl border border-[var(--color-border)]">
+              <div className="grid grid-cols-3 gap-1.5">
                 {(['out', 'in', 'save'] as const).map((t) => (
                   <button
                     key={t}
@@ -303,40 +304,78 @@ export const QuickAddSheet: React.FC<Props> = ({
                     onClick={() => {
                       setType(t);
                       setPick(null);
-                      setShowOneoff(false);
+                      setAddToBudget(false);
                     }}
-                    className={`py-1.5 rounded-lg text-xs font-heading font-bold transition ${
+                    className={`min-h-12 rounded-xl text-xs font-heading font-bold transition leading-tight ${
                       type === t
                         ? `${t === 'in' ? 'bg-[var(--color-income)]' : t === 'save' ? 'bg-[var(--color-primary)]' : 'bg-[var(--color-expense)]'} text-white shadow-xs`
-                        : 'text-[var(--color-text-muted)]'
+                        : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
                     }`}
                   >
-                    {typeLabel(t)}
+                    <span className="block text-sm">{typeLabel(t)}</span>
+                    <span className="block text-[10px] font-semibold opacity-90">{t === 'out' ? 'j’ai payé' : t === 'in' ? 'j’ai reçu' : 'je mets de côté'}</span>
                   </button>
                 ))}
               </div>
 
-              {!smart && (
-                <div className="py-2 px-4 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex items-center justify-between">
-                  <span className="text-xs font-heading font-semibold text-[var(--color-text-muted)]">Montant</span>
-                  <span className="flex items-baseline gap-1.5">
-                    <span className={`text-3xl font-heading font-extrabold num ${amountStr ? '' : 'text-[var(--color-text-muted)]/50'}`}>
-                      {amountStr ? fmt(parseInt(amountStr, 10)) : '0'}
-                    </span>
-                    <span className="text-xs font-heading font-bold text-[var(--color-primary)]">F</span>
-                  </span>
-                </div>
-              )}
-
               {!smart ? (
                 <>
-                  {(typeLines.length > 0 || envelopeCats.length > 0) && (
+                  <div className="py-2 px-4 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex items-center justify-between">
+                    <span className="text-xs font-heading font-semibold text-[var(--color-text-muted)]">Combien ?</span>
+                    <span className="flex items-baseline gap-1.5">
+                      <span className={`text-3xl font-heading font-extrabold num ${amountStr ? '' : 'text-[var(--color-text-muted)]/50'}`}>
+                        {amountStr ? fmt(parseInt(amountStr, 10)) : '0'}
+                      </span>
+                      <span className="text-xs font-heading font-bold text-[var(--color-primary)]">F</span>
+                    </span>
+                  </div>
+                  <Keypad value={amountStr} onChange={setAmountStr} />
+
+                  <div className="flex flex-col gap-1.5">
+                    <span className="text-xs font-heading font-bold text-[var(--color-text)] px-0.5">
+                      {type === 'in' ? 'D’où vient cet argent ?' : 'C’est pour quoi ?'}{' '}
+                      <span className="font-normal text-[var(--color-text-muted)]">(facultatif)</span>
+                    </span>
+                    {kindCats.length ? (
+                      <div className="grid grid-cols-3 gap-1.5">
+                        {kindCats.map((c) => {
+                          const sel = pick?.categoryId === c.id;
+                          return (
+                            <button
+                              key={c.id}
+                              type="button"
+                              onClick={() => {
+                                triggerHaptic('light');
+                                setPick(sel ? null : { lineId: null, categoryId: c.id });
+                                setAddToBudget(false);
+                              }}
+                              className={`min-h-[60px] p-1.5 rounded-xl border flex flex-col items-center justify-center gap-1 text-[11px] font-semibold leading-tight text-center transition ${
+                                sel ? 'border-transparent text-white' : 'border-[var(--color-border)] text-[var(--color-text)] bg-[var(--color-surface)]'
+                              }`}
+                              style={sel ? { backgroundColor: c.color } : undefined}
+                              aria-pressed={sel}
+                            >
+                              <RubricBadge icon={c.icon} color={sel ? '#FFFFFF' : c.color} size="sm" />
+                              <span className="line-clamp-2">{c.name}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <span className="text-[11px] text-[var(--color-text-muted)] px-0.5">
+                        Pas encore de rubrique : l’opération sera notée « sans rubrique ». Vous pourrez la ranger plus tard.
+                      </span>
+                    )}
+                  </div>
+
+                  {pick && pickLines.length > 0 && (
                     <div className="flex flex-col gap-1.5">
-                      <span className="text-[11px] font-semibold text-[var(--color-text-muted)] px-1">Pour quelle ligne ?</span>
-                      <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-                        {typeLines.map((l) => {
-                          const c = catById.get(l.categoryId);
-                          const sel = pick?.lineId === l.id;
+                      <span className="text-xs font-heading font-bold text-[var(--color-text)] px-0.5">
+                        Laquelle ? <span className="font-normal text-[var(--color-text-muted)]">(facultatif)</span>
+                      </span>
+                      <div className="flex flex-wrap gap-1.5">
+                        {pickLines.map((l) => {
+                          const sel = pick.lineId === l.id;
                           const rem = remainingOf(l);
                           return (
                             <button
@@ -344,35 +383,16 @@ export const QuickAddSheet: React.FC<Props> = ({
                               type="button"
                               onClick={() => {
                                 triggerHaptic('light');
-                                if (sel) return setPick(null);
-                                setPick({ lineId: l.id, categoryId: l.categoryId });
-                                if (rem > 0 && !amountStr) setAmountStr(String(rem));
+                                setPick({ categoryId: l.categoryId, lineId: sel ? null : l.id });
+                                if (!sel && rem > 0 && !amountStr) setAmountStr(String(rem));
                               }}
-                              className={`shrink-0 h-9 pl-1 pr-2.5 rounded-full flex items-center gap-1.5 border text-xs font-medium transition ${
+                              className={`min-h-10 px-3 rounded-full border text-xs font-semibold transition ${
                                 sel ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'bg-[var(--color-surface)] border-[var(--color-border)]'
                               }`}
+                              aria-pressed={sel}
                             >
-                              <RubricBadge icon={c?.icon} color={sel ? '#FFFFFF' : c?.color} size="sm" className="!w-7 !h-7 rounded-full" />
-                              <span className="truncate max-w-[120px]">{l.label}</span>
-                              {rem > 0 && <span className={`text-[10px] num ${sel ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>reste {fmt(rem)}</span>}
-                            </button>
-                          );
-                        })}
-                        {envelopeCats.map((c) => {
-                          const sel = pick && !pick.lineId && pick.categoryId === c.id;
-                          const rem = calc.byCategory[c.id]?.remaining || 0;
-                          return (
-                            <button
-                              key={c.id}
-                              type="button"
-                              onClick={() => setPick(sel ? null : { lineId: null, categoryId: c.id })}
-                              className={`shrink-0 h-9 pl-1 pr-2.5 rounded-full flex items-center gap-1.5 border text-xs font-medium transition ${
-                                sel ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'bg-[var(--color-surface)] border-[var(--color-border)]'
-                              }`}
-                            >
-                              <RubricBadge icon={c.icon} color={sel ? '#FFFFFF' : c.color} size="sm" className="!w-7 !h-7 rounded-full" />
-                              <span className="truncate max-w-[120px]">{c.name}</span>
-                              {rem > 0 && <span className={`text-[10px] num ${sel ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>reste {fmt(rem)}</span>}
+                              {l.label}
+                              {rem > 0 && <span className={`ml-1 text-[10px] num ${sel ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>reste {fmt(rem)}</span>}
                             </button>
                           );
                         })}
@@ -380,68 +400,26 @@ export const QuickAddSheet: React.FC<Props> = ({
                     </div>
                   )}
 
-                  {!pick && (
+                  <div className="flex flex-col gap-1">
+                    <span className="text-xs font-heading font-bold text-[var(--color-text)] px-0.5">
+                      Détail <span className="font-normal text-[var(--color-text-muted)]">(facultatif)</span>
+                    </span>
                     <input
                       type="text"
                       value={label}
                       maxLength={MAX_NAME_LENGTH}
-                      onChange={(e) => {
-                        setLabel(e.target.value);
-                        setShowOneoff(false);
-                      }}
-                      placeholder="Libellé (ex : Pousseur, Beignets, Don)"
+                      onChange={(e) => setLabel(e.target.value)}
+                      placeholder={type === 'in' ? 'Ex : salaire d’octobre' : 'Ex : essence moto, marché, beignets'}
                       className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] focus:border-[var(--color-primary)] focus:outline-hidden"
-                      aria-label="Libellé"
+                      aria-label="Détail"
                     />
-                  )}
-
-                  {!pick && labelMatch && (
-                    <span className="text-[11px] text-[var(--color-text-muted)] px-1">
-                      Sera rangé dans la ligne « {labelMatch.label} » ({catById.get(labelMatch.categoryId)?.name}).
-                    </span>
-                  )}
-
-                  {!pick && label.trim() && !labelMatch && type !== 'in' && (
-                    <div className="p-2.5 rounded-2xl border border-dashed border-[var(--color-border)] flex flex-col gap-2">
-                      {!showOneoff ? (
-                        <button
-                          type="button"
-                          onClick={() => setShowOneoff(true)}
-                          className="text-xs font-heading font-bold text-[var(--color-primary)] text-left"
-                        >
-                          + Créer une ligne ponctuelle pour ce mois
-                        </button>
-                      ) : (
-                        <>
-                          <span className="text-[11px] text-[var(--color-text-muted)]">
-                            Dans quelle rubrique ? La ligne « {label.trim()} » sera créée pour ce mois seulement.
-                          </span>
-                          <div className="flex flex-wrap gap-1.5">
-                            {kindCats.map((c) => (
-                              <button
-                                key={c.id}
-                                type="button"
-                                onClick={() => submitSaisie(c.id)}
-                                className="h-9 pl-1 pr-2.5 rounded-full border border-[var(--color-border)] flex items-center gap-1.5 text-xs font-semibold"
-                              >
-                                <RubricBadge icon={c.icon} color={c.color} size="sm" className="!w-7 !h-7 rounded-full" />
-                                {c.name}
-                              </button>
-                            ))}
-                            {!kindCats.some((c) => c.name.toLowerCase() === OTHER_RUBRIC_DEFAULT.name.toLowerCase()) && (
-                              <button
-                                type="button"
-                                onClick={() => submitSaisie(null)}
-                                className="h-9 px-3 rounded-full border border-[var(--color-border)] text-xs font-semibold"
-                              >
-                                {OTHER_RUBRIC_DEFAULT.name}
-                              </button>
-                            )}
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  )}
+                    {pick && !pick.lineId && label.trim() && calc.byCategory[pick.categoryId]?.mode === 'lines' && (
+                      <label className="flex items-center gap-2 text-[11px] text-[var(--color-text-muted)] px-0.5 py-1">
+                        <input type="checkbox" checked={addToBudget} onChange={(e) => setAddToBudget(e.target.checked)} className="w-4 h-4" />
+                        Ajouter « {label.trim()} » comme ligne du budget de ce mois
+                      </label>
+                    )}
+                  </div>
                 </>
               ) : (
                 <div className="flex flex-col gap-1.5">
@@ -461,66 +439,79 @@ export const QuickAddSheet: React.FC<Props> = ({
                       return (
                         <div className="p-2 rounded-xl bg-[var(--color-primary-light)] text-[11px] text-[var(--color-primary)] font-medium">
                           {typeLabel(p.type)} · <b>{fmt(p.amt)} F</b> · {p.label || '—'}
-                          {p.line ? ` · ${catById.get(p.line.categoryId)?.name}` : ' · sans ligne'}
+                          {p.line ? ` · ${catById.get(p.line.categoryId)?.name}` : ''}
                         </div>
                       );
                     })()}
                 </div>
               )}
 
-              <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5 min-w-0">
-                  <WalletIcon size={14} className="text-[var(--color-text-muted)] shrink-0" />
+              <div className="flex flex-col gap-1.5">
+                <span className="text-xs font-heading font-bold text-[var(--color-text)] px-0.5">
+                  {type === 'in' ? 'Reçu sur' : 'Payé avec'}
+                </span>
+                <div className="flex flex-wrap gap-1.5">
                   {wallets.map((w) => (
                     <button
                       key={w.id}
                       type="button"
                       onClick={() => setWalletId(w.id)}
-                      className={`px-2 py-1 rounded-lg text-[10px] font-bold shrink-0 ${
-                        walletId === w.id ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
+                      className={`min-h-10 px-3 rounded-full text-xs font-bold border transition ${
+                        walletId === w.id ? 'bg-[var(--color-text)] text-[var(--color-surface)] border-transparent' : 'bg-[var(--color-surface)] border-[var(--color-border)] text-[var(--color-text)]'
                       }`}
+                      aria-pressed={walletId === w.id}
                     >
                       {w.name}
                     </button>
                   ))}
                 </div>
-                <div className="flex items-center gap-1 shrink-0">
-                  <Calendar size={13} className="text-[var(--color-text-muted)]" />
-                  {currentMonth === currentMonthKey() ? (
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <span className="text-xs font-heading font-bold text-[var(--color-text)] px-0.5">Quand ?</span>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {currentMonth === currentMonthKey() &&
                     (['today', 'yesterday'] as const).map((d) => (
                       <button
                         key={d}
                         type="button"
                         onClick={() => setDateMode(d)}
-                        className={`px-2 py-1 rounded-lg text-[10px] font-bold ${
-                          dateMode === d ? 'bg-[var(--color-text)] text-[var(--color-surface)]' : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
+                        className={`min-h-10 px-3 rounded-full text-xs font-bold border ${
+                          dateMode === d ? 'bg-[var(--color-text)] text-[var(--color-surface)] border-transparent' : 'bg-[var(--color-surface)] border-[var(--color-border)]'
                         }`}
                       >
                         {d === 'today' ? 'Aujourd’hui' : 'Hier'}
                       </button>
-                    ))
-                  ) : (
+                    ))}
+                  <label
+                    className={`min-h-10 px-3 rounded-full text-xs font-bold border flex items-center gap-1.5 ${
+                      dateMode === 'custom' ? 'bg-[var(--color-text)] text-[var(--color-surface)] border-transparent' : 'bg-[var(--color-surface)] border-[var(--color-border)]'
+                    }`}
+                  >
+                    <Calendar size={13} />
                     <input
                       type="date"
                       value={customDate}
-                      onChange={(e) => setCustomDate(e.target.value)}
-                      className="px-1.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--color-surface-subtle)]"
-                      aria-label="Date"
+                      onChange={(e) => {
+                        setCustomDate(e.target.value);
+                        setDateMode('custom');
+                      }}
+                      onFocus={() => setDateMode('custom')}
+                      className="bg-transparent text-xs font-bold w-[110px]"
+                      aria-label="Autre date"
                     />
-                  )}
+                  </label>
                 </div>
               </div>
 
               <button
                 type="button"
-                onClick={() => setSmart((s) => !s)}
-                className="self-start text-[11px] font-semibold text-[var(--color-text-muted)] hover:text-[var(--color-primary)] flex items-center gap-1"
+                onClick={() => setSmart((v) => !v)}
+                className="self-start min-h-9 text-[11px] font-semibold text-[var(--color-text-muted)] hover:text-[var(--color-primary)] flex items-center gap-1"
               >
                 <Sparkles size={12} className="text-[var(--color-accent)]" />
-                {smart ? 'Retour au clavier numérique' : 'Saisie rapide en 1 ligne'}
+                {smart ? 'Revenir au clavier' : 'Ou écrire en une ligne (ex : « 5000 beurre »)'}
               </button>
-
-              {!smart && <Keypad value={amountStr} onChange={setAmountStr} />}
             </>
           )}
 
@@ -643,7 +634,10 @@ export const QuickAddSheet: React.FC<Props> = ({
         <div className="px-4 pt-2 pb-[calc(12px+env(safe-area-inset-bottom,0px))] border-t border-[var(--color-border)] shrink-0">
           {tab === 'saisie' && (
             <button type="button" onClick={() => submitSaisie()} className="w-full min-h-12 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm flex items-center justify-center gap-2 active:scale-[0.98]">
-              <Check size={18} /> Enregistrer
+              <Check size={18} />
+              {smart || !amountStr
+                ? 'Enregistrer'
+                : `Enregistrer ${type === 'in' ? 'l’entrée' : type === 'save' ? 'l’épargne' : 'la sortie'} de ${fmt(parseInt(amountStr, 10))} F`}
             </button>
           )}
           {tab === 'sms' && (

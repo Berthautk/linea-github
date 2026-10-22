@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BookOpen,
+  History,
   Home,
   LayoutGrid,
   Plus,
@@ -37,7 +37,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     icon: React.ComponentType<{ size?: number; className?: string }>;
   }> = [
     { id: 'accueil', label: 'Accueil', icon: Home },
-    { id: 'journal', label: 'Journal', icon: BookOpen },
+    { id: 'journal', label: 'Historique', icon: History },
   ];
 
   const rightTabs: Array<{
@@ -91,7 +91,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             type="button"
             onClick={handleFabClick}
             className="w-13 h-13 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center shadow-[var(--shadow-fab)] hover:scale-105 active:scale-95 transition-all transform cursor-pointer border-4 border-[var(--color-surface)]"
-            aria-label="Ajouter une opération"
+            aria-label="Noter une sortie ou une entrée"
           >
             <Plus size={26} className="stroke-[2.5px]" />
           </button>

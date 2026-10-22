@@ -11,7 +11,7 @@ import { fmt, todayStr } from '../lib/budget-math';
 import { describeEntry, MonthCalc, sortCategories } from '../lib/calc';
 import { triggerHaptic } from '../lib/haptics';
 import { NO_RUBRIC_STYLE, RubricBadge } from '../lib/icons';
-import { Category, Entry } from '../lib/types';
+import { Category, Entry, Wallet } from '../lib/types';
 import { EntryEditSheet } from './EntryEditSheet';
 
 interface JournalScreenProps {
@@ -21,6 +21,7 @@ interface JournalScreenProps {
   onUpdateEntry: (updated: Entry) => void;
   onDeleteEntry: (id: string) => void;
   onOpenQuickAdd: () => void;
+  wallets?: Wallet[];
 }
 
 export const JournalScreen: React.FC<JournalScreenProps> = ({
@@ -30,6 +31,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
   onUpdateEntry,
   onDeleteEntry,
   onOpenQuickAdd,
+  wallets = [],
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<'all' | 'out' | 'in'>('all');
@@ -104,9 +106,25 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
 
   return (
     <div className="flex flex-col gap-2.5 pb-24">
+      <div className="px-1 pt-1">
+        <h1 className="m-0 text-lg font-heading font-extrabold text-[var(--color-text)]">Historique</h1>
+        <p className="m-0 text-[11px] text-[var(--color-text-muted)]">
+          Toutes vos entrées et sorties du mois, jour par jour. Touchez une opération pour la corriger ou la supprimer.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        <div className="rounded-2xl p-2.5 bg-[var(--color-income-soft)]">
+          <span className="block text-[11px] font-semibold text-[var(--color-text-muted)]">Entrées du mois</span>
+          <b className="text-base font-heading num text-[var(--color-income)]">+{fmt(calc.inc)} F</b>
+        </div>
+        <div className="rounded-2xl p-2.5 bg-[var(--color-expense-soft)]">
+          <span className="block text-[11px] font-semibold text-[var(--color-text-muted)]">Sorties du mois</span>
+          <b className="text-base font-heading num text-[var(--color-expense)]">−{fmt(calc.out)} F</b>
+        </div>
+      </div>
       {/* Compact Search and Filters in a single top row */}
-      <div className="flex items-center gap-1.5">
-        <div className="relative flex-1">
+      <div className="flex flex-wrap items-center gap-1.5">
+        <div className="relative w-full">
           <Search
             size={14}
             className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] pointer-events-none"
@@ -115,7 +133,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Rechercher…"
+            placeholder="Rechercher une opération (nom, montant…)"
             className="w-full pl-8 pr-7 py-1.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-xs text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-primary)] focus:outline-hidden"
           />
           {searchTerm && (
@@ -268,6 +286,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
                               </span>
                               <small className="text-[10px] text-[var(--color-text-muted)] truncate block">
                                 {el.g}
+                                {wallets.find((w) => w.id === e.w) ? ` · ${wallets.find((w) => w.id === e.w)!.name}` : ''}
                               </small>
                             </div>
                           </div>

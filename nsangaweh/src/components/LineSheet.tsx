@@ -133,7 +133,7 @@ export const LineSheet: React.FC<Props> = ({
   return (
     <Sheet
       open={open}
-      title={line ? 'Modifier la ligne' : isIncome || kindFilter === 'in' ? 'Nouveau revenu' : 'Nouvelle ligne'}
+      title={line ? 'Modifier la ligne' : isIncome || kindFilter === 'in' ? 'Nouvelle entrée prévue' : 'Nouvelle ligne à payer'}
       onClose={onClose}
       footer={
         <>
@@ -145,7 +145,7 @@ export const LineSheet: React.FC<Props> = ({
             <div className="grid grid-cols-2 gap-2">
               {onPayNow && (
                 <PrimaryButton tone="ghost" onClick={() => onPayNow(line)}>
-                  <HandCoins size={16} /> {isIncome ? 'Marquer reçu' : 'Payer maintenant'}
+                  <HandCoins size={16} /> {isIncome ? 'Noter que c’est reçu' : 'Noter un paiement'}
                 </PrimaryButton>
               )}
               {onDelete && (

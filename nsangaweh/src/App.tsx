@@ -197,6 +197,13 @@ export default function App() {
   const [isCommitmentsOpen, setIsCommitmentsOpen] = useState(false);
   const [activePlusModule, setActivePlusModule] = useState<PlusModule | null>(null);
   const [reviewSkipped, setReviewSkipped] = useState<string[]>(readSkipped);
+  const [helpDismissed, setHelpDismissed] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('nsangaweh-help-dismissed') === '1';
+    } catch {
+      return false;
+    }
+  });
 
   // Snackbar with "Annuler" (6 seconds)
   const [toast, setToast] = useState<Toast | null>(null);
@@ -597,7 +604,7 @@ export default function App() {
         }
         return next;
       },
-      `${d.type === 'in' ? 'Revenu' : d.type === 'save' ? 'Épargne' : 'Dépense'} ajoutée : ${fmt(d.amt)} F · ${d.label}${
+      `${d.type === 'in' ? 'Entrée' : d.type === 'save' ? 'Épargne' : 'Sortie'} enregistrée : ${fmt(d.amt)} F · ${d.label}${
         monthKey !== currentMonth ? ` (${monthLabel(monthKey)})` : ''
       }`,
       true
@@ -1035,6 +1042,18 @@ export default function App() {
               onPrepareMonth={openReview}
               onChooseRubrics={() => setSetup({ open: true, step: 'pick' })}
               onImport={() => setSetup({ open: true, step: 'import' })}
+              wallets={wallets}
+              showHelp={!helpDismissed}
+              onDismissHelp={() => {
+                setHelpDismissed(true);
+                try {
+                  localStorage.setItem('nsangaweh-help-dismissed', '1');
+                } catch {
+                  /* storage unavailable */
+                }
+              }}
+              onOpenQuickAdd={(type) => setQuickAdd({ open: true, type, prefill: null })}
+              onOpenHistory={() => changeTab('journal')}
             />
           )}
 
@@ -1046,6 +1065,7 @@ export default function App() {
               onUpdateEntry={(e) => run((b) => updateEntry(b, currentMonth, budgetMonthOf(e.d), e), 'Opération mise à jour.', true)}
               onDeleteEntry={(id) => run((b) => deleteEntry(b, currentMonth, id), 'Opération supprimée.', true)}
               onOpenQuickAdd={() => setQuickAdd({ open: true, type: 'out', prefill: null })}
+              wallets={wallets}
             />
           )}
 

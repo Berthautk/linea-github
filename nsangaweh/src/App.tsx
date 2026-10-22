@@ -1034,6 +1034,10 @@ export default function App() {
                 setLineSheet({ open: true, lineId: l.id });
               }}
               onPayLine={payLine}
+              onPayCategory={(c) => {
+                const cc = calc.byCategory[c.id];
+                setQuickAdd({ open: true, type: c.kind === 'save' ? 'save' : 'out', prefill: { categoryId: c.id, amount: cc?.remaining || undefined } });
+              }}
               onRubricMenu={setRubricMenu}
               onEditEnvelope={(c) => setEnvelopeFor(c.id)}
               onReorderCategories={(ids) => run((b) => reorderCategories(b, ids))}

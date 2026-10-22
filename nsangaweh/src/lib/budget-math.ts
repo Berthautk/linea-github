@@ -392,7 +392,7 @@ export function escapeHtml(s: string): string {
 
 /** Default label when the user did not type one. */
 export function defaultEntryLabel(t: EntryType): string {
-  return t === 'in' ? 'Revenu' : t === 'save' ? 'Épargne' : t === 'transfer' ? 'Virement' : 'Dépense';
+  return t === 'in' ? 'Entrée' : t === 'save' ? 'Épargne' : t === 'transfer' ? 'Virement' : 'Sortie';
 }
 
 export type { Entry };

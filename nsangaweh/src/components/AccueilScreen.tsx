@@ -11,7 +11,8 @@ import {
   Info,
   ListChecks,
   Minus,
-  MoreHorizontal,
+  Pencil,
+  Settings2,
   Plus,
   Sparkles,
   X,
@@ -40,6 +41,7 @@ interface Props {
   onAddLine: (categoryId?: string) => void;
   onEditLine: (line: MonthLine) => void;
   onPayLine: (line: MonthLine) => void;
+  onPayCategory: (cat: Category) => void;
   onRubricMenu: (cat: Category) => void;
   onEditEnvelope: (cat: Category) => void;
   onReorderCategories: (ids: string[]) => void;
@@ -107,8 +109,7 @@ export const AccueilScreen: React.FC<Props> = (props) => {
       <div className="pt-2 px-1">
         <h2 className="m-0 text-base font-heading font-extrabold text-[var(--color-text)]">Mon budget du mois</h2>
         <p className="m-0 text-[11px] text-[var(--color-text-muted)] leading-snug">
-          Ce que vous aviez prévu de recevoir et de payer, et où vous en êtes. « 30 000 / 50 000 F » veut dire : 30 000 F déjà
-          payés sur 50 000 F prévus.
+          <b>Prévu</b> : ce que vous avez prévu. <b>Sorti</b> (ou <b>Reçu</b>) : ce qui est déjà passé. <b>Reste</b> : ce qu’il reste à payer, en rouge avec un « − » si vous avez dépassé.
         </p>
       </div>
 
@@ -186,42 +187,31 @@ export const AccueilScreen: React.FC<Props> = (props) => {
             <>
               <IncomeSection calc={calc} onAddIncome={props.onAddIncome} onEditLine={props.onEditLine} onPayLine={props.onPayLine} />
 
-              <div className="flex items-center justify-between px-1 pt-1">
-                <h3 className="m-0 text-sm font-heading font-extrabold text-[var(--color-text)]">Sorties prévues</h3>
-                <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      triggerHaptic('light');
-                      setReorder((r) => !r);
-                      props.onToggleRubric(null);
-                    }}
-                    className={`h-9 px-3 rounded-full text-xs font-heading font-bold transition ${
-                      reorder ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-primary)] hover:bg-[var(--color-primary-light)]'
-                    }`}
-                  >
-                    {reorder ? 'Terminé' : 'Changer l’ordre'}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setPlusMenu(true)}
-                    className="h-9 px-3 rounded-full border border-[var(--color-primary)] text-[var(--color-primary)] text-xs font-heading font-bold flex items-center gap-1 active:scale-95"
-                  >
-                    <Plus size={14} /> Ajouter
-                  </button>
-                </div>
+              <div className="flex items-center justify-between px-1 pt-2">
+                <h3 className="m-0 text-sm font-heading font-extrabold text-[var(--color-text)]">Mes sorties du mois</h3>
+                <button
+                  type="button"
+                  onClick={() => {
+                    triggerHaptic('light');
+                    setReorder((r) => !r);
+                    props.onToggleRubric(null);
+                  }}
+                  className={`h-9 px-3 rounded-full text-xs font-heading font-bold transition ${
+                    reorder ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-primary)] hover:bg-[var(--color-primary-light)]'
+                  }`}
+                >
+                  {reorder ? 'Terminé' : 'Changer l’ordre'}
+                </button>
               </div>
-              <p className="m-0 px-1 -mt-1.5 text-[10px] text-[var(--color-text-muted)]">
-                Touchez une rubrique pour voir ses lignes. Touchez une ligne pour la modifier.
-              </p>
 
+              <TableHeader rubrics={calc.expense.filter((c) => !c.category.archived || c.actual > 0)} />
               <RubricList {...props} reorder={reorder} />
 
               {calc.uncategorizedOut > 0 && (
-                <div className="h-12 px-3.5 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-between gap-2">
+                <div className="min-h-12 px-3.5 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2.5 min-w-0">
                     <RubricBadge {...NO_RUBRIC_STYLE} size="sm" />
-                    <span className="text-xs font-semibold text-[var(--color-text)] truncate">Sorties sans rubrique</span>
+                    <span className="text-xs font-semibold text-[var(--color-text)] leading-tight">Sorties sans rubrique</span>
                   </div>
                   <span className="text-xs font-heading font-bold num">{fmt(calc.uncategorizedOut)} F</span>
                 </div>
@@ -229,10 +219,14 @@ export const AccueilScreen: React.FC<Props> = (props) => {
 
               <button
                 type="button"
-                onClick={props.onAddRubric}
-                className="h-12 rounded-2xl border-2 border-dashed border-[var(--color-border)] text-xs font-heading font-bold text-[var(--color-primary)] flex items-center justify-center gap-1.5 hover:border-[var(--color-primary)] transition"
+                onClick={() => setPlusMenu(true)}
+                className="min-h-14 rounded-2xl bg-[var(--color-primary)] text-white font-heading font-bold text-sm flex items-center justify-center gap-2.5 shadow-sm active:scale-[0.98] transition"
               >
-                <Plus size={16} /> Ajouter une rubrique
+                <Plus size={20} strokeWidth={3} />
+                <span className="leading-tight text-left">
+                  Ajouter au budget
+                  <span className="block text-[11px] font-semibold opacity-90">une dépense, un groupe ou une entrée</span>
+                </span>
               </button>
             </>
           )}
@@ -245,19 +239,20 @@ export const AccueilScreen: React.FC<Props> = (props) => {
       <ActionSheet
         open={plusMenu}
         title="Ajouter au budget"
+        message="Que voulez-vous prévoir ? Rien n’est dépensé : vous ajoutez seulement une prévision."
         onClose={() => setPlusMenu(false)}
         actions={[
           {
-            label: 'Une ligne à payer',
-            hint: 'Ex : Loyer, Eau, Maman — dans une rubrique',
+            label: 'Une dépense prévue',
+            hint: 'Ex : le loyer, 50 000 F. Elle va dans une rubrique (Logement, Santé…).',
             onClick: () => {
               setPlusMenu(false);
               props.onAddLine();
             },
           },
           {
-            label: 'Une rubrique',
-            hint: 'Un groupe de lignes, ex : Logement, Santé',
+            label: 'Un groupe de dépenses (rubrique)',
+            hint: 'Ex : Logement, Santé, École. Une rubrique réunit plusieurs dépenses.',
             onClick: () => {
               setPlusMenu(false);
               props.onAddRubric();
@@ -265,7 +260,7 @@ export const AccueilScreen: React.FC<Props> = (props) => {
           },
           {
             label: 'Une entrée prévue',
-            hint: 'Ex : Salaire, Vacation',
+            hint: 'Ex : votre salaire, une vacation.',
             onClick: () => {
               setPlusMenu(false);
               props.onAddIncome();
@@ -468,6 +463,64 @@ const Row: React.FC<{ label: string; value: string }> = ({ label, value }) => (
   </div>
 );
 
+/* ------------------- table: Prévu | Sorti (ou Reçu) | Reste ------------------- */
+
+const COL = 'w-[60px] text-right shrink-0';
+
+const ColLabels: React.FC<{ done: string; className?: string }> = ({ done, className = '' }) => (
+  <div className={`flex items-center justify-end text-[10px] font-heading font-bold uppercase tracking-wide text-[var(--color-text-muted)] ${className}`}>
+    <span className={COL}>Prévu</span>
+    <span className={COL}>{done}</span>
+    <span className={COL}>Reste</span>
+  </div>
+);
+
+/** Three aligned figures. "Reste" turns red with a minus when the planned amount is exceeded. */
+const Cols: React.FC<{ planned: number | null; done: number; income?: boolean }> = ({ planned, done, income = false }) => {
+  const has = planned !== null && planned > 0;
+  const rest = has ? planned! - done : null;
+  let restText = '–';
+  let restClass = 'text-[var(--color-text-muted)]';
+  if (rest !== null) {
+    if (income) {
+      restText = rest < 0 ? `+${fmt(-rest)}` : fmt(rest);
+      restClass = rest <= 0 ? 'text-[var(--color-income)]' : 'text-[var(--color-text)]';
+    } else if (rest < 0) {
+      restText = `−${fmt(-rest)}`;
+      restClass = 'text-[var(--color-expense)]';
+    } else {
+      restText = fmt(rest);
+      restClass = rest === 0 ? 'text-[var(--color-income)]' : 'text-[var(--color-text)]';
+    }
+  }
+  return (
+    <div className="flex items-center justify-end text-[11.5px] num font-heading">
+      <span className={`${COL} text-[var(--color-text-muted)] font-semibold`}>{has ? fmt(planned!) : '–'}</span>
+      <span className={`${COL} font-bold text-[var(--color-text)]`}>{fmt(done)}</span>
+      <span className={`${COL} font-extrabold ${restClass}`}>{restText}</span>
+    </div>
+  );
+};
+
+const TableHeader: React.FC<{ rubrics: CategoryCalc[] }> = ({ rubrics }) => {
+  const planned = rubrics.reduce((s, r) => s + r.planned, 0);
+  const done = rubrics.reduce((s, r) => s + r.actual, 0);
+  return (
+    <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl px-2 py-2 shadow-2xs" aria-label="Total des sorties">
+      <div className="flex items-center gap-2">
+        <span className="flex-1 text-[10px] uppercase font-heading font-bold tracking-wide text-[var(--color-text-muted)] pl-1">Rubrique</span>
+        <ColLabels done="Sorti" />
+        <span className="w-5 shrink-0" />
+      </div>
+      <div className="flex items-center gap-2 mt-1.5 pt-1.5 border-t border-[var(--color-border)]/60">
+        <span className="flex-1 text-xs font-heading font-extrabold text-[var(--color-text)] pl-1">Total</span>
+        <Cols planned={planned} done={done} />
+        <span className="w-5 shrink-0" />
+      </div>
+    </section>
+  );
+};
+
 /* --------------------------------- income --------------------------------- */
 
 const IncomeSection: React.FC<{
@@ -479,29 +532,43 @@ const IncomeSection: React.FC<{
   const lines = calc.income.flatMap((c) => c.lines.map((l) => ({ l, c })));
   const unlined = calc.income.reduce((s, c) => s + c.unplanned, 0) + calc.uncategorizedIn;
   return (
-    <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-2.5 shadow-2xs flex flex-col gap-1" aria-label="Entrées prévues">
-      <div className="flex items-center justify-between px-1">
-        <h3 className="m-0 text-sm font-heading font-extrabold text-[var(--color-text)]">Entrées prévues</h3>
-        <button
-          type="button"
-          onClick={onAddIncome}
-          className="h-7 px-2 rounded-full text-[11px] font-heading font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] flex items-center gap-0.5"
-        >
-          <Plus size={13} /> Ajouter
-        </button>
+    <section className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-2 shadow-2xs flex flex-col gap-1.5" aria-label="Mes entrées du mois">
+      <div className="px-1 pt-1">
+        <h3 className="m-0 text-sm font-heading font-extrabold text-[var(--color-text)]">Mes entrées du mois</h3>
       </div>
+      {(lines.length > 0 || unlined > 0) && (
+        <div className="flex items-center gap-2 px-3">
+          <span className="flex-1" />
+          <ColLabels done="Reçu" />
+        </div>
+      )}
       {!lines.length && !unlined && (
-        <p className="m-0 px-1 pb-1 text-[11px] text-[var(--color-text-muted)]">Aucune entrée prévue. Ajoutez par exemple votre salaire pour savoir ce qu’il vous restera.</p>
+        <p className="m-0 px-1 text-[11px] text-[var(--color-text-muted)]">
+          Aucune entrée prévue. Ajoutez par exemple votre salaire : l’application pourra alors vous dire ce qu’il vous restera.
+        </p>
       )}
       {lines.map(({ l, c }) => (
         <LineRow key={l.line.id} lc={l} cat={c.category} income onEdit={onEditLine} onPay={onPayLine} />
       ))}
       {unlined > 0 && (
-        <div className="h-9 px-3 flex items-center justify-between text-xs text-[var(--color-text-muted)]">
-          <span>Autres revenus reçus</span>
-          <b className="num text-[var(--color-text)]">{fmt(unlined)} F</b>
+        <div className="min-h-11 px-3 flex items-center gap-2 text-xs text-[var(--color-text-muted)]">
+          <span className="flex-1 min-w-0 leading-tight">Autres entrées reçues (sans ligne prévue)</span>
+          <Cols planned={null} done={unlined} income />
         </div>
       )}
+      {lines.length > 0 && (
+        <div className="flex items-center gap-2 px-3 pt-1.5 border-t border-[var(--color-border)]/60">
+          <span className="flex-1 text-xs font-heading font-extrabold">Total</span>
+          <Cols planned={calc.pIn} done={calc.inc} income />
+        </div>
+      )}
+      <button
+        type="button"
+        onClick={onAddIncome}
+        className="min-h-11 rounded-xl text-xs font-heading font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] flex items-center justify-center gap-1.5"
+      >
+        <Plus size={15} /> Ajouter une entrée prévue (salaire…)
+      </button>
     </section>
   );
 };
@@ -516,11 +583,7 @@ const RubricList: React.FC<Props & { reorder: boolean }> = (props) => {
   const byId = new Map(rubrics.map((r) => [r.id, r]));
 
   if (!rubrics.length) {
-    return (
-      <p className="m-0 px-1 text-xs text-[var(--color-text-muted)]">
-        Aucune rubrique de dépense. Ajoutez-en une avec le bouton ci-dessous.
-      </p>
-    );
+    return <p className="m-0 px-1 text-xs text-[var(--color-text-muted)]">Aucune rubrique pour l’instant. Utilisez le bouton « Ajouter au budget » ci-dessous.</p>;
   }
 
   return (
@@ -539,6 +602,7 @@ const RubricList: React.FC<Props & { reorder: boolean }> = (props) => {
               onAddLine={() => props.onAddLine(id)}
               onEditLine={props.onEditLine}
               onPayLine={props.onPayLine}
+              onPayCategory={() => props.onPayCategory(cc.category)}
               onEditEnvelope={() => props.onEditEnvelope(cc.category)}
               onReorderLines={props.onReorderLines}
             />
@@ -548,6 +612,15 @@ const RubricList: React.FC<Props & { reorder: boolean }> = (props) => {
     </section>
   );
 };
+
+function rubricSubtitle(cc: CategoryCalc): string {
+  const cat = cc.category;
+  if (cat.archived) return 'Archivée';
+  if (!cc.planned) return cc.mode === 'envelope' ? 'Sans montant prévu' : `${cc.lines.length} ligne${cc.lines.length > 1 ? 's' : ''}`;
+  if (cc.actual > cc.planned) return 'Dépassé';
+  if (cc.remaining === 0) return cat.kind === 'save' ? 'Objectif atteint' : 'Tout est payé';
+  return cc.mode === 'envelope' ? 'Un seul montant' : `${cc.lines.length} ligne${cc.lines.length > 1 ? 's' : ''}`;
+}
 
 const RubricRow: React.FC<{
   cc: CategoryCalc;
@@ -559,140 +632,114 @@ const RubricRow: React.FC<{
   onAddLine: () => void;
   onEditLine: (l: MonthLine) => void;
   onPayLine: (l: MonthLine) => void;
+  onPayCategory: () => void;
   onEditEnvelope: () => void;
   onReorderLines: (ids: string[]) => void;
-}> = ({ cc, open, reorder, handle, onToggle, onMenu, onAddLine, onEditLine, onPayLine, onEditEnvelope, onReorderLines }) => {
+}> = ({ cc, open, reorder, handle, onToggle, onMenu, onAddLine, onEditLine, onPayLine, onPayCategory, onEditEnvelope, onReorderLines }) => {
   const g = useRowGestures({
     onTap: reorder ? undefined : () => {
       triggerHaptic('light');
       onToggle();
     },
     onLongPress: reorder ? undefined : onMenu,
-    onSwipeLeft: reorder ? undefined : onMenu,
   });
   const cat = cc.category;
   const pct = cc.planned > 0 ? Math.min(100, (cc.actual / cc.planned) * 100) : 0;
   const over = cc.planned > 0 && cc.actual > cc.planned;
-  const done = cc.planned > 0 && cc.remaining === 0 && !over;
+  const doneLabel = cat.kind === 'save' ? 'Mis de côté' : 'Sorti';
 
   return (
-    <div
-      className={`bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-2xs ${
-        done && !open && !reorder ? 'opacity-70' : ''
-      }`}
-    >
-      <div className="relative">
-        {g.dx < 0 && (
-          <div className="absolute inset-0 flex items-center justify-end pr-4 bg-[var(--color-surface-subtle)] text-[11px] font-bold text-[var(--color-text-muted)]">
-            Options
-          </div>
+    <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl overflow-hidden shadow-2xs">
+      <div
+        {...g.handlers}
+        style={g.style}
+        className="relative min-h-[60px] pl-2 pr-2 py-2 flex items-center gap-2 bg-[var(--color-surface)] cursor-pointer select-none"
+        aria-expanded={open}
+      >
+        {reorder && (
+          <span {...handle} className="w-8 h-10 flex items-center justify-center text-[var(--color-text-muted)]" aria-label={`Déplacer ${cat.name}`}>
+            <GripVertical size={18} />
+          </span>
         )}
-        <div
-          {...g.handlers}
-          style={g.style}
-          className="relative h-14 pl-2 pr-1 flex items-center gap-2 bg-[var(--color-surface)] cursor-pointer select-none"
-          aria-expanded={open}
-        >
-          {reorder && (
-            <span {...handle} className="w-8 h-10 flex items-center justify-center text-[var(--color-text-muted)]" aria-label={`Déplacer ${cat.name}`}>
-              <GripVertical size={18} />
-            </span>
-          )}
-          <RubricBadge icon={cat.icon} color={cat.color} size="sm" className={reorder ? '' : 'ml-1.5'} />
-          <div className="min-w-0 flex-1 leading-tight">
-            <span className="block font-heading font-bold text-xs text-[var(--color-text)] truncate">{cat.name}</span>
-            <span className="block text-[10px] text-[var(--color-text-muted)] truncate">
-              {cat.archived
-                ? 'Archivée'
-                : !cc.planned
-                ? cc.mode === 'envelope'
-                  ? 'Pas de montant prévu'
-                  : `${cc.lines.length} ligne${cc.lines.length > 1 ? 's' : ''}`
-                : cc.actual > cc.planned
-                ? `Dépassé de ${fmt(cc.actual - cc.planned)} F`
-                : cc.remaining > 0
-                ? `Reste ${fmt(cc.remaining)} F ${cat.kind === 'save' ? 'à mettre de côté' : 'à payer'}`
-                : 'Tout est payé'}
-              {cat.linkedTo === 'debts' ? ' · dettes' : ''}
-            </span>
-          </div>
-          {!reorder && (
-            <div className="text-right leading-tight text-xs shrink-0">
-              <b className="font-heading font-bold text-[var(--color-text)] num">{fmt(cc.actual)}</b>
-              <span className="text-[10px] text-[var(--color-text-muted)] num"> / {cc.planned ? fmt(cc.planned) : '–'} F</span>
-            </div>
-          )}
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              onMenu();
-            }}
-            onPointerDown={(e) => e.stopPropagation()}
-            className="w-9 h-10 flex items-center justify-center text-[var(--color-text-muted)] hover:text-[var(--color-text)] shrink-0"
-            aria-label={`Options de ${cat.name}`}
-          >
-            <MoreHorizontal size={18} />
-          </button>
-          {!reorder && <span className="text-[var(--color-text-muted)] pr-1">{open ? <ChevronUp size={15} /> : <ChevronDown size={15} />}</span>}
+        <RubricBadge icon={cat.icon} color={cat.color} size="sm" className={reorder ? '' : 'ml-1'} />
+        <div className="min-w-0 flex-1 leading-tight">
+          <span className="block font-heading font-bold text-[12px] text-[var(--color-text)] line-clamp-2">{cat.name}</span>
+          <span className={`block text-[10px] truncate ${over ? 'text-[var(--color-expense)] font-bold' : 'text-[var(--color-text-muted)]'}`}>
+            {rubricSubtitle(cc)}
+            {cat.linkedTo === 'debts' ? ' · dettes' : ''}
+          </span>
         </div>
+        {!reorder && <Cols planned={cc.planned} done={cc.actual} />}
+        {!reorder && (
+          <span className="w-5 shrink-0 text-[var(--color-text-muted)] flex items-center justify-center">
+            {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          </span>
+        )}
       </div>
 
       {!reorder && (
         <div className="w-full h-1 bg-[var(--color-border)]/40" aria-hidden="true">
-          <div
-            className={`h-full ${over ? 'bg-[var(--color-expense)]' : ''}`}
-            style={{ width: `${pct}%`, backgroundColor: over ? undefined : cat.color }}
-          />
+          <div className={`h-full ${over ? 'bg-[var(--color-expense)]' : ''}`} style={{ width: `${pct}%`, backgroundColor: over ? undefined : cat.color }} />
         </div>
       )}
 
       {open && (
-        <div className="p-2 bg-[var(--color-surface-subtle)]/40 border-t border-[var(--color-border)]/50 flex flex-col gap-1">
+        <div className="px-2 pt-2 pb-2.5 bg-[var(--color-surface-subtle)]/40 border-t border-[var(--color-border)]/50 flex flex-col gap-2">
+          {cc.mode === 'lines' && cc.lines.length > 0 && (
+            <div className="flex items-center gap-2 px-3">
+              <span className="flex-1 text-[10px] uppercase font-heading font-bold tracking-wide text-[var(--color-text-muted)]">Ligne</span>
+              <ColLabels done={doneLabel} />
+            </div>
+          )}
+
           {cc.mode === 'envelope' ? (
-            <button
-              type="button"
-              onClick={onEditEnvelope}
-              className="h-11 px-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60 flex items-center justify-between text-xs"
-            >
-              <span className="font-medium text-[var(--color-text)]">Prévu pour le mois (touchez pour changer)</span>
-              <span className="num">
-                {cc.envelope === null ? (
-                  <span className="text-[var(--color-text-muted)]">Sans montant</span>
-                ) : (
-                  <>
-                    <b>{fmt(cc.actual)}</b>
-                    <span className="text-[var(--color-text-muted)]"> / {fmt(cc.envelope)} F · reste {fmt(cc.remaining)} F</span>
-                  </>
-                )}
-              </span>
-            </button>
+            <div className="rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60">
+              <div className="min-h-12 px-3 py-2 flex items-center gap-2">
+                <span className="flex-1 min-w-0 text-[13px] font-semibold leading-tight">Montant prévu pour tout le mois</span>
+                <Cols planned={cc.envelope} done={cc.actual} />
+              </div>
+              <div className="px-2 pb-2 flex gap-1.5">
+                <button type="button" onClick={onEditEnvelope} className={BTN_GHOST}>
+                  <Pencil size={13} /> Modifier le montant
+                </button>
+                <button type="button" onClick={onPayCategory} className={BTN_SOFT}>
+                  <HandCoins size={13} /> {cat.kind === 'save' ? 'Mettre de côté' : 'Noter une sortie'}
+                </button>
+              </div>
+            </div>
           ) : (
             <LineList cc={cc} onEditLine={onEditLine} onPayLine={onPayLine} onReorderLines={onReorderLines} />
           )}
+
           {cc.mode === 'lines' && cc.unplanned > 0 && (
-            <div className="h-9 px-3 flex items-center justify-between text-[11px] text-[var(--color-text-muted)]">
-              <span>Dépenses hors lignes</span>
+            <div className="min-h-9 px-3 flex items-center gap-2 text-[11px] text-[var(--color-text-muted)]">
+              <span className="flex-1 leading-tight">Sorties de cette rubrique sans ligne précise</span>
               <b className="num text-[var(--color-text)]">{fmt(cc.unplanned)} F</b>
             </div>
           )}
+
           {!cat.archived && (
-            <button
-              type="button"
-              onClick={onAddLine}
-              className="h-9 rounded-xl text-[11px] font-heading font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] flex items-center justify-center gap-1"
-            >
-              <Plus size={13} /> Ajouter une ligne
-            </button>
+            <div className="flex gap-1.5">
+              {cc.mode === 'lines' && (
+                <button type="button" onClick={onAddLine} className={BTN_GHOST}>
+                  <Plus size={14} /> Ajouter une ligne
+                </button>
+              )}
+              <button type="button" onClick={onMenu} className={BTN_GHOST}>
+                <Settings2 size={14} /> Modifier la rubrique
+              </button>
+            </div>
           )}
-          <span className="text-[10px] text-center text-[var(--color-text-muted)]">
-            Touchez une ligne pour la modifier. Glissez-la vers la droite pour noter un paiement.
-          </span>
         </div>
       )}
     </div>
   );
 };
+
+const BTN_GHOST =
+  'flex-1 min-h-10 px-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] text-[11px] font-heading font-bold text-[var(--color-text)] flex items-center justify-center gap-1 active:scale-[0.98]';
+const BTN_SOFT =
+  'flex-1 min-h-10 px-2 rounded-lg bg-[var(--color-primary-light)] text-[11px] font-heading font-bold text-[var(--color-primary)] flex items-center justify-center gap-1 active:scale-[0.98]';
 
 const LineList: React.FC<{
   cc: CategoryCalc;
@@ -705,7 +752,7 @@ const LineList: React.FC<{
   const drag = useDragReorder(ids, onReorderLines);
   const byId = new Map(cc.lines.map((l) => [l.line.id, l]));
   if (!cc.lines.length) {
-    return <p className="m-0 px-2 py-1 text-[11px] text-[var(--color-text-muted)]">Aucune ligne ce mois-ci.</p>;
+    return <p className="m-0 px-2 py-1 text-[11px] text-[var(--color-text-muted)]">Aucune ligne ce mois-ci. Ajoutez-en une avec le bouton ci-dessous.</p>;
   }
   return (
     <>
@@ -722,12 +769,8 @@ const LineList: React.FC<{
         </div>
       ))}
       {cc.lines.length > 1 && (
-        <button
-          type="button"
-          onClick={() => setSorting((s) => !s)}
-          className="self-end h-7 px-2 text-[10px] font-bold text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
-        >
-          {sorting ? 'Terminé' : 'Réorganiser les lignes'}
+        <button type="button" onClick={() => setSorting((s) => !s)} className="self-end h-8 px-2 text-[10px] font-bold text-[var(--color-text-muted)] hover:text-[var(--color-text)]">
+          {sorting ? 'Terminé' : 'Changer l’ordre des lignes'}
         </button>
       )}
     </>
@@ -738,16 +781,16 @@ function lineStatus(lc: LineCalc, income: boolean): { dot: string; label: string
   const a = lc.line.amount;
   if (a === null) {
     return lc.line.remind
-      ? { dot: 'bg-[var(--color-warning)]', label: 'À fixer' }
-      : { dot: 'bg-[var(--color-border)]', label: 'Sans montant' };
+      ? { dot: 'bg-[var(--color-warning)]', label: 'Montant à fixer' }
+      : { dot: 'bg-[var(--color-border)]', label: 'Sans montant prévu' };
   }
   if (income) {
-    if (lc.paid >= a && a > 0) return { dot: 'bg-[var(--color-income)]', label: lc.paid > a ? `Reçu, ${fmt(lc.paid - a)} F de plus que prévu` : 'Reçu' };
-    return { dot: 'bg-[var(--color-info)]', label: lc.paid ? `Encore ${fmt(a - lc.paid)} F à recevoir` : 'Pas encore reçu' };
+    if (lc.paid >= a && a > 0) return { dot: 'bg-[var(--color-income)]', label: lc.paid > a ? 'Reçu, plus que prévu' : 'Reçu' };
+    return { dot: 'bg-[var(--color-info)]', label: lc.paid ? 'Reçu en partie' : 'Pas encore reçu' };
   }
-  if (lc.paid > a) return { dot: 'bg-[var(--color-expense)]', label: `Dépassé de ${fmt(lc.paid - a)} F` };
+  if (lc.paid > a) return { dot: 'bg-[var(--color-expense)]', label: 'Dépassé' };
   if (lc.paid >= a && a > 0) return { dot: 'bg-[var(--color-income)]', label: 'Payé' };
-  return { dot: 'bg-[var(--color-info)]', label: lc.paid ? `Reste ${fmt(a - lc.paid)} F à payer` : 'Pas encore payé' };
+  return { dot: 'bg-[var(--color-info)]', label: lc.paid ? 'Payé en partie' : 'Pas encore payé' };
 }
 
 const LineRow: React.FC<{
@@ -756,7 +799,7 @@ const LineRow: React.FC<{
   income?: boolean;
   onEdit: (l: MonthLine) => void;
   onPay: (l: MonthLine) => void;
-}> = ({ lc, income = false, onEdit, onPay }) => {
+}> = ({ lc, cat, income = false, onEdit, onPay }) => {
   const g = useRowGestures({
     onTap: () => {
       triggerHaptic('light');
@@ -767,48 +810,40 @@ const LineRow: React.FC<{
   const st = lineStatus(lc, income);
   const a = lc.line.amount;
   return (
-    <div className="relative rounded-xl overflow-hidden">
-      {g.dx > 0 && (
-        <div className="absolute inset-0 flex items-center pl-3 gap-1 bg-[var(--color-income)] text-white text-[11px] font-bold">
-          <HandCoins size={14} /> {income ? 'Marquer reçu' : 'Payer'}
-        </div>
-      )}
-      <div
-        {...g.handlers}
-        style={g.style}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => e.key === 'Enter' && onEdit(lc.line)}
-        className="relative min-h-12 py-1.5 px-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60 flex items-center justify-between gap-2 cursor-pointer active:bg-[var(--color-surface-subtle)]"
-        aria-label={`${lc.line.label}, ${st.label}`}
-      >
-        <div className="flex items-center gap-2 min-w-0">
+    <div className="rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]/60 overflow-hidden">
+      <div className="relative">
+        {g.dx > 0 && (
+          <div className="absolute inset-0 flex items-center pl-3 gap-1 bg-[var(--color-income)] text-white text-[11px] font-bold">
+            <HandCoins size={14} /> {income ? 'Noter une entrée reçue' : 'Noter un paiement'}
+          </div>
+        )}
+        <div
+          {...g.handlers}
+          style={g.style}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && onEdit(lc.line)}
+          className="relative min-h-12 px-3 py-2 bg-[var(--color-surface)] flex items-center gap-2 cursor-pointer active:bg-[var(--color-surface-subtle)]"
+          aria-label={`${lc.line.label}, ${st.label}`}
+        >
           <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${st.dot}`} />
-          <span className="min-w-0 leading-tight">
-            <span className="flex items-center gap-1.5">
-              <span className="font-semibold text-[13px] text-[var(--color-text)] truncate">{lc.line.label}</span>
-              {lc.line.origin === 'oneoff' && (
-                <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] shrink-0">
-                  ce mois seulement
-                </span>
-              )}
+          <span className="min-w-0 flex-1 leading-tight">
+            <span className="block font-semibold text-[13px] text-[var(--color-text)] line-clamp-2">{lc.line.label}</span>
+            <span className={`block text-[10px] ${lc.line.remind && a === null ? 'text-[var(--color-warning)] font-bold' : 'text-[var(--color-text-muted)]'}`}>
+              {st.label}
+              {lc.line.origin === 'oneoff' ? ' · ce mois seulement' : ''}
             </span>
-            <span className="block text-[10px] text-[var(--color-text-muted)] truncate">{st.label}</span>
           </span>
+          <Cols planned={a} done={lc.paid} income={income} />
         </div>
-        <div className="text-right whitespace-nowrap text-xs">
-          {a === null ? (
-            <span className={`text-[11px] ${lc.line.remind ? 'text-[var(--color-warning)] font-bold' : 'text-[var(--color-text-muted)]'}`}>
-              {lc.paid ? `${fmt(lc.paid)} F · ` : ''}
-              {lc.line.remind ? 'À fixer' : 'Sans montant'}
-            </span>
-          ) : (
-            <>
-              <b className="font-heading font-bold text-[var(--color-text)] num">{fmt(lc.paid)}</b>
-              <span className="text-[11px] text-[var(--color-text-muted)] num"> / {fmt(a)} F</span>
-            </>
-          )}
-        </div>
+      </div>
+      <div className="px-2 pb-2 flex gap-1.5">
+        <button type="button" onClick={() => onEdit(lc.line)} className={BTN_GHOST}>
+          <Pencil size={13} /> {a === null ? 'Mettre un montant' : 'Modifier'}
+        </button>
+        <button type="button" onClick={() => onPay(lc.line)} className={BTN_SOFT}>
+          <HandCoins size={13} /> {income ? 'Noter une entrée reçue' : cat.kind === 'save' ? 'Mettre de côté' : 'Noter un paiement'}
+        </button>
       </div>
     </div>
   );

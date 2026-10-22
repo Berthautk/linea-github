@@ -31,7 +31,9 @@ export interface QuickAddDraft {
 }
 
 export interface QuickAddPrefill {
-  lineId: string;
+  lineId?: string;
+  /** Pay into a whole rubric (envelope) instead of a line. */
+  categoryId?: string;
   amount?: number;
 }
 
@@ -107,11 +109,16 @@ export const QuickAddSheet: React.FC<Props> = ({
     setListening(false);
     setAddToBudget(false);
     setLabel('');
-    const line = prefill ? calc.month.lines.find((l) => l.id === prefill.lineId) : undefined;
+    const line = prefill?.lineId ? calc.month.lines.find((l) => l.id === prefill.lineId) : undefined;
+    const prefCat = prefill?.categoryId ? catById.get(prefill.categoryId) : undefined;
     if (line) {
       const kind = catById.get(line.categoryId)?.kind || 'out';
       setType(kind);
       setPick({ lineId: line.id, categoryId: line.categoryId });
+      setAmountStr(prefill?.amount ? String(prefill.amount) : '');
+    } else if (prefCat) {
+      setType(prefCat.kind);
+      setPick({ lineId: null, categoryId: prefCat.id });
       setAmountStr(prefill?.amount ? String(prefill.amount) : '');
     } else {
       setType(initialType);

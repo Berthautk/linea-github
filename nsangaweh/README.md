@@ -83,32 +83,27 @@ Pour déployer sur Firebase Hosting :
 
 ## 🔐 Modèle de sécurité et explications techniques
 
-### Structure Firestore (budget dynamique)
-Aucune rubrique, icône, libellé ou montant n'est fixé dans le code : tout est une donnée créée, modifiée et supprimée par chaque partenaire.
+### Structure Firestore (un seul budget pour le foyer)
+Le budget est **commun aux deux partenaires** : mêmes rubriques, mêmes lignes, mêmes montants prévus, mêmes totaux. Aucune rubrique, icône, libellé ou montant n'est fixé dans le code. Seules les opérations (entrées et sorties) portent le nom de leur auteur.
 
-- `households/{hid}` : `{ joinCode, members: [uid, uid], settings }` — `settings.rubricMerges` regroupe, **dans la vue Famille seulement**, deux noms de rubrique (ex. « Aide famille » → « Soutien famille ») sans toucher aux données de chacun.
-- `households/{hid}/members/{uid}` : profil `{ name, color, joined, budgetSetupDone, templateStripDismissed, envelopeRollover }`
-- `…/members/{uid}/categories/{id}` : une **rubrique** `{ name, icon, color, order, kind: 'out'|'in'|'save', budgetMode: 'lines'|'envelope', envelopeAmount, archived, createdAt, linkedTo? }`
-- `…/members/{uid}/items/{id}` : un **modèle de ligne** `{ categoryId, label, amount (entier ou null), recurrence, active, order, archived }` avec `recurrence` = `once(month)` | `monthly` | `everyNMonths(n, startMonth)` | `months([1..12])` | `yearly(month)` et `startMonth`/`endMonth` facultatifs.
-- `…/members/{uid}/months/{YYYY-MM}` : le **plan propre à ce mois** `{ lines, entries, envelopes, planCreated }`. Il est créé à partir des modèles actifs dont la récurrence correspond au mois (revue « Préparer {mois} »). Modifier un mois ne change jamais les autres en silence.
-- `…/members/{uid}/debts/{id}` et `…/commitments/{id}` : carnet de dettes (chaque dette « Je dois » devient une ligne de la rubrique liée aux dettes) et engagements (un engagement crée un modèle de ligne mensuel).
+- `households/{hid}` : `{ joinCode, members: [uid, uid], budgetVersion: 2, settings }` — `settings.householdName` (nom du foyer) et `settings.envelopeRollover` sont communs.
+- `households/{hid}/members/{uid}` : profil personnel `{ name, color, joined, budgetSetupDone, templateStripDismissed }` (le prénom est personnel).
+- `households/{hid}/categories/{id}` : une **rubrique** `{ name, icon, color, order, kind: 'out'|'in'|'save', budgetMode: 'lines'|'envelope', envelopeAmount, archived, createdAt, linkedTo? }`
+- `households/{hid}/items/{id}` : un **modèle de ligne** `{ categoryId, label, amount (entier ou null), recurrence, active, order, archived }`
+- `households/{hid}/months/{YYYY-MM}` : le **plan du mois** `{ lines, envelopes, planCreated }` (sans les opérations). Chaque mois a son propre plan ; modifier un mois ne change jamais les autres en silence.
+- `households/{hid}/entries/{YYYY-MM}_{uid}` : les **opérations** notées par un partenaire dans un mois `{ month, uid, entries[] }`. Chaque téléphone n'écrit que son document : deux personnes ne s'écrasent jamais.
+- `households/{hid}/debts/{id}` et `…/commitments/{id}` : carnet de dettes (chaque dette « Je dois » devient une ligne de la rubrique des dettes) et engagements.
 
-Les opérations (`entries`) référencent `categoryId` et `lineId` (jamais un nom) et gardent un libellé en copie pour l'historique : renommer une rubrique ou une ligne se voit partout.
+Dans l'application, les opérations des deux partenaires sont réunies dans le mois affiché : les totaux sont ceux du foyer (10 000 F d'entrée pour l'un et 5 000 F pour l'autre font 15 000 F), et chaque opération indique qui l'a notée. L'écran Famille montre « qui a fait quoi ».
 
 **Quotas Spark** : une écriture groupée (`writeBatch`) toutes les 400 ms (20 s en mode économe) ne contient que les documents réellement modifiés ; les écoutes ne relisent que les documents changés. Aucune Cloud Function, aucun produit payant.
 
-**Migration** : au premier lancement de cette version, les mois de l'ancien format (`plan` + `entries` avec `p`) sont convertis en rubriques, modèles et lignes du mois, sans rien perdre (mêmes identifiants de lignes, copie de l'ancien plan gardée dans `legacyPlan`). La revue « Préparer {mois} » s'affiche au mois suivant pour corriger les récurrences. Les deux partenaires doivent utiliser cette version : les nouvelles règles refusent l'écriture de l'ancien format.
+**Migration (une seule fois)** : si le foyer a été créé avant le budget partagé (`budgetVersion` absent), le premier téléphone qui ouvre la nouvelle version lit les budgets que chacun avait construits seul et les fusionne : une rubrique du même nom (majuscules et accents ignorés) devient la même rubrique, une ligne du même nom dans la même rubrique devient la même ligne, chaque opération garde son auteur. Les anciens documents ne sont pas supprimés (copie de sauvegarde). **Les règles de sécurité doivent être publiées avant d'ouvrir la nouvelle version**, sinon l'application affiche « Synchronisation impossible ».
 
-**Tests** : `npx vitest run` (génération des mois selon la récurrence, « seulement ce mois » / « ce mois et les suivants », suppression avec archivage, renommage, migration, enveloppe ou lignes, revue du mois, import de fiche, noms en double, agrégation Famille, règles des totaux).
-
-### Comment fonctionne l'accès par code
-- Le foyer est identifié par un code aléatoire de 10 caractères alphanumériques non ambigus (alphabet de 32 caractères : `ABCDEFGHJKLMNPQRSTUVWXYZ23456789`).
-- Il y a **32^10 = 1 125 899 906 842 624** combinaisons possibles (~1,1 million de milliards), ce qui rend toute recherche exhaustive ou attaque par force brute impossible.
-- Chaque partenaire a son propre compte et **écrit exclusivement dans son propre dossier utilisateur** (`/members/{uid}`). Aucun partenaire ne peut écraser ou altérer les entrées de l'autre.
-- Les deux partenaires peuvent **lire** l'ensemble des données du foyer afin d'alimenter la vue consolidée **Famille**.
+**Tests** : `npx vitest run` (génération des mois selon la récurrence, modifications « ce mois » ou « ce mois et les suivants », suppression avec archivage, renommage, migration, fusion des budgets des deux partenaires, découpage par auteur et annulation, enveloppe ou lignes, revue du mois, import de fiche, noms en double, règles des totaux). Les règles `firestore.rules` ont aussi été testées sur l'émulateur Firebase avec deux utilisateurs et un intrus.
 
 ### Accès par code
-- Le document du foyer se lit avec le code (pour pouvoir le rejoindre) ; **les budgets des membres ne sont lisibles que par les deux uid inscrits dans `members`** du document du foyer.
+- Le document du foyer se lit avec le code (pour pouvoir le rejoindre) ; **le budget (rubriques, plan, opérations, dettes) n'est lisible et modifiable que par les deux uid inscrits dans `members`** du document du foyer.
 - Les règles valident les types, les listes de valeurs permises (`kind`, `budgetMode`, `recurrence.kind`…), les montants entiers entre 0 et 999 999 999, les noms de 1 à 40 caractères et la taille des listes.
 - **Version précédente des règles, pour mémoire** :
   Créer un document racine `households/{hid}` contenant un tableau `memberUids: [uid1, uid2]`.

@@ -71,6 +71,7 @@ export interface Entry {
   categoryId: string | null;
   lineId: string | null;
   label: string; // snapshot for history
+  by?: string; // uid of the partner who noted it
   w: string; // wallet id
   toW?: string; // destination wallet for transfers
   fee?: number;
@@ -274,9 +275,10 @@ export interface HouseholdSettings {
   approvalThreshold: number; // e.g. 50000
   approvalEnabled: boolean;
   exemptCategoryIds?: string[];
-  /** Famille view only: normalised rubric name -> canonical normalised name. */
-  rubricMerges?: Record<string, string>;
-  rubricMergesDismissed?: string[];
+  /** Shared by both partners: the name of the household (ex : Famille Kamdem). */
+  householdName?: string;
+  /** Shared: unspent envelope money moves to the next month. */
+  envelopeRollover?: boolean;
   plan: 'free' | 'premium';
   trialEndsAt?: number;
   premiumEnabled?: boolean; // dev test override
@@ -297,11 +299,10 @@ export interface MemberProfile {
   joined?: number;
   budgetSetupDone?: boolean;
   templateStripDismissed?: boolean;
-  envelopeRollover?: boolean;
 }
 
-/** A household member with their own budget structure (used by Famille). */
-export interface MemberData extends MemberBudget {
+/** A partner of the household, as shown next to the operations they noted. */
+export interface HouseholdMember {
   uid: string;
   name: string;
   color?: string;

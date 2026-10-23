@@ -15,31 +15,29 @@ import {
 } from 'recharts';
 import { addMonth, compact, fmt, fmtS, getInsights, MonthInsightData, shortMonth } from '../lib/budget-math';
 import { calcMonth } from '../lib/calc';
-import { aggregateFamily } from '../lib/family';
 import { triggerHaptic } from '../lib/haptics';
-import { MemberData } from '../lib/types';
+import { MemberBudget } from '../lib/types';
 
 interface EvolutionScreenProps {
   isCloudMode: boolean;
-  members: MemberData[];
+  budget: MemberBudget;
+  myUid: string;
   currentMonth: string;
-  merges: Record<string, string>;
 }
 
-/** One row of the per-rubric table: a rubric id (Moi) or a normalised name (Famille). */
+/** One row of the per-rubric table (a rubric of the shared budget). */
 interface RubricSeries {
   key: string;
   name: string;
   archived: boolean;
 }
 
-export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, members, currentMonth, merges }) => {
-  const [scope, setScope] = useState<'me' | 'fam'>('me');
+export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, budget, myUid, currentMonth }) => {
+  const [scope, setScope] = useState<'me' | 'fam'>('fam');
   const [periodMonths, setPeriodMonths] = useState<3 | 6 | 12>(6);
   const [viewMode, setViewMode] = useState<'graphique' | 'details'>('graphique');
 
   const curM = currentMonth;
-  const me = members.find((m) => m.me);
 
   const slots: Array<{
     monthKey: string;
@@ -54,37 +52,23 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, m
 
   for (let i = periodMonths - 1; i >= 0; i--) {
     const k = addMonth(curM, -i);
-    if (scope === 'me' || !isCloudMode) {
-      const c = calcMonth(me?.categories || [], me?.months[k], k);
-      const byGroup: Record<string, number> = {};
-      const byRubric: Record<string, number> = {};
-      c.expense.forEach((cc) => {
-        if (cc.kind !== 'out' || !cc.actual) return;
-        byGroup[cc.id] = cc.actual;
-        byRubric[cc.category.name] = cc.actual;
-        series.set(cc.id, { key: cc.id, name: cc.category.name, archived: cc.category.archived });
-      });
-      if (c.uncategorizedOut) {
-        byGroup.__none = c.uncategorizedOut;
-        series.set('__none', { key: '__none', name: 'Sans rubrique', archived: false });
-      }
-      slots.push({ monthKey: k, inc: c.inc, out: c.out, solde: c.inc - c.out - c.saved, pOut: c.pOut, byGroup, byRubric });
-    } else {
-      const fam = aggregateFamily(members, k, merges);
-      const byGroup: Record<string, number> = {};
-      const byRubric: Record<string, number> = {};
-      [...fam.shared, ...fam.unmatched].forEach((r) => {
-        if (r.kind !== 'out' || !r.actual) return;
-        byGroup[r.key] = r.actual;
-        byRubric[r.name] = r.actual;
-        if (!series.has(r.key)) series.set(r.key, { key: r.key, name: r.name, archived: false });
-      });
-      if (fam.uncategorizedOut) {
-        byGroup.__none = fam.uncategorizedOut;
-        series.set('__none', { key: '__none', name: 'Sans rubrique', archived: false });
-      }
-      slots.push({ monthKey: k, inc: fam.inc, out: fam.out, solde: fam.inc - fam.out - fam.saved, pOut: fam.pOut, byGroup, byRubric });
+    const m = budget.months[k];
+    // "Moi" counts only what I noted; "Famille" counts both partners. Rubrics and plan are shared.
+    const month = m && scope === 'me' && isCloudMode ? { ...m, entries: m.entries.filter((e) => !e.by || e.by === myUid) } : m;
+    const c = calcMonth(budget.categories, month, k);
+    const byGroup: Record<string, number> = {};
+    const byRubric: Record<string, number> = {};
+    c.expense.forEach((cc) => {
+      if (cc.kind !== 'out' || !cc.actual) return;
+      byGroup[cc.id] = cc.actual;
+      byRubric[cc.category.name] = cc.actual;
+      series.set(cc.id, { key: cc.id, name: cc.category.name, archived: cc.category.archived });
+    });
+    if (c.uncategorizedOut) {
+      byGroup.__none = c.uncategorizedOut;
+      series.set('__none', { key: '__none', name: 'Sans rubrique', archived: false });
     }
+    slots.push({ monthKey: k, inc: c.inc, out: c.out, solde: c.inc - c.out - c.saved, pOut: c.pOut, byGroup, byRubric });
   }
 
   const chartData = slots.map((s) => ({
@@ -139,7 +123,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, m
                   : 'text-[var(--color-text-muted)]'
               }`}
             >
-              Moi
+              Ce que j’ai noté
             </button>
             <button
               type="button"
@@ -153,7 +137,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, m
                   : 'text-[var(--color-text-muted)]'
               }`}
             >
-              Famille
+              Nous deux
             </button>
           </div>
         ) : (

@@ -63,7 +63,6 @@ import {
 } from './lib/budget-math';
 import { calcMonth, sortCategories } from './lib/calc';
 import { INCOME_RUBRIC_DEFAULT, OTHER_RUBRIC_DEFAULT } from './lib/catalog';
-import { addMerge, MergeSuggestion, removeMerge } from './lib/family';
 import {
   createUserWithEmailAndPassword,
   deleteDoc,
@@ -98,21 +97,20 @@ import {
   Entry,
   HouseholdSettings,
   MemberBudget,
-  MemberData,
+  HouseholdMember,
   MonthDoc,
   MonthLine,
   RecipientMemory,
   Wallet,
 } from './lib/types';
-import { useMemberStore } from './lib/useMemberStore';
+import { useHouseholdStore } from './lib/useHouseholdStore';
 
 const DEFAULT_SETTINGS: HouseholdSettings = {
   monthStartDay: 1,
   approvalThreshold: 50000,
   approvalEnabled: true,
   plan: 'free',
-  rubricMerges: {},
-  rubricMergesDismissed: [],
+  householdName: '',
 };
 
 const LOCAL_SETTINGS_KEY = 'nsangaweh-household-settings';
@@ -139,7 +137,7 @@ function readSkipped(): string[] {
 }
 
 export default function App() {
-  const store = useMemberStore();
+  const store = useHouseholdStore();
   const { budget, profile } = store;
 
   const [activeTab, setActiveTab] = useState<NavTab>('accueil');
@@ -214,7 +212,8 @@ export default function App() {
     toastTimer.current = setTimeout(() => setToast(null), 6000);
   }, []);
 
-  const rollover = !!profile.envelopeRollover;
+  const rollover = !!householdSettings.envelopeRollover;
+  const myUid = userUid || 'local-me';
   const monthStartDay = householdSettings.monthStartDay || 1;
   const budgetMonthOf = (date: string) => getBudgetMonthForDate(date, monthStartDay);
 
@@ -238,6 +237,11 @@ export default function App() {
     if (message) showToast(typeof message === 'string' ? message : message(r), undoable && paths.length ? { before, paths } : undefined);
     return null;
   };
+
+  useEffect(() => {
+    if (store.migrated && store.loaded) showToast('Vos budgets ont été regroupés en un seul budget de foyer, commun à vous deux.');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [store.migrated, store.loaded]);
 
   /* ------------------------------- theme ------------------------------- */
   useEffect(() => {
@@ -346,7 +350,7 @@ export default function App() {
     }
   };
 
-  const handleCreateHousehold = async (name: string, color: string) => {
+  const handleCreateHousehold = async (name: string, color: string, houseName: string) => {
     const code = generateHouseholdCode();
     setCreatedHouseholdCode(code);
     saveStoredHouseholdId(code);
@@ -357,8 +361,10 @@ export default function App() {
         joinCode: code,
         members: [userUid],
         createdAt: Date.now(),
-        settings: householdSettings,
+        budgetVersion: 2,
+        settings: { ...householdSettings, householdName: houseName },
       });
+      setHouseholdSettings((prev) => ({ ...prev, householdName: houseName }));
       incrementQuota('write', 1);
       startCloud(userUid, code);
       showToast(`Code foyer créé : ${code}. Partagez-le avec votre partenaire.`);
@@ -411,13 +417,16 @@ export default function App() {
   const activeCategories = useMemo(() => budget.categories.filter((c) => !c.archived), [budget.categories]);
   const month: MonthDoc | undefined = budget.months[currentMonth];
 
-  const allMembers = useMemo<MemberData[]>(
-    () => [
-      { ...budget, uid: userUid || 'local-me', name: profile.name || 'Moi', color: profile.color, me: true },
-      ...Object.values(store.partners),
-    ],
-    [budget, userUid, profile.name, profile.color, store.partners]
-  );
+  // The two partners (names come from the shared household, so both phones show the same names).
+  const people = useMemo<HouseholdMember[]>(() => {
+    const list = Object.values(store.members)
+      .filter((m) => m.name)
+      .map((m) => ({ uid: m.uid, name: m.name, color: m.color, me: m.uid === myUid }));
+    if (!list.some((p) => p.me)) list.unshift({ uid: myUid, name: profile.name || 'Moi', color: profile.color, me: true });
+    return list.sort((a, b) => Number(b.me) - Number(a.me));
+  }, [store.members, myUid, profile.name, profile.color]);
+
+  const myEntries = useMemo(() => (month?.entries || []).filter((e) => !e.by || e.by === myUid), [month, myUid]);
 
   const lineInSheet = lineSheet.lineId ? month?.lines.find((l) => l.id === lineSheet.lineId) || null : null;
   const itemInSheet = lineInSheet?.itemId ? budget.items.find((i) => i.id === lineInSheet.itemId) || null : null;
@@ -491,53 +500,24 @@ export default function App() {
     return err;
   };
 
-  const copySources: CopySource[] = useMemo(() => {
-    const own = Object.keys(budget.months)
-      .filter((k) => k !== currentMonth && budget.months[k].planCreated && budget.months[k].lines.length)
-      .sort()
-      .reverse()
-      .slice(0, 6)
-      .map((k) => ({ id: `me|${k}`, label: `Mon plan de ${monthLabel(k)}` }));
-    const partners = Object.values(store.partners).flatMap((p) =>
-      Object.keys(p.months)
-        .filter((k) => p.months[k].lines?.length)
+  const copySources: CopySource[] = useMemo(
+    () =>
+      Object.keys(budget.months)
+        .filter((k) => k !== currentMonth && budget.months[k].planCreated && budget.months[k].lines.length)
         .sort()
         .reverse()
-        .slice(0, 2)
-        .map((k) => ({ id: `${p.uid}|${k}`, label: `Plan de ${p.name} — ${monthLabel(k)}` }))
-    );
-    return [...own, ...partners];
-  }, [budget.months, currentMonth, store.partners]);
+        .slice(0, 6)
+        .map((k) => ({ id: `me|${k}`, label: `Le budget de ${monthLabel(k)}` })),
+    [budget.months, currentMonth]
+  );
 
   const setupCopy = (sourceId: string): string | null => {
-    const [who, key] = sourceId.split('|');
-    const err = run((b) => {
-      if (who === 'me') return { ...b, months: { ...b.months, [currentMonth]: copyMonthPlan(b.months[key], b.months[currentMonth]) } };
-      const partner = store.partners[who];
-      const src = partner?.months[key];
-      if (!partner || !src) return { ok: false, error: 'Mois introuvable.' };
-      let next = ensurePlanned(b, currentMonth, rollover);
-      const ids = new Map<string, string>();
-      for (const c of sortCategories(partner.categories.filter((c) => !c.archived))) {
-        const env = src.envelopes && c.id in src.envelopes;
-        const r = ensureCategory(next, { name: c.name, icon: c.icon, color: c.color, kind: c.kind, budgetMode: env ? 'envelope' : 'lines', envelopeAmount: env ? src.envelopes![c.id] : null }, currentMonth);
-        if (!r.ok) return r;
-        next = r.budget;
-        ids.set(c.id, r.id!);
-      }
-      for (const l of src.lines.filter((x) => !x.archived && x.origin !== 'debt')) {
-        const item = l.itemId ? partner.items.find((i) => i.id === l.itemId) : undefined;
-        const r = addLine(next, currentMonth, {
-          categoryId: ids.get(l.categoryId)!,
-          label: l.label,
-          amount: l.amount,
-          recurrence: item && item.recurrence.kind !== 'once' ? { ...item.recurrence, startMonth: currentMonth } : { kind: 'once', month: currentMonth },
-        });
-        if (!r.ok) return r;
-        next = r.budget;
-      }
-      return next;
-    }, 'Plan copié.', true);
+    const key = sourceId.split('|')[1];
+    const err = run(
+      (b) => ({ ...b, months: { ...b.months, [currentMonth]: copyMonthPlan(b.months[key], b.months[currentMonth]) } }),
+      'Budget copié.',
+      true
+    );
     if (!err) {
       finishSetup();
       setSetup({ open: false });
@@ -577,6 +557,7 @@ export default function App() {
           id: generateId(),
           d: d.date,
           ts: Date.now(),
+          by: myUid,
           t: d.type,
           amt: d.amt,
           categoryId,
@@ -593,6 +574,7 @@ export default function App() {
             id: generateId(),
             d: d.date,
             ts: Date.now() + 1,
+            by: myUid,
             t: 'out',
             amt: d.fee,
             categoryId: null,
@@ -796,6 +778,7 @@ export default function App() {
           id: payId,
           d: currentMonth === currentMonthKey() ? todayStr() : `${currentMonth}-01`,
           ts: Date.now(),
+          by: myUid,
           t: 'out',
           amt: amount,
           categoryId: line?.categoryId || cat?.id || null,
@@ -860,6 +843,7 @@ export default function App() {
           id: generateId(),
           d: date,
           ts: Date.now(),
+          by: myUid,
           t: 'transfer',
           amt: amount,
           categoryId: null,
@@ -873,6 +857,7 @@ export default function App() {
             id: generateId(),
             d: date,
             ts: Date.now() + 1,
+            by: myUid,
             t: 'out',
             amt: fee,
             categoryId: null,
@@ -1001,8 +986,17 @@ export default function App() {
     <div className="min-h-screen bg-[var(--color-background)] text-[var(--color-text)] flex justify-center">
       <div className="w-full max-w-[480px] min-h-screen flex flex-col relative bg-[var(--color-surface)] shadow-lg">
         <OfflineIndicator />
+        {store.syncError && (
+          <div role="alert" className="px-3.5 py-2.5 bg-[var(--color-expense-soft)] border-b border-[var(--color-expense)]/30 text-[12px] leading-snug text-[var(--color-text)]">
+            <b className="text-[var(--color-expense)]">Synchronisation impossible.</b>{' '}
+            {store.syncError === 'permission'
+              ? 'Firebase refuse l’écriture : les nouvelles règles de sécurité ne sont pas encore publiées. Publiez-les (voir la procédure), puis rouvrez l’application. Vos saisies restent sur ce téléphone en attendant.'
+              : 'Vérifiez votre connexion. Vos saisies restent sur ce téléphone et seront envoyées dès que possible.'}
+          </div>
+        )}
         <TopAppBar
           userName={profile.name}
+          householdName={householdSettings.householdName}
           currentMonth={currentMonth}
           syncStatus={store.syncStatus}
           unreadAlertsCount={alerts.length}
@@ -1047,6 +1041,7 @@ export default function App() {
               onChooseRubrics={() => setSetup({ open: true, step: 'pick' })}
               onImport={() => setSetup({ open: true, step: 'import' })}
               wallets={wallets}
+              people={people}
               showHelp={!helpDismissed}
               onDismissHelp={() => {
                 setHelpDismissed(true);
@@ -1070,6 +1065,7 @@ export default function App() {
               onDeleteEntry={(id) => run((b) => deleteEntry(b, currentMonth, id), 'Opération supprimée.', true)}
               onOpenQuickAdd={() => setQuickAdd({ open: true, type: 'out', prefill: null })}
               wallets={wallets}
+              people={people}
             />
           )}
 
@@ -1078,21 +1074,10 @@ export default function App() {
               currentMonth={currentMonth}
               isCloudMode={isCloud}
               householdId={householdId}
-              members={allMembers}
-              merges={householdSettings.rubricMerges || {}}
-              dismissedMerges={householdSettings.rubricMergesDismissed || []}
-              onAcceptMerge={(s: MergeSuggestion) =>
-                updateHouseholdSettings(
-                  { rubricMerges: addMerge(householdSettings.rubricMerges || {}, s.keep, s.merge) },
-                  `« ${s.mergeName} » est regroupée avec « ${s.keepName} » dans la vue Famille.`
-                )
-              }
-              onDismissMerge={(id) =>
-                updateHouseholdSettings({ rubricMergesDismissed: [...(householdSettings.rubricMergesDismissed || []), id] })
-              }
-              onRemoveMerge={(k) =>
-                updateHouseholdSettings({ rubricMerges: removeMerge(householdSettings.rubricMerges || {}, k) }, 'Rubriques séparées dans la vue Famille.')
-              }
+              householdName={householdSettings.householdName}
+              people={people}
+              calc={calc}
+              categories={budget.categories}
               onShowSetup={() => setAuthStatus('signin')}
             />
           )}
@@ -1103,7 +1088,7 @@ export default function App() {
                 <button type="button" onClick={() => setActivePlusModule(null)} className="self-start text-xs font-bold text-[var(--color-primary)] py-1">
                   ← Retour aux outils
                 </button>
-                <EvolutionScreen isCloudMode={isCloud} members={allMembers} currentMonth={currentMonth} merges={householdSettings.rubricMerges || {}} />
+                <EvolutionScreen isCloudMode={isCloud} budget={budget} myUid={myUid} currentMonth={currentMonth} />
               </div>
             ) : (
               <PlusHubScreen
@@ -1249,7 +1234,7 @@ export default function App() {
         <WalletsSheet
           isOpen={isWalletsOpen}
           wallets={wallets}
-          entries={calc.month.entries}
+          entries={myEntries}
           onClose={() => setIsWalletsOpen(false)}
           onUpdateWallets={setWallets}
           onInternalTransfer={internalTransfer}
@@ -1278,8 +1263,10 @@ export default function App() {
           userEmail={userEmail}
           householdId={householdId}
           budget={budget}
+          householdName={householdSettings.householdName}
+          onUpdateHouseholdName={(name) => updateHouseholdSettings({ householdName: name }, 'Nom du foyer mis à jour pour vous deux.')}
           rollover={rollover}
-          onToggleRollover={(v) => store.updateProfile({ envelopeRollover: v })}
+          onToggleRollover={(v) => updateHouseholdSettings({ envelopeRollover: v })}
           onRestoreCategory={(id) => run((b) => restoreCategory(b, id), 'Rubrique restaurée.', true)}
           onMoveEntries={(from, to) => {
             const err = run((b) => moveCategoryEntries(b, from, to), 'Opérations déplacées.', true);

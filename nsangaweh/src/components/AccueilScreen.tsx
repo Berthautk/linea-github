@@ -23,7 +23,7 @@ import { CategoryCalc, describeEntry, effectiveKind, LineCalc, MonthCalc, rankEx
 import { useDragReorder, useRowGestures } from '../lib/gestures';
 import { triggerHaptic } from '../lib/haptics';
 import { NO_RUBRIC_STYLE, RubricBadge } from '../lib/icons';
-import { Category, MonthLine, Wallet } from '../lib/types';
+import { Category, HouseholdMember, MonthLine, Wallet } from '../lib/types';
 import { ActionSheet, PrimaryButton } from './ui';
 
 interface Props {
@@ -51,6 +51,7 @@ interface Props {
   onChooseRubrics: () => void;
   onImport: () => void;
   wallets: Wallet[];
+  people: HouseholdMember[];
   showHelp: boolean;
   onDismissHelp: () => void;
   onOpenQuickAdd: (type: 'in' | 'out') => void;
@@ -104,7 +105,7 @@ export const AccueilScreen: React.FC<Props> = (props) => {
         </button>
       </div>
 
-      <RecentOps calc={calc} categories={categories} wallets={props.wallets} onOpenHistory={props.onOpenHistory} />
+      <RecentOps calc={calc} categories={categories} wallets={props.wallets} people={props.people} onOpenHistory={props.onOpenHistory} />
 
       <div className="pt-2 px-1">
         <h2 className="m-0 text-base font-heading font-extrabold text-[var(--color-text)]">Mon budget du mois</h2>
@@ -302,10 +303,11 @@ const HelpCard: React.FC<{ onDismiss: () => void }> = ({ onDismiss }) => (
   </section>
 );
 
-const RecentOps: React.FC<{ calc: MonthCalc; categories: Category[]; wallets: Wallet[]; onOpenHistory: () => void }> = ({
+const RecentOps: React.FC<{ calc: MonthCalc; categories: Category[]; wallets: Wallet[]; people: HouseholdMember[]; onOpenHistory: () => void }> = ({
   calc,
   categories,
   wallets,
+  people,
   onOpenHistory,
 }) => {
   const cats = new Map(categories.map((c) => [c.id, c]));
@@ -342,6 +344,7 @@ const RecentOps: React.FC<{ calc: MonthCalc; categories: Category[]; wallets: Wa
                     {e.d.slice(8, 10)}/{e.d.slice(5, 7)}
                     {d.category ? ` · ${d.category.name}` : ''}
                     {wallet ? ` · ${wallet}` : ''}
+                    {people.length > 1 && e.by ? ` · ${people.find((p) => p.uid === e.by)?.name || ''}` : ''}
                   </span>
                 </div>
               </div>

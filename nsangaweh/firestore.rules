@@ -109,6 +109,30 @@ service cloud.firestore {
         && optional(d, 'legacyPlan', d.get('legacyPlan', []) is list && d.get('legacyPlan', []).size() <= 300);
     }
 
+    // The shared plan of one month: lines and envelopes only. Operations live in
+    // their own documents (one per partner and month), so two phones never
+    // overwrite each other.
+    function isValidPlan(d) {
+      return d.keys().hasAll(['lines'])
+        && d.keys().hasOnly(['lines', 'envelopes', 'planCreated', 'createdAt', 'fromTemplate', 'updated'])
+        && d.lines is list && d.lines.size() <= 300
+        && optional(d, 'envelopes', d.get('envelopes', {}) is map && d.get('envelopes', {}).size() <= 100)
+        && optional(d, 'planCreated', d.get('planCreated', false) is bool)
+        && optional(d, 'fromTemplate', d.get('fromTemplate', false) is bool)
+        && optional(d, 'createdAt', d.get('createdAt', 0) is int)
+        && optional(d, 'updated', d.get('updated', 0) is int);
+    }
+
+    function isValidEntriesDoc(d, docId) {
+      return d.keys().hasAll(['month', 'uid', 'entries'])
+        && d.keys().hasOnly(['month', 'uid', 'entries', 'updated'])
+        && isMonthKey(d.month)
+        && d.uid is string && d.uid.size() > 0 && d.uid.size() <= 128
+        && docId == d.month + '_' + d.uid
+        && d.entries is list && d.entries.size() <= 3000
+        && optional(d, 'updated', d.get('updated', 0) is int);
+    }
+
     function isValidDebt(d, id) {
       return d.keys().hasAll(['id', 'person', 'direction', 'principal', 'createdAt', 'payments', 'status'])
         && d.keys().hasOnly(['id', 'person', 'phone', 'direction', 'principal', 'createdAt', 'dueDate', 'note', 'payments', 'shared', 'status'])
@@ -164,11 +188,51 @@ service cloud.firestore {
         ||
         // Members change the shared settings (Famille merges are a small map).
         (request.auth.uid in resource.data.members
-          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['settings', 'members'])
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['settings', 'members', 'budgetVersion'])
           && request.resource.data.members == resource.data.members
-          && (!('rubricMerges' in request.resource.data.settings) || request.resource.data.settings.rubricMerges.size() <= 200))
+          && (!('householdName' in request.resource.data.settings) || isName(request.resource.data.settings.householdName)))
       );
       allow delete: if isSignedIn() && isValidHouseholdId(hid) && request.auth.uid in resource.data.members;
+
+      // ------------------------------------------------------------------
+      // The shared budget: both partners read and write the same documents.
+      // ------------------------------------------------------------------
+      match /categories/{catId} {
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isHouseholdMember(hid) && isValidCategory(request.resource.data, catId);
+        allow delete: if isHouseholdMember(hid);
+      }
+
+      match /items/{itemId} {
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isHouseholdMember(hid) && isValidItem(request.resource.data, itemId);
+        allow delete: if isHouseholdMember(hid);
+      }
+
+      match /months/{monthId} {
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isHouseholdMember(hid) && isMonthKey(monthId) && isValidPlan(request.resource.data);
+        allow delete: if isHouseholdMember(hid);
+      }
+
+      match /entries/{entriesId} {
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isHouseholdMember(hid) && isValidEntriesDoc(request.resource.data, entriesId)
+          && request.resource.data.uid in get(/databases/$(database)/documents/households/$(hid)).data.members;
+        allow delete: if isHouseholdMember(hid);
+      }
+
+      match /debts/{debtId} {
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isHouseholdMember(hid) && isValidDebt(request.resource.data, debtId);
+        allow delete: if isHouseholdMember(hid);
+      }
+
+      match /commitments/{commitId} {
+        allow read: if isHouseholdMember(hid);
+        allow create, update: if isHouseholdMember(hid) && isValidCommitment(request.resource.data, commitId);
+        allow delete: if isHouseholdMember(hid);
+      }
 
       match /goals/{goalId} {
         allow read, write: if isHouseholdMember(hid);
@@ -202,8 +266,10 @@ service cloud.firestore {
           allow delete: if isOwner(uid);
         }
 
+        // Old per-person debts: the household budget is shared, so both partners can read
+        // them (needed once, to merge them into the shared budget).
         match /debts/{docId} {
-          allow read: if isOwner(uid) || (isHouseholdMember(hid) && resource.data.shared == true);
+          allow read: if isHouseholdMember(hid);
           allow create, update: if isOwner(uid) && isValidDebt(request.resource.data, docId);
           allow delete: if isOwner(uid);
         }

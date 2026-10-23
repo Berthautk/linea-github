@@ -15,13 +15,12 @@ import {
   updateCategory,
 } from './budget-ops';
 import { calcMonth, describeEntry } from './calc';
-import { addMerge, aggregateFamily, suggestMerges } from './family';
 import { applyImport, parseBudgetSheet } from './importer';
 import { hasLegacyData, migrateLegacy } from './migration';
 import { applyMonthReview, buildMonthReview, generateMonthDoc } from './plan';
 import { recurrenceMatches } from './recurrence';
 import { applyTemplate, TEMPLATE_SEPTEMBER_2026 } from './templates';
-import { Category, Entry, LegacyMonthData, MemberBudget, MemberData, MonthDoc } from './types';
+import { Category, Entry, LegacyMonthData, MemberBudget, MonthDoc } from './types';
 import { cleanName, validateAmount, validateCategoryName } from './validation';
 
 const SEP = '2026-09';
@@ -509,40 +508,5 @@ describe('Debts feed the Dettes rubric', () => {
     b = addEntry(b, SEP, entry({ t: 'out', amt: 4000, categoryId: cat.id, lineId: line.id }));
     expect(b.debts[0].payments).toHaveLength(1);
     expect(generateMonthDoc(b, OCT).lines.map((l) => [l.label, l.amount])).toEqual([['Claude', 6000]]);
-  });
-});
-
-describe('Famille aggregates by rubric name', () => {
-  function member(uid: string, name: string, me: boolean, rubrics: Array<[string, number]>): MemberData {
-    let b = EMPTY_BUDGET;
-    rubrics.forEach(([n, amt]) => {
-      const r = rubric(b, n);
-      b = must(addLine(r.b, SEP, { categoryId: r.id, label: n, amount: amt, recurrence: { kind: 'once', month: SEP } }));
-    });
-    return { ...b, uid, name, me };
-  }
-
-  it('matches names case- and accent-insensitively and keeps the others apart', () => {
-    const a = member('a', 'Awa', true, [['Santé', 10000], ['Soutien famille', 20000]]);
-    const c = member('c', 'Cabrel', false, [['SANTE', 5000], ['Aide famille', 7000]]);
-    const fam = aggregateFamily([a, c], SEP);
-    expect(fam.shared.map((r) => [r.name, r.planned])).toEqual([['Santé', 15000]]);
-    expect(fam.unmatched.map((r) => r.name).sort()).toEqual(['Aide famille', 'Soutien famille']);
-
-    const sugg = suggestMerges([a, c]);
-    expect(sugg).toHaveLength(1);
-    expect([sugg[0].keepName, sugg[0].mergeName]).toEqual(['Soutien famille', 'Aide famille']);
-
-    const merged = aggregateFamily([a, c], SEP, addMerge({}, sugg[0].keep, sugg[0].merge));
-    expect(merged.unmatched).toHaveLength(0);
-    expect(merged.shared.find((r) => r.name === 'Soutien famille')!.planned).toBe(27000);
-    // Each partner's own data is unchanged.
-    expect(c.categories.map((x) => x.name)).toContain('Aide famille');
-  });
-
-  it('uses the planned amounts of the given month only (one-off lines included)', () => {
-    const a = member('a', 'Awa', true, [['Enfants', 120000]]);
-    expect(aggregateFamily([a], SEP).pOut).toBe(120000);
-    expect(aggregateFamily([a], OCT).pOut).toBe(0);
   });
 });

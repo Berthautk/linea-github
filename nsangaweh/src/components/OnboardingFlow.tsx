@@ -27,7 +27,7 @@ interface OnboardingFlowProps {
   onSignUp: (email: string, pass: string, name: string, color: string) => void;
   onResetPassword: (email: string) => Promise<void>;
   onContinueOffline: () => void;
-  onCreateHousehold: (name: string, color: string) => void;
+  onCreateHousehold: (name: string, color: string, householdName: string) => void;
   onJoinHousehold: (code: string, name: string, color: string) => void;
   onSignOut: () => void;
 }
@@ -68,6 +68,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [firstName, setFirstName] = useState('');
+  const [householdName, setHouseholdName] = useState('');
   const [selectedColor, setSelectedColor] = useState(AVATAR_COLORS[0]);
 
   // Forgot password
@@ -387,12 +388,29 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
             </div>
           ) : householdMode === 'choose' ? (
             <div className="grid grid-cols-1 gap-3">
+              <div className="flex flex-col gap-1.5 p-3.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]">
+                <label htmlFor="household-name" className="text-xs font-semibold text-[var(--color-text)]">
+                  Nom de votre foyer <span className="font-normal text-[var(--color-text-muted)]">(à remplir si vous créez le foyer)</span>
+                </label>
+                <input
+                  id="household-name"
+                  type="text"
+                  value={householdName}
+                  maxLength={40}
+                  onChange={(e) => setHouseholdName(e.target.value)}
+                  placeholder="Ex : Famille Kamdem"
+                  className="w-full px-3 py-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-sm text-[var(--color-text)] focus:border-[var(--color-primary)] focus:outline-hidden font-medium"
+                />
+                <span className="text-[11px] text-[var(--color-text-muted)] leading-snug">
+                  Ce nom, comme le budget, est commun : votre partenaire le verra aussi. Votre prénom reste personnel.
+                </span>
+              </div>
               <button
                 type="button"
-                disabled={busy || !firstName.trim()}
+                disabled={busy || !firstName.trim() || !householdName.trim()}
                 onClick={() => {
                   triggerHaptic('success');
-                  onCreateHousehold(firstName.trim(), selectedColor);
+                  onCreateHousehold(firstName.trim(), selectedColor, householdName.trim());
                 }}
                 className="p-4 rounded-2xl border-2 border-[var(--color-primary)] bg-[var(--color-primary)] text-white font-heading font-bold text-sm shadow-xs hover:bg-[var(--color-primary-dark)] active:scale-95 transition disabled:opacity-50 text-left flex items-center justify-between"
               >

@@ -1,6 +1,7 @@
 import { FirebaseApp, getApp, getApps, initializeApp } from 'firebase/app';
 import {
   Auth,
+  connectAuthEmulator,
   createUserWithEmailAndPassword,
   deleteUser,
   getAuth,
@@ -12,6 +13,7 @@ import {
 } from 'firebase/auth';
 import {
   collection,
+  connectFirestoreEmulator,
   deleteDoc,
   doc,
   Firestore,
@@ -228,6 +230,12 @@ export function initFirebase(config: FirebaseConfig): {
     }
 
     firebaseAuth = getAuth(firebaseApp);
+
+    // Local test mode only (never set in the published app): talk to the Firebase emulators.
+    if (import.meta.env.VITE_USE_EMULATOR === 'true') {
+      connectAuthEmulator(firebaseAuth, 'http://127.0.0.1:9099', { disableWarnings: true });
+      connectFirestoreEmulator(firestoreDb!, '127.0.0.1', 8089);
+    }
   }
   return { app: firebaseApp, db: firestoreDb!, auth: firebaseAuth! };
 }

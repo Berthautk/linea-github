@@ -5,8 +5,9 @@ import { triggerHaptic } from '../lib/haptics';
 
 interface TopAppBarProps {
   userName: string;
+  householdName?: string;
   currentMonth: string;
-  syncStatus: 'cloud' | 'saving' | 'local' | 'load';
+  syncStatus: 'cloud' | 'saving' | 'local' | 'load' | 'error';
   unreadAlertsCount?: number;
   onMonthChange: (month: string) => void;
   onOpenAlerts: () => void;
@@ -15,6 +16,7 @@ interface TopAppBarProps {
 
 export const TopAppBar: React.FC<TopAppBarProps> = ({
   userName,
+  householdName,
   currentMonth,
   syncStatus,
   unreadAlertsCount = 0,
@@ -28,14 +30,18 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
   const initial = displayName ? displayName.charAt(0).toUpperCase() : '';
 
   const syncDotColor =
-    syncStatus === 'cloud'
+    syncStatus === 'error'
+      ? 'bg-[var(--color-expense)]'
+      : syncStatus === 'cloud'
       ? 'bg-[var(--color-income)]'
       : syncStatus === 'saving'
       ? 'bg-[var(--color-warning)] animate-ping'
       : 'bg-[var(--color-warning)]';
 
   const syncTitle =
-    syncStatus === 'cloud'
+    syncStatus === 'error'
+      ? 'Synchronisation impossible'
+      : syncStatus === 'cloud'
       ? 'Synchronisé avec le foyer'
       : syncStatus === 'saving'
       ? 'Enregistrement en cours…'
@@ -68,11 +74,11 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
         <div className="min-w-0 leading-tight">
           {displayName ? (
             <>
-              <p className="m-0 text-[11px] font-medium text-[var(--color-text-muted)] truncate">{greeting}</p>
+              <p className="m-0 text-[11px] font-medium text-[var(--color-text-muted)] truncate">{householdName || greeting}</p>
               <h2 className="m-0 text-sm font-heading font-bold text-[var(--color-text)] truncate">{displayName}</h2>
             </>
           ) : (
-            <h2 className="m-0 text-sm font-heading font-bold text-[var(--color-text)] truncate">{greeting}</h2>
+            <h2 className="m-0 text-sm font-heading font-bold text-[var(--color-text)] truncate">{householdName || greeting}</h2>
           )}
         </div>
       </div>

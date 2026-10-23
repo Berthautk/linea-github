@@ -40,6 +40,8 @@ interface SettingsSheetProps {
   userEmail: string;
   householdId: string;
   budget: MemberBudget;
+  householdName?: string;
+  onUpdateHouseholdName: (name: string) => void;
   rollover: boolean;
   onToggleRollover: (v: boolean) => void;
   onRestoreCategory: (id: string) => void;
@@ -62,6 +64,8 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
   userEmail,
   householdId,
   budget,
+  householdName,
+  onUpdateHouseholdName,
   rollover,
   onToggleRollover,
   onRestoreCategory,
@@ -78,12 +82,16 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
   onDeleteAccount,
 }) => {
   const [nameInput, setNameInput] = useState(userName);
+  const [houseInput, setHouseInput] = useState(householdName || '');
   const [moving, setMoving] = useState<Category | null>(null);
   const [moveTarget, setMoveTarget] = useState<Category | null>(null);
   const [templateAsk, setTemplateAsk] = useState<string | null>(null);
   React.useEffect(() => {
-    if (isOpen) setNameInput(userName);
-  }, [isOpen, userName]);
+    if (isOpen) {
+      setNameInput(userName);
+      setHouseInput(householdName || '');
+    }
+  }, [isOpen, userName, householdName]);
   const archived = budget.categories.filter((c) => c.archived);
   const activeCats = budget.categories.filter((c) => !c.archived).sort((a, b) => a.order - b.order);
   const entriesOf = (id: string) =>
@@ -240,7 +248,7 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
           <div className="p-3.5 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex flex-col gap-2.5">
             <div className="flex items-center gap-2 text-xs font-heading font-bold text-[var(--color-text)]">
               <User size={15} className="text-[var(--color-primary)]" />
-              <span>Profil personnel</span>
+              <span>Mon prénom (personnel)</span>
             </div>
 
             <form onSubmit={handleSaveName} className="flex gap-2">
@@ -327,6 +335,41 @@ export const SettingsSheet: React.FC<SettingsSheetProps> = ({
               </button>
             ))}
           </div>
+
+          {householdId && (
+            <div className="p-3.5 rounded-2xl bg-[var(--color-surface-subtle)] border border-[var(--color-border)] flex flex-col gap-2">
+              <span className="text-xs font-heading font-bold text-[var(--color-text)] flex items-center gap-1.5">
+                <Users size={15} className="text-[var(--color-primary)]" />
+                Nom du foyer (commun aux deux)
+              </span>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const v = houseInput.replace(/\s+/g, ' ').trim().slice(0, 40);
+                  if (!v) return;
+                  triggerHaptic('success');
+                  onUpdateHouseholdName(v);
+                }}
+                className="flex gap-2"
+              >
+                <input
+                  type="text"
+                  value={houseInput}
+                  maxLength={40}
+                  onChange={(e) => setHouseInput(e.target.value)}
+                  placeholder="Ex : Famille Kamdem"
+                  className="flex-1 px-3 py-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-sm text-[var(--color-text)] font-semibold"
+                  aria-label="Nom du foyer"
+                />
+                <button type="submit" className="px-3 py-2 rounded-xl bg-[var(--color-primary)] text-white text-xs font-bold">
+                  Enregistrer
+                </button>
+              </form>
+              <span className="text-[11px] text-[var(--color-text-muted)] leading-snug">
+                Ce nom, les rubriques, les montants prévus et les totaux sont les mêmes pour vous deux. Seul votre prénom est personnel.
+              </span>
+            </div>
+          )}
 
           {/* 2. Household code */}
           {householdId && (

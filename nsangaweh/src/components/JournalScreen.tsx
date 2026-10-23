@@ -11,7 +11,7 @@ import { fmt, todayStr } from '../lib/budget-math';
 import { describeEntry, MonthCalc, sortCategories } from '../lib/calc';
 import { triggerHaptic } from '../lib/haptics';
 import { NO_RUBRIC_STYLE, RubricBadge } from '../lib/icons';
-import { Category, Entry, Wallet } from '../lib/types';
+import { Category, Entry, HouseholdMember, Wallet } from '../lib/types';
 import { EntryEditSheet } from './EntryEditSheet';
 
 interface JournalScreenProps {
@@ -22,6 +22,7 @@ interface JournalScreenProps {
   onDeleteEntry: (id: string) => void;
   onOpenQuickAdd: () => void;
   wallets?: Wallet[];
+  people?: HouseholdMember[];
 }
 
 export const JournalScreen: React.FC<JournalScreenProps> = ({
@@ -32,10 +33,12 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
   onDeleteEntry,
   onOpenQuickAdd,
   wallets = [],
+  people = [],
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<'all' | 'out' | 'in'>('all');
   const [rubricFilter, setRubricFilter] = useState<string>('all');
+  const [whoFilter, setWhoFilter] = useState<string>('all');
   const [editingEntry, setEditingEntry] = useState<Entry | null>(null);
   const [expandedOlderDays, setExpandedOlderDays] = useState<Record<string, boolean>>({});
   const [visibleLimit, setVisibleLimit] = useState<number>(30);
@@ -60,6 +63,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
     return mData.entries
       .filter((e) => {
         if (typeFilter !== 'all' && e.t !== typeFilter) return false;
+        if (whoFilter !== 'all' && e.by !== whoFilter) return false;
         const el = labelOf(e);
         if (rubricFilter !== 'all' && (el.c?.id || 'none') !== rubricFilter) return false;
         if (searchTerm.trim()) {
@@ -77,7 +81,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
         return b.ts - a.ts;
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mData, typeFilter, rubricFilter, searchTerm, catMap]);
+  }, [mData, typeFilter, rubricFilter, whoFilter, searchTerm, catMap]);
 
   // Paginated visible entries
   const visibleEntries = useMemo(() => {
@@ -167,6 +171,22 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
             </button>
           ))}
         </div>
+
+        {people.length > 1 && (
+          <select
+            value={whoFilter}
+            onChange={(e) => setWhoFilter(e.target.value)}
+            className="py-1.5 pl-2 pr-2 rounded-xl text-[11px] font-heading font-semibold bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text)] max-w-[110px] truncate"
+            aria-label="Qui a noté l’opération"
+          >
+            <option value="all">Nous deux</option>
+            {people.map((p) => (
+              <option key={p.uid} value={p.uid}>
+                {p.me ? `Moi (${p.name})` : p.name}
+              </option>
+            ))}
+          </select>
+        )}
 
         {/* Rubric Dropdown */}
         <div className="relative shrink-0">
@@ -287,6 +307,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
                               <small className="text-[10px] text-[var(--color-text-muted)] truncate block">
                                 {el.g}
                                 {wallets.find((w) => w.id === e.w) ? ` · ${wallets.find((w) => w.id === e.w)!.name}` : ''}
+                                {people.length > 1 && e.by ? ` · ${people.find((p) => p.uid === e.by)?.name || ''}` : ''}
                               </small>
                             </div>
                           </div>

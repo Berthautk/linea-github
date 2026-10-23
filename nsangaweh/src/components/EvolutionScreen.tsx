@@ -46,6 +46,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, b
     solde: number;
     pOut: number;
     byGroup: Record<string, number>;
+    plannedByGroup: Record<string, number>;
     byRubric: Record<string, number>;
   }> = [];
   const series = new Map<string, RubricSeries>();
@@ -57,10 +58,12 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, b
     const month = m && scope === 'me' && isCloudMode ? { ...m, entries: m.entries.filter((e) => !e.by || e.by === myUid) } : m;
     const c = calcMonth(budget.categories, month, k);
     const byGroup: Record<string, number> = {};
+    const plannedByGroup: Record<string, number> = {};
     const byRubric: Record<string, number> = {};
     c.expense.forEach((cc) => {
       if (cc.kind !== 'out' || !cc.actual) return;
       byGroup[cc.id] = cc.actual;
+      plannedByGroup[cc.id] = cc.planned;
       byRubric[cc.category.name] = cc.actual;
       series.set(cc.id, { key: cc.id, name: cc.category.name, archived: cc.category.archived });
     });
@@ -68,7 +71,7 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, b
       byGroup.__none = c.uncategorizedOut;
       series.set('__none', { key: '__none', name: 'Sans rubrique', archived: false });
     }
-    slots.push({ monthKey: k, inc: c.inc, out: c.out, solde: c.inc - c.out - c.saved, pOut: c.pOut, byGroup, byRubric });
+    slots.push({ monthKey: k, inc: c.inc, out: c.out, solde: c.inc - c.out - c.saved, pOut: c.pOut, byGroup, plannedByGroup, byRubric });
   }
 
   const chartData = slots.map((s) => ({
@@ -319,8 +322,12 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, b
           aria-label="Tableau détaillé des dépenses par poste"
         >
           <span className="text-xs font-heading font-bold text-[var(--color-text)]">
-            Dépenses par poste au fil des mois
+            Les rubriques mois après mois
           </span>
+          <p className="m-0 text-[11px] text-[var(--color-text-muted)] leading-snug">
+            Chaque case montre ce qui a été dépensé. <b className="text-[var(--color-expense)]">En rouge</b> : le montant prévu pour cette rubrique ce mois-là a été
+            dépassé. Un « – » : rien dépensé.
+          </p>
 
           {!activeRubrics.length ? (
             <p className="m-0 py-4 text-xs text-[var(--color-text-muted)] text-center">
@@ -348,10 +355,13 @@ export const EvolutionScreen: React.FC<EvolutionScreenProps> = ({ isCloudMode, b
                       {slots.map((s) => {
                         const v = s.byGroup[group] || 0;
                         const ratio = maxRubricVal > 0 ? (v / maxRubricVal).toFixed(2) : 0;
+                        const planned = s.plannedByGroup[group] || 0;
+                        const over = planned > 0 && v > planned;
                         return (
                           <td
                             key={s.monthKey}
-                            className="py-1.5 px-1 text-right num font-medium text-[11px]"
+                            className={`py-1.5 px-1 text-right num text-[11px] ${over ? 'font-extrabold text-[var(--color-expense)]' : 'font-medium'}`}
+                            title={planned ? `Prévu ${fmt(planned)} F` : 'Aucun montant prévu'}
                             style={{
                               backgroundColor:
                                 v > 0

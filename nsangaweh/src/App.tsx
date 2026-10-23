@@ -1066,6 +1066,7 @@ export default function App() {
               onOpenQuickAdd={() => setQuickAdd({ open: true, type: 'out', prefill: null })}
               wallets={wallets}
               people={people}
+              myUid={myUid}
             />
           )}
 
@@ -1078,6 +1079,8 @@ export default function App() {
               people={people}
               calc={calc}
               categories={budget.categories}
+              budget={budget}
+              myUid={myUid}
               onShowSetup={() => setAuthStatus('signin')}
             />
           )}

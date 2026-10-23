@@ -8,7 +8,7 @@ import {
   X,
 } from 'lucide-react';
 import { fmt, todayStr } from '../lib/budget-math';
-import { describeEntry, MonthCalc, sortCategories } from '../lib/calc';
+import { describeEntry, effectiveKind, MonthCalc, sortCategories } from '../lib/calc';
 import { triggerHaptic } from '../lib/haptics';
 import { NO_RUBRIC_STYLE, RubricBadge } from '../lib/icons';
 import { Category, Entry, HouseholdMember, Wallet } from '../lib/types';
@@ -23,6 +23,7 @@ interface JournalScreenProps {
   onOpenQuickAdd: () => void;
   wallets?: Wallet[];
   people?: HouseholdMember[];
+  myUid?: string;
 }
 
 export const JournalScreen: React.FC<JournalScreenProps> = ({
@@ -34,11 +35,14 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
   onOpenQuickAdd,
   wallets = [],
   people = [],
+  myUid = '',
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<'all' | 'out' | 'in'>('all');
   const [rubricFilter, setRubricFilter] = useState<string>('all');
-  const [whoFilter, setWhoFilter] = useState<string>('all');
+  // Personal by default: my own history. "Nous deux" is the household's combined history.
+  const [whoFilter, setWhoFilter] = useState<string>('me');
+  const byWho = (e: Entry) => (whoFilter === 'all' ? true : whoFilter === 'me' ? !e.by || e.by === myUid : e.by === whoFilter);
   const [editingEntry, setEditingEntry] = useState<Entry | null>(null);
   const [expandedOlderDays, setExpandedOlderDays] = useState<Record<string, boolean>>({});
   const [visibleLimit, setVisibleLimit] = useState<number>(30);
@@ -63,7 +67,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
     return mData.entries
       .filter((e) => {
         if (typeFilter !== 'all' && e.t !== typeFilter) return false;
-        if (whoFilter !== 'all' && e.by !== whoFilter) return false;
+        if (!byWho(e)) return false;
         const el = labelOf(e);
         if (rubricFilter !== 'all' && (el.c?.id || 'none') !== rubricFilter) return false;
         if (searchTerm.trim()) {
@@ -81,7 +85,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
         return b.ts - a.ts;
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mData, typeFilter, rubricFilter, whoFilter, searchTerm, catMap]);
+  }, [mData, typeFilter, rubricFilter, whoFilter, searchTerm, catMap, myUid]);
 
   // Paginated visible entries
   const visibleEntries = useMemo(() => {
@@ -108,22 +112,73 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
     }));
   };
 
+  const scopeTotals = useMemo(() => {
+    let inc = 0;
+    let out = 0;
+    mData.entries.forEach((e) => {
+      if (!byWho(e)) return;
+      const k = effectiveKind(e, e.categoryId ? catMap.get(e.categoryId)?.kind : undefined);
+      if (k === 'in') inc += e.amt;
+      else if (k === 'out') out += e.amt;
+    });
+    return { inc, out };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mData, whoFilter, catMap, myUid]);
+
+  const partner = people.find((p) => !p.me);
+  const pickedPerson = people.find((p) => p.uid === whoFilter);
+  const title =
+    people.length < 2 || whoFilter === 'me' ? 'Mon historique' : whoFilter === 'all' ? 'Historique du foyer' : `Historique de ${pickedPerson?.name || ''}`;
+  const subtitle =
+    people.length < 2
+      ? 'Toutes vos entrées et sorties du mois, jour par jour. Touchez une opération pour la corriger ou la supprimer.'
+      : whoFilter === 'me'
+      ? `Ce que vous avez noté ce mois-ci.${partner ? ` Celui de ${partner.name} et celui du foyer sont à côté, ou dans l’onglet Famille.` : ''}`
+      : whoFilter === 'all'
+      ? 'Les opérations de vous deux, mises ensemble : c’est ce qui fait bouger le budget du foyer.'
+      : `Ce que ${pickedPerson?.name || 'votre partenaire'} a noté ce mois-ci.`;
+
   return (
     <div className="flex flex-col gap-2.5 pb-24">
       <div className="px-1 pt-1">
-        <h1 className="m-0 text-lg font-heading font-extrabold text-[var(--color-text)]">Historique</h1>
-        <p className="m-0 text-[11px] text-[var(--color-text-muted)]">
-          Toutes vos entrées et sorties du mois, jour par jour. Touchez une opération pour la corriger ou la supprimer.
-        </p>
+        <h1 className="m-0 text-lg font-heading font-extrabold text-[var(--color-text)]">{title}</h1>
+        <p className="m-0 text-[11px] text-[var(--color-text-muted)]">{subtitle}</p>
       </div>
+      {people.length > 1 && (
+        <div className="grid grid-cols-3 gap-1.5" role="radiogroup" aria-label="Quel historique afficher">
+          {[
+            { id: 'me', label: 'Moi' },
+            ...people.filter((p) => !p.me).map((p) => ({ id: p.uid, label: p.name })),
+            { id: 'all', label: 'Nous deux' },
+          ]
+            .slice(0, 3)
+            .map((o) => (
+              <button
+                key={o.id}
+                type="button"
+                role="radio"
+                aria-checked={whoFilter === o.id}
+                onClick={() => {
+                  triggerHaptic('light');
+                  setWhoFilter(o.id);
+                }}
+                className={`min-h-11 px-1 rounded-xl text-xs font-heading font-bold truncate transition ${
+                  whoFilter === o.id ? 'bg-[var(--color-primary)] text-white shadow-xs' : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
+                }`}
+              >
+                {o.label}
+              </button>
+            ))}
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-2">
         <div className="rounded-2xl p-2.5 bg-[var(--color-income-soft)]">
           <span className="block text-[11px] font-semibold text-[var(--color-text-muted)]">Entrées du mois</span>
-          <b className="text-base font-heading num text-[var(--color-income)]">+{fmt(calc.inc)} F</b>
+          <b className="text-base font-heading num text-[var(--color-income)]">+{fmt(scopeTotals.inc)} F</b>
         </div>
         <div className="rounded-2xl p-2.5 bg-[var(--color-expense-soft)]">
           <span className="block text-[11px] font-semibold text-[var(--color-text-muted)]">Sorties du mois</span>
-          <b className="text-base font-heading num text-[var(--color-expense)]">−{fmt(calc.out)} F</b>
+          <b className="text-base font-heading num text-[var(--color-expense)]">−{fmt(scopeTotals.out)} F</b>
         </div>
       </div>
       {/* Compact Search and Filters in a single top row */}
@@ -171,22 +226,6 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
             </button>
           ))}
         </div>
-
-        {people.length > 1 && (
-          <select
-            value={whoFilter}
-            onChange={(e) => setWhoFilter(e.target.value)}
-            className="py-1.5 pl-2 pr-2 rounded-xl text-[11px] font-heading font-semibold bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text)] max-w-[110px] truncate"
-            aria-label="Qui a noté l’opération"
-          >
-            <option value="all">Nous deux</option>
-            {people.map((p) => (
-              <option key={p.uid} value={p.uid}>
-                {p.me ? `Moi (${p.name})` : p.name}
-              </option>
-            ))}
-          </select>
-        )}
 
         {/* Rubric Dropdown */}
         <div className="relative shrink-0">

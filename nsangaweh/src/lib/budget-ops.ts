@@ -31,7 +31,7 @@ const ok = (budget: MemberBudget, extra: { id?: string; archived?: boolean } = {
 });
 const fail = (error: string): OpResult => ({ ok: false, error });
 
-export const EMPTY_BUDGET: MemberBudget = { categories: [], items: [], debts: [], commitments: [], months: {} };
+export const EMPTY_BUDGET: MemberBudget = { categories: [], items: [], debts: [], commitments: [], provisions: [], goals: [], tontines: [], months: {} };
 
 function setMonth(b: MemberBudget, key: string, m: MonthDoc): MemberBudget {
   return { ...b, months: { ...b.months, [key]: m } };
@@ -649,6 +649,19 @@ export function updateEntry(b: MemberBudget, fromMonth: string, toMonth: string,
   const to = getMonth(moved, toMonth);
   const lineOk = entry.lineId && to.lines.some((l) => l.id === entry.lineId);
   return setMonth(moved, toMonth, { ...to, entries: [...to.entries, lineOk ? entry : { ...entry, lineId: null }] });
+}
+
+/** Move several operations to another budget month. Dates are kept; a line link is dropped when the target month has no such line. */
+export function moveEntries(b: MemberBudget, fromMonth: string, ids: string[], toMonth: string): MemberBudget {
+  if (fromMonth === toMonth || !ids.length) return b;
+  const from = getMonth(b, fromMonth);
+  const set = new Set(ids);
+  const moving = from.entries.filter((e) => set.has(e.id));
+  if (!moving.length) return b;
+  const moved = setMonth(b, fromMonth, { ...from, entries: from.entries.filter((e) => !set.has(e.id)) });
+  const to = getMonth(moved, toMonth);
+  const arrived = moving.map((e) => (e.lineId && !to.lines.some((l) => l.id === e.lineId) ? { ...e, lineId: null } : e));
+  return setMonth(moved, toMonth, { ...to, entries: [...to.entries, ...arrived] });
 }
 
 export function deleteEntry(b: MemberBudget, monthKey: string, entryId: string): MemberBudget {

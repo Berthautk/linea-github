@@ -15,7 +15,7 @@
  */
 import { Entry, MemberBudget, MonthDoc } from './types';
 
-export const BUDGET_COLLECTIONS = ['categories', 'items', 'debts', 'commitments'] as const;
+export const BUDGET_COLLECTIONS = ['categories', 'items', 'debts', 'commitments', 'provisions', 'goals', 'tontines'] as const;
 export type BudgetCollection = (typeof BUDGET_COLLECTIONS)[number];
 
 type WithId = { id: string };

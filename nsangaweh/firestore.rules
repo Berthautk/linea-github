@@ -234,6 +234,14 @@ service cloud.firestore {
         allow delete: if isHouseholdMember(hid);
       }
 
+      match /provisions/{provId} {
+        allow read, write: if isHouseholdMember(hid);
+      }
+
+      match /tontines/{tontineId} {
+        allow read, write: if isHouseholdMember(hid);
+      }
+
       match /goals/{goalId} {
         allow read, write: if isHouseholdMember(hid);
       }

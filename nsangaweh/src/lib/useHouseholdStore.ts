@@ -74,7 +74,7 @@ async function writePaths(db: any, hid: string, b: MemberBudget, paths: string[]
     chunk.forEach((p) => {
       const v = valueAt(b, p);
       const ref = doc(db, `households/${hid}/${p}`);
-      if (v) batch.set(ref, toFirestore(p.startsWith('categories/') || p.startsWith('items/') || p.startsWith('debts/') || p.startsWith('commitments/') ? v : { ...v, updated: Date.now() }));
+      if (v) batch.set(ref, toFirestore(p.startsWith('months/') || p.startsWith('entries/') ? { ...v, updated: Date.now() } : v));
       else batch.delete(ref);
     });
     await batch.commit();

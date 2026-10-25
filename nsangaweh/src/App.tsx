@@ -10,6 +10,8 @@ import { BottomNav, NavTab } from './components/BottomNav';
 import { BudgetSetupFlow, CopySource, PickedRubric, SetupStep } from './components/BudgetSetupFlow';
 import { CommitmentsSheet } from './components/CommitmentsSheet';
 import { DebtsSheet } from './components/DebtsSheet';
+import { MoveEntriesSheet } from './components/MoveEntriesSheet';
+import { CouncilSheet, GoalsSheet, ProvisionsSheet, ReportsSheet, TontineSheet } from './components/ToolsSheets';
 import { EnvelopeSheet } from './components/EnvelopeSheet';
 import { EvolutionScreen } from './components/EvolutionScreen';
 import { FamilleScreen } from './components/FamilleScreen';
@@ -48,6 +50,7 @@ import {
   setBudgetMode,
   setEnvelopeAmount,
   updateCategory,
+  moveEntries,
   updateEntry,
 } from './lib/budget-ops';
 import {
@@ -192,6 +195,8 @@ export default function App() {
   const [isWalletsOpen, setIsWalletsOpen] = useState(false);
   const [isAlertsOpen, setIsAlertsOpen] = useState(false);
   const [isDebtsOpen, setIsDebtsOpen] = useState(false);
+  const [isMoveOpen, setIsMoveOpen] = useState(false);
+  const [toolSheet, setToolSheet] = useState<'provisions' | 'objectifs' | 'tontine' | 'conseil' | 'bilans' | null>(null);
   const [isCommitmentsOpen, setIsCommitmentsOpen] = useState(false);
   const [activePlusModule, setActivePlusModule] = useState<PlusModule | null>(null);
   const [reviewSkipped, setReviewSkipped] = useState<string[]>(readSkipped);
@@ -944,7 +949,7 @@ export default function App() {
     else if (mod === 'dettes') setIsDebtsOpen(true);
     else if (mod === 'engagements') setIsCommitmentsOpen(true);
     else if (mod === 'evolution') setActivePlusModule(mod);
-    else showToast('Ce module arrive dans la prochaine étape.');
+    else setToolSheet(mod);
   };
 
   /* ------------------------------ render ------------------------------ */
@@ -1088,6 +1093,7 @@ export default function App() {
               wallets={wallets}
               people={people}
               myUid={myUid}
+              onOpenMove={() => setIsMoveOpen(true)}
             />
           )}
 
@@ -1118,9 +1124,9 @@ export default function App() {
               <PlusHubScreen
                 debts={budget.debts}
                 commitments={budget.commitments}
-                provisions={[]}
-                goals={[]}
-                tontines={[]}
+                provisions={budget.provisions}
+                goals={budget.goals.filter((g) => Array.isArray(g.contributions))}
+                tontines={budget.tontines}
                 wallets={wallets}
                 onOpenModule={openPlusModule}
               />
@@ -1226,6 +1232,60 @@ export default function App() {
         />
 
         <MonthReviewSheet open={!!review} review={review} categories={budget.categories} onCreate={createFromReview} onSkip={skipReview} />
+
+        <MoveEntriesSheet
+          open={isMoveOpen}
+          monthKey={currentMonth}
+          entries={month?.entries || []}
+          people={people}
+          myUid={myUid}
+          onClose={() => setIsMoveOpen(false)}
+          onMove={(ids, to) => {
+            run((b) => moveEntries(b, currentMonth, ids, to), `${ids.length} opération${ids.length > 1 ? 's' : ''} déplacée${ids.length > 1 ? 's' : ''} vers ${monthLabel(to)}.`, true);
+            setIsMoveOpen(false);
+            setCurrentMonth(to);
+          }}
+        />
+
+        <ProvisionsSheet
+          open={toolSheet === 'provisions'}
+          provisions={budget.provisions}
+          walletId={wallets[0]?.id || ''}
+          onChange={(list, msg) => run((b) => ({ ...b, provisions: list }), msg, true)}
+          onClose={() => setToolSheet(null)}
+        />
+        <GoalsSheet
+          open={toolSheet === 'objectifs'}
+          goals={budget.goals.filter((g) => Array.isArray(g.contributions))}
+          me={{ uid: myUid, name: profile.name }}
+          onChange={(list, msg) => run((b) => ({ ...b, goals: list }), msg, true)}
+          onClose={() => setToolSheet(null)}
+        />
+        <TontineSheet
+          open={toolSheet === 'tontine'}
+          tontines={budget.tontines}
+          onChange={(list, msg) => run((b) => ({ ...b, tontines: list }), msg, true)}
+          onClose={() => setToolSheet(null)}
+        />
+        <CouncilSheet
+          open={toolSheet === 'conseil'}
+          budget={budget}
+          people={people}
+          householdName={householdSettings.householdName}
+          notify={showToast}
+          onClose={() => setToolSheet(null)}
+        />
+        <ReportsSheet
+          open={toolSheet === 'bilans'}
+          budget={budget}
+          monthKey={currentMonth}
+          monthName={monthLabel(currentMonth)}
+          userName={profile.name}
+          householdId={householdId}
+          householdName={householdSettings.householdName}
+          notify={showToast}
+          onClose={() => setToolSheet(null)}
+        />
 
         <DebtsSheet
           open={isDebtsOpen}

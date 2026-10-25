@@ -170,5 +170,5 @@ export function mergeMemberBudgets(members: PersonalBudget[]): MemberBudget {
     })
   );
 
-  return { categories, items, debts, commitments, months };
+  return { categories, items, debts, commitments, provisions: [], goals: [], tontines: [], months };
 }

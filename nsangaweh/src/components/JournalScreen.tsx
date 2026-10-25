@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import {
+  ArrowRightLeft,
   Calendar,
   ChevronDown,
   ChevronUp,
@@ -24,6 +25,7 @@ interface JournalScreenProps {
   wallets?: Wallet[];
   people?: HouseholdMember[];
   myUid?: string;
+  onOpenMove?: () => void;
 }
 
 export const JournalScreen: React.FC<JournalScreenProps> = ({
@@ -36,6 +38,7 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
   wallets = [],
   people = [],
   myUid = '',
+  onOpenMove,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<'all' | 'out' | 'in'>('all');
@@ -181,6 +184,15 @@ export const JournalScreen: React.FC<JournalScreenProps> = ({
           <b className="text-base font-heading num text-[var(--color-expense)]">−{fmt(scopeTotals.out)} F</b>
         </div>
       </div>
+      {onOpenMove && (
+        <button
+          type="button"
+          onClick={onOpenMove}
+          className="self-start min-h-10 px-3.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[12px] font-bold text-[var(--color-primary)] flex items-center gap-1.5"
+        >
+          <ArrowRightLeft size={14} /> Déplacer des opérations vers un autre mois
+        </button>
+      )}
       {/* Compact Search and Filters in a single top row */}
       <div className="flex flex-wrap items-center gap-1.5">
         <div className="relative w-full">

@@ -10,6 +10,7 @@ import {
   editNeedsScope,
   EMPTY_BUDGET,
   moveCategoryEntries,
+  moveEntries,
   OpResult,
   setBudgetMode,
   updateCategory,
@@ -508,5 +509,17 @@ describe('Debts feed the Dettes rubric', () => {
     b = addEntry(b, SEP, entry({ t: 'out', amt: 4000, categoryId: cat.id, lineId: line.id }));
     expect(b.debts[0].payments).toHaveLength(1);
     expect(generateMonthDoc(b, OCT).lines.map((l) => [l.label, l.amount])).toEqual([['Claude', 6000]]);
+  });
+});
+
+describe('déplacer des opérations vers un autre mois', () => {
+  it('garde la date et les montants, et change de mois', () => {
+    let b = addEntry(EMPTY_BUDGET, OCT, entry({ t: 'out', amt: 500, d: '2026-10-24' }));
+    b = addEntry(b, OCT, entry({ t: 'out', amt: 700, d: '2026-10-25' }));
+    const ids = b.months[OCT].entries.map((e) => e.id);
+    const moved = moveEntries(b, OCT, [ids[1]], '2026-11');
+    expect(moved.months[OCT].entries.map((e) => e.amt)).toEqual([500]);
+    expect(moved.months['2026-11'].entries.map((e) => [e.amt, e.d])).toEqual([[700, '2026-10-25']]);
+    expect(moveEntries(b, OCT, ids, OCT)).toBe(b);
   });
 });

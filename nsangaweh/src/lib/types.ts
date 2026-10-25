@@ -103,6 +103,9 @@ export interface MemberBudget {
   items: BudgetItem[];
   debts: Debt[];
   commitments: Commitment[];
+  provisions: Provision[];
+  goals: SharedGoal[];
+  tontines: Tontine[];
   months: Record<string, MonthDoc>;
 }
 

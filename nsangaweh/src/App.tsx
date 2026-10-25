@@ -249,6 +249,14 @@ export default function App() {
     return null;
   };
 
+  const monthInitRef = useRef(false);
+  useEffect(() => {
+    if (!store.loaded || monthInitRef.current) return;
+    monthInitRef.current = true;
+    setCurrentMonth(budgetMonthOf(todayStr()));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [store.loaded]);
+
   useEffect(() => {
     if (store.migrated && store.loaded) showToast('Vos budgets ont été regroupés en un seul budget de foyer, commun à vous deux.');
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -539,6 +547,8 @@ export default function App() {
   /* ------------------------------ entries ------------------------------ */
   const saveQuickAdd = (d: QuickAddDraft) => {
     const monthKey = budgetMonthOf(d.date);
+    // The operation belongs to another budget month (e.g. the month starts on the 25th): show it.
+    if (monthKey !== currentMonth) setCurrentMonth(monthKey);
     if (d.saveMemory) {
       setRecipientMemories((prev) => [
         ...prev.filter((m) => m.name.toLowerCase() !== d.saveMemory!.name.toLowerCase()),

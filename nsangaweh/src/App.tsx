@@ -227,13 +227,24 @@ export default function App() {
     undoable = false
   ): string | null => {
     const before = store.budgetRef.current;
-    const res = fn(before);
-    const r: OpResult = 'ok' in res ? res : { ok: true, budget: res };
-    if (!r.ok) {
+    let r: OpResult;
+    let paths: string[];
+    try {
+      const res = fn(before);
+      r = 'ok' in res ? res : { ok: true, budget: res };
+      if (!r.ok) {
+        triggerHaptic('warning');
+        showToast(r.error);
+        return r.error;
+      }
+      paths = store.commit(r.budget);
+    } catch (e) {
+      console.error('Enregistrement impossible', e);
       triggerHaptic('warning');
-      return r.error;
+      const msg = `Enregistrement impossible (${(e as Error)?.message || 'erreur'}). Rien n’a été perdu : réessayez.`;
+      showToast(msg);
+      return msg;
     }
-    const paths = store.commit(r.budget);
     if (message) showToast(typeof message === 'string' ? message : message(r), undoable && paths.length ? { before, paths } : undefined);
     return null;
   };

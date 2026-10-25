@@ -31,7 +31,7 @@ const ok = (budget: MemberBudget, extra: { id?: string; archived?: boolean } = {
 });
 const fail = (error: string): OpResult => ({ ok: false, error });
 
-export const EMPTY_BUDGET: MemberBudget = { categories: [], items: [], debts: [], commitments: [], provisions: [], goals: [], tontines: [], months: {} };
+export const EMPTY_BUDGET: MemberBudget = { categories: [], items: [], debts: [], commitments: [], provisions: [], goals: [], tontines: [], shopping: [], months: {} };
 
 function setMonth(b: MemberBudget, key: string, m: MonthDoc): MemberBudget {
   return { ...b, months: { ...b.months, [key]: m } };

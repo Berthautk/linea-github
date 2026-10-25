@@ -42,6 +42,7 @@ import {
   Users,
   UtensilsCrossed,
   Wallet,
+  Mail,
   Wifi,
   Wrench,
   Zap,
@@ -111,8 +112,9 @@ export const RubricBadge: React.FC<{
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   title?: string;
-}> = ({ icon, color = NO_RUBRIC_STYLE.color, size = 'md', className = '', title }) => {
-  const Icon = iconFor(icon);
+  envelope?: boolean;
+}> = ({ icon, color = NO_RUBRIC_STYLE.color, size = 'md', className = '', title, envelope }) => {
+  const Icon = envelope ? Mail : iconFor(icon);
   const box = { sm: 'w-7 h-7 rounded-lg', md: 'w-10 h-10 rounded-xl', lg: 'w-12 h-12 rounded-2xl' }[size];
   const px = size === 'sm' ? 14 : size === 'md' ? 18 : 22;
   return (

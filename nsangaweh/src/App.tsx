@@ -11,6 +11,7 @@ import { BudgetSetupFlow, CopySource, PickedRubric, SetupStep } from './componen
 import { CommitmentsSheet } from './components/CommitmentsSheet';
 import { DebtsSheet } from './components/DebtsSheet';
 import { MoveEntriesSheet } from './components/MoveEntriesSheet';
+import { ShoppingSheet } from './components/ShoppingSheet';
 import { CouncilSheet, GoalsSheet, ProvisionsSheet, ReportsSheet, TontineSheet } from './components/ToolsSheets';
 import { EnvelopeSheet } from './components/EnvelopeSheet';
 import { EvolutionScreen } from './components/EvolutionScreen';
@@ -196,7 +197,7 @@ export default function App() {
   const [isAlertsOpen, setIsAlertsOpen] = useState(false);
   const [isDebtsOpen, setIsDebtsOpen] = useState(false);
   const [isMoveOpen, setIsMoveOpen] = useState(false);
-  const [toolSheet, setToolSheet] = useState<'provisions' | 'objectifs' | 'tontine' | 'conseil' | 'bilans' | null>(null);
+  const [toolSheet, setToolSheet] = useState<'provisions' | 'objectifs' | 'tontine' | 'courses' | 'conseil' | 'bilans' | null>(null);
   const [isCommitmentsOpen, setIsCommitmentsOpen] = useState(false);
   const [activePlusModule, setActivePlusModule] = useState<PlusModule | null>(null);
   const [reviewSkipped, setReviewSkipped] = useState<string[]>(readSkipped);
@@ -1037,6 +1038,7 @@ export default function App() {
         <main className="flex-1 px-3.5 pt-2">
           {activeTab === 'accueil' && (
             <AccueilScreen
+              onOpenRecap={() => setToolSheet('bilans')}
               monthKey={currentMonth}
               calc={calc}
               categories={budget.categories}
@@ -1127,6 +1129,7 @@ export default function App() {
                 provisions={budget.provisions}
                 goals={budget.goals.filter((g) => Array.isArray(g.contributions))}
                 tontines={budget.tontines}
+                shopping={budget.shopping}
                 wallets={wallets}
                 onOpenModule={openPlusModule}
               />
@@ -1247,6 +1250,48 @@ export default function App() {
           }}
         />
 
+        <ShoppingSheet
+          open={toolSheet === 'courses'}
+          lists={budget.shopping}
+          categories={budget.categories}
+          lines={budget.months[budgetMonthOf(todayStr())]?.lines || []}
+          wallets={wallets}
+          myUid={myUid}
+          onChange={(list, msg) => run((b) => ({ ...b, shopping: list }), msg)}
+          onClose={() => setToolSheet(null)}
+          onFinish={(list, purchases, walletId) => {
+            const monthKey = budgetMonthOf(todayStr());
+            run(
+              (b) => {
+                let next = b;
+                purchases.forEach((p, i) => {
+                  next = addEntry(next, monthKey, {
+                    id: generateId(),
+                    d: todayStr(),
+                    ts: Date.now() + i,
+                    by: myUid,
+                    t: 'out',
+                    amt: p.amt,
+                    categoryId: p.categoryId,
+                    lineId: p.lineId,
+                    label: p.label.slice(0, 40),
+                    w: walletId,
+                    src: 'manual',
+                  });
+                });
+                return {
+                  ...next,
+                  shopping: next.shopping.map((l) => (l.id === list.id ? { ...list, status: 'done' as const } : l)),
+                };
+              },
+              `Courses enregistrées : ${purchases.length} achat${purchases.length > 1 ? 's' : ''}, ${fmt(purchases.reduce((s, p) => s + p.amt, 0))} F.`,
+              true
+            );
+            setCurrentMonth(monthKey);
+            setToolSheet(null);
+          }}
+        />
+
         <ProvisionsSheet
           open={toolSheet === 'provisions'}
           provisions={budget.provisions}
@@ -1278,6 +1323,7 @@ export default function App() {
         <ReportsSheet
           open={toolSheet === 'bilans'}
           budget={budget}
+          calc={calc}
           monthKey={currentMonth}
           monthName={monthLabel(currentMonth)}
           userName={profile.name}

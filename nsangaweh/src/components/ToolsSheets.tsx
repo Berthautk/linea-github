@@ -3,6 +3,7 @@ import { Download, Plus, Share2, Trash2 } from 'lucide-react';
 import { fmt, generateId, todayStr } from '../lib/budget-math';
 import { exportLedgerToCSV } from '../lib/csv-export';
 import { triggerHaptic } from '../lib/haptics';
+import { MonthCalc } from '../lib/calc';
 import { Entry, GoalContribution, MemberBudget, Provision, SharedGoal, Tontine } from '../lib/types';
 import { ErrorText, FieldLabel, inputClass, PrimaryButton, Sheet } from './ui';
 
@@ -543,6 +544,7 @@ export const CouncilSheet: React.FC<{
 export const ReportsSheet: React.FC<{
   open: boolean;
   budget: MemberBudget;
+  calc: MonthCalc;
   monthKey: string;
   monthName: string;
   userName: string;
@@ -550,43 +552,98 @@ export const ReportsSheet: React.FC<{
   householdName?: string;
   notify: (msg: string) => void;
   onClose: () => void;
-}> = ({ open, budget, monthKey, monthName, userName, householdId, householdName, notify, onClose }) => {
+}> = ({ open, budget, calc, monthName, userName, householdId, householdName, notify, onClose }) => {
   if (!open) return null;
-  const m = budget.months[monthKey];
-  const entries = (m?.entries || []).filter((e) => e.t !== 'transfer');
-  const cats = new Map(budget.categories.map((c) => [c.id, c.name]));
-  const income = entries.filter((e) => e.t === 'in').reduce((s, e) => s + e.amt, 0);
-  const out = entries.filter((e) => e.t === 'out');
-  const spent = out.reduce((s, e) => s + e.amt, 0);
-  const saved = entries.filter((e) => e.t === 'save').reduce((s, e) => s + e.amt, 0);
-  const byCat = new Map<string, number>();
-  out.forEach((e) => {
-    const n = (e.categoryId && cats.get(e.categoryId)) || 'Sans rubrique';
-    byCat.set(n, (byCat.get(n) || 0) + e.amt);
-  });
-  const rows = [...byCat.entries()].sort((a, b) => b[1] - a[1]);
+  const rows = [...calc.expense, ...(calc.byCategory ? Object.values(calc.byCategory).filter((c) => c.kind === 'save') : [])]
+    .filter((c) => !c.category.archived || c.actual > 0)
+    .map((c) => ({
+      name: c.category.name,
+      planned: c.planned,
+      actual: c.actual,
+      pct: c.planned > 0 ? Math.round((c.actual / c.planned) * 100) : null,
+    }))
+    .filter((r) => r.planned > 0 || r.actual > 0)
+    .sort((a, b) => b.actual - a.actual);
+  const hasAny = calc.month.entries.length > 0 || rows.length > 0;
+  const biggest = rows[0];
+  const status = (pct: number | null) => (pct === null ? '' : pct > 100 ? 'dépassée' : pct >= 90 ? 'presque vide' : pct >= 70 ? 'bien entamée' : 'ok');
   const text = [
-    `Bilan ${monthName}${householdName ? ` — ${householdName}` : ''}`,
-    `Entrées : ${fmt(income)} F`,
-    `Sorties : ${fmt(spent)} F`,
-    saved ? `Épargne : ${fmt(saved)} F` : '',
-    `Reste : ${fmt(income - spent - saved)} F`,
+    `Récapitulatif ${monthName}${householdName ? ` — ${householdName}` : ''}`,
+    `Entrées : ${fmt(calc.inc)} F`,
+    `Sorties : ${fmt(calc.out)} F`,
+    calc.saved ? `Épargne : ${fmt(calc.saved)} F` : '',
+    `Reste en main : ${fmt(calc.inc - calc.out - calc.saved)} F`,
     '',
-    ...rows.map(([n, a]) => `• ${n} : ${fmt(a)} F`),
+    'Où l’argent est parti :',
+    ...rows.filter((r) => r.actual > 0).map((r) => `• ${r.name} : ${fmt(r.actual)} F${r.planned ? ` sur ${fmt(r.planned)} F prévus (${r.pct} %)` : ''}`),
   ]
     .filter((l, i, a) => l !== '' || a[i - 1] !== '')
     .join('\n');
 
   return (
-    <Sheet open={open} title="Bilans & Export" onClose={onClose}>
+    <Sheet open={open} title={`Récapitulatif de ${monthName}`} onClose={onClose} footer={<PrimaryButton disabled={!hasAny} onClick={() => { triggerHaptic('light'); shareText(text, notify); }}><Share2 size={16} /> Envoyer ce récapitulatif</PrimaryButton>}>
       <div className="flex flex-col gap-3 p-4">
-        <div className={card}>
-          <b className="text-[14px]">Bilan de {monthName}</b>
-          <pre className="m-0 whitespace-pre-wrap font-sans text-[13px] text-[var(--color-text)]">{entries.length ? text : 'Rien n’a encore été noté ce mois-ci.'}</pre>
-          <PrimaryButton disabled={!entries.length} onClick={() => { triggerHaptic('light'); shareText(text, notify); }}>
-            <Share2 size={16} /> Envoyer ce bilan (WhatsApp…)
-          </PrimaryButton>
-        </div>
+        <p className={`m-0 ${muted}`}>Les faits du mois : combien est rentré, combien est sorti, et comment chaque enveloppe a été utilisée.</p>
+        {!hasAny ? (
+          <Empty>Rien n’a encore été noté ce mois-ci.</Empty>
+        ) : (
+          <>
+            <div className="grid grid-cols-3 gap-2">
+              <div className={card}>
+                <span className={muted}>Entrées</span>
+                <b className="text-[15px] text-[var(--color-income)] num">{fmt(calc.inc)} F</b>
+              </div>
+              <div className={card}>
+                <span className={muted}>Sorties</span>
+                <b className="text-[15px] text-[var(--color-expense)] num">{fmt(calc.out)} F</b>
+              </div>
+              <div className={card}>
+                <span className={muted}>Reste</span>
+                <b className="text-[15px] num">{fmt(calc.inc - calc.out - calc.saved)} F</b>
+              </div>
+            </div>
+            {biggest && biggest.actual > 0 && (
+              <div className={card}>
+                <span className={muted}>C’est là que l’argent est le plus parti</span>
+                <b className="text-[14px]">
+                  {biggest.name} · {fmt(biggest.actual)} F{calc.out > 0 ? ` (${Math.round((biggest.actual / calc.out) * 100)} % des sorties)` : ''}
+                </b>
+              </div>
+            )}
+            <div className={card}>
+              <b className="text-[13px]">Mes enveloppes</b>
+              {rows.map((r) => {
+                const over = r.pct !== null && r.pct > 100;
+                const high = r.pct !== null && r.pct >= 90;
+                const mid = r.pct !== null && r.pct >= 70;
+                return (
+                  <div key={r.name} className="flex flex-col gap-1">
+                    <div className="flex justify-between gap-2 text-[13px]">
+                      <span className="font-semibold truncate">{r.name}</span>
+                      <span className="num whitespace-nowrap">
+                        {fmt(r.actual)} F{r.planned ? ` / ${fmt(r.planned)} F` : ''}
+                      </span>
+                    </div>
+                    {r.planned > 0 && (
+                      <>
+                        <div className="h-2 rounded-full bg-[var(--color-surface-subtle)] overflow-hidden">
+                          <div
+                            className={`h-full rounded-full ${over || high ? 'bg-[var(--color-expense)]' : mid ? 'bg-amber-500' : 'bg-[var(--color-primary)]'}`}
+                            style={{ width: `${Math.min(100, r.pct || 0)}%` }}
+                          />
+                        </div>
+                        <span className={`text-[11px] ${over || high ? 'text-[var(--color-expense)] font-bold' : muted}`}>
+                          Utilisée à {r.pct} % · {status(r.pct)}
+                          {over ? ` (+${fmt(r.actual - r.planned)} F)` : ''}
+                        </span>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
         <div className={card}>
           <b className="text-[14px]">Tout mon budget dans un tableau</b>
           <p className={`m-0 ${muted}`}>Un fichier CSV avec toutes les opérations, qui s’ouvre dans Excel ou Google Sheets.</p>

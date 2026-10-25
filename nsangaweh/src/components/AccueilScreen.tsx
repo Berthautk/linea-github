@@ -56,6 +56,7 @@ interface Props {
   onDismissHelp: () => void;
   onOpenQuickAdd: (type: 'in' | 'out') => void;
   onOpenHistory: () => void;
+  onOpenRecap?: () => void;
 }
 
 export const AccueilScreen: React.FC<Props> = (props) => {
@@ -106,6 +107,16 @@ export const AccueilScreen: React.FC<Props> = (props) => {
       </div>
 
       <RecentOps calc={calc} categories={categories} wallets={props.wallets} people={props.people} onOpenHistory={props.onOpenHistory} />
+
+      {props.onOpenRecap && (
+        <button
+          type="button"
+          onClick={props.onOpenRecap}
+          className="min-h-12 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[13px] font-heading font-bold text-[var(--color-primary)] flex items-center justify-center gap-2"
+        >
+          <ClipboardList size={16} /> Récapitulatif du mois
+        </button>
+      )}
 
       <div className="pt-2 px-1">
         <h2 className="m-0 text-base font-heading font-extrabold text-[var(--color-text)]">Mon budget du mois</h2>
@@ -649,6 +660,8 @@ const RubricRow: React.FC<{
   const cat = cc.category;
   const pct = cc.planned > 0 ? Math.min(100, (cc.actual / cc.planned) * 100) : 0;
   const over = cc.planned > 0 && cc.actual > cc.planned;
+  const usedPct = cc.planned > 0 ? Math.round((cc.actual / cc.planned) * 100) : null;
+  const level = over ? 'over' : usedPct !== null && usedPct >= 90 ? 'high' : usedPct !== null && usedPct >= 70 ? 'mid' : 'ok';
   const doneLabel = cat.kind === 'save' ? 'Mis de côté' : 'Sorti';
 
   return (
@@ -664,9 +677,25 @@ const RubricRow: React.FC<{
             <GripVertical size={18} />
           </span>
         )}
-        <RubricBadge icon={cat.icon} color={cat.color} size="sm" className={reorder ? '' : 'ml-1'} />
+        <RubricBadge envelope={cat.kind !== 'in'} icon={cat.icon} color={cat.color} size="sm" className={reorder ? '' : 'ml-1'} title={`Enveloppe ${cat.name}`} />
         <div className="min-w-0 flex-1 leading-tight">
-          <span className="block font-heading font-bold text-[12px] text-[var(--color-text)] line-clamp-2">{cat.name}</span>
+          <span className="flex items-center gap-1.5 min-w-0">
+            <span className="font-heading font-bold text-[12px] text-[var(--color-text)] line-clamp-2">{cat.name}</span>
+            {usedPct !== null && cat.kind !== 'in' && cc.actual > 0 && (
+              <span
+                className={`shrink-0 px-1.5 py-px rounded-full text-[9.5px] font-bold num ${
+                  level === 'over' || level === 'high'
+                    ? 'bg-[var(--color-expense-soft)] text-[var(--color-expense)]'
+                    : level === 'mid'
+                    ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300'
+                    : 'bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)]'
+                }`}
+                title={level === 'over' ? 'Enveloppe dépassée' : level === 'high' ? 'Enveloppe presque vide' : `Enveloppe utilisée à ${usedPct} %`}
+              >
+                {level === 'over' ? 'Dépassée' : `${usedPct} %`}
+              </span>
+            )}
+          </span>
           <span className={`block text-[10px] truncate ${over ? 'text-[var(--color-expense)] font-bold' : 'text-[var(--color-text-muted)]'}`}>
             {rubricSubtitle(cc)}
             {cat.linkedTo === 'debts' ? ' · dettes' : ''}
@@ -682,7 +711,10 @@ const RubricRow: React.FC<{
 
       {!reorder && (
         <div className="w-full h-1 bg-[var(--color-border)]/40" aria-hidden="true">
-          <div className={`h-full ${over ? 'bg-[var(--color-expense)]' : ''}`} style={{ width: `${pct}%`, backgroundColor: over ? undefined : cat.color }} />
+          <div
+            className={`h-full ${level === 'over' || level === 'high' ? 'bg-[var(--color-expense)]' : level === 'mid' ? 'bg-amber-500' : ''}`}
+            style={{ width: `${pct}%`, backgroundColor: level === 'ok' ? cat.color : undefined }}
+          />
         </div>
       )}
 

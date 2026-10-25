@@ -106,6 +106,7 @@ export interface MemberBudget {
   provisions: Provision[];
   goals: SharedGoal[];
   tontines: Tontine[];
+  shopping: ShoppingList[];
   months: Record<string, MonthDoc>;
 }
 
@@ -253,6 +254,24 @@ export interface Tontine {
   potAmount: number;
   payments: TontineCyclePayment[];
   shared?: boolean;
+}
+
+export interface ShoppingItem {
+  id: string;
+  label: string;
+  amt: number;
+  done: boolean; // ticked = bought
+  kind: 'item' | 'transport';
+}
+
+export interface ShoppingList {
+  id: string;
+  name: string;
+  date: string; // YYYY-MM-DD
+  budget: number; // what was planned for this trip, 0 = none
+  items: ShoppingItem[];
+  status: 'open' | 'done';
+  by?: string;
 }
 
 export interface RecipientMemory {

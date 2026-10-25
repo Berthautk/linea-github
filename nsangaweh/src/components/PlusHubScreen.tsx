@@ -10,6 +10,7 @@ import {
   PiggyBank,
   Receipt,
   Settings,
+  ShoppingBasket,
   Target,
   Users,
   Wallet as WalletIcon,
@@ -21,6 +22,7 @@ import {
   Debt,
   Provision,
   SharedGoal,
+  ShoppingList,
   Tontine,
   Wallet,
 } from '../lib/types';
@@ -33,6 +35,7 @@ export type PlusModule =
   | 'objectifs'
   | 'tontine'
   | 'portefeuilles'
+  | 'courses'
   | 'conseil'
   | 'bilans'
   | 'reglages';
@@ -44,6 +47,7 @@ interface PlusHubScreenProps {
   goals?: SharedGoal[];
   tontines?: Tontine[];
   wallets?: Wallet[];
+  shopping?: ShoppingList[];
   onOpenModule: (mod: PlusModule) => void;
 }
 
@@ -54,6 +58,7 @@ export const PlusHubScreen: React.FC<PlusHubScreenProps> = ({
   goals = [],
   tontines = [],
   wallets = [],
+  shopping = [],
   onOpenModule,
 }) => {
   // Compute live statuses
@@ -159,6 +164,14 @@ export const PlusHubScreen: React.FC<PlusHubScreenProps> = ({
       icon: WalletIcon,
       color: '#F59E0B',
       bgColor: 'bg-amber-50 dark:bg-amber-950/40',
+    },
+    {
+      id: 'courses',
+      title: 'Courses',
+      status: shopping.some((l) => l.status === 'open') ? `${shopping.filter((l) => l.status === 'open').length} liste en cours` : 'Liste du marché',
+      icon: ShoppingBasket,
+      color: '#EA580C',
+      bgColor: 'bg-orange-50 dark:bg-orange-950/40',
     },
     {
       id: 'conseil',

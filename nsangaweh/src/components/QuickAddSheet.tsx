@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useVoice } from '../lib/useVoice';
 import { AlertCircle, Calendar, Check, Clipboard, Mic, MicOff, MessageSquareText, PenLine, Sparkles, X } from 'lucide-react';
 import { currentMonthKey, defaultEntryLabel, fmt, matchLine, parseQuick, todayStr } from '../lib/budget-math';
 import { MonthCalc, sortCategories } from '../lib/calc';
@@ -85,11 +86,20 @@ export const QuickAddSheet: React.FC<Props> = ({
   const [smsWallet, setSmsWallet] = useState('');
   const [remember, setRemember] = useState(false);
 
-  const [listening, setListening] = useState(false);
   const [voiceText, setVoiceText] = useState('');
   const [voice, setVoice] = useState<ReturnType<typeof parseVoiceTranscript> | null>(null);
-  const [speechOk, setSpeechOk] = useState(true);
-  const recRef = useRef<any>(null);
+  const mic = useVoice((t) => {
+    setVoiceText(t);
+    setVoice(parseVoiceTranscript(t));
+  });
+  const { supported: speechOk, listening, left: voiceLeft } = mic;
+  const toggleVoice = () => {
+    if (!mic.listening) {
+      setVoiceText('');
+      setVoice(null);
+    }
+    mic.toggle();
+  };
 
   const catById = useMemo(() => new Map(categories.map((c) => [c.id, c])), [categories]);
   const lines = calc.month.lines.filter((l) => !l.archived && !catById.get(l.categoryId)?.archived);
@@ -106,7 +116,7 @@ export const QuickAddSheet: React.FC<Props> = ({
     setSms(null);
     setVoiceText('');
     setVoice(null);
-    setListening(false);
+    mic.stop();
     setAddToBudget(false);
     setLabel('');
     const line = prefill?.lineId ? calc.month.lines.find((l) => l.id === prefill.lineId) : undefined;
@@ -128,7 +138,6 @@ export const QuickAddSheet: React.FC<Props> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
-  useEffect(() => () => recRef.current?.abort?.(), []);
 
   if (!isOpen) return null;
 
@@ -223,38 +232,6 @@ export const QuickAddSheet: React.FC<Props> = ({
       src: 'sms',
       saveMemory: remember && smsWho && smsCat ? { name: smsWho, categoryId: smsCat } : undefined,
     });
-  };
-
-  const toggleVoice = () => {
-    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SR) return setSpeechOk(false);
-    if (listening) {
-      recRef.current?.stop();
-      return setListening(false);
-    }
-    try {
-      const r = new SR();
-      r.lang = 'fr-FR';
-      r.interimResults = true;
-      r.onstart = () => {
-        setListening(true);
-        setVoiceText('');
-        setVoice(null);
-      };
-      r.onresult = (ev: any) => {
-        const t = Array.from(ev.results)
-          .map((x: any) => x[0].transcript)
-          .join('');
-        setVoiceText(t);
-        setVoice(parseVoiceTranscript(t));
-      };
-      r.onerror = () => setListening(false);
-      r.onend = () => setListening(false);
-      recRef.current = r;
-      r.start();
-    } catch {
-      setSpeechOk(false);
-    }
   };
 
   const submitVoice = () => {
@@ -644,12 +621,16 @@ export const QuickAddSheet: React.FC<Props> = ({
                   type="button"
                   onClick={toggleVoice}
                   className={`w-24 h-24 rounded-full flex items-center justify-center text-white shadow-lg ${listening ? 'bg-rose-500 animate-pulse' : 'bg-[var(--color-primary)]'}`}
-                  aria-label={listening ? 'Arrêter' : 'Parler'}
+                  aria-label={listening ? 'Terminé' : 'Parler'}
                 >
                   {listening ? <MicOff size={38} /> : <Mic size={38} />}
                 </button>
               )}
-              {listening && <span className="text-xs font-semibold text-rose-500">Je vous écoute… parlez distinctement</span>}
+              {listening ? (
+                <span className="text-xs font-semibold text-rose-500">Je vous écoute… {voiceLeft} s · touchez le micro quand vous avez fini</span>
+              ) : (
+                <span className="text-[11px] text-[var(--color-text-muted)]">Vous avez 10 secondes. Touchez le micro quand vous avez fini de parler.</span>
+              )}
               {voiceText && (
                 <div className="w-full p-3 rounded-2xl bg-[var(--color-surface-subtle)] text-left flex flex-col gap-2">
                   <p className="m-0 text-xs italic">« {voiceText} »</p>

@@ -229,8 +229,10 @@ export function generateMonthDoc(
 /** Copy another month's structure (lines and envelopes, no entries) into `monthKey`. */
 export function copyMonthPlan(from: MonthDoc, existing?: MonthDoc, now = Date.now()): MonthDoc {
   const base: MonthDoc = existing ? { ...existing } : { lines: [], entries: [] };
+  // Never add a line the month already has (copying twice used to double everything).
+  const have = new Set((base.lines || []).filter((l) => !l.archived).map(lineKey));
   const lines = from.lines
-    .filter((l) => !l.archived && l.origin !== 'debt')
+    .filter((l) => !l.archived && l.origin !== 'debt' && !have.has(lineKey(l)))
     .map((l, i) => ({ ...l, id: generateId(), order: i }));
   return {
     ...base,
@@ -238,5 +240,52 @@ export function copyMonthPlan(from: MonthDoc, existing?: MonthDoc, now = Date.no
     envelopes: { ...(from.envelopes || {}), ...(base.envelopes || {}) },
     planCreated: true,
     createdAt: base.createdAt || now,
+  };
+}
+
+const lineKey = (l: Pick<MonthLine, 'categoryId' | 'label'>) =>
+  `${l.categoryId}|${l.label.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim()}`;
+
+/** Lines that appear twice (same rubric and same name) in a month. Debt lines are left alone. */
+export function duplicateLines(doc: MonthDoc | undefined): MonthLine[] {
+  if (!doc) return [];
+  const seen = new Set<string>();
+  const dups: MonthLine[] = [];
+  doc.lines.forEach((l) => {
+    if (l.archived || l.origin === 'debt' || l.debtId) return;
+    const k = lineKey(l);
+    if (seen.has(k)) dups.push(l);
+    else seen.add(k);
+  });
+  return dups;
+}
+
+/**
+ * Remove the second copy of every duplicated line. Operations that pointed to a removed copy
+ * are moved to the line that stays, so nothing is lost and totals stay right.
+ */
+export function dedupeMonthPlan(doc: MonthDoc): { doc: MonthDoc; removed: number } {
+  const keep = new Map<string, MonthLine>();
+  const redirect = new Map<string, string>();
+  const lines: MonthLine[] = [];
+  doc.lines.forEach((l) => {
+    if (l.archived || l.origin === 'debt' || l.debtId) return void lines.push(l);
+    const k = lineKey(l);
+    const first = keep.get(k);
+    if (!first) {
+      keep.set(k, l);
+      lines.push(l);
+    } else {
+      redirect.set(l.id, first.id);
+    }
+  });
+  if (!redirect.size) return { doc, removed: 0 };
+  return {
+    removed: redirect.size,
+    doc: {
+      ...doc,
+      lines: lines.map((l, i) => ({ ...l, order: i })),
+      entries: doc.entries.map((e) => (e.lineId && redirect.has(e.lineId) ? { ...e, lineId: redirect.get(e.lineId)! } : e)),
+    },
   };
 }

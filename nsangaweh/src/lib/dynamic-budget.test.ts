@@ -18,6 +18,7 @@ import {
 import { calcMonth, describeEntry } from './calc';
 import { applyImport, parseBudgetSheet } from './importer';
 import { hasLegacyData, migrateLegacy } from './migration';
+import { dedupeMonthPlan, duplicateLines, copyMonthPlan } from './plan';
 import { applyMonthReview, buildMonthReview, generateMonthDoc } from './plan';
 import { recurrenceMatches } from './recurrence';
 import { applyTemplate, TEMPLATE_SEPTEMBER_2026 } from './templates';
@@ -521,5 +522,28 @@ describe('déplacer des opérations vers un autre mois', () => {
     expect(moved.months[OCT].entries.map((e) => e.amt)).toEqual([500]);
     expect(moved.months['2026-11'].entries.map((e) => [e.amt, e.d])).toEqual([[700, '2026-10-25']]);
     expect(moveEntries(b, OCT, ids, OCT)).toBe(b);
+  });
+});
+
+describe('plan en double', () => {
+  const line = (id: string, label: string, amount: number) => ({ id, categoryId: 'c1', label, amount, origin: 'manual' as const });
+  it('retire les lignes en double et garde les opérations', () => {
+    const doc = {
+      lines: [line('a', 'Moto', 1000), line('b', 'Déjeuner', 500), line('a2', 'moto', 1000), line('b2', 'Déjeuner', 500)],
+      entries: [entry({ t: 'out', amt: 300, categoryId: 'c1', lineId: 'a2' })],
+      planCreated: true,
+    };
+    expect(duplicateLines(doc)).toHaveLength(2);
+    const r = dedupeMonthPlan(doc);
+    expect(r.removed).toBe(2);
+    expect(r.doc.lines.map((l) => l.id)).toEqual(['a', 'b']);
+    expect(r.doc.entries[0].lineId).toBe('a');
+    expect(dedupeMonthPlan(r.doc).removed).toBe(0);
+  });
+  it('copier deux fois ne double plus rien', () => {
+    const src = { lines: [line('a', 'Moto', 1000)], entries: [], planCreated: true };
+    const once = copyMonthPlan(src);
+    const twice = copyMonthPlan(src, once);
+    expect(twice.lines).toHaveLength(1);
   });
 });

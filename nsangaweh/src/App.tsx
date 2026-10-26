@@ -89,7 +89,7 @@ import {
 } from './lib/firebase';
 import { triggerHaptic } from './lib/haptics';
 import { applyImport, ImportRow } from './lib/importer';
-import { applyMonthReview, buildMonthReview, copyMonthPlan, debtsCategory, generateMonthDoc, MonthReview, previousPlannedMonth } from './lib/plan';
+import { applyMonthReview, buildMonthReview, copyMonthPlan, debtsCategory, generateMonthDoc, MonthReview, previousPlannedMonth, dedupeMonthPlan, duplicateLines } from './lib/plan';
 import { recurrenceChoice, sameRecurrence } from './lib/recurrence';
 import { applyTemplate, TEMPLATES } from './lib/templates';
 import {
@@ -468,13 +468,42 @@ export default function App() {
   const needsSetup = store.loaded && authStatus === 'ready' && !profile.budgetSetupDone && !activeCategories.length;
   const needsName = store.loaded && authStatus === 'ready' && !profile.name?.trim();
 
+  // The new budget month (from the 25th, say) prepares itself like the previous one; "Annuler" undoes it.
+  const autoDone = useRef<Set<string>>(new Set());
   useEffect(() => {
     if (!store.loaded || authStatus !== 'ready' || needsSetup || needsName || review || setup.open) return;
-    if (!activeCategories.length || month?.planCreated) return;
-    if (currentMonth < currentMonthKey() || reviewSkipped.includes(currentMonth)) return;
-    setReview(buildMonthReview(budget, currentMonth, { rollover }));
+    if (!activeCategories.length) return;
+    if (currentMonth !== budgetMonthOf(todayStr())) return;
+    if (month?.planCreated || autoDone.current.has(`plan-${currentMonth}`)) return;
+    const prev = previousPlannedMonth(budget.months, currentMonth);
+    if (!prev) return; // very first month: the Accueil proposes to start
+    autoDone.current.add(`plan-${currentMonth}`);
+    run(
+      (b) => ({ ...b, months: { ...b.months, [currentMonth]: generateMonthDoc(b, currentMonth, { rollover }) } }),
+      `Budget de ${monthName(currentMonth).toLowerCase()} préparé comme ${monthName(prev).toLowerCase()}. Vous pouvez tout modifier.`,
+      true
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [store.loaded, authStatus, currentMonth, month?.planCreated, activeCategories.length, needsSetup, needsName]);
+
+  // Lines that appear twice in the month (e.g. after copying a budget twice) are merged automatically.
+  useEffect(() => {
+    if (!store.loaded || authStatus !== 'ready' || !month) return;
+    const key = `dup-${currentMonth}`;
+    if (autoDone.current.has(key)) return;
+    const dups = duplicateLines(month);
+    if (!dups.length) return;
+    autoDone.current.add(key);
+    run(
+      (b) => {
+        const r = dedupeMonthPlan(b.months[currentMonth]);
+        return r.removed ? { ...b, months: { ...b.months, [currentMonth]: r.doc } } : b;
+      },
+      `${dups.length} ligne${dups.length > 1 ? 's' : ''} en double retirée${dups.length > 1 ? 's' : ''} de ${monthName(currentMonth).toLowerCase()}. Vos opérations sont gardées.`,
+      true
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [store.loaded, authStatus, currentMonth, month?.lines]);
 
   const openReview = () => setReview(buildMonthReview(store.budgetRef.current, currentMonth, { rollover }));
 

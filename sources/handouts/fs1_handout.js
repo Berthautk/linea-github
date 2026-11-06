@@ -22,7 +22,7 @@ const picture = (n) => { const [f, ext, w, h, cap] = IMG[n]; const wpx = 400; re
 
 const children = [
   para([TXT('GBHS GAROUA – GEOGRAPHY DEPARTMENT', { bold: true, size: 22 })], { align: AlignmentType.CENTER, after: 20 }),
-  para([TXT('LOWER SIXTH ARTS – GEOGRAPHY – MODULE 1', { size: 22 })], { align: AlignmentType.CENTER, after: 60 }),
+  para([TXT('UPPER SIXTH ARTS – GEOGRAPHY – MODULE 1', { size: 22 })], { align: AlignmentType.CENTER, after: 60 }),
   para([TXT('FURTHER STUDY 1', { bold: true, size: 36, color: '1F3864' })], { align: AlignmentType.CENTER, after: 0 }),
   para([TXT('TROPICAL WEATHER DISTURBANCES', { bold: true, size: 36, color: '9B1B1B' })], { align: AlignmentType.CENTER, after: 80 }),
   para([TXT('Topic: ', { bold: true }), TXT('Climates     '), TXT('Sub-topic: ', { bold: true }), TXT('Air Mass Interactions at Fronts and Convergence Zones')], { align: AlignmentType.CENTER, after: 40 }),
@@ -76,8 +76,12 @@ children.push(para([], { after: 60 }), band('5. SUMMARY TABLE: THE THREE DISTURB
       shading: i === 0 ? { fill: 'D9E2F3', type: ShadingType.CLEAR, color: 'auto' } : j === 0 ? { fill: 'F2F2F2', type: ShadingType.CLEAR, color: 'auto' } : undefined,
       children: [para([TXT(c, { bold: i === 0 || j === 0, size: 23 })], { after: 0, line: 300 })] })) })) }));
 
+children.push(para([], { after: 60 }), band('HOMEWORK'), para([], { after: 40 }),
+  para([TXT('Define a micro-climate.', { bold: true })], { left: 360, after: 120 }),
+  para([TXT('Our next lesson will be on: ', { italics: true }), TXT('Lesson 20: Micro-climates.', { italics: true, bold: true })], { left: 360, after: 60 }));
+
 const doc = new Document({ styles: { default: { document: { run: { font: FONT, size: 25 } } } },
   sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 800, left: 720, right: 720 } } },
-    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'GBHS Garoua – Lower Sixth Arts – Geography – Further Study 1: Tropical Weather Disturbances – Page ', font: FONT, size: 17 }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 17 })] })] }) },
+    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'GBHS Garoua – Upper Sixth Arts – Geography – Further Study 1: Tropical Weather Disturbances – Page ', font: FONT, size: 17 }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 17 })] })] }) },
     children }] });
 Packer.toBuffer(doc).then((b) => { fs.writeFileSync(OUT, b); console.log('ok'); });

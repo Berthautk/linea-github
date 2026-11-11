@@ -168,13 +168,16 @@ function build(sp) {
     if (caption) s.addText(caption, { x: bx, y: 6.66, w: bw, h: 0.38, fontFace: TNR, fontSize: 16, italic: true, color: GREY, align: 'center', valign: 'middle', margin: 0 });
     note(s, nt); return s;
   }
-  function picture(sec, title, img, caption, nt) {
+  let figN = 0; const capF = (x) => x.charAt(0).toUpperCase() + x.slice(1);
+  function picture(sec, title, img, caption, nt, sub, fig) {
     const s = add(); section(s, sec);
     s.addText(title, { x: 0.5, y: 1.1, w: W - 1, h: 0.8, fontFace: TNR, fontSize: 36, bold: true, color: RED, align: 'center', valign: 'middle', margin: 0 });
-    const p = imgPath(img); const [iw, ih] = sizeOf(p); const bw = W - 0.6, bh = (caption ? 6.62 : 7.0) - 1.95;
+    let top = 1.95;
+    if (sub) { s.addText(sub, { x: 0.5, y: 1.9, w: W - 1, h: 0.45, fontFace: TNR, fontSize: 28, bold: true, color: RED, align: 'center', valign: 'middle', margin: 0, fit: 'shrink' }); top = 2.45; }
+    const p = imgPath(img); const [iw, ih] = sizeOf(p); const bw = W - 0.6, bh = (caption ? 6.62 : 7.0) - top;
     let w = bw, h = bw * ih / iw; if (h > bh) { h = bh; w = bh * iw / ih; }
-    s.addImage({ path: p, x: 0.3 + (bw - w) / 2, y: 1.95 + (bh - h) / 2, w, h });
-    if (caption) s.addText(caption, { x: 0.5, y: 6.66, w: W - 1, h: 0.38, fontFace: TNR, fontSize: 18, italic: true, color: GREY, align: 'center', valign: 'middle', margin: 0 });
+    s.addImage({ path: p, x: 0.3 + (bw - w) / 2, y: top + (bh - h) / 2, w, h });
+    if (caption) s.addText(caption, { x: 0.5, y: 6.66, w: W - 1, h: 0.38, fontFace: TNR, fontSize: fig ? 22 : 18, bold: !!fig, italic: !fig, color: fig ? BLACK : GREY, align: 'center', valign: 'middle', margin: 0 });
     note(s, nt); return s;
   }
   function table(sec, title, rows, colW, fs, nt, head) {
@@ -260,8 +263,19 @@ function build(sp) {
       const introRun = gi === 0 && part.intro ? [{ runs: [{ t: part.intro, i: true }], intro: true }] : [];
       if (g.fig) {
         const [lead, text, img, cap] = g.fig; const term = lead.replace(/:$/, '');
-        fslide('BOARD SUMMARY', part.title, part.sub, introRun.concat(itemRuns(lead, text)), img, cap ? 'Illustration: ' + cap.replace(/\.$/, '') : null,
-          `${gi === 0 ? `Let us copy ${hName}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : ''}Copy the point on ${term} on the left, then draw the diagram on the right${cap ? ': ' + lc1(cap.replace(/\.$/, '')) : ''}. Give it a title and label it clearly.`);
+        const figName = capF((cap || term).replace(/\.$/, '')); const fno = ++figN;
+        const its = introRun.concat(itemRuns(lead, text));
+        const lead0 = gi === 0 ? `Let us copy ${hName}. ${part.intro ? part.intro.replace(/:$/, '.') + ' ' : ''}` : '';
+        // picture beside the text only if the text still fits at a comfortable size; otherwise the picture goes on the next slide
+        const tw0 = sp.pointPerSlide ? 6.6 : 5.3, th0 = FTY - 0.1 - (BY + (part.sub ? 0.5 : 0)); let sz0 = 36;
+        while (sz0 > 22 && hOf(its, tw0, sz0) > th0) sz0 -= 2;
+        if (sz0 >= 99) { // the picture always goes on its own slide: a wide diagram beside the text is too small to copy
+          fslide('BOARD SUMMARY', part.title, part.sub, its, img, `Figure ${fno}: ${figName}`,
+            `${lead0}Copy the point on ${term} on the left, then draw the diagram on the right: ${lc1(figName)}. Give it a title and label it clearly.`);
+        } else {
+          tslide('BOARD SUMMARY', part.title, its, { sub: part.sub, note: `${lead0}Copy the point on ${term}. The figure is on the next slide.` });
+          picture('BOARD SUMMARY', part.title, img, `Figure ${fno}: ${figName}`, `Now draw Figure ${fno} in your notebook: ${lc1(figName)}. Give it a title and label it clearly.`, part.sub, true);
+        }
         return;
       }
       if (sp.pointPerSlide && !/^DEFINITIONS/.test(part.title)) {
@@ -289,8 +303,9 @@ function build(sp) {
       });
     });
     if (part.draw) {
-      const s = picture('BOARD SUMMARY', part.title, part.draw.img, 'Illustration: ' + (part.draw.caption || '').replace(/\.$/, ''),
-        `Now draw this illustration in your notebook: ${lc1((part.draw.caption || 'the diagram').replace(/\.$/, ''))}. Give it a title and label it clearly.`);
+      const dn = capF((part.draw.name || part.draw.caption || 'the diagram').replace(/\.$/, '')), fno = ++figN;
+      picture('BOARD SUMMARY', part.title, part.draw.img, `Figure ${fno}: ${dn}`,
+        `Now draw Figure ${fno} in your notebook: ${lc1(dn)}. Give it a title and label it clearly.`, part.sub, true);
     }
   });
 

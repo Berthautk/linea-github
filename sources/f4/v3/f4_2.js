@@ -226,7 +226,7 @@ module.exports = {
           ['Phacolith:', 'It is a lens-shaped mass of igneous rock found in the crest or the trough of a fold.'],
           ['Batholith:', 'It is a huge mass of igneous rock, often granite, deep in the crust. It is the largest intrusive feature.'],
           ['Volcanic plug (spine):', 'It is the hard magma that fills the vent of an old volcano, and stays as a rocky hill when erosion removes the cone, like Rhumsiki in northern Cameroon.', 'plug.jpg', 'a volcanic plug']],
-        draw: { img: 'intrusive_features_big.png', caption: 'Copy the intrusive features on a generalised diagram.' } },
+        draw: { img: 'intrusive_features_big.png', name: 'Intrusive features' } },
       { title: '4. Features of Volcanicity', sub: 'B) Extrusive Features', intro: 'Extrusive features are made on the surface by lava, ash and gases:',
         items: [['Lava cones:', 'They are broad cones with gentle slopes built by runny lava, like Mauna Loa in Hawaii. Thick lava builds steep lava domes.', 'lava_cone_big.png', 'a lava cone and a lava dome'],
           ['Ash and cinder cones:', 'They are small, steep cones built of loose ash and cinders, usually less than 300 metres high. Many are found on the slopes of Mount Cameroon.', 'cinder_cone_big.png', 'an ash and cinder cone'],

@@ -18,9 +18,10 @@ function prepare(seq) {
   // seq: [{ L: lesson, B: branch defaults, P: patch or undefined }] in teaching order
   const rank = {};
   return seq.map(({ L: l, B, P }, i) => {
-    const fk = B.level + '/' + B.folder; rank[fk] = (rank[fk] || 0) + 1;
-    const nn = String(rank[fk]).padStart(2, '0') + '_';
+    const fk = B.level + '/' + B.folder;
     const sp = Object.assign({}, l, P || {});
+    if (!sp.fileNo) rank[fk] = (rank[fk] || 0) + 1;   // fileNo: a part inserted between two lessons keeps the numbers of the other files
+    const nn = (sp.fileNo || String(rank[fk]).padStart(2, '0')) + '_';
     if (P && P.secs) sp.activities = l.activities.map((a, k) => Object.assign({}, a, { sec: P.secs[k] || a.sec }));
     if (P && P.activities) sp.activities = P.activities;
     const kind = sp.kind || 'Lesson';

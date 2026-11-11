@@ -15,7 +15,7 @@ LAYOUT = [
     ('Copyright MINESEC  —  HOD – GBHS GAROUA', 'Copyright MINESEC  —  LYCÉE BILINGUE DE MFOU'),
     ('GBHS GAROUA  —  GEOGRAPHY DEPARTMENT', 'LYCÉE BILINGUE DE MFOU  —  GEOGRAPHY DEPARTMENT'),
     ('KAMDEM Emmanuel Berthaut', 'Madame CHE Yvonne'),
-    ('Mr KAMDEM E.  —  Geography', 'Mme CHE Y.  —  Geography'),
+    ('Mr KAMDEM E.  —  Geography', 'Madame CHE Yvonne  —  Geography'),
 ]
 NOTES = [('Mr Kamdem', 'Madam Che')]
 CLASS = [('FORM 4', 'FORM 3'), ('Form 4', 'Form 3')]   # these are the lessons of the Form 3 syllabus

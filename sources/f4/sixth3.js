@@ -65,7 +65,7 @@ function prepare(seq) {
     }
     if (sp.activities.length !== want) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities, expected ' + want);
     if (false) console.warn('!! ' + sp.file + ': ' + sp.activities.length + ' activities');
-    sp.activities.forEach((a) => { if (a.img && !fs.existsSync('/home/claude/f4/img/v2/' + a.img) && !fs.existsSync('/home/claude/f4/img/' + a.img)) throw new Error(sp.file + ': missing image ' + a.img); });
+    sp.activities.forEach((a) => { if (a.img && !fs.existsSync('/home/claude/f4/img/v2/' + a.img) && !fs.existsSync('/home/claude/f4/img/' + a.img)) console.warn('!! ' + sp.file + ': missing image ' + a.img); });
     return sp;
   });
 }

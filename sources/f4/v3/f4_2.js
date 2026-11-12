@@ -167,7 +167,7 @@ module.exports = {
       ['What came out of Mount Cameroon in 2000?', 'Lava.'],
       ['Is Mount Cameroon active, dormant or extinct?', 'Active: it has erupted recently.']],
     activities: [
-      { sec: '1. DEFINITION AND ORIGIN', img: 'f4_eruption.jpg', caption: 'A volcano erupts.', q: 'What comes out of a volcano during an eruption?', a: 'Lava, gases and ash.', noProj: 'describe the 2000 eruption of Mount Cameroon.' },
+      { sec: '1. DEFINITION AND ORIGIN', img: 'eruption_big.png', caption: 'A volcano erupts.', q: 'What comes out of a volcano during an eruption?', a: 'Lava, gases and ash.', noProj: 'describe the 2000 eruption of Mount Cameroon.' },
       { sec: '2. TYPES OF VOLCANOES', img: 'volcano_types_big.png', caption: 'Types of volcanoes by shape.', q: 'Which type of volcano has gentle slopes made of runny lava?', a: 'The shield volcano.', noProj: 'draw the three shapes on the board.' },
       { sec: '3. PROCESSES AND GENERAL STRUCTURE', img: 'volcano_big.png', caption: 'The parts of a volcano.', q: ['Where is magma stored under a volcano?', 'Through which part does it rise?'], a: ['In the magma chamber.', 'Through the vent (pipe).'], noProj: 'draw a simple volcano on the board.' },
     ],
@@ -194,7 +194,7 @@ module.exports = {
           ['Hot spots:', 'In some places, hot magma rises from deep in the mantle in the middle of a plate, as in Hawaii.'],
           ['Lines of weakness:', 'Magma rises along cracks in the crust, as on the Cameroon Volcanic Line.', 'cameroon_volcanic_line.png', 'volcanoes of Cameroon']] },
       { title: '2. Types of Volcanoes', sub: 'A) According to Activity', intro: 'Volcanoes are classified according to their activity as follows:',
-        items: [['Active volcano:', 'It erupts now or has erupted recently, like Mount Cameroon.', 'lsa_mtcameroon.jpg', 'Mount Cameroon'],
+        items: [['Active volcano:', 'It erupts now or has erupted recently, like Mount Cameroon.', 'volcano_activity_big.png', 'active, dormant and extinct volcanoes'],
           ['Dormant volcano:', 'It has not erupted for a long time but can erupt again.'],
           ['Extinct volcano:', 'It will never erupt again, like Mount Manengouba.']] },
       { title: '2. Types of Volcanoes', sub: 'B) According to Shape', intro: 'Volcanoes are classified according to their shape as follows:',

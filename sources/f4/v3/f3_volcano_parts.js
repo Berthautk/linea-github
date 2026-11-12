@@ -45,8 +45,8 @@ const part2 = {
         ['Ash and cinder cones:', 'They are small, steep cones of loose ash, many of them on the slopes of Mount Cameroon.', 'cinder_cone_big.png', 'an ash and cinder cone'],
         ['Composite cones:', 'They are high cones of alternate layers of lava and ash, like Mount Cameroon and Mount Fuji.', 'composite_cone_big.png', 'a composite cone'],
         ['Craters and calderas:', 'A crater is a small hollow at the top of the vent, and a caldera is a huge basin, like those of Manengouba and Bambouto.', 'caldera_big.png', 'a crater and a caldera'],
-        ['Volcanic mountains:', 'They are large mountains built by many eruptions, like Mount Kilimanjaro.', 'f2t_kilimanjaro.jpg', 'Mount Kilimanjaro, a volcanic mountain'],
-        ['Lava plateaux:', 'They are wide, flat highlands built by runny lava, like the Deccan Plateau in India.']] },
+        ['Volcanic mountains:', 'They are large mountains built by many eruptions, like Mount Kilimanjaro.', 'volcanic_mountain_big.png', 'a volcanic mountain'],
+        ['Lava plateaux:', 'They are wide, flat highlands built by runny lava, like the Deccan Plateau in India.', 'lava_plateau_big.png', 'a lava plateau']] },
   ],
 };
 const part3 = {
@@ -66,8 +66,8 @@ const part3 = {
   action: 'Recognise the intrusive features when we see rocky hills and walls of rock.',
   activities: [
     { sec: '1. INTRUSIVE FEATURES', img: 'intrusive_features_big.png', caption: 'Intrusive features: magma cools inside the crust.', q: 'Where does the magma cool to form intrusive features?', a: 'Inside the crust.', noProj: 'draw layers of rock with a vertical wall and a horizontal sheet.' },
-    { sec: '2. INTRUSIVE FEATURES', img: 'f4_dyke.jpg', caption: 'A dyke.', q: 'Is this wall of igneous rock vertical or horizontal?', a: 'Vertical: it is a dyke.', noProj: 'describe a wall of rock that cuts across the layers.' },
-    { sec: '3. INTRUSIVE FEATURES', img: 'plug.jpg', caption: 'Rhumsiki, Far North Region.', q: 'Why do the rocky hills of Rhumsiki stand alone in the plain?', a: 'They are hard volcanic plugs that remain after erosion removed the soft cone.', noProj: 'describe the rocky hills of Rhumsiki.' },
+    { sec: '2. INTRUSIVE FEATURES', img: 'dyke_big.png', caption: 'A dyke.', q: 'Is this wall of igneous rock vertical or horizontal?', a: 'Vertical: it is a dyke.', noProj: 'describe a wall of rock that cuts across the layers.' },
+    { sec: '3. INTRUSIVE FEATURES', img: 'plug_big.png', caption: 'A volcanic plug.', q: 'Why do the rocky hills of Rhumsiki stand alone in the plain?', a: 'They are hard volcanic plugs that remain after erosion removed the soft cone.', noProj: 'describe the rocky hills of Rhumsiki.' },
   ],
   evaluation: [['What are intrusive features?', 'They are landforms made by magma that cools inside the crust.'],
     ['Name two intrusive features.', 'A dyke and a sill (or a laccolith, a batholith, a volcanic plug).'],
@@ -80,13 +80,13 @@ const part3 = {
     D([['Intrusive features:', 'They are landforms made by magma that cools inside the crust.'],
       ['Igneous rock:', 'It is a rock formed when magma or lava cools and hardens.']]),
     { title: '1. Intrusive Features', intro: 'The main intrusive features are the following:',
-      items: [['Dyke:', 'It is a vertical sheet of igneous rock that cuts across the layers of rock.', 'f4_dyke.jpg', 'a dyke'],
+      items: [['Dyke:', 'It is a vertical sheet of igneous rock that cuts across the layers of rock.', 'dyke_big.png', 'a dyke'],
         ['Sill:', 'It is a horizontal sheet of igneous rock between two layers of rock.'],
         ['Laccolith:', 'It is a dome-shaped mass of igneous rock that pushes up the layers above it.'],
         ['Lopolith:', 'It is a saucer-shaped mass of igneous rock that sinks into the layers below it.'],
         ['Phacolith:', 'It is a lens-shaped mass of igneous rock in the crest or the trough of a fold.'],
         ['Batholith:', 'It is a huge mass of igneous rock, often granite, deep in the crust.'],
-        ['Volcanic plug:', 'It is the hard magma in the vent of an old volcano, like Rhumsiki in northern Cameroon.', 'plug.jpg', 'a volcanic plug at Rhumsiki']],
+        ['Volcanic plug:', 'It is the hard magma in the vent of an old volcano, like Rhumsiki in northern Cameroon.', 'plug_big.png', 'a volcanic plug']],
       draw: { img: 'intrusive_features_big.png', name: 'Intrusive features' } },
   ],
   // homework of the original Lesson 11 (it prepares Lesson 12) is supplied by v3/homework.js through "src"

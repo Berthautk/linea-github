@@ -970,4 +970,10 @@ export const EN = {
   "Équipe : son identifiant s’affiche, un nouveau mot de passe se crée en un geste.": "Team: their username is shown and a new password is created in one tap.",
   "Identifiant copié : {u}": "Username copied: {u}",
   "Son identifiant est affiché sous son nom. Pour le mot de passe, touchez « Nouveau mot de passe » : l’ancien est annulé et le nouveau s’affiche, avec un message prêt à envoyer sur WhatsApp. Les mots de passe ne sont pas conservés en clair : on ne peut pas les relire, seulement les remplacer.": "Their username is shown under their name. For the password, tap “New password”: the old one is cancelled and the new one is shown, with a message ready to send on WhatsApp. Passwords are not kept in clear text: they cannot be read back, only replaced.",
+  "Correction d’examen / remise des copies": "Exam correction / returning scripts",
+  "Leçons faites pendant cette séance": "Lessons taught during this session",
+  "La durée est partagée entre les {k} leçons, numérotées à la suite : de {a} à {b}.": "The time is shared between the {k} lessons, numbered consecutively: {a} to {b}.",
+  "Séance de 2 h avec 2 leçons ? Choisissez 2 : elles sont enregistrées toutes les deux.": "A 2-hour session with 2 lessons? Choose 2: both are saved.",
+  "Séances d’évaluation et de correction : {h} h (comptées en heures, pas en leçons).": "Assessment and correction sessions: {h} h (counted as hours, not as lessons).",
+  "Dont révisions, évaluations et corrections (h)": "Of which revision, assessments and corrections (h)",
 };

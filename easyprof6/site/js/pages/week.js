@@ -40,7 +40,7 @@ export function absent(ctx, tid, iso, row, reason = 'unknown') {
 }
 
 /** « Fait » / « Présent » : on demande ce qui a été fait (leçon, TP, further study…) et, si on veut, son numéro. */
-const DONE_TYPES = ['lesson', 'practical', 'further', 'revision', 'assessment'];
+const DONE_TYPES = ['lesson', 'practical', 'further', 'revision', 'assessment', 'correction'];
 function DonePick({ ctx, tid, iso, row }) {
   const cname = (ctx.cls(row.c) || {}).name || row.c, lang = getLang();
   const [type, setType] = useState('lesson'), numbered = isLessonType(type), auto = numbered ? nextNumber(ctx, tid, row.c, type) : null, [n, setN] = useState('');

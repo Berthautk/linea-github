@@ -45,6 +45,17 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
     if (mins <= 0) return setErr(t('L’heure de fin doit être après l’heure de début.'));
     if (lesson && !(+n > 0)) return setErr(t('Indiquez le numéro de la leçon.'));
     if (f.evalOn && +f.passed > +f.evaluated) return setErr(t('Le nombre d’élèves ayant la moyenne dépasse le nombre d’élèves évalués.'));
+    const k = lesson ? Math.max(1, Math.min(4, +f.k || 1)) : 1;
+    if (k > 1) {   // une séance, plusieurs leçons : durée partagée, numéros à la suite
+      const cs = timeToMin(f.start), ce = timeToMin(f.end), per = Math.floor(mins / k), recs = [];
+      for (let i = 0; i < k; i++) {
+        const a = minToTime(Math.round(cs + (ce - cs) * i / k)), b = i === k - 1 ? f.end : minToTime(Math.round(cs + (ce - cs) * (i + 1) / k));
+        recs.push(saveEntry({ id: i === 0 ? f.id : undefined, teacherId: tid, type: f.type, classId: f.classId, date: f.date, start: a, end: b, minutes: i === k - 1 ? mins - per * (k - 1) : per, n: +n + i, title: (i === 0 && f.title) || infoOf(ctx, tid, f.classId, f.type, +n + i) || '', digital: f.digital, present: i === 0 && f.present !== '' && f.present != null ? +f.present : null, eval: i === 0 && f.evalOn ? { evaluated: +f.evaluated || 0, passed: +f.passed || 0 } : null, note: f.note || '' }));
+      }
+      onSaved && onSaved(recs[0], { editing, wasN: +n });
+      setF(o => ({ ...o, k: 1, title: '', nAuto: true, n: '', start: o.end, end: minToTime(timeToMin(o.end) + mins), digital: false, present: '', evalOn: false, evaluated: '', passed: '', id: editing ? o.id : undefined }));
+      return;
+    }
     const rec = saveEntry({ id: f.id, teacherId: tid, type: f.type, classId: f.classId, date: f.date, start: f.start, end: f.end, minutes: mins, n: lesson ? +n : null, title: f.title || (lesson ? infoOf(ctx, tid, f.classId, f.type, +n) : ''), digital: lesson && f.digital, present: f.present === '' || f.present == null ? null : +f.present, eval: f.evalOn ? { evaluated: +f.evaluated || 0, passed: +f.passed || 0 } : null });
     onSaved && onSaved(rec, { editing, wasN: lesson ? +n : null });
     if (!editing) setF(o => ({ ...o, title: '', nAuto: true, n: '', start: o.end, end: minToTime(timeToMin(o.end) + mins), digital: false, present: '', evalOn: false, evaluated: '', passed: '' }));
@@ -55,6 +66,7 @@ export function EntryForm({ ctx, tid, initial, onSaved, submitLabel }) {
     <div class="times"><${Field} class="wide" label=${t('Date')}><input class="input" type="date" value=${f.date} max=${editing ? '' : ctx.today} onInput=${(e) => set('date', e.target.value)} required /><//>
       <${Field} label=${t('Début')}><input class="input" type="time" value=${f.start} onInput=${(e) => set('start', normTime(e.target.value))} required /><//><${Field} label=${t('Fin')}><input class="input" type="time" value=${f.end} onInput=${(e) => set('end', normTime(e.target.value))} required /><//></div>
     <div class="row" style="gap:6px"><span class="lab">${t('Durée')} :</span>${DURATIONS.map(d => html`<button type="button" class=${'btn sm ' + (mins === d[0] ? '' : 'soft')} onClick=${() => setDur(d[0])}>${d[1]}</button>`)}<${Chip} tone=${mins > 0 ? 'info' : 'bad'}>${mins > 0 ? Math.floor(mins / 60) + ' h' + (mins % 60 ? ' ' + (mins % 60) : '') : t('invalide')}<//></div>
+    ${lesson ? html`<${Field} label=${t('Leçons faites pendant cette séance')} hint=${(+f.k || 1) > 1 ? t('La durée est partagée entre les {k} leçons, numérotées à la suite : de {a} à {b}.', { k: +f.k, a: n, b: (+n || 0) + (+f.k) - 1 }) : t('Séance de 2 h avec 2 leçons ? Choisissez 2 : elles sont enregistrées toutes les deux.')}><div class="row" style="gap:6px">${[1, 2, 3].map(x => html`<button type="button" class=${'btn sm ' + ((+f.k || 1) === x ? '' : 'soft')} onClick=${() => set('k', x)}>${x}</button>`)}</div><//>` : null}
     ${lesson ? html`<${Field} label=${f.type === 'practical' ? t('N° du TP') : t('N° de la leçon')} hint=${f.nAuto ? t('Numéro suivant proposé automatiquement. Une même leçon faite en deux séances garde le même numéro.') : ''}>
       <div class="row" style="flex-wrap:nowrap"><input class="input" type="number" min="1" inputmode="numeric" value=${n} onInput=${(e) => setF(o => ({ ...o, n: e.target.value, nAuto: false }))} style="max-width:120px" />${f.nAuto ? html`<${Chip} tone="ok">${t('automatique')}<//>` : html`<button type="button" class="btn soft sm" onClick=${() => set('nAuto', true)}>${t('Remettre auto')}</button>`}</div><//>` : null}
     <${Field} label=${t('Titre ou chapitre (facultatif)')}><input class="input" value=${f.title} onInput=${(e) => set('title', e.target.value)} placeholder=${(lesson && infoOf(ctx, tid, f.classId, f.type, +n)) || (f.type === 'orientation' ? t('Présentation, règles de classe…') : t('Ex. Les plaques tectoniques'))} /><//>

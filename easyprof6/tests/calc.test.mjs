@@ -397,3 +397,9 @@ test('fiche de suivi = accueil : même calcul, jamais plus de 100 % par classe, 
   // accueil par enseignant : somme des enseignants = département
   const byT = c.teachers.map(t => coverTotals(c, T[0].start, T[0].end, t.id)); near(byT.reduce((a, x) => a + x.doneL, 0), C1.doneL, 'enseignants → département');
 });
+
+test('correction d’examen / remise des copies : les heures comptent, aucune leçon', () => {
+  const st = mk({ assign: [{ id: 'K:LSA', teacherId: 'K', classId: 'LSA', th: 10, hth: 40, hpr: 0, hours: 40 }], entries: [E('c1', 'K', '2026-09-14', { type: 'correction', n: null })] });
+  const c = makeCtx(st, '2026-10-13'), S = stats(c, 'K', ...P1);
+  assert.equal(S.hours, 2); assert.equal(S.lessonsDone, 0); assert.equal(S.assessH, 2);
+});

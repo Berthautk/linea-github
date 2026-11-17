@@ -7,6 +7,7 @@ export const TYPES = [
   { id: 'orientation', fr: 'Première rencontre / orientation', en: 'First meeting / orientation', icon: '🤝' },
   { id: 'revision', fr: 'Révision', en: 'Revision', icon: '🔁' },
   { id: 'assessment', fr: 'Évaluation / devoir', en: 'Assessment / test', icon: '📝' },
+  { id: 'correction', fr: 'Correction d’examen / remise des copies', en: 'Exam correction / returning scripts', icon: '✅' },
 ];
 // Motifs d'absence ou de jour sans cours. « out » = retiré des heures dues (ce n'est pas la faute de l'enseignant) ; sinon les heures restent dues mais non faites.
 // L'animateur peut changer ce classement pour chaque motif (Réglages › Année scolaire). « other » reste en dernier : c'est le motif de repli.

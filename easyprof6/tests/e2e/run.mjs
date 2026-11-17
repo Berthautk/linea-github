@@ -101,6 +101,18 @@ await step('D. Hors ligne puis synchronisation', async () => {
   ok(lessons === 2, 'D3 la saisie faite hors ligne est arrivée chez l’animateur après reconnexion (2 leçons)');
 });
 
+await step('K. Une séance, deux leçons ; correction d’examen', async () => {
+  const count = (type) => tp.evaluate((ty) => { const k = Object.keys(localStorage).find(x => x.startsWith('ep6:data:')); return JSON.parse(localStorage.getItem(k)).data.entries.filter(e => !e.deleted && e.type === ty).length; }, type);
+  const l0 = await count('lesson');
+  await go(tp, url, '#/log'); await tp.getByRole('button', { name: '2', exact: true }).first().click();
+  await tp.getByRole('button', { name: /enregistrer (la séance|quand même)/i }).click(); await tp.waitForTimeout(600);
+  ok((await count('lesson')) - l0 === 2, 'K1 une séance avec 2 leçons enregistre deux leçons');
+  const c0 = await count('correction');
+  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /Correction d’examen/ }).first().click();
+  await tp.getByRole('button', { name: /enregistrer (la séance|quand même)/i }).click(); await tp.waitForTimeout(600);
+  ok((await count('correction')) - c0 === 1 && (await count('lesson')) - l0 === 2, 'K2 une correction d’examen est enregistrée sans compter de leçon');
+});
+
 await step('E. Jour sans cours et fiche d’inspection', async () => {
   await go(tp, url, '#/home'); await tp.getByRole('button', { name: 'Pas de cours' }).first().click();
   await tp.locator('.sheet input[type=date]').first().fill('2026-10-13'); await tp.locator('.sheet input[type=date]').nth(1).fill('2026-10-13');

@@ -101,7 +101,7 @@ export function doneRange(ctx, tid, ps, pe) {
     else if (e.type === 'further') out.further.add(e.classId + '|' + (e.n != null ? e.n : e.id));       // further study / travail guidé : à part aussi
     else if (e.type === 'revision') out.revisionH += h;
     else if (e.type === 'orientation') out.orientationH += h;
-    else if (e.type === 'assessment') out.assessH += h;
+    else if (e.type === 'assessment' || e.type === 'correction') out.assessH += h;   // évaluations et corrections : heures comptées, jamais des leçons
     if (e.digital) out.digital++;
     if (e.eval) { out.evaluated += +e.eval.evaluated || 0; out.passed += +e.eval.passed || 0; }
   }

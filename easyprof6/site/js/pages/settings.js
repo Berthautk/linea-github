@@ -19,6 +19,7 @@ import { letterText, defaultLetter, showArms } from '../letterhead.js';
 import { exportCSV, downloadBackup } from '../exports.js';
 import { isOldBackup, isNewBackup, summarize, convert, surname, remapBackup } from '../import-old.js';
 import { syncNow } from '../sync.js';
+import { APP_VERSION } from '../version.js';
 
 const Back = ({ title, children }) => html`<div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${title}</h1></div>${children}</div>`;
 
@@ -51,7 +52,7 @@ function Menu() {
   return html`<div class="page"><div class="page-h"><h1>${t('Réglages')}</h1></div>
     ${ap ? html`<a class="notice" href="#/settings/team" style="text-decoration:none;background:var(--teal-l)"><${Icon} n="lock" size="18" /><span><b>${t('Un collègue a oublié son identifiant ou son mot de passe ?')}</b> ${t('Équipe : son identifiant s’affiche, un nouveau mot de passe se crée en un geste.')}</span></a>` : null}
     ${groups.map(([title, items]) => html`<h3 class="grp" style="margin:14px 4px 2px">${title}</h3>${desc[title] ? html`<p class="sub" style="margin:0 4px 6px">${desc[title]}</p>` : null}<div class="card"><div class="list">${items.map(([href, ic, title, sub]) => html`<a class="item" href=${href} style="text-decoration:none;color:inherit"><div class="dot"><${Icon} n=${ic} /></div><div class="grow"><b>${title}</b><span>${sub}</span></div><${Icon} n="right" size="18" /></a>`)}</div></div>`)}
-    <p class="sub" style="text-align:center">Rekort · ${t('Département')} ${state.data.dept.name}</p></div>`;
+    <p class="sub" style="text-align:center">Rekort v${APP_VERSION} · ${t('Département')} ${state.data.dept.name}</p></div>`;
 }
 
 function RecoveryCard() {

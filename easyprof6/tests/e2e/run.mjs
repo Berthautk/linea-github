@@ -163,9 +163,9 @@ await step('S. Sixth Form : sous-branches', async () => {
 await step('I. Transfert du rôle d’animateur', async () => {
   await go(apPage, url, '#/settings/team'); await apPage.getByRole('button', { name: 'Transférer…' }).click();
   await apPage.locator('.sheet select').selectOption({ label: 'Mme ASTHA Noura' }); await apPage.locator('.sheet input[type=password]').fill('secret1'); await apPage.getByRole('button', { name: 'Transférer le rôle' }).click(); await apPage.waitForTimeout(1200);
-  await go(apPage, url, '#/settings'); ok(!/Collègues et emplois du temps/.test(await apPage.innerText('.page')), 'I1 l’ancien animateur n’a plus les réglages d’animateur');
+  await go(apPage, url, '#/settings'); ok(!/Collègues, identifiants et emplois du temps/.test(await apPage.innerText('.page')), 'I1 l’ancien animateur n’a plus les réglages d’animateur');
   await tp.locator('.sync').first().click(); await tp.waitForTimeout(1200); await go(tp, url, '#/settings');
-  ok(/Collègues et emplois du temps/.test(await tp.innerText('.page')), 'I2 le nouvel animateur reçoit les réglages d’animateur automatiquement');
+  ok(/Collègues, identifiants et emplois du temps/.test(await tp.innerText('.page')), 'I2 le nouvel animateur reçoit les réglages d’animateur automatiquement');
 });
 
 await step('G. Application installable hors ligne (service worker)', async () => {

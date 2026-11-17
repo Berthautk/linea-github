@@ -22,8 +22,15 @@ import { syncNow } from '../sync.js';
 
 const Back = ({ title, children }) => html`<div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${title}</h1></div>${children}</div>`;
 
+const groupDesc = () => ({
+  [t('Mon compte')]: t('Vos informations personnelles et l’aide pour utiliser Rekort.'),
+  [t('Établissement et fiches')]: t('Nom de l’école, texte imprimé sur les fiches, durée des cours, pauses, trimestres, vacances et passage à l’année suivante.'),
+  [t('Classes et programme')]: t('Les classes, leurs effectifs et les leçons et heures prévues pour l’année (programme officiel, Sixth Form par sous-branches).'),
+  [t('Équipe')]: t('Vos collègues : identifiants, mots de passe oubliés, emplois du temps, classes de chacun.'),
+  [t('Données')]: t('Heures faites avant Rekort, sauvegarde, restauration et import de fichiers.'),
+});
 function Menu() {
-  const ap = isAP(), groups = [
+  const desc = groupDesc(), ap = isAP(), groups = [
     [t('Mon compte'), [
       ['#/settings/profile', 'user', t('Mon profil'), t('Nom, téléphone, identifiant, mot de passe, langue')],
       ['#/settings/guide', 'info', t('Mode d’emploi'), t('Comment utiliser Rekort, pas à pas')]]],
@@ -35,14 +42,15 @@ function Menu() {
       [t('Classes et programme'), [
         ['#/settings/classes', 'book', t('Classes et leçons prévues'), t('Les classes, leurs effectifs, et pour chacune le nombre de leçons et d’heures prévues pour l’année')]]],
       [t('Équipe'), [
-        ['#/settings/team', 'users', t('Collègues et emplois du temps'), t('Créer les comptes, mots de passe, cours de la semaine de chaque collègue')]]],
+        ['#/settings/team', 'users', t('Collègues, identifiants et emplois du temps'), t('Voir l’identifiant de chacun, créer un nouveau mot de passe si un collègue l’a oublié, ajouter un collègue, régler ses cours de la semaine')]]],
       [t('Données'), [
         ['#/settings/regul', 'clock', t('Heures hors application'), t('Compter des heures faites avant Rekort')],
         ['#/settings/data', 'download', t('Sauvegarde et import'), t('Exporter, importer une sauvegarde ou l’ancienne version')]]]]
     : [[t('Données'), [['#/settings/data', 'download', t('Sauvegarde et import'), t('Exporter vos données')]]]]),
   ];
   return html`<div class="page"><div class="page-h"><h1>${t('Réglages')}</h1></div>
-    ${groups.map(([title, items]) => html`<h3 class="grp" style="margin:14px 4px 6px">${title}</h3><div class="card"><div class="list">${items.map(([href, ic, title, sub]) => html`<a class="item" href=${href} style="text-decoration:none;color:inherit"><div class="dot"><${Icon} n=${ic} /></div><div class="grow"><b>${title}</b><span>${sub}</span></div><${Icon} n="right" size="18" /></a>`)}</div></div>`)}
+    ${ap ? html`<a class="notice" href="#/settings/team" style="text-decoration:none;background:var(--teal-l)"><${Icon} n="lock" size="18" /><span><b>${t('Un collègue a oublié son identifiant ou son mot de passe ?')}</b> ${t('Équipe : son identifiant s’affiche, un nouveau mot de passe se crée en un geste.')}</span></a>` : null}
+    ${groups.map(([title, items]) => html`<h3 class="grp" style="margin:14px 4px 2px">${title}</h3>${desc[title] ? html`<p class="sub" style="margin:0 4px 6px">${desc[title]}</p>` : null}<div class="card"><div class="list">${items.map(([href, ic, title, sub]) => html`<a class="item" href=${href} style="text-decoration:none;color:inherit"><div class="dot"><${Icon} n=${ic} /></div><div class="grow"><b>${title}</b><span>${sub}</span></div><${Icon} n="right" size="18" /></a>`)}</div></div>`)}
     <p class="sub" style="text-align:center">Rekort · ${t('Département')} ${state.data.dept.name}</p></div>`;
 }
 

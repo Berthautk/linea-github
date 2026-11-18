@@ -449,7 +449,7 @@ if (process.env.KEY) console.log('DGC F4 ' + D4A.concat(D4B).map((q, i) => `${i 
 const gridT = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: Array(5).fill(2093), borders: BOX,
   rows: Array.from({ length: 7 }, (_, r) => new TableRow({ children: Array.from({ length: 5 }, (_, c) => cell(P(`**${String(r * 5 + c + 1).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), 2093)) })) });
 const DGC_F4 = base({
-  file: 'DGCAST_F4_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Four Geography – Second Sequence', cls: 'FORM FOUR ARTS AND SCIENCE', module: '2',
+  file: 'DGCAST_F4_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Four General Geography – Second Sequence', cls: 'FORM FOUR GENERAL', module: '2',
   teacher: 'Mr KAMDEM Emmanuel  and  Mr TABIT Blaise', subject: 'Physical and Human Geography',
   competence: 'Learners are able to explain wind deposition, the atmosphere and the weather, and to describe the physical geography of Cameroon.',
   instructions: ['Answer ALL the 35 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],

@@ -86,9 +86,9 @@ function idBlock(x) {
   const s = 20;
   const p = (t, o = {}) => P(t, Object.assign({ after: 0, size: s }, o));
   const out = [];
-  out.push(table([3500, 500, 500, 3966, 2000], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class:** ' + x.cls), p('**Class N°:**')]]));
+  out.push(table([6700, 450, 450, 2866], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class N°:**')]]));
   out.push(table([1500, 2766, 1700, 2200, 2300], [[p('**SEQ N° 2**'), p('**Assessment of module N°:** ' + x.module), p('**Date:**'), p('**Discipline:** Geography'), p('**Duration:** ' + x.duration)]]));
-  out.push(table([10466], [[p('**Teacher:** ' + x.teacher)]]));
+  out.push(table([4800, 5666], [[p('**Class:** ' + x.cls), p('**Teacher:** ' + x.teacher)]]));
   out.push(table([10466], [[p('**Evaluated competence:** ' + x.competence)]]));
   out.push(table([5233, 5233], [[p('**Student performance:**'), p('**Remarks**', { align: AlignmentType.CENTER })]]));
   out.push(table([2600, 2633, 1046, 1046, 1047, 1047, 1047], [[p('**Mark/20:**'), p('**Grade:**'), ...['CVWA', 'CWA', 'CA', 'CAA', 'CNA'].map((g) => p(g, { align: AlignmentType.CENTER }))]]));
@@ -148,6 +148,7 @@ function build(x) {
   const sections = [{ properties: { page }, footers: footers(), children }];
   // questions that flow in two columns: the whole left column first (top to bottom), then the right column, then the next page
   if (x.colBody) sections.push({ properties: { type: SectionType.CONTINUOUS, page, column: { count: 2, space: 500, separate: true } }, footers: footers(), children: x.colBody });
+  if (x.tailBody) sections.push({ properties: { type: SectionType.CONTINUOUS, page }, footers: footers(), children: x.tailBody });
   const doc = new Document({
     creator: 'Geography Department, GBHS Garoua', title: x.title,
     styles: { default: { document: { run: { font: FONT, size: 24 } } } },
@@ -171,9 +172,9 @@ const mcqRows = (qs, lines, off = 0) => {
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB, rows });
 };
 // questions as ordinary paragraphs: they fill a column from top to bottom, then the next column, then the next page
-const flowQ = (q, n) => [
-  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 40, after: 30 }, children: runs(`**${n}. ${q[0]}**`, { size: 21 }) }),
-  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 21 }) })),
+const flowQ = (q, n, fs = 21) => [
+  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 40, after: 30 }, children: runs(`**${n}. ${q[0]}**`, { size: fs }) }),
+  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: fs }) })),
   new Paragraph({ spacing: { before: 40, after: 40 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
 ];
 const flowH = (t) => new Paragraph({ keepNext: true, spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 2 } }, children: runs('**' + t + '**', { size: 23 }) });
@@ -186,6 +187,13 @@ const calc = (n, text, marks) => [P(`**${n})** ${text} **(${marks})**`, { before
 // =====================================================================
 // FORM ONE: module 1 (cosmic changes: the map, the movements of the Earth, the winds, time)
 // =====================================================================
+// compact versions so that the papers fit on two pages
+const situationS = (t) => table([10466], [[cell([P('**Situation:**', { after: 20, size: 22 }), P(t, { after: 20, size: 22, line: 270 })], 10466, { shade: 'F2F2F2' })]]);
+const docCellS = (d, w) => cell([P('**' + d.title + '**', { after: 20, size: 21 }), ...[].concat(d.text).map((x) => P(x, { after: 20, size: 21, line: 260 }))], w, { valign: VerticalAlign.TOP });
+const documentsS = (d1, d2) => table([5233, 5233], [[docCellS(d1, 5233), docCellS(d2, 5233)]]);
+const taskS = (n, t, marks, nLines, sub) => [P(`**${n}.** ${t} **(${marks})**`, { before: 60, after: 20, indent: 360, hanging: 360, keepNext: true }), ...(sub ? sub.flatMap((x) => [P(x, { indent: 360, after: 0 }), ...DOTS(nLines, 360)]) : DOTS(nLines, 360))];
+const calcS = (n, text, marks, nl = 2) => [P(`**${n})** ${text} **(${marks})**`, { before: 50, after: 20, indent: 360, hanging: 360, line: 280, keepNext: true }), ...DOTS(nl, 360)];
+const tasksLine = new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] });
 const F1 = base({
   file: 'F1_Geography_Seq2_2026-2027.docx', title: 'Form One Geography – Second Sequence', cls: 'FORM ONE BIL A / B', module: '1',
   competence: 'Learners are able to adapt to cosmic changes.',
@@ -199,21 +207,20 @@ const F1 = base({
       ['In which season are the days longer and the nights shorter?', ['Winter solstice', 'Summer solstice', 'Spring', 'Autumn']],
       ['The parts of the Earth that exist without being modified by man form the:', ['Natural environment', 'Waste', 'Forest', 'Seasons']],
     ]),
-    H('Section II: Structural Questions (2 × 2 = 4 marks)', { pageBreak: true }),
+    H('Section II: Structural Questions (2 × 2 = 4 marks)'),
     P('Show the correct calculation procedure.', { italics: true, after: 40 }),
-    ...calc(1, 'What is the local time in **Cairo**, on longitude **30° E**, if the GMT is **8:00 am**?', '2 marks'),
-    ...calc(2, 'What is the longitude of **Los Angeles**, whose local time is **10:00 am** when the GMT is **6:00 pm (18:00)**?', '2 marks'),
-    Hc('PART TWO: VERIFICATION OF COMPETENCES (9 marks)'),
-    situation('Your elder brother lives in Tokyo. One day, he phones you in Garoua and tells you that he is just getting up from sleep, but on your watch it is midday. Moussa, a pupil who lives in Maroua, notices that in January his parents wake him up to prepare for school when it is still dark, but in September the sun is already up at the same time. You are called upon to explain these situations.'),
-    P('', { after: 60 }),
-    documents(
+    ...calcS(1, 'What is the local time in **Cairo**, on longitude **30° E**, if the GMT is **8:00 am**?', '2 marks'),
+    ...calcS(2, 'What is the longitude of **Los Angeles**, whose local time is **10:00 am** when the GMT is **6:00 pm (18:00)**?', '2 marks'),
+    new Paragraph({ spacing: { before: 100, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situationS('Your elder brother lives in Tokyo. One day, he phones you in Garoua and tells you that he is just getting up from sleep, but on your watch it is midday. Moussa, a pupil who lives in Maroua, notices that in January his parents wake him up to prepare for school when it is still dark, but in September the sun is already up at the same time. You are called upon to explain these situations.'),
+    P('', { after: 0, size: 8 }),
+    documentsS(
       { title: 'Document 1: The movements of the Earth', text: ['**Rotation:** the Earth spins on its axis from west to east in about 24 hours. It causes the succession of day and night. It also causes differences of time between places: places to the east are ahead, and places to the west are behind.', '**Revolution:** the Earth moves around the Sun in about 365 days, with its axis tilted. It causes the seasons and the unequal length of days and nights during the year.'] },
       { title: 'Document 2', text: 'Mount Cameroon, in the South-West Region, is the highest mountain of Cameroon. It is about 4,040 metres high and it is an active volcano.' }),
-    P('**Perform the following tasks:**', { before: 120, after: 0 }),
-    ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Using Document 1, give two effects of the phenomenon raised in the situation above.', '3 marks', 2, ['i)', 'ii)']),
-    ...task(3, 'Suggest two solutions to your friend Moussa on what to do, or how to adapt, during the cold season, when the mornings are still dark.', '3 marks', 2, ['1)', '2)']),
-    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+    tasksLine,
+    ...taskS(1, 'Present the problem raised in the situation above.', '3 marks', 3),
+    ...taskS(2, 'Using Document 1, give two effects of the phenomenon raised in the situation above.', '3 marks', 2, ['i)', 'ii)']),
+    ...taskS(3, 'Suggest two solutions to your friend Moussa on what to do, or how to adapt, during the cold season, when the mornings are still dark.', '3 marks', 2, ['1)', '2)']),
   ],
 });
 
@@ -236,17 +243,16 @@ const F2 = base({
     H('Section II: Structural Question (4 × 1 = 4 marks)'),
     P('Using your knowledge of the lessons, complete the table below. Give **one cause** and **one consequence** of each problem.', { line: 300, after: 80 }),
     completeTable([3400, 3533, 3533], ['Problem', 'Cause', 'Consequence'], [['Firewood crisis', '', ''], ['Deforestation', '', '']]),
-    Hc('PART TWO: VERIFICATION OF COMPETENCES (9 marks)'),
-    situation('In your locality, there used to be a natural cover with many plants and trees. The municipal council wanted to create a park, a restaurant and a hall for celebrations and meetings. To build them, the trees had to be cut down. Today, the trees have progressively disappeared: on one side there is empty land, and on the other side there are buildings and playgrounds.'),
-    P('', { after: 60 }),
-    documents(
+    new Paragraph({ spacing: { before: 100, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situationS('In your locality, there used to be a natural cover with many plants and trees. The municipal council wanted to create a park, a restaurant and a hall for celebrations and meetings. To build them, the trees had to be cut down. Today, the trees have progressively disappeared: on one side there is empty land, and on the other side there are buildings and playgrounds.'),
+    P('', { after: 0, size: 8 }),
+    documentsS(
       { title: 'Document 1: Extract from a report of the municipal council', text: ['“The site covered 8 hectares of trees. To build the park, the restaurant and the hall for ceremonies and meetings, the trees were cut down on 6 hectares. The inhabitants also cut some trees for firewood and for building poles. Nobody has planted new trees since the works. The ground is now bare and dusty in many places, and the air is hotter.”'] },
       { title: 'Document 2', text: 'The Sahara is the largest hot desert in the world. It covers about 9 million km² in the north of Africa. Very few people live there, and nomads move from one oasis to another.' }),
-    P('**Perform the following tasks:**', { before: 120, after: 0 }),
-    ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Using Document 1, state the factors that caused the cutting down of the trees.', '3 marks', 3),
-    ...task(3, 'What should be done to bring back the trees on that land?', '3 marks', 3),
-    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+    tasksLine,
+    ...taskS(1, 'Present the problem raised in the situation above.', '3 marks', 3),
+    ...taskS(2, 'Using Document 1, state the factors that caused the cutting down of the trees.', '3 marks', 3),
+    ...taskS(3, 'What should be done to bring back the trees on that land?', '3 marks', 3),
   ],
 });
 
@@ -254,15 +260,7 @@ const F2 = base({
 // FORM THREE: built from the pages given by the teachers (rotation and revolution of the Earth, great circles, the International Date Line, time)
 // =====================================================================
 const ORBIT = fs.readFileSync(__dirname + '/orbit_f3.png');
-const F3 = base({
-  file: 'F3_Geography_Seq2_2026-2027.docx', title: 'Form Three Geography – Second Sequence', cls: 'FORM THREE', module: '1',
-  teacher: 'Mme ASTHA Noura  and  Mr KAMDEM Emmanuel',
-  competence: 'Learners are able to explain the effects of the movements of the Earth and to calculate time differences.',
-  instructions: ['Answer ALL questions on this question paper. Calculators are allowed.', 'In Section I, mark an (X) on the letter of the correct answer.'],
-  body: [
-    Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
-    H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
-    mcqRows([
+const Q3 = [
       ['The Earth rotates on its axis from:', ['South to north', 'North to south', 'West to east', 'East to west']],
       ['The Earth completes one full rotation in approximately:', ['12 hours', '24 hours', '365 days', '30 days']],
       ['The apparent deflection of winds and ocean currents caused by the rotation of the Earth is called the:', ['Albedo effect', 'Greenhouse effect', 'Doppler effect', 'Coriolis effect']],
@@ -273,26 +271,35 @@ const F3 = base({
       ['The International Date Line is drawn mainly through the Pacific Ocean because:', ['The Pacific has the strongest currents', 'Greenwich lies in the Pacific', 'The Pacific is the warmest ocean', 'Few people and countries live along the 180° meridian there']],
       ['Which statement about great circles is NOT correct?', ['They divide the Earth into two equal halves', 'The shortest distance between two places lies along a great circle', 'All parallels of latitude are great circles', 'The Equator is a great circle']],
       ['Identify the pair of longitudes that forms a great circle.', ['145° East and 35° East', '120° East and 60° East', '120° West and 60° West', '120° East and 60° West']],
-    ]),
-    H('Section II: Structural Questions (4 marks)'),
-    P('**1.** Study the diagram below, which shows the Earth at four positions A, B, C and D in its orbit round the Sun, then complete the table with the approximate date and the season experienced in the **northern hemisphere** at each position. **(4 × 0.5 = 2 marks)**', { line: 300, after: 40 }),
-    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 40, after: 40 }, children: [new ImageRun({ type: 'png', data: ORBIT, transformation: { width: 330, height: 197 } })] }),
-    completeTable([1500, 4000, 4966], ['Position', 'Approximate date', 'Season in the northern hemisphere'], [['A', '', ''], ['B', '', ''], ['C', '', ''], ['D', '', '']], 620),
-    P('**2.** An aeroplane leaves Douala (standard time GMT + 1) on Monday at 23:30 and flies to New York (standard time GMT − 5). The flight takes 8 hours.', { before: 160, line: 300, after: 40, keepNext: true }),
-    ...calc('a', 'Calculate the time difference between Douala and New York.', '0.5 mark'),
-    ...calc('b', 'What is the time in New York when the aeroplane leaves Douala?', '0.5 mark'),
-    ...calc('c', 'Calculate the time and the day on which the aeroplane lands in New York (New York time). Show your working.', '1 mark'),
-    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
-    situation('Your cousin in Douala wants to telephone his business partner in New York during the partner’s normal working hours (9:00 am to 5:00 pm). He once called at 8:00 pm Cameroon time and was told that it was still the afternoon in New York. He asks the Geography Club to find, by calculation, the best time to call.'),
-    P('', { after: 60 }),
-    documents(
+    ];
+// spread letters of the F3 paper (the first option is the right one in the list: reorder)
+const F3 = base({
+  file: 'F3_Geography_Seq2_2026-2027.docx', title: 'Form Three Geography – Second Sequence', cls: 'FORM THREE A and B', module: '1',
+  teacher: 'Mme ASTHA Noura  and  Mr KAMDEM Emmanuel',
+  competence: 'Learners are able to explain the effects of the movements of the Earth and to calculate time differences.',
+  instructions: ['Answer ALL questions on this question paper. Calculators are allowed.', 'In Section I, mark an (X) on the letter of the correct answer.'],
+  body: [
+    Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
+    H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
+  ],
+  colBody: Q3.map((q, k) => flowQ([q[0], q[1]], k + 1, 21)).flat(),
+  tailBody: [
+    H('Section II: Structural Question (4 × 1 = 4 marks)'),
+    P('An aeroplane leaves Douala (standard time **GMT + 1**) on **Monday at 23:30** and flies to New York (standard time **GMT − 5**). The flight takes **8 hours**. Show your working and calculate:', { line: 300, after: 40, keepNext: true }),
+    ...calcS('a', 'The time difference between Douala and New York.', '1 mark', 1),
+    ...calcS('b', 'The time in New York when the aeroplane leaves Douala.', '1 mark', 1),
+    ...calcS('c', 'The time at which the aeroplane lands in New York (New York time).', '1 mark', 1),
+    ...calcS('d', 'The day on which the aeroplane lands in New York.', '1 mark', 1),
+    new Paragraph({ spacing: { before: 100, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situationS('Your cousin in Douala wants to telephone his business partner in New York during the partner’s normal working hours (9:00 am to 5:00 pm). He once called at 8:00 pm Cameroon time and was told that it was still the afternoon in New York. He asks the Geography Club to find, by calculation, the best time to call.'),
+    P('', { after: 0, size: 8 }),
+    documentsS(
       { title: 'Document 1: Standard time zones (practical work sheet)', text: ['Douala (Cameroon): GMT + 1', 'London: GMT', 'New York: GMT − 5', 'Tokyo: GMT + 9'] },
       { title: 'Document 2: Extract from an encyclopaedia', text: 'New York is home to Wall Street, one of the largest financial centres in the world, and its subway system carries millions of passengers every day.' }),
-    P('**Perform the following tasks:**', { before: 120, after: 0 }),
-    ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Using Document 1, explain why the time in New York differs from the time in Douala, and state the number of hours of the difference.', '3 marks', 3),
-    ...task(3, 'Suggest a convenient time (in Cameroon time) at which your cousin can call New York during working hours, and justify your answer.', '3 marks', 3),
-    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+    tasksLine,
+    ...taskS(1, 'Present the problem raised in the situation above.', '3 marks', 2),
+    ...taskS(2, 'Explain why the time in New York differs from the time in Douala, and state the number of hours of the difference.', '3 marks', 2),
+    ...taskS(3, 'Suggest a convenient time (in Cameroon time) at which your cousin can call New York during working hours, and justify your answer.', '3 marks', 2),
   ],
 });
 

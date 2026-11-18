@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, ImageRun, AlignmentType, WidthType,
-  BorderStyle, TabStopType, LeaderType, VerticalAlign, ShadingType, Footer, PageNumber,
+  BorderStyle, TabStopType, LeaderType, VerticalAlign, ShadingType, Footer, PageNumber, SectionType,
 } = require('docx');
 
 const OUT = process.argv[2] || '.';
@@ -117,18 +117,19 @@ const facilitators = (names) => [C('**FACILITATOR' + (names.length > 1 ? 'S' : '
 
 function build(x) {
   const children = [header(), new Paragraph({ spacing: { after: 80 }, children: [] }), ...idBlock(x), ...titles(x), ...x.body];
+  const footers = () => ({ default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [
+    new TextRun({ text: `GBHS Garoua – Geography – ${x.cls} – Second Sequence ${YEAR} – Page `, font: FONT, size: 16 }),
+    new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16 })] })] }) });
+  const page = { size: { width: 11906, height: 16838 }, margin: { top: 567, bottom: 567, left: 720, right: 720 } };
+  const sections = [{ properties: { page }, footers: footers(), children }];
+  // questions that flow in two columns: the whole left column first (top to bottom), then the right column, then the next page
+  if (x.colBody) sections.push({ properties: { type: SectionType.CONTINUOUS, page, column: { count: 2, space: 500, separate: true } }, footers: footers(), children: x.colBody });
   const doc = new Document({
     creator: 'Geography Department, GBHS Garoua', title: x.title,
     styles: { default: { document: { run: { font: FONT, size: 24 } } } },
-    sections: [{
-      properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 567, bottom: 567, left: 720, right: 720 } } },
-      footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [
-        new TextRun({ text: `GBHS Garoua – Geography – ${x.cls} – Second Sequence ${YEAR} – Page `, font: FONT, size: 16 }),
-        new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16 })] })] }) },
-      children,
-    }],
+    sections,
   });
-  return Packer.toBuffer(doc).then((b) => { fs.mkdirSync(OUT, { recursive: true }); fs.writeFileSync(OUT + x.file, b); console.log('written', x.file); });
+  return Packer.toBuffer(doc).then((bf) => { fs.mkdirSync(OUT, { recursive: true }); fs.writeFileSync(OUT + x.file, bf); console.log('written', x.file); });
 }
 
 // =====================================================================
@@ -145,6 +146,13 @@ const mcqRows = (qs, lines, off = 0) => {
   for (let i = 0; i < half; i++) rows.push(new TableRow({ cantSplit: true, children: [cell(one(qs[i], i + 1 + off), 5233, { borders: LB, valign: VerticalAlign.TOP }), qs[i + half] ? cell(one(qs[i + half], i + 1 + half + off), 5233, { borders: LB, valign: VerticalAlign.TOP }) : cell(P(''), 5233, { borders: NOB })] }));
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB, rows });
 };
+// questions as ordinary paragraphs: they fill a column from top to bottom, then the next column, then the next page
+const flowQ = (q, n) => [
+  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 60, after: 40 }, children: runs(`**${n}. ${q[0]}**`, { size: 22 }) }),
+  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 22 }) })),
+  new Paragraph({ spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
+];
+const flowH = (t) => new Paragraph({ keepNext: true, spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 2 } }, children: runs('**' + t + '**', { size: 23 }) });
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
   rows: [new TableRow({ children: head.map((h, i) => cell(P('**' + h + '**', { align: AlignmentType.CENTER, after: 0, size: 22 }), widths[i], { shade: 'D9D9D9' })) }),
     ...rows.map((r) => new TableRow({ cantSplit: true, height: { value: rh, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 22, bold: i === 0 }), widths[i])) }))] });
@@ -341,10 +349,12 @@ const F4 = base({
       for (let r = 0; r < 7; r++) rows.push(new TableRow({ children: cw.map((w, c) => { const n = r * 5 + c + 1; return cell(P(`**${String(n).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), w); }) }));
       return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cw, borders: BOX, rows }); })(),
     P('', { after: 120 }),
-    H('SECTION A: PHYSICAL GEOGRAPHY (questions 1 to 20)'),
-    mcqRows(PHYS.map((q) => [q[0], q[1]]), true, 0),
-    H('SECTION B: HUMAN GEOGRAPHY (questions 21 to 35)'),
-    mcqRows(HUM.map((q) => [q[0], q[1]]), true, 20),
+  ],
+  colBody: [
+    flowH('SECTION A: PHYSICAL GEOGRAPHY (questions 1 to 20)'),
+    ...PHYS.flatMap((q, i) => flowQ(q, i + 1)),
+    flowH('SECTION B: HUMAN GEOGRAPHY (questions 21 to 35)'),
+    ...HUM.flatMap((q, i) => flowQ(q, i + 21)),
   ],
 });
 FOURKEY = ALL.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');

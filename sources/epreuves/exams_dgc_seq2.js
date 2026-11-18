@@ -440,26 +440,24 @@ const D4B = [
   ['The dry wind from the Sahara that brings the dry season is the:', ['Monsoon', 'Harmattan', 'Trade wind of the south', 'Sea breeze'], 1],
   ['The vegetation that grows in salty water along the coast near Douala and Limbe is the:', ['Mangrove', 'Steppe', 'Savanna', 'Montane forest'], 0],
   ['Short grass and thorny bushes cover the Far North of Cameroon. This vegetation is the:', ['Dense rainforest', 'Steppe', 'Mangrove', 'Montane forest'], 1],
-  ['The red, deep and leached soils of the forest south are called:', ['Ferrallitic soils', 'Volcanic soils', 'Alluvial soils', 'Hydromorphic soils'], 0],
-  ['The dark and very fertile soils of Mount Cameroon and of the Western Highlands are the:', ['Ferruginous soils', 'Hydromorphic soils', 'Volcanic soils', 'Ferrallitic soils'], 2],
 ];
-const T4 = [2, 0, 3, 1, 1, 3, 0, 2, 3, 0, 1, 2, 0, 3, 1, 2, 3, 1, 0, 2, 0, 2, 3, 1, 0, 1, 3, 2, 0, 3, 1, 2, 3, 0, 1];
+const T4 = [2, 0, 3, 1, 1, 3, 0, 2, 3, 0, 1, 2, 0, 3, 1, 2, 3, 1, 0, 2, 0, 2, 3, 1, 0, 1, 3, 2, 0, 3, 1, 2, 3];
 D4A.concat(D4B).forEach((q, k) => { if (q[1].some((o) => /^[\d(]/.test(o))) return; const t = T4[k]; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
 if (process.env.KEY) console.log('DGC F4 ' + D4A.concat(D4B).map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
 const gridT = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: Array(5).fill(2093), borders: BOX,
-  rows: Array.from({ length: 7 }, (_, r) => new TableRow({ children: Array.from({ length: 5 }, (_, c) => cell(P(`**${String(r * 5 + c + 1).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), 2093)) })) });
+  rows: Array.from({ length: 7 }, (_, r) => new TableRow({ children: Array.from({ length: 5 }, (_, c) => { const n = r * 5 + c + 1; return cell(P(n <= 33 ? `**${String(n).padStart(2, '0')}**  [A] [B] [C] [D]` : '', { after: 0, size: 21, align: AlignmentType.CENTER }), 2093); }) })) });
 const DGC_F4 = base({
   file: 'DGCAST_F4_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Four General Geography – Second Sequence', cls: 'FORM FOUR GENERAL', module: '2',
   teacher: 'Mr KAMDEM Emmanuel  and  Mr TABIT Blaise', subject: 'Physical and Human Geography',
   competence: 'Learners are able to explain wind deposition, the atmosphere and the weather, and to describe the physical geography of Cameroon.',
-  instructions: ['Answer ALL the 35 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
+  instructions: ['Answer ALL the 33 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
   body: [
     H('MULTIPLE CHOICE QUESTIONS'),
-    P('35 questions × 1 mark = 35 marks, converted to 20 marks.', { italics: true, size: 21, after: 80 }),
+    P('33 questions × 1 mark = 33 marks, converted to 20 marks.', { italics: true, size: 21, after: 80 }),
     gridT,
   ],
   colBody: [flowH('SECTION A: PHYSICAL GEOGRAPHY (questions 1 to 20)'), ...D4A.flatMap((q, i) => flowQ(q, i + 1)),
-    flowH('SECTION B: HUMAN GEOGRAPHY, GEOGRAPHY OF CAMEROON (questions 21 to 35)'), ...D4B.flatMap((q, i) => flowQ(q, i + 21))],
+    flowH('SECTION B: HUMAN GEOGRAPHY, GEOGRAPHY OF CAMEROON (questions 21 to 33)'), ...D4B.flatMap((q, i) => (i === D4B.length - 1 ? flowQ(q, i + 21).slice(0, -1) : flowQ(q, i + 21)))],
 });
 
 (async () => { for (const x of [DGC_F1, DGC_F2, DGC_F2T, DGC_F3, DGC_F4]) await build(x); })();

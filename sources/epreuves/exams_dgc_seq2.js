@@ -400,4 +400,66 @@ const DGC_F3 = base({
   ],
 });
 
-(async () => { for (const x of [DGC_F1, DGC_F2, DGC_F2T, DGC_F3]) await build(x); })();
+// =====================================================================
+// DGCAST Form 4 (Arts and Science): 35 MCQs, 1 hour. Section A physical geography (lessons 28 to 32: wind deposition, man in hot deserts, the atmosphere,
+// weather and climate, atmospheric temperatures); Section B human geography (Cameroon: situation, relief, drainage, climate, vegetation, soils)
+// =====================================================================
+const D4A = [
+  ['Wind deposition builds hills or ridges of sand called:', ['Sand dunes', 'Wadis', 'Oases', 'Plateaux'], 0],
+  ['The crescent-shaped dunes whose horns point in the direction of the wind are called:', ['Seif dunes', 'Barchans', 'Ripples', 'Loess'], 1],
+  ['The long, narrow, straight ridges of sand lying parallel to the wind are called:', ['Barchans', 'Sand sheets', 'Seif dunes', 'Yardangs'], 2],
+  ['A thick layer of fine, fertile dust deposited far from the desert is called:', ['Loess', 'Laterite', 'Humus', 'Scree'], 0],
+  ['The wind deposits its load mainly when:', ['Its speed increases', 'Its speed falls or an obstacle stops it', 'The sand is dry and loose only', 'It blows over the sea'], 1],
+  ['Which of the following is a resource of hot deserts?', ['Oil and gas in Algeria and Libya', 'Dense rainforest', 'Heavy rainfall', 'Thick soils'], 0],
+  ['The Tuareg, who move with their animals in search of water and pasture, practise:', ['Nomadism', 'Shifting cultivation', 'Fishing', 'Lumbering'], 0],
+  ['Rare but heavy storms in the desert cause sudden floods in dry valleys called:', ['Dunes', 'Wadis', 'Ergs', 'Regs'], 1],
+  ['Which of the following is a human adaptation to the hot desert?', ['Houses with thick mud walls and small windows', 'Houses with large glass windows', 'Wearing short clothes', 'Building houses with thin walls'], 0],
+  ['The Great Green Wall is a project that aims to:', ['Plant trees to stop the desert', 'Build a wall against sandstorms', 'Dig oil wells', 'Attract tourists'], 0],
+  ['The layer of the atmosphere in which clouds, rain and weather occur is the:', ['Stratosphere', 'Troposphere', 'Mesosphere', 'Thermosphere'], 1],
+  ['The layer of the atmosphere that contains the ozone layer is the:', ['Troposphere', 'Stratosphere', 'Mesosphere', 'Thermosphere'], 1],
+  ['In the troposphere, the temperature falls with height by about:', ['0.65 °C per 1,000 m', '6.5 °C per 1,000 m', '65 °C per 1,000 m', '2 °C per 10 m'], 1],
+  ['Which of the following gases destroys the ozone layer?', ['Chlorofluorocarbons (CFCs)', 'Nitrogen', 'Oxygen', 'Water vapour'], 0],
+  ['The international agreement of 1987 that banned CFCs in almost all countries is the:', ['Kyoto Protocol', 'Montreal Protocol', 'Paris Agreement', 'Lomé Convention'], 1],
+  ['The instrument used to measure rainfall is the:', ['Hygrometer', 'Barometer', 'Rain gauge', 'Anemometer'], 2],
+  ['The lines on a map that join places with the same air pressure are called:', ['Isotherms', 'Isohyets', 'Isobars', 'Isohels'], 2],
+  ['The maximum and the minimum temperatures of a day are recorded by:', ['A wind vane', 'A Six’s thermometer', 'A rain gauge', 'A hygrometer'], 1],
+  ['The maximum temperature of a day is 38 °C and the minimum is 24 °C. The mean daily temperature is:', ['14 °C', '31 °C', '62 °C', '26 °C'], 1],
+  ['The Stevenson screen is painted white in order to:', ['Attract the rays of the Sun', 'Reflect the rays of the Sun', 'Be seen from far', 'Keep out the rain only'], 1],
+];
+const D4B = [
+  ['Cameroon lies between about:', ['2° N and 13° N', '10° N and 30° N', '20° S and 2° S', '30° N and 60° N'], 0],
+  ['Cameroon covers an area of about:', ['47,500 km²', '475,000 km²', '4,750,000 km²', '4,750 km²'], 1],
+  ['The highest point of Cameroon, 4,095 m, is:', ['Mount Oku', 'Mount Manengouba', 'Mount Cameroon', 'Mount Kupe'], 2],
+  ['The high plateau of 1,000 to 1,500 m in the centre of Cameroon is the:', ['Adamawa Plateau', 'Chad Plain', 'Benue lowland', 'Coastal lowland'], 0],
+  ['The flat plain in the Far North of Cameroon, around Lake Chad, is the:', ['Benue lowland', 'Coastal lowland', 'Chad Plain', 'South Cameroon Plateau'], 2],
+  ['The main watersheds of Cameroon are the Western Highlands and the:', ['Chad Plain', 'Adamawa Plateau', 'Coastal lowlands', 'Atlantic Ocean'], 1],
+  ['The Benue, the Faro and the Mayo Kébbi flow to the:', ['Congo basin', 'Atlantic basin', 'Niger basin', 'Chad basin'], 2],
+  ['The Sanaga, the Nyong and the Wouri flow to the:', ['Atlantic Ocean', 'Lake Chad', 'Niger', 'Congo'], 0],
+  ['Waterfalls and rapids on the rivers of Cameroon favour:', ['Navigation', 'Hydro-electricity', 'Fishing only', 'Desertification'], 1],
+  ['The climate of Yaoundé is the:', ['Tropical climate with one rainy season', 'Equatorial climate with two rainy seasons', 'Desert climate', 'Mountain climate with snow'], 1],
+  ['The dry wind from the Sahara that brings the dry season is the:', ['Monsoon', 'Harmattan', 'Trade wind of the south', 'Sea breeze'], 1],
+  ['The vegetation that grows in salty water along the coast near Douala and Limbe is the:', ['Mangrove', 'Steppe', 'Savanna', 'Montane forest'], 0],
+  ['Short grass and thorny bushes cover the Far North of Cameroon. This vegetation is the:', ['Dense rainforest', 'Steppe', 'Mangrove', 'Montane forest'], 1],
+  ['The red, deep and leached soils of the forest south are called:', ['Ferrallitic soils', 'Volcanic soils', 'Alluvial soils', 'Hydromorphic soils'], 0],
+  ['The dark and very fertile soils of Mount Cameroon and of the Western Highlands are the:', ['Ferruginous soils', 'Hydromorphic soils', 'Volcanic soils', 'Ferrallitic soils'], 2],
+];
+const T4 = [2, 0, 3, 1, 1, 3, 0, 2, 3, 0, 1, 2, 0, 3, 1, 2, 3, 1, 0, 2, 0, 2, 3, 1, 0, 1, 3, 2, 0, 3, 1, 2, 3, 0, 1];
+D4A.concat(D4B).forEach((q, k) => { if (q[1].some((o) => /^[\d(]/.test(o))) return; const t = T4[k]; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+if (process.env.KEY) console.log('DGC F4 ' + D4A.concat(D4B).map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
+const gridT = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: Array(5).fill(2093), borders: BOX,
+  rows: Array.from({ length: 7 }, (_, r) => new TableRow({ children: Array.from({ length: 5 }, (_, c) => cell(P(`**${String(r * 5 + c + 1).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), 2093)) })) });
+const DGC_F4 = base({
+  file: 'DGCAST_F4_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Four Geography – Second Sequence', cls: 'FORM FOUR ARTS AND SCIENCE', module: '2',
+  teacher: 'Mr KAMDEM Emmanuel  and  Mr TABIT Blaise', subject: 'Physical and Human Geography',
+  competence: 'Learners are able to explain wind deposition, the atmosphere and the weather, and to describe the physical geography of Cameroon.',
+  instructions: ['Answer ALL the 35 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
+  body: [
+    H('MULTIPLE CHOICE QUESTIONS'),
+    P('35 questions × 1 mark = 35 marks, converted to 20 marks.', { italics: true, size: 21, after: 80 }),
+    gridT,
+  ],
+  colBody: [flowH('SECTION A: PHYSICAL GEOGRAPHY (questions 1 to 20)'), ...D4A.flatMap((q, i) => flowQ(q, i + 1)),
+    flowH('SECTION B: HUMAN GEOGRAPHY, GEOGRAPHY OF CAMEROON (questions 21 to 35)'), ...D4B.flatMap((q, i) => flowQ(q, i + 21))],
+});
+
+(async () => { for (const x of [DGC_F1, DGC_F2, DGC_F2T, DGC_F3, DGC_F4]) await build(x); })();

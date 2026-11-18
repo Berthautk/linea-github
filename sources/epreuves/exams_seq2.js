@@ -137,9 +137,15 @@ function build(x) {
 const base = (o) => Object.assign({ duration: '1 hour', teacher: 'Mme ASTHA Noura', instructions: ['Answer ALL questions on this question paper.', 'In Section I, mark an (X) on the letter of the correct answer.'] }, o);
 const docCell = (d, w) => cell([P('**' + d.title + '**', { after: 40, size: 22 }), ...[].concat(d.text).map((t) => P(t, { after: 40, size: 22, line: 280 }))], w, { valign: VerticalAlign.TOP });
 const documents = (d1, d2) => table([5233, 5233], [[docCell(d1, 5233), docCell(d2, 5233)]]);
-const completeTable = (widths, head, rows) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
+const mcqRows = (qs) => {
+  const one = (q, n) => [P(`**${n}. ${q[0]}**`, { after: 40, size: 22 }), ...q[1].map((o, i) => P(`${'ABCD'[i]}.  ${o}`, { indent: 360, after: 0, size: 22 })), P('', { after: 80 })];
+  const half = Math.ceil(qs.length / 2); const rows = [];
+  for (let i = 0; i < half; i++) rows.push(new TableRow({ cantSplit: true, children: [cell(one(qs[i], i + 1), 5233, { borders: NOB, valign: VerticalAlign.TOP }), qs[i + half] ? cell(one(qs[i + half], i + 1 + half), 5233, { borders: NOB, valign: VerticalAlign.TOP }) : cell(P(''), 5233, { borders: NOB })] }));
+  return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB, rows });
+};
+const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
   rows: [new TableRow({ children: head.map((h, i) => cell(P('**' + h + '**', { align: AlignmentType.CENTER, after: 0, size: 22 }), widths[i], { shade: 'D9D9D9' })) }),
-    ...rows.map((r) => new TableRow({ height: { value: 1100, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 22, bold: i === 0 }), widths[i])) }))] });
+    ...rows.map((r) => new TableRow({ cantSplit: true, height: { value: rh, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 22, bold: i === 0 }), widths[i])) }))] });
 // a calculation box: question text + space for the working
 const calc = (n, text, marks) => [P(`**${n})** ${text} **(${marks})**`, { before: 120, after: 40, indent: 360, hanging: 360, line: 300, keepNext: true }), ...DOTS(3, 360)];
 
@@ -161,17 +167,17 @@ const F1 = base({
     ]),
     H('Section II: Structural Questions (2 × 2 = 4 marks)', { pageBreak: true }),
     P('Show the correct calculation procedure.', { italics: true, after: 40 }),
-    ...calc(1, 'What is the local time in **Bockle**, on longitude **30° E**, if the GMT is **8:00 am**?', '2 marks'),
-    ...calc(2, 'What is the longitude of **Ebolowa**, whose local time is **10:00 am** when the GMT is **6:00 pm (18:00)**?', '2 marks'),
+    ...calc(1, 'What is the local time in **Cairo**, on longitude **30° E**, if the GMT is **8:00 am**?', '2 marks'),
+    ...calc(2, 'What is the longitude of **Los Angeles**, whose local time is **10:00 am** when the GMT is **6:00 pm (18:00)**?', '2 marks'),
     Hc('PART TWO: VERIFICATION OF COMPETENCES (9 marks)'),
     situation('Your elder brother lives in Tokyo. One day, he phones you in Garoua and tells you that he is just getting up from sleep, but on your watch it is midday. Moussa, a pupil who lives in Maroua, notices that in January his parents wake him up to prepare for school when it is still dark, but in September the sun is already up at the same time. You are called upon to explain these situations.'),
     P('', { after: 60 }),
     documents(
-      { title: 'Document 1: Some data on time and daylight', text: ['Standard time of Tokyo: GMT + 9 hours.', 'Standard time of Garoua and Maroua: GMT + 1 hour.', 'Sunrise in Maroua (approximate): 6:40 am in January, 6:00 am in September.', 'In January, the cold season, the nights are longer than the days in the northern hemisphere.'] },
+      { title: 'Document 1: The movements of the Earth', text: ['**Rotation:** the Earth spins on its axis from west to east in about 24 hours. It causes the succession of day and night. It also causes differences of time between places: places to the east are ahead, and places to the west are behind.', '**Revolution:** the Earth moves around the Sun in about 365 days, with its axis tilted. It causes the seasons and the unequal length of days and nights during the year.'] },
       { title: 'Document 2', text: 'Mount Cameroon, in the South-West Region, is the highest mountain of Cameroon. It is about 4,040 metres high and it is an active volcano.' }),
     P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Give two effects of the phenomenon raised in the situation above.', '3 marks', 2, ['i)', 'ii)']),
+    ...task(2, 'Using Document 1, give two effects of the phenomenon raised in the situation above.', '3 marks', 2, ['i)', 'ii)']),
     ...task(3, 'Suggest two solutions to your friend Moussa on what to do, or how to adapt, during the cold season, when the mornings are still dark.', '3 marks', 2, ['1)', '2)']),
     P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
@@ -200,14 +206,60 @@ const F2 = base({
     situation('In your locality, there used to be a natural cover with many plants and trees. The municipal council wanted to create a park, a restaurant and a hall for celebrations and meetings. To build them, the trees had to be cut down. Today, the trees have progressively disappeared: on one side there is empty land, and on the other side there are buildings and playgrounds.'),
     P('', { after: 60 }),
     documents(
-      { title: 'Document 1: Extract from a report of the municipal council', text: ['“The site covered 8 hectares of trees. The park, the restaurant and the hall have been built on 6 hectares. The inhabitants also cut some trees for firewood and for building poles. Nobody has planted new trees since the works. The ground is now bare and dusty in many places, and the air is hotter.”'] },
+      { title: 'Document 1: Extract from a report of the municipal council', text: ['“The site covered 8 hectares of trees. To build the park, the restaurant and the hall for ceremonies and meetings, the trees were cut down on 6 hectares. The inhabitants also cut some trees for firewood and for building poles. Nobody has planted new trees since the works. The ground is now bare and dusty in many places, and the air is hotter.”'] },
       { title: 'Document 2', text: 'The Sahara is the largest hot desert in the world. It covers about 9 million km² in the north of Africa. Very few people live there, and nomads move from one oasis to another.' }),
     P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'What are the factors that caused the cutting down of the trees?', '3 marks', 3),
+    ...task(2, 'Using Document 1, state the factors that caused the cutting down of the trees.', '3 marks', 3),
     ...task(3, 'What should be done to bring back the trees on that land?', '3 marks', 3),
     P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 
-(async () => { for (const x of [F1, F2]) await build(x); })();
+// =====================================================================
+// FORM THREE: built from the pages given by the teachers (rotation and revolution of the Earth, great circles, the International Date Line, time)
+// =====================================================================
+const ORBIT = fs.readFileSync(__dirname + '/orbit_f3.png');
+const F3 = base({
+  file: 'F3_Geography_Seq2_2026-2027.docx', title: 'Form Three Geography – Second Sequence', cls: 'FORM THREE', module: '1',
+  teacher: 'Mme ASTHA Noura  and  Mr KAMDEM Emmanuel',
+  competence: 'Learners are able to explain the effects of the movements of the Earth and to calculate time differences.',
+  instructions: ['Answer ALL questions on this question paper. Calculators are allowed.', 'In Section I, mark an (X) on the letter of the correct answer.'],
+  body: [
+    Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
+    H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
+    mcqRows([
+      ['The Earth rotates on its axis from:', ['South to north', 'North to south', 'West to east', 'East to west']],
+      ['The Earth completes one full rotation in approximately:', ['12 hours', '24 hours', '365 days', '30 days']],
+      ['The apparent deflection of winds and ocean currents caused by the rotation of the Earth is called the:', ['Albedo effect', 'Greenhouse effect', 'Doppler effect', 'Coriolis effect']],
+      ['In the northern hemisphere, the Coriolis effect deflects moving objects to the:', ['South only', 'Left', 'Right', 'North only']],
+      ['The axis of the Earth is tilted from the vertical (the perpendicular to the plane of its orbit) at an angle of approximately:', ['23.5°', '45°', '66.5°', '90°']],
+      ['Which of the following is NOT an effect of the rotation of the Earth?', ['Tidal bulges influenced by the rotation', 'The four seasons', 'Day and night', 'The deflection of winds and currents']],
+      ['A traveller crossing the International Date Line from west to east on Monday 10 March will find that the date becomes:', ['Tuesday 11 March', 'Sunday 9 March', 'Monday 10 March', 'Monday 17 March']],
+      ['The International Date Line is drawn mainly through the Pacific Ocean because:', ['The Pacific has the strongest currents', 'Greenwich lies in the Pacific', 'The Pacific is the warmest ocean', 'Few people and countries live along the 180° meridian there']],
+      ['Which statement about great circles is NOT correct?', ['They divide the Earth into two equal halves', 'The shortest distance between two places lies along a great circle', 'All parallels of latitude are great circles', 'The Equator is a great circle']],
+      ['Identify the pair of longitudes that forms a great circle.', ['145° East and 35° East', '120° East and 60° East', '120° West and 60° West', '120° East and 60° West']],
+    ]),
+    H('Section II: Structural Questions (4 marks)'),
+    P('**1.** Study the diagram below, which shows the Earth at four positions A, B, C and D in its orbit round the Sun, then complete the table with the approximate date and the season experienced in the **northern hemisphere** at each position. **(4 × 0.5 = 2 marks)**', { line: 300, after: 40 }),
+    new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 40, after: 40 }, children: [new ImageRun({ type: 'png', data: ORBIT, transformation: { width: 330, height: 197 } })] }),
+    completeTable([1500, 4000, 4966], ['Position', 'Approximate date', 'Season in the northern hemisphere'], [['A', '', ''], ['B', '', ''], ['C', '', ''], ['D', '', '']], 620),
+    P('**2.** An aeroplane leaves Douala (standard time GMT + 1) on Monday at 23:30 and flies to New York (standard time GMT − 5). The flight takes 8 hours.', { before: 160, line: 300, after: 40, keepNext: true }),
+    ...calc('a', 'Calculate the time difference between Douala and New York.', '0.5 mark'),
+    ...calc('b', 'What is the time in New York when the aeroplane leaves Douala?', '0.5 mark'),
+    ...calc('c', 'Calculate the time and the day on which the aeroplane lands in New York (New York time). Show your working.', '1 mark'),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situation('Your cousin in Douala wants to telephone his business partner in New York during the partner’s normal working hours (9:00 am to 5:00 pm). He once called at 8:00 pm Cameroon time and was told that it was still the afternoon in New York. He asks the Geography Club to find, by calculation, the best time to call.'),
+    P('', { after: 60 }),
+    documents(
+      { title: 'Document 1: Standard time zones (practical work sheet)', text: ['Douala (Cameroon): GMT + 1', 'London: GMT', 'New York: GMT − 5', 'Tokyo: GMT + 9'] },
+      { title: 'Document 2: Extract from an encyclopaedia', text: 'New York is home to Wall Street, one of the largest financial centres in the world, and its subway system carries millions of passengers every day.' }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
+    ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
+    ...task(2, 'Using Document 1, explain why the time in New York differs from the time in Douala, and state the number of hours of the difference.', '3 marks', 3),
+    ...task(3, 'Suggest a convenient time (in Cameroon time) at which your cousin can call New York during working hours, and justify your answer.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+  ],
+});
+
+(async () => { for (const x of [F1, F2, F3]) await build(x); })();

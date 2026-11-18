@@ -250,4 +250,53 @@ const DGC_F1 = base({
   ],
 });
 
-(async () => { for (const x of [DGC_F1]) await build(x); })();
+// =====================================================================
+// DGCAST Form 2: lessons 1 to 4 of the national syllabus (L1 population growth, PW1 demographic indices, L2 uneven distribution, PW2 densities,
+// L3 man in the equatorial zone, FS1 deforestation, L4 man in the tropical zone)
+// =====================================================================
+const DGC_Q2 = [
+  ['The difference between the number of births and the number of deaths in a population is called:', ['Migration', 'Natural population growth', 'Density', 'Distribution'], 1],
+  ['Which of the following explains the rapid growth of the world population?', ['A rising death rate', 'The fall of the death rate thanks to vaccines and hospitals', 'The fall of food production', 'The absence of children'], 1],
+  ['The birth rate is the number of births per:', ['100 people in one year', '1,000 people in one year', '1,000 people in one month', '10,000 people in one year'], 1],
+  ['The population density of an area is calculated by dividing:', ['The area by the population', 'The population by the area', 'The births by the deaths', 'The deaths by the births'], 1],
+  ['Which of the following areas is sparsely populated?', ['East Asia', 'Western Europe', 'The hot deserts', 'The north-east of the USA'], 2],
+  ['A region has 600,000 inhabitants on 3,000 km². Its population density is:', ['20 persons per km²', '200 persons per km²', '2,000 persons per km²', '18,000 persons per km²'], 1],
+  ['The equatorial zone lies between about:', ['5° N and 5° S of the Equator', '15° N and 30° N', '30° N and 60° N', '60° N and the North Pole'], 0],
+  ['Farming a plot for a few years and then moving to a new plot when the soil becomes poor is called:', ['Irrigation', 'Shifting cultivation', 'Ranching', 'Market gardening'], 1],
+  ['The destruction of forests by people is called:', ['Reforestation', 'Afforestation', 'Deforestation', 'Conservation'], 2],
+  ['Moving with animals from place to place in search of grass and water is called:', ['Pastoral nomadism', 'Crop rotation', 'Bush fallowing', 'Fishing'], 0],
+];
+// spread the correct letters (questions with numbers as options keep their order)
+[3, 1, 0, 2, 3, 1, 0, 2, 1, 3].forEach((t, k) => { const q = DGC_Q2[k]; if (q[1].some((o) => /^\d/.test(o))) return; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+if (process.env.KEY) console.log('DGC F2 ' + DGC_Q2.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
+const DGC_F2 = base({
+  file: 'DGCAST_F2_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Two Geography – Second Sequence', cls: 'FORM TWO', module: '1',
+  teacher: 'Mr KAMDEM Emmanuel',
+  competence: 'Learners are able to manage the consequences of population growth and to exploit the resources of the equatorial and tropical zones.',
+  body: [
+    Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
+    H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
+  ],
+  colBody: DGC_Q2.map((q, k) => flowQ(q, k + 1)).flat(),
+  tailBody: [
+    H('Section II: Structural Question (4 × 1 = 4 marks)'),
+    P('In 2025, a town had **50,000** inhabitants and covered an area of **250 km²**. During the year, **1,750** children were born and **450** people died. Write the formula, then calculate:', { line: 300, after: 60 }),
+    ...calc('a', 'The birth rate (in ‰).', '1 mark'),
+    ...calc('b', 'The death rate (in ‰).', '1 mark'),
+    ...calc('c', 'The natural growth rate (in %).', '1 mark'),
+    ...calc('d', 'The population density of the town (persons per km²).', '1 mark'),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situation('In a village of the equatorial forest, the population has doubled in twenty years. To feed their families, the villagers clear more forest every year for new farms. Timber companies cut the valuable trees along the new roads, and the women now walk farther and farther to find firewood. The village chief notices that the forest is disappearing, the soils are becoming poor and the animals have left. He asks you, a Form Two pupil, to help the villagers.'),
+    P('', { after: 60 }),
+    documents(
+      { title: 'Document 1: Extract from the report of a forest officer', text: ['“In twenty years, the forest around the village has lost nearly half of its trees. The main causes are the following: the clearing of the forest by farmers for shifting cultivation, the felling of valuable trees by logging companies, the cutting of trees for firewood and charcoal, and the opening of new roads and settlements. As a result, the soils are washed away by the rain and many animals have disappeared.”'] },
+      { title: 'Document 2', text: 'The Eiffel Tower, in Paris, is about 330 metres high. It was built in 1889 for a world exhibition and receives millions of visitors every year.' }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
+    ...task(2, 'State three causes of the disappearance of the forest around the village.', '3 marks', 3),
+    ...task(3, 'Suggest three actions that the villagers can carry out to protect the forest.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+  ],
+});
+
+(async () => { for (const x of [DGC_F1, DGC_F2]) await build(x); })();

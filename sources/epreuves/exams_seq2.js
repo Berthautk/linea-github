@@ -132,47 +132,53 @@ function build(x) {
 }
 
 // =====================================================================
+// The two papers keep the questions and the chapters written by the class teacher (Mme ASTHA Noura);
+// the wording, the layout and the situation are rewritten, and Documents 1 and 2 (Document 2 = distractor) are added.
 const base = (o) => Object.assign({ duration: '1 hour', teacher: 'Mme ASTHA Noura', instructions: ['Answer ALL questions on this question paper.', 'In Section I, mark an (X) on the letter of the correct answer.'] }, o);
-
-// a table to complete: [header cells], rows of [given text, '' ...]
+const docCell = (d, w) => cell([P('**' + d.title + '**', { after: 40, size: 22 }), ...[].concat(d.text).map((t) => P(t, { after: 40, size: 22, line: 280 }))], w, { valign: VerticalAlign.TOP });
+const documents = (d1, d2) => table([5233, 5233], [[docCell(d1, 5233), docCell(d2, 5233)]]);
 const completeTable = (widths, head, rows) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
   rows: [new TableRow({ children: head.map((h, i) => cell(P('**' + h + '**', { align: AlignmentType.CENTER, after: 0, size: 22 }), widths[i], { shade: 'D9D9D9' })) }),
-    ...rows.map((r) => new TableRow({ height: { value: 900, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 22, bold: i === 0 }), widths[i])) }))] });
+    ...rows.map((r) => new TableRow({ height: { value: 1100, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 22, bold: i === 0 }), widths[i])) }))] });
+// a calculation box: question text + space for the working
+const calc = (n, text, marks) => [P(`**${n})** ${text} **(${marks})**`, { before: 120, after: 40, indent: 360, hanging: 360, line: 300, keepNext: true }), ...DOTS(3, 360)];
 
 // =====================================================================
-// FORM ONE: module 2, lessons 4 and 5 (the environment; the natural regions of Cameroon)
+// FORM ONE: module 1 (cosmic changes: the map, the movements of the Earth, the winds, time)
 // =====================================================================
 const F1 = base({
-  file: 'F1_Geography_Seq2_2026-2027.docx', title: 'Form One Geography – Second Sequence', cls: 'FORM ONE BIL A / B', module: '2',
-  competence: 'Learners are able to preserve their natural environment.',
+  file: 'F1_Geography_Seq2_2026-2027.docx', title: 'Form One Geography – Second Sequence', cls: 'FORM ONE BIL A / B', module: '1',
+  competence: 'Learners are able to adapt to cosmic changes.',
   body: [
     Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
     H('Section I: Multiple Choice Questions (1 × 5 = 5 marks)'),
     mcq([
-      ['Which of the following is NOT part of the natural environment?', ['Water', 'Plants and animals', 'Buildings', 'Air']],
-      ['Rivers, lakes, seas and oceans form the:', ['Lithosphere', 'Hydrosphere', 'Atmosphere', 'Biosphere']],
-      ['A community of living things and their non-living surroundings that depend on one another is called:', ['A resource', 'A climate', 'An ecosystem', 'A region']],
-      ['The natural vegetation of the equatorial region of Cameroon is:', ['The savanna', 'The steppe', 'The desert', 'The rainforest']],
-      ['The soil of the tropical region of northern Cameroon is the:', ['Ferruginous soil', 'Ferrallitic soil', 'Volcanic soil', 'Black soil']],
+      ['Which of the following is NOT a marginal information of a map?', ['The title', 'The scale', 'The conventional signs', 'The cardinal points']],
+      ['Which of the following is NOT an effect of the rotation of the Earth?', ['The change of seasons', 'The succession of day and night', 'The rise and fall of sea tides', 'The deflection of winds']],
+      ['In the northern hemisphere, the winds are deflected to the:', ['Right', 'Downward', 'Left', 'Regular direction']],
+      ['In which season are the days longer and the nights shorter?', ['Winter solstice', 'Summer solstice', 'Spring', 'Autumn']],
+      ['The parts of the Earth that exist without being modified by man form the:', ['Natural environment', 'Waste', 'Forest', 'Seasons']],
     ]),
-    H('Section II: Structural Question (4 × 1 = 4 marks)'),
-    P('Complete the table below on the natural regions of Cameroon. Write the **vegetation** and the **soil** of each region.', { line: 300, after: 80 }),
-    completeTable([2800, 2800, 2433, 2433], ['Natural region', 'Location', 'Vegetation', 'Soil'], [
-      ['Equatorial region', 'Between 2° N and 6° N', '', ''],
-      ['Tropical region', 'Between 6° N and 13° N', '', ''],
-    ]),
+    H('Section II: Structural Questions (2 × 2 = 4 marks)', { pageBreak: true }),
+    P('Show the correct calculation procedure.', { italics: true, after: 40 }),
+    ...calc(1, 'What is the local time in **Bockle**, on longitude **30° E**, if the GMT is **8:00 am**?', '2 marks'),
+    ...calc(2, 'What is the longitude of **Ebolowa**, whose local time is **10:00 am** when the GMT is **6:00 pm (18:00)**?', '2 marks'),
     Hc('PART TWO: VERIFICATION OF COMPETENCES (9 marks)'),
-    situation('During the holidays, Nadège, a Form One pupil, travels by bus from Yaoundé to Garoua to visit her cousin. At the start of the journey she sees a thick green forest, then tall grass with a few scattered trees, and near Garoua only short grass and thorny trees. In Garoua, her cousin tells her that many trees are cut every day for firewood and for charcoal. Nadège wonders why the landscape changes so much from the south to the north, and how the vegetation can be protected. She asks you, a Form One geography pupil, to help her.'),
+    situation('Your elder brother lives in Tokyo. One day, he phones you in Garoua and tells you that he is just getting up from sleep, but on your watch it is midday. Moussa, a pupil who lives in Maroua, notices that in January his parents wake him up to prepare for school when it is still dark, but in September the sun is already up at the same time. You are called upon to explain these situations.'),
+    P('', { after: 60 }),
+    documents(
+      { title: 'Document 1: Some data on time and daylight', text: ['Standard time of Tokyo: GMT + 9 hours.', 'Standard time of Garoua and Maroua: GMT + 1 hour.', 'Sunrise in Maroua (approximate): 6:40 am in January, 6:00 am in September.', 'In January, the cold season, the nights are longer than the days in the northern hemisphere.'] },
+      { title: 'Document 2', text: 'Mount Cameroon, in the South-West Region, is the highest mountain of Cameroon. It is about 4,040 metres high and it is an active volcano.' }),
     P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Give three differences between the natural region of Yaoundé and that of Garoua.', '3 marks', 1, ['i)', 'ii)', 'iii)']),
-    ...task(3, 'Suggest three actions that pupils can carry out in their school and neighbourhood to protect the vegetation.', '3 marks', 1, ['i)', 'ii)', 'iii)']),
+    ...task(2, 'Give two effects of the phenomenon raised in the situation above.', '3 marks', 2, ['i)', 'ii)']),
+    ...task(3, 'Suggest two solutions to your friend Moussa on what to do, or how to adapt, during the cold season, when the mornings are still dark.', '3 marks', 2, ['1)', '2)']),
     P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 
 // =====================================================================
-// FORM TWO: module 1, lessons 3 to 5 and Further Studies (man in the equatorial, tropical and hot desert zones)
+// FORM TWO: module 1 (man in the equatorial, tropical and hot desert zones)
 // =====================================================================
 const F2 = base({
   file: 'F2_Geography_Seq2_2026-2027.docx', title: 'Form Two Geography – Second Sequence', cls: 'FORM TWO BIL A / B', module: '1',
@@ -181,21 +187,25 @@ const F2 = base({
     Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
     H('Section I: Multiple Choice Questions (1 × 5 = 5 marks)'),
     mcq([
-      ['The hot desert milieu lies on both sides of the equator, between latitudes:', ['0° and 5°', '5° and 10°', '10° and 15°', '15° and 30°']],
-      ['The parts of the Earth where people do not live permanently are called the:', ['Forest', 'Non-ecumene', 'Savanna', 'Ecumene']],
-      ['The movement of herdsmen and their cattle from place to place in search of pasture and water is called:', ['Grazing', 'Pastoral nomadism', 'Ranching', 'Sedentary farming']],
-      ['Which of the following animals of Cameroon is obtained from the wild?', ['The cow', 'The hen', 'The sheep', 'The pangolin']],
-      ['The soil of the tropical zone of Cameroon is mainly:', ['Volcanic soil', 'Ferrallitic soil', 'Ferruginous soil', 'Sandy soil']],
+      ['The hot desert milieu is located between the latitudes (north and south of the equator):', ['0° and 5°', '5° and 10°', '10° and 15°', '15° and 30°']],
+      ['Which of the following animals of Cameroon is gathered from the wild?', ['The cow', 'The goat', 'The pangolin', 'The cock']],
+      ['The movement of herdsmen and their cattle from place to place, in search of pasture and water, is called:', ['Grazing', 'Pastoral nomadism', 'Cattle rearing', 'Pasture']],
+      ['The places in the world where people do not live are called:', ['The forest', 'The non-ecumene', 'The deciduous forest', 'The ecumene']],
+      ['The soil of the tropical zone is called:', ['Volcanic soil', 'Ferrallitic soil', 'Ferruginous soil', 'Loam soil']],
     ]),
     H('Section II: Structural Question (4 × 1 = 4 marks)'),
     P('Using your knowledge of the lessons, complete the table below. Give **one cause** and **one consequence** of each problem.', { line: 300, after: 80 }),
     completeTable([3400, 3533, 3533], ['Problem', 'Cause', 'Consequence'], [['Firewood crisis', '', ''], ['Deforestation', '', '']]),
     Hc('PART TWO: VERIFICATION OF COMPETENCES (9 marks)'),
-    situation('In your locality, there was a green area with many trees where children played and birds nested. The municipal council wanted to build a park, a restaurant and a hall for ceremonies and meetings, so it cut down the trees of the area. A few years later, part of the area is bare and dusty and the rest is covered with buildings and playgrounds. The air is hotter, the birds have gone, and during the rains the water runs over the bare ground and carries the soil away. The inhabitants ask you, a Form Two geography pupil, to explain what happened and to propose solutions.'),
+    situation('In your locality, there used to be a natural cover with many plants and trees. The municipal council wanted to create a park, a restaurant and a hall for celebrations and meetings. To build them, the trees had to be cut down. Today, the trees have progressively disappeared: on one side there is empty land, and on the other side there are buildings and playgrounds.'),
+    P('', { after: 60 }),
+    documents(
+      { title: 'Document 1: Extract from a report of the municipal council', text: ['“The site covered 8 hectares of trees. The park, the restaurant and the hall have been built on 6 hectares. The inhabitants also cut some trees for firewood and for building poles. Nobody has planted new trees since the works. The ground is now bare and dusty in many places, and the air is hotter.”'] },
+      { title: 'Document 2', text: 'The Sahara is the largest hot desert in the world. It covers about 9 million km² in the north of Africa. Very few people live there, and nomads move from one oasis to another.' }),
     P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...task(1, 'Present the problem raised in the situation above.', '3 marks', 3),
-    ...task(2, 'Give three factors that cause the cutting down of trees in Cameroon.', '3 marks', 1, ['i)', 'ii)', 'iii)']),
-    ...task(3, 'Suggest three actions to bring back the trees in the locality.', '3 marks', 1, ['i)', 'ii)', 'iii)']),
+    ...task(2, 'What are the factors that caused the cutting down of the trees?', '3 marks', 3),
+    ...task(3, 'What should be done to bring back the trees on that land?', '3 marks', 3),
     P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });

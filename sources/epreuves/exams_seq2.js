@@ -449,4 +449,89 @@ const LSA = base({
   colBody: QL.flatMap((q, i) => flowQ(q, i + 1)),
 });
 
-(async () => { for (const x of [F1, F2, F3, F4, LSA]) await build(x); })();
+// =====================================================================
+// UPPER SIXTH ARTS (A2 and A4): 50 MCQs, 1 h 30, GCE Board style
+// Population Geography L9-L14, Meteorology L5-L9, Geomorphology L10-L14, Geography of Cameroon L8, L11, L13
+// =====================================================================
+const QU = [
+  // ---- Population Geography, lessons 9 to 14
+  ['Population change in an area is equal to:', ['Births + deaths', '(Births − deaths) + (immigrants − emigrants)', 'Immigrants + emigrants', 'Births − immigrants'], 1],
+  ['Natural increase happens when:', ['The death rate is higher than the birth rate', 'The birth rate is higher than the death rate', 'Immigrants are more numerous than emigrants', 'Emigrants are more numerous than immigrants'], 1],
+  ['Which of the following is a NON-demographic factor of population growth?', ['The birth rate', 'The death rate', 'Epidemics', 'The age structure'], 2],
+  ['The economic growth made possible when the working-age population is large compared with the number of dependants is called the demographic:', ['Explosion', 'Dividend', 'Transition', 'Density'], 1],
+  ['A policy that encourages people to have more children, as in France, is called a:', ['Pro-natalist policy', 'Anti-natalist policy', 'Migration law', 'Land policy'], 0],
+  ['The one-child policy of China was applied from about:', ['1950 to 1970', '1980 to 2015', '1990 to 2030', '2016 to 2021'], 1],
+  ['Canada selects its immigrants through a points-based system that takes into account:', ['Their religion', 'Their education, skills, age and languages', 'Their colour', 'The number of their children'], 1],
+  ['In the demographic transition model, as a country develops, the first rate to fall is the:', ['Birth rate', 'Death rate', 'Marriage rate', 'Growth rate of towns'], 1],
+  ['Stage 2 (early expanding) of the demographic transition model is characterised by:', ['A high birth rate and a rapidly falling death rate', 'Low birth and death rates', 'A birth rate lower than the death rate', 'High birth and high death rates'], 0],
+  ['Cameroon is now at:', ['Stage 1 of the demographic transition model', 'The end of stage 2 and the entry into stage 3', 'Stage 4 of the model', 'Stage 5 of the model'], 1],
+  ['According to Zipf’s inverse distance law, the number of migrants between two places is:', ['Proportional to the distance between them', 'Inversely proportional to the distance between them', 'Independent of distance', 'Equal in both directions'], 1],
+  ['Using the gravity model with k = 1, what is the interaction between town A (400,000 people) and town B (100,000 people), 200 km apart?', ['200,000', '1,000,000', '2,000,000', '10,000'], 1],
+  ['In Stouffer’s model, an opportunity found between the origin and the destination, which reduces the flow of migrants to the destination, is called:', ['A push factor', 'An intervening opportunity', 'A migration law', 'Complementarity'], 1],
+  ['The decrease of spatial interaction as the distance between two places increases is called:', ['Complementarity', 'Transferability', 'Distance decay', 'Chain migration'], 2],
+  // ---- Meteorology, lessons 5 to 9
+  ['The vertical transfer of heat by rising warm air and sinking cool air is called:', ['Conduction', 'Convection', 'Advection', 'Radiation'], 1],
+  ['The horizontal transfer of heat or moisture by moving air, such as the Harmattan, is called:', ['Advection', 'Conduction', 'Convection', 'Condensation'], 0],
+  ['On which date is the sun overhead at the Equator, with day and night equal everywhere?', ['21 June', '22 December', '21 March', '4 July'], 2],
+  ['The position of the Earth nearest to the Sun, about 3 January, is called:', ['Aphelion', 'Perihelion', 'Equinox', 'Solstice'], 1],
+  ['A town that is warmer than the surrounding countryside forms a:', ['Heat island', 'Cold pool', 'Thermal belt', 'Valley inversion'], 0],
+  ['Inland places such as Garoua have a larger annual range of temperature than Douala mainly because of:', ['Their lower altitude', 'The distance from the sea (continentality)', 'The warm Guinea Current', 'Their latitude only'], 1],
+  ['The temperature at Garoua (about 200 m) is 35 °C. Using a lapse rate of 6.5 °C per 1,000 m, the temperature at 1,200 m is about:', ['28.5 °C', '35.0 °C', '41.5 °C', '21.5 °C'], 0],
+  ['The cooling of rising air, which expands without losing heat to its surroundings, is called:', ['Radiational cooling', 'Adiabatic cooling', 'Advection cooling', 'Evaporative cooling'], 1],
+  ['A situation in which temperature increases with height, so that warm air lies above cold air, is called a temperature:', ['Lapse', 'Gradient', 'Inversion', 'Isotherm'], 2],
+  ['The most common type of surface inversion, formed on clear, calm nights, is the:', ['Frontal inversion', 'Subsidence inversion', 'Radiation (ground) inversion', 'Capping inversion'], 2],
+  // ---- Geomorphology, lessons 10 to 14
+  ['According to Peltier’s graph, chemical weathering is strongest in:', ['Hot and wet climates', 'Cold and dry climates', 'Hot deserts', 'Cold and moist climates'], 0],
+  ['Which of the following rocks best resists weathering because it is rich in quartz?', ['Limestone', 'Rock salt', 'Quartzite', 'Rocks rich in feldspar'], 2],
+  ['On steep slopes, such as those of the Mandara Mountains, weathering is mainly:', ['Chemical, with deep soils', 'Mechanical, with thin soils', 'Biological only', 'Absent'], 1],
+  ['Isolated hills of hard rock rising steeply from a plain, such as those around Garoua, are called:', ['Inselbergs', 'Sinkholes', 'Moraines', 'Dunes'], 0],
+  ['The bauxite deposits of Minim-Martap in the Adamawa were formed by:', ['Volcanic eruptions', 'Chemical weathering that concentrated useful minerals', 'Frost action', 'River deposition'], 1],
+  ['The steepest angle at which loose material remains stable is called the angle of:', ['Dip', 'Repose', 'Incidence', 'Slope'], 1],
+  ['The most common trigger of landslides is:', ['Heavy or prolonged rain', 'Strong winds', 'Low temperatures', 'Sunshine'], 0],
+  ['In the triangular graph of Carson and Kirkby, the three corners are heave, flow and:', ['Fall', 'Slide', 'Creep', 'Wash'], 1],
+  ['The very slow downhill movement of soil, a few centimetres a year, is called:', ['Soil creep', 'A mudflow', 'A rockfall', 'A landslide'], 0],
+  ['The sliding of a mass of material along a curved surface, with a backward rotation, is called:', ['Solifluction', 'Slumping', 'Subsidence', 'Soil creep'], 1],
+  ['The pile of rock fragments at the foot of a cliff is called:', ['A moraine', 'Scree (talus)', 'A delta', 'An alluvial fan'], 1],
+  ['The size of the largest particle that a river can carry is called its:', ['Capacity', 'Competence', 'Discharge', 'Gradient'], 1],
+  ['In the upper course of a river, where the gradient is steep, erosion is mainly:', ['Lateral', 'Vertical', 'Headward only', 'Absent'], 1],
+  // ---- Geography of Cameroon, lessons 8, 11 and 13
+  ['Agriculture in Cameroon is dominated by:', ['Large state plantations only', 'Small family farms', 'Large mechanised farms', 'Greenhouses'], 1],
+  ['Agriculture employs more than what share of the workers of Cameroon?', ['5 %', '15 %', '40 %', '90 %'], 2],
+  ['Which of the following is a large plantation company of Cameroon?', ['SOCAPALM', 'CAMRAIL', 'CAMWATER', 'ELECAM'], 0],
+  ['The main cattle-rearing region of Cameroon is the:', ['Adamawa Plateau', 'Coastal lowlands', 'Southern Plateau', 'Douala basin'], 0],
+  ['SEMRY and UNVDA are state companies that develop the production of:', ['Cotton', 'Rice', 'Cocoa', 'Timber'], 1],
+  ['The Lagdo dam (72 MW), which supplies electricity to the northern grid, is on the:', ['Sanaga', 'Wouri', 'Benue', 'Logone'], 2],
+  ['The SEMRY irrigated rice schemes near Yagoua and Maga use the waters of the:', ['Logone', 'Sanaga', 'Nyong', 'Ntem'], 0],
+  ['Farming on land left moist when river floods go down, to grow dry-season sorghum (muskwari), is called:', ['Shifting cultivation', 'Flood-retreat cultivation', 'Ranching', 'Plantation farming'], 1],
+  ['Lake Chad has shrunk greatly since the 1960s mainly because of:', ['Earthquakes', 'Droughts and the use of water for irrigation', 'Volcanic eruptions', 'The construction of the Lagdo dam'], 1],
+  ['The Transcam railway of Cameroon runs from Douala to:', ['Garoua', 'Yaoundé and Ngaoundéré', 'Maroua', 'Bamenda'], 1],
+  ['The deep-sea port opened in Cameroon in 2018 is:', ['Limbe', 'Tiko', 'Kribi', 'Douala'], 2],
+  ['The goods of the landlocked countries of Chad and the Central African Republic pass mainly through the port of:', ['Douala', 'Limbe', 'Garoua', 'Kumba'], 0],
+  ['The main road of the north, from Ngaoundéré to Garoua, Maroua and Kousseri, is the:', ['N3', 'N1', 'N7', 'N11'], 1],
+];
+const spreadLetters = (Q) => {
+  const isL = (q) => q[1].some((o) => /^[\d(]/.test(o));
+  const fin = Q.map((q) => (isL(q) ? q[2] : -1)); const use = [0, 0, 0, 0]; fin.forEach((l) => { if (l >= 0) use[l]++; });
+  for (let k = 0; k < Q.length; k++) {
+    if (fin[k] >= 0) continue;
+    const prev = k > 0 ? fin[k - 1] : -1, next = k < Q.length - 1 ? fin[k + 1] : -1;
+    let cand = [0, 1, 2, 3].filter((l) => l !== prev && l !== next); if (!cand.length) cand = [0, 1, 2, 3].filter((l) => l !== prev);
+    const m = Math.min(...cand.map((l) => use[l])); const pick = cand.filter((l) => use[l] === m); const t = pick[(k * 5 + 1) % pick.length]; fin[k] = t; use[t]++;
+  }
+  Q.forEach((q, k) => { if (isL(q)) return; const t = fin[k]; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+};
+spreadLetters(QU);
+if (process.env.KEY) console.log('USA ' + QU.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
+const USA = base({
+  file: 'USA_Geography_Seq2_2026-2027.docx', title: 'Upper Sixth Arts Geography – Second Sequence', cls: 'UPPER SIXTH ARTS (A2 and A4)', module: '1, 2 and 4', duration: '1 hour 30 minutes',
+  teacher: 'Mr KAMDEM Emmanuel  –  Mme TSOGO Sylviane  –  Mr NEBASIBI',
+  competence: 'Learners are able to explain population growth and migration, temperature in the atmosphere, weathering, mass wasting and the use of the resources of Cameroon.',
+  instructions: ['Answer ALL the 50 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
+  body: [
+    H('MULTIPLE CHOICE QUESTIONS (50 questions × 1 mark = 50 marks, converted to 20 marks)'),
+    gridTable(50),
+  ],
+  colBody: QU.flatMap((q, i) => flowQ(q, i + 1)),
+});
+
+(async () => { for (const x of [F1, F2, F3, F4, LSA, USA]) await build(x); })();

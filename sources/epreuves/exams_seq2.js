@@ -172,10 +172,10 @@ const mcqRows = (qs, lines, off = 0) => {
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB, rows });
 };
 // questions as ordinary paragraphs: they fill a column from top to bottom, then the next column, then the next page
-const flowQ = (q, n, fs = 21) => [
-  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 40, after: 30 }, children: runs(`**${n}. ${q[0]}**`, { size: fs }) }),
-  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: fs }) })),
-  new Paragraph({ spacing: { before: 40, after: 40 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
+const flowQ = (q, n, tight = false) => [
+  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: tight ? 20 : 60, after: tight ? 20 : 40 }, children: runs(`**${n}. ${q[0]}**`, { size: tight ? 21 : 22 }) }),
+  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: tight ? 21 : 22 }) })),
+  new Paragraph({ spacing: tight ? { before: 0, after: 20, line: 40, lineRule: 'exact' } : { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: tight ? 0 : 1 } }, children: [] }),
 ];
 const flowH = (t) => new Paragraph({ keepNext: true, spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 2 } }, children: runs('**' + t + '**', { size: 23 }) });
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
@@ -282,7 +282,7 @@ const F3 = base({
     Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
     H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
   ],
-  colBody: Q3.map((q, k) => flowQ([q[0], q[1]], k + 1, 21)).flat(),
+  colBody: Q3.map((q, k) => flowQ([q[0], q[1]], k + 1, true)).flat(),
   tailBody: [
     H('Section II: Structural Question (4 × 1 = 4 marks)'),
     P('An aeroplane leaves Douala (standard time **GMT + 1**) on **Monday at 23:30** and flies to New York (standard time **GMT − 5**). The flight takes **8 hours**. Show your working and calculate:', { line: 300, after: 40, keepNext: true }),

@@ -171,9 +171,9 @@ const mcqRows = (qs, lines, off = 0) => {
 };
 // questions as ordinary paragraphs: they fill a column from top to bottom, then the next column, then the next page
 const flowQ = (q, n) => [
-  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 20, after: 20 }, children: runs(`**${n}. ${q[0]}**`, { size: 21 }) }),
-  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 21 }) })),
-  new Paragraph({ spacing: { before: 0, after: 20, line: 40, lineRule: 'exact' }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 0 } }, children: [] }),
+  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 60, after: 40 }, children: runs(`**${n}. ${q[0]}**`, { size: 22 }) }),
+  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 22 }) })),
+  new Paragraph({ spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
 ];
 const flowH = (t) => new Paragraph({ keepNext: true, spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 2 } }, children: runs('**' + t + '**', { size: 23 }) });
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
@@ -201,11 +201,10 @@ const dataTable = (head, rows, widths) => new Table({ alignment: AlignmentType.C
     ...rows.map((r) => new TableRow({ children: r.map((c, i) => cell(P(c, { align: i === 0 ? AlignmentType.LEFT : AlignmentType.CENTER, after: 0, size: 19, bold: i === 0 }), widths[i])) }))] });
 
 // compact versions (11 pt) so that the whole paper fits on two pages
-const situationS = (t) => table([10466], [[cell([P('**Situation:**', { after: 20, size: 22 }), P(t, { after: 20, size: 22, line: 270 })], 10466, { shade: 'F2F2F2' })]]);
-const docCellS = (d, w) => cell([P('**' + d.title + '**', { after: 20, size: 21 }), ...[].concat(d.text).map((x) => P(x, { after: 20, size: 21, line: 260 }))], w, { valign: VerticalAlign.TOP });
-const documentsS = (d1, d2) => table([5233, 5233], [[docCellS(d1, 5233), docCellS(d2, 5233)]]);
-const taskS = (n, t, marks, nLines) => [P(`**${n}.** ${t} **(${marks})**`, { before: 60, after: 20, indent: 360, hanging: 360, keepNext: true }), ...DOTS(nLines, 360)];
-const calcS = (n, text, marks, nl = 2) => [P(`**${n})** ${text} **(${marks})**`, { before: 50, after: 20, indent: 360, hanging: 360, line: 280, keepNext: true }), ...DOTS(nl, 360)];
+const situationS = situation;
+const documentsS = documents;
+const taskS = task;
+const calcS = (n, t, m) => calc(n, t, m);
 const DGC_Q = [
       ['The study and description of the Earth and of the people who live on it is called:', ['Geography', 'History', 'Biology', 'Astronomy'], 0],
       ['From the Sun, the Earth is the:', ['First planet', 'Second planet', 'Third planet', 'Fourth planet'], 2],
@@ -242,16 +241,17 @@ const DGC_F1 = base({
     ...calcS('b', 'Which month has the lowest temperature? Give its value.', '1 mark', 1),
     ...calcS('c', 'How many months make up the rainy season?', '1 mark', 1),
     ...calcS('d', 'In which natural region of Cameroon is Garoua found?', '1 mark', 1),
-    new Paragraph({ spacing: { before: 120, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
     situationS('Paul, a Form One pupil, travels by bus from Yaoundé to Garoua during the holidays. At the start of the journey, he sees a thick green forest. Then he sees tall grass with a few scattered trees and, near Garoua, only short grass and thorny trees. In Garoua, his cousin tells him that many trees are cut every day for firewood and charcoal. Paul wonders why the landscape changes so much from the south to the north, and how the vegetation can be protected.'),
-    P('', { after: 0, size: 8 }),
+    P('', { after: 60 }),
     documentsS(
       { title: 'Document 1: The two natural regions of Cameroon', text: ['**Equatorial region (Yaoundé):** between 2° N and 6° N. It is hot all year, with heavy rainfall of about 2,500 mm in almost every month. The vegetation is a thick evergreen rainforest, and the soils are ferrallitic.', '**Tropical region (Garoua):** between 6° N and 13° N. It has a long dry season and less rainfall, about 1,000 mm. The vegetation is savanna of grass with scattered thorny trees, and the soils are ferruginous.'] },
       { title: 'Document 2', text: 'The Indomitable Lions, the national football team of Cameroon, have won the Africa Cup of Nations five times: in 1984, 1988, 2000, 2002 and 2017.' }),
-    new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...taskS(1, 'What is the problem raised in the situation above?', '3 marks', 3),
     ...taskS(2, 'Give three differences between the natural region of Yaoundé and that of Garoua.', '3 marks', 3),
     ...taskS(3, 'Suggest three actions that pupils can carry out in their school and neighbourhood to protect the vegetation.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 
@@ -290,16 +290,17 @@ const DGC_F2 = base({
     ...calcS('b', 'The death rate (in ‰).', '1 mark'),
     ...calcS('c', 'The natural growth rate (in %).', '1 mark'),
     ...calcS('d', 'The population density of the town (persons per km²).', '1 mark'),
-    new Paragraph({ spacing: { before: 120, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
     situationS('In a village of the equatorial forest, the population has doubled in twenty years. To feed their families, the villagers clear more forest every year for new farms. Timber companies cut the valuable trees along the new roads, and the women now walk farther and farther to find firewood. The village chief notices that the forest is disappearing, the soils are becoming poor and the animals have left. He asks you, a Form Two pupil, to help the villagers.'),
-    P('', { after: 0, size: 8 }),
+    P('', { after: 60 }),
     documentsS(
       { title: 'Document 1: Extract from the report of a forest officer', text: ['“In twenty years, the forest around the village has lost nearly half of its trees. The main causes are the following: the clearing of the forest by farmers for shifting cultivation, the felling of valuable trees by logging companies, the cutting of trees for firewood and charcoal, and the opening of new roads and settlements. As a result, the soils are washed away by the rain and many animals have disappeared.”'] },
       { title: 'Document 2', text: 'The Eiffel Tower, in Paris, is about 330 metres high. It was built in 1889 for a world exhibition and receives millions of visitors every year.' }),
-    new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...taskS(1, 'What is the problem raised in the situation above?', '3 marks', 3),
     ...taskS(2, 'State three causes of the disappearance of the forest around the village.', '3 marks', 3),
     ...taskS(3, 'Suggest three actions that the villagers can carry out to protect the forest.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 
@@ -337,16 +338,17 @@ const DGC_F2T = base({
     H('Section II: Structural Question (4 × 1 = 4 marks)'),
     P('Complete the table below on the natural regions studied. Write the **natural vegetation** and **one resource** of each region.', { line: 300, after: 60, keepNext: true }),
     completeTable2([2600, 3933, 3933], ['Region', 'Natural vegetation (1 mark each)', 'One resource (1 mark each)'], [['Equatorial region', '', ''], ['Tropical grassland region', '', '']]),
-    new Paragraph({ spacing: { before: 120, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
     situationS('Samuel, a Form Two Technical student, spends the holidays in his uncle’s village, in the equatorial forest of the South Region. In the rainy season, the earth road is so muddy that vehicles cannot reach the village, and the sick cannot be taken to the health centre. Many villagers have malaria. The farmers say that their farms give very little after two years, and loggers cut the big trees every day. Samuel wonders why life is so difficult in the forest and how it can be improved.'),
-    P('', { after: 0, size: 8 }),
+    P('', { after: 60 }),
     documentsS(
       { title: 'Document 1: Extract from the report of the Divisional Officer', text: ['“In this equatorial zone, the earth roads become muddy in the rainy season and cut off many villages. Malaria and sleeping sickness are common among the inhabitants. The thick forest is difficult to clear and to cross. The heavy rain washes the plant food out of the soil, so the farms become poor after two or three years.”'] },
       { title: 'Document 2', text: 'Mount Everest, in the Himalayas, is the highest mountain in the world. It is about 8,849 metres high.' }),
-    new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
     ...task(2, 'State three problems faced by the people of the equatorial region.', '3 marks', 3),
     ...task(3, 'Suggest three solutions to improve the life of the villagers.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 
@@ -384,16 +386,17 @@ const DGC_F3 = base({
     ...calcS('b', 'The difference of time between the two towns, in hours and minutes.', '1 mark'),
     ...calcS('c', 'The local time in Nairobi.', '1 mark'),
     ...calcS('d', 'The local time in a town on longitude 17° W.', '1 mark'),
-    new Paragraph({ spacing: { before: 120, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
     situationS('Mariam, a Form Three student in Garoua, receives a message from her cousin who studies in Oslo, in Norway. He writes: “In June, it is still bright at midnight, and in December the day lasts only five hours.” Mariam is surprised, because in Garoua the days and the nights have almost the same length all year. She asks you, her classmate, to help her to understand the situation.'),
-    P('', { after: 0, size: 8 }),
+    P('', { after: 60 }),
     documentsS(
       { title: 'Document 1: The revolution of the Earth', text: ['The Earth moves around the Sun in 365¼ days. During this revolution, its axis stays tilted at 23½° and always points in the same direction. As a result, each hemisphere leans towards the Sun for part of the year. Away from the Equator, days are long in summer and short in winter, and beyond the polar circles the Sun can stay up for 24 hours (midnight Sun) or stay down (polar night). Near the Equator, the days last about 12 hours all year.'] },
       { title: 'Document 2', text: 'The Nile is the longest river in Africa. It is about 6,650 kilometres long and flows into the Mediterranean Sea.' }),
-    new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
     ...taskS(1, 'What is the problem raised in the situation above?', '3 marks', 3),
     ...taskS(2, 'Explain why the length of the day and of the night changes during the year in Norway but hardly changes in Garoua.', '3 marks', 3),
     ...taskS(3, 'Suggest three activities that Mariam can organise at school to help her classmates to understand the movements of the Earth.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 

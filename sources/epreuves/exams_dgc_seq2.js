@@ -171,9 +171,9 @@ const mcqRows = (qs, lines, off = 0) => {
 };
 // questions as ordinary paragraphs: they fill a column from top to bottom, then the next column, then the next page
 const flowQ = (q, n) => [
-  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 40, after: 30 }, children: runs(`**${n}. ${q[0]}**`, { size: 21 }) }),
+  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 20, after: 20 }, children: runs(`**${n}. ${q[0]}**`, { size: 21 }) }),
   ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 21 }) })),
-  new Paragraph({ spacing: { before: 40, after: 40 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
+  new Paragraph({ spacing: { before: 0, after: 20, line: 40, lineRule: 'exact' }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 0 } }, children: [] }),
 ];
 const flowH = (t) => new Paragraph({ keepNext: true, spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 2 } }, children: runs('**' + t + '**', { size: 23 }) });
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
@@ -190,7 +190,7 @@ const mcqCols = (qs) => {
   const LINE = { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080' } };
   const one = (q, n) => [P(`**${n}. ${q[0]}**`, { after: 40, size: 22 }),
     ...q[1].map((o, i) => P(`${'ABCD'[i]}.  ${o}`, { indent: 360, after: 0, size: 22 })),
-    new Paragraph({ spacing: { before: 40, after: 70 }, border: LINE, children: [] })];
+    new Paragraph({ spacing: { before: 0, after: 20, line: 40, lineRule: 'exact' }, border: LINE, children: [] })];
   const half = Math.ceil(qs.length / 2);
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB,
     rows: [new TableRow({ children: [cell(qs.slice(0, half).flatMap((q, i) => one(q, i + 1)), 5233, { borders: NOB, valign: VerticalAlign.TOP }),
@@ -344,9 +344,9 @@ const DGC_F2T = base({
       { title: 'Document 1: Extract from the report of the Divisional Officer', text: ['“In this equatorial zone, the earth roads become muddy in the rainy season and cut off many villages. Malaria and sleeping sickness are common among the inhabitants. The thick forest is difficult to clear and to cross. The heavy rain washes the plant food out of the soil, so the farms become poor after two or three years.”'] },
       { title: 'Document 2', text: 'Mount Everest, in the Himalayas, is the highest mountain in the world. It is about 8,849 metres high.' }),
     new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
-    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 2),
-    ...task(2, 'State three problems faced by the people of the equatorial region.', '3 marks', 2),
-    ...task(3, 'Suggest three solutions to improve the life of the villagers.', '3 marks', 2),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
+    ...task(2, 'State three problems faced by the people of the equatorial region.', '3 marks', 3),
+    ...task(3, 'Suggest three solutions to improve the life of the villagers.', '3 marks', 3),
   ],
 });
 
@@ -391,7 +391,7 @@ const DGC_F3 = base({
       { title: 'Document 1: The revolution of the Earth', text: ['The Earth moves around the Sun in 365¼ days. During this revolution, its axis stays tilted at 23½° and always points in the same direction. As a result, each hemisphere leans towards the Sun for part of the year. Away from the Equator, days are long in summer and short in winter, and beyond the polar circles the Sun can stay up for 24 hours (midnight Sun) or stay down (polar night). Near the Equator, the days last about 12 hours all year.'] },
       { title: 'Document 2', text: 'The Nile is the longest river in Africa. It is about 6,650 kilometres long and flows into the Mediterranean Sea.' }),
     new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
-    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 2),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
     ...task(2, 'Explain why the length of the day and of the night changes during the year in Norway but hardly changes in Garoua.', '3 marks', 3),
     ...task(3, 'Suggest three activities that Mariam can organise at school to help her classmates to understand the movements of the Earth.', '3 marks', 3),
   ],

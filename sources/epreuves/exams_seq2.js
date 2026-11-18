@@ -42,27 +42,51 @@ function table(widths, rows, borders = BOX) {
 }
 
 // ---------- official bilingual header ----------
-function header() {
+function header(small) {
   const fr = ['REPUBLIQUE DU CAMEROUN', 'Paix – Travail – Patrie', '********', 'MINISTERE DES ENSEIGNEMENTS SECONDAIRES', '********',
     'DELEGATION REGIONALE DU NORD', '********', 'DELEGATION DEPARTEMENTALE DE LA BENOUE', '********', 'LYCEE BILINGUE DE GAROUA',
     'BP : 301 GAROUA – TEL : 222 27 30 51', 'E-mail : lybilgaroua@yahoo.fr', 'N° Immatriculation : 1CK1GSFD110910109'];
   const en = ['REPUBLIC OF CAMEROON', 'Peace – Work – Fatherland', '********', 'MINISTRY OF SECONDARY EDUCATION', '********',
     'NORTH REGIONAL DELEGATION', '********', 'BENOUE DIVISIONAL DELEGATION', '********', 'GOVERNMENT BILINGUAL HIGH SCHOOL GAROUA',
     'P.O. BOX: 301 GAROUA – TEL: 222 27 30 51', 'E-mail: lybilgaroua@yahoo.fr', 'Registration N°: 1CK1GSFD110910109'];
-  const col = (arr) => arr.map((t, i) => C(t, { size: 15, after: 0, bold: i === 0 || i === 9, italics: i === 1 }));
+  const col = (arr) => arr.map((t, i) => C(t, { size: small ? 14 : 15, after: 0, bold: i === 0 || i === 9, italics: i === 1 }));
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [4133, 2200, 4133], borders: NOB,
     rows: [new TableRow({ children: [
       cell(col(fr), 4133, { borders: NOB }),
-      cell(new Paragraph({ alignment: AlignmentType.CENTER, children: [new ImageRun({ type: 'jpg', data: LOGO, transformation: { width: 118, height: 136 } })] }), 2200, { borders: NOB }),
+      cell(new Paragraph({ alignment: AlignmentType.CENTER, children: [new ImageRun({ type: 'jpg', data: LOGO, transformation: small ? { width: 88, height: 101 } : { width: 118, height: 136 } })] }), 2200, { borders: NOB }),
       cell(col(en), 4133, { borders: NOB })] })] });
 }
 
 // student / paper identification block (the school model)
+function idBlockCompact(x) {
+  const p = (t, o = {}) => P(t, Object.assign({ after: 0, size: 19 }, o));
+  const dotsP = (label, w) => new Paragraph({ spacing: { after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: w, leader: LeaderType.DOT }], children: [...runs('**' + label + '**', { size: 19 }), new TextRun({ text: '\t', font: FONT, size: 19 })] });
+  const rows = [
+    [p('**DEPARTMENT**'), p('GEOGRAPHY', { align: AlignmentType.CENTER, bold: true }), p('**DURATION**'), p(x.durationShort, { bold: true })],
+    [p('**SUBJECT**'), p(x.subject, { align: AlignmentType.CENTER, bold: true }), p('**COEFFICIENT**'), p('')],
+    [p('**CLASS**'), p(x.cls, { align: AlignmentType.CENTER, bold: true }), p('**ENROLMENT**'), p('')],
+    [p('**TEACHERS**'), p(x.teacher, { align: AlignmentType.CENTER }), p('**SEQUENCE N°**'), p('2', { bold: true })],
+  ];
+  const w = [1750, 4916, 1800, 2000];
+  return [
+    new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: w, borders: BOX, rows: rows.map((r) => new TableRow({ children: r.map((c, i) => cell(c, w[i])) })) }),
+    new Paragraph({ spacing: { after: 40 }, children: [] }),
+    table([5300, 500, 500, 4166], [[cell(dotsP('STUDENT’S NAMES: ', 5000), 5300, { borders: NOB }), cell(p('F', { align: AlignmentType.CENTER }), 500), cell(p('M', { align: AlignmentType.CENTER }), 500), cell(dotsP('Class number: ', 3900), 4166, { borders: NOB })]]),
+  ];
+}
+function titlesCompact(x) {
+  return [
+    C('**SECOND SEQUENCE EVALUATION – SCHOOL YEAR ' + YEAR + '**', { before: 80, after: 20, size: 23 }),
+    C('**INSTRUCTIONS TO CANDIDATES**', { after: 0, size: 20 }),
+    ...x.instructions.map((t) => C(t, { after: 0, size: 20, italics: true })),
+    new Paragraph({ spacing: { after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '000000', space: 2 } }, children: [] }),
+  ];
+}
 function idBlock(x) {
   const s = 20;
   const p = (t, o = {}) => P(t, Object.assign({ after: 0, size: s }, o));
   const out = [];
-  out.push(table([5466, 500, 500, 4000], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class:** ' + x.cls)]]));
+  out.push(table([3500, 500, 500, 3966, 2000], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class:** ' + x.cls), p('**Class N°:**')]]));
   out.push(table([1500, 2766, 1700, 2200, 2300], [[p('**SEQ N° 2**'), p('**Assessment of module N°:** ' + x.module), p('**Date:**'), p('**Discipline:** Geography'), p('**Duration:** ' + x.duration)]]));
   out.push(table([10466], [[p('**Teacher:** ' + x.teacher)]]));
   out.push(table([10466], [[p('**Evaluated competence:** ' + x.competence)]]));
@@ -116,7 +140,7 @@ const gq = (label, t, marks) => {
 const facilitators = (names) => [C('**FACILITATOR' + (names.length > 1 ? 'S' : '') + ':** ' + names.join('  –  '), { before: 160, after: 0, size: 22 })];
 
 function build(x) {
-  const children = [header(), new Paragraph({ spacing: { after: 80 }, children: [] }), ...idBlock(x), ...titles(x), ...x.body];
+  const children = x.compact ? [header(true), new Paragraph({ spacing: { after: 40 }, children: [] }), ...idBlockCompact(x), ...titlesCompact(x), ...x.body] : [header(), new Paragraph({ spacing: { after: 80 }, children: [] }), ...idBlock(x), ...titles(x), ...x.body];
   const footers = () => ({ default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [
     new TextRun({ text: `GBHS Garoua – Geography – ${x.cls} – Second Sequence ${YEAR} – Page `, font: FONT, size: 16 }),
     new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16 })] })] }) });
@@ -148,9 +172,9 @@ const mcqRows = (qs, lines, off = 0) => {
 };
 // questions as ordinary paragraphs: they fill a column from top to bottom, then the next column, then the next page
 const flowQ = (q, n) => [
-  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 60, after: 40 }, children: runs(`**${n}. ${q[0]}**`, { size: 22 }) }),
-  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 22 }) })),
-  new Paragraph({ spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
+  new Paragraph({ keepNext: true, keepLines: true, spacing: { before: 40, after: 30 }, children: runs(`**${n}. ${q[0]}**`, { size: 21 }) }),
+  ...q[1].map((o, i) => new Paragraph({ keepNext: i < 3, keepLines: true, indent: { left: 360 }, spacing: { after: 0 }, children: runs(`${'ABCD'[i]}.  ${o}`, { size: 21 }) })),
+  new Paragraph({ spacing: { before: 40, after: 40 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 1 } }, children: [] }),
 ];
 const flowH = (t) => new Paragraph({ keepNext: true, spacing: { before: 60, after: 60 }, border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080', space: 2 } }, children: runs('**' + t + '**', { size: 23 }) });
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
@@ -438,12 +462,12 @@ const FIFTY = QL.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');
 if (process.env.KEY) console.log('LSA ' + FIFTY);
 const gridTable = (n) => { const cw = Array(5).fill(2093); const rows = []; for (let r = 0; r < Math.ceil(n / 5); r++) rows.push(new TableRow({ children: cw.map((w, c) => { const k = r * 5 + c + 1; return cell(P(k <= n ? `**${String(k).padStart(2, '0')}**  [A] [B] [C] [D]` : '', { after: 0, size: 21, align: AlignmentType.CENTER }), w); }) })); return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cw, borders: BOX, rows }); };
 const LSA = base({
-  file: 'LSA_Geography_Seq2_2026-2027.docx', title: 'Lower Sixth Arts Geography – Second Sequence', cls: 'LOWER SIXTH ARTS (A2 and A3)', module: '1 and 2', duration: '1 hour 30 minutes',
+  file: 'LSA_Geography_Seq2_2026-2027.docx', compact: true, durationShort: '1h30', subject: 'PHYSICAL and HUMAN GEOGRAPHY', title: 'Lower Sixth Arts Geography – Second Sequence', cls: 'LOWER SIXTH ARTS (A2 and A3)', module: '1 and 2', duration: '1 hour 30 minutes',
   teacher: 'Mr KAMDEM Emmanuel  –  Mme TSOGO Sylviane  –  Mr NEBASIBI',
   competence: 'Learners are able to explain the distribution of population, the atmosphere, the structure of the Earth and the physical geography of Cameroon.',
   instructions: ['Answer ALL the 50 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
   body: [
-    H('MULTIPLE CHOICE QUESTIONS (50 questions × 1 mark = 50 marks, converted to 20 marks)'),
+    P('**MULTIPLE CHOICE QUESTIONS**  (50 questions × 1 mark = 50 marks, converted to 20 marks)', { size: 21, before: 20, after: 40 }),
     gridTable(50),
   ],
   colBody: QL.flatMap((q, i) => flowQ(q, i + 1)),
@@ -523,12 +547,12 @@ const spreadLetters = (Q) => {
 spreadLetters(QU);
 if (process.env.KEY) console.log('USA ' + QU.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
 const USA = base({
-  file: 'USA_Geography_Seq2_2026-2027.docx', title: 'Upper Sixth Arts Geography – Second Sequence', cls: 'UPPER SIXTH ARTS (A2 and A4)', module: '1, 2 and 4', duration: '1 hour 30 minutes',
+  file: 'USA_Geography_Seq2_2026-2027.docx', compact: true, durationShort: '1h30', subject: 'PHYSICAL and HUMAN GEOGRAPHY', title: 'Upper Sixth Arts Geography – Second Sequence', cls: 'UPPER SIXTH ARTS (A2 and A4)', module: '1, 2 and 4', duration: '1 hour 30 minutes',
   teacher: 'Mr KAMDEM Emmanuel  –  Mme TSOGO Sylviane  –  Mr NEBASIBI',
   competence: 'Learners are able to explain population growth and migration, temperature in the atmosphere, weathering, mass wasting and the use of the resources of Cameroon.',
   instructions: ['Answer ALL the 50 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
   body: [
-    H('MULTIPLE CHOICE QUESTIONS (50 questions × 1 mark = 50 marks, converted to 20 marks)'),
+    P('**MULTIPLE CHOICE QUESTIONS**  (50 questions × 1 mark = 50 marks, converted to 20 marks)', { size: 21, before: 20, after: 40 }),
     gridTable(50),
   ],
   colBody: QU.flatMap((q, i) => flowQ(q, i + 1)),

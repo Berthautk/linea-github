@@ -134,6 +134,7 @@ function build(x) {
 // =====================================================================
 // The two papers keep the questions and the chapters written by the class teacher (Mme ASTHA Noura);
 // the wording, the layout and the situation are rewritten, and Documents 1 and 2 (Document 2 = distractor) are added.
+let FOURKEY = '';
 const base = (o) => Object.assign({ duration: '1 hour', teacher: 'Mme ASTHA Noura', instructions: ['Answer ALL questions on this question paper.', 'In Section I, mark an (X) on the letter of the correct answer.'] }, o);
 const docCell = (d, w) => cell([P('**' + d.title + '**', { after: 40, size: 22 }), ...[].concat(d.text).map((t) => P(t, { after: 40, size: 22, line: 280 }))], w, { valign: VerticalAlign.TOP });
 const documents = (d1, d2) => table([5233, 5233], [[docCell(d1, 5233), docCell(d2, 5233)]]);
@@ -262,4 +263,66 @@ const F3 = base({
   ],
 });
 
-(async () => { for (const x of [F1, F2, F3]) await build(x); })();
+// =====================================================================
+// FORM FOUR ARTS: 35 MCQs only (wave action on coasts, coastal management, wind action in deserts), taken from the pages given by the teachers
+// =====================================================================
+// [question, [options], index of the correct answer]
+const Q4 = [
+  ['The wearing away of a coastline by the sheer force of waves striking the rock is called:', ['Attrition', 'Corrasion', 'Hydraulic action', 'Solution'], 2],
+  ['The wearing away of a coastline by rock fragments carried by waves grinding against it is called:', ['Hydraulic action', 'Attrition', 'Solution', 'Corrasion (abrasion)'], 3],
+  ['The process by which rock fragments carried by waves wear each other down into smaller, rounder pieces is called:', ['Solution', 'Hydraulic action', 'Corrasion', 'Attrition'], 3],
+  ['A steep rock face formed by wave erosion along a coastline is called a:', ['Sea cliff', 'Tombolo', 'Bar', 'Spit'], 0],
+  ['The gently sloping rock platform found at the base of a sea cliff, exposed at low tide, is called a:', ['Arch', 'Bay', 'Stack', 'Wave-cut platform'], 3],
+  ['A tall column of rock isolated from the mainland by wave erosion is called a:', ['Stack', 'Arch', 'Spit', 'Cave'], 0],
+  ['An opening eroded right through a headland, joining two caves, is called a sea:', ['Arch', 'Cliff', 'Platform', 'Stack'], 0],
+  ['Study the following list: (1) Hydraulic action (2) Deflation (3) Attrition (4) Saltation (5) Corrasion. Select the answer that gives only processes of wave erosion:', ['1, 3 and 5', '1, 2 and 4', '2, 4 and 5', '3, 4 and 5'], 0],
+  ['A cliff retreats at an average rate of 0.4 m per year. How far will it retreat in 25 years?', ['0.1 m', '1.0 m', '10 m', '100 m'], 2],
+  ['An accumulation of sand and shingle deposited along a shoreline by wave action is called a:', ['Cave', 'Beach', 'Cliff', 'Stack'], 1],
+  ['A long, narrow ridge of sand or shingle projecting from the coast into the sea, often with a curved (hooked) end, is called a:', ['Cliff', 'Wave-cut platform', 'Arch', 'Spit'], 3],
+  ['A ridge of sand or shingle connecting two areas of land or partially blocking the entrance to a bay is called a:', ['Bar', 'Headland', 'Cave', 'Stack'], 0],
+  ['A bar that connects an island to the mainland is specifically called a:', ['Delta', 'Levee', 'Spit', 'Tombolo'], 3],
+  ['Spits and bars are mainly built up by the process of:', ['Longshore drift depositing material', 'River flooding only', 'Volcanic eruption', 'Wave erosion'], 0],
+  ['A shallow body of water partly cut off from the sea by a bar or spit is called a:', ['Lagoon', 'Fjord', 'Delta', 'Estuary only'], 0],
+  ['The material deposited to form beaches, spits and bars is mainly:', ['Magma', 'Volcanic ash', 'Ice', 'Sand and shingle transported by waves and currents'], 3],
+  ['Beaches are considered valuable to man mainly because they:', ['Cause constant flooding', 'Are always dangerous to settle near', 'Support tourism and recreation', 'Prevent all fishing activities'], 2],
+  ['Study the following list: (i) Spit (ii) Stack (iii) Bar (iv) Wave-cut platform (v) Tombolo. Select the answer that gives only depositional features of wave action:', ['(ii), (iii) and (iv)', '(i), (ii) and (iv)', '(ii), (iv) and (v)', '(i), (iii) and (v)'], 3],
+  ['Which of the following is an economic benefit of coastal areas shaped by wave action?', ['Tourism based on beaches', 'Permanent flooding of all settlements', 'Destruction of all farmland', 'Complete absence of fishing activity'], 0],
+  ['Which of the following is a hazard associated with coastal areas?', ['Abundant freshwater everywhere', 'Coastal erosion damaging property', 'Absence of storms', 'Permanent fertile soils only'], 1],
+  ['A wall built parallel to the shore to absorb and reduce the force of waves is called a:', ['Sea wall', 'Levee', 'Spit', 'Groyne'], 0],
+  ['A wooden or stone barrier built perpendicular to the shore to trap sand and reduce longshore drift is called a:', ['Sea wall', 'Groyne', 'Tombolo', 'Breakwater offshore only'], 1],
+  ['Rising sea levels linked to climate change pose which major threat to low-lying coastal settlements?', ['Immediate drought', 'Volcanic eruption', 'Guaranteed protection from erosion', 'Increased risk of flooding and land loss'], 3],
+  ['Mangrove forests along tropical coastlines help to protect the coast mainly by:', ['Reducing wave energy and stabilising the shoreline', 'Attracting more storms', 'Causing more erosion', 'Increasing wave energy'], 0],
+  ['One sustainable strategy for managing coastal erosion is to:', ['Remove all vegetation along the coast', 'Ignore rising sea levels', 'Combine hard engineering (sea walls) with soft measures (mangrove planting)', 'Build unrestricted settlements on unstable cliffs'], 2],
+  ['Study the following list: (1) Sea wall (2) Groyne (3) Mangrove planting (4) Rip-rap (5) Beach nourishment. Select the answer that gives only soft (natural) methods of coastal protection:', ['1 and 2', '3 and 5', '2 and 4', '1 and 4'], 1],
+  ['A region with an average annual rainfall below 250 mm is generally classified as a:', ['Tropical rainforest', 'Desert', 'Tundra', 'Savanna'], 1],
+  ['The removal of loose sand and dust by wind, leaving behind a stony surface, is called:', ['Deposition', 'Deflation', 'Saltation', 'Abrasion'], 1],
+  ['The wearing away of rock surfaces by wind-blown sand grains rubbing against them is called:', ['Deflation', 'Solution', 'Abrasion (corrasion)', 'Saltation'], 2],
+  ['A mushroom-shaped rock formed by wind abrasion, which erodes the base more than the top, is called a:', ['Inselberg', 'Rock pedestal (zeugen)', 'Barchan', 'Yardang'], 1],
+  ['A long, streamlined ridge of rock carved by wind abrasion and aligned parallel to the prevailing wind direction is called a:', ['Yardang', 'Seif dune', 'Rock pedestal', 'Barchan'], 0],
+  ['An isolated hill or small mountain rising abruptly from a flat desert plain is called an:', ['Inselberg', 'Yardang', 'Oasis', 'Wadi'], 0],
+  ['A desert landscape that has been stripped of its fine sand and left covered mainly with pebbles and gravel is called a:', ['Reg (stony desert)', 'Erg (sand desert)', 'Oasis', 'Wadi'], 0],
+  ['Which of the following statements about barchan dunes is NOT correct?', ['They are crescent-shaped', 'Their horns point downwind', 'They move slowly in the direction of the wind', 'Their steep slope faces the wind'], 3],
+  ['A barchan dune moves forward at 15 m per year. How long will it take to reach a road 600 m away?', ['4 years', '25 years', '40 years', '90 years'], 2],
+];
+// spread the correct letters evenly: the correct option is swapped with the option at the target place (lists of numbers keep their order)
+const TARGET = [1, 3, 0, 2, 3, 1, 2, 0];
+let ti = 0;
+Q4.forEach((q) => { if (q[1].some((o) => /^[\d(]/.test(o))) return; const t = TARGET[ti++ % TARGET.length]; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+const F4 = base({
+  file: 'F4_Geography_Seq2_2026-2027.docx', title: 'Form Four Arts Geography – Second Sequence', cls: 'FORM FOUR ARTS', module: '2',
+  teacher: 'Mme ASTHA Noura  and  Mr KAMDEM Emmanuel',
+  competence: 'Learners are able to explain the action of waves and of the wind on the landscape and to manage the coast.',
+  instructions: ['Answer ALL the 35 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
+  body: [
+    H('MULTIPLE CHOICE QUESTIONS (35 questions × 1 mark = 35 marks, converted to 20 marks)'),
+    (() => { const cw = Array(5).fill(2093); const rows = [];
+      for (let r = 0; r < 7; r++) rows.push(new TableRow({ children: cw.map((w, c) => { const n = r * 5 + c + 1; return cell(P(`**${String(n).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), w); }) }));
+      return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cw, borders: BOX, rows }); })(),
+    P('', { after: 120 }),
+    mcqRows(Q4.map((q) => [q[0], q[1]])),
+  ],
+});
+FOURKEY = Q4.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');
+if (process.env.KEY) console.log(FOURKEY);
+
+(async () => { for (const x of [F1, F2, F3, F4]) await build(x); })();

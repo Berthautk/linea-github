@@ -360,4 +360,93 @@ const F4 = base({
 FOURKEY = ALL.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');
 if (process.env.KEY) console.log(FOURKEY);
 
-(async () => { for (const x of [F1, F2, F3, F4]) await build(x); })();
+// =====================================================================
+// LOWER SIXTH ARTS (A2 and A3): 50 MCQs, 1 h 30, GCE Board style
+// Population Geography L1-L4, Meteorology L1-L3, Geomorphology L2, FS1, FS2, L3, Geography of Cameroon L1-L6
+// =====================================================================
+// [question, [options], index of the correct answer]
+const QL = [
+  // ---- Population Geography, lessons 1 to 4
+  ['Which of the following is the most complete source of population data?', ['A sample survey', 'A census', 'Vital registration', 'Migration records'], 1],
+  ['In a census, people who are counted where they are found on census night are counted by the:', ['De jure method', 'De facto method', 'Sampling method', 'Registration method'], 1],
+  ['In Cameroon, the population censuses are organised by:', ['BUCREP', 'CAMTEL', 'ELECAM', 'SONARA'], 0],
+  ['The number of people living per square kilometre is called the population:', ['Distribution', 'Growth rate', 'Density', 'Structure'], 2],
+  ['A country has 10 million people and 200,000 km² of cultivable land. Its physiological density is:', ['5 persons per km²', '20 persons per km²', '50 persons per km²', '200 persons per km²'], 2],
+  ['About what proportion of the world population lives within 500 km of the sea?', ['One-tenth', 'One-third', 'Two-thirds', 'Nine-tenths'], 2],
+  ['The part of the Earth that is permanently inhabited because conditions are favourable is called the:', ['Non-ecumene', 'Ecumene', 'Megalopolis', 'Tundra'], 1],
+  ['Which of the following is an example of the non-ecumene?', ['The Nile valley', 'Western Europe', 'The Sahara', 'The Ganges plain'], 2],
+  ['Dubai has a large population in a hot desert mainly because of:', ['Heavy rainfall', 'Fertile volcanic soils', 'Technology and oil wealth', 'A cool climate'], 2],
+  ['Study the following list: (1) Lack of jobs in villages (2) Schools in towns (3) Poor roads and services in villages (4) Insecurity (5) Hospitals in towns. Select the answer that gives only push factors of migration:', ['1, 3 and 4', '2, 3 and 5', '1, 2 and 5', '2, 4 and 5'], 0],
+  ['The fertility needed for a population to replace itself is about:', ['1.0 child per woman', '2.1 children per woman', '4.0 children per woman', '6.5 children per woman'], 1],
+  ['The emigration of skilled and educated people, such as doctors and engineers, from a country is called:', ['Rural exodus', 'Brain drain', 'Differential growth', 'Urbanisation'], 1],
+  // ---- Meteorology, lessons 1 to 3
+  ['Study the following list: (1) Nitrogen (2) Oxygen (3) Argon (4) Carbon dioxide (5) Water vapour. Select the answer that gives only constant gases of the atmosphere:', ['1, 2 and 3', '1, 4 and 5', '2, 3 and 5', '3, 4 and 5'], 0],
+  ['Tiny solid or liquid particles suspended in the air, such as dust, sea salt and smoke, are called:', ['Variable gases', 'Aerosols', 'Constant gases', 'Isotherms'], 1],
+  ['The gas of the atmosphere whose amount varies most from place to place, from almost nothing over deserts to about 4 % over hot oceans, is:', ['Nitrogen', 'Oxygen', 'Argon', 'Water vapour'], 3],
+  ['In the troposphere, the temperature falls with height by about 6.5 °C per kilometre. If the temperature at sea level is 30 °C, the temperature at 3 km is about:', ['10.5 °C', '19.5 °C', '23.5 °C', '36.5 °C'], 0],
+  ['In which layer of the atmosphere does the temperature rise with height because ozone absorbs ultraviolet rays?', ['The troposphere', 'The stratosphere', 'The mesosphere', 'The thermosphere'], 1],
+  ['The coldest layer of the atmosphere, where the temperature reaches about −90 °C and meteors burn up, is the:', ['Troposphere', 'Stratosphere', 'Mesosphere', 'Thermosphere'], 2],
+  ['The Montreal Protocol (1987) was signed to stop the production and use of:', ['Chlorofluorocarbons (CFCs)', 'Carbon dioxide', 'Water vapour', 'Nitrogen'], 0],
+  ['The proportion of solar radiation reflected by a surface is called the:', ['Insolation', 'Albedo', 'Absorption', 'Scattering'], 1],
+  ['Which of the following surfaces has the highest albedo?', ['A tarred road', 'A forest', 'Fresh snow', 'Dark bare soil'], 2],
+  ['The sky is blue during the day mainly because blue light is:', ['Absorbed most by ozone', 'Reflected by the ground', 'Scattered most by gas molecules and tiny particles', 'Produced by the oceans'], 2],
+  // ---- Geomorphology: lesson 2, FS1, FS2, lesson 3
+  ['The boundary that separates the crust from the mantle is called the:', ['Gutenberg discontinuity', 'Mohorovičić (Moho) discontinuity', 'Lithosphere', 'Asthenosphere'], 1],
+  ['The continental crust is made mainly of:', ['Basalt rich in silica and magnesium (SIMA)', 'Granite rich in silica and aluminium (SIAL)', 'Liquid iron and nickel', 'Sedimentary rocks only'], 1],
+  ['The layer of the Earth made of liquid iron and nickel, whose movements produce the magnetic field, is the:', ['Crust', 'Mantle', 'Outer core', 'Inner core'], 2],
+  ['Mountain ranges, plateaux and plains are examples of:', ['First-order landforms', 'Second-order landforms', 'Third-order landforms', 'Minor landforms only'], 1],
+  ['Who proposed the theory of continental drift in 1912?', ['Harry Hess', 'Alfred Wegener', 'John Tuzo Wilson', 'Dan McKenzie'], 1],
+  ['According to Wegener, the supercontinent Pangaea first split into Laurasia in the north and:', ['Panthalassa in the south', 'Gondwanaland in the south', 'Antarctica only', 'Eurasia in the south'], 1],
+  ['The fossils of Mesosaurus, a small freshwater reptile, are found only in South America and southern Africa. They support the idea that:', ['The oceans are very old', 'The two continents were once joined', 'Volcanoes were active there', 'The climate has never changed'], 1],
+  ['The theory of sea-floor spreading was proposed in the early 1960s by:', ['Alfred Wegener', 'Harry Hess', 'Mohorovičić', 'Gutenberg'], 1],
+  ['According to the theory of sea-floor spreading, new oceanic crust is formed at the:', ['Ocean trenches', 'Mid-ocean ridges', 'Continental shelves', 'Abyssal plains'], 1],
+  ['The rocks of the ocean floor are youngest:', ['Near the continents', 'In the ocean trenches', 'At the mid-ocean ridges', 'Everywhere, with the same age'], 2],
+  ['Study the following list: (i) Mid-ocean ridge (ii) Ocean trench (iii) Rift valley (iv) Fold mountain (v) Island arc. Select the answer that gives only features of constructive margins:', ['(i) and (iii)', '(ii) and (iv)', '(ii) and (v)', '(iii) and (v)'], 0],
+  ['The San Andreas Fault in California lies along a:', ['Constructive margin', 'Destructive margin', 'Conservative (transform) margin', 'Mid-ocean ridge'], 2],
+  ['The force that is now thought to be the strongest in moving the tectonic plates, in which the cold, dense edge of an oceanic plate sinks into the mantle, is:', ['Ridge push', 'Slab pull', 'The rotation of the Earth', 'The tides'], 1],
+  // ---- Geography of Cameroon, lessons 1 to 6
+  ['The highest peak of Cameroon, an active volcano of 4,095 m, is:', ['Mount Oku', 'Mount Manengouba', 'Mount Cameroon', 'The Bamboutos Mountains'], 2],
+  ['The main watershed of Cameroon, from which rivers flow in different directions, is the:', ['Southern Plateau', 'Adamawa Plateau', 'Mandara Mountains', 'Chad plain'], 1],
+  ['The dome-shaped hills of the “half-orange” relief are typical of the:', ['Western Highlands', 'Southern Plateau', 'Coastal lowlands', 'Chad plain'], 1],
+  ['The climate of Douala, Limbe and Debundscha, with rainfall between 2,500 and 10,000 mm, is the:', ['Guinea (equatorial) type', 'Cameroon (maritime) type', 'Sudan type', 'Sahelian type'], 1],
+  ['In July and August, the Intertropical Convergence Zone (ITCZ) lies:', ['South of Cameroon', 'North of Cameroon', 'Over Douala only', 'Over the Atlantic Ocean only'], 1],
+  ['The climate with four seasons (two dry and two rainy) is that of the:', ['Guinea (equatorial) type', 'Mountain type', 'Dry tropical type', 'Sahelian type'], 0],
+  ['The most widespread soils of Cameroon, which are deep, red or yellow and acid, are the:', ['Ferruginous soils', 'Ferrallitic soils', 'Vertisols', 'Alluvial soils'], 1],
+  ['The tropical black earths (vertisols) around Maroua and Kaélé are suitable for:', ['Cocoa and rubber', 'Cotton and muskwari (dry-season sorghum)', 'Tea and bananas', 'Oil palm only'], 1],
+  ['Rhizophora, a tree with stilt roots, is a typical species of the:', ['Mangrove forests', 'Montane forests', 'Sahel savanna', 'Guinea savanna'], 0],
+  ['Which of the following trees is typical of the Sudan savanna around Garoua?', ['Iroko', 'Sapele', 'Shea (karité)', 'Ebony'], 2],
+  ['The longest river entirely in Cameroon, which carries most of the hydroelectric dams of the country, is the:', ['Benue', 'Sanaga', 'Wouri', 'Logone'], 1],
+  ['Study the following list of rivers: (i) Wouri (ii) Sanaga (iii) Benue (iv) Logone (v) Nyong. Select the answer that gives only rivers of the Atlantic basin:', ['(i), (ii) and (v)', '(ii), (iii) and (iv)', '(i), (iii) and (iv)', '(iii), (iv) and (v)'], 0],
+  ['The census of 2005 counted about:', ['7.7 million people', '10.5 million people', '17.5 million people', '29 million people'], 2],
+  ['The population pyramid of Cameroon has a wide base and a narrow top. This is typical of a country with:', ['Low fertility and a long life expectancy', 'High fertility and a short life expectancy', 'No migration', 'A very old population'], 1],
+  ['Which region of Cameroon is thinly populated, with about 11 persons per km², because of dense forest, poor soils and isolation?', ['The West', 'The Littoral', 'The East', 'The North-West'], 2],
+];
+// spread the correct letters: lists of numbers keep their order (their letter is fixed); the other questions are placed so that
+// the same letter never comes twice in a row if it can be avoided, and the four letters are used about equally often
+const isList = (q) => q[1].some((o) => /^[\d(]/.test(o));
+const fin = QL.map((q) => (isList(q) ? q[2] : -1)); const use = [0, 0, 0, 0]; fin.forEach((l) => { if (l >= 0) use[l]++; });
+for (let k = 0; k < QL.length; k++) {
+  if (fin[k] >= 0) continue;
+  const prev = k > 0 ? fin[k - 1] : -1, next = k < QL.length - 1 ? fin[k + 1] : -1;
+  let cand = [0, 1, 2, 3].filter((l) => l !== prev && l !== next);
+  if (!cand.length) cand = [0, 1, 2, 3].filter((l) => l !== prev);
+  const m = Math.min(...cand.map((l) => use[l])); const pick = cand.filter((l) => use[l] === m);
+  const t = pick[(k * 7 + 3) % pick.length]; fin[k] = t; use[t]++;
+}
+QL.forEach((q, k) => { if (isList(q)) return; const t = fin[k]; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+const FIFTY = QL.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');
+if (process.env.KEY) console.log('LSA ' + FIFTY);
+const gridTable = (n) => { const cw = Array(5).fill(2093); const rows = []; for (let r = 0; r < Math.ceil(n / 5); r++) rows.push(new TableRow({ children: cw.map((w, c) => { const k = r * 5 + c + 1; return cell(P(k <= n ? `**${String(k).padStart(2, '0')}**  [A] [B] [C] [D]` : '', { after: 0, size: 21, align: AlignmentType.CENTER }), w); }) })); return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cw, borders: BOX, rows }); };
+const LSA = base({
+  file: 'LSA_Geography_Seq2_2026-2027.docx', title: 'Lower Sixth Arts Geography – Second Sequence', cls: 'LOWER SIXTH ARTS (A2 and A3)', module: '1 and 2', duration: '1 hour 30 minutes',
+  teacher: 'Mr KAMDEM Emmanuel  –  Mme TSOGO Sylviane  –  Mr NEBASIBI',
+  competence: 'Learners are able to explain the distribution of population, the atmosphere, the structure of the Earth and the physical geography of Cameroon.',
+  instructions: ['Answer ALL the 50 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
+  body: [
+    H('MULTIPLE CHOICE QUESTIONS (50 questions × 1 mark = 50 marks, converted to 20 marks)'),
+    gridTable(50),
+  ],
+  colBody: QL.flatMap((q, i) => flowQ(q, i + 1)),
+});
+
+(async () => { for (const x of [F1, F2, F3, F4, LSA]) await build(x); })();

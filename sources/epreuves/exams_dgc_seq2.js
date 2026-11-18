@@ -84,7 +84,7 @@ function idBlock(x) {
   const s = 20;
   const p = (t, o = {}) => P(t, Object.assign({ after: 0, size: s }, o));
   const out = [];
-  out.push(table([3500, 500, 500, 3966, 2000], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class:** ' + x.cls), p('**Class N°:**')]]));
+  out.push(table([4300, 450, 450, 3566, 1700], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class:** ' + x.cls), p('**Class N°:**')]]));
   out.push(table([1500, 2766, 1700, 2200, 2300], [[p('**SEQ N° 2**'), p('**Assessment of module N°:** ' + x.module), p('**Date:**'), p('**Discipline:** ' + (x.subject || 'Geography')), p('**Duration:** ' + x.duration)]]));
   out.push(table([10466], [[p('**Teacher:** ' + x.teacher)]]));
   out.push(table([10466], [[p('**Evaluated competence:** ' + x.competence)]]));
@@ -320,6 +320,10 @@ if (process.env.KEY) console.log('DGC F2T ' + DGC_QT.map((q, i) => `${i + 1}${'A
 const completeTable2 = (widths, head, rows) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
   rows: [new TableRow({ children: head.map((h, i) => cell(P('**' + h + '**', { align: AlignmentType.CENTER, after: 0, size: 21 }), widths[i], { shade: 'D9D9D9' })) }),
     ...rows.map((r) => new TableRow({ cantSplit: true, height: { value: 900, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 21, bold: i === 0 }), widths[i])) }))] });
+// compact versions (11 pt) so that the whole paper fits on two pages
+const situationS = (t) => table([10466], [[cell([P('**Situation:**', { after: 20, size: 22 }), P(t, { after: 20, size: 22, line: 270 })], 10466, { shade: 'F2F2F2' })]]);
+const docCellS = (d, w) => cell([P('**' + d.title + '**', { after: 20, size: 21 }), ...[].concat(d.text).map((x) => P(x, { after: 20, size: 21, line: 260 }))], w, { valign: VerticalAlign.TOP });
+const documentsS = (d1, d2) => table([5233, 5233], [[docCellS(d1, 5233), docCellS(d2, 5233)]]);
 const DGC_F2T = base({
   file: 'DGCAST_F2T_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Two Technical Economic Geography – Second Sequence', cls: 'FORM TWO TECHNICAL', module: '1',
   teacher: 'Mr KAMDEM Emmanuel', subject: 'Economic Geography',
@@ -331,19 +335,18 @@ const DGC_F2T = base({
   colBody: DGC_QT.map((q, k) => flowQ(q, k + 1)).flat(),
   tailBody: [
     H('Section II: Structural Question (4 × 1 = 4 marks)'),
-    P('Complete the table below on the natural regions studied. Write the **natural vegetation** and **one resource with its use** for each region.', { line: 300, after: 60, keepNext: true }),
-    completeTable2([2600, 3933, 3933], ['Region', 'Natural vegetation (1 mark each)', 'One resource and its use (1 mark each)'], [['Equatorial region', '', ''], ['Tropical grassland region', '', '']]),
-    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
-    situation('Samuel, a Form Two Technical student, spends the holidays in his uncle’s village, in the equatorial forest of the South Region. In the rainy season, the earth road is so muddy that vehicles cannot reach the village, and the sick cannot be taken to the health centre. Many villagers have malaria. The farmers say that their farms give very little after two years, and loggers cut the big trees every day. Samuel wonders why life is so difficult in the forest and how it can be improved.'),
-    P('', { after: 60 }),
-    documents(
+    P('Complete the table below on the natural regions studied. Write the **natural vegetation** and **one resource** of each region.', { line: 300, after: 60, keepNext: true }),
+    completeTable2([2600, 3933, 3933], ['Region', 'Natural vegetation (1 mark each)', 'One resource (1 mark each)'], [['Equatorial region', '', ''], ['Tropical grassland region', '', '']]),
+    new Paragraph({ spacing: { before: 120, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situationS('Samuel, a Form Two Technical student, spends the holidays in his uncle’s village, in the equatorial forest of the South Region. In the rainy season, the earth road is so muddy that vehicles cannot reach the village, and the sick cannot be taken to the health centre. Many villagers have malaria. The farmers say that their farms give very little after two years, and loggers cut the big trees every day. Samuel wonders why life is so difficult in the forest and how it can be improved.'),
+    P('', { after: 0, size: 8 }),
+    documentsS(
       { title: 'Document 1: Extract from the report of the Divisional Officer', text: ['“In this equatorial zone, the earth roads become muddy in the rainy season and cut off many villages. Malaria and sleeping sickness are common among the inhabitants. The thick forest is difficult to clear and to cross. The heavy rain washes the plant food out of the soil, so the farms become poor after two or three years.”'] },
       { title: 'Document 2', text: 'Mount Everest, in the Himalayas, is the highest mountain in the world. It is about 8,849 metres high.' }),
-    P('**Perform the following tasks:**', { before: 120, after: 0 }),
-    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
-    ...task(2, 'State three problems faced by the people of the equatorial region.', '3 marks', 3),
-    ...task(3, 'Suggest three solutions to improve the life of the villagers.', '3 marks', 3),
-    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+    new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 2),
+    ...task(2, 'State three problems faced by the people of the equatorial region.', '3 marks', 2),
+    ...task(3, 'Suggest three solutions to improve the life of the villagers.', '3 marks', 2),
   ],
 });
 
@@ -381,17 +384,16 @@ const DGC_F3 = base({
     ...calc('b', 'The difference of time between the two towns, in hours and minutes.', '1 mark'),
     ...calc('c', 'The local time in Nairobi.', '1 mark'),
     ...calc('d', 'The local time in a town on longitude 17° W.', '1 mark'),
-    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    new Paragraph({ spacing: { before: 120, after: 60 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
     situation('Mariam, a Form Three student in Garoua, receives a message from her cousin who studies in Oslo, in Norway. He writes: “In June, it is still bright at midnight, and in December the day lasts only five hours.” Mariam is surprised, because in Garoua the days and the nights have almost the same length all year. She asks you, her classmate, to help her to understand the situation.'),
-    P('', { after: 60 }),
+    P('', { after: 0, size: 8 }),
     documents(
       { title: 'Document 1: The revolution of the Earth', text: ['The Earth moves around the Sun in 365¼ days. During this revolution, its axis stays tilted at 23½° and always points in the same direction. As a result, each hemisphere leans towards the Sun for part of the year. Away from the Equator, days are long in summer and short in winter, and beyond the polar circles the Sun can stay up for 24 hours (midnight Sun) or stay down (polar night). Near the Equator, the days last about 12 hours all year.'] },
       { title: 'Document 2', text: 'The Nile is the longest river in Africa. It is about 6,650 kilometres long and flows into the Mediterranean Sea.' }),
-    P('**Perform the following tasks:**', { before: 120, after: 0 }),
-    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
+    new Paragraph({ spacing: { before: 60, after: 0 }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [...runs('**Perform the following tasks:**'), new TextRun({ text: '\t', font: FONT, size: 24 }), ...runs('**Presentation: 2 marks**')] }),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 2),
     ...task(2, 'Explain why the length of the day and of the night changes during the year in Norway but hardly changes in Garoua.', '3 marks', 3),
     ...task(3, 'Suggest three activities that Mariam can organise at school to help her classmates to understand the movements of the Earth.', '3 marks', 3),
-    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
   ],
 });
 

@@ -138,10 +138,11 @@ let FOURKEY = '';
 const base = (o) => Object.assign({ duration: '1 hour', teacher: 'Mme ASTHA Noura', instructions: ['Answer ALL questions on this question paper.', 'In Section I, mark an (X) on the letter of the correct answer.'] }, o);
 const docCell = (d, w) => cell([P('**' + d.title + '**', { after: 40, size: 22 }), ...[].concat(d.text).map((t) => P(t, { after: 40, size: 22, line: 280 }))], w, { valign: VerticalAlign.TOP });
 const documents = (d1, d2) => table([5233, 5233], [[docCell(d1, 5233), docCell(d2, 5233)]]);
-const mcqRows = (qs) => {
+const mcqRows = (qs, lines) => {
+  const LB = lines ? { top: none, left: none, right: none, bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080' } } : NOB;
   const one = (q, n) => [P(`**${n}. ${q[0]}**`, { after: 40, size: 22 }), ...q[1].map((o, i) => P(`${'ABCD'[i]}.  ${o}`, { indent: 360, after: 0, size: 22 })), P('', { after: 80 })];
   const half = Math.ceil(qs.length / 2); const rows = [];
-  for (let i = 0; i < half; i++) rows.push(new TableRow({ cantSplit: true, children: [cell(one(qs[i], i + 1), 5233, { borders: NOB, valign: VerticalAlign.TOP }), qs[i + half] ? cell(one(qs[i + half], i + 1 + half), 5233, { borders: NOB, valign: VerticalAlign.TOP }) : cell(P(''), 5233, { borders: NOB })] }));
+  for (let i = 0; i < half; i++) rows.push(new TableRow({ cantSplit: true, children: [cell(one(qs[i], i + 1), 5233, { borders: LB, valign: VerticalAlign.TOP }), qs[i + half] ? cell(one(qs[i + half], i + 1 + half), 5233, { borders: LB, valign: VerticalAlign.TOP }) : cell(P(''), 5233, { borders: NOB })] }));
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB, rows });
 };
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
@@ -304,25 +305,46 @@ const Q4 = [
   ['Which of the following statements about barchan dunes is NOT correct?', ['They are crescent-shaped', 'Their horns point downwind', 'They move slowly in the direction of the wind', 'Their steep slope faces the wind'], 3],
   ['A barchan dune moves forward at 15 m per year. How long will it take to reach a road 600 m away?', ['4 years', '25 years', '40 years', '90 years'], 2],
 ];
+// Form 4 Arts and Science: 20 questions of physical geography (taken from the teachers' pages) + 15 of human geography (agriculture, from the Form 4 syllabus)
+const PHYS = [0, 1, 3, 5, 7, 10, 12, 13, 14, 17, 20, 21, 23, 24, 25, 27, 28, 29, 33, 34].map((i) => Q4[i]);
+const HUM = [
+  ['Climate-smart agriculture is a type of farming that:', ['Uses only traditional tools and no new ideas', 'Raises production, adapts to climate change and reduces greenhouse gas emissions', 'Is practised only in cold regions', 'Aims only at exporting crops'], 1],
+  ['Which of the following is NOT one of the three pillars of climate-smart agriculture?', ['Productivity', 'Adaptation', 'Mitigation', 'Mechanisation of all farms'], 3],
+  ['Which of the following techniques of climate-smart agriculture helps farmers to save water?', ['Zaï pits and water harvesting', 'Burning the bush', 'Felling the forest', 'Overgrazing'], 0],
+  ['Which of the following products brings foreign currency to Cameroon?', ['Cocoa, coffee and cotton', 'Cassava, yams and plantains grown for the family', 'Firewood', 'Sand from the rivers'], 0],
+  ['Agriculture contributes to the economy of Cameroon mainly because it:', ['Employs most of the working population', 'Produces only for the farmers’ families', 'Has no link with industries', 'Is practised only by the state'], 0],
+  ['In the long term, agriculture helps industrialisation because it:', ['Replaces all factories', 'Supplies raw materials to agro-industries such as SOSUCAM and SOCAPALM', 'Reduces the number of jobs', 'Stops the export of products'], 1],
+  ['The dependence of Cameroon on exports of raw agricultural products makes the incomes of farmers unstable because:', ['The world prices of these products fall and rise', 'Farmers do not produce enough cassava', 'There are no roads in the country', 'Cocoa is not sold abroad'], 0],
+  ['The Green Revolution is:', ['The planting of trees in towns', 'The great increase in food production since the 1960s through science and new inputs', 'The return to traditional farming', 'A political movement against farming'], 1],
+  ['Which of the following is a characteristic of the Green Revolution?', ['High-yielding varieties of rice, wheat and maize', 'The use of seeds without selection', 'The refusal of fertilisers', 'Farming without water'], 0],
+  ['One advantage of the Green Revolution is that:', ['It increased yields and reduced hunger and famine in Asia', 'It stopped all pollution', 'It made inputs cheap for all farmers', 'It was a great success in all African countries'], 0],
+  ['One disadvantage of the Green Revolution is that:', ['It reduced yields', 'Chemicals pollute soils and water', 'It needs no inputs', 'It reduced the production of food'], 1],
+  ['In a farm seen as a system, which of the following is an input?', ['Harvest', 'Income from the sale', 'Seeds and fertiliser', 'Milk and meat'], 2],
+  ['In a farm seen as a system, which of the following is a process?', ['Ploughing, sowing, weeding and harvesting', 'Land and labour', 'Crops and income', 'Capital and water'], 0],
+  ['In a farm seen as a system, which of the following is an output?', ['Land', 'Labour', 'Crops, milk and meat', 'Fertiliser'], 2],
+  ['In the system of a farm, the part of the profit or of the harvest which is reinvested in the farm is called:', ['An input only', 'Feedback', 'A process', 'Waste'], 1],
+];
+const ALL = PHYS.concat(HUM);
 // spread the correct letters evenly: the correct option is swapped with the option at the target place (lists of numbers keep their order)
-const TARGET = [1, 3, 0, 2, 3, 1, 2, 0];
+const TARGET = [1, 3, 2, 0, 2, 3, 0, 1, 2, 0, 3, 1, 0, 2, 1, 3, 0, 2, 3, 1, 0, 3, 2, 1, 3, 0, 2, 3, 1, 2, 0, 3, 1, 2, 0];
 let ti = 0;
-Q4.forEach((q) => { if (q[1].some((o) => /^[\d(]/.test(o))) return; const t = TARGET[ti++ % TARGET.length]; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+ALL.forEach((q) => { const t = TARGET[ti++]; if (q[1].some((o) => /^[\d(]/.test(o))) return; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
 const F4 = base({
-  file: 'F4_Geography_Seq2_2026-2027.docx', title: 'Form Four Arts Geography – Second Sequence', cls: 'FORM FOUR ARTS', module: '2',
+  file: 'F4_Geography_Seq2_2026-2027.docx', title: 'Form Four Arts and Science Geography – Second Sequence', cls: 'FORM FOUR ARTS AND SCIENCE', module: '2',
   teacher: 'Mme ASTHA Noura  and  Mr KAMDEM Emmanuel',
-  competence: 'Learners are able to explain the action of waves and of the wind on the landscape and to manage the coast.',
+  competence: 'Learners are able to explain the action of waves and of the wind on the landscape and to manage agricultural resources for development.',
   instructions: ['Answer ALL the 35 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
   body: [
-    H('MULTIPLE CHOICE QUESTIONS (35 questions × 1 mark = 35 marks, converted to 20 marks)'),
+    H('MULTIPLE CHOICE QUESTIONS: Physical Geography (questions 1 to 20) and Human Geography (questions 21 to 35)'),
+    P('35 questions × 1 mark = 35 marks, converted to 20 marks.', { italics: true, size: 21, after: 80 }),
     (() => { const cw = Array(5).fill(2093); const rows = [];
       for (let r = 0; r < 7; r++) rows.push(new TableRow({ children: cw.map((w, c) => { const n = r * 5 + c + 1; return cell(P(`**${String(n).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), w); }) }));
       return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cw, borders: BOX, rows }); })(),
     P('', { after: 120 }),
-    mcqRows(Q4.map((q) => [q[0], q[1]])),
+    mcqRows(ALL.map((q) => [q[0], q[1]]), true),
   ],
 });
-FOURKEY = Q4.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');
+FOURKEY = ALL.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');
 if (process.env.KEY) console.log(FOURKEY);
 
 (async () => { for (const x of [F1, F2, F3, F4]) await build(x); })();

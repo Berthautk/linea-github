@@ -85,7 +85,7 @@ function idBlock(x) {
   const p = (t, o = {}) => P(t, Object.assign({ after: 0, size: s }, o));
   const out = [];
   out.push(table([3500, 500, 500, 3966, 2000], [[p('**Student’s names:**'), p('F', { align: AlignmentType.CENTER }), p('M', { align: AlignmentType.CENTER }), p('**Class:** ' + x.cls), p('**Class N°:**')]]));
-  out.push(table([1500, 2766, 1700, 2200, 2300], [[p('**SEQ N° 2**'), p('**Assessment of module N°:** ' + x.module), p('**Date:**'), p('**Discipline:** Geography'), p('**Duration:** ' + x.duration)]]));
+  out.push(table([1500, 2766, 1700, 2200, 2300], [[p('**SEQ N° 2**'), p('**Assessment of module N°:** ' + x.module), p('**Date:**'), p('**Discipline:** ' + (x.subject || 'Geography')), p('**Duration:** ' + x.duration)]]));
   out.push(table([10466], [[p('**Teacher:** ' + x.teacher)]]));
   out.push(table([10466], [[p('**Evaluated competence:** ' + x.competence)]]));
   out.push(table([5233, 5233], [[p('**Student performance:**'), p('**Remarks**', { align: AlignmentType.CENTER })]]));
@@ -299,4 +299,52 @@ const DGC_F2 = base({
   ],
 });
 
-(async () => { for (const x of [DGC_F1, DGC_F2]) await build(x); })();
+// =====================================================================
+// DGCAST Form 2 Technical (Economic Geography): Natural regions: the equatorial region and the tropical grassland region
+// (harmonised progression sheet: location, climate, soils and vegetation, resources and exploitation, human activities, problems and solutions)
+// =====================================================================
+const DGC_QT = [
+  ['The equatorial region lies on both sides of the Equator, between about:', ['5° N and 5° S', '15° N and 30° N', '30° N and 60° N', '60° N and 90° N'], 0],
+  ['Which of the following describes the equatorial climate?', ['Hot all year with heavy rain in almost every month', 'Cool all year with little rain', 'A long dry season and a short rainy season', 'Very cold winters and hot summers'], 0],
+  ['The red or yellow soils of the equatorial region, washed by heavy rain, are called:', ['Black cotton soils', 'Ferrallitic soils', 'Sandy soils', 'Alluvial soils'], 1],
+  ['Which of the following trees is a hardwood of the equatorial forest?', ['Baobab', 'Acacia', 'Sapele', 'Shea tree'], 2],
+  ['Farming a piece of forest for a few years and moving to another one when the soil becomes poor is called:', ['Irrigated farming', 'Ranching', 'Shifting cultivation', 'Transhumance'], 2],
+  ['The tropical grassland (savanna) lies between about:', ['5° and 15° N and S of the Equator', '0° and 5° N and S of the Equator', '30° and 40° N and S of the Equator', '60° and 90° N and S of the Equator'], 0],
+  ['The climate of the tropical grassland has:', ['One season with rain all year', 'A wet season and a dry season', 'Snow in winter', 'No rain at all'], 1],
+  ['Which tree of the savanna stores water in its trunk?', ['Baobab', 'Mahogany', 'Ebony', 'Iroko'], 0],
+  ['A red soil that becomes very hard when it dries, used for roads and bricks, is called:', ['Humus', 'Laterite', 'Loam', 'Peat'], 1],
+  ['The seasonal movement of herders and their animals in search of grass and water is called:', ['Lumbering', 'Mining', 'Transhumance', 'Fishing'], 2],
+];
+[0, 1, 3, 2, 3, 0, 2, 1, 0, 3].forEach((t, k) => { const q = DGC_QT[k]; if (q[1].some((o) => /^\d/.test(o))) return; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+if (process.env.KEY) console.log('DGC F2T ' + DGC_QT.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
+const completeTable2 = (widths, head, rows) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
+  rows: [new TableRow({ children: head.map((h, i) => cell(P('**' + h + '**', { align: AlignmentType.CENTER, after: 0, size: 21 }), widths[i], { shade: 'D9D9D9' })) }),
+    ...rows.map((r) => new TableRow({ cantSplit: true, height: { value: 900, rule: 'atLeast' }, children: r.map((c, i) => cell(P(c, { after: 0, size: 21, bold: i === 0 }), widths[i])) }))] });
+const DGC_F2T = base({
+  file: 'DGCAST_F2T_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Two Technical Economic Geography – Second Sequence', cls: 'FORM TWO TECHNICAL', module: '1',
+  teacher: 'Mr KAMDEM Emmanuel', subject: 'Economic Geography',
+  competence: 'Learners are able to exploit the resources of the equatorial and tropical grassland regions and to solve the problems of these regions.',
+  body: [
+    Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
+    H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
+  ],
+  colBody: DGC_QT.map((q, k) => flowQ(q, k + 1)).flat(),
+  tailBody: [
+    H('Section II: Structural Question (4 × 1 = 4 marks)'),
+    P('Complete the table below on the natural regions studied. Write the **natural vegetation** and **one resource with its use** for each region.', { line: 300, after: 60, keepNext: true }),
+    completeTable2([2600, 3933, 3933], ['Region', 'Natural vegetation (1 mark each)', 'One resource and its use (1 mark each)'], [['Equatorial region', '', ''], ['Tropical grassland region', '', '']]),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situation('Samuel, a Form Two Technical student, spends the holidays in his uncle’s village, in the equatorial forest of the South Region. In the rainy season, the earth road is so muddy that vehicles cannot reach the village, and the sick cannot be taken to the health centre. Many villagers have malaria. The farmers say that their farms give very little after two years, and loggers cut the big trees every day. Samuel wonders why life is so difficult in the forest and how it can be improved.'),
+    P('', { after: 60 }),
+    documents(
+      { title: 'Document 1: Extract from the report of the Divisional Officer', text: ['“In this equatorial zone, the earth roads become muddy in the rainy season and cut off many villages. Malaria and sleeping sickness are common among the inhabitants. The thick forest is difficult to clear and to cross. The heavy rain washes the plant food out of the soil, so the farms become poor after two or three years.”'] },
+      { title: 'Document 2', text: 'Mount Everest, in the Himalayas, is the highest mountain in the world. It is about 8,849 metres high.' }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
+    ...task(2, 'State three problems faced by the people of the equatorial region.', '3 marks', 3),
+    ...task(3, 'Suggest three solutions to improve the life of the villagers.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+  ],
+});
+
+(async () => { for (const x of [DGC_F1, DGC_F2, DGC_F2T]) await build(x); })();

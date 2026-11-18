@@ -347,4 +347,52 @@ const DGC_F2T = base({
   ],
 });
 
-(async () => { for (const x of [DGC_F1, DGC_F2, DGC_F2T]) await build(x); })();
+// =====================================================================
+// DGCAST Form 3 (general): lessons 1 to 6 of the national syllabus, with Further Study 1 and Practical Works 1 and 2
+// (L1 Our planet, FS1 Universe and Moon, L2 Latitudes and longitudes, L3 Great circles and IDL, PW1 Locate a place, L4 Time, PW2 Calculation of time, L5 Rotation, L6 Revolution)
+// =====================================================================
+const DGC_Q3 = [
+  ['The shape of the Earth is best described as:', ['A perfect sphere', 'An oblate spheroid', 'A flat disc', 'A cube'], 1],
+  ['Which of the following observations is a proof that the Earth is spherical?', ['The shadow of the Earth on the Moon during an eclipse is always curved', 'The Sun rises in the east', 'The sea is salty', 'The Moon has phases'], 0],
+  ['The phase of the Moon in which the whole lit face is seen from the Earth is the:', ['New Moon', 'First quarter', 'Full Moon', 'Last quarter'], 2],
+  ['Spring tides, which are very high, occur at:', ['The first and last quarters of the Moon', 'New Moon and full Moon', 'Noon only', 'Midnight only'], 1],
+  ['The line of latitude 23½° N is called the:', ['Tropic of Capricorn', 'Arctic Circle', 'Tropic of Cancer', 'Equator'], 2],
+  ['The only line of latitude that is a great circle is the:', ['Tropic of Cancer', 'Equator', 'Arctic Circle', 'Tropic of Capricorn'], 1],
+  ['The Earth turns 360° in 24 hours. One degree of longitude therefore corresponds to a time difference of:', ['1 minute', '4 minutes', '15 minutes', '1 hour'], 1],
+  ['The standard time of Cameroon is:', ['GMT − 1', 'GMT', 'GMT + 1', 'GMT + 5'], 2],
+  ['In the northern hemisphere, the rotation of the Earth deflects winds and ocean currents to the:', ['Left', 'Right', 'North', 'South'], 1],
+  ['On 21 June, the Sun is overhead at the:', ['Equator', 'Tropic of Capricorn', 'Tropic of Cancer', 'Arctic Circle'], 2],
+];
+[3, 0, 1, 2, 3, 0, 1, 2, 1, 0].forEach((t, k) => { const q = DGC_Q3[k]; if (q[1].some((o) => /^\d/.test(o))) return; const c = q[2]; [q[1][c], q[1][t]] = [q[1][t], q[1][c]]; q[2] = t; });
+if (process.env.KEY) console.log('DGC F3 ' + DGC_Q3.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' '));
+const DGC_F3 = base({
+  file: 'DGCAST_F3_Geography_Seq2_2026-2027.docx', title: 'DGCAST Form Three Geography – Second Sequence', cls: 'FORM THREE', module: '1',
+  teacher: 'Mr KAMDEM Emmanuel',
+  competence: 'Learners are able to describe the planet Earth, to locate places and to explain the effects of the movements of the Earth.',
+  body: [
+    Hc('PART ONE: VERIFICATION OF RESOURCES (9 marks)'),
+    H('Section I: Multiple Choice Questions (10 × 0.5 = 5 marks)'),
+  ],
+  colBody: DGC_Q3.map((q, k) => flowQ(q, k + 1)).flat(),
+  tailBody: [
+    H('Section II: Structural Question (4 × 1 = 4 marks)'),
+    P('Garoua is on longitude **13° E**. At 12:00 noon in Garoua, calculate (show your working):', { line: 300, after: 60, keepNext: true }),
+    ...calc('a', 'The difference of longitude between Garoua and Nairobi, which is on longitude 37° E.', '1 mark'),
+    ...calc('b', 'The difference of time between the two towns, in hours and minutes.', '1 mark'),
+    ...calc('c', 'The local time in Nairobi.', '1 mark'),
+    ...calc('d', 'The local time in a town on longitude 17° W.', '1 mark'),
+    new Paragraph({ pageBreakBefore: true, spacing: { after: 80 }, keepNext: true, alignment: AlignmentType.CENTER, children: runs('**PART TWO: VERIFICATION OF COMPETENCES (9 marks)**') }),
+    situation('Mariam, a Form Three student in Garoua, receives a message from her cousin who studies in Oslo, in Norway. He writes: “In June, it is still bright at midnight, and in December the day lasts only five hours.” Mariam is surprised, because in Garoua the days and the nights have almost the same length all year. She asks you, her classmate, to help her to understand the situation.'),
+    P('', { after: 60 }),
+    documents(
+      { title: 'Document 1: The revolution of the Earth', text: ['The Earth moves around the Sun in 365¼ days. During this revolution, its axis stays tilted at 23½° and always points in the same direction. As a result, each hemisphere leans towards the Sun for part of the year. Away from the Equator, days are long in summer and short in winter, and beyond the polar circles the Sun can stay up for 24 hours (midnight Sun) or stay down (polar night). Near the Equator, the days last about 12 hours all year.'] },
+      { title: 'Document 2', text: 'The Nile is the longest river in Africa. It is about 6,650 kilometres long and flows into the Mediterranean Sea.' }),
+    P('**Perform the following tasks:**', { before: 120, after: 0 }),
+    ...task(1, 'What is the problem raised in the situation above?', '3 marks', 3),
+    ...task(2, 'Explain why the length of the day and of the night changes during the year in Norway but hardly changes in Garoua.', '3 marks', 3),
+    ...task(3, 'Suggest three activities that Mariam can organise at school to help her classmates to understand the movements of the Earth.', '3 marks', 3),
+    P('**Presentation: 2 marks**', { before: 160, align: AlignmentType.RIGHT }),
+  ],
+});
+
+(async () => { for (const x of [DGC_F1, DGC_F2, DGC_F2T, DGC_F3]) await build(x); })();

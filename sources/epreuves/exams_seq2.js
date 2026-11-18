@@ -138,11 +138,11 @@ let FOURKEY = '';
 const base = (o) => Object.assign({ duration: '1 hour', teacher: 'Mme ASTHA Noura', instructions: ['Answer ALL questions on this question paper.', 'In Section I, mark an (X) on the letter of the correct answer.'] }, o);
 const docCell = (d, w) => cell([P('**' + d.title + '**', { after: 40, size: 22 }), ...[].concat(d.text).map((t) => P(t, { after: 40, size: 22, line: 280 }))], w, { valign: VerticalAlign.TOP });
 const documents = (d1, d2) => table([5233, 5233], [[docCell(d1, 5233), docCell(d2, 5233)]]);
-const mcqRows = (qs, lines) => {
+const mcqRows = (qs, lines, off = 0) => {
   const LB = lines ? { top: none, left: none, right: none, bottom: { style: BorderStyle.SINGLE, size: 6, color: '808080' } } : NOB;
   const one = (q, n) => [P(`**${n}. ${q[0]}**`, { after: 40, size: 22 }), ...q[1].map((o, i) => P(`${'ABCD'[i]}.  ${o}`, { indent: 360, after: 0, size: 22 })), P('', { after: 80 })];
   const half = Math.ceil(qs.length / 2); const rows = [];
-  for (let i = 0; i < half; i++) rows.push(new TableRow({ cantSplit: true, children: [cell(one(qs[i], i + 1), 5233, { borders: LB, valign: VerticalAlign.TOP }), qs[i + half] ? cell(one(qs[i + half], i + 1 + half), 5233, { borders: LB, valign: VerticalAlign.TOP }) : cell(P(''), 5233, { borders: NOB })] }));
+  for (let i = 0; i < half; i++) rows.push(new TableRow({ cantSplit: true, children: [cell(one(qs[i], i + 1 + off), 5233, { borders: LB, valign: VerticalAlign.TOP }), qs[i + half] ? cell(one(qs[i + half], i + 1 + half + off), 5233, { borders: LB, valign: VerticalAlign.TOP }) : cell(P(''), 5233, { borders: NOB })] }));
   return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [5233, 5233], borders: NOB, rows });
 };
 const completeTable = (widths, head, rows, rh = 1100) => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: widths, borders: BOX,
@@ -335,13 +335,16 @@ const F4 = base({
   competence: 'Learners are able to explain the action of waves and of the wind on the landscape and to manage agricultural resources for development.',
   instructions: ['Answer ALL the 35 questions.', 'In the table below, draw a horizontal line on the letter with the correct answer.'],
   body: [
-    H('MULTIPLE CHOICE QUESTIONS: Physical Geography (questions 1 to 20) and Human Geography (questions 21 to 35)'),
+    H('MULTIPLE CHOICE QUESTIONS'),
     P('35 questions × 1 mark = 35 marks, converted to 20 marks.', { italics: true, size: 21, after: 80 }),
     (() => { const cw = Array(5).fill(2093); const rows = [];
       for (let r = 0; r < 7; r++) rows.push(new TableRow({ children: cw.map((w, c) => { const n = r * 5 + c + 1; return cell(P(`**${String(n).padStart(2, '0')}**  [A] [B] [C] [D]`, { after: 0, size: 21, align: AlignmentType.CENTER }), w); }) }));
       return new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cw, borders: BOX, rows }); })(),
     P('', { after: 120 }),
-    mcqRows(ALL.map((q) => [q[0], q[1]]), true),
+    H('SECTION A: PHYSICAL GEOGRAPHY (questions 1 to 20)'),
+    mcqRows(PHYS.map((q) => [q[0], q[1]]), true, 0),
+    H('SECTION B: HUMAN GEOGRAPHY (questions 21 to 35)'),
+    mcqRows(HUM.map((q) => [q[0], q[1]]), true, 20),
   ],
 });
 FOURKEY = ALL.map((q, i) => `${i + 1}${'ABCD'[q[2]]}`).join(' ');

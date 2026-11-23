@@ -13,6 +13,7 @@ import { state, setUI, isAP, myId, me, getScope, setScope } from '../store.js';
 import { saveDept } from '../actions.js';
 import { openReminder } from '../reminder.js';
 import { record, absent, openRound, askDone } from './week.js';
+import { TeacherHome } from './teacher.js';
 import { minISO, fmt, addDays, dow } from '../dates.js';
 import { reasonOf, THRESHOLDS } from '../consts.js';
 
@@ -205,6 +206,7 @@ function RemindInvite({ ctx }) {
 
 export function Home() {
   const ctx = makeCtx(viewData()), live = makeCtx(state.data), past = !!state.ui.year, lang = getLang(), ap = isAP();
+  if (!ap && !past) return html`<${TeacherHome} ctx=${ctx} live=${live} extras=${html`<${BackupNag} /><${RemindInvite} ctx=${live} />`} />`;   // enseignant : accueil simplifié
   const tid = currentTid(), scope = getScope();
   const p = state.ui.period && state.ui.period.ps ? state.ui.period : periodOf(ctx, (state.ui.period && state.ui.period.kind) || 'term');
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, minISO(ctx.today, ctx.ye));

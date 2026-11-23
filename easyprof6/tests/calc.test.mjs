@@ -403,3 +403,41 @@ test('correction d’examen / remise des copies : les heures comptent, aucune le
   const c = makeCtx(st, '2026-10-13'), S = stats(c, 'K', ...P1);
   assert.equal(S.hours, 2); assert.equal(S.lessonsDone, 0); assert.equal(S.assessH, 2);
 });
+
+test('progression : semaines de la fiche → dates (vacances sautées), parties de Form 5, reprise Form 3 → Form 4, date de début décalée', async () => {
+  const { weekMonday, planOf, partsOf } = await import('../site/js/progress.js');
+  const c = makeCtx(mk(), '2026-11-23');
+  assert.equal(weekMonday(c, 'T1W1'), '2026-09-07'); assert.equal(weekMonday(c, 'T1W2'), '2026-09-14'); assert.equal(weekMonday(c, 'T2W4'), '2027-01-04', 'après les vacances de Noël');
+  const f3 = planOf(c, { level: 'form 3' }, null); assert.equal(f3.filter(x => x.k === 'l').length, 42); assert.equal(f3.find(x => x.n === 5 && x.k === 'l').date, '2026-10-12');
+  const f4 = planOf(c, { level: 'form 4' }, null).filter(x => x.k === 'l'); assert.equal(f4.length, 46); assert.match(f4.find(x => x.n === 39).t, /Forest resources/);
+  assert.deepEqual(partsOf('form 5').map(p => p.lessons), [9, 44]);
+  const cam = planOf(c, { level: 'form 5', part: 'cam' }, null); assert.equal(cam.filter(x => x.k === 'l').length, 9); assert.equal(cam.filter(x => x.k === 'p').length, 5);
+  const rep = planOf(c, { level: 'form 3', n0: 24 }, null).filter(x => x.k === 'l'); assert.equal(rep.length, 19); assert.equal(rep[0].n, 24);
+  const late = planOf(c, { level: 'form 3', start: '2026-10-05' }, null).find(x => x.k === 'l' && x.n === 1); assert.equal(late.date, '2026-10-05', 'arrivé 4 semaines plus tard : ses dates partent de son premier cours');
+});
+
+test('où j’en suis, leçon proposée, leçon en cours : heures comptées, leçon comptée seulement une fois terminée', async () => {
+  const { whereAmI, suggestLesson } = await import('../site/js/progress.js');
+  const st = mk({ assign: [{ id: 'K:F3A', teacherId: 'K', classId: 'F3A', th: 42, level: 'form 3', hours: 0 }],
+    entries: [E('1', 'K', '2026-09-07', { classId: 'F3A', n: 1 }), E('2', 'K', '2026-09-14', { classId: 'F3A', n: 2 }), E('3', 'K', '2026-09-21', { classId: 'F3A', n: 3, done: false })] });
+  const c = makeCtx(st, '2026-10-19');
+  const s = suggestLesson(c, 'K', 'F3A'); assert.equal(s.n, 3); assert.ok(s.inProgress, 'la leçon en cours est proposée en premier');
+  const w = whereAmI(c, 'K', 'F3A'); assert.equal(w.status, 'late'); assert.equal(w.expected.n, 6); assert.equal(w.done, 2);
+  const S = stats(c, 'K', '2026-09-07', '2026-10-19'); assert.equal(S.lessonsDone, 2, 'leçon 3 en cours : pas encore comptée'); assert.equal(S.hours, 6, 'mais ses 2 h comptent');
+  st.entries.push(E('4', 'K', '2026-09-28', { classId: 'F3A', n: 3 })); const c2 = makeCtx(st, '2026-10-19');
+  assert.equal(stats(c2, 'K', '2026-09-07', '2026-10-19').lessonsDone, 3); assert.equal(suggestLesson(c2, 'K', 'F3A').n, 4);
+});
+
+test('évaluations par séquence : dernière remédiation, cumul du trimestre, filles / garçons, fiche de suivi', async () => {
+  const { seqResults, cumulate, evalWeekOf } = await import('../site/js/progress.js');
+  const st = mk({ entries: [
+    E('a', 'K', '2026-10-14', { classId: 'F3A', type: 'assessment', n: null, seq: 1, res: { cf: 30, cg: 28, pf: 27, pg: 26 } }),
+    E('b', 'K', '2026-10-21', { classId: 'F3A', type: 'correction', n: null, seq: 1, res: { cf: 30, cg: 28, pf: 27, pg: 26, rf: 18, rg: 14 } }),
+    E('c', 'K', '2026-11-30', { classId: 'F3A', type: 'correction', n: null, seq: 2, res: { cf: 30, cg: 28, pf: 25, pg: 25, rf: 10, rg: 10 } })] });
+  const c = makeCtx(st, '2026-12-01'), R = seqResults(c);
+  assert.equal(R.F3A[1].rf, 18); assert.ok(R.F3A[1].remed);
+  const t1 = cumulate([R.F3A[1], R.F3A[2]]); assert.equal(t1.comp, 103); assert.equal(t1.pass, 52); assert.equal(t1.rate, 50.5); assert.equal(cumulate([R.F3A[1]]).rateF, 66.7);
+  const F = followUp(c, '2026-09-07', '2026-11-27'); const row = F.g1.concat(F.g2).find(r => r.id === 'F3A'); assert.equal(row.ev, 53); assert.equal(row.ok, 32);
+  assert.equal(evalWeekOf(c, '2026-11-24').seq, 2, 'semaine harmonisée de la séquence 2 (calendrier par défaut 2026/2027)');
+  const S = stats(c, 'K', '2026-10-01', '2026-12-01'); assert.equal(S.lessonsDone, 0); assert.equal(S.assessH, 6, 'évaluation et remédiations : heures comptées, aucune leçon');
+});

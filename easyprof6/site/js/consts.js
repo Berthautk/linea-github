@@ -3,11 +3,11 @@
 export const TYPES = [
   { id: 'lesson', fr: 'Leçon', en: 'Lesson', icon: '📖', lesson: true },
   { id: 'practical', fr: 'Travaux pratiques', en: 'Practical work', icon: '🧭', lesson: true },
-  { id: 'further', fr: 'Further study / travail guidé', en: 'Further study / guided work', icon: '🔎', lesson: true },
+  { id: 'further', fr: 'Further study / travail dirigé', en: 'Further study / guided work', icon: '🔎', lesson: true },
   { id: 'orientation', fr: 'Première rencontre / orientation', en: 'First meeting / orientation', icon: '🤝' },
-  { id: 'revision', fr: 'Révision', en: 'Revision', icon: '🔁' },
-  { id: 'assessment', fr: 'Évaluation / devoir', en: 'Assessment / test', icon: '📝' },
-  { id: 'correction', fr: 'Correction d’examen / remise des copies', en: 'Exam correction / returning scripts', icon: '✅' },
+  { id: 'revision', fr: 'Intégration partielle des ressources', en: 'Partial integration of resources', icon: '🧩' },   // ancien « Révision » : même identifiant, nouveau nom officiel
+  { id: 'assessment', fr: 'Évaluation', en: 'Assessment', icon: '📝' },
+  { id: 'correction', fr: 'Remédiation', en: 'Remediation', icon: '🩹' },   // correction de l’évaluation et remise des copies
 ];
 // Motifs d'absence ou de jour sans cours. « out » = retiré des heures dues (ce n'est pas la faute de l'enseignant) ; sinon les heures restent dues mais non faites.
 // L'animateur peut changer ce classement pour chaque motif (Réglages › Année scolaire). « other » reste en dernier : c'est le motif de repli.

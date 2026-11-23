@@ -19,6 +19,7 @@ import { letterText, defaultLetter, showArms } from '../letterhead.js';
 import { exportCSV, downloadBackup } from '../exports.js';
 import { isOldBackup, isNewBackup, summarize, convert, surname, remapBackup } from '../import-old.js';
 import { syncNow } from '../sync.js';
+import { evalWeeks } from '../progress.js';
 import { APP_VERSION } from '../version.js';
 
 const Back = ({ title, children }) => html`<div class="page-h"><div class="row"><a class="icon-btn" href="#/settings" aria-label=${t('Retour')}><${Icon} n="left" /></a><h1>${title}</h1></div>${children}</div>`;
@@ -80,7 +81,8 @@ function Profile() {
   const inst = window.__epInstall;
   return html`<div class="page"><${Back} title=${t('Mon profil')} />
     <div class="card stack"><div class="grid2"><${Field} label=${t('Nom complet')}><${DraftInput} class="input" value=${m ? m.name : ''} onChange=${(e) => e.target.value.trim() && saveTeacher(myId(), { name: e.target.value.trim() })} /><//>
-      <${Field} label=${t('Téléphone WhatsApp')}><${DraftInput} class="input" inputmode="tel" value=${m ? m.phone || '' : ''} onChange=${(e) => saveTeacher(myId(), { phone: e.target.value.trim() })} /><//></div>
+      <${Field} label=${t('Téléphone WhatsApp')}><${DraftInput} class="input" inputmode="tel" value=${m ? m.phone || '' : ''} onChange=${(e) => saveTeacher(myId(), { phone: e.target.value.trim() })} /><//>
+      <${Field} label=${t('Matricule (facultatif)')} hint=${t('Repris sur le récapitulatif à reporter sur la plateforme.')}><${DraftInput} class="input" value=${m ? m.matricule || '' : ''} onChange=${(e) => saveTeacher(myId(), { matricule: e.target.value.trim() })} /><//></div>
       ${isAP() ? html`<${OwnUsername} />` : html`<div class="row"><span class="lab">${t('Identifiant')}</span><b>${state.session.username}</b></div>`}
       <div class="row"><${Chip} tone="info">${isAP() ? t('Animateur pédagogique') : t('Enseignant')}<//></div>
       <div class="row"><span class="lab">${t('Affichage')}</span><${Seg} options=${[{ id: 'auto', label: '📱 ' + t('Auto') }, { id: 'light', label: '☀️ ' + t('Clair') }, { id: 'dark', label: '🌙 ' + t('Sombre') }]} value=${getTheme()} onChange=${setTheme} /></div>
@@ -152,6 +154,9 @@ function Year() {
   return html`<div class="page"><${Back} title=${t('Année scolaire et calendrier')}><button class="btn soft sm" onClick=${reset}>${t('Rétablir l’officiel 2026/2027')}</button><//>
     <div class="card"><div class="card-h"><h3>${t('Trimestres')}</h3></div><div class="stack" style="gap:14px">${d.terms.map(x => html`<div class="stack" style="gap:8px"><div class="row"><input class="input grow" value=${x.name} onChange=${(e) => setTerm(x.id, { name: e.target.value })} /></div>
       <div class="grid2"><${Field} label=${t('Début')}><input class="input" type="date" value=${x.start} onChange=${(e) => e.target.value && setTerm(x.id, { start: e.target.value })} /><//><${Field} label=${t('Fin officielle')}><input class="input" type="date" value=${x.end} onChange=${(e) => e.target.value && setTerm(x.id, { end: e.target.value })} /><//></div></div>`)}</div></div>
+    <div class="card"><div class="card-h"><h3>${t('Semaines d’évaluation (séquences)')}</h3></div><p class="sub" style="margin-bottom:10px">${t('Pendant ces semaines, l’accueil des enseignants propose de mettre tous leurs cours en « Évaluation » d’un seul geste, et la séquence est choisie toute seule.')}</p>
+      <div class="stack" style="gap:8px">${[1, 2, 3, 4, 5, 6].map(sq => { const ws = evalWeeks(ctx), w = ws.find(x => +x.seq === sq) || { seq: sq, f: '', t: '' }, put = (patch) => saveDept({ evalWeeks: [...ws.filter(x => +x.seq !== sq), { ...w, ...patch }].sort((a, b) => a.seq - b.seq) });
+        return html`<div class="row" style="flex-wrap:nowrap;gap:8px"><b style="width:96px">${t('Séquence {s}', { s: sq })}</b><input class="input" type="date" value=${w.f} onChange=${(e) => put({ f: e.target.value, t: w.t && w.t >= e.target.value ? w.t : e.target.value })} aria-label=${t('Du')} /><input class="input" type="date" value=${w.t} onChange=${(e) => put({ t: e.target.value })} aria-label=${t('Au')} /></div>`; })}</div></div>
     <div class="card"><div class="card-h"><h3>${t('Jours sans cours de l’établissement')}</h3></div>
       <div class="list">${cal.map((r, i) => html`<div class="item"><div class="grow"><b>${r.n || t('Jour sans cours')}</b><span>${r.t && r.t !== r.f ? fmt(r.f, lang, { noYear: true }) + ' → ' + fmt(r.t, lang) : fmt(r.f, lang)}</span></div><button class="icon-btn" onClick=${() => saveDept({ calendar: cal.filter((_, j) => j !== i) })} aria-label=${t('Supprimer')}><${Icon} n="trash" /></button></div>`)}</div>
       <div class="stack" style="margin-top:12px;gap:10px"><div class="grid3"><${Field} label=${t('Du')}><input class="input" type="date" value=${c.f} onInput=${(e) => setC({ ...c, f: e.target.value, t: c.t < e.target.value ? e.target.value : c.t })} /><//><${Field} label=${t('Au')}><input class="input" type="date" min=${c.f} value=${c.t} onInput=${(e) => setC({ ...c, t: e.target.value })} /><//><${Field} label=${t('Nom')}><input class="input" value=${c.n} placeholder=${t('Tabaski, journée pédagogique…')} onInput=${(e) => setC({ ...c, n: e.target.value })} /><//></div>

@@ -4,6 +4,7 @@ import { t, getLang } from '../i18n.js';
 import { Icon } from '../icons.js';
 import { Seg, Chip, num1 } from '../ui.js';
 import { makeCtx, stats, factors, followUp, periodOf, classProgress, coverTotals, pct } from '../calc.js';
+import { seqResults, cumulate } from '../progress.js';
 import { PeriodBar, ScopeBar, currentTid, periodLabel , viewData, YearBar } from '../widgets.js';
 import { state, setUI, isAP, myId } from '../store.js';
 import { fmt, minISO } from '../dates.js';
@@ -18,8 +19,8 @@ function factorTexts(ctx, S) {
     if (f.kind === 'absence') out.push(t('Absences déclarées ({r}) : {w}.', { r: t(reasonOf(f.reason).fr).toLowerCase(), w: f.who.map(x => (x.teacher ? x.teacher + ' ' : '') + '(' + num1(x.h) + ' h)').join(' ; ') }));
     else if (f.kind === 'closed') out.push(t('Jours fériés et vacances, non comptés dans les heures dues : {h} h.', { h: num1(f.h) }));
     else if (f.kind === 'excused') out.push(t('Activités scolaires et jours fériés déclarés, non comptés dans les heures dues : {h} h.', { h: num1(f.h) }));
-    else if (f.kind === 'revision') out.push(t('Séances de révision : {h} h (comptées en heures, pas en leçons).', { h: num1(f.h) }));
-    else if (f.kind === 'assessment') out.push(t('Séances d’évaluation et de correction : {h} h (comptées en heures, pas en leçons).', { h: num1(f.h) }));
+    else if (f.kind === 'revision') out.push(t('Intégration partielle des ressources : {h} h (comptées en heures, pas en leçons).', { h: num1(f.h) }));
+    else if (f.kind === 'assessment') out.push(t('Évaluations et remédiations : {h} h (comptées en heures, pas en leçons).', { h: num1(f.h) }));
     else if (f.kind === 'regul') out.push(t('Régularisation d’heures : {h} h.', { h: (f.h > 0 ? '+' : '') + num1(f.h) }));
   }
   if (!out.length && S.gap >= 0) out.push(t('Aucun écart significatif.'));
@@ -67,9 +68,9 @@ export function Sheet({ ctx, tid, S, Y, p, who, facts, acts }) {
     <p style="font-size:10px;margin:6px 0 0"><b>${t('Situation cumulée depuis la rentrée')} (${fmt(ctx.ys, lang, { noYear: ctx.ys.slice(0, 4) === Y.pe.slice(0, 4) })} ${t('au')} ${fmt(Y.pe, lang)}) : </b>${num1(CY.doneH)} h ${t('faites sur')} ${num1(CY.planH)} h ${t('prévues')} (${num1(CY.rateH)} %) · ${t('soit')} ${num1(yH)} % ${t('des')} ${num1(YP.planH)} h ${t('prévues sur l’année')} · ${num1(CY.doneL)} / ${num1(CY.planL)} ${t('leçons')} (${num1(CY.rateL)} %) · ${num1(yL)} % ${t('des')} ${num1(YP.planL)} ${t('leçons de l’année')}.</p>
     <div class="sig"><div>${tid ? t('Enseignant(e)') : t('Animateur pédagogique')}<br /><b>${who || ((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div>
     <div class="annex"><div style="font-weight:800;font-size:12px;margin:0 0 6px">${tid ? t('Annexe : détail de mes heures') : t('Annexe : détail par enseignant')}</div>
-      <table><thead><tr><th>${t('Enseignant')}</th><th>${t('H / semaine')}</th><th>${t('Prévues')}</th><th>${t('Faites')}</th><th>${t('Écart')}</th><th>${t('Taux')}</th><th>${t('Leçons faites / prévues')}</th><th>${t('Dont révisions, évaluations et corrections (h)')}</th><th>${t('Absences déclarées (h)')}</th><th>${t('Retirées des heures dues (h)')}</th></tr></thead><tbody>
+      <table><thead><tr><th>${t('Enseignant')}</th><th>${t('H / semaine')}</th><th>${t('Prévues')}</th><th>${t('Faites')}</th><th>${t('Écart')}</th><th>${t('Taux')}</th><th>${t('Leçons faites / prévues')}</th><th>${t('Dont intégration partielle, évaluations et remédiations (h)')}</th><th>${t('Absences déclarées (h)')}</th><th>${t('Retirées des heures dues (h)')}</th></tr></thead><tbody>
       ${teachers.map(x => { const s = stats(ctx, x.id, p.ps, p.pe), c = coverTotals(ctx, p.ps, p.pe, x.id); return html`<tr><td style="text-align:left">${x.name}</td><td>${num1(wk(x))}</td><td>${num1(c.planH)}</td><td><b>${num1(c.doneH)}</b></td><td>${sg(c.doneH - c.planH)}</td><td>${num1(c.rateH)} %</td><td>${num1(c.doneL)} / ${num1(c.planL)}</td><td>${num1(s.revisionH + s.assessH)}</td><td>${num1(s.absent)}</td><td>${num1(s.excused + s.closed)}</td></tr>`; })}</tbody></table>
-      <p style="font-size:10px;margin:6px 0 0">${t('Heures prévues : emplois du temps sur la période, hors jours fériés, vacances et activités scolaires. Heures faites : séances saisies dans Rekort (révisions et évaluations comptent en heures mais pas en leçons), jamais au-delà du prévu. Leçons prévues : programme de chaque classe réparti selon les heures de cours. Ces chiffres sont ceux de la fiche pédagogique de suivi. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
+      <p style="font-size:10px;margin:6px 0 0">${t('Heures prévues : emplois du temps sur la période, hors jours fériés, vacances et activités scolaires. Heures faites : séances saisies dans Rekort (intégration partielle, évaluations et remédiations comptent en heures mais pas en leçons), jamais au-delà du prévu. Leçons prévues : programme de chaque classe réparti selon les heures de cours. Ces chiffres sont ceux de la fiche pédagogique de suivi. Seuils d’alerte de l’arrêté conjoint du 14/08/2026 : {h} % (heures), {l} % (programme).', { h: THRESHOLDS.hours, l: THRESHOLDS.lessons })}</p></div></div>`;
 }
 
 const TERM_NAME = { T1: '1er trimestre', T2: '2e trimestre', T3: '3e trimestre' };
@@ -107,22 +108,25 @@ function fitPaper() {
 /** Évaluations et assiduité par classe sur la période : seuils de l'arrêté (réussite 40 %, assiduité 75 %). */
 function Evals({ ctx, p, tid }) {
   const lang = getLang(), d = ctx.dept, hd = d.header || {}, P = (v) => (v == null ? '—' : num1(v) + ' %');
+  const R = seqResults(ctx), terms = ctx.terms.map((tm, i) => ({ k: i + 1, tm })).filter(x => x.tm.start <= p.pe && x.tm.end >= p.ps);
+  const seqs = terms.flatMap(x => [2 * x.k - 1, 2 * x.k]);
+  const classes = ctx.classes.filter(c => !tid || ctx.assign.some(a => a.classId === c.id && a.teacherId === tid));
+  const cell = (r) => r ? html`<td style=${r.rate != null && r.rate < 40 ? 'color:#C0472A;font-weight:800' : ''}>${r.rate != null ? P(r.rate) : t('composé')}<div style="font-size:8.5px;color:#555">${r.comp}/${r.size || '?'}${r.rate != null ? ' · F ' + P(r.rateF) + ' · G ' + P(r.rateG) : ''}</div></td>` : html`<td>—</td>`;
+  const one = (x) => (x ? cumulate([x]) : null);
+  const rows = classes.map(c => ({ c, s: seqs.map(q => one((R[c.id] || {})[q])), tr: terms.map(x => { const l = [2 * x.k - 1, 2 * x.k].map(q => (R[c.id] || {})[q]).filter(Boolean); return l.length ? cumulate(l) : null; }) })).filter(r => r.s.some(Boolean));
+  const dep = { s: seqs.map(q => { const l = classes.map(c => (R[c.id] || {})[q]).filter(Boolean); return l.length ? cumulate(l) : null; }), tr: terms.map(x => { const l = classes.flatMap(c => [2 * x.k - 1, 2 * x.k].map(q => (R[c.id] || {})[q])).filter(Boolean); return l.length ? cumulate(l) : null; }) };
   const es = ctx.entries.filter(e => e.type !== 'absence' && e.date >= p.ps && e.date <= p.pe && (!tid || e.teacherId === tid));
-  const rows = ctx.classes.map(c => {
-    const mine = es.filter(e => e.classId === c.id), evs = mine.filter(e => e.eval && +e.eval.evaluated > 0), pres = mine.filter(e => e.present != null && e.present !== '');
-    const ev = evs.reduce((s, e) => s + +e.eval.evaluated, 0), ok = evs.reduce((s, e) => s + +e.eval.passed, 0), eff = +(c.effectif || {}).total || 0;
-    const att = pres.length && eff ? pres.reduce((s, e) => s + Math.min(eff, +e.present), 0) / (pres.length * eff) * 100 : null;
-    return { c, n: evs.length, ev, ok, rate: ev ? ok / ev * 100 : null, last: evs.map(e => e.date).sort().pop(), eff, nPres: pres.length, att };
-  }).filter(r => r.n || r.nPres);
-  const bad = (v, s) => v != null && v < s;
+  const att = ctx.classes.map(c => { const pres = es.filter(e => e.classId === c.id && e.present != null && e.present !== ''), eff = +(c.effectif || {}).total || 0;
+    return { c, n: pres.length, eff, att: pres.length && eff ? pres.reduce((s, e) => s + Math.min(eff, +e.present), 0) / (pres.length * eff) * 100 : null }; }).filter(r => r.n);
   return html`<div class="paper">
     <${Letterhead} d=${d} hd=${hd} />
-    <h2>${t('Évaluations et assiduité des élèves')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${t('Du {a} au {b}', { a: fmt(p.ps, lang), b: fmt(p.pe, lang) })} · ${t('Année scolaire')} ${d.year || ''}</div>
-    <table><thead><tr><th>${t('Classe')}</th><th>${t('Évaluations')}</th><th>${t('Élèves évalués')}</th><th>${t('Moyenne ≥ 10')}</th><th>${t('Taux de réussite')}</th><th>${t('Effectif')}</th><th>${t('Cours avec présences')}</th><th>${t('Taux d’assiduité')}</th></tr></thead>
-      <tbody>${rows.length ? rows.map(r => html`<tr><td style="text-align:left">${r.c.name}</td><td>${r.n}</td><td>${r.ev}</td><td>${r.ok}</td><td style=${bad(r.rate, 40) ? 'color:#C0472A;font-weight:800' : ''}>${P(r.rate)}</td><td>${r.eff || ''}</td><td>${r.nPres}</td><td style=${bad(r.att, 75) ? 'color:#C0472A;font-weight:800' : ''}>${P(r.att)}</td></tr>`)
-        : html`<tr><td colspan="8">${t('Aucune évaluation ni présence saisie sur la période. Pour les ajouter : à la saisie d’un cours, « Élèves présents » et « Il y a eu une évaluation ».')}</td></tr>`}</tbody></table>
-    <p style="font-size:9px;margin:6px 0 0">${t('Seuils de l’arrêté conjoint du 14/08/2026 : réussite sous 40 % → remédiation obligatoire ; assiduité sous 75 % → mesures à notifier. En rouge : sous le seuil.')}</p>
-    ${rows.some(r => bad(r.rate, 40) || bad(r.att, 75)) ? html`<p style="font-size:10px;margin:6px 0 0"><b>${t('Classes à suivre')} :</b> ${rows.filter(r => bad(r.rate, 40) || bad(r.att, 75)).map(r => r.c.name + (bad(r.rate, 40) ? ' (' + t('réussite') + ' ' + P(r.rate) + ')' : '') + (bad(r.att, 75) ? ' (' + t('assiduité') + ' ' + P(r.att) + ')' : '')).join(' ; ')}</p>` : null}
+    <h2>${t('Résultats des évaluations par séquence')}</h2><div style="text-align:center;font-size:11px;margin-bottom:8px">${terms.map(x => x.tm.name || t('Trimestre {k}', { k: x.k })).join(' · ')} · ${up(d.discipline)} · ${t('Année scolaire')} ${d.year || ''}</div>
+    <table><thead><tr><th>${t('Classe')}</th>${seqs.map(q => html`<th>${t('Séquence {s}', { s: q })}</th>`)}${terms.map(x => html`<th>${t('Trimestre {k}', { k: x.k })}</th>`)}</tr></thead>
+      <tbody>${rows.length ? rows.map(r => html`<tr><td style="text-align:left">${r.c.name}</td>${r.s.map(cell)}${r.tr.map(x => (x ? html`<td style="font-weight:800">${x.rate != null ? P(x.rate) : '—'}<div style="font-size:8.5px;color:#555;font-weight:400">${x.pass}/${x.comp}</div></td>` : html`<td>—</td>`))}</tr>`)
+        : html`<tr><td colspan=${1 + seqs.length + terms.length}>${t('Aucun résultat saisi. Le jour de la remédiation, l’enseignant saisit : élèves de la classe, ont composé, ont réussi (filles et garçons).')}</td></tr>`}
+      ${rows.length ? html`<tr style="font-weight:800;background:#F3ECDD"><td style="text-align:left">${t('Département')}</td>${dep.s.map(x => html`<td>${x && x.rate != null ? P(x.rate) : '—'}</td>`)}${dep.tr.map(x => html`<td>${x && x.rate != null ? P(x.rate) : '—'}</td>`)}</tr>` : null}</tbody></table>
+    <p style="font-size:9px;margin:6px 0 0">${t('Taux de réussite = élèves ayant la moyenne ÷ élèves ayant composé. Trimestre = cumul de ses deux séquences. Sous chaque taux : composés / effectif, puis filles (F) et garçons (G). En rouge : sous le seuil de 40 % (arrêté conjoint du 14/08/2026).')}</p>
+    ${att.length ? html`<h3 style="font-size:11px;margin:12px 0 4px">${t('Assiduité des élèves')}</h3><table><thead><tr><th>${t('Classe')}</th><th>${t('Effectif')}</th><th>${t('Cours avec présences')}</th><th>${t('Taux d’assiduité')}</th></tr></thead><tbody>${att.map(r => html`<tr><td style="text-align:left">${r.c.name}</td><td>${r.eff}</td><td>${r.n}</td><td style=${r.att < 75 ? 'color:#C0472A;font-weight:800' : ''}>${P(r.att)}</td></tr>`)}</tbody></table>` : null}
     <div class="sig"><div>${t('Animateur pédagogique')}<br /><b>${((ctx.teacher(state.session.teacherId) || {}).name || '')}</b></div><div>${t('Censeur / Vice-Principal')}</div><div>${t('Proviseur / Principal')}</div></div></div>`;
 }
 

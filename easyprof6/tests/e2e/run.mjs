@@ -54,28 +54,29 @@ let tp, tpErrs;
 await step('B. Le collègue se connecte et saisit', async () => {
   const p = await newPage(browser, url, { clock: MON }); tp = p.page; tpErrs = p.errs;
   await tp.getByLabel(/^identifiant/i).fill(teacher.username); await tp.locator('input[type=password]').fill(teacher.password);
-  await tp.getByRole('button', { name: 'Se connecter' }).first().click(); await tp.waitForSelector('.hero');
-  await tp.waitForSelector('text=Aujourd’hui'); await tp.waitForTimeout(600);
+  await tp.getByRole('button', { name: 'Se connecter' }).first().click(); await tp.waitForSelector('.tpage');
+  await tp.waitForSelector('text=Form 3 A'); await tp.waitForTimeout(600);
   const body = await tp.innerText('body');
-  ok(/Bonjour, Noura/.test(body) && /Form 3 A/.test(body), 'B1 connexion : le collègue retrouve son prénom et sa classe du jour (reçus par synchronisation)');
-  ok(!/Pour bien démarrer|Ronde en classe|Rappeler/.test(body) && !!(await tp.getByRole('button', { name: /Département$/ }).count()), 'B2 le collègue n’a aucun outil d’animateur, mais peut regarder le département');
-  await tp.getByRole('button', { name: /Département$/ }).click(); await tp.waitForTimeout(400);
-  const dview = await tp.innerText('.page');
-  ok(/Résultats par collègue/.test(dview) && !(await tp.getByRole('button', { name: 'Rappeler' }).count()) && !(await tp.getByRole('link', { name: 'Contrôler' }).count()), 'B2b le collègue voit les résultats de tous, sans pouvoir rappeler ni contrôler');
-  await tp.getByRole('button', { name: /Moi$/ }).click(); await tp.waitForTimeout(300);
-  await tp.locator('.card', { hasText: 'Aujourd’hui' }).getByRole('button', { name: 'Fait' }).click(); await tp.locator('.sheet').getByRole('button', { name: /^Enregistrer$/ }).click(); await tp.waitForTimeout(500);
-  ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'B3 saisie en un geste : « Fait » → leçon 1 enregistrée');
-  const k = await tp.locator('.kpis').innerText();
-  ok(/2 \/ 12 h/.test(k.replace(/\n/g, ' ')), 'B4 heures : 2 h faites sur 12 h dues depuis la rentrée (6 lundis × 2 h)');
+  ok(/Bonjour, Noura/.test(body) && /Mes cours d’aujourd’hui/.test(body) && /Form 3 A/.test(body), 'B1 accueil simplifié : prénom, « Mes cours d’aujourd’hui » et la classe du jour');
+  ok(!/Pour bien démarrer|Ronde en classe|Rappeler/.test(body) && (await tp.locator('nav.nav a').count()) === 3, 'B2 le collègue n’a que 3 boutons (Accueil · Saisir · Mes cours) et aucun outil d’animateur');
+  ok(/Semaine d’évaluation · séquence 1/.test(body), 'B1b semaine d’évaluation harmonisée (12–16 oct.) signalée sur l’accueil');
+  await tp.getByRole('button', { name: /Saisir ce cours/ }).click(); await tp.waitForSelector('.sheet .quick');
+  ok(/Quelle séquence/.test(await tp.innerText('.sheet')), 'B2d pendant la semaine d’évaluation, « Évaluation » est proposée d’office');
+  await tp.locator('.sheet .tiles button', { hasText: 'Leçon' }).first().click();
+  ok(/Quelle classe/.test(await tp.innerText('.sheet')) && /Quelle leçon/.test(await tp.innerText('.sheet')), 'B2c la saisie se lit de haut en bas : questions numérotées');
+  await tp.locator('.sheet').getByRole('button', { name: /^Enregistrer$/ }).click(); await tp.waitForTimeout(500);
+  ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'B3 « Saisir ce cours » puis « Enregistrer » : leçon 1 enregistrée');
+  ok(/2 h faites sur 12 h/.test((await tp.innerText('.tpage')).replace(/\s+/g, ' ')), 'B4 heures : 2 h faites sur 12 h dues depuis la rentrée (6 lundis × 2 h)');
   await go(tp, url, '#/settings/team'); ok(!(await tp.locator('text=Ajouter un collègue').count()), 'B5 l’équipe est interdite au collègue (retour au menu)');
-  await go(tp, url, '#/lessons');
-  await tp.locator('.item').first().getByRole('button', { name: 'Modifier' }).click();
-  await tp.getByLabel(/titre ou chapitre/i).fill('Les climats'); await tp.getByRole('button', { name: /enregistrer les modifications/i }).click(); await tp.waitForTimeout(400);
-  ok((await tx(tp, '.item')).includes('Les climats'), 'B6 modification d’une saisie sur place');
-  await tp.locator('.item').first().getByRole('button', { name: 'Supprimer' }).click(); await tp.getByRole('button', { name: 'Supprimer', exact: true }).last().click(); await tp.waitForTimeout(300);
-  ok(/Aucune séance/.test(await tp.innerText('body')), 'B7 suppression avec confirmation');
+  await go(tp, url, '#/mine'); await tp.waitForTimeout(300);
+  await tp.locator('.crow').first().getByRole('button', { name: 'Modifier' }).click(); await tp.waitForSelector('.sheet .quick');
+  await tp.locator('.sheet').getByRole('button', { name: /Non, je continue/ }).click(); await tp.getByRole('button', { name: /enregistrer les modifications/i }).click(); await tp.waitForTimeout(400);
+  ok((await tx(tp, '.crow')).includes('en cours'), 'B6 modification : la leçon passe « en cours »');
+  await tp.locator('.crow').first().getByRole('button', { name: 'Modifier' }).click(); await tp.waitForSelector('.sheet .quick');
+  await tp.getByRole('button', { name: /Supprimer ce cours/ }).click(); await tp.getByRole('button', { name: 'Supprimer', exact: true }).last().click(); await tp.waitForTimeout(300);
+  ok(/Pas encore saisi/.test(await tp.innerText('.tpage')), 'B7 suppression avec confirmation');
   await tp.getByRole('button', { name: 'Annuler' }).click(); await tp.waitForTimeout(300);
-  ok((await tp.innerText('body')).includes('Les climats'), 'B8 suppression annulée par « Annuler »');
+  ok((await tp.innerText('.tpage')).includes('en cours'), 'B8 suppression annulée par « Annuler »');
 });
 
 await step('C. Synchronisation vers l’animateur', async () => {
@@ -91,8 +92,8 @@ await step('C. Synchronisation vers l’animateur', async () => {
 
 await step('D. Hors ligne puis synchronisation', async () => {
   await tp.context().setOffline(true);
-  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /enregistrer (la séance|quand même)/i }).click(); await tp.waitForTimeout(500);
-  ok(/leçon 2 enregistrée/.test(await tx(tp, '.toast')), 'D1 saisie possible sans Internet (leçon 2)');
+  await go(tp, url, '#/log'); await tp.locator('.tiles button', { hasText: 'Leçon' }).first().click(); await tp.getByRole('button', { name: /^Enregistrer$/ }).click(); await tp.waitForTimeout(500);
+  ok(/leçon 1 enregistrée/.test(await tx(tp, '.toast')), 'D1 saisie possible sans Internet (la leçon 1, en cours, est proposée en premier)');
   await tp.locator('.sync').first().click(); await tp.waitForTimeout(900);
   ok(/Hors ligne/.test(await tp.locator('.sync').first().getAttribute('title') + (await tp.locator('.sync .t').first().innerText())), 'D2 l’état « Hors ligne » est signalé');
   await tp.context().setOffline(false); await tp.locator('.sync').first().click(); await tp.waitForTimeout(1500);
@@ -101,23 +102,25 @@ await step('D. Hors ligne puis synchronisation', async () => {
   ok(lessons === 2, 'D3 la saisie faite hors ligne est arrivée chez l’animateur après reconnexion (2 leçons)');
 });
 
-await step('K. Une séance, deux leçons ; correction d’examen', async () => {
+await step('K. Plusieurs activités dans un cours ; remédiation', async () => {
   const count = (type) => tp.evaluate((ty) => { const k = Object.keys(localStorage).find(x => x.startsWith('ep6:data:')); return JSON.parse(localStorage.getItem(k)).data.entries.filter(e => !e.deleted && e.type === ty).length; }, type);
-  const l0 = await count('lesson');
-  await go(tp, url, '#/log'); await tp.getByRole('button', { name: '2', exact: true }).first().click();
-  await tp.getByRole('button', { name: /enregistrer (la séance|quand même)/i }).click(); await tp.waitForTimeout(600);
-  ok((await count('lesson')) - l0 === 2, 'K1 une séance avec 2 leçons enregistre deux leçons');
-  const c0 = await count('correction');
-  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /Correction d’examen/ }).first().click();
-  await tp.getByRole('button', { name: /enregistrer (la séance|quand même)/i }).click(); await tp.waitForTimeout(600);
-  ok((await count('correction')) - c0 === 1 && (await count('lesson')) - l0 === 2, 'K2 une correction d’examen est enregistrée sans compter de leçon');
+  const l0 = await count('lesson'), a0 = await count('assessment');
+  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /autre activité dans ce cours/ }).click(); await tp.waitForTimeout(200);
+  ok(/Périodes restantes/.test(await tp.innerText('.page')), 'K0 deux activités : « Périodes restantes » affiché');
+  await tp.getByRole('button', { name: /^Enregistrer$/ }).click(); await tp.waitForTimeout(600);
+  ok((await count('lesson')) - l0 === 1 && (await count('assessment')) - a0 === 1, 'K1 un cours avec une leçon et une évaluation enregistre les deux activités');
+  const c0 = await count('correction'), l1 = await count('lesson');
+  await go(tp, url, '#/log'); await tp.getByRole('button', { name: /Remédiation/ }).first().click(); await tp.locator('.chips').getByRole('button', { name: '1', exact: true }).last().click();
+  ok(/Ont réussi/.test(await tp.innerText('.page')), 'K2a remédiation : tableau filles / garçons avec « Ont réussi »');
+  await tp.getByRole('button', { name: /^Enregistrer$/ }).click(); await tp.waitForTimeout(600);
+  ok((await count('correction')) - c0 === 1 && (await count('lesson')) === l1, 'K2 une remédiation est enregistrée sans compter de leçon');
 });
 
 await step('E. Jour sans cours et fiche d’inspection', async () => {
-  await go(tp, url, '#/home'); await tp.getByRole('button', { name: 'Pas de cours' }).first().click();
+  await go(tp, url, '#/mine'); await tp.getByRole('button', { name: /pas eu cours/ }).first().click();
   await tp.locator('.sheet input[type=date]').first().fill('2026-10-13'); await tp.locator('.sheet input[type=date]').nth(1).fill('2026-10-13');
   await tp.getByRole('button', { name: 'Enregistrer', exact: true }).click(); await tp.waitForTimeout(500);
-  await go(tp, url, '#/lessons'); ok((await tp.innerText('body')).includes('Maladie'), 'E1 jour sans cours (maladie) enregistré et visible dans l’historique');
+  await go(tp, url, '#/lessons'); ok(/motif inconnu/i.test(await tp.innerText('body')), 'E1 jour sans cours enregistré et visible dans l’historique');
   await go(apPage, url, '#/report'); await apPage.waitForTimeout(600);
   const paper = await apPage.locator('.paper').first().innerText();
   ok(/FICHE DE L’INSPECTION NATIONALE/i.test(paper) && /GEOGRAPHY|GÉOGRAPHIE|Géographie/i.test(paper) && /GBHS GAROUA/.test(paper), 'E2 fiche officielle : en-tête, établissement, discipline');

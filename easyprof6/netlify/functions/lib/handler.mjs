@@ -41,6 +41,9 @@ function cleanEntry(e, tid) {
     present: e.present == null || e.present === '' ? null : Math.min(500, Math.max(0, num(e.present))),
     eval: e.eval && typeof e.eval === 'object' ? { evaluated: num(e.eval.evaluated), passed: num(e.eval.passed) } : null,
     reason: str(e.reason, 20), note: str(e.note, 200), term: str(e.term, 8),
+    done: e.done === false ? false : undefined, seq: e.seq ? Math.min(6, Math.max(1, num(e.seq))) : undefined,
+    res: e.res && typeof e.res === 'object' ? Object.fromEntries(['cf', 'cg', 'pf', 'pg', 'rf', 'rg'].filter(k => e.res[k] !== '' && e.res[k] != null).map(k => [k, Math.min(500, Math.max(0, num(e.res[k])))])) : undefined,
+    resource: str(e.resource, 80) || undefined, prac: e.prac ? true : undefined,
   };
 }
 function cleanClass(c) {
@@ -53,7 +56,7 @@ function cleanClass(c) {
 function cleanAssign(a) {
   if (!a || typeof a.id !== 'string' || a.id.length > 90) return null;
   if (a.deleted) return { id: a.id, u: cu(a.u), deleted: true };
-  return { id: a.id, u: cu(a.u), teacherId: str(a.teacherId, 40), classId: str(a.classId, 40), th: Math.max(0, num(a.th)), pr: Math.max(0, num(a.pr)), fs: Math.max(0, num(a.fs)), hth: Math.max(0, num(a.hth)), hpr: Math.max(0, num(a.hpr)), n0: Math.min(999, Math.max(0, num(a.n0))), sbs: /^[a-z]+(,[a-z]+){0,15}$/.test(a.sbs || '') ? a.sbs : '', hours: Math.max(0, num(a.hours)) };
+  return { id: a.id, u: cu(a.u), teacherId: str(a.teacherId, 40), classId: str(a.classId, 40), th: Math.max(0, num(a.th)), pr: Math.max(0, num(a.pr)), fs: Math.max(0, num(a.fs)), hth: Math.max(0, num(a.hth)), hpr: Math.max(0, num(a.hpr)), n0: Math.min(999, Math.max(0, num(a.n0))), sbs: /^[a-z]+(,[a-z]+){0,15}$/.test(a.sbs || '') ? a.sbs : '', part: /^[a-z0-9 ]{0,20}$/.test(a.part || '') ? (a.part || '') : '', level: str(a.level, 20), start: /^\d{4}-\d{2}-\d{2}$/.test(a.start || '') ? a.start : '', hours: Math.max(0, num(a.hours)) };
 }
 function cleanRegul(r) {
   if (!r || typeof r.id !== 'string' || r.id.length > 40) return null;
@@ -80,6 +83,7 @@ function cleanDept(d, id) {
   return {
     id, u: cu(d.u), name: str(d.name, 120), discipline: str(d.discipline, 80), abbr: str(d.abbr, 8), system: d.system === 'francophone' ? 'francophone' : 'anglophone',
     years: cleanYears(d.years), year: str(d.year, 12), lh: Math.min(6, Math.max(0.5, num(d.lh, 2))), period: [40, 45, 50, 55, 60].includes(+d.period) ? +d.period : 60, header: hdr, ...(Array.isArray(d.breaks) ? { breaks: d.breaks.slice(0, 6).map(b => ({ f: str(b && b.f, 5), t: str(b && b.t, 5) })).filter(b => /^\d{2}:\d{2}$/.test(b.f) && /^\d{2}:\d{2}$/.test(b.t)) } : {}), setup: Object.fromEntries(Object.entries(d.setup || {}).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])), terms, calendar: cal,
+    evalWeeks: Array.isArray(d.evalWeeks) ? d.evalWeeks.slice(0, 8).map(w => ({ seq: Math.min(6, Math.max(1, num(w.seq, 1))), f: str(w.f, 10), t: str(w.t, 10) })) : undefined,
     dueOut: d.dueOut && typeof d.dueOut === 'object' ? Object.fromEntries(Object.entries(d.dueOut).slice(0, 20).map(([k, v]) => [str(k, 20), !!v])) : {},
   };
 }
@@ -177,7 +181,7 @@ function mergeTeachersAP(curT, incT) {
     const cur = byId.get(inc.id);
     if (!cur || inc.deleted || (+inc.u || 0) <= (+cur.u || 0)) continue;
     const i = out.findIndex(t => t.id === inc.id);
-    out[i] = { ...cur, name: str(inc.name, 80) || cur.name, short: str(inc.short, 20) || cur.short, phone: str(inc.phone, 30), slots: cleanSlots(inc.slots), u: cu(inc.u) };
+    out[i] = { ...cur, name: str(inc.name, 80) || cur.name, short: str(inc.short, 20) || cur.short, phone: str(inc.phone, 30), matricule: str(inc.matricule, 20), slots: cleanSlots(inc.slots), u: cu(inc.u) };
   }
   return out;
 }
@@ -199,7 +203,7 @@ function applyMetaPush(cur, push, ctx) {
   const mine = (Array.isArray(push.teachers) ? push.teachers : []).find(t => t && t.id === ctx.teacherId);
   const out = { ...cur, teachers: (cur.teachers || []).map(t => ({ ...t })) };
   const i = out.teachers.findIndex(t => t.id === ctx.teacherId);
-  if (mine && i >= 0 && cu(mine.u) > (+out.teachers[i].u || 0)) out.teachers[i] = { ...out.teachers[i], name: str(mine.name, 80) || out.teachers[i].name, phone: str(mine.phone, 30), u: now() };
+  if (mine && i >= 0 && cu(mine.u) > (+out.teachers[i].u || 0)) out.teachers[i] = { ...out.teachers[i], name: str(mine.name, 80) || out.teachers[i].name, phone: str(mine.phone, 30), matricule: str(mine.matricule, 20), u: now() };
   return out;
 }
 

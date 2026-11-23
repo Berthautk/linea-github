@@ -1,5 +1,5 @@
 // Fichier généré par tools/gen-sw.mjs : ne pas modifier à la main.
-const VERSION = '1c8764bb3e';
+const VERSION = '32ec7da1a9';
 const CACHE = 'ep6-' + VERSION;
 const ASSETS = [
  "/",
@@ -36,14 +36,21 @@ const ASSETS = [
  "/js/pages/lessons.js",
  "/js/pages/log.js",
  "/js/pages/myweek.js",
+ "/js/pages/program.js",
  "/js/pages/report.js",
+ "/js/pages/saisir.js",
  "/js/pages/settings.js",
+ "/js/pages/teacher.js",
  "/js/pages/team.js",
  "/js/pages/week.js",
+ "/js/progress.js",
+ "/js/progressions.js",
  "/js/reminder-text.js",
  "/js/reminder.js",
+ "/js/reminders.js",
  "/js/shared/merge.js",
  "/js/store.js",
+ "/js/syllabus.js",
  "/js/sync.js",
  "/js/ui.js",
  "/js/vendor/preact-htm.js",

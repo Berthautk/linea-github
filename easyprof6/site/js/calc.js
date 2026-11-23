@@ -2,6 +2,7 @@
 // Fonctions pures : aucune dépendance à l'écran. `state` = { dept, teachers, classes, assign, regul, entries }.
 import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO, endFor, timeToMin } from './dates.js';
 import { reasonOf, isLessonType, THRESHOLDS } from './consts.js';
+import { seqResults, cumulate } from './progress.js';
 
 export const r1 = (x) => Math.round(x * 10) / 10;
 export const pct = (a, b) => (b > 0 ? Math.round((a / b) * 1000) / 10 : 0);
@@ -95,8 +96,8 @@ export function doneRange(ctx, tid, ps, pe) {
   for (const e of ctx.byTeacher[tid] || []) {
     if (e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
     const h = (+e.minutes || 0) / 60; out.hours += h; out.count++;
-    if (e.classId) { const b = (out.byClass[e.classId] = out.byClass[e.classId] || { hours: 0, theory: new Set(), practical: new Set() }); b.hours += h; if (e.type === 'lesson' && e.n != null) b.theory.add(e.n); if (e.type === 'practical') b.practical.add(e.n != null ? e.n : e.id); }
-    if (e.type === 'lesson' && e.n != null) { out.lessons.add(e.classId + '|L|' + e.n); out.theory.add(e.classId + '|' + e.n); }
+    if (e.classId) { const b = (out.byClass[e.classId] = out.byClass[e.classId] || { hours: 0, theory: new Set(), practical: new Set() }); b.hours += h; if (e.type === 'lesson' && e.n != null && e.done !== false) b.theory.add(e.n); if (e.type === 'practical') b.practical.add(e.n != null ? e.n : e.id); }
+    if (e.type === 'lesson' && e.n != null) { if (e.done !== false) { out.lessons.add(e.classId + '|L|' + e.n); out.theory.add(e.classId + '|' + e.n); } }   // leçon « en cours » : heures comptées, leçon pas encore
     else if (e.type === 'practical') out.practical.add(e.classId + '|' + (e.n != null ? e.n : e.id));   // TP : comptés à part, jamais dans les leçons
     else if (e.type === 'further') out.further.add(e.classId + '|' + (e.n != null ? e.n : e.id));       // further study / travail guidé : à part aussi
     else if (e.type === 'revision') out.revisionH += h;
@@ -368,7 +369,7 @@ export function recap(ctx, ps, pe) {
       for (const e of ctx.byTeacher[t.id] || []) {
         if (e.classId !== c.id || e.type === 'absence' || !e.date || e.date < ps || e.date > pe) continue;
         hours += (+e.minutes || 0) / 60; if (e.digital) digital++;
-        if (e.type === 'lesson' && e.n != null) th.add(t.id + '|' + e.n); if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
+        if (e.type === 'lesson' && e.n != null && e.done !== false) th.add(t.id + '|' + e.n); if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
       }
       hoursDue += dueRange(ctx, t.id, ps, minISO(pe, ctx.today)).byClass[c.id] || 0;
     }
@@ -411,7 +412,7 @@ export function coverTotals(ctx, ps, pe, tid = null) { return sumCells(coverCell
 /** Fiche pédagogique de suivi (censorat / délégation) : une ligne par classe, sur la période demandée (trimestre, année…).
  *  Leçons et heures : « prévu » et « fait » de coverCells, donc jamais plus de 100 % par classe, et les totaux sont les mêmes que sur l'accueil. */
 export function followUp(ctx, ps, pe) {
-  const cells = coverCells(ctx, ps, pe), byClass = {};
+  const cells = coverCells(ctx, ps, pe), byClass = {}, SEQ = seqResults(ctx, { from: ps, to: pe });
   for (const c of cells) (byClass[c.cid] = byClass[c.cid] || []).push(c);
   const rows = ctx.classes.map(c => {
     const A = ctx.assign.filter(a => a.classId === c.id), cc = sumCells(byClass[c.id] || []), ids = new Set([...A.map(a => a.teacherId), ...(byClass[c.id] || []).filter(x => x.rawL || x.rawH).map(x => x.tid)]);
@@ -421,12 +422,15 @@ export function followUp(ctx, ps, pe) {
       if (e.digital) digital++; if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
       if (e.date >= ps && e.eval && +e.eval.evaluated > 0 && (!lastEval || e.date >= lastEval.date)) lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 };
     }
-    const planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), eff = +((c.effectif || {}).total) || 0, ev = lastEval ? lastEval.evaluated : 0, ok = lastEval ? lastEval.passed : 0;
+    // évaluations : séquences de la période (cumul des séquences, ex. trimestre = séquences 1 + 2) ; à défaut, la dernière évaluation saisie à l'ancienne
+    const seqs = Object.values(SEQ[c.id] || {}), cum = cumulate(seqs);
+    const planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), eff = +((c.effectif || {}).total) || 0;
+    const ev = seqs.length ? cum.comp : lastEval ? lastEval.evaluated : 0, ok = seqs.length ? cum.pass : lastEval ? lastEval.passed : 0, evBase = eff * Math.max(1, seqs.length);
     return { id: c.id, name: c.name, cycle: c.cycle, teachers: [...ids].map(i => (ctx.teacher(i) || {}).short || (ctx.teacher(i) || {}).name || '').filter(Boolean),
-      planL: cc.planL, doneL: cc.doneL, rawL: cc.rawL, planH: cc.planH, doneH: cc.doneH, rawH: cc.rawH, planPr, pr: Math.min(pr.size, planPr), digital: Math.min(digital, planPr), eff, ev, ok };
+      planL: cc.planL, doneL: cc.doneL, rawL: cc.rawL, planH: cc.planH, doneH: cc.doneH, rawH: cc.rawH, planPr, pr: Math.min(pr.size, planPr), digital: Math.min(digital, planPr), eff, ev, ok, evBase };
   });
-  const fin = (r) => ({ ...r, rateL: pct(r.doneL, r.planL), rateH: pct(r.doneH, r.planH), ratePr: pct(r.pr, r.planPr), rateDg: pct(r.digital, r.planPr), rateEv: pct(r.ev, r.eff), rateOk: pct(r.ok, r.ev) });
-  const KEYS = ['planL', 'doneL', 'rawL', 'planH', 'doneH', 'rawH', 'planPr', 'pr', 'digital', 'eff', 'ev', 'ok'];
+  const fin = (r) => ({ ...r, rateL: pct(r.doneL, r.planL), rateH: pct(r.doneH, r.planH), ratePr: pct(r.pr, r.planPr), rateDg: pct(r.digital, r.planPr), rateEv: Math.min(100, pct(r.ev, r.evBase || r.eff)), rateOk: pct(r.ok, r.ev) });
+  const KEYS = ['planL', 'doneL', 'rawL', 'planH', 'doneH', 'rawH', 'planPr', 'pr', 'digital', 'eff', 'ev', 'ok', 'evBase'];
   const sum = (list) => fin(list.reduce((a, r) => { for (const k of KEYS) a[k] += r[k]; return a; }, Object.fromEntries(KEYS.map(k => [k, 0]))));
   const all = rows.map(fin), g1 = all.filter(r => r.cycle !== '2nd'), g2 = all.filter(r => r.cycle === '2nd');
   return { g1, g2, t1: sum(g1), t2: sum(g2), total: sum(all), over: all.filter(r => r.rawL > r.planL + 0.05 || r.rawH > r.planH + 0.05), n: all.length };

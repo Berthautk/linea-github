@@ -2,7 +2,7 @@
 // Fonctions pures : aucune dépendance à l'écran. `state` = { dept, teachers, classes, assign, regul, entries }.
 import { dow, eachDay, addDays, minISO, maxISO, diffDays, mondayOf, monthStart, monthEnd, addMonths, todayISO, endFor, timeToMin } from './dates.js';
 import { reasonOf, isLessonType, THRESHOLDS } from './consts.js';
-import { seqResults, cumulate } from './progress.js';
+import { seqResults, cumulate, evalWeeks } from './progress.js';
 
 export const r1 = (x) => Math.round(x * 10) / 10;
 export const pct = (a, b) => (b > 0 ? Math.round((a / b) * 1000) / 10 : 0);
@@ -411,27 +411,32 @@ export function coverTotals(ctx, ps, pe, tid = null) { return sumCells(coverCell
 
 /** Fiche pédagogique de suivi (censorat / délégation) : une ligne par classe, sur la période demandée (trimestre, année…).
  *  Leçons et heures : « prévu » et « fait » de coverCells, donc jamais plus de 100 % par classe, et les totaux sont les mêmes que sur l'accueil. */
-export function followUp(ctx, ps, pe) {
-  const cells = coverCells(ctx, ps, pe), byClass = {}, SEQ = seqResults(ctx, { from: ps, to: pe });
+export function followUp(ctx, ps, pe, tid = null) {
+  // tid : fiche personnelle d'un enseignant (ses classes, ses heures, ses leçons) ; sans tid : tout le département (somme des fiches de chacun)
+  const cells = coverCells(ctx, ps, pe, tid), byClass = {}, SEQ = seqResults(ctx), wk = evalWeeks(ctx);
+  // séquences de la période : celles dont la semaine d'évaluation tombe dans la période (la remédiation peut venir après) ; à défaut, la date de la saisie
+  const inPeriod = (q, r) => { const w = wk.find(x => +x.seq === +q); return w ? w.f <= pe && (w.t || w.f) >= ps : r.date >= ps && r.date <= pe; };
   for (const c of cells) (byClass[c.cid] = byClass[c.cid] || []).push(c);
-  const rows = ctx.classes.map(c => {
-    const A = ctx.assign.filter(a => a.classId === c.id), cc = sumCells(byClass[c.id] || []), ids = new Set([...A.map(a => a.teacherId), ...(byClass[c.id] || []).filter(x => x.rawL || x.rawH).map(x => x.tid)]);
+  const mineCls = tid ? new Set([...ctx.assign.filter(a => a.teacherId === tid).map(a => a.classId), ...cells.filter(x => x.rawL || x.rawH || x.planH).map(x => x.cid)]) : null;
+  const rows = ctx.classes.filter(c => !mineCls || mineCls.has(c.id)).map(c => {
+    const A = ctx.assign.filter(a => a.classId === c.id && (!tid || a.teacherId === tid)), cc = sumCells(byClass[c.id] || []), ids = tid ? new Set([tid]) : new Set([...A.map(a => a.teacherId), ...(byClass[c.id] || []).filter(x => x.rawL || x.rawH).map(x => x.tid)]);
     const pr = new Set(); let digital = 0, lastEval = null;
-    for (const t of ctx.teachers) for (const e of ctx.byTeacher[t.id] || []) {
+    for (const t of ctx.teachers) { if (tid && t.id !== tid) continue; for (const e of ctx.byTeacher[t.id] || []) {
       if (e.classId !== c.id || e.type === 'absence' || !e.date || e.date < ctx.ys || e.date > pe) continue;
       if (e.digital) digital++; if (e.type === 'practical') pr.add(t.id + '|' + (e.n != null ? e.n : e.id));
-      if (e.date >= ps && e.eval && +e.eval.evaluated > 0 && (!lastEval || e.date >= lastEval.date)) lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 };
-    }
-    // évaluations : séquences de la période (cumul des séquences, ex. trimestre = séquences 1 + 2) ; à défaut, la dernière évaluation saisie à l'ancienne
-    const seqs = Object.values(SEQ[c.id] || {}), cum = cumulate(seqs);
-    const planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), eff = +((c.effectif || {}).total) || 0;
+      if (e.date >= ps && !e.res && e.eval && +e.eval.evaluated > 0 && (!lastEval || e.date >= lastEval.date)) lastEval = { date: e.date, evaluated: +e.eval.evaluated, passed: +e.eval.passed || 0 };
+    } }
+    // évaluations de la classe (même chiffres pour tous ses enseignants) : cumul des séquences de la période (trimestre = séquences 1 + 2)
+    const seqs = Object.entries(SEQ[c.id] || {}).filter(([q, r]) => inPeriod(q, r)).map(([, r]) => r), cum = cumulate(seqs);
+    const planPr = A.reduce((x, a) => x + (+a.pr || 0), 0), size = seqs.length ? Math.max(...seqs.map(r => r.cf + r.cg)) : 0, eff = size || +((c.effectif || {}).total) || 0;
+    const hasEv = seqs.length > 0 || !!lastEval;
     const ev = seqs.length ? cum.comp : lastEval ? lastEval.evaluated : 0, ok = seqs.length ? cum.pass : lastEval ? lastEval.passed : 0, evBase = eff * Math.max(1, seqs.length);
     return { id: c.id, name: c.name, cycle: c.cycle, teachers: [...ids].map(i => (ctx.teacher(i) || {}).short || (ctx.teacher(i) || {}).name || '').filter(Boolean),
-      planL: cc.planL, doneL: cc.doneL, rawL: cc.rawL, planH: cc.planH, doneH: cc.doneH, rawH: cc.rawH, planPr, pr: Math.min(pr.size, planPr), digital: Math.min(digital, planPr), eff, ev, ok, evBase };
+      planL: cc.planL, doneL: cc.doneL, rawL: cc.rawL, planH: cc.planH, doneH: cc.doneH, rawH: cc.rawH, planPr, pr: Math.min(pr.size, planPr), digital: Math.min(digital, planPr), eff, ev, ok, evBase, hasEv: hasEv ? 1 : 0, nSeq: seqs.length, remed: cum.remed };
   });
   const fin = (r) => ({ ...r, rateL: pct(r.doneL, r.planL), rateH: pct(r.doneH, r.planH), ratePr: pct(r.pr, r.planPr), rateDg: pct(r.digital, r.planPr), rateEv: Math.min(100, pct(r.ev, r.evBase || r.eff)), rateOk: pct(r.ok, r.ev) });
-  const KEYS = ['planL', 'doneL', 'rawL', 'planH', 'doneH', 'rawH', 'planPr', 'pr', 'digital', 'eff', 'ev', 'ok', 'evBase'];
-  const sum = (list) => fin(list.reduce((a, r) => { for (const k of KEYS) a[k] += r[k]; return a; }, Object.fromEntries(KEYS.map(k => [k, 0]))));
+  const KEYS = ['planL', 'doneL', 'rawL', 'planH', 'doneH', 'rawH', 'planPr', 'pr', 'digital', 'eff', 'ev', 'ok', 'evBase', 'hasEv', 'remed'];
+  const sum = (list) => fin(list.reduce((a, r) => { for (const k of KEYS) a[k] += r.hasEv || (k !== 'ev' && k !== 'ok' && k !== 'evBase') ? r[k] : 0; return a; }, Object.fromEntries(KEYS.map(k => [k, 0]))));
   const all = rows.map(fin), g1 = all.filter(r => r.cycle !== '2nd'), g2 = all.filter(r => r.cycle === '2nd');
   return { g1, g2, t1: sum(g1), t2: sum(g2), total: sum(all), over: all.filter(r => r.rawL > r.planL + 0.05 || r.rawH > r.planH + 0.05), n: all.length };
 }

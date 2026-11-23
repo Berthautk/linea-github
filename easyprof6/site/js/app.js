@@ -26,7 +26,8 @@ function openMenu() {
   const go = (h) => { closeModal(); location.hash = h; };
   const it = (h, ic, title, sub) => html`<button class="menu-item" onClick=${() => go(h)}><span class="mi">${ic}</span><span class="grow"><b>${title}</b><small>${sub}</small></span>›</button>`;
   openModal(() => html`<${Modal} title=${t('Menu')} onClose=${closeModal}><div class="stack" style="gap:8px">
-    ${it('#/report', '📄', t('Ma fiche'), t('Mes heures et mes leçons, prêtes à imprimer'))}
+    ${it('#/stats', '📈', t('Mon évolution'), t('Mes heures et mes leçons semaine après semaine, et celles du département'))}
+    ${it('#/report', '📄', t('Mes fiches'), t('Fiche d’inspection et fiche du censorat (VP office) : les miennes et celles du département'))}
     ${it('#/lessons', '🗂️', t('Tout l’historique'), t('Toutes mes saisies depuis la rentrée'))}
     ${it('#/settings/profile', '👤', t('Mon profil'), t('Nom, téléphone, matricule, mot de passe, langue'))}
     ${it('#/settings', '⚙️', t('Réglages'), t('Rappels, sauvegarde, mode d’emploi'))}</div><//>`);
@@ -41,7 +42,7 @@ export function App() {
   const items = ap ? [['home', 'home', t('Accueil')], ['lessons', 'list', t('Historique')], ['log', 'plus', t('Saisir')], ['report', 'file', t('Fiche')], ['settings', 'gear', t('Réglages')]]
     : [['home', 'home', t('Accueil')], ['log', 'plus', t('Saisir')], ['mine', 'list', t('Mes cours')]];
   const m = me(), init = ((m && m.name) || state.session.username).replace(/^(Mr?\.?|Mme|Mlle)\s+/i, '').trim().slice(0, 1).toUpperCase();
-  const body = page === 'week' ? html`<${Week} />` : page === 'log' ? html`<${Saisir} ctx=${makeCtx(state.data)} />` : page === 'mine' ? html`<${MyCourses} ctx=${makeCtx(state.data)} />` : page === 'lessons' ? html`<${Lessons} />` : page === 'report' ? html`<${Report} />` : page === 'settings' ? html`<${Settings} route=${route} />` : html`<${Home} />`;
+  const body = page === 'week' ? html`<${Week} />` : page === 'log' ? html`<${Saisir} ctx=${makeCtx(state.data)} />` : page === 'mine' ? html`<${MyCourses} ctx=${makeCtx(state.data)} />` : page === 'stats' ? html`<${Home} full />` : page === 'lessons' ? html`<${Lessons} />` : page === 'report' ? html`<${Report} />` : page === 'settings' ? html`<${Settings} route=${route} />` : html`<${Home} />`;
   return html`<div class="shell">
     <nav class=${'nav' + (ap ? '' : ' nav3')} aria-label=${t('Navigation')}><div class="brand"><img src="/icons/icon-192.png" alt="" />Rekort</div>
       ${items.map(([id, ic, label]) => html`<a href=${'#/' + id} onPointerDown=${(e) => { if (e.pointerType === 'touch' && location.hash !== '#/' + id) location.hash = '#/' + id; }} class=${((page === id || (id === 'log' && page === 'week')) ? 'on ' : '') + (id === 'log' ? 'add' : '') + (ap ? '' : ' three')} aria-current=${(page === id || (id === 'log' && page === 'week')) ? 'page' : null}>${id === 'log' ? html`<i><${Icon} n=${ic} /></i>` : html`<${Icon} n=${ic} />`}<span>${label}</span></a>`)}

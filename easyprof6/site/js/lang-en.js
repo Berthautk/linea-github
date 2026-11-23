@@ -1116,4 +1116,11 @@ export const EN = {
   "Autre": "Other",
   "La fiche compte {l} leçons ({p} TP), le programme saisi ici en compte {m}.": "The progression sheet has {l} lessons ({p} practicals); the programme entered here has {m}.",
   "Prendre les {l} leçons de la fiche": "Use the sheet’s {l} lessons",
+  "Mon évolution": "My progress",
+  "Mes heures et mes leçons semaine après semaine, et celles du département": "My hours and lessons week by week, and the department’s",
+  "Mes fiches": "My sheets",
+  "Fiche d’inspection et fiche du censorat (VP office) : les miennes et celles du département": "Inspection sheet and VP office sheet: mine and the department’s",
+  "Voir mon évolution et celle du département": "See my progress and the department’s",
+  "Fiche d’inspection et fiche du censorat, les miennes et celles du département": "Inspection sheet and VP office sheet, mine and the department’s",
+  "Prév. = prévu pour la période (leçons du programme réparties selon les heures de cours ; heures dues d’après les emplois du temps). Faites = ce qui est réalisé, jamais au-delà du prévu. % = Faites ÷ Prév. Le total annuel est la somme des trimestres. Travaux pratiques et digitalisation : cumul depuis la rentrée face au prévu de l’année. Effectif, évalués, moyenne ≥ 10 et taux de réussite : saisis par l’enseignant le jour de l’évaluation et de la remédiation, séquences de la période cumulées (trimestre = ses deux séquences) ; case vide = pas encore saisi.": "Plan. = planned for the period (programme lessons spread according to class hours; hours due from the timetables). Done = what was actually done, never beyond what was planned. % = Done ÷ Plan. The annual total is the sum of the terms. Practical work and digitalisation: cumulative since the start of the year against the year’s plan. Class size, evaluated, average ≥ 10 and pass rate: entered by the teacher on the test day and the remediation day, sequences of the period added up (term = its two sequences); empty cell = not entered yet.",
 };

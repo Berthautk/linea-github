@@ -204,9 +204,9 @@ function RemindInvite({ ctx }) {
     <${ReminderSetup} ctx=${ctx} tid=${me} onDone=${done} /></div>`;
 }
 
-export function Home() {
+export function Home({ full } = {}) {
   const ctx = makeCtx(viewData()), live = makeCtx(state.data), past = !!state.ui.year, lang = getLang(), ap = isAP();
-  if (!ap && !past) return html`<${TeacherHome} ctx=${ctx} live=${live} extras=${html`<${BackupNag} /><${RemindInvite} ctx=${live} />`} />`;   // enseignant : accueil simplifié
+  if (!ap && !past && !full) return html`<${TeacherHome} ctx=${ctx} live=${live} extras=${html`<${BackupNag} /><${RemindInvite} ctx=${live} />`} />`;   // enseignant : accueil simplifié
   const tid = currentTid(), scope = getScope();
   const p = state.ui.period && state.ui.period.ps ? state.ui.period : periodOf(ctx, (state.ui.period && state.ui.period.kind) || 'term');
   const S = stats(ctx, tid, p.ps, p.pe), Y = stats(ctx, tid, ctx.ys, minISO(ctx.today, ctx.ye));
@@ -222,7 +222,7 @@ export function Home() {
   const empty = !ctx.teachers.length || (!state.data.classes.length && ap);
   return html`<div class="page">
     ${tid && tid === myId() && !past ? html`<${TodayCard} ctx=${live} tid=${tid} />` : null}
-    ${past ? null : html`<${Welcome} ctx=${live} /><${ToCheck} ctx=${live} /><${BackupNag} /><${RemindInvite} ctx=${live} />`}
+    ${past || (full && !ap) ? null : html`<${Welcome} ctx=${live} /><${ToCheck} ctx=${live} /><${BackupNag} /><${RemindInvite} ctx=${live} />`}${full && !ap ? html`<div class="page-h"><h1>${t('Mon évolution')}</h1></div>` : null}
     <${YearBar} />
     <${ScopeBar} ctx=${ctx} />
     <div class="card stack" style="gap:10px"><div class="scope-big sm"><${Seg} full options=${[{ id: 'L', label: '📖 ' + t('Leçons') }, { id: 'H', label: '⏱️ ' + t('Heures') }]} value=${mode} onChange=${(v) => setUI({ dmode: v })} /></div><${PeriodBar} ctx=${ctx} period=${p} onChange=${(np) => setUI({ period: np })} /></div>

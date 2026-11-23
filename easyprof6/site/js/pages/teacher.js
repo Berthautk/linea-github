@@ -70,7 +70,8 @@ export function TeacherHome({ ctx, live, extras }) {
     ${td.rows.length && !left ? html`<p class="hint" style="text-align:center">${t('Tous vos cours d’aujourd’hui sont saisis. Merci !')}</p>` : null}
     ${mine.length ? html`<h2 class="sec">${t('Où j’en suis')}</h2>${mine.map(cid => html`<${Mirror} ctx=${live} tid=${tid} classId=${cid} />`)}` : null}
     <a class="tcard link-card" href="#/mine"><b>📋 ${t('Mes cours de la semaine')}</b><span>${t('Voir, modifier, compléter ce qui manque')} ›</span></a>
-    <div class="tcard"><div class="tc-h"><b>${t('Ce trimestre')}</b></div><div class="mirror">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })} · ${t('{l} leçons terminées', { l: S.lessonsDone })}</div></div>
+    <a class="tcard link-card" href="#/stats"><div class="tc-h"><b>📈 ${t('Ce trimestre')}</b></div><div class="mirror">${t('{h} h faites sur {d} h dues à ce jour', { h: num1(S.hours), d: num1(S.due) })} · ${t('{l} leçons terminées', { l: S.lessonsDone })}</div><span>${t('Voir mon évolution et celle du département')} ›</span></a>
+    <a class="tcard link-card" href="#/report"><b>📄 ${t('Mes fiches')}</b><span>${t('Fiche d’inspection et fiche du censorat, les miennes et celles du département')} ›</span></a>
     ${extras}
   </div>`;
 }

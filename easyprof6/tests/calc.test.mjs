@@ -437,7 +437,11 @@ test('évaluations par séquence : dernière remédiation, cumul du trimestre, f
   const c = makeCtx(st, '2026-12-01'), R = seqResults(c);
   assert.equal(R.F3A[1].rf, 18); assert.ok(R.F3A[1].remed);
   const t1 = cumulate([R.F3A[1], R.F3A[2]]); assert.equal(t1.comp, 103); assert.equal(t1.pass, 52); assert.equal(t1.rate, 50.5); assert.equal(cumulate([R.F3A[1]]).rateF, 66.7);
-  const F = followUp(c, '2026-09-07', '2026-11-27'); const row = F.g1.concat(F.g2).find(r => r.id === 'F3A'); assert.equal(row.ev, 53); assert.equal(row.ok, 32);
+  const row = (ps, pe, tid) => { const F = followUp(c, ps, pe, tid); return F.g1.concat(F.g2).find(r => r.id === 'F3A'); };
+  const T1 = row('2026-09-07', '2026-11-27'); assert.equal(T1.ev, 103, '1er trimestre = séquences 1 + 2 (remédiation de la séquence 2 rendue après la fin du trimestre)'); assert.equal(T1.ok, 52); assert.equal(T1.eff, 58, 'effectif = élèves de la classe saisis');
+  const S1 = row('2026-10-12', '2026-10-16'); assert.equal(S1.ev, 53); assert.equal(S1.ok, 32); assert.equal(S1.rateOk, 60.4, 'une seule séquence : la séquence 1');
+  const empty = row('2027-01-04', '2027-01-29'); assert.equal(empty.hasEv, 0, 'pas encore de résultats : cases vides');
+  assert.ok(followUp(c, '2026-09-07', '2026-11-27', 'K').n >= 1, 'fiche personnelle d’un enseignant');
   assert.equal(evalWeekOf(c, '2026-11-24').seq, 2, 'semaine harmonisée de la séquence 2 (calendrier par défaut 2026/2027)');
   const S = stats(c, 'K', '2026-10-01', '2026-12-01'); assert.equal(S.lessonsDone, 0); assert.equal(S.assessH, 6, 'évaluation et remédiations : heures comptées, aucune leçon');
 });
